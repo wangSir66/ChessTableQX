@@ -1,5 +1,5 @@
 {
-  "ID": "47456d50-ce5a-44e9-92e3-41c97ece8f87",
+  "ID": "eb78c658-b2e0-4bc3-a694-7502aeb0a3f0",
   "Version": "2.3.4",
   "Name": "mobilePhoneLogin",
   "Content": {
@@ -12,7 +12,6 @@
       },
       "AnimationList": [],
       "ObjectData": {
-        "Tag": 119,
         "Children": [
           {
             "ClipAble": false,
@@ -29,7 +28,7 @@
             },
             "EndColor": {},
             "ColorVector": {
-              "ScaleY": 1.0
+              "ScaleX": 1.0
             },
             "Scale9Width": 1,
             "Scale9Height": 1,
@@ -46,20 +45,18 @@
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
-            "CColor": {
-              "R": 0,
-              "G": 0,
-              "B": 0
-            },
+            "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.5,
-              "Y": 0.5
+              "X": 0.4798,
+              "Y": 0.48
             },
             "PreSize": {
-              "X": 1.0,
-              "Y": 1.0
+              "X": 0.9595,
+              "Y": 0.96
             },
+            "RightMargin": 54.0,
+            "TopMargin": 30.0,
             "Tag": 147,
             "ActionTag": 171908841,
             "Size": {
@@ -75,17 +72,15 @@
               "Path": "game_picture/bac_xiaotanchuan.png",
               "Plist": ""
             },
-            "Scale9OriginX": 169,
-            "Scale9OriginY": 141,
-            "Scale9Width": 640,
-            "Scale9Height": 339,
+            "Scale9Width": 768,
+            "Scale9Height": 458,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 640.0,
-              "Y": 360.0
+              "X": 667.0,
+              "Y": 375.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -100,26 +95,26 @@
               "Y": 0.5
             },
             "PreSize": {
-              "X": 0.643,
-              "Y": 0.6958
+              "X": 0.6169,
+              "Y": 0.668
             },
-            "LeftMargin": 228.5,
-            "RightMargin": 228.5,
-            "TopMargin": 109.5,
-            "BottomMargin": 109.5,
+            "LeftMargin": 255.5,
+            "RightMargin": 255.5,
+            "TopMargin": 124.5,
+            "BottomMargin": 124.5,
             "Tag": 120,
             "Children": [
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "game_picture/diban.png",
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 20,
                 "Scale9OriginY": 18,
-                "Scale9Width": 21,
-                "Scale9Height": 21,
+                "Scale9Width": 6,
+                "Scale9Height": 10,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -154,6 +149,7 @@
                   "X": 771.0,
                   "Y": 406.0
                 },
+                "VisibleForFrame": false,
                 "Name": "Image_1",
                 "ctype": "ImageViewObjectData"
               },
@@ -170,54 +166,53 @@
                   "Path": "game_picture/btn_x_normal.png",
                   "Plist": ""
                 },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 46,
-                "Scale9Height": 54,
+                "Scale9Width": 127,
+                "Scale9Height": 128,
+                "OutlineSize": 0,
                 "OutlineColor": {
+                  "R": 0,
+                  "G": 63,
+                  "B": 198
+                },
+                "ShadowColor": {
+                  "R": 0,
                   "G": 0,
                   "B": 0
                 },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
+                "ShadowOffsetX": 0.0,
+                "ShadowOffsetY": 0.0,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 809.0,
-                  "Y": 486.0
+                  "X": 790.7611,
+                  "Y": 405.7261
                 },
                 "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
+                  "ScaleX": 0.8,
+                  "ScaleY": 0.8
                 },
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.983,
-                  "Y": 0.9701
+                  "X": 0.9608,
+                  "Y": 0.8098
                 },
                 "PreSize": {
-                  "X": 0.0923,
-                  "Y": 0.1517
+                  "X": 0.1543,
+                  "Y": 0.2555
                 },
-                "LeftMargin": 771.0,
-                "RightMargin": -24.0,
-                "TopMargin": -23.0,
-                "BottomMargin": 448.0,
+                "LeftMargin": 727.2611,
+                "RightMargin": -31.2611,
+                "TopMargin": 31.2739,
+                "BottomMargin": 341.7261,
                 "Tag": 122,
                 "ActionTag": 1299404610,
                 "Size": {
-                  "X": 76.0,
-                  "Y": 76.0
+                  "X": 127.0,
+                  "Y": 128.0
                 },
                 "Name": "close",
                 "ctype": "ButtonObjectData"
@@ -228,17 +223,15 @@
                   "Path": "bindPhoneNum/title_phoneLogin.png",
                   "Plist": ""
                 },
-                "Scale9OriginX": 83,
-                "Scale9OriginY": 18,
-                "Scale9Width": 173,
-                "Scale9Height": 22,
+                "Scale9Width": 198,
+                "Scale9Height": 54,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
                   "X": 411.5,
-                  "Y": 463.65
+                  "Y": 394.6501
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -249,21 +242,21 @@
                 "PositionPercentXEnabled": true,
                 "PrePosition": {
                   "X": 0.5,
-                  "Y": 0.9254
+                  "Y": 0.7877
                 },
                 "PreSize": {
-                  "X": 0.4119,
-                  "Y": 0.1158
+                  "X": 0.2406,
+                  "Y": 0.1078
                 },
-                "LeftMargin": 242.0,
-                "RightMargin": 242.0,
-                "TopMargin": 8.35,
-                "BottomMargin": 434.65,
+                "LeftMargin": 312.5,
+                "RightMargin": 312.5,
+                "TopMargin": 79.3499,
+                "BottomMargin": 367.6501,
                 "Tag": 123,
                 "ActionTag": -718157796,
                 "Size": {
-                  "X": 339.0,
-                  "Y": 58.0
+                  "X": 198.0,
+                  "Y": 54.0
                 },
                 "Name": "title",
                 "ctype": "ImageViewObjectData"
@@ -303,13 +296,14 @@
                       "Plist": ""
                     },
                     "OutlineColor": {
+                      "R": 0,
                       "G": 0,
                       "B": 0
                     },
                     "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
                     },
                     "ShadowOffsetX": 2.0,
                     "ShadowOffsetY": -2.0,
@@ -361,8 +355,8 @@
                     "Scale9Enable": true,
                     "Scale9OriginX": 19,
                     "Scale9OriginY": 20,
-                    "Scale9Width": 22,
-                    "Scale9Height": 22,
+                    "Scale9Width": 146,
+                    "Scale9Height": 4,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -400,20 +394,21 @@
                   },
                   {
                     "FontSize": 28,
-                    "LabelText": "验证码",
+                    "LabelText": "密码",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "fonts/fzcy.ttf",
                       "Plist": ""
                     },
                     "OutlineColor": {
+                      "R": 0,
                       "G": 0,
                       "B": 0
                     },
                     "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
                     },
                     "ShadowOffsetX": 2.0,
                     "ShadowOffsetY": -2.0,
@@ -443,13 +438,13 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": -279.0001,
-                    "RightMargin": 193.0001,
+                    "LeftMargin": -265.0001,
+                    "RightMargin": 207.0001,
                     "BottomMargin": -34.0,
                     "Tag": 127,
                     "ActionTag": -40817417,
                     "Size": {
-                      "X": 86.0,
+                      "X": 58.0,
                       "Y": 34.0
                     },
                     "Name": "Text_securityCode",
@@ -464,14 +459,14 @@
                     "Scale9Enable": true,
                     "Scale9OriginX": 19,
                     "Scale9OriginY": 20,
-                    "Scale9Width": 22,
-                    "Scale9Height": 22,
+                    "Scale9Width": 146,
+                    "Scale9Height": 4,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": -8.0,
+                      "X": 57.0001,
                       "Y": -16.9995
                     },
                     "Scale": {
@@ -488,14 +483,14 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": -173.0,
-                    "RightMargin": -157.0,
+                    "LeftMargin": -172.9999,
+                    "RightMargin": -287.0001,
                     "TopMargin": -15.5005,
                     "BottomMargin": -49.4995,
                     "Tag": 128,
                     "ActionTag": -495649382,
                     "Size": {
-                      "X": 330.0,
+                      "X": 460.0,
                       "Y": 65.0
                     },
                     "Name": "Image_securityCode",
@@ -519,22 +514,21 @@
                       "Path": "bindPhoneNum/btn_send.png",
                       "Plist": ""
                     },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 15,
-                    "Scale9OriginY": 11,
-                    "Scale9Width": 105,
-                    "Scale9Height": 47,
+                    "Scale9Width": 110,
+                    "Scale9Height": 50,
+                    "OutlineSize": 0,
                     "OutlineColor": {
+                      "R": 0,
+                      "G": 63,
+                      "B": 198
+                    },
+                    "ShadowColor": {
+                      "R": 0,
                       "G": 0,
                       "B": 0
                     },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
+                    "ShadowOffsetX": 0.0,
+                    "ShadowOffsetY": 0.0,
                     "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
@@ -558,35 +552,36 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": 155.0,
-                    "RightMargin": -290.0,
-                    "TopMargin": -16.5,
-                    "BottomMargin": -52.5,
+                    "LeftMargin": 167.5,
+                    "RightMargin": -277.5,
+                    "TopMargin": -7.0,
+                    "BottomMargin": -43.0,
                     "Tag": 129,
                     "ActionTag": 644922504,
                     "Size": {
-                      "X": 135.0,
-                      "Y": 69.0
+                      "X": 110.0,
+                      "Y": 50.0
                     },
                     "Name": "btn_send",
                     "ctype": "ButtonObjectData"
                   },
                   {
                     "FontSize": 20,
-                    "LabelText": "提示：验证码输入错误",
+                    "LabelText": "提示：账号或者密码输入错误",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "fonts/fzcy.ttf",
                       "Plist": ""
                     },
                     "OutlineColor": {
+                      "R": 0,
                       "G": 0,
                       "B": 0
                     },
                     "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
                     },
                     "ShadowOffsetX": 2.0,
                     "ShadowOffsetY": -2.0,
@@ -595,8 +590,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": -59.001,
-                      "Y": -70.0
+                      "X": 31.0012,
+                      "Y": -87.9998
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -616,14 +611,14 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": -160.501,
-                    "RightMargin": -42.499,
-                    "TopMargin": 58.0,
-                    "BottomMargin": -82.0,
+                    "LeftMargin": -100.4988,
+                    "RightMargin": -162.5012,
+                    "TopMargin": 75.9998,
+                    "BottomMargin": -99.9998,
                     "Tag": 130,
                     "ActionTag": 2049516654,
                     "Size": {
-                      "X": 203.0,
+                      "X": 263.0,
                       "Y": 24.0
                     },
                     "Name": "Text_hint",
@@ -637,35 +632,124 @@
                       "G": 65,
                       "B": 70
                     },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "login/btn_phoneLogin.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Normal",
+                      "Path": "login/btn_phoneLogin.png",
+                      "Plist": ""
+                    },
                     "NormalFileData": {
                       "Type": "Normal",
-                      "Path": "bindPhoneNum/btn_login.png",
+                      "Path": "login/btn_phoneLogin.png",
                       "Plist": ""
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
                     "Scale9OriginY": 11,
-                    "Scale9Width": 207,
-                    "Scale9Height": 66,
+                    "Scale9Width": 475,
+                    "Scale9Height": 155,
+                    "OutlineSize": 0,
                     "OutlineColor": {
+                      "R": 0,
+                      "G": 63,
+                      "B": 198
+                    },
+                    "ShadowColor": {
+                      "R": 0,
                       "G": 0,
                       "B": 0
                     },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
+                    "ShadowOffsetX": 0.0,
+                    "ShadowOffsetY": 0.0,
                     "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
+                      "X": 167.8393,
+                      "Y": -167.9986
+                    },
+                    "Scale": {
+                      "ScaleX": 0.52,
+                      "ScaleY": 0.42
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
                       "X": 0.0,
-                      "Y": -158.0
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -84.6607,
+                    "RightMargin": -420.3393,
+                    "TopMargin": 79.4986,
+                    "BottomMargin": -256.4985,
+                    "Tag": 131,
+                    "ActionTag": 52560254,
+                    "Size": {
+                      "X": 505.0,
+                      "Y": 177.0
+                    },
+                    "Name": "btn_sureBind",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "login/btn_register.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Normal",
+                      "Path": "login/btn_register.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "login/btn_register.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 224,
+                    "Scale9Height": 51,
+                    "OutlineSize": 0,
+                    "OutlineColor": {
+                      "R": 0,
+                      "G": 63,
+                      "B": 198
+                    },
+                    "ShadowColor": {
+                      "R": 0,
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowOffsetX": 0.0,
+                    "ShadowOffsetY": 0.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -128.9973,
+                      "Y": -167.9985
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -681,17 +765,17 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": -118.5,
-                    "RightMargin": -118.5,
-                    "TopMargin": 114.0,
-                    "BottomMargin": -202.0,
-                    "Tag": 131,
-                    "ActionTag": 52560254,
+                    "LeftMargin": -255.9973,
+                    "RightMargin": 1.9973,
+                    "TopMargin": 131.4985,
+                    "BottomMargin": -204.4985,
+                    "Tag": 360,
+                    "ActionTag": 1831459841,
                     "Size": {
-                      "X": 237.0,
-                      "Y": 88.0
+                      "X": 254.0,
+                      "Y": 73.0
                     },
-                    "Name": "btn_sureBind",
+                    "Name": "btn_register",
                     "ctype": "ButtonObjectData"
                   }
                 ],
@@ -714,20 +798,21 @@
           }
         ],
         "Size": {
-          "X": 1280.0,
-          "Y": 720.0
+          "X": 1334.0,
+          "Y": 750.0
         },
-        "Name": "Layer",
+        "Name": "mobilePhoneLogin",
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "bindPhoneNum/btn_login.png",
         "bindPhoneNum/btn_send.png",
         "bindPhoneNum/title_phoneLogin.png",
+        "Default/ImageFile.png",
         "fonts/fzcy.ttf",
         "game_picture/bac_xiaotanchuan.png",
         "game_picture/btn_x_normal.png",
-        "game_picture/diban.png",
+        "login/btn_phoneLogin.png",
+        "login/btn_register.png",
         "store/into_number.png"
       ],
       "ctype": "GameFileData"
