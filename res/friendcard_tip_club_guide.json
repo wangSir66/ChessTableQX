@@ -1,0 +1,492 @@
+{
+  "ID": "31c253d3-d2a5-47ad-a905-9dc00a3285ce",
+  "Version": "2.3.4",
+  "Name": "friendcard_tip_club_guide",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 195,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 639.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4992,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": -1.0,
+            "RightMargin": 1.0,
+            "Tag": 203,
+            "ActionTag": 212976254,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 1508,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/img_tongyong.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 224,
+                "Scale9OriginY": 163,
+                "Scale9Width": 269,
+                "Scale9Height": 99,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 360.0
+                },
+                "Scale": {
+                  "ScaleX": 1.1448,
+                  "ScaleY": 1.21
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.5328,
+                  "Y": 0.6361
+                },
+                "LeftMargin": 299.0,
+                "RightMargin": 299.0,
+                "TopMargin": 131.0,
+                "BottomMargin": 131.0,
+                "Tag": 1509,
+                "ActionTag": -1484688416,
+                "Size": {
+                  "X": 682.0,
+                  "Y": 458.0
+                },
+                "Name": "bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 46,
+                "Scale9Height": 54,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5059,
+                  "ScaleY": 0.4837
+                },
+                "Position": {
+                  "X": 999.865,
+                  "Y": 612.09
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7811,
+                  "Y": 0.8501
+                },
+                "PreSize": {
+                  "X": 0.0594,
+                  "Y": 0.1056
+                },
+                "LeftMargin": 961.4166,
+                "RightMargin": 242.5834,
+                "TopMargin": 68.6712,
+                "BottomMargin": 575.3289,
+                "Tag": 1510,
+                "ActionTag": 1019467826,
+                "Size": {
+                  "X": 76.0,
+                  "Y": 76.0
+                },
+                "Name": "closeBtn",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "    亲友圈的优势？    ",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 558.64
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 211,
+                  "G": 60,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.7759
+                },
+                "PreSize": {
+                  "X": 0.2078,
+                  "Y": 0.0472
+                },
+                "LeftMargin": 507.0,
+                "RightMargin": 507.0,
+                "TopMargin": 144.36,
+                "BottomMargin": 541.64,
+                "Tag": 579,
+                "ActionTag": 1538348840,
+                "Size": {
+                  "X": 266.0,
+                  "Y": 34.0
+                },
+                "Name": "text_1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 26,
+                "LabelText": "1、好友之间快速组局，自动开房，一键邀请，无须等待。\n2、玩法多样，20种玩法满足你的个性需求。\n3、升级钻石亲友圈，管理更轻松，玩牌更安心！\n4、联盟模式，小组功能，强强联手，扩大你的朋友圈！\n5、完善、稳定、安全的系统给你极致、流畅体验。\n6、1对1客服指导，带你玩转亲友圈。",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 422.64
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 96,
+                  "G": 46,
+                  "B": 26
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.587
+                },
+                "PreSize": {
+                  "X": 0.5352,
+                  "Y": 0.2722
+                },
+                "LeftMargin": 297.5,
+                "RightMargin": 297.5,
+                "TopMargin": 199.36,
+                "BottomMargin": 324.64,
+                "Tag": 569,
+                "ActionTag": 72470419,
+                "Size": {
+                  "X": 685.0,
+                  "Y": 196.0
+                },
+                "Name": "text_2",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "    怎么加入亲友圈？    ",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 289.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 211,
+                  "G": 60,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.4014
+                },
+                "PreSize": {
+                  "X": 0.2313,
+                  "Y": 0.0472
+                },
+                "LeftMargin": 492.0,
+                "RightMargin": 492.0,
+                "TopMargin": 414.0,
+                "BottomMargin": 272.0,
+                "Tag": 580,
+                "ActionTag": -323492475,
+                "Size": {
+                  "X": 296.0,
+                  "Y": 34.0
+                },
+                "Name": "text_3",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 26,
+                "LabelText": "1、联系代理加入现有的亲友圈。\n2、成为代理创建元宝、钻石亲友圈，并邀请好友加入。",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 196.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 96,
+                  "G": 46,
+                  "B": 26
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.2722
+                },
+                "PreSize": {
+                  "X": 0.5352,
+                  "Y": 0.1389
+                },
+                "LeftMargin": 297.5,
+                "RightMargin": 297.5,
+                "TopMargin": 474.0,
+                "BottomMargin": 146.0,
+                "Tag": 581,
+                "ActionTag": 515743137,
+                "Size": {
+                  "X": 685.0,
+                  "Y": 100.0
+                },
+                "Name": "text_4",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 1950139937,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "back",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "fonts/lanting.TTF",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_tongyong.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

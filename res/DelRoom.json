@@ -1,0 +1,577 @@
+{
+  "ID": "fbbc65ac-e0df-4570-94fe-f28adc590dc4",
+  "Version": "2.3.4",
+  "Name": "DelRoom",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 37,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 1.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -640.0,
+            "RightMargin": -640.0,
+            "TopMargin": -361.0,
+            "BottomMargin": -359.0,
+            "Tag": 181,
+            "ActionTag": 1782181862,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "game_picture/tongyongtanchuang.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 170,
+            "Scale9OriginY": 127,
+            "Scale9Width": 377,
+            "Scale9Height": 204,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 3.7557,
+              "Y": 1.9673
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -354.7443,
+            "RightMargin": -362.2557,
+            "TopMargin": -230.9673,
+            "BottomMargin": -227.0327,
+            "Tag": 38,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_66.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_66.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_60.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 159,
+                "Scale9Height": 49,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 236.61,
+                  "Y": 83.7432
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.33,
+                  "Y": 0.1828
+                },
+                "PreSize": {
+                  "X": 0.2636,
+                  "Y": 0.155
+                },
+                "LeftMargin": 142.11,
+                "RightMargin": 385.89,
+                "TopMargin": 338.7568,
+                "BottomMargin": 48.2432,
+                "Tag": 39,
+                "ActionTag": 261573171,
+                "Size": {
+                  "X": 189.0,
+                  "Y": 71.0
+                },
+                "Name": "yes",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_65.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_65.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_57.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 159,
+                "Scale9Height": 49,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 480.39,
+                  "Y": 83.7432
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.67,
+                  "Y": 0.1828
+                },
+                "PreSize": {
+                  "X": 0.2636,
+                  "Y": 0.155
+                },
+                "LeftMargin": 385.89,
+                "RightMargin": 142.11,
+                "TopMargin": 338.7568,
+                "BottomMargin": 48.2432,
+                "Tag": 40,
+                "ActionTag": -1929921974,
+                "Size": {
+                  "X": 189.0,
+                  "Y": 71.0
+                },
+                "Name": "no",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 36,
+                "LabelText": "玩家[abcdhdfafdsij]申请解散房间",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 358.5,
+                  "Y": 379.851
+                },
+                "Scale": {
+                  "ScaleX": 0.8,
+                  "ScaleY": 0.8
+                },
+                "CColor": {
+                  "R": 211,
+                  "G": 60,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.8294
+                },
+                "PreSize": {
+                  "X": 0.7782,
+                  "Y": 0.0786
+                },
+                "LeftMargin": 79.5,
+                "RightMargin": 79.5,
+                "TopMargin": 60.149,
+                "BottomMargin": 361.851,
+                "Tag": 42,
+                "ActionTag": -1407522131,
+                "Size": {
+                  "X": 558.0,
+                  "Y": 36.0
+                },
+                "Name": "player0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "玩家[一二三四]申请解散房间",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 180.1573,
+                  "Y": 314.4106
+                },
+                "Scale": {
+                  "ScaleX": 0.8,
+                  "ScaleY": 0.8
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2513,
+                  "Y": 0.6865
+                },
+                "PreSize": {
+                  "X": 0.5439,
+                  "Y": 0.0655
+                },
+                "LeftMargin": 180.1573,
+                "RightMargin": 146.8427,
+                "TopMargin": 128.5894,
+                "BottomMargin": 299.4106,
+                "Tag": 44,
+                "ActionTag": -571091661,
+                "Size": {
+                  "X": 390.0,
+                  "Y": 30.0
+                },
+                "Name": "player1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "玩家[一二三四]申请解散房间",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 180.1573,
+                  "Y": 262.5078
+                },
+                "Scale": {
+                  "ScaleX": 0.8,
+                  "ScaleY": 0.8
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2513,
+                  "Y": 0.5732
+                },
+                "PreSize": {
+                  "X": 0.5439,
+                  "Y": 0.0655
+                },
+                "LeftMargin": 180.1573,
+                "RightMargin": 146.8427,
+                "TopMargin": 180.4922,
+                "BottomMargin": 247.5078,
+                "Tag": 45,
+                "ActionTag": 569487359,
+                "Size": {
+                  "X": 390.0,
+                  "Y": 30.0
+                },
+                "Name": "player2",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "玩家[一二三四]申请解散房间",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 180.1573,
+                  "Y": 210.6059
+                },
+                "Scale": {
+                  "ScaleX": 0.8,
+                  "ScaleY": 0.8
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2513,
+                  "Y": 0.4598
+                },
+                "PreSize": {
+                  "X": 0.5439,
+                  "Y": 0.0655
+                },
+                "LeftMargin": 180.1573,
+                "RightMargin": 146.8427,
+                "TopMargin": 232.3941,
+                "BottomMargin": 195.6059,
+                "Tag": 46,
+                "ActionTag": 779769533,
+                "Size": {
+                  "X": 390.0,
+                  "Y": 30.0
+                },
+                "Name": "player3",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "玩家[一二三四]申请解散房间",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 178.6659,
+                  "Y": 154.7236
+                },
+                "Scale": {
+                  "ScaleX": 0.8,
+                  "ScaleY": 0.8
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2492,
+                  "Y": 0.3378
+                },
+                "PreSize": {
+                  "X": 0.5439,
+                  "Y": 0.0655
+                },
+                "LeftMargin": 178.6659,
+                "RightMargin": 148.3341,
+                "TopMargin": 288.2764,
+                "BottomMargin": 139.7236,
+                "Tag": 43,
+                "ActionTag": 570132051,
+                "Size": {
+                  "X": 390.0,
+                  "Y": 30.0
+                },
+                "Name": "time",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -2115898090,
+            "Size": {
+              "X": 717.0,
+              "Y": 458.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "game_picture/tongyongtanchuang.png",
+        "joinGame/xiaotanchuan_57.png",
+        "joinGame/xiaotanchuan_60.png",
+        "joinGame/xiaotanchuan_65.png",
+        "joinGame/xiaotanchuan_66.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

@@ -1,0 +1,783 @@
+{
+  "ID": "d8cefd3a-8c38-4cb2-8397-04f686f9eb83",
+  "Version": "2.3.4",
+  "Name": "gameDesLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 69,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 70,
+            "ActionTag": -796351396,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "playground/di_1.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 266,
+            "Scale9OriginY": 179,
+            "Scale9Width": 275,
+            "Scale9Height": 187,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.6305,
+              "Y": 0.7569
+            },
+            "LeftMargin": 236.5,
+            "RightMargin": 236.5,
+            "TopMargin": 87.5,
+            "BottomMargin": 87.5,
+            "Tag": 71,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/btn_x_normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 46,
+                "Scale9Height": 54,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 787.2578,
+                  "Y": 530.33
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9755,
+                  "Y": 0.9731
+                },
+                "PreSize": {
+                  "X": 0.0942,
+                  "Y": 0.1394
+                },
+                "LeftMargin": 749.2578,
+                "RightMargin": -18.2578,
+                "TopMargin": -23.33,
+                "BottomMargin": 492.33,
+                "Tag": 104,
+                "ActionTag": 597250171,
+                "Size": {
+                  "X": 76.0,
+                  "Y": 76.0
+                },
+                "Name": "close",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "IsBounceEnabled": true,
+                "InnerNodeSize": {
+                  "Width": 720,
+                  "Height": 505
+                },
+                "ScrollDirectionType": "Vertical",
+                "ClipAble": true,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "G": 150,
+                  "B": 100
+                },
+                "FirstColor": {
+                  "G": 150,
+                  "B": 100
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 403.5,
+                  "Y": 272.5
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.8922,
+                  "Y": 0.844
+                },
+                "LeftMargin": 43.5,
+                "RightMargin": 43.5,
+                "TopMargin": 42.5,
+                "BottomMargin": 42.5,
+                "Tag": 273,
+                "Children": [
+                  {
+                    "FontSize": 36,
+                    "LabelText": "奖励方案:",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 0.0,
+                      "Y": 505.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 103,
+                      "G": 90,
+                      "B": 71
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 1.0
+                    },
+                    "PreSize": {
+                      "X": 0.2153,
+                      "Y": 0.0851
+                    },
+                    "RightMargin": 565.0,
+                    "BottomMargin": 462.0,
+                    "Tag": 279,
+                    "ActionTag": 1768169589,
+                    "Size": {
+                      "X": 155.0,
+                      "Y": 43.0
+                    },
+                    "Name": "Text_reward",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "ClipAble": false,
+                    "BackColorAlpha": 102,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 0.0,
+                      "Y": 460.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.9109
+                    },
+                    "PreSize": {
+                      "X": 1.0,
+                      "Y": 0.0792
+                    },
+                    "TopMargin": 45.0,
+                    "BottomMargin": 420.0,
+                    "Tag": 278,
+                    "Children": [
+                      {
+                        "IsCustomSize": true,
+                        "FontSize": 32,
+                        "LabelText": "排名",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "fonts/fzcy.ttf",
+                          "Plist": ""
+                        },
+                        "HorizontalAlignmentType": "HT_Center",
+                        "VerticalAlignmentType": "VT_Center",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 144.0,
+                          "Y": 20.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 197,
+                          "G": 129,
+                          "B": 78
+                        },
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.2,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.2778,
+                          "Y": 0.975
+                        },
+                        "LeftMargin": 44.0,
+                        "RightMargin": 476.0,
+                        "TopMargin": 0.5,
+                        "BottomMargin": 0.5,
+                        "Tag": 275,
+                        "ActionTag": -331172575,
+                        "Size": {
+                          "X": 200.0,
+                          "Y": 39.0
+                        },
+                        "Name": "Text_0",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "IsCustomSize": true,
+                        "FontSize": 32,
+                        "LabelText": "奖励",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "fonts/fzcy.ttf",
+                          "Plist": ""
+                        },
+                        "HorizontalAlignmentType": "HT_Center",
+                        "VerticalAlignmentType": "VT_Center",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 360.0,
+                          "Y": 20.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 197,
+                          "G": 129,
+                          "B": 78
+                        },
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.2778,
+                          "Y": 0.975
+                        },
+                        "LeftMargin": 260.0,
+                        "RightMargin": 260.0,
+                        "TopMargin": 0.5,
+                        "BottomMargin": 0.5,
+                        "Tag": 276,
+                        "ActionTag": 1982377878,
+                        "Size": {
+                          "X": 200.0,
+                          "Y": 39.0
+                        },
+                        "Name": "Text_1",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "IsCustomSize": true,
+                        "FontSize": 32,
+                        "LabelText": "积分",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "fonts/fzcy.ttf",
+                          "Plist": ""
+                        },
+                        "HorizontalAlignmentType": "HT_Center",
+                        "VerticalAlignmentType": "VT_Center",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 576.0,
+                          "Y": 20.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 197,
+                          "G": 129,
+                          "B": 78
+                        },
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.8,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.2778,
+                          "Y": 0.975
+                        },
+                        "LeftMargin": 476.0,
+                        "RightMargin": 44.0,
+                        "TopMargin": 0.5,
+                        "BottomMargin": 0.5,
+                        "Tag": 277,
+                        "ActionTag": -765740919,
+                        "Size": {
+                          "X": 200.0,
+                          "Y": 39.0
+                        },
+                        "Name": "Text_2",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": 491653029,
+                    "Size": {
+                      "X": 720.0,
+                      "Y": 40.0
+                    },
+                    "Name": "item",
+                    "ctype": "PanelObjectData"
+                  },
+                  {
+                    "FontSize": 36,
+                    "LabelText": "比赛规则:",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 0.0,
+                      "Y": 340.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 103,
+                      "G": 90,
+                      "B": 71
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.6733
+                    },
+                    "PreSize": {
+                      "X": 0.2153,
+                      "Y": 0.0851
+                    },
+                    "RightMargin": 565.0,
+                    "TopMargin": 165.0,
+                    "BottomMargin": 297.0,
+                    "Tag": 280,
+                    "ActionTag": -1563975890,
+                    "Size": {
+                      "X": 155.0,
+                      "Y": 43.0
+                    },
+                    "Name": "Text_r",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 32,
+                    "LabelText": "弓弩东方红股东方国家地方能根据女警的烦恼军队富家女解放碑vujbfjvbfuvbufbvufbuvbfuvbufbv花费多个vufdhgjdfhvjdfhv",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 10.0,
+                      "Y": 286.4688
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 197,
+                      "G": 129,
+                      "B": 78
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0139,
+                      "Y": 0.5673
+                    },
+                    "PreSize": {
+                      "X": 0.9722,
+                      "Y": 0.2317
+                    },
+                    "LeftMargin": 10.0,
+                    "RightMargin": 10.0,
+                    "TopMargin": 218.5312,
+                    "BottomMargin": 169.4688,
+                    "Tag": 281,
+                    "ActionTag": 750343321,
+                    "Size": {
+                      "X": 700.0,
+                      "Y": 117.0
+                    },
+                    "Name": "Text_rule",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "FontSize": 36,
+                    "LabelText": "比赛说明:",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 0.0,
+                      "Y": 162.9896
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 103,
+                      "G": 90,
+                      "B": 71
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.3228
+                    },
+                    "PreSize": {
+                      "X": 0.2153,
+                      "Y": 0.0851
+                    },
+                    "RightMargin": 565.0,
+                    "TopMargin": 342.0104,
+                    "BottomMargin": 119.9896,
+                    "Tag": 323,
+                    "ActionTag": 188955837,
+                    "Size": {
+                      "X": 155.0,
+                      "Y": 43.0
+                    },
+                    "Name": "Text_s",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 32,
+                    "LabelText": "  1、所有玩家加入比赛后初始分值均为0分。每轮积分不清零。\n  2、4轮2局按分数排名，分数相同时将按报名时间先后排名。     \n  3、根据玩家的分数安装排名发放奖励，红包、实物奖励需在比赛记录中点击领取输入领取奖励的相关信息，提交成功后，奖励会在3个工作日内发放。\t\n  \n本赛事解释权由官方所有，如对赛事规则有疑问，请咨询微信公众号：qxqipai",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 10.0,
+                      "Y": 113.4588
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 197,
+                      "G": 129,
+                      "B": 78
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0139,
+                      "Y": 0.2247
+                    },
+                    "PreSize": {
+                      "X": 0.9722,
+                      "Y": 0.8495
+                    },
+                    "LeftMargin": 10.0,
+                    "RightMargin": 10.0,
+                    "TopMargin": 391.5412,
+                    "BottomMargin": -315.5412,
+                    "Tag": 324,
+                    "ActionTag": -1783247198,
+                    "Size": {
+                      "X": 700.0,
+                      "Y": 429.0
+                    },
+                    "Name": "Text_state",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1052965154,
+                "Size": {
+                  "X": 720.0,
+                  "Y": 460.0
+                },
+                "Name": "ScrollView",
+                "ctype": "ScrollViewObjectData"
+              }
+            ],
+            "ActionTag": -491730943,
+            "Size": {
+              "X": 807.0,
+              "Y": 545.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "fonts/fzcy.ttf",
+        "game_picture/btn_x_normal.png",
+        "playground/di_1.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "68166dcd-bbd1-422e-83fc-c72c716d9bd1",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 991,
+  "height": 462,
+  "platformSettings": {},
+  "subMetas": {
+    "Shop_atlas0": {
+      "ver": "1.0.4",
+      "uuid": "22ee9aa5-efc5-4d0e-b71f-1e3b9c6eb1fa",
+      "rawTextureUuid": "68166dcd-bbd1-422e-83fc-c72c716d9bd1",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1,
+      "offsetY": 1.5,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 989,
+      "height": 459,
+      "rawWidth": 991,
+      "rawHeight": 462,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "bb97d8c8-f167-44d3-8988-0aa2fbc240a0",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1280,
+  "height": 720,
+  "platformSettings": {},
+  "subMetas": {
+    "zBgHall-1_atlas0": {
+      "ver": "1.0.4",
+      "uuid": "4d70b7c8-4b6b-447e-8e18-89814cb0ad32",
+      "rawTextureUuid": "bb97d8c8-f167-44d3-8988-0aa2fbc240a0",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1280,
+      "height": 720,
+      "rawWidth": 1280,
+      "rawHeight": 720,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

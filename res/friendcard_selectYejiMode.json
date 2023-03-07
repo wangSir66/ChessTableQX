@@ -1,0 +1,884 @@
+{
+  "ID": "4e23ba63-9cc5-476b-9485-b6080fdc35cd",
+  "Version": "2.3.4",
+  "Name": "friendcard_selectYejiMode",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 195,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 639.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4992,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": -1.0,
+            "RightMargin": 1.0,
+            "Tag": 203,
+            "ActionTag": 212976254,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 0,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 571,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/img_zhongtanchuang.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 341,
+                "Scale9OriginY": 172,
+                "Scale9Width": 296,
+                "Scale9Height": 277,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 612.8228,
+                  "Y": 346.3118
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4788,
+                  "Y": 0.481
+                },
+                "PreSize": {
+                  "X": 0.7641,
+                  "Y": 0.8625
+                },
+                "LeftMargin": 123.8228,
+                "RightMargin": 178.1772,
+                "TopMargin": 63.1882,
+                "BottomMargin": 35.8118,
+                "Tag": 572,
+                "ActionTag": 1718451532,
+                "Size": {
+                  "X": 978.0,
+                  "Y": 621.0
+                },
+                "Name": "Image_bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "CheckedState": true,
+                "NormalBackFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_wxz.png",
+                  "Plist": ""
+                },
+                "PressedBackFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_wxz.png",
+                  "Plist": ""
+                },
+                "DisableBackFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_wxz.png",
+                  "Plist": ""
+                },
+                "NodeNormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_xz.png",
+                  "Plist": ""
+                },
+                "NodeDisableFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_wxz.png",
+                  "Plist": ""
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 537.6,
+                  "Y": 504.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.42,
+                  "Y": 0.7
+                },
+                "PreSize": {
+                  "X": 0.0352,
+                  "Y": 0.0611
+                },
+                "LeftMargin": 515.1,
+                "RightMargin": 719.9,
+                "TopMargin": 194.0,
+                "BottomMargin": 482.0,
+                "Tag": 2259,
+                "Children": [
+                  {
+                    "FontSize": 30,
+                    "LabelText": "扣费玩家所属    ",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/lanting.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 82,
+                      "G": 54,
+                      "B": 33
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 47.001,
+                      "Y": 22.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 96,
+                      "G": 46,
+                      "B": 26
+                    },
+                    "IconVisible": false,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.0445,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 4.5333,
+                      "Y": 0.7727
+                    },
+                    "LeftMargin": 47.001,
+                    "RightMargin": -206.001,
+                    "TopMargin": 5.0,
+                    "BottomMargin": 5.0,
+                    "Tag": 2260,
+                    "ActionTag": 1073613644,
+                    "Size": {
+                      "X": 204.0,
+                      "Y": 34.0
+                    },
+                    "Name": "text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1723264666,
+                "Size": {
+                  "X": 45.0,
+                  "Y": 44.0
+                },
+                "Name": "checkBox_mode_0",
+                "ctype": "CheckBoxObjectData"
+              },
+              {
+                "CheckedState": true,
+                "NormalBackFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_wxz.png",
+                  "Plist": ""
+                },
+                "PressedBackFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_wxz.png",
+                  "Plist": ""
+                },
+                "DisableBackFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_wxz.png",
+                  "Plist": ""
+                },
+                "NodeNormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_xz.png",
+                  "Plist": ""
+                },
+                "NodeDisableFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/chexbox_wxz.png",
+                  "Plist": ""
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 537.6,
+                  "Y": 432.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.42,
+                  "Y": 0.6
+                },
+                "PreSize": {
+                  "X": 0.0352,
+                  "Y": 0.0611
+                },
+                "LeftMargin": 515.1,
+                "RightMargin": 719.9,
+                "TopMargin": 266.0,
+                "BottomMargin": 410.0,
+                "Tag": 2261,
+                "Children": [
+                  {
+                    "FontSize": 30,
+                    "LabelText": "参与玩家均分    ",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/lanting.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 82,
+                      "G": 54,
+                      "B": 33
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 47.001,
+                      "Y": 22.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 96,
+                      "G": 46,
+                      "B": 26
+                    },
+                    "IconVisible": false,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.0445,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 4.5333,
+                      "Y": 0.7727
+                    },
+                    "LeftMargin": 47.001,
+                    "RightMargin": -206.001,
+                    "TopMargin": 5.0,
+                    "BottomMargin": 5.0,
+                    "Tag": 2262,
+                    "ActionTag": -1078719695,
+                    "Size": {
+                      "X": 204.0,
+                      "Y": 34.0
+                    },
+                    "Name": "text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -2055004854,
+                "Size": {
+                  "X": 45.0,
+                  "Y": 44.0
+                },
+                "Name": "checkBox_mode_1",
+                "ctype": "CheckBoxObjectData"
+              },
+              {
+                "FontSize": 26,
+                "LabelText": "会长可制定亲友圈的业绩模式，如有疑问请联系会长。",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 468.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 208,
+                  "G": 67,
+                  "B": 5
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.65
+                },
+                "PreSize": {
+                  "X": 0.4789,
+                  "Y": 0.0417
+                },
+                "LeftMargin": 333.5,
+                "RightMargin": 333.5,
+                "TopMargin": 237.0,
+                "BottomMargin": 453.0,
+                "Tag": 303,
+                "ActionTag": 1981820295,
+                "Size": {
+                  "X": 613.0,
+                  "Y": 30.0
+                },
+                "Name": "Text_tip0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 26,
+                "LabelText": "扣费玩家所属：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 280.96,
+                  "Y": 360.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 171,
+                  "G": 143,
+                  "B": 100
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.2195,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.1312,
+                  "Y": 0.0417
+                },
+                "LeftMargin": 280.96,
+                "RightMargin": 831.04,
+                "TopMargin": 345.0,
+                "BottomMargin": 345.0,
+                "Tag": 296,
+                "ActionTag": 919471387,
+                "Size": {
+                  "X": 168.0,
+                  "Y": 30.0
+                },
+                "Name": "Text_tip1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 26,
+                "LabelText": "销售钻石数=牌局最终扣费玩家属于谁就是谁的业绩",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 280.96,
+                  "Y": 324.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 171,
+                  "G": 143,
+                  "B": 100
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.2195,
+                  "Y": 0.45
+                },
+                "PreSize": {
+                  "X": 0.4625,
+                  "Y": 0.0417
+                },
+                "LeftMargin": 280.96,
+                "RightMargin": 407.04,
+                "TopMargin": 381.0,
+                "BottomMargin": 309.0,
+                "Tag": 297,
+                "ActionTag": -1505944763,
+                "Size": {
+                  "X": 592.0,
+                  "Y": 30.0
+                },
+                "Name": "Text_tip2",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 26,
+                "LabelText": "参与玩家均分：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 280.96,
+                  "Y": 259.2
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 171,
+                  "G": 143,
+                  "B": 100
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.2195,
+                  "Y": 0.36
+                },
+                "PreSize": {
+                  "X": 0.1312,
+                  "Y": 0.0417
+                },
+                "LeftMargin": 280.96,
+                "RightMargin": 831.04,
+                "TopMargin": 445.8,
+                "BottomMargin": 244.2,
+                "Tag": 300,
+                "ActionTag": 54086850,
+                "Size": {
+                  "X": 168.0,
+                  "Y": 30.0
+                },
+                "Name": "Text_tip3",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 26,
+                "LabelText": "销售钻石数=牌局最终扣钻石÷人数，AA不受影响。",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 280.96,
+                  "Y": 223.2
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 171,
+                  "G": 143,
+                  "B": 100
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.2195,
+                  "Y": 0.31
+                },
+                "PreSize": {
+                  "X": 0.4609,
+                  "Y": 0.0417
+                },
+                "LeftMargin": 280.96,
+                "RightMargin": 409.04,
+                "TopMargin": 481.8,
+                "BottomMargin": 208.2,
+                "Tag": 301,
+                "ActionTag": 802551109,
+                "Size": {
+                  "X": 590.0,
+                  "Y": 30.0
+                },
+                "Name": "Text_tip4",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/btn_ok_s.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/btn_ok_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/btn_ok_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 208,
+                "Scale9Height": 66,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 122.4
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.17
+                },
+                "PreSize": {
+                  "X": 0.1859,
+                  "Y": 0.1222
+                },
+                "LeftMargin": 521.0,
+                "RightMargin": 521.0,
+                "TopMargin": 553.6,
+                "BottomMargin": 78.4,
+                "Tag": 302,
+                "ActionTag": -1228023683,
+                "Size": {
+                  "X": 238.0,
+                  "Y": 88.0
+                },
+                "Name": "btn_commit",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 46,
+                "Scale9Height": 54,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1081.3776,
+                  "Y": 634.5355
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8448,
+                  "Y": 0.8813
+                },
+                "PreSize": {
+                  "X": 0.0594,
+                  "Y": 0.1056
+                },
+                "LeftMargin": 1043.3776,
+                "RightMargin": 160.6224,
+                "TopMargin": 47.4645,
+                "BottomMargin": 596.5355,
+                "Tag": 577,
+                "ActionTag": -279728266,
+                "Size": {
+                  "X": 76.0,
+                  "Y": 76.0
+                },
+                "Name": "close",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1005329377,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "back",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "fonts/lanting.TTF",
+        "friendCards/common/btn_ok_n.png",
+        "friendCards/common/btn_ok_s.png",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_zhongtanchuang.png",
+        "friendCards/setSkin/chexbox_wxz.png",
+        "friendCards/setSkin/chexbox_xz.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

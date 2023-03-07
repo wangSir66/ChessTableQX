@@ -1,0 +1,674 @@
+{
+  "ID": "68bb7ab1-41db-4e5c-9d59-09c67b89168a",
+  "Version": "2.3.4",
+  "Name": "createHomeTotal",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 26,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 206,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 226,
+            "ActionTag": 1035215115,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Alpha": 216,
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "joinGame/bg_create.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 170,
+            "Scale9OriginY": 127,
+            "Scale9Width": 745,
+            "Scale9Height": 435,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.8477,
+              "Y": 0.9569
+            },
+            "LeftMargin": 97.5,
+            "RightMargin": 97.5,
+            "TopMargin": 15.5,
+            "BottomMargin": 15.5,
+            "Tag": 27,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/diban.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 20,
+                "Scale9OriginY": 18,
+                "Scale9Width": 21,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 544.8506,
+                  "Y": 310.0002
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5022,
+                  "Y": 0.4499
+                },
+                "PreSize": {
+                  "X": 0.9429,
+                  "Y": 0.8186
+                },
+                "LeftMargin": 33.3506,
+                "RightMargin": 28.6494,
+                "TopMargin": 96.9998,
+                "BottomMargin": 28.0002,
+                "Tag": 46,
+                "ActionTag": 1057993185,
+                "Size": {
+                  "X": 1023.0,
+                  "Y": 564.0
+                },
+                "Name": "Image_1",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 6.4015,
+                  "Y": -3.8657
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.0059,
+                  "Y": -0.0056
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 6.4015,
+                "RightMargin": 1078.5985,
+                "TopMargin": 692.8657,
+                "BottomMargin": -3.8657,
+                "Tag": 12,
+                "Children": [
+                  {
+                    "FontSize": 45,
+                    "ButtonText": "",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "TextColor": {},
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/friendCard_mj_1.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/friendCard_mj_1.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/friendCard_mj_2.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 328,
+                    "Scale9Height": 60,
+                    "DisplayState": false,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 376.1528,
+                      "Y": 644.8
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 197.1528,
+                    "RightMargin": -555.1528,
+                    "TopMargin": -685.8,
+                    "BottomMargin": 603.8,
+                    "Tag": 18,
+                    "ActionTag": 636977161,
+                    "Size": {
+                      "X": 358.0,
+                      "Y": 82.0
+                    },
+                    "Name": "btn_mj",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 45,
+                    "ButtonText": "",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/friendCard_poke_1.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/friendCard_poke_1.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/friendCard_poke_2.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 328,
+                    "Scale9Height": 60,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 732.9934,
+                      "Y": 644.8
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 553.9934,
+                    "RightMargin": -911.9934,
+                    "TopMargin": -685.8,
+                    "BottomMargin": 603.8,
+                    "Tag": 19,
+                    "ActionTag": 2030181104,
+                    "Size": {
+                      "X": 358.0,
+                      "Y": 82.0
+                    },
+                    "Name": "btn_poke",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": 1949063240,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "node_friendCard",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/zhongtan-1_03.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 531.216,
+                  "Y": 706.818
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.4896,
+                  "Y": 1.0259
+                },
+                "PreSize": {
+                  "X": 0.4507,
+                  "Y": 0.1045
+                },
+                "LeftMargin": 286.716,
+                "RightMargin": 309.284,
+                "TopMargin": -17.818,
+                "BottomMargin": 634.818,
+                "Tag": 42,
+                "ActionTag": -987851914,
+                "Size": {
+                  "X": 489.0,
+                  "Y": 72.0
+                },
+                "Alpha": 245,
+                "Name": "titleCreate",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/btn_x_normal.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 46,
+                "Scale9Height": 54,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.4832,
+                  "ScaleY": 0.562
+                },
+                "Position": {
+                  "X": 1061.2522,
+                  "Y": 660.3677
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9781,
+                  "Y": 0.9584
+                },
+                "PreSize": {
+                  "X": 0.07,
+                  "Y": 0.1103
+                },
+                "LeftMargin": 1024.5291,
+                "RightMargin": -15.5291,
+                "TopMargin": -4.6557,
+                "BottomMargin": 617.6557,
+                "Tag": 54,
+                "ActionTag": 685128733,
+                "Size": {
+                  "X": 76.0,
+                  "Y": 76.0
+                },
+                "Name": "goHome",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/bg_left.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 130.5012,
+                  "Y": 309.6235
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1203,
+                  "Y": 0.4494
+                },
+                "PreSize": {
+                  "X": 0.188,
+                  "Y": 0.8186
+                },
+                "LeftMargin": 28.5012,
+                "RightMargin": 852.4988,
+                "TopMargin": 97.3765,
+                "BottomMargin": 27.6235,
+                "Tag": 1269,
+                "ActionTag": -2105656300,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 564.0
+                },
+                "Name": "gameList_bg",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "DirectionType": "Vertical",
+                "HorizontalType": "Align_HorizontalCenter",
+                "IsBounceEnabled": true,
+                "ScrollDirectionType": 0,
+                "ClipAble": true,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 0,
+                  "G": 0
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": -10,
+                "Scale9OriginY": -10,
+                "Scale9Width": 20,
+                "Scale9Height": 20,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5
+                },
+                "Position": {
+                  "X": 130.93,
+                  "Y": 43.5274
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1207,
+                  "Y": 0.0632
+                },
+                "PreSize": {
+                  "X": 0.188,
+                  "Y": 0.7808
+                },
+                "LeftMargin": 28.93,
+                "RightMargin": 852.07,
+                "TopMargin": 107.4726,
+                "BottomMargin": 43.5274,
+                "Tag": 74,
+                "ActionTag": -734055203,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 538.0
+                },
+                "Name": "gameList",
+                "ctype": "ListViewObjectData"
+              },
+              {
+                "FontSize": 24,
+                "ButtonText": "",
+                "TextColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/guanyun_n.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/guanyun_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/guanyun_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 50,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": -290.3087,
+                  "Y": 397.482
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": -0.2676,
+                  "Y": 0.5769
+                },
+                "PreSize": {
+                  "X": 0.188,
+                  "Y": 0.1045
+                },
+                "LeftMargin": -392.3087,
+                "RightMargin": 1273.3087,
+                "TopMargin": 291.518,
+                "BottomMargin": 325.482,
+                "Tag": 75,
+                "ActionTag": -1573838264,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 72.0
+                },
+                "Name": "item",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": -1649403039,
+            "Size": {
+              "X": 1085.0,
+              "Y": 689.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "createNewPng/bg_left.png",
+        "createNewPng/guanyun_n.png",
+        "createNewPng/guanyun_s.png",
+        "fonts/fzcy.ttf",
+        "game_picture/btn_x_normal.png",
+        "game_picture/diban.png",
+        "joinGame/bg_create.png",
+        "joinGame/friendCard_mj_1.png",
+        "joinGame/friendCard_mj_2.png",
+        "joinGame/friendCard_poke_1.png",
+        "joinGame/friendCard_poke_2.png",
+        "joinGame/zhongtan-1_03.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

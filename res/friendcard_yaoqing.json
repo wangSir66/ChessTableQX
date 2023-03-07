@@ -1,0 +1,663 @@
+{
+  "ID": "e8f6c577-284d-44e5-8075-b870a6e5f8c2",
+  "Version": "2.3.4",
+  "Name": "friendcard_yaoqing",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 651,
+        "Children": [
+          {
+            "ClipAble": false,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 304,
+            "ActionTag": -507259598,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Alpha": 153,
+            "Name": "Image_di",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "friendCards/common/img_xiaotanchuang.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 224,
+            "Scale9OriginY": 153,
+            "Scale9Width": 338,
+            "Scale9Height": 195,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.6141,
+              "Y": 0.6958
+            },
+            "LeftMargin": 247.0,
+            "RightMargin": 247.0,
+            "TopMargin": 109.5,
+            "BottomMargin": 109.5,
+            "Tag": 1004,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/yaoqing/title_YQ.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 110,
+                "Scale9OriginY": 19,
+                "Scale9Width": 114,
+                "Scale9Height": 20,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 393.0,
+                  "Y": 465.69
+                },
+                "Scale": {
+                  "ScaleX": 0.9,
+                  "ScaleY": 0.9
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.9295
+                },
+                "PreSize": {
+                  "X": 0.4249,
+                  "Y": 0.1158
+                },
+                "LeftMargin": 226.0,
+                "RightMargin": 226.0,
+                "TopMargin": 6.31,
+                "BottomMargin": 436.69,
+                "Tag": 29,
+                "ActionTag": -1197430603,
+                "Size": {
+                  "X": 334.0,
+                  "Y": 58.0
+                },
+                "Name": "img_title",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/headMask1.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 32,
+                "Scale9OriginY": 32,
+                "Scale9Width": 40,
+                "Scale9Height": 40,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 189.45,
+                  "Y": 315.7
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.241,
+                  "Y": 0.6301
+                },
+                "PreSize": {
+                  "X": 0.1323,
+                  "Y": 0.2076
+                },
+                "LeftMargin": 137.45,
+                "RightMargin": 544.55,
+                "TopMargin": 133.3,
+                "BottomMargin": 263.7,
+                "Tag": 1005,
+                "ActionTag": 734973680,
+                "Size": {
+                  "X": 104.0,
+                  "Y": 104.0
+                },
+                "Name": "Image_head",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 42,
+                "LabelText": "七星牌友会_标题",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineSize": 3,
+                "OutlineColor": {
+                  "R": 145,
+                  "G": 70,
+                  "B": 16
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 254.52,
+                  "Y": 315.7
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 211,
+                  "G": 60,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3238,
+                  "Y": 0.6301
+                },
+                "PreSize": {
+                  "X": 0.4109,
+                  "Y": 0.0958
+                },
+                "LeftMargin": 254.52,
+                "RightMargin": 208.48,
+                "TopMargin": 161.3,
+                "BottomMargin": 291.7,
+                "Tag": 1006,
+                "ActionTag": 1074557474,
+                "Size": {
+                  "X": 323.0,
+                  "Y": 48.0
+                },
+                "Name": "Text_title",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "亲友圈ID  ",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.4677,
+                  "ScaleY": 0.4578
+                },
+                "Position": {
+                  "X": 191.45,
+                  "Y": 179.49
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 96,
+                  "G": 46,
+                  "B": 26
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2436,
+                  "Y": 0.3583
+                },
+                "PreSize": {
+                  "X": 0.1667,
+                  "Y": 0.0679
+                },
+                "LeftMargin": 130.1813,
+                "RightMargin": 524.8187,
+                "TopMargin": 303.0752,
+                "BottomMargin": 163.9248,
+                "Tag": 70,
+                "ActionTag": -260814690,
+                "Size": {
+                  "X": 131.0,
+                  "Y": 34.0
+                },
+                "Name": "Image_ID",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/yaoqing/img_shuru.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 22,
+                "Scale9OriginY": 17,
+                "Scale9Width": 182,
+                "Scale9Height": 18,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 393.0,
+                  "Y": 179.49
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.3583
+                },
+                "PreSize": {
+                  "X": 0.2875,
+                  "Y": 0.1038
+                },
+                "LeftMargin": 280.0,
+                "RightMargin": 280.0,
+                "TopMargin": 295.51,
+                "BottomMargin": 153.49,
+                "Tag": 1008,
+                "Children": [
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 30,
+                    "LabelText": "123456",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/lanting.TTF",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 113.0,
+                      "Y": 26.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 96,
+                      "G": 46,
+                      "B": 26
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.885,
+                      "Y": 0.9615
+                    },
+                    "LeftMargin": 13.0,
+                    "RightMargin": 13.0,
+                    "TopMargin": 1.0,
+                    "BottomMargin": 1.0,
+                    "Tag": 66,
+                    "ActionTag": 289712874,
+                    "Size": {
+                      "X": 200.0,
+                      "Y": 50.0
+                    },
+                    "Name": "Text_ID",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 716400184,
+                "Size": {
+                  "X": 226.0,
+                  "Y": 52.0
+                },
+                "Name": "Image_di",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/yaoqing/btn_yaoqingHaoyou_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/yaoqing/btn_yaoqingHaoyou.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 138,
+                "Scale9Height": 41,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 611.1936,
+                  "Y": 179.49
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.7776,
+                  "Y": 0.3583
+                },
+                "PreSize": {
+                  "X": 0.2137,
+                  "Y": 0.1257
+                },
+                "LeftMargin": 527.1936,
+                "RightMargin": 90.8064,
+                "TopMargin": 290.01,
+                "BottomMargin": 147.99,
+                "Tag": 1009,
+                "ActionTag": 1041176427,
+                "Size": {
+                  "X": 168.0,
+                  "Y": 63.0
+                },
+                "Name": "Button_yaoqing",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 22,
+                "LabelText": "将ID发给牌友或发到群内，牌友即可通过ID找到牌友圈\n任何人加入均需要你审核，请到成员列表查看待审核玩家  ",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 0.0,
+                "ShadowOffsetY": 0.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 385.7688,
+                  "Y": 62.0382
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 183,
+                  "G": 180,
+                  "B": 170
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.4908,
+                  "Y": 0.1238
+                },
+                "PreSize": {
+                  "X": 0.7074,
+                  "Y": 0.0998
+                },
+                "LeftMargin": 107.7688,
+                "RightMargin": 122.2312,
+                "TopMargin": 413.9618,
+                "BottomMargin": 37.0382,
+                "Tag": 1010,
+                "ActionTag": 2618896,
+                "Size": {
+                  "X": 556.0,
+                  "Y": 50.0
+                },
+                "Name": "Text_tip",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 46,
+                "Scale9Height": 54,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 760.7346,
+                  "Y": 477.9565
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.9679,
+                  "Y": 0.954
+                },
+                "PreSize": {
+                  "X": 0.0967,
+                  "Y": 0.1517
+                },
+                "LeftMargin": 722.7346,
+                "RightMargin": -12.7346,
+                "TopMargin": -14.9565,
+                "BottomMargin": 439.9565,
+                "Tag": 72,
+                "ActionTag": 1026816543,
+                "Size": {
+                  "X": 76.0,
+                  "Y": 76.0
+                },
+                "Name": "btn_close",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1690186022,
+            "Size": {
+              "X": 786.0,
+              "Y": 501.0
+            },
+            "Name": "Image_bg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "fonts/lanting.TTF",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/headMask1.png",
+        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/yaoqing/btn_yaoqingHaoyou.png",
+        "friendCards/yaoqing/btn_yaoqingHaoyou_s.png",
+        "friendCards/yaoqing/img_shuru.png",
+        "friendCards/yaoqing/title_YQ.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

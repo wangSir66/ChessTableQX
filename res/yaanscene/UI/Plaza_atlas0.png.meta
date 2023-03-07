@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "ada6342f-70ac-48e9-ada4-f97362c8355f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2025,
+  "height": 992,
+  "platformSettings": {},
+  "subMetas": {
+    "Plaza_atlas0": {
+      "ver": "1.0.4",
+      "uuid": "5abcc156-0107-41e1-87b3-e7e7fd85dc7d",
+      "rawTextureUuid": "ada6342f-70ac-48e9-ada4-f97362c8355f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1,
+      "offsetY": 1,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2023,
+      "height": 990,
+      "rawWidth": 2025,
+      "rawHeight": 992,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

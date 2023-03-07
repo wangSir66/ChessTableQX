@@ -1,0 +1,97 @@
+
+skeleton.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guang1
+  rotate: false
+  xy: 0, 1742
+  size: 836, 291
+  orig: 836, 291
+  offset: 0, 0
+  index: -1
+longImg1
+  rotate: false
+  xy: 0, 1157
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg10
+  rotate: false
+  xy: 1254, 1313
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg2
+  rotate: false
+  xy: 0, 797
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg3
+  rotate: false
+  xy: 0, 437
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg4
+  rotate: false
+  xy: 0, 77
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg5
+  rotate: false
+  xy: 836, 1673
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg6
+  rotate: false
+  xy: 1366, 1673
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg7
+  rotate: true
+  xy: 530, 360
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg8
+  rotate: false
+  xy: 530, 0
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+longImg9
+  rotate: false
+  xy: 724, 1313
+  size: 530, 360
+  orig: 530, 360
+  offset: 0, 0
+  index: -1
+mozhi1
+  rotate: true
+  xy: 530, 890
+  size: 627, 179
+  orig: 627, 179
+  offset: 0, 0
+  index: -1
+zi1
+  rotate: false
+  xy: 0, 1517
+  size: 724, 225
+  orig: 724, 225
+  offset: 0, 0
+  index: -1

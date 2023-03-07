@@ -1,0 +1,356 @@
+{
+  "ID": "0645ce54-1149-4905-accd-dc5be4331fef",
+  "Version": "2.3.4",
+  "Name": "EndRoom",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 37,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -640.0,
+            "RightMargin": -640.0,
+            "TopMargin": -360.0,
+            "BottomMargin": -360.0,
+            "Tag": 56,
+            "ActionTag": 250805695,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "game_picture/bac_xiaotanchuan.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 170,
+            "Scale9OriginY": 127,
+            "Scale9Width": 638,
+            "Scale9Height": 367,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -432.5,
+            "RightMargin": -432.5,
+            "TopMargin": -283.5,
+            "BottomMargin": -283.5,
+            "Tag": 172,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/diban.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 20,
+                "Scale9OriginY": 18,
+                "Scale9Width": 21,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 432.5,
+                  "Y": 255.15
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.45
+                },
+                "PreSize": {
+                  "X": 0.9364,
+                  "Y": 0.806
+                },
+                "LeftMargin": 27.5,
+                "RightMargin": 27.5,
+                "TopMargin": 83.35,
+                "BottomMargin": 26.65,
+                "Tag": 5033,
+                "ActionTag": 313484572,
+                "Size": {
+                  "X": 810.0,
+                  "Y": 457.0
+                },
+                "Name": "Image_bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_33.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 432.5,
+                  "Y": 530.1
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.9349
+                },
+                "PreSize": {
+                  "X": 0.3954,
+                  "Y": 0.1041
+                },
+                "LeftMargin": 261.5,
+                "RightMargin": 261.5,
+                "TopMargin": 7.4,
+                "BottomMargin": 500.6,
+                "Tag": 173,
+                "ActionTag": 1141549979,
+                "Size": {
+                  "X": 342.0,
+                  "Y": 59.0
+                },
+                "Name": "title",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 44,
+                "LabelText": "玩家[abcdhdfafdsij]申请解散房间\n玩家[abcdhdfafdsij]申请解散房间\n玩家[abcdhdfafdsij]申请解散房间",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 432.5,
+                  "Y": 325.4737
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 123,
+                  "G": 78,
+                  "B": 63
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.574
+                },
+                "PreSize": {
+                  "X": 0.7884,
+                  "Y": 0.2328
+                },
+                "LeftMargin": 91.5,
+                "RightMargin": 91.5,
+                "TopMargin": 175.5263,
+                "BottomMargin": 259.4737,
+                "Tag": 42,
+                "ActionTag": 2068191731,
+                "Size": {
+                  "X": 682.0,
+                  "Y": 132.0
+                },
+                "Name": "info",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_45.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 170,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 432.5,
+                  "Y": 144.9474
+                },
+                "Scale": {
+                  "ScaleX": 1.4,
+                  "ScaleY": 1.35
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.2556
+                },
+                "PreSize": {
+                  "X": 0.2312,
+                  "Y": 0.1305
+                },
+                "LeftMargin": 332.5,
+                "RightMargin": 332.5,
+                "TopMargin": 385.0526,
+                "BottomMargin": 107.9474,
+                "Tag": 175,
+                "ActionTag": -1897550375,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 74.0
+                },
+                "Name": "tohome",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": -831338396,
+            "Size": {
+              "X": 865.0,
+              "Y": 567.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "game_picture/bac_xiaotanchuan.png",
+        "game_picture/diban.png",
+        "joinGame/xiaotanchuan_33.png",
+        "joinGame/xiaotanchuan_45.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

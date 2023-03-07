@@ -1,0 +1,1422 @@
+{
+  "ID": "7757b1a1-0dd9-4e47-86fd-eaa0feae271f",
+  "Version": "2.3.4",
+  "Name": "createRoomRecord",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 28,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 206,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -640.0,
+            "RightMargin": -640.0,
+            "TopMargin": -360.0,
+            "BottomMargin": -360.0,
+            "Tag": 2527,
+            "ActionTag": 698997623,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "game_picture/bac_xiaotanchuan.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 30,
+            "Scale9OriginY": 30,
+            "Scale9Width": 918,
+            "Scale9Height": 561,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -490.0,
+            "RightMargin": -490.0,
+            "TopMargin": -315.0,
+            "BottomMargin": -315.0,
+            "Tag": 11,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/diban.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 20,
+                "Scale9OriginY": 18,
+                "Scale9Width": 21,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 490.0,
+                  "Y": 283.5
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.45
+                },
+                "PreSize": {
+                  "X": 0.9398,
+                  "Y": 0.8175
+                },
+                "LeftMargin": 29.5,
+                "RightMargin": 29.5,
+                "TopMargin": 89.0,
+                "BottomMargin": 26.0,
+                "Tag": 586,
+                "ActionTag": 13149408,
+                "Size": {
+                  "X": 921.0,
+                  "Y": 515.0
+                },
+                "Name": "Image_bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "ItemMargin": 5,
+                "DirectionType": "Vertical",
+                "HorizontalType": "Align_HorizontalCenter",
+                "IsBounceEnabled": true,
+                "ScrollDirectionType": 0,
+                "ClipAble": true,
+                "BackColorAlpha": 0,
+                "ComboBoxIndex": 1,
+                "SingleColor": {},
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 41.03,
+                  "Y": 40.52
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0419,
+                  "Y": 0.0643
+                },
+                "PreSize": {
+                  "X": 0.9184,
+                  "Y": 0.7746
+                },
+                "LeftMargin": 41.03,
+                "RightMargin": 38.97,
+                "TopMargin": 101.48,
+                "BottomMargin": 40.52,
+                "Tag": 127,
+                "ActionTag": -1086848350,
+                "Size": {
+                  "X": 900.0,
+                  "Y": 488.0
+                },
+                "Name": "list",
+                "ctype": "ListViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/kaifangjilu.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 34,
+                "Scale9OriginY": 14,
+                "Scale9Width": 331,
+                "Scale9Height": 41,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 490.0,
+                  "Y": 585.21
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.9289
+                },
+                "PreSize": {
+                  "X": 0.4071,
+                  "Y": 0.1095
+                },
+                "LeftMargin": 290.5,
+                "RightMargin": 290.5,
+                "TopMargin": 10.29,
+                "BottomMargin": 550.71,
+                "Tag": 134,
+                "ActionTag": 656522174,
+                "Size": {
+                  "X": 399.0,
+                  "Y": 69.0
+                },
+                "Name": "play",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/btn_x_normal.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 46,
+                "Scale9Height": 54,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 960.22,
+                  "Y": 610.08
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9798,
+                  "Y": 0.9684
+                },
+                "PreSize": {
+                  "X": 0.0776,
+                  "Y": 0.1206
+                },
+                "LeftMargin": 922.22,
+                "RightMargin": -18.22,
+                "TopMargin": -18.08,
+                "BottomMargin": 572.08,
+                "Tag": 135,
+                "ActionTag": -1771852471,
+                "Size": {
+                  "X": 76.0,
+                  "Y": 76.0
+                },
+                "Name": "close",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/dengdai.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 362.6,
+                  "Y": 409.5
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.37,
+                  "Y": 0.65
+                },
+                "PreSize": {
+                  "X": 0.6316,
+                  "Y": 0.7302
+                },
+                "LeftMargin": 53.1,
+                "RightMargin": 307.9,
+                "TopMargin": -9.5,
+                "BottomMargin": 179.5,
+                "Tag": 3486,
+                "ActionTag": 511695460,
+                "Size": {
+                  "X": 619.0,
+                  "Y": 460.0
+                },
+                "Name": "nullTip_image",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FontSize": 18,
+                "LabelText": "您还没有开房记录哦~",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/fzcy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 490.0,
+                  "Y": 151.2
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 162,
+                  "G": 97,
+                  "B": 75
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.24
+                },
+                "PreSize": {
+                  "X": 0.1796,
+                  "Y": 0.0349
+                },
+                "LeftMargin": 402.0,
+                "RightMargin": 402.0,
+                "TopMargin": 467.8,
+                "BottomMargin": 140.2,
+                "Tag": 222,
+                "Children": [
+                  {
+                    "FlipX": true,
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "game_picture/tishixiushi.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 49,
+                    "Scale9OriginY": 4,
+                    "Scale9Width": 38,
+                    "Scale9Height": 5,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -70.4,
+                      "Y": 11.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": -0.4,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.7727,
+                      "Y": 0.5909
+                    },
+                    "LeftMargin": -138.4,
+                    "RightMargin": 178.4,
+                    "TopMargin": 4.5,
+                    "BottomMargin": 4.5,
+                    "Tag": 223,
+                    "ActionTag": 514735218,
+                    "Size": {
+                      "X": 136.0,
+                      "Y": 13.0
+                    },
+                    "Name": "Image_tishi_0",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "game_picture/tishixiushi.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 49,
+                    "Scale9OriginY": 4,
+                    "Scale9Width": 38,
+                    "Scale9Height": 5,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 246.4,
+                      "Y": 11.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.4,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.7727,
+                      "Y": 0.5909
+                    },
+                    "LeftMargin": 178.4,
+                    "RightMargin": -138.4,
+                    "TopMargin": 4.5,
+                    "BottomMargin": 4.5,
+                    "Tag": 224,
+                    "ActionTag": 1542861078,
+                    "Size": {
+                      "X": 136.0,
+                      "Y": 13.0
+                    },
+                    "Name": "Image_tishi_0_0",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -1680239477,
+                "Size": {
+                  "X": 176.0,
+                  "Y": 22.0
+                },
+                "Name": "nullTip_text",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -528218928,
+            "Size": {
+              "X": 980.0,
+              "Y": 630.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 101,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "game_picture/daTC3_18.png",
+              "Plist": ""
+            },
+            "SingleColor": {
+              "R": 144,
+              "G": 238,
+              "B": 144
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 24,
+            "Scale9OriginY": 24,
+            "Scale9Width": 935,
+            "Scale9Height": 60,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -0.3447,
+              "Y": 144.6322
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -450.3447,
+            "RightMargin": -449.6553,
+            "TopMargin": -204.6322,
+            "BottomMargin": 84.6322,
+            "Tag": 1549,
+            "Children": [
+              {
+                "FontSize": 20,
+                "LabelText": "房间号:123456",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 112,
+                  "G": 84,
+                  "B": 49
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 300.0,
+                  "Y": 90.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 211,
+                  "G": 60,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3333,
+                  "Y": 0.75
+                },
+                "PreSize": {
+                  "X": 0.1444,
+                  "Y": 0.1667
+                },
+                "LeftMargin": 300.0,
+                "RightMargin": 470.0,
+                "TopMargin": 20.0,
+                "BottomMargin": 80.0,
+                "Tag": 129,
+                "ActionTag": -113143812,
+                "Size": {
+                  "X": 130.0,
+                  "Y": 20.0
+                },
+                "Name": "tableid",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 17,
+                "LabelText": "2017-02-20 10:10:10",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 112,
+                  "G": 84,
+                  "B": 49
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 870.0,
+                  "Y": 90.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9667,
+                  "Y": 0.75
+                },
+                "PreSize": {
+                  "X": 0.19,
+                  "Y": 0.1417
+                },
+                "LeftMargin": 699.0,
+                "RightMargin": 30.0,
+                "TopMargin": 21.5,
+                "BottomMargin": 81.5,
+                "Tag": 130,
+                "ActionTag": -10047933,
+                "Size": {
+                  "X": 171.0,
+                  "Y": 17.0
+                },
+                "Name": "time",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 17,
+                "LabelText": "房间号:123456",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 112,
+                  "G": 84,
+                  "B": 49
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 100.0,
+                  "Y": 30.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1111,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.1267,
+                  "Y": 0.1417
+                },
+                "LeftMargin": 100.0,
+                "RightMargin": 686.0,
+                "TopMargin": 81.5,
+                "BottomMargin": 21.5,
+                "Tag": 131,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/dayingjia.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 8,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 9,
+                    "Scale9Height": 15,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -16.14,
+                      "Y": 9.37
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.1416,
+                      "Y": 0.5512
+                    },
+                    "PreSize": {
+                      "X": 0.2193,
+                      "Y": 2.4118
+                    },
+                    "LeftMargin": -28.64,
+                    "RightMargin": 117.64,
+                    "TopMargin": -12.87,
+                    "BottomMargin": -11.13,
+                    "Tag": 505,
+                    "ActionTag": 1289300951,
+                    "Size": {
+                      "X": 25.0,
+                      "Y": 41.0
+                    },
+                    "Name": "tagIcon",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -1340340863,
+                "Size": {
+                  "X": 114.0,
+                  "Y": 17.0
+                },
+                "Name": "player0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 17,
+                "LabelText": "房间号:123456",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 112,
+                  "G": 84,
+                  "B": 49
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 320.0,
+                  "Y": 30.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3556,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.1267,
+                  "Y": 0.1417
+                },
+                "LeftMargin": 320.0,
+                "RightMargin": 466.0,
+                "TopMargin": 81.5,
+                "BottomMargin": 21.5,
+                "Tag": 132,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/dayingjia.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 8,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 9,
+                    "Scale9Height": 15,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -18.14,
+                      "Y": 9.37
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.1591,
+                      "Y": 0.5512
+                    },
+                    "PreSize": {
+                      "X": 0.2193,
+                      "Y": 2.4118
+                    },
+                    "LeftMargin": -30.64,
+                    "RightMargin": 119.64,
+                    "TopMargin": -12.87,
+                    "BottomMargin": -11.13,
+                    "Tag": 506,
+                    "ActionTag": -1798370905,
+                    "Size": {
+                      "X": 25.0,
+                      "Y": 41.0
+                    },
+                    "Name": "tagIcon",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -1440806368,
+                "Size": {
+                  "X": 114.0,
+                  "Y": 17.0
+                },
+                "Name": "player1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 17,
+                "LabelText": "房间号:123456",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 112,
+                  "G": 84,
+                  "B": 49
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 540.0,
+                  "Y": 30.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.1267,
+                  "Y": 0.1417
+                },
+                "LeftMargin": 540.0,
+                "RightMargin": 246.0,
+                "TopMargin": 81.5,
+                "BottomMargin": 21.5,
+                "Tag": 133,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/dayingjia.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 8,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 9,
+                    "Scale9Height": 15,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -18.14,
+                      "Y": 9.37
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "RotationSkewX": -0.1838,
+                    "RotationSkewY": -0.1838,
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.1591,
+                      "Y": 0.5512
+                    },
+                    "PreSize": {
+                      "X": 0.2193,
+                      "Y": 2.4118
+                    },
+                    "LeftMargin": -30.64,
+                    "RightMargin": 119.64,
+                    "TopMargin": -12.87,
+                    "BottomMargin": -11.13,
+                    "Tag": 507,
+                    "ActionTag": -1615496929,
+                    "Size": {
+                      "X": 25.0,
+                      "Y": 41.0
+                    },
+                    "Name": "tagIcon",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 1924321724,
+                "Size": {
+                  "X": 114.0,
+                  "Y": 17.0
+                },
+                "Name": "player2",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 17,
+                "LabelText": "房间号:123456",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "R": 112,
+                  "G": 84,
+                  "B": 49
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 760.0,
+                  "Y": 30.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8444,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.1267,
+                  "Y": 0.1417
+                },
+                "LeftMargin": 760.0,
+                "RightMargin": 26.0,
+                "TopMargin": 81.5,
+                "BottomMargin": 21.5,
+                "Tag": 134,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/dayingjia.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 8,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 9,
+                    "Scale9Height": 15,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -18.14,
+                      "Y": 9.37
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.1591,
+                      "Y": 0.5512
+                    },
+                    "PreSize": {
+                      "X": 0.2193,
+                      "Y": 2.4118
+                    },
+                    "LeftMargin": -30.64,
+                    "RightMargin": 119.64,
+                    "TopMargin": -12.87,
+                    "BottomMargin": -11.13,
+                    "Tag": 508,
+                    "ActionTag": 1540654184,
+                    "Size": {
+                      "X": 25.0,
+                      "Y": 41.0
+                    },
+                    "Name": "tagIcon",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 30670079,
+                "Size": {
+                  "X": 114.0,
+                  "Y": 17.0
+                },
+                "Name": "player3",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/numBg.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 10,
+                "Scale9OriginY": 10,
+                "Scale9Width": 13,
+                "Scale9Height": 13,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 38.0,
+                  "Y": 60.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0422,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0367,
+                  "Y": 0.275
+                },
+                "LeftMargin": 21.5,
+                "RightMargin": 845.5,
+                "TopMargin": 43.5,
+                "BottomMargin": 43.5,
+                "Tag": 605,
+                "ActionTag": 2011281744,
+                "Size": {
+                  "X": 33.0,
+                  "Y": 33.0
+                },
+                "Name": "num_bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 24,
+                "LabelText": "1",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/fzcy.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 4,
+                "OutlineColor": {
+                  "R": 87,
+                  "G": 50,
+                  "B": 23
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 38.0,
+                  "Y": 60.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0422,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0122,
+                  "Y": 0.2417
+                },
+                "LeftMargin": 32.5,
+                "RightMargin": 856.5,
+                "TopMargin": 45.5,
+                "BottomMargin": 45.5,
+                "Tag": 176,
+                "ActionTag": -1472994401,
+                "Size": {
+                  "X": 11.0,
+                  "Y": 29.0
+                },
+                "Name": "num",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 36,
+                "LabelText": "沭阳麻将",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/fzcy.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 211,
+                  "G": 60,
+                  "B": 0
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 71.0,
+                  "Y": 90.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 246,
+                  "B": 183
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0789,
+                  "Y": 0.75
+                },
+                "PreSize": {
+                  "X": 0.1644,
+                  "Y": 0.3917
+                },
+                "LeftMargin": 71.0,
+                "RightMargin": 681.0,
+                "TopMargin": 6.5,
+                "BottomMargin": 66.5,
+                "Tag": 672,
+                "ActionTag": -1500572131,
+                "Size": {
+                  "X": 148.0,
+                  "Y": 47.0
+                },
+                "Name": "gameType",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "8局,AA付",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 440.0,
+                  "Y": 90.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 169,
+                  "G": 140,
+                  "B": 78
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4889,
+                  "Y": 0.75
+                },
+                "PreSize": {
+                  "X": 0.0889,
+                  "Y": 0.1667
+                },
+                "LeftMargin": 440.0,
+                "RightMargin": 380.0,
+                "TopMargin": 20.0,
+                "BottomMargin": 80.0,
+                "Tag": 499,
+                "ActionTag": -1986479892,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 20.0
+                },
+                "Name": "Text_1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/daTC3_19.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 250,
+                "Scale9Width": 260,
+                "Scale9Height": 1,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 472.5,
+                  "Y": 60.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.525,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.8889,
+                  "Y": 0.0083
+                },
+                "LeftMargin": 72.5,
+                "RightMargin": 27.5,
+                "TopMargin": 59.5,
+                "BottomMargin": 59.5,
+                "Tag": 606,
+                "ActionTag": 489075481,
+                "Size": {
+                  "X": 800.0,
+                  "Y": 1.0
+                },
+                "Name": "Image_br",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": 1439027231,
+            "Size": {
+              "X": 900.0,
+              "Y": 120.0
+            },
+            "Name": "item",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "createNewPng/kaifangjilu.png",
+        "fonts/fzcy.ttf",
+        "game_picture/bac_xiaotanchuan.png",
+        "game_picture/btn_x_normal.png",
+        "game_picture/daTC3_18.png",
+        "game_picture/daTC3_19.png",
+        "game_picture/dengdai.png",
+        "game_picture/diban.png",
+        "game_picture/numBg.png",
+        "game_picture/tishixiushi.png",
+        "joinGame/dayingjia.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

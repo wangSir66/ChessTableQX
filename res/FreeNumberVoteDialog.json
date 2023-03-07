@@ -1,0 +1,928 @@
+{
+  "ID": "4ce5dad9-b650-403b-bd34-abbbc3d32edb",
+  "Version": "2.3.4",
+  "Name": "FreeNumberVoteDialog",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 134,
+        "Children": [
+          {
+            "ClipAble": false,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 462,
+            "ActionTag": 800640995,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Alpha": 153,
+            "Name": "Image_di",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "game_picture/bac_xiaotanchuan.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 169,
+            "Scale9OriginY": 141,
+            "Scale9Width": 640,
+            "Scale9Height": 339,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.643,
+              "Y": 0.6958
+            },
+            "LeftMargin": 228.5,
+            "RightMargin": 228.5,
+            "TopMargin": 109.5,
+            "BottomMargin": 109.5,
+            "Tag": 161,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/diban.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 20,
+                "Scale9OriginY": 18,
+                "Scale9Width": 21,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 410.5007,
+                  "Y": 226.5002
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.4988,
+                  "Y": 0.4521
+                },
+                "PreSize": {
+                  "X": 0.9368,
+                  "Y": 0.8104
+                },
+                "LeftMargin": 25.0007,
+                "RightMargin": 26.9993,
+                "TopMargin": 71.4998,
+                "BottomMargin": 23.5002,
+                "Tag": 47,
+                "ActionTag": 814052164,
+                "Size": {
+                  "X": 771.0,
+                  "Y": 406.0
+                },
+                "Name": "Image_9",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/FreeNumber/title.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 112,
+                "Scale9OriginY": 19,
+                "Scale9Width": 118,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 411.5,
+                  "Y": 493.4699
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.985
+                },
+                "PreSize": {
+                  "X": 0.4156,
+                  "Y": 0.1178
+                },
+                "LeftMargin": 240.5,
+                "RightMargin": 240.5,
+                "TopMargin": 7.5301,
+                "BottomMargin": 434.4699,
+                "Tag": 46,
+                "ActionTag": 874737344,
+                "Size": {
+                  "X": 342.0,
+                  "Y": 59.0
+                },
+                "Name": "Image_8",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/FreeNumber/line.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 217,
+                "Scale9Width": 224,
+                "Scale9Height": 1,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 411.5001,
+                  "Y": 372.003
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.7425
+                },
+                "PreSize": {
+                  "X": 0.7995,
+                  "Y": 0.002
+                },
+                "LeftMargin": 82.5001,
+                "RightMargin": 82.4999,
+                "TopMargin": 128.497,
+                "BottomMargin": 371.503,
+                "Tag": 50,
+                "ActionTag": 935991774,
+                "Size": {
+                  "X": 658.0,
+                  "Y": 1.0
+                },
+                "Name": "Image_12",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/FreeNumber/time_di.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 31,
+                "Scale9OriginY": 12,
+                "Scale9Width": 5,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 411.5,
+                  "Y": 83.15
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.166
+                },
+                "PreSize": {
+                  "X": 0.0814,
+                  "Y": 0.0898
+                },
+                "LeftMargin": 378.0,
+                "RightMargin": 378.0,
+                "TopMargin": 395.35,
+                "BottomMargin": 60.65,
+                "Tag": 456,
+                "Children": [
+                  {
+                    "FontSize": 30,
+                    "LabelText": "60",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/lanting.TTF",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 33.5,
+                      "Y": 22.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 239,
+                      "G": 53,
+                      "B": 23
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.5672,
+                      "Y": 0.7556
+                    },
+                    "LeftMargin": 14.5,
+                    "RightMargin": 14.5,
+                    "TopMargin": 5.5,
+                    "BottomMargin": 5.5,
+                    "Tag": 457,
+                    "ActionTag": -836684282,
+                    "Size": {
+                      "X": 38.0,
+                      "Y": 34.0
+                    },
+                    "Name": "Text_time",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 238909138,
+                "Size": {
+                  "X": 67.0,
+                  "Y": 45.0
+                },
+                "Name": "Image_time_di",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "xxxxxx",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Right",
+                "VerticalAlignmentType": "VT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 175.9996,
+                  "Y": 394.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2139,
+                  "Y": 0.7864
+                },
+                "PreSize": {
+                  "X": 0.0838,
+                  "Y": 0.0459
+                },
+                "LeftMargin": 106.9996,
+                "RightMargin": 647.0004,
+                "TopMargin": 95.5,
+                "BottomMargin": 382.5,
+                "Tag": 461,
+                "ActionTag": -2120552188,
+                "Size": {
+                  "X": 69.0,
+                  "Y": 23.0
+                },
+                "Name": "Text_info_0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 22,
+                "LabelText": "申请现在开局，当前人数为",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 180.1496,
+                  "Y": 395.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2189,
+                  "Y": 0.7884
+                },
+                "PreSize": {
+                  "X": 0.322,
+                  "Y": 0.0499
+                },
+                "LeftMargin": 180.1496,
+                "RightMargin": 377.8505,
+                "TopMargin": 93.5,
+                "BottomMargin": 382.5,
+                "Tag": 458,
+                "ActionTag": 1159702039,
+                "Size": {
+                  "X": 265.0,
+                  "Y": 25.0
+                },
+                "Name": "Text_info_1",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 22,
+                "LabelText": "3",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 449.299,
+                  "Y": 395.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 239,
+                  "G": 53,
+                  "B": 23
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5459,
+                  "Y": 0.7884
+                },
+                "PreSize": {
+                  "X": 0.0194,
+                  "Y": 0.0499
+                },
+                "LeftMargin": 449.299,
+                "RightMargin": 357.701,
+                "TopMargin": 93.5,
+                "BottomMargin": 382.5,
+                "Tag": 460,
+                "ActionTag": -824286391,
+                "Size": {
+                  "X": 16.0,
+                  "Y": 25.0
+                },
+                "Name": "Text_info_2",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 20,
+                "LabelText": "人。60秒未表态将默认拒绝。",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 469.4484,
+                  "Y": 394.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 128,
+                  "G": 96,
+                  "B": 40
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5704,
+                  "Y": 0.7864
+                },
+                "PreSize": {
+                  "X": 0.3111,
+                  "Y": 0.0459
+                },
+                "LeftMargin": 469.4484,
+                "RightMargin": 97.5516,
+                "TopMargin": 95.5,
+                "BottomMargin": 382.5,
+                "Tag": 459,
+                "ActionTag": -264262981,
+                "Size": {
+                  "X": 256.0,
+                  "Y": 23.0
+                },
+                "Name": "Text_info_3",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/dating1_06.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 32,
+                "Scale9OriginY": 32,
+                "Scale9Width": 34,
+                "Scale9Height": 35,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 158.1434,
+                  "Y": 261.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1922,
+                  "Y": 0.521
+                },
+                "PreSize": {
+                  "X": 0.0972,
+                  "Y": 0.1597
+                },
+                "LeftMargin": 118.1434,
+                "RightMargin": 624.8566,
+                "TopMargin": 200.0,
+                "BottomMargin": 221.0,
+                "Tag": 462,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "playing/gameTable/FreeNumber/weibiaotai.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 35,
+                    "Scale9OriginY": 12,
+                    "Scale9Width": 37,
+                    "Scale9Height": 15,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 40.0004,
+                      "Y": -36.4655
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": -0.4558
+                    },
+                    "PreSize": {
+                      "X": 1.3375,
+                      "Y": 0.4875
+                    },
+                    "LeftMargin": -13.4996,
+                    "RightMargin": -13.5004,
+                    "TopMargin": 96.9655,
+                    "BottomMargin": -55.9655,
+                    "Tag": 49,
+                    "ActionTag": 2145628992,
+                    "Size": {
+                      "X": 107.0,
+                      "Y": 39.0
+                    },
+                    "Name": "Text_state",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 20,
+                    "LabelText": "昵称",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/lanting.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 40.0,
+                      "Y": 107.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 128,
+                      "G": 96,
+                      "B": 40
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 1.3375
+                    },
+                    "PreSize": {
+                      "X": 0.5375,
+                      "Y": 0.2875
+                    },
+                    "LeftMargin": 18.5,
+                    "RightMargin": 18.5,
+                    "TopMargin": -38.5,
+                    "BottomMargin": 95.5,
+                    "Tag": 488,
+                    "ActionTag": 833113628,
+                    "Size": {
+                      "X": 43.0,
+                      "Y": 23.0
+                    },
+                    "Name": "Text_name",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1578884251,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 80.0
+                },
+                "Name": "Image_head1",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/FreeNumber/wait_n.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/FreeNumber/wait_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 162,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 246.9,
+                  "Y": 83.15
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.3,
+                  "Y": 0.166
+                },
+                "PreSize": {
+                  "X": 0.2333,
+                  "Y": 0.1477
+                },
+                "LeftMargin": 150.9,
+                "RightMargin": 480.1,
+                "TopMargin": 380.85,
+                "BottomMargin": 46.15,
+                "Tag": 172,
+                "ActionTag": -656383708,
+                "Size": {
+                  "X": 192.0,
+                  "Y": 74.0
+                },
+                "Name": "Button_wait",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/FreeNumber/start_n.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/FreeNumber/start_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 162,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 576.1,
+                  "Y": 83.15
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.7,
+                  "Y": 0.166
+                },
+                "PreSize": {
+                  "X": 0.2333,
+                  "Y": 0.1477
+                },
+                "LeftMargin": 480.1,
+                "RightMargin": 150.9,
+                "TopMargin": 380.85,
+                "BottomMargin": 46.15,
+                "Tag": 173,
+                "ActionTag": -563634857,
+                "Size": {
+                  "X": 192.0,
+                  "Y": 74.0
+                },
+                "Name": "Button_start",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": -422875379,
+            "Size": {
+              "X": 823.0,
+              "Y": 501.0
+            },
+            "Name": "Image_bg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "fonts/lanting.TTF",
+        "game_picture/bac_xiaotanchuan.png",
+        "game_picture/dating1_06.png",
+        "game_picture/diban.png",
+        "playing/gameTable/FreeNumber/line.png",
+        "playing/gameTable/FreeNumber/start_n.png",
+        "playing/gameTable/FreeNumber/time_di.png",
+        "playing/gameTable/FreeNumber/title.png",
+        "playing/gameTable/FreeNumber/wait_n.png",
+        "playing/gameTable/FreeNumber/weibiaotai.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

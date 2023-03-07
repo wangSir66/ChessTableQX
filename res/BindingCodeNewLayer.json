@@ -1,0 +1,328 @@
+{
+  "ID": "a34df819-bc8b-455a-93cd-f548921ac8d2",
+  "Version": "2.3.4",
+  "Name": "BindingCodeNewLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 44,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 638.8578,
+              "Y": 362.3967
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4991,
+              "Y": 0.5033
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": -1.1422,
+            "RightMargin": 1.1422,
+            "TopMargin": -2.3967,
+            "BottomMargin": 2.3967,
+            "Tag": 119,
+            "ActionTag": 1311376693,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "agency/agencyBg.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 169,
+            "Scale9OriginY": 141,
+            "Scale9Width": 532,
+            "Scale9Height": 239,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.512,
+              "Y": 367.056
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5004,
+              "Y": 0.5098
+            },
+            "PreSize": {
+              "X": 0.6797,
+              "Y": 0.7236
+            },
+            "LeftMargin": 205.512,
+            "RightMargin": 204.488,
+            "TopMargin": 92.444,
+            "BottomMargin": 106.556,
+            "Tag": 116,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "agency/close.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "agency/close.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 31,
+                "Scale9Height": 43,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 867.3763,
+                  "Y": 420.0409
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.997,
+                  "Y": 0.8062
+                },
+                "PreSize": {
+                  "X": 0.0701,
+                  "Y": 0.1248
+                },
+                "LeftMargin": 836.8763,
+                "RightMargin": -27.8763,
+                "TopMargin": 68.4591,
+                "BottomMargin": 387.5409,
+                "Tag": 787,
+                "ActionTag": -1382836787,
+                "Size": {
+                  "X": 61.0,
+                  "Y": 65.0
+                },
+                "Name": "close",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "agency/btn_touming.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 29,
+                "Scale9OriginY": 39,
+                "Scale9Width": 32,
+                "Scale9Height": 42,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 515.0,
+                  "Y": 196.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.592,
+                  "Y": 0.3762
+                },
+                "PreSize": {
+                  "X": 0.6264,
+                  "Y": 0.096
+                },
+                "LeftMargin": 242.5,
+                "RightMargin": 82.5,
+                "TopMargin": 300.0,
+                "BottomMargin": 171.0,
+                "Tag": 161,
+                "ActionTag": -1713405308,
+                "Size": {
+                  "X": 545.0,
+                  "Y": 50.0
+                },
+                "Name": "input1",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "agency/btn_commit.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "agency/btn_commit.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 223,
+                "Scale9Height": 60,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 514.9999,
+                  "Y": 96.1629
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.592,
+                  "Y": 0.1846
+                },
+                "PreSize": {
+                  "X": 0.2908,
+                  "Y": 0.1574
+                },
+                "LeftMargin": 388.4999,
+                "RightMargin": 228.5001,
+                "TopMargin": 383.837,
+                "BottomMargin": 55.1629,
+                "Tag": 160,
+                "ActionTag": 580950398,
+                "Size": {
+                  "X": 253.0,
+                  "Y": 82.0
+                },
+                "Name": "btn_commit",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1692587304,
+            "Size": {
+              "X": 870.0,
+              "Y": 521.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "agency/agencyBg.png",
+        "agency/btn_commit.png",
+        "agency/btn_touming.png",
+        "agency/close.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

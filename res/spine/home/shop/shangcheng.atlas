@@ -1,0 +1,41 @@
+
+shangcheng.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+denglong-red
+  rotate: false
+  xy: 32, 4
+  size: 22, 33
+  orig: 22, 33
+  offset: 0, 0
+  index: -1
+denglong-ye
+  rotate: false
+  xy: 0, 2
+  size: 32, 35
+  orig: 32, 35
+  offset: 0, 0
+  index: -1
+tongqian
+  rotate: false
+  xy: 112, 105
+  size: 16, 23
+  orig: 16, 23
+  offset: 0, 0
+  index: -1
+yinying
+  rotate: true
+  xy: 85, 27
+  size: 101, 27
+  orig: 101, 27
+  offset: 0, 0
+  index: -1
+zhuti
+  rotate: false
+  xy: 0, 37
+  size: 85, 91
+  orig: 85, 91
+  offset: 0, 0
+  index: -1

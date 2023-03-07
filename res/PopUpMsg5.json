@@ -1,0 +1,621 @@
+{
+  "ID": "2894bc14-ce85-4b62-b846-cb82f069345d",
+  "Version": "2.3.4",
+  "Name": "PopUpMsg5",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 20,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": -1.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -640.0,
+            "RightMargin": -640.0,
+            "TopMargin": -359.0,
+            "BottomMargin": -361.0,
+            "Tag": 32,
+            "ActionTag": 1766474862,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "game_picture/bac_xiaotanchuan.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 170,
+            "Scale9OriginY": 127,
+            "Scale9Width": 638,
+            "Scale9Height": 367,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -432.5,
+            "RightMargin": -432.5,
+            "TopMargin": -283.5,
+            "BottomMargin": -283.5,
+            "Tag": 69,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/diban.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 20,
+                "Scale9OriginY": 18,
+                "Scale9Width": 21,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 431.462,
+                  "Y": 255.4902
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.4988,
+                  "Y": 0.4506
+                },
+                "PreSize": {
+                  "X": 0.9422,
+                  "Y": 0.8201
+                },
+                "LeftMargin": 23.962,
+                "RightMargin": 26.038,
+                "TopMargin": 79.0098,
+                "BottomMargin": 22.9902,
+                "Tag": 1118,
+                "ActionTag": -1816022051,
+                "Size": {
+                  "X": 815.0,
+                  "Y": 465.0
+                },
+                "Name": "Bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/tishi_xin.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 112,
+                "Scale9OriginY": 19,
+                "Scale9Width": 118,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 432.5,
+                  "Y": 531.3924
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.9372
+                },
+                "PreSize": {
+                  "X": 0.3954,
+                  "Y": 0.1041
+                },
+                "LeftMargin": 261.5,
+                "RightMargin": 261.5,
+                "TopMargin": 6.1076,
+                "BottomMargin": 501.8924,
+                "Tag": 1117,
+                "ActionTag": -967927919,
+                "Size": {
+                  "X": 342.0,
+                  "Y": 59.0
+                },
+                "Name": "title",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 26,
+                "LabelText": "请添加联系以下微信号,进行充值。\n请添加联系以下微信号,进行充值。\n请添加联系以下微信号,进行充值。",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "VerticalAlignmentType": "VT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 432.5,
+                  "Y": 322.5042
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 211,
+                  "G": 60,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5688
+                },
+                "PreSize": {
+                  "X": 0.6647,
+                  "Y": 0.2998
+                },
+                "LeftMargin": 145.0,
+                "RightMargin": 145.0,
+                "TopMargin": 159.4958,
+                "BottomMargin": 237.5042,
+                "Tag": 165,
+                "ActionTag": -1709109701,
+                "Size": {
+                  "X": 575.0,
+                  "Y": 170.0
+                },
+                "Name": "msg",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/cancle_xin_s.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/cancle_xin_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/cancle_xin_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 170,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 605.5,
+                  "Y": 110.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.7,
+                  "Y": 0.194
+                },
+                "PreSize": {
+                  "X": 0.2312,
+                  "Y": 0.1305
+                },
+                "LeftMargin": 505.5,
+                "RightMargin": 159.5,
+                "TopMargin": 420.0,
+                "BottomMargin": 73.0,
+                "Tag": 71,
+                "ActionTag": 1575123502,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 74.0
+                },
+                "Name": "no",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_s.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 170,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 259.5,
+                  "Y": 110.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.3,
+                  "Y": 0.194
+                },
+                "PreSize": {
+                  "X": 0.2312,
+                  "Y": 0.1305
+                },
+                "LeftMargin": 159.5,
+                "RightMargin": 505.5,
+                "TopMargin": 420.0,
+                "BottomMargin": 73.0,
+                "Tag": 164,
+                "ActionTag": -1513567581,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 74.0
+                },
+                "Name": "yes",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "joinGame/xiaotanchuan_42.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 83,
+                "Scale9OriginY": 18,
+                "Scale9Width": 206,
+                "Scale9Height": 19,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 260.365,
+                  "Y": 434.448
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.301,
+                  "Y": 0.7662
+                },
+                "PreSize": {
+                  "X": 0.4301,
+                  "Y": 0.1199
+                },
+                "LeftMargin": 74.365,
+                "RightMargin": 418.635,
+                "TopMargin": 98.552,
+                "BottomMargin": 400.448,
+                "Tag": 1210,
+                "ActionTag": -190613414,
+                "Size": {
+                  "X": 372.0,
+                  "Y": 68.0
+                },
+                "VisibleForFrame": false,
+                "Name": "Image_3",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "CheckedState": true,
+                "NormalBackFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/daTC1_19.png",
+                  "Plist": ""
+                },
+                "PressedBackFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/daTC1_19.png",
+                  "Plist": ""
+                },
+                "DisableBackFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/daTC1_19.png",
+                  "Plist": ""
+                },
+                "NodeNormalFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/daTC1_20.png",
+                  "Plist": ""
+                },
+                "NodeDisableFileData": {
+                  "Type": "Default",
+                  "Path": "Default/CheckBoxNode_Disable.png",
+                  "Plist": ""
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 359.5036,
+                  "Y": 198.5783
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.4156,
+                  "Y": 0.3502
+                },
+                "PreSize": {
+                  "X": 0.0416,
+                  "Y": 0.0617
+                },
+                "LeftMargin": 341.5036,
+                "RightMargin": 487.4964,
+                "TopMargin": 350.9218,
+                "BottomMargin": 181.0783,
+                "Tag": 209,
+                "Children": [
+                  {
+                    "FontSize": 20,
+                    "LabelText": "本局不再提醒",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 50.0,
+                      "Y": 17.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 137,
+                      "G": 87,
+                      "B": 47
+                    },
+                    "IconVisible": false,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.3889,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 3.3333,
+                      "Y": 0.5714
+                    },
+                    "LeftMargin": 50.0,
+                    "RightMargin": -134.0,
+                    "TopMargin": 7.5,
+                    "BottomMargin": 7.5,
+                    "Tag": 219,
+                    "ActionTag": 393883549,
+                    "Size": {
+                      "X": 120.0,
+                      "Y": 20.0
+                    },
+                    "Name": "Text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1273015035,
+                "Size": {
+                  "X": 36.0,
+                  "Y": 35.0
+                },
+                "Name": "CheckBox",
+                "ctype": "CheckBoxObjectData"
+              }
+            ],
+            "ActionTag": 1752009386,
+            "Size": {
+              "X": 865.0,
+              "Y": 567.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "createNewPng/cancle_xin_n.png",
+        "createNewPng/cancle_xin_s.png",
+        "createNewPng/daTC1_19.png",
+        "createNewPng/daTC1_20.png",
+        "createNewPng/sure_xin_n.png",
+        "createNewPng/sure_xin_s.png",
+        "createNewPng/tishi_xin.png",
+        "Default/CheckBoxNode_Disable.png",
+        "fonts/lanting.TTF",
+        "game_picture/bac_xiaotanchuan.png",
+        "game_picture/diban.png",
+        "joinGame/xiaotanchuan_42.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

@@ -1,0 +1,34 @@
+
+4.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guangxiao04
+  rotate: false
+  xy: 129, 236
+  size: 218, 255
+  orig: 218, 255
+  offset: 0, 0
+  index: -1
+yulechang01
+  rotate: false
+  xy: 129, 213
+  size: 70, 23
+  orig: 70, 23
+  offset: 0, 0
+  index: -1
+yulechang0111
+  rotate: false
+  xy: 0, 43
+  size: 129, 448
+  orig: 129, 448
+  offset: 0, 0
+  index: -1
+yulechang03
+  rotate: true
+  xy: 0, 0
+  size: 43, 120
+  orig: 43, 120
+  offset: 0, 0
+  index: -1

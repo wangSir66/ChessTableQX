@@ -1,0 +1,1923 @@
+{
+  "ID": "9ba130b2-9f2e-44eb-adda-bf5f605cbeca",
+  "Version": "2.3.4",
+  "Name": "playBackLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 69,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 204,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9OriginX": -22,
+            "Scale9OriginY": -19,
+            "Scale9Width": 44,
+            "Scale9Height": 38,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 70,
+            "ActionTag": -1101128943,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "game_picture/bac_xiaotanchuan.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 204,
+            "Scale9OriginY": 164,
+            "Scale9Width": 570,
+            "Scale9Height": 293,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.6141,
+              "Y": 0.6958
+            },
+            "LeftMargin": 247.0,
+            "RightMargin": 247.0,
+            "TopMargin": 109.5,
+            "BottomMargin": 109.5,
+            "Tag": 71,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/diban.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 20,
+                "Scale9OriginY": 18,
+                "Scale9Width": 21,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 393.0,
+                  "Y": 226.5021
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.4521
+                },
+                "PreSize": {
+                  "X": 0.9377,
+                  "Y": 0.8084
+                },
+                "LeftMargin": 24.5,
+                "RightMargin": 24.5,
+                "TopMargin": 71.9979,
+                "BottomMargin": 24.0021,
+                "Tag": 2058,
+                "ActionTag": 919066569,
+                "Size": {
+                  "X": 737.0,
+                  "Y": 405.0
+                },
+                "Name": "Image_bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/tishi_xin.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 83,
+                "Scale9OriginY": 22,
+                "Scale9Width": 176,
+                "Scale9Height": 15,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 389.463,
+                  "Y": 463.92
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.4955,
+                  "Y": 0.926
+                },
+                "PreSize": {
+                  "X": 0.4351,
+                  "Y": 0.1178
+                },
+                "LeftMargin": 218.463,
+                "RightMargin": 225.537,
+                "TopMargin": 7.58,
+                "BottomMargin": 434.42,
+                "Tag": 72,
+                "ActionTag": 2143138512,
+                "Size": {
+                  "X": 342.0,
+                  "Y": 59.0
+                },
+                "Name": "title",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/btn_x_normal.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 46,
+                "Scale9Height": 54,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 763.35,
+                  "Y": 480.73
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9712,
+                  "Y": 0.9595
+                },
+                "PreSize": {
+                  "X": 0.0967,
+                  "Y": 0.1517
+                },
+                "LeftMargin": 725.35,
+                "RightMargin": -15.35,
+                "TopMargin": -17.73,
+                "BottomMargin": 442.73,
+                "Tag": 211,
+                "ActionTag": -509193844,
+                "Size": {
+                  "X": 76.0,
+                  "Y": 76.0
+                },
+                "Name": "close",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "gameOver/shuru.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 106,
+                "Scale9OriginY": 16,
+                "Scale9Width": 110,
+                "Scale9Height": 17,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 290.43,
+                  "Y": 380.13
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3695,
+                  "Y": 0.7587
+                },
+                "PreSize": {
+                  "X": 0.4097,
+                  "Y": 0.0978
+                },
+                "LeftMargin": 129.43,
+                "RightMargin": 334.57,
+                "TopMargin": 96.37,
+                "BottomMargin": 355.63,
+                "Tag": 755,
+                "Children": [
+                  {
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "FontSize": 36,
+                    "IsCustomSize": true,
+                    "LabelText": "",
+                    "PlaceHolderText": "请输入回放码",
+                    "MaxLengthEnable": true,
+                    "MaxLengthText": 15,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 161.0,
+                      "Y": 24.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.9845,
+                      "Y": 0.8776
+                    },
+                    "LeftMargin": 2.5,
+                    "RightMargin": 2.5,
+                    "TopMargin": 3.0,
+                    "BottomMargin": 3.0,
+                    "Tag": 215,
+                    "ActionTag": -1585104904,
+                    "Size": {
+                      "X": 317.0,
+                      "Y": 43.0
+                    },
+                    "Name": "TextField_1",
+                    "ctype": "TextFieldObjectData"
+                  }
+                ],
+                "ActionTag": 33698864,
+                "Size": {
+                  "X": 322.0,
+                  "Y": 49.0
+                },
+                "Name": "xiaotanchuang",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_s.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 170,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 580.43,
+                  "Y": 380.13
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7385,
+                  "Y": 0.7587
+                },
+                "PreSize": {
+                  "X": 0.2545,
+                  "Y": 0.1477
+                },
+                "LeftMargin": 480.43,
+                "RightMargin": 105.57,
+                "TopMargin": 83.87,
+                "BottomMargin": 343.13,
+                "Tag": 73,
+                "ActionTag": -563193668,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 74.0
+                },
+                "Name": "btnSure",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 393.0,
+                  "Y": 195.39
+                },
+                "Scale": {
+                  "ScaleX": 0.8,
+                  "ScaleY": 0.8
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.39
+                },
+                "PreSize": {
+                  "X": 1.2723,
+                  "Y": 0.7984
+                },
+                "LeftMargin": -107.0,
+                "RightMargin": -107.0,
+                "TopMargin": 105.61,
+                "BottomMargin": -4.61,
+                "Tag": 139,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/xiao_bg2.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 33,
+                    "Scale9OriginY": 33,
+                    "Scale9Width": 34,
+                    "Scale9Height": 34,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 500.0,
+                      "Y": 184.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.46
+                    },
+                    "PreSize": {
+                      "X": 0.862,
+                      "Y": 0.9375
+                    },
+                    "LeftMargin": 69.0,
+                    "RightMargin": 69.0,
+                    "TopMargin": 28.5,
+                    "BottomMargin": -3.5,
+                    "Tag": 2059,
+                    "ActionTag": 827372884,
+                    "Size": {
+                      "X": 862.0,
+                      "Y": 375.0
+                    },
+                    "Name": "Image_22",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 500.0,
+                      "Y": 50.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.125
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 364.0,
+                    "RightMargin": 364.0,
+                    "TopMargin": 311.0,
+                    "BottomMargin": 11.0,
+                    "Tag": 2056,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_0.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 19,
+                        "Scale9Height": 24,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1875,
+                          "Y": 0.8462
+                        },
+                        "LeftMargin": 110.5,
+                        "RightMargin": 110.5,
+                        "TopMargin": 6.0,
+                        "BottomMargin": 6.0,
+                        "Tag": 2057,
+                        "ActionTag": 240071914,
+                        "Size": {
+                          "X": 51.0,
+                          "Y": 66.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 1594216411,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_0",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 220.0,
+                      "Y": 320.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.22,
+                      "Y": 0.8
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 84.0,
+                    "RightMargin": 644.0,
+                    "TopMargin": 41.0,
+                    "BottomMargin": 281.0,
+                    "Tag": 2054,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_1.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 1,
+                        "Scale9Height": 22,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1176,
+                          "Y": 0.8205
+                        },
+                        "LeftMargin": 120.0,
+                        "RightMargin": 120.0,
+                        "TopMargin": 7.0,
+                        "BottomMargin": 7.0,
+                        "Tag": 2055,
+                        "ActionTag": 1661548476,
+                        "Size": {
+                          "X": 32.0,
+                          "Y": 64.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 1103208803,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_1",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 500.0,
+                      "Y": 320.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.8
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 364.0,
+                    "RightMargin": 364.0,
+                    "TopMargin": 41.0,
+                    "BottomMargin": 281.0,
+                    "Tag": 2052,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_2.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 15,
+                        "Scale9Height": 23,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1728,
+                          "Y": 0.8333
+                        },
+                        "LeftMargin": 112.5,
+                        "RightMargin": 112.5,
+                        "TopMargin": 6.5,
+                        "BottomMargin": 6.5,
+                        "Tag": 2053,
+                        "ActionTag": 1302948109,
+                        "Size": {
+                          "X": 47.0,
+                          "Y": 65.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 494120575,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_2",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 780.0,
+                      "Y": 320.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.78,
+                      "Y": 0.8
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 644.0,
+                    "RightMargin": 84.0,
+                    "TopMargin": 41.0,
+                    "BottomMargin": 281.0,
+                    "Tag": 2050,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_3.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 16,
+                        "Scale9Height": 24,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1765,
+                          "Y": 0.8462
+                        },
+                        "LeftMargin": 112.0,
+                        "RightMargin": 112.0,
+                        "TopMargin": 6.0,
+                        "BottomMargin": 6.0,
+                        "Tag": 2051,
+                        "ActionTag": 1104622102,
+                        "Size": {
+                          "X": 48.0,
+                          "Y": 66.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 1387321029,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_3",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 220.0,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.22,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 84.0,
+                    "RightMargin": 644.0,
+                    "TopMargin": 131.0,
+                    "BottomMargin": 191.0,
+                    "Tag": 2048,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_4.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 19,
+                        "Scale9Height": 23,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1875,
+                          "Y": 0.8333
+                        },
+                        "LeftMargin": 110.5,
+                        "RightMargin": 110.5,
+                        "TopMargin": 6.5,
+                        "BottomMargin": 6.5,
+                        "Tag": 2049,
+                        "ActionTag": -609120177,
+                        "Size": {
+                          "X": 51.0,
+                          "Y": 65.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 1891595288,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_4",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 500.0,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 364.0,
+                    "RightMargin": 364.0,
+                    "TopMargin": 131.0,
+                    "BottomMargin": 191.0,
+                    "Tag": 2046,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_5.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 15,
+                        "Scale9Height": 23,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1728,
+                          "Y": 0.8333
+                        },
+                        "LeftMargin": 112.5,
+                        "RightMargin": 112.5,
+                        "TopMargin": 6.5,
+                        "BottomMargin": 6.5,
+                        "Tag": 2047,
+                        "ActionTag": -879906003,
+                        "Size": {
+                          "X": 47.0,
+                          "Y": 65.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": -210642418,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_5",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 780.0,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.78,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 644.0,
+                    "RightMargin": 84.0,
+                    "TopMargin": 131.0,
+                    "BottomMargin": 191.0,
+                    "Tag": 2044,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_6.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 17,
+                        "Scale9Height": 24,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1801,
+                          "Y": 0.8462
+                        },
+                        "LeftMargin": 111.5,
+                        "RightMargin": 111.5,
+                        "TopMargin": 6.0,
+                        "BottomMargin": 6.0,
+                        "Tag": 2045,
+                        "ActionTag": -564569455,
+                        "Size": {
+                          "X": 49.0,
+                          "Y": 66.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": -1481848684,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_6",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 220.0,
+                      "Y": 140.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.22,
+                      "Y": 0.35
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 84.0,
+                    "RightMargin": 644.0,
+                    "TopMargin": 221.0,
+                    "BottomMargin": 101.0,
+                    "Tag": 2042,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_7.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 17,
+                        "Scale9Height": 22,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1801,
+                          "Y": 0.8205
+                        },
+                        "LeftMargin": 111.5,
+                        "RightMargin": 111.5,
+                        "TopMargin": 7.0,
+                        "BottomMargin": 7.0,
+                        "Tag": 2043,
+                        "ActionTag": -1826906672,
+                        "Size": {
+                          "X": 49.0,
+                          "Y": 64.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": -702234291,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_7",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 500.0,
+                      "Y": 140.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.35
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 364.0,
+                    "RightMargin": 364.0,
+                    "TopMargin": 221.0,
+                    "BottomMargin": 101.0,
+                    "Tag": 2040,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_8.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 15,
+                        "Scale9Height": 24,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1728,
+                          "Y": 0.8462
+                        },
+                        "LeftMargin": 112.5,
+                        "RightMargin": 112.5,
+                        "TopMargin": 6.0,
+                        "BottomMargin": 6.0,
+                        "Tag": 2041,
+                        "ActionTag": 743787423,
+                        "Size": {
+                          "X": 47.0,
+                          "Y": 66.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 2108581908,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_8",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/bohaobtn.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 780.0,
+                      "Y": 140.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.78,
+                      "Y": 0.35
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 644.0,
+                    "RightMargin": 84.0,
+                    "TopMargin": 221.0,
+                    "BottomMargin": 101.0,
+                    "Tag": 2038,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "joinGame/bohao_9.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 16,
+                        "Scale9OriginY": 21,
+                        "Scale9Width": 17,
+                        "Scale9Height": 24,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 136.0,
+                          "Y": 39.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.1801,
+                          "Y": 0.8462
+                        },
+                        "LeftMargin": 111.5,
+                        "RightMargin": 111.5,
+                        "TopMargin": 6.0,
+                        "BottomMargin": 6.0,
+                        "Tag": 2039,
+                        "ActionTag": 1773252156,
+                        "Size": {
+                          "X": 49.0,
+                          "Y": 66.0
+                        },
+                        "Name": "Image_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": 1219804951,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "Button_9",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/shangchu_1.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/shangchu_1.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 780.0,
+                      "Y": 50.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.78,
+                      "Y": 0.125
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 644.0,
+                    "RightMargin": 84.0,
+                    "TopMargin": 311.0,
+                    "BottomMargin": 11.0,
+                    "Tag": 2036,
+                    "ActionTag": -418074301,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "del",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/qingkong_1.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "joinGame/qingkong_1.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 242,
+                    "Scale9Height": 56,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 220.0,
+                      "Y": 50.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.22,
+                      "Y": 0.125
+                    },
+                    "PreSize": {
+                      "X": 0.272,
+                      "Y": 0.195
+                    },
+                    "LeftMargin": 84.0,
+                    "RightMargin": 644.0,
+                    "TopMargin": 311.0,
+                    "BottomMargin": 11.0,
+                    "Tag": 2037,
+                    "ActionTag": -341290984,
+                    "Size": {
+                      "X": 272.0,
+                      "Y": 78.0
+                    },
+                    "Name": "clear",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": 1392974607,
+                "Size": {
+                  "X": 1000.0,
+                  "Y": 400.0
+                },
+                "Name": "num",
+                "ctype": "PanelObjectData"
+              }
+            ],
+            "ActionTag": -1994328909,
+            "Size": {
+              "X": 786.0,
+              "Y": 501.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "createNewPng/sure_xin_n.png",
+        "createNewPng/sure_xin_s.png",
+        "createNewPng/tishi_xin.png",
+        "fonts/fzcy.ttf",
+        "game_picture/bac_xiaotanchuan.png",
+        "game_picture/btn_x_normal.png",
+        "game_picture/diban.png",
+        "gameOver/shuru.png",
+        "joinGame/bohao_0.png",
+        "joinGame/bohao_1.png",
+        "joinGame/bohao_2.png",
+        "joinGame/bohao_3.png",
+        "joinGame/bohao_4.png",
+        "joinGame/bohao_5.png",
+        "joinGame/bohao_6.png",
+        "joinGame/bohao_7.png",
+        "joinGame/bohao_8.png",
+        "joinGame/bohao_9.png",
+        "joinGame/bohaobtn.png",
+        "joinGame/qingkong_1.png",
+        "joinGame/shangchu_1.png",
+        "joinGame/xiao_bg2.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

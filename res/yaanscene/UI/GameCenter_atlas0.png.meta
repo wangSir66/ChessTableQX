@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "ca1e4a87-1f16-4917-b77a-74a7dd9865f9",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 226,
+  "height": 359,
+  "platformSettings": {},
+  "subMetas": {
+    "GameCenter_atlas0": {
+      "ver": "1.0.4",
+      "uuid": "c6438b29-db2f-4a9d-a409-583eaa833da2",
+      "rawTextureUuid": "ca1e4a87-1f16-4917-b77a-74a7dd9865f9",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1,
+      "offsetY": 1,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 224,
+      "height": 357,
+      "rawWidth": 226,
+      "rawHeight": 359,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "07a432be-b2bc-4123-8623-659d592828e1",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 2048,
+  "height": 1024,
+  "platformSettings": {},
+  "subMetas": {
+    "HallLotteryTurntable_atlas0": {
+      "ver": "1.0.4",
+      "uuid": "cf5a6856-9546-4fdb-8b72-8452ff3c390a",
+      "rawTextureUuid": "07a432be-b2bc-4123-8623-659d592828e1",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -2.5,
+      "offsetY": 181.5,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 2043,
+      "height": 661,
+      "rawWidth": 2048,
+      "rawHeight": 1024,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "78a7662e-5557-484f-85eb-d3db376d0c39",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 230,
+  "height": 113,
+  "platformSettings": {},
+  "subMetas": {
+    "ClubLuckyCard_atlas0": {
+      "ver": "1.0.4",
+      "uuid": "85206420-3611-4024-8987-32701b219185",
+      "rawTextureUuid": "78a7662e-5557-484f-85eb-d3db376d0c39",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 1.5,
+      "trimX": 4,
+      "trimY": 0,
+      "width": 223,
+      "height": 110,
+      "rawWidth": 230,
+      "rawHeight": 113,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

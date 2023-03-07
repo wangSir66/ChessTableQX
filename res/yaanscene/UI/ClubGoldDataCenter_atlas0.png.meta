@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "0e0d0bf7-0e73-4594-b961-a47bf1460e10",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1397,
+  "height": 848,
+  "platformSettings": {},
+  "subMetas": {
+    "ClubGoldDataCenter_atlas0": {
+      "ver": "1.0.4",
+      "uuid": "52da2222-2d32-4816-8ad7-f95755e6c9ab",
+      "rawTextureUuid": "0e0d0bf7-0e73-4594-b961-a47bf1460e10",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1.5,
+      "offsetY": 1,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1394,
+      "height": 846,
+      "rawWidth": 1397,
+      "rawHeight": 848,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

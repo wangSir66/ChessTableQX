@@ -1,0 +1,754 @@
+{
+  "ID": "b7623f71-0fba-4c8f-b170-5d0234e1936b",
+  "Version": "2.3.4",
+  "Name": "friendcard_bindingCodeLayer_tipss",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 44,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 638.8578,
+              "Y": 362.3967
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4991,
+              "Y": 0.5033
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": -1.1422,
+            "RightMargin": 1.1422,
+            "TopMargin": -2.3967,
+            "BottomMargin": 2.3967,
+            "Tag": 119,
+            "ActionTag": 1311376693,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "game_picture/bac_xiaotanchuan.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 169,
+            "Scale9OriginY": 141,
+            "Scale9Width": 640,
+            "Scale9Height": 339,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.643,
+              "Y": 0.7889
+            },
+            "LeftMargin": 228.5,
+            "RightMargin": 228.5,
+            "TopMargin": 76.0,
+            "BottomMargin": 76.0,
+            "Tag": 116,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "game_picture/diban.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 20,
+                "Scale9OriginY": 18,
+                "Scale9Width": 21,
+                "Scale9Height": 21,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 411.5,
+                  "Y": 256.736
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.452
+                },
+                "PreSize": {
+                  "X": 0.9417,
+                  "Y": 0.8187
+                },
+                "LeftMargin": 24.0,
+                "RightMargin": 24.0,
+                "TopMargin": 78.764,
+                "BottomMargin": 24.236,
+                "Tag": 550,
+                "ActionTag": -635733089,
+                "Size": {
+                  "X": 775.0,
+                  "Y": 465.0
+                },
+                "Name": "Image_bg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 36,
+                "LabelText": "程序员程序员程序员程序员",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 123,
+                  "G": 78,
+                  "B": 63
+                },
+                "ShadowOffsetX": 1.0,
+                "ShadowOffsetY": -1.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 269.4748,
+                  "Y": 412.8976
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 123,
+                  "G": 78,
+                  "B": 63
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3274,
+                  "Y": 0.7269
+                },
+                "PreSize": {
+                  "X": 0.5249,
+                  "Y": 0.0634
+                },
+                "LeftMargin": 269.4748,
+                "RightMargin": 121.5252,
+                "TopMargin": 137.1024,
+                "BottomMargin": 394.8976,
+                "Tag": 124,
+                "ActionTag": -435973507,
+                "Size": {
+                  "X": 432.0,
+                  "Y": 36.0
+                },
+                "Name": "name",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "ID：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/fzcy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 269.4748,
+                  "Y": 365.4839
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 123,
+                  "G": 78,
+                  "B": 63
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3274,
+                  "Y": 0.6435
+                },
+                "PreSize": {
+                  "X": 0.0486,
+                  "Y": 0.0634
+                },
+                "LeftMargin": 269.4748,
+                "RightMargin": 513.5252,
+                "TopMargin": 184.5161,
+                "BottomMargin": 347.4839,
+                "Tag": 127,
+                "ActionTag": 1331507143,
+                "Size": {
+                  "X": 40.0,
+                  "Y": 36.0
+                },
+                "Name": "ID",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/common/headMask1.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 32,
+                "Scale9OriginY": 32,
+                "Scale9Width": 40,
+                "Scale9Height": 40,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 174.5885,
+                  "Y": 347.7003
+                },
+                "Scale": {
+                  "ScaleX": 1.1,
+                  "ScaleY": 1.1
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2121,
+                  "Y": 0.6121
+                },
+                "PreSize": {
+                  "X": 0.1264,
+                  "Y": 0.1831
+                },
+                "LeftMargin": 122.5885,
+                "RightMargin": 596.4115,
+                "TopMargin": 168.2997,
+                "BottomMargin": 295.7003,
+                "Tag": 595,
+                "ActionTag": 194175414,
+                "Size": {
+                  "X": 104.0,
+                  "Y": 104.0
+                },
+                "Name": "headImg",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 298.5341,
+                  "Y": 258.37
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.3627,
+                  "Y": 0.4549
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 298.5341,
+                "RightMargin": 524.4659,
+                "TopMargin": 309.63,
+                "BottomMargin": 258.37,
+                "Tag": 1185,
+                "ActionTag": -580872636,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "money",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/tishi_xin.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 83,
+                "Scale9OriginY": 18,
+                "Scale9Width": 176,
+                "Scale9Height": 23,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 410.9239,
+                  "Y": 530.65
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.4993,
+                  "Y": 0.9342
+                },
+                "PreSize": {
+                  "X": 0.4156,
+                  "Y": 0.1039
+                },
+                "LeftMargin": 239.9239,
+                "RightMargin": 241.0761,
+                "TopMargin": 7.85,
+                "BottomMargin": 501.15,
+                "Tag": 1599,
+                "ActionTag": 1218202931,
+                "Size": {
+                  "X": 342.0,
+                  "Y": 59.0
+                },
+                "Name": "title",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "绑定后不可修改，确认绑定此用户的邀请码？",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/lanting.TTF",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 123,
+                  "G": 78,
+                  "B": 63
+                },
+                "ShadowOffsetX": 1.0,
+                "ShadowOffsetY": -1.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 419.7131,
+                  "Y": 186.0633
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 211,
+                  "G": 60,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.51,
+                  "Y": 0.3276
+                },
+                "PreSize": {
+                  "X": 0.7145,
+                  "Y": 0.0599
+                },
+                "LeftMargin": 125.7131,
+                "RightMargin": 109.2869,
+                "TopMargin": 364.9367,
+                "BottomMargin": 169.0633,
+                "Tag": 139,
+                "ActionTag": -1974422854,
+                "Size": {
+                  "X": 588.0,
+                  "Y": 34.0
+                },
+                "Name": "desc",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_s.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/sure_xin_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 170,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 268.7633,
+                  "Y": 91.8252
+                },
+                "Scale": {
+                  "ScaleX": 1.35,
+                  "ScaleY": 1.35
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3266,
+                  "Y": 0.1617
+                },
+                "PreSize": {
+                  "X": 0.243,
+                  "Y": 0.1303
+                },
+                "LeftMargin": 168.7633,
+                "RightMargin": 454.2367,
+                "TopMargin": 439.1748,
+                "BottomMargin": 54.8252,
+                "Tag": 140,
+                "ActionTag": -1486958879,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 74.0
+                },
+                "Name": "Button_sure",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "邀请码：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/fzcy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 269.4748,
+                  "Y": 318.0703
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 123,
+                  "G": 78,
+                  "B": 63
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3274,
+                  "Y": 0.56
+                },
+                "PreSize": {
+                  "X": 0.1252,
+                  "Y": 0.0634
+                },
+                "LeftMargin": 269.4748,
+                "RightMargin": 450.5252,
+                "TopMargin": 231.9297,
+                "BottomMargin": 300.0703,
+                "Tag": 141,
+                "ActionTag": -868975842,
+                "Size": {
+                  "X": 103.0,
+                  "Y": 36.0
+                },
+                "Name": "yaoqingma",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/cancle_xin_s.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/cancle_xin_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/cancle_xin_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 170,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 558.8649,
+                  "Y": 91.8252
+                },
+                "Scale": {
+                  "ScaleX": 1.35,
+                  "ScaleY": 1.35
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6791,
+                  "Y": 0.1617
+                },
+                "PreSize": {
+                  "X": 0.243,
+                  "Y": 0.1303
+                },
+                "LeftMargin": 458.8649,
+                "RightMargin": 164.1351,
+                "TopMargin": 439.1748,
+                "BottomMargin": 54.8252,
+                "Tag": 142,
+                "ActionTag": 262832856,
+                "Size": {
+                  "X": 200.0,
+                  "Y": 74.0
+                },
+                "Name": "Button_cancel",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 30,
+                "LabelText": "备注：",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/fzcy.ttf",
+                  "Plist": ""
+                },
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 269.4747,
+                  "Y": 270.6566
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 123,
+                  "G": 78,
+                  "B": 63
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3274,
+                  "Y": 0.4765
+                },
+                "PreSize": {
+                  "X": 0.0887,
+                  "Y": 0.0634
+                },
+                "LeftMargin": 269.4747,
+                "RightMargin": 480.5253,
+                "TopMargin": 279.3434,
+                "BottomMargin": 252.6566,
+                "Tag": 143,
+                "ActionTag": -596297917,
+                "Size": {
+                  "X": 73.0,
+                  "Y": 36.0
+                },
+                "Name": "beizhu",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 1692587304,
+            "Size": {
+              "X": 823.0,
+              "Y": 568.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "createNewPng/cancle_xin_n.png",
+        "createNewPng/cancle_xin_s.png",
+        "createNewPng/sure_xin_n.png",
+        "createNewPng/sure_xin_s.png",
+        "createNewPng/tishi_xin.png",
+        "fonts/fzcy.ttf",
+        "fonts/lanting.TTF",
+        "friendCards/common/headMask1.png",
+        "game_picture/bac_xiaotanchuan.png",
+        "game_picture/diban.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

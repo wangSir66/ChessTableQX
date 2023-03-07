@@ -1,0 +1,2693 @@
+{
+  "ID": "d493212b-58a5-48e9-9d9c-872318ea7201",
+  "Version": "2.3.4",
+  "Name": "friendcard_setMainSkin",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 72,
+        "Children": [
+          {
+            "ClipAble": false,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 26,
+            "ActionTag": 736875449,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Alpha": 153,
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 0,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 331,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/img_bg.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 22,
+                "Scale9Width": 706,
+                "Scale9Height": 720,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1280.0,
+                  "Y": 360.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 1.0,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.5688,
+                  "Y": 1.0
+                },
+                "LeftMargin": 552.0,
+                "Tag": 332,
+                "ActionTag": -1150399100,
+                "Size": {
+                  "X": 728.0,
+                  "Y": 720.0
+                },
+                "Name": "bg_img",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/img_title.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 66,
+                "Scale9OriginY": 18,
+                "Scale9Width": 444,
+                "Scale9Height": 27,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 990.85,
+                  "Y": 720.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.7741,
+                  "Y": 1.0
+                },
+                "PreSize": {
+                  "X": 0.45,
+                  "Y": 0.0875
+                },
+                "LeftMargin": 702.85,
+                "RightMargin": 1.15,
+                "BottomMargin": 657.0,
+                "Tag": 150,
+                "ActionTag": -829112253,
+                "Size": {
+                  "X": 576.0,
+                  "Y": 63.0
+                },
+                "VisibleForFrame": false,
+                "Name": "img_title",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 0,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 747.127,
+                  "Y": 1033.8453
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5837,
+                  "Y": 1.4359
+                },
+                "PreSize": {
+                  "X": 0.4305,
+                  "Y": 0.375
+                },
+                "LeftMargin": 747.127,
+                "RightMargin": -18.127,
+                "TopMargin": -313.8453,
+                "BottomMargin": 763.8453,
+                "Tag": 376,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "friendCards/setSkin/img_xian.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 5,
+                    "Scale9Width": 96,
+                    "Scale9Height": 3,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 365.6786,
+                      "Y": 250.551
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.6637,
+                      "Y": 0.928
+                    },
+                    "PreSize": {
+                      "X": 0.1924,
+                      "Y": 0.0111
+                    },
+                    "LeftMargin": 365.6786,
+                    "RightMargin": 79.3214,
+                    "TopMargin": 17.949,
+                    "BottomMargin": 249.051,
+                    "Tag": 162,
+                    "ActionTag": -1948399977,
+                    "Size": {
+                      "X": 106.0,
+                      "Y": 3.0
+                    },
+                    "Name": "img_hua2",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "friendCards/setSkin/img_xian.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 5,
+                    "Scale9Width": 96,
+                    "Scale9Height": 3,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 187.1449,
+                      "Y": 249.051
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "RotationSkewX": 180.0,
+                    "RotationSkewY": 180.0,
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.3396,
+                      "Y": 0.9224
+                    },
+                    "PreSize": {
+                      "X": 0.1924,
+                      "Y": 0.0111
+                    },
+                    "LeftMargin": 187.1449,
+                    "RightMargin": 257.8551,
+                    "TopMargin": 20.949,
+                    "BottomMargin": 246.051,
+                    "Tag": 164,
+                    "ActionTag": 1128967442,
+                    "Size": {
+                      "X": 106.0,
+                      "Y": 3.0
+                    },
+                    "Name": "img_hua1",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "friendCards/setSkin/img_bgkuang2.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 155,
+                    "Scale9OriginY": 8,
+                    "Scale9Width": 241,
+                    "Scale9Height": 216,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 275.5,
+                      "Y": 116.775
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.4325
+                    },
+                    "PreSize": {
+                      "X": 1.0,
+                      "Y": 0.8593
+                    },
+                    "TopMargin": 37.225,
+                    "BottomMargin": 0.775,
+                    "Tag": 386,
+                    "ActionTag": -83498192,
+                    "Size": {
+                      "X": 551.0,
+                      "Y": 232.0
+                    },
+                    "Name": "bg",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "这里是六个字",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/lanting.TTF",
+                      "Plist": ""
+                    },
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 272.7332,
+                      "Y": 250.3754
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 128,
+                      "G": 74,
+                      "B": 41
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.495,
+                      "Y": 0.9273
+                    },
+                    "PreSize": {
+                      "X": 0.3085,
+                      "Y": 0.1185
+                    },
+                    "LeftMargin": 187.7332,
+                    "RightMargin": 193.2668,
+                    "TopMargin": 3.6246,
+                    "BottomMargin": 234.3754,
+                    "Tag": 166,
+                    "ActionTag": 1301970244,
+                    "Size": {
+                      "X": 170.0,
+                      "Y": 32.0
+                    },
+                    "Name": "ruleName",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsBounceEnabled": true,
+                    "InnerNodeSize": {
+                      "Width": 1000,
+                      "Height": 232
+                    },
+                    "ScrollDirectionType": "Horizontal",
+                    "ClipAble": false,
+                    "BackColorAlpha": 0,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "G": 150,
+                      "B": 100
+                    },
+                    "FirstColor": {
+                      "G": 150,
+                      "B": 100
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": 0.0,
+                      "Y": 232.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.8593
+                    },
+                    "PreSize": {
+                      "X": 1.0,
+                      "Y": 0.8593
+                    },
+                    "TopMargin": 38.0,
+                    "Tag": 244,
+                    "Children": [
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 133.4415,
+                          "Y": 171.26
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1334,
+                          "Y": 0.7382
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 115.4415,
+                        "RightMargin": 848.5585,
+                        "TopMargin": 42.24,
+                        "BottomMargin": 152.76,
+                        "Tag": 377,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_0.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 379,
+                            "ActionTag": -699394465,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -1027236044,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg1",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 461.2928,
+                          "Y": 171.2598
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.4613,
+                          "Y": 0.7382
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 443.2928,
+                        "RightMargin": 520.7072,
+                        "TopMargin": 42.2402,
+                        "BottomMargin": 152.7598,
+                        "Tag": 380,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_1.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 382,
+                            "ActionTag": -51372659,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": 602177478,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg2",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 297.3671,
+                          "Y": 171.2598
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.2974,
+                          "Y": 0.7382
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 279.3671,
+                        "RightMargin": 684.6329,
+                        "TopMargin": 42.2402,
+                        "BottomMargin": 152.7598,
+                        "Tag": 383,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_2.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 385,
+                            "ActionTag": 366414087,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -1206203143,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg3",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.3671,
+                          "ScaleY": 0.3426
+                        },
+                        "Position": {
+                          "X": 129.5182,
+                          "Y": 52.7039
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1295,
+                          "Y": 0.2272
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 116.3026,
+                        "RightMargin": 847.6974,
+                        "TopMargin": 154.9723,
+                        "BottomMargin": 40.0277,
+                        "Tag": 388,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_00.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.477,
+                              "ScaleY": 0.5072
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -102.654,
+                            "RightMargin": 36.654,
+                            "TopMargin": -29.7944,
+                            "BottomMargin": -31.2056,
+                            "Tag": 390,
+                            "ActionTag": -1061835128,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -1015519599,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg4",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 461.2928,
+                          "Y": 58.5357
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.4613,
+                          "Y": 0.2523
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 443.2928,
+                        "RightMargin": 520.7072,
+                        "TopMargin": 154.9643,
+                        "BottomMargin": 40.0357,
+                        "Tag": 391,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_10.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 393,
+                            "ActionTag": 1435260007,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -801381929,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg5",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 297.3671,
+                          "Y": 58.5357
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.2974,
+                          "Y": 0.2523
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 279.3671,
+                        "RightMargin": 684.6329,
+                        "TopMargin": 154.9643,
+                        "BottomMargin": 40.0357,
+                        "Tag": 394,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_20.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 396,
+                            "ActionTag": 846672796,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": 1178639351,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg6",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 625.2184,
+                          "Y": 171.6731
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.6252,
+                          "Y": 0.74
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 607.2184,
+                        "RightMargin": 356.7816,
+                        "TopMargin": 41.8269,
+                        "BottomMargin": 153.1731,
+                        "Tag": 245,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_5.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 246,
+                            "ActionTag": -127337769,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -245499035,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg7",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 789.1442,
+                          "Y": 171.6731
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.7891,
+                          "Y": 0.74
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 771.1442,
+                        "RightMargin": 192.8558,
+                        "TopMargin": 41.8269,
+                        "BottomMargin": 153.1731,
+                        "Tag": 247,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_4.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 248,
+                            "ActionTag": -584836490,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -5698311,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg8",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 953.0699,
+                          "Y": 171.6731
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.9531,
+                          "Y": 0.74
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 935.0699,
+                        "RightMargin": 28.9301,
+                        "TopMargin": 41.8269,
+                        "BottomMargin": 153.1731,
+                        "Tag": 249,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_3.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 250,
+                            "ActionTag": 986333653,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": 951993777,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg9",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.3671,
+                          "ScaleY": 0.3426
+                        },
+                        "Position": {
+                          "X": 621.2953,
+                          "Y": 53.1223
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.6213,
+                          "Y": 0.229
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 608.0797,
+                        "RightMargin": 355.9203,
+                        "TopMargin": 154.5539,
+                        "BottomMargin": 40.4461,
+                        "Tag": 251,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_50.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.477,
+                              "ScaleY": 0.5072
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -102.654,
+                            "RightMargin": 36.654,
+                            "TopMargin": -29.7944,
+                            "BottomMargin": -31.2056,
+                            "Tag": 252,
+                            "ActionTag": 583642376,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -289077261,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg10",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 789.1442,
+                          "Y": 58.9479
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.7891,
+                          "Y": 0.2541
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 771.1442,
+                        "RightMargin": 192.8558,
+                        "TopMargin": 154.5521,
+                        "BottomMargin": 40.4479,
+                        "Tag": 253,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_40.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 254,
+                            "ActionTag": -329804620,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": 347205369,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg11",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 953.0698,
+                          "Y": 58.9479
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.9531,
+                          "Y": 0.2541
+                        },
+                        "PreSize": {
+                          "X": 0.036,
+                          "Y": 0.1595
+                        },
+                        "LeftMargin": 935.0698,
+                        "RightMargin": 28.9302,
+                        "TopMargin": 154.5521,
+                        "BottomMargin": 40.4479,
+                        "Tag": 255,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgDesk_30.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 60,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -54.0,
+                              "Y": 18.5
+                            },
+                            "Scale": {
+                              "ScaleX": 0.82,
+                              "ScaleY": 0.82
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -1.5,
+                              "Y": 0.5
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 2.6486
+                            },
+                            "LeftMargin": -105.0,
+                            "RightMargin": 39.0,
+                            "TopMargin": -30.5,
+                            "BottomMargin": -30.5,
+                            "Tag": 256,
+                            "ActionTag": 2030141378,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 98.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -768146856,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg12",
+                        "ctype": "CheckBoxObjectData"
+                      }
+                    ],
+                    "ActionTag": -1696482427,
+                    "Size": {
+                      "X": 551.0,
+                      "Y": 232.0
+                    },
+                    "Name": "scrollView",
+                    "ctype": "ScrollViewObjectData"
+                  }
+                ],
+                "ActionTag": -1112005497,
+                "Size": {
+                  "X": 551.0,
+                  "Y": 270.0
+                },
+                "Name": "item",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "ItemMargin": 8,
+                "DirectionType": "Vertical",
+                "IsBounceEnabled": true,
+                "ScrollDirectionType": 0,
+                "ClipAble": true,
+                "BackColorAlpha": 0,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 717.43,
+                  "Y": 640.7455
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5605,
+                  "Y": 0.8899
+                },
+                "PreSize": {
+                  "X": 0.4453,
+                  "Y": 0.75
+                },
+                "LeftMargin": 717.43,
+                "RightMargin": -7.4299,
+                "TopMargin": 79.2545,
+                "BottomMargin": 100.7455,
+                "Tag": 161,
+                "Children": [
+                  {
+                    "ClipAble": false,
+                    "BackColorAlpha": 0,
+                    "ComboBoxIndex": 1,
+                    "SingleColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "FirstColor": {
+                      "R": 150,
+                      "G": 200
+                    },
+                    "EndColor": {},
+                    "ColorVector": {
+                      "ScaleY": 1.0
+                    },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
+                    "TouchEnable": true,
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 0.0,
+                      "Y": 415.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.7685
+                    },
+                    "PreSize": {
+                      "X": 0.9667,
+                      "Y": 0.2315
+                    },
+                    "RightMargin": 19.0,
+                    "BottomMargin": 415.0,
+                    "Tag": 433,
+                    "Children": [
+                      {
+                        "FontSize": 28,
+                        "LabelText": " 背景 ",
+                        "FontResource": {
+                          "Type": "Normal",
+                          "Path": "fonts/lanting.TTF",
+                          "Plist": ""
+                        },
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 264.2836,
+                          "Y": 103.5265
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 128,
+                          "G": 74,
+                          "B": 41
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.4796,
+                          "Y": 0.8282
+                        },
+                        "PreSize": {
+                          "X": 0.1198,
+                          "Y": 0.256
+                        },
+                        "LeftMargin": 231.2836,
+                        "RightMargin": 253.7164,
+                        "TopMargin": 5.4735,
+                        "BottomMargin": 87.5265,
+                        "Tag": 242,
+                        "ActionTag": 1495762817,
+                        "ZOrder": 1,
+                        "Size": {
+                          "X": 66.0,
+                          "Y": 32.0
+                        },
+                        "Name": "ruleName",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/img_xian.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 5,
+                        "Scale9Width": 96,
+                        "Scale9Height": 3,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 364.08,
+                          "Y": 104.984
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.6608,
+                          "Y": 0.8399
+                        },
+                        "PreSize": {
+                          "X": 0.1924,
+                          "Y": 0.024
+                        },
+                        "LeftMargin": 311.08,
+                        "RightMargin": 133.92,
+                        "TopMargin": 18.516,
+                        "BottomMargin": 103.484,
+                        "Tag": 238,
+                        "ActionTag": 1750166236,
+                        "Size": {
+                          "X": 106.0,
+                          "Y": 3.0
+                        },
+                        "Name": "img_hua2",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/img_xian.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 5,
+                        "Scale9Width": 96,
+                        "Scale9Height": 3,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 167.51,
+                          "Y": 104.984
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "RotationSkewX": 180.0,
+                        "RotationSkewY": 180.0,
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.304,
+                          "Y": 0.8399
+                        },
+                        "PreSize": {
+                          "X": 0.1924,
+                          "Y": 0.024
+                        },
+                        "LeftMargin": 114.51,
+                        "RightMargin": 330.49,
+                        "TopMargin": 18.516,
+                        "BottomMargin": 103.484,
+                        "Tag": 240,
+                        "ActionTag": 1662451596,
+                        "Size": {
+                          "X": 106.0,
+                          "Y": 3.0
+                        },
+                        "Name": "img_hua1",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/img_bgkuang1.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 155,
+                        "Scale9OriginY": 8,
+                        "Scale9Width": 241,
+                        "Scale9Height": 62,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 276.2765,
+                          "Y": 44.3178
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.5014,
+                          "Y": 0.3545
+                        },
+                        "PreSize": {
+                          "X": 1.0,
+                          "Y": 0.624
+                        },
+                        "LeftMargin": 0.7765,
+                        "RightMargin": -0.7765,
+                        "TopMargin": 41.6822,
+                        "BottomMargin": 5.3178,
+                        "Tag": 357,
+                        "ActionTag": -1986239732,
+                        "Size": {
+                          "X": 551.0,
+                          "Y": 78.0
+                        },
+                        "Name": "bg",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 150.2124,
+                          "Y": 41.7875
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.2726,
+                          "Y": 0.3343
+                        },
+                        "PreSize": {
+                          "X": 0.0653,
+                          "Y": 0.296
+                        },
+                        "LeftMargin": 132.2124,
+                        "RightMargin": 382.7876,
+                        "TopMargin": 64.7125,
+                        "BottomMargin": 23.2875,
+                        "Tag": 442,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgbg_0.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 20,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -69.9775,
+                              "Y": 20.4307
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PrePosition": {
+                              "X": -1.9438,
+                              "Y": 0.5522
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 1.5676
+                            },
+                            "LeftMargin": -120.9775,
+                            "RightMargin": 54.9775,
+                            "TopMargin": -12.4307,
+                            "BottomMargin": -8.5693,
+                            "Tag": 444,
+                            "ActionTag": -1538573138,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 58.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -1418036710,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg1",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 333.7713,
+                          "Y": 41.3375
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.6058,
+                          "Y": 0.3307
+                        },
+                        "PreSize": {
+                          "X": 0.0653,
+                          "Y": 0.296
+                        },
+                        "LeftMargin": 315.7713,
+                        "RightMargin": 199.2287,
+                        "TopMargin": 65.1625,
+                        "BottomMargin": 22.8375,
+                        "Tag": 358,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgbg_1.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 20,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -62.2709,
+                              "Y": 20.4308
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PrePosition": {
+                              "X": -1.7297,
+                              "Y": 0.5522
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 1.5676
+                            },
+                            "LeftMargin": -113.2709,
+                            "RightMargin": 47.2709,
+                            "TopMargin": -12.4308,
+                            "BottomMargin": -8.5692,
+                            "Tag": 360,
+                            "ActionTag": -912794621,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 58.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": -2079687503,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg2",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_xz.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "friendCards/setSkin/chexbox_wxz.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 517.3302,
+                          "Y": 38.95
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.9389,
+                          "Y": 0.3116
+                        },
+                        "PreSize": {
+                          "X": 0.0653,
+                          "Y": 0.296
+                        },
+                        "LeftMargin": 499.3302,
+                        "RightMargin": 15.6698,
+                        "TopMargin": 67.55,
+                        "BottomMargin": 20.45,
+                        "Tag": 361,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "friendCards/setSkin/xg_imgbg_2.png",
+                              "Plist": ""
+                            },
+                            "Scale9OriginX": 33,
+                            "Scale9OriginY": 19,
+                            "Scale9Width": 36,
+                            "Scale9Height": 20,
+                            "TouchEnable": true,
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": -62.2709,
+                              "Y": 20.4308
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PrePosition": {
+                              "X": -1.7297,
+                              "Y": 0.5522
+                            },
+                            "PreSize": {
+                              "X": 2.8333,
+                              "Y": 1.5676
+                            },
+                            "LeftMargin": -113.2709,
+                            "RightMargin": 47.2709,
+                            "TopMargin": -12.4308,
+                            "BottomMargin": -8.5692,
+                            "Tag": 363,
+                            "ActionTag": 1144694182,
+                            "Size": {
+                              "X": 102.0,
+                              "Y": 58.0
+                            },
+                            "Name": "Image_1",
+                            "ctype": "ImageViewObjectData"
+                          }
+                        ],
+                        "ActionTag": 1868635238,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "gameBg3",
+                        "ctype": "CheckBoxObjectData"
+                      }
+                    ],
+                    "ActionTag": -1277090844,
+                    "Size": {
+                      "X": 551.0,
+                      "Y": 125.0
+                    },
+                    "Name": "beiJing",
+                    "ctype": "PanelObjectData"
+                  }
+                ],
+                "ActionTag": 516636710,
+                "Size": {
+                  "X": 570.0,
+                  "Y": 540.0
+                },
+                "Name": "scrollView",
+                "ctype": "ListViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/btn_save_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/btn_save_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 190,
+                "Scale9Height": 52,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1134.3811,
+                  "Y": 48.8388
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8862,
+                  "Y": 0.0678
+                },
+                "PreSize": {
+                  "X": 0.1719,
+                  "Y": 0.1028
+                },
+                "LeftMargin": 1024.3811,
+                "RightMargin": 35.6189,
+                "TopMargin": 634.1612,
+                "BottomMargin": 11.8388,
+                "Tag": 568,
+                "ActionTag": 1267757096,
+                "Size": {
+                  "X": 220.0,
+                  "Y": 74.0
+                },
+                "Name": "saveBtn",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/btn_preview_s.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "friendCards/setSkin/btn_preview_n.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 191,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 863.4008,
+                  "Y": 48.8388
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6745,
+                  "Y": 0.0678
+                },
+                "PreSize": {
+                  "X": 0.1727,
+                  "Y": 0.1014
+                },
+                "LeftMargin": 752.9008,
+                "RightMargin": 306.0992,
+                "TopMargin": 634.6612,
+                "BottomMargin": 12.3388,
+                "Tag": 439,
+                "ActionTag": -172019784,
+                "Size": {
+                  "X": 221.0,
+                  "Y": 73.0
+                },
+                "Name": "previewBtn",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": -261385852,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "back",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "fonts/lanting.TTF",
+        "friendCards/setSkin/btn_preview_n.png",
+        "friendCards/setSkin/btn_preview_s.png",
+        "friendCards/setSkin/btn_save_n.png",
+        "friendCards/setSkin/btn_save_s.png",
+        "friendCards/setSkin/chexbox_wxz.png",
+        "friendCards/setSkin/chexbox_xz.png",
+        "friendCards/setSkin/img_bg.png",
+        "friendCards/setSkin/img_bgkuang1.png",
+        "friendCards/setSkin/img_bgkuang2.png",
+        "friendCards/setSkin/img_title.png",
+        "friendCards/setSkin/img_xian.png",
+        "friendCards/setSkin/xg_imgbg_0.png",
+        "friendCards/setSkin/xg_imgbg_1.png",
+        "friendCards/setSkin/xg_imgbg_2.png",
+        "friendCards/setSkin/xg_imgDesk_0.png",
+        "friendCards/setSkin/xg_imgDesk_00.png",
+        "friendCards/setSkin/xg_imgDesk_1.png",
+        "friendCards/setSkin/xg_imgDesk_10.png",
+        "friendCards/setSkin/xg_imgDesk_2.png",
+        "friendCards/setSkin/xg_imgDesk_20.png",
+        "friendCards/setSkin/xg_imgDesk_3.png",
+        "friendCards/setSkin/xg_imgDesk_30.png",
+        "friendCards/setSkin/xg_imgDesk_4.png",
+        "friendCards/setSkin/xg_imgDesk_40.png",
+        "friendCards/setSkin/xg_imgDesk_5.png",
+        "friendCards/setSkin/xg_imgDesk_50.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

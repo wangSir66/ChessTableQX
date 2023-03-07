@@ -1,0 +1,147 @@
+{
+  "content_scale": 1.0,
+  "armature_data": [
+    {
+      "strVersion": "1.6.0.0",
+      "version": 1.6,
+      "name": "NewAnimation",
+      "bone_data": [
+        {
+          "name": "Layer3",
+          "parent": "",
+          "dI": 0,
+          "x": 139.59091186523438,
+          "y": -249.92892456054688,
+          "z": 3,
+          "cX": 1.0,
+          "cY": 1.0,
+          "kX": 0.0,
+          "kY": 0.0,
+          "arrow_x": 0.0,
+          "arrow_y": 0.0,
+          "effectbyskeleton": false,
+          "bl": 0,
+          "display_data": [
+            {
+              "name": "guangxiao.png",
+              "displayType": 0,
+              "skin_data": [
+                {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "cX": 1.0,
+                  "cY": 1.0,
+                  "kX": 0.0,
+                  "kY": 0.0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "animation_data": [
+    {
+      "name": "NewAnimation",
+      "mov_data": [
+        {
+          "name": "Animation1",
+          "dr": 141,
+          "lp": true,
+          "to": 0,
+          "drTW": 0,
+          "twE": 0,
+          "sc": 0.5,
+          "mov_bone_data": [
+            {
+              "name": "Layer3",
+              "dl": 0.0,
+              "frame_data": [
+                {
+                  "dI": 0,
+                  "x": -140.0,
+                  "y": 250.0,
+                  "z": 0,
+                  "cX": 0.09,
+                  "cY": 0.09,
+                  "kX": 1.57079637,
+                  "kY": -1.57079637,
+                  "fi": 0,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "color": {
+                    "a": 0,
+                    "r": 98,
+                    "g": 151,
+                    "b": 194
+                  },
+                  "bd_src": 770,
+                  "bd_dst": 772
+                },
+                {
+                  "dI": 0,
+                  "x": -140.0,
+                  "y": 250.0,
+                  "z": 0,
+                  "cX": 0.122621313,
+                  "cY": 0.122621313,
+                  "kX": 1.04719758,
+                  "kY": -1.04719758,
+                  "fi": 60,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "color": {
+                    "a": 255,
+                    "r": 255,
+                    "g": 244,
+                    "b": 87
+                  },
+                  "bd_src": 1,
+                  "bd_dst": 772
+                },
+                {
+                  "dI": 0,
+                  "x": -140.0,
+                  "y": 250.0,
+                  "z": 0,
+                  "cX": 0.141581118,
+                  "cY": 0.141581118,
+                  "kX": 0.5235988,
+                  "kY": -0.5235988,
+                  "fi": 140,
+                  "twE": 0,
+                  "tweenFrame": true,
+                  "color": {
+                    "a": 0,
+                    "r": 62,
+                    "g": 126,
+                    "b": 217
+                  },
+                  "bd_src": 770,
+                  "bd_dst": 772
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "texture_data": [
+    {
+      "name": "guangxiao",
+      "width": 1075.0,
+      "height": 1250.0,
+      "pX": 0.5,
+      "pY": 0.5,
+      "plistFile": ""
+    }
+  ],
+  "config_file_path": [
+    "NewAnimation0.plist"
+  ],
+  "config_png_path": [
+    "NewAnimation0.png"
+  ]
+}
