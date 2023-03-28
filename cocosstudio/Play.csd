@@ -6,13 +6,13 @@
       <ObjectData Name="Layer" Tag="619" ctype="GameLayerObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="block" ActionTag="-313768227" VisibleForFrame="False" Tag="196" IconVisible="False" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="block" ActionTag="-313768227" VisibleForFrame="False" Tag="196" IconVisible="False" LeftMargin="-471.9992" RightMargin="471.9991" TopMargin="6.4438" BottomMargin="-6.4438" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="640.0000" Y="360.0000" />
+            <Position X="168.0008" Y="353.5562" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.5000" />
+            <PrePosition X="0.1313" Y="0.4911" />
             <PreSize X="1.0000" Y="1.0000" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
@@ -22,10 +22,10 @@
           <AbstractNodeData Name="back" ActionTag="-124919213" Tag="95" IconVisible="True" RightMargin="1280.0000" TopMargin="720.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
-              <AbstractNodeData Name="back" ActionTag="-592801474" Tag="51" IconVisible="False" LeftMargin="0.7200" RightMargin="-1280.7200" TopMargin="-720.1111" BottomMargin="0.1111" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="back" ActionTag="-592801474" Tag="51" IconVisible="False" LeftMargin="0.7201" RightMargin="-1280.7201" TopMargin="-721.7219" BottomMargin="1.7219" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="640.7200" Y="360.1111" />
+                <Position X="640.7201" Y="361.7219" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
@@ -150,13 +150,13 @@
             <OutlineColor A="255" R="0" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="info" ActionTag="-252217799" VisibleForFrame="False" Tag="214" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="30.0000" RightMargin="990.0000" TopMargin="46.8000" BottomMargin="569.2000" FontSize="26" LabelText="宁波麻将            &#xA;3台&#xA;3百搭&#xA;东风圈" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="info" ActionTag="-252217799" Tag="214" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="6.1667" RightMargin="1013.8333" TopMargin="55.8879" BottomMargin="560.1121" FontSize="26" LabelText="宁波麻将            &#xA;3台&#xA;3百搭&#xA;东风圈" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="260.0000" Y="104.0000" />
             <AnchorPoint ScaleY="1.0000" />
-            <Position X="30.0000" Y="673.2000" />
+            <Position X="6.1667" Y="664.1121" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="0" G="0" B="0" />
-            <PrePosition X="0.0234" Y="0.9350" />
+            <PrePosition X="0.0048" Y="0.9224" />
             <PreSize X="0.2031" Y="0.1444" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
@@ -1276,10 +1276,10 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="playing/MJ/Mj_up_1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="outBig" ActionTag="1860206205" Tag="303" IconVisible="False" LeftMargin="-451.6463" RightMargin="344.6463" TopMargin="-323.8777" BottomMargin="194.8777" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="39" Scale9Height="25" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="outBig" ActionTag="1860206205" Tag="303" IconVisible="False" LeftMargin="-445.4699" RightMargin="338.4699" TopMargin="-333.8621" BottomMargin="204.8621" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="39" Scale9Height="25" ctype="ImageViewObjectData">
                 <Size X="107.0000" Y="129.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="-398.1463" Y="259.3777" />
+                <Position X="-391.9699" Y="269.3621" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />

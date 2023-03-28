@@ -1115,7 +1115,7 @@ majiang_jsBind.node_wait = {
             this.recordTime = (new Date().getTime()) - this.recordTime.getTime();
             MjClient.atRecord = false;
             MjClient.playui.resumeMusicAndAllEffects();
-
+            
             if(this.recordTime > 1000){
                 this.recordLayer.runStopRecord();
                 MjClient.native.EndRecord("uploadRecord");

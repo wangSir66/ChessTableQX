@@ -14,6 +14,7 @@
     "jsList" : [
         "src/YaAn/Homeview.js",
         "src/YaAn/CreateRoomPanel.js",
+        "src/CreateRoomNode.js",
         "src/YaAn/CreateRoomNode_yaan.js",
         "src/YaAn/CreateRoomNode_red20.js",
 
@@ -56,6 +57,7 @@
 		"src/CommonFunc_paohuzi_SR.js",
 		"src/CommonFunc_Layer.js",
         "src/Arithmetic_LYG.js",
+        "src/Arithmetic_Red20.js",
         "src/Arithmetic_shuyang.js",
         "src/Arithmetic_guanyun.js",
         "src/Arithmetic_guannan.js",
@@ -82,7 +84,6 @@
         "src/UserSettingPanel.js",
         "src/DisclaimerLayer.js",
         "src/ReportPlayerLayer.js",
-        "src/CreateRoomNode.js",
         "src/CreateRoomNode_LYG.js",
         "src/CreateRoomNode_donghai.js",
         "src/CreateRoomNode_guanyun.js",
@@ -106,6 +107,7 @@
         "src/CreateRoomPanel.js",
         "src/JoinRoomPanel.js",
         "src/PlayerGamePanel_LYG.js",
+        "src/YaAn/Red20/PlayerGamePanel_Red20.js",
         "src/PlayerGamePanel_shuyang.js",
         "src/PlayerGamePanel_guanyun.js",
         "src/PlayerGamePanel_guannan.js",

@@ -4084,19 +4084,6 @@
             <File Name="positiveFont.labelatlas" />
           </Folder>
           <Folder Name="Game">
-            <Folder Name=".Card_PList.Dir">
-              <Image Name="0-1.png" />
-              <Image Name="0-11.png" />
-            </Folder>
-            <Folder Name=".Controller_PList.Dir">
-              <Image Name="btn_cancel.png" />
-              <Image Name="btn_chi.png" />
-              <Image Name="btn_guo.png" />
-            </Folder>
-            <Folder Name=".Desk_PList.Dir">
-              <Image Name="other_mytou_bg.png" />
-              <Image Name="userBg.png" />
-            </Folder>
             <PlistImageFolder Image="Card.png" PListFile="Card.plist" Name=".Card_PList.Dir">
               <PlistImageFile Name="0-1.png" Key="0-1.png" />
               <PlistImageFile Name="0-10.png" Key="0-10.png" />
@@ -4890,6 +4877,7 @@
         <Project Name="bg_PaoDeKuaiLYG.csd" Type="Node" />
         <Project Name="bg_PaoDeKuaiTY.csd" Type="Node" />
         <Project Name="bg_paodekuaiXS.csd" Type="Node" />
+        <Project Name="bg_red20.csd" Type="Node" />
         <Project Name="bg_shuyang.csd" Type="Node" />
         <Project Name="bg_siyang.csd" Type="Node" />
         <Project Name="bg_siyang_new.csd" Type="Node" />
@@ -5040,7 +5028,7 @@
         <Project Name="LucklyTable_newBack.csd" Type="Layer" />
         <Project Name="LucklyTable_newRank.csd" Type="Layer" />
         <Project Name="LucklyTable_qianDaoBack.csd" Type="Layer" />
-        <Project Name="mobilePhoneLogin.csd" Type="Layer" />
+        <Project Name="mobilePhoneLogin-yzm.csd" Type="Layer" />
         <Project Name="NetError.csd" Type="Node" />
         <Project Name="NewYear_Back.csd" Type="Layer" />
         <Project Name="NewYear_main.csd" Type="Layer" />
@@ -5102,8 +5090,12 @@
         <Project Name="RankRequstLayer.csd" Type="Layer" />
         <Project Name="RecommendLayer_active.csd" Type="Layer" />
         <Project Name="RecommendLayer_activeList.csd" Type="Layer" />
-        <Project Name="Red20Scene.csd" Type="Scene" />
-        <Project Name="registerPhoneNumLayer.csd" Type="Layer" />
+        <Project Name="Red20_BottomHandCard.csd" Type="Layer" />
+        <Project Name="Red20_BRChiCards.csd" Type="Layer" />
+        <Project Name="Red20_LTChiCards.csd" Type="Layer" />
+        <Project Name="Red20Scene.csd" Type="Layer" />
+        <Project Name="Red20Scene_old.csd" Type="Scene" />
+        <Project Name="registerPhoneNumLayer-yzm.csd" Type="Layer" />
         <Project Name="Replay.csd" Type="Layer" />
         <Project Name="Replay_TDH.csd" Type="Layer" />
         <Project Name="ReplayUILayer.csd" Type="Layer" />
@@ -5157,7 +5149,6 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
-        <Project Name="bg_red20.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>

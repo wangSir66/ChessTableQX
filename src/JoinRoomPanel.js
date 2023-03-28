@@ -111,7 +111,7 @@ var EnterRoomLayer = cc.Layer.extend({
         }, this);
 
         //数字按键
-        var _num = _back.getChildByName("num");
+        var _num = _back.getChildByName('Image_1').getChildByName("num");
         function numBtnTouchEvent(sender, Type) {
             if (Type == ccui.Widget.TOUCH_ENDED) {
                 var itag = sender.getTag();
@@ -159,7 +159,7 @@ var EnterRoomLayer = cc.Layer.extend({
     InitMyRoom:function(_back)
     {
 
-        var _btnRoomHistory = _back.getChildByName("Button_record");
+        var _btnRoomHistory = _back.getChildByName("Image_2").getChildByName("Button_record");
         _btnRoomHistory.setTouchEnabled(true);
         _btnRoomHistory.addTouchEventListener(function (sender, Type) {
             switch (Type) {
@@ -177,7 +177,7 @@ var EnterRoomLayer = cc.Layer.extend({
             }
         }, this);
 
-        var _btnCreateRoom = _back.getChildByName("Button_10_0");
+        var _btnCreateRoom = _back.getChildByName('Image_2').getChildByName("Button_10_0");
         _btnCreateRoom.addTouchEventListener(function (sender, Type) {
             switch (Type) {
                 case ccui.Widget.TOUCH_ENDED:
@@ -209,7 +209,7 @@ var EnterRoomLayer = cc.Layer.extend({
             }
         }, this);
 
-        var _roomCell = _back.getChildByName("room_cell");
+        var _roomCell = _back.getChildByName("Image_2").getChildByName("room_cell");
         _roomCell.visible = false;
         var _imgqx = _back.getChildByName("Image_qixing");
         if (_imgqx) {
@@ -227,7 +227,7 @@ var EnterRoomLayer = cc.Layer.extend({
             _imgqx.visible = false;
         }
 
-        var _listViewNode = _back.getChildByName("ListView_1");
+        var _listViewNode = _back.getChildByName('Image_2').getChildByName("ListView_1");
         _listViewNode.removeAllItems();
 
         function createOneCell(oneRoomData)
@@ -3011,7 +3011,7 @@ var EnterRoomLayer_QXYYQP_v3 = cc.Layer.extend({
     },
 });
 var Switch_enterRoom = function() {
-    if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
+    if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ || MjClient.getAppType() == MjClient.APP_TYPE.YAAN || MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
         EnterRoomLayer = EnterRoomLayer_lyg;
     } else if (MjClient.getAppType() === MjClient.APP_TYPE.TXJINZHONGMJ ||
         MjClient.getAppType() === MjClient.APP_TYPE.DQSHANXIMJ ||

@@ -3286,6 +3286,16 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="png/nameBar.png" Plist="" />
               </AbstractNodeData>
+              <AbstractNodeData Name="face" ActionTag="-1734045631" Tag="697" IconVisible="False" LeftMargin="158.5109" RightMargin="-261.5109" TopMargin="-150.2951" BottomMargin="-7.7049" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="79" Scale9Height="120" ctype="ImageViewObjectData">
+                <Size X="103.0000" Y="158.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="210.0109" Y="71.2951" />
+                <Scale ScaleX="0.4000" ScaleY="0.4000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition />
+                <PreSize X="0.0000" Y="0.0000" />
+                <FileData Type="Normal" Path="playing/MJ/Mj_04.png" Plist="" />
+              </AbstractNodeData>
             </Children>
             <AnchorPoint />
             <Position />

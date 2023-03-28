@@ -14199,6 +14199,51 @@
                 },
                 "Name": "tingCardNumNode",
                 "ctype": "ImageViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "playing/MJ/Mj_04.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 12,
+                "Scale9OriginY": 19,
+                "Scale9Width": 79,
+                "Scale9Height": 120,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 210.0109,
+                  "Y": 71.2951
+                },
+                "Scale": {
+                  "ScaleX": 0.4,
+                  "ScaleY": 0.4
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 158.5109,
+                "RightMargin": -261.5109,
+                "TopMargin": -150.2951,
+                "BottomMargin": -7.7049,
+                "Tag": 697,
+                "ActionTag": -1734045631,
+                "Size": {
+                  "X": 103.0,
+                  "Y": 158.0
+                },
+                "Name": "face",
+                "ctype": "ImageViewObjectData"
               }
             ],
             "ActionTag": 332052040,

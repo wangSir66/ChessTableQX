@@ -59,6 +59,7 @@ function isCanChangePlayerNum() {
         MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
         MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO ||
         MjClient.gameType == MjClient.GAME_TYPE.HUAI_AN_ERZ ||
+        MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER ||
         MjClient.gameType == MjClient.GAME_TYPE.LIAN_YUN_GANG ||
         MjClient.gameType == MjClient.GAME_TYPE.GAN_YU ||
         MjClient.gameType == MjClient.GAME_TYPE.TY_HONGZHONG ||
@@ -9409,7 +9410,7 @@ function getFinalHunCardMsg() {
 function setAreaTypeInfo(isVisible) {
     // var info = MjClient.playui.jsBind.gameName._node;
     var info = MjClient.playui.jsBind.banner._node.getChildByName("gameName");
-    if (!info) {
+    if (!info && MjClient.playui.jsBind.gameName) {
         info = MjClient.playui.jsBind.gameName._node
     }
     if (isVisible && info) {

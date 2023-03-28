@@ -10,6 +10,7 @@ var res = {
 	
 	Home_json:"Home.json",
 	Play_json:"Play.json",
+    Play_Red20_json:"Red20Scene.json",
     Play_niuniu_json:"Play_niuniu.json",
     Play_shuyang_json:"Play_shuyang.json",
     Play_guanyun_json:"Play_guanyun.json",

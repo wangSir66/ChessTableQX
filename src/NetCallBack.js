@@ -5,17 +5,14 @@
 
 
 MjClient.netCallBack = {
-    MJReadyJiaGang: [0, function(d)
-    {
+    MJReadyJiaGang: [0, function (d) {
     }],
-    MJOuCard: [0, function(d)
-    {
+    MJOuCard: [0, function (d) {
     }],
-    MJJiaGang: [0, function(d)
-    {
+    MJJiaGang: [0, function (d) {
         console.log("---------call MJJiaGang=========");
         var sData = MjClient.data.sData;
-        if(sData) {
+        if (sData) {
             var pl = sData.players[d.uid.toString()];
             // if (pl) {
             //  pl.jiaGang = d.jiaGang;
@@ -24,7 +21,7 @@ MjClient.netCallBack = {
     }],
     loadWxHead: [/*0.01*/0, function (d) {
         var sData = MjClient.data.sData;
-        if(sData) {
+        if (sData) {
             var pl = sData.players[d.uid.toString()];
             if (pl) {
                 pl.wxHeadImg = d.img;
@@ -53,42 +50,40 @@ MjClient.netCallBack = {
         }
     }]
     , MJFight: [0, function (d) {
-        var sData=MjClient.data.sData;
+        var sData = MjClient.data.sData;
         if (!sData) return;
-        var tData=sData.tData;
+        var tData = sData.tData;
 
         //add by sking 2017.8.25
         var playerCount = 4;
         playerCount = parseInt(MjClient.data.sData.tData.maxPlayer);
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.HAI_AN_MJ ||
+        if (MjClient.gameType == MjClient.GAME_TYPE.HAI_AN_MJ ||
             MjClient.gameType == MjClient.GAME_TYPE.HAI_AN_BAI_DA ||
             MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN ||
-            MjClient.gameType == MjClient.GAME_TYPE.XUE_LIU )//海安玩法，3人玩法 会空一个位置，为了东朝着庄的位置
+            MjClient.gameType == MjClient.GAME_TYPE.XUE_LIU)//海安玩法，3人玩法 会空一个位置，为了东朝着庄的位置
         {
-            if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG)
-            {
-                if(playerCount == 3 ) playerCount = 4;
+            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG) {
+                if (playerCount == 3) playerCount = 4;
             }
         }
 
         if (MjClient.playui && MjClient.playui.playChatAni) {
-            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
-            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
+            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
+            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
             var kind = d.kind;
             var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
-            if(_props) {
+            if (_props) {
                 MjClient.playui.playChatAni(fromOff, toOff, kind);
             }
-        } 
-        else if((isJinZhongAPPType() ||
+        }
+        else if ((isJinZhongAPPType() ||
             MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP )
-            && d.targetUid == d.uid)
-        {
+            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP)
+            && d.targetUid == d.uid) {
             //山西,海安,南通点自己的时候发另外几家动画
             var kind = d.kind;
-            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
+            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
             var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
             var icount = 0;
             if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) {
@@ -97,86 +92,81 @@ MjClient.netCallBack = {
             } else {
                 icount = playerCount;// > 4 ? playerCount: 4;
             }
-            for(var i =  0;i < icount;i++)
-            {
-                if(i != fromOff)
-                {
-                    if(_props) playChatAni(fromOff,i,kind);
+            for (var i = 0; i < icount; i++) {
+                if (i != fromOff) {
+                    if (_props) playChatAni(fromOff, i, kind);
                 }
             }
-        } 
-        else if(MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ &&
-        (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY || 
-        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ) )
-        {
-            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
-            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
+        }
+        else if (MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ &&
+            (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ)) {
+            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
+            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
             var kind = d.kind;
             var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
-            if(_props) {
+            if (_props) {
                 playChatAni_guizhou(fromOff, toOff, kind);
-            }            
+            }
         }
         else {
-            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
-            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
+            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
+            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
             var kind = d.kind;
             var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
-            
-            if( MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ){
-                if(playerCount == 3){
-                    if ( toOff == 2 ){
+
+            if (MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
+                if (playerCount == 3) {
+                    if (toOff == 2) {
                         toOff = 4;
                     }
 
-                    if( fromOff == 2){
-                        fromOff = 4; 
+                    if (fromOff == 2) {
+                        fromOff = 4;
                     }
                 }
             }
-            
-            if(_props) {
-                playChatAni(fromOff,toOff,kind);
+
+            if (_props) {
+                playChatAni(fromOff, toOff, kind);
             }
         }
     }]
     , useInteractiveProp: [0, function (d) {
-        var sData=MjClient.data.sData;
+        var sData = MjClient.data.sData;
         if (!sData) return;
-        var tData=sData.tData;
+        var tData = sData.tData;
 
         //add by sking 2017.8.25
         var playerCount = 4;
         playerCount = parseInt(MjClient.data.sData.tData.maxPlayer);
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.HAI_AN_MJ ||
+        if (MjClient.gameType == MjClient.GAME_TYPE.HAI_AN_MJ ||
             MjClient.gameType == MjClient.GAME_TYPE.HAI_AN_BAI_DA ||
             MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN ||
-            MjClient.gameType == MjClient.GAME_TYPE.XUE_LIU )//海安玩法，3人玩法 会空一个位置，为了东朝着庄的位置
+            MjClient.gameType == MjClient.GAME_TYPE.XUE_LIU)//海安玩法，3人玩法 会空一个位置，为了东朝着庄的位置
         {
-            if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG)
-            {
-                if(playerCount == 3 ) playerCount = 4;
+            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG) {
+                if (playerCount == 3) playerCount = 4;
             }
         }
 
         if (MjClient.playui && MjClient.playui.playChatAni) {
-            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
-            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
+            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
+            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
             var kind = d.kind;
             var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
-            if(_props) {
+            if (_props) {
                 MjClient.playui.playChatAni(fromOff, toOff, kind);
             }
         }
-        else if((isJinZhongAPPType() ||
+        else if ((isJinZhongAPPType() ||
             MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP )
-            && d.targetUid == d.uid)
-        {
+            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP)
+            && d.targetUid == d.uid) {
             //山西,海安,南通点自己的时候发另外几家动画
             var kind = d.kind;
-            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
+            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
             var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
             var icount = 0;
             if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) {
@@ -185,56 +175,53 @@ MjClient.netCallBack = {
             } else {
                 icount = playerCount;// > 4 ? playerCount: 4;
             }
-            for(var i =  0;i < icount;i++)
-            {
-                if(i != fromOff)
-                {
-                    if(_props) playChatAni(fromOff,i,kind);
+            for (var i = 0; i < icount; i++) {
+                if (i != fromOff) {
+                    if (_props) playChatAni(fromOff, i, kind);
                 }
             }
         }
-        else if(MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ &&
+        else if (MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ &&
             (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY ||
-            MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ) )
-        {
-            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
-            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ)) {
+            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
+            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
             var kind = d.kind;
             var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
-            if(_props) {
+            if (_props) {
                 playChatAni_guizhou(fromOff, toOff, kind);
             }
         }
         else {
-            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
-            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount)%playerCount;
+            var fromOff = (tData.uids.indexOf(d.uid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
+            var toOff = (tData.uids.indexOf(d.targetUid) - tData.uids.indexOf(SelfUid()) + playerCount) % playerCount;
             var kind = d.kind;
             var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
-            if(_props) {
-                playChatAni(fromOff,toOff,kind);
+            if (_props) {
+                playChatAni(fromOff, toOff, kind);
             }
         }
     }],
-    waitChooseCard:[0,function (d){
+    waitChooseCard: [0, function (d) {
         MjClient.data.sData.tData.tState = TableState.waitChooseCard;
     }]
     , waitJiazhu: [0, function (d) {
         //cc.log(JSON.stringify(d), "等待加注。。。", JSON.stringify(d));
         MjClient.data.sData.tData.tState = TableState.waitJiazhu;
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
-            MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG ) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
+            MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG) {
             //上一次飘分选择
-            if(d.lastPiaoFens) {
-                for(var uid in d.lastPiaoFens) {
+            if (d.lastPiaoFens) {
+                for (var uid in d.lastPiaoFens) {
                     MjClient.data.sData.players[uid].lastPiaoFen = d.lastPiaoFens[uid];
                 }
             }
         }
         var sData = MjClient.data.sData;
         if (MjClient.gameType != MjClient.GAME_TYPE.CHANG_SHA) {
-            if(d.uid){
+            if (d.uid) {
                 sData.players[d.uid].mjState = TableState.waitJiazhu;
-            }else{
+            } else {
                 for (var uid in sData.players) {
                     sData.players[uid].mjState = TableState.waitJiazhu;
                 }
@@ -245,20 +232,20 @@ MjClient.netCallBack = {
             tData.lastWinner = d.lastWinner;
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_ZI_PAI || 
+        if (MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_ZI_PAI ||
             MjClient.gameType == MjClient.GAME_TYPE.HY_SHI_HU_KA || MjClient.gameType == MjClient.GAME_TYPE.LENG_SHUI_JIANG_SHI_HU_DAO ||
             MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.DA_ZI_BO_PI) {
             for (var uid in sData.players) {
                 sData.players[uid].jiachuiNum = -1;
             }
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIN_NING_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_MA_JIANG){
-            for(var uid in d.jiachuiNums){
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIN_NING_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_MA_JIANG) {
+            for (var uid in d.jiachuiNums) {
                 sData.players[uid].jiachuiNum = d.jiachuiNums[uid];
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIN_NING_MA_JIANG && !cc.isUndefined(d.zhuang))//新宁麻将庄家信息在waitJiaZhu发过来了
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIN_NING_MA_JIANG && !cc.isUndefined(d.zhuang))//新宁麻将庄家信息在waitJiaZhu发过来了
             MjClient.data.sData.tData.zhuang = d.zhuang;
 
         if ((MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() === MjClient.APP_TYPE.QXSYDTZ) && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG) {
@@ -271,8 +258,8 @@ MjClient.netCallBack = {
             }
         }
     }]
-    ,selectChong:[0, function (d) {}]
-    ,selectGuChou:[0, function (d) {
+    , selectChong: [0, function (d) { }]
+    , selectGuChou: [0, function (d) {
         var players = MjClient.data.sData.players;
         players[d.uid].guChouValue = d.guChouValue;
     }]
@@ -290,7 +277,7 @@ MjClient.netCallBack = {
         }
         */
     }]
-    , FLSdoTrust: [0, function(d) {
+    , FLSdoTrust: [0, function (d) {
         //cc.log("收到托管事件", JSON.stringify(d));
         var pl = MjClient.data.sData.players[d.uid];
         pl.isTuoGuan = d.isTuoGuan;
@@ -299,17 +286,16 @@ MjClient.netCallBack = {
         MjClient.data.sData.tData.tState = TableState.waitDingZhuang;
     }]
     , payCash: [0, function (d) {
-        if (d.eventName == "花杠")
-        {
+        if (d.eventName == "花杠") {
             playEffectInPlay("huaGang");
         }
     }],
     showCard: [0, function (d) {
         if (d.isJiang) {
-            if (MjClient.data.sData && typeof(d.showCard) === "number") {
+            if (MjClient.data.sData && typeof (d.showCard) === "number") {
                 MjClient.data.sData.tData.hunCard = d.showCard;
             }
-            else if (MjClient.data.sData && typeof(d.showCard) === "object") {
+            else if (MjClient.data.sData && typeof (d.showCard) === "object") {
                 MjClient.data.sData.tData.hunCard = d.showCard[0];
                 MjClient.data.sData.tData.hunCard2 = d.showCard[1];
             }
@@ -317,8 +303,7 @@ MjClient.netCallBack = {
     }],
     MJPinniu: [0, function (d) {
         var pl = getUIPlayer(0)
-        if(d.uid == pl.info.uid)
-        {
+        if (d.uid == pl.info.uid) {
             pl.mjState = TableState.roundFinish;
         }
     }]
@@ -327,15 +312,15 @@ MjClient.netCallBack = {
         MjClient.downAndPlayVoiceMessageQueue.push(d);
         return -1;//不立即处理
     }]
-    ,PKBaoFen: [0, function(d) {
+    , PKBaoFen: [0, function (d) {
         //cc.log("掂坨报分", JSON.stringify(d));
         MjClient.data.sData.tData.baoFenCards = d.baoFenCards;
     }]
-    ,ZDTeamerHand: [0, function(d) {
+    , ZDTeamerHand: [0, function (d) {
         var pl = MjClient.data.sData.players[SelfUid()];
         pl.teamerHand = d.teamerHand;
     }]
-    ,TZScore: [0,function(d){
+    , TZScore: [0, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
         // 打筒子 清空上次的inc
@@ -378,12 +363,12 @@ MjClient.netCallBack = {
         }
 
         if (tData.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
-            if(tData.duZhanPlayer != -1 || tData.maxPlayer == 3 || tData.areaSelectMode.isSanFuPai){
+            if (tData.duZhanPlayer != -1 || tData.maxPlayer == 3 || tData.areaSelectMode.isSanFuPai) {
                 pl.t_score_draw = d.t_score_draw;
                 return;
-            } 
+            }
             // 刷新总分
-            var team = sData.teams[pl.teamid]; 
+            var team = sData.teams[pl.teamid];
             for (var i = 0; i < team.uids.length; i++) {
                 sData.players[team.uids[i]].t_score_draw = d.t_score_draw;
             }
@@ -394,16 +379,16 @@ MjClient.netCallBack = {
             }
         }
     }]
-    ,TZTeam: [0, function(d){
-        cc.log("TZTeam d.uids = ",JSON.stringify(d.uids));
+    , TZTeam: [0, function (d) {
+        cc.log("TZTeam d.uids = ", JSON.stringify(d.uids));
         var sData = MjClient.data.sData;
-        if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO){
-            sData.tData.uids = d.uids;  
+        if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
+            sData.tData.uids = d.uids;
             sData.teams = d.teams;
-        }else{
+        } else {
             //邵阳打筒子 霸炸弹
-            for(var tid in d){
-                if(tid != "A" && tid != "B"){
+            for (var tid in d) {
+                if (tid != "A" && tid != "B") {
                     delete d[tid];
                 }
             }
@@ -411,83 +396,83 @@ MjClient.netCallBack = {
         }
 
         var players = sData.players;
-        for(var tid in sData.teams){
+        for (var tid in sData.teams) {
             var team = sData.teams[tid];
             var uids = team.uids;
-            for(var i = 0; i < uids.length; i++){
+            for (var i = 0; i < uids.length; i++) {
                 var pl = players[uids[i]];
                 pl.teamid = tid;
             }
         }
-        cc.log("gggggggggggggggggggg = ",JSON.stringify(MjClient.data.sData.tData));
-  
+        cc.log("gggggggggggggggggggg = ", JSON.stringify(MjClient.data.sData.tData));
+
     }],
-    TZJoinTeam: [0, function(d) {
+    TZJoinTeam: [0, function (d) {
         MjClient.data.sData.tData = d.tData;
     }],
-    TZTrust: [0, function(d){
+    TZTrust: [0, function (d) {
         var players = MjClient.data.sData.players;
         var pl = players[d.uid];
         pl.isTrust = d.isTrust;
         pl.trustTime = d.trustTime;
     }],
-    locationApps : [0, function(d){
+    locationApps: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[d.uid];
         pl.locationApps = d.locationApps;
     }],
-    duZhanSelectRet: [0,function(d){
+    duZhanSelectRet: [0, function (d) {
         MjClient.data.sData.tData.duZhanPlayer = d.duZhanPlayer;
         cc.log("duZhanSelectRet");
     }]
-    ,refresh_goldfield_new_user:[0,function(d) {
+    , refresh_goldfield_new_user: [0, function (d) {
         MjClient.data.goldfieldNewUser = d.data;
-    }], 
-    matchEnd:[0,function (d) {   //比赛结束
-        if(MjClient.roundendui){
+    }],
+    matchEnd: [0, function (d) {   //比赛结束
+        if (MjClient.roundendui) {
             MjClient.roundendui.removeFromParent(true);
             MjClient.roundendui = null;
         }
-        if(MjClient.endoneui) {
+        if (MjClient.endoneui) {
             MjClient.endoneui.removeFromParent(true);
         }
-        if(MjClient.endallui){
+        if (MjClient.endallui) {
             MjClient.endallui.removeFromParent(true);
             MjClient.endallui = null;
         }
-        if(!d.reward && (d.rank > 3 || d.rank < 1)){
+        if (!d.reward && (d.rank > 3 || d.rank < 1)) {
             MjClient.Scene.addChild(new loseGameLayer(d));
-        }else {
+        } else {
             MjClient.Scene.addChild(new winGameLayer(d));
         }
     }],
     initSceneData: [0, function (d) {
         delete MjClient.MJPutCache;
         delete MjClient.init_y; //为了解决打了扑克牌后，的位置只初始化麻将的了
-        if(MjClient._initSceneDataHideBlock){
+        if (MjClient._initSceneDataHideBlock) {
             cc.log("initSceneData取消遮罩")
             MjClient.unblock();
         }
         MjClient._initSceneDataHideBlock = false;
         //判断是否要清空忽略过胡，过杠
-        if(MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ){
-            var roomMsgValue = d.tData.tableid +":"+d.tData.roundNum;
-            var saveRoomMsgValue = util.localStorageEncrypt.getStringItem("IGNORE_G_TIP","")
-            if(saveRoomMsgValue.length > 0 && saveRoomMsgValue != roomMsgValue){
-                util.localStorageEncrypt.setStringItem("IGNORE_G_TIP","");
+        if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
+            var roomMsgValue = d.tData.tableid + ":" + d.tData.roundNum;
+            var saveRoomMsgValue = util.localStorageEncrypt.getStringItem("IGNORE_G_TIP", "")
+            if (saveRoomMsgValue.length > 0 && saveRoomMsgValue != roomMsgValue) {
+                util.localStorageEncrypt.setStringItem("IGNORE_G_TIP", "");
             }
-            saveRoomMsgValue = util.localStorageEncrypt.getStringItem("IGNORE_H_TIP","")
-            if(saveRoomMsgValue.length > 0 && saveRoomMsgValue != roomMsgValue){
-                util.localStorageEncrypt.setStringItem("IGNORE_H_TIP","");
+            saveRoomMsgValue = util.localStorageEncrypt.getStringItem("IGNORE_H_TIP", "")
+            if (saveRoomMsgValue.length > 0 && saveRoomMsgValue != roomMsgValue) {
+                util.localStorageEncrypt.setStringItem("IGNORE_H_TIP", "");
             }
         }
 
-        if(cc.sys.isObjectValid(MjClient.roundendui)){
+        if (cc.sys.isObjectValid(MjClient.roundendui)) {
             MjClient.roundendui.removeFromParent(true);
             MjClient.roundendui = null;
         }
-        if(MjClient.endallui && cc.sys.isObjectValid(MjClient.endallui)){
+        if (MjClient.endallui && cc.sys.isObjectValid(MjClient.endallui)) {
             MjClient.endallui.removeFromParent(true);
             MjClient.endallui = null;
         }
@@ -501,17 +486,17 @@ MjClient.netCallBack = {
             MjClient.playui = null;
         }
 
-        if(MjClient.delroomui){
+        if (MjClient.delroomui) {
             MjClient.delroomui.removeFromParent(true);
             delete MjClient.delroomui;
         }
 
-        if(MjClient.endoneui && cc.sys.isObjectValid(MjClient.endoneui)){
+        if (MjClient.endoneui && cc.sys.isObjectValid(MjClient.endoneui)) {
             MjClient.endoneui.removeFromParent(true);
             MjClient.endoneui = null;
         }
 
-        if(MjClient.ShowCardsLayer != null){
+        if (MjClient.ShowCardsLayer != null) {
             MjClient.ShowCardsLayer.removeFromParent(true);
             MjClient.ShowCardsLayer = null;
         }
@@ -524,22 +509,20 @@ MjClient.netCallBack = {
             MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
             MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ ||
             MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || 
+            MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
             MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
             MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ)
-        {
+            MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ) {
             util.Timer.setServerTime(d.serverNow);
         }
 
 
-        if(d.tData.maxPlayer)
-        {
+        if (d.tData.maxPlayer) {
             MjClient.MaxPlayerNum = d.tData.maxPlayer;
             MjClient.MaxPlayerNum_changPai = d.tData.maxPlayer;
         }
 
-        if((d.tData.gameType == MjClient.GAME_TYPE.HAI_AN_MJ ||
+        if ((d.tData.gameType == MjClient.GAME_TYPE.HAI_AN_MJ ||
             d.tData.gameType == MjClient.GAME_TYPE.HAI_AN_BAI_DA) && MjClient.MaxPlayerNum != 2)//海安玩法，会空一个位置，为了东朝着庄的位置
         {
             MjClient.MaxPlayerNum = 4;
@@ -557,6 +540,9 @@ MjClient.netCallBack = {
                 MjClient.gameType = d.tData.gameType;
             // MjClient.majiang 保存当前游戏玩法
             switch (MjClient.gameType) {
+                case MjClient.GAME_TYPE.RED_20_POKER:
+                    MjClient.majiang = MjClient.majiang_red20;
+                    break;
                 case MjClient.GAME_TYPE.LIAN_YUN_GANG:
                     MjClient.majiang = MjClient.majiang_lyg;
                     break;
@@ -760,7 +746,7 @@ MjClient.netCallBack = {
                     break;
                 case MjClient.GAME_TYPE.DOU_DI_ZHU_QC:
                     MjClient.majiang = MjClient.doudizhu_QC;
-                    break;    
+                    break;
                 case MjClient.GAME_TYPE.TY_ZHUANZHUAN:
                     MjClient.majiang = MjClient.majiang_TYZZ;
                     break;
@@ -770,20 +756,20 @@ MjClient.netCallBack = {
                 case MjClient.GAME_TYPE.RU_GAO_SHUANG_JIANG:
                     MjClient.majiang = MjClient.majiang_rugao_SJ;
                     break;
-                case  MjClient.GAME_TYPE.HAI_AN_MJ:
+                case MjClient.GAME_TYPE.HAI_AN_MJ:
                     MjClient.majiang = MjClient.majiang_haian;
                     break;
 
-                case  MjClient.GAME_TYPE.XUE_ZHAN:
+                case MjClient.GAME_TYPE.XUE_ZHAN:
                     MjClient.majiang = MjClient.majiang_xuezhanMJ;
                     break;
-                case  MjClient.GAME_TYPE.XUE_LIU:
+                case MjClient.GAME_TYPE.XUE_LIU:
                     MjClient.majiang = MjClient.majiang_xueliu;
                     break;
-                case  MjClient.GAME_TYPE.HAI_AN_BAI_DA:
+                case MjClient.GAME_TYPE.HAI_AN_BAI_DA:
                     MjClient.majiang = MjClient.majiang_haianbaida;
                     break;
-                case  MjClient.GAME_TYPE.JIN_ZHONG_MJ:
+                case MjClient.GAME_TYPE.JIN_ZHONG_MJ:
                     MjClient.majiang = MjClient.majiang_jinzhong;
                     break;
                 case MjClient.GAME_TYPE.DOU_DI_ZHU_JZ:
@@ -812,10 +798,10 @@ MjClient.netCallBack = {
                     break;
                 case MjClient.GAME_TYPE.YUN_CHENG_TIE_JIN:
                     MjClient.majiang = MjClient.majiang_yunchengtiejin;
-                    break; 
+                    break;
                 case MjClient.GAME_TYPE.HE_JIN_KUN_JIN:
                     MjClient.majiang = MjClient.majiang_hejinkunjin;
-                    break;   
+                    break;
                 case MjClient.GAME_TYPE.JING_LE_KOU_DIAN:
                     MjClient.majiang = MjClient.majiang_jingle;
                     break;
@@ -834,86 +820,86 @@ MjClient.netCallBack = {
                 case MjClient.GAME_TYPE.JIN_ZHONG_TUI_DAO_HU:
                     MjClient.majiang = MjClient.majiang_tuidaohu;
                     break;
-                case  MjClient.GAME_TYPE.LING_SHI_BIAN_LONG:
+                case MjClient.GAME_TYPE.LING_SHI_BIAN_LONG:
                     MjClient.majiang = MjClient.majiang_lingshibianlong;
                     break;
-                case  MjClient.GAME_TYPE.LING_SHI_BAN_MO:
+                case MjClient.GAME_TYPE.LING_SHI_BAN_MO:
                     MjClient.majiang = MjClient.majiang_lingshibanmo;
                     break;
                 case MjClient.GAME_TYPE.PING_YAO_KOU_DIAN:
                     MjClient.majiang = MjClient.majiang_pingyaokoudian;
                     break;
-                case  MjClient.GAME_TYPE.PING_YAO_MA_JIANG:
+                case MjClient.GAME_TYPE.PING_YAO_MA_JIANG:
                     MjClient.majiang = MjClient.majiang_pingyaomajiang;
                     break;
-                case  MjClient.GAME_TYPE.JIE_XIU_1_DIAN_3:
+                case MjClient.GAME_TYPE.JIE_XIU_1_DIAN_3:
                     MjClient.majiang = MjClient.majiang_jiexiuyidiansan;
                     break;
                 case MjClient.GAME_TYPE.JIE_XIU_KOU_DIAN:
-                    MjClient.majiang=MjClient.majiang_jiexiukoudian;
+                    MjClient.majiang = MjClient.majiang_jiexiukoudian;
                     break;
                 case MjClient.GAME_TYPE.JIN_ZHONG_GUAI_SAN_JIAO:
-                    MjClient.majiang=MjClient.majiang_guaisanjiao;
+                    MjClient.majiang = MjClient.majiang_guaisanjiao;
                     break;
                 case MjClient.GAME_TYPE.SHOU_YANG_QUE_KA:
-                    MjClient.majiang=MjClient.majiang_shouyangqueka;
+                    MjClient.majiang = MjClient.majiang_shouyangqueka;
                     break;
                 case MjClient.GAME_TYPE.LV_LIANG_KOU_DIAN:
-                    MjClient.majiang=MjClient.majiang_lvliangkoudian;
+                    MjClient.majiang = MjClient.majiang_lvliangkoudian;
                     break;
                 case MjClient.GAME_TYPE.JIN_ZHONG_LI_SI:
-                    MjClient.majiang=MjClient.majiang_jinzhonglisi;
+                    MjClient.majiang = MjClient.majiang_jinzhonglisi;
                     break;
                 case MjClient.GAME_TYPE.HONG_TONG_WANG_PAI:
-                    MjClient.majiang=MjClient.majiang_hongtongwangpai;
+                    MjClient.majiang = MjClient.majiang_hongtongwangpai;
                     break;
                 case MjClient.GAME_TYPE.LIN_FEN_YING_SAN_ZUI:
-                    MjClient.majiang=MjClient.majiang_linfenyingsanzui;
+                    MjClient.majiang = MjClient.majiang_linfenyingsanzui;
                     break;
                 case MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN:
-                    MjClient.majiang=MjClient.doudizhu_linfen;
+                    MjClient.majiang = MjClient.doudizhu_linfen;
                     break;
                 case MjClient.GAME_TYPE.LIN_FEN_YI_MEN_ZI:
-                    MjClient.majiang=MjClient.majiang_linfenyimenzi;
+                    MjClient.majiang = MjClient.majiang_linfenyimenzi;
                     break;
                 case MjClient.GAME_TYPE.FEN_XI_YING_KOU:
-                    MjClient.majiang=MjClient.majiang_fenxiyingkou;
+                    MjClient.majiang = MjClient.majiang_fenxiyingkou;
                     break;
                 case MjClient.GAME_TYPE.JI_XIAN_1928_JIA_ZHANG:
-                    MjClient.majiang=MjClient.majiang_linfenjixian;
+                    MjClient.majiang = MjClient.majiang_linfenjixian;
                     break;
                 case MjClient.GAME_TYPE.ML_HONG_ZI:
-                    MjClient.majiang=MjClient.majiang_hongZi;
+                    MjClient.majiang = MjClient.majiang_hongZi;
                     break;
                 case MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI:
-                    MjClient.majiang=MjClient.majiang_YueYangWaiHuZi;
+                    MjClient.majiang = MjClient.majiang_YueYangWaiHuZi;
                     break;
                 case MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI:
-                    MjClient.majiang=MjClient.majiang_YiYangWaiHuZi;
+                    MjClient.majiang = MjClient.majiang_YiYangWaiHuZi;
                     break;
                 case MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI:
-                    MjClient.majiang=MjClient.majiang_nanXianGuiHuZi;
+                    MjClient.majiang = MjClient.majiang_nanXianGuiHuZi;
                     break;
                 case MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI:
-                    MjClient.majiang=MjClient.majiang_yuanJiangGuiHuZi;
+                    MjClient.majiang = MjClient.majiang_yuanJiangGuiHuZi;
                     break;
                 case MjClient.GAME_TYPE.JIANG_YONG_15Z:
                     MjClient.majiang = MjClient.majiang_paohuzi;
                     break;
                 case MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI:
-                    MjClient.majiang=MjClient.majiang_xyHongZi;
+                    MjClient.majiang = MjClient.majiang_xyHongZi;
                     break;
                 case MjClient.GAME_TYPE.LIN_FEN_XIANG_NING_SHUAI_JIN:
-                    MjClient.majiang=MjClient.majiang_xiangningshuaijin;
+                    MjClient.majiang = MjClient.majiang_xiangningshuaijin;
                     break;
                 case MjClient.GAME_TYPE.LIN_FEN_KOU_DIAN_FENG_ZUI_ZI:
-                    MjClient.majiang=MjClient.majiang_linfenkoudianfengzuizi;
+                    MjClient.majiang = MjClient.majiang_linfenkoudianfengzuizi;
                     break;
                 case MjClient.GAME_TYPE.JIN_ZHONG_CAI_SHEN:
-                    MjClient.majiang=MjClient.majiang_jinzhongcaishen;
+                    MjClient.majiang = MjClient.majiang_jinzhongcaishen;
                     break;
                 case MjClient.GAME_TYPE.XIAO_YI_KOU_DIAN:
-                    MjClient.majiang=MjClient.majiang_xiaoyikoudian;
+                    MjClient.majiang = MjClient.majiang_xiaoyikoudian;
                     break;
                 case MjClient.GAME_TYPE.XU_ZHOU_PEI_XIAN:
                     MjClient.majiang = MjClient.majiang_xuzhoupeixian;
@@ -1012,9 +998,9 @@ MjClient.netCallBack = {
                     MjClient.majiang = MjClient.majiang_yueYangPengHu;
                     break;
                 case MjClient.GAME_TYPE.HY_LIU_HU_QIANG:
-                    if(isYongZhouProject()){
+                    if (isYongZhouProject()) {
                         MjClient.majiang = MjClient.majiang_hengyang;
-                    }else{
+                    } else {
                         MjClient.majiang = MjClient.majiang_liuHuQiang;
                     }
                     break;
@@ -1071,15 +1057,15 @@ MjClient.netCallBack = {
                     MjClient.majiang = MjClient.majiang_yuanLingPaoHuZi;
                     break;
                 case MjClient.GAME_TYPE.SHI_MEN_PAO_HU_ZI:
-                    MjClient.majiang=MjClient.majiang_shiMenPaoHuZi;
+                    MjClient.majiang = MjClient.majiang_shiMenPaoHuZi;
                     break;
                 case MjClient.GAME_TYPE.ZP_LY_CHZ:
-                    if(isYongZhouProject()){
+                    if (isYongZhouProject()) {
                         MjClient.majiang = MjClient.majiang_zplychz;
-                    }else{
+                    } else {
                         MjClient.majiang = MjClient.majiang_zplychz_lyg;
                     }
-                    
+
                     break;
                 case MjClient.GAME_TYPE.HAN_SHOU_PAO_HU_ZI:
                     MjClient.majiang = MjClient.majiang_hanshoupaohuzi;
@@ -1114,7 +1100,7 @@ MjClient.netCallBack = {
                 case MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI:
                     MjClient.majiang = MjClient.majiang_zplychz;
                     break;
-                case MjClient.GAME_TYPE.XIANG_XIANG_PAO_HU_ZI: 
+                case MjClient.GAME_TYPE.XIANG_XIANG_PAO_HU_ZI:
                     MjClient.majiang = MjClient.majiang_zplychz;
                     break;
                 case MjClient.GAME_TYPE.XIANG_TAN_PAO_HU_ZI:
@@ -1166,13 +1152,13 @@ MjClient.netCallBack = {
                     MjClient.majiang = MjClient.majiang_hengyang;
                     break;
                 case MjClient.GAME_TYPE.SHAO_YANG_ZI_PAI:
-                    MjClient.majiang = MjClient.majiang_hengyang; 
-                    break; 
+                    MjClient.majiang = MjClient.majiang_hengyang;
+                    break;
                 case MjClient.GAME_TYPE.SHAO_YANG_MA_JIANG:
-                     MjClient.majiang = MjClient.majiang_SYMJ;
+                    MjClient.majiang = MjClient.majiang_SYMJ;
                     break;
                 case MjClient.GAME_TYPE.XIN_NING_MA_JIANG:
-                     MjClient.majiang = MjClient.majiang_XinNingMJ;
+                    MjClient.majiang = MjClient.majiang_XinNingMJ;
                     break;
                 case MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN:
                     MjClient.majiang = MjClient.majiang_BaZhaDan;
@@ -1210,31 +1196,31 @@ MjClient.netCallBack = {
                 case MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE:
                     MjClient.majiang = MjClient.majiang_anXiangWeiMaQue;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_PU_DING_MJ:
+                case MjClient.GAME_TYPE.GUI_ZHOU_PU_DING_MJ:
                     MjClient.majiang = MjClient.majiang_guizhoupuding;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_AN_SHUN_MJ:
+                case MjClient.GAME_TYPE.GUI_ZHOU_AN_SHUN_MJ:
                     MjClient.majiang = MjClient.majiang_guizhouAnShun;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_LIANG_FANG:
+                case MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_LIANG_FANG:
                     MjClient.majiang = MjClient.majiang_guizhouSanDingLiangFang;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_LIANG_DING_LIANG_FANG:
+                case MjClient.GAME_TYPE.GUI_ZHOU_LIANG_DING_LIANG_FANG:
                     MjClient.majiang = MjClient.majiang_guizhouLiangDingLiangFang;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_GUAI:
+                case MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_GUAI:
                     MjClient.majiang = MjClient.majiang_guizhouSanDingGuai;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_ER_DING_GUAI:
+                case MjClient.GAME_TYPE.GUI_ZHOU_ER_DING_GUAI:
                     MjClient.majiang = MjClient.majiang_guizhouSanDingGuai;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_XMY_GUI_YANG_ZHUO_JI:
+                case MjClient.GAME_TYPE.GUI_ZHOU_XMY_GUI_YANG_ZHUO_JI:
                     MjClient.majiang = MjClient.majiang_guizhouXMYGuiYangZhuoJi;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_GUI_YANG_ZHUO_JI:
+                case MjClient.GAME_TYPE.GUI_ZHOU_GUI_YANG_ZHUO_JI:
                     MjClient.majiang = MjClient.majiang_guizhouGuiYangZhuoJi;
                     break;
-                case  MjClient.GAME_TYPE.GUI_ZHOU_MEN_HU_XUE_LIU:
+                case MjClient.GAME_TYPE.GUI_ZHOU_MEN_HU_XUE_LIU:
                     MjClient.majiang = MjClient.majiang_guizhouMenHuXueLiu;
                     break;
                 case MjClient.GAME_TYPE.XIANG_XI_96POKER:
@@ -1332,45 +1318,44 @@ MjClient.netCallBack = {
             MjClient.data.sData = d;
 
             //金币场使用用户信息的金币
-            if(MjClient.data.sData.tData.fieldId) {
+            if (MjClient.data.sData.tData.fieldId) {
                 var pl = getUIPlayer(0);
-                if (pl){
+                if (pl) {
                     pl.info.gold = MjClient.data.pinfo.gold;
                 }
-                if (!MjClient._LAST_FIELD){
-                    MjClient._LAST_FIELD = {fieldId:MjClient.data.sData.tData.fieldId};
+                if (!MjClient._LAST_FIELD) {
+                    MjClient._LAST_FIELD = { fieldId: MjClient.data.sData.tData.fieldId };
                 }
             }
 
-            if(MjClient.GAME_TYPE.EN_SHI_MA_JIANG == d.tData.gameType || MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG == d.tData.gameType){
+            if (MjClient.GAME_TYPE.EN_SHI_MA_JIANG == d.tData.gameType || MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG == d.tData.gameType) {
                 var sData = MjClient.data.sData;
-                for(var uid in d.players){
+                for (var uid in d.players) {
                     var player = sData.players[uid];
-                    if(!player.hasOwnProperty("mjPiZiGang")){
+                    if (!player.hasOwnProperty("mjPiZiGang")) {
                         player.mjPiZiGang = [];
                     }
                 }
             }
-            if(MjClient.GAME_TYPE.DA_YE_KAI_KOU_FAN == d.tData.gameType ||
-                MjClient.GAME_TYPE.HONG_ZHONG_LAI_ZI_GANG == d.tData.gameType){
+            if (MjClient.GAME_TYPE.DA_YE_KAI_KOU_FAN == d.tData.gameType ||
+                MjClient.GAME_TYPE.HONG_ZHONG_LAI_ZI_GANG == d.tData.gameType) {
                 var sData = MjClient.data.sData;
-                for(var uid in d.players){
+                for (var uid in d.players) {
                     var player = sData.players[uid];
-                    if(!player.hasOwnProperty("rateGangList")){
+                    if (!player.hasOwnProperty("rateGangList")) {
                         player.mjPiZiGang = [];
-                    }else {
+                    } else {
                         player.mjPiZiGang = d.players[uid].rateGangList;
                     }
                 }
             }
 
             //安化麻将重连回来听牌状态下摸到王牌不能过(宁乡开王麻将根据听的状态判断是否报听了)
-            if(MjClient.gameType === MjClient.GAME_TYPE.AN_HUA_MA_JIANG || 
+            if (MjClient.gameType === MjClient.GAME_TYPE.AN_HUA_MA_JIANG ||
                 MjClient.gameType === MjClient.GAME_TYPE.AN_HUA_MA_JIANG_SW ||
-                MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG || 
-                MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG || 
-                MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_MA_JIANG)
-            {
+                MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG ||
+                MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG ||
+                MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_MA_JIANG) {
                 var sData = MjClient.data.sData;
                 if (sData) {
                     var tData = sData.tData;
@@ -1378,18 +1363,18 @@ MjClient.netCallBack = {
                         var pl = sData.players[uid];
                         if (pl && pl.newSendCard && tData && tData.gangAddCard && tData.gangAddCard.length == 0) {
                             pl.newCd = pl.newSendCard;
-                        }else if(pl && pl.newSendCard && tData && tData.gangAddCard && tData.gangAddCard.length != 0){
+                        } else if (pl && pl.newSendCard && tData && tData.gangAddCard && tData.gangAddCard.length != 0) {
                             pl.newCd = 0;
                         }
 
-                        if((MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG || MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG
-                            || MjClient.gameType === MjClient.GAME_TYPE.YI_YANG_MA_JIANG) && pl.tingStatus == 1){
+                        if ((MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG || MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG
+                            || MjClient.gameType === MjClient.GAME_TYPE.YI_YANG_MA_JIANG) && pl.tingStatus == 1) {
                             pl.isTing = true;
                         }
                     }
                 }
             }
-            if(MjClient.gameType === MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType === MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG){
+            if (MjClient.gameType === MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType === MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) {
                 var sData = MjClient.data.sData;
                 var pl = sData.players[sData.tData.uids[sData.tData.curPlayer]];
                 if (pl) {
@@ -1397,7 +1382,7 @@ MjClient.netCallBack = {
                 }
             }
             //获取服务器与本地的时间差
-            MjClient.timeBetween = d.serverNow  - new Date().getTime();
+            MjClient.timeBetween = d.serverNow - new Date().getTime();
 
             //初始化断线重连时间
             var sData = MjClient.data.sData;
@@ -1406,13 +1391,12 @@ MjClient.netCallBack = {
                     var PL = sData.players[uid];
                     if (PL) {
 
-                        if(SelfUid() == uid) PL.onLine = true; //自己断线重连回来肯定是在先状态
+                        if (SelfUid() == uid) PL.onLine = true; //自己断线重连回来肯定是在先状态
 
-                        if (!PL.onLine)
-                        {
-                            if(!PL.lastOffLineTime || PL.lastOffLineTime < 0) PL.lastOffLineTime = new Date().getTime();
+                        if (!PL.onLine) {
+                            if (!PL.lastOffLineTime || PL.lastOffLineTime < 0) PL.lastOffLineTime = new Date().getTime();
                             PL.offLineTime = PL.lastOffLineTime - MjClient.timeBetween;//new Date().getTime();
-                            if(!PL.offLineTime || PL.offLineTime < 0) PL.offLineTime = new Date().getTime();
+                            if (!PL.offLineTime || PL.offLineTime < 0) PL.offLineTime = new Date().getTime();
                             //cc.log(uid + "= uid==============================PL.lastOffLineTime = " + PL.lastOffLineTime);
                         }
                         else {
@@ -1420,8 +1404,7 @@ MjClient.netCallBack = {
                         }
 
 
-                        if(d.players[uid].mjhandFour && d.players[uid].mjhandFour.length > 0)
-                        {
+                        if (d.players[uid].mjhandFour && d.players[uid].mjhandFour.length > 0) {
                             PL.cardFourCount = d.players[uid].mjhandFour.length;
                             PL.mjhandFour = d.players[uid].mjhandFour;
                         }
@@ -1429,7 +1412,7 @@ MjClient.netCallBack = {
                         PL.gangFourCounts = d.players[uid].gangFourCounts;
                         PL.pengFourCounts = d.players[uid].pengFourCounts;
 
-                        if(PL.qiang)
+                        if (PL.qiang)
                             PL.qiang = d.players[uid].qiang;
 
                     }
@@ -1461,8 +1444,7 @@ MjClient.netCallBack = {
                     }
                 }
             }
-            if (!MjClient.playui)
-            {
+            if (!MjClient.playui) {
                 if (false && cc.sys.OS_WINDOWS != cc.sys.os)
                     sortSearchPath(MjClient.gameType);
                 else
@@ -1471,40 +1453,43 @@ MjClient.netCallBack = {
                 // 清空听牌数据
                 MjClient.canTingCards = null;
 
-                cc.log("MjClient.gameType    ",MjClient.gameType);
+                cc.log("MjClient.gameType    ", MjClient.gameType);
                 //加载游戏界面
-                switch(MjClient.gameType){
+                switch (MjClient.gameType) {
+                    case MjClient.GAME_TYPE.RED_20_POKER:
+                        MjClient.Scene.addChild(new PlayerGamePanel_Red20());
+                        break;
                     case MjClient.GAME_TYPE.SHU_YANG:
                         MjClient.Scene.addChild(new PlayLayer_shuyang());
                         break;
-                    case  MjClient.GAME_TYPE.LIAN_YUN_GANG:
+                    case MjClient.GAME_TYPE.LIAN_YUN_GANG:
                         MjClient.Scene.addChild(new PlayLayer_LYG());
                         break;
-                    case  MjClient.GAME_TYPE.GUAN_YUN:
+                    case MjClient.GAME_TYPE.GUAN_YUN:
                         MjClient.Scene.addChild(new PlayLayer_guanyun());
                         break;
                     case MjClient.GAME_TYPE.GUAN_NAN:
                         MjClient.Scene.addChild(new PlayLayer_guannan());
                         break;
-                    case  MjClient.GAME_TYPE.DONG_HAI:
+                    case MjClient.GAME_TYPE.DONG_HAI:
                         MjClient.Scene.addChild(new PlayLayer_donghai());
                         break;
-                    case  MjClient.GAME_TYPE.NAN_JING:
+                    case MjClient.GAME_TYPE.NAN_JING:
                         MjClient.Scene.addChild(new PlayLayer_nanjing());
                         break;
-                    case  MjClient.GAME_TYPE.SU_QIAN:
+                    case MjClient.GAME_TYPE.SU_QIAN:
                         MjClient.Scene.addChild(new PlayLayer_suqian());
                         break;
-                    case  MjClient.GAME_TYPE.NIU_NIU://牛牛
+                    case MjClient.GAME_TYPE.NIU_NIU://牛牛
                         MjClient.Scene.addChild(new PlayLayer_niuniu());
                         break;
-                    case  MjClient.GAME_TYPE.HUAI_AN:
+                    case MjClient.GAME_TYPE.HUAI_AN:
                         MjClient.Scene.addChild(new PlayLayer_huaian());
                         break;
-                    case  MjClient.GAME_TYPE.HA_HONGZHONG:
+                    case MjClient.GAME_TYPE.HA_HONGZHONG:
                         MjClient.Scene.addChild(new PlayLayer_HAHZ());
                         break;
-                    case  MjClient.GAME_TYPE.HA_14DUN:
+                    case MjClient.GAME_TYPE.HA_14DUN:
                         MjClient.Scene.addChild(new PlayLayer_HA14D());
                         break;
                     case MjClient.GAME_TYPE.XIN_PU_HZ:
@@ -1513,17 +1498,17 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.NTHZ:
                         MjClient.Scene.addChild(new PlayLayer_NTHZ);
                         break;
-                    case  MjClient.GAME_TYPE.XU_ZHOU:
+                    case MjClient.GAME_TYPE.XU_ZHOU:
                         MjClient.Scene.addChild(new PlayLayer_xuzhou());
                         break;
-                    case  MjClient.GAME_TYPE.TONG_HUA:
+                    case MjClient.GAME_TYPE.TONG_HUA:
                         MjClient.Scene.addChild(new PlayLayer_tonghua());
                         break;
                     case MjClient.GAME_TYPE.CHANG_SHA:
                         if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ
-                           || MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
+                            || MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
                             MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ
-                            ) {
+                        ) {
                             MjClient.Scene.addChild(new majiang_panel_changSha());
                         }
                         // else if(MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP){
@@ -1537,31 +1522,31 @@ MjClient.netCallBack = {
                             MjClient.Scene.addChild(new PlayLayer_changSha());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU:
-                            MjClient.Scene.addChild(new majiang_panel_xiangyintuidaohu());
+                    case MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU:
+                        MjClient.Scene.addChild(new majiang_panel_xiangyintuidaohu());
                         break;
-                    case  MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO:
+                    case MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO:
                         //if (Number(SelfUid()) % 2 == 0) {
-                           // MjClient.Scene.addChild(new majiang_panel_pingjiangzhaniao());
+                        // MjClient.Scene.addChild(new majiang_panel_pingjiangzhaniao());
                         //}else{
-                            MjClient.Scene.addChild(new PlayLayer_pingjiangzhaniao());
+                        MjClient.Scene.addChild(new PlayLayer_pingjiangzhaniao());
                         //}
                         break;
-                    case  MjClient.GAME_TYPE.TUAN_TUAN_ZHUAN:
+                    case MjClient.GAME_TYPE.TUAN_TUAN_ZHUAN:
                         MjClient.Scene.addChild(new PlayLayer_tuantuanzhuan());
                         break;
                     case MjClient.GAME_TYPE.PAO_DE_KUAI:
                         MjClient.Scene.addChild(new PlayLayer_paodekuai());
                         break;
                     case MjClient.GAME_TYPE.PAO_DE_KUAI_TY:
-                        if(typeof(GoldField_PlayLayer_PaoDeKuaiTY) != 'undefined' && MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId){
+                        if (typeof (GoldField_PlayLayer_PaoDeKuaiTY) != 'undefined' && MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {
                             cc.log("into GoldField_PlayLayer_PaoDeKuaiTY");
                             MjClient.Scene.addChild(new GoldField_PlayLayer_PaoDeKuaiTY());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_PaoDeKuaiTY());
                         }
                         break;
-                        case MjClient.GAME_TYPE.PAO_DE_KUAI_ZERO:
+                    case MjClient.GAME_TYPE.PAO_DE_KUAI_ZERO:
                         MjClient.Scene.addChild(new PlayLayer_PaoDeKuaiZERO());
                         break;
                     case MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN:
@@ -1576,20 +1561,19 @@ MjClient.netCallBack = {
                         break;
                     case MjClient.GAME_TYPE.PAO_DE_KUAI_HBTY:
                         MjClient.Scene.addChild(new PlayLayer_PaoDeKuaiHBTY());
-                        break;    
-                    case  MjClient.GAME_TYPE.HY_SHI_HU_KA:
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP || 
-                            MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ)
-                        {
+                        break;
+                    case MjClient.GAME_TYPE.HY_SHI_HU_KA:
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
+                            MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ) {
                             MjClient.Scene.addChild(new PlayLayer_ShiHuKa());
-                        }else if(MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP){
+                        } else if (MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
                             MjClient.Scene.addChild(new PlayLayer_bdhyShiHuKa());
-                        }else if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+                        } else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new playPanel_syShiHuKa());
-                        }else if (MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
+                        } else if (MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
                             MjClient.Scene.addChild(new PlayLayer_ylShiHuKa());
                         }
-                        else{
+                        else {
                             MjClient.Scene.addChild(new PlayLayer_hyShiHuKa());
                         }
                         break;
@@ -1616,7 +1600,7 @@ MjClient.netCallBack = {
                         break;
                     case MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO:
                         MjClient.Scene.addChild(new PlayLayer_chongYangHuaQuanJiao());
-                        break;    
+                        break;
                     case MjClient.GAME_TYPE.SAN_DA_HA:
                         MjClient.Scene.addChild(new PlayLayer_sanDaHa());
                         break;
@@ -1632,42 +1616,42 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.LV_LIANG_DA_QI:
                         MjClient.Scene.addChild(new PlayLayer_daQi());
                         break;
-                    case  MjClient.GAME_TYPE.PAO_HU_ZI:
-                        if(MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()){
+                    case MjClient.GAME_TYPE.PAO_HU_ZI:
+                        if (MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) {
                             MjClient.Scene.addChild(new PlayPanel_cheHuZi());
-                        }else{  
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_paohuzi());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.PAO_HU_ZI_SR:
-                        if(MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()){
+                    case MjClient.GAME_TYPE.PAO_HU_ZI_SR:
+                        if (MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) {
                             MjClient.Scene.addChild(new PlayPanel_cheHuZi());
-                        }else{  
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_paohuzi_SR());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.SI_YANG:
+                    case MjClient.GAME_TYPE.SI_YANG:
                         MjClient.Scene.addChild(new PlayLayer_siyang());
                         break;
-                    case  MjClient.GAME_TYPE.XIN_SI_YANG:
+                    case MjClient.GAME_TYPE.XIN_SI_YANG:
                         MjClient.Scene.addChild(new PlayLayer_siyang_New());
                         break;
-                    case  MjClient.GAME_TYPE.SI_YANG_HH:
+                    case MjClient.GAME_TYPE.SI_YANG_HH:
                         MjClient.Scene.addChild(new PlayLayer_siyanghh());
                         break;
-                    case  MjClient.GAME_TYPE.YAN_CHENG_HH:
+                    case MjClient.GAME_TYPE.YAN_CHENG_HH:
                         MjClient.Scene.addChild(new PlayLayer_yanchenghh());
                         break;
-                    case  MjClient.GAME_TYPE.RU_GAO:
+                    case MjClient.GAME_TYPE.RU_GAO:
                         MjClient.Scene.addChild(new PlayLayer_rugao());
                         break;
-                    case  MjClient.GAME_TYPE.GAN_YU:
+                    case MjClient.GAME_TYPE.GAN_YU:
                         MjClient.Scene.addChild(new PlayLayer_ganyu());
                         break;
                     case MjClient.GAME_TYPE.HUAI_AN_TTZ:
                         MjClient.Scene.addChild(new PlayLayer_huaianTTZ);
                         break;
-                    case  MjClient.GAME_TYPE.RU_GAO_MJH:
+                    case MjClient.GAME_TYPE.RU_GAO_MJH:
                         MjClient.Scene.addChild(new PlayLayer_rugaoMJH());
                         break;
                     case MjClient.GAME_TYPE.HUAI_AN_CC:
@@ -1680,9 +1664,9 @@ MjClient.netCallBack = {
                         MjClient.Scene.addChild(new PlayLayer_huaianERZ());
                         break;
                     case MjClient.GAME_TYPE.LUO_DI_SAO:
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new PlayPanel_luoDiSao);
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_liuhusao);
                         }
                         break;
@@ -1695,45 +1679,45 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.LIAN_SHUI:
                         MjClient.Scene.addChild(new PlayLayer_Lianshui());
                         break;
-                    case  MjClient.GAME_TYPE.TY_HONGZHONG:
+                    case MjClient.GAME_TYPE.TY_HONGZHONG:
                         if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new majiang_panel_SYHZ());
                         } else {
                             MjClient.Scene.addChild(new PlayLayer_TYHZ());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.ML_HONGZHONG:
-                        if(MjClient.getAppType() === MjClient.APP_TYPE.QXYYQP){
+                    case MjClient.GAME_TYPE.ML_HONGZHONG:
+                        if (MjClient.getAppType() === MjClient.APP_TYPE.QXYYQP) {
                             MjClient.Scene.addChild(new majiang_panel_MLHZ());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_MLHZ());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.ML_HONGZHONG_ZERO:
-                        if(typeof(GoldField_PlayLayer_MLHZ) != 'undefined' && MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId){
+                    case MjClient.GAME_TYPE.ML_HONGZHONG_ZERO:
+                        if (typeof (GoldField_PlayLayer_MLHZ) != 'undefined' && MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {
                             cc.log("into GoldField_PlayLayer_MLHZ");
                             MjClient.Scene.addChild(new GoldField_PlayLayer_MLHZ());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_MLHZ_AI());
                         }
 
                         break;
-                    case  MjClient.GAME_TYPE.NING_XIANG_MJ:
+                    case MjClient.GAME_TYPE.NING_XIANG_MJ:
                         MjClient.Scene.addChild(new PlayLayer_ningxiang());
                         break;
-                    case  MjClient.GAME_TYPE.NAN_XIAN_MJ:
+                    case MjClient.GAME_TYPE.NAN_XIAN_MJ:
                         MjClient.Scene.addChild(new PlayLayer_nanxian());
                         break;
-                    case  MjClient.GAME_TYPE.YUAN_JIANG_MJ:
+                    case MjClient.GAME_TYPE.YUAN_JIANG_MJ:
                         MjClient.Scene.addChild(new PlayLayer_yuanjiang());
                         break;
-                    case  MjClient.GAME_TYPE.CHEN_ZHOU:
+                    case MjClient.GAME_TYPE.CHEN_ZHOU:
                         MjClient.Scene.addChild(new PlayLayer_chenzhou());
                         break;
-                    case  MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI:
+                    case MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI:
                         MjClient.Scene.addChild(new PlayLayer_zhuoxiazi());
                         break;
-                    case  MjClient.GAME_TYPE.CHAO_GU_MJ:
+                    case MjClient.GAME_TYPE.CHAO_GU_MJ:
                         MjClient.Scene.addChild(new PlayLayer_chaogu());
                         break;
                     case MjClient.GAME_TYPE.WU_XUE_GE_BAN:
@@ -1744,46 +1728,46 @@ MjClient.netCallBack = {
                         break;
                     case MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY:
                         MjClient.Scene.addChild(new PlayLayer_doudizhuHBTY());
-                        break;  
+                        break;
                     case MjClient.GAME_TYPE.DOU_DI_ZHU_QC:
                         MjClient.Scene.addChild(new PlayLayer_doudizhuQC());
-                        break;                       
-                    case  MjClient.GAME_TYPE.TY_ZHUANZHUAN:
-                        if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ 
-                             || MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP
-                            ) {
+                        break;
+                    case MjClient.GAME_TYPE.TY_ZHUANZHUAN:
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ
+                            || MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP
+                        ) {
                             MjClient.Scene.addChild(new majiang_panel_TYZZ());
                         }
-                        else{
+                        else {
                             MjClient.Scene.addChild(new PlayLayer_TYZZ());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.BAI_PU_LIN_ZI:
+                    case MjClient.GAME_TYPE.BAI_PU_LIN_ZI:
                         MjClient.Scene.addChild(new PlayLayer_BPLZ());
                         break;
-                    case  MjClient.GAME_TYPE.RU_GAO_SHUANG_JIANG:
+                    case MjClient.GAME_TYPE.RU_GAO_SHUANG_JIANG:
                         MjClient.Scene.addChild(new PlayLayer_rugao_SJ());
                         break;
-                    case  MjClient.GAME_TYPE.HAI_AN_MJ:
+                    case MjClient.GAME_TYPE.HAI_AN_MJ:
                         MjClient.Scene.addChild(new PlayLayer_haian());
                         break;
-                    case  MjClient.GAME_TYPE.XUE_ZHAN:
+                    case MjClient.GAME_TYPE.XUE_ZHAN:
                         MjClient.Scene.addChild(new PlayLayer_xuezhanMJ());
                         break;
-                    case  MjClient.GAME_TYPE.XUE_LIU:
+                    case MjClient.GAME_TYPE.XUE_LIU:
                         MjClient.Scene.addChild(new PlayLayer_xueliu());
                         break;
-                    case  MjClient.GAME_TYPE.HAI_AN_BAI_DA:
+                    case MjClient.GAME_TYPE.HAI_AN_BAI_DA:
                         MjClient.Scene.addChild(new PlayLayer_haianbaida());
                         break;
-                    case  MjClient.GAME_TYPE.JIN_ZHONG_MJ:
+                    case MjClient.GAME_TYPE.JIN_ZHONG_MJ:
                         MjClient.Scene.addChild(new PlayLayer_jinzhong());
                         break;
                     case MjClient.GAME_TYPE.DOU_DI_ZHU_JZ:
-                        if(typeof(GoldField_PlayLayer_doudizhuJZ) != 'undefined' && MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId){
+                        if (typeof (GoldField_PlayLayer_doudizhuJZ) != 'undefined' && MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {
                             cc.log("into GoldField_PlayLayer_doudizhuJZ");
                             MjClient.Scene.addChild(new GoldField_PlayLayer_doudizhuJZ());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_doudizhuJZ());
                         }
                         break;
@@ -1802,67 +1786,67 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.DOU_DI_ZHU_HA:
                         MjClient.Scene.addChild(new PlayLayer_doudizhuHA());
                         break;
-                    case  MjClient.GAME_TYPE.RU_DONG_SHUANG_JIANG:
+                    case MjClient.GAME_TYPE.RU_DONG_SHUANG_JIANG:
                         MjClient.Scene.addChild(new PlayLayer_rudong());
                         break;
-                    case  MjClient.GAME_TYPE.JIN_ZHONG_KD:
+                    case MjClient.GAME_TYPE.JIN_ZHONG_KD:
                         MjClient.Scene.addChild(new PlayLayer_koudian());
                         break;
-                    case  MjClient.GAME_TYPE.YUN_CHENG_TIE_JIN:
+                    case MjClient.GAME_TYPE.YUN_CHENG_TIE_JIN:
                         MjClient.Scene.addChild(new PlayLayer_yunchengtiejin());
                         break;
-                    case  MjClient.GAME_TYPE.HE_JIN_KUN_JIN:
+                    case MjClient.GAME_TYPE.HE_JIN_KUN_JIN:
                         MjClient.Scene.addChild(new PlayLayer_hejinkunjin());
                         break;
-                    case  MjClient.GAME_TYPE.JING_LE_KOU_DIAN:
+                    case MjClient.GAME_TYPE.JING_LE_KOU_DIAN:
                         MjClient.Scene.addChild(new PlayLayer_jingle());
                         break;
-                    case  MjClient.GAME_TYPE.LV_LIANG_MA_JIANG:
+                    case MjClient.GAME_TYPE.LV_LIANG_MA_JIANG:
                         MjClient.Scene.addChild(new PlayLayer_lvliangmajiang());
                         break;
-                    case  MjClient.GAME_TYPE.ZHUO_HAO_ZI:
+                    case MjClient.GAME_TYPE.ZHUO_HAO_ZI:
                         MjClient.Scene.addChild(new PlayLayer_zhuohaozi());
                         break;
-                    case  MjClient.GAME_TYPE.RU_GAO_ER:
+                    case MjClient.GAME_TYPE.RU_GAO_ER:
                         MjClient.Scene.addChild(new PlayLayer_rugaoER());
                         break;
-                    case  MjClient.GAME_TYPE.JIN_ZHONG_TUI_DAO_HU:
+                    case MjClient.GAME_TYPE.JIN_ZHONG_TUI_DAO_HU:
                         MjClient.Scene.addChild(new PlayLayer_tuidaohu());
                         break;
-                    case  MjClient.GAME_TYPE.LING_SHI_BIAN_LONG:
+                    case MjClient.GAME_TYPE.LING_SHI_BIAN_LONG:
                         MjClient.Scene.addChild(new PlayLayer_lingshibianlong());
                         break;
-                    case  MjClient.GAME_TYPE.LING_SHI_BAN_MO:
+                    case MjClient.GAME_TYPE.LING_SHI_BAN_MO:
                         MjClient.Scene.addChild(new PlayLayer_lingshibanmo());
                         break;
-                    case  MjClient.GAME_TYPE.PING_YAO_KOU_DIAN:
+                    case MjClient.GAME_TYPE.PING_YAO_KOU_DIAN:
                         MjClient.Scene.addChild(new PlayLayer_pingyaokoudian());
                         break;
-                    case  MjClient.GAME_TYPE.PING_YAO_MA_JIANG:
+                    case MjClient.GAME_TYPE.PING_YAO_MA_JIANG:
                         MjClient.Scene.addChild(new PlayLayer_pingyaomajiang());
                         break;
-                    case  MjClient.GAME_TYPE.JIE_XIU_1_DIAN_3:
+                    case MjClient.GAME_TYPE.JIE_XIU_1_DIAN_3:
                         MjClient.Scene.addChild(new PlayLayer_jiexiuyidiansan());
                         break;
-                    case  MjClient.GAME_TYPE.JIE_XIU_KOU_DIAN:
+                    case MjClient.GAME_TYPE.JIE_XIU_KOU_DIAN:
                         MjClient.Scene.addChild(new PlayLayer_jiexiukoudian());
                         break;
-                    case  MjClient.GAME_TYPE.JIN_ZHONG_GUAI_SAN_JIAO:
+                    case MjClient.GAME_TYPE.JIN_ZHONG_GUAI_SAN_JIAO:
                         MjClient.Scene.addChild(new PlayLayer_guaisanjiao());
                         break;
-                    case  MjClient.GAME_TYPE.SHOU_YANG_QUE_KA:
+                    case MjClient.GAME_TYPE.SHOU_YANG_QUE_KA:
                         MjClient.Scene.addChild(new PlayLayer_shouyangqueka());
                         break;
-                    case  MjClient.GAME_TYPE.LV_LIANG_KOU_DIAN:
+                    case MjClient.GAME_TYPE.LV_LIANG_KOU_DIAN:
                         MjClient.Scene.addChild(new PlayLayer_lvliangkoudian());
                         break;
-                    case  MjClient.GAME_TYPE.JIN_ZHONG_LI_SI:
+                    case MjClient.GAME_TYPE.JIN_ZHONG_LI_SI:
                         MjClient.Scene.addChild(new PlayLayer_jinzhonglisi());
                         break;
-                    case  MjClient.GAME_TYPE.HONG_TONG_WANG_PAI:
+                    case MjClient.GAME_TYPE.HONG_TONG_WANG_PAI:
                         MjClient.Scene.addChild(new PlayLayer_hongtongwangpai());
                         break;
-                    case  MjClient.GAME_TYPE.LIN_FEN_YING_SAN_ZUI:
+                    case MjClient.GAME_TYPE.LIN_FEN_YING_SAN_ZUI:
                         MjClient.Scene.addChild(new PlayLayer_linfenyingsanzui());
                         break;
                     case MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN:
@@ -1901,16 +1885,16 @@ MjClient.netCallBack = {
                             MjClient.Scene.addChild(new PlayLayer_YiYangWaiHuZi());
                         }*/
                         break;
-                    case MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI: 
-                         MjClient.Scene.addChild(new playPanel_nanXianGuiHuZi());
-                  
+                    case MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI:
+                        MjClient.Scene.addChild(new playPanel_nanXianGuiHuZi());
+
 
                         // MjClient.Scene.addChild(new PlayLayer_NanXianGuiHuZi());
                         break;
                     case MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI:
-                        if(MjClient.APP_TYPE.QXYYQP == MjClient.getAppType()){
+                        if (MjClient.APP_TYPE.QXYYQP == MjClient.getAppType()) {
                             MjClient.Scene.addChild(new PlayPanel_YuanJiangGuiHuZi());
-                        }else
+                        } else
                             MjClient.Scene.addChild(new PlayLayer_YuanJiangGuiHuZi());
                         break;
                     case MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI:
@@ -1941,7 +1925,7 @@ MjClient.netCallBack = {
                         MjClient.Scene.addChild(new PlayLayer_daixian());
                         break;
                     case MjClient.GAME_TYPE.YUE_YANG_HONG_ZHONG:
-                        if(MjClient.APP_TYPE.QXYYQP == MjClient.getAppType())
+                        if (MjClient.APP_TYPE.QXYYQP == MjClient.getAppType())
                             MjClient.Scene.addChild(new majiang_panel_yueYangHongZhong());
                         else
                             MjClient.Scene.addChild(new PlayLayer_yueyanghongzhong());
@@ -1949,7 +1933,7 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA:
                         MjClient.Scene.addChild(new PlayLayer_sanDaHaYueyang());
                         break;
-                    case  MjClient.GAME_TYPE.WU_TAI_KOU_DIAN:
+                    case MjClient.GAME_TYPE.WU_TAI_KOU_DIAN:
                         MjClient.Scene.addChild(new PlayLayer_wutaikoudian());
                         break;
                     case MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER:
@@ -1972,7 +1956,7 @@ MjClient.netCallBack = {
                         //金币场暂时走旧版
                         if (MjClient.data.sData.tData.fieldId) {
                             MjClient.Scene.addChild(new PlayLayer_ahPaoHuZi());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new playPanel_ahPaoHuZi());
                         }
                         break;
@@ -1984,9 +1968,9 @@ MjClient.netCallBack = {
                         break;
                     case MjClient.GAME_TYPE.AN_HUA_MA_JIANG:
                         // if (Number(SelfUid()) % 2 == 0) {
-                            MjClient.Scene.addChild(new majiang_panel_anHuaQiWang());
+                        MjClient.Scene.addChild(new majiang_panel_anHuaQiWang());
                         // } else {
-                            // MjClient.Scene.addChild(new PlayLayer_anhuaMaJiang());
+                        // MjClient.Scene.addChild(new PlayLayer_anhuaMaJiang());
                         // }
                         break;
                     case MjClient.GAME_TYPE.AN_HUA_MA_JIANG_SW:
@@ -2041,7 +2025,7 @@ MjClient.netCallBack = {
                         // if(parseInt(SelfUid())%2 == 0)
                         //     MjClient.Scene.addChild(new majiang_panel_taoJiang());
                         // else
-                            MjClient.Scene.addChild(new PlayLayer_taoJiang());
+                        MjClient.Scene.addChild(new PlayLayer_taoJiang());
                         break;
                     case MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU:
                         MjClient.Scene.addChild(new PlayLayer_yiJiaoLaiYou());
@@ -2100,12 +2084,12 @@ MjClient.netCallBack = {
                         MjClient.Scene.addChild(new PlayLayer_yuanLingPaoHuZi());
                         break;
                     case MjClient.GAME_TYPE.SHI_MEN_PAO_HU_ZI:
-                            MjClient.Scene.addChild(new playPanel_shiMenPaoHuzi());
+                        MjClient.Scene.addChild(new playPanel_shiMenPaoHuzi());
                         break;
                     case MjClient.GAME_TYPE.ZP_LY_CHZ:
-                        if(isYongZhouProject()){
+                        if (isYongZhouProject()) {
                             MjClient.Scene.addChild(new PlayLayer_zplychz());
-                        }else{
+                        } else {
                             // if(Number(SelfUid()) % 2 == 0){
                             //     MjClient.Scene.addChild(new PlayLayer_zplychz_lyg());
                             // }else{
@@ -2113,7 +2097,7 @@ MjClient.netCallBack = {
                             // }
                             MjClient.Scene.addChild(new playPanel_zplychz_lyg());
                         }
-                        
+
                         break;
                     case MjClient.GAME_TYPE.HAN_SHOU_PAO_HU_ZI:
                         MjClient.Scene.addChild(new playLayer_hanShouPaoHuZi());
@@ -2122,9 +2106,9 @@ MjClient.netCallBack = {
                         MjClient.Scene.addChild(new PlayLayer_yunChengFengHaoZi());
                         break;
                     case MjClient.GAME_TYPE.DAO_ZHOU_MJ:
-                        if(MjClient.getAppType() === MjClient.APP_TYPE.QXSYDTZ){
+                        if (MjClient.getAppType() === MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new majiang_panel_daoZhou());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_DaozhouMJ());
                         }
                         break;
@@ -2135,21 +2119,21 @@ MjClient.netCallBack = {
                         MjClient.Scene.addChild(new PlayLayer_PaoDeKuaiYZTY());
                         break;
                     case MjClient.GAME_TYPE.WANG_DIAO_MA_JIANG:
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
-                            MjClient.Scene.addChild(new majiang_panel_wangdiaoMJ()); 
-                        }else{
-                            MjClient.Scene.addChild(new PlayLayer_WangDiaoMJ()); 
-                        }  
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
+                            MjClient.Scene.addChild(new majiang_panel_wangdiaoMJ());
+                        } else {
+                            MjClient.Scene.addChild(new PlayLayer_WangDiaoMJ());
+                        }
                         break;
-                    case  MjClient.GAME_TYPE.JIANG_HUA_MJ:
-                        if(MjClient.getAppType() === MjClient.APP_TYPE.QXSYDTZ){
+                    case MjClient.GAME_TYPE.JIANG_HUA_MJ:
+                        if (MjClient.getAppType() === MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new majiang_panel_jiangHua());
                         } else {
                             MjClient.Scene.addChild(new PlayLayer_jiangHuaMJ());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.YONG_ZHOU_MJ:
-                        if(MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ){
+                    case MjClient.GAME_TYPE.YONG_ZHOU_MJ:
+                        if (MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new PlayLayer_yongZhouGMJ());
                         } else {
                             MjClient.Scene.addChild(new majiang_panel_yongZhouGMJ());
@@ -2164,119 +2148,118 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA:
                         MjClient.Scene.addChild(new PlayLayer_hengyangChangSha());
                         break;
-                    case  MjClient.GAME_TYPE.PAO_HU_ZI_ER:
-                        if(MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()){
+                    case MjClient.GAME_TYPE.PAO_HU_ZI_ER:
+                        if (MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) {
                             MjClient.Scene.addChild(new PlayPanel_cheHuZi());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_paohuzi_ER());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI:    
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+                    case MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI:
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new playPanel_xxGaoHuZi());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_xxGaoHuZi());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.XIANG_XIANG_PAO_HU_ZI:    
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+                    case MjClient.GAME_TYPE.XIANG_XIANG_PAO_HU_ZI:
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new playPanel_xiangxiangPHZ());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_xiangxiangPHZ());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.XIANG_TAN_PAO_HU_ZI:    
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+                    case MjClient.GAME_TYPE.XIANG_TAN_PAO_HU_ZI:
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new playPanel_xiangTanPHZ());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_xiangtanPHZ());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.LOU_DI_FANG_PAO_FA:
+                    case MjClient.GAME_TYPE.LOU_DI_FANG_PAO_FA:
                         MjClient.Scene.addChild(new PlayLayer_loudifpf());
                         break;
-                    case  MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA:
+                    case MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA:
                         var tData = MjClient.data.sData.tData;
-                        if(tData.maxPlayer == 4){
+                        if (tData.maxPlayer == 4) {
                             MjClient.Scene.addChild(new playPanel_syLouDiFangPaoFa());
-                        }else{
-                            if(tData.fieldId) {
+                        } else {
+                            if (tData.fieldId) {
                                 MjClient.Scene.addChild(new PlayLayer_SYloudifpf());
-                            }else{
+                            } else {
                                 MjClient.Scene.addChild(new playPanel_syLouDiFangPaoFa());
                             }
                         }
                         break;
-                    case  MjClient.GAME_TYPE.HENG_YANG_FANG_PAO_FA:
+                    case MjClient.GAME_TYPE.HENG_YANG_FANG_PAO_FA:
                         var tData = MjClient.data.sData.tData;
-                        if(tData.maxPlayer == 4){
+                        if (tData.maxPlayer == 4) {
                             MjClient.Scene.addChild(new PlayLayer_HYFangPaoFaZuoXing());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_HYFangPaoFa());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.HUAI_HUA_HONG_GUAI_WAN:
+                    case MjClient.GAME_TYPE.HUAI_HUA_HONG_GUAI_WAN:
                         MjClient.Scene.addChild(new playPanel_hhHongGuaiWan());
                         break;
-                    case  MjClient.GAME_TYPE.PAO_HU_ZI_King:
-                        if(MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()){
+                    case MjClient.GAME_TYPE.PAO_HU_ZI_King:
+                        if (MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) {
                             MjClient.Scene.addChild(new PlayPanel_cheHuZi());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_paohuzi());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.PAO_HU_ZI_LR_King:
-                        if(MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()){
+                    case MjClient.GAME_TYPE.PAO_HU_ZI_LR_King:
+                        if (MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) {
                             MjClient.Scene.addChild(new PlayPanel_cheHuZi());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_paohuzi_ER());
                         }
                         break;
-                    case  MjClient.GAME_TYPE.PAO_HU_ZI_SR_King:
-                            if(MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()){
-                                MjClient.Scene.addChild(new PlayPanel_cheHuZi());
-                            }else{
-                                MjClient.Scene.addChild(new PlayLayer_paohuzi_SR());
-                            }
+                    case MjClient.GAME_TYPE.PAO_HU_ZI_SR_King:
+                        if (MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) {
+                            MjClient.Scene.addChild(new PlayPanel_cheHuZi());
+                        } else {
+                            MjClient.Scene.addChild(new PlayLayer_paohuzi_SR());
+                        }
                         break;
-                    case  MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG:
+                    case MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG:
                         // if (Number(SelfUid()) % 2 == 0) {
-                            // MjClient.Scene.addChild(new majiang_panel_huaihuaMaJiang());
+                        // MjClient.Scene.addChild(new majiang_panel_huaihuaMaJiang());
                         // } else {
-                            MjClient.Scene.addChild(new PlayLayer_huaihuaMaJiang());
+                        MjClient.Scene.addChild(new PlayLayer_huaihuaMaJiang());
                         // // }
                         break;
                     case MjClient.GAME_TYPE.XIANG_XIANG_HONG_ZHONG:
                         MjClient.Scene.addChild(new PlayLayer_XXHZ());
                         break;
-                    case  MjClient.GAME_TYPE.HY_LIU_HU_QIANG:
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP || 
-                            MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ)
-                        {
+                    case MjClient.GAME_TYPE.HY_LIU_HU_QIANG:
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
+                            MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ) {
                             MjClient.Scene.addChild(new PlayLayer_LiuHuQiang());
-                        }else if(MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || 
-                            MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ){
+                        } else if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
+                            MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
                             MjClient.Scene.addChild(new playPanel_liuHuQiang());
                             /*if(Number(SelfUid()) % 2 == 0){
                                 MjClient.Scene.addChild(new playPanel_liuHuQiang());
                             }else{
                                 MjClient.Scene.addChild(new PlayLayer_liuHuQiang());
                             }*/
-                        }else if(MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP){
+                        } else if (MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
                             MjClient.Scene.addChild(new PlayLayer_bdhyLiuHuQiang());
-                        }else if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+                        } else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new playPanel_syLiuHuQiang());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_hyLiuHuQiang());
                         }
                         break;
-                    case MjClient.GAME_TYPE.SHAO_YANG_MA_JIANG: 
+                    case MjClient.GAME_TYPE.SHAO_YANG_MA_JIANG:
                         MjClient.Scene.addChild(new majiang_panel_SYMJ());
                         break;
                     case MjClient.GAME_TYPE.HENG_YANG_SHIWUHUXI:
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new playPanel_syShiWuHu());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_HYShiWuHu());
                         }
                         break;
@@ -2305,7 +2288,7 @@ MjClient.netCallBack = {
                         MjClient.Scene.addChild(new playPanel_syZiPai());
                         break;
                     case MjClient.GAME_TYPE.XIN_NING_MA_JIANG:
-                        if(MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType())
+                        if (MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType())
                             MjClient.Scene.addChild(new majiang_panel_xinNing());
                         else
                             MjClient.Scene.addChild(new PlayLayer_XNMJ());
@@ -2317,9 +2300,9 @@ MjClient.netCallBack = {
                         MjClient.Scene.addChild(new PlayLayer_YongZhouLaoChuo());
                         break;
                     case MjClient.GAME_TYPE.HY_ER_PAO_HU_ZI:
-                        if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+                        if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
                             MjClient.Scene.addChild(new playPanel_syERenPaoHuZi());
-                        }else{
+                        } else {
                             MjClient.Scene.addChild(new PlayLayer_hyERenPaoHuZi());
                         }
                         break;
@@ -2350,31 +2333,31 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE:
                         MjClient.Scene.addChild(new playLayer_anXiangWeiMaQue());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_PU_DING_MJ:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_PU_DING_MJ:
                         MjClient.Scene.addChild(new PlayLayer_guizhoupuding());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_AN_SHUN_MJ:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_AN_SHUN_MJ:
                         MjClient.Scene.addChild(new PlayLayer_guizhouAnShun());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_LIANG_FANG:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_LIANG_FANG:
                         MjClient.Scene.addChild(new PlayLayer_guizhouSanDingLiangFang());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_LIANG_DING_LIANG_FANG:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_LIANG_DING_LIANG_FANG:
                         MjClient.Scene.addChild(new PlayLayer_guizhouLiangDingLiangFang());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_GUAI:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_GUAI:
                         MjClient.Scene.addChild(new PlayLayer_guizhouSanDingGuai());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_ER_DING_GUAI:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_ER_DING_GUAI:
                         MjClient.Scene.addChild(new PlayLayer_guizhouSanDingGuai());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_XMY_GUI_YANG_ZHUO_JI:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_XMY_GUI_YANG_ZHUO_JI:
                         MjClient.Scene.addChild(new PlayLayer_guizhouXMYGuiYangZhuoJi());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_GUI_YANG_ZHUO_JI:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_GUI_YANG_ZHUO_JI:
                         MjClient.Scene.addChild(new PlayLayer_guizhouGuiYangZhuoJi());
                         break;
-                    case  MjClient.GAME_TYPE.GUI_ZHOU_MEN_HU_XUE_LIU:
+                    case MjClient.GAME_TYPE.GUI_ZHOU_MEN_HU_XUE_LIU:
                         MjClient.Scene.addChild(new PlayLayer_guizhouMenHuXueLiu());
                         break;
                     case MjClient.GAME_TYPE.XIANG_XI_96POKER:
@@ -2389,7 +2372,7 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.ER_REN_YI_FANG_MJ:
                         MjClient.Scene.addChild(new majiang_panel_erRenYiFang());
                         break;
-                    case  MjClient.GAME_TYPE.HONG_ZE_MA_JIANG:
+                    case MjClient.GAME_TYPE.HONG_ZE_MA_JIANG:
                         MjClient.Scene.addChild(new majiang_panel_hongZeMaJiang());
                         break;
                     case MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN:
@@ -2407,7 +2390,7 @@ MjClient.netCallBack = {
                     case MjClient.GAME_TYPE.DANG_YANG_FAN_JING:
                         MjClient.Scene.addChild(new playPanel_dangYangFanJing());
                         break;
-                    case MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN: 
+                    case MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN:
                         MjClient.Scene.addChild(new playPanel_yiChangShangDaRen());
                         break;
                     case MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG:
@@ -2467,28 +2450,26 @@ MjClient.netCallBack = {
                 }
 
                 // 默认过胡弹窗没弹过
-                if(cc.sys.isObjectValid(MjClient.playui)){
+                if (cc.sys.isObjectValid(MjClient.playui)) {
                     util.localStorageEncrypt.setBoolItem(MjClient.guoHuHasBeenShown, false);
                 }
 
 
                 // 江苏, 山西, 湖南, 可以切换3D的麻将玩法，第一次进入房间，选择牌桌(金币场不弹2/3D选择)
-                if(MjClient.rePlayVideo === -1)  // 表示正常游戏
+                if (MjClient.rePlayVideo === -1)  // 表示正常游戏
                 {
                     var sData = MjClient.data.sData;
                     var isGoldField = sData.tData.fieldId;
-                    if(MjClient.playui && !cc.isUndefined(MjClient.gameType) && COMMON_UI3D.isCanChangTo3D() && !isGoldField)
-                    {
+                    if (MjClient.playui && !cc.isUndefined(MjClient.gameType) && COMMON_UI3D.isCanChangTo3D() && !isGoldField) {
                         var roomTableSwitch = new RoomTableSwitch();
                         roomTableSwitch.setName("roomTableSwitch");
                         var key = util.localStorageEncrypt.getBoolItem("canShowRoomTableSwitch", true);
-                        if(key) MjClient.playui.addChild(roomTableSwitch, 100);
+                        if (key) MjClient.playui.addChild(roomTableSwitch, 100);
                     }
                 }
 
 
-                if(MjClient.rePlayVideo !== -1)
-                {
+                if (MjClient.rePlayVideo !== -1) {
                     MjClient.Scene.addChild(new replayUILayer());
                 }
 
@@ -2496,53 +2477,46 @@ MjClient.netCallBack = {
                 //if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ
                 //|| isJinZhongAPPType())
                 {
-                    if(MjClient.GoldHallLayer)
-                    {
-                        if(cc.sys.isObjectValid(MjClient.GoldHallLayer)){
+                    if (MjClient.GoldHallLayer) {
+                        if (cc.sys.isObjectValid(MjClient.GoldHallLayer)) {
                             MjClient.GoldHallLayer.removeFromParent();
                         }
                         MjClient.GoldHallLayer = null;
                     }
-                    if(MjClient.homeui)
-                    {
+                    if (MjClient.homeui) {
                         MjClient.homeui.removeFromParent();
                         MjClient.homeui = null;
                     }
 
-                    if (MjClient.FriendCard_main_ui)
-                    {
+                    if (MjClient.FriendCard_main_ui) {
                         MjClient.FriendCard_main_ui.removeFromParent();
                         MjClient.FriendCard_main_ui = null;
                     }
                 }
 
                 //位置插件检测界面
-                if(MjClient.APP_TYPE.BDHYZP == MjClient.getAppType() && MjClient.playui){
+                if (MjClient.APP_TYPE.BDHYZP == MjClient.getAppType() && MjClient.playui) {
                     MjClient.playui.addChild(new LocationAppsLayer(), 5001);
-                }else if(MjClient.rePlayVideo == -1 && (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) && MjClient.playui && !MjClient.data.sData.tData.fieldId){
+                } else if (MjClient.rePlayVideo == -1 && (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) && MjClient.playui && !MjClient.data.sData.tData.fieldId) {
                     // ScanCheatLayer.pInstance = null;
                     // ScanCheatLayer.showStartOnce();
-                }else if(MjClient.rePlayVideo == -1 && MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP && MjClient.playui && !MjClient.data.sData.tData.fieldId && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_HU_ZI){
+                } else if (MjClient.rePlayVideo == -1 && MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP && MjClient.playui && !MjClient.data.sData.tData.fieldId && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_HU_ZI) {
                     // ScanCheatLayer.pInstance = null;
                     // ScanCheatLayer.showStartOnce();
                 }
 
             }
-            else
-            {
+            else {
                 cc.log("=================connect========== ");
-                if(MjClient.endoneui)
-                {
+                if (MjClient.endoneui) {
                     if (cc.sys.isObjectValid(MjClient.endoneui)) {
                         MjClient.endoneui.removeFromParent(true);
                     }
                     MjClient.endoneui = null;
                 }
 
-                for(var off = 0; off < 4; off++)
-                {
-                    if(getNode(off) && cc.sys.isObjectValid(getNode(off)))
-                    {
+                for (var off = 0; off < 4; off++) {
+                    if (getNode(off) && cc.sys.isObjectValid(getNode(off))) {
                         var _ready = getNode(off).getChildByName("ready");
                         if (cc.sys.isObjectValid(_ready)) {
                             GetReadyVisible(_ready, off);
@@ -2555,13 +2529,12 @@ MjClient.netCallBack = {
 
 
             var tData = MjClient.data.sData.tData;
-            if(tData.fieldId && tData.redPacketInfo) {
+            if (tData.fieldId && tData.redPacketInfo) {
                 MjClient._redPacketInfo = tData.redPacketInfo;
                 MjClient._redPacketInfo.currentTime = (sData.serverNow + Date.now());
             }
-            if(tData.matchId){
-                var readyLayer = new readyLayer_niuniu(function ()
-                {
+            if (tData.matchId) {
+                var readyLayer = new readyLayer_niuniu(function () {
                     readyLayer.removeFromParent();
                 });
                 MjClient.playui.addChild(readyLayer, 500);
@@ -2570,35 +2543,32 @@ MjClient.netCallBack = {
             if (MjClient.putTypeSaved)
                 delete MjClient.putTypeSaved;
 
-            if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) 
-            {
-                if (tData.kaigangs && tData.kaigangs.length > 0) 
-                {
-                    if (tData.kaigangs[tData.kaigangs.length - 1].fan2) 
-                    {
+            if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
+                if (tData.kaigangs && tData.kaigangs.length > 0) {
+                    if (tData.kaigangs[tData.kaigangs.length - 1].fan2) {
                         tData.lastPutCard = tData.kaigangs[tData.kaigangs.length - 1].card2;
                     }
                 }
             }
-            cc.log("断线重连  tData.lastPutCard ",tData.lastPutCard);
+            cc.log("断线重连  tData.lastPutCard ", tData.lastPutCard);
         }
-        if(!MjClient._lastTableId || MjClient._lastTableId == ""){
+        if (!MjClient._lastTableId || MjClient._lastTableId == "") {
             MjClient._lastTableId = util.localStorageEncrypt.getStringItem("_lastTableId");
         }
-        if(!MjClient._lastTableId || MjClient._lastTableId != MjClient.data.sData.tData.tableid){
+        if (!MjClient._lastTableId || MjClient._lastTableId != MjClient.data.sData.tData.tableid) {
             //【联盟&亲友圈】玩家加入房间时，toast显示该房间的玩法昵称
             MjClient._lastTableId = MjClient.data.sData.tData.tableid;
-            util.localStorageEncrypt.setStringItem("_lastTableId",(MjClient._lastTableId+""));
+            util.localStorageEncrypt.setStringItem("_lastTableId", (MjClient._lastTableId + ""));
             var clubInfoTable = getClubInfoInTable();
-            if(clubInfoTable && clubInfoTable.ruleName){
-                MjClient.showToast("当前玩法："+unescape(clubInfoTable.ruleName))
+            if (clubInfoTable && clubInfoTable.ruleName) {
+                MjClient.showToast("当前玩法：" + unescape(clubInfoTable.ruleName))
             }
         }
         showVoteJiaShiTip({
-            fromInitScene:true,
+            fromInitScene: true,
         });
         if (showMatchInfo) {
-           showMatchInfo(); 
+            showMatchInfo();
         }
     }]
     , removePlayer: [0, function (d) {
@@ -2607,22 +2577,20 @@ MjClient.netCallBack = {
 
         if (isJinZhongAPPType() &&
             GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG &&
-            d.mjState != TableState.waitReady)
-        {
+            d.mjState != TableState.waitReady) {
             playEffect("player_leave_effect");
             var nickname = sData.players[d.uid].info.nickname;
             var msg = " 离开了房间";
-            MjClient.showToastWithInfobyPos(nickname,msg,0.725);
+            MjClient.showToastWithInfobyPos(nickname, msg, 0.725);
         }
         if (MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP)
-        {
+            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP) {
             //if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG)
             {
                 playEffect("player_leave_effect");
                 var nickname = sData.players[d.uid].info.nickname;
                 var msg = " 离开了房间";
-                MjClient.showToastWithInfobyPos(nickname,msg,0.725);
+                MjClient.showToastWithInfobyPos(nickname, msg, 0.725);
             }
         }
 
@@ -2638,52 +2606,50 @@ MjClient.netCallBack = {
         sData.tData = d.tData;
         if (isJinZhongAPPType()
             //&& (MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_GUAI_SAN_JIAO || sData.tData.maxPlayer == 2)
-            && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG )
-        {
+            && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG) {
             cc.log("add player by sking --进入了房间-----------------");
             playEffect("player_join_effect");
             var nickname = d.player.info.nickname;
             var msg = " 进入了房间";
-            MjClient.showToastWithInfobyPos(nickname,msg,0.725);
+            MjClient.showToastWithInfobyPos(nickname, msg, 0.725);
         }
         if (MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP)
-        {
+            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP) {
             //if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG)
             {
                 playEffect("player_join_effect");
                 var nickname = d.player.info.nickname;
                 var msg = " 进入了房间";
-                MjClient.showToastWithInfobyPos(nickname,msg,0.725);
+                MjClient.showToastWithInfobyPos(nickname, msg, 0.725);
             }
         }
-        cc.log('addPlayer++++:'+JSON.stringify(sData.players));
+        cc.log('addPlayer++++:' + JSON.stringify(sData.players));
     }]
     , updateInfo: [0, function (info) {
         var pinfo = MjClient.data.pinfo;
-        
+
         for (var pty in info) pinfo[pty] = info[pty];
 
 
         //不管乱来，只刷新money
-        if (info &&(info.money || info.money == 0)){
+        if (info && (info.money || info.money == 0)) {
             var pself = getUIPlayer(0);
             if (pself)
-                pself.info.money= info.money;
+                pself.info.money = info.money;
         }
 
         //金币场使用用户信息的金币
-        if (info && (info.gold || info.gold == 0)){
-            if(MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId){
+        if (info && (info.gold || info.gold == 0)) {
+            if (MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {
                 var pl = getUIPlayer(0);
-                if (pl){
+                if (pl) {
                     pl.info._preGold = pl.info.gold;
                     pl.info.gold = info.gold
                 }
             }
         }
-        cc.log("-----------------------updateInfo:"+JSON.stringify(info));
-        cc.log("-----------------------MjClient.data.pinfo:"+JSON.stringify(MjClient.data.pinfo));
+        cc.log("-----------------------updateInfo:" + JSON.stringify(info));
+        cc.log("-----------------------MjClient.data.pinfo:" + JSON.stringify(MjClient.data.pinfo));
     }]
     , moveHead: [1, function () {
 
@@ -2691,23 +2657,23 @@ MjClient.netCallBack = {
     field_reconnection: [0, function () {
 
     }],
-    MJGenZhuang: [0, function (d) { 
+    MJGenZhuang: [0, function (d) {
 
-    }], 
+    }],
     mjhand: [0, function (d) {
         stopDoJiaShiAction();
-        
+
         delete MjClient.MJPutCache;
         postEvent("clearCardUI");
         MjClient.isNoLiang = false;
-        //cc.log("mjhand消息", JSON.stringify(d));
+        cc.log("mjhand消息", JSON.stringify(d));
         var sData = MjClient.data.sData;
         var tData = d.tData;
         if (!sData) return;
         sData.tData = d.tData;
 
         // 默认过胡弹窗没弹过
-        if(cc.sys.isObjectValid(MjClient.playui)){
+        if (cc.sys.isObjectValid(MjClient.playui)) {
             util.localStorageEncrypt.setBoolItem(MjClient.guoHuHasBeenShown, false);
         }
 
@@ -2715,12 +2681,11 @@ MjClient.netCallBack = {
         //cc.log("sData ==========="+JSON.stringify(sData.players));
         //cc.log("=============2222222222222222222=waitwant===========" + sData.tData.areaSelectMode["wanfa"]);
 
-        if (GameClass[MjClient.gameType] === MjClient.GAME_CLASS.DOU_DI_ZHU)
-        {
+        if (GameClass[MjClient.gameType] === MjClient.GAME_CLASS.DOU_DI_ZHU) {
             sData.tData.zhuang = -1;
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.CHANG_SHA ||
+        if (MjClient.gameType === MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
             MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO ||
             MjClient.gameType === MjClient.GAME_TYPE.AN_HUA_MA_JIANG ||
@@ -2728,8 +2693,7 @@ MjClient.netCallBack = {
             MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG ||
             MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG ||
             MjClient.gameType === MjClient.GAME_TYPE.YI_YANG_MA_JIANG ||
-            MjClient.gameType === MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA)
-        {
+            MjClient.gameType === MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA) {
             sData.players[SelfUid()].linkZhuang = d.linkZhuang;
         }
 
@@ -2763,7 +2727,7 @@ MjClient.netCallBack = {
             pl.isOuCard = false;
             pl.wangStatus = false;
             pl.isZiMoHu = false;
-            pl.mustHu    = false;
+            pl.mustHu = false;
             pl.putCount = 0;
             pl.putCardAfterTing = -1; //add by sking 2018 .1. 26
             pl.canNotPutCard = []; // 汨罗红字
@@ -2799,30 +2763,30 @@ MjClient.netCallBack = {
             pl.mjPiZiGang = [];//恩施麻将（一痞二癞）痞子杠和癞子杠,蕲春红中杠也使用这个字段存储痞子杠和癞子杠
             pl.genZhuangScore = 0//蕲春广东麻将跟庄分清零
             pl.curFanCount = 0;
-			pl.liangCards = [];
+            pl.liangCards = [];
             pl.anKe = [];
             pl.anKeNum = 0;
             pl.tingCards = [];
             //打筒子自动托管
-            if(MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG && !tData.areaSelectMode.isTrustWhole) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG && !tData.areaSelectMode.isTrustWhole) {
                 pl.isTrust = false;
                 pl.trustTime = 0;
             }
 
             pl.selectPutState = -2; //大冶字牌 开朝出牌状态
             pl.putCardDir = [];     //大冶字牌 弃牌字典
-            
+
             //托管标记 //该玩家处于全局托管，发牌后仍然是托管
             if (!(pl.trust && tData.areaSelectMode.isTrustWhole)) {
-                pl.trust = false; 
-            } 
+                pl.trust = false;
+            }
 
             pl.tPutCard = false;
             pl.dirNumber = -1;
             pl.touziCount = 0;
             pl.que = -1;
             pl.chongJiCard = [];
-            pl.isDoTianTing =  false;
+            pl.isDoTianTing = false;
             pl.isPass = false;
             pl.guChouValue = -1;
             pl.chongScore = 0;
@@ -2837,7 +2801,7 @@ MjClient.netCallBack = {
                 pl.qingDui = 0;
             }
 
-            if(MjClient.gameType === MjClient.GAME_TYPE.YI_CHANG_XUE_LIU_MJ) {
+            if (MjClient.gameType === MjClient.GAME_TYPE.YI_CHANG_XUE_LIU_MJ) {
                 pl.puCards = [];
                 pl.huanBefore = [];
                 pl.huanAfter = [];
@@ -2846,15 +2810,15 @@ MjClient.netCallBack = {
                 pl.maxFan = 0;
             }
 
-            if(MjClient.gameType === MjClient.GAME_TYPE.QIAN_JIANG_HH_MJ) {
+            if (MjClient.gameType === MjClient.GAME_TYPE.QIAN_JIANG_HH_MJ) {
                 pl.huanBefore = [];
                 pl.huanAfter = [];
             }
 
-            if(MjClient.gameType === MjClient.GAME_TYPE.HUANG_SHI_HH_MJ ||
+            if (MjClient.gameType === MjClient.GAME_TYPE.HUANG_SHI_HH_MJ ||
                 MjClient.gameType === MjClient.GAME_TYPE.QI_CHUN_HH_MJ) {
                 pl.liangCards = [];
-                pl.gangCards = []; 
+                pl.gangCards = [];
             }
 
             if (MjClient.gameType === MjClient.GAME_TYPE.QU_TANG_23_ZHANG) {
@@ -2863,8 +2827,7 @@ MjClient.netCallBack = {
             if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
                 MjClient.gameType == MjClient.GAME_TYPE.CHEN_ZHOU ||
                 MjClient.gameType == MjClient.GAME_TYPE.CHAO_GU_MJ ||
-                MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ ) 
-            {
+                MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) {
                 pl.jiazhuNum = -1;
             }
             if (MjClient.gameType === MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) {
@@ -2892,9 +2855,9 @@ MjClient.netCallBack = {
             }
 
             if (MjClient.gameType != MjClient.GAME_TYPE.SHAO_YANG_ZI_PAI && MjClient.gameType != MjClient.GAME_TYPE.SHAO_YANG_BO_PI
-                && MjClient.gameType != MjClient.GAME_TYPE.HY_SHI_HU_KA && MjClient.gameType != MjClient.GAME_TYPE.LENG_SHUI_JIANG_SHI_HU_DAO 
+                && MjClient.gameType != MjClient.GAME_TYPE.HY_SHI_HU_KA && MjClient.gameType != MjClient.GAME_TYPE.LENG_SHUI_JIANG_SHI_HU_DAO
                 && MjClient.gameType != MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI && MjClient.gameType != MjClient.GAME_TYPE.DA_ZI_BO_PI) {
-                pl.jiachuiNum = -1; 
+                pl.jiachuiNum = -1;
             }
 
             if (MjClient.gameType == MjClient.GAME_TYPE.ZP_LY_CHZ) {
@@ -2904,14 +2867,14 @@ MjClient.netCallBack = {
                 pl.limitHuTypeList = [];
             }
 
-            if(MjClient.gameType === MjClient.GAME_TYPE.XIANG_XI_2710){
-                pl.skipArr  = [];
-                pl.qiPai    = [];
+            if (MjClient.gameType === MjClient.GAME_TYPE.XIANG_XI_2710) {
+                pl.skipArr = [];
+                pl.qiPai = [];
                 pl.fallArea = -1;
                 pl.limitChiAndHuMatrix = [];
             }
 
-            if(MjClient.gameType === MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA){
+            if (MjClient.gameType === MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA) {
                 pl.defeatState = -1;
             }
 
@@ -2936,7 +2899,7 @@ MjClient.netCallBack = {
                 pl.oldMjSort = [];
             }
 
-            if (typeof(pl.winall) == "undefined") {
+            if (typeof (pl.winall) == "undefined") {
                 pl.winall = 0;
             }
             //pl.xuanfengGang = [];
@@ -2955,8 +2918,7 @@ MjClient.netCallBack = {
                 pl.gaiPai = false;
             }
 
-            if(MjClient.rePlayVideo == -1)
-            {
+            if (MjClient.rePlayVideo == -1) {
                 delete pl.mjhand;
             }
 
@@ -2993,12 +2955,10 @@ MjClient.netCallBack = {
                     pl.yingkou = -1;
                 }
 
-                if ("que" in pl)
-                {
+                if ("que" in pl) {
                     pl.que = -1;
                 }
-                else if(tData.ques)
-                {
+                else if (tData.ques) {
                     pl.que = tData.ques[pl.info.uid];
                 }
 
@@ -3008,16 +2968,13 @@ MjClient.netCallBack = {
                 if ("hunCard" in pl) {
                     pl.hunCard = -1;
                 }
-                if (pl.tingLists)
-                {
+                if (pl.tingLists) {
                     pl.tingLists = {};
                 }
-                if (pl.jiangjianghuLists) 
-                {
+                if (pl.jiangjianghuLists) {
                     pl.jiangjianghuLists = {};
                 }
-                if (pl.gangList) 
-                {
+                if (pl.gangList) {
                     pl.gangList = {};
                 }
             }
@@ -3050,18 +3007,18 @@ MjClient.netCallBack = {
                     pl.jiazhuNum = d.jiachuiNums[uid];
                 }
             }
-            
+
             // 估卖
             if (MjClient.gameType == MjClient.GAME_TYPE.GUI_ZHOU_GUI_YANG_ZHUO_JI) {
                 if (d.guMaiNums && d.guMaiNums[uid] != undefined) {
                     pl.gumaiValue = d.guMaiNums[uid];
                 }
             }
-            
+
             if (MjClient.gameType == MjClient.GAME_TYPE.XIN_NING_MA_JIANG ||
                 MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_MA_JIANG ||
                 MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_ZI_PAI ||
-                MjClient.gameType == MjClient.GAME_TYPE.HY_SHI_HU_KA || 
+                MjClient.gameType == MjClient.GAME_TYPE.HY_SHI_HU_KA ||
                 MjClient.gameType == MjClient.GAME_TYPE.LENG_SHUI_JIANG_SHI_HU_DAO ||
                 MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI
             ) { // 每一小局加锤 回放需要此消息更新加锤状态
@@ -3070,7 +3027,7 @@ MjClient.netCallBack = {
                 }
             }
 
-            if (MjClient.gameType === MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG || 
+            if (MjClient.gameType === MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG ||
                 MjClient.gameType === MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN ||
                 MjClient.gameType === MjClient.GAME_TYPE.BAN_BIAN_TIAN_ZHA) {
                 for (var tid in sData.teams) {
@@ -3079,10 +3036,9 @@ MjClient.netCallBack = {
                 }
             }
 
-            if(MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_LI_SI )
-            {
+            if (MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_LI_SI) {
                 pl.cardFourCount = 4; //晋中立四初始化牌张数为4
-                if (d.mjhandFour){
+                if (d.mjhandFour) {
                     pl.mjhandFour = d.mjhandFour;
                 }
 
@@ -3098,14 +3054,13 @@ MjClient.netCallBack = {
             }
 
             //乡宁摔金需重置摔金,一脚赖油重置撑的次数
-            if (MjClient.gameType == MjClient.GAME_TYPE.LIN_FEN_XIANG_NING_SHUAI_JIN ) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.LIN_FEN_XIANG_NING_SHUAI_JIN) {
                 pl.rate = 0;
             }
 
-            if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU ||
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU ||
                 MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU ||
-                MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI)
-            {
+                MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI) {
                 pl.rate = 0;
                 pl.skipGang = [];
             }
@@ -3114,8 +3069,8 @@ MjClient.netCallBack = {
             }
 
             //岳阳福禄寿添加招
-            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU 
-                ||MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG  ) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU
+                || MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG) {
                 pl.mjzhao0 = [];        //他人送的招
                 pl.mjzhao1 = [];        //自己摸的招
                 //pl.lastPiaoFen = -1;    //上一局的飘分
@@ -3124,9 +3079,9 @@ MjClient.netCallBack = {
                 pl.newSendCard = 0;        //新进的牌
                 pl.isTuoGuan = false;       //是否托管
             }
-            if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-                || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI || 
-                MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE){
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+                || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
+                MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
                 pl.mjputType = [];//摸牌标志
                 pl.isDead = false;
                 pl.mjgang2 = [];
@@ -3148,8 +3103,8 @@ MjClient.netCallBack = {
                     var cd = d.mjhand[i];
                     dict[cd] = dict[cd] ? dict[cd] + 1 : 1;
                 }
-                
-                for(var c in dict){
+
+                for (var c in dict) {
                     if (dict[c] == 3) {
                         pl.canNotPutCard.push(Number(c));
                     }
@@ -3163,9 +3118,9 @@ MjClient.netCallBack = {
         }
 
         // 海安麻将先要骰子
-        if(MjClient.gameType != MjClient.GAME_TYPE.HAI_AN_MJ &&
+        if (MjClient.gameType != MjClient.GAME_TYPE.HAI_AN_MJ &&
             MjClient.gameType != MjClient.GAME_TYPE.XUE_ZHAN &&
-            MjClient.gameType != MjClient.GAME_TYPE.XUE_LIU  &&
+            MjClient.gameType != MjClient.GAME_TYPE.XUE_LIU &&
             MjClient.gameType != MjClient.GAME_TYPE.CHANG_SHA &&
             MjClient.gameType != MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU &&
             MjClient.gameType != MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO &&
@@ -3188,9 +3143,8 @@ MjClient.netCallBack = {
             MjClient.getAppType() != MjClient.APP_TYPE.HUNANWANGWANG &&
             MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ &&
             MjClient.getAppType() != MjClient.APP_TYPE.QXLYQP &&
-            MjClient.getAppType() != MjClient.APP_TYPE.BDHYZP && 
-            MjClient.GAME_CLASS.PAO_HU_ZI != GameClass[MjClient.gameType])
-        {
+            MjClient.getAppType() != MjClient.APP_TYPE.BDHYZP &&
+            MjClient.GAME_CLASS.PAO_HU_ZI != GameClass[MjClient.gameType]) {
             playEffect("shuffle");
         }
 
@@ -3205,7 +3159,7 @@ MjClient.netCallBack = {
             cc.log("==============waitwant===========" + sData.tData.areaSelectMode["wanfa"]);
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.XIANG_XI_2710){
+        if (MjClient.gameType === MjClient.GAME_TYPE.XIANG_XI_2710) {
             tData.lastPutCard = -1;
         }
 
@@ -3220,7 +3174,7 @@ MjClient.netCallBack = {
             || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_GUAI
             || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_ER_DING_GUAI
             || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_XMY_GUI_YANG_ZHUO_JI
-            )
+        )
             && tData.maxPlayer !== 4) { //2,3 人才用定缺
             tData.tState = TableState.waitSelect;
         }
@@ -3238,11 +3192,11 @@ MjClient.netCallBack = {
             pl.limitHuTypeList = [];
         }
 
-        if(d.mjhandDatas){
-            for(var uid in d.mjhandDatas){
+        if (d.mjhandDatas) {
+            for (var uid in d.mjhandDatas) {
                 var obj = d.mjhandDatas[uid];
                 var pl = sData.players[uid];
-                if(pl){
+                if (pl) {
                     pl.linkZhuang = obj.linkZhuang;
                     pl.dirNumber = obj.dirNumber;
                 }
@@ -3260,18 +3214,17 @@ MjClient.netCallBack = {
     MJPass: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
-        
+
         var tData = sData.tData;
         tData.haveTianTing = false;
         var pl = sData.players[SelfUid()];
-        if(d.isDoTianTing){
+        if (d.isDoTianTing) {
             cc.log("==================mjpass d = " + JSON.stringify(d));
-            if(d.uid == SelfUid())
-            {
+            if (d.uid == SelfUid()) {
                 pl.isDoTianTing = d.isDoTianTing;
             }
         }
-        if(d.passTianTing) return; //贵州的app,特殊听牌流程
+        if (d.passTianTing) return; //贵州的app,特殊听牌流程
 
         if (!sData) return;
         pl.mjState = d.mjState;
@@ -3279,16 +3232,16 @@ MjClient.netCallBack = {
         pl.skipHu = d.skipHu;
         pl.isQiHu = d.isQiHu;
         //console.log("====isQiHu---", JSON.stringify(d));
-        if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_HU_ZI){
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_HU_ZI) {
             pl.passHu = (pl.eatFlag & 32);
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG){//靖州麻将
-            if(tData.hasOwnProperty("dengHuPlayers"))
+        if (MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) {//靖州麻将
+            if (tData.hasOwnProperty("dengHuPlayers"))
                 tData.dengHuPlayers = null;
         }
-        
-        if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG){
+
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG) {
             pl.passHu = (pl.eatFlag & 8);
         }
         if (MjClient.gameType == MjClient.GAME_TYPE.XU_PU_LAO_PAI) {
@@ -3297,49 +3250,43 @@ MjClient.netCallBack = {
         pl.eatFlag = 0;
         pl.isBBHu = false;
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.XIANG_XI_2710){
+        if (MjClient.gameType === MjClient.GAME_TYPE.XIANG_XI_2710) {
             pl.skipArr = d.skipArr;
             pl.limitChiAndHuMatrix = d.limitChiAndHuMatrix;
         }
-        
-        if (d.needTing) 
-        {
+
+        if (d.needTing) {
             pl.needTing = d.needTing;
         }
 
-        if ("isPass" in d) 
-        {
+        if ("isPass" in d) {
             pl.isPass = d.isPass;
         }
-        else
-        {
+        else {
             pl.isPass = false;
         }
 
-        if(d.isDoTianTing) pl.isDoTianTing = d.isDoTianTing;
+        if (d.isDoTianTing) pl.isDoTianTing = d.isDoTianTing;
 
-        if (pl.eatFlag & 32)
-        {
+        if (pl.eatFlag & 32) {
             MjClient.showToast("您放弃了胡牌");
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA || 
+        if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA) {
             pl.eatFlag2 = 0;
             pl.eatFlag3 = 0;
             pl.eatFlag4 = 0;
         }
         else if (MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
-            MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO )
+            MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO)
             pl.eatFlag2 = 0;
 
-        
-        if ("mjState" in d) 
-        {
+
+        if ("mjState" in d) {
             pl.mjState = d.mjState;
         }
-        if ("tState" in d) 
-        {
+        if ("tState" in d) {
             tData.tState = d.tState;
         }
         pl.wangType = 0;
@@ -3359,25 +3306,20 @@ MjClient.netCallBack = {
     }],
     changeState: [0, function (d) {
         var sData = MjClient.data.sData;
-        if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) 
-        {   
-            if (d.tState) 
-            {
+        if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) {
+            if (d.tState) {
                 sData.tData.tState = d.tState;
             }
         }
     }],
     MJPassQsHu: [0, function (d) {
         var sData = MjClient.data.sData;
-        if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) 
-        {         
+        if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) {
             var pl = sData.players[d.passuid];
-            if ("needTing" in d) 
-            {
+            if ("needTing" in d) {
                 pl.needTing = d.needTing;
             }
-            if (d.tingCard) 
-            {
+            if (d.tingCard) {
                 pl.tingCard = d.tingCard;
             }
             pl.mjState = d.mjState;
@@ -3386,21 +3328,17 @@ MjClient.netCallBack = {
     MJPassBaoTing: [0, function (d) {
         var sData = MjClient.data.sData;
         var pl = sData.players[d.passuid];
-        if (d.uid == SelfUid() ) 
-        {
-            if ("eatFlag" in d) 
-            {
+        if (d.uid == SelfUid()) {
+            if ("eatFlag" in d) {
                 pl.eatFlag = d.eatFlag;
             }
         }
-        if ("tingFinish" in d) 
-        {
+        if ("tingFinish" in d) {
             pl.tingFinish = d.tingFinish;
         }
         if (MjClient.GAME_TYPE.YUAN_JIANG_MJ == MjClient.gameType ||
             MjClient.GAME_TYPE.NAN_XIAN_MJ == MjClient.gameType ||
-            MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) 
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) {
             pl.needTing = false;
         }
 
@@ -3408,43 +3346,39 @@ MjClient.netCallBack = {
     zhuangflag: [0, function (d) {
         var sData = MjClient.data.sData;
         var pl = sData.players[d.uid];
-        if (d.uid == SelfUid() && "eatFlag" in d) 
-        {
+        if (d.uid == SelfUid() && "eatFlag" in d) {
             pl.eatFlag = d.eatFlag;
         }
     }]
-    ,MJSelect: [0, function (d) {
-        cc.log("d-------MJSelect--------",JSON.stringify(d));
+    , MJSelect: [0, function (d) {
+        cc.log("d-------MJSelect--------", JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
         //sData.players[d.uid].que = parseInt(d.que);
         if (MjClient.GAME_TYPE.XUE_ZHAN === MjClient.gameType ||
-            MjClient.GAME_TYPE.XUE_LIU === MjClient.gameType)
-        {
-            if (d.uid == SelfUid())
-            {
+            MjClient.GAME_TYPE.XUE_LIU === MjClient.gameType) {
+            if (d.uid == SelfUid()) {
                 sData.players[SelfUid()].que = parseInt(d.que);
                 sData.players[SelfUid()].eatFlag = d.eatFlag;
             }
             tData.tState = d.tState;
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_PU_DING_MJ
+        if (MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_PU_DING_MJ
             || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_GUAI
             || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_ER_DING_GUAI
             || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_XMY_GUI_YANG_ZHUO_JI
-            || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_GUI_YANG_ZHUO_JI){
-            if (d.uid === SelfUid())
-            {
+            || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_GUI_YANG_ZHUO_JI) {
+            if (d.uid === SelfUid()) {
                 sData.players[SelfUid()].que = d.que;
                 sData.players[SelfUid()].eatFlag = d.eatFlag;
             }
             tData.tState = d.tState;
 
         }
-        if(MjClient.GAME_TYPE.LUAN_GUA_FENG == MjClient.gameType){
-            if(d.liangfengInfo && d.uid == SelfUid()){
+        if (MjClient.GAME_TYPE.LUAN_GUA_FENG == MjClient.gameType) {
+            if (d.liangfengInfo && d.uid == SelfUid()) {
                 if (d.tDataChanged) {
                     for (var k in d.tDataChanged) {
                         sData.tData[k] = d.tDataChanged[k];
@@ -3460,13 +3394,11 @@ MjClient.netCallBack = {
                 lp.buCards = d.liangfengInfo.buCards;
 
 
-                if (d.eatFlag)
-                {
+                if (d.eatFlag) {
                     lp.eatFlag = d.eatFlag;
                 }
 
-                if (lp.info.uid == SelfUid())
-                {
+                if (lp.info.uid == SelfUid()) {
                     if (d.liangfengInfo.mjflower) {
                         lp.mjflower = d.liangfengInfo.mjflower;
                         for (var i = 0; i < d.liangfengInfo.mjflower.length; i++) {
@@ -3476,8 +3408,7 @@ MjClient.netCallBack = {
                             }
                         }
                     }
-                    if (d.liangfengInfo.buCards)
-                    {
+                    if (d.liangfengInfo.buCards) {
                         for (var i = 0; i < d.liangfengInfo.buCards.length; i++) {
                             lp.mjhand.push(d.liangfengInfo.buCards[i]);
                         }
@@ -3496,30 +3427,30 @@ MjClient.netCallBack = {
         var pl = sData.players[SelfUid()];
         pl.mjState = d.mjState;
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ ||
-           MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO || 
-           MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ){
+        if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ ||
+            MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO ||
+            MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ) {
             //晋中斗地主不播
-        }else if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO || 
-            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO ||
+            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN) {
 
         } else {
             playEffectInPlay("pass");
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO){
-            if(tData.isFirstSingleCard == 1)
-                tData.isFirstSingleCard = -1; 
+        if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
+            if (tData.isFirstSingleCard == 1)
+                tData.isFirstSingleCard = -1;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.PAO_HU_ZI){
+        if (MjClient.gameType == MjClient.GAME_TYPE.PAO_HU_ZI) {
             pl.wangType = 0;
             pl.wangStatus = false;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG){
+        if (MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) {
             pl = sData.players[d.uid];
-            if(pl){
+            if (pl) {
                 pl.trustTime = 0;
             }
         }
@@ -3530,18 +3461,17 @@ MjClient.netCallBack = {
     , waitHaiDiLao: [0, function (d) {
 
     }]
-    , MJSelectHaiDiLao:[0, function (d) {
+    , MJSelectHaiDiLao: [0, function (d) {
 
     }]
-    , waitBanbanhu:[0, function (d) {
+    , waitBanbanhu: [0, function (d) {
         var sData = MjClient.data.sData;
         if (d.tDataChanged) {
             for (var k in d.tDataChanged) {
                 sData.tData[k] = d.tDataChanged[k];
             }
         }
-        if ("banbanhuList" in d) 
-        {
+        if ("banbanhuList" in d) {
             for (var i = 0; i < d.banbanhuList.length; i++) {
                 var pl = sData.players[d.banbanhuList[i]];
                 pl.isBBHu = true;
@@ -3549,28 +3479,24 @@ MjClient.netCallBack = {
         }
 
     }]
-    , MJBBhu:[0, function (d) {
+    , MJBBhu: [0, function (d) {
         var sData = MjClient.data.sData;
         var pl = sData.players[d.uid];
         sData.tData.cardNext = d.cardNext;
         pl.isBBHu = false;
-        if (d.mjput) 
-        {
+        if (d.mjput) {
             pl.mjput = d.mjput;
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) 
-        {
-            if (d.clearBBHu) 
-            {
+        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
+            if (d.clearBBHu) {
                 for (var i = 0; i < sData.tData.maxPlayer; i++) {
                     uid = sData.tData.uids[i];
                     var pl = sData.players[uid];
-                    if (pl)
-                    {
+                    if (pl) {
                         pl.isBBHu = false;
-                    } 
+                    }
                 }
-                
+
             }
         }
     }]
@@ -3587,7 +3513,7 @@ MjClient.netCallBack = {
 
         tData.tState = TableState.waitEat;
         tData.putType = d.putType;
-        
+
         var pl = sData.players[d.uid];
         pl.skipPeng = d.skipPeng;
         pl.justPeng = 0;
@@ -3599,30 +3525,25 @@ MjClient.netCallBack = {
         if (d.card4 && d.card4 != -1)
             pl.mjput.push(d.card4);
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) 
-        {
-            if ("kaigangs" in d) 
-            {
+        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
+            if ("kaigangs" in d) {
                 tData.kaigangs = d.kaigangs;
             }
-            if (d.card2 != -1)
-            {
+            if (d.card2 != -1) {
                 pl.mjput.pop();//平江扎鸟每次只放入一张，第二张在sendKaiGangCard2中放入
             }
             var kaigangData = tData.kaigangs[tData.kaigangs.length - 1];
-            if (kaigangData.cards && kaigangData.fanIndex) 
-            {
+            if (kaigangData.cards && kaigangData.fanIndex) {
                 tData.lastPutCard = kaigangData.cards[kaigangData.fanIndex];
             }
             tData.isKaigang = true;
-            if ("isKaigang" in d) 
-            {
+            if ("isKaigang" in d) {
                 tData.isKaigang = d.isKaigang;
             }
-            for(var uid in d.canEats) {
+            for (var uid in d.canEats) {
                 sData.players[uid].canEat = d.canEats[uid];
             }
-            
+
             //cc.log("已出牌   sendKaiGangCard",pl.mjput,d.card1,d.card2,d.uid);
         }
 
@@ -3636,55 +3557,54 @@ MjClient.netCallBack = {
             pl.skipHu = d.skipHu;
             pl.isQiHu = d.isQiHu;
             //console.log("====isQiHu---", JSON.stringify(d));
-            if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ){
-                for(var uid in d.tingListAfterPut) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) {
+                for (var uid in d.tingListAfterPut) {
                     sData.players[uid].tingListAfterPut = d.tingListAfterPut[uid];
                 }
             }
-            else{
-                if ("tingListAfterPut" in d) 
-                {
+            else {
+                if ("tingListAfterPut" in d) {
                     pl.tingListAfterPut = d.tingListAfterPut;
-                }  
-            }   
+                }
+            }
         }
         else {
             sData.players[SelfUid() + ""].mjState = TableState.waitEat;
         }
 
-        for(var uid in d.eatFlags) {
+        for (var uid in d.eatFlags) {
             sData.players[uid].eatFlag = d.eatFlags[uid];
         }
         if (d.canKaiGangs) {
-            for(var uid in d.canKaiGangs) {
+            for (var uid in d.canKaiGangs) {
                 sData.players[uid].canKaiGang = d.canKaiGangs[uid];
             }
-            
+
         }
         if (d.kaigangLists) {
-            for(var uid in d.kaigangLists) {
+            for (var uid in d.kaigangLists) {
                 sData.players[uid].kaigangList = d.kaigangLists[uid];
             }
         }
 
-        for(var uid in d.eatFlags2) {
+        for (var uid in d.eatFlags2) {
             sData.players[uid].eatFlag2 = d.eatFlags2[uid];
         }
 
         if (d.eatFlags3) {
-            for(var uid in d.eatFlags3) {
+            for (var uid in d.eatFlags3) {
                 sData.players[uid].eatFlag3 = d.eatFlags3[uid];
             }
         }
 
         if (d.eatFlags4) {
-            for(var uid in d.eatFlags4) {
+            for (var uid in d.eatFlags4) {
                 sData.players[uid].eatFlag4 = d.eatFlags4[uid];
             }
         }
 
         if (d.skipHus) {
-            for(var uid in d.skipHus) {
+            for (var uid in d.skipHus) {
                 sData.players[uid].skipHu = d.skipHus[uid];
             }
         }
@@ -3699,40 +3619,34 @@ MjClient.netCallBack = {
         var tData = sData.tData;
 
         if (d.card2)
-        tData.lastPutCard = d.card2;
+            tData.lastPutCard = d.card2;
 
         var pl = sData.players[d.uid];
         tData.tState = TableState.waitEat;
         tData.putType = d.putType;
-        if ("cardNext" in d) 
-        {
+        if ("cardNext" in d) {
             tData.cardNext = d.cardNext;
         }
-        if ("curPlayer" in d) 
-        {
+        if ("curPlayer" in d) {
             tData.curPlayer = d.curPlayer;
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) 
-        {
-            if ("kaigangs" in d) 
-            {
+        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
+            if ("kaigangs" in d) {
                 tData.kaigangs = d.kaigangs;
             }
-            for(var uid in d.canEats) {
+            for (var uid in d.canEats) {
                 sData.players[uid].canEat = d.canEats[uid];
             }
             var kaigangData = tData.kaigangs[tData.kaigangs.length - 1];
-            if (kaigangData.cards && kaigangData.fanIndex) 
-            {
+            if (kaigangData.cards && kaigangData.fanIndex) {
                 tData.lastPutCard = kaigangData.cards[kaigangData.fanIndex];
             }
             tData.isKaigang = true;
-            if ("isKaigang" in d) 
-            {
+            if ("isKaigang" in d) {
                 tData.isKaigang = d.isKaigang;
             }
         }
-        
+
         pl.skipPeng = d.skipPeng;
         if (tData.lastPutCard != -1)
             pl.mjput.push(tData.lastPutCard);
@@ -3746,47 +3660,44 @@ MjClient.netCallBack = {
             pl.skipHu = d.skipHu;
             pl.isQiHu = d.isQiHu;
             //console.log("====isQiHu---", JSON.stringify(d));
-            if ("tingListAfterPut" in d) 
-            {
+            if ("tingListAfterPut" in d) {
                 pl.tingListAfterPut = d.tingListAfterPut;
             }
-            if (d.gangList) 
-            {
+            if (d.gangList) {
                 pl.gangList = d.gangList;
             }
         }
         else {
             sData.players[SelfUid() + ""].mjState = TableState.waitEat;
         }
-/*
-        for(var uid in d.eatFlags) {
-            sData.players[uid].eatFlag = d.eatFlags[uid];
-        }*/
-/*        for(var uid in d.canKaiGangs) {
-            sData.players[uid].canKaiGang = d.canKaiGangs[uid];
-        }*/
+        /*
+                for(var uid in d.eatFlags) {
+                    sData.players[uid].eatFlag = d.eatFlags[uid];
+                }*/
+        /*        for(var uid in d.canKaiGangs) {
+                    sData.players[uid].canKaiGang = d.canKaiGangs[uid];
+                }*/
         if (d.kaigangLists) {
-            for(var uid in d.kaigangLists) {
+            for (var uid in d.kaigangLists) {
                 sData.players[uid].kaigangList = d.kaigangLists[uid];
             }
         }
 
-        if (d.eatFlags) 
-        {
-            for(var uid in d.eatFlags) {
+        if (d.eatFlags) {
+            for (var uid in d.eatFlags) {
                 sData.players[uid].eatFlag = d.eatFlags[uid];
             }
         }
 
 
-/*        if (d.skipHus) {
-            for(var uid in d.skipHus) {
-                sData.players[uid].skipHu = d.skipHus[uid];
-            }
-        }
-        if ("putCount" in d) {
-            pl.putCount = d.putCount;
-        }*/
+        /*        if (d.skipHus) {
+                    for(var uid in d.skipHus) {
+                        sData.players[uid].skipHu = d.skipHus[uid];
+                    }
+                }
+                if ("putCount" in d) {
+                    pl.putCount = d.putCount;
+                }*/
     }]
     , MJPut: [0, function (d) {
         //cc.log("=======================App.js MJPut=================================" + JSON.stringify(d));
@@ -3794,23 +3705,23 @@ MjClient.netCallBack = {
         if (!sData) return;
         var tData = sData.tData;
         tData.lastPutCard = d.card;
-        if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_HU_ZI){
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_HU_ZI) {
             tData.currCard = d.card;
         }
         tData.tState = TableState.waitEat;
         tData.putType = d.putType;
-        if(MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG){
+        if (MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG) {
             tData.firstCard = d.firstCard;
         }
         var pl = sData.players[d.uid];
-        if(pl.buCards){
+        if (pl.buCards) {
             pl.buCards = [];
         }
-        if("allGangMul" in d){//一痞二赖的倍数
+        if ("allGangMul" in d) {//一痞二赖的倍数
             pl.allGangMul = d.allGangMul;
         }
 
-        if("taiZhuangState" in d){//一痞二癞抬庄
+        if ("taiZhuangState" in d) {//一痞二癞抬庄
             pl.taiZhuangState = d.taiZhuangState;
         }
 
@@ -3818,12 +3729,11 @@ MjClient.netCallBack = {
             pl.yingkou = d.yingkou;
         }
 
-        if ("needTing" in pl) 
-        {
+        if ("needTing" in pl) {
             pl.needTing = false;
         }
 
-        if("dengHuPlayers" in d){//靖州麻将等胡操作
+        if ("dengHuPlayers" in d) {//靖州麻将等胡操作
             tData.dengHuPlayers = d.dengHuPlayers;
         }
 
@@ -3833,26 +3743,25 @@ MjClient.netCallBack = {
             //     sData.players[uid].canEat = d.canEat[uid];
             // }
         }
-        var  pl_self = sData.players[SelfUid()];
-        if ("isPass" in pl_self) 
-        { 
+        var pl_self = sData.players[SelfUid()];
+        if ("isPass" in pl_self) {
             pl_self.isPass = false;
-        } 
+        }
 
         pl.skipPeng = d.skipPeng;
         pl.skipGang = d.skipGang;
 
-        if(d.skipMingGang){
+        if (d.skipMingGang) {
             pl.skipMingGang = d.skipMingGang;
         }
-        if(MjClient.playui && MjClient.playui.isNewFrameMaJiang){
+        if (MjClient.playui && MjClient.playui.isNewFrameMaJiang) {
             pl.isNew = false;
         }
         //贵州的天听逻辑
         tData.haveTianTing = false;
-        if(d.haveTianTing) tData.haveTianTing = true;
+        if (d.haveTianTing) tData.haveTianTing = true;
         //安乡偎麻雀摸牌是否显示牌背
-        if(MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
             tData.isCurrCardHide = d.isCurrCardHide;
         }
 
@@ -3871,17 +3780,15 @@ MjClient.netCallBack = {
             pl.mjput.pop();
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
             || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
             MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER
-            || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU){
+            || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
             pl.mjputType.push(0);
             cc.log("MJPut mjputType", " pl = " + JSON.stringify(pl));
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.YUN_CHENG_TIE_JIN || MjClient.gameType == MjClient.GAME_TYPE.HE_JIN_KUN_JIN) 
-        {
-            if (d.card == tData.hunCard || d.card == tData.hunCard2) 
-            {
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUN_CHENG_TIE_JIN || MjClient.gameType == MjClient.GAME_TYPE.HE_JIN_KUN_JIN) {
+            if (d.card == tData.hunCard || d.card == tData.hunCard2) {
                 pl.jinMjPut.push(d.card);
             }
         }
@@ -3893,16 +3800,15 @@ MjClient.netCallBack = {
         /*
             自动打牌，如果改成后台主动发给前端，非玩家主动操作的，不能把online直接设成true状态
          */
-        if(MjClient.gameType != MjClient.GAME_TYPE.LIN_FEN_YI_MEN_ZI &&
-            MjClient.gameType != MjClient.GAME_TYPE.LIN_FEN_YING_SAN_ZUI && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_HU_ZI)
-        {
+        if (MjClient.gameType != MjClient.GAME_TYPE.LIN_FEN_YI_MEN_ZI &&
+            MjClient.gameType != MjClient.GAME_TYPE.LIN_FEN_YING_SAN_ZUI && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_HU_ZI) {
             pl.onLine = true;
         }
 
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.DA_YE_KAI_KOU_FAN ||
-            MjClient.gameType == MjClient.GAME_TYPE.HONG_ZHONG_LAI_ZI_GANG){//大冶开口番 红中癞子杠
-            if(d.gangType == 1 || d.gangType == 2 || d.gangType == 3){//红中杠:1 发财杠:2 癞子杠:3
+        if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_KAI_KOU_FAN ||
+            MjClient.gameType == MjClient.GAME_TYPE.HONG_ZHONG_LAI_ZI_GANG) {//大冶开口番 红中癞子杠
+            if (d.gangType == 1 || d.gangType == 2 || d.gangType == 3) {//红中杠:1 发财杠:2 癞子杠:3
                 pl.mjPiZiGang.push(d.card);
                 pl.mjput.pop();
             }
@@ -3911,53 +3817,48 @@ MjClient.netCallBack = {
         if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
             MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO ||
-            MjClient.gameType === MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA)
-        {
+            MjClient.gameType === MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA) {
             tData.lastPutCard2 = null;
             tData.lastPutCard3 = null;
             tData.lastPutCard4 = null;
         }
-        if (MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) 
-        {
+        if (MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
             tData.isKaigang = false;
         }
 
         //console.log("=====doomsky say:pl.mjhand====== , pl.ting", pl.mjhand);
-        if(d.card < 111){ //补花在MJFlower播放
-            if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
+        if (d.card < 111) { //补花在MJFlower播放
+            if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP || MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
-                MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP)
-            {
+                MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
                 if ((MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
                     MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ ||
-                    MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP) && d.uid == SelfUid() && 
-                    GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG) 
-                { // 先行音效已播过，所以不再二次播放
-                    if(MjClient.rePlayVideo != -1 ){
-                        playEffectInPlay(d.card); 
+                    MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP) && d.uid == SelfUid() &&
+                    GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG) { // 先行音效已播过，所以不再二次播放
+                    if (MjClient.rePlayVideo != -1) {
+                        playEffectInPlay(d.card);
                     }
-                    else if (d.uid == SelfUid() && 
+                    else if (d.uid == SelfUid() &&
                         (MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG ||
-                            MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG_ZERO||
+                            MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG_ZERO ||
                             MjClient.gameType == MjClient.GAME_TYPE.TY_HONGZHONG ||
-                         MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN ||
-                        MjClient.gameType === MjClient.GAME_TYPE.YUE_YANG_HONG_ZHONG || 
-                        MjClient.gameType === MjClient.GAME_TYPE.AN_HUA_MA_JIANG || 
-                        MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG || 
-                        MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG || 
-                         MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
-                         MjClient.gameType == MjClient.GAME_TYPE.XIAO_GAN_KA_WU_XING ||
-                         MjClient.gameType == MjClient.GAME_TYPE.SUI_ZHOU_KA_WU_XING ||
-                         MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
-                         MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU ||
-                         MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_JING_SHAN_MJ ||
-                         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_KAI_KOU_FAN ||
-                         MjClient.gameType == MjClient.GAME_TYPE.HONG_ZHONG_LAI_ZI_GANG ||
-                         MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU ||
-                         MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI
-                        )&& pl.tPutCard == true) 
-                    {
+                            MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN ||
+                            MjClient.gameType === MjClient.GAME_TYPE.YUE_YANG_HONG_ZHONG ||
+                            MjClient.gameType === MjClient.GAME_TYPE.AN_HUA_MA_JIANG ||
+                            MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG ||
+                            MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG ||
+                            MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
+                            MjClient.gameType == MjClient.GAME_TYPE.XIAO_GAN_KA_WU_XING ||
+                            MjClient.gameType == MjClient.GAME_TYPE.SUI_ZHOU_KA_WU_XING ||
+                            MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
+                            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU ||
+                            MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_JING_SHAN_MJ ||
+                            MjClient.gameType == MjClient.GAME_TYPE.DA_YE_KAI_KOU_FAN ||
+                            MjClient.gameType == MjClient.GAME_TYPE.HONG_ZHONG_LAI_ZI_GANG ||
+                            MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU ||
+                            MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI
+                        ) && pl.tPutCard == true) {
                         //红中麻将 自动摸打时自己出牌声音在MJput时播放
                         playEffectInPlay(d.card);
                     }
@@ -3966,26 +3867,24 @@ MjClient.netCallBack = {
                 }
                 else {
                     if (MjClient.gameClass == MjClient.GAME_CLASS.MA_JIANG ||
-                        MjClient.gameClass == MjClient.GAME_CLASS.CHANG_PAI )
-                    {
+                        MjClient.gameClass == MjClient.GAME_CLASS.CHANG_PAI) {
                         playEffect("give");
                     }
                     if (MjClient.gameType != MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI &&
                         MjClient.gameType != MjClient.GAME_TYPE.XIANG_XI_96POKER) {  //这两个玩法音效的牌不一定 <111
-                        playEffectInPlay(d.card);  
+                        playEffectInPlay(d.card);
                     }
                 }
-            }else if (!(d.uid == SelfUid() && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG && MjClient.rePlayVideo == -1))//出牌前端先行，所有麻将中自己出的牌在PutOutCard中播放音效
+            } else if (!(d.uid == SelfUid() && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG && MjClient.rePlayVideo == -1))//出牌前端先行，所有麻将中自己出的牌在PutOutCard中播放音效
             {
                 var gameClass = GameClass[MjClient.gameType];
                 if (gameClass == MjClient.GAME_CLASS.MA_JIANG ||
-                    gameClass == MjClient.GAME_CLASS.CHANG_PAI )
-                {
+                    gameClass == MjClient.GAME_CLASS.CHANG_PAI) {
                     playEffect("give");
                 }
 
 
-                if(MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_MJ ||
+                if (MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_MJ ||
                     MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_CAI_SHEN ||
                     MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_LI_SI ||
                     MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_TUI_DAO_HU ||
@@ -3998,87 +3897,82 @@ MjClient.netCallBack = {
                     MjClient.gameType == MjClient.GAME_TYPE.LING_SHI_BIAN_LONG ||
                     MjClient.gameType == MjClient.GAME_TYPE.LING_SHI_BAN_MO ||
                     MjClient.gameType == MjClient.GAME_TYPE.PING_YAO_KOU_DIAN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PING_YAO_MA_JIANG||
-                    MjClient.gameType == MjClient.GAME_TYPE.JIE_XIU_1_DIAN_3||
+                    MjClient.gameType == MjClient.GAME_TYPE.PING_YAO_MA_JIANG ||
+                    MjClient.gameType == MjClient.GAME_TYPE.JIE_XIU_1_DIAN_3 ||
                     MjClient.gameType == MjClient.GAME_TYPE.JIE_XIU_KOU_DIAN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_GUAI_SAN_JIAO||
+                    MjClient.gameType == MjClient.GAME_TYPE.JIN_ZHONG_GUAI_SAN_JIAO ||
                     MjClient.gameType == MjClient.GAME_TYPE.SHOU_YANG_QUE_KA ||
                     MjClient.gameType == MjClient.GAME_TYPE.LIN_FEN_YING_SAN_ZUI ||
                     MjClient.gameType == MjClient.GAME_TYPE.DAI_XIAN_MA_JIANG ||
                     MjClient.gameType == MjClient.GAME_TYPE.LIN_FEN_YI_MEN_ZI ||
                     MjClient.gameType == MjClient.GAME_TYPE.FEN_XI_YING_KOU ||
-                    MjClient.gameType == MjClient.GAME_TYPE.LIN_FEN_KOU_DIAN_FENG_ZUI_ZI||
+                    MjClient.gameType == MjClient.GAME_TYPE.LIN_FEN_KOU_DIAN_FENG_ZUI_ZI ||
                     MjClient.gameType == MjClient.GAME_TYPE.WU_TAI_KOU_DIAN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.JI_XIAN_1928_JIA_ZHANG||
+                    MjClient.gameType == MjClient.GAME_TYPE.JI_XIAN_1928_JIA_ZHANG ||
                     MjClient.gameType == MjClient.GAME_TYPE.LIN_FEN_XIANG_NING_SHUAI_JIN ||
                     MjClient.gameType == MjClient.GAME_TYPE.DA_NING_SHUAI_JIN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.FEN_YANG_QUE_MEN  ||
+                    MjClient.gameType == MjClient.GAME_TYPE.FEN_YANG_QUE_MEN ||
                     MjClient.gameType == MjClient.GAME_TYPE.JING_LE_KOU_DIAN
-                )
-                {
+                ) {
                     var putnum = pl.mjput.length - 1;
-                    if(pl.putCardAfterTing >= 0 && pl.putCardAfterTing == putnum)
-                    {
+                    if (pl.putCardAfterTing >= 0 && pl.putCardAfterTing == putnum) {
                         cc.log("----------盖住的牌不播声音------晋中麻将----");
                     }
-                    else
-                    {
+                    else {
                         playEffectInPlay(d.card);
                     }
                 }
                 else {
                     var putnum = pl.mjput.length - 1;
-                    if(MjClient.gameType == MjClient.GAME_TYPE.XIAO_YI_KOU_DIAN &&
+                    if (MjClient.gameType == MjClient.GAME_TYPE.XIAO_YI_KOU_DIAN &&
                         MjClient.data.sData.tData.areaSelectMode["anting"] &&
-                        pl.putCardAfterTing >= 0 && pl.putCardAfterTing == putnum){
+                        pl.putCardAfterTing >= 0 && pl.putCardAfterTing == putnum) {
 
-                    }else if(MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_KAI_WANG && pl.fengDong) {
+                    } else if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_KAI_WANG && pl.fengDong) {
 
-                    }else if(MjClient.gameType === MjClient.GAME_TYPE.JI_SHAN_NIU_YE_ZI && !tData.areaSelectMode["tingPaiBuKou"] &&
-                        pl.putCardAfterTing >= 0 && pl.putCardAfterTing === putnum){
+                    } else if (MjClient.gameType === MjClient.GAME_TYPE.JI_SHAN_NIU_YE_ZI && !tData.areaSelectMode["tingPaiBuKou"] &&
+                        pl.putCardAfterTing >= 0 && pl.putCardAfterTing === putnum) {
 
-                    } else{
+                    } else {
                         playEffectInPlay(d.card);
                     }
                 }
             }
-            else if ( typeof(MjClient.majiang.isAutoPutOut) == "function" &&  MjClient.majiang.isAutoPutOut() && pl.isTing) 
-            {
+            else if (typeof (MjClient.majiang.isAutoPutOut) == "function" && MjClient.majiang.isAutoPutOut() && pl.isTing) {
                 playEffectInPlay(d.card);
             }
-            else if (d.uid == SelfUid() && 
-                (MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG 
-                || MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG_ZERO 
-                || MjClient.gameType == MjClient.GAME_TYPE.TY_HONGZHONG 
-                || MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN
-                || MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU
-                || MjClient.gameType == MjClient.GAME_TYPE.CHAO_GU_MJ 
-                || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_MJ
-                || MjClient.gameType == MjClient.GAME_TYPE.CHEN_ZHOU
-                || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_MJ
-                || MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ
-                || MjClient.gameType === MjClient.GAME_TYPE.AN_HUA_MA_JIANG  
-                || MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG  
-                || MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG 
-                || MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO
-                || MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA
-                || MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU
-                || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU
-                || MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI
-                || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_JING_SHAN_MJ
-                || MjClient.gameType == MjClient.GAME_TYPE.DA_YE_KAI_KOU_FAN
-                || MjClient.gameType == MjClient.GAME_TYPE.HONG_ZHONG_LAI_ZI_GANG
-                || MjClient.gameType == MjClient.GAME_TYPE.XIAO_GAN_KA_WU_XING
-                || MjClient.gameType == MjClient.GAME_TYPE.SUI_ZHOU_KA_WU_XING
-                )&& pl.tPutCard == true) 
-            {
+            else if (d.uid == SelfUid() &&
+                (MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG
+                    || MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG_ZERO
+                    || MjClient.gameType == MjClient.GAME_TYPE.TY_HONGZHONG
+                    || MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN
+                    || MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU
+                    || MjClient.gameType == MjClient.GAME_TYPE.CHAO_GU_MJ
+                    || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_MJ
+                    || MjClient.gameType == MjClient.GAME_TYPE.CHEN_ZHOU
+                    || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_MJ
+                    || MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ
+                    || MjClient.gameType === MjClient.GAME_TYPE.AN_HUA_MA_JIANG
+                    || MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG
+                    || MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG
+                    || MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO
+                    || MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA
+                    || MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU
+                    || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU
+                    || MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI
+                    || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_JING_SHAN_MJ
+                    || MjClient.gameType == MjClient.GAME_TYPE.DA_YE_KAI_KOU_FAN
+                    || MjClient.gameType == MjClient.GAME_TYPE.HONG_ZHONG_LAI_ZI_GANG
+                    || MjClient.gameType == MjClient.GAME_TYPE.XIAO_GAN_KA_WU_XING
+                    || MjClient.gameType == MjClient.GAME_TYPE.SUI_ZHOU_KA_WU_XING
+                ) && pl.tPutCard == true) {
                 //红中麻将 自动摸打时自己出牌声音在MJput时播放
                 playEffectInPlay(d.card);
             }
         }
 
         //湖北.湖北花牌.公安花牌别杠牌音效
-        if(MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
+        if (MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
             MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
             MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
             if (d.card == 357 || d.card == 142)
@@ -4086,22 +3980,22 @@ MjClient.netCallBack = {
         }
 
         //96扑克打牌声音播放
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER ||
-           MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER ||
+            MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
             playEffectInPlay(d.card);
         }
 
         //修复福禄寿回放手牌数据
-        if( (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
-            MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG ) &&
-            d.uid != SelfUid() &&  MjClient.rePlayVideo !== -1) {
+        if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
+            MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG) &&
+            d.uid != SelfUid() && MjClient.rePlayVideo !== -1) {
             pl.mjhand.splice(pl.mjhand.indexOf(d.card), 1);
         }
 
-        if( (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
-            MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG ) &&
-            d.uid == SelfUid() &&  MjClient.rePlayVideo == -1) {
-            pl.isGuoHu = false; 
+        if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
+            MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG) &&
+            d.uid == SelfUid() && MjClient.rePlayVideo == -1) {
+            pl.isGuoHu = false;
         }
 
         if (d.uid == SelfUid()) {
@@ -4116,8 +4010,7 @@ MjClient.netCallBack = {
             if (pl.tingLists && pl.tingLists[d.card]) {
                 pl.tingListAfterPut = pl.tingLists[d.card];
             }
-            if (pl.isTingJJHu) 
-            {
+            if (pl.isTingJJHu) {
                 if (pl.jiangjianghuLists && pl.jiangjianghuLists[d.card]) {
                     pl.tingListAfterPut = pl.jiangjianghuLists[d.card];
                 }
@@ -4128,44 +4021,44 @@ MjClient.netCallBack = {
             sData.players[SelfUid() + ""].mjState = TableState.waitEat;
         }
         if (d.eatFlags) {
-            for(var uid in d.eatFlags) {
+            for (var uid in d.eatFlags) {
                 sData.players[uid].eatFlag = d.eatFlags[uid];
             }
         }
         if (d.canKaiGangs) {
-            for(var uid in d.canKaiGangs) {
+            for (var uid in d.canKaiGangs) {
                 sData.players[uid].canKaiGang = d.canKaiGangs[uid];
             }
         }
         if (d.kaigangLists) {
-            for(var uid in d.kaigangLists) {
+            for (var uid in d.kaigangLists) {
                 sData.players[uid].kaigangList = d.kaigangLists[uid];
             }
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
-            for(var uid in d.giveupChis) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
+            for (var uid in d.giveupChis) {
                 sData.players[uid].giveupChis = d.giveupChis[uid];
             }
             pl.isDead = d.isDead;
-            if(pl.isDead && pl.info.uid == SelfUid()){
+            if (pl.isDead && pl.info.uid == SelfUid()) {
                 playEffectInPlay("sishou");
             }
-            for(var uid in d.eatFlags) {
-                if(d.eatFlags[uid] & 4){
+            for (var uid in d.eatFlags) {
+                if (d.eatFlags[uid] & 4) {
                     sData.players[uid].piaoCards = d.piaoCards;
                 }
-                if(d.eatFlags[uid] & 64){
+                if (d.eatFlags[uid] & 64) {
                     sData.players[uid].zhaCards = d.zhaCards;
                 }
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING || 
-           MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
-           MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
-           MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
-           MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
+            MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
+            MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
+            MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
+            MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
             for (var uid in d.liuCards) {
                 sData.players[uid].liuCards = d.liuCards[uid]; //毛
             }
@@ -4173,25 +4066,23 @@ MjClient.netCallBack = {
 
         if (d.mustHus) {
             cc.log("==============mustHus = " + JSON.stringify(d.mustHus));
-            for(var uid in d.mustHus) {
+            for (var uid in d.mustHus) {
                 sData.players[uid].mustHu = d.mustHus[uid];
             }
         }
         if (d.skipHus) {
-            for(var uid in d.skipHus) {
+            for (var uid in d.skipHus) {
                 sData.players[uid].skipHu = d.skipHus[uid];
             }
         }
         if ("putCount" in d) {
             pl.putCount = d.putCount;
         }
-        else
-        {
+        else {
             pl.putCount++; //按道理是要后端传给前端的
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.GUAN_YUN || 
-            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ)
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.GUAN_YUN ||
+            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) {
             sData.players[SelfUid() + ""].isTianting = false;
         }
 
@@ -4200,13 +4091,12 @@ MjClient.netCallBack = {
             pl.isPutCardOnce = true;
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA || 
+        if (MjClient.gameType === MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA ||
             MjClient.gameType === MjClient.GAME_TYPE.HENG_YANG_FANG_PAO_FA ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_XIANG_PAO_HU_ZI ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_TAN_PAO_HU_ZI ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ)
-        {
+            MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ) {
             tData.isLastDraw = d.isLastDraw;
         }
 
@@ -4221,9 +4111,9 @@ MjClient.netCallBack = {
             cc.log(" ========PUT CARD ======== pl.mjhandFour = " + pl.mjhandFour);
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
             //报警标志
-            for(var uid in d.alarmFlags) {
+            for (var uid in d.alarmFlags) {
                 sData.players[uid].alarmFlag = d.alarmFlags[uid];
             }
         }
@@ -4232,23 +4122,23 @@ MjClient.netCallBack = {
             sData.players[tData.uids[index]].wangType = 0;
         }
 
-        if(d.nextMsg && d.nextMsg.uid){
+        if (d.nextMsg && d.nextMsg.uid) {
             var nextUid = d.nextMsg.uid;
             var nextPlayer = sData.players[nextUid + ""];
             nextPlayer.wangType = d.nextMsg.wangType;
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIN_NING_MA_JIANG){
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIN_NING_MA_JIANG) {
             pl.touzi = false;
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG){
+        if (MjClient.gameType == MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) {
             tData.isFirstPut = false;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710){
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710) {
             for (var uid in sData.players) {
                 sData.players[uid].fallArea = -1;
             }
-            
+
             if (d.uid == SelfUid()) {
                 pl.limitChiAndHuMatrix = d.limitChiAndHuMatrix;
             }
@@ -4258,18 +4148,18 @@ MjClient.netCallBack = {
             pl.canNotPutCard = d.canNotPutCard;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN || MjClient.gameType == MjClient.GAME_TYPE.TY_HONGZHONG 
+        if (MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN || MjClient.gameType == MjClient.GAME_TYPE.TY_HONGZHONG
             || MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG
-            || MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG_ZERO 
+            || MjClient.gameType == MjClient.GAME_TYPE.ML_HONGZHONG_ZERO
             || MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU
             || MjClient.gameType == MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI
-            || MjClient.gameType == MjClient.GAME_TYPE.CHAO_GU_MJ 
+            || MjClient.gameType == MjClient.GAME_TYPE.CHAO_GU_MJ
             || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_MJ
             || MjClient.gameType == MjClient.GAME_TYPE.CHEN_ZHOU
             || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_MJ
             || MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ
             || MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO
-            ){
+        ) {
             for (var uid in sData.players) {
                 sData.players[uid].isPass = false;
             }
@@ -4281,17 +4171,17 @@ MjClient.netCallBack = {
         }
         d.chongFengJi && (pl.chongFengJi = d.chongFengJi);
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_MEN_HU_XUE_LIU){
-            if(d.card) playEffectInPlay(d.card);
+        if (MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_MEN_HU_XUE_LIU) {
+            if (d.card) playEffectInPlay(d.card);
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
             pl.canNotPutCard = []; //直接置空.解除所有不能打的牌
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_GD_MJ){//蕲春广东麻将跟庄分
-            if(d.genZhuangState && d.genZhuangScore){
-                for(var uid in d.genZhuangScore){
+        if (MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_GD_MJ) {//蕲春广东麻将跟庄分
+            if (d.genZhuangState && d.genZhuangScore) {
+                for (var uid in d.genZhuangScore) {
                     var player = MjClient.data.sData.players[uid];
                     player.genZhuangScore = d.genZhuangScore[uid];
                 }
@@ -4305,10 +4195,10 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
-        if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA) {
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA) {
             tData.curPlayer = tData.uids.indexOf(d.uid); // 三打哈播声音需要
-            if(d.autoSend) {
-                d.card = MjClient.majiang.sortHandCards(d.card , tData.zhuPaiType);
+            if (d.autoSend) {
+                d.card = MjClient.majiang.sortHandCards(d.card, tData.zhuPaiType);
                 tData.isCanShuaiPai = d.isCanShuaiPai;
 
                 if (d.fenPaiArr)
@@ -4335,7 +4225,7 @@ MjClient.netCallBack = {
         tData.putType = d.putType;
 
 
-        if(d.totalScore || d.totalScore == 0)
+        if (d.totalScore || d.totalScore == 0)
             tData.totalScore = d.totalScore;
         var pl = sData.players[d.uid];
         if (MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) { // 打筒子记牌器
@@ -4349,11 +4239,11 @@ MjClient.netCallBack = {
         pl.isChunTian = d.isChuntian;
         pl.onLine = true;
 
-        if(MjClient.GAME_TYPE.DIAN_TUO == MjClient.gameType){
+        if (MjClient.GAME_TYPE.DIAN_TUO == MjClient.gameType) {
             if (d.kingList) {
                 tData.kingList = d.kingList //有发才刷
-            }   
-            tData.isFirstSingleCard = d.isFirstSingleCard;   
+            }
+            tData.isFirstSingleCard = d.isFirstSingleCard;
             //sData.players[d.uid].score_xi = d.xiFen;
             tData.lastPutCardType = d.cardType;
             tData.bodyLen = d.bodyLen;
@@ -4363,16 +4253,16 @@ MjClient.netCallBack = {
             for (var i = 0; i < xiFen.length; i++) {
                 var xiData = xiFen[i];
                 sData.players[xiData[0]].score_xi = xiData[1];
-            } 
-        } 
+            }
+        }
 
         if (d.uid == SelfUid()) {
-            if(MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI == MjClient.gameType || 
+            if (MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI == MjClient.gameType ||
                 MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN == MjClient.gameType) {
-                
-                pl.mjhand = MjClient.majiang.checkPut(pl.mjhand, d.card, null , MjClient.data.sData.tData);
+
+                pl.mjhand = MjClient.majiang.checkPut(pl.mjhand, d.card, null, MjClient.data.sData.tData);
             }
-            else if (MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN == MjClient.gameType || 
+            else if (MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN == MjClient.gameType ||
                 MjClient.GAME_TYPE.DA_YE_510K == MjClient.gameType ||
                 MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN == MjClient.gameType ||
                 MjClient.GAME_TYPE.QI_CHUN_DA_GONG == MjClient.gameType ||
@@ -4387,21 +4277,19 @@ MjClient.netCallBack = {
             sData.players[SelfUid() + ""].mjState = TableState.waitEat;
         }
 
-        if(d.putCardsRecord)
-        {
+        if (d.putCardsRecord) {
             tData.putCardsRecord = d.putCardsRecord;
         }
 
-        if(d.firstPutCardUid >= 0)
-        {
+        if (d.firstPutCardUid >= 0) {
             tData.firstPutCardUid = d.firstPutCardUid;
         }
 
         //打炸弹已出分牌
-        if(d.scoreCards){
+        if (d.scoreCards) {
             tData.scoreCards = d.scoreCards;
         }
-        if(d.cardType != undefined){
+        if (d.cardType != undefined) {
             tData.lastPutCardType = d.cardType;
         }
         tData.score_draw = d.score_draw;
@@ -4409,40 +4297,39 @@ MjClient.netCallBack = {
         tData.rank = d.rank;
 
         //春天音效
-        if(d.isChuntian)
-        {
+        if (d.isChuntian) {
             // pl.isChunTian = true;
             // playCardEffect(d.card, d.handCount,tData);
         }
 
         //播放出牌牌型音效
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN  ){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN) {
             playSoundEffect_daZhaDan(d.card, d.uid);
-        }else if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
             cc.log("播放掂坨音效", d.card, d.uid);
             playSoundEffect_dianTuo(d.card, d.uid);
-        }else if (MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) {
             playSoundEffect_daTongZi(d.card, d.uid);
-        }else if (MjClient.gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN) {
             playSoundEffect_BaZhaDan(d.card, d.uid);
-        }else if (MjClient.gameType == MjClient.GAME_TYPE.BAN_BIAN_TIAN_ZHA){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.BAN_BIAN_TIAN_ZHA) {
             playSoundEffect_BanBianTianZha(d.card, d.uid);
-        }else if (MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_LAO_CHUO){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_LAO_CHUO) {
             playSoundEffect_YongZhouLaoChuo(d.card, d.uid);
-        }else{
-            if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ ||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO || 
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ){
+        } else {
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ) {
                 //晋中斗地主不播
             } else {
                 if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN) {
-                    if (tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1)  {
+                    if (tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1) {
                         playCardEffect(d.card, d.handCount);
                     } else {
-                        if (getRandomRange(0,100) < 25) {
+                        if (getRandomRange(0, 100) < 25) {
                             playCardEffect(d.card, d.handCount);
                         } else {
-                            playEffectInPlay("dani" + getRandomRange(1,3));
+                            playEffectInPlay("dani" + getRandomRange(1, 3));
                         }
                     }
                 } else {
@@ -4452,21 +4339,21 @@ MjClient.netCallBack = {
         }
 
         // 三打哈 防止快速点击造成牌局桌面牌被清空
-        if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA) {
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA) {
             tData.curPlayer = (tData.curPlayer + 1) % tData.maxPlayer;
         }
 
         //删除队友手牌
-        if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO || 
-            MjClient.gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN || 
+        if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO ||
+            MjClient.gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN ||
             MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN) {
             if (MjClient.rePlayVideo == -1) {
                 var p = sData.players[SelfUid()];
-                if ((tData.isDivideTeam || (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN && tData.baoType_sys == 2)) 
+                if ((tData.isDivideTeam || (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN && tData.baoType_sys == 2))
                     && p.mjhand.length == 0) {
                     var selfIndex = tData.uids.indexOf(p.info.uid);
                     var teamerUid = tData.uids[((selfIndex + 2) % tData.maxPlayer)];
-                    if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN){
+                    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN) {
                         teamerUid = p.friendUid;
                     }
                     if (d.uid == teamerUid) {
@@ -4478,7 +4365,7 @@ MjClient.netCallBack = {
             }
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN || 
+        if (MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
             MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
             tData.laiziCards = d.laiziCards;
         }
@@ -4499,11 +4386,11 @@ MjClient.netCallBack = {
     , newCard: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData || !sData.players[SelfUid() + ""]) return;
-        var pl = sData.players[SelfUid() + ""]; 
+        var pl = sData.players[SelfUid() + ""];
         var hands = pl.mjhand;
         pl.isNew = true;
-        if (typeof(d) == "number") {
-            d = {newCard: d};
+        if (typeof (d) == "number") {
+            d = { newCard: d };
         }
 
         pl.newCd = d.newCard; //---for ting pai
@@ -4512,52 +4399,46 @@ MjClient.netCallBack = {
         pl.tingLists = {};
         pl.justPeng = 0;
 
-        if (d.tingLists) 
-        {
+        if (d.tingLists) {
             pl.tingLists = d.tingLists;
         }
-        if (d.jiangjianghuLists) 
-        {
+        if (d.jiangjianghuLists) {
             pl.jiangjianghuLists = d.jiangjianghuLists;
         }
-        if ("needTing" in d) 
-        {
+        if ("needTing" in d) {
             pl.needTing = d.needTing;
         }
-        if (d.gangList) 
-        {
+        if (d.gangList) {
             pl.gangList = d.gangList;
         }
         if (d.isNotAnGang) {
             pl.isNotAnGang = d.isNotAnGang;
         }
-        if(d.wangType){
+        if (d.wangType) {
             pl.wangType = d.wangType;
         }
 
 
 
         MjClient.canTingCards = {};
-        if (pl.tingLists)
-        {
+        if (pl.tingLists) {
             for (var i in pl.tingLists) {
                 MjClient.canTingCards[i] = 1;
             }
         }
-        if (pl.gangList)
-        {
+        if (pl.gangList) {
             MjClient.gangCards = pl.gangList;
         }
 
-/*        if (MjClient.GAME_TYPE.XUE_LIU == MjClient.gameType)
-        {
-            if (hands.length % 3 == 2)
-            {
-                var cardtag =  hands.pop();
-                RemoveNodeBack(getNode(0),"mjhand",1,cardtag);
-            }
-        }
-*/      
+        /*        if (MjClient.GAME_TYPE.XUE_LIU == MjClient.gameType)
+                {
+                    if (hands.length % 3 == 2)
+                    {
+                        var cardtag =  hands.pop();
+                        RemoveNodeBack(getNode(0),"mjhand",1,cardtag);
+                    }
+                }
+        */
         if (hands && d.newCard > 0) {
             hands.push(d.newCard);
         }
@@ -4580,19 +4461,19 @@ MjClient.netCallBack = {
         if ("mustHu" in d) {
             pl.mustHu = d.mustHu;
         }
-        if ("skipHuStatus" in d){
+        if ("skipHuStatus" in d) {
             pl.skipHuStatus = d.skipHuStatus;
         }
         if ("canGangHand" in d) {
             pl.canGangHand = d.canGangHand;
         }
-        if("haoDiao" in d){
+        if ("haoDiao" in d) {
             pl.haoDiao = d.haoDiao;
         }
 
     }],
     waitPut: [0, function (d) {
-        var sData = MjClient.data.sData; 
+        var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[SelfUid() + ""];
         if (d.tDataChanged) {
@@ -4603,23 +4484,20 @@ MjClient.netCallBack = {
         else {
             sData.tData = d;
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) 
-        {
-            if (d.clearBBHu) 
-            {
+        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
+            if (d.clearBBHu) {
                 for (var i = 0; i < sData.tData.maxPlayer; i++) {
                     uid = sData.tData.uids[i];
                     var pl = sData.players[uid];
-                    if (pl)
-                    {
+                    if (pl) {
                         pl.isBBHu = false;
-                    } 
+                    }
                 }
-                
+
             }
         }
 
-        if(sData.tData.curTrustTime != undefined){
+        if (sData.tData.curTrustTime != undefined) {
             //邵阳打筒子 托管时间
             var uid = sData.tData.uids[d.curPlayer];
             var pl = sData.players[uid].trustTime = sData.tData.curTrustTime;
@@ -4635,11 +4513,10 @@ MjClient.netCallBack = {
             }
         }
 
-        if(d.liangfengInfo == null){
+        if (d.liangfengInfo == null) {
             pl.buCards = [];
         }
-        if (d.picture) 
-        {
+        if (d.picture) {
             var p = sData.players[d.uid];
             p.picture = d.picture;
         }
@@ -4657,26 +4534,24 @@ MjClient.netCallBack = {
         if ("fengdui" in d) {
             pl.fengdui = d.fengdui;
         }
-        if(MjClient.playui && MjClient.playui.isNewFrameMaJiang){
+        if (MjClient.playui && MjClient.playui.isNewFrameMaJiang) {
             pl.isNew = true;
         }
-        if(d.liangfengInfo){
+        if (d.liangfengInfo) {
             var lp = sData.players[d.liangfengInfo.uid];
-            if(d.liangfengInfo.mjState){
+            if (d.liangfengInfo.mjState) {
                 lp.mjState = d.liangfengInfo.mjState;
             }
-            else{
+            else {
 
                 lp.mjflower = d.liangfengInfo.mjflower;
                 lp.liangfengCount = lp.mjflower.length;
                 lp.buCards = d.liangfengInfo.buCards;
             }
         }
-        if (d.liangfengInfo)
-        {
+        if (d.liangfengInfo) {
             var curpl = sData.players[d.liangfengInfo.uid];
-            if (curpl.info.uid == SelfUid())
-            {
+            if (curpl.info.uid == SelfUid()) {
                 if (d.liangfengInfo.mjflower) {
                     curpl.mjflower = d.liangfengInfo.mjflower;
                     for (var i = 0; i < d.liangfengInfo.mjflower.length; i++) {
@@ -4686,8 +4561,7 @@ MjClient.netCallBack = {
                         }
                     }
                 }
-                if (d.liangfengInfo.buCards)
-                {
+                if (d.liangfengInfo.buCards) {
                     for (var i = 0; i < d.liangfengInfo.buCards.length; i++) {
                         curpl.mjhand.push(d.liangfengInfo.buCards[i]);
                     }
@@ -4704,7 +4578,7 @@ MjClient.netCallBack = {
             sData.tData.tState = d.tState;
 
         if (d.qiShouHus) {
-            for(var uid in d.qiShouHus) {
+            for (var uid in d.qiShouHus) {
                 sData.players[uid].qiShouHu = d.qiShouHus[uid];
                 sData.players[uid].mjState = d.mjStates[uid];
             }
@@ -4715,13 +4589,13 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         if (!sData) return;
 
-        if(d.isNoQsHu){
+        if (d.isNoQsHu) {
             sData.tData.tState = d.tState;
         }
 
         for (var uid in d.players) {
             var pl = d.players[uid];
-            if(pl.mjState)
+            if (pl.mjState)
                 sData.players[uid].mjState = pl.mjState;
         }
 
@@ -4734,30 +4608,29 @@ MjClient.netCallBack = {
         if (MjClient.gameType == MjClient.GAME_TYPE.NINGXIANG) return;//宁乡麻将没有这些数据
         for (var uid in d.players) {
             var pl = d.players[uid];
-            if(typeof pl.winall == 'number')
+            if (typeof pl.winall == 'number')
                 sData.players[uid].winall = pl.winall;
 
-            if(pl.mjState)
+            if (pl.mjState)
                 sData.players[uid].mjState = pl.mjState;
-            
-        }   
-        if (!sData.players[d.uid].qiShouHuDone) 
+
+        }
+        if (!sData.players[d.uid].qiShouHuDone)
             sData.players[d.uid].qiShouHuDone = [];
-        sData.players[d.uid].qiShouHuDone.push({name:d.qshuName, cards:d.showCards});     
+        sData.players[d.uid].qiShouHuDone.push({ name: d.qshuName, cards: d.showCards });
 
         if (sData.players[d.uid].qiShouHu)
             delete sData.players[d.uid].qiShouHu[d.qshuName];
 
-        if(d.tState){
+        if (d.tState) {
             sData.tData.tState = d.tState;
         }
     }],
-    MJTouchPutCard:[0, function (d) {
+    MJTouchPutCard: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[d.uid]
-        if ("tPutCard" in d) 
-        {
+        if ("tPutCard" in d) {
             pl.tPutCard = d.tPutCard;
         }
 
@@ -4774,16 +4647,13 @@ MjClient.netCallBack = {
         var cds = d.mjchi;
 
         //徐州的白板会，当成癞子的点数
-        if(MjClient.gameType == MjClient.GAME_TYPE.XU_ZHOU)
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XU_ZHOU) {
             cds.sort(function (a, b) {
 
-                if(a == 91)
-                {
+                if (a == 91) {
                     a = MjClient.data.sData.tData.hunCard;
                 }
-                if(b == 91)
-                {
+                if (b == 91) {
                     b = MjClient.data.sData.tData.hunCard;
                 }
 
@@ -4792,13 +4662,12 @@ MjClient.netCallBack = {
         }
         else {
             if (MjClient.gameType != MjClient.GAME_TYPE.YONG_ZHOU_MJ && MjClient.gameType != MjClient.GAME_TYPE.JIANG_HUA_MJ &&
-                MjClient.gameType != MjClient.GAME_TYPE.DAO_ZHOU_MJ)
-            {
-                 cds.sort(function (a, b) {
-                return a - b
-                 });
+                MjClient.gameType != MjClient.GAME_TYPE.DAO_ZHOU_MJ) {
+                cds.sort(function (a, b) {
+                    return a - b
+                });
             }
-          
+
         }
 
 
@@ -4815,14 +4684,14 @@ MjClient.netCallBack = {
                 var mjput = lp.mjput;
                 if (mjput.length > 0 && mjput[mjput.length - 1] == cds[i]) {
                     mjput.length = mjput.length - 1;
-                    if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+                    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
                         || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
-                         MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE){
+                        MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
                         pl.mjputType.length = pl.mjputType.length - 1;
                         cc.log("MJChi mjputType", " pl = " + JSON.stringify(pl));
                     }
                 }
-                else if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA || 
+                else if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
                     MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA) && tData.lastPutCard2) {
                     var cd = cds[i];
                     if (mjput.length >= 2 && mjput[mjput.length - 2] == cd && tData.lastPutCard2 > 0)
@@ -4834,7 +4703,7 @@ MjClient.netCallBack = {
                     else
                         cc.log("eat error from");
                 }
-                else  mylog("eat error from");
+                else mylog("eat error from");
             }
             else if (uids[tData.curPlayer] == SelfUid()) {
                 pl.mjState = TableState.waitPut;
@@ -4846,26 +4715,20 @@ MjClient.netCallBack = {
                 else mylog("eat error to");
             }
         }
-        if (uids[tData.curPlayer] == SelfUid()) 
-        {
-            if (d.tingLists) 
-            {
+        if (uids[tData.curPlayer] == SelfUid()) {
+            if (d.tingLists) {
                 pl.tingLists = d.tingLists;
             }
-            if (d.jiangjianghuLists) 
-            {
+            if (d.jiangjianghuLists) {
                 pl.jiangjianghuLists = d.jiangjianghuLists;
             }
-            if (pl.tingListAfterPut) 
-            {
+            if (pl.tingListAfterPut) {
                 pl.tingListAfterPut = [];
             }
-            if (d.gangList) 
-            {
+            if (d.gangList) {
                 pl.gangList = d.gangList;
             }
-            if (d.kaigangList) 
-            {
+            if (d.kaigangList) {
                 pl.kaigangList = d.kaigangList;
             }
         }
@@ -4873,14 +4736,12 @@ MjClient.netCallBack = {
             pl.canKaiGang = d.canKaiGang;
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.TONG_HUA)
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.TONG_HUA) {
             pl.eatFlag = d.cpginfo.eatFlag;
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA || 
-            MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA)
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
+            MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA) {
             tData.lastPutCard2 = null;
             tData.lastPutCard3 = null;
             tData.lastPutCard4 = null;
@@ -4915,7 +4776,7 @@ MjClient.netCallBack = {
             if (mjput.length > 0 && mjput[mjput.length - 1] == cd) {
                 mjput.length = mjput.length - 1;
             }
-            else  mylog("peng error from");
+            else mylog("peng error from");
             if (uids[tData.curPlayer] == SelfUid()) {
                 if (d.hua !== undefined) {
                     pl.hua = d.hua;
@@ -4937,10 +4798,10 @@ MjClient.netCallBack = {
                     mjhand.splice(idx, 1);
                 }
                 else mylog("eat error to");
-                if (mjhand.indexOf(cd) >= 0)  pl.mjpeng4.push(cd);
+                if (mjhand.indexOf(cd) >= 0) pl.mjpeng4.push(cd);
             } else {
                 //福禄寿回放剔除碰的手牌
-                if(MjClient.rePlayVideo != -1) {
+                if (MjClient.rePlayVideo != -1) {
                     var mjhand = pl.mjhand;
                     var idx = mjhand.indexOf(cd);
                     if (idx >= 0) {
@@ -4958,10 +4819,10 @@ MjClient.netCallBack = {
             }
 
             sData.players[d.id].eatFlag = d.eatFlag;
-            if(d.eatFlag>0){// 吃后有杠操作继续显示杠
+            if (d.eatFlag > 0) {// 吃后有杠操作继续显示杠
                 sData.tData.tState = TableState.waitEat;
                 pl.mjState = TableState.waitEat
-            } 
+            }
 
             return;
         }
@@ -4973,7 +4834,7 @@ MjClient.netCallBack = {
             var uids = tData.uids;
             var pl = sData.players[d.cpginfo.uid + ""];
             var fromPl = sData.players[uids[d.from]];
-            if(!pl || !fromPl) 
+            if (!pl || !fromPl)
                 return;
 
             //因为96扑克的mjsort会一直变, 更新数据时先备份旧的mjsort, 刷UI时会用到
@@ -4988,17 +4849,17 @@ MjClient.netCallBack = {
             pl.mjpeng.push(d.pengCards);
 
             //清理手牌
-            if(d.cpginfo.uid == SelfUid()) {
+            if (d.cpginfo.uid == SelfUid()) {
                 var mjhand = pl.mjhand;
-                for(var i = 0; i < d.pengCards.length - 1; i++) {
+                for (var i = 0; i < d.pengCards.length - 1; i++) {
                     var cd = d.pengCards[i];
                     var idx = mjhand.indexOf(cd);
-                    if(cd >= 0) {
+                    if (cd >= 0) {
                         mjhand.splice(idx, 1);
                     }
                 }
             }
-            
+
             //清理打出的牌
             var mjput = fromPl.mjput;
             var cd = d.pengCards[d.pengCards - 1];
@@ -5024,17 +4885,16 @@ MjClient.netCallBack = {
         if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
             MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO ||
-            MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA)
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA) {
             var peng = d.cpginfo.pengchigang.peng;
             cd = peng[peng.length - 1].card;
         }
-        if(MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
             playEffectInPlay("peng");
         }
         var pl = sData.players[uids[tData.curPlayer]];
         var lp = sData.players[uids[d.from]];
-        if("mjflower" in d){
+        if ("mjflower" in d) {
             lp.mjflower = d.mjflower;
         }
         if ("canKaiGang" in d) {
@@ -5048,23 +4908,23 @@ MjClient.netCallBack = {
             //溆浦跑胡子需要整组数据 湖北花牌也是
             pl.mjpeng.push(d.cards);
         } else {
-            pl.mjpeng.push(cd); 
+            pl.mjpeng.push(cd);
         }
-        
+
         pl.mjsort = d.cpginfo.mjsort;
         pl.isQiHu = d.cpginfo.isQiHu;
         pl.skipGang = d.cpginfo.skipGang;
-        if(d.cpginfo.skipMingGang){
+        if (d.cpginfo.skipMingGang) {
             pl.skipMingGang = d.cpginfo.skipMingGang;
         }
         pl.onLine = true;
         pl.justPeng = cd;
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
             pl.pengOrPaoCardByPut = d.cpginfo.pengOrPaoCardByPut;
             var num = pl.mjwei.length + pl.mjpeng.length + pl.mjgang0.length + pl.mjgang1.length;
-            if(num == 3 || num == 4){
+            if (num == 3 || num == 4) {
                 playEffectInPlay("peng" + num);
-            }else{
+            } else {
                 playEffectInPlay("peng");
             }
         }
@@ -5072,14 +4932,14 @@ MjClient.netCallBack = {
         var mjput = lp.mjput;
         if (mjput.length > 0 && mjput[mjput.length - 1] == cd && !(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU && tData.putType == 0)) {
             mjput.length = mjput.length - 1;
-            if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
                 || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
-                 MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU){
+                MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
                 lp.mjputType.length = lp.mjputType.length - 1;
                 cc.log("MJPeng mjputType", " pl = " + JSON.stringify(pl));
             }
         }
-        else if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA || 
+        else if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA) && tData.lastPutCard2) {
             if (mjput.length >= 2 && mjput[mjput.length - 2] == cd && tData.lastPutCard2 > 0)
                 mjput.splice(mjput.length - 2, 1);
@@ -5090,10 +4950,9 @@ MjClient.netCallBack = {
             else
                 cc.log("peng error from");
         }
-        else  mylog("peng error from");
+        else mylog("peng error from");
         if (uids[tData.curPlayer] == SelfUid()) {
-            if (pl.eatFlag & 32)
-            {
+            if (pl.eatFlag & 32) {
                 MjClient.showToast("您放弃了胡牌");
             }
             if (d.hua !== undefined) {
@@ -5105,28 +4964,22 @@ MjClient.netCallBack = {
             }
             pl.isNew = false;
             //pl.openDoorState = d.cpginfo.openDoorState;
-            if ("needTing" in d.cpginfo) 
-            {
+            if ("needTing" in d.cpginfo) {
                 pl.needTing = d.cpginfo.needTing;
             }
-            if (d.tingLists) 
-            {
+            if (d.tingLists) {
                 pl.tingLists = d.tingLists;
             }
-            if (pl.tingListAfterPut) 
-            {
+            if (pl.tingListAfterPut) {
                 pl.tingListAfterPut = [];
             }
-            if (d.jiangjianghuLists) 
-            {
+            if (d.jiangjianghuLists) {
                 pl.jiangjianghuLists = d.jiangjianghuLists;
             }
-            if (d.gangList) 
-            {
+            if (d.gangList) {
                 pl.gangList = d.gangList;
             }
-            if (d.kaigangList) 
-            {
+            if (d.kaigangList) {
                 pl.kaigangList = d.kaigangList;
             }
             else mylog("eat error to");
@@ -5157,22 +5010,22 @@ MjClient.netCallBack = {
                     mjhand.splice(idx, 1);
                 }
                 else mylog("eat error to");
-                if (mjhand.indexOf(cd) >= 0)  pl.mjpeng4.push(cd);
+                if (mjhand.indexOf(cd) >= 0) pl.mjpeng4.push(cd);
             }
-            
-            if (MjClient.gameType == MjClient.GAME_TYPE.GUAN_YUN || 
-            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) {
+
+            if (MjClient.gameType == MjClient.GAME_TYPE.GUAN_YUN ||
+                MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) {
                 pl.isTianting = false;
             }
         }
 
-        for(var uid in sData.players){
+        for (var uid in sData.players) {
             sData.players[uid].wangType = 0;
             sData.players[uid].wangStatus = false;
         }
 
         //南京麻将的嘴
-        if (d.zuiUid ) {
+        if (d.zuiUid) {
             pl.zuiUid = d.zuiUid;
         }
         if (d.zuiCount) {
@@ -5190,25 +5043,25 @@ MjClient.netCallBack = {
             sData.players[uid].eatFlag = 0;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
             || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI
             || MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING || MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN
-            || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI || MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI){
+            || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI || MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
             pl.eatFlag = d.eatFlags[pl.info.uid];
-            if(pl.eatFlag != 0){
+            if (pl.eatFlag != 0) {
                 pl.mjState = TableState.waitEat;
                 pl.liuCards = d.liuCards;
                 pl.piaoCards = d.piaoCards;
             }
             pl.isDead = d.isDead;
-            if(pl.isDead && pl.info.uid == SelfUid()){
+            if (pl.isDead && pl.info.uid == SelfUid()) {
                 playEffectInPlay("sishou");
             }
         }
 
         if (MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI) {
             pl.eatFlag = d.eatFlags[pl.info.uid];
-            if(pl.eatFlag != 0){
+            if (pl.eatFlag != 0) {
                 pl.mjState = TableState.waitEat;
                 pl.liuCards = d.liuCards;
             }
@@ -5233,18 +5086,16 @@ MjClient.netCallBack = {
         if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
             MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO ||
-            MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA)
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA) {
             tData.lastPutCard2 = null;
             tData.lastPutCard3 = null;
             tData.lastPutCard4 = null;
         }
-        if (MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) 
-        {
+        if (MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
             tData.isKaigang = false;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
             pl.mjState = tData.tState;
             pl.isDead = d.isDead;
             //偎麻雀死手不播音效
@@ -5253,13 +5104,13 @@ MjClient.netCallBack = {
             // }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710){
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710) {
             for (var uid in sData.players) {
                 sData.players[uid].fallArea = -1;
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG && d.cpginfo.canKaHuPlayer != null){
+        if (MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG && d.cpginfo.canKaHuPlayer != null) {
             var kaHuPlayerUid = d.cpginfo.canKaHuPlayer;
             var kaHuPlayer = sData.players[kaHuPlayerUid];
             kaHuPlayer.eatFlag = 8;
@@ -5269,7 +5120,7 @@ MjClient.netCallBack = {
     }]
     , MJGang: [0, function (d) {
         //cc.log("收到杠的消息", JSON.stringify(d));
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
             MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG) {
             //福禄寿协议内容严重不一样
             var sData = MjClient.data.sData;
@@ -5283,12 +5134,12 @@ MjClient.netCallBack = {
             pl.isTing = true;       //福禄寿只能杠一次，接到杠后进入听牌自动摸打状态
 
             //"杠"牌
-            if(d.isNew) {
-                if(d.mjgang1 && d.mjgang1 && d.mjgang1 > 0) {
+            if (d.isNew) {
+                if (d.mjgang1 && d.mjgang1 && d.mjgang1 > 0) {
                     pl.mjgang1.push(d.mjgang1);     //暗招
                 }
             } else {
-                if(d.mjgang0 && d.mjgang0 && d.mjgang0 > 0) {
+                if (d.mjgang0 && d.mjgang0 && d.mjgang0 > 0) {
                     pl.mjgang0.push(d.mjgang0);     //明招
                 }
             }
@@ -5302,24 +5153,24 @@ MjClient.netCallBack = {
             }
 
             //清理手牌中的杠牌
-            var clearHandZhao = function(pai) {
-                if(!pai)
+            var clearHandZhao = function (pai) {
+                if (!pai)
                     return;
                 pl.mjhand.splice(pl.mjhand.indexOf(pai), 1);
                 pl.mjhand.splice(pl.mjhand.indexOf(pai), 1);
                 pl.mjhand.splice(pl.mjhand.indexOf(pai), 1);
-                if(pl.isAnGang) {
+                if (pl.isAnGang) {
                     pl.mjhand.splice(pl.mjhand.indexOf(pai), 1);
                 }
             };
 
-            if(d.id == SelfUid()) {
+            if (d.id == SelfUid()) {
                 //播放声音
                 playEffectInPlay("gang");
                 clearHandZhao(d.isNew ? d.mjgang1[0] : d.mjgang0[0]);
                 pl.mjState = TableState.waitCard;
             } else {
-                if(MjClient.rePlayVideo != -1) {
+                if (MjClient.rePlayVideo != -1) {
                     clearHandZhao(d.isNew ? d.mjgang1[0] : d.mjgang0[0]);
                 }
             }
@@ -5330,10 +5181,9 @@ MjClient.netCallBack = {
             }
             return;
         }
-        if (d.card instanceof Array)
-        {
+        if (d.card instanceof Array) {
             // 通化麻将，特殊的杠（旋风杠、瘸腿杠）会走到这里
-            mylog("MJGang "+d.card+" "+d.gang+" "+d.from);
+            mylog("MJGang " + d.card + " " + d.gang + " " + d.from);
 
             var sData = MjClient.data.sData;
             sData.players[d.cpginfo.id + ""].pengchigang = d.cpginfo.pengchigang;
@@ -5348,8 +5198,7 @@ MjClient.netCallBack = {
             if (d.gang == 1) {
                 pl.mjTeshuGang0.push(cd);
                 if (d.uid == SelfUid()) {
-                    for (var i = 1; i < cd.length; i ++)
-                    {
+                    for (var i = 1; i < cd.length; i++) {
                         pl.mjhand.splice(pl.mjhand.indexOf(cd[i]), 1);
                     }
                 }
@@ -5359,16 +5208,14 @@ MjClient.netCallBack = {
                 if (mjput.length > 0 && mjput[mjput.length - 1] == cd[0]) {
                     mjput.length = mjput.length - 1;
                 }
-                else  mylog("gang error from");
+                else mylog("gang error from");
                 pl.isNew = false;
             }
             else if (d.gang == 2) //中发白+中/发/白 补杠
             {
-                for (var i = 0; i < pl.mjTeshuGang1.length; i++)
-                {
+                for (var i = 0; i < pl.mjTeshuGang1.length; i++) {
                     var gang1 = pl.mjTeshuGang1[i];
-                    if (gang1.length == 3 && gang1[0] == 71 && gang1[1] == 81 && gang1[2] == 91)
-                    {
+                    if (gang1.length == 3 && gang1[0] == 71 && gang1[1] == 81 && gang1[2] == 91) {
                         if (cd[0] == 71)
                             gang1.splice(0, 0, 71);
                         else if (cd[0] == 81)
@@ -5385,8 +5232,7 @@ MjClient.netCallBack = {
             else if (d.gang == 3) {
                 pl.mjTeshuGang1.push(cd);
                 if (d.uid == SelfUid()) {
-                    for (var i = 0; i < cd.length; i ++)
-                    {
+                    for (var i = 0; i < cd.length; i++) {
                         pl.mjhand.splice(pl.mjhand.indexOf(cd[i]), 1);
                     }
                 }
@@ -5400,7 +5246,7 @@ MjClient.netCallBack = {
                 pl.mjState = TableState.waitCard;
             }
             else {
-                if(tData.tState != TableState.waitLong)
+                if (tData.tState != TableState.waitLong)
                     sData.players[SelfUid() + ""].mjState = TableState.waitEat;
             }
 
@@ -5409,23 +5255,21 @@ MjClient.netCallBack = {
             }
 
             if (d.eatFlags) {
-                for(var uid in d.eatFlags) {
+                for (var uid in d.eatFlags) {
                     sData.players[uid].eatFlag = d.eatFlags[uid];
                 }
             }
 
             if (d.mustHus) {
-                for(var uid in d.mustHus) {
+                for (var uid in d.mustHus) {
                     sData.players[uid].mustHu = d.mustHus[uid];
                 }
             }
 
-            if (d.gang == 1 || (cd.length == 3 && cd[0] == 71 && cd[1] == 81 && cd[2] == 91))
-            {
+            if (d.gang == 1 || (cd.length == 3 && cd[0] == 71 && cd[1] == 81 && cd[2] == 91)) {
                 playEffectInPlay("mingDan");
             }
-            else if (d.gang == 2)
-            {
+            else if (d.gang == 2) {
                 if (cd[0] == 71)
                     playEffectInPlay("guoHongZhong");
                 else if (cd[0] == 81)
@@ -5433,12 +5277,11 @@ MjClient.netCallBack = {
                 else
                     playEffectInPlay("guoBaiBan");
             }
-            else if (d.gang == 3)
-            {
+            else if (d.gang == 3) {
                 playEffectInPlay("anDan");
             }
             if (d.eatFlags) {
-                for(var uid in d.eatFlags) {
+                for (var uid in d.eatFlags) {
                     sData.players[uid].eatFlag = d.eatFlags[uid];
                 }
             }
@@ -5451,17 +5294,16 @@ MjClient.netCallBack = {
         if (!sData) return;
 
         if (d.mustHus) {
-            for(var uid in d.mustHus) {
+            for (var uid in d.mustHus) {
                 sData.players[uid].mustHu = d.mustHus[uid];
             }
         }
         if (d.gangFourCounts) {
             sData.players[uid].gangFourCounts = d.gangFourCounts;
             var pl = getUIPlayerByUID(uid);
-             pl.gangFourCounts = d.gangFourCounts;
+            pl.gangFourCounts = d.gangFourCounts;
         }
-        if (d.uid == SelfUid()) 
-        {
+        if (d.uid == SelfUid()) {
             var pl = sData.players[d.uid];
             if ("kaigangList" in d) {
                 pl.kaigangList = d.kaigangList;
@@ -5469,8 +5311,7 @@ MjClient.netCallBack = {
             if ("canKaiGang" in pl) {
                 pl.canKaiGang = false;
             }
-            if ("isBBHu" in pl) 
-            {
+            if ("isBBHu" in pl) {
                 pl.isBBHu = false;
             }
         }
@@ -5491,12 +5332,11 @@ MjClient.netCallBack = {
             if (d.uid == SelfUid()) {
                 pl.mjhand.splice(pl.mjhand.indexOf(cd), 1);
                 pl.mjhand.splice(pl.mjhand.indexOf(cd), 1);
-                if((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU 
+                if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU
                     || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU
                     || MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_HH_MJ
-                    || MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI) 
-                    && tData.chaoTianCard && d.card == tData.chaoTianCard)
-                {
+                    || MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI)
+                    && tData.chaoTianCard && d.card == tData.chaoTianCard) {
 
                 }
                 else {
@@ -5509,7 +5349,7 @@ MjClient.netCallBack = {
             if (mjput.length > 0 && mjput[mjput.length - 1] == cd) {
                 mjput.length = mjput.length - 1;
             }
-            else  mylog("gang error from");
+            else mylog("gang error from");
             pl.isNew = false;
         }
         else if (d.gang == 2) {
@@ -5519,17 +5359,17 @@ MjClient.netCallBack = {
                 if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
                     MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA ||
                     MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
-                    MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO )
+                    MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO)
                     && tData.lastPutCard2 && tData.uids[tData.curPlayer] == d.uid) // 长沙麻将开杠后再杠
                     ;
-                else if(MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_KAI_WANG && d.card === tData.showCard){  //宁乡开王麻将借子开杠
+                else if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_KAI_WANG && d.card === tData.showCard) {  //宁乡开王麻将借子开杠
                 }
-                else if(MjClient.gameType == MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG && tData.areaSelectMode.touhougang && tData.touingUid != null){
-                    
-                }else if(MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG && tData.touingUid != null){
+                else if (MjClient.gameType == MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG && tData.areaSelectMode.touhougang && tData.touingUid != null) {
+
+                } else if (MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG && tData.touingUid != null) {
 
                 }
-                else{
+                else {
                     pl.mjhand.splice(pl.mjhand.indexOf(cd), 1);
                 }
             }
@@ -5545,95 +5385,83 @@ MjClient.netCallBack = {
                 if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
                     MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA ||
                     MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
-                    MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO)&& tData.lastPutCard2 && tData.uids[tData.curPlayer] == d.uid) // 长沙麻将开杠后再杠
+                    MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) && tData.lastPutCard2 && tData.uids[tData.curPlayer] == d.uid) // 长沙麻将开杠后再杠
                     ;
-                else if((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU 
+                else if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU
                     || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU
                     || MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_HH_MJ
                     || MjClient.gameType == MjClient.GAME_TYPE.CHUO_XIA_ZI)
-                     && tData.chaoTianCard && d.card == tData.chaoTianCard)
-                {
+                    && tData.chaoTianCard && d.card == tData.chaoTianCard) {
 
                 }
-                else if(MjClient.gameType == MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG && tData.areaSelectMode.touhougang && tData.touingUid != null){
-                }else if(MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG && tData.touingUid != null){
+                else if (MjClient.gameType == MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG && tData.areaSelectMode.touhougang && tData.touingUid != null) {
+                } else if (MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG && tData.touingUid != null) {
 
-                }else
+                } else
                     pl.mjhand.splice(pl.mjhand.indexOf(cd), 1);
             }
         }
 
 
-        if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA || 
+        if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA ||
-        MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ) && tData.lastPutCard2) // 长沙麻将开杠后再杠
+            MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU) && tData.lastPutCard2) // 长沙麻将开杠后再杠
         {
             var mjput = sData.players[uids[tData.curPlayer]].mjput;
-            if (mjput.length > 0 && mjput[mjput.length - 1] == cd)
-            {
+            if (mjput.length > 0 && mjput[mjput.length - 1] == cd) {
                 mjput.length = mjput.length - 1;
             }
-            else if (mjput.length >= 2 && mjput[mjput.length - 2] == cd && tData.lastPutCard2 > 0)
-            {
+            else if (mjput.length >= 2 && mjput[mjput.length - 2] == cd && tData.lastPutCard2 > 0) {
                 mjput.splice(mjput.length - 2, 1);
             }
-            else if (mjput.length >= 3 && mjput[mjput.length - 3] == cd && tData.lastPutCard3 > 0)
-            {
+            else if (mjput.length >= 3 && mjput[mjput.length - 3] == cd && tData.lastPutCard3 > 0) {
                 mjput.splice(mjput.length - 3, 1);
             }
-            else if (mjput.length >= 4 && mjput[mjput.length - 4] == cd && tData.lastPutCard4 > 0)
-            {
+            else if (mjput.length >= 4 && mjput[mjput.length - 4] == cd && tData.lastPutCard4 > 0) {
                 mjput.splice(mjput.length - 4, 1);
             }
-            else
-            {
+            else {
                 cc.log("mjGangCard --error--!!");
             }
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO && tData.kaigangs.length > 0) 
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO && tData.kaigangs.length > 0) {
 
             var mjput = sData.players[uids[tData.curPlayer]].mjput;
             //cc.log("已出牌    ",uids[tData.curPlayer],mjput,"  杠的牌 ",cd)
-            if (mjput.length > 0 && mjput[mjput.length - 1] == cd)
-            {
+            if (mjput.length > 0 && mjput[mjput.length - 1] == cd) {
                 mjput.length = mjput.length - 1;
             }
-            else
-            {
+            else {
                 cc.log("mjGangCard --error--!!");
             }
         }
 
         tData.curPlayer = tData.uids.indexOf(d.uid);
         tData.lastPutCard = cd;
-        if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA||
+        if (MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
-            MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO )
-        {
+            MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
             tData.lastPutCard2 = null;
             tData.lastPutCard3 = null;
             tData.lastPutCard4 = null;
         }
-        if (MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) 
-        {
+        if (MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
             tData.isKaigang = false;
         }
 
         if (!tData.noBigWin || (d.gang == 2 && tData.canEatHu)) tData.putType = d.gang;
 
         if (d.gang == 4) {//如皋长牌，龙是三张牌的杠
-            if(MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG){//一痞二癞的痞子杠和癞子杠
-                if(d.cpginfo.gangType == 1 || d.cpginfo.gangType == 2){//痞子杠:1  癞子杠:2
+            if (MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG) {//一痞二癞的痞子杠和癞子杠
+                if (d.cpginfo.gangType == 1 || d.cpginfo.gangType == 2) {//痞子杠:1  癞子杠:2
                     pl.mjPiZiGang.push(d.card);
-                    if(d.uid == SelfUid()){
+                    if (d.uid == SelfUid()) {
                         pl.mjhand.splice(pl.mjhand.indexOf(d.card), 1);
                     }
                 }
-            }else{
-                if (d.isFenggang)
-                {
+            } else {
+                if (d.isFenggang) {
                     if (d.uid == SelfUid()) {
                         if (d.fgang) {
                             pl.fgang = d.fgang;
@@ -5648,11 +5476,10 @@ MjClient.netCallBack = {
                     if (mjput.length > 0 && mjput[mjput.length - 1] == cd) {
                         mjput.length = mjput.length - 1;
                     }
-                    else  mylog("gang error from");
+                    else mylog("gang error from");
                     pl.isNew = false;
                 }
-                else
-                {
+                else {
                     pl.mjgang1.push(cd);
                     if (d.uid == SelfUid()) {
                         pl.mjhand.splice(pl.mjhand.indexOf(cd), 1);
@@ -5665,15 +5492,14 @@ MjClient.netCallBack = {
                         pl.mjState = TableState.waitPut;
                     }
                     else {
-                        if(tData.tState != TableState.waitLong)
+                        if (tData.tState != TableState.waitLong)
                             sData.players[SelfUid() + ""].mjState = TableState.waitPut;
                     }
                 }
-            }  
+            }
         }
         if (d.gang == 5) {//如皋长牌，龙是2张牌的杠
-            if (d.isFenggang)
-            {
+            if (d.isFenggang) {
                 cc.log("风杠");
                 if (d.uid == SelfUid()) {
                     if (d.fgang) {
@@ -5685,8 +5511,7 @@ MjClient.netCallBack = {
                     }
                 }
             }
-            else
-            {
+            else {
                 pl.mjgang1.push(cd);
                 if (d.uid == SelfUid()) {
                     pl.mjhand.splice(pl.mjhand.indexOf(cd), 1);
@@ -5697,7 +5522,7 @@ MjClient.netCallBack = {
                     pl.mjState = TableState.waitPut;
                 }
                 else {
-                    if(tData.tState != TableState.waitLong)
+                    if (tData.tState != TableState.waitLong)
                         sData.players[SelfUid() + ""].mjState = TableState.waitPut;
                 }
             }
@@ -5708,7 +5533,7 @@ MjClient.netCallBack = {
                 pl.mjState = TableState.waitCard;
             }
             else {
-                if(tData.tState != TableState.waitLong)
+                if (tData.tState != TableState.waitLong)
                     sData.players[SelfUid() + ""].mjState = TableState.waitEat;
             }
         }
@@ -5716,7 +5541,7 @@ MjClient.netCallBack = {
             pl.hua = d.hua;
         }
         //南京麻将的嘴
-        if (d.zuiUid ) {
+        if (d.zuiUid) {
             pl.zuiUid = d.zuiUid;
         }
         if (d.zuiCount) {
@@ -5726,57 +5551,51 @@ MjClient.netCallBack = {
             pl.qingDui = d.qingDui;
         }
         if (d.eatFlags) {
-            for(var uid in d.eatFlags) {
+            for (var uid in d.eatFlags) {
                 sData.players[uid].eatFlag = d.eatFlags[uid];
             }
         }
-        if(d.touzi){
+        if (d.touzi) {
             pl.touzi = d.touzi;
             pl.mjState = TableState.waitEat;
         }
 
         //一痞二癞的倍数
-        if("allGangMul" in d.cpginfo){
+        if ("allGangMul" in d.cpginfo) {
             pl.allGangMul = d.cpginfo.allGangMul;
         }
 
         //蕲春红中杠番数
-        if("curFanCount" in d.cpginfo){
+        if ("curFanCount" in d.cpginfo) {
             pl.curFanCount = d.cpginfo.curFanCount;
         }
         //console.log("=====doomsky say:pl.openDoorState======", pl.openDoorState);
 
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXTHMJ)
-        {
+        if (MjClient.getAppType() == MjClient.APP_TYPE.QXTHMJ) {
             if (tData.hunCard == d.card)
                 playEffectInPlay("huangjinDan");
             else if (d.gang == 1)
-                 playEffectInPlay("mingDan");
+                playEffectInPlay("mingDan");
             else if (d.gang == 2)
                 playEffectInPlay("guoDan");
             else
                 playEffectInPlay("anDan");
         }
-        else if(MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP)
-        {
-            if(tData.tState === TableState.waitLong)
-            {
-                if(MjClient.GAME_TYPE.QU_TANG_23_ZHANG === MjClient.gameType){    // 曲塘23张起手杠播杠音效
+        else if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP) {
+            if (tData.tState === TableState.waitLong) {
+                if (MjClient.GAME_TYPE.QU_TANG_23_ZHANG === MjClient.gameType) {    // 曲塘23张起手杠播杠音效
                     playEffectInPlay("gang");
-                }else{
+                } else {
                     playEffectInPlay("long");
                 }
             }
-            else if(d.gang == 1 || d.gang == 2)
-            {
+            else if (d.gang == 1 || d.gang == 2) {
                 playEffectInPlay("gang");
             }
-            else if (d.gang == 3)
-            {
+            else if (d.gang == 3) {
                 playEffectInPlay("anGang");
             }
-            else if(d.gang == 4 || d.gang == 5)
-            {
+            else if (d.gang == 4 || d.gang == 5) {
                 playEffectInPlay("anGang");
             }
         }
@@ -5784,25 +5603,20 @@ MjClient.netCallBack = {
             MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA ||
             MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
             MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO ||
-            MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ)&& d.isKaiGang)
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) && d.isKaiGang) {
             playEffectInPlay("kaiGang");
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.CHAO_GU_MJ) 
-        {
+        else if (MjClient.gameType == MjClient.GAME_TYPE.CHAO_GU_MJ) {
             playEffectInPlay("gang");
         }
-        else
-        {
-            if (d.gang == 1 || d.gang == 2)
-            {
+        else {
+            if (d.gang == 1 || d.gang == 2) {
                 playEffectInPlay("gang");
             }
-            else if (d.gang == 3)
-            {
+            else if (d.gang == 3) {
                 playEffectInPlay("anGang");
             }
-            else if(d.gang == 4 || d.gang == 5)//用在南通长牌的“龙”
+            else if (d.gang == 4 || d.gang == 5)//用在南通长牌的“龙”
             {
                 playEffectInPlay("anGang");
             }
@@ -5821,7 +5635,7 @@ MjClient.netCallBack = {
             sData.players[SelfUid() + ""].mjState = d.plState;
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.GUAN_YUN || 
+        if (MjClient.gameType == MjClient.GAME_TYPE.GUAN_YUN ||
             MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) {
             pl.isTianting = false;
         }
@@ -5835,19 +5649,19 @@ MjClient.netCallBack = {
         }
 
         //安化麻将杠后重置摸的牌
-        if(MjClient.gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG_SW ||
-            MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_KAI_WANG){
+        if (MjClient.gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG_SW ||
+            MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_KAI_WANG) {
             pl.newCd = 0;
-            if(d.canBaotingNum != undefined){
+            if (d.canBaotingNum != undefined) {
                 tData.canBaotingNum = d.canBaotingNum;
             }
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType === MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG){
+        if (MjClient.gameType === MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType === MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) {
             tData.touingUid = null;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG && d.cpginfo.canKaHuPlayer != null){
+        if (MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG && d.cpginfo.canKaHuPlayer != null) {
             var kaHuPlayerUid = d.cpginfo.canKaHuPlayer;
             var kaHuPlayer = sData.players[kaHuPlayerUid];
             kaHuPlayer.eatFlag = 8;
@@ -5870,12 +5684,12 @@ MjClient.netCallBack = {
         pl.isNew = d.isNew;  //isNew=true 表示暗招
 
         //"招"牌
-        if(d.isNew) {
-            if(d.mjzhao1 && d.mjzhao1 && d.mjzhao1 > 0) {
+        if (d.isNew) {
+            if (d.mjzhao1 && d.mjzhao1 && d.mjzhao1 > 0) {
                 pl.mjzhao1.push(d.mjzhao1);     //暗招
             }
         } else {
-            if(d.mjzhao0 && d.mjzhao0 && d.mjzhao0 > 0) {
+            if (d.mjzhao0 && d.mjzhao0 && d.mjzhao0 > 0) {
                 pl.mjzhao0.push(d.mjzhao0);     //明招
             }
         }
@@ -5889,24 +5703,24 @@ MjClient.netCallBack = {
         }
 
         //清理手牌中的杠牌
-        var clearHandZhao = function(pai) {
-            if(!pai)
+        var clearHandZhao = function (pai) {
+            if (!pai)
                 return;
             pl.mjhand.splice(pl.mjhand.indexOf(pai), 1);
             pl.mjhand.splice(pl.mjhand.indexOf(pai), 1);
             pl.mjhand.splice(pl.mjhand.indexOf(pai), 1);
-            if(pl.isNew) {
+            if (pl.isNew) {
                 pl.mjhand.splice(pl.mjhand.indexOf(pai), 1);
             }
         };
 
-        if(d.id == SelfUid()) {
+        if (d.id == SelfUid()) {
             //播放声音
             playEffectInPlay("zhao");
             clearHandZhao(d.isNew ? d.mjzhao1 : d.mjzhao0);
             pl.mjState = TableState.waitCard;
         } else {
-            if(MjClient.rePlayVideo != -1) {
+            if (MjClient.rePlayVideo != -1) {
                 clearHandZhao(d.isNew ? d.mjzhao1 : d.mjzhao0);
             }
         }
@@ -5931,8 +5745,7 @@ MjClient.netCallBack = {
         var pl = sData.players[d.uid];
         if (d.uid == SelfUid()) {
             var idx = pl.mjhand.indexOf(d.card);
-            if(idx >= 0)
-            {
+            if (idx >= 0) {
                 pl.mjhand.splice(idx, 1);
             }
         }
@@ -5940,12 +5753,11 @@ MjClient.netCallBack = {
             pl.mjflower = [];
         }
         if (d.eatFlags) {
-            for(var uid in d.eatFlags) {
+            for (var uid in d.eatFlags) {
                 sData.players[uid].eatFlag = d.eatFlags[uid];
             }
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.LUAN_GUA_FENG)
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.LUAN_GUA_FENG) {
             sData.tData.tState = TableState.waitEat;
             sData.tData.lastPutCard = d.card;
             if (pl.buCards) {
@@ -5958,8 +5770,7 @@ MjClient.netCallBack = {
                 sData.players[SelfUid() + ""].mjState = TableState.waitEat;
             }
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU)
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU) {
             pl.rate = d.rate;
             pl.mjput.push(d.card);
         }
@@ -5968,31 +5779,27 @@ MjClient.netCallBack = {
         if (!d.firstFlower8) {
             pl.firstFlower8 = d.firstFlower8;
         }
-        
+
 
 
         pl.mjflower.push(d.card);
         pl.putType = d.putType;
         console.log("=====doomsky say:pl.putType======", pl.putType);
-        cc.log("pl--------------",pl.mjhand);
+        cc.log("pl--------------", pl.mjhand);
     }],
-    MJTing:[0,function(d)
-    {
-        if(MjClient.gameType != MjClient.GAME_TYPE.CHANG_SHA ||
+    MJTing: [0, function (d) {
+        if (MjClient.gameType != MjClient.GAME_TYPE.CHANG_SHA ||
             MjClient.gameType != MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA ||
             MjClient.gameType != MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
-            MjClient.gameType != MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO ){
+            MjClient.gameType != MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
             playEffectInPlay("ting");
         }
-        if(MjClient.CheckPlayerCount(function(pl){return pl.isTing}) == 0)
-        {
-            if (MjClient.getAppType() != MjClient.APP_TYPE.QXTHMJ)
-            {
+        if (MjClient.CheckPlayerCount(function (pl) { return pl.isTing }) == 0) {
+            if (MjClient.getAppType() != MjClient.APP_TYPE.QXTHMJ) {
                 playMusic("bgFight_ting");
             }
         }
-        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU)
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU) {
             playMusic("bgFightXYTDH");
         }
         var sData = MjClient.data.sData;
@@ -6002,15 +5809,12 @@ MjClient.netCallBack = {
         pl.isTing = true;
         tData.haveTianTing = false;
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO ) 
-        {
-            if ("isTingJJHu" in d) 
-            {
+        if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
+            if ("isTingJJHu" in d) {
                 pl.isTingJJHu = d.isTingJJHu;
             }
             pl.isKaigang = false;
-            if (d.isKaigang) 
-            {
+            if (d.isKaigang) {
                 pl.isKaigang = d.isKaigang;
             }
         }
@@ -6022,42 +5826,36 @@ MjClient.netCallBack = {
             pl.liangCards = d.liangCards;
         }
 
-        if (d.uid == SelfUid()) 
-        {
-            if ("eatFlag" in d) 
-            {
+        if (d.uid == SelfUid()) {
+            if ("eatFlag" in d) {
                 pl.eatFlag = d.eatFlag;
             }
         }
-        if ("tingFinish" in d) 
-        { 
+        if ("tingFinish" in d) {
             pl.tingFinish = d.tingFinish;
         }
         if (MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_MJ ||
-            MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_MJ  ||
+            MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_MJ ||
             MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ ||
-            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) 
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) {
             pl.needTing = false;
         }
-        if("putCount" in d)
+        if ("putCount" in d)
             pl.putCount = d.putCount;
 
-        if(d.tingIndex >= 0 && (MjClient.gameType == MjClient.GAME_TYPE.GUAN_NAN || MjClient.gameType == MjClient.GAME_TYPE.SI_YANG ||  MjClient.gameType == MjClient.GAME_TYPE.HUAI_AN_ERZ)) {
+        if (d.tingIndex >= 0 && (MjClient.gameType == MjClient.GAME_TYPE.GUAN_NAN || MjClient.gameType == MjClient.GAME_TYPE.SI_YANG || MjClient.gameType == MjClient.GAME_TYPE.HUAI_AN_ERZ)) {
             pl.tingIndex = d.tingIndex;
         }
 
         cc.log("mjting -------------- pl.putCount = " + pl.putCount);
-        if(MjClient.gameType == MjClient.GAME_TYPE.LIAN_SHUI ||
-            MjClient.gameType == MjClient.GAME_TYPE.GUAN_YUN || 
-            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ)
-        {
+        if (MjClient.gameType == MjClient.GAME_TYPE.LIAN_SHUI ||
+            MjClient.gameType == MjClient.GAME_TYPE.GUAN_YUN ||
+            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) {
             var _cardCount = 0;
-            if(tData.uids[tData.zhuang] == d.uid)
-            {
+            if (tData.uids[tData.zhuang] == d.uid) {
                 _cardCount = 1;
             }
-            if(pl.mjgang1.length == 0 && pl.mjgang0.length == 0 && pl.mjpeng.length == 0 && pl.putCount <= _cardCount )//起手听牌不受张数限制
+            if (pl.mjgang1.length == 0 && pl.mjgang0.length == 0 && pl.mjpeng.length == 0 && pl.putCount <= _cardCount)//起手听牌不受张数限制
             {
                 //起手听牌，天听
                 cc.log("--起手听牌，天听---------天听");
@@ -6071,7 +5869,7 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
-        var pl = sData.players[d.cpginfo.id+ ""];
+        var pl = sData.players[d.cpginfo.id + ""];
         //console.log("=====doomsky say:JSON.stringify(pl.xuanfengGang)======", JSON.stringify(pl.xuanfengGang));
         // pl.xuanfengGang = d.cpginfo.xuanfenggang;
         //pl.xuanfengGang.push(31);
@@ -6103,7 +5901,7 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
-        var pl = sData.players[d.cpginfo.id+ ""];
+        var pl = sData.players[d.cpginfo.id + ""];
         //console.log("=====doomsky say:JSON.stringify(pl.xuanfengPeng)======", JSON.stringify(pl.xuanfengGang));
         // pl.xuanfengGang = d.cpginfo.xuanfenggang;
         //pl.xuanfengGang.push(71);
@@ -6128,7 +5926,7 @@ MjClient.netCallBack = {
         }
         playEffectInPlay("gang");
     }],
-    MJHu:[0.5, function (d) {
+    MJHu: [0.5, function (d) {
         //处理自摸和点炮的音频
         //if (d.uid == SelfUid())
         {
@@ -6137,15 +5935,14 @@ MjClient.netCallBack = {
             var tData = sData.tData;
             var pl = sData.players[d.uid];
             tData.curPlayer = tData.uids.indexOf(d.uid);
-            if ("curPlayer" in d) 
-            {
+            if ("curPlayer" in d) {
                 tData.curPlayer = d.curPlayer;
             }
             pl.huWord = d.huWord; // 添加 不同胡的动画
             if ("huWords" in d) {
                 pl.huWords = d.huWords;
             }
-            
+
             if ("huCards" in d) {
                 pl.huCards = d.huCards;
             }
@@ -6170,26 +5967,21 @@ MjClient.netCallBack = {
             }
             //自摸胡刪牌
             if (MjClient.GAME_TYPE.XUE_LIU == MjClient.gameType &&
-                d.uid == SelfUid())
-            {
-                if (pl.mjhand.length % 3 == 2)
-                {
-                    var cardtag =  pl.mjhand.pop();
-                    RemoveNodeBack(getNode(0),"mjhand",1,cardtag);
+                d.uid == SelfUid()) {
+                if (pl.mjhand.length % 3 == 2) {
+                    var cardtag = pl.mjhand.pop();
+                    RemoveNodeBack(getNode(0), "mjhand", 1, cardtag);
                 }
             }
             pl.onLine = true;
 
-            if (MjClient.GAME_TYPE.XUE_ZHAN == MjClient.gameType)
-            {
+            if (MjClient.GAME_TYPE.XUE_ZHAN == MjClient.gameType) {
                 pl.isTing = true;
             }
-            if (MjClient.GAME_TYPE.XUE_LIU == MjClient.gameType)
-            {
+            if (MjClient.GAME_TYPE.XUE_LIU == MjClient.gameType) {
                 pl.isTing = true;
             }
-            if (MjClient.GAME_TYPE.YI_CHANG_XUE_LIU_MJ === MjClient.gameType)
-            {
+            if (MjClient.GAME_TYPE.YI_CHANG_XUE_LIU_MJ === MjClient.gameType) {
                 pl.isTing = true;
                 var sData = MjClient.data.sData;
                 var showScoreData = d.showScore;
@@ -6205,46 +5997,45 @@ MjClient.netCallBack = {
                 }
             }
             if (MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO == MjClient.gameType ||
-                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) 
-            {
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
                 pl.eatFlag = 0;//海底胡之后刷新按钮
             }
             // 红字有人胡 所有玩家操作flag置0
             if (tData.gameType == MjClient.GAME_TYPE.ML_HONG_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
-                 tData.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG ||
-                 tData.gameType == MjClient.GAME_TYPE.YY_AN_HUA_PAO_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_ZI_PAI ||
-                 tData.gameType == MjClient.GAME_TYPE.GUI_YANG_ZI_PAI ||
-                 tData.gameType == MjClient.GAME_TYPE.NING_XIANG_PAO_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU ||
-                 tData.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_MAO_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.CHANG_DE_PAO_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.YUAN_LING_PAO_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.SHI_MEN_PAO_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.XIANG_XI_2710 ||
-                 tData.gameType == MjClient.GAME_TYPE.HAN_SHOU_PAO_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE ||
-                 tData.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER || 
-                 tData.gameType == MjClient.GAME_TYPE.HY_LIU_HU_QIANG ||
-                 tData.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI ||
-                 tData.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
-                 tData.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
-                 tData.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
-                 tData.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI) {
+                tData.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
+                tData.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG ||
+                tData.gameType == MjClient.GAME_TYPE.YY_AN_HUA_PAO_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_ZI_PAI ||
+                tData.gameType == MjClient.GAME_TYPE.GUI_YANG_ZI_PAI ||
+                tData.gameType == MjClient.GAME_TYPE.NING_XIANG_PAO_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU ||
+                tData.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_MAO_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.CHANG_DE_PAO_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.YUAN_LING_PAO_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.SHI_MEN_PAO_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.XIANG_XI_2710 ||
+                tData.gameType == MjClient.GAME_TYPE.HAN_SHOU_PAO_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE ||
+                tData.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER ||
+                tData.gameType == MjClient.GAME_TYPE.HY_LIU_HU_QIANG ||
+                tData.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI ||
+                tData.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
+                tData.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
+                tData.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
+                tData.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI) {
                 for (var uid in sData.players) {
                     sData.players[uid].eatFlag = 0;
                 }
             }
 
-            if(MjClient.gameType === MjClient.GAME_TYPE.QU_TANG_23_ZHANG){
+            if (MjClient.gameType === MjClient.GAME_TYPE.QU_TANG_23_ZHANG) {
                 // d.huWord = quanhun, qinghu, zimo
-                if(d.huWord) playEffectInPlay(d.huWord);
+                if (d.huWord) playEffectInPlay(d.huWord);
             }
 
 
@@ -6252,159 +6043,152 @@ MjClient.netCallBack = {
                 MjClient.playui.playHuEffect(d.winType, d.huWords);
             }
             // 长沙麻将开杠后， 自摸胡牌， tState 是 waitEat ，长沙麻将特需处理添加 胡牌类型 winType数据下发
-            else if((
+            else if ((
                 MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_XUE_LIU_MJ ||
                 MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA ||
                 MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_CHANG_SHA ||
                 MjClient.gameType === MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU ||
-                MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO )&& d.winType){
+                MjClient.gameType === MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) && d.winType) {
                 // 长沙麻将自摸音效
-                if(d.winType == 3){
+                if (d.winType == 3) {
                     playEffectInPlay("zimo");
-                }else{
+                } else {
                     playEffectInPlay("fangpao");
                 }
 
             }
-            else if(MjClient.gameType == MjClient.GAME_TYPE.ML_HONG_ZI || MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI
-                || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI|| MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
-                if(d.huType == 0){
+            else if (MjClient.gameType == MjClient.GAME_TYPE.ML_HONG_ZI || MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI
+                || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
+                if (d.huType == 0) {
                     playEffectInPlay("zimoXiaoHu");
-                }else{
+                } else {
                     playEffectInPlay("zimoDaHu");
                 }
-                if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-                    || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
+                if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+                    || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
                     playEffectInPlay("hu");
                 }
             }
-            else if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU || MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG ||
-                    MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER ||
-                    MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING || MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI || MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
+            else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU || MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG ||
+                MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER ||
+                MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING || MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
+                MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI || MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
                 playEffectInPlay("hu");
-            }else if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
                 var sound_hu = ["hu", "shuanglong", "tianhu", "hu_dihu", "hu_penghu", "hu_saohu", "hu_paohu"];
                 playEffectInPlay(sound_hu[d.huType]);
 
-            }else if(MjClient.playui.isNewFrameMaJiang){   //新版麻将
-                var handlewShandian = function(){
-                    if(MjClient.playui.addLightEffect){
-                        MjClient.playui.addLightEffect(d);   
+            } else if (MjClient.playui.isNewFrameMaJiang) {   //新版麻将
+                var handlewShandian = function () {
+                    if (MjClient.playui.addLightEffect) {
+                        MjClient.playui.addLightEffect(d);
                         return;
                     }
                     var paoNode = MjClient.lastCardposNode;//新增地点炮动画
                     if (cc.sys.isObjectValid(paoNode)) {
                         paoNode.setVisible(true);
-                        cc.log(" ===========paoNode======== x: "+ paoNode.x + " -----y:"+ paoNode.y);
+                        cc.log(" ===========paoNode======== x: " + paoNode.x + " -----y:" + paoNode.y);
                         var projNode2 = createSpine("spine/dianpao/skeleton.json", "spine/dianpao/skeleton.atlas");
                         projNode2.setAnimation(0, 'idle', false);
-                        projNode2.setPosition(50,100);
+                        projNode2.setPosition(50, 100);
                         projNode2.setTimeScale(0.35);
                         projNode2.setScale(1.5);
-                        paoNode.addChild(projNode2,999999);
-                    } 
+                        paoNode.addChild(projNode2, 999999);
+                    }
                     else {
                         cc.log('error  MjClient.lastCardposNode 非法对象')
                     }
                 }
 
-                if(MjClient.getAppType() === MjClient.APP_TYPE.AYGUIZHOUMJ)
-                {
-                    if("huWord" in d && (d.huWord.indexOf("zimo") >= 0 || d.huWord.indexOf("gangkai") >= 0)){
+                if (MjClient.getAppType() === MjClient.APP_TYPE.AYGUIZHOUMJ) {
+                    if ("huWord" in d && (d.huWord.indexOf("zimo") >= 0 || d.huWord.indexOf("gangkai") >= 0)) {
                         playEffectInPlay("zimo");
-                    }else{
+                    } else {
                         handlewShandian();
                         playEffectInPlay("fangpao");
                     }
 
-                }else { 
-                    if("huWord" in d && d.huWord.indexOf("zimo") >= 0){
-                        if(getCurrentVoiceType() == 0)//普通话
+                } else {
+                    if ("huWord" in d && d.huWord.indexOf("zimo") >= 0) {
+                        if (getCurrentVoiceType() == 0)//普通话
                             playEffectInPlay("zimo");
-                        else if("soundType" in d)
+                        else if ("soundType" in d)
                             playEffectInPlay(d.soundType);
-                    }else{
+                    } else {
                         handlewShandian();
-                        if(getCurrentVoiceType() == 0)//普通话
+                        if (getCurrentVoiceType() == 0)//普通话
                             playEffectInPlay("fangpao");
-                        else if("soundType" in d)
+                        else if ("soundType" in d)
                             playEffectInPlay(d.soundType);
                     }
                 }
-            }else if(MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
                 playEffectInPlay(tData.putType == 1 ? 'zimo' : 'hu');
-            }else if(MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_LAO_CHUO ){
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_LAO_CHUO) {
                 var url = "yongZhouLaoChuo/nan/hu";
                 var pl = MjClient.data.sData.players[d.uid];
                 playEffect(url, false, pl.info.sex);
-                var UIoff =  getUiOffByUid(d.uid);
+                var UIoff = getUiOffByUid(d.uid);
                 playCardAni_Hu(UIoff);
             }
             else {
-                if((MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_MA_JIANG
-                    || MjClient.gameType == MjClient.GAME_TYPE.ZHUO_HAO_ZI) && pl.huWord == "jiaotingdianpao"){
+                if ((MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_MA_JIANG
+                    || MjClient.gameType == MjClient.GAME_TYPE.ZHUO_HAO_ZI) && pl.huWord == "jiaotingdianpao") {
                     playEffectInPlay("hu");
                 }
                 //自摸
-                else if((tData.tState == TableState.waitPut && pl.mjState == TableState.waitPut ) || pl.huWord == "zimo")
-                {
-                    if(pl.huWord == "wangchuang"){
+                else if ((tData.tState == TableState.waitPut && pl.mjState == TableState.waitPut) || pl.huWord == "zimo") {
+                    if (pl.huWord == "wangchuang") {
                         playEffectInPlay("wangchuang");
-                    }else if(pl.huWord == "wangdiao"){
+                    } else if (pl.huWord == "wangdiao") {
                         playEffectInPlay("wangdiao");
-                    }else{
+                    } else {
                         playEffectInPlay("zimo");
                     }
                 }
-                else if(MjClient.gameType == MjClient.GAME_TYPE.FEN_XI_YING_KOU && pl.huWord == "gangshangkaihua")
-                {
+                else if (MjClient.gameType == MjClient.GAME_TYPE.FEN_XI_YING_KOU && pl.huWord == "gangshangkaihua") {
                     playEffectInPlay("gangshangkaihua");
                 }
-                else if(pl.huWord == "jiaotingdianpao")//晋中app叫听后点炮不算点炮
+                else if (pl.huWord == "jiaotingdianpao")//晋中app叫听后点炮不算点炮
                 {
                     playEffectInPlay("hu");
                 }
-                else if((MjClient.gameType == MjClient.GAME_TYPE.CHANG_DE_PAO_HU_ZI ||
+                else if ((MjClient.gameType == MjClient.GAME_TYPE.CHANG_DE_PAO_HU_ZI ||
                     MjClient.gameType == MjClient.GAME_TYPE.YUAN_LING_PAO_HU_ZI ||
                     MjClient.gameType == MjClient.GAME_TYPE.SHI_MEN_PAO_HU_ZI ||
                     MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SHIWUHUXI ||
-                        MjClient.gameType == MjClient.GAME_TYPE.HAN_SHOU_PAO_HU_ZI) && pl.huWord == "hu")//晋中app叫听后点炮不算点炮
+                    MjClient.gameType == MjClient.GAME_TYPE.HAN_SHOU_PAO_HU_ZI) && pl.huWord == "hu")//晋中app叫听后点炮不算点炮
                 {
                     playEffectInPlay("hu");
                 }
                 else if (MjClient.gameType == MjClient.GAME_TYPE.CHAO_GU_MJ ||
-                    MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) 
-                {
-                    if ("huWord" in d) 
-                    {
+                    MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
+                    if ("huWord" in d) {
                         playEffectInPlay(d.huWord);
                     }
-                    else
-                    {
+                    else {
                         playEffectInPlay("hu");
                     }
                 }
-                else
-                {
-                    var addDianpaoAni = function(){
+                else {
+                    var addDianpaoAni = function () {
                         var paoNode = MjClient.lastCardposNode;//新增地点炮动画
                         if (cc.sys.isObjectValid(paoNode)) {
                             paoNode.setVisible(true);
-                            cc.log(" ===========paoNode======== x: "+ paoNode.x + " -----y:"+ paoNode.y);
+                            cc.log(" ===========paoNode======== x: " + paoNode.x + " -----y:" + paoNode.y);
                             var projNode2 = createSpine("spine/dianpao/skeleton.json", "spine/dianpao/skeleton.atlas");
                             projNode2.setAnimation(0, 'idle', false);
-                            projNode2.setPosition(50,100);
+                            projNode2.setPosition(50, 100);
                             projNode2.setTimeScale(0.35);
                             projNode2.setScale(1.5);
-                            paoNode.addChild(projNode2,999999);
+                            paoNode.addChild(projNode2, 999999);
                         } else {
                             cc.log('error  MjClient.lastCardposNode 非法对象')
                         }
                     };
                     if (MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
-                        MjClient.playui.scheduleOnce(function(){ // 延时0.1秒执行，保证 lastCardposNode 是最后胡的那张牌
+                        MjClient.playui.scheduleOnce(function () { // 延时0.1秒执行，保证 lastCardposNode 是最后胡的那张牌
                             addDianpaoAni();
                         }, 0.1);
                     }
@@ -6420,13 +6204,13 @@ MjClient.netCallBack = {
         //    playEffectInPlay("hu");
         //}
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.XU_PU_LAO_PAI){
-            if(d.huWord){
-                if(d.huWord === "dianpao"){
+        if (MjClient.gameType === MjClient.GAME_TYPE.XU_PU_LAO_PAI) {
+            if (d.huWord) {
+                if (d.huWord === "dianpao") {
                     playEffectInPlay("jiepao");
                 }
 
-                if(d.huWord === "zimo"){
+                if (d.huWord === "zimo") {
                     playEffectInPlay("zimo");
                 }
             }
@@ -6446,20 +6230,19 @@ MjClient.netCallBack = {
 
 
         // 南通app和大宁摔金，不加胡牌倒牌效果
-        if (MjClient.rePlayVideo === -1 && d.mjhand)
-        {
+        if (MjClient.rePlayVideo === -1 && d.mjhand) {
             // 血流成河麻将如果还有剩余牌，状态不能改为roundFinish，不能倒牌
             if (MjClient.gameType === MjClient.GAME_TYPE.YI_CHANG_XUE_LIU_MJ) {
-                if(MjClient.majiang.getAllCardsTotal() - tData.cardNext > 0) {
+                if (MjClient.majiang.getAllCardsTotal() - tData.cardNext > 0) {
                     return;
                 }
             }
 
             if (MjClient.playui.showMjhandBeforeEndOne) {
                 //用于新版倒牌
-                if(MjClient.playui.isZiMo && MjClient.playui.isZiMo(d.huWord)){
+                if (MjClient.playui.isZiMo && MjClient.playui.isZiMo(d.huWord)) {
                     pl.isZiMo = true;
-                }else{
+                } else {
                     pl.isZiMo = false;
                 }
                 var uidIndex = tData.uids.indexOf(d.uid);
@@ -6482,12 +6265,12 @@ MjClient.netCallBack = {
             MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ ||
             MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
             MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP  ||
+            MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
             MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ ||
             MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP)
 
 
-        if ( isYongZhouApp && MjClient.gameType != MjClient.GAME_TYPE.SHAO_YANG_MA_JIANG
+        if (isYongZhouApp && MjClient.gameType != MjClient.GAME_TYPE.SHAO_YANG_MA_JIANG
             && MjClient.gameType != MjClient.GAME_TYPE.LEI_YANG_GMJ
             && MjClient.gameType != MjClient.GAME_TYPE.TY_HONGZHONG
             && MjClient.gameType != MjClient.GAME_TYPE.XIANG_XIANG_HONG_ZHONG
@@ -6504,13 +6287,13 @@ MjClient.netCallBack = {
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710){
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710) {
             for (var uid in sData.players) {
                 sData.players[uid].fallArea = -1;
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG && d.canKaHuPlayer != null){
+        if (MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG && d.canKaHuPlayer != null) {
             var kaHuPlayerUid = d.canKaHuPlayer;
             var kaHuPlayer = sData.players[kaHuPlayerUid];
             kaHuPlayer.eatFlag = 8;
@@ -6518,7 +6301,7 @@ MjClient.netCallBack = {
             tData.tState = TableState.waitEat;
         }
     }],
-    MJMenHu: [0.5, function(d) {
+    MJMenHu: [0.5, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
 
@@ -6531,8 +6314,8 @@ MjClient.netCallBack = {
             if (d.uid == SelfUid()) {
                 pl.mjhand.pop();
             }
-        // } else if (tData.tState == TableState.waitEat && pl.mjState == TableState.waitEat) { // 字段没同步#
-        } else if (tData.tState == TableState.waitEat) { 
+            // } else if (tData.tState == TableState.waitEat && pl.mjState == TableState.waitEat) { // 字段没同步#
+        } else if (tData.tState == TableState.waitEat) {
             var lastPutPlayer = sData.players[tData.uids[d.from]];
             lastPutPlayer.mjput.pop();
         }
@@ -6543,15 +6326,13 @@ MjClient.netCallBack = {
             p.mjState = TableState.waitCard;
         }
     }],
-    WaitSelect:[0, function (d) {
+    WaitSelect: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
-        if ("tData" in d) 
-        {
+        if ("tData" in d) {
             sData.tData = d.tData;
         }
-        if (d.info) 
-        {
+        if (d.info) {
             for (var i in d.info) {
                 var pl_now = sData.players[d.info[i].uid];
                 pl_now.tingFinish = d.info[i].tingFinish;
@@ -6559,38 +6340,32 @@ MjClient.netCallBack = {
         }
     }],
 
-    takecards:[0, function (d) {
+    takecards: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[SelfUid()];
-        if ("addScoreCards" in d) 
-        {
+        if ("addScoreCards" in d) {
             pl.addScoreCards = d.addScoreCards;
         }
-        if ("mjState" in d) 
-        {
+        if ("mjState" in d) {
             pl.mjState = d.mjState;
         }
-        if ("needTing" in d) 
-        {
+        if ("needTing" in d) {
             pl.needTing = d.needTing;
         }
-        if ("tingCard" in d) 
-        {
+        if ("tingCard" in d) {
             pl.tingCard = d.tingCard;
         }
-        if ("tingFinish" in d) 
-        {
+        if ("tingFinish" in d) {
             var pl_now = sData.players[d.uid];
             pl_now.tingFinish = d.tingFinish;
         }
 
         if (MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_MJ ||
             MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_MJ ||
-            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) 
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.XIANG_SHUI_MJ) {
             if (d.needTings) {
-                for(var uid in d.needTings) {
+                for (var uid in d.needTings) {
                     sData.players[uid].needTing = d.needTings[uid];
                 }
             }
@@ -6607,30 +6382,27 @@ MjClient.netCallBack = {
             || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY
             || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY
             || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC
-        )
-        {
+        ) {
             playMusic("guandan/bgFight_guandan");
         }
-        else if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU)
-        {
+        else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU) {
             playMusic("bgFightXYTDH");
         }
         else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI || MjClient.gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY ||
-             MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN ){
+            MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
             playMusic("bgFight_paodekuai");
-        }else if(MjClient.gameType == MjClient.GAME_TYPE.ML_HONG_ZI ||
-                 MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI ||
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.ML_HONG_ZI ||
+            MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI ||
             MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI ||
             MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI ||
-            MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
+            MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
             playMusic("bgHongZi");
-        } else if(MjClient.gameType == MjClient.GAME_TYPE.XIN_SI_YANG){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_SI_YANG) {
             playMusic("bgFight_xinsiyang");
-        }else if (MjClient.gameType != MjClient.GAME_TYPE.NIU_NIU &&
+        } else if (MjClient.gameType != MjClient.GAME_TYPE.NIU_NIU &&
             MjClient.getAppType() != MjClient.APP_TYPE.QXTHMJ &&
             MjClient.getAppType() != MjClient.APP_TYPE.HUNANWANGWANG &&
-            MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ)
-        {
+            MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ) {
             playMusic("bgFight");
         }
 
@@ -6640,8 +6412,7 @@ MjClient.netCallBack = {
         //cc.log('========================xxxxxxxxxxxxxx:'+JSON.stringify(sData.tData))
         sData.serverTime = d.serverTime;
 
-        if(!sData.serverTime)
-        {
+        if (!sData.serverTime) {
             sData.serverTime = new Date().getTime();
         }
 
@@ -6662,23 +6433,21 @@ MjClient.netCallBack = {
             // pl.score_draw = 0;
             pl.picture = -1;
             pl.mjState = TableState.roundFinish;
-            if (!pl.onLine)
-            {
-                if(pl.lastOffLineTime) pl.offLineTime = pl.lastOffLineTime;//new Date().getTime();
+            if (!pl.onLine) {
+                if (pl.lastOffLineTime) pl.offLineTime = pl.lastOffLineTime;//new Date().getTime();
             }
             else {
                 delete pl.offLineTime;
             };
 
-            if ("countHu" in d) 
-            {
+            if ("countHu" in d) {
                 pl.countHu = d.countHu;
             }
 
-            for (var pty in pl)  plLocal[pty] = pl[pty];
+            for (var pty in pl) plLocal[pty] = pl[pty];
 
             //宁乡开王麻将胡牌可以是两张
-            if(pl.huGangCards){
+            if (pl.huGangCards) {
                 sData.players[uid].huGangCards = pl.huGangCards;
             }
 
@@ -6696,7 +6465,7 @@ MjClient.netCallBack = {
             if (sData.tData.winner == sData.tData.zhuang) {
                 sData.players[sData.tData.uids[sData.tData.zhuang] + ""].linkZhuang += 1;
 
-            } else if(sData.tData.zhuang >= 0 ){
+            } else if (sData.tData.zhuang >= 0) {
                 sData.players[sData.tData.uids[sData.tData.zhuang] + ""].linkZhuang = 0;
                 sData.players[sData.tData.uids[sData.tData.winner] + ""].linkZhuang = 0;
                 // if(sData.tData.gameType == MjClient.GAME_TYPE.SHEN_YANG)
@@ -6706,27 +6475,27 @@ MjClient.netCallBack = {
 
             }
         } else if (sData.tData.zhuang >= 0) {
-            cc.log("sData in  the roundEnd -----",JSON.stringify(sData));
-            cc.log("sData.tData.zhuang----",sData.tData.zhuang);
-            cc.log("sData.tData------",JSON.stringify(sData.tData));
-            cc.log("uids players------------",sData.tData.uids[0] + "");
+            cc.log("sData in  the roundEnd -----", JSON.stringify(sData));
+            cc.log("sData.tData.zhuang----", sData.tData.zhuang);
+            cc.log("sData.tData------", JSON.stringify(sData.tData));
+            cc.log("uids players------------", sData.tData.uids[0] + "");
             sData.players[sData.tData.uids[sData.tData.zhuang] + ""].linkZhuang += 1;
         }
         if (d.playInfo && MjClient.data.playLog) {
             MjClient.data.playLog.logs.push(d.playInfo);
         }
-        if( d.Qiang ){
+        if (d.Qiang) {
             sData.tData.Qiang = d.Qiang;
         }
-        if(d.cards){
+        if (d.cards) {
             sData.cards = d.cards;
         }
-        if(d.allSelect){
+        if (d.allSelect) {
             sData.tData.allSelect = d.allSelect;
         }
-        if(d.teams) {
+        if (d.teams) {
             sData.teams = d.teams;
-            if (MjClient.gameType === MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG || 
+            if (MjClient.gameType === MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG ||
                 MjClient.gameType === MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN ||
                 MjClient.gameType === MjClient.GAME_TYPE.BAN_BIAN_TIAN_ZHA) {
                 for (var tid in sData.teams) {
@@ -6736,39 +6505,38 @@ MjClient.netCallBack = {
             }
         }
 
-        if(cc.sys.isObjectValid(MjClient.userInfoLayerUi))
-        {
+        if (cc.sys.isObjectValid(MjClient.userInfoLayerUi)) {
             MjClient.userInfoLayerUi.removeFromParent(true);
             delete MjClient.userInfoLayerUi;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
             for (var uid in sData.players) {
                 var pl = sData.players[uid];
                 pl.linkZhuang = d.players[uid].linkZhuang;
             }
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.YI_CHANG_XUE_LIU_MJ) {
+        if (MjClient.gameType === MjClient.GAME_TYPE.YI_CHANG_XUE_LIU_MJ) {
             var tData = MjClient.data.sData.tData;
-            if(d.chaHuazhuData) {
+            if (d.chaHuazhuData) {
                 tData.chaHuazhuData = d.chaHuazhuData;
             }
-            if(d.chaDajiaoData) {
+            if (d.chaDajiaoData) {
                 tData.chaDajiaoData = d.chaDajiaoData;
             }
-            if(d.isChaHuaZhu && d.isChaDaJiao) {
+            if (d.isChaHuaZhu && d.isChaDaJiao) {
                 tData.isChaHuaZhu = d.isChaHuaZhu;
                 tData.isChaDaJiao = d.isChaDaJiao;
             }
         }
 
-        if (sData.tData.roundNum <= 0){
+        if (sData.tData.roundNum <= 0) {
             //房间解散
             //清空缓冲池
             CommonPool.drainAllPools();
             //关闭聊天界面
-            if(cc.sys.isObjectValid(MjClient.playerChatLayer)){
+            if (cc.sys.isObjectValid(MjClient.playerChatLayer)) {
                 MjClient.playerChatLayer.removeFromParent(true);
                 delete MjClient.playerChatLayer;
                 MjClient.playerChatLayer = null;
@@ -6776,24 +6544,24 @@ MjClient.netCallBack = {
         }
 
         //处理金币场连胜
-        if (sData.tData.fieldId){
+        if (sData.tData.fieldId) {
             var selfPl = getUIPlayer(0);
-            var preWinTimes = util.localStorageEncrypt.getNumberItem("GOLD_FIELD_WIN_TIMES",0);
-            util.localStorageEncrypt.setNumberItem("GOLD_FIELD_PRE_WIN_TIMES",preWinTimes);
-            if(selfPl.winone < 0){
-                util.localStorageEncrypt.setNumberItem("GOLD_FIELD_WIN_TIMES",0)
-            }else{
-                util.localStorageEncrypt.setNumberItem("GOLD_FIELD_WIN_TIMES",(preWinTimes+1));
+            var preWinTimes = util.localStorageEncrypt.getNumberItem("GOLD_FIELD_WIN_TIMES", 0);
+            util.localStorageEncrypt.setNumberItem("GOLD_FIELD_PRE_WIN_TIMES", preWinTimes);
+            if (selfPl.winone < 0) {
+                util.localStorageEncrypt.setNumberItem("GOLD_FIELD_WIN_TIMES", 0)
+            } else {
+                util.localStorageEncrypt.setNumberItem("GOLD_FIELD_WIN_TIMES", (preWinTimes + 1));
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_DA_ZHA_DAN) {
             sData.tData.score_draw = 0;
         }
-        
+
         //王钓麻将小结算清除上局价值信息
-        if(MjClient.gameType == MjClient.GAME_TYPE.WANG_DIAO_MA_JIANG){
-            for(var uid in MjClient.data.sData.players){
+        if (MjClient.gameType == MjClient.GAME_TYPE.WANG_DIAO_MA_JIANG) {
+            for (var uid in MjClient.data.sData.players) {
                 var currPlayer = MjClient.data.sData.players[uid];
                 currPlayer.jiazhuNum = -1;
             }
@@ -6842,42 +6610,42 @@ MjClient.netCallBack = {
         }
 
         //分数是否翻倍标志
-        if(d.isFanBei){
+        if (d.isFanBei) {
             MjClient.data.sData.tData.isFanBei = d.isFanBei;
         }
-        
+
         // 跑得快大结算翻倍更新winall
         if (d.players && MjClient.data.sData) {
             var sData = MjClient.data.sData;
             for (var uid in d.players) {
                 var pl = d.players[uid];
                 var plLocal = sData.players[uid];
-                
-                for (var pty in pl)  
+
+                for (var pty in pl)
                     plLocal[pty] = pl[pty];
 
                 //离线
                 MjClient.data.sData.serverTime = d.serverTime;
-                if(pl.lastOffLineTime) pl.offLineTime = pl.lastOffLineTime;//new Date().getTime();
+                if (pl.lastOffLineTime) pl.offLineTime = pl.lastOffLineTime;//new Date().getTime();
             }
         }
-        
-        if(d.playInfo && d.playInfo.now){
+
+        if (d.playInfo && d.playInfo.now) {
             MjClient.roundEndTime = d.playInfo.now;
         }
 
-        if(d.reason == 6){
+        if (d.reason == 6) {
             //比赛场触发分数过低，自动解散房间
             var tData = MjClient.data.sData.tData;
             var namesStr = "";
-            for(var key in tData.matchScoreLimitUser){
-                namesStr += unescape(tData.matchScoreLimitUser[key].nickname) +"、";
+            for (var key in tData.matchScoreLimitUser) {
+                namesStr += unescape(tData.matchScoreLimitUser[key].nickname) + "、";
             }
-            if(namesStr.length > 0){
-                namesStr = namesStr.substring(0,namesStr.length-1);
+            if (namesStr.length > 0) {
+                namesStr = namesStr.substring(0, namesStr.length - 1);
             }
-            MjClient.showMsg(namesStr+"参赛积分小于房间解散分数，房间自动解散", function() {
-                
+            MjClient.showMsg(namesStr + "参赛积分小于房间解散分数，房间自动解散", function () {
+
             });
         }
 
@@ -6885,16 +6653,14 @@ MjClient.netCallBack = {
     }]
     ,
     onlinePlayer: [0, function (d) {
-        cc.log("-------online Player NetCallBack------"+JSON.stringify(d));
+        cc.log("-------online Player NetCallBack------" + JSON.stringify(d));
         var sData = MjClient.data.sData;
-        if (sData&&sData.players[d.uid]) {
+        if (sData && sData.players[d.uid]) {
 
-            if (sData.players[d.uid].onLine == true && d.onLine == false)
-            {
+            if (sData.players[d.uid].onLine == true && d.onLine == false) {
                 sData.players[d.uid].offLineTime = new Date().getTime();
             }
-            else if (d.onLine == true)
-            {
+            else if (d.onLine == true) {
                 delete sData.players[d.uid].offLineTime;
             }
 
@@ -6917,9 +6683,8 @@ MjClient.netCallBack = {
                 if (PL) {
 
                     if (pl.tickType < 0 || pl.mjTickAt + 10000 < msg.serverNow) {
-                        if (PL.onLine)
-                        {
-                            if(!PL.offLineTime) PL.offLineTime = new Date().getTime();
+                        if (PL.onLine) {
+                            if (!PL.offLineTime) PL.offLineTime = new Date().getTime();
                         }
                         PL.onLine = false;
                     }
@@ -6931,7 +6696,7 @@ MjClient.netCallBack = {
             }
         }
     }]
-    , playerStatusChange : [0, function (msg) {
+    , playerStatusChange: [0, function (msg) {
 
         var sData = MjClient.data.sData;
         MjClient.lastMJTick = Date.now();
@@ -6939,19 +6704,17 @@ MjClient.netCallBack = {
             for (var uid in sData.players) {
                 var pl = sData.players[uid];
 
-                if(msg.uids.indexOf(uid) >= 0)
-                {
+                if (msg.uids.indexOf(uid) >= 0) {
                     if (pl.onLine) //如果当前是在线
                     {
-                        if(!msg.status && msg.uids.indexOf(uid) >= 0) //改为离线状态时
+                        if (!msg.status && msg.uids.indexOf(uid) >= 0) //改为离线状态时
                         {
-                            if(!pl.offLineTime) pl.offLineTime = new Date().getTime();
+                            if (!pl.offLineTime) pl.offLineTime = new Date().getTime();
                         }
                     }
 
                     pl.onLine = msg.status;
-                    if(pl.onLine)
-                    {
+                    if (pl.onLine) {
                         delete pl.offLineTime;
                     }
                 }
@@ -6990,24 +6753,20 @@ MjClient.netCallBack = {
             MjClient.showMsg("玩家 " + GetNameByUid(dr.nouid) + " 不同意和牌");
         }
     }]
-    , loadOther : [0, function (dr) {
-        if(dr.uids != undefined)
-        {
-            for (var i = 0; i < dr.uids.length; i++)
-            {
+    , loadOther: [0, function (dr) {
+        if (dr.uids != undefined) {
+            for (var i = 0; i < dr.uids.length; i++) {
                 var uid = dr.uids[i];
-                if(uid == SelfUid())
-                {
-                   
+                if (uid == SelfUid()) {
+
 
                     //if(MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ)
                     //if(MjClient.gameType == MjClient.GAME_TYPE.LIAN_YUN_GANG)
-                    if(MjClient.playui.jsBind.node_eat)
+                    if (MjClient.playui.jsBind.node_eat)
                         return; // 新版麻将不再这里处理
                     MjClient.showToast("等待其他玩家操作!");
                     var eat = MjClient.playui.jsBind.eat;
-                    if (!eat.hu._node.visible)
-                    {
+                    if (!eat.hu._node.visible) {
                         eat.chi0._node.visible = false;
                         eat.chi1._node.visible = false;
                         eat.chi2._node.visible = false;
@@ -7028,49 +6787,44 @@ MjClient.netCallBack = {
         }
 
     }]
-    , chiCount : [0, function (dr) {
+    , chiCount: [0, function (dr) {
         var pl;
         var sData = MjClient.data.sData;
         if (!sData) return;
-        if(dr.cUid)
-        {
+        if (dr.cUid) {
             pl = sData.players[dr.cUid];
-            if(dr.count == 2)
-            {
+            if (dr.count == 2) {
                 MjClient.showToast("你已经被" + unescape(pl.info.nickname) + "吃2次了");
             }
-            else if(dr.count == 3)
-            {
+            else if (dr.count == 3) {
                 MjClient.showToast("你已经被" + unescape(pl.info.nickname) + "吃3次，绑定三口关系");
             }
         }
-        else if(dr.zUid) {
+        else if (dr.zUid) {
             pl = sData.players[dr.zUid];
-            if(dr.count == 2)
-            {
+            if (dr.count == 2) {
                 MjClient.showToast("你已经吃了" + unescape(pl.info.nickname) + "2次了");
             }
-            else if(dr.count == 3)
-            {
+            else if (dr.count == 3) {
                 MjClient.showToast("你已经吃了" + unescape(pl.info.nickname) + "3次，绑定三口关系");
             }
         }
 
 
     }]
-    , initAllHandcards : [0, function (d) {
-        cc.log("MjClient.data.sData = "+ JSON.stringify(MjClient.data));
-        if(!MjClient.data.sData) return;
+    , initAllHandcards: [0, function (d) {
+        cc.log("MjClient.data.sData = " + JSON.stringify(MjClient.data));
+        if (!MjClient.data.sData) return;
 
-        for(var uid in d) {
+        for (var uid in d) {
             var pl = MjClient.data.sData.players[uid];
             pl.mjhand = d[uid].mjhand;
             pl.dirNumber = d[uid].dirNumber;
-            cc.log("_________________initAllHandcards_______________"+JSON.stringify(pl.mjhand));
+            cc.log("_________________initAllHandcards_______________" + JSON.stringify(pl.mjhand));
         }
     }]
-    , otherNewCard : [0, function (d) {
-        if(!MjClient.data.sData) return;
+    , otherNewCard: [0, function (d) {
+        if (!MjClient.data.sData) return;
         var pl = MjClient.data.sData.players[d.uid];
         if (pl && pl.mjhand) {
             pl.mjhand.push(d.newCard);
@@ -7079,32 +6833,28 @@ MjClient.netCallBack = {
             cc.log("otherNewCard数据错误", uid, pl && pl.mjhand);
         }
     }]
-    , rechargeResult : [0, function (d) {//后端支付完成的回调
+    , rechargeResult: [0, function (d) {//后端支付完成的回调
         MjClient.getRechargeLadder();
-        if(d.message)
-        {
+        if (d.message) {
             MjClient.showToast(d.message);
         }
-        if (MjClient.homeui && MjClient.systemConfig.rankEnable == "true")
-        {
+        if (MjClient.homeui && MjClient.systemConfig.rankEnable == "true") {
             MjClient.homeui.gameRankLayer();
         }
     }]
-    ,rematch:[0, function (msg) {
-        cc.log("----------rematch-----------------"+JSON.stringify(msg));
-        if (msg.code == 0 && msg.data && msg.data.vipTable && !MjClient.data.inviteVipTable)
-        {
-            if(MjClient.rePlayVideo !== -1) return; //回放不弹再来一局
+    , rematch: [0, function (msg) {
+        cc.log("----------rematch-----------------" + JSON.stringify(msg));
+        if (msg.code == 0 && msg.data && msg.data.vipTable && !MjClient.data.inviteVipTable) {
+            if (MjClient.rePlayVideo !== -1) return; //回放不弹再来一局
             MjClient.data.inviteVipTable = msg.data.vipTable;
-            MjClient.showMsg("["+ unescape(msg.data.owner.nickname) +"]邀请你再战一局，是否继续？", function () {
-                MjClient.leaveGame(function()
-                {
+            MjClient.showMsg("[" + unescape(msg.data.owner.nickname) + "]邀请你再战一局，是否继续？", function () {
+                MjClient.leaveGame(function () {
                     MjClient.joinGame(msg.data.vipTable);
                 });
-            }, function(){}, "1", MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP ? "nantongAgain" : "");
+            }, function () { }, "1", MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP ? "nantongAgain" : "");
         }
     }],
-    MJZhiTouZi:[2, function(d){
+    MJZhiTouZi: [2, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[d.uid + ""];
@@ -7115,43 +6865,40 @@ MjClient.netCallBack = {
         pl.touziCount++;
         pl.isTing = true;
 
-        if (d.huEatFlag) 
-        {
-            if(cc.isNumber(d.huEatFlag))
-            {
+        if (d.huEatFlag) {
+            if (cc.isNumber(d.huEatFlag)) {
                 pl.eatFlag = d.huEatFlag;
             }
-            else if(typeof(d.huEatFlag) === "object")
-            {
+            else if (typeof (d.huEatFlag) === "object") {
                 for (var uid in sData.players) {
                     sData.players[uid].eatFlag = d.huEatFlag[uid];
                     sData.players[uid].mjState = TableState.waitEat;
                 }
             }
-           
+
             pl.isNew = true;
             pl.mjState = TableState.waitPut;
             sData.tData.tState = TableState.waitPut;
             sData.tData.addnewcard = d.addnewcard;
         }
 
-        if(d.addnewcard){
+        if (d.addnewcard) {
             sData.tData.gangAddCard = d.addnewcard;
         }
 
-        if(d.cardNext){
+        if (d.cardNext) {
             sData.tData.cardNext = d.cardNext;
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG){
+        if (MjClient.gameType === MjClient.GAME_TYPE.NING_XIANG_KAI_WANG) {
             sData.tData.firstCard = false;
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType === MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG){
+        if (MjClient.gameType === MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType === MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) {
             sData.tData.touingUid = d.uid;
         }
     }],
-    HZNewCard: [0.8, function(d) { //跑胡子发牌
+    HZNewCard: [0.8, function (d) { //跑胡子发牌
         //cc.log("进牌...", JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
@@ -7203,42 +6950,42 @@ MjClient.netCallBack = {
                     MjClient.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_ZI_PAI ||
                     MjClient.gameType == MjClient.GAME_TYPE.GUI_YANG_ZI_PAI ||
                     MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_PAO_HU_ZI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_MAO_HU_ZI  ||
-                    MjClient.gameType == MjClient.GAME_TYPE.CHANG_DE_PAO_HU_ZI  ||
-                    MjClient.gameType == MjClient.GAME_TYPE.YUAN_LING_PAO_HU_ZI  ||
+                    MjClient.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_MAO_HU_ZI ||
+                    MjClient.gameType == MjClient.GAME_TYPE.CHANG_DE_PAO_HU_ZI ||
+                    MjClient.gameType == MjClient.GAME_TYPE.YUAN_LING_PAO_HU_ZI ||
                     MjClient.gameType == MjClient.GAME_TYPE.SHI_MEN_PAO_HU_ZI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710  ||
+                    MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710 ||
                     MjClient.gameType == MjClient.GAME_TYPE.HAN_SHOU_PAO_HU_ZI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER){
+                    MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
                     isShow = true;
                 }
             }
 
             // todo 湘潭跑胡子 暗偎选项 
-            if(d.tData.gameType == MjClient.GAME_TYPE.XIANG_TAN_PAO_HU_ZI){
-                if(eatFlags[pl.info.uid] & 8){
-                    if(d.tData.areaSelectMode.mingwei || (d.tData.areaSelectMode.isShowChouWei && (d.skipPeng && d.skipPeng.indexOf(d.newCard) >= 0))){
+            if (d.tData.gameType == MjClient.GAME_TYPE.XIANG_TAN_PAO_HU_ZI) {
+                if (eatFlags[pl.info.uid] & 8) {
+                    if (d.tData.areaSelectMode.mingwei || (d.tData.areaSelectMode.isShowChouWei && (d.skipPeng && d.skipPeng.indexOf(d.newCard) >= 0))) {
 
-                    }else{
+                    } else {
                         isShow = false;
                     }
                 }
 
-                if(eatFlags[pl.info.uid] & 16){
-                    if(d.tData.areaSelectMode.mingwei){
+                if (eatFlags[pl.info.uid] & 16) {
+                    if (d.tData.areaSelectMode.mingwei) {
 
-                    }else{
+                    } else {
                         isShow = false;
                     }
                 }
             }
 
             // todo 怀化红拐弯也有暗偎但不是选项
-            if(d.tData.gameType == MjClient.GAME_TYPE.HUAI_HUA_HONG_GUAI_WAN){
-                if(eatFlags[pl.info.uid] & 8){
-                    if(d.skipPeng && d.skipPeng.indexOf(d.newCard) >= 0){
+            if (d.tData.gameType == MjClient.GAME_TYPE.HUAI_HUA_HONG_GUAI_WAN) {
+                if (eatFlags[pl.info.uid] & 8) {
+                    if (d.skipPeng && d.skipPeng.indexOf(d.newCard) >= 0) {
 
-                    }else{
+                    } else {
                         isShow = false;
                     }
                 }
@@ -7259,23 +7006,23 @@ MjClient.netCallBack = {
                 d.tData.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_ZI_PAI ||
                 d.tData.gameType == MjClient.GAME_TYPE.GUI_YANG_ZI_PAI ||
                 d.tData.gameType == MjClient.GAME_TYPE.NING_XIANG_PAO_HU_ZI ||
-                d.tData.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_MAO_HU_ZI  ||
-                d.tData.gameType == MjClient.GAME_TYPE.CHANG_DE_PAO_HU_ZI  ||
-                d.tData.gameType == MjClient.GAME_TYPE.YUAN_LING_PAO_HU_ZI  ||
-                d.tData.gameType == MjClient.GAME_TYPE.SHI_MEN_PAO_HU_ZI  ||
-                d.tData.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI  ||
-                d.tData.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI  ||
+                d.tData.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_MAO_HU_ZI ||
+                d.tData.gameType == MjClient.GAME_TYPE.CHANG_DE_PAO_HU_ZI ||
+                d.tData.gameType == MjClient.GAME_TYPE.YUAN_LING_PAO_HU_ZI ||
+                d.tData.gameType == MjClient.GAME_TYPE.SHI_MEN_PAO_HU_ZI ||
+                d.tData.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI ||
+                d.tData.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
                 d.tData.gameType == MjClient.GAME_TYPE.XIANG_XI_2710 ||
                 d.tData.gameType == MjClient.GAME_TYPE.HAN_SHOU_PAO_HU_ZI ||
-                d.tData.gameType == MjClient.GAME_TYPE.AN_HUA_PAO_HU_ZI){
-                if ((d.isDrawCard || d.mjHide.indexOf(d.newCard) >= 0) && SelfUid() != d.uid){
+                d.tData.gameType == MjClient.GAME_TYPE.AN_HUA_PAO_HU_ZI) {
+                if ((d.isDrawCard || d.mjHide.indexOf(d.newCard) >= 0) && SelfUid() != d.uid) {
                     isShow = false;
                 }
             }
 
-            if ((d.tData.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU || 
-                d.tData.gameType == MjClient.GAME_TYPE.HY_LIU_HU_QIANG) && MjClient.rePlayVideo == -1){
-                if ((pl.eatFlag & 8) && d.uid != SelfUid() && pl.mjHide.indexOf(d.newCard) >= 0){
+            if ((d.tData.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU ||
+                d.tData.gameType == MjClient.GAME_TYPE.HY_LIU_HU_QIANG) && MjClient.rePlayVideo == -1) {
+                if ((pl.eatFlag & 8) && d.uid != SelfUid() && pl.mjHide.indexOf(d.newCard) >= 0) {
                     isShow = false;
                 }
             }
@@ -7283,10 +7030,10 @@ MjClient.netCallBack = {
             if (isShow) {
                 //新版在play里面播放
                 if (MjClient.playui && MjClient.playui.checkDelayNewCard) {
-                }else{
+                } else {
                     playEffectInPlay(d.newCard);
                 }
-                
+
             }
 
             if (d.uid == SelfUid() && !d.isCommon) {
@@ -7297,56 +7044,55 @@ MjClient.netCallBack = {
                 pl.mjput.push(d.newCard);
             }
 
-            if(MjClient.getAppType() != MjClient.APP_TYPE.QXYZQP &&
+            if (MjClient.getAppType() != MjClient.APP_TYPE.QXYZQP &&
                 MjClient.getAppType() != MjClient.APP_TYPE.QXXXGHZ &&
                 MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ &&
                 MjClient.getAppType() != MjClient.APP_TYPE.HUNANWANGWANG &&
                 MjClient.getAppType() != MjClient.APP_TYPE.BDHYZP &&
-                MjClient.getAppType() != MjClient.APP_TYPE.QXLYQP)
-            {
+                MjClient.getAppType() != MjClient.APP_TYPE.QXLYQP) {
                 if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU
                     && MjClient.gameType != MjClient.GAME_TYPE.LOU_DI_FANG_PAO_FA
                     && MjClient.gameType != MjClient.GAME_TYPE.XIANG_XIANG_PAO_HU_ZI
                     && MjClient.gameType != MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG
                     && MjClient.gameType != MjClient.GAME_TYPE.DANG_YANG_FAN_JING
-                    && MjClient.gameType != MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN 
+                    && MjClient.gameType != MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN
                     && MjClient.gameType != MjClient.GAME_TYPE.HU_BEI_HUA_PAI
                     && MjClient.gameType != MjClient.GAME_TYPE.GONG_AN_HUA_PAI
                     && MjClient.gameType != MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
 
-                    if(!d.isCommon) pl.mjput.push(d.newCard);
-                    
-                    if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+                    if (!d.isCommon) pl.mjput.push(d.newCard);
+
+                    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
                         || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
-                         MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER
-                        || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU){
+                        MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER
+                        || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
                         pl.mjputType.push(1);
                         cc.log("HZNewCard mjputType", " pl = " + JSON.stringify(pl));
                     }
-                }   
+                }
             }
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
-            for(var uid in d.giveupChis) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
+            for (var uid in d.giveupChis) {
                 sData.players[uid].giveupChis = d.giveupChis[uid];
             }
-            if(pl.eatFlag != 0){
+            if (pl.eatFlag != 0) {
                 pl.mjState = TableState.waitEat;
                 pl.liuCards = d.liuCards;
 
             }
-            for(var uid in d.eatFlags) {
-                if(d.eatFlags[uid] & 4){
+            for (var uid in d.eatFlags) {
+                if (d.eatFlags[uid] & 4) {
                     sData.players[uid].piaoCards = d.piaoCards;
                 }
-                if(d.eatFlags[uid] & 64){
+                if (d.eatFlags[uid] & 64) {
                     sData.players[uid].zhaCards = d.zhaCards;
                 }
             }
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING || 
+        if (MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
             MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
             MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
             MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
@@ -7356,22 +7102,22 @@ MjClient.netCallBack = {
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
             //报警标志
-            for(var uid in d.alarmFlags) {
+            for (var uid in d.alarmFlags) {
                 sData.players[uid].alarmFlag = d.alarmFlags[uid];
             }
         }
 
-        if(d.nextMsg && d.nextMsg.uid){
+        if (d.nextMsg && d.nextMsg.uid) {
             var nextUid = d.nextMsg.uid;
             var nextPlayer = sData.players[nextUid + ""];
             nextPlayer.wangType = d.nextMsg.wangType;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710){
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710) {
             for (var uid in sData.players) {
-                if(sData.players[uid].fallArea == 1){
+                if (sData.players[uid].fallArea == 1) {
                     var lastNewCard = sData.players[uid].mjput.pop();
                     sData.players[uid].qiPai.push(lastNewCard);
                 }
@@ -7385,16 +7131,16 @@ MjClient.netCallBack = {
             sData.players[d.uid + ""].fallArea = 1;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
-            if(d.renNums) {
-                for(var uid in d.renNums) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
+            if (d.renNums) {
+                for (var uid in d.renNums) {
                     sData.players[uid].renNum = d.renNums[uid];
                 }
             }
         }
     }],
-    HZGangCard:[0.8,function (d) {
-        cc.log("wxd...................HZGangCard:"+JSON.stringify(d));
+    HZGangCard: [0.8, function (d) {
+        cc.log("wxd...................HZGangCard:" + JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
         sData.tData = d.tData;
@@ -7402,13 +7148,13 @@ MjClient.netCallBack = {
         var cpginfo = d.cpginfo;
 
         //96扑克杠牌特殊处理 走/开招/龙
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
             var pl = sData.players[cpginfo.uid + ""];
             var fromPl = sData.players[tData.uids[d.from]];
-            if(!pl || !fromPl) {
+            if (!pl || !fromPl) {
                 return;
             }
-            
+
             //因为96扑克的mjsort会一直变, 更新数据时先备份旧的mjsort, 刷UI时会用到
             pl.oldMjSort = pl.mjsort;
             pl.mjState = tData.tState;
@@ -7422,54 +7168,54 @@ MjClient.netCallBack = {
             var mjhand = pl.mjhand;
             var mjput = fromPl.mjput;
 
-            var delPutCards = function() {
+            var delPutCards = function () {
                 var cd = tData.lastPutCard;
-                if(mjput.length > 0 && mjput[mjput.length - 1] == cd) {
+                if (mjput.length > 0 && mjput[mjput.length - 1] == cd) {
                     mjput.length -= 1;
                     fromPl.mjputType.length -= 1;
                 }
             }
 
             //半招变满招
-            if(d.gang0Pos >= 0) {
+            if (d.gang0Pos >= 0) {
                 delPutCards();
-            }else {
+            } else {
                 var gangInfo = d.gangInfo;
                 var ex = gangInfo.ex;
 
-                var delHandCards = function(list) {
-                    if(cpginfo.uid != SelfUid()) {
+                var delHandCards = function (list) {
+                    if (cpginfo.uid != SelfUid()) {
                         return;
                     }
-                    for(var i = 0; i < list.length; i++) {
+                    for (var i = 0; i < list.length; i++) {
                         var cd = list[i];
                         var idx = mjhand.indexOf(cd);
-                        if(idx >= 0) {
+                        if (idx >= 0) {
                             mjhand.splice(idx, 1);
                         }
                     }
                 }
 
-                if(d.isGangHand) {
+                if (d.isGangHand) {
                     //起手龙
                     delHandCards(gangInfo.gang);
-                    if(ex && ex.length > 0) {
+                    if (ex && ex.length > 0) {
                         delHandCards(ex);
-                    }        
-                }else {                     //走/开招
+                    }
+                } else {                     //走/开招
                     //判断tiePos
-                    if(gangInfo.tiePos >= 0) {
+                    if (gangInfo.tiePos >= 0) {
                         pl.mjtie.splice(gangInfo.tiePos, 1);
-                    }else {
-                        if(ex && ex.length > 0) {
+                    } else {
+                        if (ex && ex.length > 0) {
                             delHandCards(ex);
                         }
                     }
 
                     //判断weiPos
-                    if(gangInfo.weiPos >= 0) {
+                    if (gangInfo.weiPos >= 0) {
                         pl.mjwei.splice(gangInfo.weiPos, 1);
-                    }else {
+                    } else {
                         var list = gangInfo.gang.slice();
                         list.length -= 1;
                         delHandCards(list);
@@ -7481,36 +7227,36 @@ MjClient.netCallBack = {
 
             //eatflags
             var eatFlags = d.eatFlags;
-            for(var uid in sData.players){
-                if(eatFlags && eatFlags[uid]){
+            for (var uid in sData.players) {
+                if (eatFlags && eatFlags[uid]) {
                     sData.players[uid].eatFlag = eatFlags[uid];
-                }else{
+                } else {
                     sData.players[uid].eatFlag = 0;
                 }
             }
 
             //播放音效
-            if(d.gang0Pos >= 0) {
+            if (d.gang0Pos >= 0) {
                 playEffectInPlay("manzhao");
-            }else {
+            } else {
                 var gangInfo = d.gangInfo;
                 var ex = gangInfo.ex;
-                if(gangInfo.gang0Pos >= 0) {
+                if (gangInfo.gang0Pos >= 0) {
                     var gang1 = pl.mjgang1[pl.mjgang1.length - 1];
-                    if(MjClient.majiang.isShuangLongBaoZhu(sData, gang1)) {
+                    if (MjClient.majiang.isShuangLongBaoZhu(sData, gang1)) {
                         playEffectInPlay("shuanglongxizhu");
-                    }else {
-                        playEffectInPlay("shuanglong"); 
+                    } else {
+                        playEffectInPlay("shuanglong");
                     }
-                }else if(!ex || ex.length == 0) {
-                    if(d.isGangHand) {
+                } else if (!ex || ex.length == 0) {
+                    if (d.isGangHand) {
                         playEffectInPlay("long");
-                    }else {
+                    } else {
                         playEffectInPlay("zou");
                     }
-                }else if(ex.length == 1) {
+                } else if (ex.length == 1) {
                     playEffectInPlay("banzhao");
-                }else {
+                } else {
                     playEffectInPlay("manzhao");
                 }
             }
@@ -7523,23 +7269,23 @@ MjClient.netCallBack = {
         pl.mjsort = cpginfo.mjsort;
         pl.isNew = false;
         pl.isQiHu = cpginfo.isQiHu;
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
             pl.pengOrPaoCardByPut = cpginfo.pengOrPaoCardByPut;
         }
 
         var eatFlags = d.eatFlags;
-        for(var uid in sData.players){
+        for (var uid in sData.players) {
             sData.players[uid].wangType = 0;
             sData.players[uid].wangStatus = false;
-            if(eatFlags && eatFlags[uid]){
+            if (eatFlags && eatFlags[uid]) {
                 sData.players[uid].eatFlag = eatFlags[uid];
-            }else{
+            } else {
                 sData.players[uid].eatFlag = 0;
             }
         }
 
         //溆浦跑胡子跑、提数据特殊处理
-        if(MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
             var paoTiNum = pl.mjgang0.length + pl.mjgang1.length;
             var cards = [];
             if (d.newCard > 300) {
@@ -7547,33 +7293,33 @@ MjClient.netCallBack = {
             } else {
                 cards.push(d.newCard, d.newCard, d.newCard + 200, d.newCard + 200);
             }
-            
-            if(d.type == 2) {
+
+            if (d.type == 2) {
                 playEffectInPlay(paoTiNum > 0 ? "chongpao" : "pao");
-                pl.mjgang0.push(d.newCard);   
+                pl.mjgang0.push(d.newCard);
                 //跑牌
                 var putCardPl = sData.players[tData.uids[d.from] + ""];
-                if(putCardPl.mjput.length > 0 && putCardPl.mjput[putCardPl.mjput.length-1] == d.newCard){
+                if (putCardPl.mjput.length > 0 && putCardPl.mjput[putCardPl.mjput.length - 1] == d.newCard) {
                     putCardPl.mjput.length = putCardPl.mjput.length - 1;
                 }
 
                 var pos = d.pos;
-                if(d.pos == 1){
-                    if(cpginfo.uid == SelfUid()) {
+                if (d.pos == 1) {
+                    if (cpginfo.uid == SelfUid()) {
                         cards.splice(cards.indexOf(d.newCard), 1);
                         pl.mjhand.splice(pl.mjhand.indexOf(cards[0]), 1);
                         pl.mjhand.splice(pl.mjhand.indexOf(cards[1]), 1);
                         pl.mjhand.splice(pl.mjhand.indexOf(cards[2]), 1);
                     }
                 }
-                else if(pos == 2) {
+                else if (pos == 2) {
                     for (var i = 0; i < pl.mjwei.length; i++) {
                         if (pl.mjwei[i].indexOf(d.newCard) >= 0) {
                             pl.mjwei.splice(i, 1);
                             break;
                         }
                     }
-                }else if(pos == 3) {
+                } else if (pos == 3) {
                     for (var i = 0; i < pl.mjpeng.length; i++) {
                         if (pl.mjpeng[i].indexOf(d.newCard) >= 0) {
                             pl.mjpeng.splice(i, 1);
@@ -7582,20 +7328,20 @@ MjClient.netCallBack = {
                     }
                 }
             }
-            else if(d.type == 1) {
+            else if (d.type == 1) {
                 playEffectInPlay(paoTiNum > 0 ? "chongpao" : "ti");
                 pl.mjgang1.push(d.newCard);
                 var uid = cpginfo.uid;
-                if(d.isGangHand) {
-                    if(uid == SelfUid()) {
-                        pl.mjhand.splice(pl.mjhand.indexOf(cards[0]),1);
-                        pl.mjhand.splice(pl.mjhand.indexOf(cards[1]),1);
-                        pl.mjhand.splice(pl.mjhand.indexOf(cards[2]),1);
-                        pl.mjhand.splice(pl.mjhand.indexOf(cards[3]),1);
-                    }                
-                }else{ 
+                if (d.isGangHand) {
+                    if (uid == SelfUid()) {
+                        pl.mjhand.splice(pl.mjhand.indexOf(cards[0]), 1);
+                        pl.mjhand.splice(pl.mjhand.indexOf(cards[1]), 1);
+                        pl.mjhand.splice(pl.mjhand.indexOf(cards[2]), 1);
+                        pl.mjhand.splice(pl.mjhand.indexOf(cards[3]), 1);
+                    }
+                } else {
                     //提牌
-                    pl.mjput.splice(pl.mjput.indexOf(d.newCard),1);
+                    pl.mjput.splice(pl.mjput.indexOf(d.newCard), 1);
                     var fromWeiIdx = -1;
                     for (var i = 0; i < pl.mjwei.length; i++) {
                         if (pl.mjwei[i].indexOf(d.newCard) >= 0) {
@@ -7603,10 +7349,10 @@ MjClient.netCallBack = {
                             break;
                         }
                     }
-                    if(fromWeiIdx >= 0){
+                    if (fromWeiIdx >= 0) {
                         pl.mjwei.splice(fromWeiIdx, 1);
-                    }else{
-                        if(uid == SelfUid()) {
+                    } else {
+                        if (uid == SelfUid()) {
                             cards.splice(cards.indexOf(d.newCard), 1);
                             pl.mjhand.splice(pl.mjhand.indexOf(cards[0]), 1);
                             pl.mjhand.splice(pl.mjhand.indexOf(cards[1]), 1);
@@ -7618,75 +7364,75 @@ MjClient.netCallBack = {
             return;
         }
 
-        if(d.type == 2){
-            if(MjClient.gameType == MjClient.GAME_TYPE.DA_YE_ZI_PAI){
+        if (d.type == 2) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_ZI_PAI) {
                 //todo 暂时没有声音资源
-            }else {
+            } else {
                 playEffectInPlay("pao");
             }
-            
+
             pl.mjgang0.push(d.newCard);
             //跑牌
             var putCardPl = sData.players[tData.uids[d.from] + ""];
-            if(putCardPl.mjput.length > 0 && putCardPl.mjput[putCardPl.mjput.length-1] == d.newCard && !(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU && tData.putType == 0)){
+            if (putCardPl.mjput.length > 0 && putCardPl.mjput[putCardPl.mjput.length - 1] == d.newCard && !(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU && tData.putType == 0)) {
                 putCardPl.mjput.length = putCardPl.mjput.length - 1;
             }
 
             var pos = d.pos;
-            if(d.pos == 1){
-                if(cpginfo.uid == SelfUid()){
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
+            if (d.pos == 1) {
+                if (cpginfo.uid == SelfUid()) {
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
                 }
             }
-            else if(pos == 2){
-                pl.mjwei.splice(pl.mjwei.indexOf(d.newCard),1);
-            }else if(pos == 3){
-                pl.mjpeng.splice(pl.mjpeng.indexOf(d.newCard),1);
+            else if (pos == 2) {
+                pl.mjwei.splice(pl.mjwei.indexOf(d.newCard), 1);
+            } else if (pos == 3) {
+                pl.mjpeng.splice(pl.mjpeng.indexOf(d.newCard), 1);
             }
         }
-        if(d.type == 1){
-            if(d.isGangHand){
+        if (d.type == 1) {
+            if (d.isGangHand) {
                 var uid = cpginfo.uid;
                 pl.mjgang1.push(d.newCard);
-                if(uid == SelfUid()){
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
+                if (uid == SelfUid()) {
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
                 }
-                if(MjClient.GAME_TYPE.DA_YE_ZI_PAI != MjClient.gameType){
+                if (MjClient.GAME_TYPE.DA_YE_ZI_PAI != MjClient.gameType) {
                     playEffectInPlay("ti");
                 }
-            }else{
+            } else {
                 pl.wangType = 0;
                 pl.wangStatus = false;
-                if(MjClient.gameType == MjClient.GAME_TYPE.DA_YE_ZI_PAI){
+                if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_ZI_PAI) {
                     //todo 暂时没有声音资源
-                }else {
+                } else {
                     playEffectInPlay("ti");
                 }
-                
+
                 pl.mjgang1.push(d.newCard);
                 //提牌
-                pl.mjput.splice(pl.mjput.indexOf(d.newCard),1);
+                pl.mjput.splice(pl.mjput.indexOf(d.newCard), 1);
                 var uid = cpginfo.uid
-                if(pl.mjwei.indexOf(d.newCard) >= 0){
-                    pl.mjwei.splice(pl.mjwei.indexOf(d.newCard),1);
-                }else{
-                    if(uid == SelfUid()){
-                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
-                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
-                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
+                if (pl.mjwei.indexOf(d.newCard) >= 0) {
+                    pl.mjwei.splice(pl.mjwei.indexOf(d.newCard), 1);
+                } else {
+                    if (uid == SelfUid()) {
+                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
+                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
+                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
                     }
                 }
             }
         }
 
     }],
-    HZLiuCard:[0,function (d) {
-        cc.log("wxd...................HZLiuCard:"+JSON.stringify(d));
+    HZLiuCard: [0, function (d) {
+        cc.log("wxd...................HZLiuCard:" + JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
         sData.tData = d.tData;
@@ -7698,12 +7444,12 @@ MjClient.netCallBack = {
         pl.isNew = false;
         pl.isQiHu = cpginfo.isQiHu;
 
-        if (tData.isLastDraw && 
+        if (tData.isLastDraw &&
             (MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
-             MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
-             MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
-             MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
-             MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI)) {
+                MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
+                MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI)) {
             //只清当前操作人的
             pl.eatFlag = 0;
             pl.liuCards = []; //先清理，如果还能溜，会在HZUpdateEatFlag消息中重置
@@ -7718,7 +7464,7 @@ MjClient.netCallBack = {
             MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
             MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
             var lp = sData.players[tData.uids[d.from] + ""];
-            var delHands = function(hand, arr) {
+            var delHands = function (hand, arr) {
                 for (var i = 0; i < arr.length; i++) {
                     var index = hand.indexOf(arr[i]);
                     if (index >= 0) {
@@ -7763,35 +7509,35 @@ MjClient.netCallBack = {
             }
             return;
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU){
+        if (MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
             pl.mjgang0 = d.mjgang0;
             pl.mjgang1 = d.mjgang1;
 
             var cards = d.gangInfo.gang.concat(d.gangInfo.ex);
-            if(cards.length > 4 && d.isDiToKua){
+            if (cards.length > 4 && d.isDiToKua) {
                 cards.splice(cards.indexOf(tData.lastPutCard), 1);
             }
             var uid = cpginfo.uid;
-            if(uid == SelfUid()){
-                for(var i = 0; i < cards.length; i++){
+            if (uid == SelfUid()) {
+                for (var i = 0; i < cards.length; i++) {
                     var idx = pl.mjhand.indexOf(cards[i]);
-                    if(idx >= 0){
-                        pl.mjhand.splice(idx,1);
+                    if (idx >= 0) {
+                        pl.mjhand.splice(idx, 1);
                     }
                 }
             }
-            if(d.canNotPutCard){
+            if (d.canNotPutCard) {
                 pl.canNotPutCard = d.canNotPutCard;
             }
             var putCardPl = sData.players[tData.uids[d.from] + ""];
-            if(putCardPl.mjput.length > 0 && !d.isBuKua){
+            if (putCardPl.mjput.length > 0 && !d.isBuKua) {
                 putCardPl.mjput.length = putCardPl.mjput.length - 1;
                 putCardPl.mjputType.length = putCardPl.mjputType.length - 1;
             }
             return;
         }
 
-        if(d.type == 2){
+        if (d.type == 2) {
             if (MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
                 MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN) {
                 playEffectInPlay("mao");
@@ -7801,42 +7547,42 @@ MjClient.netCallBack = {
             pl.mjgang0.push(d.newCard);
             //跑牌
             var putCardPl = sData.players[tData.uids[d.from] + ""];
-            if(putCardPl.mjput.length > 0 && putCardPl.mjput[putCardPl.mjput.length-1] == d.newCard){
+            if (putCardPl.mjput.length > 0 && putCardPl.mjput[putCardPl.mjput.length - 1] == d.newCard) {
                 putCardPl.mjput.length = putCardPl.mjput.length - 1;
-                if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-                    || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
+                if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+                    || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
                     putCardPl.mjputType.length = putCardPl.mjputType.length - 1;
                     cc.log("HZLiuCard mjputType", " putCardPl = " + JSON.stringify(putCardPl));
                 }
             }
             var uid = tData.uids[tData.curPlayer];
-            if(uid == SelfUid()){
-                while(pl.mjhand.indexOf(d.newCard) >= 0){
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
+            if (uid == SelfUid()) {
+                while (pl.mjhand.indexOf(d.newCard) >= 0) {
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
                 }
             }
-            while(pl.mjpeng.indexOf(d.newCard) >= 0){
-                pl.mjpeng.splice(pl.mjpeng.indexOf(d.newCard),1);
+            while (pl.mjpeng.indexOf(d.newCard) >= 0) {
+                pl.mjpeng.splice(pl.mjpeng.indexOf(d.newCard), 1);
             }
         }
-        if(d.type == 3){
+        if (d.type == 3) {
             // playEffectInPlay("zha");
             pl.mjgang3.push(d.newCard);
             //炸牌
             var putCardPl = sData.players[tData.uids[d.from] + ""];
-            if(putCardPl.mjput.length > 0 && putCardPl.mjput[putCardPl.mjput.length-1] == d.newCard){
+            if (putCardPl.mjput.length > 0 && putCardPl.mjput[putCardPl.mjput.length - 1] == d.newCard) {
                 putCardPl.mjput.length = putCardPl.mjput.length - 1;
                 putCardPl.mjputType.length = putCardPl.mjputType.length - 1;
                 cc.log("HZLiuCard putCardPl = " + JSON.stringify(putCardPl));
             }
             var uid = tData.uids[tData.curPlayer];
-            if(uid == SelfUid()){
-                while(pl.mjhand.indexOf(d.newCard) >= 0){
-                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
+            if (uid == SelfUid()) {
+                while (pl.mjhand.indexOf(d.newCard) >= 0) {
+                    pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
                 }
             }
         }
-        if(d.type == 1){
+        if (d.type == 1) {
             pl.wangType = 0;
             pl.wangStatus = false;
             if (MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
@@ -7847,53 +7593,53 @@ MjClient.netCallBack = {
             }
             //pl.mjgang1.push(d.newCard);
             //提牌
-            if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-                || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
-                if(pl.mjput.indexOf(d.newCard) >= 0){
-                    pl.mjputType.splice(pl.mjput.indexOf(d.newCard),1);
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+                || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
+                if (pl.mjput.indexOf(d.newCard) >= 0) {
+                    pl.mjputType.splice(pl.mjput.indexOf(d.newCard), 1);
                 }
             }
-            if(pl.mjput.indexOf(d.newCard) >= 0){
-                pl.mjput.splice(pl.mjput.indexOf(d.newCard),1);
+            if (pl.mjput.indexOf(d.newCard) >= 0) {
+                pl.mjput.splice(pl.mjput.indexOf(d.newCard), 1);
             }
             var uid = tData.uids[tData.curPlayer];
-            if(MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
-               MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN){
+            if (MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
+                MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN) {
                 uid = cpginfo.uid;
             }
-            cc.log("wxd...................pl:"+JSON.stringify(pl));
-            if(pl.mjwei.indexOf(d.newCard) >= 0){
-                if(d.isGangHand){
-                    if(uid == SelfUid()){
-                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
+            cc.log("wxd...................pl:" + JSON.stringify(pl));
+            if (pl.mjwei.indexOf(d.newCard) >= 0) {
+                if (d.isGangHand) {
+                    if (uid == SelfUid()) {
+                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
                     }
                 }
-                pl.mjwei.splice(pl.mjwei.indexOf(d.newCard),1);
-                if(MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
+                pl.mjwei.splice(pl.mjwei.indexOf(d.newCard), 1);
+                if (MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
                     pl.mjgang1.push(d.newCard);
-                }else{
+                } else {
                     pl.mjgang0.push(d.newCard);
                 }
-            }else{
-                if(uid == SelfUid()){
-                    while(pl.mjhand.indexOf(d.newCard) >= 0){
-                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard),1);
+            } else {
+                if (uid == SelfUid()) {
+                    while (pl.mjhand.indexOf(d.newCard) >= 0) {
+                        pl.mjhand.splice(pl.mjhand.indexOf(d.newCard), 1);
                     }
                 }
-                if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI && !d.isGangHand){
+                if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI && !d.isGangHand) {
                     pl.mjgang0.push(d.newCard);
-                }else{
-                    if((MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI ||MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI
-                        || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI)&& d.liuType == 2){
+                } else {
+                    if ((MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI
+                        || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) && d.liuType == 2) {
                         pl.mjgang2.push(d.newCard);
-                    }else{
+                    } else {
                         pl.mjgang1.push(d.newCard);
                     }
                 }
             }
         }
         pl.isDead = d.isDead;
-        if(pl.isDead && pl.info.uid == SelfUid()){
+        if (pl.isDead && pl.info.uid == SelfUid()) {
             playEffectInPlay("sishou");
         }
     }],
@@ -7907,18 +7653,18 @@ MjClient.netCallBack = {
             sData.players[uid].eatFlag = eatFlags[uid];
         }
         var pl = sData.players[sData.tData.uids[sData.tData.curPlayer] + ""];
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
             pl.eatFlag = d.eatFlags[pl.info.uid];
-            if(pl.eatFlag != 0){
+            if (pl.eatFlag != 0) {
                 pl.mjState = TableState.waitEat;
                 pl.liuCards = d.liuCards;
                 pl.piaoCards = d.piaoCards;
             }
         }
     }],
-    HZWeiCard:[0,function(d) {//偎牌
-        cc.log("wxd...................HZWeiCard:"+JSON.stringify(d));
+    HZWeiCard: [0, function (d) {//偎牌
+        cc.log("wxd...................HZWeiCard:" + JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
         sData.tData = d.tData;
@@ -7926,10 +7672,10 @@ MjClient.netCallBack = {
         var uids = d.tData.uids;
 
         // 96扑克偎牌逻辑特殊处理
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
             var pl = sData.players[d.cpginfo.uid + ""];
             var fromPl = sData.players[uids[d.from]];
-            if(!pl || !fromPl)
+            if (!pl || !fromPl)
                 return;
 
             //因为96扑克的mjsort会一直变, 更新数据时先备份旧的mjsort, 刷UI时会用到
@@ -7944,12 +7690,12 @@ MjClient.netCallBack = {
             pl.mjwei.push(d.weiCards);
 
             //手牌清理
-            if(d.cpginfo.uid == SelfUid()) {
+            if (d.cpginfo.uid == SelfUid()) {
                 var mjhand = pl.mjhand;
-                for(var i = 0; i < d.weiCards.length - 1; i++) {
+                for (var i = 0; i < d.weiCards.length - 1; i++) {
                     var cd = d.weiCards[i];
                     var idx = mjhand.indexOf(cd);
-                    if(cd >= 0) {
+                    if (cd >= 0) {
                         mjhand.splice(idx, 1);
                     }
                 }
@@ -7974,13 +7720,13 @@ MjClient.netCallBack = {
         var pl = sData.players[uids[tData.curPlayer] + ""];
         pl.mjsort = d.mjsort;
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
             pl.alarmFlag = d.alarmFlag;
         }
-        
-        if(d.isHandWei){
+
+        if (d.isHandWei) {
             var uid = tData.uids[tData.curPlayer];
-            if(uid == SelfUid()){
+            if (uid == SelfUid()) {
                 var mjhand = pl.mjhand;
                 mjhand.splice(mjhand.indexOf(d.newCard), 1);
                 mjhand.splice(mjhand.indexOf(d.newCard), 1);
@@ -7989,15 +7735,15 @@ MjClient.netCallBack = {
             pl.mjHide = d.mjHide;
             pl.mjwei.push(d.newCard);
             var num = pl.mjwei.length + pl.mjpeng.length + pl.mjgang0.length + pl.mjgang1.length;
-            if(num == 3 || num == 4){
+            if (num == 3 || num == 4) {
                 playEffectInPlay("wei" + num);
-            }else{
-            playEffectInPlay("wei");
+            } else {
+                playEffectInPlay("wei");
             }
             return;
         }
 
-        var putCard = pl.mjput[pl.mjput.length-1];
+        var putCard = pl.mjput[pl.mjput.length - 1];
         if (MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
             // 溆浦跑胡子需要整组数据
             pl.mjwei.push(d.cards);
@@ -8007,9 +7753,9 @@ MjClient.netCallBack = {
 
         pl.skipPeng = d.skipPeng;
         pl.mjput.length = pl.mjput.length - 1;
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
             || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI
-            || MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU){
+            || MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
             pl.mjputType.length = pl.mjputType.length - 1;
             cc.log("HZWeiCard mjputType", " pl = " + JSON.stringify(pl));
         }
@@ -8017,39 +7763,39 @@ MjClient.netCallBack = {
         pl.wangType = 0;
         pl.wangStatus = false;
 
-        if(pl.skipPeng.indexOf(putCard) < 0){
-            if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        if (pl.skipPeng.indexOf(putCard) < 0) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
                 var num = pl.mjwei.length + pl.mjpeng.length + pl.mjgang0.length + pl.mjgang1.length;
-                if(num == 3 || num == 4){
+                if (num == 3 || num == 4) {
                     playEffectInPlay("wei" + num);
-                }else{
+                } else {
                     playEffectInPlay("wei");
                 }
-            }else{
+            } else {
                 playEffectInPlay("wei");
             }
-        }else{
-            if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU){
+        } else {
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_PENG_HU) {
                 var num = pl.mjwei.length + pl.mjpeng.length + pl.mjgang0.length + pl.mjgang1.length;
-                if(num == 3 || num == 4){
+                if (num == 3 || num == 4) {
                     playEffectInPlay("wei" + num);
-                }else{
-                playEffectInPlay("wei"); //碰胡没有臭偎一说
+                } else {
+                    playEffectInPlay("wei"); //碰胡没有臭偎一说
                 }
-            }else if(MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
                 playEffectInPlay("wei");
-            }else {
+            } else {
                 playEffectInPlay("chouwei");
             }
         }
 
         var eatFlags = d.eatFlags;
-        for(var uid in sData.players){
+        for (var uid in sData.players) {
             sData.players[uid].wangType = 0;
             sData.players[uid].wangStatus = false;
-            if(eatFlags && eatFlags[uid]){
+            if (eatFlags && eatFlags[uid]) {
                 sData.players[uid].eatFlag = eatFlags[uid];
-            }else{
+            } else {
                 sData.players[uid].eatFlag = 0;
             }
         }
@@ -8057,7 +7803,7 @@ MjClient.netCallBack = {
         pl.mjState = tData.tState;
 
         var uid = tData.uids[tData.curPlayer];
-        if(uid == SelfUid()){
+        if (uid == SelfUid()) {
             var mjhand = pl.mjhand;
             if (MjClient.gameType == MjClient.GAME_TYPE.XU_PU_PAO_HU_ZI) {
                 var cards = d.cards.slice();
@@ -8077,36 +7823,36 @@ MjClient.netCallBack = {
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI){
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
             pl.eatFlag = d.eatFlags[pl.info.uid];
-            if(pl.eatFlag != 0){
+            if (pl.eatFlag != 0) {
                 pl.mjState = TableState.waitEat;
                 pl.liuCards = d.liuCards;
                 pl.piaoCards = d.piaoCards;
             }
             pl.isDead = d.isDead;
-            if(pl.isDead && pl.info.uid == SelfUid()){
+            if (pl.isDead && pl.info.uid == SelfUid()) {
                 playEffectInPlay("sishou");
             }
-            if(d.canNotPutCard){
+            if (d.canNotPutCard) {
                 pl.canNotPutCard = d.canNotPutCard;
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
             pl.isDead = d.isDead;
             //偎麻雀死手不播音效
             // if(pl.isDead && pl.info.uid == SelfUid()){
             //     playEffectInPlay("sishou");  
             // }
-            if(d.canNotPutCard) {
+            if (d.canNotPutCard) {
                 pl.canNotPutCard = d.canNotPutCard;
             }
         }
     }],
-    HZChiCard:[0,function(d) {//吃牌
-        cc.log("wxd...................HZChiCard:"+JSON.stringify(d));
+    HZChiCard: [0, function (d) {//吃牌
+        cc.log("wxd...................HZChiCard:" + JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
         sData.tData = d.tData;
@@ -8116,10 +7862,10 @@ MjClient.netCallBack = {
         var cpginfo = d.cpginfo;
 
         //96扑克吃牌逻辑需要特殊处理
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
             var pl = sData.players[cpginfo.uid + ""];
             var fromPl = sData.players[uids[d.from]];
-            if(!pl || !fromPl) {
+            if (!pl || !fromPl) {
                 return;
             }
 
@@ -8135,7 +7881,7 @@ MjClient.netCallBack = {
             var chiMsg = d.chiCards;
 
             //清理手牌/桌面牌
-            if(chiMsg && chiMsg.eatCards) {
+            if (chiMsg && chiMsg.eatCards) {
                 var mjhand = pl.mjhand;
                 //桌面招牌吃牌(半招->满招)走杠牌消息了
                 // if(chiMsg.gang0Pos >= 0) {
@@ -8143,15 +7889,15 @@ MjClient.netCallBack = {
                 //     var cd = chiMsg.eatCards[chiMsg.eatCards.length - 1];
                 //     pl.mjgang0[chiMsg.gang0Pos].ex.push(cd);
                 // } else 
-                if(chiMsg.tiePos >= 0) {
+                if (chiMsg.tiePos >= 0) {
                     //桌面贴牌触发吃牌
                     pl.mjtie.splice(chiMsg.tiePos, 1);
-                } else if(cpginfo.uid == SelfUid()) {
+                } else if (cpginfo.uid == SelfUid()) {
                     //正常吃牌, 自己要删手牌
                     for (var i = 0; i < chiMsg.eatCards.length - 1; i++) {
                         var cd = chiMsg.eatCards[i];
                         var idx = mjhand.indexOf(cd);
-                        if(idx >= 0) {
+                        if (idx >= 0) {
                             mjhand.splice(idx, 1);
                         }
                     }
@@ -8160,9 +7906,9 @@ MjClient.netCallBack = {
 
             //清理打出的牌
             var mjput = fromPl.mjput;
-            if(chiMsg && chiMsg.eatCards) {
+            if (chiMsg && chiMsg.eatCards) {
                 var cd = chiMsg.eatCards[chiMsg.eatCards.length - 1];
-                if(mjput.length > 0 && mjput[mjput.length - 1] == cd) {
+                if (mjput.length > 0 && mjput[mjput.length - 1] == cd) {
                     mjput.length -= 1;
                     fromPl.mjputType.length -= 1;
                 }
@@ -8177,8 +7923,8 @@ MjClient.netCallBack = {
         }
 
         //湖北.通城个子牌.捡牌也使用了该协议.特殊处理
-        if(MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
-        var lp = sData.players[uids[d.from] + ""];
+        if (MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
+            var lp = sData.players[uids[d.from] + ""];
             var pl = sData.players[d.cpginfo.uid];
             pl.mjchi = d.mjchi;
             pl.mjchiCard = d.mjchiCard;
@@ -8187,7 +7933,7 @@ MjClient.netCallBack = {
             }
             lp.mjput.length -= 1;
             pl.eatFlag = d.eatFlags[pl.info.uid];
-            if(pl.eatFlag != 0){
+            if (pl.eatFlag != 0) {
                 pl.mjState = TableState.waitEat;
                 pl.liuCards = d.liuCards;
             } else {
@@ -8213,41 +7959,40 @@ MjClient.netCallBack = {
         pl.isQiHu = cpginfo.isQiHu;
 
         //耒阳吃边打边
-        if(d.canNotPutCard){
+        if (d.canNotPutCard) {
             pl.canNotPutCard = d.canNotPutCard;
         }
-        if(d.limitHuPutCard){
+        if (d.limitHuPutCard) {
             pl.limitHuPutCard = d.limitHuPutCard;
         }
 
-        var eatAndBiCards = pl.mjchi[pl.mjchi.length-1];
+        var eatAndBiCards = pl.mjchi[pl.mjchi.length - 1];
         var eatCards = eatAndBiCards.eatCards;
         var biCards = eatAndBiCards.biCards;
-        if(biCards){
+        if (biCards) {
             playEffectInPlay("bi");
-        }else{
+        } else {
             playEffectInPlay("chi");
         }
 
         var lastCard = pl.mjchiCard[pl.mjchiCard.length - 1];
         var uid = tData.uids[tData.curPlayer];
-        if(uid == SelfUid()){
-            if (pl.eatFlag & 32)
-            {
+        if (uid == SelfUid()) {
+            if (pl.eatFlag & 32) {
                 MjClient.showToast("您放弃了胡牌");
             }
             var mjhand = pl.mjhand;
             var tmpEatCards = eatCards.slice();
-            var eatCard = pl.mjchiCard[pl.mjchiCard.length-1];
-            tmpEatCards.splice(tmpEatCards.indexOf(eatCard),1);
-            for(var k = 0;k < tmpEatCards.length;k++){
-                mjhand.splice(mjhand.indexOf(tmpEatCards[k]),1);
+            var eatCard = pl.mjchiCard[pl.mjchiCard.length - 1];
+            tmpEatCards.splice(tmpEatCards.indexOf(eatCard), 1);
+            for (var k = 0; k < tmpEatCards.length; k++) {
+                mjhand.splice(mjhand.indexOf(tmpEatCards[k]), 1);
             }
-            if(biCards){
-                for(k = 0;k < biCards.length;k++){
+            if (biCards) {
+                for (k = 0; k < biCards.length; k++) {
                     var cardsArr = biCards[k];
-                    for(var m = 0;m<cardsArr.length;m++){
-                        mjhand.splice(mjhand.indexOf(cardsArr[m]),1);
+                    for (var m = 0; m < cardsArr.length; m++) {
+                        mjhand.splice(mjhand.indexOf(cardsArr[m]), 1);
                     }
                 }
             }
@@ -8256,13 +8001,13 @@ MjClient.netCallBack = {
         var mjput = lp.mjput;
         if (mjput.length > 0 && mjput[mjput.length - 1] == lastCard) {
             mjput.length = mjput.length - 1;
-            if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
                 || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
-                 MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU){
+                MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
                 lp.mjputType.length = lp.mjputType.length - 1;
                 cc.log("HZChiCard mjputType", " lp = " + JSON.stringify(lp));
             }
-        }else{
+        } else {
             mylog("eat error from");
         }
 
@@ -8271,8 +8016,8 @@ MjClient.netCallBack = {
             sData.players[uid].wangType = 0;
             sData.players[uid].wangStatus = false;
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
-            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI 
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+            || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI
             || MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING || MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN) {
             pl.eatFlag = d.eatFlags[pl.info.uid];
             if (pl.eatFlag != 0) {
@@ -8281,18 +8026,18 @@ MjClient.netCallBack = {
                 pl.piaoCards = d.piaoCards;
             }
             pl.isDead = d.isDead;
-            if(pl.isDead && pl.info.uid == SelfUid()){
+            if (pl.isDead && pl.info.uid == SelfUid()) {
                 playEffectInPlay("sishou");
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710){
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_2710) {
             for (var uid in sData.players) {
                 sData.players[uid].fallArea = -1;
             }
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
             pl.mjState = tData.tState;
             pl.isDead = d.isDead;
             //偎麻雀死手不播音效
@@ -8301,13 +8046,13 @@ MjClient.netCallBack = {
             // }
         }
     }],
-    HZTieCard:[0,function(d) {
+    HZTieCard: [0, function (d) {
         var sData = MjClient.data.sData;
         sData.tData = d.tData;
         var tData = sData.tData;
         var pl = sData.players[d.cpginfo.uid + ""];
         var fromPl = sData.players[tData.uids[d.from]];
-        if(!pl || !fromPl) {
+        if (!pl || !fromPl) {
             return;
         }
 
@@ -8323,17 +8068,17 @@ MjClient.netCallBack = {
         pl.mjtie.push(d.tieCards);
 
         //清理手牌
-        if(d.cpginfo.uid == SelfUid()) {
+        if (d.cpginfo.uid == SelfUid()) {
             var mjhand = pl.mjhand;
-            for(var i = 0; i < d.tieCards.length - 1; i++) {
+            for (var i = 0; i < d.tieCards.length - 1; i++) {
                 var cd = d.tieCards[i];
                 var idx = mjhand.indexOf(cd);
-                if(cd >= 0) {
+                if (cd >= 0) {
                     mjhand.splice(idx, 1);
                 }
             }
         }
-        
+
         //清理打出的牌
         var mjput = fromPl.mjput;
         var cd = d.tieCards[d.tieCards.length - 1];
@@ -8348,15 +8093,15 @@ MjClient.netCallBack = {
 
         playEffectInPlay("tie");
     }],
-    MJGuChou:[0,function(d) {
+    MJGuChou: [0, function (d) {
         var sData = MjClient.data.sData;
-        if (!sData || !d || !d.uid) 
+        if (!sData || !d || !d.uid)
             return;
         sData.players[d.uid].isGuChou = d.isGuChou
     }],
-    MJShuffle:[1.7, function(d) {
+    MJShuffle: [1.7, function (d) {
     }],
-    FLSChiCard:[0,function(d) {//吃牌
+    FLSChiCard: [0, function (d) {//吃牌
         //cc.log("wxd...................FLSChiCard:"+JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
@@ -8376,25 +8121,25 @@ MjClient.netCallBack = {
 
         playEffectInPlay("chi");
         //刷新手牌
-        if(d.mjchi.length >0 && d.uid == SelfUid()) {
+        if (d.mjchi.length > 0 && d.uid == SelfUid()) {
             var mjhand = pl.mjhand;
             //清理当前列的手牌
-            for(var i=0; i<d.mjchi.length; i++) {
-                for(var j=0; j<mjhand.length; j++) {
-                    if(mjhand[j] == d.mjchi[i] && d.mjchi[i] != d.tData.lastPutCard) {
+            for (var i = 0; i < d.mjchi.length; i++) {
+                for (var j = 0; j < mjhand.length; j++) {
+                    if (mjhand[j] == d.mjchi[i] && d.mjchi[i] != d.tData.lastPutCard) {
                         mjhand.splice(j, 1);
                         break;
                     }
                 }
             }
-        } 
-        if(d.uid != SelfUid() && MjClient.rePlayVideo != -1) {
+        }
+        if (d.uid != SelfUid() && MjClient.rePlayVideo != -1) {
 
             var mjhand = pl.mjhand;
             //回放清理非自己的当前列的手牌
-            for(var i=0; i<d.mjchi.length; i++) {
-                for(var j=0; j<mjhand.length; j++) {
-                    if(mjhand[j] == d.mjchi[i] && d.mjchi[i] != d.tData.lastPutCard) {
+            for (var i = 0; i < d.mjchi.length; i++) {
+                for (var j = 0; j < mjhand.length; j++) {
+                    if (mjhand[j] == d.mjchi[i] && d.mjchi[i] != d.tData.lastPutCard) {
                         mjhand.splice(j, 1);
                         break;
                     }
@@ -8405,7 +8150,7 @@ MjClient.netCallBack = {
         var mjput = lp.mjput;
         if (mjput.length > 0 && mjput[mjput.length - 1] == d.tData.lastPutCard) {
             mjput.length = mjput.length - 1;
-        }else{
+        } else {
             mylog("eat error from");
         }
 
@@ -8417,20 +8162,20 @@ MjClient.netCallBack = {
         //cc.log("刷新后的手牌", JSON.stringify(pl.mjhand));
 
         sData.players[d.uid].eatFlag = d.eatFlag;
-        if(d.eatFlag>0){// 吃后有杠操作继续显示杠
+        if (d.eatFlag > 0) {// 吃后有杠操作继续显示杠
             sData.tData.tState = TableState.waitEat;
             pl.mjState = TableState.waitEat
-        } 
+        }
     }],
-    HZPickCard: [0.8, function(d) {
+    HZPickCard: [0.8, function (d) {
         var sData = MjClient.data.sData;
-        if(!sData) return;
+        if (!sData) return;
         var pl = sData.players[d.uid];
         if (pl.mjput.length > 0 && pl.mjput[pl.mjput.length - 1] == d.card) {
             pl.mjput.pop();
-            if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
                 || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
-                MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU){
+                MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE || MjClient.gameType == MjClient.GAME_TYPE.EN_SHI_SHAO_HU) {
                 pl.mjputType.pop();
                 cc.log("HZPickCard mjputType", " pl = " + JSON.stringify(pl));
             }
@@ -8443,20 +8188,19 @@ MjClient.netCallBack = {
 
         //红字
         if (MjClient.gameType == MjClient.GAME_TYPE.ML_HONG_ZI ||
-            MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI)
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI) {
 
             pl.mjState = TableState.waitPut;
             sData.tData.tState = TableState.waitPut;
         }
 
     }],
-    HZCheckRaise:[0,function (d) {
+    HZCheckRaise: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
         tData.tState = d.mjState;
-        if(MjClient.GAME_TYPE.YUE_YANG_PENG_HU == MjClient.gameType ||
+        if (MjClient.GAME_TYPE.YUE_YANG_PENG_HU == MjClient.gameType ||
             MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE == MjClient.gameType ||
             MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI == MjClient.gameType ||
             MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI == MjClient.gameType ||
@@ -8466,39 +8210,35 @@ MjClient.netCallBack = {
             MjClient.gameType == MjClient.GAME_TYPE.PAO_HU_ZI_ER ||
             MjClient.gameType == MjClient.GAME_TYPE.PAO_HU_ZI_SR_King ||
             MjClient.gameType == MjClient.GAME_TYPE.PAO_HU_ZI_SR ||
-            MjClient.gameType == MjClient.GAME_TYPE.LUO_DI_SAO){
+            MjClient.gameType == MjClient.GAME_TYPE.LUO_DI_SAO) {
             tData.curPlayer = tData.zhuang;
         }
-        if(MjClient.GAME_TYPE.XIANG_XI_2710 == MjClient.gameType)
-        {
-             tData.curPlayer = tData.zhuang;
+        if (MjClient.GAME_TYPE.XIANG_XI_2710 == MjClient.gameType) {
+            tData.curPlayer = tData.zhuang;
         }
-        if(d.beginHandCard)
-        {
+        if (d.beginHandCard) {
             tData.beginHandCard = d.beginHandCard;
         }
 
-        if (d.jiazhuNums)
-        {
-            for(var uid in d.jiazhuNums){
+        if (d.jiazhuNums) {
+            for (var uid in d.jiazhuNums) {
                 sData.players[uid].jiazhuNum = d.jiazhuNums[uid];
             }
 
         }
 
-        if (d.jiachuiNums)
-        {
-            for(var uid in d.jiachuiNums){
+        if (d.jiachuiNums) {
+            for (var uid in d.jiachuiNums) {
                 sData.players[uid].jiachuiNum = d.jiachuiNums[uid];
             }
 
         }
 
-        if(tData.uids[tData.zhuang] == SelfUid()){
+        if (tData.uids[tData.zhuang] == SelfUid()) {
             sData.players[SelfUid().toString()].eatFlag = d.eatFlag;
             sData.players[SelfUid().toString()].mjState = d.mjState;
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI
             || MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
             var pl = sData.players[SelfUid().toString()];
             if (pl.eatFlag != 0) {
@@ -8506,29 +8246,29 @@ MjClient.netCallBack = {
                 pl.liuCards = d.liuCards;
                 pl.piaoCards = d.piaoCards;
             }
-            if(MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI){
+            if (MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI) {
                 tData.shenType = d.shenType;
-                if(tData.shenType == 0){
+                if (tData.shenType == 0) {
                     playEffectInPlay("shuangshen");
-                }else{
+                } else {
                     playEffectInPlay("danshen");
                 }
             }
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
-            for(var uid in d.eatFlags) {
-                sData.players[uid].eatFlag = d.eatFlags[uid]; 
+        if (MjClient.gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {
+            for (var uid in d.eatFlags) {
+                sData.players[uid].eatFlag = d.eatFlags[uid];
             }
-            if(tData.uids[tData.zhuang] == SelfUid()) {
+            if (tData.uids[tData.zhuang] == SelfUid()) {
                 sData.players[SelfUid().toString()].mjState = d.mjState;
             }
         }
-        if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XI_96POKER) {
             tData.curPlayer = d.curPlayer;
-            for(var uid in d.eatFlags) {
-                sData.players[uid].eatFlag = d.eatFlags[uid]; 
+            for (var uid in d.eatFlags) {
+                sData.players[uid].eatFlag = d.eatFlags[uid];
             }
-            if(tData.uids[tData.zhuang] == SelfUid()) {
+            if (tData.uids[tData.zhuang] == SelfUid()) {
                 sData.players[SelfUid().toString()].mjState = d.mjState;
             }
         }
@@ -8536,18 +8276,18 @@ MjClient.netCallBack = {
         //     pl.jiazhuNum = d.jiazhuNums[uid];
         // }
     }],
-    HZUpdateEatFlag:[0.4,function (d) {
+    HZUpdateEatFlag: [0.4, function (d) {
         //更新玩家eatFalg，目前只用于郴州桂阳字牌（选项选中：出牌后明龙）的更新
         var sData = MjClient.data.sData;
         if (!sData) return;
         var eatFlags = d.eatFlags;
-        for(var uid in eatFlags){
+        for (var uid in eatFlags) {
             sData.players[uid].eatFlag = eatFlags[uid];
             if ((MjClient.gameType == MjClient.GAME_TYPE.DANG_YANG_FAN_JING ||
-                 MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
-                 MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
-                 MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
-                 MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) && d.liuCards) {
+                MjClient.gameType == MjClient.GAME_TYPE.YI_CHANG_SHANG_DA_REN ||
+                MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_HUA_PAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.GONG_AN_HUA_PAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) && d.liuCards) {
                 sData.players[uid].liuCards = d.liuCards[uid];
             }
         }
@@ -8557,28 +8297,28 @@ MjClient.netCallBack = {
             sData.tData = d.tData;
         }
     }],
-    HZAddCards:[0,function (d) {
+    HZAddCards: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
-        for(var uid in sData.players){
-            if(Number(uid) == d.uid){
+        for (var uid in sData.players) {
+            if (Number(uid) == d.uid) {
                 var pl = sData.players[uid + ""];
-                if(pl.mjhand){
-                    for(var i = 0; i< d.cardList.length; i++){
+                if (pl.mjhand) {
+                    for (var i = 0; i < d.cardList.length; i++) {
                         pl.mjhand.push(d.cardList[i]);
                     }
                 }
             }
         }
     }],
-    HZCardNum:[0,function (d) {
+    HZCardNum: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
         tData.cardNext = d.cardNext;
     }],
-    HZWang:[0,function(d){
-        cc.log("wxd...............HZWang:"+JSON.stringify(d));
+    HZWang: [0, function (d) {
+        cc.log("wxd...............HZWang:" + JSON.stringify(d));
         //王闯或者王钓
         var sData = MjClient.data.sData;
         if (!sData) return;
@@ -8589,36 +8329,36 @@ MjClient.netCallBack = {
         pl.mjState = TableState.waitEat;
         pl.wangType = d.wangType;
     }],
-    HZWangChuang:[0,function(d){
-        cc.log("wxd...............HZWangChuang:"+JSON.stringify(d));
+    HZWangChuang: [0, function (d) {
+        cc.log("wxd...............HZWangChuang:" + JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[d.uid + ""];
         pl.wangStatus = d.wangStatus;
         pl.wangType = d.type;
-        if(pl.wangType == 1){
+        if (pl.wangType == 1) {
             playEffectInPlay("wangdiao");
-        }else if(pl.wangType == 2){
+        } else if (pl.wangType == 2) {
             playEffectInPlay("wangchuang");
-        }else if(pl.wangType == 4){
+        } else if (pl.wangType == 4) {
             playEffectInPlay("wangzha");
         }
     }],
-    HZWangChuangShow:[0.8,function(d){
+    HZWangChuangShow: [0.8, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[d.uid + ""];
         pl.wangStatus = d.wangStatus;
         pl.wangType = d.type;
-        if(pl.wangType == 1){
+        if (pl.wangType == 1) {
             playEffectInPlay("wangdiao");
-        }else if(pl.wangType == 2){
+        } else if (pl.wangType == 2) {
             playEffectInPlay("wangchuang");
-        }else if(pl.wangType == 4){
+        } else if (pl.wangType == 4) {
             playEffectInPlay("wangzha");
         }
     }],
-    MJPassWei:[0,function (d) {
+    MJPassWei: [0, function (d) {
         var eatFlags = d.eatFlags;
         var sData = MjClient.data.sData;
         var tData = sData.tData;
@@ -8628,110 +8368,109 @@ MjClient.netCallBack = {
         tData.mjHideCard = d.mjHideCard;
 
     }],
-    MJQiShouHu:[0,function(d){
-        cc.log("wxd...............MJQiShouHu:"+JSON.stringify(d));
+    MJQiShouHu: [0, function (d) {
+        cc.log("wxd...............MJQiShouHu:" + JSON.stringify(d));
     }],
-    refreshMyTables:[0,function(d) {
+    refreshMyTables: [0, function (d) {
         MjClient.createRoomDatas = d;
     }],
-    match_end:[0,function (d) {   //比赛结束
-        cc.log("wxd...............match_end:"+JSON.stringify(d));
+    match_end: [0, function (d) {   //比赛结束
+        cc.log("wxd...............match_end:" + JSON.stringify(d));
         delete MjClient.matchRank;
-        if(MjClient.roundendui){
+        if (MjClient.roundendui) {
             MjClient.roundendui.removeFromParent(true);
             MjClient.roundendui = null;
         }
-        if(MjClient.endoneui) {
+        if (MjClient.endoneui) {
             MjClient.endoneui.removeFromParent(true);
         }
-        if(MjClient.endallui){
+        if (MjClient.endallui) {
             MjClient.endallui.removeFromParent(true);
             MjClient.endallui = null;
         }
-        if(d.awardInfo){
+        if (d.awardInfo) {
             MjClient.Scene.addChild(new winGameLayer(d));
-        }else {
+        } else {
             MjClient.Scene.addChild(new loseGameLayer(d));
         }
     }],
-    beTrust:[0,function (d) {       //比赛托管{uid: pl.uid}
+    beTrust: [0, function (d) {       //比赛托管{uid: pl.uid}
         var sData = MjClient.data.sData;
-        if(!sData){
+        if (!sData) {
             return;
         }
         sData.players[d.uid].trust = true;
 
         //打筒子整场托管
-        if(MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) {
             sData.players[d.uid].isTrust = true;
             postEvent("TZTrust", {});
         }
 
     }],
-    cancelTrust:[0, function(d){
+    cancelTrust: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(!sData){
+        if (!sData) {
             return;
         }
         sData.players[d.uid].trust = false;
 
         //打筒子整场托管
-        if(MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) {
             sData.players[d.uid].isTrust = false;
             postEvent("TZTrust", {});
         }
     }],
-    trustTime:[0, function(d){
+    trustTime: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(!sData){
+        if (!sData) {
             return;
         }
         sData.tData.trustEnd = d.trustEnd;
     }],
-    trustTip:[0,function (d) {       //托管倒计时
+    trustTip: [0, function (d) {       //托管倒计时
 
     }],
-    signUpInfo:[0,function (d) {        //报名等待人数更新
+    signUpInfo: [0, function (d) {        //报名等待人数更新
 
     }],
-    leftTable:[0,function (d) {       //比赛剩余桌数
+    leftTable: [0, function (d) {       //比赛剩余桌数
 
     }],
-    selectDir_event:[0,function (d) {       //选方位
+    selectDir_event: [0, function (d) {       //选方位
         var tData = MjClient.data.sData.tData;
         var sData = MjClient.data.sData;
         if (isJinZhongAPPType()
             && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.MA_JIANG
-            && tData.maxPlayer != 2 && d.uid != SelfUid())
-        {
+            && tData.maxPlayer != 2 && d.uid != SelfUid()) {
             playEffect("player_join_effect");
             var nickname = sData.players[d.uid].info.nickname;
             var msg = " 选好了座位"
-            MjClient.showToastWithInfobyPos(nickname,msg,0.725);
+            MjClient.showToastWithInfobyPos(nickname, msg, 0.725);
         }
     }],
-    novice_guide_user:[0,function(d)//玩家新手引导
+    novice_guide_user: [0, function (d)//玩家新手引导
     {
         MjClient.guide_info = d;
         MjClient.isNewUser = true;
     }
     ],
-    novice_guide_member:[0,function(d)// 代理新手引导
+    novice_guide_member: [0, function (d)// 代理新手引导
     {
         MjClient.isNewMember = true;
     }
     ],
-    waitReady:[0,function (d) {       //准备
+    waitReady: [0, function (d) {       //准备
         cc.log("----------------准备按钮--------------显示");
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
         tData.tState = TableState.waitReady;
-        for(var uid in sData.players){
+        for (var uid in sData.players) {
             sData.players[uid].mjState = TableState.waitReady;
         }
     }],
-    waitBaoTing: [0, function(d) {
+    waitBaoTing: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) {
             return;
@@ -8741,7 +8480,7 @@ MjClient.netCallBack = {
         var pl = sData.players[d.uid];
         pl.mjState = TableState.waitBaoTing;
     }],
-    updateEatFlags: [0, function(d) {
+    updateEatFlags: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) {
             return;
@@ -8762,32 +8501,31 @@ MjClient.netCallBack = {
             }
         }
     }],
-    matchWinnerBroadcast:[0,function (d) {    //比赛跑马灯
+    matchWinnerBroadcast: [0, function (d) {    //比赛跑马灯
         cc.log("比赛界面广播", d);
     }],
-    dismissMatch:[0,function (d) {      //比赛报名时间截止时
+    dismissMatch: [0, function (d) {      //比赛报名时间截止时
 
     }],
-    match_enter:[0,function (d) {//在等待界面断线重连
+    match_enter: [0, function (d) {//在等待界面断线重连
         //cc.log("wxd...断线重连match_enter"+d);
-        MjClient.gamenet.request("pkplayer.handler.matchEnter",{matchId:d},function(rtn){
+        MjClient.gamenet.request("pkplayer.handler.matchEnter", { matchId: d }, function (rtn) {
             //cc.log("wxd pkplayer.handler.matchEnter:"+JSON.stringify(rtn))
-            if(rtn.code == -1)
-            {
+            if (rtn.code == -1) {
                 MjClient.showToast(rtn.message);
-            }else if(rtn.code == 0){
-                if(rtn.data.rank){
+            } else if (rtn.code == 0) {
+                if (rtn.data.rank) {
                     MjClient.matchRank = rtn.data.rank;
                 }
-                if(rtn.data.state == 0){
-                    if(!MjClient.gemewaitingui) {
+                if (rtn.data.state == 0) {
+                    if (!MjClient.gemewaitingui) {
                         MjClient.Scene.addChild(new gameWaiteLayer(rtn.data));
                     }
-                }else if(rtn.data.state == 1){
-                    if(rtn.data.tableid){
-                        MjClient.joinMatchGame(rtn.data.tableid,null,"match");
+                } else if (rtn.data.state == 1) {
+                    if (rtn.data.tableid) {
+                        MjClient.joinMatchGame(rtn.data.tableid, null, "match");
                     }
-                }else if(rtn.data.state == 2){
+                } else if (rtn.data.state == 2) {
                     var waiteLayer = new gameWaiteLayer(rtn.data);
                     MjClient.Scene.addChild(waiteLayer);
                     waiteLayer.addChild(new roundEndLayer(rtn.data));
@@ -8795,20 +8533,20 @@ MjClient.netCallBack = {
             }
         });
     }],
-    match_wait:[0,function (d) {//比赛等待入场
-        cc.log("wxd...断线重连match_wait"+JSON.stringify(d));
-        var min = Math.ceil((d.info.startTime- d.serverTime)/1000/60);
-        MjClient.showMsg("你报名的“"+d.info.title+"”将在"+min+"分钟后开始，请提前进入比赛", function () {
-            MjClient.gamenet.request("pkplayer.handler.matchEnter",{matchId:d.info.matchId},function(rtn){
+    match_wait: [0, function (d) {//比赛等待入场
+        cc.log("wxd...断线重连match_wait" + JSON.stringify(d));
+        var min = Math.ceil((d.info.startTime - d.serverTime) / 1000 / 60);
+        MjClient.showMsg("你报名的“" + d.info.title + "”将在" + min + "分钟后开始，请提前进入比赛", function () {
+            MjClient.gamenet.request("pkplayer.handler.matchEnter", { matchId: d.info.matchId }, function (rtn) {
                 //cc.log("wxd pkplayer.handler.matchEnter:"+JSON.stringify(rtn))
-                if(rtn.code == 0){
+                if (rtn.code == 0) {
                     MjClient.Scene.addChild(new gameWaiteLayer(rtn.data));
-                }else {
+                } else {
                     MjClient.showToast(rtn.message);
                 }
             });
-        },function(){
-            if(cc.sys.isObjectValid(MjClient.playgroundui)){
+        }, function () {
+            if (cc.sys.isObjectValid(MjClient.playgroundui)) {
                 MjClient.playgroundui.getPlayDetailData();
             }
             // MjClient.gamenet.request("pkplayer.handler.matchLeave",{matchId:d},function(rtn){
@@ -8822,47 +8560,47 @@ MjClient.netCallBack = {
             // })
         }, "1");
     }],
-    match_refresh_info:[0,function (d) {//刷新等待人数
-        cc.log("wxd...刷新等待人数match_refresh_info"+JSON.stringify(d));
+    match_refresh_info: [0, function (d) {//刷新等待人数
+        cc.log("wxd...刷新等待人数match_refresh_info" + JSON.stringify(d));
     }],
-    match_state_refresh:[0,function (d) {//
-        cc.log("wxd...进入比赛match_state_refresh"+JSON.stringify(d));
-        if(d.tableid && d.state == 1){
-            MjClient.joinMatchGame(d.tableid,null,"match");
+    match_state_refresh: [0, function (d) {//
+        cc.log("wxd...进入比赛match_state_refresh" + JSON.stringify(d));
+        if (d.tableid && d.state == 1) {
+            MjClient.joinMatchGame(d.tableid, null, "match");
         }
-        if(d.rank){
+        if (d.rank) {
             MjClient.matchRank = d.rank;
         }
     }],
-    match_cancel:[0,function (d) {
-        cc.log("wxd...比赛取消match_cancel"+JSON.stringify(d));
+    match_cancel: [0, function (d) {
+        cc.log("wxd...比赛取消match_cancel" + JSON.stringify(d));
     }],
-    match_list_refresh:[0, function (d) {//刷新比赛列表接口
-        cc.log("wxd...比赛取消match_list_refresh"+JSON.stringify(d));
-        if(cc.sys.isObjectValid(MjClient.playgroundui)){
-            MjClient.playgroundui._playListData=d;
+    match_list_refresh: [0, function (d) {//刷新比赛列表接口
+        cc.log("wxd...比赛取消match_list_refresh" + JSON.stringify(d));
+        if (cc.sys.isObjectValid(MjClient.playgroundui)) {
+            MjClient.playgroundui._playListData = d;
             MjClient.playgroundui.initPlay();
-            if(MjClient.playgroundui._playListData.length == 0){
+            if (MjClient.playgroundui._playListData.length == 0) {
                 //MjClient.showToast("没有比赛");
                 MjClient.playgroundui.initPlayDetailNoSee();
             }
         }
     }],
-    match_rank_refresh:[0,function (d) {
-        if(d.rank){
+    match_rank_refresh: [0, function (d) {
+        if (d.rank) {
             MjClient.matchRank = d.rank;
         }
     }],
-    Qiangdizhu:[0,function (d) {    //抢地主发送服务器
-        cc.log("强地主",JSON.stringify(d));
-        if(MjClient.data.sData.tData.minJiaofen == undefined) {
+    Qiangdizhu: [0, function (d) {    //抢地主发送服务器
+        cc.log("强地主", JSON.stringify(d));
+        if (MjClient.data.sData.tData.minJiaofen == undefined) {
             MjClient.data.sData.tData.minJiaofen = 0;
         }
-        if(d.qiang>MjClient.data.sData.tData.minJiaofen)
-        MjClient.data.sData.tData.minJiaofen = d.qiang;
+        if (d.qiang > MjClient.data.sData.tData.minJiaofen)
+            MjClient.data.sData.tData.minJiaofen = d.qiang;
         cc.log("强地主", d);
     }],
-    waitJiaodizhu:[0,function (d) {   //轮到叫地主
+    waitJiaodizhu: [0, function (d) {   //轮到叫地主
         if ("minJiaofen" in d) {
             MjClient.data.sData.tData.minJiaofen = d.minJiaofen;
         }
@@ -8872,7 +8610,7 @@ MjClient.netCallBack = {
 
         cc.log("轮到叫地主", JSON.stringify(d));
     }],
-    MJChuzi:[0,function(d) {
+    MJChuzi: [0, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
         if (d.mjState) {
@@ -8883,12 +8621,12 @@ MjClient.netCallBack = {
             sData.players[d.uid].chuZi = d.chuZi;
         }
     }],
-    MJJiazhu:[0,function (d) {   //轮到叫地主
-        if (MjClient.playui){
-                clearSortData();
+    MJJiazhu: [0, function (d) {   //轮到叫地主
+        if (MjClient.playui) {
+            clearSortData();
         }
- 
-        if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
+
+        if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
             MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG ||
             MjClient.gameType == MjClient.GAME_TYPE.CHEN_ZHOU_ZI_PAI ||
             MjClient.gameType == MjClient.GAME_TYPE.GUI_YANG_ZI_PAI ||
@@ -8904,40 +8642,35 @@ MjClient.netCallBack = {
             if (!sData) return;
             var tData = sData.tData;
             sData.players[d.uid].piaoFen = -1;
-            if(d.piaoFen != undefined) {
+            if (d.piaoFen != undefined) {
                 sData.players[d.uid].piaoFen = d.piaoFen;
                 //sData.players[d.uid].lastPiaoFen = d.piaoFen;
             }
-        }else {
+        } else {
             var sData = MjClient.data.sData;
             if (!sData) return;
             var tData = sData.tData;
             if (d.mjState) {
                 tData.tState = d.mjState;
             }
-            if (d.jiazhuNums)
-            {
-                for(var uid in d.jiazhuNums){
+            if (d.jiazhuNums) {
+                for (var uid in d.jiazhuNums) {
                     sData.players[uid].jiazhuNum = d.jiazhuNums[uid];
                     sData.players[uid].mjState = TableState.isReady;
-                } 
+                }
             }
             // 防止d.jiazhuNum=0, pl接不到这个值
-            if (!cc.isUndefined(d.jiazhuNum))
-            {
-                if (d.uid) 
-                {
+            if (!cc.isUndefined(d.jiazhuNum)) {
+                if (d.uid) {
                     sData.players[d.uid].jiazhuNum = d.jiazhuNum;
                 }
-                if (d.mjState) 
-                {
+                if (d.mjState) {
                     sData.players[d.uid].mjState = d.mjState;
                 }
             }
 
-            if (d.jiachuiNums)
-            {
-                for(var uid in d.jiachuiNums){
+            if (d.jiachuiNums) {
+                for (var uid in d.jiachuiNums) {
                     sData.players[uid].jiachuiNum = d.jiachuiNums[uid];
                     sData.players[uid].mjState = TableState.isReady;
                 }
@@ -8948,22 +8681,21 @@ MjClient.netCallBack = {
                 sData.players[d.uid].jiachuiNum = d.jiachuiNum;
             }
 
-            if(tData.uids[tData.zhuang] == SelfUid()){
+            if (tData.uids[tData.zhuang] == SelfUid()) {
                 sData.players[SelfUid().toString()].eatFlag = d.eatFlag;
                 sData.players[SelfUid().toString()].mjState = d.mjState;
             }
         }
     }],
-    diCards:[0,function (d) {    //斗地主翻底牌
+    diCards: [0, function (d) {    //斗地主翻底牌
         cc.log("翻底牌", d);
         var tData = MjClient.data.sData.tData;
         MjClient.selectCards_card = [];
         MjClient.colloctionCurrentSelcetUIArray = [];
         setCardToNormalPos();
         clearSortData();
-        tData.zhuang =  d.zhuang;
-        if(d.zhuang == getPlayerIndex(0))
-        {
+        tData.zhuang = d.zhuang;
+        if (d.zhuang == getPlayerIndex(0)) {
             var tData = MjClient.data.sData.tData;
             var uids = tData.uids;
             var selfIndex = uids.indexOf(SelfUid());
@@ -8973,16 +8705,13 @@ MjClient.netCallBack = {
                 pl.mjhand.push(d.diCards[j]);
             }
         }
-        else
-        {
-            if(MjClient.rePlayVideo != -1)//回放
+        else {
+            if (MjClient.rePlayVideo != -1)//回放
             {
                 var num = Math.max(MjClient.MaxPlayerNum, 4);
-                for(var i = 0;i < num;i++)
-                {
+                for (var i = 0; i < num; i++) {
                     var pl = getUIPlayer(i);
-                    if(pl && tData.uids[tData.zhuang] == pl.info.uid)
-                    {
+                    if (pl && tData.uids[tData.zhuang] == pl.info.uid) {
                         for (var j = 0; j < d.diCards.length; j++) {
                             pl.mjhand.push(d.diCards[j]);
                         }
@@ -8991,7 +8720,7 @@ MjClient.netCallBack = {
             }
         }
     }],
-    waitLong:[0,function (d) {    //等待龙的操作
+    waitLong: [0, function (d) {    //等待龙的操作
         cc.log("等待龙的操作", JSON.stringify(d));
         var sData = MjClient.data.sData;
         if (!sData) return;
@@ -9003,7 +8732,7 @@ MjClient.netCallBack = {
 
         sData.tData.tState = TableState.waitLong;
     }],
-    buLongCards:[0,function (d) {    //龙后补牌
+    buLongCards: [0, function (d) {    //龙后补牌
         cc.log("龙后补牌", JSON.stringify(d));
         var buCards = d.buCards;
         var sData = MjClient.data.sData;
@@ -9011,11 +8740,9 @@ MjClient.netCallBack = {
         //sData.tData = d.tData;
         for (var uid in sData.players) {
             var pl = sData.players[uid];
-            if(pl.mjhand && buCards[uid])
-            {
+            if (pl.mjhand && buCards[uid]) {
 
-                for(var i = 0;i < buCards[uid].length;i++)
-                {
+                for (var i = 0; i < buCards[uid].length; i++) {
                     pl.mjhand.push(buCards[uid][i]);
                 }
             }
@@ -9023,14 +8750,13 @@ MjClient.netCallBack = {
 
 
     }],
-    s2c_sdhJiaoFen:[0, function (d) {  // 三打哈-叫分
+    s2c_sdhJiaoFen: [0, function (d) {  // 三打哈-叫分
         var tData = MjClient.data.sData.tData;
         if (d.tState)
             tData.tState = d.tState;
         if (d.mustJiao != null)
             tData.mustJiao = d.mustJiao;
-        if (d.jiaoFen != 0)
-        {
+        if (d.jiaoFen != 0) {
             tData.jiaoFen = d.jiaoFen;
             tData.isPaiFen = d.isPaiFen;
         }
@@ -9041,16 +8767,13 @@ MjClient.netCallBack = {
         if (d.nextPlayer != -1)
             tData.curPlayer = d.nextPlayer;
 
-        if (tData.jiaoFenPlayer != null)
-        {
+        if (tData.jiaoFenPlayer != null) {
             var pl = MjClient.data.sData.players[tData.uids[tData.jiaoFenPlayer]];
             pl.jiaoFen = d.jiaoFen;
             pl.isPaiFen = d.isPaiFen;
-            pl.isLastJiao= d.isLastJiao;
-            if(MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER)
-            {
-                if(d.isLastJiao)
-                {
+            pl.isLastJiao = d.isLastJiao;
+            if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
+                if (d.isLastJiao) {
                     pl.jiaoFen = d.jiaoFen;
                 }
                 else {
@@ -9059,7 +8782,7 @@ MjClient.netCallBack = {
             }
         }
     }],
-    s2c_sdhJiaoZhu:[1, function (d) {  // 三打哈-叫主
+    s2c_sdhJiaoZhu: [1, function (d) {  // 三打哈-叫主
         var tData = MjClient.data.sData.tData;
         if (d.tState)
             tData.tState = d.tState;
@@ -9068,21 +8791,21 @@ MjClient.netCallBack = {
         tData.zhuang = tData.curPlayer;
     }],
 
-    s2c_sdhSelectLiuShou:[1, function (d) {  // 三打哈-选择留守花色
+    s2c_sdhSelectLiuShou: [1, function (d) {  // 三打哈-选择留守花色
         var player = getUIPlayerByUID(d.uid);
 
         if (player)
             player.liuShouColor = d.liuShouColor;
     }],
 
-    s2c_sdhHanLai:[0, function (d) {  // 永州包牌-喊来
+    s2c_sdhHanLai: [0, function (d) {  // 永州包牌-喊来
         var player = getUIPlayerByUID(d.uid);
 
         if (player)
             player.hanlai = true;
     }],
 
-    waitJiaChui:[0, function (d) {  // 永州包牌-等待加锤
+    waitJiaChui: [0, function (d) {  // 永州包牌-等待加锤
         var sData = MjClient.data.sData;
 
         sData.tData.tState = TableState.waitJiazhu;
@@ -9093,17 +8816,16 @@ MjClient.netCallBack = {
         }
     }],
 
-    s2c_jiaChui:[0, function (d) {  // 永州包牌-加锤
+    s2c_jiaChui: [0, function (d) {  // 永州包牌-加锤
         var player = getUIPlayerByUID(d.uid);
 
-        if (player)
-        {
+        if (player) {
             player.jiaChui = d.jiaChui;
             player.mjState = TableState.isReady;
         }
     }],
 
-    s2c_sdhMaiPai:[0, function (d) {   // 三打哈-埋牌
+    s2c_sdhMaiPai: [0, function (d) {   // 三打哈-埋牌
         var tData = MjClient.data.sData.tData;
         if (d.tState)
             tData.tState = d.tState;
@@ -9111,24 +8833,24 @@ MjClient.netCallBack = {
             tData.maiPaiArr = [];
         else
             tData.maiPaiArr = d.maiPaiArr;
-        if(d.isTouXiang)
+        if (d.isTouXiang)
             tData.isTouXiang = d.isTouXiang;
 
         tData.isCanTouXiang = d.isCanTouXiang;
 
-        if(d.isSuccess)
+        if (d.isSuccess)
             tData.maiPaiSuccess = d.isSuccess;
 
         if (tData.maiPaiArr.length != 0 && (!tData.isTouXiang || MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA
             || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA))
             tData.tState = TableState.waitPut;
     }],
-    s2c_sdhTouXiang:[0, function(d) {   // 三打哈-投降
+    s2c_sdhTouXiang: [0, function (d) {   // 三打哈-投降
     }],
-    s2c_sdhZhuaFen:[0, function (d) {  // 三打哈-抓分
+    s2c_sdhZhuaFen: [0, function (d) {  // 三打哈-抓分
 
     }],
-    s2c_dqJiaoZhu:[0, function (d) {  // 打七-叫主
+    s2c_dqJiaoZhu: [0, function (d) {  // 打七-叫主
         var tData = MjClient.data.sData.tData;
         tData.zhuType = d.zhuType;
         tData.zhuang = d.zhuang;
@@ -9136,7 +8858,7 @@ MjClient.netCallBack = {
         tData.curPlayer = d.zhuang;
         tData.zhuValue = d.card;
     }],
-    s2c_dqDiCard:[0, function (d) {  // 打七-底牌
+    s2c_dqDiCard: [0, function (d) {  // 打七-底牌
         var tData = MjClient.data.sData.tData;
         if (d.tState)
             tData.tState = d.tState;
@@ -9144,13 +8866,13 @@ MjClient.netCallBack = {
             tData.curPlayer = d.curPlayer;
         tData.diPaiArr = d.diPaiArr;
     }],
-    s2c_dqMaiPai:[0, function (d) {   // 打七-埋牌
+    s2c_dqMaiPai: [0, function (d) {   // 打七-埋牌
         var tData = MjClient.data.sData.tData;
         if (d.tState)
             tData.tState = d.tState;
         tData.diPaiArr = d.diPaiArr;
     }],
-    s2c_dqWaitJiaoZhu:[0, function (d) {   //打七等待叫主
+    s2c_dqWaitJiaoZhu: [0, function (d) {   //打七等待叫主
         var tData = MjClient.data.sData.tData;
         if (d.tState)
             tData.tState = d.tState;
@@ -9159,14 +8881,13 @@ MjClient.netCallBack = {
         tData.zhuType = d.zhuType;
         tData.hasJiaoIdx = d.hasJiaoIdx;
     }],
-    s2c_sdhWaitJiaoZhu:[0, function (d) {   //忻州三打二等待叫主
+    s2c_sdhWaitJiaoZhu: [0, function (d) {   //忻州三打二等待叫主
         var tData = MjClient.data.sData.tData;
         if (d.tState)
             tData.tState = d.tState;
         if (d.diPaiArr)
             tData.diPaiArr = d.diPaiArr;
-        if (d.zhuang || d.zhuang == 0)
-        {
+        if (d.zhuang || d.zhuang == 0) {
             tData.zhuang = d.zhuang;
             tData.curPlayer = tData.zhuang;
         }
@@ -9174,32 +8895,32 @@ MjClient.netCallBack = {
 
 
     }],
-    s2c_sdhWaitChooseCard:[0, function (d) {   //忻州三打二等待选朋友
+    s2c_sdhWaitChooseCard: [0, function (d) {   //忻州三打二等待选朋友
         var tData = MjClient.data.sData.tData;
         if (d.zhuang)
             tData.zhuang = d.zhuang;
-        if(d.tState)
+        if (d.tState)
             tData.tState = d.tState
     }],
-    s2c_sdhChooseCard:[0, function (d) {   //忻州三打二选朋友
+    s2c_sdhChooseCard: [0, function (d) {   //忻州三打二选朋友
         var tData = MjClient.data.sData.tData;
         if (d.tState)
             tData.tState = d.tState;
         if (d.card)
             tData.friendCard = d.card;
     }],
-    s2c_TiQianOver:[0, function (d) {   //忻州三打二提前结束
-       var tData = MjClient.data.sData.tData;
-       tData.hasTiQianOver = d.hasTiQianOver;
-       if(d.tiQianOverinfo)
-           tData.tiQianOverinfo = d.tiQianOverinfo;
+    s2c_TiQianOver: [0, function (d) {   //忻州三打二提前结束
+        var tData = MjClient.data.sData.tData;
+        tData.hasTiQianOver = d.hasTiQianOver;
+        if (d.tiQianOverinfo)
+            tData.tiQianOverinfo = d.tiQianOverinfo;
         tData.isAgreeOverList = d.isAgreeOverList;
     }],
-    s2c_dqZhuaFen:[0, function (d) {//打七抓分
+    s2c_dqZhuaFen: [0, function (d) {//打七抓分
         var tData = MjClient.data.sData.tData;
         tData.playerScore = d.playerScore;
     }],
-    s2cZhaGuZiJiaZhu:[0, function (d) {//扎股子亮三、扎股
+    s2cZhaGuZiJiaZhu: [0, function (d) {//扎股子亮三、扎股
         var tData = MjClient.data.sData.tData;
         tData.curPlayer = d.curPlayer;
         tData.tState = d.tState;
@@ -9208,19 +8929,19 @@ MjClient.netCallBack = {
         tData.canTouXiang = d.canTouXiang;
         tData.totalJiaZhu = d.totalJiaZhu;
     }],
-    red_packet_config:[0, function (d) {// 俱乐部用，红包局宣传数据
+    red_packet_config: [0, function (d) {// 俱乐部用，红包局宣传数据
         MjClient._FriendCard_RedPackageConfig = d.data;
         FriendCard_Common.showRedPackageAd();
     }],
-    club_refresh_room:[0, function (d) {      // club 刷新房间列表(服务器推送)  startQueueNetMsg var  handleData=dh[1](ed[1]);
+    club_refresh_room: [0, function (d) {      // club 刷新房间列表(服务器推送)  startQueueNetMsg var  handleData=dh[1](ed[1]);
         var record = 0;
         var keysStr = Object.keys(d).toString();
         for (var i = 0; i < MjClient.NetMsgQueue.length; i++) {
-            var str =  MjClient.NetMsgQueue[i][0];
+            var str = MjClient.NetMsgQueue[i][0];
             if ("club_refresh_room" == str) {
                 var keys2Str = Object.keys(MjClient.NetMsgQueue[i][1]).toString();
                 if (keysStr == keys2Str) {
-                    record ++;
+                    record++;
                 }
             }
         }
@@ -9228,25 +8949,25 @@ MjClient.netCallBack = {
         // （原结构如此：startQueueNetMsg ，var  handleData=dh[1](ed[1]);）
         if (record == 1) {
             return 1;
-        }else{
+        } else {
             if (record <= 0) {
                 cc.log(" Error : club_refresh_room is not exit !")
             }
             return -1;
         }
     }],
-    club_update_room:[0, function (d) {      // club 更新联盟房间列表
+    club_update_room: [0, function (d) {      // club 更新联盟房间列表
     }],
- 
-    league_refresh_room:[0, function (d) {      // club 刷新联盟房间列表(服务器推送)  startQueueNetMsg var  handleData=dh[1](ed[1]);
+
+    league_refresh_room: [0, function (d) {      // club 刷新联盟房间列表(服务器推送)  startQueueNetMsg var  handleData=dh[1](ed[1]);
         var record = 0;
         var keysStr = Object.keys(d).toString();
         for (var i = 0; i < MjClient.NetMsgQueue.length; i++) {
-            var str =  MjClient.NetMsgQueue[i][0];
+            var str = MjClient.NetMsgQueue[i][0];
             if ("league_refresh_room" == str) {
                 var keys2Str = Object.keys(MjClient.NetMsgQueue[i][1]).toString();
                 if (keysStr == keys2Str) {
-                    record ++;
+                    record++;
                 }
             }
         }
@@ -9254,7 +8975,7 @@ MjClient.netCallBack = {
         // （原结构如此：startQueueNetMsg ，var  handleData=dh[1](ed[1]);）
         if (record == 1) {
             return 1;
-        }else{
+        } else {
             if (record <= 0) {
                 cc.log(" Error : club_refresh_room is not exit !")
             }
@@ -9262,37 +8983,34 @@ MjClient.netCallBack = {
         }
     }],
 
-    league_update_room:[0, function (d) {      // club 更新联盟房间列表
+    league_update_room: [0, function (d) {      // club 更新联盟房间列表
     }],
-    
-    club_refresh_info:[0, function (d) {      // club 刷新亲友圈信息（服务器推送)
+
+    club_refresh_info: [0, function (d) {      // club 刷新亲友圈信息（服务器推送)
 
     }],
-    club_update_info:[0, function (d) {      // club 更新亲友圈信息（服务器推送)
+    club_update_info: [0, function (d) {      // club 更新亲友圈信息（服务器推送)
 
     }],
-    league_refresh_info:[0, function (d) {      // club 刷新联盟亲友圈信息（服务器推送)
+    league_refresh_info: [0, function (d) {      // club 刷新联盟亲友圈信息（服务器推送)
     }],
-    league_update_info:[0, function (d) {      // club 更新联盟亲友圈信息（服务器推送)
+    league_update_info: [0, function (d) {      // club 更新联盟亲友圈信息（服务器推送)
     }],
-    league_match_user:[0, function (d) {      // 联盟 比赛信息推送,解决进入亲友圈接口没有返回比赛信息的bug
+    league_match_user: [0, function (d) {      // 联盟 比赛信息推送,解决进入亲友圈接口没有返回比赛信息的bug
     }],
-    club_remove_player:[0, function (d) {      // club 被踢出亲友圈或亲友圈被解散（服务器推送)
+    club_remove_player: [0, function (d) {      // club 被踢出亲友圈或亲友圈被解散（服务器推送)
         if (d)
             MjClient.showToast(d);
     }],
-    league_remove_player:[0, function (d) {      // 联盟club 被踢出亲友圈或亲友圈被解散（服务器推送)
+    league_remove_player: [0, function (d) {      // 联盟club 被踢出亲友圈或亲友圈被解散（服务器推送)
         if (d)
             MjClient.showToast(d);
     }],
-    club_player_apply:[0, function (d) {        //club 亲友圈审核信息
+    club_player_apply: [0, function (d) {        //club 亲友圈审核信息
         //进入游戏推的消息
-        if (d.code == 0 && d.data && !d.data.userId)
-        {
-            for (var i = 0; i < d.data.length; i ++)
-            {
-                if (MjClient.clubPlayerApplyList.indexOf(d.data[i]) == -1)
-                {
+        if (d.code == 0 && d.data && !d.data.userId) {
+            for (var i = 0; i < d.data.length; i++) {
+                if (MjClient.clubPlayerApplyList.indexOf(d.data[i]) == -1) {
                     MjClient.clubPlayerApplyList.push(d.data[i]);
                 }
             }
@@ -9300,75 +9018,68 @@ MjClient.netCallBack = {
                 MjClient.showToast(d.message);
         }
         //推过来的新数据
-        if (d.code == 0 && d.data && d.data.userId)
-        {
-            if (MjClient.clubPlayerApplyList.indexOf(d.data.clubId) == -1)
-            {
+        if (d.code == 0 && d.data && d.data.userId) {
+            if (MjClient.clubPlayerApplyList.indexOf(d.data.clubId) == -1) {
                 MjClient.clubPlayerApplyList.push(d.data.clubId);
             }
 
-            if(util.localStorageEncrypt.getBoolItem("clubIsShowShenhe" + d.data.clubId, true))
-            {
+            if (util.localStorageEncrypt.getBoolItem("clubIsShowShenhe" + d.data.clubId, true)) {
                 var layer = new Friendcard_popMsgShenhe(d.data);
                 FriendCard_Common.PopUpMsgCount++;
-                MjClient.Scene.addChild(layer,10000 - FriendCard_Common.PopUpMsgCount);
+                MjClient.Scene.addChild(layer, 10000 - FriendCard_Common.PopUpMsgCount);
             }
-            else if(d.message)
-            {
+            else if (d.message) {
                 MjClient.showToast(d.message);
             }
         }
     }],
-    club_adder_invite:[0, function (d) {        //club 亲友圈邀请审核信息
+    club_adder_invite: [0, function (d) {        //club 亲友圈邀请审核信息
         //推过来的新数据
-        if (d.code == 0 )
-        {
+        if (d.code == 0) {
             FriendCard_Common.PopUpMsgCount++;
             MjClient.Scene.addChild(new Friendcard_popMsgInvited(d.data), 10000 - FriendCard_Common.PopUpMsgCount);
         }
     }],
-    league_adder_invite:[0, function (d) {        //联盟邀请审核信息
+    league_adder_invite: [0, function (d) {        //联盟邀请审核信息
         //推过来的新数据
-        if (d.code == 0 )
-        {
+        if (d.code == 0) {
             FriendCard_Common.PopUpMsgCount++;
             MjClient.Scene.addChild(new Friendcard_popMsgInvited(d.data), 10000 - FriendCard_Common.PopUpMsgCount);
         }
     }],
-    user_invite_check:[0, function (d) {        //亲友圈、联盟 邀请未审核信息 服务端推送
-        if (d.message)
-        {
+    user_invite_check: [0, function (d) {        //亲友圈、联盟 邀请未审核信息 服务端推送
+        if (d.message) {
             MjClient.showMsg(d.message);
-            postEvent("refresh_inviteShenhe_num", {num:d.data.nums});
+            postEvent("refresh_inviteShenhe_num", { num: d.data.nums });
         }
     }],
-    user_store_order :[0, function (d) {        //club 亲友圈审核信息
+    user_store_order: [0, function (d) {        //club 亲友圈审核信息
         //推过来的新数据
-        if(d && d.iselfAudit){
+        if (d && d.iselfAudit) {
             MjClient.showToast("您有一笔免审核订单已经自动通过")
             return;
         }
-        if (d.code == 0 && d.goodsData){
+        if (d.code == 0 && d.goodsData) {
             var layer = new Friendcard_shop_shenhePopMsg(d);
             FriendCard_Common.PopUpMsgCount++;
-            MjClient.Scene.addChild(layer,10000 - FriendCard_Common.PopUpMsgCount);
+            MjClient.Scene.addChild(layer, 10000 - FriendCard_Common.PopUpMsgCount);
         }
-        if(MjClient.systemConfig){
+        if (MjClient.systemConfig) {
             MjClient.systemConfig.isNewDiamondOrder = 1;
         }
-        postEvent("audit_diamond_order_seller",{isNewDiamondOrder:1})
+        postEvent("audit_diamond_order_seller", { isNewDiamondOrder: 1 })
     }],
-    audit_diamond_order_buyer:[0, function (d) {//亲友圈商城订单处理通知买家
-        if(d.status == 1){
-            MjClient.showToast(d.message+"");
+    audit_diamond_order_buyer: [0, function (d) {//亲友圈商城订单处理通知买家
+        if (d.status == 1) {
+            MjClient.showToast(d.message + "");
         }
     }],
-    audit_diamond_order_seller:[0, function (d) {//亲友圈是否有待处理商城订单
-        if(MjClient.systemConfig){
+    audit_diamond_order_seller: [0, function (d) {//亲友圈是否有待处理商城订单
+        if (MjClient.systemConfig) {
             MjClient.systemConfig.isNewDiamondOrder = d.isNewDiamondOrder
         }
     }],
-    notify_in_club:[0, function (d) {//【联盟】设置比例提醒  和 比赛场权限更改提示
+    notify_in_club: [0, function (d) {//【联盟】设置比例提醒  和 比赛场权限更改提示
         if (cc.sys.isObjectValid(MjClient.FriendCard_main_ui)) {
             if (d.leagueAvatar || d.clubAvatar)
                 MjClient.FriendCard_main_ui.addChild(new Friendcard_tipSetRatioDialog(d));
@@ -9380,7 +9091,7 @@ MjClient.netCallBack = {
                     function () {
                     },
                     function () { });
-                if(FriendCard_UI.FriendCard_Match_CheckRight){
+                if (FriendCard_UI.FriendCard_Match_CheckRight) {
                     MjClient.showToast("你的上级对你进行了新的授权,请重新打开页面设置");
                     FriendCard_UI.FriendCard_Match_CheckRight.removeFromParent();
                 }
@@ -9388,55 +9099,52 @@ MjClient.netCallBack = {
 
         }
     }],
-    league_rule_forbid_user:[0, function (d) {//【联盟】屏蔽名单
+    league_rule_forbid_user: [0, function (d) {//【联盟】屏蔽名单
     }],
-    club_rule_forbid_user:[0, function (d) {//【联盟】屏蔽名单
-        
-    }],
-    fangka_extratime_draw:[0, function (d) {//亲友圈房卡加时抽奖
+    club_rule_forbid_user: [0, function (d) {//【联盟】屏蔽名单
 
-        if(cc.sys.isObjectValid(MjClient.friendCard_actLuckyDraw)){
+    }],
+    fangka_extratime_draw: [0, function (d) {//亲友圈房卡加时抽奖
+
+        if (cc.sys.isObjectValid(MjClient.friendCard_actLuckyDraw)) {
             MjClient.friendCard_actLuckyDraw.removeFromParent();
         }
         MjClient._isNeedShowFriendCardActLuckyDraw = false;
-        if(cc.sys.isObjectValid(MjClient.FriendCard_main_ui)){
+        if (cc.sys.isObjectValid(MjClient.FriendCard_main_ui)) {
             MjClient.FriendCard_main_ui.addChild(new FriendCard_actLuckyDraw());
-        }else{
+        } else {
             MjClient._isNeedShowFriendCardActLuckyDraw = true;
         }
     }],
-    fangka_extratime_hongbao:[0, function (d) {//亲友圈房卡加时抽红包
+    fangka_extratime_hongbao: [0, function (d) {//亲友圈房卡加时抽红包
         MjClient._isNeedShowFriendCardActRedPackage = true
         MjClient._friendcard_redPackage_count = d.count;
         //开始监听展示抢红包
         showRedPackageStickDialog();
     }],
-    club_fangkaju_hongbao_draw:[0, function (d) {//亲友圈房卡加抽到红包
-        if(!MjClient._redPackageToastList){
+    club_fangkaju_hongbao_draw: [0, function (d) {//亲友圈房卡加抽到红包
+        if (!MjClient._redPackageToastList) {
             MjClient._redPackageToastList = [];
         }
-        if(d.level <= 10 && d.level > 0){
+        if (d.level <= 10 && d.level > 0) {
             MjClient._redPackageToastList.push(d);
             FriendCard_UI.showAwardToast();
         }
     }],
-    league_fangkaju_hongbao_draw:[0, function (d) {//联盟房卡加抽到红包
-        if(!MjClient._redPackageToastList){
+    league_fangkaju_hongbao_draw: [0, function (d) {//联盟房卡加抽到红包
+        if (!MjClient._redPackageToastList) {
             MjClient._redPackageToastList = [];
         }
-        if(d.level <= 10 && d.level > 0){
+        if (d.level <= 10 && d.level > 0) {
             MjClient._redPackageToastList.push(d);
             FriendCard_UI.showAwardToast();
         }
     }],
-    league_player_apply:[0, function (d) {        //club 联盟亲友圈审核信息
+    league_player_apply: [0, function (d) {        //club 联盟亲友圈审核信息
         //进入游戏推的消息
-        if (d.code == 0 && d.data && !d.data.userId)
-        {
-            for (var i = 0; i < d.data.length; i ++)
-            {
-                if (MjClient.clubPlayerApplyList.indexOf(d.data[i]) == -1)
-                {
+        if (d.code == 0 && d.data && !d.data.userId) {
+            for (var i = 0; i < d.data.length; i++) {
+                if (MjClient.clubPlayerApplyList.indexOf(d.data[i]) == -1) {
                     MjClient.clubPlayerApplyList.push(d.data[i]);
                 }
             }
@@ -9444,89 +9152,83 @@ MjClient.netCallBack = {
                 MjClient.showToast(d.message);
         }
         //推过来的新数据
-        if (d.code == 0 && d.data && d.data.userId)
-        {
-            if (MjClient.clubPlayerApplyList.indexOf(d.data.clubId) == -1)
-            {
+        if (d.code == 0 && d.data && d.data.userId) {
+            if (MjClient.clubPlayerApplyList.indexOf(d.data.clubId) == -1) {
                 MjClient.clubPlayerApplyList.push(d.data.clubId);
             }
 
-            if(util.localStorageEncrypt.getBoolItem("clubIsShowShenhe" + d.data.clubId, true))
-            {
+            if (util.localStorageEncrypt.getBoolItem("clubIsShowShenhe" + d.data.clubId, true)) {
                 var layer = new Friendcard_popMsgShenhe(d.data);
                 FriendCard_Common.PopUpMsgCount++;
-                MjClient.Scene.addChild(layer,10000 - FriendCard_Common.PopUpMsgCount);
+                MjClient.Scene.addChild(layer, 10000 - FriendCard_Common.PopUpMsgCount);
             }
-            else if(d.message)
-            {
+            else if (d.message) {
                 MjClient.showToast(d.message);
             }
 
         }
     }],
-    cancel_club_player_apply:[0, function (d) {
-        if (d.code == 0 && d.data)
-        {
-            for (var i = 0; i < d.data.length; i ++)
-            {
+    cancel_club_player_apply: [0, function (d) {
+        if (d.code == 0 && d.data) {
+            for (var i = 0; i < d.data.length; i++) {
                 var index = MjClient.clubPlayerApplyList.indexOf(d.data[i]);
                 if (index >= 0)
                     MjClient.clubPlayerApplyList.splice(index, 1);
             }
         }
     }],
-    club_hide_status: [0, function(d) {
-        if(cc.sys.isObjectValid(MjClient.FriendCard_main_ui)){
-            
+    club_hide_status: [0, function (d) {
+        if (cc.sys.isObjectValid(MjClient.FriendCard_main_ui)) {
+
             var clubId = util.localStorageEncrypt.getNumberItem(FriendCard_Common.LocalKey.lastIntoClub, 0);
-            if(clubId != d.clubId){
+            if (clubId != d.clubId) {
                 d.leagueId = null;
-            }else{
-                if(d.clubHideStatus == 1 && d.message){
+            } else {
+                if (d.clubHideStatus == 1 && d.message) {
                     MjClient.showToast(d.message);
                 }
             }
-            postEvent("club_refresh_list",d)
-        }else{
-            if(d && d.clubHideStatus == 1){
-                if(!MjClient._canNotBackToHallClubIds){
+            postEvent("club_refresh_list", d)
+        } else {
+            if (d && d.clubHideStatus == 1) {
+                if (!MjClient._canNotBackToHallClubIds) {
                     MjClient._canNotBackToHallClubIds = [];
                     MjClient._backToHallToLMClubIds = [];
                 }
                 MjClient._canNotBackToHallClubIds.push(d.clubId);
                 MjClient._backToHallToLMClubIds.push(d.leagueId);
-                
-            }else if(d && d.clubHideStatus == 0){
-                if(MjClient._canNotBackToHallClubIds){
+
+            } else if (d && d.clubHideStatus == 0) {
+                if (MjClient._canNotBackToHallClubIds) {
                     var index = MjClient._canNotBackToHallClubIds.indexOf(d.clubId);
-                    if(index >= 0){
-                        MjClient._canNotBackToHallClubIds.splice(index,1);
-                        MjClient._backToHallToLMClubIds.splice(index,1);
+                    if (index >= 0) {
+                        MjClient._canNotBackToHallClubIds.splice(index, 1);
+                        MjClient._backToHallToLMClubIds.splice(index, 1);
                     }
                 }
             }
         }
     }],
-    club_refresh_list: [0, function(d) {
-        MjClient.Scene.runAction(cc.sequence(cc.delayTime(1.0), cc.callFunc(function() {
+    club_refresh_list: [0, function (d) {
+        MjClient.Scene.runAction(cc.sequence(cc.delayTime(1.0), cc.callFunc(function () {
             MjClient.showToast("您的亲友圈申请已通过");
         })));
     }],
-    club_invite_game: [0, function(d) {
+    club_invite_game: [0, function (d) {
         friendCard_yaoqingIntoGame(d);
     }],
     //联盟亲友圈
-    league_refresh_list: [0, function(d) {
+    league_refresh_list: [0, function (d) {
         // MjClient.Scene.runAction(cc.sequence(cc.delayTime(1.0), cc.callFunc(function() {
         //     MjClient.showToast("您的联盟亲友圈申请已通过");
         // })));
     }],
     //联盟亲友圈
-    league_invite_game: [0, function(d) {
+    league_invite_game: [0, function (d) {
         friendCard_yaoqingIntoGame(d);
     }],
     // 联盟 被邀请联盟/俱乐部同意
-    league_club_invite: [0, function(rtn) {
+    league_club_invite: [0, function (rtn) {
         if (rtn.code != 0) {
             FriendCard_Common.serverFailToast(rtn);
             return;
@@ -9536,29 +9238,28 @@ MjClient.netCallBack = {
             MjClient.league_club_invite_list = [];
 
         if (rtn.list)
-            MjClient.league_club_invite_list = MjClient.league_club_invite_list.concat(rtn.list); 
+            MjClient.league_club_invite_list = MjClient.league_club_invite_list.concat(rtn.list);
     }],
     // 俱乐部更新体力值
-    club_update_user_mp: [0, function(d) {
+    club_update_user_mp: [0, function (d) {
     }],
-    league_update_user_mp: [0, function(d) {
+    league_update_user_mp: [0, function (d) {
     }],
-    redpoint_member_button: [0, function(d) {
+    redpoint_member_button: [0, function (d) {
     }],
     //比赛场
-    redpoint_match_button: [0, function(d) {
+    redpoint_match_button: [0, function (d) {
     }],
-    LeaveRoom:[0, function (d) {
-        if(MjClient.setui)
-        {
+    LeaveRoom: [0, function (d) {
+        if (MjClient.setui) {
             MjClient.setui.removeFromParent(true);
             MjClient.setui = null;
         }
         var sData = MjClient.data.sData;
         var bmatchLeave = d.indexOf("您已被上级设置为禁止加入房间的团队，如有疑问，请联系会长或管理员！") != -1; //比赛禁玩限制提示语过滤
         var matchAllowLeave = sData && (sData.tData.tState == TableState.waitJoin || sData.tData.tState == TableState.waitReady || sData.tData.roundNum == -2) //比赛场牌局允许离开房间的条件
-        if ( !bmatchLeave || matchAllowLeave){
-            MjClient.showMsg(d + "", function() {
+        if (!bmatchLeave || matchAllowLeave) {
+            MjClient.showMsg(d + "", function () {
                 if (sData) {
                     var clubInfoTable = getClubInfoInTable();
                     if (clubInfoTable)
@@ -9570,44 +9271,44 @@ MjClient.netCallBack = {
             });
         }
     }],
-    notification:[0, function (d) {
+    notification: [0, function (d) {
         if (d.logout === true) {
             MjClient.logout();
         }
         MjClient.showMsgTop(d.content);
     }],
-    lotteryCanGet:[0,function(d){
+    lotteryCanGet: [0, function (d) {
 
     }],
-    after_ready:[0,function(d){
+    after_ready: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
 
-        if(typeof(d.tState) != 'undefined') {
+        if (typeof (d.tState) != 'undefined') {
             sData.tData.tState = d.tState;
             for (var uid in sData.players) sData.players[uid].mjState = d.tState;
         }
 
         // 准备后的切牌操作
-        if( sData.tData.tState == TableState.afterReady && d.actionName && d.actionName == 'qiepai' ) {
-            cc.log("after_ready showPlayerShuffleView====",JSON.stringify(d))
-            postEvent("showPlayerShuffleView",d);
+        if (sData.tData.tState == TableState.afterReady && d.actionName && d.actionName == 'qiepai') {
+            cc.log("after_ready showPlayerShuffleView====", JSON.stringify(d))
+            postEvent("showPlayerShuffleView", d);
         }
-        if( sData.tData.tState == TableState.afterReady && d.actionName && d.actionName == 'qiepai_end' ) {
-            cc.log("after_ready showPlayerShuffleAnim====",JSON.stringify(d))
-            postEvent("showPlayerShuffleAnim",d);
+        if (sData.tData.tState == TableState.afterReady && d.actionName && d.actionName == 'qiepai_end') {
+            cc.log("after_ready showPlayerShuffleAnim====", JSON.stringify(d))
+            postEvent("showPlayerShuffleAnim", d);
         }
     }],
-    select_shuffle_index:[0,function(d){
+    select_shuffle_index: [0, function (d) {
 
     }],
-    refresh_mail_list:[0, function(d){
+    refresh_mail_list: [0, function (d) {
         MjClient.emailData = d;
     }],
-    refresh_mission:[0, function(d){
+    refresh_mission: [0, function (d) {
         MjClient._GoldFuli = d.data;
     }],
-    FreeBegin:[0, function(d){
+    FreeBegin: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         if (d.players) {
@@ -9619,55 +9320,55 @@ MjClient.netCallBack = {
         if (d.tData)
             sData.tData = d.tData;
     }],
-    enter_room:[0, function (d) {
-        MjClient.joinGame(d.tableid, null,false,MjClient.gameType);
+    enter_room: [0, function (d) {
+        MjClient.joinGame(d.tableid, null, false, MjClient.gameType);
     }],
-    PKWrongful:[0,function (d) {
+    PKWrongful: [0, function (d) {
         cc.log('不合法！')
     }],
-    PKMingPai:[0,function (d) {
+    PKMingPai: [0, function (d) {
         cc.log('Nothing to do !')
     }],
-    waitQiang:[0,function (d) {
+    waitQiang: [0, function (d) {
         cc.log("waitQiang event");
         MjClient.data.sData.tData.tState = TableState.waitJiazhu;
     }],
-    s2cQiangZhuang:[0,function (d) {
+    s2cQiangZhuang: [0, function (d) {
     }],
-    partnerJieFeng:[0,function (d){
+    partnerJieFeng: [0, function (d) {
 
     }],
-    partnerCards:[0,function (d){
+    partnerCards: [0, function (d) {
 
     }],
-    updatePlayerZhuaFen:[0,function (d){
-        var UIoff =  getUiOffByUid(d.uid);
+    updatePlayerZhuaFen: [0, function (d) {
+        var UIoff = getUiOffByUid(d.uid);
         var pl = getUIPlayer(UIoff);
-        if(pl){
+        if (pl) {
             pl.zhuaFen = d.zhuaFen;
         }
     }],
-    playerXiFen:[0,function (d){
+    playerXiFen: [0, function (d) {
     }],
-    updatePlayerXiFen:[0,function (d){
+    updatePlayerXiFen: [0, function (d) {
     }],
-    updateRoundZhuaFen:[0,function (d){
+    updateRoundZhuaFen: [0, function (d) {
     }],
-    earlyTermination:[0,function (d){
+    earlyTermination: [0, function (d) {
     }],
-    playerBieWang:[0,function (d){
-        var UIoff =  getUiOffByUid(d.uid);
+    playerBieWang: [0, function (d) {
+        var UIoff = getUiOffByUid(d.uid);
         var pl = getUIPlayer(UIoff);
-        if(pl){
+        if (pl) {
             pl.bieWang = true;
         }
     }],
 
-    waitBaoxi:[0,function (d) {
+    waitBaoxi: [0, function (d) {
         cc.log("waitBaoxi event");
         MjClient.data.sData.tData.tState = TableState.waitBaoXi;
     }],
-    Baoxi:[0,function (d) {
+    Baoxi: [0, function (d) {
         // 株洲打码子
         var sData = MjClient.data.sData;
 
@@ -9675,7 +9376,7 @@ MjClient.netCallBack = {
             return;
 
         for (var uid in sData.players) {
-            var localPlayer = sData.players[uid]; 
+            var localPlayer = sData.players[uid];
             if (uid == d.uid) {
                 localPlayer.winall += d.score;
 
@@ -9686,15 +9387,15 @@ MjClient.netCallBack = {
                         MjClient.majiang.setXiCards(d.xiCard);
                 }
             } else
-                localPlayer.winall -= d.score/(MjClient.MaxPlayerNum - 1);
+                localPlayer.winall -= d.score / (MjClient.MaxPlayerNum - 1);
         }
     }],
-    TouXiang:[0,function (d) {
+    TouXiang: [0, function (d) {
         cc.log("TouXiang event");
     }],
-    initJiPaiQi:[0,function (d) {
+    initJiPaiQi: [0, function (d) {
         // 初始化记牌器
-        if(MjClient.data.sData) {
+        if (MjClient.data.sData) {
             MjClient.data.sData.tData.jipaiqi = d.jipaiqi;
 
         } else {
@@ -9702,21 +9403,21 @@ MjClient.netCallBack = {
         }
     }],
 
-    MJChangeLocationApp: [0, function(d) {
+    MJChangeLocationApp: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData || !sData.players[d.uid]) return;
         var pl = sData.players[d.uid];
         pl.locationApps = d.appList;
     }],
 
-    locationApps : [0, function(d){
+    locationApps: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[d.uid];
         pl.locationApps = d.locationApps;
     }],
 
-    putCardAfterGang:[0, function(d){  // 安化麻将打出骰后展示的麻将
+    putCardAfterGang: [0, function (d) {  // 安化麻将打出骰后展示的麻将
         var sData = MjClient.data.sData;
         if (!sData) return;
 
@@ -9735,48 +9436,48 @@ MjClient.netCallBack = {
             sData.players[uid].mjState = TableState.waitEat;
         }
 
-        if(MjClient.gameType === MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG){
+        if (MjClient.gameType === MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) {
             tData.touingUid = null;
             tData.lastPutCard = d.card;
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG){
+        if (MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) {
             tData.isFirstPut = false;
         }
     }],
-    MJGangScore:[0, function(d){
+    MJGangScore: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(!sData){
+        if (!sData) {
             return;
         }
         var scoreArr = d.scoreArr;
-        for(var uid in scoreArr){
+        for (var uid in scoreArr) {
             sData.players[uid].gangScore = sData.players[uid].gangScore || 0;
             sData.players[uid].gangScore += scoreArr[uid];
         }
     }],
-    MJCanBaoTing:[0, function (d) {  //可以起手报听
+    MJCanBaoTing: [0, function (d) {  //可以起手报听
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
         var pl = sData.players[d.uid];
-        if(d.tingStatus){
+        if (d.tingStatus) {
             pl.tingStatus = d.tingStatus;
-        }else{
+        } else {
             tData.allPlayerTingFalg = d;
         }
 
-        if(d.eatFlag && (d.eatFlag & 8) == 8){
+        if (d.eatFlag && (d.eatFlag & 8) == 8) {
             pl.eatFlag = d.eatFlag;
         }
 
-        if(d.canBaotingNum){
+        if (d.canBaotingNum) {
             tData.canBaotingNum = d.canBaotingNum;
         }
     }],
-    MJBaoTing:[0, function (d) {    // 起手报听
-        if((d.isBaoTing || d.tingStatus == 1) && (MjClient.gameType != MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG && MjClient.gameType != MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG)){
-            playEffectInPlay("ting",false,d.uid);
+    MJBaoTing: [0, function (d) {    // 起手报听
+        if ((d.isBaoTing || d.tingStatus == 1) && (MjClient.gameType != MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG && MjClient.gameType != MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG)) {
+            playEffectInPlay("ting", false, d.uid);
         }
         var sData = MjClient.data.sData;
         if (!sData) return;
@@ -9785,7 +9486,7 @@ MjClient.netCallBack = {
         tData.canBaotingNum = d.canBaotingNum;
         pl.isTing = d.isBaoTing || d.tingStatus == 1;
         pl.tingStatus = d.tingStatus;
-        if((MjClient.gameType == MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) && MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()){
+        if ((MjClient.gameType == MjClient.GAME_TYPE.HUAI_HUA_MA_JIANG || MjClient.gameType == MjClient.GAME_TYPE.JING_ZHOU_MA_JIANG) && MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) {
             pl.passHu = (pl.eatFlag & 8);
         }
         if (d.eatFlag) pl.eatFlag = d.eatFlag;
@@ -9798,7 +9499,7 @@ MjClient.netCallBack = {
             }
         }
     }],
-    MJFengDong:[0, function(d){    //  宁乡开王麻将封东
+    MJFengDong: [0, function (d) {    //  宁乡开王麻将封东
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[d.uid];
@@ -9806,9 +9507,9 @@ MjClient.netCallBack = {
         pl.putIndex = d.putIndex;
         sData.tData.canBaotingNum = d.canBaotingNum;
     }],
-    PickHaiDiCard:[0, function(d){  //  宁乡开王麻将选择海底牌
+    PickHaiDiCard: [0, function (d) {  //  宁乡开王麻将选择海底牌
     }],
-    MJPickHaiDi:[0, function(d){
+    MJPickHaiDi: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
@@ -9816,7 +9517,7 @@ MjClient.netCallBack = {
         pl.haiDiStatus = d.haiDiStatus;
         tData.curPlayer = d.curPlayer;
     }],
-    MJOtherGang:[0, function(d){    //  宁乡开王麻将借子开杠
+    MJOtherGang: [0, function (d) {    //  宁乡开王麻将借子开杠
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
@@ -9829,125 +9530,125 @@ MjClient.netCallBack = {
         tData.tState = d.tData.tState;
         tData.curPlayer = d.tData.curPlayer;
     }],
-    HZPickScore:[0,function(d){
+    HZPickScore: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
 
         var pickScores = d.pickScores;
-        for(var uid  in pickScores){
+        for (var uid in pickScores) {
             var pl = sData.players[uid];
             pl.winone += pickScores[uid];
             pl.winone = revise(pl.winone);
         }
     }],
-    HZAlarm:[0,function(d){
+    HZAlarm: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
 
         var alarmFlags = d.alarmFlags;
-        for(var uid  in alarmFlags){
+        for (var uid in alarmFlags) {
             var pl = sData.players[uid];
             pl.alarmFlag = alarmFlags[uid];
-            if(pl.alarmFlag == 1){
+            if (pl.alarmFlag == 1) {
                 playEffectInPlay("baojing");
-        }
+            }
         }
         var p = sData.players[d.uid];
-        if(d.canNotPutCard){
-           p.canNotPutCard = d.canNotPutCard; 
+        if (d.canNotPutCard) {
+            p.canNotPutCard = d.canNotPutCard;
         }
     }],
-    startShuffleCards:[0,function(d){
+    startShuffleCards: [0, function (d) {
         MjClient.data.sData.tData.curPlayer = d.curPlayer;
         MjClient.data.sData.tData.shuffler = d.curPlayer;
         MjClient.data.sData.tData.tState = TableState.waitShuffle;
         // 开始切牌
         cc.log("ssssss 切牌开始");
     }],
-    endShuffleCards:[0,function(d){
+    endShuffleCards: [0, function (d) {
         // 切牌结束
         cc.log("ssssss 切牌结束");
         cc.log(JSON.stringify(d));
     }],
-    waitBao : [0, function(d){
+    waitBao: [0, function (d) {
         var sData = MjClient.data.sData;
         sData.tData.tState = TableState.waitBao
         var pl = sData.players[d.uid];
         pl.bao = -2;  // -3 无 -2 等待选择包牌 -1等待选择队友 0 选择不包 1选择包牌 
         sData.tData.curPlayer = sData.tData.uids.indexOf(pl.info.uid);
     }],
-    waitFindFriend : [0, function(d){
+    waitFindFriend: [0, function (d) {
         var sData = MjClient.data.sData;
         sData.tData.tState = TableState.waitBao
         var pl = sData.players[d.uid];
         pl.bao = -1;
         sData.tData.curPlayer = sData.tData.uids.indexOf(pl.info.uid);
     }],
-    PKFindFriend : [0, function(d){
+    PKFindFriend: [0, function (d) {
         var tData = MjClient.data.sData.tData;
         tData.friendCard = d.card;
         var pl = MjClient.data.sData.players[d.uid];
         pl.bao = 0;
     }],
-    PKTeam : [0, function(d){
+    PKTeam: [0, function (d) {
         var tData = MjClient.data.sData.tData;
         tData.baoType = d.baoType; //-1 未确定 0包 1暗包 2分组
         tData.baoUid = d.baoUid; // 包玩家uid
         var players = MjClient.data.sData.players;
         var len = d.friendUids;
-        for(var uid in d.friendUids){
+        for (var uid in d.friendUids) {
             var pl = players[uid];
             pl.friendUid = d.friendUids[uid];
         }
     }],
-    PKBao : [0, function(d){
+    PKBao: [0, function (d) {
         var sData = MjClient.data.sData;
         var pl = sData.players[d.uid];
-        pl.bao = d.bao; 
+        pl.bao = d.bao;
 
         if (d.bao == 1) {
             sData.tData.zhuang = sData.tData.uids.indexOf(pl.info.uid);
         }
     }],
-    s2cYJQianFenDiCards :[0, function(d){
+    s2cYJQianFenDiCards: [0, function (d) {
         var tData = MjClient.data.sData.tData;
         tData.diPaiArr = d.cards;
         tData.diPaiCount = d.cards.length;
     }],
-    TZXi : [0, function(d){
+    TZXi: [0, function (d) {
         var tData = MjClient.data.sData.tData;
         var players = MjClient.data.sData.players;
-        for(var uid in d.xiScores){
+        for (var uid in d.xiScores) {
             var pl = players[uid];
             pl.score_xi = d.xiScores[uid];
         }
     }],
-    MJWangZhua:[0.7, function(d){
+    MJWangZhua: [0.7, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var pl = sData.players[d.uid + ""];
         pl.eatFlag = 0;
         pl.mjState = TableState.waitCard;
     }],
-    userReportPush:[0,function (d) {      //举报推送信息
-        cc.log("wxd===userReportPush===="+JSON.stringify(d));
+    userReportPush: [0, function (d) {      //举报推送信息
+        cc.log("wxd===userReportPush====" + JSON.stringify(d));
     }],
-    SelectedQuanHun:[0, function(){
+    SelectedQuanHun: [0, function () {
         cc.log("SelectedQuanHun......")
     }],
-    QuanHunToAllPlayer:[0, function (d) {
+    QuanHunToAllPlayer: [0, function (d) {
         var sData = MjClient.data.sData;
         var pl = sData.players[d.uid + ""];
         pl.isQuanHun = d.isQuanHun;
         pl.eatFlag = d.eatFlag;
     }],
-    JiaBeiToAllPlayer:[0, function (d) {
+    JiaBeiToAllPlayer: [0, function (d) {
         var sData = MjClient.data.sData;
         var pl = sData.players[d.uid + ""];
         pl.jiabei = d.jiabei;
         sData.tData.allSelect = d.allSelect;
     }],
-    beDefeat:[0, function (d) {
+    beDefeat: [0, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
         var pl = sData.players[d.uid + ""];
@@ -9956,26 +9657,26 @@ MjClient.netCallBack = {
             pl.mjState = TableState.waitCard;
         }
     }],
-    exchangeMall:[0, function (d) {
+    exchangeMall: [0, function (d) {
 
     }],
-    selectGuMai:[0, function (d) { // 贵阳抓鸡选择估卖
+    selectGuMai: [0, function (d) { // 贵阳抓鸡选择估卖
         var sData = MjClient.data.sData;
         var pl = sData.players[d.uid + ""];
         pl.gumaiValue = d.gumaiValue;
     }],
-    playerMoneyChanged:[0, function (d) {
+    playerMoneyChanged: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(!sData){
+        if (!sData) {
             return;
         }
         var off = getUiOffByUid(d.userId);
         var pl = getUIPlayer(off);
         pl.info.money = pl.info.money - d.count;
     }],
-    selectTing:[0, function (d) {
+    selectTing: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(!sData){
+        if (!sData) {
             return;
         }
         var off = getUiOffByUid(d.uid);
@@ -9984,59 +9685,59 @@ MjClient.netCallBack = {
     }],
 
     //比赛场 相关 某人参加进来审核
-    club_join_match:[0, function (d) {
+    club_join_match: [0, function (d) {
         // cc.log(" ====== lms --- dddd  ",JSON.stringify(d));  
 
         var layer = new Friendcard_match_shenhePopMsg(d, 1);
         FriendCard_Common.PopUpMsgCount++;
-        MjClient.Scene.addChild(layer,10000 - FriendCard_Common.PopUpMsgCount);
+        MjClient.Scene.addChild(layer, 10000 - FriendCard_Common.PopUpMsgCount);
 
     }],
 
-    league_join_match:[0, function (d) {
+    league_join_match: [0, function (d) {
         // cc.log(" ====== lms --- dddd  ",JSON.stringify(d));  
 
         var layer = new Friendcard_match_shenhePopMsg(d, 1, true);
         FriendCard_Common.PopUpMsgCount++;
-        MjClient.Scene.addChild(layer,10000 - FriendCard_Common.PopUpMsgCount);
+        MjClient.Scene.addChild(layer, 10000 - FriendCard_Common.PopUpMsgCount);
 
     }],
 
     //比赛场 相关 某人退出比赛 (会长)
-    club_quit_match:[0, function (d) {
+    club_quit_match: [0, function (d) {
         var layer = new Friendcard_match_shenhePopMsg(d, 0);
         FriendCard_Common.PopUpMsgCount++;
-        MjClient.Scene.addChild(layer,10000 - FriendCard_Common.PopUpMsgCount);
+        MjClient.Scene.addChild(layer, 10000 - FriendCard_Common.PopUpMsgCount);
 
     }],
 
     //比赛场 相关 某人退出比赛 (会长)
-    league_quit_match:[0, function (d) {
+    league_quit_match: [0, function (d) {
         var layer = new Friendcard_match_shenhePopMsg(d, 0, true);
         FriendCard_Common.PopUpMsgCount++;
-        MjClient.Scene.addChild(layer,10000 - FriendCard_Common.PopUpMsgCount);
+        MjClient.Scene.addChild(layer, 10000 - FriendCard_Common.PopUpMsgCount);
 
     }],
 
     //league_match_aduit
-    league_match_aduit:[0, function (d) {
+    league_match_aduit: [0, function (d) {
 
     }],
 
-    club_match_aduit:[0, function (d) {
+    club_match_aduit: [0, function (d) {
 
     }],
 
-    match_overdue_notice:[0, function (d) {
+    match_overdue_notice: [0, function (d) {
 
     }],
-    league_transfer_creator_match:[0, function (d) {
+    league_transfer_creator_match: [0, function (d) {
 
     }],
 
 
     //比赛场 相关 某人退出比赛 （成员）
-    club_audit_match:[0, function (d) {
+    club_audit_match: [0, function (d) {
         var str = "";
         switch (d.status) {
             case 0:
@@ -10064,7 +9765,7 @@ MjClient.netCallBack = {
     }],
 
     //比赛场 相关 某人退出比赛 （成员）
-    league_audit_match:[0, function (d) {
+    league_audit_match: [0, function (d) {
         var str = "";
         switch (d.status) {
             case 0:
@@ -10093,42 +9794,42 @@ MjClient.netCallBack = {
         MjClient.showToast(str);
 
     }],
-    voteExtraTime:[0, function (d) {
+    voteExtraTime: [0, function (d) {
         //普通加时赛投票消息
-        if(MjClient.data.sData && MjClient.data.sData.tData){
+        if (MjClient.data.sData && MjClient.data.sData.tData) {
 
             var tData = MjClient.data.sData.tData;
             tData.extraTimeVote = d.extraTimeVote;
             var isAllAgree = true;
             var hasReject = false;
             var noChoiceNameStr = ""
-            for(var i = 0 ; i < tData.uids.length; i++){
-                var pl = MjClient.data.sData.players[tData.uids[i]+""];
-                var votePlData =  tData.extraTimeVote[tData.uids[i]];
-                if(votePlData && votePlData.vote != 1){
+            for (var i = 0; i < tData.uids.length; i++) {
+                var pl = MjClient.data.sData.players[tData.uids[i] + ""];
+                var votePlData = tData.extraTimeVote[tData.uids[i]];
+                if (votePlData && votePlData.vote != 1) {
                     isAllAgree = false;
                 }
-                if(votePlData && votePlData.vote == -1){
-                    noChoiceNameStr += (("玩家"+unescape(pl.info.nickname))+"、")
+                if (votePlData && votePlData.vote == -1) {
+                    noChoiceNameStr += (("玩家" + unescape(pl.info.nickname)) + "、")
                 }
-                if(votePlData && votePlData.vote === 0){
+                if (votePlData && votePlData.vote === 0) {
                     hasReject = true;
-                    if(pl){
-                        MjClient.showToast("玩家"+unescape(pl.info.nickname)+"拒绝延长比赛");
+                    if (pl) {
+                        MjClient.showToast("玩家" + unescape(pl.info.nickname) + "拒绝延长比赛");
                     }
-                    
+
                     break;
                 }
             }
-            if(isAllAgree){
+            if (isAllAgree) {
                 tData.extraTimeVote.isEnd = true;
                 MjClient.showToast("所有人同意，游戏进入加赛");
-                if(cc.sys.isObjectValid(MjClient.VoteJiaShiView)){
+                if (cc.sys.isObjectValid(MjClient.VoteJiaShiView)) {
                     MjClient.VoteJiaShiView.removeFromParent();
                 }
                 //去除准备按钮点击的遮罩
-                if(cc.sys.isObjectValid(MjClient.endoneui) &&
-                    cc.sys.isObjectValid(MjClient.endoneui._readyBtnLayout)){
+                if (cc.sys.isObjectValid(MjClient.endoneui) &&
+                    cc.sys.isObjectValid(MjClient.endoneui._readyBtnLayout)) {
                     cc.log("去除准备按钮点击的遮罩")
                     MjClient.endoneui._readyBtnLayout.removeFromParent();
                 }
@@ -10136,34 +9837,34 @@ MjClient.netCallBack = {
             if (d.playInfo && MjClient.data.playLog) {
                 MjClient.data.playLog.logs.push(d.playInfo);
             }
-            if(d.playInfo){
+            if (d.playInfo) {
                 tData.extraTimeVote.isEnd = true;
                 //展示大结算
-                if(tData.roundNum > 0){
+                if (tData.roundNum > 0) {
                     tData.roundNum = 0;
                 }
-                if(!hasReject){
+                if (!hasReject) {
                     //超时拒绝
-                    if(noChoiceNameStr.length > 0){
-                        noChoiceNameStr = noChoiceNameStr.substring(0,noChoiceNameStr.length-1);
+                    if (noChoiceNameStr.length > 0) {
+                        noChoiceNameStr = noChoiceNameStr.substring(0, noChoiceNameStr.length - 1);
                     }
-                    MjClient.showToast(noChoiceNameStr+"选择超时，加时取消");
+                    MjClient.showToast(noChoiceNameStr + "选择超时，加时取消");
                 }
-                if(cc.sys.isObjectValid(MjClient.VoteJiaShiView)){
+                if (cc.sys.isObjectValid(MjClient.VoteJiaShiView)) {
                     MjClient.VoteJiaShiView.removeFromParent();
                 }
                 //去除准备按钮点击的遮罩
-                if(cc.sys.isObjectValid(MjClient.endoneui) &&
-                    cc.sys.isObjectValid(MjClient.endoneui._readyBtnLayout)){
+                if (cc.sys.isObjectValid(MjClient.endoneui) &&
+                    cc.sys.isObjectValid(MjClient.endoneui._readyBtnLayout)) {
                     cc.log("去除准备按钮点击的遮罩")
                     MjClient.endoneui._readyBtnLayout.removeFromParent();
                 }
-                if(!cc.sys.isObjectValid(MjClient.endoneui) && !cc.sys.isObjectValid(MjClient.endallui)){
-                    postEvent("endRoom",{
-                        showEnd:true
+                if (!cc.sys.isObjectValid(MjClient.endoneui) && !cc.sys.isObjectValid(MjClient.endallui)) {
+                    postEvent("endRoom", {
+                        showEnd: true
                     });
-                }else{
-                    if(!cc.sys.isObjectValid(MjClient.endallui)){
+                } else {
+                    if (!cc.sys.isObjectValid(MjClient.endallui)) {
                         //有小结算没有大结算,检测小结算关闭弹大结算
                         doShowEndAllAction();
                     }
@@ -10172,17 +9873,17 @@ MjClient.netCallBack = {
         }
 
     }],
-    user_growth_activity:[0, function (d) {
-        if(!MjClient.growInfoData){
+    user_growth_activity: [0, function (d) {
+        if (!MjClient.growInfoData) {
             MjClient.growInfoData = d;
         }
 
-        for(var k in d ) MjClient.growInfoData[k] = d[k];
-        
+        for (var k in d) MjClient.growInfoData[k] = d[k];
+
     }],
 
     s2cMJJiazhu: [0, function (d) {
-        
+
     }],
 
     pkNewCard: [0, function (d) {
@@ -10205,7 +9906,7 @@ MjClient.netCallBack = {
 
     MJHuanPai: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(sData.players[d.uid]) {
+        if (sData.players[d.uid]) {
             sData.players[d.uid].mjhand = d.mjhand;
             sData.players[d.uid].huanBefore = d.huanBefore;   // 换之前的三张牌
         }
@@ -10217,21 +9918,21 @@ MjClient.netCallBack = {
         var player = MjClient.playui.getPlayerInfoByOff();
         player.mjhand = backData[player.info.uid].mjhand;
         player.huanAfter = backData[player.info.uid].huanAfter;   // 换之后的三张牌
-        if(player.mjhand && player.mjhand.length === 14){
+        if (player.mjhand && player.mjhand.length === 14) {
             player.eatFlag = d.eatFlag;
             player.mjState = d.tData.tState;
         }
     }],
 
     waitPuPai: [0, function (d) {
-        if(d && d.tData) {
+        if (d && d.tData) {
             MjClient.data.sData.tData = d.tData;
         }
     }],
 
     MJPuPai: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(sData.players[d.uid]) {
+        if (sData.players[d.uid]) {
             sData.players[d.uid].mjhand = d.mjhand;
             sData.players[d.uid].puCards = d.puCards;
         }
@@ -10241,13 +9942,13 @@ MjClient.netCallBack = {
         MjClient.data.sData.tData = d.tData;
         MjClient.data.sData.tData.tState = TableState.waitPut;
         var player = MjClient.playui.getPlayerInfoByOff();
-        if(player.mjhand && player.mjhand.length % 3 === 2){
+        if (player.mjhand && player.mjhand.length % 3 === 2) {
             player.eatFlag = d.eatFlag;
             player.mjState = d.tData.tState;
         }
     }],
 
-    user_treasure_activity:[0, function(d){
+    user_treasure_activity: [0, function (d) {
         MjClient.duoBaoPrizeData = d;
     }],
 
@@ -10273,10 +9974,10 @@ MjClient.netCallBack = {
     s2cDispatchDiCards: [0, function (d) {
         var tData = MjClient.data.sData.tData;
         var player = getUIPlayerByUID(d.uid);
-        
+
         if (player && player.mjhand) {
             var diCardsLength = tData.diCards.length;
-            var addCards = tData.diCards.slice(diCardsLength / 2 * d.part,diCardsLength / 2 * (d.part + 1));
+            var addCards = tData.diCards.slice(diCardsLength / 2 * d.part, diCardsLength / 2 * (d.part + 1));
 
             player.mjhand = player.mjhand.concat(addCards);
             player.handCount = player.mjhand.length;
@@ -10292,16 +9993,16 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
 
-        cc.log( "+++++++HZUpdateData", JSON.stringify(d));
-        if(d.chuoCards){
+        cc.log("+++++++HZUpdateData", JSON.stringify(d));
+        if (d.chuoCards) {
             for (var uid in sData.players) {
                 sData.players[uid].chuoCards = d.chuoCards[uid];
             }
         }
-        
+
     }],
 
-    HZSelectPut: [0, function(d) {
+    HZSelectPut: [0, function (d) {
         var sData = MjClient.data.sData;
         if (!sData) return;
         sData.tData = d.tData;
@@ -10311,62 +10012,62 @@ MjClient.netCallBack = {
         pl.selectPutState = d.selectPutState;
     }],
 
-    HZFanJiang: [0, function(d) {
+    HZFanJiang: [0, function (d) {
         MjClient.data.sData.tData = d.tData;
     }],
 
-    HZPutCardDir: [0, function(d) {
+    HZPutCardDir: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(sData) {
+        if (sData) {
             for (var uid in sData.players) {
-                if(d[uid]) {
+                if (d[uid]) {
                     sData.players[uid].putCardDir = d[uid];
                 }
             }
         }
     }],
-    waitVieGuan:[0,function (d) {
+    waitVieGuan: [0, function (d) {
         cc.log('Nothing to do !')
     }],
-    pkVieGuan:[0,function (d) {
+    pkVieGuan: [0, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
-        if (d.vieGuanState == 1)tData.areaSelectMode.firstHongTao3 = false;
+        if (d.vieGuanState == 1) tData.areaSelectMode.firstHongTao3 = false;
         //cc.log('Nothing to do !')
     }],
-    setLaizi:[0,function (d) {
+    setLaizi: [0, function (d) {
         cc.log('Nothing to do !')
     }],
     //阳新麻将仰牌
-    MJCanYangCard:[0, function(d){
+    MJCanYangCard: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(!sData) return;
+        if (!sData) return;
         var tData = sData.tData;
         tData.canYangNum = d.canYangNum;
-       
+
         var yangInfo = (d.yangInfo || {});
-        for(var uid in yangInfo){
+        for (var uid in yangInfo) {
             sData.players[uid].yangStatus = yangInfo[uid];
         }
 
-        if(d.canYangNum == 0){
+        if (d.canYangNum == 0) {
             tData.cardNext += 1;
             tData.hunCard = d.hunCard;
             var zhuangPlayer = sData.players[tData.uids[tData.zhuang]];
             zhuangPlayer.eatFlag = d.eatFlag;
             zhuangPlayer.mjput = zhuangPlayer.mjput || [];
             var laiZiPi = tData.hunCard - 1;
-            if(tData.hunCard > 30){
-                if(tData.hunCard == 71){
+            if (tData.hunCard > 30) {
+                if (tData.hunCard == 71) {
                     laiZiPi = 91;
-                }else{
+                } else {
                     laiZiPi = tData.hunCard - 10;
                 }
-            }else{
+            } else {
                 var color = Math.floor(tData.hunCard / 10);
                 var value = tData.hunCard % 10;
                 value -= 1;
-                if(value == 0) value = 9;
+                if (value == 0) value = 9;
                 laiZiPi = color * 10 + value;
             }
             zhuangPlayer.mjput.push(laiZiPi);
@@ -10374,46 +10075,46 @@ MjClient.netCallBack = {
     }],
 
     //阳新麻将玩家仰通知
-    MJYangCard: [0, function(d){
+    MJYangCard: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(!sData) return;
+        if (!sData) return;
         var tData = sData.tData;
         d = d || {};
         var yangPlayer = sData.players[d.uid];
         tData.canYangNum = d.canYangNum;
-        if(yangPlayer.yangStatus > 0 && yangPlayer.yangStatus == d.mjchi.length / 3){
+        if (yangPlayer.yangStatus > 0 && yangPlayer.yangStatus == d.mjchi.length / 3) {
             yangPlayer.yangStatus = 0;
-            for (var i = 0; i <  d.mjchi.length; i++){
-                if(d.uid == SelfUid()){
+            for (var i = 0; i < d.mjchi.length; i++) {
+                if (d.uid == SelfUid()) {
                     yangPlayer.mjhand.splice(yangPlayer.mjhand.indexOf(d.mjchi[i]), 1);
                 }
-                if(i % 3 == 0){
+                if (i % 3 == 0) {
                     yangPlayer.pengchigang["chi"] = yangPlayer.pengchigang["chi"] || [];
-                    yangPlayer.pengchigang["chi"].push({pos: tData.uids.indexOf(yangPlayer.info.uid), card: d.mjchi[i]});
+                    yangPlayer.pengchigang["chi"].push({ pos: tData.uids.indexOf(yangPlayer.info.uid), card: d.mjchi[i] });
                 }
             }
             yangPlayer.mjchi = yangPlayer.mjchi || [];
             yangPlayer.mjchi = yangPlayer.mjchi.concat(d.mjchi);
-           
+
         }
-        if(d.canYangNum == 0){
+        if (d.canYangNum == 0) {
             tData.cardNext += 1;
             tData.hunCard = d.hunCard;
             var zhuangPlayer = sData.players[tData.uids[tData.zhuang]];
             zhuangPlayer.mjput = zhuangPlayer.mjput || [];
             zhuangPlayer.eatFlag = d.eatFlag;
             var laiZiPi = tData.hunCard - 1;
-            if(tData.hunCard > 30){
-                if(tData.hunCard == 71){
+            if (tData.hunCard > 30) {
+                if (tData.hunCard == 71) {
                     laiZiPi = 91;
-                }else{
+                } else {
                     laiZiPi = tData.hunCard - 10;
                 }
-            }else{
+            } else {
                 var color = Math.floor(tData.hunCard / 10);
                 var value = tData.hunCard % 10;
                 value -= 1;
-                if(value == 0) value = 9;
+                if (value == 0) value = 9;
                 laiZiPi = color * 10 + value;
             }
             zhuangPlayer.mjput.push(laiZiPi);
@@ -10421,14 +10122,14 @@ MjClient.netCallBack = {
     }],
 
     waitLiangCard: [0, function (d) {
-        if(d && d.tData) {
+        if (d && d.tData) {
             MjClient.data.sData.tData = d.tData;
         }
     }],
 
     MJLiangPai: [0, function (d) {
         var sData = MjClient.data.sData;
-        if(sData.players[d.uid]) {
+        if (sData.players[d.uid]) {
             sData.players[d.uid].mjhand = d.mjhand;
             sData.players[d.uid].liangCards = d.liangCards;
         }
@@ -10442,12 +10143,12 @@ MjClient.netCallBack = {
         }
     }],
     //靖州麻将拦胡消息
-    MJGrabHu: [0, function(d){
+    MJGrabHu: [0, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
-        
+
         tData.tState = TableState.waitEat;
-        for(var i = 0, len = tData.uids.length; i < len; i++){
+        for (var i = 0, len = tData.uids.length; i < len; i++) {
             var player = sData.players[tData.uids[i]];
             player.eatFlag = 0;
             player.mjState = TableState.waitCard;
@@ -10456,14 +10157,14 @@ MjClient.netCallBack = {
 
         var pl = sData.players[d.uid];
         var grabInfo = d.canGrabInfo;
-        if(grabInfo && pl){
+        if (grabInfo && pl) {
             tData.canGrabInfo = grabInfo;
             pl.mjState = TableState.waitEat;
             pl.eatFlag = 8;
         }
     }],
     //公安花牌捏牌.后续字牌玩法死手可以统一使用
-    HZAutoSkip: [0, function(d) {
+    HZAutoSkip: [0, function (d) {
         var sData = MjClient.data.sData;
         var pl = sData.players[d.uid + ""];
         if (pl) {
@@ -10486,7 +10187,7 @@ MjClient.netCallBack = {
         sData.tData.tState = TableState.waitPut;
     }],
 
-    waitFan: [0,function (d) {
+    waitFan: [0, function (d) {
         MjClient.data.sData.tData.tState = TableState.waitJiazhu;
     }],
 
@@ -10497,7 +10198,7 @@ MjClient.netCallBack = {
     }],
 
     // 大结算 成长经验
-    game_finished_incr_empirical:[0,function(d){
+    game_finished_incr_empirical: [0, function (d) {
         MjClient.showToastEXP(d);
     }],
 };

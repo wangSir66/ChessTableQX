@@ -1001,6 +1001,14 @@ GameCnDesc[MjClient.GAME_TYPE.LIAN_YUN_GANG] = {
     duoHu: function(v) {return v ? "一炮多响" : "截胡"},
     wuWanFeng: function (v) {return v ? "无万无风牌":""}
 };
+
+GameCnDesc[MjClient.GAME_TYPE.RED_20_POKER] = {
+    AutoZhuang: function(v) {return v ? "随机坐庄" : ""},
+    IsThreeKouDouble : function(v) {return v ? "三口翻2倍" : "三口不翻倍"},
+    gangkai4bei : function(v) {return v ? "杠开翻倍" : "杠开不翻倍"},
+    duoHu: function(v) {return v ? "一炮多响" : "截胡"},
+    wuWanFeng: function (v) {return v ? "无万无风牌":""}
+};
 /*  南京   */
 GameCnDesc[MjClient.GAME_TYPE.NAN_JING] = {
     playType:{0:"进园子",1:"敞开头"},
