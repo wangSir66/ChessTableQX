@@ -1497,13 +1497,8 @@
     majiang.getAllCardsTotal = function ()
     {
         var tData = MjClient.data.sData.tData;
-        var wuWanFeng = tData.areaSelectMode.wuWanFeng;
-        if(wuWanFeng) //无风万字
-        {
-            return 52;
-        }else{
-            return 54;
-        }
+        var numOfKing = tData.Rule.MaxKingCount || 0;
+        return numOfKing ? numOfKing + 52 : 52
     };
 
     majiang.setFlowerImg = function (node, pl)

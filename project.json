@@ -57,7 +57,7 @@
 		"src/CommonFunc_paohuzi_SR.js",
 		"src/CommonFunc_Layer.js",
         "src/Arithmetic_LYG.js",
-        "src/Arithmetic_Red20.js",
+        "src/YaAn/Red20/Arithmetic_Red20.js",
         "src/Arithmetic_shuyang.js",
         "src/Arithmetic_guanyun.js",
         "src/Arithmetic_guannan.js",
