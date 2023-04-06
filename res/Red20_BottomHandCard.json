@@ -16,9 +16,9 @@
         "Children": [
           {
             "FileData": {
-              "Type": "PlistSubImage",
-              "Path": "0-1.png",
-              "Plist": "Red20/Game/Card.plist"
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
             },
             "Scale9Enable": true,
             "Scale9OriginX": 29,
@@ -59,9 +59,9 @@
           },
           {
             "FileData": {
-              "Type": "PlistSubImage",
-              "Path": "0-1.png",
-              "Plist": "Red20/Game/Card.plist"
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
             },
             "Scale9Enable": true,
             "Scale9OriginX": 29,
@@ -103,9 +103,9 @@
           },
           {
             "FileData": {
-              "Type": "PlistSubImage",
-              "Path": "0-1.png",
-              "Plist": "Red20/Game/Card.plist"
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
             },
             "Scale9Enable": true,
             "Scale9OriginX": 29,
@@ -153,8 +153,7 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "Red20/Game/Card.plist",
-        "Red20/Game/Card.png"
+        "Default/ImageFile.png"
       ],
       "ctype": "GameFileData"
     }

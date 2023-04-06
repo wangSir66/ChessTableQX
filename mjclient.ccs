@@ -4077,6 +4077,126 @@
               </Folder>
             </Folder>
           </Folder>
+          <Folder Name="Card">
+            <Image Name="0-1.png" />
+            <Image Name="0-10.png" />
+            <Image Name="0-11.png" />
+            <Image Name="0-12.png" />
+            <Image Name="0-13.png" />
+            <Image Name="0-2.png" />
+            <Image Name="0-3.png" />
+            <Image Name="0-4.png" />
+            <Image Name="0-5.png" />
+            <Image Name="0-6.png" />
+            <Image Name="0-7.png" />
+            <Image Name="0-8.png" />
+            <Image Name="0-9.png" />
+            <Image Name="1-1.png" />
+            <Image Name="1-10.png" />
+            <Image Name="1-11.png" />
+            <Image Name="1-12.png" />
+            <Image Name="1-13.png" />
+            <Image Name="1-2.png" />
+            <Image Name="1-3.png" />
+            <Image Name="1-4.png" />
+            <Image Name="1-5.png" />
+            <Image Name="1-6.png" />
+            <Image Name="1-7.png" />
+            <Image Name="1-8.png" />
+            <Image Name="1-9.png" />
+            <Image Name="2-1.png" />
+            <Image Name="2-10.png" />
+            <Image Name="2-11.png" />
+            <Image Name="2-12.png" />
+            <Image Name="2-13.png" />
+            <Image Name="2-2.png" />
+            <Image Name="2-3.png" />
+            <Image Name="2-4.png" />
+            <Image Name="2-5.png" />
+            <Image Name="2-6.png" />
+            <Image Name="2-7.png" />
+            <Image Name="2-8.png" />
+            <Image Name="2-9.png" />
+            <Image Name="3-1.png" />
+            <Image Name="3-10.png" />
+            <Image Name="3-11.png" />
+            <Image Name="3-12.png" />
+            <Image Name="3-13.png" />
+            <Image Name="3-2.png" />
+            <Image Name="3-3.png" />
+            <Image Name="3-4.png" />
+            <Image Name="3-5.png" />
+            <Image Name="3-6.png" />
+            <Image Name="3-7.png" />
+            <Image Name="3-8.png" />
+            <Image Name="3-9.png" />
+            <Image Name="4-15.png" />
+            <Image Name="back.png" />
+            <Image Name="YZDN_card_enable.png" />
+          </Folder>
+          <Folder Name="Controller">
+            <Image Name="btn_cancel.png" />
+            <Image Name="btn_chi.png" />
+            <Image Name="btn_gang.png" />
+            <Image Name="btn_guo.png" />
+            <Image Name="btn_hu.png" />
+            <Image Name="btn_ocad.png" />
+            <Image Name="btn_peng.png" />
+            <Image Name="btn_ting.png" />
+            <Image Name="btn_tou.png" />
+            <Image Name="other_btings.png" />
+            <Image Name="other_chating.png" />
+            <Image Name="other_dianpao.png" />
+            <Image Name="other_fan_bg.png" />
+            <Image Name="other_liuju.png" />
+            <Image Name="ready.png" />
+            <Image Name="tip_bting.png" />
+            <Image Name="tip_chi.png" />
+            <Image Name="tip_gang.png" />
+            <Image Name="tip_guo.png" />
+            <Image Name="tip_hu.png" />
+            <Image Name="tip_peng.png" />
+            <Image Name="tip_tou.png" />
+          </Folder>
+          <Folder Name="DeskTexture">
+            <Image Name="btn_bhall_btn.png" />
+            <Image Name="btn_nextGame_btn.png" />
+            <Image Name="btn_share_btn.png" />
+            <Image Name="btnCopy.png" />
+            <Image Name="btnExit.png" />
+            <Image Name="btnReady.png" />
+            <Image Name="btnReady2.png" />
+            <Image Name="BtnRule.png" />
+            <Image Name="btnShare.png" />
+            <Image Name="cancelBg.png" />
+            <Image Name="cancelTuoGuan.png" />
+            <Image Name="ChangeTable.png" />
+            <Image Name="dn_order_tip.png" />
+            <Image Name="dss_cardnum.png" />
+            <Image Name="endBg.png" />
+            <Image Name="endBgS.png" />
+            <Image Name="endBtnCopy.png" />
+            <Image Name="endBtnShare.png" />
+            <Image Name="heng.png" />
+            <Image Name="lixian.png" />
+            <Image Name="oneMoreGame.png" />
+            <Image Name="other_game_over.png" />
+            <Image Name="other_hutip.png" />
+            <Image Name="other_mix_summary.png" />
+            <Image Name="other_mytou_bg.png" />
+            <Image Name="other_total_score.png" />
+            <Image Name="other_win_player_image.png" />
+            <Image Name="overBg.png" />
+            <Image Name="phz_icon_007.png" />
+            <Image Name="player_blue_bg.png" />
+            <Image Name="ready.png" />
+            <Image Name="tiao.png" />
+            <Image Name="tipBg.png" />
+            <Image Name="totalScore.png" />
+            <Image Name="tuoGuan.png" />
+            <Image Name="userBg.png" />
+            <Image Name="zhuang.png" />
+          </Folder>
           <Folder Name="Fonts">
             <File Name="negativeFont.labelatlas" />
             <Image Name="over_loss_nums.png" />
@@ -4084,131 +4204,6 @@
             <File Name="positiveFont.labelatlas" />
           </Folder>
           <Folder Name="Game">
-            <PlistImageFolder Image="Card.png" PListFile="Card.plist" Name=".Card_PList.Dir">
-              <PlistImageFile Name="0-1.png" Key="0-1.png" />
-              <PlistImageFile Name="0-10.png" Key="0-10.png" />
-              <PlistImageFile Name="0-11.png" Key="0-11.png" />
-              <PlistImageFile Name="0-12.png" Key="0-12.png" />
-              <PlistImageFile Name="0-13.png" Key="0-13.png" />
-              <PlistImageFile Name="0-2.png" Key="0-2.png" />
-              <PlistImageFile Name="0-3.png" Key="0-3.png" />
-              <PlistImageFile Name="0-4.png" Key="0-4.png" />
-              <PlistImageFile Name="0-5.png" Key="0-5.png" />
-              <PlistImageFile Name="0-6.png" Key="0-6.png" />
-              <PlistImageFile Name="0-7.png" Key="0-7.png" />
-              <PlistImageFile Name="0-8.png" Key="0-8.png" />
-              <PlistImageFile Name="0-9.png" Key="0-9.png" />
-              <PlistImageFile Name="1-1.png" Key="1-1.png" />
-              <PlistImageFile Name="1-10.png" Key="1-10.png" />
-              <PlistImageFile Name="1-11.png" Key="1-11.png" />
-              <PlistImageFile Name="1-12.png" Key="1-12.png" />
-              <PlistImageFile Name="1-13.png" Key="1-13.png" />
-              <PlistImageFile Name="1-2.png" Key="1-2.png" />
-              <PlistImageFile Name="1-3.png" Key="1-3.png" />
-              <PlistImageFile Name="1-4.png" Key="1-4.png" />
-              <PlistImageFile Name="1-5.png" Key="1-5.png" />
-              <PlistImageFile Name="1-6.png" Key="1-6.png" />
-              <PlistImageFile Name="1-7.png" Key="1-7.png" />
-              <PlistImageFile Name="1-8.png" Key="1-8.png" />
-              <PlistImageFile Name="1-9.png" Key="1-9.png" />
-              <PlistImageFile Name="2-1.png" Key="2-1.png" />
-              <PlistImageFile Name="2-10.png" Key="2-10.png" />
-              <PlistImageFile Name="2-11.png" Key="2-11.png" />
-              <PlistImageFile Name="2-12.png" Key="2-12.png" />
-              <PlistImageFile Name="2-13.png" Key="2-13.png" />
-              <PlistImageFile Name="2-2.png" Key="2-2.png" />
-              <PlistImageFile Name="2-3.png" Key="2-3.png" />
-              <PlistImageFile Name="2-4.png" Key="2-4.png" />
-              <PlistImageFile Name="2-5.png" Key="2-5.png" />
-              <PlistImageFile Name="2-6.png" Key="2-6.png" />
-              <PlistImageFile Name="2-7.png" Key="2-7.png" />
-              <PlistImageFile Name="2-8.png" Key="2-8.png" />
-              <PlistImageFile Name="2-9.png" Key="2-9.png" />
-              <PlistImageFile Name="3-1.png" Key="3-1.png" />
-              <PlistImageFile Name="3-10.png" Key="3-10.png" />
-              <PlistImageFile Name="3-11.png" Key="3-11.png" />
-              <PlistImageFile Name="3-12.png" Key="3-12.png" />
-              <PlistImageFile Name="3-13.png" Key="3-13.png" />
-              <PlistImageFile Name="3-2.png" Key="3-2.png" />
-              <PlistImageFile Name="3-3.png" Key="3-3.png" />
-              <PlistImageFile Name="3-4.png" Key="3-4.png" />
-              <PlistImageFile Name="3-5.png" Key="3-5.png" />
-              <PlistImageFile Name="3-6.png" Key="3-6.png" />
-              <PlistImageFile Name="3-7.png" Key="3-7.png" />
-              <PlistImageFile Name="3-8.png" Key="3-8.png" />
-              <PlistImageFile Name="3-9.png" Key="3-9.png" />
-              <PlistImageFile Name="4-15.png" Key="4-15.png" />
-              <PlistImageFile Name="back.png" Key="back.png" />
-              <PlistImageFile Name="YZDN_card_enable.png" Key="YZDN_card_enable.png" />
-            </PlistImageFolder>
-            <PlistImageFolder Image="Controller.png" PListFile="Controller.plist" Name=".Controller_PList.Dir">
-              <PlistImageFile Name="btn_cancel.png" Key="btn_cancel.png" />
-              <PlistImageFile Name="btn_chi.png" Key="btn_chi.png" />
-              <PlistImageFile Name="btn_gang.png" Key="btn_gang.png" />
-              <PlistImageFile Name="btn_guo.png" Key="btn_guo.png" />
-              <PlistImageFile Name="btn_hu.png" Key="btn_hu.png" />
-              <PlistImageFile Name="btn_ocad.png" Key="btn_ocad.png" />
-              <PlistImageFile Name="btn_peng.png" Key="btn_peng.png" />
-              <PlistImageFile Name="btn_ting.png" Key="btn_ting.png" />
-              <PlistImageFile Name="btn_tou.png" Key="btn_tou.png" />
-              <PlistImageFile Name="other_btings.png" Key="other_btings.png" />
-              <PlistImageFile Name="other_chating.png" Key="other_chating.png" />
-              <PlistImageFile Name="other_dianpao.png" Key="other_dianpao.png" />
-              <PlistImageFile Name="other_fan_bg.png" Key="other_fan_bg.png" />
-              <PlistImageFile Name="other_liuju.png" Key="other_liuju.png" />
-              <PlistImageFile Name="ready.png" Key="ready.png" />
-              <PlistImageFile Name="tip_bting.png" Key="tip_bting.png" />
-              <PlistImageFile Name="tip_chi.png" Key="tip_chi.png" />
-              <PlistImageFile Name="tip_gang.png" Key="tip_gang.png" />
-              <PlistImageFile Name="tip_guo.png" Key="tip_guo.png" />
-              <PlistImageFile Name="tip_hu.png" Key="tip_hu.png" />
-              <PlistImageFile Name="tip_peng.png" Key="tip_peng.png" />
-              <PlistImageFile Name="tip_tou.png" Key="tip_tou.png" />
-            </PlistImageFolder>
-            <PlistImageFolder Image="Desk.png" PListFile="Desk.plist" Name=".Desk_PList.Dir">
-              <PlistImageFile Name="btn_bhall_btn.png" Key="btn_bhall_btn.png" />
-              <PlistImageFile Name="btn_nextGame_btn.png" Key="btn_nextGame_btn.png" />
-              <PlistImageFile Name="btn_share_btn.png" Key="btn_share_btn.png" />
-              <PlistImageFile Name="btnCopy.png" Key="btnCopy.png" />
-              <PlistImageFile Name="btnExit.png" Key="btnExit.png" />
-              <PlistImageFile Name="btnReady.png" Key="btnReady.png" />
-              <PlistImageFile Name="btnReady2.png" Key="btnReady2.png" />
-              <PlistImageFile Name="BtnRule.png" Key="BtnRule.png" />
-              <PlistImageFile Name="btnShare.png" Key="btnShare.png" />
-              <PlistImageFile Name="cancelBg.png" Key="cancelBg.png" />
-              <PlistImageFile Name="cancelTuoGuan.png" Key="cancelTuoGuan.png" />
-              <PlistImageFile Name="ChangeTable.png" Key="ChangeTable.png" />
-              <PlistImageFile Name="dn_order_tip.png" Key="dn_order_tip.png" />
-              <PlistImageFile Name="dss_cardnum.png" Key="dss_cardnum.png" />
-              <PlistImageFile Name="endBg.png" Key="endBg.png" />
-              <PlistImageFile Name="endBgS.png" Key="endBgS.png" />
-              <PlistImageFile Name="endBtnCopy.png" Key="endBtnCopy.png" />
-              <PlistImageFile Name="endBtnShare.png" Key="endBtnShare.png" />
-              <PlistImageFile Name="heng.png" Key="heng.png" />
-              <PlistImageFile Name="lixian.png" Key="lixian.png" />
-              <PlistImageFile Name="oneMoreGame.png" Key="oneMoreGame.png" />
-              <PlistImageFile Name="other_game_over.png" Key="other_game_over.png" />
-              <PlistImageFile Name="other_hutip.png" Key="other_hutip.png" />
-              <PlistImageFile Name="other_mix_summary.png" Key="other_mix_summary.png" />
-              <PlistImageFile Name="other_mytou_bg.png" Key="other_mytou_bg.png" />
-              <PlistImageFile Name="other_total_score.png" Key="other_total_score.png" />
-              <PlistImageFile Name="other_win_player_image.png" Key="other_win_player_image.png" />
-              <PlistImageFile Name="overBg.png" Key="overBg.png" />
-              <PlistImageFile Name="phz_icon_007.png" Key="phz_icon_007.png" />
-              <PlistImageFile Name="player_blue_bg.png" Key="player_blue_bg.png" />
-              <PlistImageFile Name="ready.png" Key="ready.png" />
-              <PlistImageFile Name="tiao.png" Key="tiao.png" />
-              <PlistImageFile Name="tipBg.png" Key="tipBg.png" />
-              <PlistImageFile Name="totalScore.png" Key="totalScore.png" />
-              <PlistImageFile Name="tuoGuan.png" Key="tuoGuan.png" />
-              <PlistImageFile Name="userBg.png" Key="userBg.png" />
-              <PlistImageFile Name="zhuang.png" Key="zhuang.png" />
-            </PlistImageFolder>
-            <PlistImageFolder Image="effects_cxmjzmts0.png" PListFile="effects_cxmjzmts0.plist" Name=".effects_cxmjzmts0_PList.Dir">
-              <PlistImageFile Name="effects_cxmjzmts1.png" Key="effects_cxmjzmts1.png" />
-              <PlistImageFile Name="effects_cxmjzmts2.png" Key="effects_cxmjzmts2.png" />
-              <PlistImageFile Name="effects_cxmjzmts3.png" Key="effects_cxmjzmts3.png" />
-            </PlistImageFolder>
             <Image Name="bg_back.jpg" />
             <Image Name="bottom.png" />
             <Image Name="default_head.jpg" />
@@ -5149,6 +5144,7 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
+        <Project Name="Play_Red20.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

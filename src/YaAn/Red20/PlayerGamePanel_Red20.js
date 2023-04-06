@@ -104,8 +104,10 @@ function SetUserVisible_Red20(node, off) {
     var offline = head.getChildByName("offline");
     var name_bg = head.getChildByName("name_bg");
     var score_bg = head.getChildByName("score_bg");
+    var toubg = head.getChildByName("tou");
     if (pl) {
         name.visible = true;
+        toubg.visible = false;
         coin.visible = true;
         offline.visible = true;
         coin.visible = true;
@@ -120,6 +122,7 @@ function SetUserVisible_Red20(node, off) {
         name.visible = false;
         coin.visible = false;
         offline.visible = false;
+        toubg.visible = false;
         coin.visible = false;
         var WxHead = nobody.getChildByName("WxHead");
         if (WxHead) {
@@ -301,7 +304,7 @@ function InitUserHandUI_Red20(node, off) {
                 CardCount = 7;
             }
 
-            cc.log('----tData.curPlayer-------', tData.curPlayer, tData.uids[tData.curPlayer] , pl.info.uid)
+            cc.log('----tData.curPlayer-------', tData.curPlayer, tData.uids[tData.curPlayer], pl.info.uid)
             var upCardCount = CardCount - ((pl.mjpeng.length + pl.mjgang0.length + pl.mjgang1.length) * 3 + pl.mjchi.length);
             for (var i = 0; i < upCardCount; i++) {
                 getNewCard(node, "stand", "standPri");
@@ -367,23 +370,21 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
     _btnPutCard: null,
     jsBind: {
         _event: {
-            mjhand: function() {
-                if(MjClient.endoneui != null)
-                {
-                    cc.log("=======mjhand====endoneui====" + typeof (MjClient.endoneui) );
+            mjhand: function () {
+                if (MjClient.endoneui != null) {
+                    cc.log("=======mjhand====endoneui====" + typeof (MjClient.endoneui));
                     MjClient.endoneui.removeFromParent(true);
                     MjClient.endoneui = null;
                 }
 
-                if(MjClient.rePlayVideo != -1)
-                {
+                if (MjClient.rePlayVideo != -1) {
                     resetPlayerHead_mj();
                 }
 
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
                 resetFlowerNum(this);
-                if ((tData.roundNum != tData.roundAll && MjClient.tableid == tData.tableid )|| tData.maxPlayer <= 2) return;
+                if ((tData.roundNum != tData.roundAll && MjClient.tableid == tData.tableid) || tData.maxPlayer <= 2) return;
                 var pls = sData.players;
                 var ip2pl = {};
                 for (var uid in pls) {
@@ -391,7 +392,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     var ip = pi.info.remoteIP;
                     if (ip) {
                         if (!ip2pl[ip]) ip2pl[ip] = [];
-                        ip2pl[ip].push(unescape(pi.info.nickname ));
+                        ip2pl[ip].push(unescape(pi.info.nickname));
                     }
                 }
                 var ipmsg = [];
@@ -410,7 +411,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 mylog("ipmsg " + ipmsg.length);
 
             },
-            LeaveGame: function() {
+            LeaveGame: function () {
                 MjClient.addHomeView();
                 MjClient.playui.removeFromParent(true);
                 delete MjClient.playui;
@@ -419,95 +420,92 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 cc.audioEngine.stopAllEffects();
                 playMusic("bgMain");
             },
-            endRoom: function(msg) {
+            endRoom: function (msg) {
                 mylog(JSON.stringify(msg));
-                if (msg.showEnd) this.addChild(new GameOverLayer(),500);
+                if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
                 else
                     MjClient.Scene.addChild(new StopRoomView());
             },
-            MJPut:function () {
+            MJPut: function () {
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
-                if (tData){
-                    if(tData.fieldId) {//金币场显示场次名称
-                         showAndHideHeadEffect();
+                if (tData) {
+                    if (tData.fieldId) {//金币场显示场次名称
+                        showAndHideHeadEffect();
                     }
                 }
 
             },
-            waitPut:function () {
+            waitPut: function () {
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
-                if (tData){
-                    if(tData.fieldId) {//金币场显示场次名称
+                if (tData) {
+                    if (tData.fieldId) {//金币场显示场次名称
                         showAndHideHeadEffect();
                     }
                 }
             },
-            roundEnd: function() {
+            roundEnd: function () {
                 var self = this;
-                function delayExe()
-                {
+                function delayExe() {
                     var sData = MjClient.data.sData;
                     var tData = sData.tData;
                     resetEatActionAnim();
 
-                    if(MjClient.isInGoldFieldNormal()){//金币场普通场
-                        self.addChild(new GoldEndOneLayer_MJ(),500);
+                    if (MjClient.isInGoldFieldNormal()) {//金币场普通场
+                        self.addChild(new GoldEndOneLayer_MJ(), 500);
                         // if(cc.sys.isObjectValid(MjClient.ActiveGoldPlayingLayer)
                         //     && MjClient.ActiveGoldPlayingLayer.btn_hongbao.truePosition){
                         //     MjClient.playui.setHongBaoPos(MjClient.ActiveGoldPlayingLayer.btn_hongbao)
                         // }
-                    }else{
-                        if (sData.tData.roundNum <= 0 && !MjClient.isInGoldFieldNormal())
-                        {
-                            if(!tData.matchId){
-                                self.addChild(new GameOverLayer(),500);
-                            }else{
-                                self.runAction(cc.sequence(cc.delayTime(3),cc.callFunc(function(){
-                                    self.addChild(new GameOverLayer(),500);
+                    } else {
+                        if (sData.tData.roundNum <= 0 && !MjClient.isInGoldFieldNormal()) {
+                            if (!tData.matchId) {
+                                self.addChild(new GameOverLayer(), 500);
+                            } else {
+                                self.runAction(cc.sequence(cc.delayTime(3), cc.callFunc(function () {
+                                    self.addChild(new GameOverLayer(), 500);
                                 })))
                             }
                         }
-                        self.addChild(new EndOneView_LYG(),500);
+                        self.addChild(new EndOneView_LYG(), 500);
                     }
                 }
-                if(MjClient.rePlayVideo === -1)    // 正常游戏
+                if (MjClient.rePlayVideo === -1)    // 正常游戏
                 {
-                    this.runAction(cc.sequence(cc.delayTime(0.1),cc.callFunc(COMMON_UI.showMjhandBeforeEndOne),cc.delayTime(1.7),cc.callFunc(delayExe)));
+                    this.runAction(cc.sequence(cc.delayTime(0.1), cc.callFunc(COMMON_UI.showMjhandBeforeEndOne), cc.delayTime(1.7), cc.callFunc(delayExe)));
                 }
-                else
-                {
-                    this.runAction(cc.sequence(cc.DelayTime(0.2),cc.callFunc(delayExe)));
+                else {
+                    this.runAction(cc.sequence(cc.DelayTime(0.2), cc.callFunc(delayExe)));
                 }
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
-                if (tData){
-                    if(tData.fieldId) {//金币场显示场次名称
+                if (tData) {
+                    if (tData.fieldId) {//金币场显示场次名称
                         showAndHideHeadEffect();
                     }
                 }
             },
-            moveHead: function() {
+            moveHead: function () {
                 postEvent("returnPlayerLayer");
                 tableStartHeadMoveAction(this);
             },
-            initSceneData: function() {
+            initSceneData: function () {
                 reConectHeadLayout(this);
                 CheckRoomUiDelete();
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
-                if (tData){
-                    if(tData.fieldId) {//金币场显示场次名称
+                if (tData) {
+                    if (tData.fieldId) {//金币场显示场次名称
                         showAndHideHeadEffect();
                     }
                 }
                 //TingVisibleCheckForLianYunGang(MjClient.playui.eat._node);
             },
-            onlinePlayer: function() {
+            onlinePlayer: function () {
                 reConectHeadLayout(this);
             },
-            logout: function() {
+            logout: function () {
                 if (MjClient.playui) {
                     MjClient.addHomeView();
                     MjClient.playui.removeFromParent(true);
@@ -516,15 +514,15 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     delete MjClient.endallui;
                 }
             },
-            DelRoom: function() {
+            DelRoom: function () {
                 CheckRoomUiDelete();
             },
-            changePosition:function(msg) {
+            changePosition: function (msg) {
                 /*
                  换位置
                */
                 //var currentSelectCard = msg.selectedCard;
-                var change_uids  = msg.uids;
+                var change_uids = msg.uids;
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
                 var current_uids = tData.uids;
@@ -534,43 +532,35 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
 
 
                 //回放的时候
-                if(MjClient.rePlayVideo != -1)
-                {
+                if (MjClient.rePlayVideo != -1) {
                     tData.uids = msg.uids;//要更新uid位置
                     resetPlayerHead_mj();
                 }
-                else
-                {
+                else {
                     MjClient.playui._waitChangePos.visible = true;
                     //牌的翻的效果,正常打牌
                     var _toNodePos = [];
                     var _playerCount = change_uids.length;
-                    for(var i = 0;i < 4; i++)
-                    {
-                        if(_playerCount == 3 && i == 2)
-                        {
-                            _toNodePos.push(cc.p(0,0));
+                    for (var i = 0; i < 4; i++) {
+                        if (_playerCount == 3 && i == 2) {
+                            _toNodePos.push(cc.p(0, 0));
                         }
-                        else if (_playerCount == 2 && (i == 1 || i == 3))
-                        {
-                            _toNodePos.push(cc.p(0,0));
+                        else if (_playerCount == 2 && (i == 1 || i == 3)) {
+                            _toNodePos.push(cc.p(0, 0));
                         }
-                        else
-                        {
-                            var _toNode   = getNode(i).getChildByName("head");
+                        else {
+                            var _toNode = getNode(i).getChildByName("head");
                             _toNodePos.push(_toNode.getPosition());
                         }
 
                     }
 
-                    for(var i = 0;i < _playerCount; i++)
-                    {
-                        var change_UIoff = mj_getUiOffByUid(change_uids[i],change_uids);
+                    for (var i = 0; i < _playerCount; i++) {
+                        var change_UIoff = mj_getUiOffByUid(change_uids[i], change_uids);
 
-                        var current_UIoff = mj_getUiOffByUid(change_uids[i],current_uids);
+                        var current_UIoff = mj_getUiOffByUid(change_uids[i], current_uids);
 
-                        if(change_UIoff != current_UIoff)
-                        {
+                        if (change_UIoff != current_UIoff) {
                             changePositionByUIoff_mj(current_UIoff, _toNodePos[change_UIoff]);
                         }
                     }
@@ -582,13 +572,13 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     })));
                 }
             },
-            changeMJBgEvent: function() {
+            changeMJBgEvent: function () {
                 changeMJBg(this, getCurrentMJBgType());
-                MjClient.playui.CardLayoutRestore(getNode(0),0)
+                MjClient.playui.CardLayoutRestore(getNode(0), 0)
             }
         },
-        waitChangePos:{
-            _visible:false,
+        waitChangePos: {
+            _visible: false,
             _layout: [
                 [0.4, 0.4],
                 [0.5, 0.5],
@@ -613,83 +603,86 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         },
         roundnumImg: {
             _event: {
-                initSceneData: function(eD) {
-                    this.visible = IsArrowVisible();
+                initSceneData: function (eD) {
+                    // this.visible = IsArrowVisible();
+                    this.visible = false
                 },
-                mjhand: function(eD) {
-                    this.visible = IsArrowVisible();
+                mjhand: function (eD) {
+                    // this.visible = IsArrowVisible();
+                    this.visible = false
                 },
-                onlinePlayer: function(eD) {
+                onlinePlayer: function (eD) {
                     //this.visible = IsArrowVisible();
+                    this.visible = false
                 }
             },
-            _run:function () {
+            _run: function () {
                 //roundnumImgObj = this;
                 MjClient.roundnumImgNode = this;
-                setWgtLayout(this,[0.085, 0], [0.5, 0.5], [-1.76, 1.0]);
+                setWgtLayout(this, [0.085, 0], [0.5, 0.5], [-1.76, 1.0]);
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
-                if (tData){
-                    if(tData.fieldId) {//金币场显示场次名称
+                if (tData) {
+                    if (tData.fieldId) {//金币场显示场次名称
                         this.removeFromParent(true);
                     }
                 }
             },
             roundnumAtlas: {
-                _visible : function () {
+                _visible: function () {
                     var sData = MjClient.data.sData;
                     var tData = sData.tData;
-                    if (tData){
-                        if(tData.fieldId) {//金币场显示场次名称
+                    if (tData) {
+                        if (tData.fieldId) {//金币场显示场次名称
                             return false;
                         }
                     }
                     return true;
                 },
-                _run:function(){
+                _run: function () {
                     this.ignoreContentAdaptWithSize(true);
                 },
-                _text: function() {
+                _text: function () {
                     var sData = MjClient.data.sData;
                     var tData = sData.tData;
-                    if (tData) return "第" + (tData.roundAll-tData.roundNum + 1)+"/"+tData.roundAll + "局";
+                    if (tData) return "第" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll + "局";
                 },
                 _event: {
-                    mjhand: function() {
+                    mjhand: function () {
                         var sData = MjClient.data.sData;
                         var tData = sData.tData;
-                        if (tData) return this.setString("第" + (tData.roundAll-tData.roundNum + 1)+"/"+tData.roundAll + "局");
+                        if (tData) return this.setString("第" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll + "局");
                     }
                 }
             }
         },
         cardNumImg: {
-            _run:function () {
+            _run: function () {
                 MjClient.cardNumImgNode = this;
-                setWgtLayout(this,[0.0641, 0], [0.5, 0.5], [2.13, 1.0]);
+                setWgtLayout(this, [0.15, 0.15], [0.5, 0.5], [0, 0.25]);
             },
             _event: {
-                initSceneData: function(eD) {
-                    this.visible = IsArrowVisible();
+                initSceneData: function (eD) {
+                    this.visible = false;
                 },
-                mjhand: function(eD) {
-                    this.visible = IsArrowVisible();
+                mjhand: function (eD) {
+                    this.visible = true;
                 },
-                onlinePlayer: function(eD) {
+                onlinePlayer: function (eD) {
                     //this.visible = IsArrowVisible();
                 }
             },
             cardnumAtlas: {
-                _run:function(){
+                _run: function () {
                     this.ignoreContentAdaptWithSize(true);
                 },
-                _text: function() {
+                _text: function () {
                     var sData = MjClient.data.sData;
                     var tData = sData.tData;
                     if (tData) return MjClient.majiang.getAllCardsTotal() - tData.cardNext;
                 },
                 _event: {
-                    waitPut: function() {
+                    waitPut: function () {
                         var sData = MjClient.data.sData;
                         var tData = sData.tData;
                         if (tData) this.setString(MjClient.majiang.getAllCardsTotal() - tData.cardNext);
@@ -700,11 +693,11 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         },
         back: {
             back: {
-                _run: function() {
+                _run: function () {
                     changeGameBg(this);
                 },
                 _event: {
-                    changeGameBgEvent: function() {
+                    changeGameBgEvent: function () {
                         changeGameBg(this);
                     }
                 },
@@ -714,32 +707,32 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0, 0], true
                 ],
             },
-            LeftBottom:{
+            LeftBottom: {
                 _layout: [
                     [0.1, 0.1],
                     [0.03, 0.045],
                     [0, 0]
                 ],
             },
-            RightBottom:{
+            RightBottom: {
                 _layout: [
                     [0.1, 0.1],
-                    [0.97,0.05],
+                    [0.97, 0.05],
                     [0, 0]
                 ],
             },
-            RightTop:{
+            RightTop: {
                 _layout: [
                     [0.1, 0.1],
-                    [0.97,0.95],
+                    [0.97, 0.95],
                     [0, 0]
                 ],
             },
-            leftTop:{
+            leftTop: {
                 _layout: [
                     [0.1, 0.1],
-                    [0.03,0.95],
-                    [0,0]
+                    [0.03, 0.95],
+                    [0, 0]
                 ],
                 // _run:function()
                 // {
@@ -769,43 +762,42 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 [0, 0]
             ]
         },
-        gameName:{
+        gameName: {
             _layout: [
                 [0.16, 0.16],
                 [0.5, 0.62],
                 [0, 1.0]
             ]
         },
-        roundInfo:{
+        roundInfo: {
             _layout: [
                 [0.12, 0.12],
                 [0.5, 0.38],
                 [0, 1.0]
             ],
-            _run:function()
-            {
+            _run: function () {
                 this.ignoreContentAdaptWithSize(true);
 
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
 
-                if(tData.fieldId){
+                if (tData.fieldId) {
                     var payWay = tData.areaSelectMode.payWay;
                     delete tData.areaSelectMode.payWay;
                 }
                 this.setString(getPlayingRoomInfo(0));
-                if(payWay){
+                if (payWay) {
                     tData.areaSelectMode.payWay = payWay;
                 }
-                if(tData.matchId && tData.matchInfo){
-                    if(MjClient.matchRank){
-                        showPlayUI_matchInfo("排名："+MjClient.matchRank+"/"+tData.matchInfo.userCount+"\n前"+tData.matchInfo.jingjiCount+"名晋级");
-                    }else {
-                        showPlayUI_matchInfo("排名："+tData.matchInfo.userCount+"/"+tData.matchInfo.userCount+"\n前"+tData.matchInfo.jingjiCount+"名晋级");
+                if (tData.matchId && tData.matchInfo) {
+                    if (MjClient.matchRank) {
+                        showPlayUI_matchInfo("排名：" + MjClient.matchRank + "/" + tData.matchInfo.userCount + "\n前" + tData.matchInfo.jingjiCount + "名晋级");
+                    } else {
+                        showPlayUI_matchInfo("排名：" + tData.matchInfo.userCount + "/" + tData.matchInfo.userCount + "\n前" + tData.matchInfo.jingjiCount + "名晋级");
                     }
-                }else{
+                } else {
                     if (MjClient.rePlayVideo == -1)  // 回放时候不能显示
-                        showPlayUI_roundInfo(this.getString(),tData.fieldId?(getJinbiStr(MjClient.data.sData.tData.fieldBase)+"金币"):tData.tableid,tData.fieldId?"底分 ":"");
+                        showPlayUI_roundInfo(this.getString(), tData.fieldId ? (getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币") : tData.tableid, tData.fieldId ? "底分 " : "");
                 }
             }
         },
@@ -815,55 +807,54 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 [0.5, 1],
                 [0, 0]
             ],
-            bg_time:{
-                 _run:function()
-                {
+            bg_time: {
+                _run: function () {
                     var text = new ccui.Text();
                     text.setFontName(MjClient.fzcyfont);
                     text.setFontSize(24);
                     text.setFontName("fonts/lanting.TTF");
-                    text.setAnchorPoint(1,0.5);
+                    text.setAnchorPoint(1, 0.5);
                     text.setPosition(66, 15);
                     this.addChild(text);
-                    text.schedule(function(){
+                    text.schedule(function () {
 
                         var time = MjClient.getCurrentTime();
-                        var str = (time[3]<10?"0"+time[3]:time[3])+":"+
-                            (time[4]<10?"0"+time[4]:time[4]);
+                        var str = (time[3] < 10 ? "0" + time[3] : time[3]) + ":" +
+                            (time[4] < 10 ? "0" + time[4] : time[4]);
                         this.setString(str);
                     });
                 }
 
             },
             wifi: {
-                _run: function() {
+                _run: function () {
                     updateWifiState(this);
                 }
             },
             powerBar: {
-                _run: function() {
+                _run: function () {
                     cc.log("powerBar_run");
                     updateBattery(this);
                 },
                 _event: {
-                    nativePower: function(d) {
+                    nativePower: function (d) {
                         this.setPercent(Number(d));
                     }
                 }
             },
             tableid: {
-                _run: function() {
+                _run: function () {
                     this.ignoreContentAdaptWithSize(true);
-                    if(MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId){//金币场显示场次名称
-                        this.setString("底分 "+getJinbiStr(MjClient.data.sData.tData.fieldBase)+"金币");
+                    if (MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
+                        this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
                     }
                 },
                 _event: {
-                    initSceneData: function() {
+                    initSceneData: function () {
                         this.ignoreContentAdaptWithSize(true);
-                        if(MjClient.data.sData.tData.fieldId){//金币场显示场次名称
-                            this.setString("底分 "+getJinbiStr(MjClient.data.sData.tData.fieldBase)+"金币");
-                        }else{
+                        if (MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
+                            this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
+                        } else {
                             this.setString(MjClient.data.sData.tData.tableid);
 
                         }
@@ -871,44 +862,42 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             },
             setting: {
-                _run: function() {
+                _run: function () {
                     this.setScale(0.6);
-                    this.setPositionX(this.getParent().getContentSize().width*1.43);
+                    this.setPositionX(this.getParent().getContentSize().width * 1.43);
                 },
-                _click: function() {
+                _click: function () {
                     var settringLayer = new SettingView();
                     settringLayer.setName("PlayLayerClick");
                     MjClient.Scene.addChild(settringLayer);
-                    MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", {uid:SelfUid(),gameType:MjClient.gameType});
+                    MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
                 }
             },
             Button_1: {
-                _visible : true,
-                _click: function() {
-                    MjClient.openWeb({url:MjClient.GAME_TYPE.LIAN_YUN_GANG,help:true});
+                _visible: true,
+                _click: function () {
+                    MjClient.openWeb({ url: MjClient.GAME_TYPE.LIAN_YUN_GANG, help: true });
                 }
             },
-            hunPai:{
-                baidaBg:{
-                    _run:function()
-                    {
+            hunPai: {
+                baidaBg: {
+                    _run: function () {
                         //baidaBg = this;
                         this.setVisible(false);
                     },
                     _event: {
-                        roundEnd:function (eD) {
+                        roundEnd: function (eD) {
                             this.visible = false;
                         }
                     },
                 },
                 baidaText: {
-                    _run:function()
-                    {
+                    _run: function () {
                         //baidaOject = this;
                         this.setVisible(false);
                     },
                     _event: {
-                        roundEnd:function (eD) {
+                        roundEnd: function (eD) {
                             this.visible = false;
                         }
                     },
@@ -916,144 +905,32 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
 
             },
         },
-        // arrowbk: {
-        //     _layout: [
-        //         [0.2, 0.2],
-        //         [0.5, 0.5],
-        //         [0, 0.25]
-        //     ],
-        //     _run:function () {
-        //         MjClient.arrowbkNode = this;
-        //         setDirVisible(this, true);
-        //         setArrowFengDir(this);
-        //         // windObj["dong"] = this.getChildByName("dir_right");
-        //         // windObj["nan"] = this.getChildByName("dir_down");
-        //         // windObj["xi"] = this.getChildByName("dir_left");
-        //         // windObj["bei"] = this.getChildByName("dir_up");
-        //         // windPos["dong"] = windObj["dong"].getPosition();
-        //         // windPos["nan"]   = windObj["nan"].getPosition();
-        //         // windPos["xi"]   =  windObj["xi"].getPosition();
-        //         // windPos["bei"]  = windObj["bei"].getPosition();
-        //     },
-        //     _event: {
-        //         initSceneData: function(eD) {
-        //             this.visible = IsArrowVisible();
-        //             SetArrowRotation(this)
-        //         },
-        //         mjhand: function(eD) {
-        //             this.visible = IsArrowVisible();
-        //             SetArrowRotation(this);
-        //         },
-        //         onlinePlayer: function(eD) {
-        //             //this.visible = IsArrowVisible();
-        //         },
-        //         waitPut: function() {
-        //             SetArrowRotation(this)
-        //         },
-        //         MJPeng: function(eD) {
-        //             SetArrowRotation(this)
-        //         },
-        //         MJChi: function(eD) {
-        //             SetArrowRotation(this)
-        //         },
-        //         MJGang: function(eD) {
-        //             SetArrowRotation(this)
-        //         },
-        //         MJFlower: function(eD) {
-        //             SetArrowRotation(this)
-        //         },
-        //
-        //     },
-        //     number: {
-        //         _run: function() {
-        //             this.setString("00");
-        //             //arrowbkNumberUpdate(this);
-        //             this.ignoreContentAdaptWithSize(true);
-        //         },
-        //         _event: {
-        //             MJPeng: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 playTimeUpEff = null;
-        //                 arrowbkNumberUpdate(this);
-        //             },
-        //             MJChi: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 playTimeUpEff = null;
-        //                 arrowbkNumberUpdate(this);
-        //             },
-        //             waitPut: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 var eat = MjClient.playui.jsBind.eat;
-        //                 var endFunc = null;
-        //                 if (IsTurnToMe()
-        //                     && !eat.ting._node.visible
-        //                     && !eat.hu._node.visible
-        //                     && !eat.peng._node.visible
-        //                     && !eat.chi0._node.visible
-        //                     && !eat.gang0._node.visible
-        //                     && !eat.gang1._node.visible
-        //                     && !eat.gang2._node.visible) {
-        //                     endFunc = MjClient.playui.jsBind.BtnPutCard._click;
-        //                 }
-        //                 arrowbkNumberUpdate(this, endFunc);
-        //             },
-        //             MJPut: function(msg) {
-        //                 //if (msg.uid == SelfUid()) {
-        //                 //    this.stopAllActions();
-        //                 //    stopEffect(playTimeUpEff);
-        //                 //    playTimeUpEff = null;
-        //                 //    //arrowbkNumberUpdate(this);
-        //                 //    this.setString("00");
-        //                 //}
-        //             },
-        //             roundEnd: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 playTimeUpEff = null;
-        //             },
-        //             LeaveGame: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 playTimeUpEff = null;
-        //             }
-        //
-        //         }
-        //     },
-        // },
-        BtnPutCard:{ //add by  sking for put card button
+        BtnPutCard: { //add by  sking for put card button
             _run: function () {
 
                 var tData = MjClient.data.sData.tData;
-                cc.log("BtnPutCard _run set put card btn state = " + tData.tState );
+                cc.log("BtnPutCard _run set put card btn state = " + tData.tState);
 
-                if(!IsTurnToMe() || tData.tState != TableState.waitPut)
-                {
+                if (!IsTurnToMe() || tData.tState != TableState.waitPut) {
                     // cc.log(" it's not my turn------------------sking");
                     this.visible = false;
                 }
-                else
-                {
+                else {
                     // cc.log(" it's my turn------------------sking");
                     this.visible = true;
                 }
-                setWgtLayout(this,[0.18, 0.18], [0.82, 0.3], [0.7, -0.1]);
+                setWgtLayout(this, [0.18, 0.18], [0.82, 0.3], [0.7, -0.1]);
             },
-            _click: function(btn) {
+            _click: function (btn) {
                 cc.log("点击出牌");
                 //var sData = MjClient.data.sData;
                 //cc.log("sData.tState == " + sData.tState);
                 var downNode = MjClient.playui._downNode;
                 var standUI = downNode.getChildByName("stand");
                 var children = downNode.children;
-                for(var i = 0; i < children.length; i++)
-                {
-                    if(children[i].name == "mjhand")
-                    {
-                        if(children[i].y > standUI.y + 10)
-                        {
+                for (var i = 0; i < children.length; i++) {
+                    if (children[i].name == "mjhand") {
+                        if (children[i].y > standUI.y + 10) {
                             PutOutCard(children[i], children[i].tag); //可以出牌
                             break;
                         }
@@ -1061,90 +938,79 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
                 this.visible = false;
             },
-            _event:{
+            _event: {
                 //拿到一张牌的时候，出牌按钮亮起，其他状态隐藏，by sking
-                mjhand: function() {
+                mjhand: function () {
                     this.visible = false;
                     cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>initSceneData");
                 },
-                MJHu:function(){
+                MJHu: function () {
                     this.visible = false;
                     cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>mjhand");
                 },
-                newCard: function(eD)
-                {
+                newCard: function (eD) {
                     cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>newCard by sking");
                     this.visible = true;
                     //setWgtLayout(this, [0.1, 0.1],[0.7, 0.2],[0, 0]);
                 },
-                MJPut: function(eD) {
+                MJPut: function (eD) {
                     cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJPut by sking");
                     this.visible = false;
                 },
-                MJChi: function(eD) {
+                MJChi: function (eD) {
                     cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJChi by sking");
-                    if(IsTurnToMe())
-                    {
+                    if (IsTurnToMe()) {
                         cc.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJPeng  btn show----");
                         this.visible = true;
                     }
                 },
-                MJGang: function(eD) {
+                MJGang: function (eD) {
                     cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJGang by sking");
-                    if(IsTurnToMe())
-                    {
+                    if (IsTurnToMe()) {
                         cc.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJPeng  btn show----");
                         this.visible = true;
                     }
                 },
-                MJPeng: function(eD) {
+                MJPeng: function (eD) {
                     cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJPeng by sking");
-                    if(IsTurnToMe())
-                    {
+                    if (IsTurnToMe()) {
                         cc.log(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJPeng  btn show----");
                         this.visible = true;
                     }
                 },
                 MJTing: function (eD) {
-                    if(MjClient.playui.isCanPutCard())
-                    {
+                    if (MjClient.playui.isCanPutCard()) {
                         this.visible = true;
                         cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJTing by sking - hide");
-                    }else{
+                    } else {
                         this.visible = false;
                     }
                 },
-                MJPass:function()
-                {
+                MJPass: function () {
                     var tData = MjClient.data.sData.tData;
                     var pl = getUIPlayer(0);
-                    if(tData.tState == TableState.waitPut && pl.mjState == TableState.waitPut)
-                    {
+                    if (tData.tState == TableState.waitPut && pl.mjState == TableState.waitPut) {
                         this.visible = true;
                     }
                 },
-                initSceneData:function(eD)
-                {
+                initSceneData: function (eD) {
 
                 },
-                waitPut: function() {
+                waitPut: function () {
                     var pl = getUIPlayer(0);
                     var eat = MjClient.playui.jsBind.eat;
                     if (IsTurnToMe() && pl.isTing && !eat.hu._node.visible && !eat.gang0._node.visible && !eat.gang1._node.visible && !eat.gang2._node.visible) {
                         cc.log("*********自动出牌*********");
                         this.runAction(cc.sequence(cc.delayTime(0.8),
                             cc.callFunc(MjClient.playui.jsBind.BtnPutCard._click)));
-                    }else{
-                        if(MjClient.playui.isCanPutCard())
-                        {
+                    } else {
+                        if (MjClient.playui.isCanPutCard()) {
                             cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>isCanPutCard");
-                            if(eat.hu._node.visible)
-                            {
+                            if (eat.hu._node.visible) {
                                 this.visible = false;
                                 cc.log("--------------------有胡按钮拉--------------");
                             }
-                            else
-                            {
+                            else {
                                 this.visible = true;
                             }
                         }
@@ -1154,14 +1020,14 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         },//end of add by sking
         down: {
             head: {
-                TG_CountDown:{//托管倒计时
-                    _run:function () {
+                TG_CountDown: {//托管倒计时
+                    _run: function () {
                         this.visible = false;
                         this.ignoreContentAdaptWithSize(true);
                     },
-                    _event:{
-                        trustTip:function (msg) {
-                            if(getUIPlayer(0)&&getUIPlayer(0).info.uid == msg.uid){
+                    _event: {
+                        trustTip: function (msg) {
+                            if (getUIPlayer(0) && getUIPlayer(0).info.uid == msg.uid) {
                                 this.visible = true;
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
@@ -1170,83 +1036,81 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                     self.setString(tipCountDown);
                                     if (tipCountDown > 0) {
                                         tipCountDown--;
-                                    }else {
+                                    } else {
                                         self.setVisible(false);
                                         self.unscheduleAllCallbacks();
                                     }
                                 }, 1, cc.REPEAT_FOREVER, 0);
                             }
                         },
-                        MJPut:function (msg) {
+                        MJPut: function (msg) {
                             this.visible = false;
                         },
-                        roundEnd:function()
-                        {
+                        roundEnd: function () {
                             this.visible = false;
                         }
                     }
                 },
                 tuoguan: {
-                    _run:function () {
+                    _run: function () {
                         this.visible = false;
                     },
-                    _event:{
-                        beTrust:function (msg) {
-                            if(getUIPlayer(0)&&getUIPlayer(0)&&getUIPlayer(0).info.uid == msg.uid){
+                    _event: {
+                        beTrust: function (msg) {
+                            if (getUIPlayer(0) && getUIPlayer(0) && getUIPlayer(0).info.uid == msg.uid) {
                                 this.visible = true;
                             }
                         },
-                        cancelTrust:function (msg) {
-                            if(getUIPlayer(0)&&getUIPlayer(0)&&getUIPlayer(0).info.uid == msg.uid){
+                        cancelTrust: function (msg) {
+                            if (getUIPlayer(0) && getUIPlayer(0) && getUIPlayer(0).info.uid == msg.uid) {
                                 this.visible = false;
                             }
                         },
-                        roundEnd:function()
-                        {
+                        roundEnd: function () {
                             this.visible = false;
                         },
-                        initSceneData:function (msg) {
+                        initSceneData: function (msg) {
                             var pl = getUIPlayer(0);
-                            if(pl&&pl.trust){
+                            if (pl && pl.trust) {
                                 this.visible = true;
-                            }else {
+                            } else {
                                 this.visible = false;
                             }
                         }
                     }
                 },
                 zhuang: {
-                    _run: function() {
+                    _run: function () {
                         this.visible = false;
                     },
                     _event: {
-                        waitPut: function() {
+                        waitPut: function () {
                             showUserZhuangLogo(this, 0);
                         },
-                        initSceneData: function() {
+                        initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 0);
                         }
                     }
                 },
                 chatbg: {
-                    _run: function() {
+                    _run: function () {
                         this.getParent().zIndex = 600;
                     },
                     chattext: {
                         _event: {
 
-                            MJChat: function(msg) {
+                            MJChat: function (msg) {
 
                                 showUserChat(this, 0, msg);
                             },
-                            playVoice: function(voicePath) {
+                            playVoice: function (voicePath) {
                                 MjClient.data._tempMessage.msg = voicePath;
                                 showUserChat(this, 0, MjClient.data._tempMessage);
                             }
                         }
                     }
                 },
-                _click: function(btn) {
+                _click: function (btn) {
                     showPlayerInfo(0, btn);
 
                     //cc.log("点击出牌");
@@ -1278,66 +1142,64 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     //}
                 },
                 _event: {
-                    loadWxHead: function(d) {
+                    loadWxHead: function (d) {
                         setWxHead(this, d, 0);
                     },
-                    addPlayer: function(eD) {
-                        showFangzhuTagIcon(this,0);
+                    addPlayer: function (eD) {
+                        showFangzhuTagIcon(this, 0);
                     },
-                    removePlayer: function(eD) {
-                        showFangzhuTagIcon(this,0);
+                    removePlayer: function (eD) {
+                        showFangzhuTagIcon(this, 0);
                     }
 
                 },
                 _run: function () {
                     // this.zIndex = 600;
-                    showFangzhuTagIcon(this,0);
+                    showFangzhuTagIcon(this, 0);
                 },
-                score_bg:{_visible:false},
-                name_bg:{_visible:false},
-                flower_layout: {_visible:false},
-                flower_zfb_layout : {_visible:false},
+                score_bg: { _visible: false },
+                name_bg: { _visible: false },
+                flower_layout: { _visible: false },
+                flower_zfb_layout: { _visible: false },
                 tingIcon: {
-                    _visible:false,
-                    _run:function(){
+                    _visible: false,
+                    _run: function () {
                         this.visible = false;
-                        this.runAction(cc.sequence(cc.spawn(cc.tintTo(0.6, 255,0,0),cc.scaleTo(0.6,this.getScale() + 0.3)),
-                            cc.spawn(cc.tintTo(0.6, 255,255,255),cc.scaleTo(0.6,this.getScale()))).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(cc.tintTo(0.6, 255, 0, 0), cc.scaleTo(0.6, this.getScale() + 0.3)),
+                            cc.spawn(cc.tintTo(0.6, 255, 255, 255), cc.scaleTo(0.6, this.getScale()))).repeatForever());
                     },
                     _event: {
-                        clearCardUI: function(eD) {
+                        clearCardUI: function (eD) {
                             this.visible = false;
                         },
-                        MJHu: function(eD) {
+                        MJHu: function (eD) {
                             this.visible = false;
                         },
-                        moveHead: function() {
+                        moveHead: function () {
                             MjClient.playui.tingIconVisible(this, 0);
                         },
-                        onlinePlayer: function(eD) {
+                        onlinePlayer: function (eD) {
                             //MjClient.playui.tingIconVisible(this,0);
                         },
-                        initSceneData:function(eD)
-                        {
-                            MjClient.playui.tingIconVisible(this,0);
+                        initSceneData: function (eD) {
+                            MjClient.playui.tingIconVisible(this, 0);
                         },
-                        roundEnd: function(){
+                        roundEnd: function () {
                             // cc.log("end rounde------------------------");
                             this.visible = false;
                         }
                     }
                 },
                 skipHuIconTag: {
-                    _visible:false,
+                    _visible: false,
                     _event: {
-                        clearCardUI: function(eD) {
+                        clearCardUI: function (eD) {
                             this.visible = false;
                         },
-                        MJHu: function(eD) {
+                        MJHu: function (eD) {
                             this.visible = false;
                         },
-                        initSceneData:function(eD)
-                        {
+                        initSceneData: function (eD) {
                             var pl = getUIPlayer(0);
                             cc.log("====================initSceneData=============== pl.skipHu = " + pl.skipHu);
                             if (pl.skipHu) {
@@ -1348,44 +1210,52 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     }
                 },
                 skipPengIconTag: {
-                    _visible:false,
+                    _visible: false,
                     _event: {
-                        clearCardUI: function(eD) {
+                        clearCardUI: function (eD) {
                             this.visible = false;
                         },
-                       MJpeng: function(eD) {
+                        MJpeng: function (eD) {
                             this.visible = false;
                         },
-                        initSceneData:function(eD)
-                        {
+                        initSceneData: function (eD) {
                             var pl = getUIPlayer(0);
                             if (pl.skipPeng.length > 0) {
                                 //var _skipHuIconNode =  MjClient.playui._downNode.getChildByName("head").getChildByName("skipHuIconTag");
                                 this.visible = true;
-                            }else{
+                            } else {
                                 this.visible = false;
                             }
                         }
                     }
 
+                },
+                tou: {
+                    _run: function () {
+                        this.visible = false;
+                    },
+                    _event: {
+                        TouResult: function (sD) {
+                            MjClient.playui.showUserTouAction(this, 0, sD);
+                        },
+                    }
                 }
-
             },
             play_tips: {
                 _layout: [[0.08, 0.14], [0.5, 0.25], [0, 0.5]],
                 _run: function () {
                     this.zIndex = actionZindex;
                 },
-                _visible:false,
+                _visible: false,
             },
-            tai_layout:{
+            tai_layout: {
                 _layout: [
                     [0.018, 0.018],
                     [0, 0],
                     [0, 0.2]
                 ],
-                tai_info:{
-                    _visible:true,
+                tai_info: {
+                    _visible: true,
                     _run: function () {
                         this.setString("");
                     }
@@ -1397,20 +1267,20 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0.5],
                     [0, -1.5]
                 ],
-                _run: function() {
+                _run: function () {
                     GetReadyVisible(this, 0);
                 },
                 _event: {
-                    moveHead: function() {
+                    moveHead: function () {
                         GetReadyVisible(this, -1);
                     },
-                    addPlayer: function() {
+                    addPlayer: function () {
                         GetReadyVisible(this, 0);//根据状态设置ready 是否可见 add by sking
                     },
-                    removePlayer: function() {
+                    removePlayer: function () {
                         GetReadyVisible(this, 0);
                     },
-                    onlinePlayer: function() {
+                    onlinePlayer: function () {
                         GetReadyVisible(this, 0);
                     }
                 }
@@ -1443,7 +1313,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out2: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0.0, 0.0763], [0.53, 0], [-7, 5.7]);
                     } else {
@@ -1456,7 +1326,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out1: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
 
                         setWgtLayout(this, [0.0, 0.0763], [0.53, 0], [-7, 4.7]);
@@ -1470,7 +1340,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out0: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0.0, 0.0763], [0.53, 0], [-7, 3.7]);
                     } else {
@@ -1494,67 +1364,66 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _layout: [[0.25, 0.12], [0.2, 0.25], [0, -0.3]],
                 _visible: false,
                 _event: {
-                    clearCardUI: function(eD) {
+                    clearCardUI: function (eD) {
                         this.visible = false;
                     },
-                    MJHu: function(eD) {
+                    MJHu: function (eD) {
                         this.visible = false;
                     },
-                    initSceneData:function(eD)
-                    {
-                        MjClient.playui.tingIconVisible(this,0);
+                    initSceneData: function (eD) {
+                        MjClient.playui.tingIconVisible(this, 0);
                     }
                 }
             },
             tingCardNumNode: {
-                _layout: [[0.25, 0.12], [0.12, 0.25], [0,-0.2]],
+                _layout: [[0.25, 0.12], [0.12, 0.25], [0, -0.2]],
                 _visible: false,
                 _event: {
-                    clearCardUI: function(eD) {
+                    clearCardUI: function (eD) {
                         this.visible = false;
                     },
-                    MJHu: function(eD) {
+                    MJHu: function (eD) {
                         this.visible = false;
                     },
-                    MJPut: function(eD) {
+                    MJPut: function (eD) {
                         this.visible = false;
                     }
                 }
             },
             _event: {
-                clearCardUI: function() {
+                clearCardUI: function () {
                     clearCardUI(this, 0);
                 },
-                initSceneData: function(eD) {
+                initSceneData: function (eD) {
                     SetUserVisible_Red20(this, 0);
                 },
-                addPlayer: function(eD) {
+                addPlayer: function (eD) {
                     SetUserVisible_Red20(this, 0);
                 },
-                removePlayer: function(eD) {
+                removePlayer: function (eD) {
                     SetUserVisible_Red20(this, 0);
                 },
-                mjhand: function(eD) {
+                mjhand: function (eD) {
                     InitUserHandUI_Red20(this, 0);
                 },
-                roundEnd: function() {
+                roundEnd: function () {
                     InitUserCoinAndName(this, 0);
                     //setTaiInfo("");
                 },
-                newCard: function(eD) {
+                newCard: function (eD) {
                     // cdsNums++;
                     console.log("客户端发牌组合...... ");
                     //cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>newCard---------------");
                     //var putButtn = this.getChildByName("BtnPutCard");
                     //putButtn.visible = true;
                     //MjClient.playui._btnPutCard.visible = true;
-                    if (typeof(eD) == "number") {
-                        eD = {newCard: eD};
+                    if (typeof (eD) == "number") {
+                        eD = { newCard: eD };
                     }
-                    DealNewCard(this,eD.newCard,0);// checkCanTing(eD);
+                    DealNewCard(this, eD.newCard, 0);// checkCanTing(eD);
                     hideTingBtn();
                 },
-                MJPut: function(eD) {
+                MJPut: function (eD) {
                     cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MJPut---------------");
                     cc.log("重置头像信息位置");
                     var sData = MjClient.data.sData;
@@ -1562,61 +1431,73 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     var uids = tData.uids;
                     cc.log("======================重置头像信息位置 =  " + uids);
 
-                    DealMJPut(this,eD,0);
+                    DealMJPut(this, eD, 0);
                     var pl = getUIPlayer(0);
-                    if (eD.uid === SelfUid())
-                    {
+                    if (eD.uid === SelfUid()) {
                         var _tingCards = this.getChildByName("tingCardsNode");
                         var tingSet = calTingSet(pl.mjhand);
-                        setTingCards(_tingCards,tingSet);
+                        setTingCards(_tingCards, tingSet);
                     }
                     MjClient.playui.jsBind.eat.ting._node.visible = false;//托管清除听牌按钮
                     setUserOffline(this, 0);
                 },
-                MJChi: function(eD) {
+                MJChi: function (eD) {
                     DealMJChi(this, eD, 0);
                     setUserOffline(this, 0);
                 },
-                MJGang: function(eD) {
+                MJGang: function (eD) {
                     DealMJGang(this, eD, 0);
                     hideTingBtn();
                     setUserOffline(this, 0);
                 },
-                MJPeng: function(eD) {
+                MJPeng: function (eD) {
                     DealMJPeng(this, eD, 0);
                     setUserOffline(this, 0);
                 },
-                MJHu: function(eD) {
+                MJHu: function (eD) {
                     HandleMJHu(this, eD, 0);
                     setUserOffline(this, 0);
                 },
-                onlinePlayer: function(eD) {
+                onlinePlayer: function (eD) {
                     setUserOffline(this, 0);
                 },
-                playerStatusChange: function(eD) {
+                playerStatusChange: function (eD) {
                     setUserOffline(this, 0);
                 },
-                MJFlower: function(eD) {
+                MJFlower: function (eD) {
                     HandleMJFlower(this, eD, 0);
                 },
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 0);
-                }
+                },
+                TouResult: function (sD) {
+                    MjClient.playui.DealAndMoveCard(this, sD, 0);
+                },
             }
         },
         right: {
-            _run: function() {
+            _run: function () {
                 this.visible = MjClient.MaxPlayerNum != 2;
             },
             head: {
-                TG_CountDown:{//托管倒计时
-                    _run:function () {
+                tou: {
+                    _run: function () {
+                        this.visible = false;
+                    },
+                    _event: {
+                        TouResult: function (sD) {
+                            MjClient.playui.showUserTouAction(this, 1, sD);
+                        },
+                    }
+                },
+                TG_CountDown: {//托管倒计时
+                    _run: function () {
                         this.visible = false;
                         this.ignoreContentAdaptWithSize(true);
                     },
-                    _event:{
-                        trustTip:function (msg) {
-                            if(getUIPlayer(1)&&getUIPlayer(1).info.uid == msg.uid){
+                    _event: {
+                        trustTip: function (msg) {
+                            if (getUIPlayer(1) && getUIPlayer(1).info.uid == msg.uid) {
                                 this.visible = true;
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
@@ -1625,129 +1506,126 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                     self.setString(tipCountDown);
                                     if (tipCountDown > 0) {
                                         tipCountDown--;
-                                    }else {
+                                    } else {
                                         self.setVisible(false);
                                         self.unscheduleAllCallbacks();
                                     }
                                 }, 1, cc.REPEAT_FOREVER, 0);
                             }
                         },
-                        MJPut:function (msg) {
+                        MJPut: function (msg) {
                             this.visible = false;
                         },
-                        roundEnd:function()
-                        {
+                        roundEnd: function () {
                             this.visible = false;
                         }
                     }
                 },
                 tuoguan: {
-                    _run:function () {
+                    _run: function () {
                         this.visible = false;
                     },
-                    _event:{
-                        beTrust:function (msg) {
-                            if(getUIPlayer(1)&&getUIPlayer(1)&&getUIPlayer(1).info.uid == msg.uid){
+                    _event: {
+                        beTrust: function (msg) {
+                            if (getUIPlayer(1) && getUIPlayer(1) && getUIPlayer(1).info.uid == msg.uid) {
                                 this.visible = true;
                             }
                         },
-                        cancelTrust:function (msg) {
-                            if(getUIPlayer(1)&&getUIPlayer(1)&&getUIPlayer(1).info.uid == msg.uid){
+                        cancelTrust: function (msg) {
+                            if (getUIPlayer(1) && getUIPlayer(1) && getUIPlayer(1).info.uid == msg.uid) {
                                 this.visible = false;
                             }
                         },
-                        roundEnd:function()
-                        {
+                        roundEnd: function () {
                             this.visible = false;
                         },
-                        initSceneData:function (msg) {
+                        initSceneData: function (msg) {
                             var pl = getUIPlayer(1);
-                            if(pl&&pl.trust){
+                            if (pl && pl.trust) {
                                 this.visible = true;
-                            }else {
+                            } else {
                                 this.visible = false;
                             }
                         }
                     }
                 },
                 zhuang: {
-                    _run: function() {
+                    _run: function () {
                         this.visible = false;
                     },
                     _event: {
-                        waitPut: function() {
+                        waitPut: function () {
                             showUserZhuangLogo(this, 1);
                         },
-                        initSceneData: function() {
+                        initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 1);
                         }
                     }
                 },
                 chatbg: {
-                    _run: function() {
+                    _run: function () {
                         this.getParent().zIndex = 500;
                     },
                     chattext: {
                         _event: {
 
-                            MJChat: function(msg) {
+                            MJChat: function (msg) {
                                 showUserChat(this, 1, msg);
                             },
-                            playVoice: function(voicePath) {
+                            playVoice: function (voicePath) {
                                 MjClient.data._tempMessage.msg = voicePath;
                                 showUserChat(this, 1, MjClient.data._tempMessage);
                             }
                         }
                     }
                 },
-                _click: function(btn) {
+                _click: function (btn) {
                     showPlayerInfo(1, btn);
                 },
                 _event: {
-                    loadWxHead: function(d) {
+                    loadWxHead: function (d) {
                         setWxHead(this, d, 1);
                     },
-                    addPlayer: function(eD) {
-                        showFangzhuTagIcon(this,1);
+                    addPlayer: function (eD) {
+                        showFangzhuTagIcon(this, 1);
                     },
-                    removePlayer: function(eD) {
-                        showFangzhuTagIcon(this,1);
+                    removePlayer: function (eD) {
+                        showFangzhuTagIcon(this, 1);
                     }
                 },
                 _run: function () {
                     // this.zIndex = 600;
-                    showFangzhuTagIcon(this,1);
+                    showFangzhuTagIcon(this, 1);
                 },
-                score_bg:{_visible:false},
-                name_bg:{_visible:false},
-                flower_layout: {_visible:false},
-                flower_zfb_layout : {_visible:false},
+                score_bg: { _visible: false },
+                name_bg: { _visible: false },
+                flower_layout: { _visible: false },
+                flower_zfb_layout: { _visible: false },
                 tingIcon: {
-                    _visible:false,
-                    _run:function(){
+                    _visible: false,
+                    _run: function () {
                         this.visible = false;
 
-                        this.runAction(cc.sequence(cc.spawn(cc.tintTo(0.6, 255,0,0),cc.scaleTo(0.6,this.getScale() + 0.3)),
-                            cc.spawn(cc.tintTo(0.6, 255,255,255),cc.scaleTo(0.6,this.getScale()))).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(cc.tintTo(0.6, 255, 0, 0), cc.scaleTo(0.6, this.getScale() + 0.3)),
+                            cc.spawn(cc.tintTo(0.6, 255, 255, 255), cc.scaleTo(0.6, this.getScale()))).repeatForever());
                     },
                     _event: {
-                        clearCardUI: function(eD) {
+                        clearCardUI: function (eD) {
                             this.visible = false;
                         },
-                        MJHu: function(eD) {
+                        MJHu: function (eD) {
                             this.visible = false;
                         },
-                        moveHead: function() {
+                        moveHead: function () {
                             MjClient.playui.tingIconVisible(this, 1);
                         },
-                        onlinePlayer: function(eD) {
+                        onlinePlayer: function (eD) {
                             //MjClient.playui.tingIconVisible(this,1);
                         },
-                        initSceneData:function(eD)
-                        {
-                            MjClient.playui.tingIconVisible(this,1);
+                        initSceneData: function (eD) {
+                            MjClient.playui.tingIconVisible(this, 1);
                         },
-                        roundEnd: function(){
+                        roundEnd: function () {
                             // cc.log("end rounde------------------------");
                             this.visible = false;
                         }
@@ -1760,7 +1638,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _run: function () {
                     this.zIndex = actionZindex;
                 },
-                _visible:false,
+                _visible: false,
             },
             ready: {
                 _layout: [
@@ -1768,26 +1646,24 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0.5],
                     [2, 0]
                 ],
-                _run: function() {
+                _run: function () {
                     GetReadyVisible(this, 1);
                 },
                 _event: {
-                    moveHead: function() {
+                    moveHead: function () {
                         GetReadyVisible(this, -1);
                     },
-                    addPlayer: function() {
+                    addPlayer: function () {
                         GetReadyVisible(this, 1);
                     },
-                    removePlayer: function() {
+                    removePlayer: function () {
                         GetReadyVisible(this, 1);
                     },
-                    onlinePlayer: function() {
+                    onlinePlayer: function () {
                         GetReadyVisible(this, 1);
                     }
                 }
             },
-
-
             stand: {
                 _layout: [
                     [0, 0.08],
@@ -1796,7 +1672,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 ],
                 _visible: false
             },
-
             up: {
                 _layout: [
                     [0, 0.05],
@@ -1815,7 +1690,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
 
             out0: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0545], [1, 0.5], [-4.6, -4.1]);
                     } else {
@@ -1825,7 +1700,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out1: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0545], [1, 0.5], [-5.8, -4.1]);
                     } else {
@@ -1836,7 +1711,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out2: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0545], [1, 0.5], [-7.0, -4.1]);
                     } else {
@@ -1854,78 +1729,90 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             _event: {
-                clearCardUI: function() {
+                clearCardUI: function () {
                     clearCardUI(this, 1);
                 },
-                initSceneData: function(eD) {
+                initSceneData: function (eD) {
                     SetUserVisible_Red20(this, 1);
                 },
-                addPlayer: function(eD) {
+                addPlayer: function (eD) {
                     SetUserVisible_Red20(this, 1);
                 },
-                removePlayer: function(eD) {
+                removePlayer: function (eD) {
                     SetUserVisible_Red20(this, 1);
                 },
-                mjhand: function(eD) {
+                mjhand: function (eD) {
                     InitUserHandUI_Red20(this, 1);
                 },
-                roundEnd: function() {
+                roundEnd: function () {
                     InitUserCoinAndName(this, 1);
                 },
-                waitPut: function() {
+                waitPut: function () {
                     DealWaitPut(this, MjClient.data.sData.tData, 1);
                 },
-                MJPut: function(eD) {
+                MJPut: function (eD) {
                     DealMJPut(this, eD, 1);
-                    if(eD.uid != SelfUid())
-                    {
+                    if (eD.uid != SelfUid()) {
                         hideTingBtn();
                     }
                     setUserOffline(this, 1);
                 },
-                MJChi: function(eD) {
+                MJChi: function (eD) {
                     DealMJChi(this, eD, 1);
                     setUserOffline(this, 1);
                 },
-                MJGang: function(eD) {
+                MJGang: function (eD) {
                     DealMJGang(this, eD, 1);
                     setUserOffline(this, 1);
                 },
-                MJPeng: function(eD) {
+                MJPeng: function (eD) {
                     DealMJPeng(this, eD, 1);
                     setUserOffline(this, 1);
                 },
-                MJHu: function(eD) {
-                    HandleMJHu(this, eD,1);
+                MJHu: function (eD) {
+                    HandleMJHu(this, eD, 1);
                     setUserOffline(this, 1);
                 },
-                onlinePlayer: function(eD) {
+                onlinePlayer: function (eD) {
                     setUserOffline(this, 1);
                 },
-                playerStatusChange: function(eD) {
+                playerStatusChange: function (eD) {
                     setUserOffline(this, 1);
                 },
-                MJFlower: function(eD) {
+                MJFlower: function (eD) {
                     HandleMJFlower(this, eD, 1);
                 },
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 1);
-                }
+                },
+                TouResult: function (sD) {
+                    MjClient.playui.DealAndMoveCard(this, sD, 1);
+                },
             }
         },
         top: {
-            _run: function() {
+            _run: function () {
                 this.visible = MjClient.MaxPlayerNum != 3;
             },
             head: {
-                TG_CountDown:{//托管倒计时
-                    _run:function () {
+                tou: {
+                    _run: function () {
+                        this.visible = false;
+                    },
+                    _event: {
+                        TouResult: function (sD) {
+                            MjClient.playui.showUserTouAction(this, 2, sD);
+                        }
+                    }
+                },
+                TG_CountDown: {//托管倒计时
+                    _run: function () {
                         this.visible = false;
                         this.ignoreContentAdaptWithSize(true);
                     },
-                    _event:{
-                        trustTip:function (msg) {
-                            if(getUIPlayer(2)&&getUIPlayer(2).info.uid == msg.uid){
+                    _event: {
+                        trustTip: function (msg) {
+                            if (getUIPlayer(2) && getUIPlayer(2).info.uid == msg.uid) {
                                 this.visible = true;
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
@@ -1934,129 +1821,126 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                     self.setString(tipCountDown);
                                     if (tipCountDown > 0) {
                                         tipCountDown--;
-                                    }else {
+                                    } else {
                                         self.setVisible(false);
                                         self.unscheduleAllCallbacks();
                                     }
                                 }, 1, cc.REPEAT_FOREVER, 0);
                             }
                         },
-                        MJPut:function (msg) {
+                        MJPut: function (msg) {
                             this.visible = false;
                         },
-                        roundEnd:function()
-                        {
+                        roundEnd: function () {
                             this.visible = false;
                         }
                     }
                 },
                 tuoguan: {
-                    _run:function () {
+                    _run: function () {
                         this.visible = false;
                     },
-                    _event:{
-                        beTrust:function (msg) {
-                            if(getUIPlayer(2)&&getUIPlayer(2)&&getUIPlayer(2).info.uid == msg.uid){
+                    _event: {
+                        beTrust: function (msg) {
+                            if (getUIPlayer(2) && getUIPlayer(2) && getUIPlayer(2).info.uid == msg.uid) {
                                 this.visible = true;
                             }
                         },
-                        cancelTrust:function (msg) {
-                            if(getUIPlayer(2)&&getUIPlayer(2)&&getUIPlayer(2).info.uid == msg.uid){
+                        cancelTrust: function (msg) {
+                            if (getUIPlayer(2) && getUIPlayer(2) && getUIPlayer(2).info.uid == msg.uid) {
                                 this.visible = false;
                             }
                         },
-                        roundEnd:function()
-                        {
+                        roundEnd: function () {
                             this.visible = false;
                         },
-                        initSceneData:function (msg) {
+                        initSceneData: function (msg) {
                             var pl = getUIPlayer(2);
-                            if(pl&&pl.trust){
+                            if (pl && pl.trust) {
                                 this.visible = true;
-                            }else {
+                            } else {
                                 this.visible = false;
                             }
                         }
                     }
                 },
                 zhuang: {
-                    _run: function() {
+                    _run: function () {
                         this.visible = false;
                     },
                     _event: {
-                        waitPut: function() {
+                        waitPut: function () {
                             showUserZhuangLogo(this, 2);
                         },
-                        initSceneData: function() {
+                        initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 2);
                         }
                     }
                 },
                 chatbg: {
-                    _run: function() {
+                    _run: function () {
                         this.getParent().zIndex = 500;
                     },
                     chattext: {
                         _event: {
 
-                            MJChat: function(msg) {
+                            MJChat: function (msg) {
                                 showUserChat(this, 2, msg);
                             },
-                            playVoice: function(voicePath) {
+                            playVoice: function (voicePath) {
                                 MjClient.data._tempMessage.msg = voicePath;
                                 showUserChat(this, 2, MjClient.data._tempMessage);
                             }
                         }
                     }
                 },
-                _click: function(btn) {
+                _click: function (btn) {
                     showPlayerInfo(2, btn);
                 },
                 _event: {
-                    loadWxHead: function(d) {
+                    loadWxHead: function (d) {
                         setWxHead(this, d, 2);
                     },
-                    addPlayer: function(eD) {
-                        showFangzhuTagIcon(this,2);
+                    addPlayer: function (eD) {
+                        showFangzhuTagIcon(this, 2);
                     },
-                    removePlayer: function(eD) {
-                        showFangzhuTagIcon(this,2);
+                    removePlayer: function (eD) {
+                        showFangzhuTagIcon(this, 2);
                     }
                 },
                 _run: function () {
                     // this.zIndex = 600;
-                    showFangzhuTagIcon(this,2);
+                    showFangzhuTagIcon(this, 2);
                 },
-                score_bg:{_visible:false},
-                name_bg:{_visible:false},
-                flower_layout: {_visible:false},
-                flower_zfb_layout : {_visible:false},
+                score_bg: { _visible: false },
+                name_bg: { _visible: false },
+                flower_layout: { _visible: false },
+                flower_zfb_layout: { _visible: false },
                 tingIcon: {
-                    _visible:false,
-                    _run:function(){
+                    _visible: false,
+                    _run: function () {
                         this.visible = false;
 
-                        this.runAction(cc.sequence(cc.spawn(cc.tintTo(0.6, 255,0,0),cc.scaleTo(0.6,this.getScale() + 0.3)),
-                            cc.spawn(cc.tintTo(0.6, 255,255,255),cc.scaleTo(0.6,this.getScale()))).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(cc.tintTo(0.6, 255, 0, 0), cc.scaleTo(0.6, this.getScale() + 0.3)),
+                            cc.spawn(cc.tintTo(0.6, 255, 255, 255), cc.scaleTo(0.6, this.getScale()))).repeatForever());
                     },
                     _event: {
-                        clearCardUI: function(eD) {
+                        clearCardUI: function (eD) {
                             this.visible = false;
                         },
-                        MJHu: function(eD) {
+                        MJHu: function (eD) {
                             this.visible = false;
                         },
-                        moveHead: function() {
+                        moveHead: function () {
                             MjClient.playui.tingIconVisible(this, 2);
                         },
-                        onlinePlayer: function(eD) {
+                        onlinePlayer: function (eD) {
                             //MjClient.playui.tingIconVisible(this,1);
                         },
-                        initSceneData:function(eD)
-                        {
-                            MjClient.playui.tingIconVisible(this,2);
+                        initSceneData: function (eD) {
+                            MjClient.playui.tingIconVisible(this, 2);
                         },
-                        roundEnd: function(){
+                        roundEnd: function () {
                             // cc.log("end rounde------------------------");
                             this.visible = false;
                         }
@@ -2068,7 +1952,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _run: function () {
                     this.zIndex = actionZindex;
                 },
-                _visible:false,
+                _visible: false,
             },
             ready: {
                 _layout: [
@@ -2076,20 +1960,20 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0.5],
                     [0, 1.5]
                 ],
-                _run: function() {
+                _run: function () {
                     GetReadyVisible(this, 2);
                 },
                 _event: {
-                    moveHead: function() {
+                    moveHead: function () {
                         GetReadyVisible(this, -1);
                     },
-                    addPlayer: function() {
+                    addPlayer: function () {
                         GetReadyVisible(this, 2);
                     },
-                    removePlayer: function() {
+                    removePlayer: function () {
                         GetReadyVisible(this, 2);
                     },
-                    onlinePlayer: function() {
+                    onlinePlayer: function () {
                         GetReadyVisible(this, 2);
                     }
                 }
@@ -2122,7 +2006,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
 
             out0: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0763], [0.5, 1], [6.8, -2.5]);
                     } else {
@@ -2135,7 +2019,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out1: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0763], [0.5, 1], [6.8, -3.5]);
                     } else {
@@ -2148,7 +2032,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out2: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0763], [0.5, 1], [6.8, -4.5]);
                     } else {
@@ -2169,79 +2053,91 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             _event: {
-                clearCardUI: function() {
+                clearCardUI: function () {
                     clearCardUI(this, 2);
                 },
-                initSceneData: function(eD) {
+                initSceneData: function (eD) {
                     SetUserVisible_Red20(this, 2);
                 },
-                addPlayer: function(eD) {
+                addPlayer: function (eD) {
                     SetUserVisible_Red20(this, 2);
                 },
-                removePlayer: function(eD) {
+                removePlayer: function (eD) {
                     SetUserVisible_Red20(this, 2);
                 },
-                mjhand: function(eD) {
+                mjhand: function (eD) {
                     InitUserHandUI_Red20(this, 2);
                 },
-                roundEnd: function() {
+                roundEnd: function () {
                     InitUserCoinAndName(this, 2);
 
                 },
-                waitPut: function() {
+                waitPut: function () {
                     DealWaitPut(this, MjClient.data.sData.tData, 2);
                 },
-                MJPut: function(eD) {
+                MJPut: function (eD) {
                     DealMJPut(this, eD, 2);
-                    if(eD.uid != SelfUid())
-                    {
+                    if (eD.uid != SelfUid()) {
                         hideTingBtn();
                     }
                     setUserOffline(this, 2);
                 },
-                MJChi: function(eD) {
+                MJChi: function (eD) {
                     DealMJChi(this, eD, 2);
                     setUserOffline(this, 2);
                 },
-                MJGang: function(eD) {
+                MJGang: function (eD) {
                     DealMJGang(this, eD, 2);
                     setUserOffline(this, 2);
                 },
-                MJPeng: function(eD) {
+                MJPeng: function (eD) {
                     DealMJPeng(this, eD, 2);
                     setUserOffline(this, 2);
                 },
-                MJHu: function(eD) {
-                    HandleMJHu(this, eD,2);
+                MJHu: function (eD) {
+                    HandleMJHu(this, eD, 2);
                     setUserOffline(this, 2);
                 },
-                onlinePlayer: function(eD) {
+                onlinePlayer: function (eD) {
                     setUserOffline(this, 2);
                 },
-                playerStatusChange: function(eD) {
+                playerStatusChange: function (eD) {
                     setUserOffline(this, 2);
                 },
-                MJFlower: function(eD) {
+                MJFlower: function (eD) {
                     HandleMJFlower(this, eD, 2);
                 },
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 2);
-                }
+                },
+                TouResult: function (sD) {
+                    MjClient.playui.DealAndMoveCard(this, sD, 2);
+                },
             }
         },
         left: {
-            _run: function() {
+            _run: function () {
                 this.visible = MjClient.MaxPlayerNum != 2;
             },
             head: {
-                TG_CountDown:{//托管倒计时
-                    _run:function () {
+                tou: {
+                    _run: function () {
+                        this.visible = false;
+                    },
+                    _event: {
+                        TouResult: function (sD) {
+                            MjClient.playui.showUserTouAction(this, 3, sD);
+                        }
+                    }
+                },
+                TG_CountDown: {//托管倒计时
+                    _run: function () {
                         this.visible = false;
                         this.ignoreContentAdaptWithSize(true);
                     },
-                    _event:{
-                        trustTip:function (msg) {
-                            if(getUIPlayer(3)&&getUIPlayer(3).info.uid == msg.uid){
+                    _event: {
+                        trustTip: function (msg) {
+                            if (getUIPlayer(3) && getUIPlayer(3).info.uid == msg.uid) {
                                 this.visible = true;
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
@@ -2250,130 +2146,127 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                     self.setString(tipCountDown);
                                     if (tipCountDown > 0) {
                                         tipCountDown--;
-                                    }else {
+                                    } else {
                                         self.setVisible(false);
                                         self.unscheduleAllCallbacks();
                                     }
                                 }, 1, cc.REPEAT_FOREVER, 0);
                             }
                         },
-                        MJPut:function (msg) {
+                        MJPut: function (msg) {
                             this.visible = false;
                         },
-                        roundEnd:function()
-                        {
+                        roundEnd: function () {
                             this.visible = false;
                         }
                     }
                 },
                 tuoguan: {
-                    _run:function () {
+                    _run: function () {
                         this.visible = false;
                     },
-                    _event:{
-                        beTrust:function (msg) {
-                            if(getUIPlayer(3)&&getUIPlayer(3)&&getUIPlayer(3).info.uid == msg.uid){
+                    _event: {
+                        beTrust: function (msg) {
+                            if (getUIPlayer(3) && getUIPlayer(3) && getUIPlayer(3).info.uid == msg.uid) {
                                 this.visible = true;
                             }
                         },
-                        cancelTrust:function (msg) {
-                            if(getUIPlayer(3)&&getUIPlayer(3)&&getUIPlayer(3).info.uid == msg.uid){
+                        cancelTrust: function (msg) {
+                            if (getUIPlayer(3) && getUIPlayer(3) && getUIPlayer(3).info.uid == msg.uid) {
                                 this.visible = false;
                             }
                         },
-                        roundEnd:function()
-                        {
+                        roundEnd: function () {
                             this.visible = false;
                         },
-                        initSceneData:function (msg) {
+                        initSceneData: function (msg) {
                             var pl = getUIPlayer(3);
-                            if(pl&&pl.trust){
+                            if (pl && pl.trust) {
                                 this.visible = true;
-                            }else {
+                            } else {
                                 this.visible = false;
                             }
                         }
                     }
                 },
                 zhuang: {
-                    _run: function() {
+                    _run: function () {
                         this.visible = false;
                     },
                     _event: {
-                        waitPut: function() {
+                        waitPut: function () {
                             showUserZhuangLogo(this, 3);
                         },
-                        initSceneData: function() {
+                        initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 3);
                         }
                     }
                 },
                 chatbg: {
-                    _run: function() {
+                    _run: function () {
                         this.getParent().zIndex = 500;
                     },
                     chattext: {
                         _event: {
 
-                            MJChat: function(msg) {
+                            MJChat: function (msg) {
 
                                 showUserChat(this, 3, msg);
                             },
-                            playVoice: function(voicePath) {
+                            playVoice: function (voicePath) {
                                 MjClient.data._tempMessage.msg = voicePath;
                                 showUserChat(this, 3, MjClient.data._tempMessage);
                             }
                         }
                     }
                 },
-                _click: function(btn) {
+                _click: function (btn) {
                     showPlayerInfo(3, btn);
                 },
                 _event: {
-                    loadWxHead: function(d) {
+                    loadWxHead: function (d) {
                         setWxHead(this, d, 3);
                     },
-                    addPlayer: function(eD) {
-                        showFangzhuTagIcon(this,3);
+                    addPlayer: function (eD) {
+                        showFangzhuTagIcon(this, 3);
                     },
-                    removePlayer: function(eD) {
-                        showFangzhuTagIcon(this,3);
+                    removePlayer: function (eD) {
+                        showFangzhuTagIcon(this, 3);
                     }
                 },
                 _run: function () {
                     // this.zIndex = 600;
-                    showFangzhuTagIcon(this,3);
+                    showFangzhuTagIcon(this, 3);
                 },
-                score_bg:{_visible:false},
-                name_bg:{_visible:false},
-                flower_layout: {_visible:false},
-                flower_zfb_layout : {_visible:false},
+                score_bg: { _visible: false },
+                name_bg: { _visible: false },
+                flower_layout: { _visible: false },
+                flower_zfb_layout: { _visible: false },
                 tingIcon: {
-                    _visible:false,
-                    _run:function(){
+                    _visible: false,
+                    _run: function () {
                         this.visible = false;
 
-                        this.runAction(cc.sequence(cc.spawn(cc.tintTo(0.6, 255,0,0),cc.scaleTo(0.6,this.getScale() + 0.3)),
-                            cc.spawn(cc.tintTo(0.6, 255,255,255),cc.scaleTo(0.6,this.getScale()))).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(cc.tintTo(0.6, 255, 0, 0), cc.scaleTo(0.6, this.getScale() + 0.3)),
+                            cc.spawn(cc.tintTo(0.6, 255, 255, 255), cc.scaleTo(0.6, this.getScale()))).repeatForever());
                     },
                     _event: {
-                        clearCardUI: function(eD) {
+                        clearCardUI: function (eD) {
                             this.visible = false;
                         },
-                        MJHu: function(eD) {
+                        MJHu: function (eD) {
                             this.visible = false;
                         },
-                        moveHead: function() {
+                        moveHead: function () {
                             MjClient.playui.tingIconVisible(this, 3);
                         },
-                        onlinePlayer: function(eD) {
+                        onlinePlayer: function (eD) {
                             //MjClient.playui.tingIconVisible(this,1);
                         },
-                        initSceneData:function(eD)
-                        {
-                            MjClient.playui.tingIconVisible(this,3);
+                        initSceneData: function (eD) {
+                            MjClient.playui.tingIconVisible(this, 3);
                         },
-                        roundEnd: function(){
+                        roundEnd: function () {
                             // cc.log("end rounde------------------------");
                             this.visible = false;
                         }
@@ -2385,7 +2278,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _run: function () {
                     this.zIndex = actionZindex;
                 },
-                _visible:false,
+                _visible: false,
             },
             ready: {
                 _layout: [
@@ -2393,20 +2286,20 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0.5],
                     [-2, 0]
                 ],
-                _run: function() {
+                _run: function () {
                     GetReadyVisible(this, 3);
                 },
                 _event: {
-                    moveHead: function() {
+                    moveHead: function () {
                         GetReadyVisible(this, -1);
                     },
-                    addPlayer: function() {
+                    addPlayer: function () {
                         GetReadyVisible(this, 3);
                     },
-                    removePlayer: function() {
+                    removePlayer: function () {
                         GetReadyVisible(this, 3);
                     },
-                    onlinePlayer: function() {
+                    onlinePlayer: function () {
                         GetReadyVisible(this, 3);
                     }
                 }
@@ -2438,7 +2331,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
 
             out0: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0545], [0, 0.5], [4.5, 4.8]);
                     } else {
@@ -2451,7 +2344,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out1: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0545], [0, 0.5], [5.6, 4.8]);
                     } else {
@@ -2463,7 +2356,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             out2: {
-                _run: function() {
+                _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
                         setWgtLayout(this, [0, 0.0545], [0, 0.5], [6.7, 4.8]);
                     } else {
@@ -2483,67 +2376,68 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 _visible: false
             },
             _event: {
-                clearCardUI: function() {
+                clearCardUI: function () {
                     clearCardUI(this, 3);
                 },
-                initSceneData: function(eD) {
+                initSceneData: function (eD) {
                     SetUserVisible_Red20(this, 3);
                 },
-                addPlayer: function(eD) {
+                addPlayer: function (eD) {
                     SetUserVisible_Red20(this, 3);
                 },
-                removePlayer: function(eD) {
+                removePlayer: function (eD) {
                     SetUserVisible_Red20(this, 3);
                 },
-                mjhand: function(eD) {
+                mjhand: function (eD) {
                     InitUserHandUI_Red20(this, 3);
                 },
-                roundEnd: function() {
+                roundEnd: function () {
                     InitUserCoinAndName(this, 3);
                 },
-                waitPut: function() {
+                waitPut: function () {
                     DealWaitPut(this, MjClient.data.sData.tData, 3);
                 },
-                MJPut: function(eD) {
+                MJPut: function (eD) {
                     DealMJPut(this, eD, 3);
-                    if(eD.uid != SelfUid())
-                    {
+                    if (eD.uid != SelfUid()) {
                         hideTingBtn();
                     }
                     setUserOffline(this, 3);
                 },
-                MJChi: function(eD) {
+                MJChi: function (eD) {
                     DealMJChi(this, eD, 3);
                     setUserOffline(this, 3);
                 },
-                MJGang: function(eD) {
+                MJGang: function (eD) {
                     DealMJGang(this, eD, 3);
                     setUserOffline(this, 3);
                 },
-                MJPeng: function(eD) {
+                MJPeng: function (eD) {
                     DealMJPeng(this, eD, 3);
                     setUserOffline(this, 3);
                 },
-                MJHu: function(eD) {
+                MJHu: function (eD) {
                     HandleMJHu(this, eD, 3);
                     setUserOffline(this, 3);
                 },
-                onlinePlayer: function(eD) {
+                onlinePlayer: function (eD) {
                     setUserOffline(this, 3);
                 },
-                playerStatusChange: function(eD) {
+                playerStatusChange: function (eD) {
                     setUserOffline(this, 3);
                 },
-                MJFlower: function(eD) {
+                MJFlower: function (eD) {
                     HandleMJFlower(this, eD, 3);
                 },
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 3);
-                }
+                },
+                TouResult: function (sD) {
+                    MjClient.playui.DealAndMoveCard(this, sD, 3);
+                },
             }
         },
         eat: {
-
             chi0: {
                 _visible: false,
                 _layout: [
@@ -2551,34 +2445,34 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0],
                     [1.3, 2.5]
                 ],
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     if (eT == 2) MJChiCardchange(btn.tag);
                 },
-                bg_img:{
-                    _run:function(){
+                bg_img: {
+                    _run: function () {
                         var _Image_light_scale = this.getScale();
 
-                        var a = cc.scaleTo(0.5,_Image_light_scale*1.0);
+                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
                         var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1,_Image_light_scale*1.3);
+                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
                         var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function(){
+                        var a3 = cc.callFunc(function () {
                             //this.setOpacity(255);
-                            this.setScale(_Image_light_scale*0.95);
+                            this.setScale(_Image_light_scale * 0.95);
                         }.bind(this));
 
-                        this.runAction(cc.sequence(cc.spawn(a,aa), cc.spawn(a1,a2).easing(cc.easeCubicActionOut()),a3,cc.delayTime(0.2)).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
 
                     }
 
                 },
                 bgimg: {
-                    _run: function() {
+                    _run: function () {
                         this.zIndex = -1;
                     }
                 },
                 bgground: {
-                    _run: function() {
+                    _run: function () {
                         this.zIndex = -1;
                     }
                 },
@@ -2593,7 +2487,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0],
                     [1.3, 3.8]
                 ],
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     if (eT == 2) MJChiCardchange(btn.tag);
                 }
             },
@@ -2604,7 +2498,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0],
                     [1.3, 5.1]
                 ],
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     if (eT == 2) MJChiCardchange(btn.tag);
                 }
             },
@@ -2615,27 +2509,26 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0],
                     [1.3, 2.5]
                 ],
-                bg_img:{
-                    _run:function(){
+                bg_img: {
+                    _run: function () {
                         var _Image_light_scale = this.getScale();
 
-                        var a = cc.scaleTo(0.5,_Image_light_scale*1.0);
+                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
                         var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1,_Image_light_scale*1.3);
+                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
                         var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function(){
+                        var a3 = cc.callFunc(function () {
                             //this.setOpacity(255);
-                            this.setScale(_Image_light_scale*0.95);
+                            this.setScale(_Image_light_scale * 0.95);
                         }.bind(this));
 
-                        this.runAction(cc.sequence(cc.spawn(a,aa), cc.spawn(a1,a2).easing(cc.easeCubicActionOut()),a3,cc.delayTime(0.2)).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
 
                     }
 
                 },
-                _touch: function(btn, eT) {
-                    if (eT == 2)
-                    {
+                _touch: function (btn, eT) {
+                    if (eT == 2) {
                         var eat = MjClient.playui.jsBind.eat;
                         eat.gang0._node.visible = false;
                         eat.guo._node.visible = false;
@@ -2651,22 +2544,21 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         var pl = getUIPlayer(0);
                         var currentCard = CurrentPutCardMsg();
                         cc.log("======================= tingCards = " + currentCard);
-                        var tingCards = getCheckTingHuCards(currentCard,pl.mjhand);
+                        var tingCards = getCheckTingHuCards(currentCard, pl.mjhand);
                         cc.log("======================= tingCards = " + JSON.stringify(tingCards));
                         setCurrentTingNum(tingCards);
                     }
                 }
             },
-            noTing : {
-                _visible : false,
+            noTing: {
+                _visible: false,
                 _layout: [
                     [0, 0.1],
                     [0.5, 0],
                     [4.6, 2.5]
                 ],
-                _touch: function(btn, eT) {
-                    if (eT == 2)
-                    {
+                _touch: function (btn, eT) {
+                    if (eT == 2) {
                         cc.log("_____noting______");
                         hideTingBtn();
                     }
@@ -2679,30 +2571,30 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0],
                     [0, 2.5]
                 ],
-                bg_img:{
-                    _run:function(){
+                bg_img: {
+                    _run: function () {
                         var _Image_light_scale = this.getScale();
 
-                        var a = cc.scaleTo(0.5,_Image_light_scale*1.0);
+                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
                         var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1,_Image_light_scale*1.3);
+                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
                         var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function(){
+                        var a3 = cc.callFunc(function () {
                             //this.setOpacity(255);
-                            this.setScale(_Image_light_scale*0.95);
+                            this.setScale(_Image_light_scale * 0.95);
                         }.bind(this));
 
-                        this.runAction(cc.sequence(cc.spawn(a,aa), cc.spawn(a1,a2).easing(cc.easeCubicActionOut()),a3,cc.delayTime(0.2)).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
 
                     }
 
                 },
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     console.log(">>>> lf，点击碰按钮");
                     if (eT == 2) MJPengToServer();
                 },
                 bgimg: {
-                    _run: function() {
+                    _run: function () {
                         this.zIndex = -1;
                     }
                 }
@@ -2714,35 +2606,35 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0],
                     [-1.7, 2.5]
                 ],
-                bg_img:{
-                    _run:function(){
+                bg_img: {
+                    _run: function () {
                         var _Image_light_scale = this.getScale();
 
-                        var a = cc.scaleTo(0.5,_Image_light_scale*1.0);
+                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
                         var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1,_Image_light_scale*1.3);
+                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
                         var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function(){
+                        var a3 = cc.callFunc(function () {
                             //this.setOpacity(255);
-                            this.setScale(_Image_light_scale*0.95);
+                            this.setScale(_Image_light_scale * 0.95);
                         }.bind(this));
 
-                        this.runAction(cc.sequence(cc.spawn(a,aa), cc.spawn(a1,a2).easing(cc.easeCubicActionOut()),a3,cc.delayTime(0.2)).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
 
                     }
 
                 },
                 card1: {},
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     if (eT == 2) MJGangCardchange(btn.tag);
                 },
                 bgimg: {
-                    _run: function() {
+                    _run: function () {
                         this.zIndex = -1;
                     }
                 },
                 bgground: {
-                    _run: function() {
+                    _run: function () {
                         this.zIndex = -1;
                     }
                 }
@@ -2755,7 +2647,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [-1.7, 3.8]
                 ],
                 card: {},
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     if (eT == 2) MJGangCardchange(btn.tag);
                 }
             },
@@ -2767,7 +2659,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [-1.7, 5.1]
                 ],
                 card: {},
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     if (eT == 2) MJGangCardchange(btn.tag);
                 }
             },
@@ -2778,14 +2670,13 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0],
                     [4.6, 2.5]
                 ],
-                _touch: function(btn, eT) {
-                    if (eT == 2)
-                    {
+                _touch: function (btn, eT) {
+                    if (eT == 2) {
                         MjClient.MJPass2NetForLianYunGang();
                     }
                 },
                 bgimg: {
-                    _run: function() {
+                    _run: function () {
                         this.zIndex = -1;
                     }
                 }
@@ -2797,30 +2688,44 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 0],
                     [-3, 2.5]
                 ],
-                bg_img:{
-                    _run:function(){
+                bg_img: {
+                    _run: function () {
                         var _Image_light_scale = this.getScale();
 
-                        var a = cc.scaleTo(0.5,_Image_light_scale*1.0);
+                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
                         var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1,_Image_light_scale*1.3);
+                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
                         var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function(){
+                        var a3 = cc.callFunc(function () {
                             //this.setOpacity(255);
-                            this.setScale(_Image_light_scale*0.95);
+                            this.setScale(_Image_light_scale * 0.95);
                         }.bind(this));
 
-                        this.runAction(cc.sequence(cc.spawn(a,aa), cc.spawn(a1,a2).easing(cc.easeCubicActionOut()),a3,cc.delayTime(0.2)).repeatForever());
+                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
 
                     }
 
                 },
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     if (eT == 2) MJHuToServer();
                 },
                 bgimg: {
-                    _run: function() {
+                    _run: function () {
                         this.zIndex = -1;
+                    }
+                }
+            },
+            tou: {
+                _visible: false,
+                _layout: [
+                    [0, 0.1],
+                    [0.5, 0],
+                    [-3, 2.5]
+                ],
+                _touch: function (btn, eT) {
+                    if (eT == 2) {
+                        this.visible = false;
+                        MJTouToServer();
                     }
                 }
             },
@@ -2831,7 +2736,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.78, 0.1],
                     [0, 1.12]
                 ],
-                _touch: function(btn, eT) {
+                _touch: function (btn, eT) {
                     if (eT == 2) {
                         btn.visible = false;
                         MjClient.clickTing = false;
@@ -2842,46 +2747,42 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             },
             changeui: {
-                _visible:true,
+                _visible: true,
                 changeuibg: {
                     _layout: [
                         [0.36, 0.36],
                         [0.5, 0.15],
                         [0, 0]
                     ],
-                    _run: function() {
+                    _run: function () {
                         this.visible = false;
                         this.getChildByName("card").visible = false;
-                        this.chiTouch = function(btn, et) {
-                            if (et == 2)
-                            {
-                                if (btn.name.localeCompare("card3") < 0)
-                                {
+                        this.chiTouch = function (btn, et) {
+                            if (et == 2) {
+                                if (btn.name.localeCompare("card3") < 0) {
                                     MJChiToServer(0);
                                 }
-                                else if (btn.name.localeCompare("card6") < 0)
-                                {
+                                else if (btn.name.localeCompare("card6") < 0) {
                                     MJChiToServer(1);
                                 }
-                                else
-                                {
+                                else {
                                     MJChiToServer(2);
                                 }
                             }
                         };
-                        this.gangTouch = function(btn, et) {
+                        this.gangTouch = function (btn, et) {
                             if (et == 2)
                                 MJGangToServer(btn.tag);
                         };
                     },
                     guobg: {
                         guo: {
-                            _touch: function(btn, eT) {
+                            _touch: function (btn, eT) {
                                 if (eT == 2) MjClient.MJPass2NetForLianYunGang();
                             }
                         },
                         fanhui: {
-                            _touch: function(btn, et) {
+                            _touch: function (btn, et) {
                                 if (et == 2) {
                                     btn.getParent().getParent().visible = false;
                                     MjClient.playui.EatVisibleCheck();
@@ -2893,40 +2794,40 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             },
             _event: {
-                clearCardUI: function() {
+                clearCardUI: function () {
                     //add by sking
                     cc.log("ting yu no ting hide --------by sking");
                     MjClient.playui.EatVisibleCheck();
                     hideTingBtn();
                 },
-                MJPass: function(eD) {
+                MJPass: function (eD) {
                     console.log("HHH :，MJPass------");
                     setSkipHuState();
                     setSkipPengState(); // 开启 过碰 机制
                     MjClient.playui.EatVisibleCheck();
                 },
-                mjhand: function(eD) {
+                mjhand: function (eD) {
                     console.log("HHH :，mjhand------");
                     MjClient.playui.EatVisibleCheck();
                 },
-                waitPut: function() {
+                waitPut: function () {
                     console.log("HHH :，waitPut------");
                     MjClient.playui.EatVisibleCheck();
                     COMMON_UI.willHuShowArrow();
                 },
-                MJPut: function(eD) {
+                MJPut: function (eD) {
                     console.log("HHH :，MJPut------");
                     MjClient.playui.EatVisibleCheck();
                 },
-                MJPeng: function(eD) {
+                MJPeng: function (eD) {
                     console.log("HHH :，MJPeng------");
                     MjClient.playui.EatVisibleCheck();
                 },
-                MJChi: function(eD) {
+                MJChi: function (eD) {
                     console.log("HHH :，MJChi------");
                     MjClient.playui.EatVisibleCheck();
                 },
-                MJGang: function(eD) {
+                MJGang: function (eD) {
                     console.log("HHH :，MJGang------");
                     MjClient.playui.EatVisibleCheck();
                 },
@@ -2935,33 +2836,37 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     hideTingBtn();
                     isCheckedTing = false;
                 },
-                roundEnd: function(eD) {
+
+                OptBtnShow: function (eD) {
+                    console.log("HHH :，OptBtnShow------", eD);
+                    MjClient.playui.EatVisibleCheck();
+                },
+                roundEnd: function (eD) {
                     console.log("HHH :，roundEnd------");
                     MjClient.playui.EatVisibleCheck();
                 },
-                initSceneData: function(eD) {
-                    function delayExe()
-                    {
+                initSceneData: function (eD) {
+                    function delayExe() {
                         cc.log("MjClient.playui == >");
                         cc.log(MjClient.playui);
                         MjClient.playui.EatVisibleCheck();
 
                     }
-                    this.runAction(cc.sequence(cc.DelayTime(0.1),cc.callFunc(delayExe)));
+                    this.runAction(cc.sequence(cc.DelayTime(0.1), cc.callFunc(delayExe)));
                 }
             }
         },
         chat_btn: {
             _layout: [
-                [0.08, 0.08], [0.97, 0.1],[0, 3.2]
+                [0.08, 0.08], [0.97, 0.1], [0, 3.2]
             ],
-            _run:function() {
+            _run: function () {
                 if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ && MjClient.data.sData.tData.fieldId) {
-                    setWgtLayout(this,  [0.09, 0.09],[0.95, 0],[0, 3.7])
+                    setWgtLayout(this, [0.09, 0.09], [0.95, 0], [0, 3.7])
                 }
             },
 
-            _click: function() {
+            _click: function () {
                 var chatlayer = new ChatLayer();
                 MjClient.Scene.addChild(chatlayer);
             }
@@ -2970,18 +2875,18 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             _layout: [
                 [0.08, 0.08], [0.97, 0.2], [0, 3.2]
             ],
-            _run: function() {
+            _run: function () {
                 initVoiceData();
                 if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ && MjClient.data.sData.tData.fieldId) {
-                    setWgtLayout(this,  [0.09, 0.09],[0.95, 0.1],[0, 3.7])
+                    setWgtLayout(this, [0.09, 0.09], [0.95, 0.1], [0, 3.7])
                 }
                 cc.eventManager.addListener(getTouchListener(), this);
-                if(MjClient.isShenhe) this.visible=false;
+                if (MjClient.isShenhe) this.visible = false;
                 if (MjClient.data.sData.tData.fieldId) {
                     this.setVisible(false);
                 }
             },
-            _touch: function(btn, eT) {
+            _touch: function (btn, eT) {
                 // 点击开始录音 松开结束录音,并且上传至服务器, 然后通知其他客户端去接受录音消息, 播放
                 if (eT == 0) {
                     startRecord();
@@ -2992,10 +2897,10 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             },
             _event: {
-                cancelRecord: function() {
+                cancelRecord: function () {
                     MjClient.native.HelloOC("cancelRecord !!!");
                 },
-                uploadRecord: function(filePath) {
+                uploadRecord: function (filePath) {
                     if (filePath) {
                         MjClient.native.HelloOC("upload voice file");
                         MjClient.native.UploadFile(filePath, MjClient.remoteCfg.voiceUrl, "sendVoice");
@@ -3003,7 +2908,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         MjClient.native.HelloOC("No voice file update");
                     }
                 },
-                sendVoice: function(fullFilePath) {
+                sendVoice: function (fullFilePath) {
                     if (!fullFilePath) {
                         console.log("sendVoice No fileName");
                         return;
@@ -3023,7 +2928,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     });
                     MjClient.native.HelloOC("download file");
                 },
-                downAndPlayVoice: function(msg) {
+                downAndPlayVoice: function (msg) {
                     MjClient.native.HelloOC("downloadPlayVoice ok");
                     MjClient.data._tempMessage = msg;
                     MjClient.native.HelloOC("mas is" + JSON.stringify(msg));
@@ -3031,38 +2936,38 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             }
         },
-        tuoguan_btn:{
+        tuoguan_btn: {
             _layout: [
                 [0.09, 0.09],
                 [0.95, 0.3],
                 [0, 3.7]
             ],
-            _run:function () {
+            _run: function () {
                 this.setVisible(MjClient.data.sData.tData.fieldId ? true : false);
                 if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ && MjClient.data.sData.tData.fieldId) {
                     this.setVisible(false)
-                }   
-                
+                }
+
             },
-            _click: function() {
-                MjClient.gamenet.request("pkroom.handler.tableMsg", {cmd: "beTrust"});
+            _click: function () {
+                MjClient.gamenet.request("pkroom.handler.tableMsg", { cmd: "beTrust" });
             },
-            _event:{
-                beTrust:function (msg) {
-                    if(msg.uid == SelfUid()){
+            _event: {
+                beTrust: function (msg) {
+                    if (msg.uid == SelfUid()) {
                         this.enabled = false;
                     }
                 },
-                cancelTrust:function (msg) {
-                    if(msg.uid == SelfUid()){
+                cancelTrust: function (msg) {
+                    if (msg.uid == SelfUid()) {
                         this.enabled = true;
                     }
                 },
-                initSceneData:function (msg) {
+                initSceneData: function (msg) {
                     var pl = getUIPlayer(0);
-                    if(pl.trust){
+                    if (pl.trust) {
                         this.enabled = false;
-                    }else {
+                    } else {
                         this.enabled = true;
                     }
                 },
@@ -3076,72 +2981,72 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             ],
             _run: function () {
                 if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ && MjClient.data.sData.tData.fieldId) {
-                    setWgtLayout(this,  [0.09, 0.09],[0.95, 0.2],[0, 3.7])
+                    setWgtLayout(this, [0.09, 0.09], [0.95, 0.2], [0, 3.7])
                 }
                 this.setVisible(MjClient.data.sData.tData.fieldId ? true : false);
-                ShowDayTaskTips(this,"left")
+                ShowDayTaskTips(this, "left")
             },
             _click: function () {
                 MjClient.Scene.addChild(new GoldTaskLayer());
             },
-            Image_hongdian:{
+            Image_hongdian: {
                 _run: function () {
                     this.visible = MjClient._GoldFuli;
                 },
                 _event: {
-                    refresh_mission: function() {
+                    refresh_mission: function () {
                         this.visible = MjClient._GoldFuli;
                     }
                 }
             }
         },
-        get_gold_btn:{
+        get_gold_btn: {
             _layout: [
                 [0.09, 0.09],
                 [0.95, 0],
                 [0, 3.7]
             ],
-            _run:function () {
+            _run: function () {
                 if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
-                    setWgtLayout(this, [0.09, 0.09], [0.86, 0.94], [0,0], false, false);
+                    setWgtLayout(this, [0.09, 0.09], [0.86, 0.94], [0, 0], false, false);
                 }
-                if(MjClient._GOLD_RECHARGE && MjClient.data.sData.tData.fieldId){
+                if (MjClient._GOLD_RECHARGE && MjClient.data.sData.tData.fieldId) {
                     this.setVisible(true);
-                }else {
+                } else {
                     this.setVisible(false);
                 }
 
                 // 隐藏按钮，暂不开放
                 this.setVisible(false);
             },
-            _click: function() {
+            _click: function () {
                 MjClient.Scene.addChild(new goldStoreLayer());
             }
         },
-        block_tuoguan:{
-            _layout:[
+        block_tuoguan: {
+            _layout: [
                 [1, 0],
                 [0.5, 0],
                 [0, 0],
                 true
             ],
-            _run: function() {
+            _run: function () {
                 this.visible = false;
             },
-            btn_tuoguan:{
-                _touch:function (btn, eT) {
+            btn_tuoguan: {
+                _touch: function (btn, eT) {
                     if (eT == 2) {
-                        MjClient.gamenet.request("pkroom.handler.tableMsg", {cmd: "cancelTrust"},function (rtn) {
+                        MjClient.gamenet.request("pkroom.handler.tableMsg", { cmd: "cancelTrust" }, function (rtn) {
                             btn.getParent().setVisible(false);
                         });
                     }
                 }
             },
-            _event:{
-                beTrust:function (msg) {
-                    cc.log("wxd........beTrust......."+JSON.stringify(msg));
-                    if(getUIPlayer(0)&&getUIPlayer(0).info.uid == msg.uid){
-                        if(MjClient.movingCard){
+            _event: {
+                beTrust: function (msg) {
+                    cc.log("wxd........beTrust......." + JSON.stringify(msg));
+                    if (getUIPlayer(0) && getUIPlayer(0).info.uid == msg.uid) {
+                        if (MjClient.movingCard) {
                             MjClient.movingCard.setTouchEnabled(false);
                             MjClient.movingCard.setScale(cardBeginScale);
                             MjClient.movingCard.setTouchEnabled(true);
@@ -3149,16 +3054,15 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         this.visible = true;
                     }
                 },
-                initSceneData:function (msg) {
+                initSceneData: function (msg) {
                     var pl = getUIPlayer(0);
-                    if(pl.trust){
+                    if (pl.trust) {
                         this.visible = true;
-                    }else {
+                    } else {
                         this.visible = false;
                     }
                 },
-                roundEnd:function()
-                {
+                roundEnd: function () {
                     this.visible = false;
                 }
             }
@@ -3170,7 +3074,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
     _leftNode: null,
     ctor: function () {
         this._super();
-        var playui = ccs.load(res.Play_json);
+        var playui = ccs.load('Play_Red20.json');
         this.srcMaxPlayerNum = MjClient.MaxPlayerNum;
         MjClient.MaxPlayerNum = parseInt(MjClient.data.sData.tData.maxPlayer);
         cc.log("MjClient.MaxPlayerNum LYG = " + MjClient.MaxPlayerNum);
@@ -3341,11 +3245,15 @@ function getSpriteFrameByCard(card) {
     if (card == -1) {
         str = 'back'
     } else {
-        let cardNum = card % 16;
-        let cardColor = Math.floor(card / 16);
-        str = cardColor + '-' + cardNum
+        str = GetCardColor(card) + '-' + GetCardNum(card)
     }
     return 'Red20/Card/' + str + '.png'
+}
+function GetCardColor(card) {
+    return Math.floor(card / 16)
+}
+function GetCardNum(card) {
+    return card % 16
 }
 //设置牌的渲染
 PlayerGamePanel_Red20.prototype.setCardSprite = function (node, cd, off) {
@@ -3368,6 +3276,9 @@ PlayerGamePanel_Red20.prototype.setCardSprite = function (node, cd, off) {
     //麻将的底牌公用图，4张
     node.loadTexture(getSpriteFrameByCard(cd));
 
+    if (cc.sys.isObjectValid(node) && cd != null && typeof (cd) != "undefined") {
+        node.tag = cd;
+    }
     //调牌背和牌面的大小
     // setMJDif(node, off);
 }
@@ -3751,16 +3662,6 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
     //吃碰杠胡node
     var vnode = [];
 
-    if (
-        pl.mjState == TableState.waitEat ||
-        pl.mjState == TableState.waitPut &&
-        tData.uids[tData.curPlayer] == SelfUid()) {
-
-    }
-    else {
-        return;
-    }
-
     //自摸
     if (tData.tState == TableState.waitPut && pl.mjState == TableState.waitPut) {
         if (IsTurnToMe()) {
@@ -3885,6 +3786,11 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
         }
     }
 
+    if (pl && pl.eatFlag & 16) {
+        vnode.push(eat.tou._node);
+        eat.tou._node.visible = true;
+    }
+
     //吃碰杠胡过处理
     if (vnode.length > 0) {
         var btnImgs =
@@ -3972,11 +3878,64 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
             setWgtLayout(vnode[i], [0, 0.2], [0.5, 0], [(1 - vnode.length) / 1.8 + i * 1.2, 1.8], false, false);
         }
     }
-
+    cc.log('000000000000000000000', pl.eatFlag)
     /*吃碰杠按钮，适配iOS*/
     COMMON_UI.vnodeAdaptForiOS(vnode);
 
-    if (eat.hu._node.visible) {
-        MjClient.playui._btnPutCard.visible = false;
-    }
+    // if (eat.hu._node.visible) {
+    //     MjClient.playui._btnPutCard.visible = false;
+    // }
 };
+
+
+
+PlayerGamePanel_Red20.prototype.DealAndMoveCard = function (node, msg, off) {
+    let children = node.children, delCards = msg.Kings || [], addCards = msg.Cards || [], name = off == 0 ? 'mjhand' : (MjClient.rePlayVideo == -1 ? 'standPri' : "mjhand_replay");
+    let num = delCards.length
+
+    let moveNode = [];
+    let cp = getUIPlayer(off);
+    if (cp && cp.info.uid == msg.uid) {
+        cc.log('---------moveNode---------------', JSON.stringify(cp),cp.info.uid == msg.uid)
+        for (let _i = 0; _i < delCards.length; _i++) {
+            const king = delCards[_i];
+            if (off === 0 || MjClient.rePlayVideo != -1) {
+                for (var i = children.length - 1; i >= 0 && num > 0; i--) {
+                    var ci = children[i];
+                    if ((ci.name == off === 0 ? 'mjhand' : 'mjhand_replay') && ci.tag == king) {
+                        moveNode.push(ci)
+                        ci.name = 'tou_' + GetCardNum(king)
+                    }
+                }
+            } else {
+                let up = node.getChildByName('up')
+                let nc = getNewCard(node, "up", 'tou_' + GetCardNum(king), king, 0)
+                moveNode.push(nc)
+                // setWgtLayout(nc, [0.18, 0.18], [0.5, 0.5], [0.7, -0.1]);
+                nc.x = up.x;
+                nc.y = up.y - 20 * _i;
+            }
+        }
+        cc.log('---------moveNode---------------', JSON.stringify(moveNode))
+        for (let _i = 0; _i < moveNode.length; _i++) {
+            const element = moveNode[_i];
+            element.y += 20
+        }
+    }
+}
+//显示玩家头像的偷ui动画
+PlayerGamePanel_Red20.prototype.showUserTouAction = function (node, off, sD) {
+    var pl = getUIPlayer(off);
+    node.zIndex = 99;
+    if (sD && pl) {
+        if (sD.uid == pl.info.uid) {
+            node.visible = true;
+            node.runAction(cc.sequence(cc.delayTime(2), cc.callFunc(() => {
+                node.visible = false;
+            })));
+        }
+        else {
+            node.visible = false;
+        }
+    }
+}

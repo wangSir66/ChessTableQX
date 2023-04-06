@@ -213,9 +213,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "phz_icon_007.png",
-                  "Plist": "Red20/Game/Desk.plist"
+                  "Type": "Default",
+                  "Path": "Default/Sprite.png",
+                  "Plist": ""
                 },
                 "BlendFunc": {
                   "Src": 1,
@@ -1027,9 +1027,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "back.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/Sprite.png",
+                  "Plist": ""
                 },
                 "BlendFunc": {
                   "Src": 1,
@@ -1822,9 +1822,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "PlistSubImage",
-                          "Path": "0-1.png",
-                          "Plist": "Red20/Game/Card.plist"
+                          "Type": "Default",
+                          "Path": "Default/Sprite.png",
+                          "Plist": ""
                         },
                         "BlendFunc": {
                           "Src": 1,
@@ -1912,9 +1912,9 @@
                         "Children": [
                           {
                             "FileData": {
-                              "Type": "PlistSubImage",
-                              "Path": "0-1.png",
-                              "Plist": "Red20/Game/Card.plist"
+                              "Type": "Default",
+                              "Path": "Default/Sprite.png",
+                              "Plist": ""
                             },
                             "BlendFunc": {
                               "Src": 1,
@@ -2645,9 +2645,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "PlistSubImage",
-                          "Path": "0-1.png",
-                          "Plist": "Red20/Game/Card.plist"
+                          "Type": "Default",
+                          "Path": "Default/Sprite.png",
+                          "Plist": ""
                         },
                         "BlendFunc": {
                           "Src": 1,
@@ -2735,9 +2735,9 @@
                         "Children": [
                           {
                             "FileData": {
-                              "Type": "PlistSubImage",
-                              "Path": "0-1.png",
-                              "Plist": "Red20/Game/Card.plist"
+                              "Type": "Default",
+                              "Path": "Default/Sprite.png",
+                              "Plist": ""
                             },
                             "BlendFunc": {
                               "Src": 1,
@@ -3468,9 +3468,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "PlistSubImage",
-                          "Path": "0-1.png",
-                          "Plist": "Red20/Game/Card.plist"
+                          "Type": "Default",
+                          "Path": "Default/Sprite.png",
+                          "Plist": ""
                         },
                         "BlendFunc": {
                           "Src": 1,
@@ -3558,9 +3558,9 @@
                         "Children": [
                           {
                             "FileData": {
-                              "Type": "PlistSubImage",
-                              "Path": "0-1.png",
-                              "Plist": "Red20/Game/Card.plist"
+                              "Type": "Default",
+                              "Path": "Default/Sprite.png",
+                              "Plist": ""
                             },
                             "BlendFunc": {
                               "Src": 1,
@@ -4291,9 +4291,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "PlistSubImage",
-                          "Path": "0-1.png",
-                          "Plist": "Red20/Game/Card.plist"
+                          "Type": "Default",
+                          "Path": "Default/Sprite.png",
+                          "Plist": ""
                         },
                         "BlendFunc": {
                           "Src": 1,
@@ -4381,9 +4381,9 @@
                         "Children": [
                           {
                             "FileData": {
-                              "Type": "PlistSubImage",
-                              "Path": "0-1.png",
-                              "Plist": "Red20/Game/Card.plist"
+                              "Type": "Default",
+                              "Path": "Default/Sprite.png",
+                              "Plist": ""
                             },
                             "BlendFunc": {
                               "Src": 1,
@@ -5072,9 +5072,9 @@
                   "Plist": ""
                 },
                 "NormalFileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "btn_ocad.png",
-                  "Plist": "Red20/Game/Controller.plist"
+                  "Type": "Default",
+                  "Path": "Default/Button_Normal.png",
+                  "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
@@ -6086,12 +6086,6 @@
         "Default/Sprite.png",
         "Red20/Game/bg_back.jpg",
         "Red20/Game/bottom.png",
-        "Red20/Game/Card.plist",
-        "Red20/Game/Card.png",
-        "Red20/Game/Controller.plist",
-        "Red20/Game/Controller.png",
-        "Red20/Game/Desk.plist",
-        "Red20/Game/Desk.png",
         "Red20/Game/left.png",
         "Red20/Game/right.png",
         "Red20/Game/top.png"

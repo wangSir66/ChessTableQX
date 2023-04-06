@@ -14,7 +14,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.7301" />
             <PreSize X="1.0000" Y="0.5398" />
-            <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="card_1" ActionTag="-1296016087" Tag="450" IconVisible="False" TopMargin="52.0000" BottomMargin="52.0000" Scale9Enable="True" LeftEage="29" RightEage="29" TopEage="40" BottomEage="40" Scale9OriginX="29" Scale9OriginY="40" Scale9Width="32" Scale9Height="42" ctype="ImageViewObjectData">
             <Size X="90.0000" Y="122.0000" />
@@ -24,7 +24,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="1.0000" Y="0.5398" />
-            <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="card_2" ActionTag="46704511" Tag="451" IconVisible="False" TopMargin="104.0000" Scale9Enable="True" LeftEage="29" RightEage="29" TopEage="40" BottomEage="40" Scale9OriginX="29" Scale9OriginY="40" Scale9Width="32" Scale9Height="42" ctype="ImageViewObjectData">
             <Size X="90.0000" Y="122.0000" />
@@ -34,7 +34,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.2699" />
             <PreSize X="1.0000" Y="0.5398" />
-            <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

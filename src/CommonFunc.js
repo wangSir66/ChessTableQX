@@ -533,6 +533,15 @@ function MJHuToServer() {
     });
 }
 
+function MJTouToServer() {
+    if (MjClient.rePlayVideo != -1) return; // 回放时候不能请求
+    cc.log("====================MJTouToServer=================");
+    MjClient.gamenet.request("pkroom.handler.tableMsg", {
+        cmd: "MJTou",
+        eatFlag: EatFlag()
+    });
+}
+
 
 
 function MJPengToServer() {
@@ -2613,6 +2622,10 @@ function EatFlag() {
     var eat = MjClient.playui.jsBind.eat;
     var eatFlag = 0;
 
+    if (eat.tou._node.visible) {
+        eatFlag = eatFlag + 16;
+    }
+
     if (eat.gang0._node.visible) {
         eatFlag = eatFlag + 4;
     }
@@ -2883,39 +2896,69 @@ function InitHeadPostionPlaying(node) {
 
     var _sc = 0.13;
     if (isIPad()) _sc = 0.1;
+    if (MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) {
+        if (isCanChangePlayerNum() && MjClient.MaxPlayerNum === 2) {
+            setWgtLayout(top, [_sc, _sc], [0.5, 1], [0, -0.65], false, false);
+            if (isIPad()) {
+                setWgtLayout(top, [_sc, _sc], [0.5, 1], [0, -0.65], false, false);
+            }
+        }
+        else {
+            setWgtLayout(top, [_sc, _sc], [0.5, 1], [0, -0.65], false, false);
+            if (isIPad()) {
+                setWgtLayout(top, [_sc, _sc], [0.505, 1], [0, -0.65], false, false);
+            }
+        }
+        setWgtLayout(down, [_sc, _sc], [0.25, 0], [0.6, 1], false, false);
+        setWgtLayout(right, [_sc, _sc], [1, 0.5], [-0.6, 1.7], false, false);
+        setWgtLayout(left, [_sc, _sc], [0, 0.5], [0.6, 1.7], false, false);
+        setWgtLayout(topTingCard, [0.6, 0.6], [1.30, 0.75], [0, 0], false, true);
+        setWgtLayout(topTingIcon, [0.6, 0.6], [1.35, 0.25], [0, 0], false, true);
 
-    if (isCanChangePlayerNum() && MjClient.MaxPlayerNum === 2) {
-        setWgtLayout(top, [_sc, _sc], [0, 1], [3.1, -0.65], false, false);
-        if (isIPad()) {
-            setWgtLayout(top, [_sc, _sc], [0, 1], [2.05, -0.65], false, false);
+        if (isIPad()) setWgtLayout(top, [_sc, _sc], [0.5, 0.97], [2.2, -0.65], false, false);
+
+
+        if (isIPhoneX()) {
+            node.getChildByName("left").x = cc.winSize.width * 0.09;
+            left.y = cc.winSize.height * 0.75;
+            left.x = 0;
+            left.setScale(down.getScale());
+
+            setWgtLayout(down, [_sc, _sc], [0.05, 0], [0.6, 2.8], false, false);
+            setWgtLayout(left, [_sc, _sc], [0, 0.49], [-0.1, 1.7], false, false);
+        }
+    } else {
+        if (isCanChangePlayerNum() && MjClient.MaxPlayerNum === 2) {
+            setWgtLayout(top, [_sc, _sc], [0, 1], [3.1, -0.65], false, false);
+            if (isIPad()) {
+                setWgtLayout(top, [_sc, _sc], [0, 1], [2.05, -0.65], false, false);
+            }
+        }
+        else {
+            setWgtLayout(top, [_sc, _sc], [0.25, 1], [0, -0.65], false, false);
+            if (isIPad()) {
+                setWgtLayout(top, [_sc, _sc], [0.205, 1], [0, -0.65], false, false);
+            }
+        }
+        setWgtLayout(down, [_sc, _sc], [0, 0], [0.6, 2.8], false, false);
+        setWgtLayout(right, [_sc, _sc], [1, 0.5], [-0.6, 1.7], false, false);
+        setWgtLayout(left, [_sc, _sc], [0, 0.49], [0.6, 1.7], false, false);
+        setWgtLayout(topTingCard, [0.6, 0.6], [1.30, 0.75], [0, 0], false, true);
+        setWgtLayout(topTingIcon, [0.6, 0.6], [1.35, 0.25], [0, 0], false, true);
+
+        if (isIPad()) setWgtLayout(top, [_sc, _sc], [0.03, 0.97], [2.2, -0.65], false, false);
+
+
+        if (isIPhoneX()) {
+            node.getChildByName("left").x = cc.winSize.width * 0.09;
+            left.y = cc.winSize.height * 0.75;
+            left.x = 0;
+            left.setScale(down.getScale());
+
+            setWgtLayout(down, [_sc, _sc], [0.05, 0], [0.6, 2.8], false, false);
+            setWgtLayout(left, [_sc, _sc], [0, 0.49], [-0.1, 1.7], false, false);
         }
     }
-    else {
-        setWgtLayout(top, [_sc, _sc], [0.25, 1], [0, -0.65], false, false);
-        if (isIPad()) {
-            setWgtLayout(top, [_sc, _sc], [0.205, 1], [0, -0.65], false, false);
-        }
-    }
-
-    setWgtLayout(down, [_sc, _sc], [0, 0], [0.6, 2.8], false, false);
-    setWgtLayout(right, [_sc, _sc], [1, 0.5], [-0.6, 1.7], false, false);
-    setWgtLayout(left, [_sc, _sc], [0, 0.49], [0.6, 1.7], false, false);
-    setWgtLayout(topTingCard, [0.6, 0.6], [1.30, 0.75], [0, 0], false, true);
-    setWgtLayout(topTingIcon, [0.6, 0.6], [1.35, 0.25], [0, 0], false, true);
-
-    if (isIPad()) setWgtLayout(top, [_sc, _sc], [0.03, 0.97], [2.2, -0.65], false, false);
-
-
-    if (isIPhoneX()) {
-        node.getChildByName("left").x = cc.winSize.width * 0.09;
-        left.y = cc.winSize.height * 0.75;
-        left.x = 0;
-        left.setScale(down.getScale());
-
-        setWgtLayout(down, [_sc, _sc], [0.05, 0], [0.6, 2.8], false, false);
-        setWgtLayout(left, [_sc, _sc], [0, 0.49], [-0.1, 1.7], false, false);
-    }
-
 }
 
 
@@ -3364,6 +3407,7 @@ function tableIndicator(arrowbkNode, off) {
 
 //设置东南西北
 function setArrowFengDir(arrowbkNode) {
+    if (!arrowbkNode) return
     var tData = MjClient.data.sData.tData;
     var uids = tData.uids;
     var selfIndex = uids.indexOf(SelfUid());

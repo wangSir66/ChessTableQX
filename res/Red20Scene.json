@@ -599,9 +599,9 @@
           },
           {
             "FileData": {
-              "Type": "PlistSubImage",
-              "Path": "phz_icon_007.png",
-              "Plist": "Red20/Game/Desk.plist"
+              "Type": "Default",
+              "Path": "Default/ImageFile.png",
+              "Plist": ""
             },
             "Scale9Enable": true,
             "Scale9OriginX": 30,
@@ -1879,7 +1879,7 @@
                           "Y": 0.5961
                         },
                         "PreSize": {
-                          "X": 3.2812,
+                          "X": 3.2813,
                           "Y": 2.7241
                         },
                         "LeftMargin": -34.8168,
@@ -2267,9 +2267,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "0-1.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
@@ -2312,9 +2312,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "back.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 12,
                 "Scale9OriginY": 19,
@@ -2357,9 +2357,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "back.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 13,
                 "Scale9OriginY": 19,
@@ -2402,9 +2402,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "4-15.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
@@ -2447,9 +2447,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "4-15.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
@@ -2492,9 +2492,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "4-15.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -4165,9 +4165,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "PlistSubImage",
-                      "Path": "tip_chi.png",
-                      "Plist": "Red20/Game/Controller.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 33,
                     "Scale9OriginY": 27,
@@ -4210,9 +4210,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "PlistSubImage",
-                      "Path": "tip_peng.png",
-                      "Plist": "Red20/Game/Controller.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 33,
                     "Scale9OriginY": 27,
@@ -4257,9 +4257,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "PlistSubImage",
-                      "Path": "tip_gang.png",
-                      "Plist": "Red20/Game/Controller.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 57,
                     "Scale9OriginY": 27,
@@ -4351,9 +4351,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "PlistSubImage",
-                      "Path": "tip_hu.png",
-                      "Plist": "Red20/Game/Controller.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 57,
                     "Scale9OriginY": 49,
@@ -4398,9 +4398,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "PlistSubImage",
-                      "Path": "tip_bting.png",
-                      "Plist": "Red20/Game/Controller.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 57,
                     "Scale9OriginY": 28,
@@ -4445,9 +4445,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "PlistSubImage",
-                      "Path": "tip_tou.png",
-                      "Plist": "Red20/Game/Controller.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 57,
                     "Scale9OriginY": 28,
@@ -4501,9 +4501,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-6.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
@@ -4546,9 +4546,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-8.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -4894,9 +4894,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "1-1.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -6901,9 +6901,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-8.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -7024,9 +7024,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "0-12.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
@@ -7069,9 +7069,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "back.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
@@ -7115,9 +7115,9 @@
               {
                 "FlipY": true,
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "back.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 7,
                 "Scale9OriginY": 19,
@@ -7162,9 +7162,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-6.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
@@ -7207,9 +7207,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-6.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
@@ -7252,9 +7252,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-6.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -9216,9 +9216,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-6.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
@@ -9261,9 +9261,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-8.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -9384,9 +9384,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "YZDN_card_enable.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
@@ -9429,9 +9429,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "back.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 12,
                 "Scale9OriginY": 19,
@@ -9474,9 +9474,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-8.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
@@ -9519,9 +9519,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-8.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
@@ -9564,9 +9564,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-8.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -11809,9 +11809,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "PlistSubImage",
-                      "Path": "3-6.png",
-                      "Plist": "Red20/Game/Card.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 14,
                     "Scale9OriginY": 21,
@@ -12018,9 +12018,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "PlistSubImage",
-                          "Path": "3-6.png",
-                          "Plist": "Red20/Game/Card.plist"
+                          "Type": "Default",
+                          "Path": "Default/ImageFile.png",
+                          "Plist": ""
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 21,
@@ -12227,9 +12227,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-6.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
@@ -12272,9 +12272,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "back.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -12317,9 +12317,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-8.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -12362,9 +12362,9 @@
               },
               {
                 "FileData": {
-                  "Type": "PlistSubImage",
-                  "Path": "3-8.png",
-                  "Plist": "Red20/Game/Card.plist"
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
+                  "Plist": ""
                 },
                 "Scale9OriginX": 34,
                 "Scale9OriginY": 52,
@@ -15931,12 +15931,6 @@
         "png/nameBar.png",
         "png/Z_zhunbeizhuangt.png",
         "Red20/Game/bg_back.jpg",
-        "Red20/Game/Card.plist",
-        "Red20/Game/Card.png",
-        "Red20/Game/Controller.plist",
-        "Red20/Game/Controller.png",
-        "Red20/Game/Desk.plist",
-        "Red20/Game/Desk.png",
         "setting/chi_gang_bg.png",
         "setting/fanhui.png",
         "setting/pai_bottom.png",

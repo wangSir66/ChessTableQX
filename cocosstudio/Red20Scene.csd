@@ -162,7 +162,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5025" Y="0.5679" />
             <PreSize X="0.0773" Y="0.1125" />
-            <FileData Type="PlistSubImage" Path="phz_icon_007.png" Plist="Red20/Game/Desk.plist" />
+            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="arrowbk3D" Visible="False" ActionTag="-1989378389" VisibleForFrame="False" Tag="1276" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="544.5000" RightMargin="544.5000" TopMargin="291.5000" BottomMargin="291.5000" LeftEage="15" RightEage="15" TopEage="15" BottomEage="15" Scale9OriginX="15" Scale9OriginY="15" Scale9Width="161" Scale9Height="107" ctype="ImageViewObjectData">
             <Size X="191.0000" Y="137.0000" />
@@ -520,7 +520,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="down" ActionTag="-806788767" Tag="34" IconVisible="False" LeftMargin="792.2736" RightMargin="-882.2736" TopMargin="-664.5957" BottomMargin="542.5957" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="66" Scale9Height="84" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -530,7 +530,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="back.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="stand" ActionTag="-1290218571" Tag="38" IconVisible="False" LeftMargin="323.8206" RightMargin="-413.8206" TopMargin="-648.5167" BottomMargin="526.5167" LeftEage="13" RightEage="13" TopEage="19" BottomEage="19" Scale9OriginX="13" Scale9OriginY="19" Scale9Width="64" Scale9Height="84" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -540,7 +540,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="back.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out0" ActionTag="753089099" Tag="46" IconVisible="False" LeftMargin="806.7374" RightMargin="-896.7374" TopMargin="-582.6689" BottomMargin="460.6689" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -550,7 +550,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="4-15.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out1" ActionTag="1304487898" Tag="47" IconVisible="False" LeftMargin="807.0530" RightMargin="-897.0530" TopMargin="-512.4670" BottomMargin="390.4670" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -560,7 +560,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="4-15.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="outBig" ActionTag="224263030" Tag="302" IconVisible="False" LeftMargin="-313.4606" RightMargin="223.4606" TopMargin="-483.7864" BottomMargin="361.7864" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="22" Scale9Height="18" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -570,7 +570,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="4-15.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="head" ActionTag="-1795085916" Tag="3642" IconVisible="False" LeftMargin="198.2556" RightMargin="-324.2556" TopMargin="-722.0179" BottomMargin="597.0179" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="126.0000" Y="125.0000" />
@@ -961,7 +961,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="1.0000" Y="0.8400" />
-                    <FileData Type="PlistSubImage" Path="tip_chi.png" Plist="Red20/Game/Controller.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="peng" ActionTag="-1229252962" Tag="259" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-51.5000" RightMargin="48.5000" TopMargin="58.0000" BottomMargin="-42.0000" LeftEage="33" RightEage="33" TopEage="27" BottomEage="27" Scale9OriginX="33" Scale9OriginY="27" Scale9Width="37" Scale9Height="30" ctype="ImageViewObjectData">
                     <Size X="103.0000" Y="84.0000" />
@@ -971,7 +971,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="1.0300" Y="0.8400" />
-                    <FileData Type="PlistSubImage" Path="tip_peng.png" Plist="Red20/Game/Controller.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="gang" ActionTag="-1224128237" Tag="260" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-63.5000" RightMargin="36.5000" TopMargin="58.5000" BottomMargin="-41.5000" LeftEage="57" RightEage="57" TopEage="27" BottomEage="27" Scale9OriginX="57" Scale9OriginY="27" Scale9Width="13" Scale9Height="29" ctype="ImageViewObjectData">
                     <Size X="127.0000" Y="83.0000" />
@@ -981,7 +981,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="1.2700" Y="0.8300" />
-                    <FileData Type="PlistSubImage" Path="tip_gang.png" Plist="Red20/Game/Controller.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="hua" ActionTag="1000792797" Tag="261" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-58.0000" RightMargin="42.0000" TopMargin="42.0000" BottomMargin="-58.0000" LeftEage="57" RightEage="57" TopEage="49" BottomEage="49" Scale9OriginX="57" Scale9OriginY="49" Scale9Width="2" Scale9Height="18" ctype="ImageViewObjectData">
                     <Size X="116.0000" Y="116.0000" />
@@ -1001,7 +1001,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="1.2400" Y="1.1200" />
-                    <FileData Type="PlistSubImage" Path="tip_hu.png" Plist="Red20/Game/Controller.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="ting" ActionTag="1289408019" Tag="527" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-338.0000" RightMargin="298.0000" TopMargin="36.5000" BottomMargin="-23.5000" LeftEage="57" RightEage="57" TopEage="28" BottomEage="28" Scale9OriginX="57" Scale9OriginY="28" Scale9Width="26" Scale9Height="31" ctype="ImageViewObjectData">
                     <Size X="140.0000" Y="87.0000" />
@@ -1011,7 +1011,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="-2.6800" Y="0.2000" />
                     <PreSize X="1.4000" Y="0.8700" />
-                    <FileData Type="PlistSubImage" Path="tip_bting.png" Plist="Red20/Game/Controller.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="tou" ActionTag="1738424404" Tag="8515" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-63.7500" RightMargin="36.7500" TopMargin="51.4400" BottomMargin="-70.4400" LeftEage="57" RightEage="57" TopEage="28" BottomEage="28" Scale9OriginX="57" Scale9OriginY="28" Scale9Width="13" Scale9Height="63" ctype="ImageViewObjectData">
                     <Size X="127.0000" Y="119.0000" />
@@ -1021,7 +1021,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="-0.0025" Y="-0.1094" />
                     <PreSize X="1.2700" Y="1.1900" />
-                    <FileData Type="PlistSubImage" Path="tip_tou.png" Plist="Red20/Game/Controller.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
@@ -1043,7 +1043,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-6.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="face" ActionTag="1266536066" Tag="338" IconVisible="False" LeftMargin="-267.3482" RightMargin="177.3482" TopMargin="-110.8607" BottomMargin="-11.1393" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="22" Scale9Height="18" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -1053,7 +1053,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-8.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
@@ -1135,7 +1135,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="1-1.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="head" ActionTag="-1841463676" Tag="3592" IconVisible="False" LeftMargin="19.1600" RightMargin="-145.1600" TopMargin="-541.8400" BottomMargin="416.8400" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="126.0000" Y="125.0000" />
@@ -1608,7 +1608,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-8.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
@@ -1640,7 +1640,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="0-12.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="down" ActionTag="-1654907950" Tag="40" IconVisible="False" LeftMargin="1058.6179" RightMargin="-1148.6179" TopMargin="-312.1887" BottomMargin="190.1887" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="58" Scale9Height="96" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -1650,7 +1650,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="back.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="stand" ActionTag="-1757043640" Tag="39" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="False" LeftMargin="1067.3911" RightMargin="-1157.3911" TopMargin="-627.1471" BottomMargin="505.1471" FlipY="True" LeftEage="7" RightEage="7" TopEage="19" BottomEage="19" Scale9OriginX="7" Scale9OriginY="19" Scale9Width="76" Scale9Height="84" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -1660,7 +1660,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="back.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out0" ActionTag="-1088196022" Tag="100" IconVisible="False" LeftMargin="982.2463" RightMargin="-1072.2463" TopMargin="-288.1473" BottomMargin="166.1473" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="58" Scale9Height="96" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -1670,7 +1670,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-6.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out1" ActionTag="-488978241" Tag="101" IconVisible="False" LeftMargin="918.6232" RightMargin="-1008.6232" TopMargin="-287.8463" BottomMargin="165.8463" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="58" Scale9Height="96" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -1680,7 +1680,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-6.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="outBig" ActionTag="822535044" Tag="304" IconVisible="False" LeftMargin="-187.6584" RightMargin="97.6584" TopMargin="-317.7845" BottomMargin="195.7845" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="22" Scale9Height="18" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -1690,7 +1690,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-6.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="head" ActionTag="593160249" Tag="3694" IconVisible="False" LeftMargin="1150.0000" RightMargin="-1276.0000" TopMargin="-391.5000" BottomMargin="266.5000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="126.0000" Y="125.0000" />
@@ -2153,7 +2153,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-6.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="face" ActionTag="-769810033" Tag="336" IconVisible="False" LeftMargin="-287.3482" RightMargin="197.3482" TopMargin="-130.8607" BottomMargin="8.8607" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="22" Scale9Height="18" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2163,7 +2163,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-8.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
@@ -2195,7 +2195,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="YZDN_card_enable.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="down" ActionTag="-1359981093" Tag="41" IconVisible="False" LeftMargin="156.1821" RightMargin="-246.1821" TopMargin="-142.9526" BottomMargin="20.9526" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="66" Scale9Height="84" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2205,7 +2205,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="back.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out1" ActionTag="-2007703463" Tag="107" IconVisible="False" LeftMargin="321.8206" RightMargin="-411.8206" TopMargin="-312.5400" BottomMargin="190.5400" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2215,7 +2215,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-8.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out0" ActionTag="-1449809231" Tag="106" IconVisible="False" LeftMargin="321.8206" RightMargin="-411.8206" TopMargin="-242.5516" BottomMargin="120.5516" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2225,7 +2225,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-8.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="outBig" ActionTag="-273745635" Tag="305" IconVisible="False" LeftMargin="-317.3482" RightMargin="227.3482" TopMargin="-160.8607" BottomMargin="38.8607" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="22" Scale9Height="18" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2235,7 +2235,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-8.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="head" ActionTag="-773782896" Tag="3554" IconVisible="False" LeftMargin="15.0000" RightMargin="-141.0000" TopMargin="-255.5000" BottomMargin="130.5000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="126.0000" Y="125.0000" />
@@ -2758,7 +2758,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.2261" Y="0.4880" />
                     <PreSize X="0.3309" Y="2.5417" />
-                    <FileData Type="PlistSubImage" Path="3-6.png" Plist="Red20/Game/Card.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Node_card" ActionTag="403954474" Tag="1063" IconVisible="True" RightMargin="272.0000" TopMargin="48.0000" ctype="SingleNodeObjectData">
                     <Size X="0.0000" Y="0.0000" />
@@ -2802,7 +2802,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.1872" Y="0.4684" />
                         <PreSize X="1.0465" Y="1.5844" />
-                        <FileData Type="PlistSubImage" Path="3-6.png" Plist="Red20/Game/Card.plist" />
+                        <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="cardText" ActionTag="688250596" Tag="372" IconVisible="False" LeftMargin="36.9851" RightMargin="18.0149" TopMargin="40.6520" BottomMargin="2.3480" FontSize="28" LabelText="张" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="31.0000" Y="34.0000" />
@@ -2866,7 +2866,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-6.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="back" ActionTag="1419709830" Tag="329" IconVisible="False" LeftMargin="524.8450" RightMargin="-614.8450" TopMargin="-173.1894" BottomMargin="51.1894" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="22" Scale9Height="18" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2876,7 +2876,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="back.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="face" ActionTag="896148993" Tag="330" IconVisible="False" LeftMargin="-307.3482" RightMargin="217.3482" TopMargin="-150.8607" BottomMargin="28.8607" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="22" Scale9Height="18" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2886,7 +2886,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-8.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="stand" ActionTag="1800502127" Tag="329" IconVisible="False" LeftMargin="-297.3482" RightMargin="207.3482" TopMargin="-140.8607" BottomMargin="18.8607" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="22" Scale9Height="18" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2896,7 +2896,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="PlistSubImage" Path="3-8.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />

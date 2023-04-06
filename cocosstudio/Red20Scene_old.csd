@@ -50,7 +50,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4971" Y="0.5968" />
                 <PreSize X="0.0359" Y="0.0639" />
-                <FileData Type="PlistSubImage" Path="phz_icon_007.png" Plist="Red20/Game/Desk.plist" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
             </Children>
@@ -253,7 +253,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5012" Y="0.6170" />
                 <PreSize X="0.0703" Y="0.1694" />
-                <FileData Type="PlistSubImage" Path="back.png" Plist="Red20/Game/Card.plist" />
+                <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="temporaryCard" ActionTag="-1688305561" Tag="51" IconVisible="False" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" HorizontalEdge="BothEdge" VerticalEdge="BothEdge" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -410,7 +410,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="1.2833" Y="0.5015" />
                         <PreSize X="0.5325" Y="0.7578" />
-                        <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                        <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Desc" ActionTag="1997635762" Tag="48" IconVisible="False" LeftMargin="95.6879" RightMargin="73.3121" TopMargin="86.5151" BottomMargin="74.4849" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="64" RightEage="64" TopEage="46" BottomEage="46" Scale9OriginX="-64" Scale9OriginY="-46" Scale9Width="128" Scale9Height="92" ctype="PanelObjectData">
@@ -424,7 +424,7 @@
                             <CColor A="255" R="255" G="255" B="255" />
                             <PrePosition />
                             <PreSize X="0.0000" Y="0.0000" />
-                            <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                             <BlendFunc Src="1" Dst="771" />
                           </AbstractNodeData>
                           <AbstractNodeData Name="Cancel" ActionTag="-1274842406" Tag="41" IconVisible="False" LeftMargin="-75.5000" RightMargin="-75.5000" TopMargin="-69.0000" BottomMargin="-69.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="121" Scale9Height="116" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -605,7 +605,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="1.2833" Y="0.5015" />
                         <PreSize X="0.5325" Y="0.7578" />
-                        <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                        <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Desc" ActionTag="-1982843558" Tag="61" IconVisible="False" LeftMargin="95.6879" RightMargin="73.3121" TopMargin="86.5151" BottomMargin="74.4849" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="64" RightEage="64" TopEage="46" BottomEage="46" Scale9OriginX="-64" Scale9OriginY="-46" Scale9Width="128" Scale9Height="92" ctype="PanelObjectData">
@@ -619,7 +619,7 @@
                             <CColor A="255" R="255" G="255" B="255" />
                             <PrePosition />
                             <PreSize X="0.0000" Y="0.0000" />
-                            <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                             <BlendFunc Src="1" Dst="771" />
                           </AbstractNodeData>
                           <AbstractNodeData Name="Cancel" ActionTag="-1425304322" Tag="63" IconVisible="False" LeftMargin="-75.5000" RightMargin="-75.5000" TopMargin="-69.0000" BottomMargin="-69.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="121" Scale9Height="116" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -800,7 +800,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="1.2833" Y="0.5015" />
                         <PreSize X="0.5325" Y="0.7578" />
-                        <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                        <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Desc" ActionTag="855752444" Tag="76" IconVisible="False" LeftMargin="95.6879" RightMargin="73.3121" TopMargin="86.5151" BottomMargin="74.4849" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="64" RightEage="64" TopEage="46" BottomEage="46" Scale9OriginX="-64" Scale9OriginY="-46" Scale9Width="128" Scale9Height="92" ctype="PanelObjectData">
@@ -814,7 +814,7 @@
                             <CColor A="255" R="255" G="255" B="255" />
                             <PrePosition />
                             <PreSize X="0.0000" Y="0.0000" />
-                            <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                             <BlendFunc Src="1" Dst="771" />
                           </AbstractNodeData>
                           <AbstractNodeData Name="Cancel" ActionTag="1835837904" Tag="78" IconVisible="False" LeftMargin="-75.5000" RightMargin="-75.5000" TopMargin="-69.0000" BottomMargin="-69.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="121" Scale9Height="116" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -995,7 +995,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="1.2833" Y="0.5015" />
                         <PreSize X="0.5325" Y="0.7578" />
-                        <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                        <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Desc" ActionTag="48746821" Tag="91" IconVisible="False" LeftMargin="95.6879" RightMargin="73.3121" TopMargin="86.5151" BottomMargin="74.4849" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="64" RightEage="64" TopEage="46" BottomEage="46" Scale9OriginX="-64" Scale9OriginY="-46" Scale9Width="128" Scale9Height="92" ctype="PanelObjectData">
@@ -1009,7 +1009,7 @@
                             <CColor A="255" R="255" G="255" B="255" />
                             <PrePosition />
                             <PreSize X="0.0000" Y="0.0000" />
-                            <FileData Type="PlistSubImage" Path="0-1.png" Plist="Red20/Game/Card.plist" />
+                            <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                             <BlendFunc Src="1" Dst="771" />
                           </AbstractNodeData>
                           <AbstractNodeData Name="Cancel" ActionTag="-1920748292" Tag="93" IconVisible="False" LeftMargin="-75.5000" RightMargin="-75.5000" TopMargin="-69.0000" BottomMargin="-69.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="121" Scale9Height="116" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -1202,7 +1202,7 @@
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
                 <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
-                <NormalFileData Type="PlistSubImage" Path="btn_ocad.png" Plist="Red20/Game/Controller.plist" />
+                <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
