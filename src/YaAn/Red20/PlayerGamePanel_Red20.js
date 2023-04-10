@@ -251,6 +251,15 @@ function InitUserHandUI_Red20(node, off) {
         }
     }
 
+    //添加碰
+    for (var i = 0; i < pl.touCardList.length; i++) {
+        let tou = pl.touCardList[i];
+        for (let _i = 0; _i < tou.length; _i++) {
+            const tc = tou[_i];
+            getNewCard(node, "up", "tou", tc, off);
+        }
+    }
+
     //cc.log("pl.mjchi = " + pl.mjchi);
     var chiIdx = 0;
     var cdui = null;
@@ -1220,7 +1229,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         },
                         initSceneData: function (eD) {
                             var pl = getUIPlayer(0);
-                            if (pl.skipPeng.length > 0) {
+                            if (pl.skipPeng && pl.skipPeng.length > 0) {
                                 //var _skipHuIconNode =  MjClient.playui._downNode.getChildByName("head").getChildByName("skipHuIconTag");
                                 this.visible = true;
                             } else {
@@ -3365,6 +3374,7 @@ PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off) {
     var uichi = [];
     var uistand = [];
     var uihun = [];//癞子牌在最左边
+    var uiTou = [];
     // var sData = MjClient.data.sData;
     // var tData = sData.tData;
     for (var i = 0; i < children.length; i++) //children 为 "down" 节点下的字节点
@@ -3406,6 +3416,8 @@ PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off) {
         }
         else if (ci.name == "mjhand_replay") {
             uistand.push(ci);
+        } else if (ci.name == "tou") {
+            uiTou.push(ci);
         }
     }
 
@@ -3427,7 +3439,7 @@ PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off) {
         uistand.push(newC); //把这张牌放入手牌的数组里  by sking
     }
 
-    var uiOrder = [uigang1, uigang0, uipeng, uichi, uistand];
+    var uiOrder = [uiTou, uigang1, uigang0, uipeng, uichi, uistand];
     if (off == 1 || off == 2) {
         uiOrder.reverse();//颠倒顺序
     }
@@ -3441,7 +3453,7 @@ PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off) {
     }
 
     //设置麻将大小
-    var slotwith = upSize.width * upS * 0.2;//0.05;
+    var slotwith = upSize.width * upS * 0.5;//0.05;
     var slotheigt = upSize.height * upS * 0.3;
     var hasUp = false;
     for (var i = 0; i < orders.length; i++) {
@@ -3715,22 +3727,22 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
             //听
             cc.log("￥￥￥￥听牌监测");
             MjClient.canTingCards = {};
-            if (tData.areaSelectMode.tingType != TingCardType.noTing && !pl.isTing) {
+            // if (tData.areaSelectMode.tingType != TingCardType.noTing && !pl.isTing) {
 
 
-                for (var i = 0; i < pl.mjhand.length; i++) {
-                    var cardsAfterPut = pl.mjhand.slice(0);
-                    cardsAfterPut.splice(i, 1); //依次去掉某张牌看能不能听
-                    // cc.log(cardsAfterPut);
-                    if (MjClient.majiang.canTing(cardsAfterPut)) {
-                        // cc.log("去掉可以听"+pl.mjhand[i]);
-                        MjClient.canTingCards[pl.mjhand[i]] = 1;
-                        if (vnode.indexOf(eat.ting._node) < 0) {
-                            vnode.push(eat.ting._node);
-                        }
-                    }
-                }
-            }
+            //     for (var i = 0; i < pl.mjhand.length; i++) {
+            //         var cardsAfterPut = pl.mjhand.slice(0);
+            //         cardsAfterPut.splice(i, 1); //依次去掉某张牌看能不能听
+            //         // cc.log(cardsAfterPut);
+            //         if (MjClient.majiang.canTing(cardsAfterPut)) {
+            //             // cc.log("去掉可以听"+pl.mjhand[i]);
+            //             MjClient.canTingCards[pl.mjhand[i]] = 1;
+            //             if (vnode.indexOf(eat.ting._node) < 0) {
+            //                 vnode.push(eat.ting._node);
+            //             }
+            //         }
+            //     }
+            // }
 
             //var rtn = leftCard > 4 ? MjClient.majiang.canGang1(pl.mjpeng, pl.mjhand, pl.mjpeng4) : [];
             //碰后不能杠
@@ -3896,32 +3908,28 @@ PlayerGamePanel_Red20.prototype.DealAndMoveCard = function (node, msg, off) {
     let moveNode = [];
     let cp = getUIPlayer(off);
     if (cp && cp.info.uid == msg.uid) {
-        cc.log('---------moveNode---------------', JSON.stringify(cp),cp.info.uid == msg.uid)
         for (let _i = 0; _i < delCards.length; _i++) {
             const king = delCards[_i];
             if (off === 0 || MjClient.rePlayVideo != -1) {
                 for (var i = children.length - 1; i >= 0 && num > 0; i--) {
                     var ci = children[i];
                     if ((ci.name == off === 0 ? 'mjhand' : 'mjhand_replay') && ci.tag == king) {
-                        moveNode.push(ci)
-                        ci.name = 'tou_' + GetCardNum(king)
+                        ci.removeFromParent(true)
+                        let nc = getNewCard(node, "up", "tou", king, off);
+                        moveNode.push(nc)
                     }
                 }
+                for (let _i = 0; _i < addCards.length; _i++) {
+                    const ac = addCards[_i];
+                    getNewCard(node, "stand", 'mjhand', ac, 0)
+                }
             } else {
-                let up = node.getChildByName('up')
-                let nc = getNewCard(node, "up", 'tou_' + GetCardNum(king), king, 0)
+                let nc = getNewCard(node, "up", 'tou', king, off)
                 moveNode.push(nc)
-                // setWgtLayout(nc, [0.18, 0.18], [0.5, 0.5], [0.7, -0.1]);
-                nc.x = up.x;
-                nc.y = up.y - 20 * _i;
             }
         }
-        cc.log('---------moveNode---------------', JSON.stringify(moveNode))
-        for (let _i = 0; _i < moveNode.length; _i++) {
-            const element = moveNode[_i];
-            element.y += 20
-        }
     }
+    this.CardLayoutRestore(node, off);
 }
 //显示玩家头像的偷ui动画
 PlayerGamePanel_Red20.prototype.showUserTouAction = function (node, off, sD) {

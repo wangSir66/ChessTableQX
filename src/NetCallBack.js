@@ -2550,7 +2550,7 @@ MjClient.netCallBack = {
                     }
                 }
             }
-            cc.log("断线重连  tData.lastPutCard ", tData.lastPutCard);
+            cc.log("断线重连  tData.lastPutCard ", JSON.stringify(MjClient.data.sData));
         }
         if (!MjClient._lastTableId || MjClient._lastTableId == "") {
             MjClient._lastTableId = util.localStorageEncrypt.getStringItem("_lastTableId");
@@ -2707,6 +2707,7 @@ MjClient.netCallBack = {
             pl.mjpeng = [];
             pl.mjgang0 = [];
             pl.mjgang1 = [];
+            pl.touCardList = [];
             pl.mjTeshuGang0 = [];
             pl.mjTeshuGang1 = [];
             pl.mjchi = [];
@@ -10212,11 +10213,19 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         let pl = sData.players[d.uid];
         cc.log('-----------TouResult----------------', JSON.stringify(pl.mjhand));
-        // for (let _i = 0; _i < pl.mjhand.length; _i++) {
-        //     const c = pl.mjhand[_i];
-        //     if (d.Kings.indexOf(c) > -1) {
-        //         pl.mjhand.splice(_i, 1);
-        //     }
-        // }
+        if (!pl) {
+            cc.log('----------TouResult----------错误--')
+            return;
+        }
+        if (pl.mjhand) {
+            for (let _i = 0; _i < pl.mjhand.length; _i++) {
+                const c = pl.mjhand[_i];
+                if (d.Kings.indexOf(c) > -1) {
+                    pl.mjhand.splice(_i, 1, d.Cards.splice(0, 1)[0]);
+                }
+            }
+            
+        }
+        pl.touCardList.push(d.Kings)
     }],
 };
