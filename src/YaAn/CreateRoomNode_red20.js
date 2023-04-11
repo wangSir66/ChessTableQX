@@ -112,7 +112,7 @@ var CreateRoomNode_red20 = CreateRoomNode.extend({
             MaxGameCount: 12,
             MaxFan: 6,
             MaxKingCount: 3,
-            EnableChi: 1,
+            EnableChi: false,
             EnableZiMo: true,
             Enable4Pairs: true,
             EnableDragon4Pairs: true,

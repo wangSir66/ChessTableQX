@@ -4360,6 +4360,7 @@ function SetTouchCardHandler(standUI, cardui) {
                         if (MjClient.APP_TYPE.QXYYQP == MjClient.getAppType() && eat.hu._node.visible) {//过胡提示
                             MjClient.showToast("你选择了过，暂时放弃胡牌");
                         }
+                        cc.log('-----PutOutCard--')
                         PutOutCard(cardui, cardui.tag);
                     }
                 }
@@ -4612,7 +4613,6 @@ function PutOutCard(cdui, cd) {
     if (MjClient.rePlayVideo != -1) {
         return;
     }
-
     if (cdui.isNew) {
         MjClient.newCard = null; //打出去的是新摸的这张牌
         cdui.isNew = false;
@@ -4643,7 +4643,7 @@ function PutOutCard(cdui, cd) {
     //cardPutted = true;
     var pl = getUIPlayer(0);
     var tData = MjClient.data.sData.tData;
-
+    cc.log('mjhandNum == pl.mjhand.length', mjhandNum, cd, JSON.stringify(pl.mjhand))
     if (mjhandNum == pl.mjhand.length) {
         var mjputMsg = {
             cmd: "MJPut",
@@ -4918,6 +4918,7 @@ function PutOutCard(cdui, cd) {
 function DealMJPut(node, msg, off, outNum) {
     // cc.log("~DealMJPut() === off ===" + off);
     // cc.log("~DealMJPut() === msg:" + JSON.stringify(msg));
+    if (MjClient.playui.DealMJPut) MjClient.playui.DealMJPut(node, msg, off, outNum)
 
     //断线重连 起手胡 不消失
     var sData = MjClient.data.sData;
@@ -7429,6 +7430,7 @@ function setTingCards_JINZHONGMJ(node, tingSet) {
 }
 
 function setTingCards(node, tingSet) {
+    if (!node) return
     if (isNeedSetTingBtn()) {
         node.setVisible(false);
         return;

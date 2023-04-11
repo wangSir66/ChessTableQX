@@ -12,9 +12,9 @@ MjClient.MJPass2NetForRed20 = function () {
     cc.log("====================send======pass=====");
     var sData = MjClient.data.sData;
     var tData = sData.tData;
+    var eat = MjClient.playui.jsBind.eat;
 
     if (IsTurnToMe() && tData.tState == TableState.waitPut) {
-        var eat = MjClient.playui.jsBind.eat;
         var msg = "确认过";
         if (eat.gang0._node.visible) {
             msg += " 杠 ";
@@ -44,10 +44,12 @@ MjClient.MJPass2NetForRed20 = function () {
         }, function () { }, "1");
     }
     else {
-        if (MjClient.playui.jsBind.eat.hu._node.visible) {
+        if (eat.hu._node.visible) {
             MjClient.showMsg("确认不胡吗?", MJPassConfirmToServer, function () { }, "1");
         }
         else {
+            eat.guo._node.visible = eat.ting._node.visible = false;
+
             MJPassConfirmToServer();
         }
     }
@@ -306,14 +308,13 @@ function InitUserHandUI_Red20(node, off) {
         }
         else if (off > 0) {
             var CardCount = 0;
-            if (tData.tState == TableState.waitPut && tData.uids[tData.curPlayer] == pl.info.uid) {
+            if (tData.uids[tData.curPlayer] == pl.info.uid) {
                 CardCount = 8;
             }
             else {
                 CardCount = 7;
             }
 
-            cc.log('----tData.curPlayer-------', tData.curPlayer, tData.uids[tData.curPlayer], pl.info.uid)
             var upCardCount = CardCount - ((pl.mjpeng.length + pl.mjgang0.length + pl.mjgang1.length) * 3 + pl.mjchi.length);
             for (var i = 0; i < upCardCount; i++) {
                 getNewCard(node, "stand", "standPri");
@@ -373,7 +374,24 @@ function initFlower_Red20() {
     // initFlower(flowerVisble, flowerZfbVisible);
 }
 
-
+const ActionTime = {
+    //从中央落下到牌桌
+    Fall: 0.1,
+    //自己偷牌，上移200px,上移时间
+    MoveUp: 0.2,
+    //上移后停顿时间
+    UpStop: 0.2,
+    //移动到吃碰杠牌堆
+    MoveWeaves: 0.2,
+    //新进牌，移动到中间 /系统翻牌 /游戏中偷牌(先移动到中间，在移到碰牌堆) /
+    MoveCenter: 0.3,
+    //从中央移动到手牌
+    MoveHand: 0.2,
+    //玩家出牌 从手牌移动到中央
+    HandMoveCenter: 0.2,
+    //其他玩家吃碰杠后在手牌展示停顿时间
+    WaitTime: 0.2,
+}
 
 var PlayerGamePanel_Red20 = cc.Layer.extend({
     _btnPutCard: null,
@@ -455,6 +473,10 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             },
             roundEnd: function () {
+                var jsbs = MjClient.playui.jsBind, arr = [jsbs.down, jsbs.right, jsbs.top, jsbs.left];
+                for (let _i = 0; _i < arr.length; _i++) {
+                    MjClient.playui.showMJOutBig(arr[_i]._node, {}, _i);
+                }
                 var self = this;
                 function delayExe() {
                     var sData = MjClient.data.sData;
@@ -584,7 +606,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             changeMJBgEvent: function () {
                 changeMJBg(this, getCurrentMJBgType());
                 MjClient.playui.CardLayoutRestore(getNode(0), 0)
-            }
+            },
         },
         waitChangePos: {
             _visible: false,
@@ -1247,6 +1269,9 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         TouResult: function (sD) {
                             MjClient.playui.showUserTouAction(this, 0, sD);
                         },
+                        KingCard: function (sD) {
+                            MjClient.playui.showUserTouAction(this, 0, sD);
+                        },
                     }
                 }
             },
@@ -1363,8 +1388,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
             outBig: {
                 _layout: [
-                    [0.0836, 0],
-                    [0.5, 0.32],
+                    [0.1, 0],
+                    [0.5, 0.5],
                     [0, 0]
                 ],
                 _visible: false
@@ -1372,17 +1397,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             tingCardsNode: {
                 _layout: [[0.25, 0.12], [0.2, 0.25], [0, -0.3]],
                 _visible: false,
-                _event: {
-                    clearCardUI: function (eD) {
-                        this.visible = false;
-                    },
-                    MJHu: function (eD) {
-                        this.visible = false;
-                    },
-                    initSceneData: function (eD) {
-                        MjClient.playui.tingIconVisible(this, 0);
-                    }
-                }
             },
             tingCardNumNode: {
                 _layout: [[0.25, 0.12], [0.12, 0.25], [0, -0.2]],
@@ -1397,6 +1411,21 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     MJPut: function (eD) {
                         this.visible = false;
                     }
+                }
+            },
+            myTurnBg: {
+                _visible: false,
+                _layout: [
+                    [1, 1],
+                    [0.5, 0.5],
+                    [0, 0]
+                ],
+                _event: {
+                    TurnMeOutCard: function (sD) {
+                        var pl = getUIPlayer(0);
+                        cc.log('------TurnMeOutCard--------', pl.info.uid, sD.uid)
+                        this.setVisible(pl.info.uid == sD.uid);
+                    },
                 }
             },
             _event: {
@@ -1443,9 +1472,9 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     DealMJPut(this, eD, 0);
                     var pl = getUIPlayer(0);
                     if (eD.uid === SelfUid()) {
-                        var _tingCards = this.getChildByName("tingCardsNode");
-                        var tingSet = calTingSet(pl.mjhand);
-                        setTingCards(_tingCards, tingSet);
+                        // var _tingCards = this.getChildByName("tingCardsNode");
+                        // var tingSet = calTingSet(pl.mjhand);
+                        // setTingCards(_tingCards, tingSet);
                     }
                     MjClient.playui.jsBind.eat.ting._node.visible = false;//托管清除听牌按钮
                     setUserOffline(this, 0);
@@ -1482,6 +1511,19 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 TouResult: function (sD) {
                     MjClient.playui.DealAndMoveCard(this, sD, 0);
                 },
+                //系统发牌
+                SystemCard: function (sD) {
+                    MjClient.playui.showMJOutBig(this, sD, 0);
+                },
+                //游戏中偷牌
+                KingCard: function (sD) {
+                    MjClient.playui.KingCard(this, sD, 0);
+                },
+                //游戏中偷牌
+                GetNewCard: function (sD) {
+                    MjClient.playui.DealAndMoveCard(this, { Cards: [sD.Card], uid: sD.uid }, 0);
+                },
+
             }
         },
         right: {
@@ -1495,6 +1537,9 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     },
                     _event: {
                         TouResult: function (sD) {
+                            MjClient.playui.showUserTouAction(this, 1, sD);
+                        },
+                        KingCard: function (sD) {
                             MjClient.playui.showUserTouAction(this, 1, sD);
                         },
                     }
@@ -1697,7 +1742,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 ],
                 _visible: false
             },
-
             out0: {
                 _run: function () {
                     if (MjClient.size.width / MjClient.size.height >= 1.5) {
@@ -1731,11 +1775,26 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
             outBig: {
                 _layout: [
-                    [0.0836, 0],
-                    [0.75, 0.58],
+                    [0.1, 0],
+                    [0.5, 0.5],
                     [0, 0]
                 ],
                 _visible: false
+            },
+            myTurnBg: {
+                _visible: false,
+                _layout: [
+                    [1, 1],
+                    [0.5, 0.5],
+                    [0, 0]
+                ],
+                _event: {
+                    TurnMeOutCard: function (sD) {
+                        var pl = getUIPlayer(1);
+                        cc.log('------TurnMeOutCard--------', pl.info.uid, sD.uid)
+                        this.setVisible(pl.info.uid == sD.uid);
+                    },
+                }
             },
             _event: {
                 clearCardUI: function () {
@@ -1797,11 +1856,38 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 TouResult: function (sD) {
                     MjClient.playui.DealAndMoveCard(this, sD, 1);
                 },
+                //系统发牌
+                SystemCard: function (sD) {
+                    MjClient.playui.showMJOutBig(this, sD, 1);
+                },
+                //游戏中偷牌
+                KingCard: function (sD) {
+                    MjClient.playui.KingCard(this, sD, 1);
+                },
+                //游戏中偷牌
+                GetNewCard: function (sD) {
+                    MjClient.playui.DealAndMoveCard(this, { Cards: [sD.Card], uid: sD.uid }, 1);
+                },
             }
         },
         top: {
             _run: function () {
                 this.visible = MjClient.MaxPlayerNum != 3;
+            },
+            myTurnBg: {
+                _visible: false,
+                _layout: [
+                    [1, 1],
+                    [0.5, 0.5],
+                    [0, 0]
+                ],
+                _event: {
+                    TurnMeOutCard: function (sD) {
+                        var pl = getUIPlayer(2);
+                        cc.log('------TurnMeOutCard--------', pl.info.uid, sD.uid)
+                        this.setVisible(pl.info.uid == sD.uid);
+                    },
+                }
             },
             head: {
                 tou: {
@@ -1811,7 +1897,10 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     _event: {
                         TouResult: function (sD) {
                             MjClient.playui.showUserTouAction(this, 2, sD);
-                        }
+                        },
+                        KingCard: function (sD) {
+                            MjClient.playui.showUserTouAction(this, 2, sD);
+                        },
                     }
                 },
                 TG_CountDown: {//托管倒计时
@@ -2055,8 +2144,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
             outBig: {
                 _layout: [
-                    [0.0836, 0],
-                    [0.5, 0.75],
+                    [0.1, 0],
+                    [0.5, 0.5],
                     [0, 0]
                 ],
                 _visible: false
@@ -2122,11 +2211,38 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 TouResult: function (sD) {
                     MjClient.playui.DealAndMoveCard(this, sD, 2);
                 },
+                //系统发牌
+                SystemCard: function (sD) {
+                    MjClient.playui.showMJOutBig(this, sD, 2);
+                },
+                //游戏中偷牌
+                KingCard: function (sD) {
+                    MjClient.playui.KingCard(this, sD, 2);
+                },
+                //游戏中偷牌
+                GetNewCard: function (sD) {
+                    MjClient.playui.DealAndMoveCard(this, { Cards: [sD.Card], uid: sD.uid }, 2);
+                },
             }
         },
         left: {
             _run: function () {
                 this.visible = MjClient.MaxPlayerNum != 2;
+            },
+            myTurnBg: {
+                _visible: false,
+                _layout: [
+                    [1, 1],
+                    [0.5, 0.5],
+                    [0, 0]
+                ],
+                _event: {
+                    TurnMeOutCard: function (sD) {
+                        var pl = getUIPlayer(3);
+                        cc.log('------TurnMeOutCard--------', pl.info.uid, sD.uid)
+                        this.setVisible(pl.info.uid == sD.uid);
+                    }
+                }
             },
             head: {
                 tou: {
@@ -2136,7 +2252,10 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     _event: {
                         TouResult: function (sD) {
                             MjClient.playui.showUserTouAction(this, 3, sD);
-                        }
+                        },
+                        KingCard: function (sD) {
+                            MjClient.playui.showUserTouAction(this, 3, sD);
+                        },
                     }
                 },
                 TG_CountDown: {//托管倒计时
@@ -2378,8 +2497,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
             outBig: {
                 _layout: [
-                    [0.0836, 0],
-                    [0.25, 0.58],
+                    [0.1, 0],
+                    [0.5, 0.5],
                     [0, 0]
                 ],
                 _visible: false
@@ -2443,6 +2562,18 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 },
                 TouResult: function (sD) {
                     MjClient.playui.DealAndMoveCard(this, sD, 3);
+                },
+                //系统发牌
+                SystemCard: function (sD) {
+                    MjClient.playui.showMJOutBig(this, sD, 3);
+                },
+                //游戏中偷牌
+                KingCard: function (sD) {
+                    MjClient.playui.KingCard(this, sD, 3);
+                },
+                //游戏中偷牌
+                GetNewCard: function (sD) {
+                    MjClient.playui.DealAndMoveCard(this, { Cards: [sD.Card], uid: sD.uid }, 3);
                 },
             }
         },
@@ -2538,24 +2669,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 },
                 _touch: function (btn, eT) {
                     if (eT == 2) {
-                        var eat = MjClient.playui.jsBind.eat;
-                        eat.gang0._node.visible = false;
-                        eat.guo._node.visible = false;
-                        eat.ting._node.visible = false;
-                        eat.cancel._node.visible = true;
-                        MjClient.clickTing = true;
-                        eat.hu._node.visible = false;
-                        MjClient.playui._btnPutCard.visible = true;
-                        MjClient.playui.CardLayoutRestore(MjClient.playui._downNode, 0);
-                        /*
-                         设置当前听牌的张数
-                         */
-                        var pl = getUIPlayer(0);
-                        var currentCard = CurrentPutCardMsg();
-                        cc.log("======================= tingCards = " + currentCard);
-                        var tingCards = getCheckTingHuCards(currentCard, pl.mjhand);
-                        cc.log("======================= tingCards = " + JSON.stringify(tingCards));
-                        setCurrentTingNum(tingCards);
+                        MJTingToServer()
                     }
                 }
             },
@@ -2681,7 +2795,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 ],
                 _touch: function (btn, eT) {
                     if (eT == 2) {
-                        MjClient.MJPass2NetForLianYunGang();
+                        MjClient.MJPass2NetForRed20();
                     }
                 },
                 bgimg: {
@@ -2787,7 +2901,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     guobg: {
                         guo: {
                             _touch: function (btn, eT) {
-                                if (eT == 2) MjClient.MJPass2NetForLianYunGang();
+                                if (eT == 2) MjClient.MJPass2NetForRed20();
                             }
                         },
                         fanhui: {
@@ -2800,6 +2914,21 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         }
                     }
 
+                }
+            },
+            playercardtip: {
+                _visible: false,
+                _layout: [
+                    [0.1, 0.1],
+                    [0.5, 0],
+                    [4.6, 2.5]
+                ],
+                _event: {
+                    TurnMeOutCard: function (sD) {
+                        var pl = getUIPlayer(0);
+                        cc.log('------TurnMeOutCard--------', pl.info.uid, sD.uid)
+                        this.setVisible(pl.info.uid == sD.uid);
+                    }
                 }
             },
             _event: {
@@ -2822,11 +2951,11 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 waitPut: function () {
                     console.log("HHH :，waitPut------");
                     MjClient.playui.EatVisibleCheck();
-                    COMMON_UI.willHuShowArrow();
                 },
                 MJPut: function (eD) {
                     console.log("HHH :，MJPut------");
                     MjClient.playui.EatVisibleCheck();
+                    MjClient.playui.jsBind.eat.playercardtip._node.visible = false;
                 },
                 MJPeng: function (eD) {
                     console.log("HHH :，MJPeng------");
@@ -2843,6 +2972,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 MJTing: function (eD) {
                     console.log("HHH :，MJTing------");
                     hideTingBtn();
+                    MjClient.playui.jsBind.eat.guo._node.visible = false;
                     isCheckedTing = false;
                 },
 
@@ -3081,6 +3211,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
     _rightNode: null,
     _topNode: null,
     _leftNode: null,
+    TableOutData: { pos: -1, Card: 0 },
     ctor: function () {
         this._super();
         var playui = ccs.load('Play_Red20.json');
@@ -3092,7 +3223,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         this._rightNode = playui.node.getChildByName("right");
         this._topNode = playui.node.getChildByName("top");
         this._leftNode = playui.node.getChildByName("left");
-        this._tingCardsNode = this._downNode.getChildByName("tingCardsNode");
+        // this._tingCardsNode = this._downNode.getChildByName("tingCardsNode");
         this._tingCardNumNode = this._downNode.getChildByName("tingCardNumNode");
         this._waitChangePos = playui.node.getChildByName("waitChangePos");
         MjClient.playui = this;
@@ -3639,9 +3770,6 @@ PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off) {
         //刷新手牌大小
         resetCardSize();
     }
-
-    // 胡牌箭头
-    COMMON_UI.willHuShowArrow();
 };
 
 // 判断吃碰杠胡的状态
@@ -3674,142 +3802,30 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
     //吃碰杠胡node
     var vnode = [];
 
-    //自摸
-    if (tData.tState == TableState.waitPut && pl.mjState == TableState.waitPut) {
-        if (IsTurnToMe()) {
-            //检测补花
-            var flowerCard = -1;
-            if (tData.areaSelectMode && tData.areaSelectMode.withFlowerType == WithFlowerType.commonFlower) {
-                flowerCard = RequestFlower8();
-            }
-            else if (tData.areaSelectMode && tData.areaSelectMode.withFlowerType == WithFlowerType.zfbFlower) {
-                flowerCard = RequestFlower20();
-            }
-            cc.log();
-
-            if (flowerCard > 0) {
-                var cduis = MjClient.playui.jsBind.down._node.children;
-                var cardIndex = null;
-                for (var i = cduis.length - 1; i >= 0; i--) {
-                    if (cduis[i].name == "mjhand" && cduis[i].tag == flowerCard) {
-                        cardIndex = i;
-                        break;
-                    }
-                }
-                if (cardIndex) {
-                    var callback = function () {
-                        PutOutCard(cduis[cardIndex], flowerCard);
-                    };
-                    cduis[cardIndex].runAction(cc.sequence(cc.delayTime(0.5), cc.callFunc(callback)));
-                    return;
-                }
-            }
-            //检测补花完毕
-            if (pl.isNew && pl.eatFlag & 8) {
-                vnode.push(eat.hu._node);
-            }
-            // else
-            // {
-            //     // //如果不能胡,并且是最后四张牌
-            //     // var sData = MjClient.data.sData;
-            //     // var tData = sData.tData;
-            //     // var cardsLength = getAllCardsTotal();
-            //     // var isLastFourCard = tData.cardNext > cardsLength - 4 && tData.cardNext <= cardsLength;
-            //     // console.log("=====doomsky say:isLastFourCard======", tData.cardNext, isLastFourCard);
-            //     // if (isLastFourCard)
-            //     // {
-            //     //     MjClient.gamenet.request("pkroom.handler.tableMsg", {
-            //     //         cmd: "MJPut",
-            //     //         card: -1
-            //     //     });
-            //     // }
-            // }
-            //听
-            cc.log("￥￥￥￥听牌监测");
-            MjClient.canTingCards = {};
-            // if (tData.areaSelectMode.tingType != TingCardType.noTing && !pl.isTing) {
-
-
-            //     for (var i = 0; i < pl.mjhand.length; i++) {
-            //         var cardsAfterPut = pl.mjhand.slice(0);
-            //         cardsAfterPut.splice(i, 1); //依次去掉某张牌看能不能听
-            //         // cc.log(cardsAfterPut);
-            //         if (MjClient.majiang.canTing(cardsAfterPut)) {
-            //             // cc.log("去掉可以听"+pl.mjhand[i]);
-            //             MjClient.canTingCards[pl.mjhand[i]] = 1;
-            //             if (vnode.indexOf(eat.ting._node) < 0) {
-            //                 vnode.push(eat.ting._node);
-            //             }
-            //         }
-            //     }
-            // }
-
-            //var rtn = leftCard > 4 ? MjClient.majiang.canGang1(pl.mjpeng, pl.mjhand, pl.mjpeng4) : [];
-            //碰后不能杠
-            var rtn = MjClient.majiang.canGang1(pl.mjpeng, pl.mjhand, pl.isTing);
-            if (rtn.length > 0 && pl.isNew)//听牌也可以杠的，my
-            {
-                MjClient.gangCards = rtn;
-                vnode.push(eat.gang0._node);
-            }
-
-
-            if (vnode.length > 0) {
-                vnode.push(eat.guo._node);
-                eat.ting._node.visible = false;
-                eat.noTing._node.visible = false;
-                isCheckedTing = false;
-            }
+    if (pl) {
+        let haveGuo = !pl.isTing;
+        if (pl.eatFlag & 16) {
+            haveGuo = false;
+            vnode.push(eat.tou._node);
         }
-    }
-    //别人点
-    else if (tData.tState == TableState.waitEat) {
-        // cc.log("diao pao hu-=================================================");
-        if (!IsTurnToMe()) {
-            if (pl.eatFlag & 8) {
-                vnode.push(eat.hu._node);
-            }
-            if (pl.eatFlag & 4) {
-                vnode.push(eat.gang0._node);
-                MjClient.gangCards = [tData.lastPutCard];
-                eat.gang0._node.visible = true;
-                setCardSprite(eat.gang0.card1._node, MjClient.gangCards[0], 0);
-            }
-            if (pl.eatFlag & 2) {
-                vnode.push(eat.peng._node);
-            }
-            if (pl.eatFlag & 1) {
-                var eatpos = mj.canChi(pl.mjhand, tData.lastPutCard);
-                MjClient.eatpos = eatpos;
-                if (eatpos.length > 0) {
-                    vnode.push(eat.chi0._node);
-                }
-            }
-            //如果，有杠，碰，吃。 这出现过的UI. 否则玩家状态为等待
-            if (vnode.length > 0) {
-                vnode.push(eat.guo._node);
-                eat.ting._node.visible = false;
-                eat.noTing._node.visible = false;
-                isCheckedTing = false;
-            }
-            else {
-                getUIPlayer(0).mjState = TableState.waitCard;
-            }
-        }
-    }
-
-    if (pl && pl.eatFlag & 16) {
-        vnode.push(eat.tou._node);
-        eat.tou._node.visible = true;
+        pl.eatFlag & 32 && vnode.push(eat.ting._node);
+        pl.eatFlag & 1 && vnode.push(eat.chi1._node);
+        pl.eatFlag & 8 && vnode.push(eat.hu._node);
+        pl.eatFlag & 2 && vnode.push(eat.peng._node);
+        pl.eatFlag & 4 && vnode.push(eat.gang1._node);
+        vnode.length > 0 && haveGuo && vnode.push(eat.guo._node);
     }
 
     //吃碰杠胡过处理
     if (vnode.length > 0) {
         var btnImgs =
         {
-            "peng": ["playing/gameTable/youxizhong-2_57.png", "playing/gameTable/youxizhong-2_07.png"],
-            "gang0": ["playing/gameTable/youxizhong-2_55.png", "playing/gameTable/youxizhong-2_05.png"],
-            "chi0": ["playing/gameTable/youxizhong-2_59.png", "playing/gameTable/youxizhong-2_09.png"],
+            "peng": ["Red20/Controller/btn_peng.png", "Red20/Controller/btn_peng.png"],
+            "gang1": ["Red20/Controller/btn_gang.png", "Red20/Controller/btn_gang.png"],
+            "ting": ["Red20/Controller/btn_ting.png"],
+            "guo": ["Red20/Controller/btn_guo.png"],
+            "chi1": ["Red20/Controller/btn_chi.png", "Red20/Controller/btn_chi.png"],
+            "hu": ["Red20/Controller/btn_hu.png", "Red20/Controller/btn_hu.png"],
         }
 
         for (var i = 0; i < vnode.length; i++) {
@@ -3828,7 +3844,8 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
             }
 
             var btnName = vnode[i].name;
-            if (btnName == "peng" || btnName == "chi0" || btnName == "gang0") {
+
+            if (btnName == "ting" || btnName == "guo" || btnName == "chi1" || btnName == "hu") {
                 vnode[i].loadTextureNormal(btnImgs[btnName][0]);
                 // vnode[i].loadTexturePressed(btnImgs[btnName][1]);
             }
@@ -3902,30 +3919,31 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
 
 
 PlayerGamePanel_Red20.prototype.DealAndMoveCard = function (node, msg, off) {
-    let children = node.children, delCards = msg.Kings || [], addCards = msg.Cards || [], name = off == 0 ? 'mjhand' : (MjClient.rePlayVideo == -1 ? 'standPri' : "mjhand_replay");
-    let num = delCards.length
-
+    let delCards = msg.Kings || [], addCards = msg.Cards || [], name = off == 0 ? 'mjhand' : (MjClient.rePlayVideo == -1 ? 'standPri' : "mjhand_replay");
     let moveNode = [];
     let cp = getUIPlayer(off);
     if (cp && cp.info.uid == msg.uid) {
         for (let _i = 0; _i < delCards.length; _i++) {
             const king = delCards[_i];
             if (off === 0 || MjClient.rePlayVideo != -1) {
-                for (var i = children.length - 1; i >= 0 && num > 0; i--) {
-                    var ci = children[i];
+                for (var i = 0; i < node.children.length; i++) {
+                    var ci = node.children[i];
                     if ((ci.name == off === 0 ? 'mjhand' : 'mjhand_replay') && ci.tag == king) {
-                        ci.removeFromParent(true)
+                        ci.removeFromParent(true);
                         let nc = getNewCard(node, "up", "tou", king, off);
-                        moveNode.push(nc)
+                        moveNode.push(nc);
+                        break;
                     }
-                }
-                for (let _i = 0; _i < addCards.length; _i++) {
-                    const ac = addCards[_i];
-                    getNewCard(node, "stand", 'mjhand', ac, 0)
                 }
             } else {
                 let nc = getNewCard(node, "up", 'tou', king, off)
                 moveNode.push(nc)
+            }
+        }
+        if (off === 0 || MjClient.rePlayVideo != -1) {
+            for (let _i = 0; _i < addCards.length; _i++) {
+                const ac = addCards[_i];
+                getNewCard(node, "stand", 'mjhand', ac, 0)
             }
         }
     }
@@ -3945,5 +3963,437 @@ PlayerGamePanel_Red20.prototype.showUserTouAction = function (node, off, sD) {
         else {
             node.visible = false;
         }
+    }
+}
+/**
+ * @function 显示每个玩家放大出牌预览效果
+ * @param {node} playerUi "top"|"left"|"down"|"right" node
+ * @card {number} card 麻将牌值
+ */
+PlayerGamePanel_Red20.prototype.showMJOutBig = function (playerUi, card, off) {
+    cc.log("-----showMJOutBig------" + playerUi.getName(), JSON.stringify(card));
+    this.setUserTableCard(playerUi, off);
+    var outBig = playerUi.getChildByName("outBig");
+    if (outBig) {
+        let pl = getUIPlayer(off);
+        outBig.stopAllActions();
+        let n = MjClient.playui.jsBind.cardNumImg._node, endPos = cc.p(n.x, n.y);
+        if (!pl || pl.info.uid != card.uid) {
+            outBig.visible = false;
+            outBig.setScale(0);
+            outBig.setPosition(endPos);
+            return;
+        }
+        cc.log('--------showMJOutBig2--------', JSON.stringify(MjClient.playui.TableOutData))
+        MjClient.playui.TableOutData.Card = card.Card;
+        MjClient.playui.TableOutData.pos = off;
+        card = card.Card;
+        outBig.setPosition(endPos);
+        outBig.setScale(0);
+        setCardSprite(outBig, card);
+        outBig.visible = true;
+        if (off == 0) endPos.y -= 40;
+        else if (off == 1) endPos.x += 80;
+        else if (off == 2) endPos.y += 40;
+        else if (off == 3) endPos.x -= 80;
+        outBig.setOpacity(255);
+        outBig.zIndex = 500;
+        outBig.runAction(cc.spawn(cc.moveTo(ActionTime.MoveCenter, endPos.x, endPos.y), cc.scaleTo(ActionTime.MoveCenter, 0.5)));
+    }
+}
+//游戏中偷拍
+PlayerGamePanel_Red20.prototype.KingCard = function (playerUi, card, off) {
+    this.setUserTableCard(playerUi, off);
+    this.DealAndMoveCard(playerUi, { Kings: card.card, uid: card.uid }, off);
+    let cp = getUIPlayer(off);
+    if (cp && cp.info.uid == card.uid) {
+        getNewCard(playerUi, "up", 'tou', card.card, off);
+        this.CardLayoutRestore(playerUi, off);
+    }
+}
+//添加桌子上的牌
+PlayerGamePanel_Red20.prototype.setUserTableCard = function () {
+    if (MjClient && MjClient.playui && MjClient.playui.TableOutData.pos != -1) {
+        let off = MjClient.playui.TableOutData.pos;
+        MjClient.playui.TableOutData.pos = -1;
+        var jsbs = MjClient.playui.jsBind, arr = [jsbs.down, jsbs.right, jsbs.top, jsbs.left];
+        let node = arr[off]._node;
+        var outBig = node.getChildByName("outBig");
+        if (outBig) outBig.visible = false;
+        let pl = getUIPlayer(off);
+        if (pl.mjput) pl.mjput.push(MjClient.playui.TableOutData.Card);
+        var msg = {
+            card: MjClient.playui.TableOutData.Card,
+            uid: pl.info.uid
+        };
+
+        cc.log('--------创建出牌--------', off, MjClient.playui.TableOutData.Card)
+        DealMJPut(node, msg, off);
+        // setTimeout(() => {
+        //     try {
+        //         if (!cc.isValid(this.node)) return;
+
+        //         // cc.log('游戏消息++++掉', new Date().format('hh:mm:ss:S'))
+        //         let wpos = node.convertToWorldSpaceAR(cc.v2(0, 0));
+        //         let npos = this.node.convertToNodeSpaceAR(wpos);
+        //         let moveLast = cc.moveTo(ActionTime.Fall, npos.x, npos.y);
+        //         let tableNode = this.TableLastOutCard1;
+        //         let seq = cc.sequence(cc.spawn(moveLast, cc.scaleTo(ActionTime.Fall, node.scale)), cc.callFunc(() => {
+        //             tableNode.node.active = false;
+        //             node.opacity = 255;
+        //             // cc.log('游戏消息++++掉完', new Date().format('hh:mm:ss:S'))
+        //         }));
+        //         tableNode.node.runAction(seq);
+        //         this.TableLastOutCard.node.active = false;
+        //     } catch (error) {
+        //         cc.error('添加桌子上的牌', error)
+        //     }
+        // }, 0.05 * 1000);
+    }
+}
+//处理出牌,放一张牌，打牌动作
+PlayerGamePanel_Red20.prototype.DealMJPut = function (node, msg, off, outNum) {
+    let p0 = getUIPlayer(off);
+    if (!p0 || msg.uid != p0.info.uid) return;
+    cc.log('----------DealMJPut---------------', off, msg.card)    //断线重连 起手胡 不消失
+    var sData = MjClient.data.sData;
+    var tData = sData.tData;
+    var uids = tData.uids;
+    var noNeedOutBig = false;
+
+    var selfIndex = getPlayerIndex(off);
+    if (uids[selfIndex] == msg.uid) {
+        var pl = sData.players[msg.uid];
+        var putnum = outNum >= 0 ? outNum : (pl.mjput.length - 1);
+        var out0 = node.getChildByName("out0");
+        var out1 = node.getChildByName("out1");
+        var out2 = node.getChildByName("out2");
+        var out0_self = getNode(0).getChildByName("out0");
+        var out1_self = getNode(0).getChildByName("out1");
+        var out2_self = getNode(0).getChildByName("out2");
+        var maxNum = 11;
+        if (isCanChangePlayerNum()) {
+            if (MjClient.MaxPlayerNum == 2)
+                maxNum = 20;
+            else if (MjClient.MaxPlayerNum == 3 && off != 0)
+                maxNum = 13;
+        }
+        var out;
+        var out_self;
+        if (putnum >= maxNum * 2 && out2) {
+            out = out2.clone();
+            out_self = out2_self.clone();
+        }
+        else if (putnum >= maxNum) {
+            out = out1.clone();
+            out_self = out1_self.clone();
+        }
+        else {
+            out = out0.clone();
+            out_self = out0_self.clone();
+        }
+        out.name = "out";
+        setCardSprite(out, msg.card, off);
+        out.setScale(out.getScale() * 1.3);
+        out_self.setScale(out_self.getScale() * 1.3);
+        var oSize = out.getSize();
+        var oSc = out.getScale();
+
+        if (off == 0 && putnum >= maxNum * 2 && out2) {
+            node.addChild(out);
+        }
+        else if (off == 0 && putnum >= maxNum) {
+            node.addChild(out, 1);
+        }
+        else if (off == 1 || off == 0) {
+            node.addChild(out, 200 - putnum);
+        }
+        else if (off == 2 || off == 3) {
+            node.addChild(out, putnum);
+        }
+        else {
+            node.addChild(out);
+        }
+
+        for (var i = 0; i < node.children.length; i++) {
+            if (node.children[i].name == "newout") {
+                node.children[i].name = "out";
+            }
+        }
+
+        out.visible = true;
+
+        var tingIndex = pl.tingIndex;//沭阳麻将需要
+
+
+        if (cc.isUndefined(tingIndex) || !pl.isTing) {
+            tingIndex = -1;//为了不报错;
+        }
+        var endPoint = cc.p(0, 0);
+        var Midpoint = cc.p(0, 0);
+        var ws = cc.director.getWinSize();
+        var lineNum = 1; // 记录当前出牌显示的行数，默认第一行
+        if (putnum > maxNum * 2 - 1 && out2) {
+            out.x = out2.x;
+            out.y = out2.y;
+            putnum -= maxNum * 2;
+            tingIndex -= maxNum * 2;
+            lineNum = 3;
+        }
+        else if (putnum > maxNum - 1) {
+            out.x = out1.x;
+            out.y = out1.y;
+            putnum -= maxNum;
+            tingIndex -= maxNum;
+            lineNum = 2;
+        }
+
+
+        //是否需要变宽
+        var addWide = 0;
+        if (tingIndex <= putnum && tingIndex >= 0) {
+            if (off == 0 || off == 2) {
+                addWide = oSize.width * oSc * 0.91;
+            }
+            else if (off == 1 || off == 3) {
+                addWide = oSize.height * oSc * 0.7;
+            }
+        }
+
+        var arg = 1.0
+
+        if (off == 0) {
+            endPoint.y = out.y;
+            endPoint.x = out.x + oSize.width * oSc * arg * putnum * 0.91 + addWide;
+
+            if (isIPad()) {
+                var ax = ws.height / 1024;
+                var ay = ws.height / 768;
+                endPoint.x = endPoint.x + 20 * ax;
+                out.zIndex = 100 - putnum;
+                endPoint.y = lineNum > 1 ? endPoint.y - 8 * ay : endPoint.y;
+            }
+
+            Midpoint.x = ws.width / 2;
+            Midpoint.y = ws.height * 0.3;
+        }
+        else if (off == 1) {
+            cc.log("DealMJPut remove card  = " + msg.card);
+            endPoint.y = out.y + oSize.height * oSc * arg * putnum * 0.7 + addWide;
+            endPoint.x = out.x;
+
+            if (isIPad()) {
+                var ay = ws.height / 768;
+                endPoint.y = endPoint.y + 20 * ay;
+            }
+
+            Midpoint.x = ws.width * 0.78;
+            Midpoint.y = ws.height * 0.57;
+            out.zIndex = 100 - putnum;
+        }
+        else if (off == 2) {
+
+            endPoint.y = out.y;
+            endPoint.x = out.x - oSize.width * oSc * arg * putnum * 0.91 - addWide;
+
+            if (isIPad()) {
+                var ax = ws.height / 1024;
+                var ay = ws.height / 768;
+                endPoint.x = endPoint.x - 20 * ax;
+                out.zIndex = 100 - putnum - lineNum;
+                endPoint.y = lineNum > 1 ? endPoint.y + 5 * ay : endPoint.y;
+            }
+
+            Midpoint.x = ws.width / 2;
+            Midpoint.y = ws.height / 4 * 3;
+        }
+        else if (off == 3) {
+
+            endPoint.y = out.y - oSize.height * oSc * arg * putnum * 0.7 - addWide;
+            endPoint.x = out.x;
+
+            if (isIPad()) {
+                var ay = ws.height / 768;
+                endPoint.y = MjClient.MaxPlayerNum === 3 ? endPoint.y + 120 * ay : endPoint.y - 25 * ay;
+            }
+
+            Midpoint.x = ws.width * (1 - 0.78);
+            Midpoint.y = ws.height * 0.57;
+            out.zIndex = putnum;
+        }
+
+
+        if (outNum >= 0) //重连
+        {
+            //cc.log("==================tData = "+ JSON.stringify(tData));
+            //断线重连的时候
+            if (tData.lastPutCard == msg.card && tData.lastPutPlayer == tData.uids.indexOf(msg.uid)) {
+                out.x = endPoint.x;
+                out.y = endPoint.y;
+                clearCurrentPutTag();
+                addCurrentPutTag(out, off);
+            }
+
+            if ((outNum == pl.mjput.length - 1) && tData.curPlayer == selfIndex && tData.tState == TableState.waitEat) {
+
+            }
+            else {
+                out.x = endPoint.x;
+                out.y = endPoint.y;
+                return;
+            }
+        }
+        else //打牌
+        {
+            clearCurrentPutTag();
+            addCurrentPutTag(out, off);
+        }
+
+        var zoder = out.zIndex;
+        out.visible = false;
+        if (COMMON_UI.isPutScale && off != 0 && !noNeedOutBig) {
+            out.zIndex = 200;
+            out.x = Midpoint.x;
+            out.y = Midpoint.y;
+            out.scale = 2 * oSc;
+        }
+        else {
+            out.x = endPoint.x;
+            out.y = endPoint.y;
+            out.scale = oSc;
+        }
+
+        out.name = "newout";
+
+        var outAction = null;
+        if (off != 0 && COMMON_UI.isPutScale && !noNeedOutBig) {
+            outAction = out_self.clone();
+            setCardSprite(outAction, msg.card, 0);
+        }
+        else {
+            outAction = out.clone();
+        }
+
+        outAction.name = "outAction";
+        outAction.visible = true;
+        node.addChild(outAction);
+
+        if (COMMON_UI.isPutScale && off != 0 && !noNeedOutBig) {
+            outAction.zIndex = 200;
+            outAction.scale = 2 * oSc;
+            outAction.setPosition(Midpoint);
+            clearCurrentPutTag();
+        }
+        else {
+            outAction.scale = oSc;
+            outAction.zIndex = zoder;
+            outAction.setPosition(endPoint);
+            setCardSprite(outAction, msg.card, off);
+        }
+        addCurrentPutTag(outAction, off);
+
+        var putTime = Date.now();
+        var RemovePutCardScale = function (onlySelf) {
+            if (!cc.sys.isObjectValid(outAction)) {
+                return;
+            }
+
+            if (!onlySelf) {
+                var _delayTime = 0.8;
+                // if(off == 0) _delayTime = 0.4;
+
+                var delayNum = _delayTime - (Date.now() - putTime) / 1000;
+                if (delayNum < 0) {
+                    delayNum = 0;
+                }
+
+                cc.log("---------delayNumdelayNumdelayNum------- " + delayNum);
+                outAction.runAction(cc.sequence(
+                    cc.delayTime(delayNum),
+                    cc.callFunc(function () {
+                        if (cc.sys.isObjectValid(out)) {
+                            out.visible = true;
+                            out.runAction(cc.sequence(
+                                cc.spawn(cc.moveTo(0.1, endPoint), cc.scaleTo(0.1, oSc)),
+                                cc.callFunc(function () {
+                                    addCurrentPutTag(out, off);
+                                    out.setPosition(endPoint);
+                                    out.setScale(oSc);
+                                    out.zIndex = zoder;
+                                })
+                            ));
+                        }
+                        //CommonPool.putInPool(outAction);
+                        //outAction.removeFromParent();
+                    }),
+                    cc.removeSelf()
+                ));
+            }
+            else {
+                clearCurrentPutTag();
+                //CommonPool.putInPool(outAction);
+                outAction.removeFromParent();
+            }
+        }
+
+        function RemovePutCard(onlySelf) {
+            if (COMMON_UI.isPutScale && off != 0 && !noNeedOutBig) {
+                return RemovePutCardScale(onlySelf);
+            }
+            if (cc.sys.isObjectValid(outAction)) {
+                //CommonPool.putInPool(outAction);
+                outAction.removeFromParent();
+            }
+            if (!onlySelf) {
+                out.visible = true;
+                out.zIndex = zoder;
+            }
+            else {
+                clearCurrentPutTag();
+            }
+        }
+
+        var outActionBind =
+        {
+            _event:
+            {
+                waitPut: function () {
+                    RemovePutCard(false)
+                },
+                MJChi: function () {
+                    RemovePutCard(true)
+                },
+                MJPeng: function () {
+                    RemovePutCard(true)
+                },
+                MJGang: function () {
+                    RemovePutCard(true)
+
+                },
+                roundEnd: function () {
+                    var num = MjClient.CheckPlayerCount(function (p) {
+                        if (p.winone == 0) {
+                            return true;
+                        }
+                        return false;
+                    });
+                    if (num != MjClient.MaxPlayerNum) // 荒庄不移除打出去的牌
+                        RemovePutCard(true)
+                },
+            }
+        }
+
+        BindUiAndLogic(outAction, outActionBind);
+
+        var pl = getUIPlayer(0);
+        if (off == 0 && !pl.isTing && MjClient.rePlayVideo == -1 && COMMON_UI.isChaPai && !pl.trust) {
+            //正常游戏时,在putOutCard函数里面，已经提前处理了，此处不用再处理，by sking 2018.9.25
+        }
+        else {
+            if (!(outNum >= 0)) {
+                if (cc.sys.isObjectValid(MjClient.playui)) MjClient.playui.CardLayoutRestore(node, off);
+            }
+        }
+
     }
 }

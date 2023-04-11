@@ -5809,6 +5809,7 @@ MjClient.netCallBack = {
         var pl = sData.players[d.uid];
         pl.isTing = true;
         tData.haveTianTing = false;
+        pl.eatFlag = 0;
 
         if (MjClient.gameType == MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO) {
             if ("isTingJJHu" in d) {
@@ -10202,14 +10203,14 @@ MjClient.netCallBack = {
     game_finished_incr_empirical: [0, function (d) {
         MjClient.showToastEXP(d);
     }],
-    
+
     OptBtnShow: [0, function (d) {
         cc.log('-----------OptBtnShow----------------', JSON.stringify(d));
         var sData = MjClient.data.sData;
         var pl = sData.players[SelfUid()];
         pl.eatFlag = d.eatFlag;
     }],
-    TouResult:[0, function (d) {
+    TouResult: [0, function (d) {
         var sData = MjClient.data.sData;
         let pl = sData.players[d.uid];
         cc.log('-----------TouResult----------------', JSON.stringify(pl.mjhand));
@@ -10218,14 +10219,39 @@ MjClient.netCallBack = {
             return;
         }
         if (pl.mjhand) {
-            for (let _i = 0; _i < pl.mjhand.length; _i++) {
-                const c = pl.mjhand[_i];
-                if (d.Kings.indexOf(c) > -1) {
-                    pl.mjhand.splice(_i, 1, d.Cards.splice(0, 1)[0]);
-                }
+            for (let _i = 0; _i < d.Kings.length; _i++) {
+                const k = d.Kings[_i];
+                pl.mjhand.splice(pl.mjhand.indexOf(k), 1);
             }
-            
+            pl.mjhand = pl.mjhand.concat(d.Cards);
         }
         pl.touCardList.push(d.Kings)
+    }],
+    TurnMeOutCard: [0, function (d) {
+        var sData = MjClient.data.sData;
+        let pl = sData.players[d.uid];
+        cc.log('-----------TurnMeOutCard----------------', JSON.stringify(pl.mjhand));
+        if (!pl) {
+            cc.log('----------TurnMeOutCard----------错误--')
+            return;
+        }
+        pl.mjState = TableState.waitPut;
+        sData.tData.tState = TableState.waitPut;
+    }],
+    SystemCard: [0, function (d) {
+        cc.log('-----------SystemCard----------------', JSON.stringify(d));
+    }],
+    KingCard: [0, function (d) {
+        cc.log('-----------KingCard----------------', JSON.stringify(d));
+    }],
+    GetNewCard: [0, function (d) {
+        cc.log('-----------GetNewCard----------------', JSON.stringify(d));
+        var sData = MjClient.data.sData;
+        let pl = sData.players[d.uid];
+        if (!pl) {
+            cc.log('----------GetNewCard----------错误--')
+            return;
+        }
+        if (pl.mjhand && pl.mjhand.length) pl.mjhand.push(d.Card);
     }],
 };
