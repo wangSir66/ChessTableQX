@@ -97,7 +97,7 @@ CreateViewYaAn = cc.Layer.extend({
         gameItem.visible = false;
         var gameList = this._gameTypeList[this._curTabIndex];
         var lastGameType = this._lastGameType[this._curTabIndex];
-        cc.log("加载玩法按钮   ~~~   ", gameList);
+        cc.log("加载玩法按钮   ~~~  gameList ", JSON.stringify(gameList));
         for (var i = 0; i < gameList.length; i++) {
 
             var gameType = gameList[i];

@@ -61,7 +61,7 @@
                 "IsBounceEnabled": true,
                 "InnerNodeSize": {
                   "Width": 893,
-                  "Height": 1400
+                  "Height": 1250
                 },
                 "ScrollDirectionType": "Vertical",
                 "ClipAble": false,
@@ -86,8 +86,8 @@
                   "ScaleY": 1.0
                 },
                 "Position": {
-                  "X": 446.5,
-                  "Y": 567.034
+                  "X": 446.4979,
+                  "Y": 565.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -99,14 +99,14 @@
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
                   "X": 0.5,
-                  "Y": 1.0036
+                  "Y": 1.0
                 },
                 "PreSize": {
                   "X": 1.0,
                   "Y": 1.0
                 },
-                "TopMargin": -2.034,
-                "BottomMargin": 2.034,
+                "LeftMargin": -0.0021,
+                "RightMargin": 0.0021,
                 "Tag": 541,
                 "Children": [
                   {
@@ -124,8 +124,8 @@
                       "ScaleY": 1.0
                     },
                     "Position": {
-                      "X": 444.7371,
-                      "Y": 1395.0603
+                      "X": 444.9927,
+                      "Y": 1245.1641
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -134,17 +134,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.498,
-                      "Y": 0.9965
+                      "X": 0.4983,
+                      "Y": 0.9961
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -1.7629,
-                    "RightMargin": 1.7629,
-                    "TopMargin": 4.9397,
-                    "BottomMargin": 1335.0603,
+                    "LeftMargin": -1.5073,
+                    "RightMargin": 1.5073,
+                    "TopMargin": 4.8359,
+                    "BottomMargin": 1185.1641,
                     "Tag": 503,
                     "Children": [
                       {
@@ -451,7 +451,7 @@
                         "Children": [
                           {
                             "FontSize": 28,
-                            "LabelText": "8局",
+                            "LabelText": "12局",
                             "FontResource": {
                               "Type": "Default",
                               "Path": "",
@@ -493,17 +493,17 @@
                               "Y": 0.5022
                             },
                             "PreSize": {
-                              "X": 1.1667,
+                              "X": 1.5556,
                               "Y": 0.7568
                             },
                             "LeftMargin": 42.0,
-                            "RightMargin": -48.0,
+                            "RightMargin": -62.0,
                             "TopMargin": 4.4186,
                             "BottomMargin": 4.5814,
                             "Tag": 507,
                             "ActionTag": -624683715,
                             "Size": {
-                              "X": 42.0,
+                              "X": 56.0,
                               "Y": 28.0
                             },
                             "Name": "text",
@@ -788,8 +788,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 445.144,
-                      "Y": 1306.9119
+                      "X": 445.3995,
+                      "Y": 1157.0193
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -798,17 +798,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4985,
-                      "Y": 0.9335
+                      "X": 0.4988,
+                      "Y": 0.9256
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -1.356,
-                    "RightMargin": 1.356,
-                    "TopMargin": 63.0881,
-                    "BottomMargin": 1276.9119,
+                    "LeftMargin": -1.1005,
+                    "RightMargin": 1.1005,
+                    "TopMargin": 62.9807,
+                    "BottomMargin": 1127.0193,
                     "Tag": 252,
                     "Children": [
                       {
@@ -1271,8 +1271,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 444.3333,
-                      "Y": 1244.3523
+                      "X": 444.5904,
+                      "Y": 1094.4585
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1281,17 +1281,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4976,
-                      "Y": 0.8888
+                      "X": 0.4979,
+                      "Y": 0.8756
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -2.1667,
-                    "RightMargin": 2.1667,
-                    "TopMargin": 125.6477,
-                    "BottomMargin": 1214.3523,
+                    "LeftMargin": -1.9096,
+                    "RightMargin": 1.9096,
+                    "TopMargin": 125.5415,
+                    "BottomMargin": 1064.4585,
                     "Tag": 325,
                     "Children": [
                       {
@@ -1754,8 +1754,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 443.6815,
-                      "Y": 1177.0928
+                      "X": 443.9359,
+                      "Y": 1027.2006
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1764,17 +1764,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4968,
-                      "Y": 0.8408
+                      "X": 0.4971,
+                      "Y": 0.8218
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -2.8185,
-                    "RightMargin": 2.8185,
-                    "TopMargin": 192.9072,
-                    "BottomMargin": 1147.0928,
+                    "LeftMargin": -2.5641,
+                    "RightMargin": 2.5641,
+                    "TopMargin": 192.7994,
+                    "BottomMargin": 997.2006,
                     "Tag": 333,
                     "Children": [
                       {
@@ -2108,8 +2108,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 445.254,
-                      "Y": 1107.2502
+                      "X": 445.5112,
+                      "Y": 957.3574
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2118,17 +2118,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4986,
-                      "Y": 0.7909
+                      "X": 0.4989,
+                      "Y": 0.7659
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -1.246,
-                    "RightMargin": 1.246,
-                    "TopMargin": 262.7498,
-                    "BottomMargin": 1077.2502,
+                    "LeftMargin": -0.9888,
+                    "RightMargin": 0.9888,
+                    "TopMargin": 262.6426,
+                    "BottomMargin": 927.3574,
                     "Tag": 588,
                     "Children": [
                       {
@@ -2466,8 +2466,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 444.1188,
-                      "Y": 1035.7554
+                      "X": 444.3762,
+                      "Y": 885.8635
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2476,17 +2476,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4973,
-                      "Y": 0.7398
+                      "X": 0.4976,
+                      "Y": 0.7087
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -2.3812,
-                    "RightMargin": 2.3812,
-                    "TopMargin": 334.2446,
-                    "BottomMargin": 1005.7554,
+                    "LeftMargin": -2.1238,
+                    "RightMargin": 2.1238,
+                    "TopMargin": 334.1365,
+                    "BottomMargin": 855.8635,
                     "Tag": 596,
                     "Children": [
                       {
@@ -2949,8 +2949,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 443.8986,
-                      "Y": 964.4398
+                      "X": 444.1533,
+                      "Y": 814.5491
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2959,17 +2959,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4971,
-                      "Y": 0.6889
+                      "X": 0.4974,
+                      "Y": 0.6516
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -2.6014,
-                    "RightMargin": 2.6014,
-                    "TopMargin": 405.5602,
-                    "BottomMargin": 934.4398,
+                    "LeftMargin": -2.3467,
+                    "RightMargin": 2.3467,
+                    "TopMargin": 405.4509,
+                    "BottomMargin": 784.5491,
                     "Tag": 604,
                     "Children": [
                       {
@@ -3808,8 +3808,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 443.9057,
-                      "Y": 839.633
+                      "X": 444.1609,
+                      "Y": 689.7445
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -3818,17 +3818,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4971,
-                      "Y": 0.5997
+                      "X": 0.4974,
+                      "Y": 0.5518
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -2.5943,
-                    "RightMargin": 2.5943,
-                    "TopMargin": 530.367,
-                    "BottomMargin": 809.633,
+                    "LeftMargin": -2.3391,
+                    "RightMargin": 2.3391,
+                    "TopMargin": 530.2555,
+                    "BottomMargin": 659.7445,
                     "Tag": 618,
                     "Children": [
                       {
@@ -4166,8 +4166,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 442.2433,
-                      "Y": 778.6005
+                      "X": 442.4987,
+                      "Y": 628.7136
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -4176,17 +4176,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4952,
-                      "Y": 0.5561
+                      "X": 0.4955,
+                      "Y": 0.503
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -4.2567,
-                    "RightMargin": 4.2567,
-                    "TopMargin": 591.3995,
-                    "BottomMargin": 748.6005,
+                    "LeftMargin": -4.0013,
+                    "RightMargin": 4.0013,
+                    "TopMargin": 591.2864,
+                    "BottomMargin": 598.7136,
                     "Tag": 626,
                     "Children": [
                       {
@@ -4524,8 +4524,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 444.9563,
-                      "Y": 713.1984
+                      "X": 445.2113,
+                      "Y": 563.3112
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -4534,22 +4534,22 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4983,
-                      "Y": 0.5094
+                      "X": 0.4986,
+                      "Y": 0.4506
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -1.5437,
-                    "RightMargin": 1.5437,
-                    "TopMargin": 656.8016,
-                    "BottomMargin": 683.1984,
+                    "LeftMargin": -1.2887,
+                    "RightMargin": 1.2887,
+                    "TopMargin": 656.6888,
+                    "BottomMargin": 533.3112,
                     "Tag": 632,
                     "Children": [
                       {
                         "FontSize": 28,
-                        "LabelText": "报听红点：",
+                        "LabelText": "流    局：",
                         "FontResource": {
                           "Type": "Default",
                           "Path": "",
@@ -4882,8 +4882,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 446.9569,
-                      "Y": 643.8453
+                      "X": 447.2116,
+                      "Y": 493.958
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -4892,17 +4892,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.5005,
-                      "Y": 0.4599
+                      "X": 0.5008,
+                      "Y": 0.3952
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": 0.4569,
-                    "RightMargin": -0.4569,
-                    "TopMargin": 726.1547,
-                    "BottomMargin": 613.8453,
+                    "LeftMargin": 0.7116,
+                    "RightMargin": -0.7116,
+                    "TopMargin": 726.042,
+                    "BottomMargin": 463.958,
                     "Tag": 640,
                     "Children": [
                       {
@@ -5239,8 +5239,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 444.4721,
-                      "Y": 578.2346
+                      "X": 444.7285,
+                      "Y": 428.3496
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -5249,17 +5249,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4977,
-                      "Y": 0.413
+                      "X": 0.498,
+                      "Y": 0.3427
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": -2.0279,
-                    "RightMargin": 2.0279,
-                    "TopMargin": 791.7654,
-                    "BottomMargin": 548.2346,
+                    "LeftMargin": -1.7715,
+                    "RightMargin": 1.7715,
+                    "TopMargin": 791.6504,
+                    "BottomMargin": 398.3496,
                     "Tag": 648,
                     "Children": [
                       {
@@ -5855,7 +5855,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 441.7405,
+                          "X": 441.74,
                           "Y": -40.9545
                         },
                         "Scale": {
@@ -5872,8 +5872,8 @@
                           "X": 0.0426,
                           "Y": 0.6667
                         },
-                        "LeftMargin": 422.7405,
-                        "RightMargin": 432.2595,
+                        "LeftMargin": 422.74,
+                        "RightMargin": 432.26,
                         "TopMargin": 80.9545,
                         "BottomMargin": -60.9545,
                         "Tag": 658,
@@ -5946,6 +5946,131 @@
                         },
                         "Name": "btnCheckZiMo",
                         "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "CheckedState": true,
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_19.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_19.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_19.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_20.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_19.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 709.12,
+                          "Y": -40.95
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.7941,
+                          "Y": -0.6825
+                        },
+                        "PreSize": {
+                          "X": 0.0426,
+                          "Y": 0.6667
+                        },
+                        "LeftMargin": 690.12,
+                        "RightMargin": 164.88,
+                        "TopMargin": 80.95,
+                        "BottomMargin": -60.95,
+                        "Tag": 191,
+                        "Children": [
+                          {
+                            "FontSize": 28,
+                            "LabelText": "金二十",
+                            "FontResource": {
+                              "Type": "Default",
+                              "Path": "",
+                              "Plist": ""
+                            },
+                            "OutlineSize": 2,
+                            "OutlineColor": {
+                              "R": 82,
+                              "G": 54,
+                              "B": 33
+                            },
+                            "ShadowColor": {
+                              "R": 110,
+                              "G": 110,
+                              "B": 110
+                            },
+                            "ShadowOffsetX": 2.0,
+                            "ShadowOffsetY": -2.0,
+                            "AnchorPoint": {
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": 42.0,
+                              "Y": 19.304
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {
+                              "R": 96,
+                              "G": 46,
+                              "B": 26
+                            },
+                            "IconVisible": false,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": 1.1053,
+                              "Y": 0.4826
+                            },
+                            "PreSize": {
+                              "X": 2.2105,
+                              "Y": 0.7
+                            },
+                            "LeftMargin": 42.0,
+                            "RightMargin": -88.0,
+                            "TopMargin": 6.696,
+                            "BottomMargin": 5.304,
+                            "Tag": 192,
+                            "ActionTag": 730365712,
+                            "Size": {
+                              "X": 84.0,
+                              "Y": 28.0
+                            },
+                            "Name": "text",
+                            "ctype": "TextObjectData"
+                          }
+                        ],
+                        "ActionTag": -691186084,
+                        "Size": {
+                          "X": 38.0,
+                          "Y": 40.0
+                        },
+                        "Name": "btnCheckjin20",
+                        "ctype": "CheckBoxObjectData"
                       }
                     ],
                     "ActionTag": 1955772249,
@@ -5971,8 +6096,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 452.0463,
-                      "Y": 445.4596
+                      "X": 452.3021,
+                      "Y": 295.5761
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -5981,22 +6106,22 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.5062,
-                      "Y": 0.3182
+                      "X": 0.5065,
+                      "Y": 0.2365
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": 5.5463,
-                    "RightMargin": -5.5463,
-                    "TopMargin": 924.5404,
-                    "BottomMargin": 415.4596,
+                    "LeftMargin": 5.8021,
+                    "RightMargin": -5.8021,
+                    "TopMargin": 924.4239,
+                    "BottomMargin": 265.5761,
                     "Tag": 660,
                     "Children": [
                       {
                         "FontSize": 28,
-                        "LabelText": "金 二 十：",
+                        "LabelText": "平   胡：",
                         "FontResource": {
                           "Type": "Default",
                           "Path": "",
@@ -6019,7 +6144,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 6.1494,
+                          "X": 6.0,
                           "Y": 22.008
                         },
                         "Scale": {
@@ -6034,21 +6159,21 @@
                         "IconVisible": false,
                         "PositionPercentYEnabled": true,
                         "PrePosition": {
-                          "X": 0.0069,
+                          "X": 0.0067,
                           "Y": 0.3668
                         },
                         "PreSize": {
-                          "X": 0.1568,
+                          "X": 0.1411,
                           "Y": 0.4667
                         },
-                        "LeftMargin": 6.1494,
-                        "RightMargin": 746.8506,
+                        "LeftMargin": 6.0,
+                        "RightMargin": 761.0,
                         "TopMargin": 23.992,
                         "BottomMargin": 8.008,
                         "Tag": 661,
                         "ActionTag": 1116207630,
                         "Size": {
-                          "X": 140.0,
+                          "X": 126.0,
                           "Y": 28.0
                         },
                         "Name": "text_1",
@@ -6113,7 +6238,7 @@
                         "Children": [
                           {
                             "FontSize": 28,
-                            "LabelText": "1番",
+                            "LabelText": "可以平胡",
                             "FontResource": {
                               "Type": "Default",
                               "Path": "",
@@ -6155,17 +6280,17 @@
                               "Y": 0.5729
                             },
                             "PreSize": {
-                              "X": 1.1667,
+                              "X": 3.1111,
                               "Y": 0.7568
                             },
                             "LeftMargin": 41.9999,
-                            "RightMargin": -47.9999,
+                            "RightMargin": -117.9999,
                             "TopMargin": 1.8027,
                             "BottomMargin": 7.1973,
                             "Tag": 663,
                             "ActionTag": -163416117,
                             "Size": {
-                              "X": 42.0,
+                              "X": 112.0,
                               "Y": 28.0
                             },
                             "Name": "text",
@@ -6238,7 +6363,7 @@
                         "Children": [
                           {
                             "FontSize": 28,
-                            "LabelText": "3番",
+                            "LabelText": "不可平胡",
                             "FontResource": {
                               "Type": "Default",
                               "Path": "",
@@ -6280,17 +6405,17 @@
                               "Y": 0.5022
                             },
                             "PreSize": {
-                              "X": 1.1667,
+                              "X": 3.1111,
                               "Y": 0.7568
                             },
                             "LeftMargin": 42.0,
-                            "RightMargin": -48.0,
+                            "RightMargin": -118.0,
                             "TopMargin": 4.4186,
                             "BottomMargin": 4.5814,
                             "Tag": 665,
                             "ActionTag": 1875035275,
                             "Size": {
-                              "X": 42.0,
+                              "X": 112.0,
                               "Y": 28.0
                             },
                             "Name": "text",
@@ -6311,7 +6436,7 @@
                       "X": 893.0,
                       "Y": 60.0
                     },
-                    "Name": "jinershi",
+                    "Name": "pinghu",
                     "ctype": "ImageViewObjectData"
                   },
                   {
@@ -6329,8 +6454,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 448.4231,
-                      "Y": 383.2515
+                      "X": 448.6787,
+                      "Y": 233.3708
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -6339,17 +6464,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.5022,
-                      "Y": 0.2738
+                      "X": 0.5024,
+                      "Y": 0.1867
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": 1.9231,
-                    "RightMargin": -1.9231,
-                    "TopMargin": 986.7485,
-                    "BottomMargin": 353.2515,
+                    "LeftMargin": 2.1787,
+                    "RightMargin": -2.1787,
+                    "TopMargin": 986.6292,
+                    "BottomMargin": 203.3708,
                     "Tag": 666,
                     "Children": [
                       {
@@ -6687,8 +6812,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 447.0726,
-                      "Y": 319.9078
+                      "X": 447.3264,
+                      "Y": 170.0284
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -6697,17 +6822,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.5006,
-                      "Y": 0.2285
+                      "X": 0.5009,
+                      "Y": 0.136
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.0429
+                      "Y": 0.048
                     },
-                    "LeftMargin": 0.5726,
-                    "RightMargin": -0.5726,
-                    "TopMargin": 1050.0922,
-                    "BottomMargin": 289.9078,
+                    "LeftMargin": 0.8264,
+                    "RightMargin": -0.8264,
+                    "TopMargin": 1049.9716,
+                    "BottomMargin": 140.0284,
                     "Tag": 672,
                     "Children": [
                       {
@@ -7047,16 +7172,6 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/btn_create_s.png",
-                  "Plist": ""
-                },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/btn_create_s.png",
-                  "Plist": ""
-                },
                 "NormalFileData": {
                   "Type": "Normal",
                   "Path": "createNewPng/btn_create_n.png",
@@ -7098,18 +7213,18 @@
                   "Y": 0.0675
                 },
                 "PreSize": {
-                  "X": 0.2363,
-                  "Y": 0.1257
+                  "X": 0.3382,
+                  "Y": 0.1735
                 },
-                "LeftMargin": 471.97,
-                "RightMargin": 210.03,
-                "TopMargin": 491.3422,
-                "BottomMargin": 2.6579,
+                "LeftMargin": 426.47,
+                "RightMargin": 164.53,
+                "TopMargin": 477.8421,
+                "BottomMargin": -10.8421,
                 "Tag": 516,
                 "ActionTag": 2032158414,
                 "Size": {
-                  "X": 211.0,
-                  "Y": 71.0
+                  "X": 302.0,
+                  "Y": 98.0
                 },
                 "Name": "btn_create",
                 "ctype": "ButtonObjectData"
@@ -7507,7 +7622,6 @@
         "createNewPng/bg_nothing.png",
         "createNewPng/btn_create_n.png",
         "createNewPng/btn_create_n_diamond.png",
-        "createNewPng/btn_create_s.png",
         "createNewPng/daTC1_15.png",
         "createNewPng/daTC1_18.png",
         "createNewPng/daTC1_19.png",

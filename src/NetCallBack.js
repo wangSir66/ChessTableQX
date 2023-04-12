@@ -2672,6 +2672,11 @@ MjClient.netCallBack = {
         if (!sData) return;
         sData.tData = d.tData;
 
+        if (SelfUid() != tData.uids[tData.zhuang]) {
+            tData.cardNext++;
+        }
+        postEvent('changeCardNum')
+
         // 默认过胡弹窗没弹过
         if (cc.sys.isObjectValid(MjClient.playui)) {
             util.localStorageEncrypt.setBoolItem(MjClient.guoHuHasBeenShown, false);
@@ -4392,6 +4397,10 @@ MjClient.netCallBack = {
         pl.isNew = true;
         if (typeof (d) == "number") {
             d = { newCard: d };
+        }
+        if (d.cardNext) {
+            sData.tData.cardNext = d.cardNext
+            postEvent('changeCardNum')
         }
 
         pl.newCd = d.newCard; //---for ting pai
@@ -10226,6 +10235,10 @@ MjClient.netCallBack = {
             pl.mjhand = pl.mjhand.concat(d.Cards);
         }
         pl.touCardList.push(d.Kings)
+        if (d.cardNext) {
+            sData.tData.cardNext = d.cardNext
+            postEvent('changeCardNum')
+        }
     }],
     TurnMeOutCard: [0, function (d) {
         var sData = MjClient.data.sData;
@@ -10240,9 +10253,19 @@ MjClient.netCallBack = {
     }],
     SystemCard: [0, function (d) {
         cc.log('-----------SystemCard----------------', JSON.stringify(d));
+        if (d.cardNext) {
+            var sData = MjClient.data.sData;
+            sData.tData.cardNext = d.cardNext
+            postEvent('changeCardNum')
+        }
     }],
     KingCard: [0, function (d) {
         cc.log('-----------KingCard----------------', JSON.stringify(d));
+        if (d.cardNext) {
+            var sData = MjClient.data.sData;
+            sData.tData.cardNext = d.cardNext
+            postEvent('changeCardNum')
+        }
     }],
     GetNewCard: [0, function (d) {
         cc.log('-----------GetNewCard----------------', JSON.stringify(d));
@@ -10251,6 +10274,10 @@ MjClient.netCallBack = {
         if (!pl) {
             cc.log('----------GetNewCard----------错误--')
             return;
+        }
+        if (d.cardNext) {
+            sData.tData.cardNext = d.cardNext
+            postEvent('changeCardNum')
         }
         if (pl.mjhand && pl.mjhand.length) pl.mjhand.push(d.Card);
     }],

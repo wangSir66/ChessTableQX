@@ -14,9 +14,9 @@
     "jsList" : [
         "src/YaAn/Homeview.js",
         "src/YaAn/CreateRoomPanel.js",
-        "src/CreateRoomNode.js",
-        "src/YaAn/CreateRoomNode_yaan.js",
-        "src/YaAn/CreateRoomNode_red20.js",
+        "src/YaAn/CreateRoomNode.js",
+        "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
+        "src/YaAn/Red20/CreateRoomNode_red20.js",
 
 
 		"TestConfig.js",
@@ -84,6 +84,7 @@
         "src/UserSettingPanel.js",
         "src/DisclaimerLayer.js",
         "src/ReportPlayerLayer.js",
+        "src/CreateRoomNode.js",
         "src/CreateRoomNode_LYG.js",
         "src/CreateRoomNode_donghai.js",
         "src/CreateRoomNode_guanyun.js",

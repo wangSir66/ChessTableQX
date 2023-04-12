@@ -146,7 +146,7 @@ function InitUserHandUI_Red20(node, off) {
 
     //初始化玩家金币和名称
     InitUserCoinAndName(node, off);
-    setAreaTypeInfo(true);
+    // setAreaTypeInfo(true);
     //setPlayerRoundDir(off);
     // if(vnPos.indexOf(off) == -1)
     // {
@@ -445,7 +445,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 delete MjClient.endoneui;
                 delete MjClient.endallui;
                 cc.audioEngine.stopAllEffects();
-                playMusic("bgMain");
+                playMusic("bgFight_xinsiyang");
             },
             endRoom: function (msg) {
                 mylog(JSON.stringify(msg));
@@ -713,7 +713,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     if (tData) return MjClient.majiang.getAllCardsTotal() - tData.cardNext;
                 },
                 _event: {
-                    waitPut: function () {
+                    changeCardNum: function () {
                         var sData = MjClient.data.sData;
                         var tData = sData.tData;
                         if (tData) this.setString(MjClient.majiang.getAllCardsTotal() - tData.cardNext);
@@ -725,7 +725,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         back: {
             back: {
                 _run: function () {
-                    changeGameBg(this);
+                    // changeGameBg(this);
                 },
                 _event: {
                     changeGameBgEvent: function () {
@@ -787,6 +787,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         },
         info:
         {
+            _visible: false,
             _layout: [
                 [0.16, 0.16],
                 [0.01, 0.935],
@@ -794,6 +795,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             ]
         },
         gameName: {
+            _visible: false,
             _layout: [
                 [0.16, 0.16],
                 [0.5, 0.62],
@@ -3218,7 +3220,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         this.srcMaxPlayerNum = MjClient.MaxPlayerNum;
         MjClient.MaxPlayerNum = parseInt(MjClient.data.sData.tData.maxPlayer);
         cc.log("MjClient.MaxPlayerNum LYG = " + MjClient.MaxPlayerNum);
-        playMusic("bgFight");
+        playMusic("Red20BGM");
         this._downNode = playui.node.getChildByName("down");
         this._rightNode = playui.node.getChildByName("right");
         this._topNode = playui.node.getChildByName("top");
@@ -3972,7 +3974,6 @@ PlayerGamePanel_Red20.prototype.showUserTouAction = function (node, off, sD) {
  */
 PlayerGamePanel_Red20.prototype.showMJOutBig = function (playerUi, card, off) {
     cc.log("-----showMJOutBig------" + playerUi.getName(), JSON.stringify(card));
-    this.setUserTableCard(playerUi, off);
     var outBig = playerUi.getChildByName("outBig");
     if (outBig) {
         let pl = getUIPlayer(off);
@@ -3984,6 +3985,7 @@ PlayerGamePanel_Red20.prototype.showMJOutBig = function (playerUi, card, off) {
             outBig.setPosition(endPos);
             return;
         }
+        this.setUserTableCard(playerUi, off);
         cc.log('--------showMJOutBig2--------', JSON.stringify(MjClient.playui.TableOutData))
         MjClient.playui.TableOutData.Card = card.Card;
         MjClient.playui.TableOutData.pos = off;
@@ -3998,7 +4000,7 @@ PlayerGamePanel_Red20.prototype.showMJOutBig = function (playerUi, card, off) {
         else if (off == 3) endPos.x -= 80;
         outBig.setOpacity(255);
         outBig.zIndex = 500;
-        outBig.runAction(cc.spawn(cc.moveTo(ActionTime.MoveCenter, endPos.x, endPos.y), cc.scaleTo(ActionTime.MoveCenter, 0.5)));
+        outBig.runAction(cc.spawn(cc.moveTo(ActionTime.MoveCenter, endPos.x, endPos.y), cc.scaleTo(ActionTime.MoveCenter, 1)));
     }
 }
 //游戏中偷拍

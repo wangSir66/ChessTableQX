@@ -17,7 +17,7 @@ var HomeView_yaan = cc.Layer.extend({
         this.uiNode = homeui.node;
         this.addChild(homeui.node);
         MjClient.homeui = this;
-        playMusic("bgMain");
+        playMusic("bgFight_xinsiyang");
         setMusicVolume(-1);
 
         UIEventBind(null, homeui.node, "logout", function () {
@@ -34,13 +34,13 @@ var HomeView_yaan = cc.Layer.extend({
         var _girlPanel = _back.getChildByName("Panel_girl");
         this._girlPanel = _girlPanel;
         this._girlPanel.setVisible(true);
-        setWgtLayout(_girlPanel, [0.8, 0.8], [0.6, 0.9], [0, 0], true);
-        // var _girlSprite = _girlPanel.getChildByName("girl");
-        // if(_girlSprite) _girlSprite.visible = false;
-        // var _girlBone = createSpine("spine/home/girl/renwunv.json", "spine/home/girl/renwunv.atlas");
-        // _girlBone.setAnimation(0, 'animation', true);
-        // setWgtLayout(_girlPanel, [0.4, 0.4], [0.54, -0.10], [0, 0], false, true);
-        // _girlPanel.addChild(_girlBone, 1);
+        // setWgtLayout(_girlPanel, [0.8, 0.8], [0.6, 0.9], [0, 0], true);
+        var _girlSprite = _girlPanel.getChildByName("girl");
+        if(_girlSprite) _girlSprite.visible = false;
+        var _girlBone = createSpine("spine/home/girl/renwunv.json", "spine/home/girl/renwunv.atlas");
+        _girlBone.setAnimation(0, 'animation', true);
+        setWgtLayout(_girlPanel, [0.4, 0.4], [0.4, -0.10], [0, 0], false, true);
+        _girlPanel.addChild(_girlBone, 1);
 
         // ccs.armatureDataManager.addArmatureFileInfo("spine/home/beijing/100.ExportJson");
         // var pAr = new ccs.Armature("100");
@@ -681,7 +681,7 @@ var HomeView_yaan = cc.Layer.extend({
 
         if (_shareTip) {
             if (_btnActive)
-                _btnShareGet.setZOrder(_btnActive.getZOrder() + 1);
+                _btnShareGet.setLocalZOrder(_btnActive.getLocalZOrder() + 1);
             _shareTip.setOpacity(0);
             _shareTip.runAction(cc.repeatForever(cc.sequence(
                 cc.fadeIn(1),

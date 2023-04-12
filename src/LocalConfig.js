@@ -2,7 +2,7 @@
 
 //雅安
 var gameListConfig_yaan = {
-	majiangList: [],
+	majiangList: [2019272],
 	pokerList: [2019273]
 }
 
