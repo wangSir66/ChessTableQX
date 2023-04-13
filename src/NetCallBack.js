@@ -10239,6 +10239,7 @@ MjClient.netCallBack = {
             sData.tData.cardNext = d.cardNext
             postEvent('changeCardNum')
         }
+        pl.eatFlag = 0;
     }],
     TurnMeOutCard: [0, function (d) {
         var sData = MjClient.data.sData;
@@ -10250,6 +10251,7 @@ MjClient.netCallBack = {
         }
         pl.mjState = TableState.waitPut;
         sData.tData.tState = TableState.waitPut;
+        sData.tData.curPlayer = d.cur;
     }],
     SystemCard: [0, function (d) {
         cc.log('-----------SystemCard----------------', JSON.stringify(d));

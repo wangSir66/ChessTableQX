@@ -9315,6 +9315,7 @@ MjClient.rematchInfo2 = function (clubId, uids, ruleId, gameType, callback) {
 MjClient.tickGame = function (tickType) {
     if (MjClient.rePlayVideo != -1) return; // 回放时候不能请求
     MjClient.gamenet.request("pkroom.handler.tableMsg", { cmd: "MJTick", tickType: tickType });
+    cc.log('---request------pkroom.handler.tableMsg-----------MJTick------', tickType);
 };
 
 

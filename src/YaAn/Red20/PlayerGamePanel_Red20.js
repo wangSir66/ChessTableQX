@@ -3793,6 +3793,8 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
     eat.hu._node.visible = false;
     eat.guo._node.visible = false;
     eat.cancel._node.visible = false;
+    eat.tou._node.visible = false;
+    eat.ting._node.visible = false;
 
 
     var pl = sData.players[SelfUid() + ""];
@@ -4398,4 +4400,37 @@ PlayerGamePanel_Red20.prototype.DealMJPut = function (node, msg, off, outNum) {
         }
 
     }
+}
+/**
+ * 在这些情况下不能出牌，简化addTouchEventListener里面的判断，增强代码可读性 by sking 2018.12.6
+ * @param cardui
+ * @param btn
+ * @returns {boolean} 返回false 表示不能出牌
+ */
+PlayerGamePanel_Red20.prototype.isCanTouch = function (cardui, btn, touchType) {
+    var sData = MjClient.data.sData;
+    var tData = sData.tData;
+
+    if (!IsTurnToMe() || tData.tState != TableState.waitPut) {
+        return false;
+    }
+    if (MjClient.clickTing && !MjClient.canTingCards[cardui.tag]) {
+        return false;
+    }
+
+    if (MjClient.movingCard !== null && MjClient.movingCard !== btn) {
+        return false;
+    }
+
+    var children = btn.getParent().children;
+
+
+    for (var i = 0; i < children.length; i++) {
+        //手里打出去，要删掉的那张牌没有删除之前不让出第二张牌，也就是没有收到Mjput消息回调前不让出牌  by sking 2018.9.12
+        if (children[i].name == "putOutCard") return false;
+    }
+
+    if (MjClient.isChaPaiPlaying) return false; //正在播插牌动画时不让点击其他的牌 by sking 2018.9.12
+
+    return true;
 }

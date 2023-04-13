@@ -2622,7 +2622,7 @@ function EatFlag() {
     var eat = MjClient.playui.jsBind.eat;
     var eatFlag = 0;
 
-    if (eat.tou._node.visible) {
+    if (eat.tou && eat.tou._node.visible) {
         eatFlag = eatFlag + 16;
     }
 
@@ -4062,9 +4062,11 @@ function SetTouchCardHandler(standUI, cardui) {
 
     cardui.addTouchEventListener(function (btn, tp) {
         var tData = MjClient.data.sData.tData;
-        var pl = getUIPlayer(0);
+        var pl = getUIPlayer(0),
+            flg = MjClient.playui.isCanTouch ? MjClient.playui.isCanTouch(cardui, btn, tp) : COMMON_UI.isCanTouch(cardui, btn, tp);
+        cc.log('------SetTouchCardHandler-------', flg)
         //返回false 表示不能出牌,增强可读性  by sking 2018.12.6
-        if (!COMMON_UI.isCanTouch(cardui, btn, tp)) return;
+        if (!flg) return;
 
         if (tp == ccui.Widget.TOUCH_BEGAN) {
             playEffect("cardClick");
