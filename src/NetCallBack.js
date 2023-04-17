@@ -10219,7 +10219,7 @@ MjClient.netCallBack = {
         var pl = sData.players[SelfUid()];
         pl.eatFlag = d.eatFlag;
     }],
-    TouResult: [0, function (d) {
+    MJTou: [0, function (d) {
         var sData = MjClient.data.sData;
         let pl = sData.players[d.uid];
         cc.log('-----------TouResult----------------', JSON.stringify(pl.mjhand));

@@ -1268,7 +1268,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         this.visible = false;
                     },
                     _event: {
-                        TouResult: function (sD) {
+                        MJTou: function (sD) {
                             MjClient.playui.showUserTouAction(this, 0, sD);
                         },
                         KingCard: function (sD) {
@@ -1510,7 +1510,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 0);
                 },
-                TouResult: function (sD) {
+                MJTou: function (sD) {
                     MjClient.playui.DealAndMoveCard(this, sD, 0);
                 },
                 //系统发牌
@@ -1538,7 +1538,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         this.visible = false;
                     },
                     _event: {
-                        TouResult: function (sD) {
+                        MJTou: function (sD) {
                             MjClient.playui.showUserTouAction(this, 1, sD);
                         },
                         KingCard: function (sD) {
@@ -1855,7 +1855,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 1);
                 },
-                TouResult: function (sD) {
+                MJTou: function (sD) {
                     MjClient.playui.DealAndMoveCard(this, sD, 1);
                 },
                 //系统发牌
@@ -1897,7 +1897,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         this.visible = false;
                     },
                     _event: {
-                        TouResult: function (sD) {
+                        MJTou: function (sD) {
                             MjClient.playui.showUserTouAction(this, 2, sD);
                         },
                         KingCard: function (sD) {
@@ -2210,7 +2210,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 2);
                 },
-                TouResult: function (sD) {
+                MJTou: function (sD) {
                     MjClient.playui.DealAndMoveCard(this, sD, 2);
                 },
                 //系统发牌
@@ -2252,7 +2252,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         this.visible = false;
                     },
                     _event: {
-                        TouResult: function (sD) {
+                        MJTou: function (sD) {
                             MjClient.playui.showUserTouAction(this, 3, sD);
                         },
                         KingCard: function (sD) {
@@ -2562,7 +2562,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 3);
                 },
-                TouResult: function (sD) {
+                MJTou: function (sD) {
                     MjClient.playui.DealAndMoveCard(this, sD, 3);
                 },
                 //系统发牌
@@ -2849,8 +2849,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 ],
                 _touch: function (btn, eT) {
                     if (eT == 2) {
-                        this.visible = false;
                         MJTouToServer();
+                        this.visible = false;
                     }
                 }
             },

@@ -162,7 +162,8 @@ var TableMsgReqExclude = [
 	"PKWrongful",
 	"MJJiazhu",
 	"c2s_sdhMaiPai",
-	"c2s_sdhTouXiang"
+	"c2s_sdhTouXiang",
+	"MJTou"
 ];
 
 
@@ -185,3 +186,4 @@ TableMsgReqRespMapping["c2s_playerShuffleIndex"] = ["select_shuffle_index"];
 TableMsgReqRespMapping["c2s_playerShuffleFinish"] = ["after_ready"];
 TableMsgReqRespMapping["c2s_duZhanRet"] = ["duZhanSelectRet"];
 TableMsgReqRespMapping["MJPut"] = ["MJFlower"];
+TableMsgReqRespMapping["MJTou"] = ["TouResult", "loadOther"];
