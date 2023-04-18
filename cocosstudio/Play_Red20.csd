@@ -978,7 +978,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="playing/MJ/Mj_up_0.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="myTurnBg" ActionTag="-77845111" Tag="658" IconVisible="False" LeftMargin="70.7188" RightMargin="-1350.7188" TopMargin="-651.7217" BottomMargin="-68.2783" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="myTurnBg" ActionTag="-77845111" VisibleForFrame="False" Tag="658" IconVisible="False" LeftMargin="70.7188" RightMargin="-1350.7188" TopMargin="-651.7217" BottomMargin="-68.2783" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="710.7188" Y="291.7217" />
@@ -1543,7 +1543,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="playing/MJ/Mj_up_1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="myTurnBg" ActionTag="1766670122" Tag="657" IconVisible="False" LeftMargin="60.7191" RightMargin="-1340.7191" TopMargin="-661.7217" BottomMargin="-58.2783" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="myTurnBg" ActionTag="1766670122" VisibleForFrame="False" Tag="657" IconVisible="False" LeftMargin="60.7191" RightMargin="-1340.7191" TopMargin="-661.7217" BottomMargin="-58.2783" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="700.7191" Y="301.7217" />
@@ -2108,7 +2108,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="playing/MJ/Mj_up_1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="myTurnBg" ActionTag="1217880875" Tag="656" IconVisible="False" LeftMargin="50.7193" RightMargin="-1330.7192" TopMargin="-671.7218" BottomMargin="-48.2782" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="myTurnBg" ActionTag="1217880875" VisibleForFrame="False" Tag="656" IconVisible="False" LeftMargin="50.7193" RightMargin="-1330.7192" TopMargin="-671.7218" BottomMargin="-48.2782" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="690.7193" Y="311.7218" />
@@ -2140,10 +2140,10 @@
                 <FileData Type="Normal" Path="png/Z_zhunbeizhuangt.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="up" ActionTag="-2120437285" Tag="42" IconVisible="False" LeftMargin="147.7048" RightMargin="-252.7048" TopMargin="-153.2440" BottomMargin="-4.7560" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="up" ActionTag="-2120437285" Tag="42" IconVisible="False" LeftMargin="464.2000" RightMargin="-569.2000" TopMargin="-156.8200" BottomMargin="-1.1800" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
                 <Size X="105.0000" Y="158.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="200.2048" Y="74.2440" />
+                <Position X="516.7000" Y="77.8200" />
                 <Scale ScaleX="0.4000" ScaleY="0.4000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
@@ -2841,7 +2841,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="playing/MJ/Mj_up_2.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="myTurnBg" ActionTag="581527794" Tag="655" IconVisible="False" LeftMargin="40.7195" RightMargin="-1320.7195" TopMargin="-681.7218" BottomMargin="-38.2782" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="myTurnBg" ActionTag="581527794" VisibleForFrame="False" Tag="655" IconVisible="False" LeftMargin="40.7195" RightMargin="-1320.7195" TopMargin="-681.7218" BottomMargin="-38.2782" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="720.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="680.7195" Y="321.7218" />
@@ -3531,7 +3531,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="playercardtip" ActionTag="594371528" Tag="321" IconVisible="False" LeftMargin="866.7531" RightMargin="-1039.7531" TopMargin="-338.7999" BottomMargin="190.7999" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="143" Scale9Height="126" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="playercardtip" ActionTag="594371528" Tag="321" IconVisible="False" LeftMargin="866.7531" RightMargin="-1039.7532" TopMargin="-338.7999" BottomMargin="190.7999" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="143" Scale9Height="126" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="173.0000" Y="148.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="953.2531" Y="264.7999" />

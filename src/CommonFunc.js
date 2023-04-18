@@ -2896,8 +2896,7 @@ function InitHeadPostionPlaying(node) {
 
     var _sc = 0.13;
     if (isIPad()) _sc = 0.1;
-    // if (MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) {
-    if (false) {
+    if (MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) {
         if (isCanChangePlayerNum() && MjClient.MaxPlayerNum === 2) {
             setWgtLayout(top, [_sc, _sc], [0.5, 1], [0, -0.65], false, false);
             if (isIPad()) {

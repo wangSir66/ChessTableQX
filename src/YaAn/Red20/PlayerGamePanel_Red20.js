@@ -1323,20 +1323,20 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
             stand: {
                 _layout: [
-                    [0.054, 0],
-                    [0.5, 0],
-                    [8, 0.68]
+                    [0, 0.15],
+                    [0, 0],
+                    [0.55, 0.5]
                 ],
                 _visible: false,
                 _run: function () {
-                    // this.zIndex = 500;
+                    this.width = 90 / 122 * this.height
                 },
             },
             up: {
                 _layout: [
-                    [0.05, 0],
-                    [0, 0],
-                    [0.8, 0.7]
+                    [0.13, 0.13],
+                    [0.35, 0],
+                    [0.5, 0.8]
                 ],
                 _visible: false
             },
@@ -2094,7 +2094,10 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.5, 1],
                     [6, -1.0]
                 ],
-                _visible: false
+                _visible: false,
+                _run: function () {
+                    this.width = 90 / 122 * this.height
+                }
             },
             down: {
                 _layout: [
@@ -3425,7 +3428,7 @@ PlayerGamePanel_Red20.prototype.setCardSprite = function (node, cd, off) {
     // setMJDif(node, off);
 }
 
-PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off) {
+PlayerGamePanel_Red20.prototype.CardLayoutRestore1 = function (node, off) {
     // node 是克隆新建的一个麻将节点 by sking
     // cc.log("排布"+off);
     var newC = null; //先创建麻将的UI节点
@@ -3771,6 +3774,93 @@ PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off) {
     else {
         //刷新手牌大小
         resetCardSize();
+    }
+};
+
+PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off) {
+    //起始位置。
+
+    var pos = [[0.13, 0.13], [0.505, 1], [0, -0.65]];// 缩放  百分比  偏移量
+    //up stand 是2种麻将的图。
+    var up = node.getChildByName("up");
+    var stand = node.getChildByName("stand");
+    var start, offui;
+    switch (off) {
+        case 0:
+            start = up;
+            offui = stand;
+            break;
+        case 1:
+            start = stand;
+            offui = up;
+            break;
+        case 2:
+            start = stand;
+            offui = up;
+            break;
+        case 3:
+            start = up;
+            offui = up;
+            break;
+    }
+
+    var upSize = offui.getSize();
+    var upS = offui.scale;
+
+    var screen = MjClient.size;
+    start = cc.p(
+        screen.width * pos[1][0],
+        screen.height * pos[1][1]
+    );
+
+    var pl = getUIPlayer(off);; //player 信息
+    var children = node.children;
+    //mjhand standPri out chi peng gang0 gang1
+    var uipeng = [];
+    var uigang0 = [];
+    var uigang1 = [];
+    var uichi = [];
+    var uistand = [];
+    for (var i = 0; i < children.length; i++) //children 为 "down" 节点下的字节点
+    {
+        let ci = children[i];
+        if (ci.name == "mjhand") {
+            uistand.push(ci);
+        }
+        else if (ci.name == "standPri") {
+            uistand.push(ci);
+        }
+        else if (ci.name == "gang0") {
+            uigang0.push(ci);
+        }
+        else if (ci.name == "gang1") {
+            uigang1.push(ci);
+        }
+        else if (ci.name == "chi") {
+            uichi.push(ci);
+        }
+        else if (ci.name == "peng") {
+            uipeng.push(ci);
+        }
+        else if (ci.name == "mjhand_replay") {
+            uistand.push(ci);
+        }
+    }
+
+    if (off == 0 || MjClient.rePlayVideo != -1) {
+        const hand = MjClient.majiang.StackCards(pl.mjhand);
+        for (let _i = 0; _i < hand.length; _i++) {
+            const cs = hand[_i];
+            for (let _j = 0; _j < cs.length; _j++) {
+                const c = cs[_j], ci = uistand.find(u => u.tag == c);
+                if (ci) {
+                    ci.setPosition((upSize.width * upS * 0.1) * (_i + 1) + start.x, start.y + 20 * _j);
+                    ci.visible = true
+                    ci.zIndex = 8 - _i
+                    cc.log('--------hand-----------', ci.width / 2 * _i + start.x, start.y - 20 * _j, ci.tag)
+                }
+            }
+        }
     }
 };
 
