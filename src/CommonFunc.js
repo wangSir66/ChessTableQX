@@ -2910,8 +2910,8 @@ function InitHeadPostionPlaying(node) {
             }
         }
         setWgtLayout(down, [_sc, _sc], [0.25, 0], [0.6, 1], false, false);
-        setWgtLayout(right, [_sc, _sc], [1, 0.5], [-0.6, 1.7], false, false);
-        setWgtLayout(left, [_sc, _sc], [0, 0.5], [0.6, 1.7], false, false);
+        setWgtLayout(right, [_sc, _sc], [1, 0.6], [-0.6, 0], false, false);
+        setWgtLayout(left, [_sc, _sc], [0, 0.6], [0.6, 0], false, false);
         setWgtLayout(topTingCard, [0.6, 0.6], [1.30, 0.75], [0, 0], false, true);
         setWgtLayout(topTingIcon, [0.6, 0.6], [1.35, 0.25], [0, 0], false, true);
 
@@ -3776,6 +3776,7 @@ function setCardArrow_chi(node, offIdx, off) {
 
 //适用麻将,重置手牌麻将的大小，为了解决手牌变小的bug, by sking
 function resetCardSize() {
+    if (MjClient.playui.resetCardSize) return MjClient.playui.resetCardSize();
     var _currentMJType = getCurrentMJBgType();
     var _downNode = getNode(0);
     var _cpnode = _downNode.getChildByName("stand");
@@ -4056,8 +4057,8 @@ var bStartMoved = false;
 var _touchTimeBetween = 0; //防止玩家一顿猛点，间隔时间太短 by sking 2018.9.12
 //设置回调，并处理回调
 function SetTouchCardHandler(standUI, cardui) {
-    if (MjClient.playui.setTouchCardHandler)
-        return MjClient.playui.setTouchCardHandler(standUI, cardui);
+    if (MjClient.playui.SetTouchCardHandler)
+        return MjClient.playui.SetTouchCardHandler(standUI, cardui);
 
     cardui.addTouchEventListener(function (btn, tp) {
         var tData = MjClient.data.sData.tData;
@@ -6584,6 +6585,7 @@ function IsArrowVisible() {
     }
     if (
         TableState.waitPut == pl.mjState ||
+        TableState.isReady == pl.mjState ||
         TableState.waitEat == pl.mjState ||
         TableState.waitCard == pl.mjState ||
         TableState.roundFinish == pl.mjState ||
@@ -11918,8 +11920,7 @@ function setDismissTypeImg(pl, node, scw, sch, file) {
 function showMJOutBig(playerUi, card, off) {
     if (MjClient.getAppType() != MjClient.APP_TYPE.QXTHMJ)
         return;
-
-    cc.log("-----showMJOutBig------" + playerUi.getName());
+    if (MjClient.playui.showMJOutBig) return MjClient.playui.showMJOutBig(playerUi, card, off);
     var outBig = playerUi.getChildByName("outBig");
     if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU) {
         var _outBig_cp = MjClient.playui.jsBind.eat._node.getChildByName("outBig");

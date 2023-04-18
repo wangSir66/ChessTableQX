@@ -12465,13 +12465,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_4.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 24,
                 "Scale9OriginY": 37,
-                "Scale9Width": 57,
-                "Scale9Height": 84,
+                "Scale9Width": 42,
+                "Scale9Height": 48,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -12495,15 +12495,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 1059.8052,
-                "RightMargin": -1164.8052,
-                "TopMargin": -167.039,
-                "BottomMargin": 9.039,
+                "LeftMargin": 1067.3052,
+                "RightMargin": -1157.3052,
+                "TopMargin": -149.039,
+                "BottomMargin": 27.039,
                 "Tag": 36,
                 "ActionTag": 1998220043,
                 "Size": {
-                  "X": 105.0,
-                  "Y": 158.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "stand",
                 "ctype": "ImageViewObjectData"
@@ -16634,6 +16634,7 @@
         "playing/other/Z_offline.png",
         "png/nameBar.png",
         "png/Z_zhunbeizhuangt.png",
+        "Red20/Card/0-1.png",
         "Red20/Game/bottom.png",
         "Red20/Game/left.png",
         "Red20/Game/right.png",

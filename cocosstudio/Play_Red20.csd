@@ -445,35 +445,35 @@
                 <FileData Type="Normal" Path="png/Z_zhunbeizhuangt.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="up" ActionTag="125356887" Tag="35" IconVisible="False" LeftMargin="625.9225" RightMargin="-730.9225" TopMargin="-686.6198" BottomMargin="528.6198" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
-                <Size X="105.0000" Y="158.0000" />
+              <AbstractNodeData Name="up" ActionTag="125356887" Tag="35" IconVisible="False" LeftMargin="633.4225" RightMargin="-723.4225" TopMargin="-668.6198" BottomMargin="546.6198" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="678.4225" Y="607.6198" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_up_0.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="down" ActionTag="-806788767" Tag="34" IconVisible="False" LeftMargin="785.7736" RightMargin="-888.7736" TopMargin="-682.5957" BottomMargin="524.5957" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="79" Scale9Height="120" ctype="ImageViewObjectData">
-                <Size X="103.0000" Y="158.0000" />
+              <AbstractNodeData Name="down" ActionTag="-806788767" Tag="34" IconVisible="False" LeftMargin="792.2736" RightMargin="-882.2736" TopMargin="-664.5957" BottomMargin="542.5957" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="66" Scale9Height="84" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="837.2736" Y="603.5957" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_04.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="stand" ActionTag="-1290218571" Tag="38" IconVisible="False" LeftMargin="315.8206" RightMargin="-421.8206" TopMargin="-666.5167" BottomMargin="508.5167" LeftEage="13" RightEage="13" TopEage="19" BottomEage="19" Scale9OriginX="13" Scale9OriginY="19" Scale9Width="80" Scale9Height="120" ctype="ImageViewObjectData">
-                <Size X="106.0000" Y="158.0000" />
+              <AbstractNodeData Name="stand" ActionTag="-1290218571" Tag="38" IconVisible="False" LeftMargin="323.8206" RightMargin="-413.8206" TopMargin="-648.5167" BottomMargin="526.5167" LeftEage="13" RightEage="13" TopEage="19" BottomEage="19" Scale9OriginX="13" Scale9OriginY="19" Scale9Width="64" Scale9Height="84" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="368.8206" Y="587.5167" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_2.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out0" ActionTag="753089099" Tag="46" IconVisible="False" LeftMargin="799.2374" RightMargin="-904.2374" TopMargin="-600.6689" BottomMargin="442.6689" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
                 <Size X="105.0000" Y="158.0000" />
@@ -1010,35 +1010,35 @@
                 <FileData Type="Normal" Path="png/Z_zhunbeizhuangt.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="stand" ActionTag="-748234071" Tag="29" IconVisible="False" LeftMargin="129.8155" RightMargin="-189.8155" TopMargin="-323.4816" BottomMargin="195.4816" LeftEage="7" RightEage="7" TopEage="19" BottomEage="19" Scale9OriginX="7" Scale9OriginY="19" Scale9Width="46" Scale9Height="90" ctype="ImageViewObjectData">
-                <Size X="60.0000" Y="128.0000" />
+              <AbstractNodeData Name="stand" ActionTag="-748234071" Tag="29" IconVisible="False" LeftMargin="114.8155" RightMargin="-204.8155" TopMargin="-320.4816" BottomMargin="198.4816" LeftEage="7" RightEage="7" TopEage="19" BottomEage="19" Scale9OriginX="7" Scale9OriginY="19" Scale9Width="76" Scale9Height="84" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="159.8155" Y="259.4816" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_3.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="up" ActionTag="-1463465457" Tag="33" IconVisible="False" LeftMargin="134.1395" RightMargin="-264.1395" TopMargin="-465.8692" BottomMargin="360.8692" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="98" Scale9Height="79" ctype="ImageViewObjectData">
-                <Size X="130.0000" Y="105.0000" />
+              <AbstractNodeData Name="up" ActionTag="-1463465457" Tag="33" IconVisible="False" LeftMargin="154.1395" RightMargin="-244.1395" TopMargin="-474.3692" BottomMargin="352.3692" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="58" Scale9Height="96" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="199.1395" Y="413.3692" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_up_1.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="down" ActionTag="1379879573" Tag="31" IconVisible="False" LeftMargin="107.3148" RightMargin="-237.3148" TopMargin="-672.6876" BottomMargin="567.6876" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="98" Scale9Height="79" ctype="ImageViewObjectData">
-                <Size X="130.0000" Y="105.0000" />
+              <AbstractNodeData Name="down" ActionTag="1379879573" Tag="31" IconVisible="False" LeftMargin="127.3148" RightMargin="-217.3148" TopMargin="-681.1876" BottomMargin="559.1876" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="58" Scale9Height="96" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="172.3148" Y="620.1876" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_06.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out0" ActionTag="1204540296" Tag="366" IconVisible="False" LeftMargin="187.2420" RightMargin="-317.2420" TopMargin="-555.5419" BottomMargin="450.5419" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="98" Scale9Height="79" ctype="ImageViewObjectData">
                 <Size X="130.0000" Y="105.0000" />
@@ -1575,35 +1575,35 @@
                 <FileData Type="Normal" Path="png/Z_zhunbeizhuangt.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="up" ActionTag="-1049218050" Tag="37" IconVisible="False" LeftMargin="1038.6173" RightMargin="-1168.6173" TopMargin="-385.9235" BottomMargin="280.9235" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="98" Scale9Height="79" ctype="ImageViewObjectData">
-                <Size X="130.0000" Y="105.0000" />
+              <AbstractNodeData Name="up" ActionTag="-1049218050" Tag="37" IconVisible="False" LeftMargin="1058.6173" RightMargin="-1148.6173" TopMargin="-394.4235" BottomMargin="272.4235" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="58" Scale9Height="96" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1103.6173" Y="333.4235" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_up_1.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="down" ActionTag="-1654907950" Tag="40" IconVisible="False" LeftMargin="1038.6179" RightMargin="-1168.6179" TopMargin="-303.6887" BottomMargin="198.6887" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="98" Scale9Height="79" ctype="ImageViewObjectData">
-                <Size X="130.0000" Y="105.0000" />
+              <AbstractNodeData Name="down" ActionTag="-1654907950" Tag="40" IconVisible="False" LeftMargin="1058.6179" RightMargin="-1148.6179" TopMargin="-312.1887" BottomMargin="190.1887" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="58" Scale9Height="96" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1103.6179" Y="251.1887" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_06.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="stand" ActionTag="-1757043640" Tag="39" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="False" LeftMargin="1082.3911" RightMargin="-1142.3911" TopMargin="-630.1471" BottomMargin="502.1471" FlipY="True" LeftEage="7" RightEage="7" TopEage="19" BottomEage="19" Scale9OriginX="7" Scale9OriginY="19" Scale9Width="46" Scale9Height="90" ctype="ImageViewObjectData">
-                <Size X="60.0000" Y="128.0000" />
+              <AbstractNodeData Name="stand" ActionTag="-1757043640" Tag="39" RotationSkewX="180.0000" RotationSkewY="180.0000" IconVisible="False" LeftMargin="1067.3911" RightMargin="-1157.3911" TopMargin="-627.1471" BottomMargin="505.1471" FlipY="True" LeftEage="7" RightEage="7" TopEage="19" BottomEage="19" Scale9OriginX="7" Scale9OriginY="19" Scale9Width="76" Scale9Height="84" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1112.3911" Y="566.1471" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_3.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out0" ActionTag="-1088196022" Tag="100" IconVisible="False" LeftMargin="962.2463" RightMargin="-1092.2463" TopMargin="-279.6473" BottomMargin="174.6473" LeftEage="16" RightEage="16" TopEage="13" BottomEage="13" Scale9OriginX="16" Scale9OriginY="13" Scale9Width="98" Scale9Height="79" ctype="ImageViewObjectData">
                 <Size X="130.0000" Y="105.0000" />
@@ -2150,15 +2150,15 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="playing/MJ/Mj_up_0.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="down" ActionTag="-1359981093" Tag="41" IconVisible="False" LeftMargin="149.6821" RightMargin="-252.6821" TopMargin="-160.9526" BottomMargin="2.9526" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="79" Scale9Height="120" ctype="ImageViewObjectData">
-                <Size X="103.0000" Y="158.0000" />
+              <AbstractNodeData Name="down" ActionTag="-1359981093" Tag="41" IconVisible="False" LeftMargin="-19.1108" RightMargin="-70.8892" TopMargin="-97.6444" BottomMargin="-24.3556" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="66" Scale9Height="84" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="201.1821" Y="81.9526" />
+                <Position X="25.8892" Y="36.6444" />
                 <Scale ScaleX="0.4000" ScaleY="0.4000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_04.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="out1" ActionTag="-2007703463" Tag="107" IconVisible="False" LeftMargin="314.3206" RightMargin="-419.3206" TopMargin="-330.5400" BottomMargin="172.5400" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
                 <Size X="105.0000" Y="158.0000" />

@@ -2896,15 +2896,15 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="stand" ActionTag="1998220043" Tag="36" IconVisible="False" LeftMargin="1059.8052" RightMargin="-1164.8052" TopMargin="-167.0390" BottomMargin="9.0390" TouchEnable="True" LeftEage="24" RightEage="24" TopEage="37" BottomEage="37" Scale9OriginX="24" Scale9OriginY="37" Scale9Width="57" Scale9Height="84" ctype="ImageViewObjectData">
-                <Size X="105.0000" Y="158.0000" />
+              <AbstractNodeData Name="stand" ActionTag="1998220043" Tag="36" IconVisible="False" LeftMargin="1067.3052" RightMargin="-1157.3052" TopMargin="-149.0390" BottomMargin="27.0390" TouchEnable="True" LeftEage="24" RightEage="24" TopEage="37" BottomEage="37" Scale9OriginX="24" Scale9OriginY="37" Scale9Width="42" Scale9Height="48" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1112.3052" Y="88.0390" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_up_4.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="tingCardsNode" ActionTag="-622202149" Tag="837" IconVisible="False" LeftMargin="196.9688" RightMargin="-468.9688" TopMargin="-169.6956" BottomMargin="121.6956" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="248" Scale9Height="3" ctype="ImageViewObjectData">
                 <Size X="272.0000" Y="48.0000" />

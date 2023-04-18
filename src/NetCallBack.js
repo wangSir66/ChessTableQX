@@ -10222,9 +10222,9 @@ MjClient.netCallBack = {
     MJTou: [0, function (d) {
         var sData = MjClient.data.sData;
         let pl = sData.players[d.uid];
-        cc.log('-----------TouResult----------------', JSON.stringify(pl.mjhand));
+        cc.log('-----------MJTou----------------', JSON.stringify(pl.mjhand));
         if (!pl) {
-            cc.log('----------TouResult----------错误--')
+            cc.log('----------MJTou----------错误--')
             return;
         }
         if (pl.mjhand) {
@@ -10240,18 +10240,6 @@ MjClient.netCallBack = {
             postEvent('changeCardNum')
         }
         pl.eatFlag = 0;
-    }],
-    TurnMeOutCard: [0, function (d) {
-        var sData = MjClient.data.sData;
-        let pl = sData.players[d.uid];
-        cc.log('-----------TurnMeOutCard----------------', JSON.stringify(pl.mjhand));
-        if (!pl) {
-            cc.log('----------TurnMeOutCard----------错误--')
-            return;
-        }
-        pl.mjState = TableState.waitPut;
-        sData.tData.tState = TableState.waitPut;
-        sData.tData.curPlayer = d.cur;
     }],
     SystemCard: [0, function (d) {
         cc.log('-----------SystemCard----------------', JSON.stringify(d));

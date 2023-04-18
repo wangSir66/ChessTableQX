@@ -5048,6 +5048,7 @@
         <Project Name="Play_paodekuai.csd" Type="Layer" />
         <Project Name="Play_PaoDeKuaiLYG.csd" Type="Layer" />
         <Project Name="Play_PaoDeKuaiTY.csd" Type="Layer" />
+        <Project Name="Play_Red20.csd" Type="Layer" />
         <Project Name="Play_shuyang.csd" Type="Layer" />
         <Project Name="Play_siyang.csd" Type="Layer" />
         <Project Name="Play_siyang_new.csd" Type="Layer" />
@@ -5144,7 +5145,6 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
-        <Project Name="Play_Red20.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>
