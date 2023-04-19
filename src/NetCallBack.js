@@ -2671,10 +2671,6 @@ MjClient.netCallBack = {
         var tData = d.tData;
         if (!sData) return;
         sData.tData = d.tData;
-
-        if (SelfUid() != tData.uids[tData.zhuang]) {
-            tData.cardNext++;
-        }
         postEvent('changeCardNum')
 
         // 默认过胡弹窗没弹过
@@ -4397,10 +4393,6 @@ MjClient.netCallBack = {
         pl.isNew = true;
         if (typeof (d) == "number") {
             d = { newCard: d };
-        }
-        if (d.cardNext) {
-            sData.tData.cardNext = d.cardNext
-            postEvent('changeCardNum')
         }
 
         pl.newCd = d.newCard; //---for ting pai
@@ -10227,14 +10219,14 @@ MjClient.netCallBack = {
             cc.log('----------MJTou----------错误--')
             return;
         }
+        //先删除 后面在添加
         if (pl.mjhand) {
             for (let _i = 0; _i < d.Kings.length; _i++) {
                 const k = d.Kings[_i];
                 pl.mjhand.splice(pl.mjhand.indexOf(k), 1);
             }
-            pl.mjhand = pl.mjhand.concat(d.Cards);
         }
-        pl.touCardList.push(d.Kings)
+        pl.touCardList.push(...d.Kings)
         if (d.cardNext) {
             sData.tData.cardNext = d.cardNext
             postEvent('changeCardNum')
@@ -10248,6 +10240,7 @@ MjClient.netCallBack = {
             sData.tData.cardNext = d.cardNext
             postEvent('changeCardNum')
         }
+        postEvent('onUserAction', { uid: d.uid });
     }],
     KingCard: [0, function (d) {
         cc.log('-----------KingCard----------------', JSON.stringify(d));
@@ -10256,6 +10249,7 @@ MjClient.netCallBack = {
             sData.tData.cardNext = d.cardNext
             postEvent('changeCardNum')
         }
+        postEvent('onUserAction', { uid: d.uid });
     }],
     GetNewCard: [0, function (d) {
         cc.log('-----------GetNewCard----------------', JSON.stringify(d));
@@ -10269,6 +10263,18 @@ MjClient.netCallBack = {
             sData.tData.cardNext = d.cardNext
             postEvent('changeCardNum')
         }
-        if (pl.mjhand && pl.mjhand.length) pl.mjhand.push(d.Card);
+    }],
+    TurnMeOutCard: [0, function (d) {
+        var sData = MjClient.data.sData;
+        let pl = sData.players[d.uid];
+        cc.log('-----------TurnMeOutCard----------------', JSON.stringify(pl.mjhand));
+        if (!pl) {
+            cc.log('----------TurnMeOutCard----------错误--')
+            return;
+        }
+        pl.mjState = TableState.waitPut;
+        sData.tData.tState = TableState.waitPut;
+        sData.tData.curPlayer = d.cur;
+        postEvent('onUserAction', { uid: d.uid });
     }],
 };

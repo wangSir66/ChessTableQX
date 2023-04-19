@@ -11918,9 +11918,9 @@ function setDismissTypeImg(pl, node, scw, sch, file) {
  * @card {number} card 麻将牌值
  */
 function showMJOutBig(playerUi, card, off) {
+    if (MjClient.playui.showMJOutBig) return MjClient.playui.showMJOutBig(playerUi, card, off);
     if (MjClient.getAppType() != MjClient.APP_TYPE.QXTHMJ)
         return;
-    if (MjClient.playui.showMJOutBig) return MjClient.playui.showMJOutBig(playerUi, card, off);
     var outBig = playerUi.getChildByName("outBig");
     if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU) {
         var _outBig_cp = MjClient.playui.jsBind.eat._node.getChildByName("outBig");

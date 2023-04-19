@@ -2046,7 +2046,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Red20/Card/0-1.png",
+                  "Path": "Red20/Card/back.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 13,
@@ -2091,13 +2091,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_0.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
-                "Scale9Width": 83,
-                "Scale9Height": 122,
+                "Scale9Width": 68,
+                "Scale9Height": 86,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -2120,15 +2120,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 799.2374,
-                "RightMargin": -904.2374,
-                "TopMargin": -600.6689,
-                "BottomMargin": 442.6689,
+                "LeftMargin": 806.7374,
+                "RightMargin": -896.7374,
+                "TopMargin": -582.6689,
+                "BottomMargin": 460.6689,
                 "Tag": 46,
                 "ActionTag": 753089099,
                 "Size": {
-                  "X": 105.0,
-                  "Y": 158.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out0",
                 "ctype": "ImageViewObjectData"
@@ -2136,13 +2136,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_0.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
-                "Scale9Width": 83,
-                "Scale9Height": 122,
+                "Scale9Width": 68,
+                "Scale9Height": 86,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -2165,15 +2165,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 799.553,
-                "RightMargin": -904.553,
-                "TopMargin": -530.467,
-                "BottomMargin": 372.467,
+                "LeftMargin": 807.053,
+                "RightMargin": -897.053,
+                "TopMargin": -512.467,
+                "BottomMargin": 390.467,
                 "Tag": 47,
                 "ActionTag": 1304487898,
                 "Size": {
-                  "X": 105.0,
-                  "Y": 158.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out1",
                 "ctype": "ImageViewObjectData"
@@ -4190,13 +4190,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_0.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 11,
                 "Scale9OriginY": 18,
-                "Scale9Width": 83,
-                "Scale9Height": 122,
+                "Scale9Width": 68,
+                "Scale9Height": 86,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -4219,64 +4219,17 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 809.5529,
-                "RightMargin": -914.5529,
-                "TopMargin": -520.467,
-                "BottomMargin": 362.467,
+                "LeftMargin": 817.0529,
+                "RightMargin": -907.0529,
+                "TopMargin": -502.467,
+                "BottomMargin": 380.467,
                 "Tag": 1547,
                 "ActionTag": 1138702802,
                 "Size": {
-                  "X": 105.0,
-                  "Y": 158.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out2",
-                "ctype": "ImageViewObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "Red20/Game/top.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 422,
-                "Scale9OriginY": 237,
-                "Scale9Width": 436,
-                "Scale9Height": 246,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 710.7188,
-                  "Y": 291.7217
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 70.7188,
-                "RightMargin": -1350.7188,
-                "TopMargin": -651.7217,
-                "BottomMargin": -68.2783,
-                "Tag": 658,
-                "ActionTag": -77845111,
-                "Size": {
-                  "X": 1280.0,
-                  "Y": 720.0
-                },
-                "VisibleForFrame": false,
-                "Name": "myTurnBg",
                 "ctype": "ImageViewObjectData"
               }
             ],
@@ -4360,7 +4313,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Red20/Card/0-1.png",
+                  "Path": "Red20/Card/back.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 7,
@@ -4495,13 +4448,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_1.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
-                "Scale9Width": 98,
-                "Scale9Height": 79,
+                "Scale9Width": 58,
+                "Scale9Height": 96,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -4524,15 +4477,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 187.242,
-                "RightMargin": -317.242,
-                "TopMargin": -555.5419,
-                "BottomMargin": 450.5419,
+                "LeftMargin": 207.242,
+                "RightMargin": -297.242,
+                "TopMargin": -564.0419,
+                "BottomMargin": 442.0419,
                 "Tag": 366,
                 "ActionTag": 1204540296,
                 "Size": {
-                  "X": 130.0,
-                  "Y": 105.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out0",
                 "ctype": "ImageViewObjectData"
@@ -4540,13 +4493,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_1.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
-                "Scale9Width": 98,
-                "Scale9Height": 79,
+                "Scale9Width": 58,
+                "Scale9Height": 96,
                 "AnchorPoint": {
                   "ScaleX": 0.432,
                   "ScaleY": 0.4744
@@ -4569,15 +4522,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 256.1983,
-                "RightMargin": -386.1983,
-                "TopMargin": -556.8862,
-                "BottomMargin": 451.8862,
+                "LeftMargin": 273.4783,
+                "RightMargin": -363.4783,
+                "TopMargin": -565.8214,
+                "BottomMargin": 443.8214,
                 "Tag": 367,
                 "ActionTag": -2023629802,
                 "Size": {
-                  "X": 130.0,
-                  "Y": 105.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out1",
                 "ctype": "ImageViewObjectData"
@@ -6594,13 +6547,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_1.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
-                "Scale9Width": 98,
-                "Scale9Height": 79,
+                "Scale9Width": 58,
+                "Scale9Height": 96,
                 "AnchorPoint": {
                   "ScaleX": 0.432,
                   "ScaleY": 0.4744
@@ -6623,64 +6576,17 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 266.1983,
-                "RightMargin": -396.1983,
-                "TopMargin": -546.8862,
-                "BottomMargin": 441.8862,
+                "LeftMargin": 283.4783,
+                "RightMargin": -373.4783,
+                "TopMargin": -555.8214,
+                "BottomMargin": 433.8214,
                 "Tag": 1546,
                 "ActionTag": 444038958,
                 "Size": {
-                  "X": 130.0,
-                  "Y": 105.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out2",
-                "ctype": "ImageViewObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "Red20/Game/left.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 422,
-                "Scale9OriginY": 237,
-                "Scale9Width": 436,
-                "Scale9Height": 246,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 700.7191,
-                  "Y": 301.7217
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 60.7191,
-                "RightMargin": -1340.7191,
-                "TopMargin": -661.7217,
-                "BottomMargin": -58.2783,
-                "Tag": 657,
-                "ActionTag": 1766670122,
-                "Size": {
-                  "X": 1280.0,
-                  "Y": 720.0
-                },
-                "VisibleForFrame": false,
-                "Name": "myTurnBg",
                 "ctype": "ImageViewObjectData"
               }
             ],
@@ -6855,7 +6761,7 @@
                 "FlipY": true,
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "Red20/Card/0-1.png",
+                  "Path": "Red20/Card/back.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 7,
@@ -6902,13 +6808,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_1.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
-                "Scale9Width": 98,
-                "Scale9Height": 79,
+                "Scale9Width": 58,
+                "Scale9Height": 96,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -6931,15 +6837,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 962.2463,
-                "RightMargin": -1092.2463,
-                "TopMargin": -279.6473,
-                "BottomMargin": 174.6473,
+                "LeftMargin": 982.2463,
+                "RightMargin": -1072.2463,
+                "TopMargin": -288.1473,
+                "BottomMargin": 166.1473,
                 "Tag": 100,
                 "ActionTag": -1088196022,
                 "Size": {
-                  "X": 130.0,
-                  "Y": 105.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out0",
                 "ctype": "ImageViewObjectData"
@@ -6947,13 +6853,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_1.png",
+                  "Path": "Red20/Card/0-10.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
-                "Scale9Width": 98,
-                "Scale9Height": 79,
+                "Scale9Width": 58,
+                "Scale9Height": 96,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -6976,15 +6882,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 898.6232,
-                "RightMargin": -1028.6233,
-                "TopMargin": -279.3463,
-                "BottomMargin": 174.3463,
+                "LeftMargin": 918.6232,
+                "RightMargin": -1008.6232,
+                "TopMargin": -287.8463,
+                "BottomMargin": 165.8463,
                 "Tag": 101,
                 "ActionTag": -488978241,
                 "Size": {
-                  "X": 130.0,
-                  "Y": 105.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out1",
                 "ctype": "ImageViewObjectData"
@@ -9003,13 +8909,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_1.png",
+                  "Path": "Red20/Card/0-10.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 16,
                 "Scale9OriginY": 13,
-                "Scale9Width": 98,
-                "Scale9Height": 79,
+                "Scale9Width": 58,
+                "Scale9Height": 96,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -9032,64 +8938,17 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 908.6232,
-                "RightMargin": -1038.6233,
-                "TopMargin": -269.3463,
-                "BottomMargin": 164.3463,
+                "LeftMargin": 928.6232,
+                "RightMargin": -1018.6232,
+                "TopMargin": -277.8463,
+                "BottomMargin": 155.8463,
                 "Tag": 1545,
                 "ActionTag": 1332047076,
                 "Size": {
-                  "X": 130.0,
-                  "Y": 105.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "out2",
-                "ctype": "ImageViewObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "Red20/Game/right.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 422,
-                "Scale9OriginY": 237,
-                "Scale9Width": 436,
-                "Scale9Height": 246,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 690.7193,
-                  "Y": 311.7218
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 50.7193,
-                "RightMargin": -1330.7192,
-                "TopMargin": -671.7218,
-                "BottomMargin": -48.2782,
-                "Tag": 656,
-                "ActionTag": 1217880875,
-                "Size": {
-                  "X": 1280.0,
-                  "Y": 720.0
-                },
-                "VisibleForFrame": false,
-                "Name": "myTurnBg",
                 "ctype": "ImageViewObjectData"
               }
             ],
@@ -9100,6 +8959,52 @@
             },
             "Name": "right",
             "ctype": "SingleNodeObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Red20/Game/bottom.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 422,
+            "Scale9OriginY": 237,
+            "Scale9Width": 436,
+            "Scale9Height": 246,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 646.8468,
+              "Y": 362.0182
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5053,
+              "Y": 0.5028
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": 6.8468,
+            "RightMargin": -6.8468,
+            "TopMargin": -2.0182,
+            "BottomMargin": 2.0182,
+            "Tag": 655,
+            "ActionTag": 581527794,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "myTurnBgd",
+            "ctype": "ImageViewObjectData"
           },
           {
             "AnchorPoint": {},
@@ -11564,13 +11469,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/MJ/Mj_up_4.png",
+                  "Path": "Red20/Card/back.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 24,
                 "Scale9OriginY": 37,
-                "Scale9Width": 57,
-                "Scale9Height": 84,
+                "Scale9Width": 42,
+                "Scale9Height": 48,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -11594,15 +11499,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 1059.8052,
-                "RightMargin": -1164.8052,
-                "TopMargin": -167.039,
-                "BottomMargin": 9.039,
+                "LeftMargin": 1067.3052,
+                "RightMargin": -1157.3052,
+                "TopMargin": -149.039,
+                "BottomMargin": 27.039,
                 "Tag": 36,
                 "ActionTag": 1998220043,
                 "Size": {
-                  "X": 105.0,
-                  "Y": 158.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "stand",
                 "ctype": "ImageViewObjectData"
@@ -12150,53 +12055,6 @@
                 },
                 "Name": "out2",
                 "ctype": "ImageViewObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "Red20/Game/bottom.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 422,
-                "Scale9OriginY": 237,
-                "Scale9Width": 436,
-                "Scale9Height": 246,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 680.7195,
-                  "Y": 321.7218
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 40.7195,
-                "RightMargin": -1320.7195,
-                "TopMargin": -681.7218,
-                "BottomMargin": -38.2782,
-                "Tag": 655,
-                "ActionTag": 581527794,
-                "Size": {
-                  "X": 1280.0,
-                  "Y": 720.0
-                },
-                "VisibleForFrame": false,
-                "Name": "myTurnBg",
-                "ctype": "ImageViewObjectData"
               }
             ],
             "ActionTag": 332052040,
@@ -12206,6 +12064,147 @@
             },
             "Name": "down",
             "ctype": "SingleNodeObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Red20/Game/left.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 422,
+            "Scale9OriginY": 237,
+            "Scale9Width": 436,
+            "Scale9Height": 246,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 700.7191,
+              "Y": 301.7217
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5474,
+              "Y": 0.4191
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": 60.7191,
+            "RightMargin": -60.7191,
+            "TopMargin": 58.2783,
+            "BottomMargin": -58.2783,
+            "Tag": 657,
+            "ActionTag": 1766670122,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "VisibleForFrame": false,
+            "Name": "myTurnBgl",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Red20/Game/top.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 422,
+            "Scale9OriginY": 237,
+            "Scale9Width": 436,
+            "Scale9Height": 246,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 710.7188,
+              "Y": 291.7217
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5552,
+              "Y": 0.4052
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": 70.7188,
+            "RightMargin": -70.7188,
+            "TopMargin": 68.2783,
+            "BottomMargin": -68.2783,
+            "Tag": 658,
+            "ActionTag": -77845111,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "VisibleForFrame": false,
+            "Name": "myTurnBgt",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Red20/Game/right.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 422,
+            "Scale9OriginY": 237,
+            "Scale9Width": 436,
+            "Scale9Height": 246,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 690.7193,
+              "Y": 311.7218
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5396,
+              "Y": 0.4329
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": 50.7193,
+            "RightMargin": -50.7192,
+            "TopMargin": 48.2782,
+            "BottomMargin": -48.2782,
+            "Tag": 656,
+            "ActionTag": 1217880875,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "VisibleForFrame": false,
+            "Name": "myTurnBgr",
+            "ctype": "ImageViewObjectData"
           },
           {
             "FontSize": 36,
@@ -15539,6 +15538,51 @@
             "ctype": "PanelObjectData"
           },
           {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Red20/DeskTexture/tiao.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 11,
+            "Scale9OriginY": 1,
+            "Scale9Width": 1258,
+            "Scale9Height": 4,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 233.9717
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.325
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 0.0083
+            },
+            "HorizontalEdge": "BothEdge",
+            "TopMargin": 483.0283,
+            "BottomMargin": 230.9717,
+            "Tag": 322,
+            "ActionTag": -406998149,
+            "Size": {
+              "X": 1280.0,
+              "Y": 6.0
+            },
+            "Name": "bounds",
+            "ctype": "ImageViewObjectData"
+          },
+          {
             "FontSize": 14,
             "ButtonText": "",
             "TextColor": {
@@ -15842,7 +15886,6 @@
         "playing/gameTable/zhuobian_07_2.png",
         "playing/MJ/Mj_big.png",
         "playing/MJ/Mj_up_0.png",
-        "playing/MJ/Mj_up_1.png",
         "playing/MJ/Mj_up_2.png",
         "playing/MJ/Mj_up_4.png",
         "playing/other/chatbg_ld.png",
@@ -15851,10 +15894,13 @@
         "png/nameBar.png",
         "png/Z_zhunbeizhuangt.png",
         "Red20/Card/0-1.png",
+        "Red20/Card/0-10.png",
+        "Red20/Card/back.png",
         "Red20/Controller/btn_ocad.png",
         "Red20/Controller/btn_tou.png",
         "Red20/Controller/tip_tou.png",
         "Red20/DeskTexture/phz_icon_007.png",
+        "Red20/DeskTexture/tiao.png",
         "Red20/Game/bg_back.jpg",
         "Red20/Game/bottom.png",
         "Red20/Game/left.png",
