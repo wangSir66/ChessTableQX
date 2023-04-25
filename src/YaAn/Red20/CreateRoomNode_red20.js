@@ -24,6 +24,58 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
         // this.payWayNodeArray[2].setEnabled(false);
     },
 
+    callSelectBack: function (indx, item, list) {
+        cc.log('callSelectBack------->red20', indx, JSON.stringify(item));
+        if (typeof item == "number") {//复选框
+            if (indx.name == 'btnCheck4Pairs') this.initLongSiDui();
+        } else {//单选框
+            let checkItem = ['btnRadio3', 'btnRadio4', 'btnRadio5'], sIndx = checkItem.indexOf(item.name);
+            if (sIndx > -1) {
+                this.initChiRule(sIndx);
+            }
+            checkItem = ['btnRadio6', 'btnRadio7'], sIndx = checkItem.indexOf(item.name);
+            if (sIndx > -1) {
+                this.initFanRule(sIndx);
+            }
+        }
+    },
+
+    /**龙四对相关 */
+    initLongSiDui: function () {
+        const checked = this.getCheckboxSelectedByName('btnCheck4Pairs'),
+            l4 = this.getBtnByName('btnCheckD4Pairs'),
+            sl4 = this.getBtnByName('btnCheckDD4Pairs');
+        cc.log('-------------------checked---------------------', checked)
+        l4.setEnabled(checked);
+        sl4.setEnabled(checked);
+    },
+
+    /**算番规则 */
+    initFanRule: function (indx) {
+        const group = this.RedioGroup['fengding'];
+        if (group) {
+            for (let _i = 0; _i < group._nodeList.length; _i++) {
+                const item = group._nodeList[_i];
+                item.setEnabled(indx != 0)
+            }
+        }
+    },
+
+    /**吃牌规则显示 */
+    initChiRule: function (indx) {
+        const group = this.RedioGroup['chipai'];
+        if (group) {
+            group.getSelectIndex() == 0 && indx == 0 && group.selectItem(1);
+            group._nodeList[0].setEnabled(indx != 0);
+        }
+    },
+    initEnd: function () {
+        this._super();
+        this.initChiRule(0);
+        this.initFanRule(0);
+        this.initLongSiDui();
+    },
+
     initPlayNode: function () {
         this._super();
     },
@@ -33,7 +85,8 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             pPriceCfg = MjClient.data.gamePrice[gameType];
         cc.log('服务器配置----', gameType, JSON.stringify(pPriceCfg));
         const maxP = Number(Object.keys(pPriceCfg)[this.getRedioSelectByName('renshu')]),
-            score = this._view.getChildByName('difen').getChildByName('BaseScore').getString();
+            score = this._view.getChildByName('difen').getChildByName('BaseScore').getString(),
+            x4d = this.getCheckboxSelectedByName('btnCheck4Pairs');
         const Rule = {
             gameType: gameType,
             maxPlayer: maxP,
@@ -45,9 +98,9 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             MaxKingCount: [3, 6, 9, 12, 15, 18][this.getRedioSelectByName('wangpai')],//最大大王数量
             EnableChi: [true, false][this.getRedioSelectByName('chipai')], //是否开启吃牌（这里的吃牌是指吃上家的牌）
             EnableZiMo: this.getCheckboxSelectedByName('btnCheckZiMo'),//true: 自摸加番
-            Enable4Pairs: this.getCheckboxSelectedByName('btnCheck4Pairs'), //是否开启小四对（汉源叫对子胡）
-            EnableDragon4Pairs: this.getCheckboxSelectedByName('btnCheckD4Pairs'), //是否开启龙四队
-            EnableDoubleDragon4Pairs: this.getCheckboxSelectedByName('btnCheckDD4Pairs'), //是否开启双龙四队
+            Enable4Pairs: x4d, //是否开启小四对（汉源叫对子胡）
+            EnableDragon4Pairs: this.getCheckboxSelectedByName('btnCheckD4Pairs') && x4d, //是否开启龙四队
+            EnableDoubleDragon4Pairs: this.getCheckboxSelectedByName('btnCheckDD4Pairs') && x4d, //是否开启双龙四队
             EnableJinGouDiao: this.getCheckboxSelectedByName('btnCheckJGG'),//是否开启金钩钓
             EnableGolden20: this.getCheckboxSelectedByName('btnCheckjin20'),//是否开启金20
             Golden20Fan: 1,//金20番薯 默认1 

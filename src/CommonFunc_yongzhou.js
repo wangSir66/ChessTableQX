@@ -4192,6 +4192,7 @@ function addCurrentPutTag(cardNode, off)
 
 function MJChiCardchange(tag)
 {
+    if (MjClient.playui.MJChiCardchange) return MjClient.playui.MJChiCardchange(tag);
     var tData = MjClient.data.sData.tData;
     var pl = getUIPlayer(0);
     if(tData.areaSelectMode.bihuType && (pl.eatFlag & 8) &&

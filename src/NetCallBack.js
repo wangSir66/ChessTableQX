@@ -2706,6 +2706,7 @@ MjClient.netCallBack = {
         for (var uid in sData.players) {
             var pl = sData.players[uid];
             pl.mjpeng = [];
+            pl.mjanpeng = [];
             pl.mjgang0 = [];
             pl.mjgang1 = [];
             pl.touCardList = [];
@@ -3773,7 +3774,7 @@ MjClient.netCallBack = {
         }
 
         //pl.fristPutCard = d.fristPutCard;
-        pl.mjput.push(d.card);
+        if(MjClient.gameType != MjClient.GAME_TYPE.RED_20_POKER)pl.mjput.push(d.card);
 
         if ((MjClient.gameType == MjClient.GAME_TYPE.HUANG_SHI_HH_MJ ||
             MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_HH_MJ) &&
@@ -4672,13 +4673,15 @@ MjClient.netCallBack = {
 
         }
 
-
-
         playEffectInPlay("chi");
         var pl = sData.players[uids[tData.curPlayer]];
         var lp = sData.players[uids[d.from]];
         pl.mjchiCard = d.mjchiCard;
         pl.onLine = true;
+        if (MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) {
+            pl.eatFlag = 0;
+            return;
+        }
         for (var i = 0; i < cds.length; i++) {
             pl.mjchi.push(cds[i]);
             pl.isNew = false;
@@ -4759,11 +4762,20 @@ MjClient.netCallBack = {
         //cc.log("收到碰的消息");
         var sData = MjClient.data.sData;
         if (!sData) return;
+        
+        if (MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) {
+            var pl = sData.players[d.uid];
+            pl.eatFlag = 0;
+            pl.mjState = TableState.waitPut;
+            pl.mjpeng.push(d.cards);
+            sData.tData.tState = TableState.waitPut;
+            playEffectInPlay("peng");
+            return;
+        }
         //福禄寿特殊处理
         if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
             MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG) {
             sData.tData = d.tData;
-            playEffectInPlay("peng");
 
             var tData = sData.tData;
             var uids = tData.uids;
@@ -5327,6 +5339,7 @@ MjClient.netCallBack = {
         var pl = sData.players[d.uid];
         pl.putType = d.cpginfo.putType;
         pl.onLine = true;
+        pl.eatFlag = 0;
         //pl.openDoorState = d.cpginfo.openDoorState;
         if (d.gang == 1) {
             pl.mjgang0.push(cd);
@@ -6000,7 +6013,8 @@ MjClient.netCallBack = {
                 }
             }
             if (MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO == MjClient.gameType ||
-                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI) {
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI||
+                MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) {
                 pl.eatFlag = 0;//海底胡之后刷新按钮
             }
             // 红字有人胡 所有玩家操作flag置0
@@ -10210,6 +10224,12 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         var pl = sData.players[SelfUid()];
         pl.eatFlag = d.eatFlag;
+        if (d.eatFlag > 0) {
+            //清空
+            MjClient.majiang.updateActionCard();
+            //查找操作的牌
+            MjClient.majiang.performActionCards(pl);
+        }
     }],
     MJTou: [0, function (d) {
         var sData = MjClient.data.sData;
@@ -10277,4 +10297,9 @@ MjClient.netCallBack = {
         sData.tData.curPlayer = d.cur;
         postEvent('onUserAction', { uid: d.uid });
     }],
+    CancelAction: [0, function (d) {
+        var sData = MjClient.data.sData;
+        let pl = sData.players[SelfUid()];
+        if (pl) pl.eatFlag = d.eatFlag;
+    }]
 };

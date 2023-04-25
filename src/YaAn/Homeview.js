@@ -36,17 +36,11 @@ var HomeView_yaan = cc.Layer.extend({
         this._girlPanel.setVisible(true);
         // setWgtLayout(_girlPanel, [0.8, 0.8], [0.6, 0.9], [0, 0], true);
         var _girlSprite = _girlPanel.getChildByName("girl");
-        if(_girlSprite) _girlSprite.visible = false;
+        if (_girlSprite) _girlSprite.visible = false;
         var _girlBone = createSpine("spine/home/girl/renwunv.json", "spine/home/girl/renwunv.atlas");
         _girlBone.setAnimation(0, 'animation', true);
         setWgtLayout(_girlPanel, [0.4, 0.4], [0.4, -0.10], [0, 0], false, true);
         _girlPanel.addChild(_girlBone, 1);
-
-        // ccs.armatureDataManager.addArmatureFileInfo("spine/home/beijing/100.ExportJson");
-        // var pAr = new ccs.Armature("100");
-        // pAr.getAnimation().play("Animation1");
-        // pAr.setPosition(500,500);
-        // _back.addChild(pAr,1000);
 
         //底部按钮的地板
         this._Panel_bottom = _back.getChildByName("Panel_bottom");
@@ -59,19 +53,8 @@ var HomeView_yaan = cc.Layer.extend({
         this._titlePanel = _tilebg;
         setWgtLayout(_tilebg, [1, 1], [0.5, 1], [0, 0]);
 
-        // function runLightEffectAction(lightNode) {
-        //     var _Image_light_scale = lightNode.getScale();
-        //     var a = cc.scaleTo(1, _Image_light_scale * 0.6);
-        //     var a1 = cc.scaleTo(0.8, _Image_light_scale * 0.3);
-        //     lightNode.runAction(cc.sequence(a, a1).repeatForever());
-        // }
-
-        //var _Image_light = homeui.node.getChildByName("Image_light");
-
         //活动伸缩按钮
         var _btnActive = this._Panel_bottom.getChildByName("Btn_Active");
-        //_Image_light.visible = true;
-
         function _btnActiveTouchEvent(sender, Type) {
             switch (Type) {
                 case ccui.Widget.TOUCH_ENDED:
@@ -86,7 +69,6 @@ var HomeView_yaan = cc.Layer.extend({
                     break;
             }
         }
-
         _btnActive.addTouchEventListener(_btnActiveTouchEvent, this);
 
         //设置
@@ -97,6 +79,27 @@ var HomeView_yaan = cc.Layer.extend({
                 case ccui.Widget.TOUCH_ENDED:
                     var settringLayer = new HomeSettingView();
                     settringLayer.setName("HomeClick");
+                    let blac = settringLayer.jsBind.back._node, nC = blac.children;
+                    for (var i = 0; i < nC.length; i++) {
+                        let cn = nC[i].name;
+                        if (cn === 'txtOther' ||
+                            cn === 'CheckBoxPrepare' ||
+                            cn === 'CheckBoxShark' ||
+                            cn === 'CheckBoxDialect' ||
+                            cn === 'CheckBoxMandarin' ||
+                            cn === 'txtLanguage') nC[i].visible = false;
+                        else if (cn === 'txtMusic' || cn === 'SliderMusic' || cn === 'CheckBoxMusic') {
+                            nC[i].y = blac.getSize().height / 2 + 70;
+                        }else if (cn === 'txtVoice' || cn === 'SliderVoice' || cn === 'CheckBoxVoice') {
+                            nC[i].y = blac.getSize().height / 2 + 10;
+                        }else if (cn === 'txtSpeak' || cn === 'SliderSpeak' || cn === 'CheckBoxSpeak') {
+                            nC[i].y = blac.getSize().height / 2 - 50;
+                        }
+                    }
+                    //默认震动
+                    util.localStorageEncrypt.setBoolItem("isVibrato", false);
+                    //默认自动准备
+                    util.localStorageEncrypt.setBoolItem(MjClient.KEY_autoRelay, false);
                     MjClient.Scene.addChild(settringLayer);
                     MjClient.native.umengEvent4CountWithProperty("ShezhiClick", { uid: SelfUid() });
                     updateUserBehavior("设置");
@@ -183,47 +186,50 @@ var HomeView_yaan = cc.Layer.extend({
 
         //客服按钮
         var _BtnKeFu = this._Panel_bottom.getChildByName("BtnKeFu");
-        _BtnKeFu.visible = true;
-        var _BtnKeFu_HongDian = _BtnKeFu.getChildByName("hongDian");
-        if (_BtnKeFu_HongDian) {
-            _BtnKeFu_HongDian.setVisible(false);
-            UIEventBind(null, _BtnKeFu, "QiYuUnreadCount", function (data) {
-                if (data.count) {
-                    _BtnKeFu_HongDian.setVisible(true);
-                    _BtnKeFu_HongDian.getChildByName("Text").setString(data.count);
-                } else {
-                    _BtnKeFu_HongDian.setVisible(false);
-                }
-            });
-        }
-        _BtnKeFu.addTouchEventListener(function (sender, Type) {
-            switch (Type) {
-                case ccui.Widget.TOUCH_ENDED:
-                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Kefu", { uid: SelfUid() });
-                    updateUserBehavior("客服");
-                    if (!isCurrentNativeVersionBiggerThan("14.0.0")) {
-                        MjClient.gamenet.request("pkplayer.handler.openBrowser", { type: 9 }, function (rtn) {
-                            if (rtn.code == 0) {
-                                MjClient.Scene.addChild(new NormalWebviewLayer(rtn.data));
-                            }
-                            else {
-                                if (rtn.message) {
-                                    MjClient.showToast(rtn.message);
-                                }
-                                else {
-                                    MjClient.showToast("获取数据失败");
-                                }
-                            }
-                        });
-                    }
-                    else {
-                        MjClient.native.showQiYuChatDialog();
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }, this);
+        _BtnKeFu.visible = false;
+
+        //设置
+
+        // var _BtnKeFu_HongDian = _BtnKeFu.getChildByName("hongDian");
+        // if (_BtnKeFu_HongDian) {
+        //     _BtnKeFu_HongDian.setVisible(false);
+        //     UIEventBind(null, _BtnKeFu, "QiYuUnreadCount", function (data) {
+        //         if (data.count) {
+        //             _BtnKeFu_HongDian.setVisible(true);
+        //             _BtnKeFu_HongDian.getChildByName("Text").setString(data.count);
+        //         } else {
+        //             _BtnKeFu_HongDian.setVisible(false);
+        //         }
+        //     });
+        // }
+        // _BtnKeFu.addTouchEventListener(function (sender, Type) {
+        //     switch (Type) {
+        //         case ccui.Widget.TOUCH_ENDED:
+        //             MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Kefu", { uid: SelfUid() });
+        //             updateUserBehavior("客服");
+        //             if (!isCurrentNativeVersionBiggerThan("14.0.0")) {
+        //                 MjClient.gamenet.request("pkplayer.handler.openBrowser", { type: 9 }, function (rtn) {
+        //                     if (rtn.code == 0) {
+        //                         MjClient.Scene.addChild(new NormalWebviewLayer(rtn.data));
+        //                     }
+        //                     else {
+        //                         if (rtn.message) {
+        //                             MjClient.showToast(rtn.message);
+        //                         }
+        //                         else {
+        //                             MjClient.showToast("获取数据失败");
+        //                         }
+        //                     }
+        //                 });
+        //             }
+        //             else {
+        //                 MjClient.native.showQiYuChatDialog();
+        //             }
+        //             break;
+        //         default:
+        //             break;
+        //     }
+        // }, this);
 
         //广告代理
         var _btnAdv = _tilebg.getChildByName("btnAdv");
@@ -236,50 +242,49 @@ var HomeView_yaan = cc.Layer.extend({
         var Text_qipao = daili_qipao.getChildByName("Text_qipao");
         Text_qipao.setString("双11庆典！场次冲一冲，购物车清空！");
         daili_qipao.setVisible(false);
-        if (MjClient.remoteCfg.guestLogin == true) {
+        // if (MjClient.remoteCfg.guestLogin == true) {
             _btnAdv.visible = false;
             _btnAdv.setTouchEnabled(false);
-        }
-        _btnAdv.addTouchEventListener(function (sender, Type) {
+        // }
+        // _btnAdv.addTouchEventListener(function (sender, Type) {
 
-            var jumbFunc = function () {
-                MjClient.gamenet.request("pkplayer.handler.openBrowser", { type: 1 }, function (rtn) {
-                    if (rtn.code == 0) {
-                        // MjClient.native.OpenUrl(rtn.data);
-                        var layer = new DaiLiWebviewLayer(rtn.data);
-                        if (layer.isInitSuccess())
-                            MjClient.Scene.addChild(layer);
-                    }
-                    else {
-                        if (rtn.message) {
-                            MjClient.showToast(rtn.message);
-                        }
-                        else {
-                            MjClient.showToast("获取数据失败");
-                        }
-                    }
-                });
-            };
+        //     var jumbFunc = function () {
+        //         MjClient.gamenet.request("pkplayer.handler.openBrowser", { type: 1 }, function (rtn) {
+        //             if (rtn.code == 0) {
+        //                 // MjClient.native.OpenUrl(rtn.data);
+        //                 var layer = new DaiLiWebviewLayer(rtn.data);
+        //                 if (layer.isInitSuccess())
+        //                     MjClient.Scene.addChild(layer);
+        //             }
+        //             else {
+        //                 if (rtn.message) {
+        //                     MjClient.showToast(rtn.message);
+        //                 }
+        //                 else {
+        //                     MjClient.showToast("获取数据失败");
+        //                 }
+        //             }
+        //         });
+        //     };
 
-            switch (Type) {
-                case ccui.Widget.TOUCH_ENDED:
-                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Daili", { uid: SelfUid() });
-                    updateUserBehavior("代理");
-                    //是代理
-                    if (MjClient.data && MjClient.data.pinfo && MjClient.data.pinfo.myMemberId && parseInt(MjClient.data.pinfo.myMemberId) > 0) {
-                        jumbFunc();
-                    }
-                    else {
-                        var layer = new BindingCodeLayer3();
-                        MjClient.Scene.addChild(layer);
-                    }
+        //     switch (Type) {
+        //         case ccui.Widget.TOUCH_ENDED:
+        //             MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Daili", { uid: SelfUid() });
+        //             updateUserBehavior("代理");
+        //             //是代理
+        //             if (MjClient.data && MjClient.data.pinfo && MjClient.data.pinfo.myMemberId && parseInt(MjClient.data.pinfo.myMemberId) > 0) {
+        //                 jumbFunc();
+        //             }
+        //             else {
+        //                 var layer = new BindingCodeLayer3();
+        //                 MjClient.Scene.addChild(layer);
+        //             }
 
-                    break;
-                default:
-                    break;
-            }
-        }, this);
-
+        //             break;
+        //         default:
+        //             break;
+        //     }
+        // }, this);
 
         //广播
         this._guangbo = homeui.node.getChildByName("guangbo");
@@ -577,42 +582,42 @@ var HomeView_yaan = cc.Layer.extend({
         }, this);
 
 
-        if (MjClient.remoteCfg.guestLogin == true ||
-            MjClient.systemConfig.moreGameEnable != "true" ||
-            MjClient.isShenhe) {
+        // if (MjClient.remoteCfg.guestLogin == true ||
+        //     MjClient.systemConfig.moreGameEnable != "true" ||
+        //     MjClient.isShenhe) {
             _btnmoreGame.visible = false;
             _btnmoreGame.setTouchEnabled(false);
-        }
-        _btnmoreGame.addTouchEventListener(function (sender, Type) {
-            switch (Type) {
-                case ccui.Widget.TOUCH_ENDED:
-                    //更多游戏
-                    MjClient.native.OpenUrl(MjClient.systemConfig.moreGameUrl);
-                    break;
-                default:
-                    break;
-            }
-        }, this);
+        // }
+        // _btnmoreGame.addTouchEventListener(function (sender, Type) {
+        //     switch (Type) {
+        //         case ccui.Widget.TOUCH_ENDED:
+        //             //更多游戏
+        //             MjClient.native.OpenUrl(MjClient.systemConfig.moreGameUrl);
+        //             break;
+        //         default:
+        //             break;
+        //     }
+        // }, this);
 
 
-        if (MjClient.remoteCfg.guestLogin == true) {
+        // if (MjClient.remoteCfg.guestLogin == true) {
             _btnShareGet.visible = false;
             _btnShareGet.setTouchEnabled(false);
-        }
-        _btnShareGet.addTouchEventListener(function (sender, Type) {
-            switch (Type) {
-                case ccui.Widget.TOUCH_ENDED:
-                    {
-                        var _sprite = _btnShareGet.getChildByName("hongDian");
-                        MjClient.Scene.addChild(new shareTodayLayer(_sprite.visible));
-                        MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Fenxiang", { uid: SelfUid() });
-                        updateUserBehavior("分享");
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }, this);
+        // }
+        // _btnShareGet.addTouchEventListener(function (sender, Type) {
+        //     switch (Type) {
+        //         case ccui.Widget.TOUCH_ENDED:
+        //             {
+        //                 var _sprite = _btnShareGet.getChildByName("hongDian");
+        //                 MjClient.Scene.addChild(new shareTodayLayer(_sprite.visible));
+        //                 MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Fenxiang", { uid: SelfUid() });
+        //                 updateUserBehavior("分享");
+        //             }
+        //             break;
+        //         default:
+        //             break;
+        //     }
+        // }, this);
 
         // var bg_share = _btnShareGet.getChildByName("bg_img");
         // bg_share.runAction(cc.sequence(cc.scaleTo(1,0.8),cc.scaleTo(1,1.1)).repeatForever());
@@ -818,23 +823,23 @@ var HomeView_yaan = cc.Layer.extend({
         /*
          商店 
          */
-        if (MjClient.remoteCfg.hideMoney == true) {
+        // if (MjClient.remoteCfg.hideMoney == true) {
             _BtnShop.visible = false;
             _BtnShop.setTouchEnabled(false);
-        }
+        // }
         //_BtnShop.runAction(cc.sequence(cc.rotateBy(1, 20), cc.rotateBy(1, -20)).repeatForever());
-        _BtnShop.addTouchEventListener(function (sender, Type) {
-            switch (Type) {
-                case ccui.Widget.TOUCH_ENDED:
-                    var layer = enter_store();
-                    MjClient.Scene.addChild(layer);
-                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Shop", { uid: SelfUid() });
-                    updateUserBehavior("商城");
-                    break;
-                default:
-                    break;
-            }
-        }, this);
+        // _BtnShop.addTouchEventListener(function (sender, Type) {
+        //     switch (Type) {
+        //         case ccui.Widget.TOUCH_ENDED:
+        //             var layer = enter_store();
+        //             MjClient.Scene.addChild(layer);
+        //             MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Shop", { uid: SelfUid() });
+        //             updateUserBehavior("商城");
+        //             break;
+        //         default:
+        //             break;
+        //     }
+        // }, this);
 
 
 
@@ -868,6 +873,12 @@ var HomeView_yaan = cc.Layer.extend({
         // this.addChild(_richText);
 
 
+        //重置UI位置
+        let hd = cc.p(_btnActive.x, _btnActive.y);
+        _btnActive.setPosition(_zhanji.x, _zhanji.y);
+        _zhanji.setPosition(_BtnKeFu.x, _BtnKeFu.y);
+        _btntuijian.setPosition(hd.x, hd.y);
+        btnRenzheng.setPosition(_btnAdv.x, _btnAdv.y);
         return true;
     },
     //扩展定义

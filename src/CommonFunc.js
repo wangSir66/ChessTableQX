@@ -513,7 +513,7 @@ function MJPassConfirmToServer() {
 // 向服务器发送吃牌
 function MJChiToServer(pos) {
     if (MjClient.rePlayVideo != -1) return; // 回放时候不能请求
-    cc.log("====================MJChiToServer=================pos=" + pos);
+    if (MjClient.playui.MJChiToServer) return MjClient.playui.MJChiToServer(pos);
     MjClient.gamenet.request("pkroom.handler.tableMsg", {
         cmd: "MJChi",
         pos: pos,
@@ -546,7 +546,7 @@ function MJTouToServer() {
 
 function MJPengToServer() {
     if (MjClient.rePlayVideo != -1) return; // 回放时候不能请求
-
+    if (MjClient.playui.MJPengToServer) return MjClient.playui.MJPengToServer();
     var tData = MjClient.data.sData.tData;
     var pl = getUIPlayer(0);
     if (pl.mustHu) {
@@ -2915,18 +2915,18 @@ function InitHeadPostionPlaying(node) {
         setWgtLayout(topTingCard, [0.6, 0.6], [1.30, 0.75], [0, 0], false, true);
         setWgtLayout(topTingIcon, [0.6, 0.6], [1.35, 0.25], [0, 0], false, true);
 
-        if (isIPad()) setWgtLayout(top, [_sc, _sc], [0.5, 0.97], [2.2, -0.65], false, false);
+        // if (isIPad()) setWgtLayout(top, [_sc, _sc], [0.5, 0.97], [0, -0.65], false, false);
 
 
-        if (isIPhoneX()) {
-            node.getChildByName("left").x = cc.winSize.width * 0.09;
-            left.y = cc.winSize.height * 0.75;
-            left.x = 0;
-            left.setScale(down.getScale());
+        // if (isIPhoneX()) {
+        //     node.getChildByName("left").x = cc.winSize.width * 0.09;
+        //     left.y = cc.winSize.height * 0.75;
+        //     left.x = 0;
+        //     left.setScale(down.getScale());
 
-            setWgtLayout(down, [_sc, _sc], [0.05, 0], [0.6, 2.8], false, false);
-            setWgtLayout(left, [_sc, _sc], [0, 0.49], [-0.1, 1.7], false, false);
-        }
+        //     setWgtLayout(down, [_sc, _sc], [0.25, 0], [0.6, 1.8], false, false);
+        //     setWgtLayout(left, [_sc, _sc], [0, 0.6], [0.6, 0], false, false);
+        // }
     } else {
         if (isCanChangePlayerNum() && MjClient.MaxPlayerNum === 2) {
             setWgtLayout(top, [_sc, _sc], [0, 1], [3.1, -0.65], false, false);
@@ -4615,6 +4615,7 @@ function PutOutCard(cdui, cd) {
     if (MjClient.rePlayVideo != -1) {
         return;
     }
+    if (MjClient.playui.PutOutCard) return MjClient.playui.PutOutCard(cdui, cd);
     if (cdui.isNew) {
         MjClient.newCard = null; //打出去的是新摸的这张牌
         cdui.isNew = false;
@@ -4645,7 +4646,6 @@ function PutOutCard(cdui, cd) {
     //cardPutted = true;
     var pl = getUIPlayer(0);
     var tData = MjClient.data.sData.tData;
-    cc.log('mjhandNum == pl.mjhand.length', mjhandNum, cd, JSON.stringify(pl.mjhand))
     if (mjhandNum == pl.mjhand.length) {
         var mjputMsg = {
             cmd: "MJPut",
@@ -4918,9 +4918,7 @@ function PutOutCard(cdui, cd) {
 
 //处理出牌,放一张牌，打牌动作
 function DealMJPut(node, msg, off, outNum) {
-    // cc.log("~DealMJPut() === off ===" + off);
-    // cc.log("~DealMJPut() === msg:" + JSON.stringify(msg));
-    if (MjClient.playui.DealMJPut) MjClient.playui.DealMJPut(node, msg, off, outNum)
+    if (MjClient.playui.DealMJPut) return MjClient.playui.DealMJPut(node, msg, off, outNum)
 
     //断线重连 起手胡 不消失
     var sData = MjClient.data.sData;
@@ -6089,6 +6087,7 @@ function addCurrentPutTag(cardNode, off) {
 
 
 function MJChiCardchange(tag) {
+    if (MjClient.playui.MJChiCardchange) return MjClient.playui.MJChiCardchange(tag);
     if (MjClient.eatpos.length == 0)
         return;
 
@@ -6200,6 +6199,7 @@ function MJChiCardchange(tag) {
  *
  */
 function MJChiPengGangWhenHu() {
+    if (MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) return;
     var eat = MjClient.playui.jsBind.eat;
     if (!eat) return;
     if (eat.cancel) eat.cancel._node.visible = false;
@@ -6765,6 +6765,7 @@ function DealWaitPut(node, msg, off) {
 
 // 处理吃
 function DealMJChi(node, msg, off) {
+    if (MjClient.playui.DealMJChi) return MjClient.playui.DealMJChi(node, msg, off);
     cc.log("~DealMJChi() === off ===" + off);
     cc.log("~DealMJChi() === msg:" + JSON.stringify(msg));
     var sData = MjClient.data.sData;
@@ -6889,7 +6890,7 @@ function DealMJChi(node, msg, off) {
 
 // 处理碰
 function DealMJPeng(node, msg, off) {
-
+    if (MjClient.playui.DealMJPeng) return MjClient.playui.DealMJPeng(node, msg, off);
     var sData = MjClient.data.sData;
     var tData = sData.tData;
     var uids = tData.uids;
@@ -7912,6 +7913,7 @@ function DealMJTeshuGang(node, msg, off) {
 
 // 处理杠
 function DealMJGang(node, msg, off) {
+    if (MjClient.playui.DealMJGang) return MjClient.playui.DealMJGang(node, msg, off);
     cc.log("~DealMJGang() === off ===" + off);
     cc.log("~DealMJGang() === msg:" + JSON.stringify(msg));
 
@@ -14373,7 +14375,8 @@ initSceneFunc = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
         && MjClient.gameType !== MjClient.GAME_TYPE.YI_YANG_MA_JIANG
         && MjClient.gameType !== MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO
         && MjClient.gameType !== MjClient.GAME_TYPE.NING_XIANG_MJ
-        && MjClient.gameType !== MjClient.GAME_TYPE.XIANG_SHUI_MJ) {
+        && MjClient.gameType !== MjClient.GAME_TYPE.XIANG_SHUI_MJ
+        && MjClient.gameType !== MjClient.GAME_TYPE.RED_20_POKER) {
         MJChiPengGangWhenHu();
     }
 

@@ -1355,6 +1355,7 @@ GameClass[MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI] = MjClient.GAME_CLASS.PAO_HU_
 GameClass[MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG] = MjClient.GAME_CLASS.MA_JIANG;
 GameClass[MjClient.GAME_TYPE.EN_SHI_SHAO_HU] = MjClient.GAME_CLASS.PAO_HU_ZI;
 GameClass[MjClient.GAME_TYPE.WU_XUE_510K] = MjClient.GAME_CLASS.DA_MA_ZI;
+GameClass[MjClient.GAME_TYPE.RED_20_POKER] = MjClient.GAME_CLASS.DA_MA_ZI;
 
 //游戏大类型到资源分类的映射
 var ResourceClass = {};

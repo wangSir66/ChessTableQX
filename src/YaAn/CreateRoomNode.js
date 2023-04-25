@@ -5,6 +5,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     _btnItems: [],
     payWayNodeArray: [],
     roundNodeArray: [],
+    RedioGroup: {},
     ctor: function (layer, data) {
         this._super();
         this.parentLayer = layer;
@@ -36,6 +37,11 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         this.initAllBtns();
         this.modifyDiFenText();
         this.initPlayNode();
+        this.initEnd();
+    },
+    //初始化结束需要做的事情
+    initEnd: function () {
+        
     },
 
     /**设置底分 */
@@ -85,6 +91,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         this.payWayNodeArray = [];
         this.roundNodeArray = [];
         this._btnItems = [];
+        this.RedioGroup = {};
         for (let _i = 0; _i < this._view.children.length; _i++) {
             const row = this._view.children[_i];
             let btns = [];
@@ -110,6 +117,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             }
             if (btns.length > 0) {
                 const _radio = createRadioBoxForCheckBoxs(btns, this.callSelectBack.bind(this), 0);
+                this.RedioGroup[row.name] = _radio;
                 this.addListenerText(btns, _radio, this.callSelectBack.bind(this));
             }
         }
@@ -358,6 +366,15 @@ var CreateRoomNodeYaAn = cc.Node.extend({
 
 
     },
+
+    getBtnByName: function (str) {
+        for (let _i = 0; _i < this._btnItems.length; _i++) {
+            const btn = this._btnItems[_i];
+            if (cc.sys.isObjectValid(btn) && btn.name == str) return btn;
+        }
+        return null;
+    },
+
 
     getCheckboxSelectedByName: function (str) {
         cc.log('----查找某个按钮----', str)

@@ -2096,16 +2096,6 @@
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="myTurnBgd" ActionTag="581527794" Tag="655" IconVisible="False" LeftMargin="6.8468" RightMargin="-6.8468" TopMargin="-2.0182" BottomMargin="2.0182" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
-            <Size X="1280.0000" Y="720.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="646.8468" Y="362.0182" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5053" Y="0.5028" />
-            <PreSize X="1.0000" Y="1.0000" />
-            <FileData Type="Normal" Path="Red20/Game/bottom.png" Plist="" />
-          </AbstractNodeData>
           <AbstractNodeData Name="down" ActionTag="332052040" Tag="92" IconVisible="True" RightMargin="1280.0000" TopMargin="720.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
@@ -2120,15 +2110,15 @@
                 <FileData Type="Normal" Path="png/Z_zhunbeizhuangt.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="up" ActionTag="-2120437285" Tag="42" IconVisible="False" LeftMargin="464.2000" RightMargin="-569.2000" TopMargin="-156.8200" BottomMargin="-1.1800" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
-                <Size X="105.0000" Y="158.0000" />
+              <AbstractNodeData Name="up" ActionTag="-2120437285" Tag="42" IconVisible="False" LeftMargin="471.7000" RightMargin="-561.7000" TopMargin="-138.8200" BottomMargin="16.8200" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="516.7000" Y="77.8200" />
                 <Scale ScaleX="0.4000" ScaleY="0.4000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_up_0.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="down" ActionTag="-1359981093" Tag="41" IconVisible="False" LeftMargin="-19.1108" RightMargin="-70.8892" TopMargin="-97.6444" BottomMargin="-24.3556" LeftEage="12" RightEage="12" TopEage="19" BottomEage="19" Scale9OriginX="12" Scale9OriginY="19" Scale9Width="66" Scale9Height="84" ctype="ImageViewObjectData">
                 <Size X="90.0000" Y="122.0000" />
@@ -2140,25 +2130,25 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="out1" ActionTag="-2007703463" Tag="107" IconVisible="False" LeftMargin="314.3206" RightMargin="-419.3206" TopMargin="-330.5400" BottomMargin="172.5400" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
-                <Size X="105.0000" Y="158.0000" />
+              <AbstractNodeData Name="out1" ActionTag="-2007703463" Tag="107" IconVisible="False" LeftMargin="321.8206" RightMargin="-411.8206" TopMargin="-312.5400" BottomMargin="190.5400" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="366.8206" Y="251.5400" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_up_2.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="out0" ActionTag="-1449809231" Tag="106" IconVisible="False" LeftMargin="314.3206" RightMargin="-419.3206" TopMargin="-260.5516" BottomMargin="102.5516" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
-                <Size X="105.0000" Y="158.0000" />
+              <AbstractNodeData Name="out0" ActionTag="-1449809231" Tag="106" IconVisible="False" LeftMargin="321.8206" RightMargin="-411.8206" TopMargin="-242.5516" BottomMargin="120.5516" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="366.8206" Y="181.5516" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_up_2.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="outBig" ActionTag="-273745635" Tag="305" IconVisible="False" LeftMargin="-325.8482" RightMargin="218.8482" TopMargin="-164.3607" BottomMargin="35.3607" LeftEage="34" RightEage="34" TopEage="52" BottomEage="52" Scale9OriginX="34" Scale9OriginY="52" Scale9Width="39" Scale9Height="25" ctype="ImageViewObjectData">
                 <Size X="107.0000" Y="129.0000" />
@@ -2170,7 +2160,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="playing/MJ/Mj_big.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="head" ActionTag="-773782896" Tag="3554" IconVisible="False" LeftMargin="347.7611" RightMargin="-473.7611" TopMargin="-268.0562" BottomMargin="143.0562" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="head" ActionTag="-773782896" Tag="3554" IconVisible="False" LeftMargin="3.1430" RightMargin="-129.1430" TopMargin="153.4091" BottomMargin="-278.4091" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="126.0000" Y="125.0000" />
                 <Children>
                   <AbstractNodeData Name="nobody" ActionTag="565425909" Tag="176" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="6.5000" RightMargin="6.5000" TopMargin="-12.0000" BottomMargin="19.0000" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="45" Scale9Height="45" ctype="ImageViewObjectData">
@@ -2526,13 +2516,13 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="tingIcon" ActionTag="1983133531" Tag="849" IconVisible="False" LeftMargin="13.1911" RightMargin="69.8089" TopMargin="-80.0721" BottomMargin="140.0721" LeftEage="14" RightEage="14" TopEage="21" BottomEage="21" Scale9OriginX="14" Scale9OriginY="21" Scale9Width="15" Scale9Height="23" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="tingIcon" ActionTag="1983133531" Tag="849" IconVisible="False" LeftMargin="-40.1364" RightMargin="123.1364" TopMargin="-14.5065" BottomMargin="74.5065" LeftEage="14" RightEage="14" TopEage="21" BottomEage="21" Scale9OriginX="14" Scale9OriginY="21" Scale9Width="15" Scale9Height="23" ctype="ImageViewObjectData">
                     <Size X="43.0000" Y="65.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="34.6911" Y="172.5721" />
+                    <Position X="-18.6364" Y="107.0065" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.2753" Y="1.3806" />
+                    <PrePosition X="-0.1479" Y="0.8561" />
                     <PreSize X="0.3413" Y="0.5200" />
                     <FileData Type="Normal" Path="playing/gameTable/icon_ting.png" Plist="" />
                   </AbstractNodeData>
@@ -2566,9 +2556,32 @@
                     <PreSize X="1.0397" Y="0.9840" />
                     <FileData Type="Normal" Path="Red20/Controller/tip_tou.png" Plist="" />
                   </AbstractNodeData>
+                  <AbstractNodeData Name="redPoint" ActionTag="-1949357050" Tag="323" IconVisible="False" LeftMargin="20.4345" RightMargin="21.5655" TopMargin="-51.5100" BottomMargin="142.5100" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="12" BottomEage="12" Scale9OriginX="22" Scale9OriginY="12" Scale9Width="40" Scale9Height="10" ctype="ImageViewObjectData">
+                    <Size X="84.0000" Y="34.0000" />
+                    <Children>
+                      <AbstractNodeData Name="Text" ActionTag="1479232746" Tag="326" IconVisible="False" LeftMargin="0.6485" RightMargin="3.3515" TopMargin="6.2318" BottomMargin="7.7682" IsCustomSize="True" FontSize="18" LabelText="红点:20" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="80.0000" Y="20.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="40.6485" Y="17.7682" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="244" G="247" B="154" />
+                        <PrePosition X="0.4839" Y="0.5226" />
+                        <PreSize X="0.9524" Y="0.5882" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="62.4345" Y="159.5100" />
+                    <Scale ScaleX="1.2000" ScaleY="1.2000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4955" Y="1.2761" />
+                    <PreSize X="0.6667" Y="0.2720" />
+                    <FileData Type="Normal" Path="Red20/DeskTexture/dss_cardnum.png" Plist="" />
+                  </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="410.7611" Y="205.5562" />
+                <Position X="66.1430" Y="-215.9091" />
                 <Scale ScaleX="0.8000" ScaleY="0.8000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
@@ -2811,15 +2824,15 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="png/nameBar.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="out2" ActionTag="-839546208" Tag="1544" IconVisible="False" LeftMargin="324.3206" RightMargin="-429.3206" TopMargin="-320.5401" BottomMargin="162.5401" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
-                <Size X="105.0000" Y="158.0000" />
+              <AbstractNodeData Name="out2" ActionTag="-839546208" Tag="1544" IconVisible="False" LeftMargin="331.8206" RightMargin="-421.8206" TopMargin="-302.5401" BottomMargin="180.5401" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="68" Scale9Height="86" ctype="ImageViewObjectData">
+                <Size X="90.0000" Y="122.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="376.8206" Y="241.5401" />
                 <Scale ScaleX="0.5000" ScaleY="0.5000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/MJ/Mj_up_2.png" Plist="" />
+                <FileData Type="Normal" Path="Red20/Card/0-1.png" Plist="" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />
@@ -2829,7 +2842,17 @@
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="myTurnBgl" ActionTag="1766670122" VisibleForFrame="False" Tag="657" IconVisible="False" LeftMargin="60.7191" RightMargin="-60.7191" TopMargin="58.2783" BottomMargin="-58.2783" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="myTurnBgd" ActionTag="581527794" VisibleForFrame="False" CallBackType="Touch" Tag="655" IconVisible="False" LeftMargin="6.8468" RightMargin="-6.8468" TopMargin="-2.0182" BottomMargin="2.0182" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+            <Size X="1280.0000" Y="720.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="646.8468" Y="362.0182" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.5053" Y="0.5028" />
+            <PreSize X="1.0000" Y="1.0000" />
+            <FileData Type="Normal" Path="Red20/Game/bottom.png" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="myTurnBgl" ActionTag="1766670122" VisibleForFrame="False" Tag="657" IconVisible="False" LeftMargin="60.7191" RightMargin="-60.7191" TopMargin="58.2783" BottomMargin="-58.2783" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="700.7191" Y="301.7217" />
@@ -2839,7 +2862,7 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="Red20/Game/left.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="myTurnBgt" ActionTag="-77845111" VisibleForFrame="False" Tag="658" IconVisible="False" LeftMargin="70.7188" RightMargin="-70.7188" TopMargin="68.2783" BottomMargin="-68.2783" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="myTurnBgt" ActionTag="-77845111" VisibleForFrame="False" Tag="658" IconVisible="False" LeftMargin="70.7188" RightMargin="-70.7188" TopMargin="68.2783" BottomMargin="-68.2783" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="710.7188" Y="291.7217" />
@@ -2849,7 +2872,7 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="Red20/Game/top.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="myTurnBgr" ActionTag="1217880875" VisibleForFrame="False" Tag="656" IconVisible="False" LeftMargin="50.7193" RightMargin="-50.7192" TopMargin="48.2782" BottomMargin="-48.2782" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="myTurnBgr" ActionTag="1217880875" VisibleForFrame="False" Tag="656" IconVisible="False" LeftMargin="50.7193" RightMargin="-50.7192" TopMargin="48.2782" BottomMargin="-48.2782" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="690.7193" Y="311.7218" />

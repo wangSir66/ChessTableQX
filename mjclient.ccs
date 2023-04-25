@@ -4134,6 +4134,12 @@
             <Image Name="back.png" />
             <Image Name="YZDN_card_enable.png" />
           </Folder>
+          <Folder Name="Common">
+            <Image Name="CheckBoxForbidden.png" />
+            <Image Name="minus-1.png" />
+            <Image Name="plus-1.png" />
+            <Image Name="RadioForbidden.png" />
+          </Folder>
           <Folder Name="Controller">
             <Image Name="btn_cancel.png" />
             <Image Name="btn_chi.png" />
@@ -5145,6 +5151,7 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
+        <Project Name="endOne_Red20.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -1,25 +1,18 @@
 {
     "project_type": "javascript",
 
-    "debugMode" : 1,
-    "showFPS" : false,
-    "frameRate" : 60,
-    "noCache" : false,
-    "id" : "gameCanvas",
-    "renderMode" : 0,
-    "engineDir":"frameworks/cocos2d-html5",
+    "debugMode": 1,
+    "showFPS": false,
+    "frameRate": 60,
+    "noCache": false,
+    "id": "gameCanvas",
+    "renderMode": 0,
+    "engineDir": "frameworks/cocos2d-html5",
 
-    "modules" : ["cocos2d", "cocostudio","extensions"],
-    "appType" : 25,
-    "jsList" : [
-        "src/YaAn/Homeview.js",
-        "src/YaAn/CreateRoomPanel.js",
-        "src/YaAn/CreateRoomNode.js",
-        "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
-        "src/YaAn/Red20/CreateRoomNode_red20.js",
-
-
-		"TestConfig.js",
+    "modules": [ "cocos2d", "cocostudio", "extensions" ],
+    "appType": 25,
+    "jsList": [
+        "TestConfig.js",
         "src/h5/amapHelper.js",
         "src/h5/clipboardHelper.js",
         "src/h5/nativeHelper.js",
@@ -30,7 +23,7 @@
         "src/util/localStorageEncrypt.js",
         "src/util/Timer.js",
 
-		"src/Net/NetSender.js",
+        "src/Net/NetSender.js",
         "src/Net/NetControl.js",
         "src/Net/NetBuffer.js",
         "src/Net/NetClient.js",
@@ -48,14 +41,14 @@
         "src/ResPreload.js",
         "src/configCnDesc.js",
         "src/CommonFunc.js",
-		"src/CommonFunc_UI.js",
-		"src/CommonFunc_UI3D.js",
+        "src/CommonFunc_UI.js",
+        "src/CommonFunc_UI3D.js",
         "src/CommonFunc_NN.js",
         "src/CommonFunc_changpai.js",
         "src/CommonFunc_card.js",
         "src/CommonFunc_paohuzi.js",
-		"src/CommonFunc_paohuzi_SR.js",
-		"src/CommonFunc_Layer.js",
+        "src/CommonFunc_paohuzi_SR.js",
+        "src/CommonFunc_Layer.js",
         "src/Arithmetic_LYG.js",
         "src/YaAn/Red20/Arithmetic_Red20.js",
         "src/Arithmetic_shuyang.js",
@@ -64,7 +57,7 @@
         "src/Arithmetic_donghai.js",
         "src/Arithmetic_suqian.js",
         "src/Arithmetic_HZMJ.js",
-		"src/Arithmetic_nanjing.js",
+        "src/Arithmetic_nanjing.js",
 
         "src/Arithmetic_tuantuanzhuan.js",
 
@@ -103,7 +96,7 @@
         "src/CreateRoomNode_siyang.js",
         "src/CreateRoomNode_siyanghh.js",
         "src/CreateRoomNode_ganyu.js",
-		"src/CreateRoomNode_nanjing.js",
+        "src/CreateRoomNode_nanjing.js",
 
         "src/CreateRoomPanel.js",
         "src/JoinRoomPanel.js",
@@ -114,7 +107,7 @@
         "src/PlayerGamePanel_guannan.js",
         "src/PlayerGamePanel_donghai.js",
         "src/PlayerGamePanel_suqian.js",
-		"src/PlayerGamePanel_nanjing.js",
+        "src/PlayerGamePanel_nanjing.js",
 
         "src/PlayerGamePanel_tuantuanzhuan.js",
         "src/PlayerGamePanel_HZMJ.js",
@@ -132,7 +125,6 @@
         "src/LoseGameLayer.js",
         "src/WinGameLayer.js",
 
-
         "src/WinGamePanel_LYG.js",
         "src/WinGamePanel_shuyang.js",
         "src/WinGamePanel_guanyun.js",
@@ -147,7 +139,7 @@
 
         "src/WinGamePanel_siyang.js",
         "src/WinGamePanel_siyanghh.js",
-		"src/WinGamePanel_nanjing.js",
+        "src/WinGamePanel_nanjing.js",
 
         "src/WinGamePanel_ganyu.js",
         "src/GameOverPanel.js",
@@ -157,8 +149,8 @@
         "src/GameWaiteLayer.js",
         "src/GongGaoLayer.js",
         "src/GetRewardLayer.js",
-		"src/WeChatPayPanel.js",
-		"src/UserInfoPanel.js",
+        "src/WeChatPayPanel.js",
+        "src/UserInfoPanel.js",
         "src/ChatCheckWords.js",
         "src/TipsPanel.js",
         "src/WebViewLayer.js",
@@ -174,7 +166,7 @@
         "src/ShareCaishenLayer.js",
         "src/ShareYuanbaoLayer.js",
         "src/StoreLayer.js",
-        
+
         "src/RecommendLayer_active.js",
         "src/UserInfoPanelPlaying.js",
         "src/GuidLayer.js",
@@ -201,44 +193,44 @@
         "src/startScene.js",
         "src/EmailLayer.js",
         "src/goldField.js",
-		
-		"src/friendCard/FriendCard_mainJS.js",
-		"src/friendCard/FriendCard_ruleBlackList.js",
-		"src/friendCard/FriendCard_gaojiSet.js",
-		"src/friendCard/FriendCard_setMainSkin.js",
-		"src/friendCard/FriendCard_tanchuang.js",
-		"src/friendCard/FriendCard_nvguanjia.js",
-		"src/friendCard/FriendCard_roomRecord.js",
-		"src/friendCard/FriendCard_tongji.js",
-		"src/friendCard/FriendCard_member.js",
-		"src/friendCard/FriendCard_mutexLayer.js",
-		"src/friendCard/FriendCard_info.js",
-		"src/friendCard/FriendCard_find.js",
-		"src/friendCard/FriendCard_yaoqingMember.js",
-		"src/friendCard/FriendCard_init.js",
 
-		"src/activity_all/MerryChristmasLayer.js",
-		"src/activity_all/WinterLayer.js",
-		"src/activity_all/NewYearLayer.js",
-		"src/activity_all/LuckyTableLayer.js",
-		"src/activity_all/QiandaoLayer.js",
-		"src/activity_all/JFHXJ_layer.js",
-		"src/activity_all/ZhuaWaWa.js",
-		"src/activity_all/ShopOfJifen.js",
+        "src/friendCard/FriendCard_mainJS.js",
+        "src/friendCard/FriendCard_ruleBlackList.js",
+        "src/friendCard/FriendCard_gaojiSet.js",
+        "src/friendCard/FriendCard_setMainSkin.js",
+        "src/friendCard/FriendCard_tanchuang.js",
+        "src/friendCard/FriendCard_nvguanjia.js",
+        "src/friendCard/FriendCard_roomRecord.js",
+        "src/friendCard/FriendCard_tongji.js",
+        "src/friendCard/FriendCard_member.js",
+        "src/friendCard/FriendCard_mutexLayer.js",
+        "src/friendCard/FriendCard_info.js",
+        "src/friendCard/FriendCard_find.js",
+        "src/friendCard/FriendCard_yaoqingMember.js",
+        "src/friendCard/FriendCard_init.js",
+
+        "src/activity_all/MerryChristmasLayer.js",
+        "src/activity_all/WinterLayer.js",
+        "src/activity_all/NewYearLayer.js",
+        "src/activity_all/LuckyTableLayer.js",
+        "src/activity_all/QiandaoLayer.js",
+        "src/activity_all/JFHXJ_layer.js",
+        "src/activity_all/ZhuaWaWa.js",
+        "src/activity_all/ShopOfJifen.js",
         "src/activity_all/JiaYouRedPacketLayer.js",
-		"src/activity_all/DuanWuJie_layer.js",
+        "src/activity_all/DuanWuJie_layer.js",
         "src/activity_all/BindPhoneNumLayer.js",
-		"src/activity_all/All_area.js",
-		"src/activity_all/LuckyTableNew_layer.js",
-		"src/activity_all/Active_zhongQiuJie.js",
-		"src/activity_all/ShareToday.js",
-		"src/activity_all/FriendsPK_layer.js",
-		"src/activity_all/LiCaiBaoXiang_layer.js",
+        "src/activity_all/All_area.js",
+        "src/activity_all/LuckyTableNew_layer.js",
+        "src/activity_all/Active_zhongQiuJie.js",
+        "src/activity_all/ShareToday.js",
+        "src/activity_all/FriendsPK_layer.js",
+        "src/activity_all/LiCaiBaoXiang_layer.js",
         "src/activity_all/ChuanQiLayer.js",
         "src/activity_all/Active_chouqian.js",
-		"src/activity_all/GoldNewYearRedPacket.js",
+        "src/activity_all/GoldNewYearRedPacket.js",
         "src/activity_all/Active_alipayRedpacket.js",
-    	"src/activity_all/Active_flyAKite.js",
+        "src/activity_all/Active_flyAKite.js",
         "src/activity_all/Active_collectSpringBean.js",
         "src/activity_all/ClubCost_layer.js",
 
@@ -246,14 +238,14 @@
         "src/poker_doudizhuTY/CreateRoomNode_doudizhuTY.js",
         "src/poker_doudizhuTY/WinGamePanel_doudizhuTY.js",
         "src/poker_doudizhuTY/PlayerGamePanel_doudizhuTongYong.js",
-		
-		"src/poker_doudizhu_wegt/PokerCardNode_Doudizhu.js",
-		"src/poker_doudizhu_wegt/PokerHeadNode_Doudizhu.js",
-		"src/poker_doudizhu_wegt/PokerHeadNode_Doudizhulyg.js",
-		"src/poker_doudizhu_wegt/PokerWaitNode_Doudizhu.js",
+
+        "src/poker_doudizhu_wegt/PokerCardNode_Doudizhu.js",
+        "src/poker_doudizhu_wegt/PokerHeadNode_Doudizhu.js",
+        "src/poker_doudizhu_wegt/PokerHeadNode_Doudizhulyg.js",
+        "src/poker_doudizhu_wegt/PokerWaitNode_Doudizhu.js",
         "src/poker_doudizhu_wegt/Animature_Doudizhu.js",
-		
-		"src/poker_doudizhu/Arithmetic_doudizhu.js",
+
+        "src/poker_doudizhu/Arithmetic_doudizhu.js",
         "src/poker_doudizhu/CreateRoomNode_doudizhu.js",
         "src/poker_doudizhu/PlayerGamePanel_doudizhu.js",
         "src/poker_doudizhu/WinGamePanel_doudizhu.js",
@@ -280,11 +272,11 @@
         "src/poker_paodekuaiBase/Arithmetic_PaoDeKuaiBase.js",
         "src/poker_paodekuaiBase/PlayPanel_PDK.js",
         "src/poker_paodekuaiBase/WinGamePanel_PaoDeKuai.js",
-		
-		"src/poker_paodekuaiXS/Arithmetic_pdkXS.js",
-		"src/poker_paodekuaiXS/CreateRoomNode_PaoDeKuaiXS.js",
-		"src/poker_paodekuaiXS/PlayPanel_PaoDeKuaiXS.js",
-		"src/poker_paodekuaiXS/WinGamePanel_PDKXS.js",
+
+        "src/poker_paodekuaiXS/Arithmetic_pdkXS.js",
+        "src/poker_paodekuaiXS/CreateRoomNode_PaoDeKuaiXS.js",
+        "src/poker_paodekuaiXS/PlayPanel_PaoDeKuaiXS.js",
+        "src/poker_paodekuaiXS/WinGamePanel_PDKXS.js",
 
 
         "src/poker_paodekuai/CreateRoomNode_paodekuai.js",
@@ -297,8 +289,15 @@
         "src/poker_paodekuaiLYG/PlayPanel_PaoDeKuaiLYG.js",
 
         "src/poker_paodekuai/WinGamePanel_PDK.js",
-        "src/poker_paodekuaiLYG/WinGamePanel_PDKLYG.js"
+        "src/poker_paodekuaiLYG/WinGamePanel_PDKLYG.js",
 
+
+        "src/YaAn/Homeview.js",
+        "src/YaAn/CreateRoomPanel.js",
+        "src/YaAn/CreateRoomNode.js",
+        "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
+        "src/YaAn/Red20/CreateRoomNode_red20.js",
+        "src/YaAn/Red20/WinGamePanel.js"
 
     ]
 }

@@ -86,7 +86,7 @@
                   "ScaleY": 1.0
                 },
                 "Position": {
-                  "X": 446.4979,
+                  "X": 446.5,
                   "Y": 565.0
                 },
                 "Scale": {
@@ -105,8 +105,6 @@
                   "X": 1.0,
                   "Y": 1.0
                 },
-                "LeftMargin": -0.0021,
-                "RightMargin": 0.0021,
                 "Tag": 541,
                 "Children": [
                   {
@@ -1903,20 +1901,20 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Default",
-                          "Path": "Default/Button_Press.png",
+                          "Type": "Normal",
+                          "Path": "Red20/Common/minus-1.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
-                          "Type": "Default",
-                          "Path": "Default/Button_Normal.png",
+                          "Type": "Normal",
+                          "Path": "Red20/Common/minus-1.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
                         "Scale9OriginY": 11,
-                        "Scale9Width": 16,
-                        "Scale9Height": 14,
+                        "Scale9Width": 24,
+                        "Scale9Height": 32,
                         "OutlineColor": {
                           "G": 0,
                           "B": 0
@@ -1934,8 +1932,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 182.5925,
-                          "Y": 20.8322
+                          "X": 195.9581,
+                          "Y": 21.5005
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -1944,70 +1942,76 @@
                         "CColor": {},
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.2045,
-                          "Y": 0.3472
+                          "X": 0.2194,
+                          "Y": 0.3583
                         },
                         "PreSize": {
-                          "X": 0.0448,
-                          "Y": 0.6667
+                          "X": 0.0504,
+                          "Y": 0.75
                         },
-                        "LeftMargin": 162.5925,
-                        "RightMargin": 690.4075,
-                        "TopMargin": 19.1678,
-                        "BottomMargin": 0.8322,
+                        "LeftMargin": 173.4581,
+                        "RightMargin": 674.5419,
+                        "TopMargin": 15.9995,
+                        "BottomMargin": -0.9995,
                         "Tag": 581,
                         "ActionTag": -687221717,
                         "Size": {
-                          "X": 40.0,
-                          "Y": 40.0
+                          "X": 45.0,
+                          "Y": 45.0
                         },
                         "Name": "BtnMinusBaseScore",
                         "ctype": "ButtonObjectData"
                       },
                       {
-                        "FontSize": 24,
-                        "IsCustomSize": true,
-                        "LabelText": "20",
-                        "PlaceHolderText": "",
-                        "MaxLengthText": 10,
-                        "TouchEnable": true,
+                        "FontSize": 20,
+                        "LabelText": "1",
+                        "HorizontalAlignmentType": "HT_Center",
+                        "VerticalAlignmentType": "VT_Center",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
                         "AnchorPoint": {
                           "ScaleX": 0.5,
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 291.6831,
-                          "Y": 19.0233
+                          "X": 304.4666,
+                          "Y": 20.0
                         },
                         "Scale": {
                           "ScaleX": 1.0,
                           "ScaleY": 1.0
                         },
-                        "CColor": {
-                          "G": 244,
-                          "B": 171
-                        },
+                        "CColor": {},
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.3266,
-                          "Y": 0.3171
+                          "X": 0.3409,
+                          "Y": 0.3333
                         },
                         "PreSize": {
-                          "X": 0.0448,
-                          "Y": 0.3667
+                          "X": 0.0112,
+                          "Y": 0.3333
                         },
-                        "LeftMargin": 271.6831,
-                        "RightMargin": 581.3169,
-                        "TopMargin": 29.9767,
-                        "BottomMargin": 8.0233,
-                        "Tag": 587,
-                        "ActionTag": 75683926,
+                        "LeftMargin": 299.4666,
+                        "RightMargin": 583.5333,
+                        "TopMargin": 30.0,
+                        "BottomMargin": 10.0,
+                        "Tag": 454,
+                        "ActionTag": 1252190903,
                         "Size": {
-                          "X": 40.0,
-                          "Y": 22.0
+                          "X": 10.0,
+                          "Y": 20.0
                         },
                         "Name": "BaseScore",
-                        "ctype": "TextFieldObjectData"
+                        "ctype": "TextObjectData"
                       },
                       {
                         "FontSize": 14,
@@ -2023,20 +2027,20 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Default",
-                          "Path": "Default/Button_Press.png",
+                          "Type": "Normal",
+                          "Path": "Red20/Common/plus-1.png",
                           "Plist": ""
                         },
                         "NormalFileData": {
-                          "Type": "Default",
-                          "Path": "Default/Button_Normal.png",
+                          "Type": "Normal",
+                          "Path": "Red20/Common/plus-1.png",
                           "Plist": ""
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
                         "Scale9OriginY": 11,
-                        "Scale9Width": 16,
-                        "Scale9Height": 14,
+                        "Scale9Width": 24,
+                        "Scale9Height": 32,
                         "OutlineColor": {
                           "G": 0,
                           "B": 0
@@ -2054,8 +2058,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 416.4813,
-                          "Y": 21.0507
+                          "X": 407.793,
+                          "Y": 20.3824
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2064,22 +2068,22 @@
                         "CColor": {},
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.4664,
-                          "Y": 0.3508
+                          "X": 0.4567,
+                          "Y": 0.3397
                         },
                         "PreSize": {
-                          "X": 0.0448,
-                          "Y": 0.6667
+                          "X": 0.0504,
+                          "Y": 0.75
                         },
-                        "LeftMargin": 396.4813,
-                        "RightMargin": 456.5187,
-                        "TopMargin": 18.9493,
-                        "BottomMargin": 1.0507,
+                        "LeftMargin": 385.293,
+                        "RightMargin": 462.707,
+                        "TopMargin": 17.1176,
+                        "BottomMargin": -2.1176,
                         "Tag": 586,
                         "ActionTag": -31166349,
                         "Size": {
-                          "X": 40.0,
-                          "Y": 40.0
+                          "X": 45.0,
+                          "Y": 45.0
                         },
                         "Name": "BtnPlusBaseScore",
                         "ctype": "ButtonObjectData"
@@ -2215,7 +2219,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -2330,7 +2334,7 @@
                         },
                         "DisableBackFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "NodeNormalFileData": {
@@ -2340,7 +2344,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -2563,7 +2567,7 @@
                         },
                         "DisableBackFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "NodeNormalFileData": {
@@ -2573,7 +2577,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -2688,7 +2692,7 @@
                         },
                         "DisableBackFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "NodeNormalFileData": {
@@ -2698,7 +2702,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -2813,7 +2817,7 @@
                         },
                         "DisableBackFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "NodeNormalFileData": {
@@ -2823,7 +2827,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -3905,7 +3909,7 @@
                         },
                         "DisableBackFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "NodeNormalFileData": {
@@ -3915,7 +3919,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
+                          "Path": "Red20/Common/RadioForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -4966,7 +4970,6 @@
                         "ctype": "TextObjectData"
                       },
                       {
-                        "CheckedState": true,
                         "NormalBackFileData": {
                           "Type": "Normal",
                           "Path": "createNewPng/daTC1_19.png",
@@ -4989,7 +4992,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_19.png",
+                          "Path": "Red20/Common/CheckBoxForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -5091,7 +5094,6 @@
                         "ctype": "CheckBoxObjectData"
                       },
                       {
-                        "CheckedState": true,
                         "NormalBackFileData": {
                           "Type": "Normal",
                           "Path": "createNewPng/daTC1_19.png",
@@ -5323,7 +5325,6 @@
                         "ctype": "TextObjectData"
                       },
                       {
-                        "CheckedState": true,
                         "NormalBackFileData": {
                           "Type": "Normal",
                           "Path": "createNewPng/daTC1_19.png",
@@ -5336,7 +5337,7 @@
                         },
                         "DisableBackFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_19.png",
+                          "Path": "Red20/Common/CheckBoxForbidden.png",
                           "Plist": ""
                         },
                         "NodeNormalFileData": {
@@ -5346,7 +5347,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_19.png",
+                          "Path": "Red20/Common/CheckBoxForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -5448,7 +5449,6 @@
                         "ctype": "CheckBoxObjectData"
                       },
                       {
-                        "CheckedState": true,
                         "NormalBackFileData": {
                           "Type": "Normal",
                           "Path": "createNewPng/daTC1_19.png",
@@ -5461,7 +5461,7 @@
                         },
                         "DisableBackFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_19.png",
+                          "Path": "Red20/Common/CheckBoxForbidden.png",
                           "Plist": ""
                         },
                         "NodeNormalFileData": {
@@ -5471,7 +5471,7 @@
                         },
                         "NodeDisableFileData": {
                           "Type": "Normal",
-                          "Path": "createNewPng/daTC1_19.png",
+                          "Path": "Red20/Common/CheckBoxForbidden.png",
                           "Plist": ""
                         },
                         "TouchEnable": true,
@@ -5573,7 +5573,6 @@
                         "ctype": "CheckBoxObjectData"
                       },
                       {
-                        "CheckedState": true,
                         "NormalBackFileData": {
                           "Type": "Normal",
                           "Path": "createNewPng/daTC1_19.png",
@@ -5698,7 +5697,6 @@
                         "ctype": "CheckBoxObjectData"
                       },
                       {
-                        "CheckedState": true,
                         "NormalBackFileData": {
                           "Type": "Normal",
                           "Path": "createNewPng/daTC1_19.png",
@@ -5823,7 +5821,6 @@
                         "ctype": "CheckBoxObjectData"
                       },
                       {
-                        "CheckedState": true,
                         "NormalBackFileData": {
                           "Type": "Normal",
                           "Path": "createNewPng/daTC1_19.png",
@@ -5948,7 +5945,6 @@
                         "ctype": "CheckBoxObjectData"
                       },
                       {
-                        "CheckedState": true,
                         "NormalBackFileData": {
                           "Type": "Normal",
                           "Path": "createNewPng/daTC1_19.png",
@@ -7627,14 +7623,16 @@
         "createNewPng/daTC1_19.png",
         "createNewPng/daTC1_20.png",
         "Default/Button_Disable.png",
-        "Default/Button_Normal.png",
-        "Default/Button_Press.png",
         "fonts/fzcy.ttf",
         "friendCards/btn_ruledelete_n.png",
         "friendCards/btn_ruledelete_s.png",
         "friendCards/btn_ruleretain_n.png",
         "friendCards/btn_ruleretain_s.png",
-        "friendCards/int_playwords.png"
+        "friendCards/int_playwords.png",
+        "Red20/Common/CheckBoxForbidden.png",
+        "Red20/Common/minus-1.png",
+        "Red20/Common/plus-1.png",
+        "Red20/Common/RadioForbidden.png"
       ],
       "ctype": "GameFileData"
     }

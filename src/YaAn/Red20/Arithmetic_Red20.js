@@ -1,5 +1,180 @@
 (function () {
     let majiang = {};
+    majiang.actionCardList = [];
+    majiang.lastTableOutCard = 0; //最后出的牌或翻的牌
+    majiang.isActionByTableCard = false;
+    majiang.updateActionCard = function (card = null) {
+        if (card) {
+            this.actionCardList.push(card);
+        } else {
+            this.actionCardList = [];
+        }
+    }
+    /**
+     * 能操作的card
+     * @param {玩家数据} pl 
+     */
+    majiang.performActionCards = function (pl) {
+        const cards = pl.mjhand,
+            eatFlg = pl.eatFlag,
+            Rule = MjClient.data.sData.tData.Rule,
+            lastD = MjClient.playui.TableOutData;
+        this.lastTableOutCard = lastD.pos != -1 ? MjClient.playui.TableOutData.Card : null;
+        let getCardMap = () => {
+            let cardMap = new Map();
+            cards.forEach(card => {
+                let num = this.getCardNum(card);
+                let data = cardMap.get(num);
+                if (data) {
+                    data.push(card);
+                    cardMap.set(num, data);
+                } else {
+                    cardMap.set(num, [card]);
+                }
+            })
+            cc.log('LLL++getCardMap', JSON.stringify(cardMap))
+            return cardMap;
+        }
+        cc.log("玩家手牌+++++++++++++", JSON.stringify(cards));
+        cc.log('LLL++lastTableOutCard', this.lastTableOutCard);
+        if (eatFlg & 1) {//吃
+            let lastCard = this.lastTableOutCard;
+            if (lastCard) {
+                let lastNum = this.getCardNum(lastCard), chiCards = [];
+                cards.forEach(card => {
+                    if ((this.getCardNum(card) + lastNum) === 14) chiCards.push(card);
+                })
+                for (let _i = 0; _i < chiCards.length; _i++) {
+                    const card = chiCards[_i];
+                    if (this.getCardColor(card) === 4) continue;
+                    if (Rule.Allow7AsKing && this.getCardNum(card) === 7) continue;
+                    let chi = {
+                        type: 'chi',
+                        card: card
+                    }
+                    this.updateActionCard(chi);
+                    this.isActionByTableCard = true;
+                }
+            }
+        }
+        if (eatFlg & 2) {
+            let lastCard = this.lastTableOutCard;
+            //打出的牌或翻的牌
+            if (lastCard) {
+                let lastNum = this.getCardNum(lastCard), pengCards = [];
+                cards.forEach(card => {
+                    if (this.getCardNum(card) === lastNum) pengCards.push(card);
+                })
+
+                if (pengCards.length >= 2) {
+                    if (this.getCardColor(pengCards[0]) != 4 && Rule.Allow7AsKing && this.getCardNum(pengCards[0]) != 7) {
+                        let peng = {
+                            type: 'peng',
+                            card: pengCards[0]
+                        }
+                        this.updateActionCard(peng);
+                        this.isActionByTableCard = true;
+                    }
+                }
+            } else {//自己进的牌
+                let cardMap = getCardMap();
+                let peng = [];
+                cardMap.forEach(value => {
+                    if (value.length >= 3) peng.push(value[0]);
+                })
+                cc.log('LLL+++peng[]', JSON.stringify(peng));
+                for (let _i = 0; _i < peng.length; _i++) {
+                    let card = peng[_i];
+                    if (this.getCardColor(card) === 4) continue;
+                    if (Rule.Allow7AsKing && this.getCardNum(card) === 7) continue;
+                    let p = {
+                        type: 'peng',
+                        card: card
+                    }
+                    this.updateActionCard(p);
+                    this.isActionByTableCard = false;
+                }
+            }
+        }
+        if (eatFlg & 4) {
+            let lastCard = this.lastTableOutCard, lastNum = this.getCardNum(lastCard);
+            //别人打出的牌或翻的牌
+            if (lastCard) {
+                //手牌里找
+                let gangCards = [];
+                cards.forEach(card => {
+                    if (this.getCardNum(card) === lastNum) gangCards.push(card);
+                })
+                if (gangCards.length === 3) {
+                    if (this.getCardColor(gangCards[0]) != 4 && Rule.Allow7AsKing && this.getCardNum(gangCards[0]) != 7) {
+                        let gang = {
+                            type: 'gang',
+                            card: gangCards[0]
+                        }
+                        this.updateActionCard(gang);
+                        this.isActionByTableCard = true;
+                    }
+                }
+                //碰牌里找
+                else {
+                    cc.log('-------peng-----', JSON.stringify(pl.mjpeng.concat(pl.mjanpeng)))
+                    let peng = pl.mjpeng.find(child => {
+                        return this.getCardNum(child[0]) === lastNum;
+                    })
+                    if (!peng) peng = pl.mjanpeng.find(child => {
+                        return this.getCardNum(child[0]) === lastNum;
+                    })
+                    if (peng) {
+                        let gang = {
+                            type: 'gang',
+                            card: lastCard
+                        }
+                        this.updateActionCard(gang);
+                        this.isActionByTableCard = true;
+                    }
+                }
+            }
+            //自己进的牌
+            else {
+                let cardMap = getCardMap();
+                let gang = [];
+                cardMap.forEach(value => {
+                    if (value.length > 3) gang.push(value[0]);
+                })
+                //手牌里能杠的牌
+                if (gang.length > 0) {
+                    gang.forEach(card => {
+                        if (this.getCardColor(card) != 4 && Rule.Allow7AsKing && this.getCardNum(card) != 7) {
+                            let gang = {
+                                type: 'gang',
+                                card: card
+                            }
+                            this.updateActionCard(gang);
+                            this.isActionByTableCard = false;
+                        }
+                    })
+                }
+                //碰转杠的牌
+                else {
+                    let gangData = [];
+                    pl.mjanpeng && pl.mjanpeng.forEach(gang => {
+                        let num = this.getCardNum(gang);
+                        cards.forEach(card => {
+                            if (this.getCardNum(card) === num) gangData.push(card);
+                        })
+                    })
+                    gangData.forEach(card => {
+                        let gang = {
+                            type: 'gang',
+                            card: card
+                        }
+                        this.updateActionCard(gang);
+                        this.isActionByTableCard = false;
+                    })
+                }
+            }
+        }
+    }
     //牌张数量
     majiang.getAllCardsTotal = function () {
         var tData = MjClient.data.sData.tData;
@@ -16,151 +191,94 @@
     }
     //手牌排序
     majiang.cardSort = (cardsData) => {
-        let rule = MjClient.data.sData.tData.Rule;
-        cardsData.sort((a, b) => {
-            if (majiang.getCardNum(b) === majiang.getCardNum(a)) {
-                //两都为红
-                if (majiang.getCardColor(a) % 2 === 0 && majiang.getCardColor(b) % 2 === 0) {
-                    return majiang.getCardColor(a) - majiang.getCardColor(b);
-                } else if (majiang.getCardColor(a) % 2 === 0) {
-                    return -1;
-                } else if (majiang.getCardColor(b) % 2 === 0) {
-                    return 1;
-                } else {
-                    return majiang.getCardColor(a) - majiang.getCardColor(b);
-                }
-            } else {
-                //从大到小
-                return majiang.getCardNum(b) - majiang.getCardNum(a)
-            }
-        });
-        let wang = cardsData.filter(card => {
-            return majiang.getCardColor(card) === 4;
-        })
-
-        //获取碰牌和对子
-        const getDui = (leftCardData) => {
-            //碰杠对子
-            let totalPeng = new Map();
-            let len = leftCardData.length;
-            for (let k = 0; k < len; k++) {
-                let peng = [];
-                peng.push(leftCardData[k]);
-                let pengNum = majiang.getCardNum(leftCardData[k]);
-                for (let i = k + 1; i < len; i++) {
-                    if (pengNum === majiang.getCardNum(leftCardData[i])) {
-                        peng.push(leftCardData[i]);
-                    }
-                }
-                if (peng.length >= 2 && !totalPeng.has(pengNum)) {
-                    totalPeng.set(pengNum, peng);
-                }
-            }
-            //去掉碰杠
-            let lastCard = leftCardData.filter(card => {
-                let out = false;
-                totalPeng.forEach((value) => {
-                    if (value.indexOf(card) !== -1) {
-                        out = true;
-                    }
-                })
-                if (out) return false;
-                else return true;
-            })
-            //对子
-            let dui14 = [];
-            len = lastCard.length;
-            for (let k = 0; k < len; k++) {
-                let dui = [];
-                dui.push(lastCard[k]);
-                let duiNum = majiang.getCardNum(lastCard[k]);
-                for (let i = k + 1; i < len; i++) {
-                    if ((duiNum + majiang.getCardNum(lastCard[i])) === 14) {
-                        dui.push(lastCard[i]);
-                    }
-                }
-                if (dui.length === 2 && dui14.indexOf(dui[0]) === -1 && dui14.indexOf(dui[1]) === -1) {
-                    dui14 = dui14.concat(dui);
-                }
-            }
-            //碰和对
-            let pengAndDui = [];
-            totalPeng.forEach((value) => {
-                pengAndDui = pengAndDui.concat(value);
-            })
-            pengAndDui = pengAndDui.concat(dui14);
-
-
-            cardsData = leftCardData.filter(card => {
-                if (pengAndDui.indexOf(card) !== -1) return false;
-                else return true;
-            })
-            return pengAndDui
-        }
-
-        let noWang = [];
-        let newCards = [];
-        if (rule.Allow7AsKing) {
-            let wangBy7 = cardsData.filter(card => {
-                return majiang.getCardNum(card) === 7;
-            })
-            noWang = cardsData.filter(card => {
-                return majiang.getCardColor(card) !== 4 && majiang.getCardNum(card) !== 7
-            })
-            let pengDui = getDui(noWang);
-
-            newCards = pengDui.concat(cardsData).concat(wangBy7).concat(wang);
-
-        } else {
-            noWang = cardsData.filter(card => {
-                return majiang.getCardColor(card) !== 4;
-            })
-            let pengDui = getDui(noWang);
-            newCards = pengDui.concat(cardsData).concat(wang);
-        }
-        cc.log('------------排序之后的牌------------',JSON.stringify(newCards))
-        return newCards;
+        return cardsData;
     }
 
     //叠牌 找相加等于14的
-    majiang.StackCards = function (cards) {
+    majiang.StackCards = function (cards, first = false) {
         let rule = MjClient.data.sData.tData.Rule;
-        let sumCard = [];
         cards = cards.concat([]);
-        for (let i = 0; i < cards.length; i++) {
-            let cNumI = this.getCardNum(cards[i]), flg = true;
-            if (cNumI === 15 || (rule.Allow7AsKing && cNumI === 7)) {
-                sumCard.push([cards[i]])
-                cards.splice(i, 1);
-                --i;
-                continue;
+        first && cards.sort((a, b) => {
+            if (this.getCardNum(b) === this.getCardNum(a)) {
+                //两都为红
+                if (this.getCardColor(a) % 2 === 0 && this.getCardColor(b) % 2 === 0) {
+                    return this.getCardColor(a) - this.getCardColor(b);
+                } else if (this.getCardColor(a) % 2 === 0) {
+                    return -1;
+                } else if (this.getCardColor(b) % 2 === 0) {
+                    return 1;
+                } else {
+                    return this.getCardColor(a) - this.getCardColor(b);
+                }
+            } else {
+                //从大到小
+                return this.getCardNum(b) - this.getCardNum(a)
             }
-            for (let j = i + 1; j < cards.length; j++) {
-                if (cNumI + this.getCardNum(cards[j]) === 14) {
-                    sumCard.push([cards[i], cards[j]])
-                    cards.splice(i, 1);
-                    --j;
-                    cards.splice(j, 1);
-                    --i;
-                    flg = false;
-                    break;
+        });
+        //王
+        let wang = [], wangBy7 = [], mulCards = [], sumCard = [];
+        for (let _i = 0; _i < cards.length; _i++) {
+            const c = cards[_i],
+                cCol = this.getCardColor(c),
+                cNum = this.getCardNum(c);
+            if (cCol === 4) {
+                wang.push([c]);
+                cards.splice(_i, 1);
+                _i--;
+            } else if (cNum === 7 && rule.Allow7AsKing) {
+                wangBy7.push([c]);
+                cards.splice(_i, 1);
+                _i--;
+            } else {
+                let mul = [];
+                for (let _j = _i + 1; _j < cards.length; _j++) {
+                    const cj = cards[_j],
+                        cNumj = this.getCardNum(cj);
+                    if (cNum === cNumj) {
+                        mul.push(cj);
+                        cards.splice(_j, 1);
+                        _j--;
+                    }
+                }
+                if (mul.length > 0) {
+                    mul.unshift(c);
+                    cards.splice(_i, 1);
+                    _i--;
+                    mulCards.push(mul);
+                } else {
+                    for (let _j = _i + 1; _j < cards.length; _j++) {
+                        const cj1 = cards[_j],
+                            cNumj1 = this.getCardNum(cj1);
+                        if (cNum + cNumj1 === 14) {
+                            mul.push(cj1);
+                            cards.splice(_j, 1);
+                            _j--;
+                            break;
+                        }
+                    }
+                    if (mul.length > 0) {
+                        mul.unshift(c);
+                        cards.splice(_i, 1);
+                        _i--;
+                        mulCards.push(mul);
+                    }
                 }
             }
-            if (flg) {
-                sumCard.push([cards[i]]);
-                cards.splice(i, 1);
-                --i;
-            }
         }
-        cc.log("LLL++排序SumCard", JSON.stringify(sumCard));
+        let sing = [];
+        cards.map(cds => { sing.push([cds]) });
+        if (rule.Allow7AsKing) {
+            sumCard = mulCards.sort((a, b) => b.length - a.length).concat(sing).concat(wangBy7).concat(wang);
+        } else {
+            sumCard = mulCards.sort((a, b) => b.length - a.length).concat(sing).concat(wang);
+        }
+        cc.log("LLL++排序SumCard", JSON.stringify(sumCard), first);
         return sumCard;
     }
 
-    majiang.CardCount = function (pl)
-    {
+    majiang.CardCount = function (pl) {
         var rtn = (pl.mjpeng.length + pl.mjgang0.length + pl.mjgang1.length) * 3 + pl.mjchi.length;
-        if(pl.mjhand)
-        {
+        if (pl.mjhand) {
             rtn += pl.mjhand.length;
         }
         return rtn;
@@ -175,8 +293,7 @@
     majiang.canGang1 = function () { return [] }
     majiang.isCardFlower = function () { return false }
     //是否是混子
-    majiang.isEqualHunCard = function(card)
-    {
+    majiang.isEqualHunCard = function (card) {
         return card == 200;
     }
 
