@@ -1,10 +1,10 @@
-var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
+var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
     ctor: function (layer, data) {
         this._super(layer, data);
     },
     //创建ui 以及变量保存
     initAll: function (IsFriendCard) {
-        let bg_node = ccs.load("bg_red20.json").node;
+        let bg_node = ccs.load("bg_xuezhan.json").node;
         this.addChild(bg_node);
         bg_node.setScale(0.9, 0.9)
         bg_node.setPosition(-200, 10);
@@ -62,9 +62,9 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
     },
     initEnd: function () {
         this._super();
-        this.initChiRule(0);
-        this.initFanRule(0);
-        this.initLongSiDui();
+        // this.initChiRule(0);
+        // this.initFanRule(0);
+        // this.initLongSiDui();
     },
 
     initPlayNode: function () {
@@ -82,8 +82,6 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             gameType: gameType,
             maxPlayer: maxP,
             trustTime: 0, //托管时间
-            gps: this._nodeGPS.isSelected(),//GPS
-            payWay: [0, 2, 1][this.getRedioSelectByName('zhifufangshi')],//付费方式
 
             MaxPlayerCount: maxP,
             MaxGameCount: Number(Object.keys(pPriceCfg[maxP])[this.getRedioSelectByName('jushu')]),
@@ -108,8 +106,9 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             Black50: this.getCheckboxSelectedByName('btnCheck50'),//黑50
             EnableTTF: [true, false][this.getRedioSelectByName('suanfan')],//是否开启梯梯番模式否则为跟斗番
             EnableGSH: this.getCheckboxSelectedByName('btnCheckGangHua'),//是否开启杠上花
+            MustOpenGPS: this._nodeGPS.isSelected(),//GPS
             BaseScore: Number(score),
-            AllowSameIP: true,
+            AllowSameIP: false,
         };
         cc.log("createara: " + JSON.stringify(Rule));
         return Rule;

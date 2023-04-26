@@ -50,7 +50,6 @@
         "src/CommonFunc_paohuzi_SR.js",
         "src/CommonFunc_Layer.js",
         "src/Arithmetic_LYG.js",
-        "src/YaAn/Red20/Arithmetic_Red20.js",
         "src/Arithmetic_shuyang.js",
         "src/Arithmetic_guanyun.js",
         "src/Arithmetic_guannan.js",
@@ -91,8 +90,6 @@
         "src/CreateRoomNode_tuantuanzhuan.js",
         "src/CreateRoomNode_HZMJ.js",
 
-
-
         "src/CreateRoomNode_siyang.js",
         "src/CreateRoomNode_siyanghh.js",
         "src/CreateRoomNode_ganyu.js",
@@ -101,7 +98,6 @@
         "src/CreateRoomPanel.js",
         "src/JoinRoomPanel.js",
         "src/PlayerGamePanel_LYG.js",
-        "src/YaAn/Red20/PlayerGamePanel_Red20.js",
         "src/PlayerGamePanel_shuyang.js",
         "src/PlayerGamePanel_guanyun.js",
         "src/PlayerGamePanel_guannan.js",
@@ -112,10 +108,7 @@
         "src/PlayerGamePanel_tuantuanzhuan.js",
         "src/PlayerGamePanel_HZMJ.js",
 
-
-
         "src/PlayerGamePanel_ganyu.js",
-
 
         "src/PlayerGamePanel_siyang.js",
         "src/PlayerGamePanel_siyanghh.js",
@@ -135,7 +128,6 @@
 
         "src/WinGamePanel_tuantuanzhuan.js",
         "src/WinGamePanel_HZMJ.js",
-
 
         "src/WinGamePanel_siyang.js",
         "src/WinGamePanel_siyanghh.js",
@@ -250,8 +242,6 @@
         "src/poker_doudizhu/PlayerGamePanel_doudizhu.js",
         "src/poker_doudizhu/WinGamePanel_doudizhu.js",
 
-
-
         "src/majiang_xiangshui/Arithmetic_xiangshui.js",
         "src/majiang_xiangshui/CreateRoomNode_xiangshui.js",
         "src/majiang_xiangshui/PlayerGamePanel_xiangshui.js",
@@ -266,8 +256,6 @@
         "src/majiang_TYHZ/CreateRoomNode_TYHZ.js",
         "src/majiang_TYHZ/PlayerGamePanel_TYHZ.js",
         "src/majiang_TYHZ/WinGamePanel_TYHZ.js",
-
-
 
         "src/poker_paodekuaiBase/Arithmetic_PaoDeKuaiBase.js",
         "src/poker_paodekuaiBase/PlayPanel_PDK.js",
@@ -291,13 +279,21 @@
         "src/poker_paodekuai/WinGamePanel_PDK.js",
         "src/poker_paodekuaiLYG/WinGamePanel_PDKLYG.js",
 
-
         "src/YaAn/Homeview.js",
         "src/YaAn/CreateRoomPanel.js",
         "src/YaAn/CreateRoomNode.js",
-        "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
-        "src/YaAn/Red20/CreateRoomNode_red20.js",
-        "src/YaAn/Red20/WinGamePanel.js"
 
+        "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
+
+        "src/YaAn/Red20/Arithmetic_Red20.js",
+        "src/YaAn/Red20/CreateRoomNode_red20.js",
+        "src/YaAn/Red20/PlayerGamePanel_Red20.js",
+        "src/YaAn/Red20/WinGamePanel.js",
+        "src/YaAn/Red20/ShowGameRule.js",
+
+        "src/YaAn/XueZhanMahjong/Arithmetic.js",
+        "src/YaAn/XueZhanMahjong/CreateRoomNode.js",
+        "src/YaAn/XueZhanMahjong/PlayerGamePanel.js",
+        "src/YaAn/XueZhanMahjong/WinGamePanel.js"
     ]
 }

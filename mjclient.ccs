@@ -4138,6 +4138,7 @@
             <Image Name="CheckBoxForbidden.png" />
             <Image Name="minus-1.png" />
             <Image Name="plus-1.png" />
+            <Image Name="pop_bg_big-1.png" />
             <Image Name="RadioForbidden.png" />
           </Folder>
           <Folder Name="Controller">
@@ -4936,6 +4937,7 @@
         <Project Name="endOne_PaoDeKuaiLYG.csd" Type="Layer" />
         <Project Name="endOne_PaoDeKuaiTY.csd" Type="Layer" />
         <Project Name="endOne_PaoDeKuaiXS.csd" Type="Layer" />
+        <Project Name="endOne_Red20.csd" Type="Layer" />
         <Project Name="endOne_shuyang.csd" Type="Layer" />
         <Project Name="endOne_siyang.csd" Type="Layer" />
         <Project Name="endOne_siyang_new.csd" Type="Layer" />
@@ -5092,11 +5094,6 @@
         <Project Name="RankRequstLayer.csd" Type="Layer" />
         <Project Name="RecommendLayer_active.csd" Type="Layer" />
         <Project Name="RecommendLayer_activeList.csd" Type="Layer" />
-        <Project Name="Red20_BottomHandCard.csd" Type="Layer" />
-        <Project Name="Red20_BRChiCards.csd" Type="Layer" />
-        <Project Name="Red20_LTChiCards.csd" Type="Layer" />
-        <Project Name="Red20Scene.csd" Type="Layer" />
-        <Project Name="Red20Scene_old.csd" Type="Scene" />
         <Project Name="registerPhoneNumLayer-yzm.csd" Type="Layer" />
         <Project Name="Replay.csd" Type="Layer" />
         <Project Name="Replay_TDH.csd" Type="Layer" />
@@ -5151,7 +5148,8 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
-        <Project Name="endOne_Red20.csd" Type="Layer" />
+        <Project Name="bg_xuezhan.csd" Type="Node" />
+        <Project Name="gamerulebg.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

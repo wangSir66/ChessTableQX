@@ -540,7 +540,10 @@ MjClient.netCallBack = {
                 MjClient.gameType = d.tData.gameType;
             // MjClient.majiang 保存当前游戏玩法
             switch (MjClient.gameType) {
-                case MjClient.GAME_TYPE.RED_20_POKER:
+                case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                    MjClient.majiang = MjClient.majiang_ynxuezhan;
+                    break;
+                case MjClient.GAME_TYPE.RED_20_POKER://红20
                     MjClient.majiang = MjClient.majiang_red20;
                     break;
                 case MjClient.GAME_TYPE.LIAN_YUN_GANG:
@@ -1456,7 +1459,10 @@ MjClient.netCallBack = {
                 cc.log("MjClient.gameType    ", MjClient.gameType);
                 //加载游戏界面
                 switch (MjClient.gameType) {
-                    case MjClient.GAME_TYPE.RED_20_POKER:
+                    case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                        MjClient.Scene.addChild(new PlayLayer_YNXueZhan());
+                        break;
+                    case MjClient.GAME_TYPE.RED_20_POKER://红20
                         MjClient.Scene.addChild(new PlayerGamePanel_Red20());
                         break;
                     case MjClient.GAME_TYPE.SHU_YANG:

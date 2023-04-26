@@ -308,8 +308,8 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="base" ActionTag="73313409" Tag="2065" IconVisible="False" LeftMargin="860.0000" RightMargin="-920.0000" TopMargin="-78.1036" BottomMargin="-41.8964" IsCustomSize="True" FontSize="28" LabelText="3王" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="60.0000" Y="120.0000" />
+                  <AbstractNodeData Name="base" ActionTag="73313409" Tag="2065" IconVisible="False" LeftMargin="860.0000" RightMargin="-910.0000" TopMargin="-78.1036" BottomMargin="-41.8964" IsCustomSize="True" FontSize="28" LabelText="3王3王" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="50.0000" Y="120.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="860.0000" Y="18.1036" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -491,8 +491,8 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="base" ActionTag="-1099225787" Tag="2081" IconVisible="False" LeftMargin="860.0000" RightMargin="-920.0000" TopMargin="-78.1035" BottomMargin="-41.8965" IsCustomSize="True" FontSize="28" LabelText="3王" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="60.0000" Y="120.0000" />
+                  <AbstractNodeData Name="base" ActionTag="-1099225787" Tag="2081" IconVisible="False" LeftMargin="860.0000" RightMargin="-910.0000" TopMargin="-78.1035" BottomMargin="-41.8965" IsCustomSize="True" FontSize="28" LabelText="3王" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="50.0000" Y="120.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="860.0000" Y="18.1035" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -674,8 +674,8 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="base" ActionTag="-1952513413" Tag="2097" IconVisible="False" LeftMargin="860.0000" RightMargin="-920.0000" TopMargin="-78.1035" BottomMargin="-41.8965" IsCustomSize="True" FontSize="28" LabelText="3王" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="60.0000" Y="120.0000" />
+                  <AbstractNodeData Name="base" ActionTag="-1952513413" Tag="2097" IconVisible="False" LeftMargin="860.0000" RightMargin="-910.0000" TopMargin="-78.1035" BottomMargin="-41.8965" IsCustomSize="True" FontSize="28" LabelText="3王" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="50.0000" Y="120.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="860.0000" Y="18.1035" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -857,8 +857,8 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="base" ActionTag="516971244" Tag="2113" IconVisible="False" LeftMargin="860.0000" RightMargin="-920.0000" TopMargin="-78.1035" BottomMargin="-41.8965" IsCustomSize="True" FontSize="28" LabelText="3王" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="60.0000" Y="120.0000" />
+                  <AbstractNodeData Name="base" ActionTag="516971244" Tag="2113" IconVisible="False" LeftMargin="860.0000" RightMargin="-910.0000" TopMargin="-78.1035" BottomMargin="-41.8965" IsCustomSize="True" FontSize="28" LabelText="3王" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="50.0000" Y="120.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="860.0000" Y="18.1035" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />

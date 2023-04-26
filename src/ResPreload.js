@@ -4,7 +4,6 @@
 
 var json_res = {};
 json_res[MjClient.APP_TYPE.YAAN] = [
-    "Red20Scene.json",
     "Red20_LTChiCards.json",
     "Red20_BRChiCards.json",
     "Red20_BottomHandCard.json",

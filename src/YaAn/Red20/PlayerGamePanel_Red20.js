@@ -1,46 +1,8 @@
 var actionZindex = 1000;
 //向服务器发送 过消息
 MjClient.MJPass2NetForRed20 = function () {
-    // console.log(">>>>>>>>>普通  过 <<<<<<<<");
     cc.log("====================send======pass=====");
-    var sData = MjClient.data.sData;
-    var tData = sData.tData;
     var eat = MjClient.playui.jsBind.eat;
-
-    // if (IsTurnToMe() && tData.tState == TableState.waitPut) {
-    //     var msg = "确认过";
-    //     if (eat.gang0._node.visible) {
-    //         msg += " 杠 ";
-    //     }
-
-    //     if (eat.hu._node.visible) {
-    //         msg += " 胡 ";
-    //     }
-
-    //     msg = msg + "吗?"
-    //     MjClient.showMsg(msg, function () {
-    //         //cc.log("==========1=============");
-    //         eat.gang0._node.visible = false;
-    //         eat.hu._node.visible = false;
-    //         eat.guo._node.visible = false;
-    //         eat.ting._node.visible = false;
-    //         eat.cancel._node.visible = false;
-    //         MJPassConfirmToServer();
-
-    //         cc.log("==================过胡---yes-----------");
-    //         // var cardsLength = getAllCardsTotal();
-    //         // var isLastFourCard = tData.cardNext > cardsLength - 4 && tData.cardNext <= cardsLength;
-    //         // if(isLastFourCard)
-    //         // {
-    //         //     MJPassConfirmToServer();
-    //         // }
-    //     }, function () { }, "1");
-    // }
-    // else {
-    //     if (eat.hu._node.visible) {
-    //         MjClient.showMsg("确认不胡吗?", MJPassConfirmToServer, function () { }, "1");
-    //     }
-    //     else {
     eat.gang0._node.visible = false;
     eat.hu._node.visible = false;
     eat.guo._node.visible = false;
@@ -49,15 +11,11 @@ MjClient.MJPass2NetForRed20 = function () {
     eat.chi0._node.visible = false;
     eat.peng._node.visible = false;
     MJPassConfirmToServer();
-    //     }
-    // }
 }
 
 // 这个没看懂干嘛的
 // off 是四个位置，根据off 显示四个位置的信息 by sking
 function SetUserVisible_Red20(node, off) {
-
-
     var pl = getUIPlayer(off);
     var head = node.getChildByName("head");
     var name = head.getChildByName("name");
@@ -220,34 +178,48 @@ function InitUserHandUI_Red20(node, off, action = false) {
     }
 }
 
-function initFlower_Red20() {
-    var flowerVisble = false;
-    var flowerZfbVisible = false;
-    var tData = MjClient.data.sData.tData;
-    cc.log("这是我选择的模式" + tData.areaSelectMode + "---------------------------------");
-    if (MjClient.gameType == MjClient.GAME_TYPE.LIAN_YUN_GANG) {
-
-        if (!tData.areaSelectMode)
-            return;
-
-        switch (tData.areaSelectMode.withFlowerType) {
-            case WithFlowerType.commonFlower:
-                flowerVisble = true;
-                flowerZfbVisible = false;
-                break;
-            case WithFlowerType.noFlower:
-                flowerVisble = false;
-                flowerZfbVisible = false;
-                break;
-            case WithFlowerType.zfbFlower:
-                flowerVisble = true;
-                flowerZfbVisible = true;
-                break;
-        }
+const initRuleLabel = (rule) => {
+    let str = [];
+    str.push(rule.MaxPlayerCount + '人' + rule.MaxGameCount + '局');
+    str.push(rule.MaxKingCount + '张王');
+    str.push('底分' + (rule.BaseScore || 1) + '分');
+    if (rule.EnableTTF) str.push("TT番");
+    else {
+        str.push('跟斗番');
+        str.push(rule.MaxFan + '番');
     }
+    if (rule.EnableChi) str.push('吃上家牌');
+    if (rule.EnableZiMo) str.push('自摸加番');
+    if (rule.Enable4Pairs) str.push('4对');
+    if (rule.EnableDragon4Pairs) str.push('龙4对');
+    if (rule.EnableDoubleDragon4Pairs) str.push('双龙4对');
+    if (rule.EnableJinGouDiao) str.push('金钩钓');
+    if (rule.EnableGolden20) str.push('金20' + rule.Golden20Fan + '番');
+    if (rule.IsCheckTing) str.push('流局査叫');
+    else str.push('流局不査叫');
+    if (rule.IsCheckFan) str.push('1番起胡');
+    else str.push('平胡可胡');
+    if (rule.Allow7AsKing) {
+        str.push('允许7当王');
+        if (rule.IsPoint7AsKing)
+            str.push('允许7当王算点');
+    }
+    else str.push('7不当王');
+    if (rule.AllowBaoTing) str.push('报听');
+    if (rule.EnableRed20Ting) str.push('满足红点>=20听牌');
+    if (rule.Red50) str.push('红50、黑50、红黑50');
+    if (rule.AllowSameIP) str.push('同IP可进');
+    else str.push('同IP不可进');
 
-    // initFlower(flowerVisble, flowerZfbVisible);
+    str.push(!rule.gps ? 'GPS(无限制)' : 'Gps不可进');
+
+    if (rule.trustTime) {
+        str.push('托管时间' + rule.trustTime + 's');
+    } else str.push('不托管');
+
+    return str.join('、');
 }
+
 //动画时长
 const Red20ActionTime = {
     //从中央落下到牌桌
@@ -650,34 +622,28 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0.03, 0.95],
                     [0, 0]
                 ],
-                // _run:function()
-                // {
-                //     var text = new ccui.Text();
-                //     text.setFontName(MjClient.fzcyfont);
-                //     text.setFontSize(20);
-                //     text.setRotation(-90);
-                //     text.setAnchorPoint(0,0.5);
-                //     text.setPosition(23.5, 20.5);
-                //     this.addChild(text);
-                //     text.schedule(function(){
-                //         var time = MjClient.getCurrentTime();
-                //         var str = time[0]+"/"+time[1]+"/"+ time[2]+" "+
-                //             (time[3]<10?"0"+time[3]:time[3])+":"+
-                //             (time[4]<10?"0"+time[4]:time[4])+":"+
-                //             (time[5]<10?"0"+time[5]:time[5]);
-                //         this.setString(str);
-                //     });
-                // }
             }
         },
         info:
         {
             _visible: false,
             _layout: [
-                [0.16, 0.16],
-                [0.01, 0.935],
+                [0.4, 0.4],
+                [0.5, 0.6],
                 [0, 0]
-            ]
+            ],
+            _event: {
+                initSceneData: function () {
+                    let tData = MjClient.data.sData.tData, rule = tData.Rule;
+                    if (tData.roomStatus != 102 && tData.roundNum == rule.MaxGameCount && tData.cardNext <= 0) {
+                        this.setString(initRuleLabel(rule));
+                        this.visible = true;
+                    } else this.visible = false;
+                },
+                mjhand: function () {
+                    this.visible = false;
+                }
+            }
         },
         gameName: {
             _visible: false,
@@ -2879,6 +2845,20 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             }
         },
+        rule_btn: {
+            _layout: [
+                [0.08, 0.08], [0.3, 0.95], [0, 0]
+            ],
+            _run: function () {
+                cc.eventManager.addListener(getTouchListener(), this);
+            },
+            _touch: function (btn, eT) {
+                if (eT == 2) {
+                    MjClient.showRuleView = new ShowGameRule_red20();
+                    MjClient.Scene.addChild(MjClient.showRuleView)
+                }
+            },
+        },
         tuoguan_btn: {
             _layout: [
                 [0.09, 0.09],
@@ -3090,6 +3070,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
     },
     ctor: function () {
         this._super();
+        this.TableOutData.pos = -1;
+        this.TableOutData.Card = 0;
         var playui = ccs.load('Play_Red20.json');
         this.srcMaxPlayerNum = MjClient.MaxPlayerNum;
         MjClient.MaxPlayerNum = parseInt(MjClient.data.sData.tData.maxPlayer);

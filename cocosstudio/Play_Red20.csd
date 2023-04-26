@@ -150,14 +150,14 @@
             <OutlineColor A="255" R="0" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="info" ActionTag="-252217799" Tag="214" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="6.1667" RightMargin="1013.8333" TopMargin="55.8720" BottomMargin="560.1280" FontSize="26" LabelText="宁波麻将            &#xA;3台&#xA;3百搭&#xA;东风圈" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="260.0000" Y="104.0000" />
-            <AnchorPoint ScaleY="1.0000" />
-            <Position X="6.1667" Y="664.1280" />
+          <AbstractNodeData Name="info" ActionTag="-252217799" Tag="214" IconVisible="False" LeftMargin="350.0000" RightMargin="330.0000" TopMargin="185.6800" BottomMargin="384.3200" IsCustomSize="True" FontSize="26" LabelText="" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="600.0000" Y="150.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="650.0000" Y="459.3200" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="0" G="0" B="0" />
-            <PrePosition X="0.0048" Y="0.9224" />
-            <PreSize X="0.2031" Y="0.1444" />
+            <PrePosition X="0.5078" Y="0.6379" />
+            <PreSize X="0.4688" Y="0.2083" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -2924,6 +2924,21 @@
             <DisabledFileData Type="Normal" Path="playing/gameTable/btn_yuyin_press.png" Plist="" />
             <PressedFileData Type="Normal" Path="playing/gameTable/btn_yuyin_press.png" Plist="" />
             <NormalFileData Type="Normal" Path="playing/gameTable/btn_yuyin_normal.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="rule_btn" ActionTag="-1287056415" Tag="1530" IconVisible="False" LeftMargin="341.3669" RightMargin="873.6331" TopMargin="9.6828" BottomMargin="639.3172" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="49" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="65.0000" Y="71.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="373.8669" Y="674.8172" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.2921" Y="0.9372" />
+            <PreSize X="0.0508" Y="0.0986" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
+            <PressedFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
+            <NormalFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

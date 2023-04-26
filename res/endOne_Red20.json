@@ -1380,7 +1380,7 @@
                   {
                     "IsCustomSize": true,
                     "FontSize": 28,
-                    "LabelText": "3王",
+                    "LabelText": "3王3王",
                     "FontResource": {
                       "Type": "Default",
                       "Path": "",
@@ -1426,13 +1426,13 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 860.0,
-                    "RightMargin": -920.0,
+                    "RightMargin": -910.0,
                     "TopMargin": -78.1036,
                     "BottomMargin": -41.8964,
                     "Tag": 2065,
                     "ActionTag": 73313409,
                     "Size": {
-                      "X": 60.0,
+                      "X": 50.0,
                       "Y": 120.0
                     },
                     "Name": "base",
@@ -2205,13 +2205,13 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 860.0,
-                    "RightMargin": -920.0,
+                    "RightMargin": -910.0,
                     "TopMargin": -78.1035,
                     "BottomMargin": -41.8965,
                     "Tag": 2081,
                     "ActionTag": -1099225787,
                     "Size": {
-                      "X": 60.0,
+                      "X": 50.0,
                       "Y": 120.0
                     },
                     "Name": "base",
@@ -2984,13 +2984,13 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 860.0,
-                    "RightMargin": -920.0,
+                    "RightMargin": -910.0,
                     "TopMargin": -78.1035,
                     "BottomMargin": -41.8965,
                     "Tag": 2097,
                     "ActionTag": -1952513413,
                     "Size": {
-                      "X": 60.0,
+                      "X": 50.0,
                       "Y": 120.0
                     },
                     "Name": "base",
@@ -3763,13 +3763,13 @@
                       "Y": 0.0
                     },
                     "LeftMargin": 860.0,
-                    "RightMargin": -920.0,
+                    "RightMargin": -910.0,
                     "TopMargin": -78.1035,
                     "BottomMargin": -41.8965,
                     "Tag": 2113,
                     "ActionTag": 516971244,
                     "Size": {
-                      "X": 60.0,
+                      "X": 50.0,
                       "Y": 120.0
                     },
                     "Name": "base",

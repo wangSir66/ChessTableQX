@@ -1,3 +1,12 @@
+//选项选中时的颜色处理  统一处理
+const BTNCOLOR1 = cc.color('#D96334');//选中
+const BTNCOLOR2 = cc.color('#8E8178');//禁用
+const BTNCOLOR3 = cc.color("#935C23");//未选中
+
+function cpp_callback(a, b) {
+    cc.log("cpp return two integer: " + a + " " + b);
+}
+
 var CreateRoomNodeYaAn = cc.Node.extend({
     bg_node: null,
     _view: null,
@@ -377,7 +386,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
 
 
     getCheckboxSelectedByName: function (str) {
-        cc.log('----查找某个按钮----', str)
         for (let _i = 0; _i < this._btnItems.length; _i++) {
             const btn = this._btnItems[_i];
             if (cc.sys.isObjectValid(btn) && btn.name == str) return btn.isSelected();

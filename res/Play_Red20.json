@@ -643,8 +643,9 @@
             "ctype": "TextObjectData"
           },
           {
+            "IsCustomSize": true,
             "FontSize": 26,
-            "LabelText": "宁波麻将            \n3台\n3百搭\n东风圈",
+            "LabelText": "",
             "OutlineColor": {
               "G": 0,
               "B": 0
@@ -657,11 +658,12 @@
             "ShadowOffsetX": 2.0,
             "ShadowOffsetY": -2.0,
             "AnchorPoint": {
-              "ScaleY": 1.0
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
             },
             "Position": {
-              "X": 6.1667,
-              "Y": 664.128
+              "X": 650.0,
+              "Y": 459.32
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -673,24 +675,23 @@
               "B": 0
             },
             "IconVisible": false,
-            "PositionPercentYEnabled": true,
             "PrePosition": {
-              "X": 0.0048,
-              "Y": 0.9224
+              "X": 0.5078,
+              "Y": 0.6379
             },
             "PreSize": {
-              "X": 0.2031,
-              "Y": 0.1444
+              "X": 0.4688,
+              "Y": 0.2083
             },
-            "LeftMargin": 6.1667,
-            "RightMargin": 1013.8333,
-            "TopMargin": 55.872,
-            "BottomMargin": 560.128,
+            "LeftMargin": 350.0,
+            "RightMargin": 330.0,
+            "TopMargin": 185.68,
+            "BottomMargin": 384.32,
             "Tag": 214,
             "ActionTag": -252217799,
             "Size": {
-              "X": 260.0,
-              "Y": 104.0
+              "X": 600.0,
+              "Y": 150.0
             },
             "Name": "info",
             "ctype": "TextObjectData"
@@ -781,7 +782,7 @@
                 },
                 "PreSize": {
                   "X": 0.2459,
-                  "Y": 0.7813
+                  "Y": 0.7812
                 },
                 "LeftMargin": 46.0,
                 "RightMargin": 46.0,
@@ -1569,7 +1570,7 @@
                           "Y": 0.5961
                         },
                         "PreSize": {
-                          "X": 3.2813,
+                          "X": 3.2812,
                           "Y": 2.7241
                         },
                         "LeftMargin": -34.8168,
@@ -12534,6 +12535,81 @@
             "ctype": "ButtonObjectData"
           },
           {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Normal",
+              "Path": "Red20/DeskTexture/BtnRule.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "Red20/DeskTexture/BtnRule.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "Red20/DeskTexture/BtnRule.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 35,
+            "Scale9Height": 49,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 373.8669,
+              "Y": 674.8172
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.2921,
+              "Y": 0.9372
+            },
+            "PreSize": {
+              "X": 0.0508,
+              "Y": 0.0986
+            },
+            "LeftMargin": 341.3669,
+            "RightMargin": 873.6331,
+            "TopMargin": 9.6828,
+            "BottomMargin": 639.3172,
+            "Tag": 1530,
+            "ActionTag": -1287056415,
+            "Size": {
+              "X": 65.0,
+              "Y": 71.0
+            },
+            "Name": "rule_btn",
+            "ctype": "ButtonObjectData"
+          },
+          {
             "AnchorPoint": {},
             "Position": {
               "X": 0.0,
@@ -16001,6 +16077,7 @@
         "Red20/Controller/btn_ocad.png",
         "Red20/Controller/btn_tou.png",
         "Red20/Controller/tip_tou.png",
+        "Red20/DeskTexture/BtnRule.png",
         "Red20/DeskTexture/dss_cardnum.png",
         "Red20/DeskTexture/phz_icon_007.png",
         "Red20/DeskTexture/tiao.png",

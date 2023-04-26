@@ -1,6 +1,6 @@
 
 
-function SetEndOneUserUI(node, off) {
+function SetEndOneUserUI_Red20(node, off) {
     var sData = MjClient.data.sData;
     var tData = sData.tData;
     var pl = MjClient.getPlayerByIndex(off);
@@ -19,7 +19,6 @@ function SetEndOneUserUI(node, off) {
     name.ignoreContentAdaptWithSize(true);
 
     result = tData.Result;
-
     var uibind = {
         head: {
             name: {
@@ -149,11 +148,10 @@ function SetEndOneUserUI(node, off) {
                 baseData.forEach(value => {
                     fan += value[1];
                     if (value[0] === '杠') {
-                        str += (value[1] / 2 + "" + value[0] + ' \n ');
+                        str += (value[1] / 2 + "" + value[0]);
                     } else {
-                        str += (value[1] + "" + value[0] + ' \n');
+                        str += (value[1] + "" + value[0]);
                     }
-                    cc.log('-------baseData----------',str)
                 })
                 this.parent.getChildByName('base').setString(str);
                 let itemLB = this.getChildByName('item');
@@ -252,7 +250,7 @@ var EndOneView_Red20 = cc.Layer.extend({
                 fan: { _visible: true },
                 score: { _visible: true },
                 base: { _visible: true },
-                _run: function () { SetEndOneUserUI(this, 0); },
+                _run: function () { SetEndOneUserUI_Red20(this, 0); },
 
             },
             head1: {
@@ -264,7 +262,7 @@ var EndOneView_Red20 = cc.Layer.extend({
                 fan: { _visible: true },
                 score: { _visible: true },
                 base: { _visible: true },
-                _run: function () { SetEndOneUserUI(this, 1); }
+                _run: function () { SetEndOneUserUI_Red20(this, 1); }
             },
             head2: {
                 head: { zhuang: { _visible: false } },
@@ -275,7 +273,7 @@ var EndOneView_Red20 = cc.Layer.extend({
                 fan: { _visible: true },
                 score: { _visible: true },
                 base: { _visible: true },
-                _run: function () { SetEndOneUserUI(this, 2); }
+                _run: function () { SetEndOneUserUI_Red20(this, 2); }
             },
             head3: {
                 head: { zhuang: { _visible: false } },
@@ -286,7 +284,7 @@ var EndOneView_Red20 = cc.Layer.extend({
                 fan: { _visible: true },
                 score: { _visible: true },
                 base: { _visible: true },
-                _run: function () { SetEndOneUserUI(this, 3); }
+                _run: function () { SetEndOneUserUI_Red20(this, 3); }
             },
             fanghao: {
                 _visible: true,
