@@ -81,8 +81,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 640.0001,
-              "Y": 406.4998
+              "X": 640.0,
+              "Y": 406.4999
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -100,10 +100,8 @@
             },
             "HorizontalEdge": "BothEdge",
             "VerticalEdge": "TopEdge",
-            "LeftMargin": 0.0001,
-            "RightMargin": -0.0001,
             "TopMargin": -1.4999,
-            "BottomMargin": 91.4998,
+            "BottomMargin": 91.4999,
             "Tag": 1595,
             "Children": [
               {
@@ -691,7 +689,7 @@
                   "Y": 0.0
                 },
                 "LeftMargin": -51.9102,
-                "RightMargin": 1331.9103,
+                "RightMargin": 1331.9102,
                 "TopMargin": 223.8832,
                 "BottomMargin": 406.1168,
                 "Tag": 118,
@@ -750,7 +748,7 @@
                         },
                         "Position": {
                           "X": 43.616,
-                          "Y": 44.8054
+                          "Y": 44.805
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -769,8 +767,8 @@
                         },
                         "LeftMargin": 3.616,
                         "RightMargin": 3.384,
-                        "TopMargin": 2.1946,
-                        "BottomMargin": 4.8054,
+                        "TopMargin": 2.195,
+                        "BottomMargin": 4.805,
                         "Tag": 2333,
                         "ActionTag": 747807929,
                         "Size": {
@@ -1161,6 +1159,8 @@
                     "ColorVector": {
                       "ScaleY": 1.0
                     },
+                    "Scale9Width": 1,
+                    "Scale9Height": 1,
                     "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
@@ -1379,7 +1379,7 @@
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 30,
+                    "FontSize": 28,
                     "LabelText": "3王",
                     "FontResource": {
                       "Type": "Default",
@@ -1427,13 +1427,13 @@
                     },
                     "LeftMargin": 860.0,
                     "RightMargin": -920.0,
-                    "TopMargin": -33.1036,
-                    "BottomMargin": 3.1036,
+                    "TopMargin": -78.1036,
+                    "BottomMargin": -41.8964,
                     "Tag": 2065,
                     "ActionTag": 73313409,
                     "Size": {
                       "X": 60.0,
-                      "Y": 30.0
+                      "Y": 120.0
                     },
                     "Name": "base",
                     "ctype": "TextObjectData"
@@ -1527,7 +1527,7 @@
                         },
                         "Position": {
                           "X": 43.616,
-                          "Y": 44.8054
+                          "Y": 44.805
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -1546,8 +1546,8 @@
                         },
                         "LeftMargin": 3.616,
                         "RightMargin": 3.384,
-                        "TopMargin": 2.1946,
-                        "BottomMargin": 4.8054,
+                        "TopMargin": 2.195,
+                        "BottomMargin": 4.805,
                         "Tag": 2068,
                         "ActionTag": -1418098392,
                         "Size": {
@@ -2158,7 +2158,7 @@
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 30,
+                    "FontSize": 28,
                     "LabelText": "3王",
                     "FontResource": {
                       "Type": "Default",
@@ -2206,13 +2206,13 @@
                     },
                     "LeftMargin": 860.0,
                     "RightMargin": -920.0,
-                    "TopMargin": -33.1035,
-                    "BottomMargin": 3.1035,
+                    "TopMargin": -78.1035,
+                    "BottomMargin": -41.8965,
                     "Tag": 2081,
                     "ActionTag": -1099225787,
                     "Size": {
                       "X": 60.0,
-                      "Y": 30.0
+                      "Y": 120.0
                     },
                     "Name": "base",
                     "ctype": "TextObjectData"
@@ -2247,7 +2247,7 @@
                   "Y": 0.0
                 },
                 "LeftMargin": -51.9675,
-                "RightMargin": 1331.9674,
+                "RightMargin": 1331.9675,
                 "TopMargin": 458.0,
                 "BottomMargin": 172.0,
                 "Tag": 2082,
@@ -2306,7 +2306,7 @@
                         },
                         "Position": {
                           "X": 43.616,
-                          "Y": 44.8054
+                          "Y": 44.805
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2325,8 +2325,8 @@
                         },
                         "LeftMargin": 3.616,
                         "RightMargin": 3.384,
-                        "TopMargin": 2.1946,
-                        "BottomMargin": 4.8054,
+                        "TopMargin": 2.195,
+                        "BottomMargin": 4.805,
                         "Tag": 2084,
                         "ActionTag": -304442459,
                         "Size": {
@@ -2937,7 +2937,7 @@
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 30,
+                    "FontSize": 28,
                     "LabelText": "3王",
                     "FontResource": {
                       "Type": "Default",
@@ -2985,13 +2985,13 @@
                     },
                     "LeftMargin": 860.0,
                     "RightMargin": -920.0,
-                    "TopMargin": -33.1035,
-                    "BottomMargin": 3.1035,
+                    "TopMargin": -78.1035,
+                    "BottomMargin": -41.8965,
                     "Tag": 2097,
                     "ActionTag": -1952513413,
                     "Size": {
                       "X": 60.0,
-                      "Y": 30.0
+                      "Y": 120.0
                     },
                     "Name": "base",
                     "ctype": "TextObjectData"
@@ -3026,7 +3026,7 @@
                   "Y": 0.0
                 },
                 "LeftMargin": -53.0421,
-                "RightMargin": 1333.042,
+                "RightMargin": 1333.0421,
                 "TopMargin": 582.6639,
                 "BottomMargin": 47.3361,
                 "Tag": 2098,
@@ -3085,7 +3085,7 @@
                         },
                         "Position": {
                           "X": 43.616,
-                          "Y": 44.8054
+                          "Y": 44.805
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -3104,8 +3104,8 @@
                         },
                         "LeftMargin": 3.616,
                         "RightMargin": 3.384,
-                        "TopMargin": 2.1946,
-                        "BottomMargin": 4.8054,
+                        "TopMargin": 2.195,
+                        "BottomMargin": 4.805,
                         "Tag": 2100,
                         "ActionTag": 1176692439,
                         "Size": {
@@ -3681,7 +3681,7 @@
                     },
                     "Position": {
                       "X": 1235.3501,
-                      "Y": 22.0
+                      "Y": 21.9988
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -3701,8 +3701,8 @@
                       "Y": 0.0
                     },
                     "VerticalEdge": "TopEdge",
-                    "LeftMargin": 1181.0002,
-                    "RightMargin": -1281.0002,
+                    "LeftMargin": 1181.0001,
+                    "RightMargin": -1281.0001,
                     "TopMargin": -32.7058,
                     "BottomMargin": 2.7058,
                     "Tag": 2112,
@@ -3716,7 +3716,7 @@
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 30,
+                    "FontSize": 28,
                     "LabelText": "3王",
                     "FontResource": {
                       "Type": "Default",
@@ -3764,13 +3764,13 @@
                     },
                     "LeftMargin": 860.0,
                     "RightMargin": -920.0,
-                    "TopMargin": -33.1035,
-                    "BottomMargin": 3.1035,
+                    "TopMargin": -78.1035,
+                    "BottomMargin": -41.8965,
                     "Tag": 2113,
                     "ActionTag": 516971244,
                     "Size": {
                       "X": 60.0,
-                      "Y": 30.0
+                      "Y": 120.0
                     },
                     "Name": "base",
                     "ctype": "TextObjectData"

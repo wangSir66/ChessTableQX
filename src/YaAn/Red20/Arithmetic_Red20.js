@@ -22,6 +22,7 @@
         this.lastTableOutCard = lastD.pos != -1 ? MjClient.playui.TableOutData.Card : null;
         let getCardMap = () => {
             let cardMap = new Map();
+            cc.log("玩家手牌+++++++++getCardMap++++", JSON.stringify(cards));
             cards.forEach(card => {
                 let num = this.getCardNum(card);
                 let data = cardMap.get(num);
@@ -67,7 +68,7 @@
                 })
 
                 if (pengCards.length >= 2) {
-                    if (this.getCardColor(pengCards[0]) != 4 && Rule.Allow7AsKing && this.getCardNum(pengCards[0]) != 7) {
+                    if (!(this.getCardColor(pengCards[0]) === 4 || (Rule.Allow7AsKing && this.getCardNum(pengCards[0]) === 7))) {
                         let peng = {
                             type: 'peng',
                             card: pengCards[0]
@@ -158,7 +159,13 @@
                 else {
                     let gangData = [];
                     pl.mjanpeng && pl.mjanpeng.forEach(gang => {
-                        let num = this.getCardNum(gang);
+                        let num = this.getCardNum(gang[0]);
+                        cards.forEach(card => {
+                            if (this.getCardNum(card) === num) gangData.push(card);
+                        })
+                    })
+                    pl.mjpeng && pl.mjpeng.forEach(gang => {
+                        let num = this.getCardNum(gang[0]);
                         cards.forEach(card => {
                             if (this.getCardNum(card) === num) gangData.push(card);
                         })

@@ -105,7 +105,7 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             EnableGolden20: this.getCheckboxSelectedByName('btnCheckjin20'),//是否开启金20
             Golden20Fan: 1,//金20番薯 默认1 
             IsCheckTing: [true, false][this.getRedioSelectByName('liuju')],//是否查叫
-            IsCheckFan: [true, false][this.getRedioSelectByName('pinghu')],//是否1番起胡(true：1番起胡 false：平胡可胡)
+            IsCheckFan: [false, true][this.getRedioSelectByName('pinghu')],//是否1番起胡(true：1番起胡 false：平胡可胡)
             Allow7AsKing: [true, false][this.getRedioSelectByName('7dianjiawang')],//是否允许7当王
             AllowBaoTing: true,//是否允许报听 默认true
             IsPoint7AsKing: [true, false][this.getRedioSelectByName('7dianwangdian')],//是否允许7当王算点

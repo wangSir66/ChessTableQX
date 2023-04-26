@@ -45,7 +45,7 @@ function SetEndOneUserUI(node, off) {
                     } else c.visible = false;
                 }
                 let newCards = [].concat(pl.mjhand);
-                if (pl.info.uid === result.Winner && result.Card) {
+                if (result && pl.info.uid === result.Winner && result.Card) {
                     let huCard = newCards.find(val => {
                         return val === result.Card;
                     })
@@ -101,7 +101,7 @@ function SetEndOneUserUI(node, off) {
         },
         huCard: {
             _run: function () {
-                if (pl.info.uid === result.Winner) {
+                if (result && pl.info.uid === result.Winner) {
                     //胡牌取手牌最后一张
                     let huCardData = result.Card;
                     if (result.Winner !== null && !huCardData) {
@@ -124,8 +124,8 @@ function SetEndOneUserUI(node, off) {
             },
             _run: function () {
                 const _indx = tData.uids.indexOf(pl.info.uid),
-                    other = result.Other[_indx],
-                    base = result.Base[_indx];
+                    other = result ? result.Other[_indx] : [],
+                    base = result ? result.Base[_indx] : [];
                 let baseData = null;
                 if (base.length > 0) {
                     baseData = base;
@@ -165,7 +165,7 @@ function SetEndOneUserUI(node, off) {
                     it.setString(o[0] + "");
                     this.addChild(it);
                 }
-                if (result.Winner === pl.info.uid || result.Scores[_indx] > 0)
+                if (result && (result.Winner === pl.info.uid || result.Scores[_indx] > 0))
                     this.parent.getChildByName('fan').setString(fan > 0 ? fan + '' : '0');
                 else this.parent.getChildByName('fan').setString('');
             }

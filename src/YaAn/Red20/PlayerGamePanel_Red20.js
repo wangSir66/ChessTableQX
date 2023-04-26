@@ -416,6 +416,9 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     if (tData._currentCard) {
                         postEvent('SystemCard', { Card: tData._currentCard, uid: tData.uids[tData.curPlayer] });
                     }
+                    if (tData.curPlayer >= 0 && tData.roomStatus == 102) {
+                        postEvent('onUserAction', { uid: tData.uids[tData.curPlayer] });
+                    }
                 }
                 let pl = getUIPlayer(0)
                 if (pl && pl.mjhand.length > 0) {
@@ -1381,8 +1384,10 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 //游戏中偷牌
                 GetNewCard: function (sD) {
                     let cp = getUIPlayer(0);
-                    if (cp && cp.info.uid == sD.uid)
+                    if (cp && cp.info.uid == sD.uid) {
+                        cp.mjhand.push(sD.Card);
                         MjClient.playui.onUserNewCard(this, 0, [sD.Card], () => { MjClient.playui.CardLayoutRestore(this, 0); }, true);
+                    }
                 },
 
             }
@@ -3622,7 +3627,7 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
  * @param {偷数据} msg 
  * @param {方位} off 
  */
-PlayerGamePanel_Red20.prototype.TouAndMoveCard = function (node, msg, off, isAction = false, stNode = null) {
+PlayerGamePanel_Red20.prototype.TouAndMoveCard = function (node, msg, off, isAction = false, stNode = null, addC = true) {
     let Kings = msg.Kings || [], addCards = msg.Cards || [];
     let cp = getUIPlayer(off);
     if (cp && cp.info.uid == msg.uid) {
@@ -3660,9 +3665,9 @@ PlayerGamePanel_Red20.prototype.TouAndMoveCard = function (node, msg, off, isAct
         let func = (act) => {
             this.CardLayoutRestore(node, off);
             off === 0 && (cp.mjhand = cp.mjhand.concat(addCards));
-            this.onUserNewCard(node, off, off === 0 ? addCards : Kings.length, () => { cc.log('---我觉得回家---'); this.CardLayoutRestore(node, off); }, act);
+            addC && this.onUserNewCard(node, off, off === 0 ? addCards : Kings.length, () => { cc.log('---我觉得回家---'); this.CardLayoutRestore(node, off); }, act);
         }
-        if (MjClient.rePlayVideo != -1) {
+        if (MjClient.rePlayVideo != -1 || !addC) {
             func(false);
         } else {
             setTimeout(() => {
@@ -4015,7 +4020,7 @@ PlayerGamePanel_Red20.prototype.KingCard = function (playerUi, card, off) {
         outBig.runAction(cc.sequence(cc.spawn(cc.moveTo(Red20ActionTime.MoveCenter, endPos.x, endPos.y), cc.scaleTo(Red20ActionTime.MoveCenter, 1)),
             cc.delayTime(0.1),
             cc.callFunc(() => {
-                this.TouAndMoveCard(playerUi, { Kings: [card.card], uid: card.uid }, off, true, outBig);
+                this.TouAndMoveCard(playerUi, { Kings: [card.card], uid: card.uid }, off, true, outBig, false);
             })));
     }
 }
@@ -4433,17 +4438,21 @@ PlayerGamePanel_Red20.prototype.DealMJGang = function (node, msg, off) {
             }
             pl.mjgang0.push(cd);
         } else if (msg.type == 3) {//弯杠
-            let bigP = getNode(this.TableOutData.pos);
-            if (bigP) {
-                let big = bigP.getChildByName('outBig');
-                let nb = big.clone();
-                nb.name = 'otbigMove';
-                node.addChild(nb);
-                startNodeInfo.push(nb);
-                big.visible = false;
-                this.TableOutData.pos = -1;
+            let lastC = this.TableOutData.Card, flag = false, pos = this.TableOutData.pos;
+            if (lastC && pos != -1) {
+                let bigP = getNode(this.TableOutData.pos);
+                if (bigP) {
+                    let big = bigP.getChildByName('outBig');
+                    let nb = big.clone();
+                    nb.name = 'otbigMove';
+                    node.addChild(nb);
+                    startNodeInfo.push(nb);
+                    big.visible = false;
+                    this.TableOutData.pos = -1;
+                }
+            } else {
+                cards = [cd[0]];
             }
-            let lastC = this.TableOutData.Card, flag = false;
             for (let _i = 0; _i < pl.mjpeng.length; _i++) {
                 let item = pl.mjpeng[_i];
                 if (MjClient.majiang.getCardNum(item[0]) === lastC) {
