@@ -1050,7 +1050,8 @@ function UpdataCurrentPutCard(isTouch)
                     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY ||
                     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN || 
                     MjClient.gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HBTY) {
+                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HBTY||
+                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
                     for (var i = 0; i < MjClient.tipCardsArray.length; i++) {
                         if (MjClient.tipCardsArray[i].length == 1) {
                             mustPut = true;
@@ -3985,7 +3986,8 @@ function postCardsEnded()
         postEvent("PostCardsEnded");
 
         // 连云港的发完牌  要自动提牌
-        if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG||
+            MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
             var pl = getUIPlayer(0);
             if (!pl) return;
             var tData = MjClient.data.sData.tData;
@@ -4988,7 +4990,8 @@ function playCardAni_feiji(cards,UIoff)
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU){
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU&&
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN){
             return;
         }
 
@@ -5126,7 +5129,8 @@ function playCardAni_shunzi(cards,UIoff)
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU){
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU&&
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN){
             return;
         }
 
@@ -5177,7 +5181,8 @@ function playCardAni_liandui(cards,UIoff)
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU){
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU&&
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN){
             return;
         }
         playEffectInPlay("ani_liandui");

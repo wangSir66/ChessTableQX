@@ -575,6 +575,7 @@ MjClient.GAME_TYPE = {
     YA_AN_MAHJONG: 2019272, //雅安麻将
     RED_20_POKER: 2019273, //红20
     XUE_ZHAN_MAHJONG: 2019274, //血战
+    PAO_DE_KUAI_YAAN: 2019275, //雅安跑得快
 };
 
 //玩法
@@ -1908,6 +1909,7 @@ var GameButton = {};
 GameButton[MjClient.GAME_TYPE.YA_AN_MAHJONG] = "createNewPng/yaan_majiang";
 GameButton[MjClient.GAME_TYPE.RED_20_POKER] = "createNewPng/yaan_red20";
 GameButton[MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG] = "createNewPng/yaan_xuezhan";
+GameButton[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = "createNewPng/paodekuai";
 
 GameButton[MjClient.GAME_TYPE.LIAN_YUN_GANG] = "createNewPng/jinzhou";
 GameButton[MjClient.GAME_TYPE.SHU_YANG] = "createNewPng/shuyang";

@@ -3,7 +3,7 @@
 //雅安
 var gameListConfig_yaan = {
 	majiangList: [2019274],
-	pokerList: [2019273]
+	pokerList: [2019273, 2019275]
 }
 
 // 七星江苏麻将

@@ -10163,6 +10163,7 @@ function playEffectInPlay(card, isLoop) {
         case MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU:
         case MjClient.GAME_TYPE.DOU_DI_ZHU_NT:
         case MjClient.GAME_TYPE.DOU_DI_ZHU_HA:
+        case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN:
             if (card == "pass" || card == "single") {
                 if (card == "single")
                     cc.audioEngine.stopAllEffects();

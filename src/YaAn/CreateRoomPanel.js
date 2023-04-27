@@ -67,6 +67,9 @@ CreateViewYaAn = cc.Layer.extend({
             case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
                 node = new CreateRoomNode_ynxuezhan(this, data);
                 break;
+            case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN: //跑得快
+                node = new CreateRoomNode_PaoDeKuaiYA(this, data);
+                break;
         }
         return node;
     },

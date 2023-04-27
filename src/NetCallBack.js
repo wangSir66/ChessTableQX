@@ -540,6 +540,9 @@ MjClient.netCallBack = {
                 MjClient.gameType = d.tData.gameType;
             // MjClient.majiang 保存当前游戏玩法
             switch (MjClient.gameType) {
+                case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN://跑得快
+                    MjClient.majiang = MjClient.majiang_runfasterya;
+                    break;
                 case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
                     MjClient.majiang = MjClient.majiang_ynxuezhan;
                     break;
@@ -1459,6 +1462,9 @@ MjClient.netCallBack = {
                 cc.log("MjClient.gameType    ", MjClient.gameType);
                 //加载游戏界面
                 switch (MjClient.gameType) {
+                    case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN://跑得快
+                        MjClient.Scene.addChild(new PlayLayer_PaoDeKuaiLYG());
+                        break;
                     case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
                         MjClient.Scene.addChild(new PlayLayer_YNXueZhan());
                         break;

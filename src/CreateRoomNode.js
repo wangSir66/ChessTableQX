@@ -3310,7 +3310,8 @@ var CreateRoomNode = cc.Node.extend({
                 unSelectColor = cc.color(0x9E, 0x76, 0x4E);
             }
 
-            if (gameType == MjClient.GAME_TYPE.PAO_DE_KUAI || gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG) {
+            if (gameType == MjClient.GAME_TYPE.PAO_DE_KUAI || gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG ||
+                gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
                 selectColor = cc.color(237,32,0);
                 unSelectColor = cc.color(96,46,26);
             }

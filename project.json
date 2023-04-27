@@ -294,6 +294,11 @@
         "src/YaAn/XueZhanMahjong/Arithmetic.js",
         "src/YaAn/XueZhanMahjong/CreateRoomNode.js",
         "src/YaAn/XueZhanMahjong/PlayerGamePanel.js",
-        "src/YaAn/XueZhanMahjong/WinGamePanel.js"
+        "src/YaAn/XueZhanMahjong/WinGamePanel.js",
+        
+        "src/YaAn/RunFaster/Arithmetic.js",
+        "src/YaAn/RunFaster/CreateRoomNode.js",
+        "src/YaAn/RunFaster/PlayerGamePanel.js",
+        "src/YaAn/RunFaster/WinGamePanel.js"
     ]
 }
