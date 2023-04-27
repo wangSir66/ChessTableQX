@@ -110,6 +110,7 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             EnableGSH: this.getCheckboxSelectedByName('btnCheckGangHua'),//是否开启杠上花
             BaseScore: Number(score),
             AllowSameIP: true,
+            SubRuleName: '雅安'
         };
         cc.log("createara: " + JSON.stringify(Rule));
         return Rule;

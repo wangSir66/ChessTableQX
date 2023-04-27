@@ -4888,6 +4888,7 @@
         <Project Name="bg_tuantuanzhuan.csd" Type="Node" />
         <Project Name="bg_TYHZ.csd" Type="Node" />
         <Project Name="bg_xiangshui.csd" Type="Node" />
+        <Project Name="bg_xuezhan.csd" Type="Node" />
         <Project Name="BindingCodeEnterLayer.csd" Type="Layer" />
         <Project Name="BindingCodeLayer.csd" Type="Layer" />
         <Project Name="bindingCodeLayer_tipss.csd" Type="Layer" />
@@ -4986,6 +4987,7 @@
         <Project Name="friendcard_yaoyingIntoGameDialog.csd" Type="Layer" />
         <Project Name="gameDesLayer.csd" Type="Layer" />
         <Project Name="gameRecordLayer.csd" Type="Layer" />
+        <Project Name="gamerulebg.csd" Type="Layer" />
         <Project Name="GameTip.csd" Type="Layer" />
         <Project Name="gameWaiteLayer.csd" Type="Layer" />
         <Project Name="gameWaitingLayer.csd" Type="Layer" />
@@ -5148,8 +5150,8 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
-        <Project Name="bg_xuezhan.csd" Type="Node" />
-        <Project Name="gamerulebg.csd" Type="Layer" />
+        <Project Name="bg_RunFasterYaAn.csd" Type="Node" />
+        <Project Name="Play_RunFasterYN.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

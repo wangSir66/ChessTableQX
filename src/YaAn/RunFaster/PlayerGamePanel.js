@@ -2096,7 +2096,7 @@ var PlayLayer_PaoDeKuaiLYG = cc.Layer.extend({
     _btn_rank:null,
     ctor: function() {
         this._super();
-        var playui = ccs.load(res.Play_PaoDeKuaiLYG_json);
+        var playui = ccs.load("Play_RunFasterYN.json");
 
         this.srcMaxPlayerNum = MjClient.MaxPlayerNum;
         MjClient.MaxPlayerNum = parseInt(MjClient.data.sData.tData.maxPlayer);

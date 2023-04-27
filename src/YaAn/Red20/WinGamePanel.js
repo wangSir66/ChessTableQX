@@ -303,7 +303,7 @@ var EndOneView_Red20 = cc.Layer.extend({
         var _back = endoneui.node.getChildByName("back");
         var fanghao = _back.getChildByName("fanghao");
         fanghao.visible = true;
-        fanghao.setString(MjClient.roundEndTime);
+        fanghao.setString(MjClient.data.sData.tData.tableid);
         changeMJBg(this, getCurrentMJBgType());
         return true;
     },

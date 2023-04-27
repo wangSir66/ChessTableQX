@@ -490,22 +490,19 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         roundnumImg: {
             _event: {
                 initSceneData: function (eD) {
-                    // this.visible = IsArrowVisible();
-                    this.visible = false
+                    this.visible = IsArrowVisible();
                 },
                 mjhand: function (eD) {
-                    // this.visible = IsArrowVisible();
-                    this.visible = false
+                    this.visible = IsArrowVisible();
                 },
                 onlinePlayer: function (eD) {
-                    //this.visible = IsArrowVisible();
-                    this.visible = false
+                    this.visible = IsArrowVisible();
                 }
             },
             _run: function () {
                 //roundnumImgObj = this;
                 MjClient.roundnumImgNode = this;
-                setWgtLayout(this, [0.085, 0], [0.5, 0.5], [-1.76, 1.0]);
+                setWgtLayout(this, [0.085, 0], [0.19, 0.8], [-1.76, 1.0]);
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
                 if (tData) {
@@ -654,6 +651,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             ]
         },
         roundInfo: {
+            _visible: false,
             _layout: [
                 [0.12, 0.12],
                 [0.5, 0.38],

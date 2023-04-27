@@ -712,8 +712,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 491.66,
-              "Y": 368.04
+              "X": 86.5713,
+              "Y": 658.9027
             },
             "Scale": {
               "ScaleX": 1.3,
@@ -726,17 +726,17 @@
             },
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.3841,
-              "Y": 0.5112
+              "X": 0.0676,
+              "Y": 0.9151
             },
             "PreSize": {
               "X": 0.0953,
               "Y": 0.0444
             },
-            "LeftMargin": 430.66,
-            "RightMargin": 727.34,
-            "TopMargin": 335.96,
-            "BottomMargin": 352.04,
+            "LeftMargin": 25.5713,
+            "RightMargin": 1132.4287,
+            "TopMargin": 45.0973,
+            "BottomMargin": 642.9027,
             "Tag": 163,
             "Children": [
               {
@@ -747,7 +747,6 @@
                   "Path": "fonts/lanting.TTF",
                   "Plist": ""
                 },
-                "HorizontalAlignmentType": "HT_Center",
                 "VerticalAlignmentType": "VT_Center",
                 "OutlineColor": {
                   "G": 0,
@@ -766,7 +765,7 @@
                 },
                 "Position": {
                   "X": 61.0,
-                  "Y": 16.0
+                  "Y": 15.9999
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -786,8 +785,8 @@
                 },
                 "LeftMargin": 46.0,
                 "RightMargin": 46.0,
-                "TopMargin": 3.5,
-                "BottomMargin": 3.5,
+                "TopMargin": 3.5001,
+                "BottomMargin": 3.4999,
                 "Tag": 151,
                 "ActionTag": 640381544,
                 "Size": {
@@ -976,8 +975,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": -157.7261,
-                  "Y": 26.4189
+                  "X": -500.3549,
+                  "Y": 33.8729
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -986,17 +985,17 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": -0.2757,
-                  "Y": 0.4064
+                  "X": -0.8747,
+                  "Y": 0.5211
                 },
                 "PreSize": {
                   "X": 0.1521,
                   "Y": 0.4615
                 },
-                "LeftMargin": -201.2261,
-                "RightMargin": 686.2261,
-                "TopMargin": 23.5811,
-                "BottomMargin": 11.4189,
+                "LeftMargin": -543.8549,
+                "RightMargin": 1028.8549,
+                "TopMargin": 16.1271,
+                "BottomMargin": 18.8729,
                 "Tag": 8079,
                 "ActionTag": 1556708115,
                 "Size": {
@@ -1021,8 +1020,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": -191.915,
-                  "Y": 26.4167
+                  "X": -534.5447,
+                  "Y": 33.873
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1031,17 +1030,17 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": -0.3355,
-                  "Y": 0.4064
+                  "X": -0.9345,
+                  "Y": 0.5211
                 },
                 "PreSize": {
                   "X": 0.3444,
                   "Y": 0.6308
                 },
-                "LeftMargin": -290.415,
-                "RightMargin": 665.415,
-                "TopMargin": 18.0833,
-                "BottomMargin": 5.9167,
+                "LeftMargin": -633.0447,
+                "RightMargin": 1008.0447,
+                "TopMargin": 10.627,
+                "BottomMargin": 13.373,
                 "Tag": 8080,
                 "ActionTag": 1736413433,
                 "Size": {
