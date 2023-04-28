@@ -1454,7 +1454,7 @@ GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI] = {
     }
 }
 
-GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_LYG] = GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_HA];
+GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_LYG] =GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN]= GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_HA];
 GameCnDesc[MjClient.GAME_TYPE.SHU_YANG] = {
     flowerCount: { 2: "胡牌底花2点", 5: "胡牌底花5点" },
     duoHu: function (v) { return v ? "一炮多响" : "截胡" },

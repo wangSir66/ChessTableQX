@@ -145,7 +145,7 @@ function cardsSort_RunFasterYA(cards)
     cards.sort(function(a, b) { return -commonCmp(a, b);});
 }
    
-var PlayLayer_PaoDeKuaiLYG = cc.Layer.extend({
+var PlayLayer_RunFasterYA = cc.Layer.extend({
     _btnPutCard:null,
     jsBind: {
         _run: function() {
@@ -2188,7 +2188,7 @@ var PlayLayer_PaoDeKuaiLYG = cc.Layer.extend({
 //初始化桌子上的客户端数据c_data..各个游戏的自身数据可以在这里初始，
 //尽量不要在外部公共代码判断游戏类型，而是在c_data里初始化数据。
 //在PlayLayer的_event 的 initSceneData调用
-PlayLayer_PaoDeKuaiLYG.prototype.InitC_Data = function() {
+PlayLayer_RunFasterYA.prototype.InitC_Data = function() {
     if (!MjClient.data.c_Data)
         MjClient.data.c_Data = {};
     cc.log("InitC_Data===========================")
@@ -2198,7 +2198,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.InitC_Data = function() {
     MjClient.data.c_Data.bTxtAnim = true;
 }
 
-PlayLayer_PaoDeKuaiLYG.prototype.cannotOutCardGrey = function()
+PlayLayer_RunFasterYA.prototype.cannotOutCardGrey = function()
 {
     if (MjClient.data.sData.tData.lastPutPlayer == -1 || MjClient.data.sData.tData.lastPutPlayer == MjClient.data.sData.tData.curPlayer)
         return;
@@ -2247,7 +2247,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.cannotOutCardGrey = function()
     }
 }
 
-PlayLayer_PaoDeKuaiLYG.prototype.recoverCannotOutCard = function()
+PlayLayer_RunFasterYA.prototype.recoverCannotOutCard = function()
 {
     var children = this._downNode.children;
     for (var i = 0; i < children.length; i++)
@@ -2260,12 +2260,12 @@ PlayLayer_PaoDeKuaiLYG.prototype.recoverCannotOutCard = function()
     }
 }
 
-PlayLayer_PaoDeKuaiLYG.prototype.clockNumberUpdate = function(node, endFunc)
+PlayLayer_RunFasterYA.prototype.clockNumberUpdate = function(node, endFunc)
 {
     return arrowbkNumberUpdate(node, endFunc);
 }
 
-PlayLayer_PaoDeKuaiLYG.prototype.updateClockPosition = function(arrowNode)
+PlayLayer_RunFasterYA.prototype.updateClockPosition = function(arrowNode)
 {
     var tData = MjClient.data.sData.tData;
     var uids = tData.uids;
@@ -2320,7 +2320,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.updateClockPosition = function(arrowNode)
  * @function
  * @return {String}
  */
-PlayLayer_PaoDeKuaiLYG.prototype.getGameInfoString = function()
+PlayLayer_RunFasterYA.prototype.getGameInfoString = function()
 {
     var tData = MjClient.data.sData.tData;
     var str = "";
@@ -2372,7 +2372,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.getGameInfoString = function()
     return str;
 };
 
-PlayLayer_PaoDeKuaiLYG.prototype.shwoFlyCardAnim = function(flyNode)
+PlayLayer_RunFasterYA.prototype.shwoFlyCardAnim = function(flyNode)
 {
     var tData = MjClient.data.sData.tData;
     var off = getOffByIndex(tData.curPlayer);
@@ -2396,7 +2396,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.shwoFlyCardAnim = function(flyNode)
     })));
 }
 
-PlayLayer_PaoDeKuaiLYG.prototype.showHandCardBeiMian = function()
+PlayLayer_RunFasterYA.prototype.showHandCardBeiMian = function()
 {
     cc.log("showHandCardBeiMian");
     var playerNode = getNode_cards(0);
@@ -2413,7 +2413,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.showHandCardBeiMian = function()
     }
 }
 
-PlayLayer_PaoDeKuaiLYG.prototype.hideHandCardBeiMian = function()
+PlayLayer_RunFasterYA.prototype.hideHandCardBeiMian = function()
 {
     cc.log("hideHandCardBeiMian");
     var playerNode = getNode_cards(0);
@@ -2427,7 +2427,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.hideHandCardBeiMian = function()
     }
 }
 
-PlayLayer_PaoDeKuaiLYG.prototype.CardLayoutRestore = function(node, off, needSort)
+PlayLayer_RunFasterYA.prototype.CardLayoutRestore = function(node, off, needSort)
 {
     // 如果正在发牌 不排序
     if (MjClient.playui.isFaPai) return;
@@ -2450,7 +2450,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.CardLayoutRestore = function(node, off, needSor
     }
 };
 
-PlayLayer_PaoDeKuaiLYG.prototype.CardLayoutDesk = function(node,cards,off)
+PlayLayer_RunFasterYA.prototype.CardLayoutDesk = function(node,cards,off)
 {
     //if(off != 0) return;
     var children = node.children;
@@ -2576,7 +2576,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.CardLayoutDesk = function(node,cards,off)
 };
 
 //横向摆放《正常》
-PlayLayer_PaoDeKuaiLYG.prototype.horSort = function(node, off, needSort)
+PlayLayer_RunFasterYA.prototype.horSort = function(node, off, needSort)
 {
     var pl; //player 信息
     pl = getUIPlayer(off);//获取玩家信息.off 为0 ，就是自己得信息，能看到自己摸牌 by sking
@@ -2824,7 +2824,7 @@ PlayLayer_PaoDeKuaiLYG.prototype.horSort = function(node, off, needSort)
 }
 
 //纵向摆放
-PlayLayer_PaoDeKuaiLYG.prototype.verSort = function(node, off, needSort)
+PlayLayer_RunFasterYA.prototype.verSort = function(node, off, needSort)
 {
     if(off != 0)
     {

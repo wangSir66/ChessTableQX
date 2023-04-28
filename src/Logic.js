@@ -1099,6 +1099,8 @@ GameCnName[MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI] = "通城个子牌";
 GameCnName[MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG] = "蕲春红中杠";
 GameCnName[MjClient.GAME_TYPE.EN_SHI_SHAO_HU] = "恩施绍胡";
 GameCnName[MjClient.GAME_TYPE.WU_XUE_510K] = "武穴510K";
+GameCnName[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = "雅安跑得快";
+GameCnName[MjClient.GAME_TYPE.RED_20_POKER] = "红20";
 
 var GameClass = {};
 GameClass[MjClient.GAME_TYPE.LIAN_YUN_GANG] = MjClient.GAME_CLASS.MA_JIANG;
@@ -1357,6 +1359,7 @@ GameClass[MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG] = MjClient.GAME_CLASS.MA_J
 GameClass[MjClient.GAME_TYPE.EN_SHI_SHAO_HU] = MjClient.GAME_CLASS.PAO_HU_ZI;
 GameClass[MjClient.GAME_TYPE.WU_XUE_510K] = MjClient.GAME_CLASS.DA_MA_ZI;
 GameClass[MjClient.GAME_TYPE.RED_20_POKER] = MjClient.GAME_CLASS.DA_MA_ZI;
+GameClass[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = MjClient.GAME_CLASS.PAO_DE_KUAI;
 
 //游戏大类型到资源分类的映射
 var ResourceClass = {};
@@ -4640,6 +4643,7 @@ GameSound4Play[MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN] = GameSound4Play[MjClient.G
 GameSound4Play[MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU] = GameSound4Play[MjClient.GAME_TYPE.PAO_DE_KUAI];
 GameSound4Play[MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY] = GameSound4Play[MjClient.GAME_TYPE.PAO_DE_KUAI];
 GameSound4Play[MjClient.GAME_TYPE.PAO_DE_KUAI_HBTY] = GameSound4Play[MjClient.GAME_TYPE.PAO_DE_KUAI];
+GameSound4Play[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = GameSound4Play[MjClient.GAME_TYPE.PAO_DE_KUAI];
 
 GameSound4Play["guizhou"] = {
     1: ["guizhou/nv/1"],
