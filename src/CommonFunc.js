@@ -15201,6 +15201,7 @@ function isYongZhouProject() {
         MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ ||
+        MjClient.getAppType() == MjClient.APP_TYPE.YAAN ||
         MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
         isYongZhou = true;
     }

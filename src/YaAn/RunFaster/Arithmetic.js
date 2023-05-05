@@ -25,7 +25,20 @@
             if (2 == cardType) this.cardCfg.hx[cardValue] = i;
             if (3 == cardType) this.cardCfg.ht[cardValue] = i;
         }
-        this.cardCfg.firstOutCard = this.cardCfg.hx[3];
+        this.cardCfg.firstOutCard = this.cardCfg.ht[3];
+        //先手规则
+        this.GameBankerRule = {
+            /** 每局黑桃3先出 */
+            EveryRoundPlaySpade3: 0,
+            /** 首局黑桃3先出 */
+            FirstRoundPlaySpade3: 1,
+            /** 首局黑桃3先出且必带 */
+            FirstRoundMustPlaySpade3: 2,
+            /** 首局随机先出 */
+            FirstRoundRandomBanker: 3,
+            /** 轮流坐庄 */
+            TurnBanker: 4,
+        }
     }
 
     if (typeof (cc) == 'undefined') {
@@ -47,6 +60,7 @@
     var PDK_CARDTPYE = {
         szdaipai: 111,
         sztonghua: 110,
+        sangeK: 15,
         sidaisan: 14,
         sandaier: 13,
         sizha: 12,
@@ -70,7 +84,7 @@
     PDK_CARDCOUNT[PDK_CARDTPYE.sidaier] = 6;
     PDK_CARDCOUNT[PDK_CARDTPYE.sidaisan] = 5;
     PDK_CARDCOUNT[PDK_CARDTPYE.sangeA] = 3;
-    PDK_CARDCOUNT[PDK_CARDTPYE.sange3] = 3;
+    PDK_CARDCOUNT[PDK_CARDTPYE.sangeK] = 3;
     PDK_CARDCOUNT[PDK_CARDTPYE.sizha] = 4;
     PDK_CARDCOUNT[PDK_CARDTPYE.sandaier] = 5;
     PDK_CARDCOUNT[PDK_CARDTPYE.sandaiyi] = 4;
@@ -84,8 +98,9 @@
 
 
     var PDK_CARD_VALUE = {};
-    PDK_CARD_VALUE[PDK_CARDTPYE.sztonghua] = 4;
-    PDK_CARD_VALUE[PDK_CARDTPYE.sangeA] = 3;
+    PDK_CARD_VALUE[PDK_CARDTPYE.sangeA] = 4;
+    PDK_CARD_VALUE[PDK_CARDTPYE.sangeK] = 5;
+    PDK_CARD_VALUE[PDK_CARDTPYE.sztonghua] = 3;
     PDK_CARD_VALUE[PDK_CARDTPYE.sizha] = 2;
     PDK_CARD_VALUE[PDK_CARDTPYE.sange3] = 1;
 
@@ -109,6 +124,7 @@
         PDK_CARDTPYE.sange3,
         PDK_CARDTPYE.sizha,
         PDK_CARDTPYE.sangeA,
+        PDK_CARDTPYE.sangeK,
         PDK_CARDTPYE.sztonghua,
     ];
 
@@ -122,6 +138,7 @@
         PDK_CARDTPYE.sange3,
         PDK_CARDTPYE.sizha,
         PDK_CARDTPYE.sangeA,
+        PDK_CARDTPYE.sangeK,
         PDK_CARDTPYE.sztonghua,
     ]
 
@@ -731,7 +748,7 @@
         // 四炸
         if (cardType == PDK_CARDTPYE.sizha
             || cardType == PDK_CARDTPYE.sangeA
-            || cardType == PDK_CARDTPYE.sange3
+            || cardType == PDK_CARDTPYE.sangeK
             || cardType == PDK_CARDTPYE.sztonghua) {
             return true;
         } else {
@@ -916,9 +933,9 @@
         if (cardCount == PDK_CARDCOUNT[PDK_CARDTPYE.sangeA] && allSame && this.calPoint(cards[0]) == PDK_APOINT && areaSelectMode.can3aZhaDan)
             return PDK_CARDTPYE.sangeA;
 
-        // 三个3算炸弹   带红桃3不算炸弹
-        if (cardCount == PDK_CARDCOUNT[PDK_CARDTPYE.sange3] && allSame && this.calPoint(cards[0]) == PDK_MINPOINT && cards.indexOf(this.cardCfg.hx[3]) < 0)
-            return PDK_CARDTPYE.sange3;
+        // 三个k  和三顺牌型相似， 避免判断为三顺， 放到三顺前
+        if (cardCount == PDK_CARDCOUNT[PDK_CARDTPYE.sangeK] && allSame && this.calPoint(cards[0]) == PDK_KPOINT && areaSelectMode.can3kZhaDan)
+            return PDK_CARDTPYE.sangeK;
 
         // 飞机
         if (cardCount >= 6 && maxCount >= 3 && this.isFeiJi(cards) != 0) {
@@ -1182,8 +1199,13 @@
             }
         }
 
+        let bankerRule = areaSelectMode && areaSelectMode.mustPutHongTaoSan;
+        needFindSpade3 = false;
+        if (bankerRule === this.GameBankerRule.FirstRoundMustPlaySpade3 && isFirstRound) {
+            needFindSpade3 = true;
+        }
         // 第一局 红桃三先出时 有红桃三必须出
-        if ((isFirstRound || areaSelectMode && areaSelectMode.mustPutHongTaoSan) && cards.indexOf(this.cardCfg.hx[3]) < 0 && oHands.indexOf(this.cardCfg.hx[3]) >= 0) {
+        if (needFindSpade3 && cards.indexOf(this.cardCfg.firstOutCard) < 0 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0) {
             return null;
         }
 
@@ -1207,11 +1229,6 @@
 
         // 四带三
         if (cardType == PDK_CARDTPYE.sidaisan && areaSelectMode && !areaSelectMode.can4dai3) {
-            return null
-        }
-
-        // 三个三
-        if (cardType == PDK_CARDTPYE.sange3 && areaSelectMode && cards.indexOf(this.cardCfg.hx[3]) >= 0) {
             return null
         }
 
@@ -1651,11 +1668,9 @@
                 var find = this.findNSameCard(hands, PDK_APOINT, 3);
                 if (find) rets.push(find);
             }
-        }
-        else if (type == PDK_CARDTPYE.sange3) {
+        } else if (type == PDK_CARDTPYE.sangeK) {
             if (laizi == 0) {
-                var newHands = this.delPoint(hands, null, [this.cardCfg.hx[3]]);
-                var find = this.findNSameCard(newHands, PDK_MINPOINT, 3);
+                var find = this.findNSameCard(hands, PDK_KPOINT, 3);
                 if (find) rets.push(find);
             }
         }
@@ -2440,7 +2455,12 @@
      * @return {Boolean} 
      */
     GameLogic_RunFaster.prototype.isMustPutCard3 = function (oHands, areaSelectMode, isFirstRound) {
-        return (isFirstRound || (areaSelectMode && areaSelectMode.mustPutHongTaoSan)) && oHands.indexOf(this.cardCfg.firstOutCard) >= 0;
+        let bankerRule = areaSelectMode && areaSelectMode.mustPutHongTaoSan;
+        needFindSpade3 = false;
+        if (bankerRule === this.GameBankerRule.FirstRoundMustPlaySpade3 && isFirstRound) {
+            needFindSpade3 = true;
+        }
+        return needFindSpade3 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0;
     }
 
     /**
@@ -2484,6 +2504,7 @@
         for (var laizi = 0; laizi <= handLaizi; laizi++) {
             if (lastCardsType == PDK_CARDTPYE.sizha) break;
             if (lastCardsType == PDK_CARDTPYE.sangeA) break;
+            if (lastCardsType == PDK_CARDTPYE.sangeK) break;
 
             var sameTypeCards = this.findCardByType(hands, laizi, lastCardsType, oLastCards);
             for (var i = 0; i < sameTypeCards.length; i++) {
@@ -2523,15 +2544,18 @@
             rets = this.sortByCardType(rets, areaSelectMode);
         }
 
-        var cardtypes = this.findCardByType(hands, 0, PDK_CARDTPYE.sange3);
-        for (var i = 0; i < cardtypes.length; i++) {
-            if (this.canPut(cardtypes[i], oLastCards, oHands.length, areaSelectMode)) {
-                rets.push(cardtypes[i]);
-            }
-        }
-
+        //3个A
         if (areaSelectMode.can3aZhaDan) {
             var cardtypes = this.findCardByType(hands, 0, PDK_CARDTPYE.sangeA);
+            for (var i = 0; i < cardtypes.length; i++) {
+                if (this.canPut(cardtypes[i], oLastCards, oHands.length, areaSelectMode)) {
+                    rets.push(cardtypes[i]);
+                }
+            }
+        }
+        //3个K
+        if (areaSelectMode.can3kZhaDan) {
+            var cardtypes = this.findCardByType(hands, 0, PDK_CARDTPYE.sangeK);
             for (var i = 0; i < cardtypes.length; i++) {
                 if (this.canPut(cardtypes[i], oLastCards, oHands.length, areaSelectMode)) {
                     rets.push(cardtypes[i]);
@@ -2580,7 +2604,7 @@
 
         if (cardtype == PDK_CARDTPYE.sanshun ||
             cardtype == PDK_CARDTPYE.sangeA ||
-            cardtype == PDK_CARDTPYE.sange3 ||
+            cardtype == PDK_CARDTPYE.sangeK ||
             cardtype == PDK_CARDTPYE.sizha ||
             cardtype == PDK_CARDTPYE.liandui ||
             cardtype == PDK_CARDTPYE.shunzi ||
@@ -2611,119 +2635,6 @@
 
     if (typeof (MjClient) != "undefined")
         MjClient.majiang_runfasterya = new GameLogic_RunFaster();
-
-
-    // 方块:  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 1, 2
-    //      [ 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 1, 5 ]
-
-    // 梅花:  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 13, 1, 2
-    //     [ 10, 14, 18, 22, 26, 30, 34, 38, 42, 46, 50, 2 , 6 ]
-
-    // 红心:  3,  4,  5,  6,  7,  8,  9,  10, 11, 12, 13, 1, 2
-    //     [ 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 3, 7 ]
-    //     
-    // 黑桃:  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 1, 2
-    //     [ 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 4, 8 ]
-    //     
-    /**测试 * / 
-    
-    shuffleArray = function(arr) {
-        for (var i = 0; i < arr.length; i++) {
-            var randIndex = i + Math.floor(Math.random() * (arr.length - i));
-            var temp = arr[i];
-            arr[i] = arr[randIndex];
-            arr[randIndex] = temp;
-        }
-        return arr;
-    };
-    
-    var change = function(cards) {
-        var col = ["a", "b", "c", "d"]; // 方块 梅花 红心 黑桃
-        var str = "";
-        for(var i in cards) {
-            var card = cards[i];
-            // var color = pdk.calColor(card);
-            var point = pdk.calPoint(card);
-            str += point + " ";
-        }
-        var feijiInfo = pdk.formatFeiJiType(cards);
-        // console.log(cards);
-        console.log(str);
-    }
-    
-    var changeEasy = function(cards) {
-        var temp = [];
-        for(var i in cards ) {
-            var card = cards[i];
-            var type = Math.floor(card / 100);
-            var value = card % 100;
-            if(1 == type) temp.push(c.fk[value]);
-            if(2 == type) temp.push(c.mh[value]);
-            if(3 == type) temp.push(c.hx[value]);
-            if(4 == type) temp.push(c.ht[value]);
-        }
-        console.log(temp.toString());
-    }
-    
-    var pdk = new GameLogic_RunFaster()
-    // console.log(pdk.cardCfg);
-    var c = pdk.cardCfg;
-    var cards = pdk.randomCards({handCardNum:0}, {maxPlayer:3});
-    // console.log(cards.length);
-    // console.log(cards.toString());
-    var handCards = [c.hx[7] ,c.ht[8], c.mh[9], c.fk[10], c.hx[11], c.mh[12], c.fk[13]]//, c.hx[4], c.hx[5], c.hx[6], c.ht[6], c.ht[5], c.ht[5]  ];
-    // handCards = [c.hx[8], c.hx[8],c.hx[8],c.hx[9], c.hx[9] ,c.ht[9],c.hx[10], c.hx[10] ,c.ht[10], c.mh[1], c.fk[3]]   // 飞机
-    // var putCards = [c.ht[10], c.ht[10], c.hx[8], c.hx[8], c.hx[8], c.hx[7], c.hx[7], c.hx[7], c.hx[4], c.hx[4]];
-    var lastCards = [c.ht[8], c.hx[8], c.fk[8], c.ht[13], c.hx[13] ];
-    lastCards = [c.hx[3], c.hx[4],c.hx[5],c.hx[6], c.hx[7] ,c.ht[8], c.mh[9]]   // 飞机
-    // console.log('GameLogic_RunFaster.prototype.checkPut', pdk.checkPut(handCards, putCards, lastCards) );
-    // handCards = [1,49,50,45,41,42,43,37,38,39,33,17,18,19,13,9]
-    
-    // changeEasy([101,201,301,403, 106,206,306,406, 107,207,307,407, 108,208,308,408, 109,209,309,409]);
-    // changeEasy([101,201,301,103, 106,206,306,406, 107,207,307,407, 108,208,308,408, 109,209,309,409]);
-    // changeEasy([101,201,301,203, 106,206,306,406, 107,207,307,407, 108,208,308,408, 109,209,309,409]);
-    
-    // var areaSelectMode = {
-    //     "tongHuaShun": true,
-    //     "can3dai2": true,
-    //     "mustPutHongTaoSan":true,"cardNumIndex":0,"showCardNumber":false,"zhaDanBuChai":false,"can4dai2":true,"can4dai3":true,"can3aZhaDan":true,"hongTao10Niao":false,"fangZuoBi":true,"payWay":0
-    // }
-    // var isNextPlayerOneCard = false;
-    // var isFirstRound = false;
-    // handCards = [c.hx[7] ,c.ht[8], c.mh[9], c.fk[10], c.hx[11], c.mh[12], c.fk[13], c.fk[1]]
-    // lastCards = [c.hx[3], c.hx[4],c.hx[5],c.hx[6], c.hx[7] ,c.ht[8], c.mh[9]]
-    
-    // handCards = [9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 1, 5,12, 16, 20 ];
-    // lastCards = [c.fk[3], c.fk[4], c.fk[5], c.fk[6], c.fk[7], c.fk[8], c.hx[9], c.mh[10], c.mh[10], c.mh[10] ];
-    // var tipcards = pdk.tipCards(handCards, lastCards, areaSelectMode, isNextPlayerOneCard, isFirstRound);
-    // for(var i in tipcards) {
-    //     change(tipcards[i])
-    // }
-    
-    // 检测是否能出牌
-    // handCards = [9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 1, 5，12, 16, 20, ];
-    // lastCards = [c.fk[3], c.fk[4], c.fk[5], c.fk[6], c.fk[7], c.fk[8], c.hx[9], c.mh[10], c.mh[10], c.mh[10] ];
-    //     console.log(pdk.checkPut(handCards, handCards, lastCards, areaSelectMode, isNextPlayerOneCard, isFirstRound) )
-    // 
-    // var feijis = []
-    // feijis.push( [c.ht[13], c.ht[13], c.fk[13], c.hx[12], c.hx[4], c.hx[4], c.hx[4], c.hx[3], c.hx[3], c.hx[3]] );
-    // feijis.push( [c.ht[13], c.fk[13], c.hx[12], c.hx[4], c.hx[4], c.hx[4], c.hx[3], c.hx[3], c.hx[3]] );
-    // feijis.push( [c.ht[13], c.ht[13], c.fk[13], c.hx[12], c.hx[12], c.hx[12], c.hx[4], c.hx[3], c.hx[3], c.hx[3]] );
-    // feijis.push( [c.ht[13], c.ht[13], c.fk[13], c.hx[12], c.hx[12], c.hx[12], c.hx[4], c.hx[3], c.hx[3]] );
-    // feijis.push( [c.ht[13], c.ht[13], c.fk[13], c.hx[12], c.hx[12], c.hx[12], c.hx[4], c.hx[3]] );
-    // feijis.push( [c.ht[13], c.ht[13], c.fk[13], c.hx[12], c.hx[12], c.hx[12], c.hx[4]] );
-    // feijis.push( [c.ht[13], c.ht[13], c.fk[13], c.hx[12], c.hx[12], c.hx[12]] );
-    // feijis.push( [c.ht[10], c.ht[10], c.hx[8], c.hx[8], c.hx[8], c.hx[7], c.hx[7], c.hx[7], c.hx[4], c.hx[4]] );
-    
-    // for(var i in feijis) {
-    //     console.log('isfeiji', i, pdk.isFeiJi(feijis[i]) );
-    // }
-    
-    var hands = [c.mh[13],c.fk[13],c.ht[12],c.hx[12],c.ht[11],c.mh[9],c.ht[9],c.ht[8],c.hx[7],c.fk[7],c.hx[6],c.hx[5],c.hx[4],c.hx[3],c.ht[3],c.fk[4]];
-    console.log("hands=" + hands);
-    var cards = pdk.tipCards(hands, [], {mustPutHongTaoSan:true, tongHuaShun:false}, false, false);
-    console.log("findPutTipCards:" + JSON.stringify(cards));
-    /**/
 
 })();
 

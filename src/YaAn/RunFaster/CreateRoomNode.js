@@ -297,7 +297,7 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNode.extend({
         //张数
         var _current;
         if (isClub)
-            _current = this.getNumberItem("HandCutRule", 16);
+            _current = this.getNumberItem("cardNumIndex", 16);
         else
             _current = util.localStorageEncrypt.getNumberItem(this.localStorageKey.KEY_RUNFASTERYA_CARDNUMBER, 16);
         var selectIndex = _current == 15 ? 1 : 0;
@@ -417,7 +417,7 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNode.extend({
         //AAA KKK 
         var isTrue;
         if (isClub)
-            isTrue = this.getBoolItem(this._paizhang_radio.selectIndex === 0 ? "OpenAAA" : 'OpenKKK', true);
+            isTrue = this.getBoolItem(this._paizhang_radio.selectIndex === 0 ? "can3aZhaDan" : 'can3kZhaDan', true);
         else
             isTrue = util.localStorageEncrypt.getBoolItem(this.localStorageKey.KEY_RUNFASTERYA_AAAKKK, true);
         this.AAAKKK.setSelected(isTrue);
@@ -427,7 +427,7 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNode.extend({
         //炸弹不可拆
         var isTrue;
         if (isClub)
-            isTrue = this.getBoolItem('IsBombDec', true);
+            isTrue = this.getBoolItem('zhaDanBuChai', true);
         else
             isTrue = util.localStorageEncrypt.getBoolItem(this.localStorageKey.KEY_RUNFASTERYA_ZHADANBUCHAI, true);
         this.zdBuChai.setSelected(isTrue);
@@ -490,7 +490,7 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNode.extend({
     getSelectedPara: function () {
         var para = {};
         para.gameType = MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN;
-        para.HandCutRule = this._paizhang_radio.getSelectIndex() == 0 ? 16 : 15;/** 牌数 */
+        para.cardNumIndex = this._paizhang_radio.getSelectIndex();/** 牌数 */
         para.maxPlayer = this._playNode_player_number_radio.getSelectIndex() == 0 ? 3 : 2;//人数
         para.mustPutHongTaoSan = this._xianshou_radio.getSelectIndex();//先手
         para.isPlayerShuffle = this.shuffle_radio.getSelectIndex();//切牌
@@ -499,19 +499,19 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNode.extend({
         para.Spring = this.chuntian.isSelected();//可春天
         para.ContrarySpring = this.fanchun.isSelected();//可反春
         para.FasterPass = this.kuaishuguopai.isSelected();//快速过牌
-        para.Is3OutOver = false;//三张 少带出完
+        para.Is3OutOver = true;//三张 少带出完
         para.Is3CatchOver = this.szFeiJiShaodai.isSelected();//三张 少带接完
-        para.IsAirOutOver = false;//飞机少带出完 
+        para.IsAirOutOver = true;//飞机少带出完 
         para.IsAirCatchOver = this.szFeiJiShaodai.isSelected();//飞机少带接完 
         para.LeftOneLose = this.yizhangbushu.isSelected();//剩余一张不输
-        para.Open_4_ZhangBomb = this.daizhadan.isSelected();//带炸弹
-        para.OpenAAA = para.Open_4_ZhangBomb && para.HandCutRule === 16 && this.AAAKKK.isSelected();//AAAKKK最大
-        para.OpenKKK = para.Open_4_ZhangBomb && para.HandCutRule === 15 && this.AAAKKK.isSelected();//AAAKKK最大
-        para.IsBombDec = para.Open_4_ZhangBomb && !this.zdBuChai.isSelected();//炸弹不可拆
-        para.can4dai2 = this.can4dai2.isSelected() && para.IsBombDec;     // 4带2
-        para.can4dai3 = this.can4dai3.isSelected() && para.IsBombDec;     // 4带3
+        para.isZhaDanJiaFen = this.daizhadan.isSelected();//带炸弹
+        para.can3aZhaDan = para.isZhaDanJiaFen && para.cardNumIndex === 16 && this.AAAKKK.isSelected();//AAAKKK最大
+        para.can3kZhaDan = para.isZhaDanJiaFen && para.cardNumIndex === 15 && this.AAAKKK.isSelected();//AAAKKK最大
+        para.zhaDanBuChai = para.isZhaDanJiaFen && !this.zdBuChai.isSelected();//炸弹不可拆
+        para.can4dai2 = this.can4dai2.isSelected() && para.zhaDanBuChai;     // 4带2
+        para.can4dai3 = this.can4dai3.isSelected() && para.zhaDanBuChai;     // 4带3
         para.BombScore = this._zhadanfen_radio.getSelectIndex() == 0 ? 5 : 10;//炸弹分
-        para.IsRedheartBird = [0, 1, 3][this._zhadanfen_radio.getSelectIndex()];//扎鸟
+        para.hongTao10Niao = this._zhadanfen_radio.getSelectIndex();//扎鸟
         para.AutoReady = this._zhadanfen_radio.getSelectIndex() == 1;//自动准备
 
         if (this._nodeGPS) para.gps = this._nodeGPS.isSelected();

@@ -1463,7 +1463,7 @@ MjClient.netCallBack = {
                 //加载游戏界面
                 switch (MjClient.gameType) {
                     case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN://跑得快
-                        MjClient.Scene.addChild(new PlayLayer_PaoDeKuaiLYG());
+                        MjClient.Scene.addChild(new PlayLayer_RunFasterYA());
                         break;
                     case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
                         MjClient.Scene.addChild(new PlayLayer_YNXueZhan());
