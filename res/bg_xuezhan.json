@@ -137,7 +137,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -534,7 +534,7 @@
                             },
                             "Position": {
                               "X": 42.0001,
-                              "Y": 19.3908
+                              "Y": 19.3917
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -557,8 +557,8 @@
                             },
                             "LeftMargin": 42.0001,
                             "RightMargin": -118.0001,
-                            "TopMargin": 3.6092,
-                            "BottomMargin": 5.3908,
+                            "TopMargin": 3.6083,
+                            "BottomMargin": 5.3917,
                             "Tag": 332,
                             "ActionTag": -907388260,
                             "Size": {
@@ -866,7 +866,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -921,7 +921,7 @@
                           "Y": 0.4667
                         },
                         "LeftMargin": 6.0003,
-                        "RightMargin": 746.9996,
+                        "RightMargin": 746.9997,
                         "TopMargin": 14.1881,
                         "BottomMargin": 17.8119,
                         "Tag": 1804,
@@ -1526,7 +1526,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -1560,7 +1560,7 @@
                         },
                         "Position": {
                           "X": 4.1121,
-                          "Y": 30.5591
+                          "Y": 30.558
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -1583,8 +1583,8 @@
                         },
                         "LeftMargin": 4.1121,
                         "RightMargin": 748.8879,
-                        "TopMargin": 15.4409,
-                        "BottomMargin": 16.5591,
+                        "TopMargin": 15.442,
+                        "BottomMargin": 16.558,
                         "Tag": 253,
                         "ActionTag": 1645486736,
                         "Size": {
@@ -1627,7 +1627,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 161.1664,
+                          "X": 161.17,
                           "Y": 31.5799
                         },
                         "Scale": {
@@ -1644,15 +1644,15 @@
                           "X": 0.0403,
                           "Y": 0.6167
                         },
-                        "LeftMargin": 143.1664,
-                        "RightMargin": 713.8336,
+                        "LeftMargin": 143.17,
+                        "RightMargin": 713.83,
                         "TopMargin": 9.9201,
                         "BottomMargin": 13.0799,
                         "Tag": 254,
                         "Children": [
                           {
                             "FontSize": 28,
-                            "LabelText": "圈主支付",
+                            "LabelText": "房主支付",
                             "FontResource": {
                               "Type": "Default",
                               "Path": "",
@@ -1772,130 +1772,6 @@
                         "RightMargin": 445.0,
                         "TopMargin": 11.5,
                         "BottomMargin": 11.5,
-                        "Tag": 257,
-                        "Children": [
-                          {
-                            "FontSize": 28,
-                            "LabelText": "赢家支付",
-                            "FontResource": {
-                              "Type": "Default",
-                              "Path": "",
-                              "Plist": ""
-                            },
-                            "OutlineSize": 2,
-                            "OutlineColor": {
-                              "R": 82,
-                              "G": 54,
-                              "B": 33
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 42.0,
-                              "Y": 18.5814
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 96,
-                              "G": 46,
-                              "B": 26
-                            },
-                            "IconVisible": false,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 1.1667,
-                              "Y": 0.5022
-                            },
-                            "PreSize": {
-                              "X": 3.1111,
-                              "Y": 0.7568
-                            },
-                            "LeftMargin": 42.0,
-                            "RightMargin": -118.0,
-                            "TopMargin": 4.4186,
-                            "BottomMargin": 4.5814,
-                            "Tag": 258,
-                            "ActionTag": -1871697127,
-                            "Size": {
-                              "X": 112.0,
-                              "Y": 28.0
-                            },
-                            "Name": "text",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": -526135084,
-                        "Size": {
-                          "X": 36.0,
-                          "Y": 37.0
-                        },
-                        "Name": "btnRadio30",
-                        "ctype": "CheckBoxObjectData"
-                      },
-                      {
-                        "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
-                          "Plist": ""
-                        },
-                        "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
-                          "Plist": ""
-                        },
-                        "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
-                          "Plist": ""
-                        },
-                        "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_15.png",
-                          "Plist": ""
-                        },
-                        "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
-                          "Plist": ""
-                        },
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 700.0,
-                          "Y": 30.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.7839,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.0403,
-                          "Y": 0.6167
-                        },
-                        "LeftMargin": 682.0,
-                        "RightMargin": 175.0,
-                        "TopMargin": 11.5,
-                        "BottomMargin": 11.5,
                         "Tag": 323,
                         "Children": [
                           {
@@ -1966,6 +1842,130 @@
                         },
                         "Name": "btnRadio31",
                         "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_18.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_18.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_18.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_15.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_18.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 700.0,
+                          "Y": 30.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.7839,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.0403,
+                          "Y": 0.6167
+                        },
+                        "LeftMargin": 682.0,
+                        "RightMargin": 175.0,
+                        "TopMargin": 11.5,
+                        "BottomMargin": 11.5,
+                        "Tag": 257,
+                        "Children": [
+                          {
+                            "FontSize": 28,
+                            "LabelText": "赢家支付",
+                            "FontResource": {
+                              "Type": "Default",
+                              "Path": "",
+                              "Plist": ""
+                            },
+                            "OutlineSize": 2,
+                            "OutlineColor": {
+                              "R": 82,
+                              "G": 54,
+                              "B": 33
+                            },
+                            "ShadowColor": {
+                              "R": 110,
+                              "G": 110,
+                              "B": 110
+                            },
+                            "ShadowOffsetX": 2.0,
+                            "ShadowOffsetY": -2.0,
+                            "AnchorPoint": {
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": 42.0,
+                              "Y": 18.5814
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {
+                              "R": 96,
+                              "G": 46,
+                              "B": 26
+                            },
+                            "IconVisible": false,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": 1.1667,
+                              "Y": 0.5022
+                            },
+                            "PreSize": {
+                              "X": 3.1111,
+                              "Y": 0.7568
+                            },
+                            "LeftMargin": 42.0,
+                            "RightMargin": -118.0,
+                            "TopMargin": 4.4186,
+                            "BottomMargin": 4.5814,
+                            "Tag": 258,
+                            "ActionTag": -1871697127,
+                            "Size": {
+                              "X": 112.0,
+                              "Y": 28.0
+                            },
+                            "Name": "text",
+                            "ctype": "TextObjectData"
+                          }
+                        ],
+                        "ActionTag": -526135084,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "btnRadio30",
+                        "ctype": "CheckBoxObjectData"
                       }
                     ],
                     "ActionTag": 347263156,
@@ -2006,7 +2006,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -2040,7 +2040,7 @@
                         },
                         "Position": {
                           "X": 6.1494,
-                          "Y": 25.2216
+                          "Y": 25.224
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2063,8 +2063,8 @@
                         },
                         "LeftMargin": 6.1494,
                         "RightMargin": 746.8506,
-                        "TopMargin": 20.7784,
-                        "BottomMargin": 11.2216,
+                        "TopMargin": 20.776,
+                        "BottomMargin": 11.224,
                         "Tag": 334,
                         "ActionTag": -1976098977,
                         "Size": {
@@ -2114,7 +2114,7 @@
                           "Y": 0.6333
                         },
                         "LeftMargin": 171.8863,
-                        "RightMargin": 521.1136,
+                        "RightMargin": 521.1137,
                         "TopMargin": 18.7995,
                         "BottomMargin": 3.2005,
                         "Tag": 585,
@@ -2366,7 +2366,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -2468,7 +2468,7 @@
                         },
                         "Position": {
                           "X": 161.1664,
-                          "Y": 18.6319
+                          "Y": 18.63
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2487,8 +2487,8 @@
                         },
                         "LeftMargin": 143.1664,
                         "RightMargin": 713.8336,
-                        "TopMargin": 22.8681,
-                        "BottomMargin": 0.1319,
+                        "TopMargin": 22.87,
+                        "BottomMargin": 0.13,
                         "Tag": 598,
                         "Children": [
                           {
@@ -2849,7 +2849,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -2951,7 +2951,7 @@
                         },
                         "Position": {
                           "X": 161.1664,
-                          "Y": 18.6319
+                          "Y": 18.63
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -2970,8 +2970,8 @@
                         },
                         "LeftMargin": 143.1664,
                         "RightMargin": 713.8336,
-                        "TopMargin": 22.8681,
-                        "BottomMargin": 0.1319,
+                        "TopMargin": 22.87,
+                        "BottomMargin": 0.13,
                         "Tag": 590,
                         "Children": [
                           {
@@ -3207,7 +3207,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -3309,7 +3309,7 @@
                         },
                         "Position": {
                           "X": 161.1664,
-                          "Y": 18.6319
+                          "Y": 18.63
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -3328,8 +3328,8 @@
                         },
                         "LeftMargin": 143.1664,
                         "RightMargin": 713.8336,
-                        "TopMargin": 22.8681,
-                        "BottomMargin": 0.1319,
+                        "TopMargin": 22.87,
+                        "BottomMargin": 0.13,
                         "Tag": 606,
                         "Children": [
                           {
@@ -3584,7 +3584,7 @@
                         "Children": [
                           {
                             "FontSize": 28,
-                            "LabelText": "13张",
+                            "LabelText": "17张",
                             "FontResource": {
                               "Type": "Default",
                               "Path": "",
@@ -3690,7 +3690,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -3792,7 +3792,7 @@
                         },
                         "Position": {
                           "X": 161.1664,
-                          "Y": 18.6319
+                          "Y": 18.63
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -3811,8 +3811,8 @@
                         },
                         "LeftMargin": 143.1664,
                         "RightMargin": 713.8336,
-                        "TopMargin": 22.8681,
-                        "BottomMargin": 0.1319,
+                        "TopMargin": 22.87,
+                        "BottomMargin": 0.13,
                         "Tag": 620,
                         "Children": [
                           {
@@ -4042,7 +4042,7 @@
                         },
                         "Position": {
                           "X": 701.1664,
-                          "Y": 18.6319
+                          "Y": 18.63
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -4061,8 +4061,8 @@
                         },
                         "LeftMargin": 683.1664,
                         "RightMargin": 173.8336,
-                        "TopMargin": 22.8681,
-                        "BottomMargin": 0.1319,
+                        "TopMargin": 22.87,
+                        "BottomMargin": 0.13,
                         "Tag": 614,
                         "Children": [
                           {
@@ -4173,7 +4173,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -4900,7 +4900,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,
@@ -5384,7 +5384,7 @@
                     },
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.048
+                      "Y": 0.06
                     },
                     "LeftMargin": -1.4825,
                     "RightMargin": 1.4825,

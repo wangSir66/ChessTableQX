@@ -4234,6 +4234,29 @@
           <Image Name="select.png" />
           <Image Name="unSelect.png" />
         </Folder>
+        <Folder Name="RunFasterYA">
+          <Folder Name="Game">
+            <Image Name="GameBG.jpg" />
+            <Image Name="GameName.png" />
+            <Image Name="head.png" />
+            <Image Name="HeadFrame.png" />
+            <Image Name="hide_head.png" />
+          </Folder>
+          <Folder Name="RoundEnd">
+            <Image Name="BigResultBG.png" />
+            <Image Name="BigResultBG1.png" />
+            <Image Name="BigResultBG2.png" />
+            <Image Name="BigResultTitle.png" />
+            <Image Name="BtnNextGround.png" />
+            <Image Name="LittleResultbg1.png" />
+            <Image Name="LittleResultBG2.png" />
+            <Image Name="LittleResultDraw.png" />
+            <Image Name="LittleResultLose.png" />
+            <Image Name="LittleResultWin.png" />
+            <Image Name="tiao.png" />
+            <Image Name="Zhuang.png" />
+          </Folder>
+        </Folder>
         <Folder Name="ScanCheat">
           <PlistImageFolder Image="ScanCheat.png" PListFile="ScanCheat.plist" Name=".ScanCheat_PList.Dir">
             <PlistImageFile Name="ScanCheat_detection_fail.png" Key="ScanCheat/detection_fail.png" />
@@ -4880,6 +4903,7 @@
         <Project Name="bg_PaoDeKuaiTY.csd" Type="Node" />
         <Project Name="bg_paodekuaiXS.csd" Type="Node" />
         <Project Name="bg_red20.csd" Type="Node" />
+        <Project Name="bg_RunFasterYaAn.csd" Type="Node" />
         <Project Name="bg_shuyang.csd" Type="Node" />
         <Project Name="bg_siyang.csd" Type="Node" />
         <Project Name="bg_siyang_new.csd" Type="Node" />
@@ -4939,6 +4963,7 @@
         <Project Name="endOne_PaoDeKuaiTY.csd" Type="Layer" />
         <Project Name="endOne_PaoDeKuaiXS.csd" Type="Layer" />
         <Project Name="endOne_Red20.csd" Type="Layer" />
+        <Project Name="endOne_RunFasterYA.csd" Type="Layer" />
         <Project Name="endOne_shuyang.csd" Type="Layer" />
         <Project Name="endOne_siyang.csd" Type="Layer" />
         <Project Name="endOne_siyang_new.csd" Type="Layer" />
@@ -5059,6 +5084,7 @@
         <Project Name="Play_PaoDeKuaiLYG.csd" Type="Layer" />
         <Project Name="Play_PaoDeKuaiTY.csd" Type="Layer" />
         <Project Name="Play_Red20.csd" Type="Layer" />
+        <Project Name="Play_RunFasterYN.csd" Type="Layer" />
         <Project Name="Play_shuyang.csd" Type="Layer" />
         <Project Name="Play_siyang.csd" Type="Layer" />
         <Project Name="Play_siyang_new.csd" Type="Layer" />
@@ -5150,8 +5176,6 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
-        <Project Name="bg_RunFasterYaAn.csd" Type="Node" />
-        <Project Name="Play_RunFasterYN.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

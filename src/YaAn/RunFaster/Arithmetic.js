@@ -1,7 +1,7 @@
 //跑得快算法类
 (function () {
     function GameLogic_RunFaster() {
-        this.handCount = 16;
+        this.handCount = 10;
         this.laiziCard = -1;
 
 
@@ -41,6 +41,19 @@
         }
     }
 
+    GameLogic_RunFaster.prototype.initAreaSelectMode = function (areaSelectMode) {
+        PDK_CARDCOUNT[PDK_CARDTPYE.liandui] = areaSelectMode.Sisters ? 4 : 6;
+        this.handCount = areaSelectMode['cardNumIndex'] || 10;
+        PDK_CARD_VALUE = {};
+        PDK_CARD_VALUE[this.CARDTPYE.sizha] = 2;
+        PDK_CARD_VALUE[this.CARDTPYE.sanzha] = 1;
+        pdk_allZhaDan = [];
+        if (areaSelectMode.isZhaDanJiaFen) {
+            areaSelectMode.can3geZha && pdk_allZhaDan.push(this.CARDTPYE.sanzha);
+            areaSelectMode.can4geZha && pdk_allZhaDan.push(this.CARDTPYE.sizha);
+        }
+    }
+
     if (typeof (cc) == 'undefined') {
         var cc = function () { }
         cc.log = function () {
@@ -60,6 +73,8 @@
     var PDK_CARDTPYE = {
         szdaipai: 111,
         sztonghua: 110,
+        sanzha: 17,
+        sizhang: 16,
         sangeK: 15,
         sidaisan: 14,
         sandaier: 13,
@@ -84,6 +99,7 @@
     PDK_CARDCOUNT[PDK_CARDTPYE.sidaier] = 6;
     PDK_CARDCOUNT[PDK_CARDTPYE.sidaisan] = 5;
     PDK_CARDCOUNT[PDK_CARDTPYE.sangeA] = 3;
+    PDK_CARDCOUNT[PDK_CARDTPYE.sanzha] = 3;
     PDK_CARDCOUNT[PDK_CARDTPYE.sangeK] = 3;
     PDK_CARDCOUNT[PDK_CARDTPYE.sizha] = 4;
     PDK_CARDCOUNT[PDK_CARDTPYE.sandaier] = 5;
@@ -406,33 +422,38 @@
     // 2.15张玩法：在16张的基础上，再去掉两个A（剩红桃A）、一个K（去掉黑桃K），一共45张
     GameLogic_RunFaster.prototype.randomCards = function (areaSelectMode, tData) {
         var cards = [];
-        var handCardNum = 1 == areaSelectMode['cardNumIndex'] ? 15 : 16;
-        this.handCount = handCardNum;
+        var handCardNum = this.handCount = areaSelectMode['cardNumIndex'] || 10;
         var allHandCardNum = handCardNum * tData.maxPlayer;
+        //根据规则确定炸弹
+        this.pdk_allZhaDan = [];
+        if (areaSelectMode.isZhaDanJiaFen) {
+            areaSelectMode.can3geZha && this.pdk_allZhaDan.push(this.CARDTPYE.sanzhang);
+            areaSelectMode.can4geZha && this.pdk_allZhaDan.push(this.CARDTPYE.sizhang);
+        } else this.pdk_allZhaDan = [];
         // 没有大小王的 52 张牌
-        for (var i = 1; i <= 52; i++) {
-            cards.push(i);
+        for (var i = 1; i <= 52; i++) cards.push(i);
+
+        // 去掉 方块2 梅花2 红心2 去掉黑桃A
+        let qc = [
+            this.cardCfg.fk[2], this.cardCfg.mh[2], this.cardCfg.hx[2], this.cardCfg.ht[1],
+            this.cardCfg.fk[3], this.cardCfg.mh[3], this.cardCfg.hx[3], this.cardCfg.ht[3],
+            this.cardCfg.fk[4], this.cardCfg.mh[4], this.cardCfg.hx[4], this.cardCfg.ht[4]
+        ];
+        //去掉所有梅花
+        if (areaSelectMode.HandCutRule == 0) {
+            let len = Object.keys(this.cardCfg.mh);
+            for (let _i = 0; _i < len.length; _i++) {
+                const key = len[_i];
+                qc.push(this.cardCfg.mh[key])
+            }
+        }
+        for (let _i = 0; _i < qc.length; _i++) {
+            const c = qc[_i];
+            cards.splice(cards.indexOf(c), 1);
         }
 
-        // 去掉 方块2 梅花2 黑桃2
-        cards.splice(cards.indexOf(this.cardCfg.fk[2]), 1);
-        cards.splice(cards.indexOf(this.cardCfg.mh[2]), 1);
-        cards.splice(cards.indexOf(this.cardCfg.ht[2]), 1);
-
-        // 去跳黑桃A
-        cards.splice(cards.indexOf(this.cardCfg.ht[1]), 1);
-
-        // 15张玩法 
-        if (15 == handCardNum) {
-            // 去掉 方块A 梅花A
-            cards.splice(cards.indexOf(this.cardCfg.fk[1]), 1);
-            cards.splice(cards.indexOf(this.cardCfg.mh[1]), 1);
-            // 去掉 黑桃K
-            cards.splice(cards.indexOf(this.cardCfg.ht[13]), 1);
-        }
-
-        // 红心3先去掉, 确定人数后再放进牌堆， 保证红心3发到玩家手上, 拿红心3的先出
-        cards.splice(cards.indexOf(this.cardCfg.hx[3]), 1);
+        // 黑桃5先去掉, 确定人数后再放进牌堆， 保证黑桃5发到玩家手上, 拿黑桃5的先出
+        cards.splice(cards.indexOf(this.cardCfg.ht[5]), 1);
 
         // 洗牌
         shuffleArray(cards);
@@ -440,8 +461,8 @@
         // 取得对应人数的牌数 - 1
         cards = cards.slice(0, allHandCardNum - 1);
 
-        // 红心3放进洗牌堆
-        cards.push(this.cardCfg.hx[3]);
+        // 黑桃3放进洗牌堆
+        cards.push(this.cardCfg.ht[5]);
 
         // 洗牌
         shuffleArray(cards);
@@ -746,10 +767,8 @@
         var cardType = this.calType(oCards, areaSelectMode);
 
         // 四炸
-        if (cardType == PDK_CARDTPYE.sizha
-            || cardType == PDK_CARDTPYE.sangeA
-            || cardType == PDK_CARDTPYE.sangeK
-            || cardType == PDK_CARDTPYE.sztonghua) {
+
+        if (pdk_allZhaDan.indexOf(cardType) > -1) {
             return true;
         } else {
             return false;
@@ -972,8 +991,10 @@
             return PDK_CARDTPYE.sidaier;
 
         //四炸
-        if (cardCount == 4 && allSame)
-            return PDK_CARDTPYE.sizha;
+        if (cardCount == 4 && allSame) {
+            if (areaSelectMode["can4geZha"]) return PDK_CARDTPYE.sizha || -1;
+            else return PDK_CARDTPYE.sizhang || -1
+        }
 
         // 三带二
         if (areaSelectMode.can3dai2 && cardCount == PDK_CARDCOUNT[PDK_CARDTPYE.sandaier] && maxCount == 3) {
@@ -988,8 +1009,10 @@
             return PDK_CARDTPYE.sandaiyi;
 
         // 三张
-        if (cardCount == 3 && allSame)
-            return PDK_CARDTPYE.sanzhang;
+        if (cardCount == 3 && allSame) {
+            if (areaSelectMode["can3geZha"]) return PDK_CARDTPYE.sanzha || -1;
+            else return PDK_CARDTPYE.sanzhang || -1
+        }
 
         // 对子
         if (cardCount == 2 && allSame)

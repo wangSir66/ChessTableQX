@@ -9215,6 +9215,7 @@ MjClient.createRoom = function (para, roundNum, payWay, callback) {
         if (rtn.result == 0) {
             MjClient.data.vipTable = rtn.vipTable;
             MjClient.joinGame(rtn.vipTable, callback, false, MjClient.gameType);
+            util.localStorageEncrypt.setStringItem(KEYCURRGAMERULE + para.gameType, JSON.stringify(para));
         } else {
             if (!cc.isUndefined(rtn.message)) {
                 if (rtn.code == -2) //创建房间失败 开启定位弹窗

@@ -928,7 +928,7 @@
                         "Children": [
                           {
                             "FontSize": 28,
-                            "LabelText": "圈主支付",
+                            "LabelText": "房主支付",
                             "FontResource": {
                               "Type": "Default",
                               "Path": "",
@@ -1027,132 +1027,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 441.5563,
-                          "Y": 17.154
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.4945,
-                          "Y": 0.2859
-                        },
-                        "PreSize": {
-                          "X": 0.0403,
-                          "Y": 0.6167
-                        },
-                        "LeftMargin": 423.5563,
-                        "RightMargin": 433.4437,
-                        "TopMargin": 24.346,
-                        "BottomMargin": -1.346,
-                        "Tag": 257,
-                        "Children": [
-                          {
-                            "FontSize": 28,
-                            "LabelText": "赢家支付",
-                            "FontResource": {
-                              "Type": "Default",
-                              "Path": "",
-                              "Plist": ""
-                            },
-                            "OutlineSize": 2,
-                            "OutlineColor": {
-                              "R": 82,
-                              "G": 54,
-                              "B": 33
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 42.0,
-                              "Y": 18.5814
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 96,
-                              "G": 46,
-                              "B": 26
-                            },
-                            "IconVisible": false,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 1.1667,
-                              "Y": 0.5022
-                            },
-                            "PreSize": {
-                              "X": 3.1111,
-                              "Y": 0.7568
-                            },
-                            "LeftMargin": 42.0,
-                            "RightMargin": -118.0,
-                            "TopMargin": 4.4186,
-                            "BottomMargin": 4.5814,
-                            "Tag": 258,
-                            "ActionTag": -1871697127,
-                            "Size": {
-                              "X": 112.0,
-                              "Y": 28.0
-                            },
-                            "Name": "text",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": -526135084,
-                        "Size": {
-                          "X": 36.0,
-                          "Y": 37.0
-                        },
-                        "Name": "btnRadio30",
-                        "ctype": "CheckBoxObjectData"
-                      },
-                      {
-                        "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
-                          "Plist": ""
-                        },
-                        "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
-                          "Plist": ""
-                        },
-                        "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
-                          "Plist": ""
-                        },
-                        "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_15.png",
-                          "Plist": ""
-                        },
-                        "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_18.png",
-                          "Plist": ""
-                        },
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 701.951,
+                          "X": 445.0,
                           "Y": 13.308
                         },
                         "Scale": {
@@ -1163,15 +1038,15 @@
                         "IconVisible": false,
                         "PositionPercentYEnabled": true,
                         "PrePosition": {
-                          "X": 0.7861,
+                          "X": 0.4983,
                           "Y": 0.2218
                         },
                         "PreSize": {
                           "X": 0.0403,
                           "Y": 0.6167
                         },
-                        "LeftMargin": 683.951,
-                        "RightMargin": 173.049,
+                        "LeftMargin": 427.0,
+                        "RightMargin": 430.0,
                         "TopMargin": 28.192,
                         "BottomMargin": -5.192,
                         "Tag": 323,
@@ -1243,6 +1118,131 @@
                           "Y": 37.0
                         },
                         "Name": "btnRadio31",
+                        "ctype": "CheckBoxObjectData"
+                      },
+                      {
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_18.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_18.png",
+                          "Plist": ""
+                        },
+                        "DisableBackFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_18.png",
+                          "Plist": ""
+                        },
+                        "NodeNormalFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_15.png",
+                          "Plist": ""
+                        },
+                        "NodeDisableFileData": {
+                          "Type": "Normal",
+                          "Path": "createNewPng/daTC1_18.png",
+                          "Plist": ""
+                        },
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 700.0,
+                          "Y": 17.154
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.7839,
+                          "Y": 0.2859
+                        },
+                        "PreSize": {
+                          "X": 0.0403,
+                          "Y": 0.6167
+                        },
+                        "LeftMargin": 682.0,
+                        "RightMargin": 175.0,
+                        "TopMargin": 24.346,
+                        "BottomMargin": -1.346,
+                        "Tag": 257,
+                        "Children": [
+                          {
+                            "FontSize": 28,
+                            "LabelText": "赢家支付",
+                            "FontResource": {
+                              "Type": "Default",
+                              "Path": "",
+                              "Plist": ""
+                            },
+                            "OutlineSize": 2,
+                            "OutlineColor": {
+                              "R": 82,
+                              "G": 54,
+                              "B": 33
+                            },
+                            "ShadowColor": {
+                              "R": 110,
+                              "G": 110,
+                              "B": 110
+                            },
+                            "ShadowOffsetX": 2.0,
+                            "ShadowOffsetY": -2.0,
+                            "AnchorPoint": {
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": 41.9999,
+                              "Y": 19.8884
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {
+                              "R": 96,
+                              "G": 46,
+                              "B": 26
+                            },
+                            "IconVisible": false,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": 1.1667,
+                              "Y": 0.5375
+                            },
+                            "PreSize": {
+                              "X": 3.1111,
+                              "Y": 0.7568
+                            },
+                            "LeftMargin": 41.9999,
+                            "RightMargin": -117.9999,
+                            "TopMargin": 3.1116,
+                            "BottomMargin": 5.8884,
+                            "Tag": 258,
+                            "ActionTag": -1871697127,
+                            "Size": {
+                              "X": 112.0,
+                              "Y": 28.0
+                            },
+                            "Name": "text",
+                            "ctype": "TextObjectData"
+                          }
+                        ],
+                        "ActionTag": -526135084,
+                        "Size": {
+                          "X": 36.0,
+                          "Y": 37.0
+                        },
+                        "Name": "btnRadio30",
                         "ctype": "CheckBoxObjectData"
                       }
                     ],
@@ -2001,7 +2001,7 @@
                           "Y": 0.3333
                         },
                         "LeftMargin": 299.4666,
-                        "RightMargin": 583.5333,
+                        "RightMargin": 583.5334,
                         "TopMargin": 30.0,
                         "BottomMargin": 10.0,
                         "Tag": 454,

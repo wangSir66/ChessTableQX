@@ -1,11 +1,8 @@
 //选项选中时的颜色处理  统一处理
 const BTNCOLOR1 = cc.color('#D96334');//选中
 const BTNCOLOR2 = cc.color('#8E8178');//禁用
-const BTNCOLOR3 = cc.color("#935C23");//未选中
-
-function cpp_callback(a, b) {
-    cc.log("cpp return two integer: " + a + " " + b);
-}
+const BTNCOLOR3 = cc.color("#602E1A");//未选中
+const KEYCURRGAMERULE = 'KEY_CURR_GAME_RULE';//缓存游戏规则
 
 var CreateRoomNodeYaAn = cc.Node.extend({
     bg_node: null,
@@ -40,6 +37,8 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         if (this._isFriendCard) this.clubRule = {};
         cc.log("++++++++++ this.clubRule ++++++++" + JSON.stringify(this.clubRule) + "\n" + JSON.stringify(this._data));
         util.localStorageEncrypt.setNumberItem(this.localStorageKey.KEY_PayWay, 0);
+        this.rangeScore = [1, 20];
+        this.trustTimes = [0, 30, 60, 90];
         //创建界面
         this.initAll(this._isFriendCard);
         //初始化
@@ -47,27 +46,89 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         this.modifyDiFenText();
         this.initPlayNode();
         this.initEnd();
+        this.setPlayNodeCurrentSelect(this._isFriendCard);
     },
     //初始化结束需要做的事情
     initEnd: function () {
-        
+        if (this._isFriendCard && cc.sys.isObjectValid(this.payWayNodeArray[0])) {
+            var _text = this.payWayNodeArray[0].getChildByName("text");
+            _text.setString("群主付");
+        }
+        const pNums = Object.keys(this.getGamePriceConfig()), list = this.RedioGroup['renshu']._nodeList;
+        for (let _i = 0; _i < list.length; _i++) {
+            const n = list[_i];
+            if (pNums[_i]) {
+                n.getChildByName('text').setString(pNums[_i]+' 人');
+                n.visible = true;
+            }else n.visible = false;
+        }
     },
+    /**设置当前选中状态 */
+    setPlayNodeCurrentSelect: function (isFriendCard) {
+    },
+    selectedCB: function (text, isSelected) {
+        if (isSelected) {
+            text.setTextColor(this._selectColor);
+        } else {
+            text.setTextColor(this._unSelectColor);
+        }
 
+    },
+    radioBoxSelectCB: function (index, sender, list) {
+        if (sender) {
+            var selectColor = this._selectColor;
+            var unSelectColor = this._unSelectColor;
+            cc.log('--------radioBoxSelectCB-----', 1)
+            var txt = sender.getChildByName("text");
+            txt.ignoreContentAdaptWithSize(true);
+            txt.setTextColor(selectColor);
+            var len = list.length;
+            for (var i = 0; i < len; i++) {
+                var radioBox = list[i];
+
+                if (radioBox !== sender || sender.isSelected() == false) {
+                    cc.log('--------radioBoxSelectCB-----', 2)
+                    txt = radioBox.getChildByName("text");
+                    txt.ignoreContentAdaptWithSize(true);
+                    txt.setTextColor(unSelectColor);
+                }
+            }
+        }
+    },
+    getItem: function (key, defaultValue) {
+        if (typeof (defaultValue) == "undefined")
+            defaultValue = 0;
+        return this.clubRule && key && typeof (this.clubRule[key]) != "undefined" ? this.clubRule[key] : defaultValue;
+    },
+    getNumberItem: function (key, defaultValue) {
+        var ret = this.getItem(key, defaultValue);
+        ret = Number(ret);
+        if (!cc.isNumber(ret))
+            ret = 0;
+        return ret;
+    },
+    getBoolItem: function (key, defaultValue) {
+        var ret = this.getItem(key, defaultValue);
+        return ret ? true : false;
+    },
+    getStringItem: function (key, defaultValue) {
+        return this.getItem(key, defaultValue) + "";
+    },
     /**设置底分 */
     modifyDiFenText: function () {
         if (!this._view) return;
         //底分加減（1-20）
         let df = this._view.getChildByName('difen');
         if (df) {
-            let baseScoreT = df.getChildByName('BaseScore');
+            let baseScoreT = this.difen = df.getChildByName('BaseScore');
             baseScoreT.setString(1);
             this._btnItems.push(df.getChildByName('BtnPlusBaseScore'))
             df.getChildByName('BtnPlusBaseScore').addTouchEventListener((sender, Type) => {
                 switch (Type) {
                     case ccui.Widget.TOUCH_ENDED:
                         let num = Number(baseScoreT.getString());
-                        if (num >= 20) {
-                            baseScoreT.setString(1);
+                        if (num >= this.rangeScore[1]) {
+                            baseScoreT.setString(this.rangeScore[0]);
                         } else {
                             baseScoreT.setString(num + 1);
                         }
@@ -81,8 +142,8 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 switch (Type) {
                     case ccui.Widget.TOUCH_ENDED:
                         let num = Number(baseScoreT.getString());
-                        if (num === 1) {
-                            baseScoreT.setString(20);
+                        if (num === this.rangeScore[0]) {
+                            baseScoreT.setString(this.rangeScore[1]);
                         } else {
                             baseScoreT.setString(num - 1);
                         }
@@ -101,6 +162,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         this.roundNodeArray = [];
         this._btnItems = [];
         this.RedioGroup = {};
+        this.tuoguanNodeList = [];
         for (let _i = 0; _i < this._view.children.length; _i++) {
             const row = this._view.children[_i];
             let btns = [];
@@ -108,12 +170,13 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 const col = row.children[_j];
                 if (col.name.indexOf('btnRadio') > -1 || col.name.indexOf('btnCheck') > -1) {
                     this._btnItems.push(col);
+                    if (row.name === 'tuoguan') this.tuoguanNodeList.push(col);
                     if (col.name.indexOf('btnRadio') > -1) {
                         btns.push(col);
                         if (col.name == 'btnRadio29' || col.name == 'btnRadio30' || col.name == 'btnRadio31') {
                             this.payWayNodeArray.push(col);
                         } else if (col.name == 'btnRadio0' || col.name == 'btnRadio1' || col.name == 'btnRadio2') {
-                            col.getChildByName('text_0').visible = false
+                            col.getChildByName('text_0').setString('');
                             this.roundNodeArray.push(col)
                         }
                     }
@@ -121,7 +184,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                         col.addEventListener(this.callSelectBack.bind(this), col);
                         this.addListenerText(col, null, this.callSelectBack.bind(this));
                     }
-                    col.getChildByName('text').setColor(col.isSelected() ? this._selectColor : this._unSelectColor);
                 }
             }
             if (btns.length > 0) {
@@ -263,7 +325,25 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     },
 
     callSelectBack: function (indx, item, list) {
-        cc.log('callSelectBack------->', indx, item.name, JSON.stringify(list))
+        const isNum = parseInt(indx)
+        if (isNum >= 0 && item) {
+            indx = Number(indx);
+            let p = item.getParent();
+            if (p) {
+                const currObj = this.RedioGroup[p.name];
+                if(p.name == 'renshu')this.changePayForPlayerNum(indx);
+                this.radioBoxSelectCB(indx, currObj._nodeList[indx], currObj._nodeList);
+            }
+        } else if (indx != null && indx != undefined) {
+            var text = indx.getChildByName("text");
+            this.selectedCB(text, indx.isSelected());
+        } else if (!indx && item) {
+            item = this._btnItems.find(b => b.name == item);
+            if (item) {
+                var text = item.getChildByName("text");
+                this.selectedCB(text, item.isSelected());
+            }
+        }
     },
 
     //gps
@@ -383,8 +463,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         }
         return null;
     },
-
-
     getCheckboxSelectedByName: function (str) {
         for (let _i = 0; _i < this._btnItems.length; _i++) {
             const btn = this._btnItems[_i];
@@ -395,7 +473,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
 
     getRedioSelectByName: function (str) {
         if (!this._view) return 0;
-        let childs = this._view.getChildByName(str).children.filter(n=>n.name.indexOf('btnRadio') > -1 || n.name.indexOf('btnCheck') > -1);
+        let childs = this._view.getChildByName(str).children.filter(n => n.name.indexOf('btnRadio') > -1 || n.name.indexOf('btnCheck') > -1);
         for (let _i = 0; _i < childs.length; _i++) {
             const btn = childs[_i];
             if (cc.sys.isObjectValid(btn) && btn.isSelected()) return _i;
@@ -490,10 +568,9 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         MjClient.createui.addChild(dialog);
     },
     getSelectPlayNum: function () {
-        if (cc.sys.OS_WINDOWS == cc.sys.os) {
-            cc.log('warn 如果是需要选择人数的游戏，调用initPlayNumNode初始化加快创建界面打开速度')
-        }
-        return this.getSelectedPara().maxPlayer;
+        let indx = this.RedioGroup['renshu'].getSelectIndex(),
+            pConfig = this.getGamePriceConfig();
+        return Number(Object.keys(pConfig)[indx]) || 2;
     },
     addListenerText: function (node, radio, callback) {//callback 是回调函数
         if (node && radio) {
@@ -516,13 +593,18 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             cc.eventManager.addListener(this.setTextClick(), node.getChildByName("text"));
         }
     },
-
+    changePayForPlayerNum: function (select_number) {
+        if (select_number != null) {
+            MjClient.MaxPlayerNum = 4 - select_number;
+        }
+        this.setDiaNumData(this.bg_node);
+    },
     //创建房间 点击范围扩大 使得文字也能点击
     setTextClick: function (listnode, number, radio, callback) {
         var that = this;
         var _callback = callback || function () { };
-        var selectColor = MjClient.createRoomNode._selectColor;
-        var unSelectColor = MjClient.createRoomNode._unSelectColor;
+        var selectColor = this._selectColor;
+        var unSelectColor = this._unSelectColor;
 
         return cc.EventListener.create({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
@@ -573,7 +655,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                         }
                     }
                     //this._playNode_round_radio  this._playNode_payway_radio
-                    if ((radio == that._playNode_round_radio) || (radio == that._playNode_payway_radio)) {
+                    if ((radio == that.RedioGroup['jushu']) || (radio == that.RedioGroup['zhifufangshi'])) {
                         cc.log(" ====== that.bg_node,", that.bg_node)
                         that.setDiaNumData(that.bg_node);
                     }
@@ -616,54 +698,13 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         if (this.isUseUIV3)
             return;
 
-        if (isJinZhongAPPType() ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
-            MjClient.getAppType() === MjClient.APP_TYPE.HUBEIMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
-            btn.loadTextureNormal("createNewPng/btn_create_n_diamond.png");
-        } else if (MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
-            btn.loadTextureNormal("ui/createRoom/create_n.png");
-            btn.loadTexturePressed("ui/createRoom/create_s.png");
-        } else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.APP_TYPE.QXSYDTZ == MjClient.getAppType()) {
-            btn.loadTextureNormal("createNewPng/btn_create_n_diamond.png");
-        } else if (costMoney == 0) {
+        if (costMoney == 0) {
             btn.loadTextureNormal("createNewPng/btn_create_n_diamond_free.png");
         } else {
             btn.loadTextureNormal("createNewPng/btn_create_n_diamond.png");
         }
     },
     selectPay: function (roundNumObj, str_type, str_pay) {
-        //var _text4 = this._text4;
-        //var _text4_0 = this._text4_0;
-        //var _text8 = this._text8;
-        //var _text8_0 = this._text8_0;
-        //var _text16 = this._text16;
-        //var _text16_0 = this._text16_0;
-        //if (str_type == MjClient.GAME_TYPE.LIAN_YUN_GANG || str_type == MjClient.GAME_TYPE.XU_ZHOU) {
-        //    _text4.setString("2圈");
-        //    _text4_0 && _text4_0.setString("(" + str_pay[0] + "黄金)");
-        //    _text8.setString(roundNumObj[1] + "局");
-        //    _text8_0 && _text8_0.setString("(" + str_pay[1] + "黄金)");
-        //    _text16.setString(roundNumObj[2] + "局");
-        //    _text16_0 && _text16_0.setString("(" + str_pay[2] + "黄金)");
-        //} else {
-        //    if (_text4_0 || _text16_0 || _text8_0) {
-        //        _text4.setString(roundNumObj[0] + "局");
-        //        _text4_0 && _text4_0.setString("(" + str_pay[0] + "黄金)");
-        //        _text8.setString(roundNumObj[1] + "局");
-        //        _text8_0 && _text8_0.setString("(" + str_pay[1] + "黄金)");
-        //        _text16.setString(roundNumObj[2] + "局");
-        //        _text16_0 && _text16_0.setString("(" + str_pay[2] + "黄金)");
-        //    } else {
-        //        _text4.setString(roundNumObj[0] + "局(" + str_pay[0] + "黄金)");
-        //        _text8.setString(roundNumObj[1] + "局(" + str_pay[1] + "黄金)");
-        //        _text16.setString(roundNumObj[2] + "局(" + str_pay[2] + "黄金)");
-        //    }
-        //}
-
-
         for (var i = 0; i < this.roundNodeArray.length; i++) {
             var roundNode = this.roundNodeArray[i];
             if (cc.sys.isObjectValid(roundNode)) {
@@ -768,16 +809,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
 
     },
     selectRound: function (totalPayWayArray, index, diamondNumNode, btn_create_diamond) {
-        //if (node1.isSelected()) {
-        //    _diamondNumNode.setString("" + pay1);
-        //    this.resetBtnCreateDiamond(_btn_create_diamond, pay1);
-        //} else if (node2.isSelected()) {
-        //    _diamondNumNode.setString("" + pay2);
-        //    this.resetBtnCreateDiamond(_btn_create_diamond, pay2);
-        //} else if (node3.isSelected()) {
-        //    _diamondNumNode.setString("" + pay3);
-        //    this.resetBtnCreateDiamond(_btn_create_diamond, pay3);
-        //}
         var roundNumObj = this.getRoundNumObj();
         var roundOneIndex = -1;
         if (roundNumObj) {
@@ -968,11 +999,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     },
     getSelectedRoundNum: function () {
         //局数
-
-        // var _gameType = this._data.gameType;
-        // var _maxPlayer = this.getSelectPlayNum();//this.getSelectedPara().maxPlayer;
-        // var roundNumObj = Object.keys(MjClient.data.gamePrice[_gameType][_maxPlayer]).sort(function(a,b){return a-b});
-
         var roundNumObj = this.getRoundNumObj();
         var roundNum = roundNumObj[0];
 
@@ -980,13 +1006,9 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             var roundNode = this.roundNodeArray[i];
             if (cc.sys.isObjectValid(roundNode) && roundNode.isSelected()) {
                 roundNum = roundNumObj[i];
-                // util.localStorageEncrypt.setNumberItem(this.localStorageKey.KEY_RondType, i+1);
                 break;
             }
         }
-
-        cc.log('ssssssssss:' + JSON.stringify(roundNum))
-
         return roundNum;
     },
 
@@ -1004,10 +1026,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     getSelectedPayWay: function () {
         //付房卡的方式
         var payWay = 0;
-        //payWay = this.payWayNode_1.isSelected() == true ? 0 : (this.payWayNode_2.isSelected() == true ? 1 : 2);
-        //util.localStorageEncrypt.setNumberItem(this.localStorageKey.KEY_PayWay, payWay);
-
-
         for (var i = 0; i < this.payWayNodeArray.length; i++) {
             var payWayNode = this.payWayNodeArray[i];
             if (cc.sys.isObjectValid(payWayNode) && payWayNode.isSelected()) {
@@ -1035,34 +1053,166 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             return pPriceCfg[pGameType][pMaxPlayer];
         }
     },
-
     getRoundNumObj: function () {
-        var gameType = this._data.gameType;
-        cc.log("===============================gameType = " + gameType);
-        var maxPlayer = this.getSelectPlayNum();//this.getSelectedPara().maxPlayer;
-        var gamePriceCfg = MjClient.data.gamePrice[gameType][maxPlayer];
-        var roundNumObj = null;
-
-        //cc.log("===============================MjClient.data.gamePrice = " + JSON.stringify(MjClient.data.gamePrice));
-
-        // for (var key in gamePriceCfg) {
-        //     cc.log("The key = ",key)
-        // }
-
-        // if (this.roundNumObj) {
-        //     // 兼容永州工程在本地配置了局数
-        //     roundNumObj = [];
-
-        //     for (var roundKey in this.roundNumObj) {
-        //         //cc.log("The roundKey = ",roundKey)
-        //         var roundNum = this.roundNumObj[roundKey].toString();
-        //         //cc.log("The roundNum = ",roundNum);
-        //         if (gamePriceCfg[roundNum])
-        //             roundNumObj.push(roundNum);
-        //     }
-        // } else {
-        roundNumObj = Object.keys(gamePriceCfg).sort(function (a, b) { return a - b });
-        // }
+        var maxPlayer = this.getSelectPlayNum();
+        var gamePriceCfg = this.getGamePriceConfig()[maxPlayer];
+        if (!gamePriceCfg) return {}
+        var roundNumObj = Object.keys(gamePriceCfg).sort(function (a, b) { return a - b });
         return roundNumObj;
+    },
+
+    getGamePriceConfig: function () {
+        var gameType = this._data.gameType;
+        var gamePriceCfg = MjClient.data.gamePrice[gameType];
+        return gamePriceCfg || {};
+    },
+
+    getExtraSelectedPara: function (para) {
+        //底分
+        para.difen = parseFloat(this.difen.getString());
+        // 托管
+        para.trustTime = this.trustTimes ? this.trustTimes[this.RedioGroup['tuoguan'].getSelectIndex()] : 0;
+        if (this.fanbei_radio) {
+            var labelString = this.nodeListFanBei[1].getChildByName("score").getString();
+
+            if (labelString == "不限分")
+                para.fanBeiScore = 10000;
+            else
+                para.fanBeiScore = parseInt(labelString);
+            para.fanBei = this.fanbei_radio.getSelectIndex();
+        }
+
+
+        //积分底分
+        if (this.jieSuanDiFen) {
+            para.jieSuanDiFen = this.difenAry[this.difenIndex];
+        }
+
+        // 封顶
+        if (this.fengding_radio) {
+            para.fengDing = this.fengding_radio.getSelectIndex();
+        }
+
+        //托管方式
+        if (this.trustWayRadio) {
+            para.isTrustWhole = false;
+            para.trustWay = 0;
+            for (var i = 0; i < this.trustWayNodeList.length; i++) {
+                if (this.trustWayNodeList[i].isSelected()) {
+                    para.trustWay = i;
+                    para.isTrustWhole = true;
+                    break;
+                }
+            }
+        }
+    },
+    setExtraPlayNodeCurrentSelect: function (isClub) {
+        if (this.fanbei_radio) {
+            // 大结算翻倍
+            var fanBeiOption;
+            var fanBeiScore;
+            if (isClub) {
+                fanBeiScore = this.getNumberItem("fanBeiScore", 10);
+                fanBeiOption = this.getNumberItem("fanBei", 0);
+            }
+            else {
+                fanBeiOption = util.localStorageEncrypt.getNumberItem(this.localStorageKey.fanBei, 0);
+                fanBeiScore = util.localStorageEncrypt.getNumberItem(this.localStorageKey.fanBeiScore, 10);
+            }
+
+            this.fanbei_radio.selectItem(fanBeiOption)
+            this.nodeListFanBei[1].getChildByName("score").setString(fanBeiScore <= 100 ? fanBeiScore + "分" : "不限分");
+            this.fanBeiRadioBoxSelectCB(fanBeiOption, this.nodeListFanBei[fanBeiOption], this.nodeListFanBei);
+        }
+
+        //托管
+        if (this.tuoguanNodeList && this.tuoguanNodeList.length) {
+            var trustTime;
+            if (isClub)
+                trustTime = this.getNumberItem("trustTime", 0);
+            else
+                trustTime = util.localStorageEncrypt.getNumberItem(this.localStorageKey.tuoGuan, 0);
+
+            var trustTimes = this.trustTimes;
+            var index = 0;
+            for (var i = 0; i < this.tuoguanNodeList.length; i++) {
+                var bSelected = trustTime == trustTimes[i];
+                this.tuoguanNodeList[i].setSelected(bSelected);
+
+                if (bSelected)
+                    index = i;
+            }
+            this.radioBoxSelectCB(index, this.tuoguanNodeList[index], this.tuoguanNodeList);
+
+            // this.refreshTrustWays(index, true);
+        }
+
+        //积分底分
+        if (this.jieSuanDiFen) {
+            var diFen;
+            if (isClub) {
+                diFen = this.getNumberItem("jieSuanDiFen", 1);
+            } else {
+                diFen = util.localStorageEncrypt.getNumberItem(this.localStorageKey.jieSuanDiFen, 1);
+            }
+            this.difenIndex = this.difenAry.indexOf(diFen);
+            if (this.difenIndex < 0) this.difenIndex = 1;
+            var text_diFen = this.jieSuanDiFen.getChildByName("text_diFen");
+            text_diFen.setString(this.difenAry[this.difenIndex] + "");
+
+        }
+
+        // 封顶
+        if (this.fengding_radio) {
+            var option = null;
+            if (isClub)
+                option = this.getNumberItem("fengDing", 0);
+            else
+                option = util.localStorageEncrypt.getNumberItem(this.localStorageKey.fengDing, 0);
+
+            this.fengding_radio.selectItem(option)
+            this.radioBoxSelectCB(option, this.nodeListFengDing[option], this.nodeListFengDing);
+        }
+
+        if (this._nodeGPS) {
+            var _bTempGPS;
+            if (isClub)
+                _bTempGPS = this.getBoolItem("gps", false);
+            else
+                _bTempGPS = util.localStorageEncrypt.getBoolItem(this.localStorageKey.KEY_GPS, false);
+            this._nodeGPS.setSelected(_bTempGPS);
+            if (this._nodeGPS.isSelected()) {
+                this._nodeGPS.getChildByName("text").setColor(this._selectColor);
+            } else {
+                this._nodeGPS.getChildByName("text").setColor(this._unSelectColor);
+            }
+        }
+
+        let roundNumObj = this.getRoundNumObj(),
+            pNums = Object.keys(this.getGamePriceConfig()).map(a=>Number(a)),
+            cacheRule = JSON.parse(util.localStorageEncrypt.getStringItem(KEYCURRGAMERULE + this._data.gameType, '{}'));
+        const key_nameR = {
+            'jushu': ['round', Number(roundNumObj[0]), roundNumObj],
+            'zhifufangshi': ['payWay', 0, [0, 1, 2]],
+            'renshu': ['maxPlayer', Number(pNums[0]), pNums],
+        }
+        let len = Object.keys(key_nameR);
+        for (let _i = 0; _i < len.length; _i++) {
+            let key = len[_i], val = key_nameR[key];
+            let _current, selectIndex, currObj;
+            if (isClub) {
+                if (typeof val[1] === 'number')
+                    _current = this.getNumberItem(val[0], val[1]);
+                else if (typeof val[1] === 'boolean')
+                    _current = this.getBoolItem(val[0], val[1]);
+            }
+            else
+                _current = cacheRule[val[0]] || val[1];
+            selectIndex = val[2].indexOf(_current);
+            currObj = this.RedioGroup[key];
+            currObj.selectItem(selectIndex);
+            this.radioBoxSelectCB(selectIndex, currObj._nodeList[selectIndex], currObj._nodeList);
+            if (key === 'renshu') this.changePayForPlayerNum(selectIndex);
+        }
     },
 });

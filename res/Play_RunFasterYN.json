@@ -92,13 +92,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/cardPic/beijing.png",
+                  "Path": "RunFasterYA/Game/GameBG.jpg",
                   "Plist": ""
                 },
                 "Scale9OriginX": 422,
                 "Scale9OriginY": 237,
                 "Scale9Width": 436,
-                "Scale9Height": 247,
+                "Scale9Height": 246,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -123,13 +123,12 @@
                   "Y": 0.0
                 },
                 "RightMargin": -1280.0,
-                "TopMargin": -720.5,
-                "BottomMargin": -0.5,
+                "TopMargin": -720.0,
                 "Tag": 1466,
                 "ActionTag": 1539225712,
                 "Size": {
                   "X": 1280.0,
-                  "Y": 721.0
+                  "Y": 720.0
                 },
                 "Name": "back",
                 "ctype": "ImageViewObjectData"
@@ -532,13 +531,13 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "playing/gameTable/game_paodekuai_ty.png",
+              "Path": "RunFasterYA/Game/GameName.png",
               "Plist": ""
             },
             "Scale9OriginX": 36,
             "Scale9OriginY": 13,
-            "Scale9Width": 208,
-            "Scale9Height": 44,
+            "Scale9Width": 161,
+            "Scale9Height": 21,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -558,18 +557,18 @@
               "Y": 0.4583
             },
             "PreSize": {
-              "X": 0.2188,
-              "Y": 0.0972
+              "X": 0.182,
+              "Y": 0.0653
             },
-            "LeftMargin": 516.3278,
-            "RightMargin": 483.6722,
-            "TopMargin": 355.0,
-            "BottomMargin": 295.0,
+            "LeftMargin": 539.8278,
+            "RightMargin": 507.1722,
+            "TopMargin": 366.5,
+            "BottomMargin": 306.5,
             "Tag": 425,
             "ActionTag": -702767818,
             "Size": {
-              "X": 280.0,
-              "Y": 70.0
+              "X": 233.0,
+              "Y": 47.0
             },
             "Name": "gameName",
             "ctype": "ImageViewObjectData"
@@ -7348,7 +7347,7 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 992.0313,
+                "LeftMargin": 992.0312,
                 "RightMargin": -1125.0312,
                 "TopMargin": -379.5733,
                 "BottomMargin": 327.5733,
@@ -8527,7 +8526,6 @@
         "playground/tuoguan.png",
         "playground/tuoguan_1.png",
         "playing/cardPic/baidi_puke.png",
-        "playing/cardPic/beijing.png",
         "playing/cardPic/beimian_puke.png",
         "playing/cardPic2/baidi_puke.png",
         "playing/cardPic2/beimian_puke_min.png",
@@ -8543,7 +8541,6 @@
         "playing/gameTable/fuzhi.png",
         "playing/gameTable/fuzhi_02.png",
         "playing/gameTable/GAME_04.png",
-        "playing/gameTable/game_paodekuai_ty.png",
         "playing/gameTable/shuzi/shuzi_0.png",
         "playing/gameTable/yaoqing_09.png",
         "playing/gameTable/yaoqing_13.png",
@@ -8584,7 +8581,9 @@
         "playing/paodekuaiTable_new/naozhong.png",
         "playing/paodekuaiTable_new/tishi.png",
         "playing/paodekuaiTable_new/WIFI_3.png",
-        "png/Z_zhunbeizhuangt.png"
+        "png/Z_zhunbeizhuangt.png",
+        "RunFasterYA/Game/GameBG.jpg",
+        "RunFasterYA/Game/GameName.png"
       ],
       "ctype": "GameFileData"
     }

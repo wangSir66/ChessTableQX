@@ -48,7 +48,6 @@ function InitUserHandUI_RunFasterYA(node, off, needSort) {
 
     //初始化玩家金币和名称
     InitUserCoinAndName(node, off);
-    setAreaTypeInfo(true);
     currentLeftCardCount_paodekuai(off);
 
     initSortUI();
@@ -348,7 +347,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
         back: {
             back: {
                 _run: function () {
-                    changeGameBg(this);
+                    // changeGameBg(this);
 
                     //     var text = new ccui.Text();
                     //     text.setFontName(MjClient.fzcyfont);
@@ -366,9 +365,9 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     //     });
                 },
                 _event: {
-                    changeGameBgEvent: function () {
-                        changeGameBg(this);
-                    }
+                    // changeGameBgEvent: function () {
+                    //     changeGameBg(this);
+                    // }
                 },
                 _layout: [
                     [1, 1],
@@ -516,7 +515,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
                 },
                 _run: function () {
-                    //setWgtLayout(this,[0.12, 0.12],[0.94,0.05],[0,0]);
+                    setWgtLayout(this,[0.12, 0.12],[1,0.05],[1.5,0]);
                 }
             },
             gps_btn: {
@@ -2118,18 +2117,25 @@ PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
 PlayLayer_RunFasterYA.prototype.getGameInfoString = function () {
     var tData = MjClient.data.sData.tData;
     var rule = tData.areaSelectMode;
-    var str = [(rule.cardNumIndex == 0 ? '16':'15') + '张'];
+    var str = [];
 
-    str.push(['每局黑桃3先出', '首局黑桃3先出必带', '首局黑桃3先出', '首局随机先出', '轮流坐庄'][rule.mustPutHongTaoSan]);
-    rule.can4dai2 &&str.push("四带二");
-    rule.can4dai3 &&str.push("四带三");
+    str.push(['每局黑桃五先出', '每局赢家先出'][rule.mustPutHongTaoSan]);
+    rule.Sisters &&str.push("姊妹对");
+    rule.AllBlack &&str.push("全黑");
+    rule.AllRed &&str.push("全红");
+    rule.AllBig &&str.push("全大");
+    rule.AllSmall &&str.push("全小");
+    rule.AllSingly &&str.push("全单");
+    rule.AllDouble &&str.push("全双");
+    rule.Four5OrA &&str.push("5555，AAAA");
+    rule.FourOther &&str.push("4个6-4个K");
+    rule.can3geZha &&str.push("3张算炸");
+    rule.can4geZha &&str.push("4张算炸");
     rule.isZhaDanJiaFen && str.push('带炸弹');
-    str.push(rule.isPlayerShuffle == 1 ? "手动切牌" : "系统切牌");
-    str.push(rule.mustPut ? "必管" : "非必管");
 
     str.push("底分X" + rule.difen);
     if (rule.trustTime > 0) {
-        str.push(Math.floor(rule.trustTime / 60) + "分钟");
+        str.push(rule.trustTime + "秒");
     }
 
     //比赛场

@@ -490,7 +490,7 @@
                 <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
                 <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="voice_2" ActionTag="-1522213368" Tag="140" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="623.5002" RightMargin="325.4998" TopMargin="377.4198" BottomMargin="255.5802" TouchEnable="True" ctype="CheckBoxObjectData">
+              <AbstractNodeData Name="voice_2" ActionTag="-1522213368" Tag="140" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="623.5002" RightMargin="325.4998" TopMargin="377.4390" BottomMargin="255.5610" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="33.0000" Y="33.0000" />
                 <Children>
                   <AbstractNodeData Name="text" ActionTag="-977070388" Tag="141" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="50.0000" RightMargin="-89.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="24" LabelText="本地话" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -507,7 +507,7 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="640.0002" Y="272.0802" />
+                <Position X="640.0002" Y="272.0610" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6517" Y="0.4085" />
@@ -518,7 +518,7 @@
                 <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
                 <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="autoReady" ActionTag="-1012643777" Tag="282" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="623.5002" RightMargin="325.4998" TopMargin="425.0196" BottomMargin="207.9804" TouchEnable="True" ctype="CheckBoxObjectData">
+              <AbstractNodeData Name="autoReady" ActionTag="-1012643777" Tag="282" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="623.5002" RightMargin="325.4998" TopMargin="424.9914" BottomMargin="208.0086" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="33.0000" Y="33.0000" />
                 <Children>
                   <AbstractNodeData Name="text" ActionTag="-1762754502" Tag="283" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="50.0000" RightMargin="-113.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="24" LabelText="自动准备" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -535,7 +535,7 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="640.0002" Y="224.4804" />
+                <Position X="640.0002" Y="224.5086" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6517" Y="0.3371" />

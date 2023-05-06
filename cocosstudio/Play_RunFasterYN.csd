@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="Play_PaoDeKuaiLYG_0" Type="Layer" ID="d0a1115c-56c1-4b74-b5d8-e57a174c2292" Version="3.10.0.0" />
+  <PropertyGroup Name="Play_RunFasterYN" Type="Layer" ID="d0a1115c-56c1-4b74-b5d8-e57a174c2292" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -22,15 +22,15 @@
           <AbstractNodeData Name="back" ActionTag="1519128333" Tag="1465" IconVisible="True" RightMargin="1280.0000" TopMargin="720.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
-              <AbstractNodeData Name="back" ActionTag="1539225712" Tag="1466" IconVisible="False" RightMargin="-1280.0000" TopMargin="-720.5000" BottomMargin="-0.5000" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="247" ctype="ImageViewObjectData">
-                <Size X="1280.0000" Y="721.0000" />
+              <AbstractNodeData Name="back" ActionTag="1539225712" Tag="1466" IconVisible="False" RightMargin="-1280.0000" TopMargin="-720.0000" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="ImageViewObjectData">
+                <Size X="1280.0000" Y="720.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="640.0000" Y="360.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
-                <FileData Type="Normal" Path="playing/cardPic/beijing.png" Plist="" />
+                <FileData Type="Normal" Path="RunFasterYA/Game/GameBG.jpg" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="RightBottom" ActionTag="563509017" Tag="1467" RotationSkewX="270.0000" RotationSkewY="270.0000" IconVisible="False" LeftMargin="1185.5609" RightMargin="-1301.5609" TopMargin="-96.9339" BottomMargin="-19.0661" LeftEage="25" RightEage="25" TopEage="22" BottomEage="22" Scale9OriginX="25" Scale9OriginY="22" Scale9Width="66" Scale9Height="72" ctype="ImageViewObjectData">
                 <Size X="116.0000" Y="116.0000" />
@@ -128,15 +128,15 @@
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="gameName" ActionTag="-702767818" Tag="425" IconVisible="False" LeftMargin="516.3278" RightMargin="483.6722" TopMargin="355.0000" BottomMargin="295.0000" LeftEage="36" RightEage="36" TopEage="13" BottomEage="13" Scale9OriginX="36" Scale9OriginY="13" Scale9Width="208" Scale9Height="44" ctype="ImageViewObjectData">
-            <Size X="280.0000" Y="70.0000" />
+          <AbstractNodeData Name="gameName" ActionTag="-702767818" Tag="425" IconVisible="False" LeftMargin="539.8278" RightMargin="507.1722" TopMargin="366.5000" BottomMargin="306.5000" LeftEage="36" RightEage="36" TopEage="13" BottomEage="13" Scale9OriginX="36" Scale9OriginY="13" Scale9Width="161" Scale9Height="21" ctype="ImageViewObjectData">
+            <Size X="233.0000" Y="47.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="656.3278" Y="330.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5128" Y="0.4583" />
-            <PreSize X="0.2188" Y="0.0972" />
-            <FileData Type="Normal" Path="playing/gameTable/game_paodekuai_ty.png" Plist="" />
+            <PreSize X="0.1820" Y="0.0653" />
+            <FileData Type="Normal" Path="RunFasterYA/Game/GameName.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="roundInfo" ActionTag="1413592282" Alpha="68" Tag="1357" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="568.2914" RightMargin="574.7086" TopMargin="432.8360" BottomMargin="258.1640" FontSize="24" LabelText="底花2，大撇" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="137.0000" Y="29.0000" />

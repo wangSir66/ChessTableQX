@@ -85,8 +85,7 @@ var ShowGameRule_red20 = cc.Layer.extend({
             rule = MjClient.data.sData.tData.Rule,
             pIndx = Object.keys(pPriceCfg).indexOf(rule.MaxPlayerCount + "");
         this.RedioGroup['jushu'].selectItem(Object.keys(pPriceCfg[rule.MaxPlayerCount]).indexOf(rule.MaxGameCount + ""));
-        this.RedioGroup['zhifufangshi'].selectItem([0, 2, 1].indexOf(rule.payWay));
-        cc.log('-----',rule.payWay)
+        this.RedioGroup['zhifufangshi'].selectItem(rule.payWay);
         this.RedioGroup['renshu'].selectItem(pIndx);
         this._view.getChildByName('difen').getChildByName('BaseScore').setString(rule.BaseScore + '');
         const ttf = rule.EnableTTF ? 0 : 1;

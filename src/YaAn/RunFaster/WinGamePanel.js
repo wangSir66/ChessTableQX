@@ -7,7 +7,7 @@ function SetEndOneUserUI_RunFasterYA(node, off) {
     node.setVisible(false);
     if (!pl) return;
     node.setVisible(true);
-    setUserOfflineWinGamePanel(node,pl);
+    setUserOfflineWinGamePanel(node, pl);
     node = node.getChildByName("head");
 
     // var zhuangNode = node.getChildByName("zhuang");
@@ -23,21 +23,19 @@ function SetEndOneUserUI_RunFasterYA(node, off) {
     var uibind = {
         head: {
             name: {
-                _run:function()
-                {
+                _run: function () {
                     this.ignoreContentAdaptWithSize(true);
                     this.setFontName("Arial");
                     this.setFontSize(this.getFontSize());
                 },
                 _text: function () {
-                    var _nameStr = unescape(pl.info.nickname ) + "";
+                    var _nameStr = unescape(pl.info.nickname) + "";
                     //this.ignoreContentAdaptWithSize(true);
                     return getNewName(_nameStr);
                 }
             },
             id: {
-                _run:function()
-                {
+                _run: function () {
                     this.ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
@@ -51,9 +49,12 @@ function SetEndOneUserUI_RunFasterYA(node, off) {
 
                     //添加手牌
                     for (var i = 0; i < pl.mjhand.length; i++) {
-                        arry.push(getNewCard_card(node, "stand", "mjhand", pl.mjhand[i], 0));
+                        let cnode = getNewCard_card(node, "stand", "mjhand", pl.mjhand[i], 0),
+                            notOut = pl.initHands.indexOf(pl.mjhand[i]);
+                        cnode.setColor(cc.color(150, 150, 150))
+                        arry.push(cnode);
+                        if (notOut > -1) cnode.setColor(cc.color(255, 255, 255))
                     }
-
                     for (var i = 0; i < arry.length; i++) {
                         arry[i].visible = true;
                         arry[i].enabled = false;
@@ -61,54 +62,57 @@ function SetEndOneUserUI_RunFasterYA(node, off) {
                     }
                     CardLayoutRestoreForEndOne_ty(node, pl);
                 }
+            },
+            zhuang: {
+                _run: function () {
+                    this.visible = tData.uids[tData.zhuang] === pl.info.uid
+                }
             }
         }
-		, winNum: {
-		    _text: function () {
-		        var pre = "";
-		        if (pl.winone > 0) pre = "+";
-		        return pre + pl.winone;
-		    }
+        , winNum: {
+            _text: function () {
+                var pre = "";
+                if (pl.winone > 0) pre = "+";
+                return pre + pl.winone;
+            }
             , fenshu: {
-                _run:function()
-                {
+                _run: function () {
                     this.ignoreContentAdaptWithSize(true);
                 },
             }
-		}
-        , cardNum : {
+        }
+        , cardNum: {
             _visible: false,
-            _run: function() {
+            _run: function () {
                 this.ignoreContentAdaptWithSize(true);
-                if( pl.mjhand.length > 0)
+                if (pl.initHands.length > 0)
                     this.visible = true;
             },
-            _text: function() {
-                return '剩' + pl.mjhand.length + '张';
+            _text: function () {
+                return '剩' + pl.initHands.length + '张';
             }
         }
         , desc: {
             _visible: false,
             _run: function () {
                 this.ignoreContentAdaptWithSize(true);
-                if(pl.mjdesc.length > 0)    this.visible = true;
+                if (pl.mjdesc.length > 0) this.visible = true;
             },
             _text: function () {
                 var str = '';
 
-                for(var i in pl.mjdesc) {
+                for (var i in pl.mjdesc) {
                     var istr = pl.mjdesc[i];
-                    if( istr.length > 16 ) istr = '申请解散';
-                    if(str.length > 0)  str += '\n';
+                    if (istr.length > 16) istr = '申请解散';
+                    if (str.length > 0) str += '\n';
                     str += istr;
                 }
                 return str;
-            },  
+            },
         }
         , zhadanfanbei: {
-            _run: function() {
-                if (!tData.areaSelectMode.isZhaDanFanBei || !pl.zhaDanCount || pl.zhaDanCount <= 0 || pl.winone <= 0)
-                {
+            _run: function () {
+                if (!tData.areaSelectMode.isZhaDanFanBei || !pl.zhaDanCount || pl.zhaDanCount <= 0 || pl.winone <= 0) {
                     this.visible = false;
                     return;
                 }
@@ -117,28 +121,26 @@ function SetEndOneUserUI_RunFasterYA(node, off) {
                 var sprites = [];
                 sprites[0] = new cc.Sprite("gameOver/zhadan_cheng.png");
                 var beishu = 1 << pl.zhaDanCount;
-                for (var i = 1; beishu > 0; i ++)
-                {
-                    var num = beishu % 10; 
+                for (var i = 1; beishu > 0; i++) {
+                    var num = beishu % 10;
                     beishu = Math.floor(beishu / 10);
                     sprites[i] = new cc.Sprite("gameOver/zhadan_" + num + ".png");
                 }
 
                 var width = 80 / sprites.length;
-                for (var i = 0, len = sprites.length; i < len; i ++)
-                {
-                    sprites[i].y = this.height/2;
+                for (var i = 0, len = sprites.length; i < len; i++) {
+                    sprites[i].y = this.height / 2;
                     if (i == 0)
-                        sprites[i].x = 65 + width/2;
+                        sprites[i].x = 65 + width / 2;
                     else
-                        sprites[i].x = 65 + (len - i) * width + width/2;
+                        sprites[i].x = 65 + (len - i) * width + width / 2;
 
                     if (width < sprites[i].width)
-                        sprites[i].scale = width/sprites[i].width;
+                        sprites[i].scale = width / sprites[i].width;
 
                     this.addChild(sprites[i]);
                 }
-            }   
+            }
         }
     }
     BindUiAndLogic(node.parent, uibind);
@@ -284,73 +286,71 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
             _layout: [[1, 1], [0.5, 0.5], [0, 0], true]
         },
         back: {
-            _layout: [[1, 1], [0.5, 0.5], [0, 0]], 
+            _layout: [[1, 1], [0.5, 0.5], [0, 0]],
             wintitle:
-    		{
-    		    _visible: function () {
-    		        var pl = getUIPlayer(0);
-    		        if (pl) {
-    		            //playEffect("win");
-    		            return pl.winone >= 1;
-    		        }
-    		        return false;
-    		    }
-    		}, losetitle:
-    		{
-    		    _visible: function () {
-    		        var pl = getUIPlayer(0);
-    		        if (pl) {
-    		            //playEffect("lose");
-    		            return pl.winone < 0;
-    		        }
-    		        return false;
-    		    }
-    		}, pingju:
-    		{
-    		    _visible: function () {
+            {
+                _visible: function () {
+                    var pl = getUIPlayer(0);
+                    if (pl) {
+                        //playEffect("win");
+                        return pl.winone >= 1;
+                    }
+                    return false;
+                }
+            }, losetitle:
+            {
+                _visible: function () {
+                    var pl = getUIPlayer(0);
+                    if (pl) {
+                        //playEffect("lose");
+                        return pl.winone < 0;
+                    }
+                    return false;
+                }
+            }, pingju:
+            {
+                _visible: function () {
 
-    		        var pl = getUIPlayer(0);
+                    var pl = getUIPlayer(0);
 
-    		        if (pl) {
-    		            //playEffect("lose");
-    		            return pl.winone == 0;
-    		        }
-    		        return false;
-    		    }, _run: function () {
-    		        var sData = MjClient.data.sData;
-    		        var tData = sData.tData;
-    		        if (MjClient.isDismiss) {
-    		            this.loadTexture("gameOver/jiesan.png");
-    		        }
-    		    }
-    		},
+                    if (pl) {
+                        //playEffect("lose");
+                        return pl.winone == 0;
+                    }
+                    return false;
+                }, _run: function () {
+                    var sData = MjClient.data.sData;
+                    var tData = sData.tData;
+                    if (MjClient.isDismiss) {
+                        this.loadTexture("gameOver/jiesan.png");
+                    }
+                }
+            },
             share: {
-                _click:function(btn,eT){
-                MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Xiaojiesuanjiemian_Fenxiang", {uid:SelfUid()});
-                    
-                    MjClient.shareMultiPlatform(MjClient.systemConfig.sharePlatforms, function()
-                    {
+                _click: function (btn, eT) {
+                    MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Xiaojiesuanjiemian_Fenxiang", { uid: SelfUid() });
+
+                    MjClient.shareMultiPlatform(MjClient.systemConfig.sharePlatforms, function () {
                         postEvent("capture_screen");
                         MjClient.endoneui.capture_screen = true;
                         btn.setTouchEnabled(false);
                     });
                 }
-                ,_event:{
+                , _event: {
                     captureScreen_OK: function () {
                         if (MjClient.endoneui.capture_screen != true)
                             return;
                         MjClient.endoneui.capture_screen = false;
                         var writePath = jsb.fileUtils.getWritablePath();
                         var textrueName = "wxcapture_screen.png";
-                        var savepath = writePath+textrueName;
+                        var savepath = writePath + textrueName;
                         MjClient.shareImageToSelectedPlatform(savepath);
-                        this.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(function()
-                        {
+                        this.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(function () {
                             this.setTouchEnabled(true);
                         }.bind(this))));
                     }
                 }
-                ,_visible: function () {
+                , _visible: function () {
                     return !MjClient.remoteCfg.guestLogin;
                 }
             },
@@ -363,20 +363,20 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                 _click: function (btn, eT) {
                     var sData = MjClient.data.sData;
                     var tData = sData.tData;
-                    if (sData.tData.roundNum <= 0) 
-                        MjClient.endoneui.getParent().addChild(new GameOverLayer(),500);
+                    if (sData.tData.roundNum <= 0)
+                        MjClient.endoneui.getParent().addChild(new GameOverLayer(), 500);
 
                     postEvent("clearCardUI");
                     MjClient.endoneui.removeFromParent(true);
                     MjClient.endoneui = null;
-                   
+
                     if (MjClient.rePlayVideo >= 0 && MjClient.replayui) {
                         MjClient.replayui.replayEnd();
                     }
                     else {
                         PKPassConfirmToServer_card();
                     }
-                    if (MjClient.arrowbkNode && cc.sys.isObjectValid( MjClient.arrowbkNode )) {
+                    if (MjClient.arrowbkNode && cc.sys.isObjectValid(MjClient.arrowbkNode)) {
                         MjClient.arrowbkNode.setVisible(false);
                     }
 
@@ -385,7 +385,7 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
             },
             delText:
             {
-                _run: function() {
+                _run: function () {
                     if (MjClient.isDismiss) {
                         var sData = MjClient.data.sData;
                         var tData = sData.tData;
@@ -393,7 +393,7 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                         var pl = sData.players[id];
                         var delStr = "";
                         if (pl) {
-                            var name = unescape(pl.info.nickname );
+                            var name = unescape(pl.info.nickname);
                             delStr = name + pl.mjdesc[0];
                         } else { // 会长或管理员解散房间时 pl 会为 null
                             pl = getUIPlayer(0);
@@ -406,54 +406,52 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                     }
                 }
             },
-            dir:
+            time:
             {
                 _visible: true,
-                _run:function()
-                {
+                _run: function () {
                     if (!MjClient.endoneui.isNewUi)
                         this.ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
                     var sData = MjClient.data.sData;
                     var tData = sData.tData;
-                    var text = "";
+                    var str = [],
+                    rule = tData.areaSelectMode;
 
                     if (MjClient.endoneui.isNewUi)
-                        text = GameCnName[MjClient.gameType] + " " + tData.maxPlayer + " 人   房号：" + tData.tableid + "\n";
+                        str.push(GameCnName[MjClient.gameType] + " " + tData.maxPlayer + " 人   房号：" + tData.tableid);
 
-                    text += tData.areaSelectMode.isXiaoGuan ? "小关X2," : "";
-                    text += tData.areaSelectMode.isDaGuan ? "大关X3," : "";
-                    text += tData.areaSelectMode.isDaGuanX2 ? "大关X2," : "";
-                    text += tData.areaSelectMode.mustPutHongTaoSan ? "红桃3先手," : "赢家先手,";
-                    text += tData.areaSelectMode.can4dai2 ? "四带二," : "";
-                    text += tData.areaSelectMode.can3dai2 ? "三带二," : "";
-                    text += tData.areaSelectMode.isZhaDanJiaFen ? "炸弹加分," : "";
-                    text += tData.areaSelectMode.tongHuaShun ? "同花顺," : "";
-                    text += tData.areaSelectMode.isPlayerShuffle == 1 ? "手动切牌," : "系统切牌,";
+                        str.push(['每局黑桃五先出', '每局赢家先出'][rule.mustPutHongTaoSan]);
+                        rule.Sisters &&str.push("姊妹对");
+                        rule.AllBlack &&str.push("全黑");
+                        rule.AllRed &&str.push("全红");
+                        rule.AllBig &&str.push("全大");
+                        rule.AllSmall &&str.push("全小");
+                        rule.AllSingly &&str.push("全单");
+                        rule.AllDouble &&str.push("全双");
+                        rule.Four5OrA &&str.push("5555，AAAA");
+                        rule.FourOther &&str.push("4个6-4个K");
+                        rule.can3geZha &&str.push("3张算炸");
+                        rule.can4geZha &&str.push("4张算炸");
+                        rule.isZhaDanJiaFen && str.push('带炸弹');
 
-                    if (typeof(tData.areaSelectMode.fengDing) == "number") {
-                        switch (tData.areaSelectMode.fengDing)
-                        {
+                    if (typeof (rule.fengDing) == "number") {
+                        switch (rule.fengDing) {
                             case 1:
-                                text += "30/32分封顶,";
+                                str.push("30/32分封顶");
                                 break;
                             case 2:
-                                text += "60/64分封顶,";
+                                str.push("60/64分封顶");
                                 break;
                         }
                     }
 
-                    // text += tData.areaSelectMode.difen ? "底分X" + tData.areaSelectMode.difen + ",":"";
-                    if (typeof(tData.areaSelectMode.fanBei) != 'undefined') 
-                        text += tData.areaSelectMode.fanBei == 0 ? "不翻倍," : "低于" + tData.areaSelectMode.fanBeiScore + "分翻倍,";
+                    str.push("底分X" + rule.difen);
+                    if (typeof (rule.fanBei) != 'undefined')
+                        str.push(rule.fanBei == 0 ? "不翻倍," : "低于" + rule.fanBeiScore + "分翻倍,");
 
-                    if (!MjClient.endoneui.isNewUi)
-                        text += ("房间号:" + tData.tableid);
-
-                    if (text.charAt(text.length - 1) == ",")
-                        text = text.substring(0, text.length - 1);
-                    return text;
+                    return str.join(',');
                 }
             },
             head0: {
@@ -464,46 +462,51 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                 },
                 _run: function () { SetEndOneUserUI_RunFasterYA(this, 0); },
 
+            },
+            head1: {
+                head: {
+                    //:{_visible:false}
+                },
+                winNum: {
+                    // _layout:[[0.08,0.08],[1,0.5],[-2.5,0.75]]
+                },
+                _run: function () { SetEndOneUserUI_RunFasterYA(this, 1); }
+            },
+            head2: {
+                head: {
+                    //zhuang:{_visible:false}
+                },
+                winNum: {
+                    // _layout:[[0.08,0.08],[1,0.5],[-2.5,-0.75]]
+                },
+                _run: function () { SetEndOneUserUI_RunFasterYA(this, 2); }
+            },
+            head3: {
+                head: {
+                    //zhuang:{_visible:false}
+                },
+                winNum: {
+                    // _layout:[[0.08,0.08],[1,0.5],[-2.5,-0.75]]
+                },
+                _run: function () { SetEndOneUserUI_RunFasterYA(this, 3); }
             }
-    		, head1: {
-    		    head: {
-    		        //:{_visible:false}
-    		    },
-    		    winNum: {
-    		        // _layout:[[0.08,0.08],[1,0.5],[-2.5,0.75]]
-    		    },
-    		    _run: function () { SetEndOneUserUI_RunFasterYA(this, 1); }
-    		}
-
-    		, head2: {
-    		    head: {
-    		        //zhuang:{_visible:false}
-    		    },
-    		    winNum: {
-    		        // _layout:[[0.08,0.08],[1,0.5],[-2.5,-0.75]]
-    		    },
-    		    _run: function () { SetEndOneUserUI_RunFasterYA(this, 2); }
-    		}
         }
     },
     ctor: function () {
         this._super();
-        this.isNewUi = (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP|| MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ);
+        this.isNewUi = (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ);
         MjClient.endoneui = this;
 
-        var endoneui = ccs.load(res.EndOne_PaoDeKuaiLYG_json);
+        var endoneui = ccs.load('endOne_RunFasterYA.json');
         BindUiAndLogic(endoneui.node, this.jsBind);
         this.addChild(endoneui.node);
 
         //时间
         var _back = endoneui.node.getChildByName("back");
-        var _time = _back.getChildByName("time");
+        var _time = _back.getChildByName("dir");
         _time.visible = true;
 
-        //var _laizi = endoneui.node.getChildByName("back").getChildByName("laizi");
-        //setCardSprite(_laizi, MjClient.data.sData.tData.hunCard, 4);
-
-        _time.setString(MjClient.roundEndTime);
+        _time.setString(MjClient.roundEndTime + '\n' + '房间号：' + MjClient.data.sData.tData.tableid);
         return true;
     }
 });
