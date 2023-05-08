@@ -399,14 +399,14 @@ function reConectHeadLayout_card(node) {
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
                     else if (isYongZhouProject()){
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
-                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [1.1, -2], false, false);
                     }
                     else {
                         setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
-                        setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -2], false, false);
                     }
 
-                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.8], false, false);
                 } else {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
                         setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
@@ -416,14 +416,14 @@ function reConectHeadLayout_card(node) {
                         setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
                     else if (isYongZhouProject()){
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -2], false, false);
                     }
                     else {
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -2], false, false);
                     }
 
-                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.8], false, false);
                 }
             } else  {//if (tData.maxPlayer == 3)
                 setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
@@ -669,38 +669,38 @@ function reConectHeadLayout_card(node) {
                 setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
                 if (isIPhoneX()) {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.2], false, false);
                     else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
                         appType == MjClient.APP_TYPE.QXLYQP)
                         // 邵阳、耒阳特殊处理
-                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.1], false, false);
                     else if (isYongZhouProject()){
-                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
-                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.4], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [1.1, -2], false, false);
                     }
                     else {
-                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
-                        setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.1], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -2], false, false);
                     }
 
-                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.8], false, false);
                 } else {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.1], false, false);
                     else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
                         appType == MjClient.APP_TYPE.QXLYQP)
                         // 邵阳、耒阳特殊处理
-                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.4], false, false);
                     else if (isYongZhouProject()){
-                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.1], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -2], false, false);
                     }
                     else {
-                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.1], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -2], false, false);
                     }
 
-                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.8], false, false);
                 }
             } else {
                 setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);

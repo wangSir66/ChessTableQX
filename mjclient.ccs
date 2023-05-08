@@ -5180,6 +5180,7 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
+        <Project Name="setting_yaan.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

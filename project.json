@@ -283,6 +283,9 @@
         "src/YaAn/CreateRoomPanel.js",
         "src/YaAn/CreateRoomNode.js",
 
+        "src/YaAn/Common/GameRuleView.js",
+        "src/YaAn/Common/RoomSettingView.js",
+
         "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
 
         "src/YaAn/Red20/Arithmetic_Red20.js",
@@ -299,6 +302,7 @@
         "src/YaAn/RunFaster/Arithmetic.js",
         "src/YaAn/RunFaster/CreateRoomNode.js",
         "src/YaAn/RunFaster/PlayerGamePanel.js",
+        "src/YaAn/RunFaster/GameRuleView.js",
         "src/YaAn/RunFaster/WinGamePanel.js"
     ]
 }

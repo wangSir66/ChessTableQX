@@ -69,9 +69,6 @@ function InitUserHandUI_Red20(node, off, action = false) {
         return;
     }
 
-    setHunNodeVisible(false);
-
-
     //添加碰
     for (var i = 0; i < pl.mjpeng.length; i++) {
         MjClient.playui.onUserAddWeaves(node, pl.mjpeng[i], 'peng', true, off);
@@ -474,10 +471,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     })));
                 }
             },
-            changeMJBgEvent: function () {
-                changeMJBg(this, getCurrentMJBgType());
-                MjClient.playui.CardLayoutRestore(getNode(0), 0)
-            },
         },
         waitChangePos: {
             _visible: false,
@@ -486,58 +479,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 [0.5, 0.5],
                 [0, 0]
             ],
-        },
-        roundnumImg: {
-            _event: {
-                initSceneData: function (eD) {
-                    this.visible = IsArrowVisible();
-                },
-                mjhand: function (eD) {
-                    this.visible = IsArrowVisible();
-                },
-                onlinePlayer: function (eD) {
-                    this.visible = IsArrowVisible();
-                }
-            },
-            _run: function () {
-                //roundnumImgObj = this;
-                MjClient.roundnumImgNode = this;
-                setWgtLayout(this, [0.085, 0], [0.19, 0.8], [-1.76, 1.0]);
-                var sData = MjClient.data.sData;
-                var tData = sData.tData;
-                if (tData) {
-                    if (tData.fieldId) {//金币场显示场次名称
-                        this.removeFromParent(true);
-                    }
-                }
-            },
-            roundnumAtlas: {
-                _visible: function () {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
-                    if (tData) {
-                        if (tData.fieldId) {//金币场显示场次名称
-                            return false;
-                        }
-                    }
-                    return true;
-                },
-                _run: function () {
-                    this.ignoreContentAdaptWithSize(true);
-                },
-                _text: function () {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
-                    if (tData) return "第" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll + "局";
-                },
-                _event: {
-                    mjhand: function () {
-                        var sData = MjClient.data.sData;
-                        var tData = sData.tData;
-                        if (tData) return this.setString("第" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll + "局");
-                    }
-                }
-            }
         },
         cardNumImg: {
             _run: function () {
@@ -678,8 +619,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         showPlayUI_matchInfo("排名：" + tData.matchInfo.userCount + "/" + tData.matchInfo.userCount + "\n前" + tData.matchInfo.jingjiCount + "名晋级");
                     }
                 } else {
-                    if (MjClient.rePlayVideo == -1)  // 回放时候不能显示
-                        showPlayUI_roundInfo(this.getString(), tData.fieldId ? (getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币") : tData.tableid, tData.fieldId ? "底分 " : "");
+                    // if (MjClient.rePlayVideo == -1)  // 回放时候不能显示
+                    // showPlayUI_roundInfo(this.getString(), tData.fieldId ? (getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币") : tData.tableid, tData.fieldId ? "底分 " : "");
                 }
             }
         },
@@ -689,59 +630,120 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 [0.5, 1],
                 [0, 0]
             ],
-            bg_time: {
+            roomNumBg2: {
                 _run: function () {
-                    var text = new ccui.Text();
-                    text.setFontName(MjClient.fzcyfont);
-                    text.setFontSize(24);
-                    text.setFontName("fonts/lanting.TTF");
-                    text.setAnchorPoint(1, 0.5);
-                    text.setPosition(66, 15);
-                    this.addChild(text);
-                    text.schedule(function () {
-
-                        var time = MjClient.getCurrentTime();
-                        var str = (time[3] < 10 ? "0" + time[3] : time[3]) + ":" +
-                            (time[4] < 10 ? "0" + time[4] : time[4]);
-                        this.setString(str);
-                    });
-                }
-
-            },
-            wifi: {
-                _run: function () {
-                    updateWifiState(this);
-                }
-            },
-            powerBar: {
-                _run: function () {
-                    cc.log("powerBar_run");
-                    updateBattery(this);
+                    setWgtLayout(this, [0.21, 0.21], [-0.35, 0.1], [-0.15, 0.2]);
                 },
-                _event: {
-                    nativePower: function (d) {
-                        this.setPercent(Number(d));
+                bg_time: {
+                    _run: function () {
+                        var text = new ccui.Text();
+                        text.setFontName("fonts/lanting.TTF");
+                        text.setFontSize(24);
+                        text.setTextColor(cc.color("#EFD196"));
+                        text.setAnchorPoint(0.5, 0.5);
+                        text.setPosition(this.getContentSize().width / 2, this.getContentSize().height / 2);
+                        this.addChild(text);
+                        text.schedule(function () {
+
+                            var time = MjClient.getCurrentTime();
+                            var str = (time[3] < 10 ? "0" + time[3] : time[3]) + ":" +
+                                (time[4] < 10 ? "0" + time[4] : time[4]);
+                            this.setString(str);
+                        });
                     }
-                }
-            },
-            tableid: {
-                _run: function () {
-                    this.ignoreContentAdaptWithSize(true);
-                    if (MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
-                        this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
+
+                },
+                wifi: {
+                    _run: function () {
+                        updateWifiState_new(this);
+                        // updateWifiState(this);
                     }
                 },
-                _event: {
-                    initSceneData: function () {
-                        this.ignoreContentAdaptWithSize(true);
-                        if (MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
-                            this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
-                        } else {
-                            this.setString(MjClient.data.sData.tData.tableid);
-
+                powerBar: {
+                    _run: function () {
+                        cc.log("powerBar_run");
+                        updateBattery(this);
+                    },
+                    _event: {
+                        nativePower: function (d) {
+                            this.setPercent(Number(d));
                         }
                     }
-                }
+                },
+            },
+            roomNumBg1: {
+                _run: function () {
+                    setWgtLayout(this, [0.35, 0.35], [-0.35, 0], [-0.1, 0]);
+                },
+                tableid: {
+                    _run: function () {
+                        this.ignoreContentAdaptWithSize(true);
+                        if (MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
+                            this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
+                        }
+                    },
+                    _event: {
+                        initSceneData: function () {
+                            this.ignoreContentAdaptWithSize(true);
+                            if (MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
+                                this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
+                            } else {
+                                this.setString('房间号：' + MjClient.data.sData.tData.tableid);
+
+                            }
+                        }
+                    }
+                },
+                roundnumAtlas: {
+                    _visible: function () {
+                        var sData = MjClient.data.sData;
+                        var tData = sData.tData;
+                        if (tData) {
+                            if (tData.fieldId) {//金币场显示场次名称
+                                return false;
+                            }
+                        }
+                        return true;
+                    },
+                    _run: function () {
+                        this.ignoreContentAdaptWithSize(true);
+                    },
+                    _text: function () {
+                        var sData = MjClient.data.sData;
+                        var tData = sData.tData;
+                        if (tData) return "第" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll + "局";
+                    },
+                    _event: {
+                        mjhand: function () {
+                            var sData = MjClient.data.sData;
+                            var tData = sData.tData;
+                            if (tData) return this.setString("第" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll + "局");
+                        }
+                    }
+                },
+            },
+            rule_btn: {
+                _run: function () {
+                    cc.eventManager.addListener(getTouchListener(), this);
+                    this.setScale(0.6);
+                    this.setPositionX(this.getParent().getContentSize().width * 1.3);
+                    var banner = this.parent;
+                    var waitNode = banner.parent.getChildByName("wait");
+                    var delroom = waitNode.getChildByName("delroom");
+                    var backHomebtn = waitNode.getChildByName("backHomebtn");
+                    var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
+                    distanceX *= 1.5;
+                    delroom.setScale(0.4);
+                    backHomebtn.setScale(0.4);
+                    delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY() * 0.9))))
+                    backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY() * 0.9))))
+                },
+                _touch: function (btn, eT) {
+                    if (eT == 2) {
+                        MjClient.showRuleView = new ShowGameRule_red20();
+                        MjClient.Scene.addChild(MjClient.showRuleView)
+                    }
+                },
             },
             setting: {
                 _run: function () {
@@ -749,35 +751,40 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     this.setPositionX(this.getParent().getContentSize().width * 1.43);
                 },
                 _click: function () {
-                    var settringLayer = new SettingView();
-                    settringLayer.setName("PlayLayerClick");
-                    let blac = settringLayer.jsBind.back._node, nC = blac.children;
-                    for (var i = 0; i < nC.length; i++) {
-                        let cn = nC[i].name;
-                        if (
-                            cn.indexOf('gameBg') > -1 ||
-                            cn.indexOf('MJBg') > -1 ||
-                            cn.indexOf('voice') > -1 ||
-                            cn === 'autoReady' ||
-                            cn === 'Text_vibrato' ||
-                            cn === 'btn_vibrato') nC[i].visible = false;
-                        else if (cn === 'Text_1' || cn === 'Text_2' || cn === 'noMusic' || cn === 'noEffect' || cn === 'Slider_music' || cn === 'Slider_effect') {
-                            nC[i].y = blac.getSize().height / 2 + nC[i].getSize().height * (cn === 'Text_1' || cn === 'noEffect' || cn === 'Slider_effect' ? 1 : -1);
-                        }
-                    }
-                    //默认震动
-                    util.localStorageEncrypt.setBoolItem("isVibrato", false);
-                    //默认自动准备
-                    util.localStorageEncrypt.setBoolItem(MjClient.KEY_autoRelay, false);
-
+                    var settringLayer = new RoomSettingView();
                     MjClient.Scene.addChild(settringLayer);
                     MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
                 }
             },
+            // roundnumImg: {
+            //     _event: {
+            //         initSceneData: function (eD) {
+            //             this.visible = IsArrowVisible();
+            //         },
+            //         mjhand: function (eD) {
+            //             this.visible = IsArrowVisible();
+            //         },
+            //         onlinePlayer: function (eD) {
+            //             this.visible = IsArrowVisible();
+            //         }
+            //     },
+            //     _run: function () {
+            //         //roundnumImgObj = this;
+            //         MjClient.roundnumImgNode = this;
+            //         setWgtLayout(this, [0.085, 0], [0.19, 0.8], [-1.76, 1.0]);
+            //         var sData = MjClient.data.sData;
+            //         var tData = sData.tData;
+            //         if (tData) {
+            //             if (tData.fieldId) {//金币场显示场次名称
+            //                 this.removeFromParent(true);
+            //             }
+            //         }
+            //     },
+            // },
             Button_1: {
                 _visible: true,
                 _click: function () {
-                    MjClient.openWeb({ url: MjClient.GAME_TYPE.LIAN_YUN_GANG, help: true });
+                    MjClient.openWeb({ url: MjClient.GAME_TYPE.RED_20_POKER, help: true });
                 }
             },
             hunPai: {
@@ -2843,20 +2850,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             }
         },
-        rule_btn: {
-            _layout: [
-                [0.08, 0.08], [0.3, 0.95], [0, 0]
-            ],
-            _run: function () {
-                cc.eventManager.addListener(getTouchListener(), this);
-            },
-            _touch: function (btn, eT) {
-                if (eT == 2) {
-                    MjClient.showRuleView = new ShowGameRule_red20();
-                    MjClient.Scene.addChild(MjClient.showRuleView)
-                }
-            },
-        },
         tuoguan_btn: {
             _layout: [
                 [0.09, 0.09],
@@ -3086,10 +3079,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         this._btnPutCard = playui.node.getChildByName("BtnPutCard");
         MjClient.playui._AniNode = playui.node.getChildByName("eat");
 
-        // ScanCheatLayer.initButton(playui.node, 0.75, 0.92);
-
-        //MjClient.playui._btnPutCard.visible = false;
-
         BindUiAndLogic(playui.node, this.jsBind);
 
         // 添加光晕动画
@@ -3097,36 +3086,13 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
 
         this.addChild(playui.node);
 
-        if (MjClient.data.sData.tData.areaSelectMode["convertible"] && MjClient.rePlayVideo == -1)
-            addFreeNumberBtn([0.5, 0.4]);
-
-        //添加滚动通知 by sking
-        var _laba_bg = playui.node.getChildByName("banner").getChildByName("laba_bg");
-        _laba_bg.visible = false;
-        var _scroll = playui.node.getChildByName("banner").getChildByName("scroll");
-        _scroll.visible = false;
-
-
-        //var _msg = _scroll.getChildByName("msg");
-        //homePageRunText(_msg);
-        //function getMsg()
-        //{
-        //    var content = (MjClient.updateCfg != null && (typeof MjClient.updateCfg) != 'undefined') ? MjClient.updateCfg.homeScroll : "";
-        //    return MjClient.isTest ? "" : content;
-        //}
-        //_msg.setString(getMsg());
-
         MjClient.lastMJTick = Date.now();
         this.runAction(cc.repeatForever(cc.sequence(cc.callFunc(function () {
             if (MjClient.game_on_show) MjClient.tickGame(0);
         }), cc.delayTime(7))));
 
-        changeMJBg(this, getCurrentMJBgType());
-
-        var _currentMJType = getCurrentMJBgType();
-        postEvent("changeMJBgEvent", _currentMJType);
         //初始化其他功能
-        initSceneFunc();
+        initSceneFunc(true);
         // 在亲友圈房间中添加邀请亲友圈牌有一起对局
         addClubYaoqingBtn(1);
         return true;

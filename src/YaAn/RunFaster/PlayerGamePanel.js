@@ -415,8 +415,8 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
         },
         banner: {
             _layout: [
-                [0.5, 0.5],
-                [0.53, 1],
+                [1, 1],
+                [0, 0.95],
                 [0, 0]
             ],
             bg_time: {
@@ -489,175 +489,82 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
             },
             setting: {
                 _click: function () {
-                    var settringLayer = new SettingView();
-                    settringLayer.setName("PlayLayerClick");
-                    let blac = settringLayer.jsBind.back._node, nC = blac.children;
-                    for (var i = 0; i < nC.length; i++) {
-                        let cn = nC[i].name;
-                        cc.log('--------nC[i].name-------', nC[i].name)
-                        if (
-                            cn.indexOf('gameBg') > -1 ||
-                            cn.indexOf('MJBg') > -1 ||
-                            cn.indexOf('voice') > -1 ||
-                            cn === 'autoReady' ||
-                            cn === 'Text_vibrato' ||
-                            cn === 'btn_vibrato') nC[i].visible = false;
-                        else if (cn === 'Text_1' || cn === 'Text_2' || cn === 'noMusic' || cn === 'noEffect' || cn === 'Slider_music' || cn === 'Slider_effect') {
-                            nC[i].y = blac.getSize().height / 2 + nC[i].getSize().height * (cn === 'Text_1' || cn === 'noEffect' || cn === 'Slider_effect' ? 1 : -1);
-                        }
-                    }
-                    //默认震动
-                    util.localStorageEncrypt.setBoolItem("isVibrato", false);
-                    //默认自动准备
-                    util.localStorageEncrypt.setBoolItem(MjClient.KEY_autoRelay, false);
+                    var settringLayer = new RoomSettingView();
                     MjClient.Scene.addChild(settringLayer);
                     MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
                 },
                 _run: function () {
-                    setWgtLayout(this, [0.12, 0.12], [1, 0.05], [1.5, 0]);
+                    this.setScale(0.7)
                 }
             },
-            gps_btn: {
+            rule_btn: {
+                _visible: true,
+                _click: function () {
+                    MjClient.showRuleView = new GameRule_YARunFaster('bg_RunFasterYaAn');
+                    MjClient.Scene.addChild(MjClient.showRuleView);
+                },
                 _run: function () {
-                    //setWgtLayout(this,[0.085, 0.085],[0.84,0.938],[0,0]);
-                    this.setVisible((MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) && MjClient.MaxPlayerNum != 2);
-
+                    const btnscal = 0.42;
+                    this.setScale(0.75);
                     var banner = this.parent;
                     var waitNode = MjClient.playui.getChildByName("playUINode").getChildByName("wait");
                     var delroom = waitNode.getChildByName("delroom");
                     var backHomebtn = waitNode.getChildByName("backHomebtn");
-                    var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("changeBg").getPositionX();
+                    var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
 
-                    delroom.setScale(banner.scaleX, banner.scaleY);
-                    backHomebtn.setScale(banner.scaleX, banner.scaleY);
-
-                    if (this.isVisible()) {
-                        delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
-                        backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))))
-                    }
-                    else {
-                        delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(this.getPosition())))
-                        backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
-                    }
-                },
-                _click: function () {
-                    if (MjClient.MaxPlayerNum == 3) {
-                        MjClient.Scene.addChild(new showDistance3PlayerLayer());
-                    } else if (MjClient.MaxPlayerNum == 4) {
-                        MjClient.Scene.addChild(new showDistanceLayer());
-                    }
-                    MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Dingwei", { uid: SelfUid(), gameType: MjClient.gameType });
+                    delroom.setScale(btnscal);
+                    backHomebtn.setScale(btnscal);
+                    delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY() * 0.9))))
+                    backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY() * 0.9))))
                 }
+            },
+            gps_btn: {
+                _visible: false,
+                // _run: function () {
+                //     setWgtLayout(this, [0.12, 0.12], [1, 0.05], [1.5, 0]);
+                //     this.setVisible((MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) && MjClient.MaxPlayerNum != 2);
+                //     var banner = this.parent;
+                //     var waitNode = MjClient.playui.getChildByName("playUINode").getChildByName("wait");
+                //     var delroom = waitNode.getChildByName("delroom");
+                //     var backHomebtn = waitNode.getChildByName("backHomebtn");
+                //     var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("changeBg").getPositionX();
+
+                //     delroom.setScale(banner.scaleX, banner.scaleY);
+                //     backHomebtn.setScale(banner.scaleX, banner.scaleY);
+
+                //     if (this.isVisible()) {
+                //         delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
+                //         backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))))
+                //     }
+                //     else {
+                //         delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(this.getPosition())))
+                //         backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
+                //     }
+                // },
+                // _click: function () {
+                //     if (MjClient.MaxPlayerNum == 3) {
+                //         MjClient.Scene.addChild(new showDistance3PlayerLayer());
+                //     } else if (MjClient.MaxPlayerNum == 4) {
+                //         MjClient.Scene.addChild(new showDistanceLayer());
+                //     }
+                //     MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Dingwei", { uid: SelfUid(), gameType: MjClient.gameType });
+                // }
             },
             changeBg: {
                 _visible: false,
-                _click: function () {
-                    setCurrentGameBgTypeToNext();
-                    postEvent("changeGameBgEvent");
-                    MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Pifu", { uid: SelfUid(), gameType: MjClient.gameType });
-                },
-                _run: function () {
-                    //setWgtLayout(this,[0.12, 0.12],[0.85,0.05],[0,0]);
-                }
+                // _click: function () {
+                //     setCurrentGameBgTypeToNext();
+                //     postEvent("changeGameBgEvent");
+                //     MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Pifu", { uid: SelfUid(), gameType: MjClient.gameType });
+                // },
+                // _run: function () {
+                //     setWgtLayout(this, [0.12, 0.12], [0.85, 0.05], [0, 0]);
+                // }
             },
             Button_1: {
-                _visible: true,
+                _visible: false,
                 _click: function () {
-                    MjClient.openWeb({ url: MjClient.GAME_TYPE.PAO_DE_KUAI, help: true });
-                }
-            },
-            hunPai: {
-                baidaBg: {
-                    small: {
-                        _run: function () {
-                            this.runAction(cc.sequence(cc.fadeOut(1), cc.fadeIn(0.5)).repeatForever());
-                        },
-                        _event: {
-                            mjhand: function () {
-                                this.visible = true;
-                            }
-                        }
-                    },
-                    _run: function () {
-                        //baidaBg = this;
-                        this.setVisible(true);
-                    },
-                    _event: {
-                        mjhand: function () {
-                            this.visible = true;
-                        },
-                        roundEnd: function (eD) {
-                            this.visible = false;
-                        }
-                    },
-                },
-                baidaImg: {
-                    _run: function () {
-                        //baidaOject = this;
-                        this.setVisible(false);
-                    },
-                    _event: {
-                        mjhand: function () {
-                            this.visible = true;
-                            this.setScale(1);
-                            this.setPosition(-296, -280);
-                            var HuncardMsg = MjClient.data.sData.tData.hunCard;
-
-                            var func = cc.callFunc(function () {
-                                playEffect("runfaster_yaan/effects/fapai");
-                            })
-                            setCardSprite(this, parseInt(HuncardMsg), 4);
-                            this.runAction(cc.sequence(cc.delayTime(1),
-                                cc.spawn(cc.scaleTo(0.6, 0.5), cc.moveTo(0.6, 6.6, 1.86)).easing(cc.easeQuinticActionOut()),
-                                func));
-                        },
-                        initSceneData: function () {
-                            this.visible = true;
-                            var HuncardMsg = MjClient.data.sData.tData.hunCard;
-                            if (HuncardMsg) {
-                                setCardSprite(this, parseInt(HuncardMsg), 4);
-                            }
-                        },
-                        roundEnd: function (eD) {
-                            this.visible = false;
-                        }
-                    },
-                },
-                baidaText: {
-                    _run: function () {
-                        //baidaOject = this;
-                        this.setVisible(true);
-                    },
-                    _event: {
-                        mjhand: function () {
-                            this.visible = true;
-                        },
-                        roundEnd: function (eD) {
-                            this.visible = false;
-                        }
-                    },
-                },
-                _event: {
-                    clearCardUI: function (eD) {
-                        this.visible = false;
-                    },
-                    mjhand: function () {
-                        this.visible = true;
-                    },
-                    initSceneData: function () {
-                        this.visible = true;
-                        var sData = MjClient.data.sData;
-                        var tData = sData.tData;
-                        //cc.log(" tData.tState  ------------sking = " + tData.tState );
-                        if (tData.tState != TableState.waitPut &&
-                            tData.tState != TableState.waitEat &&
-                            tData.tState != TableState.waitCard
-                        ) {
-                            this.visible = false;
-                        } else {
-                            this.visible = true;
-                        }
-                    }
+                    MjClient.openWeb({ url: MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN, help: true });
                 }
             },
         },
@@ -1136,10 +1043,10 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                         // 托管状态下，不播放发牌动画 
                     }
                     else {
-                        showPostCardAnimation('RunFasterYA/Card/back.png');
+                        // showPostCardAnimation('RunFasterYA/Card/back.png');
                     }
 
-                    MjClient.playui.isWaitAniEnd = true;
+                    MjClient.playui.isWaitAniEnd = false;
                 },
                 roundEnd: function () {
                     InitUserCoinAndName(this, 0);
@@ -1944,11 +1851,11 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 // ],
                 _run: function () {
                     if (MjClient.rePlayVideo == -1)// 表示正常游戏
-                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [0.5, 0.5]);
+                        setWgtLayout(this, [0.052, 0], [0, 0.65], [3.5, 0.5]);
                     else if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId)
-                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [2.2, 0.5]);
+                        setWgtLayout(this, [0.052, 0], [0, 0.65], [4.25, 0.5]);
                     else
-                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [1.2, 0.5]);
+                        setWgtLayout(this, [0.052, 0], [0, 0.65], [4.2, 0.5]);
                 },
                 _visible: false,
             },
@@ -2405,7 +2312,7 @@ PlayLayer_RunFasterYA.prototype.recoverCannotOutCard = function () {
 }
 
 PlayLayer_RunFasterYA.prototype.clockNumberUpdate = function (node, endFunc) {
-    return arrowbkNumberUpdate(node, endFunc);
+    return arrowbkNumberUpdate(node, endFunc, 20);
 }
 
 PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {

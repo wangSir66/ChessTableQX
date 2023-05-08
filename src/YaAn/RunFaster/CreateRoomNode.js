@@ -144,10 +144,10 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
         para.maxPlayer = Number(Object.keys(this.getGamePriceConfig())[this.RedioGroup['renshu'].getSelectIndex()]);//人数
         para.mustPutHongTaoSan = this.RedioGroup['xianshou'].getSelectIndex();//先手
         para.HandCutRule = para.maxPlayer === 4 ? -1 : this.RedioGroup['paizhang'].getSelectIndex();//牌张
-        para.showCardNumber = this.getCheckboxSelectedByName('btnCheckpaishu');//显示牌数
+        para.showCardNumber = true; //this.getCheckboxSelectedByName('btnCheckpaishu');//显示牌数
         para.Sisters = this.getCheckboxSelectedByName('btnCheckpaixing');//姊妹对
         para.IsAnonymous = this.getCheckboxSelectedByName('btnCheckniming');//游戏内匿名
-        para.FirstGroundHideCards = this.getCheckboxSelectedByName('btnCheckgaipai');//首轮盖牌
+        para.FirstGroundHideCards = false; //this.getCheckboxSelectedByName('btnCheckgaipai');//首轮盖牌
         para.AllBlack = this.getCheckboxSelectedByName('btnCheckquanhei');//全黑
         para.AllRed = this.getCheckboxSelectedByName('btnCheckquanhong');//全红
         para.AllBig = this.getCheckboxSelectedByName('btnCheckquanda');//全大
@@ -162,7 +162,7 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
         para.can4geZha = para.isZhaDanJiaFen ? this.getCheckboxSelectedByName('btnCheck4zhang') : false;//4张算炸
         para.XiScore = mt ? [20, 10][this.RedioGroup['mingtangfen'].getSelectIndex()] : 0;//名堂分
         para.BombScore = para.isZhaDanJiaFen ? [20, 10][this.RedioGroup['xifen'].getSelectIndex()] : 0;//炸弹分
-        para.AutoReady = this.RedioGroup['zidongzhunbei'].getSelectIndex() == 1;//自动准备
+        para.AutoReady = true;  //this.RedioGroup['zidongzhunbei'].getSelectIndex() == 1;//自动准备
 
         this.getExtraSelectedPara(para);
 
