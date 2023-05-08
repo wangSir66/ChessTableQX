@@ -105,8 +105,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 640.0,
-                  "Y": 360.0
+                  "X": 639.6719,
+                  "Y": 360.328
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -122,8 +122,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "RightMargin": -1280.0,
-                "TopMargin": -720.0,
+                "LeftMargin": -0.3281,
+                "RightMargin": -1279.6719,
+                "TopMargin": -720.328,
+                "BottomMargin": 0.328,
                 "Tag": 1466,
                 "ActionTag": 1539225712,
                 "Size": {
@@ -574,15 +576,15 @@
             "ctype": "ImageViewObjectData"
           },
           {
+            "IsCustomSize": true,
             "FontSize": 24,
-            "LabelText": "底花2，大撇",
+            "LabelText": "底花2，大撇底花2，大撇底花2，大撇底花2，大撇底花2，大撇底花2，大撇底花2，大撇底花2，大撇底花2，大撇底花2，大撇",
             "FontResource": {
               "Type": "Normal",
               "Path": "fonts/fzcy.ttf",
               "Plist": ""
             },
-            "HorizontalAlignmentType": "HT_Center",
-            "VerticalAlignmentType": "VT_Center",
+            "VerticalAlignmentType": "VT_Bottom",
             "OutlineColor": {
               "R": 0,
               "G": 0,
@@ -600,8 +602,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 636.7914,
-              "Y": 272.664
+              "X": 653.6646,
+              "Y": 426.96
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -615,22 +617,22 @@
             "IconVisible": false,
             "PositionPercentYEnabled": true,
             "PrePosition": {
-              "X": 0.4975,
-              "Y": 0.3787
+              "X": 0.5107,
+              "Y": 0.593
             },
             "PreSize": {
-              "X": 0.107,
-              "Y": 0.0403
+              "X": 0.3125,
+              "Y": 0.1667
             },
-            "LeftMargin": 568.2914,
-            "RightMargin": 574.7086,
-            "TopMargin": 432.836,
-            "BottomMargin": 258.164,
+            "LeftMargin": 453.6646,
+            "RightMargin": 426.3354,
+            "TopMargin": 233.04,
+            "BottomMargin": 366.96,
             "Tag": 1357,
             "ActionTag": 1413592282,
             "Size": {
-              "X": 137.0,
-              "Y": 29.0
+              "X": 400.0,
+              "Y": 120.0
             },
             "Alpha": 68,
             "Name": "roundInfo",
@@ -2383,8 +2385,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 364.9728,
-                  "Y": 372.2552
+                  "X": 645.403,
+                  "Y": 487.3553
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -2400,10 +2402,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 298.9728,
-                "RightMargin": -430.9728,
-                "TopMargin": -400.7552,
-                "BottomMargin": 343.7552,
+                "LeftMargin": 579.403,
+                "RightMargin": -711.403,
+                "TopMargin": -515.8553,
+                "BottomMargin": 458.8553,
                 "Tag": 108,
                 "ActionTag": 692348958,
                 "Size": {
@@ -2429,8 +2431,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 213.6246,
-                  "Y": 565.0338
+                  "X": 829.1151,
+                  "Y": 638.4753
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -2448,10 +2450,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 145.1246,
-                "RightMargin": -282.1246,
-                "TopMargin": -655.0338,
-                "BottomMargin": 475.0338,
+                "LeftMargin": 760.6151,
+                "RightMargin": -897.6151,
+                "TopMargin": -728.4753,
+                "BottomMargin": 548.4753,
                 "Tag": 284,
                 "ActionTag": -1246469347,
                 "Size": {
@@ -2476,8 +2478,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 336.9613,
-                  "Y": 452.105
+                  "X": 634.8583,
+                  "Y": 501.9818
                 },
                 "Scale": {
                   "ScaleX": 0.5,
@@ -2493,10 +2495,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 268.4613,
-                "RightMargin": -405.4613,
-                "TopMargin": -542.105,
-                "BottomMargin": 362.105,
+                "LeftMargin": 566.3583,
+                "RightMargin": -703.3583,
+                "TopMargin": -591.9818,
+                "BottomMargin": 411.9818,
                 "Tag": 46,
                 "ActionTag": 753089099,
                 "Size": {
@@ -2529,8 +2531,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 77.632,
-                  "Y": 534.7021
+                  "X": 622.3782,
+                  "Y": 636.6555
                 },
                 "Scale": {
                   "ScaleX": 0.8,
@@ -2546,10 +2548,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 14.632,
-                "RightMargin": -140.632,
-                "TopMargin": -597.2021,
-                "BottomMargin": 472.2021,
+                "LeftMargin": 559.3782,
+                "RightMargin": -685.3782,
+                "TopMargin": -699.1555,
+                "BottomMargin": 574.1555,
                 "Tag": 3642,
                 "Children": [
                   {
@@ -2614,8 +2616,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 89.966,
-                      "Y": 117.4187
+                      "X": 123.1313,
+                      "Y": 63.1817
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2624,17 +2626,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.714,
-                      "Y": 0.9393
+                      "X": 0.9772,
+                      "Y": 0.5055
                     },
                     "PreSize": {
                       "X": 0.9524,
                       "Y": 0.528
                     },
-                    "LeftMargin": 89.966,
-                    "RightMargin": -83.966,
-                    "TopMargin": -25.4187,
-                    "BottomMargin": 84.4187,
+                    "LeftMargin": 123.1313,
+                    "RightMargin": -117.1313,
+                    "TopMargin": 28.8183,
+                    "BottomMargin": 30.1817,
                     "Tag": 166,
                     "Children": [
                       {
@@ -3331,8 +3333,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 166.2388,
-                      "Y": 61.4372
+                      "X": 166.2387,
+                      "Y": 88.8481
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -3342,16 +3344,16 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 1.3194,
-                      "Y": 0.4915
+                      "Y": 0.7108
                     },
                     "PreSize": {
                       "X": 0.3571,
                       "Y": 0.472
                     },
-                    "LeftMargin": 143.7388,
-                    "RightMargin": -62.7388,
-                    "TopMargin": 34.0628,
-                    "BottomMargin": 31.9372,
+                    "LeftMargin": 143.7387,
+                    "RightMargin": -62.7387,
+                    "TopMargin": 6.6519,
+                    "BottomMargin": 59.3481,
                     "Tag": 617,
                     "Children": [
                       {
@@ -3632,8 +3634,8 @@
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
-                  "X": 645.0,
-                  "Y": 515.0
+                  "X": 592.6665,
+                  "Y": 435.4677
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -3649,10 +3651,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 645.0,
-                "RightMargin": -745.0,
-                "TopMargin": -615.0,
-                "BottomMargin": 515.0,
+                "LeftMargin": 592.6665,
+                "RightMargin": -692.6665,
+                "TopMargin": -535.4677,
+                "BottomMargin": 435.4677,
                 "Tag": 257,
                 "ActionTag": -99695970,
                 "Size": {
@@ -3677,8 +3679,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 332.0251,
-                  "Y": 449.2098
+                  "X": 641.7501,
+                  "Y": 497.3449
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -3694,10 +3696,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 265.5251,
-                "RightMargin": -398.5251,
-                "TopMargin": -475.2098,
-                "BottomMargin": 423.2098,
+                "LeftMargin": 575.2501,
+                "RightMargin": -708.2501,
+                "TopMargin": -523.3449,
+                "BottomMargin": 471.3449,
                 "Tag": 460,
                 "ActionTag": 2051978512,
                 "Size": {
@@ -3706,6 +3708,186 @@
                 },
                 "Name": "noPutTag",
                 "ctype": "SpriteObjectData"
+              },
+              {
+                "CharWidth": 41,
+                "CharHeight": 55,
+                "LabelText": "900",
+                "StartChar": "0",
+                "LabelAtlasFileImage_CNB": {
+                  "Type": "Normal",
+                  "Path": "RunFasterYA/Game/boomlose.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 596.5264,
+                  "Y": 519.5673
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 596.5264,
+                "RightMargin": -719.5264,
+                "TopMargin": -547.0673,
+                "BottomMargin": 492.0673,
+                "Tag": 646,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "RunFasterYA/Game/losejian.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 7,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 25,
+                    "Scale9Height": 37,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": -42.0945,
+                      "Y": 51.8462
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.3422,
+                      "Y": 0.9427
+                    },
+                    "PreSize": {
+                      "X": 0.3171,
+                      "Y": 0.9273
+                    },
+                    "LeftMargin": -42.0945,
+                    "RightMargin": 126.0945,
+                    "TopMargin": 3.1538,
+                    "BottomMargin": 0.8462,
+                    "Tag": 647,
+                    "ActionTag": 294772930,
+                    "Size": {
+                      "X": 39.0,
+                      "Y": 51.0
+                    },
+                    "Name": "img",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -474050611,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 55.0
+                },
+                "Name": "loseScore",
+                "ctype": "TextAtlasObjectData"
+              },
+              {
+                "CharWidth": 41,
+                "CharHeight": 55,
+                "LabelText": "900",
+                "StartChar": "0",
+                "LabelAtlasFileImage_CNB": {
+                  "Type": "Normal",
+                  "Path": "RunFasterYA/Game/boomwin.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 596.8358,
+                  "Y": 521.3193
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 596.8358,
+                "RightMargin": -719.8358,
+                "TopMargin": -548.8193,
+                "BottomMargin": 493.8193,
+                "Tag": 644,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "RunFasterYA/Game/winjia.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 7,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 25,
+                    "Scale9Height": 37,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": -42.0945,
+                      "Y": 51.8462
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.3422,
+                      "Y": 0.9427
+                    },
+                    "PreSize": {
+                      "X": 0.3171,
+                      "Y": 0.9273
+                    },
+                    "LeftMargin": -42.0945,
+                    "RightMargin": 126.0945,
+                    "TopMargin": 3.1538,
+                    "BottomMargin": 0.8462,
+                    "Tag": 645,
+                    "ActionTag": -40698585,
+                    "Size": {
+                      "X": 39.0,
+                      "Y": 51.0
+                    },
+                    "Name": "img",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -2044429507,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 55.0
+                },
+                "Name": "winScore",
+                "ctype": "TextAtlasObjectData"
               }
             ],
             "ActionTag": 413303269,
@@ -3755,8 +3937,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 291.412,
-                  "Y": 367.3918
+                  "X": 295.597,
+                  "Y": 413.4334
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -3772,10 +3954,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 225.412,
-                "RightMargin": -357.412,
-                "TopMargin": -395.8918,
-                "BottomMargin": 338.8918,
+                "LeftMargin": 229.597,
+                "RightMargin": -361.597,
+                "TopMargin": -441.9334,
+                "BottomMargin": 384.9334,
                 "Tag": 109,
                 "ActionTag": -283596604,
                 "Size": {
@@ -3801,8 +3983,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 304.9262,
-                  "Y": 498.289
+                  "X": 309.1104,
+                  "Y": 544.3322
                 },
                 "Scale": {
                   "ScaleX": 0.94,
@@ -3820,10 +4002,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 244.9262,
-                "RightMargin": -364.9262,
-                "TopMargin": -587.289,
-                "BottomMargin": 409.289,
+                "LeftMargin": 249.1104,
+                "RightMargin": -369.1104,
+                "TopMargin": -633.3322,
+                "BottomMargin": 455.3322,
                 "Tag": 285,
                 "ActionTag": 1563881250,
                 "Size": {
@@ -3848,8 +4030,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 194.0808,
-                  "Y": 425.4931
+                  "X": 254.5271,
+                  "Y": 429.748
                 },
                 "Scale": {
                   "ScaleX": 0.5,
@@ -3865,10 +4047,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 134.0808,
-                "RightMargin": -254.0808,
-                "TopMargin": -514.4931,
-                "BottomMargin": 336.4931,
+                "LeftMargin": 194.5271,
+                "RightMargin": -314.5271,
+                "TopMargin": -518.748,
+                "BottomMargin": 340.748,
                 "Tag": 366,
                 "ActionTag": 1204540296,
                 "Size": {
@@ -3901,8 +4083,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 82.16,
-                  "Y": 479.34
+                  "X": 86.3454,
+                  "Y": 525.3815
                 },
                 "Scale": {
                   "ScaleX": 0.8,
@@ -3918,22 +4100,22 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 19.16,
-                "RightMargin": -145.16,
-                "TopMargin": -541.84,
-                "BottomMargin": 416.84,
+                "LeftMargin": 23.3454,
+                "RightMargin": -149.3454,
+                "TopMargin": -587.8815,
+                "BottomMargin": 462.8815,
                 "Tag": 3592,
                 "Children": [
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "game_picture/dating1_06.png",
+                      "Path": "game_picture/dating1_07.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 21,
                     "Scale9OriginY": 21,
-                    "Scale9Width": 45,
-                    "Scale9Height": 45,
+                    "Scale9Width": 56,
+                    "Scale9Height": 57,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -3954,18 +4136,18 @@
                       "Y": 0.624
                     },
                     "PreSize": {
-                      "X": 0.8968,
-                      "Y": 0.944
+                      "X": 0.8333,
+                      "Y": 0.84
                     },
-                    "LeftMargin": 6.5,
-                    "RightMargin": 6.5,
-                    "TopMargin": -11.9999,
-                    "BottomMargin": 18.9999,
+                    "LeftMargin": 10.5,
+                    "RightMargin": 10.5,
+                    "TopMargin": -5.4999,
+                    "BottomMargin": 25.4999,
                     "Tag": 3618,
                     "ActionTag": -667909059,
                     "Size": {
-                      "X": 113.0,
-                      "Y": 118.0
+                      "X": 105.0,
+                      "Y": 105.0
                     },
                     "Name": "nobody",
                     "ctype": "ImageViewObjectData"
@@ -4228,8 +4410,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 88.9408,
-                      "Y": 59.03
+                      "X": 62.2647,
+                      "Y": 80.3781
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -4238,17 +4420,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.7059,
-                      "Y": 0.4722
+                      "X": 0.4942,
+                      "Y": 0.643
                     },
                     "PreSize": {
                       "X": 0.7857,
                       "Y": 0.792
                     },
-                    "LeftMargin": 39.4408,
-                    "RightMargin": -12.4408,
-                    "TopMargin": 16.47,
-                    "BottomMargin": 9.53,
+                    "LeftMargin": 12.7647,
+                    "RightMargin": 14.2353,
+                    "TopMargin": -4.8781,
+                    "BottomMargin": 30.8781,
                     "Tag": 129,
                     "ActionTag": -156342441,
                     "Size": {
@@ -4516,6 +4698,8 @@
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
+                    "RotationSkewX": 0.6089,
+                    "RotationSkewY": 0.6089,
                     "CColor": {},
                     "IconVisible": false,
                     "PositionPercentXEnabled": true,
@@ -4636,22 +4820,22 @@
                     "ctype": "ImageViewObjectData"
                   },
                   {
-                    "CharWidth": 15,
-                    "CharHeight": 24,
+                    "CharWidth": 22,
+                    "CharHeight": 36,
                     "LabelText": "1000",
                     "StartChar": "/",
                     "LabelAtlasFileImage_CNB": {
                       "Type": "Normal",
-                      "Path": "playing/gameTable/coinsNum.png",
+                      "Path": "playing/paodekuaiTable_new/coinsNum.png",
                       "Plist": ""
                     },
                     "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
+                      "ScaleX": 0.6508,
+                      "ScaleY": 0.6209
                     },
                     "Position": {
-                      "X": 60.0212,
-                      "Y": -29.3705
+                      "X": 69.067,
+                      "Y": -26.468
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -4660,22 +4844,22 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4764,
-                      "Y": -0.235
+                      "X": 0.5482,
+                      "Y": -0.2117
                     },
                     "PreSize": {
-                      "X": 0.4762,
-                      "Y": 0.192
+                      "X": 0.6984,
+                      "Y": 0.288
                     },
-                    "LeftMargin": 30.0212,
-                    "RightMargin": 35.9788,
-                    "TopMargin": 142.3705,
-                    "BottomMargin": -41.3705,
+                    "LeftMargin": 11.7998,
+                    "RightMargin": 26.2002,
+                    "TopMargin": 137.8217,
+                    "BottomMargin": -48.8217,
                     "Tag": 324,
                     "ActionTag": -1373483599,
                     "Size": {
-                      "X": 60.0,
-                      "Y": 24.0
+                      "X": 88.0,
+                      "Y": 36.0
                     },
                     "Name": "coin",
                     "ctype": "TextAtlasObjectData"
@@ -4683,45 +4867,186 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "playing/cardPic/beimian_puke.png",
+                      "Path": "playing/cardPic2/beimian_puke_min.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 11,
                     "Scale9OriginY": 18,
-                    "Scale9Width": 98,
-                    "Scale9Height": 142,
+                    "Scale9Width": 23,
+                    "Scale9Height": 23,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 60.748,
-                      "Y": 179.7695
+                      "X": 162.398,
+                      "Y": 106.7534
                     },
                     "Scale": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
                     },
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4821,
-                      "Y": 1.4382
+                      "X": 1.2889,
+                      "Y": 0.854
                     },
                     "PreSize": {
-                      "X": 0.9524,
-                      "Y": 1.424
+                      "X": 0.3571,
+                      "Y": 0.472
                     },
-                    "LeftMargin": 0.748,
-                    "RightMargin": 5.252,
-                    "TopMargin": -143.7695,
-                    "BottomMargin": 90.7695,
-                    "Tag": 612,
+                    "LeftMargin": 139.898,
+                    "RightMargin": -58.898,
+                    "TopMargin": -11.2534,
+                    "BottomMargin": 77.2534,
+                    "Tag": 299,
                     "Children": [
                       {
-                        "FontSize": 72,
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "playing/paodekuaiTable/baodan_alarm.png",
+                          "Plist": ""
+                        },
+                        "BlendFunc": {
+                          "Src": 1,
+                          "Dst": 771
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 1.0
+                        },
+                        "Position": {
+                          "X": 22.5,
+                          "Y": -5.9
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": -0.1
+                        },
+                        "PreSize": {
+                          "X": 1.1333,
+                          "Y": 0.9492
+                        },
+                        "LeftMargin": -3.0,
+                        "RightMargin": -3.0,
+                        "TopMargin": 64.9,
+                        "BottomMargin": -61.9,
+                        "Tag": 300,
+                        "Children": [
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "playing/paodekuaiTable/baodan_shining.png",
+                              "Plist": ""
+                            },
+                            "BlendFunc": {
+                              "Src": 1,
+                              "Dst": 771
+                            },
+                            "AnchorPoint": {
+                              "ScaleX": 0.5,
+                              "ScaleY": 0.5
+                            },
+                            "Position": {
+                              "X": 25.5,
+                              "Y": 30.8
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": 0.5,
+                              "Y": 0.55
+                            },
+                            "PreSize": {
+                              "X": 0.8627,
+                              "Y": 0.875
+                            },
+                            "LeftMargin": 3.5,
+                            "RightMargin": 3.5,
+                            "TopMargin": 0.7,
+                            "BottomMargin": 6.3,
+                            "Tag": 301,
+                            "ActionTag": -386101189,
+                            "Size": {
+                              "X": 44.0,
+                              "Y": 49.0
+                            },
+                            "Name": "shining",
+                            "ctype": "SpriteObjectData"
+                          },
+                          {
+                            "FileData": {
+                              "Type": "Normal",
+                              "Path": "playing/paodekuaiTable/baodan_new.png",
+                              "Plist": ""
+                            },
+                            "BlendFunc": {
+                              "Src": 1,
+                              "Dst": 771
+                            },
+                            "AnchorPoint": {},
+                            "Position": {
+                              "X": -8.67,
+                              "Y": -35.84
+                            },
+                            "Scale": {
+                              "ScaleX": 1.0,
+                              "ScaleY": 1.0
+                            },
+                            "CColor": {},
+                            "IconVisible": false,
+                            "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
+                            "PrePosition": {
+                              "X": -0.17,
+                              "Y": -0.64
+                            },
+                            "PreSize": {
+                              "X": 1.4706,
+                              "Y": 0.5714
+                            },
+                            "LeftMargin": -8.67,
+                            "RightMargin": -15.33,
+                            "TopMargin": 59.84,
+                            "BottomMargin": -35.84,
+                            "Tag": 302,
+                            "ActionTag": 64636083,
+                            "Size": {
+                              "X": 75.0,
+                              "Y": 32.0
+                            },
+                            "Name": "alarm",
+                            "ctype": "SpriteObjectData"
+                          }
+                        ],
+                        "ActionTag": -765366704,
+                        "Size": {
+                          "X": 51.0,
+                          "Y": 56.0
+                        },
+                        "Name": "sprite_single",
+                        "ctype": "SpriteObjectData"
+                      },
+                      {
+                        "FontSize": 32,
                         "LabelText": "88",
                         "HorizontalAlignmentType": "HT_Center",
+                        "VerticalAlignmentType": "VT_Center",
                         "OutlineColor": {
                           "G": 0,
                           "B": 0
@@ -4738,8 +5063,58 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 59.5273,
-                          "Y": 88.8198
+                          "X": 22.5,
+                          "Y": 29.5
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 238,
+                          "G": 252
+                        },
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.7111,
+                          "Y": 0.5593
+                        },
+                        "LeftMargin": 6.5,
+                        "RightMargin": 6.5,
+                        "TopMargin": 13.0,
+                        "BottomMargin": 13.0,
+                        "Tag": 303,
+                        "ActionTag": 1639542276,
+                        "Size": {
+                          "X": 32.0,
+                          "Y": 33.0
+                        },
+                        "Name": "Text_count",
+                        "ctype": "TextObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "playing/paodekuaiTable/wenhao.png",
+                          "Plist": ""
+                        },
+                        "BlendFunc": {
+                          "Src": 1,
+                          "Dst": 771
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 22.5,
+                          "Y": 29.5
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -4747,32 +5122,34 @@
                         },
                         "CColor": {},
                         "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
                         "PrePosition": {
-                          "X": 0.4961,
-                          "Y": 0.499
+                          "X": 0.5,
+                          "Y": 0.5
                         },
                         "PreSize": {
-                          "X": 0.6,
-                          "Y": 0.4045
+                          "X": 0.4,
+                          "Y": 0.5085
                         },
-                        "LeftMargin": 23.5273,
-                        "RightMargin": 24.4727,
-                        "TopMargin": 53.1802,
-                        "BottomMargin": 52.8198,
-                        "Tag": 199,
-                        "ActionTag": -402135590,
+                        "LeftMargin": 13.5,
+                        "RightMargin": 13.5,
+                        "TopMargin": 14.5,
+                        "BottomMargin": 14.5,
+                        "Tag": 304,
+                        "ActionTag": -688250877,
                         "Size": {
-                          "X": 72.0,
-                          "Y": 72.0
+                          "X": 18.0,
+                          "Y": 30.0
                         },
-                        "Name": "Text_count",
-                        "ctype": "TextObjectData"
+                        "Name": "unKnow",
+                        "ctype": "SpriteObjectData"
                       }
                     ],
-                    "ActionTag": 954723019,
+                    "ActionTag": 970693016,
                     "Size": {
-                      "X": 120.0,
-                      "Y": 178.0
+                      "X": 45.0,
+                      "Y": 59.0
                     },
                     "Name": "tingCard",
                     "ctype": "ImageViewObjectData"
@@ -4806,8 +5183,8 @@
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
-                  "X": 348.8346,
-                  "Y": 359.9999
+                  "X": 353.0187,
+                  "Y": 406.0427
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -4823,10 +5200,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 348.8346,
-                "RightMargin": -448.8346,
-                "TopMargin": -459.9999,
-                "BottomMargin": 359.9999,
+                "LeftMargin": 353.0187,
+                "RightMargin": -453.0187,
+                "TopMargin": -506.0427,
+                "BottomMargin": 406.0427,
                 "Tag": 264,
                 "ActionTag": 1812432422,
                 "Size": {
@@ -4837,41 +5214,28 @@
                 "ctype": "PanelObjectData"
               },
               {
-                "FontSize": 48,
-                "LabelText": "不出",
-                "FontResource": {
+                "FileData": {
                   "Type": "Normal",
-                  "Path": "fonts/fzcy.ttf",
+                  "Path": "playing/paodekuaiTable/yaobuqi.png",
                   "Plist": ""
                 },
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
                 },
-                "OutlineEnabled": true,
-                "ShadowColor": {
-                  "R": 192,
-                  "G": 95,
-                  "B": 9
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "ShadowEnabled": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 228.6033,
-                  "Y": 401.9281
+                  "X": 284.9086,
+                  "Y": 419.4573
                 },
                 "Scale": {
                   "ScaleX": 1.0,
                   "ScaleY": 1.0
                 },
-                "CColor": {
-                  "B": 0
-                },
+                "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.0,
@@ -4881,18 +5245,198 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 180.6033,
-                "RightMargin": -276.6033,
-                "TopMargin": -431.9281,
-                "BottomMargin": 371.9281,
-                "Tag": 130,
-                "ActionTag": 1371504397,
+                "LeftMargin": 218.4086,
+                "RightMargin": -351.4086,
+                "TopMargin": -445.4573,
+                "BottomMargin": 393.4573,
+                "Tag": 343,
+                "ActionTag": -426039673,
                 "Size": {
-                  "X": 96.0,
-                  "Y": 60.0
+                  "X": 133.0,
+                  "Y": 52.0
                 },
                 "Name": "noPutTag",
-                "ctype": "TextObjectData"
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "CharWidth": 41,
+                "CharHeight": 55,
+                "LabelText": "900",
+                "StartChar": "0",
+                "LabelAtlasFileImage_CNB": {
+                  "Type": "Normal",
+                  "Path": "RunFasterYA/Game/boomwin.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 237.244,
+                  "Y": 502.9727
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 237.244,
+                "RightMargin": -360.244,
+                "TopMargin": -530.4727,
+                "BottomMargin": 475.4727,
+                "Tag": 630,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "RunFasterYA/Game/winjia.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 7,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 25,
+                    "Scale9Height": 37,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": -42.0945,
+                      "Y": 51.8462
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.3422,
+                      "Y": 0.9427
+                    },
+                    "PreSize": {
+                      "X": 0.3171,
+                      "Y": 0.9273
+                    },
+                    "LeftMargin": -42.0945,
+                    "RightMargin": 126.0945,
+                    "TopMargin": 3.1538,
+                    "BottomMargin": 0.8462,
+                    "Tag": 633,
+                    "ActionTag": 1284865898,
+                    "Size": {
+                      "X": 39.0,
+                      "Y": 51.0
+                    },
+                    "Name": "img",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 449518837,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 55.0
+                },
+                "Name": "winScore",
+                "ctype": "TextAtlasObjectData"
+              },
+              {
+                "CharWidth": 41,
+                "CharHeight": 55,
+                "LabelText": "900",
+                "StartChar": "0",
+                "LabelAtlasFileImage_CNB": {
+                  "Type": "Normal",
+                  "Path": "RunFasterYA/Game/boomlose.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 236.9351,
+                  "Y": 501.2203
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 236.9351,
+                "RightMargin": -359.9351,
+                "TopMargin": -528.7203,
+                "BottomMargin": 473.7203,
+                "Tag": 634,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "RunFasterYA/Game/losejian.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 7,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 25,
+                    "Scale9Height": 37,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": -42.0945,
+                      "Y": 51.8462
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.3422,
+                      "Y": 0.9427
+                    },
+                    "PreSize": {
+                      "X": 0.3171,
+                      "Y": 0.9273
+                    },
+                    "LeftMargin": -42.0945,
+                    "RightMargin": 126.0945,
+                    "TopMargin": 3.1538,
+                    "BottomMargin": 0.8462,
+                    "Tag": 635,
+                    "ActionTag": 1584024304,
+                    "Size": {
+                      "X": 39.0,
+                      "Y": 51.0
+                    },
+                    "Name": "img",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -1833994079,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 55.0
+                },
+                "Name": "loseScore",
+                "ctype": "TextAtlasObjectData"
               }
             ],
             "ActionTag": 1731434638,
@@ -4900,7 +5444,6 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "VisibleForFrame": false,
             "Name": "left",
             "ctype": "SingleNodeObjectData"
           },
@@ -5173,7 +5716,7 @@
                         },
                         "Position": {
                           "X": 36.3337,
-                          "Y": 40.5296
+                          "Y": 41.4084
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -5187,7 +5730,7 @@
                         "IconVisible": false,
                         "PrePosition": {
                           "X": 0.3028,
-                          "Y": 0.6141
+                          "Y": 0.6274
                         },
                         "PreSize": {
                           "X": 4.3583,
@@ -5195,8 +5738,8 @@
                         },
                         "LeftMargin": 36.3337,
                         "RightMargin": -439.3337,
-                        "TopMargin": 9.9704,
-                        "BottomMargin": 25.0296,
+                        "TopMargin": 9.0916,
+                        "BottomMargin": 25.9084,
                         "Tag": 178,
                         "ActionTag": 369841341,
                         "Size": {
@@ -5893,13 +6436,13 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "playing/cardPic2/baidi_puke.png",
+                  "Path": "Red20/Card/0-1.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 24,
                 "Scale9OriginY": 37,
-                "Scale9Width": 89,
-                "Scale9Height": 106,
+                "Scale9Width": 42,
+                "Scale9Height": 48,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -5923,15 +6466,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 558.4933,
-                "RightMargin": -695.4933,
-                "TopMargin": -186.946,
-                "BottomMargin": 6.946,
+                "LeftMargin": 581.9933,
+                "RightMargin": -671.9933,
+                "TopMargin": -157.946,
+                "BottomMargin": 35.946,
                 "Tag": 36,
                 "ActionTag": 1998220043,
                 "Size": {
-                  "X": 137.0,
-                  "Y": 180.0
+                  "X": 90.0,
+                  "Y": 122.0
                 },
                 "Name": "stand",
                 "ctype": "ImageViewObjectData"
@@ -5980,6 +6523,186 @@
                 },
                 "Name": "noPutTag",
                 "ctype": "SpriteObjectData"
+              },
+              {
+                "CharWidth": 41,
+                "CharHeight": 55,
+                "LabelText": "900",
+                "StartChar": "0",
+                "LabelAtlasFileImage_CNB": {
+                  "Type": "Normal",
+                  "Path": "RunFasterYA/Game/boomlose.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 583.2979,
+                  "Y": 239.8981
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 583.2979,
+                "RightMargin": -706.2979,
+                "TopMargin": -267.3981,
+                "BottomMargin": 212.3981,
+                "Tag": 638,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "RunFasterYA/Game/losejian.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 7,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 25,
+                    "Scale9Height": 37,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": -42.0945,
+                      "Y": 51.8462
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.3422,
+                      "Y": 0.9427
+                    },
+                    "PreSize": {
+                      "X": 0.3171,
+                      "Y": 0.9273
+                    },
+                    "LeftMargin": -42.0945,
+                    "RightMargin": 126.0945,
+                    "TopMargin": 3.1538,
+                    "BottomMargin": 0.8462,
+                    "Tag": 639,
+                    "ActionTag": -1513544101,
+                    "Size": {
+                      "X": 39.0,
+                      "Y": 51.0
+                    },
+                    "Name": "img",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 1109995638,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 55.0
+                },
+                "Name": "loseScore",
+                "ctype": "TextAtlasObjectData"
+              },
+              {
+                "CharWidth": 41,
+                "CharHeight": 55,
+                "LabelText": "900",
+                "StartChar": "0",
+                "LabelAtlasFileImage_CNB": {
+                  "Type": "Normal",
+                  "Path": "RunFasterYA/Game/boomwin.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 583.6059,
+                  "Y": 241.651
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 583.6059,
+                "RightMargin": -706.6059,
+                "TopMargin": -269.151,
+                "BottomMargin": 214.151,
+                "Tag": 636,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "RunFasterYA/Game/winjia.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 7,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 25,
+                    "Scale9Height": 37,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": -42.0945,
+                      "Y": 51.8462
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.3422,
+                      "Y": 0.9427
+                    },
+                    "PreSize": {
+                      "X": 0.3171,
+                      "Y": 0.9273
+                    },
+                    "LeftMargin": -42.0945,
+                    "RightMargin": 126.0945,
+                    "TopMargin": 3.1538,
+                    "BottomMargin": 0.8462,
+                    "Tag": 637,
+                    "ActionTag": 129400718,
+                    "Size": {
+                      "X": 39.0,
+                      "Y": 51.0
+                    },
+                    "Name": "img",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -1773967065,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 55.0
+                },
+                "Name": "winScore",
+                "ctype": "TextAtlasObjectData"
               }
             ],
             "ActionTag": 332052040,
@@ -7359,6 +8082,186 @@
                 },
                 "Name": "noPutTag",
                 "ctype": "SpriteObjectData"
+              },
+              {
+                "CharWidth": 41,
+                "CharHeight": 55,
+                "LabelText": "900",
+                "StartChar": "0",
+                "LabelAtlasFileImage_CNB": {
+                  "Type": "Normal",
+                  "Path": "RunFasterYA/Game/boomwin.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 973.4351,
+                  "Y": 513.2122
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 973.4351,
+                "RightMargin": -1096.4351,
+                "TopMargin": -540.7122,
+                "BottomMargin": 485.7122,
+                "Tag": 642,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "RunFasterYA/Game/winjia.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 7,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 25,
+                    "Scale9Height": 37,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": -42.0945,
+                      "Y": 51.8462
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.3422,
+                      "Y": 0.9427
+                    },
+                    "PreSize": {
+                      "X": 0.3171,
+                      "Y": 0.9273
+                    },
+                    "LeftMargin": -42.0945,
+                    "RightMargin": 126.0945,
+                    "TopMargin": 3.1538,
+                    "BottomMargin": 0.8462,
+                    "Tag": 643,
+                    "ActionTag": 2010224742,
+                    "Size": {
+                      "X": 39.0,
+                      "Y": 51.0
+                    },
+                    "Name": "img",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -482374262,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 55.0
+                },
+                "Name": "winScore",
+                "ctype": "TextAtlasObjectData"
+              },
+              {
+                "CharWidth": 41,
+                "CharHeight": 55,
+                "LabelText": "900",
+                "StartChar": "0",
+                "LabelAtlasFileImage_CNB": {
+                  "Type": "Normal",
+                  "Path": "RunFasterYA/Game/boomlose.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 973.1276,
+                  "Y": 511.4593
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 973.1276,
+                "RightMargin": -1096.1277,
+                "TopMargin": -538.9593,
+                "BottomMargin": 483.9593,
+                "Tag": 640,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "RunFasterYA/Game/losejian.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 7,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 25,
+                    "Scale9Height": 37,
+                    "AnchorPoint": {
+                      "ScaleY": 1.0
+                    },
+                    "Position": {
+                      "X": -42.0945,
+                      "Y": 51.8462
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": -0.3422,
+                      "Y": 0.9427
+                    },
+                    "PreSize": {
+                      "X": 0.3171,
+                      "Y": 0.9273
+                    },
+                    "LeftMargin": -42.0945,
+                    "RightMargin": 126.0945,
+                    "TopMargin": 3.1538,
+                    "BottomMargin": 0.8462,
+                    "Tag": 641,
+                    "ActionTag": 54600264,
+                    "Size": {
+                      "X": 39.0,
+                      "Y": 51.0
+                    },
+                    "Name": "img",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -1087622627,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 55.0
+                },
+                "Name": "loseScore",
+                "ctype": "TextAtlasObjectData"
               }
             ],
             "ActionTag": 2091663298,
@@ -7384,8 +8287,8 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 640.0,
-              "Y": 540.0
+              "X": 771.84,
+              "Y": 410.256
             },
             "Scale": {
               "ScaleX": 0.5,
@@ -7396,17 +8299,17 @@
             "PositionPercentXEnabled": true,
             "PositionPercentYEnabled": true,
             "PrePosition": {
-              "X": 0.5,
-              "Y": 0.75
+              "X": 0.603,
+              "Y": 0.5698
             },
             "PreSize": {
               "X": 0.107,
               "Y": 0.25
             },
-            "LeftMargin": 571.5,
-            "RightMargin": 571.5,
-            "TopMargin": 90.0,
-            "BottomMargin": 450.0,
+            "LeftMargin": 703.34,
+            "RightMargin": 439.66,
+            "TopMargin": 219.744,
+            "BottomMargin": 320.256,
             "Tag": 218,
             "ActionTag": 1160051324,
             "Size": {
@@ -8519,14 +9422,12 @@
         "fonts/fzcy.ttf",
         "fonts/lanting.TTF",
         "game_picture/bac_datingtoushangzhezhao.png",
-        "game_picture/dating1_06.png",
         "game_picture/dating1_07.png",
         "game_picture/dating-1_73.png",
         "playground/TG_countDown.png",
         "playground/tuoguan.png",
         "playground/tuoguan_1.png",
         "playing/cardPic/baidi_puke.png",
-        "playing/cardPic/beimian_puke.png",
         "playing/cardPic2/baidi_puke.png",
         "playing/cardPic2/beimian_puke_min.png",
         "playing/cardTable/di_gd.png",
@@ -8537,7 +9438,6 @@
         "playing/gameTable/btn_chat_press.png",
         "playing/gameTable/btn_yuyin_normal.png",
         "playing/gameTable/btn_yuyin_press.png",
-        "playing/gameTable/coinsNum.png",
         "playing/gameTable/fuzhi.png",
         "playing/gameTable/fuzhi_02.png",
         "playing/gameTable/GAME_04.png",
@@ -8582,8 +9482,13 @@
         "playing/paodekuaiTable_new/tishi.png",
         "playing/paodekuaiTable_new/WIFI_3.png",
         "png/Z_zhunbeizhuangt.png",
+        "Red20/Card/0-1.png",
+        "RunFasterYA/Game/boomlose.png",
+        "RunFasterYA/Game/boomwin.png",
         "RunFasterYA/Game/GameBG.jpg",
-        "RunFasterYA/Game/GameName.png"
+        "RunFasterYA/Game/GameName.png",
+        "RunFasterYA/Game/losejian.png",
+        "RunFasterYA/Game/winjia.png"
       ],
       "ctype": "GameFileData"
     }

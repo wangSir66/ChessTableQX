@@ -410,8 +410,8 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
             {
                 _visible: true,
                 _run: function () {
-                    if (!MjClient.endoneui.isNewUi)
-                        this.ignoreContentAdaptWithSize(true);
+                    // if (!MjClient.endoneui.isNewUi)
+                        // this.ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
                     var sData = MjClient.data.sData;

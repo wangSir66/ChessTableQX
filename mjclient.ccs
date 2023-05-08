@@ -4236,11 +4236,15 @@
         </Folder>
         <Folder Name="RunFasterYA">
           <Folder Name="Game">
+            <Image Name="boomlose.png" />
+            <Image Name="boomwin.png" />
             <Image Name="GameBG.jpg" />
             <Image Name="GameName.png" />
             <Image Name="head.png" />
             <Image Name="HeadFrame.png" />
             <Image Name="hide_head.png" />
+            <Image Name="losejian.png" />
+            <Image Name="winjia.png" />
           </Folder>
           <Folder Name="RoundEnd">
             <Image Name="BigResultBG.png" />

@@ -796,7 +796,7 @@ function setWxHead(node, d, off) {
         if (WxHead) {
             WxHead.removeFromParent();
         }
-        cc.log(off + "----------setWxHead---------------" + d.uid);
+        cc.log(off + "----------setWxHead---------------" + d.uid, d.img);
         var headSprite = new cc.Sprite(d.img);
         if ((MjClient.getAppType() == MjClient.APP_TYPE.TXJINZHONGMJ || MjClient.getAppType() == MjClient.APP_TYPE.DQSHANXIMJ) &&
             MjClient.gameType != MjClient.GAME_TYPE.LV_LIANG_DA_QI &&
@@ -2773,6 +2773,7 @@ function InitUserCoinAndName(node, off) {
                         MjClient.gameType === MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
                         return getPlayerName(_nameStr);
                     }
+                    if (tData.areaSelectMode.IsAnonymous) return '匿名玩家'
                     return getNewName(_nameStr, 5);
                 }
             },
@@ -2792,8 +2793,8 @@ function InitUserCoinAndName(node, off) {
                     //sk,todo,这里有问题，服务器的pl.winall没有赋值，这里加了有个毛用？
                     var coin = tData.initCoin;
                     //this.setString("" + coin);
-
-                    changeAtalsForLabel(this, coin + pl.winall);
+                    cc.log('----------------这里有问题，服务器的pl---------',coin , pl.winall)
+                    changeAtalsForLabel(this, Math.floor(coin + pl.winall));
                 }
             }
         }

@@ -83,8 +83,8 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
                 'btnCheckquanshuang': ['AllDouble', false],
                 'btnCheck55AA': ['Four5OrA', false],
                 'btnCheck66KK': ['FourOther', false],
-                'btnCheck3zhang': ['can3geZhan', false],
-                'btnCheck4zhang': ['can4geZhan', false]
+                'btnCheck3zhang': ['can3geZha', false],
+                'btnCheck4zhang': ['can4geZha', false]
             };
         let len = Object.keys(key_nameR);
         for (let _i = 0; _i < len.length; _i++) {
@@ -126,7 +126,7 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
         para.cardNumIndex = 10; /** 牌数 */
         para.isPlayerShuffle = 0;//切牌
         para.mustPut = true;//管牌 
-        para.Spring = false;//可春天
+        para.Spring = true;//可春天
         para.ContrarySpring = false;//可反春
         para.FasterPass = true;//快速过牌
         para.Is3OutOver = false;//三张 少带出完

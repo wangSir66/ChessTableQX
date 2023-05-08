@@ -101,11 +101,12 @@
     PDK_CARDCOUNT[PDK_CARDTPYE.sangeA] = 3;
     PDK_CARDCOUNT[PDK_CARDTPYE.sanzha] = 3;
     PDK_CARDCOUNT[PDK_CARDTPYE.sangeK] = 3;
+    PDK_CARDCOUNT[PDK_CARDTPYE.sizhang] = 4;
     PDK_CARDCOUNT[PDK_CARDTPYE.sizha] = 4;
     PDK_CARDCOUNT[PDK_CARDTPYE.sandaier] = 5;
     PDK_CARDCOUNT[PDK_CARDTPYE.sandaiyi] = 4;
     PDK_CARDCOUNT[PDK_CARDTPYE.liandui] = 4;
-    PDK_CARDCOUNT[PDK_CARDTPYE.shunzi] = 5;
+    PDK_CARDCOUNT[PDK_CARDTPYE.shunzi] = 3;
     PDK_CARDCOUNT[PDK_CARDTPYE.sztonghua] = 5;
     PDK_CARDCOUNT[PDK_CARDTPYE.szdaipai] = 8;
     PDK_CARDCOUNT[PDK_CARDTPYE.sanzhang] = 3;
@@ -125,7 +126,9 @@
     var pdk_cardTypeSub = function () {
         var ret = {};
         ret[PDK_CARDTPYE.sizha] = [PDK_CARDTPYE.sanzhang, PDK_CARDTPYE.duizi];
+        ret[PDK_CARDTPYE.sizhang] = [PDK_CARDTPYE.sanzhang, PDK_CARDTPYE.duizi];
         ret[PDK_CARDTPYE.sanzhang] = [PDK_CARDTPYE.duizi];
+        ret[PDK_CARDTPYE.sanzha] = [PDK_CARDTPYE.duizi];
         ret[PDK_CARDTPYE.liandui] = [PDK_CARDTPYE.duizi];
         ret[PDK_CARDTPYE.sandaier] = [PDK_CARDTPYE.sanzhang, PDK_CARDTPYE.duizi];
         ret[PDK_CARDTPYE.sandaiyi] = [PDK_CARDTPYE.sanzhang, PDK_CARDTPYE.duizi];
@@ -148,14 +151,11 @@
     var pdk_allBuChaiType = [
         PDK_CARDTPYE.duizi,
         PDK_CARDTPYE.sanzhang,
+        PDK_CARDTPYE.sizhang,
+        PDK_CARDTPYE.sanzha,
         PDK_CARDTPYE.shunzi,
         PDK_CARDTPYE.liandui,
-        PDK_CARDTPYE.feiji,
-        PDK_CARDTPYE.sange3,
         PDK_CARDTPYE.sizha,
-        PDK_CARDTPYE.sangeA,
-        PDK_CARDTPYE.sangeK,
-        PDK_CARDTPYE.sztonghua,
     ]
 
     GameLogic_RunFaster.prototype.allTipsNoOrder = [
@@ -948,65 +948,19 @@
             }
         }
 
-        // 三个A  和三顺牌型相似， 避免判断为三顺， 放到三顺前
-        if (cardCount == PDK_CARDCOUNT[PDK_CARDTPYE.sangeA] && allSame && this.calPoint(cards[0]) == PDK_APOINT && areaSelectMode.can3aZhaDan)
-            return PDK_CARDTPYE.sangeA;
-
-        // 三个k  和三顺牌型相似， 避免判断为三顺， 放到三顺前
-        if (cardCount == PDK_CARDCOUNT[PDK_CARDTPYE.sangeK] && allSame && this.calPoint(cards[0]) == PDK_KPOINT && areaSelectMode.can3kZhaDan)
-            return PDK_CARDTPYE.sangeK;
-
-        // 飞机
-        if (cardCount >= 6 && maxCount >= 3 && this.isFeiJi(cards) != 0) {
-            return PDK_CARDTPYE.feiji;
-        }
-
-        // 3顺
-        // if(cardCount >= 3 && maxCount == 3 && this.isSanShun(cards)){
-        //     return PDK_CARDTPYE.sanshun;
-        // }
-
-        // 同花顺
-        if (areaSelectMode.tongHuaShun && cardCount >= 5 && maxCount == 1 && this.findShunZi(cards, cardCount, true))
-            return PDK_CARDTPYE.sztonghua;
-
-        // 同花顺带牌 同花顺5张可带3张牌，6张可带4张
-        if (!skipSzdaipai && areaSelectMode.tongHuaShun && cardCount >= 8 && this.findShunZi(cards, 5 + (cardCount - 8) / 2, true))
-            return PDK_CARDTPYE.szdaipai;
-
         // 顺子，5张起 
-        if (cardCount >= 5 && maxCount == 1 && this.findShunZi(cards, cardCount, false))
+        if (cardCount >= PDK_CARDCOUNT[PDK_CARDTPYE.shunzi] && maxCount == 1 && this.findShunZi(cards, cardCount, false))
             return PDK_CARDTPYE.shunzi;
 
         // 连对，2对起
         if (cardCount >= PDK_CARDCOUNT[PDK_CARDTPYE.liandui] && maxCount == 2 && this.isLiandui(cards))
             return PDK_CARDTPYE.liandui;
 
-        // 四带三
-        if (cardCount == 7 && maxCount == 4)
-            return PDK_CARDTPYE.sidaisan;
-
-        //四带二
-        if (cardCount == 6 && maxCount == 4)
-            return PDK_CARDTPYE.sidaier;
-
         //四炸
         if (cardCount == 4 && allSame) {
             if (areaSelectMode["can4geZha"]) return PDK_CARDTPYE.sizha || -1;
             else return PDK_CARDTPYE.sizhang || -1
         }
-
-        // 三带二
-        if (areaSelectMode.can3dai2 && cardCount == PDK_CARDCOUNT[PDK_CARDTPYE.sandaier] && maxCount == 3) {
-            for (var i in pointCounts) {
-                // 只能3带对子
-                if (pointCounts[i] == 2) return PDK_CARDTPYE.sandaier;
-            }
-        }
-
-        //三带一
-        if (cardCount == 4 && maxCount == 3)
-            return PDK_CARDTPYE.sandaiyi;
 
         // 三张
         if (cardCount == 3 && allSame) {
@@ -1148,12 +1102,13 @@
 
         // 不能出3张 或 3顺不能出
         if (cardsType == PDK_CARDTPYE.sanzhang) {
-            if (oCards.length == handsNum && !oLastCards) {// 如果最后一手牌是3张或3顺
-                return true;
-            } else {
-                return false;
+            // if (oCards.length == handsNum && !oLastCards) {// 如果最后一手牌是3张或3顺
+            //     return true;
+            // } else {
+            //     return false;
 
-            }
+            // }
+            return true;
         }
 
         // 单张翅膀 和 不带翅膀的飞机最后一手可以出
@@ -1224,9 +1179,9 @@
 
         let bankerRule = areaSelectMode && areaSelectMode.mustPutHongTaoSan;
         needFindSpade3 = false;
-        if (bankerRule === this.GameBankerRule.FirstRoundMustPlaySpade3 && isFirstRound) {
-            needFindSpade3 = true;
-        }
+        // if (bankerRule === this.GameBankerRule.FirstRoundMustPlaySpade3 && isFirstRound) {
+        //     needFindSpade3 = true;
+        // }
         // 第一局 红桃三先出时 有红桃三必须出
         if (needFindSpade3 && cards.indexOf(this.cardCfg.firstOutCard) < 0 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0) {
             return null;
@@ -1697,7 +1652,7 @@
                 if (find) rets.push(find);
             }
         }
-        else if (type == PDK_CARDTPYE.sizha || type == PDK_CARDTPYE.duizi || type == PDK_CARDTPYE.sanzhang) {
+        else if (type == PDK_CARDTPYE.sizha || type == PDK_CARDTPYE.duizi || type == PDK_CARDTPYE.sanzhang || type == PDK_CARDTPYE.sanzha || type == PDK_CARDTPYE.sizhang) {
             for (var i = PDK_MINPOINT; i <= PDK_MAXPOINT; i++) {
                 var find = this.findNSameCard(hands, i, cardCount - laizi);
                 if (find) {
@@ -2207,7 +2162,7 @@
             return ret;
         }
 
-        //cc.log("hands=" + JSON.stringify(hands) + " lastCards=" + JSON.stringify(lastCards));
+        cc.log("hands=" + JSON.stringify(hands) + " lastCards=" + JSON.stringify(lastCards));
 
         var startTime = new Date().getTime();
         hands = hands.slice();
@@ -2225,6 +2180,7 @@
             includeCard = this.cardCfg.firstOutCard;
         } else if (lastCards.length > 0) {
             lastType = this.calType(lastCards, areaSelectMode);
+            cc.log('---------------lastType----------------1', lastType)
         }
         if (!putOrder)
             putOrder = pdk_putOrder[lastType];
@@ -2480,9 +2436,9 @@
     GameLogic_RunFaster.prototype.isMustPutCard3 = function (oHands, areaSelectMode, isFirstRound) {
         let bankerRule = areaSelectMode && areaSelectMode.mustPutHongTaoSan;
         needFindSpade3 = false;
-        if (bankerRule === this.GameBankerRule.FirstRoundMustPlaySpade3 && isFirstRound) {
-            needFindSpade3 = true;
-        }
+        // if (bankerRule === this.GameBankerRule.FirstRoundMustPlaySpade3 && isFirstRound) {
+        //     needFindSpade3 = true;
+        // }
         return needFindSpade3 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0;
     }
 
@@ -2554,11 +2510,23 @@
             }
         }
 
-        var booms = this.findCardByType(hands, 0, PDK_CARDTPYE.sizha);
-        // 不是压三带二的时候， 最后提示炸弹
-        for (var i = 0; i < booms.length; i++) {
-            if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
-                rets.push(booms[i]);
+        if (areaSelectMode.can4geZha) {
+            var booms = this.findCardByType(hands, 0, PDK_CARDTPYE.sizha);
+            // 不是压三带二的时候， 最后提示炸弹
+            for (var i = 0; i < booms.length; i++) {
+                if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
+                    rets.push(booms[i]);
+                }
+            }
+        }
+
+        if (areaSelectMode.can3geZha) {
+            var booms = this.findCardByType(hands, 0, PDK_CARDTPYE.sanzha);
+            // 不是压三带二的时候， 最后提示炸弹
+            for (var i = 0; i < booms.length; i++) {
+                if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
+                    rets.push(booms[i]);
+                }
             }
         }
 

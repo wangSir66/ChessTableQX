@@ -3321,22 +3321,6 @@ PlayerGamePanel_Red20.prototype.getSpriteFrameByCard = function (card) {
 }
 //设置牌的渲染
 PlayerGamePanel_Red20.prototype.setCardSprite = function (node, cd, off) {
-    //东南西北中发白
-    var offSets = [[52, 104], [65, 68], [52, 104], [65, 68], [50, 66], [53, 64], [19, 25]];;
-    var MJBgType = getCurrentMJBgType();
-
-    if (!COMMON_UI3D.is3DUI()) {
-        if (MJBgType == 0)
-            offSets = [[50, 95], [60, 66], [50, 95], [60, 66], [52, 68], [53, 64], [19, 25]];
-        else if (MJBgType == 1)
-            offSets = [[52, 100], [65, 68], [52, 100], [65, 68], [52, 66], [53, 64], [19, 25]];
-        else if (MJBgType == 2 && MjClient.gameType != MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU)
-            offSets = [[52, 105], [55, 70], [52, 105], [70, 70], [50, 76], [53, 64], [19, 25]];
-        else if (MJBgType == 3)
-            offSets = [[52, 104], [65, 68], [52, 104], [65, 68], [50, 66], [53, 64], [19, 25]];
-    }
-
-
     //麻将的底牌公用图，4张
     node.loadTexture(this.getSpriteFrameByCard(cd));
 

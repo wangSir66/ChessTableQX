@@ -66,7 +66,6 @@ function InitUserHandUI_RunFasterYA(node, off, needSort) {
         if (pl.mjhand && off == 0) {//只初始化自己的手牌
             var vcard = [];
             for (var i = 0; i < pl.mjhand.length; i++) {
-
                 var card = getNewCard_card(node, "stand", "mjhand", pl.mjhand[i], off);
                 var index = vcard.indexOf(pl.mjhand[i]);//区分2张一样的牌
                 if (index >= 0) {
@@ -78,7 +77,7 @@ function InitUserHandUI_RunFasterYA(node, off, needSort) {
                 vcard.push(pl.mjhand[i]);
             }
 
-            if (tData.areaSelectMode.fangZuoBi && tData.lastPutPlayer == -1 && tData.curPlayer != getPlayerIndex(0)) {
+            if (tData.areaSelectMode.FirstGroundHideCards && tData.lastPutPlayer == -1 && tData.curPlayer != getPlayerIndex(0)) {
                 MjClient.playui.isShowHandCardBeiMain = true;
                 MjClient.playui.showHandCardBeiMian();
             }
@@ -391,12 +390,12 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
         },
         roundInfo: {
             _run: function () {
-                setWgtLayout(this, [0.12, 0.12], [0.5, 0.52], [0, 0]);
+                setWgtLayout(this, [0.3, 0.3], [0.5, 0.52], [0.05, 1.2]);
 
                 var tData = MjClient.data.sData.tData;
                 var str = MjClient.playui.getGameInfoString();
                 this.setString(str);
-                this.ignoreContentAdaptWithSize(true);
+                // this.ignoreContentAdaptWithSize(true);
 
                 if (tData.matchId && tData.matchInfo) {
                     if (MjClient.matchRank) {
@@ -495,7 +494,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     let blac = settringLayer.jsBind.back._node, nC = blac.children;
                     for (var i = 0; i < nC.length; i++) {
                         let cn = nC[i].name;
-                        cc.log('--------nC[i].name-------',nC[i].name)
+                        cc.log('--------nC[i].name-------', nC[i].name)
                         if (
                             cn.indexOf('gameBg') > -1 ||
                             cn.indexOf('MJBg') > -1 ||
@@ -515,7 +514,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
                 },
                 _run: function () {
-                    setWgtLayout(this,[0.12, 0.12],[1,0.05],[1.5,0]);
+                    setWgtLayout(this, [0.12, 0.12], [1, 0.05], [1.5, 0]);
                 }
             },
             gps_btn: {
@@ -984,10 +983,10 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     },
                     _event: {
                         waitPut: function () {
-                            //showUserZhuangLogo_card(this, 0);
+                            showUserZhuangLogo_card(this, 0);
                         },
                         initSceneData: function () {
-                            //if (IsArrowVisible()) showUserZhuangLogo_card(this, 0);
+                            if (IsArrowVisible()) showUserZhuangLogo_card(this, 0);
                         }
                     }
                 },
@@ -1014,7 +1013,14 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 },
                 _event: {
                     loadWxHead: function (d) {
-                        setWxHead(this, d, 0);
+                        if (MjClient.data.sData.tData.areaSelectMode.IsAnonymous) {
+                            cc.loader.loadImg('RunFasterYA/Game/hide_head.png', { isCrossOrigin: true }, function (err, texture) {
+                                if (!err && texture) {
+                                    d.img = texture;
+                                    setWxHead(this, d, 0);
+                                }
+                            }.bind(this));
+                        } else setWxHead(this, d, 0);
                     },
                     addPlayer: function (eD) {
                         showFangzhuTagIcon(this, 0);
@@ -1130,7 +1136,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                         // 托管状态下，不播放发牌动画 
                     }
                     else {
-                        showPostCardAnimation();
+                        showPostCardAnimation('RunFasterYA/Card/back.png');
                     }
 
                     MjClient.playui.isWaitAniEnd = true;
@@ -1216,10 +1222,31 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 playerStatusChange: function (eD) {
                     setUserOffline(this, 0);
                 }
-            }
+            },
+            loseScore: {
+                _visible: false,
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.5, 0.5], [-0.3, -0.6]);
+                },
+                _event: {
+                    PKPut: function (d) {
+                        MjClient.playui.updateBoomScore(this, d, false, 0);
+                    }
+                }
+            },
+            winScore: {
+                _visible: false,
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.5, 0.5], [-0.3, -0.6]);
+                },
+                _event: {
+                    PKPut: function (d) {
+                        MjClient.playui.updateBoomScore(this, d, true, 0);
+                    }
+                }
+            },
         },
         right: {
-
             head: {
                 countDownBg: {//托管倒计时
                     _run: function () {
@@ -1269,10 +1296,10 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     },
                     _event: {
                         waitPut: function () {
-                            //showUserZhuangLogo_card(this, 1);
+                            showUserZhuangLogo_card(this, 1);
                         },
                         initSceneData: function () {
-                            //if (IsArrowVisible()) showUserZhuangLogo_card(this, 1);
+                            if (IsArrowVisible()) showUserZhuangLogo_card(this, 1);
                         }
                     }
                 },
@@ -1298,7 +1325,14 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 },
                 _event: {
                     loadWxHead: function (d) {
-                        setWxHead(this, d, 1);
+                        if (MjClient.data.sData.tData.areaSelectMode.IsAnonymous) {
+                            cc.loader.loadImg('RunFasterYA/Game/hide_head.png', { isCrossOrigin: true }, function (err, texture) {
+                                if (!err && texture) {
+                                    d.img = texture;
+                                    setWxHead(this, d, 1);
+                                }
+                            }.bind(this));
+                        } else setWxHead(this, d, 1);
                     },
                     addPlayer: function (eD) {
                         showFangzhuTagIcon(this, 1);
@@ -1445,7 +1479,29 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 playerStatusChange: function (eD) {
                     setUserOffline(this, 1);
                 }
-            }
+            },
+            loseScore: {
+                _visible: false,
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.88, 0.75], [-1, 0]);
+                },
+                _event: {
+                    PKPut: function (d) {
+                        MjClient.playui.updateBoomScore(this, d, false, 1);
+                    }
+                }
+            },
+            winScore: {
+                _visible: false,
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.88, 0.75], [-1, 0]);
+                },
+                _event: {
+                    PKPut: function (d) {
+                        MjClient.playui.updateBoomScore(this, d, true, 1);
+                    }
+                }
+            },
         },
         top: {
             _run: function () {
@@ -1500,10 +1556,10 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     },
                     _event: {
                         waitPut: function () {
-                            //showUserZhuangLogo_card(this, 2);
+                            showUserZhuangLogo_card(this, 2);
                         },
                         initSceneData: function () {
-                            //if (IsArrowVisible()) showUserZhuangLogo_card(this, 2);
+                            if (IsArrowVisible()) showUserZhuangLogo_card(this, 2);
                         }
                     }
                 },
@@ -1529,7 +1585,14 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 },
                 _event: {
                     loadWxHead: function (d) {
-                        setWxHead(this, d, 2);
+                        if (MjClient.data.sData.tData.areaSelectMode.IsAnonymous) {
+                            cc.loader.loadImg('RunFasterYA/Game/hide_head.png', { isCrossOrigin: true }, function (err, texture) {
+                                if (!err && texture) {
+                                    d.img = texture;
+                                    setWxHead(this, d, 2);
+                                }
+                            }.bind(this));
+                        } else setWxHead(this, d, 2);
                     },
                     addPlayer: function (eD) {
                         showFangzhuTagIcon(this, 2);
@@ -1571,7 +1634,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 },
             },
             play_tips: {
-                _layout: [[0.08, 0.14], [0.25, 0.5], [0, 0.5]],
+                _layout: [[0.08, 0.14], [0.5, 0.5], [0, 0.5]],
                 _run: function () {
                     this.zIndex = actionZindex;
                 },
@@ -1579,7 +1642,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
             },
             ready: {
                 _run: function () {
-                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.5, 0.5], [-2, 0]);
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.5, 0.5], [0, -1.5]);
                     GetReadyVisible(this, 2);
                 },
                 _event: {
@@ -1603,9 +1666,9 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
             stand: {
                 _run: function () {
                     if (isIPhoneX() && !MjClient.data.sData.tData.fieldId)
-                        setWgtLayout(this, [0, 0.13], [0, 1], [3.15, 0]);
+                        setWgtLayout(this, [0, 0.13], [0.5, 1], [0, 0]);
                     else
-                        setWgtLayout(this, [0, 0.13], [0, 1], [2.5, 0]);
+                        setWgtLayout(this, [0, 0.13], [0.5, 1], [0, 0]);
 
                     this.visible = false;
                 }
@@ -1618,11 +1681,11 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 // ],
                 _run: function () {
                     if (MjClient.rePlayVideo == -1)// 表示正常游戏
-                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [0.5, 0.5]);
+                        setWgtLayout(this, [0.052, 0], [0.5, 0.65], [0, 0.5]);
                     else if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId)
-                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [2.2, 0.5]);
+                        setWgtLayout(this, [0.052, 0], [0.5, 0.65], [2.2, 0.5]);
                     else
-                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [1.2, 0.5]);
+                        setWgtLayout(this, [0.052, 0], [0.5, 0.65], [0, 0.5]);
                 },
                 _visible: false,
             },
@@ -1679,9 +1742,292 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 MJTing: function (eD) {
                     HandleMJTing(this, eD, 2);
                 }
-            }
+            },
+            loseScore: {
+                _visible: false,
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.5, 0.75], [-0.3, 0]);
+                },
+                _event: {
+                    PKPut: function (d) {
+                        MjClient.playui.updateBoomScore(this, d, false, 2);
+                    }
+                }
+            },
+            winScore: {
+                _visible: false,
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.5, 0.75], [-0.3, 0]);
+                },
+                _event: {
+                    PKPut: function (d) {
+                        MjClient.playui.updateBoomScore(this, d, true, 2);
+                    }
+                }
+            },
         },
         left: {
+            _run: function () {
+                this.visible = MjClient.MaxPlayerNum >= 4;
+            },
+            head: {
+                countDownBg: {//托管倒计时
+                    _run: function () {
+                        this.visible = false;
+                        this.getChildByName("TG_CountDown").ignoreContentAdaptWithSize(true);
+                    },
+                    _event: {
+                        trustTip: function (msg) {
+                            setTuoGuanCountDown(msg, this, 3);
+                        },
+                        PKPut: function (msg) {
+                            this.visible = false;
+                        },
+                        roundEnd: function () {
+                            this.visible = false;
+                        }
+                    }
+                },
+                tuoguan: {
+                    _run: function () {
+                        this.visible = false;
+                    },
+                    _event: {
+                        beTrust: function (msg) {
+                            if (getUIPlayer(3) && getUIPlayer(3).info.uid == msg.uid) {
+                                this.visible = true;
+                            }
+                        },
+                        cancelTrust: function (msg) {
+                            if (getUIPlayer(3) && getUIPlayer(3).info.uid == msg.uid) {
+                                this.visible = false;
+                            }
+                        },
+                        initSceneData: function (msg) {
+                            var pl = getUIPlayer(3);
+                            if (pl && pl.trust) {
+                                this.visible = true;
+                            } else {
+                                this.visible = false;
+                            }
+                        },
+                    }
+                },
+                zhuang: {
+                    _run: function () {
+                        this.visible = false;
+                    },
+                    _event: {
+                        waitPut: function () {
+                            showUserZhuangLogo_card(this, 3);
+                        },
+                        initSceneData: function () {
+                            if (IsArrowVisible()) showUserZhuangLogo_card(this, 3);
+                        }
+                    }
+                },
+                chatbg: {
+                    _run: function () {
+                        this.getParent().zIndex = 500;
+                    },
+                    chattext: {
+                        _event: {
+
+                            MJChat: function (msg) {
+                                showUserChat(this, 3, msg);
+                            },
+                            playVoice: function (voicePath) {
+                                MjClient.data._tempMessage.msg = voicePath;
+                                showUserChat(this, 3, MjClient.data._tempMessage);
+                            }
+                        }
+                    }
+                },
+                _click: function (btn) {
+                    showPlayerInfo(3, btn);
+                },
+                _event: {
+                    loadWxHead: function (d) {
+                        if (MjClient.data.sData.tData.areaSelectMode.IsAnonymous) {
+                            cc.loader.loadImg('RunFasterYA/Game/hide_head.png', { isCrossOrigin: true }, function (err, texture) {
+                                if (!err && texture) {
+                                    d.img = texture;
+                                    setWxHead(this, d, 3);
+                                }
+                            }.bind(this));
+                        } else setWxHead(this, d, 3);
+                    },
+                    addPlayer: function (eD) {
+                        showFangzhuTagIcon(this, 3);
+                    },
+                    removePlayer: function (eD) {
+                        showFangzhuTagIcon(this, 3);
+                    }
+                },
+                _run: function () {
+                    // this.zIndex = 600;
+                    showFangzhuTagIcon(this, 3);
+                },
+                score_bg: { _visible: false },
+                name_bg: { _visible: false },
+                tingCard: {
+                    _run: function () {
+                        if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId)
+                            this.setPositionX(151);
+                    },
+                    _visible: false,
+                    _event: {
+                        initSceneData: function (eD) {
+                            var pl = getUIPlayer(3);
+                            if (pl && pl.handCount) {
+                                this.visible = true;
+                            }
+                            else {
+                                this.visible = false;
+                            }
+
+                        },
+                        clearCardUI: function () {
+                            this.visible = false;
+                        },
+                        changePosition: function () {
+                            this.visible = true;
+                        }
+                    }
+                },
+            },
+            play_tips: {
+                _layout: [[0.08, 0.14], [0.25, 0.5], [0, 0.5]],
+                _run: function () {
+                    this.zIndex = actionZindex;
+                },
+                _visible: false,
+            },
+            ready: {
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.5, 0.5], [-2, 0]);
+                    GetReadyVisible(this, 3);
+                },
+                _event: {
+                    showPlayerShuffleView: function () {
+                        GetReadyVisible(this, -1);
+                    },
+                    moveHead: function () {
+                        GetReadyVisible(this, -1);
+                    },
+                    addPlayer: function () {
+                        GetReadyVisible(this, 3);
+                    },
+                    removePlayer: function () {
+                        GetReadyVisible(this, 3);
+                    },
+                    onlinePlayer: function () {
+                        GetReadyVisible(this, 3);
+                    }
+                }
+            },
+            stand: {
+                _run: function () {
+                    if (isIPhoneX() && !MjClient.data.sData.tData.fieldId)
+                        setWgtLayout(this, [0, 0.13], [0, 1], [3.15, 0]);
+                    else
+                        setWgtLayout(this, [0, 0.13], [0, 1], [2.5, 0]);
+
+                    this.visible = false;
+                }
+            },
+            deskCard: {
+                // _layout: [
+                //     [0.12, 0.15],
+                //     [0.16, 0.55],
+                //     [0, 0.1]
+                // ],
+                _run: function () {
+                    if (MjClient.rePlayVideo == -1)// 表示正常游戏
+                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [0.5, 0.5]);
+                    else if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId)
+                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [2.2, 0.5]);
+                    else
+                        setWgtLayout(this, [0.052, 0], [0.16, 0.65], [1.2, 0.5]);
+                },
+                _visible: false,
+            },
+            noPutTag: {
+                _run: function () {
+                    this.setScale(MjClient.size.width / 1280);
+                    this.setPosition(MjClient.playui._leftNode.getChildByName("deskCard").getPosition());
+                },
+                _event: {
+                    PKPass: function (eD) {
+                        var UIoff = getUiOffByUid(eD.uid);
+                        if (UIoff == 3) {
+                            DealPKPass_card(UIoff);
+                        }
+                    }
+                },
+                _visible: false
+            },
+            _event: {
+                clearCardUI: function () {
+                    clearCardUI_card(this, 3);
+                },
+                initSceneData: function (eD) {
+                    SetUserVisible_RunFasterYA(this, 3);
+                },
+                addPlayer: function (eD) {
+                    SetUserVisible_RunFasterYA(this, 3);
+                },
+                removePlayer: function (eD) {
+                    SetUserVisible_RunFasterYA(this, 3);
+                },
+                mjhand: function (eD) {
+                    InitUserHandUI_RunFasterYA(this, 3);
+                },
+                roundEnd: function () {
+                    InitUserCoinAndName(this, 3);
+                },
+                waitPut: function (eD) {
+                    DealWaitPut_card(this, eD, 3);
+                },
+                PKPut: function (eD) {
+                    DealMJPut_card(this, eD, 3);
+                    setUserOffline(this, 3);
+                },
+                onlinePlayer: function (eD) {
+                    setUserOffline(this, 3);
+                },
+                playerStatusChange: function (eD) {
+                    setUserOffline(this, 3);
+                },
+                MJFlower: function (eD) {
+                    HandleMJFlower(this, eD, 3);
+                },
+                MJTing: function (eD) {
+                    HandleMJTing(this, eD, 3);
+                }
+            },
+            loseScore: {
+                _visible: false,
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.12, 0.75], [0.3, 0]);
+                },
+                _event: {
+                    PKPut: function (d) {
+                        MjClient.playui.updateBoomScore(this, d, false, 3);
+                    }
+                }
+            },
+            winScore: {
+                _visible: false,
+                _run: function () {
+                    setWgtLayout(this, [this.width / 1280, this.height / 720], [0.12, 0.75], [0.3, 0]);
+                },
+                _event: {
+                    PKPut: function (d) {
+                        MjClient.playui.updateBoomScore(this, d, true, 3);
+                    }
+                }
+            },
         },
         clock: {
             _run: function () {
@@ -2077,6 +2423,8 @@ PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
     else if (curPlayerIndex == 2) {
         curPlayerNode = this._topNode;
         deskCardPosOffset.x = 0 - deskCardPosOffset.x;
+    } else if (curPlayerIndex == 3) {
+        curPlayerNode = this._leftNode;
     }
     if (curPlayerNode != null) {
         var deskCardPos = curPlayerNode.getChildByName("deskCard").getPosition();
@@ -2120,17 +2468,17 @@ PlayLayer_RunFasterYA.prototype.getGameInfoString = function () {
     var str = [];
 
     str.push(['每局黑桃五先出', '每局赢家先出'][rule.mustPutHongTaoSan]);
-    rule.Sisters &&str.push("姊妹对");
-    rule.AllBlack &&str.push("全黑");
-    rule.AllRed &&str.push("全红");
-    rule.AllBig &&str.push("全大");
-    rule.AllSmall &&str.push("全小");
-    rule.AllSingly &&str.push("全单");
-    rule.AllDouble &&str.push("全双");
-    rule.Four5OrA &&str.push("5555，AAAA");
-    rule.FourOther &&str.push("4个6-4个K");
-    rule.can3geZha &&str.push("3张算炸");
-    rule.can4geZha &&str.push("4张算炸");
+    rule.Sisters && str.push("姊妹对");
+    rule.AllBlack && str.push("全黑");
+    rule.AllRed && str.push("全红");
+    rule.AllBig && str.push("全大");
+    rule.AllSmall && str.push("全小");
+    rule.AllSingly && str.push("全单");
+    rule.AllDouble && str.push("全双");
+    rule.Four5OrA && str.push("5555，AAAA");
+    rule.FourOther && str.push("4个6-4个K");
+    rule.can3geZha && str.push("3张算炸");
+    rule.can4geZha && str.push("4张算炸");
     rule.isZhaDanJiaFen && str.push('带炸弹');
 
     str.push("底分X" + rule.difen);
@@ -2176,9 +2524,11 @@ PlayLayer_RunFasterYA.prototype.showHandCardBeiMian = function () {
         if (childrens[i].name != "mjhand")
             continue;
 
-        var beiMain = new cc.Sprite("playing/cardPic2/beimian_puke.png");
+        var beiMain = new cc.Sprite("RunFasterYA/Card/back.png");
         beiMain.setName("beiMain");
         beiMain.setPosition(childrens[i].width / 2, childrens[i].height / 2);
+        beiMain.width = childrens[i].width;
+        beiMain.height = childrens[i].height;
         childrens[i].addChild(beiMain, 111);
     }
 }
@@ -2513,7 +2863,7 @@ PlayLayer_RunFasterYA.prototype.horSort = function (node, off, needSort) {
             ci.zIndex = i;
         }
     }
-    else if (off == 1)//右侧的
+    else if (off == 1 || off == 3)//右侧的
     {
         for (var i = orders.length - 1; i >= 0; i--) {
             var ci = orders[i];
@@ -2809,5 +3159,46 @@ PlayLayer_RunFasterYA.prototype.verSort = function (node, off, needSort) {
             ci.zIndex -= j * 2;
             ci.zIndex += i * 2;
         }
+    }
+}
+//设置牌的渲染
+PlayLayer_RunFasterYA.prototype.setCardSprite_card = function (node, cd, off) {
+    node.tag = cd;
+    node.loadTexture(this.getSpriteFrameByCard(cd));
+}
+//获取资源
+PlayLayer_RunFasterYA.prototype.getSpriteFrameByCard = function (card) {
+    let str = ''
+    if (card == -1) {
+        str = 'back'
+    } else {
+        str = (card + 3) % 4 + '-' + Math.ceil(card / 4)
+    }
+    return 'RunFasterYA/Card/' + str + '.png'
+}
+/**炸弹即时分 */
+PlayLayer_RunFasterYA.prototype.updateBoomScore = function (node, d, isAdd, off) {
+    let pl = getUIPlayer(off),
+        tData = MjClient.data.sData.tData,
+        putType = tData.putType;
+    if (!pl) return;
+    if ((pl.info.uid != d.uid && isAdd) || (pl.info.uid == d.uid && !isAdd)) return;
+    if (MjClient.majiang.CARDTPYE.sizha == putType || MjClient.majiang.CARDTPYE.sanzha == putType) {
+        let booms = tData.areaSelectMode.BombScore * (isAdd ? tData.maxPlayer - 1 : 1),
+            ox = node.x;
+        node.x -= 100;
+        node.setString(booms + '');
+        node.zIndex = 999;
+        node.visible = true;
+        node.runAction(cc.sequence(cc.moveTo(0.5, cc.p(ox, node.y)), cc.delayTime(1), cc.callFunc(() => {
+            node.visible = false;
+            let coin = node.getParent().getChildByName('head').getChildByName('coin');
+            if (coin) {
+                let str = coin.getString().split('');
+                if (str.indexOf('/') > -1) str.splice(str.indexOf('/'), 1, '-');
+                str = str.join("");
+                changeAtalsForLabel(coin, Math.floor(parseInt(str) + booms * (isAdd ? 1 : -1)));
+            }
+        })));
     }
 }

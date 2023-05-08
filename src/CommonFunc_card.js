@@ -13,26 +13,25 @@ MjClient.isSorting = false;//按钮是理牌还是恢复
 MjClient.selectCardsUI = [];
 MjClient.currentCardPileCount = 0;
 
-MjClient.grayColor  = cc.color(190,190,190);
-MjClient.whiteColor = cc.color(255,255,255);
+MjClient.grayColor = cc.color(190, 190, 190);
+MjClient.whiteColor = cc.color(255, 255, 255);
 MjClient.sortClassType = 1;//0 正常排序， 1  纵向排序
 MjClient.sortClassKey = "_SORT_CLASS_TYPE_";
 
 MjClient.sortType = {
-    flower:1,//花色
-    count:2,//张数
-    normal:3//大小排序
+    flower: 1,//花色
+    count: 2,//张数
+    normal: 3//大小排序
 }
 
 //清除排版数据
-function clearSortData()
-{
+function clearSortData() {
     // MjClient.colloctionCardsArray = [];//理牌数组.数据
     // MjClient.colloctionCardsUIArray = [];//理牌数组ui节点
     // MjClient.colloctionCurrentSelcetUIArray = [];//当前需要理牌的数组UI;
     // //MjClient.tongHuaShunArray = [];//当前拥有的同花顺
     MjClient.selectCards_card = [];
-    if(MjClient.sortClassType == 0) {
+    if (MjClient.sortClassType == 0) {
         setCardToNormalPos();
     }
     else {
@@ -41,7 +40,7 @@ function clearSortData()
     MjClient.cardIdx = 0;
 }
 
-function setYouPaiSprite(node, cd){
+function setYouPaiSprite(node, cd) {
     var path = "playing/cardPic3/mini/";
 
     //麻将的底牌公用图，4张
@@ -52,7 +51,7 @@ function setYouPaiSprite(node, cd){
             node.loadTexture(path + "501.png");
         else
             node.loadTexture(path + "502.png");
-    } else if(cd == 55 ){
+    } else if (cd == 55) {
         node.loadTexture(path + "503.png");
     }
     else {
@@ -69,8 +68,8 @@ function setYouPaiSprite(node, cd){
 }
 
 //设置牌的渲染
-function setCardSprite_card(node, cd, isOnDesk, name)
-{
+function setCardSprite_card(node, cd, isOnDesk, name) {
+    if (MjClient.playui.setCardSprite_card) return MjClient.playui.setCardSprite_card(node, cd, isOnDesk, name);
     if (MjClient.majiang && MjClient.majiang.removeLaiziSign)
         cd = MjClient.majiang.removeLaiziSign(cd);
 
@@ -79,15 +78,14 @@ function setCardSprite_card(node, cd, isOnDesk, name)
         MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
         MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
         MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
-        GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU)
-    {
+        GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
         return setPKImg(node, cd, isOnDesk);
     } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI
         || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN || MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K || MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
         MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
-        if (name == "mjhand_ming" || name == "mjhand_replay" || name == "mjhand_you" )
+        if (name == "mjhand_ming" || name == "mjhand_replay" || name == "mjhand_you")
             return setPKMiniImg(node, cd, name);
         else
             return setPKImg(node, cd, isOnDesk);
@@ -104,7 +102,7 @@ function setCardSprite_card(node, cd, isOnDesk, name)
     node.removeAllChildren();
 
     var isJoker = false;
-    if(cd == 53 || cd == 54)//小王， 大王
+    if (cd == 53 || cd == 54)//小王， 大王
     {
         isJoker = true;
     }
@@ -122,8 +120,7 @@ function setCardSprite_card(node, cd, isOnDesk, name)
 
 
     //癞子牌
-    if(MjClient.data.sData.tData.hunCard == cd)
-    {
+    if (MjClient.data.sData.tData.hunCard == cd) {
         var imgBaiDaNode = new ccui.ImageView();
         imgBaiDaNode.loadTexture("playing/cardPic/pei_puke.png");
         //imgBaiDaNode.setScale(node.getScale());
@@ -131,27 +128,24 @@ function setCardSprite_card(node, cd, isOnDesk, name)
         node.addChild(imgBaiDaNode);
     }
 
-    if(!isJoker)//不是大小王
+    if (!isJoker)//不是大小王
     {
         //小花
 
         var smallFlowerNode = new ccui.ImageView();
         smallFlowerNode.setName("smallFlower");
-        if(MjClient.sortClassType == 0)
-        {
+        if (MjClient.sortClassType == 0) {
             smallFlowerNode.setScale(0.4);
-            smallFlowerNode.setPosition(22,35);
+            smallFlowerNode.setPosition(22, 35);
         }
-        else
-        {
+        else {
             smallFlowerNode.setScale(0.4);
-            smallFlowerNode.setPosition(65,80);
+            smallFlowerNode.setPosition(65, 80);
         }
 
-        if(isOnDesk)
-        {
+        if (isOnDesk) {
             smallFlowerNode.setScale(0.4);
-            smallFlowerNode.setPosition(22,35);
+            smallFlowerNode.setPosition(22, 35);
         }
 
 
@@ -159,14 +153,12 @@ function setCardSprite_card(node, cd, isOnDesk, name)
 
         cardTypeNode.addChild(smallFlowerNode);
 
-        cardTypeNode.setPosition(25,120);
+        cardTypeNode.setPosition(25, 120);
 
-        if(MjClient.data.sData.tData.hunCard == cd)
-        {
+        if (MjClient.data.sData.tData.hunCard == cd) {
             smallFlowerNode.loadTexture(path + "da_wujiaoxing.png");
         }
-        else
-        {
+        else {
             smallFlowerNode.loadTexture(path + "flower_" + flowerType + ".png");
         }
 
@@ -176,29 +168,26 @@ function setCardSprite_card(node, cd, isOnDesk, name)
         flowerTypeNode.loadTexture(path + "flower_" + flowerType + ".png");
 
 
-        if(flowerType == 0 || flowerType == 2)
-        {
+        if (flowerType == 0 || flowerType == 2) {
             cardTypeNode.loadTexture(path + "hei_" + cardType + ".png");
         }
-        else
-        {
+        else {
             cardTypeNode.loadTexture(path + "hong_" + cardType + ".png");
         }
     }
-    else
-    {
+    else {
         flowerTypeNode.setScale(0.8);
-        if(cd == 53)//小王
+        if (cd == 53)//小王
         {
             flowerTypeNode.loadTexture(path + "xiaowang_hua.png");
             cardTypeNode.loadTexture(path + "joker_xiao.png");
         }
-        else if(cd == 54)//大王
+        else if (cd == 54)//大王
         {
             flowerTypeNode.loadTexture(path + "dawang_hua.png");
             cardTypeNode.loadTexture(path + "joker_da.png");
         }
-        cardTypeNode.setPosition(20,120);
+        cardTypeNode.setPosition(20, 120);
         flowerTypeNode.setPosition(65, 80);
     }
 
@@ -206,26 +195,23 @@ function setCardSprite_card(node, cd, isOnDesk, name)
     node.tag = cd;
 }
 
-function getCardValueByID(ID)
-{
-    return  Math.ceil(ID / 4);// A,2 ,3, 4, 。。。。 j ,Q .k
+function getCardValueByID(ID) {
+    return Math.ceil(ID / 4);// A,2 ,3, 4, 。。。。 j ,Q .k
 }
 
-function getNewCard_card(node, copy, name, tag)
-{
-	var cpnode = node.getChildByName(copy);
-	var cp = cpnode.clone(); //克隆一个白板，上面没有任何条纹的麻将 ，by sking
-    if (name == "mjhand")
-    {
+function getNewCard_card(node, copy, name, tag) {
+    var cpnode = node.getChildByName(copy);
+    var cp = cpnode.clone(); //克隆一个白板，上面没有任何条纹的麻将 ，by sking
+    if (name == "mjhand") {
         if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
-            cp.setScale(cp.getScale()*1.30);
+            cp.setScale(cp.getScale() * 1.30);
     }
     // else
     // {
     //     cp.setScale(cp.getScale()*1);
     // }
 
-    if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+    if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
         MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
@@ -233,55 +219,49 @@ function getNewCard_card(node, copy, name, tag)
         MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ) && 
+        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) &&
         (name == "mjhand_ming" || name == "mjhand_replay"))
-        cp.setScale(cp.getScale()*0.9);
+        cp.setScale(cp.getScale() * 0.9);
 
     cp.visible = true;
-	cp.name = name;
+    cp.name = name;
 
-	node.addChild(cp);
+    node.addChild(cp);
 
-	if(tag > 0)
-	{
-	    //创建一个带有麻将信息的麻将 cp为创建后的麻将
+    if (tag > 0) {
+        //创建一个带有麻将信息的麻将 cp为创建后的麻将
         setCardSprite_card(cp, tag, false, name);
-		if(name == "mjhand")
-		{
+        if (name == "mjhand") {
             SetTouchCardHandler_card(cpnode, cp);
-		}
-	}
-	return cp;
+        }
+    }
+    return cp;
 }
 //设置回调，并处理回调
-function SetTouchCardHandler_card(standUI, cardui)
-{
+function SetTouchCardHandler_card(standUI, cardui) {
     return;
 
-	cardui.addTouchEventListener(function(btn, tp)
-	{
+    cardui.addTouchEventListener(function (btn, tp) {
         var tData = MjClient.data.sData.tData;
         //if(tData.tState != TableState.waitPut)
         //{
         //    return;
         //}
         var pl = getUIPlayer(0);
-        if(pl.mjState == TableState.roundFinish)//已经完成
+        if (pl.mjState == TableState.roundFinish)//已经完成
         {
             cc.log("pl.mjState == TableState.roundFinish");
             return;
         }
 
         var tData = MjClient.data.sData.tData;
-        if(!IsTurnToMe() || tData.tState != TableState.waitPut)
-        {
+        if (!IsTurnToMe() || tData.tState != TableState.waitPut) {
             cc.log("!IsTurnToMe() || tData.tState != TableState.waitPut");
             return;
         }
 
 
-        switch (tp)
-        {
+        switch (tp) {
             case ccui.Widget.TOUCH_BEGAN:
 
                 break;
@@ -293,26 +273,24 @@ function SetTouchCardHandler_card(standUI, cardui)
             case ccui.Widget.TOUCH_CANCELED:
                 var pos = btn.getPosition();
                 var dy = pos.y - standUI.y;
-                if(dy < 10)
-                {
+                if (dy < 10) {
                     btn.y = standUI.y + 20;
                     MjClient.selectCards_card.push(cardui.tag);//添加一张牌
 
-                }else{
+                } else {
                     btn.y = standUI.y;
                     var index = MjClient.selectCards_card.indexOf(cardui.tag);//把这张牌从数组删除
-                    MjClient.selectCards_card.splice(index,1);
+                    MjClient.selectCards_card.splice(index, 1);
                 }
                 UpdataCurrentPutCard();
                 break;
         }
-	}, cardui);
+    }, cardui);
 }
 
 // 清理ui
-function clearCardUI_card(node,uiOff)
-{
-	// mylog("clearCardUI");
+function clearCardUI_card(node, uiOff) {
+    // mylog("clearCardUI");
 
     MjClient.selectCards_card = [];//当前选牌的数据
     MjClient.colloctionCardsArray = [];//理牌数组.数据
@@ -323,16 +301,15 @@ function clearCardUI_card(node,uiOff)
     MjClient.isSorting = false;//按钮是理牌还是恢复
     MjClient.selectCardsUI = [];
     MjClient.currentCardPileCount = 0;
-	var children = node.children;
-	for(var i = 0; i < children.length; i++)
-	{
-		var ni = children[i];
-		//cc.log("ni.name SKING==== SKING  == "+ ni.name);
-		if(ni.name != "head"
-			&& ni.name != "up"
-			&& ni.name != "stand"
-			&& ni.getName() != "ready"
-			&& ni.getName() != "play_tip_card"
+    var children = node.children;
+    for (var i = 0; i < children.length; i++) {
+        var ni = children[i];
+        //cc.log("ni.name SKING==== SKING  == "+ ni.name);
+        if (ni.name != "head"
+            && ni.name != "up"
+            && ni.name != "stand"
+            && ni.getName() != "ready"
+            && ni.getName() != "play_tip_card"
             && ni.getName() != "deskCard"
             && ni.getName() != "noPutTag"
             && ni.getName() != "jiaodizhuTag"
@@ -345,24 +322,22 @@ function clearCardUI_card(node,uiOff)
             && ni.getName() != "buFanTag"
             && ni.getName() != "bieWangTag"
             && ni.getName() != "selectDiCardPannel_New"
-        )
-		{
-            cc.log("removeFromParent 444==== SKING  == "+ ni.name+ "tag:==="+ni.tag);
-			ni.removeFromParent(true);
-		}
-		else if(ni.getName() == "play_tip_card")
-		{
+            && ni.getName() != "winScore"
+            && ni.getName() != "loseScore"
+        ) {
+            cc.log("removeFromParent 444==== SKING  == " + ni.name + "tag:===" + ni.tag);
+            ni.removeFromParent(true);
+        }
+        else if (ni.getName() == "play_tip_card") {
             ni.visible = false;
-            for(var j = 0; j < ni.children.length; j++)
-            {
+            for (var j = 0; j < ni.children.length; j++) {
                 ni.children[j].visible = false;
             }
-		}
-	}
+        }
+    }
 
     // 重置发牌标记
-    if (MjClient.playui && cc.sys.isObjectValid(MjClient.playui))
-    {
+    if (MjClient.playui && cc.sys.isObjectValid(MjClient.playui)) {
         delete MjClient.playui.isFaPai;
 
         if (uiOff == 0 && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
@@ -374,89 +349,147 @@ function clearCardUI_card(node,uiOff)
 
 
 //重置4家头像位置
-function reConectHeadLayout_card(node)
-{
+function reConectHeadLayout_card(node) {
     var tData = MjClient.data.sData.tData;
     var down = node.getChildByName("down").getChildByName("head");
     var top = node.getChildByName("top").getChildByName("head");
 
     var left = node.getChildByName("left").getChildByName("head");
     var right = node.getChildByName("right").getChildByName("head");
-    if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DA_QI || 
-        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER || 
-        MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN){
+    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DA_QI ||
+        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+        MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
         var fifth = node.getChildByName("fifth").getChildByName("head");
     }
 
     var appType = MjClient.getAppType();
 
-    if(tData.tState == TableState.waitJoin || 
-        tData.tState == TableState.roundFinish || 
-        tData.tState == TableState.waitReady)
-    {
-        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU)
-        {
-            if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN)
-            {
+    if (tData.tState == TableState.waitJoin ||
+        tData.tState == TableState.roundFinish ||
+        tData.tState == TableState.waitReady) {
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) {
                 setWgtLayout(down, [0.13, 0.13], [0.5, 0.5], [0, -2], false, false);
                 setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [0, 2.0], false, false);
                 setWgtLayout(left, [0.13, 0.13], [0.5, 0.5], [-4.8, 0.1], false, false);
                 setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [4.8, 0.1], false, false);
-            }else if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO){ 
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
                 // 掂坨新UI的位置摆放
                 setWgtLayout(down, [0.15, 0.15], [0.04, 0.34], [0, -2], false, false);
                 setWgtLayout(top, [0.15, 0.15], [0.5, 0.6], [0, 2.0], false, false);
                 setWgtLayout(left, [0.15, 0.15], [0.45, 0.68], [-4.8, 0.1], false, false);
                 setWgtLayout(right, [0.15, 0.15], [0.55, 0.68], [4.8, 0.1], false, false);
             }
-            else
-            {
+            else {
                 setWgtLayout(down, [0.13, 0.13], [0.5, 0.5], [0, -2], false, false);
                 setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [-4.8, 0.1], false, false);
                 setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [4.8, 0.1], false, false);
             }
         }
         // 跑得快要固定位置
-        else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
-        {
-            setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
+        else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
+            if (tData.maxPlayer == 4) {
+                setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
+                if (isIPhoneX()) {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+                    else if (isYongZhouProject()){
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
+                    }
+                    else {
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
+                    }
 
-            if (isIPhoneX()) {
-                if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-                    setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
-                else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
-                    appType == MjClient.APP_TYPE.QXLYQP)
-                    // 邵阳、耒阳特殊处理
-                    setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
-                else if (isYongZhouProject())
-                    setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
-                else
-                    setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                } else {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+                    else if (isYongZhouProject()){
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                    }
+                    else {
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                    }
 
-                setWgtLayout(top, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
-            }else{
-                if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-                    setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
-                else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
-                    appType == MjClient.APP_TYPE.QXLYQP)
-                    // 邵阳、耒阳特殊处理
-                    setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
-                else if (isYongZhouProject())
-                    setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-                else
-                    setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                }
+            } else  {//if (tData.maxPlayer == 3)
+                setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
+                if (isIPhoneX()) {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+                    else if (isYongZhouProject())
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
+                    else
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
 
-                setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
-            }
+                    setWgtLayout(top, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
+                } else {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+                    else if (isYongZhouProject())
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                    else
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+
+                    setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                }
+            } 
+            // else {
+            //     if (isIPhoneX()) {
+            //         if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+            //             setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
+            //         else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+            //             appType == MjClient.APP_TYPE.QXLYQP)
+            //             // 邵阳、耒阳特殊处理
+            //             setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+            //         else if (isYongZhouProject())
+            //             setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
+            //         else
+            //             setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
+
+            //         setWgtLayout(right, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+            //     } else {
+            //         if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+            //             setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
+            //         else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+            //             appType == MjClient.APP_TYPE.QXLYQP)
+            //             // 邵阳、耒阳特殊处理
+            //             setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+            //         else if (isYongZhouProject())
+            //             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+            //         else
+            //             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+
+            //         setWgtLayout(right, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+            //     }
+            // }
         }
-        else if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DA_QI || 
-            MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER || 
-            MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)
-        {
-            if(MjClient.MaxPlayerNum == 5)
-            {
-                if( MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER)
-                {
+        else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DA_QI ||
+            MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+            MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
+            if (MjClient.MaxPlayerNum == 5) {
+                if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
                     setWgtLayout(down, [0.17, 0.17], [0.5, 0.25], [0, 0.0], false, false);
                     setWgtLayout(right, [0.17, 0.17], [0.5, 0.5], [2.5, 0.2], false, false);
                     setWgtLayout(top, [0.17, 0.17], [0.5, 0.5], [2.5, 2.2], false, false);
@@ -479,18 +512,16 @@ function reConectHeadLayout_card(node)
             }
 
         }
-        else if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA)
-        {
+        else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
             setWgtLayout(down, [0.13, 0.13], [0.5, 0.5], [0, -2.5], false, false);
             setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [-4.8, 0.1], false, false);
             setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [4.8, 0.1], false, false);
-            if(isIPad())
-            {
+            if (isIPad()) {
                 setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [-2.8, 0.1], false, false);
                 setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [2.8, 0.1], false, false);
             }
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+        else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
             MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
             MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
             MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
@@ -498,39 +529,37 @@ function reConectHeadLayout_card(node)
             MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
             MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
             MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-            MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ) {
+            MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
 
             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 0.3], false, false);
             setWgtLayout(top, [0.13, 0.13], [0.415, 1], [0, -0.6], false, false);
             setWgtLayout(right, [0.13, 0.13], [1, 0.5], [-0.6, 0.6], false, false);
             if (isIPhoneX()) {
                 setWgtLayout(left, [0.13, 0.13], [0.05, 0.5], [0.6, 0.6], false, false);
-            }else{
+            } else {
                 setWgtLayout(left, [0.13, 0.13], [0, 0.5], [0.6, 0.6], false, false);
             }
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || 
+        else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA ||
             MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
-            MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA)
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
             setWgtLayout(down, [0.13, 0.13], [0.5, 0.5], [2.5, -1.2], false, false);
             setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [-2.5, 1.6], false, false);
             setWgtLayout(left, [0.13, 0.13], [0.5, 0.5], [-2.5, -1.2], false, false);
             setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [2.5, 1.6], false, false);
 
-            setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[3.2, -1], false, false);
-            setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-3.2, 2.4], false, false);
-            setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-3.2, -1.7], false, false);
-            setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[3.2, 2.4], false, false);
+            setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [3.2, -1], false, false);
+            setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-3.2, 2.4], false, false);
+            setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-3.2, -1.7], false, false);
+            setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [3.2, 2.4], false, false);
         }
-        else if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA)
-        {
+        else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA) {
             setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [0, 2.5], false, false);
             setWgtLayout(down, [0.13, 0.13], [0.5, 0.5], [0, -2.5], false, false);
             setWgtLayout(left, [0.13, 0.13], [0.5, 0.5], [-4.8, 0.1], false, false);
             setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [4.8, 0.1], false, false);
             //湘乡告胡子APP添加ipad适配
-            if(MjClient.getAppType() === MjClient.APP_TYPE.QXXXGHZ && isIpadSize()){
+            if (MjClient.getAppType() === MjClient.APP_TYPE.QXXXGHZ && isIpadSize()) {
                 setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [-4.5, 0.1], false, false);
                 setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [4.5, 0.1], false, false);
             }
@@ -541,21 +570,19 @@ function reConectHeadLayout_card(node)
             setWgtLayout(left, [0.13, 0.13], [0.5, 0.5], [-2.5, -1.2], false, false);
             setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [2.5, 1.6], false, false);
 
-            if(isIPad())
-            {
-                setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[1.7, -2], false, false);
-                setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-1.7, 2.4], false, false);
-                setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-1.7, -2], false, false);
-                setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[1.7, 2.4], false, false);
+            if (isIPad()) {
+                setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [1.7, -2], false, false);
+                setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-1.7, 2.4], false, false);
+                setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-1.7, -2], false, false);
+                setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [1.7, 2.4], false, false);
             } else {
-                setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[3.2, -1], false, false);
-                setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-3.2, 2.4], false, false);
-                setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-3.2, -1.7], false, false);
-                setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[3.2, 2.4], false, false);
+                setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [3.2, -1], false, false);
+                setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-3.2, 2.4], false, false);
+                setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-3.2, -1.7], false, false);
+                setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [3.2, 2.4], false, false);
             }
         }
-        else
-        {
+        else {
             setWgtLayout(down, [0.13, 0.13], [0.5, 0.5], [0, -2], false, false);
             setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [0, 2.0], false, false);
             setWgtLayout(left, [0.13, 0.13], [0.5, 0.5], [-4.8, 0.1], false, false);
@@ -567,75 +594,69 @@ function reConectHeadLayout_card(node)
                 setWgtLayout(left, [0.13, 0.13], [0.5, 0.5], [-2.5, -1.2], false, false);
                 setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [2.5, 1.6], false, false);
 
-                setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[3.2, -1], false, false);
-                setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-3.2, 2.4], false, false);
-                setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-3.2, -1.7], false, false);
-                setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[3.2, 2.4], false, false);
+                setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [3.2, -1], false, false);
+                setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-3.2, 2.4], false, false);
+                setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-3.2, -1.7], false, false);
+                setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [3.2, 2.4], false, false);
 
-                if(MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO){
-                    setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.042, 0.0819],[0.5, 0.5],[3.2, -1], false, false);
-                    setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.042, 0.0819],[0.5, 0.5],[-3.0, 2.4], false, false);
-                    setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.042, 0.0819],[0.5, 0.5],[-3.0, -1.7], false, false);
-                    setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.042, 0.0819],[0.5, 0.5],[3.2, 2.4], false, false);
+                if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO) {
+                    setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.042, 0.0819], [0.5, 0.5], [3.2, -1], false, false);
+                    setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.042, 0.0819], [0.5, 0.5], [-3.0, 2.4], false, false);
+                    setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.042, 0.0819], [0.5, 0.5], [-3.0, -1.7], false, false);
+                    setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.042, 0.0819], [0.5, 0.5], [3.2, 2.4], false, false);
                 }
 
 
-                if(isIPad() && (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
-                    MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW))
-                {
-                    setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[1.7, -2], false, false);
-                    setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-1.7, 2.4], false, false);
-                    setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[-1.7, -2], false, false);
-                    setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094],[0.5, 0.5],[1.7, 2.4], false, false);
+                if (isIPad() && (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
+                    MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW)) {
+                    setWgtLayout(node.getChildByName("down").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [1.7, -2], false, false);
+                    setWgtLayout(node.getChildByName("top").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-1.7, 2.4], false, false);
+                    setWgtLayout(node.getChildByName("left").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [-1.7, -2], false, false);
+                    setWgtLayout(node.getChildByName("right").getChildByName('ready'), [0.084, 0.094], [0.5, 0.5], [1.7, 2.4], false, false);
                 }
             }
         }
         initFlower(false, false);
     }
-    else
-    {
-        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU)
-        {
-            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) 
-            {
+    else {
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) {
                 setWgtLayout(down, [0.13, 0.13], [0, 0], [0.8, 3], false, false);
                 setWgtLayout(right, [0.13, 0.13], [1, 1], [-0.8, -2.6], false, false);
                 setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.6], false, false);
                 setWgtLayout(left, [0.13, 0.13], [0, 1], [0.8, -2.5], false, false);
-            }else if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO){
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
                 setWgtLayout(down, [0.15, 0.15], [0.04, 0.34], [0, -2], false, false);
                 setWgtLayout(top, [0.15, 0.15], [0.5, 0.6], [0, 2.0], false, false);
                 setWgtLayout(left, [0.15, 0.15], [0.45, 0.68], [-4.8, 0.1], false, false);
                 setWgtLayout(right, [0.15, 0.15], [0.55, 0.68], [4.8, 0.1], false, false);
-            }else if(MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN){
-                setWgtLayout(right, [0.13, 0.13], [1,  0.96], [-0.6, -1.5], false, false);
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
+                setWgtLayout(right, [0.13, 0.13], [1, 0.96], [-0.6, -1.5], false, false);
                 if (isIPhoneX()) {
                     setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                     setWgtLayout(top, [0.13, 0.13], [0.05, 0.96], [0.6, -1.5], false, false);
-                }else{
+                } else {
                     setWgtLayout(down, [0.13, 0.13], [0, 0.05], [0.6, 3], false, false);
                     setWgtLayout(top, [0.13, 0.13], [0, 0.96], [0.6, -1.5], false, false);
                 }
             }
-            else
-            {
-                if(appType == MjClient.APP_TYPE.QXNTQP || appType == MjClient.APP_TYPE.QXHAIANMJ)
-                {
-                    setWgtLayout(right, [0.13, 0.13], [1,  0.92], [-0.6, -1.2], false, false);
+            else {
+                if (appType == MjClient.APP_TYPE.QXNTQP || appType == MjClient.APP_TYPE.QXHAIANMJ) {
+                    setWgtLayout(right, [0.13, 0.13], [1, 0.92], [-0.6, -1.2], false, false);
                     if (isIPhoneX()) {
                         setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                         setWgtLayout(top, [0.13, 0.13], [0.05, 0.92], [0.6, -1.2], false, false);
-                    }else{
+                    } else {
                         setWgtLayout(down, [0.13, 0.13], [0.01, 0.05], [0.6, 3], false, false);
                         setWgtLayout(top, [0.13, 0.13], [0.01, 0.92], [0.6, -1.2], false, false);
                     }
                 }
                 else {
-                    setWgtLayout(right, [0.13, 0.13], [1,  0.96], [-0.6, -1.2], false, false);
+                    setWgtLayout(right, [0.13, 0.13], [1, 0.96], [-0.6, -1.2], false, false);
                     if (isIPhoneX()) {
                         setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                         setWgtLayout(top, [0.13, 0.13], [0.05, 0.96], [0.6, -1.2], false, false);
-                    }else{
+                    } else {
                         setWgtLayout(down, [0.13, 0.13], [0, 0.05], [0.6, 3], false, false);
                         setWgtLayout(top, [0.13, 0.13], [0, 0.96], [0.6, -1.2], false, false);
                     }
@@ -643,46 +664,80 @@ function reConectHeadLayout_card(node)
             }
         }
         // 跑得快要固定位置
-        else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
-        {
-            setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
+        else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
+            if (tData.maxPlayer == 4) {
+                setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
+                if (isIPhoneX()) {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+                    else if (isYongZhouProject()){
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
+                    }
+                    else {
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
+                    }
 
-            if (isIPhoneX()) {
-                if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-                    setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
-                else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
-                    appType == MjClient.APP_TYPE.QXLYQP)
-                    // 邵阳、耒阳特殊处理
-                    setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
-                else if (isYongZhouProject())
-                    setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
-                else
-                    setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                } else {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+                    else if (isYongZhouProject()){
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                    }
+                    else {
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                        setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                    }
 
-                setWgtLayout(top, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
-            }else{
-                if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-                    setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
-                else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
-                    appType == MjClient.APP_TYPE.QXLYQP)
-                    // 邵阳、耒阳特殊处理
-                    setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
-                else if (isYongZhouProject())
-                    setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-                else
-                    setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                }
+            } else {
+                setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
+                if (isIPhoneX()) {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+                    else if (isYongZhouProject())
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
+                    else
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
 
-                setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
+                } else {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+                    else if (isYongZhouProject())
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                    else
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+
+                    setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                }
             }
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || 
-            MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER || 
-            MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)
-        {
-            if(MjClient.MaxPlayerNum == 5)
-            {
-                if(MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)
-                {
+        else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+            MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+            MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
+            if (MjClient.MaxPlayerNum == 5) {
+                if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
                     setWgtLayout(down, [0.17, 0.17], [0, 0.05], [0.5, 0.0], false, false);
                     setWgtLayout(right, [0.17, 0.17], [1, 0.4], [-0.5, 1.3], false, false);
                     setWgtLayout(top, [0.17, 0.17], [0.78, 1], [0, -0.55], false, false);
@@ -704,41 +759,39 @@ function reConectHeadLayout_card(node)
                 setWgtLayout(fifth, [0.17, 0.17], [0, 0.4], [0.5, 1.3], false, false);
             }
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || 
+        else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA ||
             MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
-            MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW || 
-            MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA || 
-            MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI)
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW ||
+            MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA ||
+            MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI) {
             setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.7], false, false);
-            if(MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO){
-               setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0.6, -0.7], false, false);
+            if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO) {
+                setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0.6, -0.7], false, false);
             }
 
             setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
             if (isIPhoneX()) {
                 setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                 setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
-            }else if(isIPad()){
+            } else if (isIPad()) {
                 setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3], false, false);
                 setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
-            }else{
+            } else {
                 setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3], false, false);
                 setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
             }
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA)
-        {
+        else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
             setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
             if (isIPhoneX()) {
                 setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                 setWgtLayout(top, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
-            } else{
+            } else {
                 setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3], false, false);
                 setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
             }
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+        else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
             MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
             MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
             MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
@@ -746,55 +799,51 @@ function reConectHeadLayout_card(node)
             MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
             MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
             MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
-            MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ) {
+            MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K) {
 
             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 0.3], false, false);
             setWgtLayout(top, [0.13, 0.13], [0.415, 1], [0, -0.6], false, false);
             setWgtLayout(right, [0.13, 0.13], [1, 0.5], [-0.6, 0.6], false, false);
             if (isIPhoneX()) {
                 setWgtLayout(left, [0.13, 0.13], [0.05, 0.5], [0.6, 0.6], false, false);
-            }else{
+            } else {
                 setWgtLayout(left, [0.13, 0.13], [0, 0.5], [0.6, 0.6], false, false);
             }
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA)
-        {
+        else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA) {
             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 0.4], false, false);
             setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.7], false, false);
             setWgtLayout(right, [0.13, 0.13], [1, 0.7], [-1.1, 0.5], false, false);
             if (isIPhoneX()) {
                 //setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 0.4], false, false);
                 setWgtLayout(left, [0.13, 0.13], [0.05, 0.7], [1.0, 0.4], false, false);
-            }else{
+            } else {
                 setWgtLayout(left, [0.13, 0.13], [0, 0.7], [1.0, 0.4], false, false);
             }
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA)
-        {
+        else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA) {
             setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.7], false, false);
             setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
             if (isIPhoneX()) {
                 setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                 setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
-            }else{
+            } else {
                 setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3], false, false);
                 setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
             }
         }
-        else
-        {
+        else {
             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-           	setWgtLayout(top, [0.13, 0.13], [0, 1], [2.8, -0.65], false, false);
+            setWgtLayout(top, [0.13, 0.13], [0, 1], [2.8, -0.65], false, false);
             setWgtLayout(left, [0.13, 0.13], [0, 0.5], [0.6, 1.5], false, false);
             setWgtLayout(right, [0.13, 0.13], [1, 0.7], [-0.6, 0.5], false, false);
         }
-        
+
         //UpdataCurrentPutCard();
         //resetFlowerNum(node);
     }
 
-    if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI && MjClient.MaxPlayerNum == 4)
-    {
+    if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI && MjClient.MaxPlayerNum == 4) {
         left.visible = false;
     }
 
@@ -805,21 +854,18 @@ function reConectHeadLayout_card(node)
 
 
 // 向服务器发送过牌
-function PKPassConfirmToServer_card(msgData)
-{
+function PKPassConfirmToServer_card(msgData) {
 
-    if(MjClient.sortClassType == 0)
-    {
+    if (MjClient.sortClassType == 0) {
         setCardToNormalPos();
     }
-    else
-    {
+    else {
         setCardToNormalColor();
     }
 
     //出完牌，清0数组
     MjClient.selectCards_card = [];
-    if(MjClient.sortClassType == 0) {
+    if (MjClient.sortClassType == 0) {
         setCardToNormalPos();
     }
     else {
@@ -841,13 +887,13 @@ function PKPassConfirmToServer_card(msgData)
     //cc.log("=============card=======MJPassConfirmToServer=================");
     if (MjClient.rePlayVideo != -1) return; // 回放时候不能请求
     //cc.log("========commonFunc card============MJPassConfirmToServer=================");
-    
-    if(msgData) {
+
+    if (msgData) {
         MjClient.gamenet.request("pkroom.handler.tableMsg", msgData);
     } else {
-        MjClient.gamenet.request("pkroom.handler.tableMsg", {cmd: "PKPass"} );
+        MjClient.gamenet.request("pkroom.handler.tableMsg", { cmd: "PKPass" });
     }
-    
+
     // 解决跑得快过牌后智能提示不正确
     if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
         MjClient.selectTipCardsArray = null;
@@ -855,38 +901,33 @@ function PKPassConfirmToServer_card(msgData)
 
 
 //把所以的牌归位
-function setCardToNormalPos()
-{
+function setCardToNormalPos() {
     var _UINode = getNode_cards(0);
     if (!_UINode || !cc.sys.isObjectValid(_UINode)) return;
     var children = _UINode.getChildren();
     var standUI = _UINode.getChildByName("stand");
 
-    if(isSelectDiCards_HuaQuanJiao()){
-        children = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildren(); 
+    if (isSelectDiCards_HuaQuanJiao()) {
+        children = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildren();
         standUI = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildByName("stand")
     }
 
     var specialType = (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA
-                || MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA);
+        || MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA);
 
-    for(var i = 0; i < children.length; i++)
-    {
+    for (var i = 0; i < children.length; i++) {
 
-        if(children[i] && children[i].name && children[i].name == "mjhand")
-        {
-            if(children[i].isUp && specialType)
-            {
-                if(children[i].y != standUI.y) children[i].y = standUI.y*2;
+        if (children[i] && children[i].name && children[i].name == "mjhand") {
+            if (children[i].isUp && specialType) {
+                if (children[i].y != standUI.y) children[i].y = standUI.y * 2;
             }
             else {
-                if(children[i].y != standUI.y)
-                {
+                if (children[i].y != standUI.y) {
                     children[i].y = standUI.y;
 
-                    var standUI_2RowY = standUI.y - standUI.height*1.3;//children[i].height*1.3;
-                    if(isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex && 
-                        children[i].y != standUI_2RowY ){
+                    var standUI_2RowY = standUI.y - standUI.height * 1.3;//children[i].height*1.3;
+                    if (isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex &&
+                        children[i].y != standUI_2RowY) {
                         children[i].y = standUI_2RowY;
                     }
                 }
@@ -896,20 +937,17 @@ function setCardToNormalPos()
 
     if (isJinZhongAPPType() && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
         // 山西斗地主系列, 断线重连会出现出牌按钮亮，牌全放下bug，这里清除 selectCards_card,目前只改山西斗地主
-        MjClient.selectCards_card = []; 
+        MjClient.selectCards_card = [];
     }
 }
 
 //把所有的牌变为正常
-function setCardToNormalColor()
-{
+function setCardToNormalColor() {
     var _UINode = getNode_cards(0);
-    if(!_UINode || !cc.sys.isObjectValid(_UINode)) return;
+    if (!_UINode || !cc.sys.isObjectValid(_UINode)) return;
     var children = _UINode.getChildren();
-    for(var i = 0; i < children.length; i++)
-    {
-        if(children[i] && children[i].name && children[i].name == "mjhand")
-        {
+    for (var i = 0; i < children.length; i++) {
+        if (children[i] && children[i].name && children[i].name == "mjhand") {
             children[i].isGray = false;
             children[i].setColor(MjClient.whiteColor);
         }
@@ -919,63 +957,54 @@ function setCardToNormalColor()
 /*
     每次更新选牌显示
  */
-function UpdataCurrentPutCard(isTouch)
- {
-     var sData = MjClient.data.sData;
-     var tData = sData.tData;
-     var uids = tData.uids;
-     var lastPutCards =  tData.lastPutCard;
-     var pl = getUIPlayer(0);
+function UpdataCurrentPutCard(isTouch) {
+    var sData = MjClient.data.sData;
+    var tData = sData.tData;
+    var uids = tData.uids;
+    var lastPutCards = tData.lastPutCard;
+    var pl = getUIPlayer(0);
 
-    if ((tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1)&&
-         (MjClient.data.c_Data ? (MjClient.data.c_Data.autoPKPUT == undefined || MjClient.data.c_Data.autoPKPUT == false)  : true)) {
-     //(MjClient.data.c_Data ? MjClient.data.c_Data.autoPKPUT == false : true)) {
-         lastPutCards = null;
-          cc.log("------------------------------last put player -------updatee current putCard ");
-         /*
-          清除自己上次打的牌
-          */
-         var children = MjClient.playui._downNode.children;
-         for (var i = 0; i < children.length; i++)
-         {
-             var ni = children[i];
-             if(ni.name == "out" || ni.name == "cardTypeTietu")
-             {
-                 cc.log("---------轮到自己出牌，清楚打出的牌---------111111");
-                 ni.removeFromParent(true);
-             }
-         }
+    if ((tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1) &&
+        (MjClient.data.c_Data ? (MjClient.data.c_Data.autoPKPUT == undefined || MjClient.data.c_Data.autoPKPUT == false) : true)) {
+        //(MjClient.data.c_Data ? MjClient.data.c_Data.autoPKPUT == false : true)) {
+        lastPutCards = null;
+        cc.log("------------------------------last put player -------updatee current putCard ");
+        /*
+         清除自己上次打的牌
+         */
+        var children = MjClient.playui._downNode.children;
+        for (var i = 0; i < children.length; i++) {
+            var ni = children[i];
+            if (ni.name == "out" || ni.name == "cardTypeTietu") {
+                cc.log("---------轮到自己出牌，清楚打出的牌---------111111");
+                ni.removeFromParent(true);
+            }
+        }
 
-         if(tData.lastPutPlayer != tData.curPlayer && tData.lastPutPlayer == -1)
-         {
-             //队友出完，自己接风
-             var noPutTag = MjClient.playui._downNode.getChildByName("noPutTag");
-             if (noPutTag)
+        if (tData.lastPutPlayer != tData.curPlayer && tData.lastPutPlayer == -1) {
+            //队友出完，自己接风
+            var noPutTag = MjClient.playui._downNode.getChildByName("noPutTag");
+            if (noPutTag)
                 noPutTag.visible = false;
-         }
-         if (MjClient.playui._btnNoPut)
-         {
+        }
+        if (MjClient.playui._btnNoPut) {
             MjClient.playui._btnNoPut.setBright(false);
             MjClient.playui._btnNoPut.setTouchEnabled(false);
-         }
+        }
 
-        if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI && 
+        if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI &&
             MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN &&
             MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG &&
             MjClient.gameType != MjClient.GAME_TYPE.DA_YE_510K &&
             MjClient.gameType != MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN &&
-            MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K)
-        {
-            if (MjClient.playui._btnHimt)
-            {
+            MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K) {
+            if (MjClient.playui._btnHimt) {
                 MjClient.playui._btnHimt.setBright(false);
                 MjClient.playui._btnHimt.setTouchEnabled(false);
             }
         }
-        else
-        {
-            if (MjClient.playui._btnHimt)
-            {
+        else {
+            if (MjClient.playui._btnHimt) {
                 MjClient.playui._btnHimt.setBright(true);
                 MjClient.playui._btnHimt.setTouchEnabled(true);
             }
@@ -1002,38 +1031,36 @@ function UpdataCurrentPutCard(isTouch)
             if (IsTurnToMe() && noPutTag) {
                 noPutTag.visible = false;
             }
-        } 
+        }
 
-        if( (MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
-            MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG) && 
-            MjClient.playui._btnHimt ){
+        if ((MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
+            MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG) &&
+            MjClient.playui._btnHimt) {
             MjClient.playui._btnHimt.setVisible(false);
         }
 
-         //斗地主断线重连的标签
-         // if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT)
-         // {
-         //     cc.log("=======================lastPutPlayer=========== = " + tData.lastPutPlayer);
-         //     cc.log("==================curPlayer================ = " + tData.curPlayer);
-         //     cc.log("=====================lastPutCard============= = " + tData.lastPutCard);
-         //     if(tData.lastPutPlayer == tData.curPlayer && tData.lastPutCard != -1 &&  tData.lastPutCard )
-         //     {
-         //         for(var i = 0 ;i < uids.length;i++)
-         //         {
-         //             var idx =  getPlayerIndex(i);
-         //             if(idx != tData.curPlayer)
-         //             {
-         //                 var _node = getNode_cards(i);
-         //                 _node.getChildByName("noPutTag").visible = true;
-         //             }
-         //         }
-         //     }
-         // }
+        //斗地主断线重连的标签
+        // if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT)
+        // {
+        //     cc.log("=======================lastPutPlayer=========== = " + tData.lastPutPlayer);
+        //     cc.log("==================curPlayer================ = " + tData.curPlayer);
+        //     cc.log("=====================lastPutCard============= = " + tData.lastPutCard);
+        //     if(tData.lastPutPlayer == tData.curPlayer && tData.lastPutCard != -1 &&  tData.lastPutCard )
+        //     {
+        //         for(var i = 0 ;i < uids.length;i++)
+        //         {
+        //             var idx =  getPlayerIndex(i);
+        //             if(idx != tData.curPlayer)
+        //             {
+        //                 var _node = getNode_cards(i);
+        //                 _node.getChildByName("noPutTag").visible = true;
+        //             }
+        //         }
+        //     }
+        // }
     }
-    else
-    {
-        if (MjClient.playui._btnNoPut)
-        {
+    else {
+        if (MjClient.playui._btnNoPut) {
             MjClient.playui._btnNoPut.setBright(true);
             MjClient.playui._btnNoPut.setTouchEnabled(true);
 
@@ -1048,9 +1075,9 @@ function UpdataCurrentPutCard(isTouch)
                     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HA ||
                     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW ||
                     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN || 
+                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN ||
                     MjClient.gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HBTY||
+                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HBTY ||
                     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
                     for (var i = 0; i < MjClient.tipCardsArray.length; i++) {
                         if (MjClient.tipCardsArray[i].length == 1) {
@@ -1059,12 +1086,12 @@ function UpdataCurrentPutCard(isTouch)
                         }
                     }
 
-                // 徐州跑得快：下家报单,接单牌时不能过牌(只有炸弹也不能过)
+                    // 徐州跑得快：下家报单,接单牌时不能过牌(只有炸弹也不能过)
                 } else if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU && MjClient.tipCardsArray.length > 0) {
                     mustPut = true;
-                // 南通跑得快：
-                } else if ((MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_NT || 
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN) 
+                    // 南通跑得快：
+                } else if ((MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_NT ||
+                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN)
                     && MjClient.tipCardsArray.length > 0 && (tData.areaSelectMode.winCountType != 1 || tData.areaSelectMode.baoDanMustPut)) {
                     mustPut = true;
                 }
@@ -1088,30 +1115,27 @@ function UpdataCurrentPutCard(isTouch)
                 }
             }
         }
-        if (MjClient.playui._btnHimt)
-        {
+        if (MjClient.playui._btnHimt) {
             MjClient.playui._btnHimt.setBright(true);
             MjClient.playui._btnHimt.setTouchEnabled(true);
         }
 
-         /*
-          清除自己上次打的牌
-          */
+        /*
+         清除自己上次打的牌
+         */
 
-         if(IsTurnToMe() &&
-             (MjClient.data.c_Data ? (MjClient.data.c_Data.autoPKPUT == undefined || MjClient.data.c_Data.autoPKPUT == false) : true))//如果刚刚客户端处理牌，服务器还没有返回，不删除出的牌
-         {
-             var children = MjClient.playui._downNode.children;
-             for (var i = 0; i < children.length; i++)
-             {
-                 var ni = children[i];
-                 if(ni.name == "out" || ni.name == "cardTypeTietu")
-                 {
-                     cc.log("---------轮到自己出牌，清楚打出的牌---------22222");
-                     ni.removeFromParent(true);
-                 }
-             }
-             
+        if (IsTurnToMe() &&
+            (MjClient.data.c_Data ? (MjClient.data.c_Data.autoPKPUT == undefined || MjClient.data.c_Data.autoPKPUT == false) : true))//如果刚刚客户端处理牌，服务器还没有返回，不删除出的牌
+        {
+            var children = MjClient.playui._downNode.children;
+            for (var i = 0; i < children.length; i++) {
+                var ni = children[i];
+                if (ni.name == "out" || ni.name == "cardTypeTietu") {
+                    cc.log("---------轮到自己出牌，清楚打出的牌---------22222");
+                    ni.removeFromParent(true);
+                }
+            }
+
             // if ((MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG || 
             //     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI ||
             //     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HA ||
@@ -1119,9 +1143,8 @@ function UpdataCurrentPutCard(isTouch)
             //     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY || 
             //     MjClient.gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY||
             //     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU) &&
-            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI&&
-                !tData.areaSelectMode.mustPut /*&& getUIPlayer(0).handCount != 1*/ && MjClient.tipCardsArray && MjClient.tipCardsArray.length <= 0)
-            {
+            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI &&
+                !tData.areaSelectMode.mustPut /*&& getUIPlayer(0).handCount != 1*/ && MjClient.tipCardsArray && MjClient.tipCardsArray.length <= 0) {
                 MjClient.playui._btnNoPut.visible = true;
                 MjClient.playui._btnPutCard.visible = true;
                 MjClient.playui._btnHimt.visible = true;
@@ -1133,13 +1156,13 @@ function UpdataCurrentPutCard(isTouch)
                 MjClient.playui._btnHimt.setTouchEnabled(false);
             }
 
-            if( (MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
-                MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ) && 
-                MjClient.playui._btnHimt ){
+            if ((MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG) &&
+                MjClient.playui._btnHimt) {
                 MjClient.playui._btnHimt.setVisible(true);
             }
 
-            if (MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN || 
+            if (MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
                 MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
                 MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
@@ -1157,144 +1180,140 @@ function UpdataCurrentPutCard(isTouch)
                     MjClient.playui._btnNoPut.x = MjClient.playui._btnHimt.x;
                 }
             }
-         }
-     }
+        }
+    }
 
-     var currentSelectCards = MjClient.selectCards_card;
-     cc.log("currentSelectCards = " + JSON.stringify(MjClient.selectCards_card));
+    var currentSelectCards = MjClient.selectCards_card;
+    cc.log("currentSelectCards = " + JSON.stringify(MjClient.selectCards_card));
 
-     if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN && IsTurnToMe()) {
+    if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN && IsTurnToMe()) {
         var bResetEnabled = currentSelectCards.length > 0;
 
         MjClient.playui._btnReset.setBright(bResetEnabled);
         MjClient.playui._btnReset.setTouchEnabled(bResetEnabled);
-     }
+    }
 
-     if(!pl.mjhand)
-     {
-         return;
-     }
+    if (!pl.mjhand) {
+        return;
+    }
 
 
     var isCanPut;
-    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI){
+    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
 
         var pl2 = getUIPlayer(1);
         var isNextPlayerOneCard = false;
 
-        if(pl2){
-            isNextPlayerOneCard = pl2.handCount==1;
+        if (pl2) {
+            isNextPlayerOneCard = pl2.handCount == 1;
         }
-        
+
 
         if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI) {
             var majiang = MjClient.majiang;
             var tData = MjClient.data.sData.tData;
             var selectData = {}
-            for(var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
+            for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
             var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-            if(1 == firstPutRuleNum || 3 == firstPutRuleNum) {
+            if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
                 selectData.firstHeiTao3 = true;  // 必须出黑桃3
-            } else if(2 == firstPutRuleNum || 4 == firstPutRuleNum) {
+            } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
                 selectData.firstHeiTao3 = false; // 可以不出黑桃3
             }
 
             var isFirstRound = tData.roundAll == tData.roundNum;
             isCanPut = majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards, selectData, isNextPlayerOneCard, isFirstRound);
+            cc.log("currentSelectCards =2 ", majiang.calType(currentSelectCards, selectData));
         } else {
+
+            cc.log("currentSelectCards =1 " + JSON.stringify(MjClient.selectCards_card));
             var mustPutHongTaoSan = MjClient.data.sData.tData.areaSelectMode.mustPutHongTaoSan
             isCanPut = MjClient.majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards, mustPutHongTaoSan, isNextPlayerOneCard)
         }
 
-    }else if(MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
-        MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI ) {
+    } else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
+        MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI) {
         var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
         isCanPut = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData.zhuPaiType, false);
-        if (tData.isCanShuaiPai)
-        {
+        if (tData.isCanShuaiPai) {
             var isCanShuaiPai = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData.zhuPaiType, true);
             MjClient.playui.jsBind.BtnShuaiPai._node.setEnabled(!isCanPut && isCanShuaiPai);
         }
-    } else if(MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
+    } else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
         var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
         isCanPut = MjClient.majiang.checkPut(pl.mjhand, currentSelectCards, roundFirstCard, tData);
-    }else if(MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {
+    } else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {
         var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
         isCanPut = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData.zhuPaiType, false);
-        if (tData.isCanShuaiPai)
-        {
+        if (tData.isCanShuaiPai) {
             var isCanShuaiPai = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData.zhuPaiType, true);
             MjClient.playui.jsBind.BtnShuaiPai._node.setEnabled(!isCanPut && isCanShuaiPai);
         }
-    }else if(MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
+    } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
         var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-        isCanPut = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData,false);
-        if (tData.isCanShuaiPai)
-        {
-            var isCanShuaiPai = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData,true);
+        isCanPut = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData, false);
+        if (tData.isCanShuaiPai) {
+            var isCanShuaiPai = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData, true);
             MjClient.playui.jsBind.BtnShuaiPai._node.setEnabled(!isCanPut && isCanShuaiPai);
         }
     }
-    else if(MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA
-        || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW || 
+    else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA
+        || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW ||
         MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
         var tData = MjClient.data.sData.tData;
         var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-        isCanPut = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData.zhuPaiType, false,tData);
-        if (tData.isCanShuaiPai)
-        {
-            var isCanShuaiPai = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData.zhuPaiType, true,tData);
+        isCanPut = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData.zhuPaiType, false, tData);
+        if (tData.isCanShuaiPai) {
+            var isCanShuaiPai = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData.zhuPaiType, true, tData);
             MjClient.playui.jsBind.BtnShuaiPai._node.setEnabled(!isCanPut && isCanShuaiPai);
         }
     }
-    else if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA) {
+    else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA) {
         var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-        isCanPut = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData,false);
-        if (tData.isCanShuaiPai)
-        {
-            var isCanShuaiPai = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData,true);
+        isCanPut = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData, false);
+        if (tData.isCanShuaiPai) {
+            var isCanShuaiPai = MjClient.majiang.checkPutSdh(pl.mjhand, currentSelectCards, roundFirstCard, tData, true);
             MjClient.playui.jsBind.BtnShuaiPai._node.setEnabled(!isCanPut && isCanShuaiPai);
         }
-    }else if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) {
+    } else if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) {
         // 临汾斗地主，提起一张牌按钮就会亮
         isCanPut = currentSelectCards.length > 0;
-    } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+    } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
         MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI) {
-        isCanPut = MjClient.majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards,tData.areaSelectMode)
-    } 
+        isCanPut = MjClient.majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards, tData.areaSelectMode)
+    }
     else if (MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
-        MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG || 
-        MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG || 
+        MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
+        MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
         MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
         isCanPut = MjClient.playui.checkPut(pl.mjhand, currentSelectCards, lastPutCards, tData.areaSelectMode);
     }
-    else if (MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN){
-        var nextPlayer = MjClient.playui.getNextOffPlayer(tData.curPlayer,1);
+    else if (MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN) {
+        var nextPlayer = MjClient.playui.getNextOffPlayer(tData.curPlayer, 1);
         var nextPlayerCardNum = nextPlayer.handCount;
-        isCanPut = MjClient.playui.checkPut(pl.mjhand, currentSelectCards, lastPutCards, tData.areaSelectMode,nextPlayerCardNum);
-        cc.log("isCanPutisCanPut",isCanPut)
+        isCanPut = MjClient.playui.checkPut(pl.mjhand, currentSelectCards, lastPutCards, tData.areaSelectMode, nextPlayerCardNum);
+        cc.log("isCanPutisCanPut", isCanPut)
     }
-    else if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN || 
+    else if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN ||
         MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
         isCanPut = MjClient.playui.checkPut(pl.mjhand, currentSelectCards, lastPutCards);
     }
     else {
-        isCanPut = MjClient.majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards,MjClient.data.sData.tData)
+        isCanPut = MjClient.majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards, MjClient.data.sData.tData)
     }
 
-    if (MjClient.playui._btnPutCard)
-    {
-        if(!isCanPut)
-        {
-             MjClient.playui._btnPutCard.setBright(false);
+    if (MjClient.playui._btnPutCard) {
+        cc.log('-----isCanPut-----12121----------', !isCanPut)
+        if (!isCanPut) {
+            MjClient.playui._btnPutCard.setBright(false);
 
             if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA ||
                 GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DA_QI ||
-                GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU || 
+                GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU ||
                 GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
-                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
                 MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                 MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
@@ -1304,20 +1323,17 @@ function UpdataCurrentPutCard(isTouch)
                 MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
                 MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
                 MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
-                
+
                 MjClient.playui._btnPutCard.setTouchEnabled(false);
             }
 
-            if(isTouch == true)
-            {
+            if (isTouch == true) {
                 cc.log("no put down cards")
             }
             else {
-                if(IsTurnToMe())
-                {
-                    if((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && isJinZhongAPPType()) || 
-                        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER)
-                    {
+                if (IsTurnToMe()) {
+                    if ((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && isJinZhongAPPType()) ||
+                        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
                         MjClient.colloctionCardsArray = [];
                         MjClient.colloctionCardsUIArray = [];
                         MjClient.selectCards_card = [];
@@ -1326,8 +1342,7 @@ function UpdataCurrentPutCard(isTouch)
                 }
             }
         }
-        else
-        {
+        else {
             MjClient.playui._btnPutCard.setBright(true);
             MjClient.playui._btnPutCard.setTouchEnabled(true);
         }
@@ -1337,13 +1352,11 @@ function UpdataCurrentPutCard(isTouch)
 /*
     根据UIOff 获取 down top 。。.四个节点
  */
-var getNode_cards = function(off)
-{
-    if(!MjClient.playui) return cc.log("error ============= MjClient.playui = null ");
+var getNode_cards = function (off) {
+    if (!MjClient.playui) return cc.log("error ============= MjClient.playui = null ");
 
     var _node = null;
-    switch (off)
-    {
+    switch (off) {
         case 0:
             _node = MjClient.playui._downNode;
             cc.log("0----getNode_cards");
@@ -1363,16 +1376,15 @@ var getNode_cards = function(off)
         case 4:
             cc.log("4----getNode_cards");
             _node = MjClient.playui._fifthNode;
-            break;    
+            break;
         default:
             break;
     }
     return _node;
 }
 
-function showUserZhuangLogo_card(ZhangIdx)
-{
-    cc.log("设置庄 == "+ ZhangIdx);
+function showUserZhuangLogo_card(ZhangIdx) {
+    cc.log("设置庄 == " + ZhangIdx);
     var tData = MjClient.data.sData.tData;
     var uids = tData.uids;
     var selfIndex = uids.indexOf(SelfUid());
@@ -1401,8 +1413,7 @@ function showUserZhuangLogo_card(ZhangIdx)
     zhuang3.getChildByName("linkZhuang").visible = false;
 
 
-    switch (selfIndex)
-    {
+    switch (selfIndex) {
         case 0:
             zhuang0.visible = true;
             break;
@@ -1419,35 +1430,28 @@ function showUserZhuangLogo_card(ZhangIdx)
 
 }
 
-function arrowbkNumberUpdate_card(node, endFunc)
-{
+function arrowbkNumberUpdate_card(node, endFunc) {
     node.setString("10");
-    var number = function()
-    {
-        if(node.getString() == 0)
-        {
+    var number = function () {
+        if (node.getString() == 0) {
             GLog("==================================================arrowbkNumberUpdate 22222======================");
             if (endFunc) {
                 // endFunc();
             }
             node.stopAllActions();
         }
-        else
-        {
+        else {
             var number = node.getString() - 1;
-            if(number > 9)
-            {
+            if (number > 9) {
                 node.setString(number);
             }
-            else
-            {
+            else {
                 node.setString("0" + number);
-                if(number == 0)
-                {
+                if (number == 0) {
                     //记录音效的handle
                     if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ) {
                         playTimeUpEff = playEffect("loop_alarm", false);
-                    }else{
+                    } else {
                         playTimeUpEff = playEffect("loop_alarm", true);
                     }
                     MjClient.native.NativeVibrato();
@@ -1459,23 +1463,20 @@ function arrowbkNumberUpdate_card(node, endFunc)
     node.runAction(cc.repeatForever(cc.sequence(cc.delayTime(1.0), cc.callFunc(number, node))));
 }
 
-function tableStartHeadMoveAction_card(node)
-{
+function tableStartHeadMoveAction_card(node) {
     cc.log("-----------------set head position ------");
     var down = node.getChildByName("down").getChildByName("head");
     var top = node.getChildByName("top").getChildByName("head");
     var left = node.getChildByName("left").getChildByName("head");
     var right = node.getChildByName("right").getChildByName("head");
     var fifth = null;
-    if(MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || 
-        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER || 
-        MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN){
+    if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+        MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
         fifth = node.getChildByName("fifth").getChildByName("head");
     }
-	if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
-    {
-        if(isIPhoneX())
-        {
+    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
+        if (isIPhoneX()) {
             if (isYongZhouProject()) {
                 setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.5], false, false);
                 setWgtLayout(top, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
@@ -1484,8 +1485,7 @@ function tableStartHeadMoveAction_card(node)
                 setWgtLayout(top, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
             }
         }
-        else
-        {
+        else {
             if (isYongZhouProject()) {
                 setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
                 setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
@@ -1495,19 +1495,15 @@ function tableStartHeadMoveAction_card(node)
             }
         }
     }
-    else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU)
-    {
-        if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) 
-        {
+    else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) {
             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.8, 3], false, false);
             setWgtLayout(right, [0.13, 0.13], [1, 1], [-0.8, -2.6], false, false);
             setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.6], false, false);
             setWgtLayout(left, [0.13, 0.13], [0, 1], [0.8, -2.5], false, false);
         }
-        else
-        {
-            if(MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP || MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ)
-            {
+        else {
+            if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP || MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
                 setWgtLayout(down, [0.13, 0.13], [0.01, 0], [0.6, 3], false, false);
                 setWgtLayout(top, [0.13, 0.13], [0.01, 0.92], [0.6, -1.2], false, false);
                 setWgtLayout(right, [0.13, 0.13], [1, 0.92], [-0.6, -1.2], false, false);
@@ -1515,7 +1511,7 @@ function tableStartHeadMoveAction_card(node)
                     setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                     setWgtLayout(top, [0.13, 0.13], [0.05, 0.92], [0.6, -1.2], false, false);
                 }
-            }else if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
                 // setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3], false, false);
                 // setWgtLayout(top, [0.13, 0.13], [0, 0.96], [0.6, -1.5], false, false);
                 // setWgtLayout(right, [0.13, 0.13], [1, 0.96], [-0.6, -1.5], false, false);
@@ -1523,11 +1519,11 @@ function tableStartHeadMoveAction_card(node)
                 //     setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                 //     setWgtLayout(top, [0.13, 0.13], [0.05, 0.96], [0.6, -1.2], false, false);
                 // }
-                setWgtLayout(right, [0.13, 0.13], [1,  0.96], [-0.6, -1.5], false, false);
+                setWgtLayout(right, [0.13, 0.13], [1, 0.96], [-0.6, -1.5], false, false);
                 if (isIPhoneX()) {
                     setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
                     setWgtLayout(top, [0.13, 0.13], [0.05, 0.96], [0.6, -1.5], false, false);
-                }else{
+                } else {
                     setWgtLayout(down, [0.13, 0.13], [0, 0.05], [0.6, 3], false, false);
                     setWgtLayout(top, [0.13, 0.13], [0, 0.96], [0.6, -1.5], false, false);
                 }
@@ -1543,21 +1539,18 @@ function tableStartHeadMoveAction_card(node)
             }
         }
     }
-    else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || 
-        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER || 
-        MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)
-    {
-        if(MjClient.MaxPlayerNum == 5)
-        {
-            if(MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)
-            {
+    else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+        MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
+        if (MjClient.MaxPlayerNum == 5) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
                 setWgtLayout(down, [0.17, 0.17], [0, 0.05], [0.5, 0.0], false, false);
                 setWgtLayout(right, [0.17, 0.17], [1, 0.4], [-0.5, 1.3], false, false);
                 setWgtLayout(top, [0.17, 0.17], [0.78, 1], [0, -0.55], false, false);
                 setWgtLayout(left, [0.17, 0.17], [0.22, 1], [0, -0.55], false, false);
                 setWgtLayout(fifth, [0.17, 0.17], [0, 0.4], [0.5, 1.3], false, false);
             }
-           else {
+            else {
                 setWgtLayout(down, [0.17, 0.17], [0, 0.05], [0.5, 0.0], false, false);
                 setWgtLayout(right, [0.17, 0.17], [1, 0.4], [-0.5, 1.3], false, false);
                 setWgtLayout(top, [0.17, 0.17], [0.73, 1], [0, -0.55], false, false);
@@ -1565,38 +1558,35 @@ function tableStartHeadMoveAction_card(node)
                 setWgtLayout(fifth, [0.17, 0.17], [0, 0.4], [0.5, 1.3], false, false);
             }
         }
-        else
-        {
+        else {
             setWgtLayout(down, [0.17, 0.17], [0, 0.05], [0.5, 0.0], false, false);
             setWgtLayout(right, [0.17, 0.17], [1, 0.4], [-0.5, 1.3], false, false);
             setWgtLayout(top, [0.17, 0.17], [0.5, 1], [0, -0.55], false, false);
-            setWgtLayout(fifth,  [0.17, 0.17], [0, 0.4], [0.5, 1.3], false, false);
+            setWgtLayout(fifth, [0.17, 0.17], [0, 0.4], [0.5, 1.3], false, false);
         }
     }
-    else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW || 
+    else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW ||
         MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
-        MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI)
-    {
+        MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI) {
         setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.7], false, false);
         setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3], false, false);
         setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
         setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ){
+        if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO) {
             setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0.6, -0.7], false, false);
         }
 
         if (isIPhoneX()) {
             setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
             setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
-        } else if(isIPad()){
+        } else if (isIPad()) {
             setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
             setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
         }
     }
 
-    else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA)
-    {
+    else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
         setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3], false, false);
         setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
         setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
@@ -1605,9 +1595,8 @@ function tableStartHeadMoveAction_card(node)
             setWgtLayout(top, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
         }
     }
-    else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || 
-        MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA)
-    {
+    else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA ||
+        MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA) {
         setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 0.4], false, false);
         setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.7], false, false);
         setWgtLayout(left, [0.13, 0.13], [0, 0.7], [1.0, 0.4], false, false);
@@ -1617,48 +1606,45 @@ function tableStartHeadMoveAction_card(node)
             setWgtLayout(left, [0.13, 0.13], [0.05, 0.7], [1.0, 0.4], false, false);
         }
     }
-    else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA)
-    {
+    else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA) {
         setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.7], false, false);
         setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
         if (isIPhoneX()) {
             setWgtLayout(down, [0.13, 0.13], [0.05, 0], [0.6, 3], false, false);
             setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -1.7], false, false);
-        }else{
+        } else {
             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3], false, false);
             setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
         }
     }
-	else 
-	{
-		setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-	    setWgtLayout(top, [0.13, 0.13], [0, 1], [2.8, -0.65], false, false);
-	    setWgtLayout(left, [0.13, 0.13], [0, 0.5], [0.6, 1.5], false, false);
-	    setWgtLayout(right, [0.13, 0.13], [1, 0.7], [-0.6, 0.5], false, false);
-	}
+    else {
+        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+        setWgtLayout(top, [0.13, 0.13], [0, 1], [2.8, -0.65], false, false);
+        setWgtLayout(left, [0.13, 0.13], [0, 0.5], [0.6, 1.5], false, false);
+        setWgtLayout(right, [0.13, 0.13], [1, 0.7], [-0.6, 0.5], false, false);
+    }
 
     var downPoint = cc.p(down.x, down.y);
     var topPoint = cc.p(top.x, top.y);
     var rightPoint = cc.p(right.x, right.y);
     var leftPoint = cc.p(left.x, left.y);
-    if(fifth != null){
+    if (fifth != null) {
         var fifthPoint = cc.p(fifth.x, fifth.y);
     }
-	
-	setWgtLayout(down, [0.13, 0.13], [0.5, 0.5], [0, -2], false, false);
-	if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
-		setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [-3, 0.1], false, false);
-	else
-    	setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [0, 2.1], false, false);
+
+    setWgtLayout(down, [0.13, 0.13], [0.5, 0.5], [0, -2], false, false);
+    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
+        setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [-3, 0.1], false, false);
+    else
+        setWgtLayout(top, [0.13, 0.13], [0.5, 0.5], [0, 2.1], false, false);
     setWgtLayout(left, [0.13, 0.13], [0.5, 0.5], [-3, 0.1], false, false);
     setWgtLayout(right, [0.13, 0.13], [0.5, 0.5], [3, 0.1], false, false);
 
-    if(MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || 
-        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER || 
-        MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN){
-        if(MjClient.MaxPlayerNum == 5)
-        {
-            if(MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
+    if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+        MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
+        if (MjClient.MaxPlayerNum == 5) {
+            if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
                 setWgtLayout(down, [0.17, 0.17], [0.5, 0.25], [0, 0.0], false, false);
                 setWgtLayout(right, [0.17, 0.17], [0.5, 0.5], [2.5, 0.2], false, false);
                 setWgtLayout(top, [0.17, 0.17], [0.5, 0.5], [2.5, 2.2], false, false);
@@ -1677,15 +1663,14 @@ function tableStartHeadMoveAction_card(node)
             setWgtLayout(down, [0.17, 0.17], [0.5, 0.25], [0, 0.0], false, false);
             setWgtLayout(right, [0.17, 0.17], [0.5, 0.5], [2.5, 0.2], false, false);
             setWgtLayout(top, [0.17, 0.17], [0.25, 0.4], [2.5, 2.2], false, false);
-            setWgtLayout(fifth,  [0.17, 0.17], [0.5, 0.5], [-2.5, 0.2], false, false);
+            setWgtLayout(fifth, [0.17, 0.17], [0.5, 0.5], [-2.5, 0.2], false, false);
         }
     }
 
     down.runAction(cc.moveTo(0.3, downPoint).easing(cc.easeCubicActionOut()));
     top.runAction(cc.moveTo(0.3, topPoint).easing(cc.easeCubicActionOut()));
-    if((MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI /*|| MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN*/) 
-        && MjClient.MaxPlayerNum == 4 )
-    {
+    if ((MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI /*|| MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN*/)
+        && MjClient.MaxPlayerNum == 4) {
         left.visible = false;
     }
     // else {
@@ -1693,18 +1678,17 @@ function tableStartHeadMoveAction_card(node)
     // }
     left.runAction(cc.moveTo(0.3, leftPoint).easing(cc.easeCubicActionOut()));
     right.runAction(cc.moveTo(0.3, rightPoint).easing(cc.easeCubicActionOut()));
-    if(fifth != null){
+    if (fifth != null) {
         fifth.runAction(cc.moveTo(0.3, fifthPoint).easing(cc.easeCubicActionOut()));
     }
     sendGPS();
     MjClient.checkChangeLocationApp();
 }
 
-function AutoPutLastCard_card()
-{
-    if(!IsTurnToMe()) 
+function AutoPutLastCard_card() {
+    if (!IsTurnToMe())
         return;
-    
+
     var pl = getUIPlayer(0);
     // 如果两家不要， 又到我出牌
     var isTurnToMeAgain = (MjClient.data.sData.tData.lastPutPlayer == -1 || MjClient.data.sData.tData.lastPutPlayer == MjClient.data.sData.tData.curPlayer)
@@ -1712,7 +1696,7 @@ function AutoPutLastCard_card()
     var tData = MjClient.data.sData.tData;
 
     var pl2 = getUIPlayer(1);
-    var isNextPlayerOneCard = pl2 ? pl2.handCount==1 : false;
+    var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
     var mustPutHongTaoSan = MjClient.data.sData.tData.areaSelectMode.mustPutHongTaoSan;
 
     var tipCardsArray;
@@ -1720,75 +1704,11 @@ function AutoPutLastCard_card()
         var majiang = MjClient.majiang;
         var tData = MjClient.data.sData.tData;
         var selectData = {}
-        for(var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
+        for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
         var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-        if(1 == firstPutRuleNum || 3 == firstPutRuleNum) {
+        if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
             selectData.firstHeiTao3 = true;  // 必须出黑桃3
-        } else if(2 == firstPutRuleNum || 4 == firstPutRuleNum){
-            selectData.firstHeiTao3 = false; // 可以不出黑桃3
-        }
-
-        var isFirstRound = tData.roundAll == tData.roundNum;
-        tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData, isNextPlayerOneCard, isFirstRound);
-    }else{
-        tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, mustPutHongTaoSan, isNextPlayerOneCard);
-    }
-
-    if(pl.mjhand.length == 1 && isTurnToMeAgain && MjClient.majiang.checkPut(pl.mjhand, pl.mjhand) ){
-        tipCardsArray.push(pl.mjhand);
-    }
-
-    if(tipCardsArray.length==1){
-        var canPutLastCard = pl.mjhand.length == tipCardsArray[0].length;
-
-        // 如果两家不要， 到我出牌， 可以一手出完
-        cc.log('wwwwww111')
-        if(isTurnToMeAgain && canPutLastCard){
-            MjClient.selectCards_card = pl.mjhand;
-            MjClient.tipCardsArray = []
-            MjClient.tipCardsArray.push(pl.mjhand);
-        // 如果两家不要, 但是不能一手出完， 不自动提示
-        }else if(isTurnToMeAgain){
-            return;
-        // 自动提示
-        }else{
-            InitPutOutCardTips(0);
-        }
-        // 自动提起牌
-        putOutCardTips();
-
-        // 能一手打完， 自动出牌
-        if(canPutLastCard && pl.mjhand.length==1 && MjClient.rePlayVideo == -1)
-            PutOutCard_card();
-    }
-}
-
-function AutoPutLastCard_card_ty()
-{
-    if(!IsTurnToMe()) 
-        return;
-    
-    var pl = getUIPlayer(0);
-    if (pl.trust == true) return;
-    // 如果两家不要， 又到我出牌
-    var isTurnToMeAgain = (MjClient.data.sData.tData.lastPutPlayer == -1 || MjClient.data.sData.tData.lastPutPlayer == MjClient.data.sData.tData.curPlayer)
-    var isCanPut = MjClient.majiang.checkPut(pl.mjhand, pl.mjhand)
-    var tData = MjClient.data.sData.tData;
-    var pl2 = getUIPlayer(1);
-    var isNextPlayerOneCard = pl2 ? pl2.handCount==1 : false;
-    var mustPutHongTaoSan = MjClient.data.sData.tData.areaSelectMode.mustPutHongTaoSan;
-
-    var tipCardsArray;
-    var majiang = MjClient.majiang;
-    var tData = MjClient.data.sData.tData;
-
-    if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI) {
-        var selectData = {}
-        for(var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
-        var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-        if(1 == firstPutRuleNum || 3 == firstPutRuleNum) {
-            selectData.firstHeiTao3 = true;  // 必须出黑桃3
-        } else if(2 == firstPutRuleNum || 4 == firstPutRuleNum){
+        } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
             selectData.firstHeiTao3 = false; // 可以不出黑桃3
         }
 
@@ -1797,39 +1717,102 @@ function AutoPutLastCard_card_ty()
     } else {
         tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, mustPutHongTaoSan, isNextPlayerOneCard);
     }
-    
 
-    if(isCanPut && isTurnToMeAgain){
+    if (pl.mjhand.length == 1 && isTurnToMeAgain && MjClient.majiang.checkPut(pl.mjhand, pl.mjhand)) {
+        tipCardsArray.push(pl.mjhand);
+    }
+
+    if (tipCardsArray.length == 1) {
+        var canPutLastCard = pl.mjhand.length == tipCardsArray[0].length;
+
+        // 如果两家不要， 到我出牌， 可以一手出完
+        cc.log('wwwwww111')
+        if (isTurnToMeAgain && canPutLastCard) {
+            MjClient.selectCards_card = pl.mjhand;
+            MjClient.tipCardsArray = []
+            MjClient.tipCardsArray.push(pl.mjhand);
+            // 如果两家不要, 但是不能一手出完， 不自动提示
+        } else if (isTurnToMeAgain) {
+            return;
+            // 自动提示
+        } else {
+            InitPutOutCardTips(0);
+        }
+        // 自动提起牌
+        putOutCardTips();
+
+        // 能一手打完， 自动出牌
+        if (canPutLastCard && pl.mjhand.length == 1 && MjClient.rePlayVideo == -1)
+            PutOutCard_card();
+    }
+}
+
+function AutoPutLastCard_card_ty() {
+    if (!IsTurnToMe())
+        return;
+
+    var pl = getUIPlayer(0);
+    if (pl.trust == true) return;
+    // 如果两家不要， 又到我出牌
+    var isTurnToMeAgain = (MjClient.data.sData.tData.lastPutPlayer == -1 || MjClient.data.sData.tData.lastPutPlayer == MjClient.data.sData.tData.curPlayer)
+    var isCanPut = MjClient.majiang.checkPut(pl.mjhand, pl.mjhand)
+    var tData = MjClient.data.sData.tData;
+    var pl2 = getUIPlayer(1);
+    var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
+    var mustPutHongTaoSan = MjClient.data.sData.tData.areaSelectMode.mustPutHongTaoSan;
+
+    var tipCardsArray;
+    var majiang = MjClient.majiang;
+    var tData = MjClient.data.sData.tData;
+
+    if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI) {
+        var selectData = {}
+        for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
+        var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
+        if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
+            selectData.firstHeiTao3 = true;  // 必须出黑桃3
+        } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
+            selectData.firstHeiTao3 = false; // 可以不出黑桃3
+        }
+
+        var isFirstRound = tData.roundAll == tData.roundNum;
+        tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData, isNextPlayerOneCard, isFirstRound);
+    } else {
+        tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, mustPutHongTaoSan, isNextPlayerOneCard);
+    }
+
+
+    if (isCanPut && isTurnToMeAgain) {
         tipCardsArray.push(pl.mjhand);
     }
 
     var maxNumCardType = 0;
-    for(var i in tipCardsArray) {
-        if(maxNumCardType < tipCardsArray[i].length ) maxNumCardType = tipCardsArray[i].length;
+    for (var i in tipCardsArray) {
+        if (maxNumCardType < tipCardsArray[i].length) maxNumCardType = tipCardsArray[i].length;
     }
-    if(maxNumCardType){
+    if (maxNumCardType) {
         // 如果可以一手出完 自动打牌
-        var isHadZhaDan = majiang.isHadZhaDan(pl.mjhand,selectData);
-        if(maxNumCardType == pl.mjhand.length && !isHadZhaDan &&  MjClient.rePlayVideo == -1){
+        var isHadZhaDan = majiang.isHadZhaDan(pl.mjhand, selectData);
+        if (maxNumCardType == pl.mjhand.length && !isHadZhaDan && MjClient.rePlayVideo == -1) {
             MjClient.selectCards_card = pl.mjhand;
             MjClient.tipCardsArray = [];
             MjClient.tipCardsArray.push(pl.mjhand);
             putOutCardTips();
             PutOutCard_card();
 
-        // 自动提起牌
-        }else if(!isTurnToMeAgain){
+            // 自动提起牌
+        } else if (!isTurnToMeAgain) {
             // 自动提示
             var isAutoTip = tData.areaSelectMode.isAutoTip;
             if (tData.areaSelectMode.mustPut == true &&//必管
-                MjClient.majiang.IsSametipCards && 
-                MjClient.majiang.IsSametipCards(tipCardsArray, tData.areaSelectMode)&& //提示都是同一牌型和牌值
+                MjClient.majiang.IsSametipCards &&
+                MjClient.majiang.IsSametipCards(tipCardsArray, tData.areaSelectMode) && //提示都是同一牌型和牌值
                 GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)// && //跑得快游戏
             {//...........使用去掉带牌的自动提示
                 InitPutOutCardTips(0);
                 putOutCardTips(true);
             }
-            else if(isAutoTip){
+            else if (isAutoTip) {
                 InitPutOutCardTips(0);
                 putOutCardTips();
             }
@@ -1839,12 +1822,10 @@ function AutoPutLastCard_card_ty()
 
 
 //出牌
-function PutOutCard_card()
-{
+function PutOutCard_card() {
     MjClient.playui.jsBind.BtnPutCard._node.stopAllActions(); //修复抓花后自摸时自动打出bug
 
-    if(MjClient.selectCards_card.length <= 0)
-    {
+    if (MjClient.selectCards_card.length <= 0) {
         if (MjClient.playui._noPutTips)
             MjClient.playui._noPutTips.visible = false;
         return;
@@ -1852,7 +1833,7 @@ function PutOutCard_card()
 
     cc.log("current put out cards = " + JSON.stringify(MjClient.selectCards_card));
 
-    if(MjClient.selectTipCardsArray) 
+    if (MjClient.selectTipCardsArray)
         MjClient.selectTipCardsArray = null;
 
     MjClient.gamenet.request("pkroom.handler.tableMsg", {
@@ -1860,23 +1841,22 @@ function PutOutCard_card()
         card: MjClient.selectCards_card,
         tingAfterPut: MjClient.clickTing
     });
-    
+
 
     //前端提前显示自己出的牌，不用等后台回复，避免视觉卡顿 by sking
     if (MjClient.playui._btnPutCard && MjClient.playui._btnPutCard.isBright()
     ) {
-        if( GameClass[MjClient.gameType] != MjClient.GAME_CLASS.SAN_DA_HA && 
-            GameClass[MjClient.gameType] != MjClient.GAME_CLASS.GUAN_DAN && 
+        if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.SAN_DA_HA &&
+            GameClass[MjClient.gameType] != MjClient.GAME_CLASS.GUAN_DAN &&
             GameClass[MjClient.gameType] != MjClient.GAME_CLASS.GAN_DENG_YAN &&
-            MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN && 
+            MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN &&
             MjClient.gameType != MjClient.GAME_TYPE.DA_YE_510K &&
             MjClient.gameType != MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN &&
             MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K &&
             MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG &&
             MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG &&
             MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG &&
-            MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN)
-        {
+            MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
             var sData = MjClient.data.sData;
             var tData = sData.tData;
             tData.lastPutCard = MjClient.selectCards_card.slice();
@@ -1885,7 +1865,7 @@ function PutOutCard_card()
                 noPlayEffect: false
             };
             if (MjClient.playui.ClearLiPai)
-                MjClient.playui.ClearLiPai(SelfUid(),tData.lastPutCard);
+                MjClient.playui.ClearLiPai(SelfUid(), tData.lastPutCard);
             DealMJPut_card(getNode_cards(0), msg, 0, true);
             MjClient.playui._btnPutCard.visible = false;
             if (MjClient.playui._btnHimt)
@@ -1894,30 +1874,27 @@ function PutOutCard_card()
                 MjClient.playui._btnNoPut.visible = false;
             //设置自动出牌状态，等服务器返回了重置
             if (!MjClient.data.c_Data)
-                MjClient.data.c_Data={};
+                MjClient.data.c_Data = {};
             MjClient.data.c_Data.autoPKPUT = true;
         }
     }
 }
 
 //出牌回调
-function DealWaitPut_card(node, msg, off)
-{
+function DealWaitPut_card(node, msg, off) {
     var sData = MjClient.data.sData;
     var tData = sData.tData;
     var uids = tData.uids;
     //var selfIndex = (uids.indexOf(SelfUid()) + off) % MjClient.MaxPlayerNum;
     var selfIndex = getPlayerIndex(off)
-    if(tData.curPlayer == selfIndex && off < MjClient.MaxPlayerNum)
-    {
+    if (tData.curPlayer == selfIndex && off < MjClient.MaxPlayerNum) {
         InitPutOutCardTips(off);
         MjClient.playui.CardLayoutRestore(node, off);
     }
 }
 
 //过的回调
-function DealPKPass_card(off)
-{
+function DealPKPass_card(off) {
     var _node = getNode_cards(off);
     _node.getChildByName("noPutTag").visible = true;
 
@@ -1927,17 +1904,15 @@ function DealPKPass_card(off)
 
 //处理出牌,放一张牌，打牌动作
 // @param clientOut 是否是客户端自己提前表现自己打出的牌，没等服务器返回。
-function DealMJPut_card(node, msg, UIOff, clientOut)
-{
+function DealMJPut_card(node, msg, UIOff, clientOut) {
     var sData = MjClient.data.sData;
     var tData = sData.tData;
 
     var uids = tData.uids;
 
     if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI &&
-        UIOff >= MjClient.MaxPlayerNum )
-    {//(uids.indexOf(SelfUid()) + UIOff) % MjClient.MaxPlayerNum;
-     //这句代码应该有问题，但为了不影响其他游戏做了跑得快判断。   
+        UIOff >= MjClient.MaxPlayerNum) {//(uids.indexOf(SelfUid()) + UIOff) % MjClient.MaxPlayerNum;
+        //这句代码应该有问题，但为了不影响其他游戏做了跑得快判断。   
         return;
     }
 
@@ -1952,29 +1927,23 @@ function DealMJPut_card(node, msg, UIOff, clientOut)
     /*
      清除其他打的牌
      */
-    if(MjClient.GAME_TYPE.TUAN_TUAN_ZHUAN == MjClient.gameType)
-    {
+    if (MjClient.GAME_TYPE.TUAN_TUAN_ZHUAN == MjClient.gameType) {
         //cc.log("清除其他打的牌 UIOff = " + UIOff);
         var children = node.children;
-        for (var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ni = children[i];
-            if(ni.name == "out" || ni.name == "cardTypeTietu")
-            {
+            if (ni.name == "out" || ni.name == "cardTypeTietu") {
                 ni.removeFromParent(true);
             }
         }
     }
 
-    if(uids[selfIndex] == msg.uid)
-    {
+    if (uids[selfIndex] == msg.uid) {
         //不清楚其他人打出的牌
         var children = node.children;
-        for (var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ni = children[i];
-            if(ni.name == "out" || ni.name == "cardTypeTietu")
-            {
+            if (ni.name == "out" || ni.name == "cardTypeTietu") {
                 ni.removeFromParent(true);
             }
         }
@@ -1983,29 +1952,26 @@ function DealMJPut_card(node, msg, UIOff, clientOut)
         showCurrentPutCardAndLayout(UIOff, msg.noPlayEffect);
 
         var pl = getUIPlayer(UIOff);
-        if(pl && pl.handCount == 1)
-        {
-            if(!msg.noPlayEffect && 
-                MjClient.gameType != MjClient.GAME_TYPE.LV_LIANG_DA_QI && 
-                MjClient.gameType != MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN && 
-                MjClient.gameType != MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER && 
-                MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE && 
+        if (pl && pl.handCount == 1) {
+            if (!msg.noPlayEffect &&
+                MjClient.gameType != MjClient.GAME_TYPE.LV_LIANG_DA_QI &&
+                MjClient.gameType != MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN &&
+                MjClient.gameType != MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER &&
+                MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE &&
                 MjClient.gameType != MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI &&
-                MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN && 
+                MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN &&
                 MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG &&
                 MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG &&
                 MjClient.gameType != MjClient.GAME_TYPE.DA_YE_510K &&
                 MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K &&
-                MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG && 
-                !clientOut)
-            {
+                MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG &&
+                !clientOut) {
                 playEffectInPlay("singer");
             }
         }
-        else if(pl && pl.handCount == 2)
-        {
-            if(!msg.noPlayEffect &&
-                (MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN)){//临汾斗地主只剩两张语音
+        else if (pl && pl.handCount == 2) {
+            if (!msg.noPlayEffect &&
+                (MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN)) {//临汾斗地主只剩两张语音
                 playEffectInPlay("double");
             }
         }
@@ -2015,31 +1981,27 @@ function DealMJPut_card(node, msg, UIOff, clientOut)
 
 
     //出完牌，清0数组
-    if(SelfUid() == msg.uid && UIOff == 0)
-    {
+    if (SelfUid() == msg.uid && UIOff == 0) {
         cc.log("清除数据 ----")
         MjClient.selectCards_card = [];
         MjClient.colloctionCurrentSelcetUIArray = [];
         MjClient.isSorting = false;
         MjClient.cardIdx = 0;
 
-        if(MjClient.playui._bg_sort)
-        {
-            if(MjClient.colloctionCardsArray.length > 0)
-            {
+        if (MjClient.playui._bg_sort) {
+            if (MjClient.colloctionCardsArray.length > 0) {
                 MjClient.playui._bg_sort.getChildByName("Button_sort").loadTextureNormal("playing/cardTable/huifu.png");
                 MjClient.playui._bg_sort.getChildByName("Button_sort").visible = true;
                 MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(true);
             }
-            else
-            {
+            else {
                 MjClient.playui._bg_sort.getChildByName("Button_sort").visible = false;
                 MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(false);
             }
         }
 
 
-        if(MjClient.sortClassType == 0) {
+        if (MjClient.sortClassType == 0) {
             setCardToNormalPos();
         }
         else {
@@ -2056,8 +2018,8 @@ function DealMJPut_card(node, msg, UIOff, clientOut)
             MjClient.gameType != MjClient.GAME_TYPE.LV_LIANG_DA_QI &&
             MjClient.gameType != MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN &&
             MjClient.gameType != MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER &&
-            MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA && 
-            MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE && 
+            MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA &&
+            MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE &&
             MjClient.gameType != MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI &&
             MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG &&
             MjClient.gameType != MjClient.GAME_TYPE.DA_YE_510K &&
@@ -2065,9 +2027,8 @@ function DealMJPut_card(node, msg, UIOff, clientOut)
             MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K &&
             MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG &&
             MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG &&
-            MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN  
-        )
-        {
+            MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN
+        ) {
             //检查同花顺
             checkTongHuaShun();
         }
@@ -2077,10 +2038,9 @@ function DealMJPut_card(node, msg, UIOff, clientOut)
 
 
     //刷新 牌显示张数
-    currentLeftCardCount(UIOff,clientOut);
+    currentLeftCardCount(UIOff, clientOut);
 
-    if (uids[selfIndex] == msg.uid && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
-    {
+    if (uids[selfIndex] == msg.uid && GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
         var pl = getUIPlayer(UIOff);
         if (!msg.noPlayEffect && pl && pl.handCount && pl.handCount == 1)
             playEffectInPlay("single");
@@ -2088,21 +2048,19 @@ function DealMJPut_card(node, msg, UIOff, clientOut)
 
 
     //斗地主，每次出牌更新倍数
-    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU)
-    {
-        DealBeishu(node.getChildByName("head").getChildByName("beishu"),msg,UIOff)
+    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
+        DealBeishu(node.getChildByName("head").getChildByName("beishu"), msg, UIOff)
     }
 }
 
-function correctPKPut(msg,uiOff) {
-    if(SelfUid() == msg.uid && uiOff == 0) {
+function correctPKPut(msg, uiOff) {
+    if (SelfUid() == msg.uid && uiOff == 0) {
         var node = getNode_cards(uiOff);
         var putCards = msg.card;
         var restoreCards = false;
 
         // 删除意外情况下，没有删除的手牌
-        for (var i = 0; i < putCards.length; i++)
-        {
+        for (var i = 0; i < putCards.length; i++) {
             if (RemoveNodeBack(node, "mjhand", 1, putCards[i]) > 0)
                 restoreCards = true;
         }
@@ -2116,13 +2074,11 @@ function correctPKPut(msg,uiOff) {
 /*
     龙后补牌,如皋长牌，如皋麻将胡
  */
-function HandleBuLongCards(msg)
-{
+function HandleBuLongCards(msg) {
 
-    for(var off = 0; off  < 3;off++)
-    {
+    for (var off = 0; off < 3; off++) {
         var pl = getUIPlayer_changpai(off);
-        if(!pl) return;
+        if (!pl) return;
         var node = getNode_changpai(off);
         //添加手牌
         if (MjClient.rePlayVideo == -1)//表示正常游戏
@@ -2146,12 +2102,10 @@ function HandleBuLongCards(msg)
             if (pl.mjhand && msg[pl.info.uid]) {
 
                 for (var i = 0; i < msg[pl.info.uid].length; i++) {
-                    if(off == 0)
-                    {
+                    if (off == 0) {
                         getNewCard_changpai(node, "stand", "mjhand", msg[pl.info.uid][i], off);
                     }
-                    else
-                    {
+                    else {
                         getNewCard_changpai(node, "up", "mjhand_replay", msg[pl.info.uid][i], off);
                     }
                 }
@@ -2183,12 +2137,11 @@ function reConnectShowDeskCard()//为 down  top, left ,right 节点
     var sData = MjClient.data.sData;
     var tData = sData.tData;
     var uids = tData.uids;
-    
-    reconnectShowCurrentPutCardAndLayout(getUiOffByUid( uids[tData.lastPutPlayer]));
+
+    reconnectShowCurrentPutCardAndLayout(getUiOffByUid(uids[tData.lastPutPlayer]));
 
     //断线重连，且轮到自己出牌
-    if(IsTurnToMe() && tData.tState == TableState.waitPut)
-    {
+    if (IsTurnToMe() && tData.tState == TableState.waitPut) {
         //初始化，出牌提示数组
         InitPutOutCardTips(0);
         cc.log('xxxxxx444')
@@ -2201,17 +2154,13 @@ function reConnectShowDeskCard()//为 down  top, left ,right 节点
 /*
     只能off等0的时候使用
  */
-function RemoveCardByUINode(cardNode)
-{
+function RemoveCardByUINode(cardNode) {
     var children = getNode_cards(0).children;
 
-    for(var i = 0; i < children.length - 1; i++)
-    {
+    for (var i = 0; i < children.length - 1; i++) {
         var ci = children[i];
-        if(ci.name == "mjhand")
-        {
-            if(ci.tag == cardNode.tag && ci.getUserData() == cardNode.getUserData())
-            {
+        if (ci.name == "mjhand") {
+            if (ci.tag == cardNode.tag && ci.getUserData() == cardNode.getUserData()) {
                 cc.log("=======RemoveCardByUINode=====tag = " + ci.tag);
                 ci.removeFromParent(true);
                 break;
@@ -2224,36 +2173,31 @@ function RemoveCardByUINode(cardNode)
     _arr 是二维数组
     从_arr数组，删除_deArr数组。并返回对应的UI，和数据
  */
-function getCheckAndDel(_arr,_deArr)
-{
+function getCheckAndDel(_arr, _deArr) {
     var deArr = _deArr.concat();
     var _myuiArr = [];
     var _uiArry = [];
-    for(var i  = 0;i < _arr.length; i++)
-    {
+    for (var i = 0; i < _arr.length; i++) {
         var _uiArr = _arr[i];
         var _tempui = [];
-        var _tempuiArr  = [];
-        for(var j = 0;j < _uiArr.length;j++) {
+        var _tempuiArr = [];
+        for (var j = 0; j < _uiArr.length; j++) {
             var bExsit = false;
-            for(var k = 0;k < deArr.length;)
-            {
+            for (var k = 0; k < deArr.length;) {
                 if (_uiArr[j].tag == deArr[k].tag &&
                     _uiArr[j].getUserData() == deArr[k].getUserData()
                 ) {
 
-                    deArr.splice(k,1);
+                    deArr.splice(k, 1);
                     bExsit = true;
                     break;
                 }
-                else
-                {
+                else {
                     k++;
                 }
             }
 
-            if(!bExsit)
-            {
+            if (!bExsit) {
                 _tempuiArr.push(_uiArr[j]);
                 _tempui.push(_uiArr[j].tag);
             }
@@ -2264,29 +2208,25 @@ function getCheckAndDel(_arr,_deArr)
     }
 
 
-    return {UIData:_myuiArr,IDData:_uiArry};
+    return { UIData: _myuiArr, IDData: _uiArry };
 }
 
 //停止手牌的所有当前的动画，谨慎调用，一般在重置手牌位置时条用
 function StopHandCardAnim(node) {
 
     var children = node.children;
-    for(var i = 0; i < children.length; i++)
-    {
+    for (var i = 0; i < children.length; i++) {
         var ci = children[i];
-        if(ci.name == "mjhand")
-        {
+        if (ci.name == "mjhand") {
             ci.stopAllActions();
         }
     }
 }
 
 //显示当前打出在牌桌上的牌
-function showCurrentPutCardAndLayout(UIoff, noPlayEffect)
-{
-    if(MjClient.data.c_Data &&
-       MjClient.data.c_Data.bPutCardAnim)
-    {
+function showCurrentPutCardAndLayout(UIoff, noPlayEffect) {
+    if (MjClient.data.c_Data &&
+        MjClient.data.c_Data.bPutCardAnim) {
         showCurrentPutCardAndLayoutNew(UIoff, noPlayEffect);
         return;
     }
@@ -2298,23 +2238,20 @@ function showCurrentPutCardAndLayout(UIoff, noPlayEffect)
     var lastPutCards = tData.lastPutCard;
     var _deskCard = node.getChildByName("deskCard");
     var putCards = lastPutCards;
-    if(!putCards)
-    {
+    if (!putCards) {
         return;
     }
-    cc.log("MjClient.colloctionCurrentSelcetUIArray = " +  JSON.stringify(MjClient.colloctionCurrentSelcetUIArray));
+    cc.log("MjClient.colloctionCurrentSelcetUIArray = " + JSON.stringify(MjClient.colloctionCurrentSelcetUIArray));
 
-    if(UIoff == 0)
-    {
-        if(MjClient.rePlayVideo == -1)// 表示正常游戏
+    if (UIoff == 0) {
+        if (MjClient.rePlayVideo == -1)// 表示正常游戏
         {
-            for(var i  =  0;i < MjClient.colloctionCurrentSelcetUIArray.length;i++)
-            {
+            for (var i = 0; i < MjClient.colloctionCurrentSelcetUIArray.length; i++) {
                 cc.log("1111当前变灰的牌" + MjClient.colloctionCurrentSelcetUIArray[i].tag);
                 cc.log("11111当前变灰的牌 DATA ：" + MjClient.colloctionCurrentSelcetUIArray[i].getUserData());
             }
 
-            var _data = getCheckAndDel(MjClient.colloctionCardsUIArray,MjClient.colloctionCurrentSelcetUIArray)
+            var _data = getCheckAndDel(MjClient.colloctionCardsUIArray, MjClient.colloctionCurrentSelcetUIArray)
             MjClient.colloctionCardsUIArray = _data.UIData;
             MjClient.colloctionCardsArray = _data.IDData;
         }
@@ -2341,46 +2278,43 @@ function showCurrentPutCardAndLayout(UIoff, noPlayEffect)
         //     }
         // }
 
-		// by cyc, 修正因网络延迟，从手牌中移除打出去的牌不准确的bug.
-        for (var i = 0; i < putCards.length; i++)
-        {
+        // by cyc, 修正因网络延迟，从手牌中移除打出去的牌不准确的bug.
+        for (var i = 0; i < putCards.length; i++) {
             cc.log("从手牌中移除打出去的牌：" + putCards[i]);
             RemoveNodeBack(node, "mjhand", 1, putCards[i])
         }
-		/* 注掉 by cyc
-		for(var i =  0;i <MjClient.colloctionCurrentSelcetUIArray.length;i++ )
+        /* 注掉 by cyc
+        for(var i =  0;i <MjClient.colloctionCurrentSelcetUIArray.length;i++ )
         {
            cc.log("MjClient.colloctionCurrentSelcetUIArray tag = " +  MjClient.colloctionCurrentSelcetUIArray[i].tag);
             RemoveCardByUINode(MjClient.colloctionCurrentSelcetUIArray[i]);
         }
-		*/
+        */
     }
 
-    for(var i = 0; i < putCards.length;i++)
-    {
+    for (var i = 0; i < putCards.length; i++) {
         //打出去的牌,添加的牌桌上
         var out = _deskCard.clone();
 
-        if(MjClient.rePlayVideo == -1)// 表示正常游戏
-        {   
-            if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
-                out.setScale(out.getScale()*1.3);
-        }
-        else
+        if (MjClient.rePlayVideo == -1)// 表示正常游戏
         {
-            out.setScale(out.getScale()*1);
+            if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
+                out.setScale(out.getScale() * 1.3);
+        }
+        else {
+            out.setScale(out.getScale() * 1);
         }
 
         out.visible = true;
         out.name = "out";
 
-        setCardSprite_card(out,putCards[i], 0,true);
+        setCardSprite_card(out, putCards[i], 0, true);
         node.addChild(out);
         // 掂坨扑克要求缩小
-        if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO)
+        if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO)
             out.setScale(0.5 * MjClient.size.height / 720);
 
-        if(UIoff == 0)//只有自己有手牌
+        if (UIoff == 0)//只有自己有手牌
         {
             /* 注掉 by cyc 上边已经移除过了
             cc.log("putCards[i] = " + putCards[i]);
@@ -2391,16 +2325,14 @@ function showCurrentPutCardAndLayout(UIoff, noPlayEffect)
             }
             */
         }
-        else
-        {
-            if(MjClient.rePlayVideo != -1)
-            {
+        else {
+            if (MjClient.rePlayVideo != -1) {
                 cc.log(UIoff + "打出去桌子的牌 = " + JSON.stringify(putCards));
                 //其他人手牌，为了支持回放功能
                 RemoveNodeBack(node, "mjhand_replay", 1, putCards[i]);
             }
-            else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
-                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
+            else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
+                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                 MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
                 MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
@@ -2422,19 +2354,17 @@ function showCurrentPutCardAndLayout(UIoff, noPlayEffect)
 
     //cc.log("打出去桌子的牌 = " + putCards.length);
     //排序牌桌上的牌
-    if(putCards.length > 0)
-    {
-        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN)
-        {
+    if (putCards.length > 0) {
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
             setDiZhuCards(UIoff);
         }
 
-        if( MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
-            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K){
+        if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
+            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
             setHongPaiIcon(UIoff);
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG){
+        if (MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG) {
             setBaoPaiIcon(UIoff);
         }
 
@@ -2442,8 +2372,7 @@ function showCurrentPutCardAndLayout(UIoff, noPlayEffect)
     }
 
     //排序手牌
-    if(putCards.length > 0)
-    {
+    if (putCards.length > 0) {
         // if(IsTurnToMe() && tData.tState == TableState.waitPut)
         // {
         //     cc.log("------排序手牌------- ");
@@ -2454,11 +2383,11 @@ function showCurrentPutCardAndLayout(UIoff, noPlayEffect)
     }
     //播放出牌牌型动画
     if (!noPlayEffect)
-        (MjClient.data.c_Data && MjClient.data.c_Data.bTxtAnim) ? playCardAni_txtsprite(putCards,UIoff) : playCardAni(putCards,UIoff);
+        (MjClient.data.c_Data && MjClient.data.c_Data.bTxtAnim) ? playCardAni_txtsprite(putCards, UIoff) : playCardAni(putCards, UIoff);
 }
 
 //显示当前打出在牌桌上的牌
-function showCurrentPutCardAndLayoutNew(UIoff,noPlayEffect) {
+function showCurrentPutCardAndLayoutNew(UIoff, noPlayEffect) {
     var sData = MjClient.data.sData;
     var tData = sData.tData;
     var node = getNode_cards(UIoff);
@@ -2487,7 +2416,7 @@ function showCurrentPutCardAndLayoutNew(UIoff,noPlayEffect) {
         if (MjClient.rePlayVideo == -1) // 表示正常游戏
         {
             if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
-                out.setScale(out.getScale()*1.3);
+                out.setScale(out.getScale() * 1.3);
         } else {
             out.setScale(out.getScale() * 1);
         }
@@ -2498,7 +2427,7 @@ function showCurrentPutCardAndLayoutNew(UIoff,noPlayEffect) {
         node.addChild(out);
         putNodes.push(out);
         // 掂坨扑克要求缩小
-        if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO)
+        if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO)
             out.setScale(0.5 * MjClient.size.height / 720);
     }
 
@@ -2516,7 +2445,7 @@ function showCurrentPutCardAndLayoutNew(UIoff,noPlayEffect) {
         putHandNodes = findNodesBack(node, "mjhand", putCards);
     else if (MjClient.rePlayVideo != -1)
         putHandNodes = findNodesBack(node, "mjhand_replay", putCards);
-    else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+    else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
         MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
         MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
@@ -2529,10 +2458,9 @@ function showCurrentPutCardAndLayoutNew(UIoff,noPlayEffect) {
 
     //播放出牌牌型动画 这一行必须放在playPKPutAni前面
     if (!noPlayEffect)
-        (MjClient.data.c_Data && MjClient.data.c_Data.bTxtAnim) ? playCardAni_txtsprite(putCards,UIoff) : playCardAni(putCards,UIoff);
+        (MjClient.data.c_Data && MjClient.data.c_Data.bTxtAnim) ? playCardAni_txtsprite(putCards, UIoff) : playCardAni(putCards, UIoff);
 
-    if (putHandNodes.length != putNodes.length)
-    {
+    if (putHandNodes.length != putNodes.length) {
         //容错处理
         var putHandNode = putHandNodes.shift();
         while (putHandNode) {
@@ -2552,7 +2480,7 @@ function showCurrentPutCardAndLayoutNew(UIoff,noPlayEffect) {
             outScale = putNodes[i].getScale();
 
         outPostions.push(putNodes[i].getPosition());
-        
+
         putNodes[i].setScale(putHandNodes[i].getScale());
         putNodes[i].setPosition(putHandNodes[i].getPosition());
         putHandNodes[i].removeFromParent();
@@ -2574,7 +2502,7 @@ function playPKPutAni(UIoff, targetsPostions, putNodes, putCards, targetScale) {
     }
 
     var speed = 0.8;
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     if (UIoff == 0) {
         var centerX = (x1 + x2) / 2;
         var offset = putCards.length <= 2 ? 0 : 20 * scale / (x2 - centerX);
@@ -2582,13 +2510,13 @@ function playPKPutAni(UIoff, targetsPostions, putNodes, putCards, targetScale) {
 
         function func(destP, putNode, index) {
             var toX = offset == 0 ? destP.x : centerX;
-            var subTime = (putCards.length/2 - Math.abs(putCards.length/2 - index)) * 0.05;
+            var subTime = (putCards.length / 2 - Math.abs(putCards.length / 2 - index)) * 0.05;
             putNode.runAction(cc.sequence(
                 cc.spawn(
                     cc.moveTo(time1, cc.p(toX, destP.y)),
                     cc.scaleTo(time1, targetScale)
                 ),
-                cc.callFunc(function() {
+                cc.callFunc(function () {
                     putNode.zIndex = destP.x - destP.x % 1;
                 }),
                 cc.spawn(
@@ -2606,10 +2534,10 @@ function playPKPutAni(UIoff, targetsPostions, putNodes, putCards, targetScale) {
         var offset = putCards.length <= 2 ? 0 : 20 * scale / (x2 - x1);
         var time1 = offset == 0 ? 0.15 * speed : 0.2 * speed;
 
-        function func(destP, putNode, index ) {
+        function func(destP, putNode, index) {
             putNode.setPosition(node.getChildByName("head").getPosition());
             //putNode.zIndex = 1;
-            
+
             var toX = offset == 0 ? destP.x : x2;
             var subTime = index * 0.05;
             putNode.runAction(cc.sequence(
@@ -2623,7 +2551,7 @@ function playPKPutAni(UIoff, targetsPostions, putNodes, putCards, targetScale) {
                     cc.delayTime(0.07 * putCards.length * speed)
                 ),
                 cc.moveTo(0.03 * speed * putCards.length, cc.p(destP.x, destP.y)),
-                cc.callFunc(function() {
+                cc.callFunc(function () {
                     //putNode.zIndex = 0;
                 })
             ));
@@ -2641,7 +2569,7 @@ function playPKPutAni(UIoff, targetsPostions, putNodes, putCards, targetScale) {
         function func(destP, putNode, index) {
             putNode.setPosition(node.getChildByName("head").getPosition());
             //putNode.zIndex = 1;
-            
+
             var toX = offset == 0 ? destP.x : x1;
             var subTime = (putCards.length - index) * 0.05;
             putNode.runAction(cc.sequence(
@@ -2655,7 +2583,7 @@ function playPKPutAni(UIoff, targetsPostions, putNodes, putCards, targetScale) {
                     cc.delayTime(0.07 * putCards.length * speed)
                 ),
                 cc.moveTo(0.03 * speed * putCards.length, cc.p(destP.x, destP.y)),
-                cc.callFunc(function() {
+                cc.callFunc(function () {
                     //putNode.zIndex = 0;
                 })
             ));
@@ -2673,7 +2601,7 @@ function playPKPutAni(UIoff, targetsPostions, putNodes, putCards, targetScale) {
     for (var i = 0; i < children.length; i++) {
         var ci = children[i];
         if (ci.name == "mjhand" || ci.name == "mjhand_replay" || ci.name == "mjhand_ming")
-            handNodes.push({node: ci, p: ci.getPosition()});
+            handNodes.push({ node: ci, p: ci.getPosition() });
     }
 
     //排序手牌
@@ -2690,33 +2618,29 @@ function playPKPutAni(UIoff, targetsPostions, putNodes, putCards, targetScale) {
 
 
 //断线重连显示牌
-function reconnectShowCurrentPutCardAndLayout(UIOff)
-{
+function reconnectShowCurrentPutCardAndLayout(UIOff) {
     var sData = MjClient.data.sData;
     var tData = sData.tData;
     var node = getNode_cards(UIOff);
     var lastPutCards = tData.lastPutCard;
     var _deskCard = node.getChildByName("deskCard");
     var putCards = lastPutCards;
-    if(!putCards)
-    {
+    if (!putCards) {
         return;
     }
 
-    for(var i = 0; i < putCards.length;i++)
-    {
+    for (var i = 0; i < putCards.length; i++) {
         //打出去的牌,添加的牌桌上
         var out = _deskCard.clone();
-        if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
-        {
-            out.setScale(out.getScale()*1.3);
+        if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE) {
+            out.setScale(out.getScale() * 1.3);
         }
 
         out.visible = true;
         out.name = "out";
         //cc.log("打出去桌子的牌 = " + JSON.stringify(putCards));
-        setCardSprite_card(out,putCards[i], 0,true);
-        if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO)
+        setCardSprite_card(out, putCards[i], 0, true);
+        if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO)
             out.setScale(0.5 * MjClient.size.height / 720);
         node.addChild(out);
     }
@@ -2725,19 +2649,17 @@ function reconnectShowCurrentPutCardAndLayout(UIOff)
 
 
     //排序手牌
-    if(putCards.length > 0)
-    {
-        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN)
-        {
+    if (putCards.length > 0) {
+        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
             setDiZhuCards(UIOff);
         }
 
-        if( MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
-            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K){
+        if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
+            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
             setHongPaiIcon(UIOff);
         }
 
-        if(MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG){
+        if (MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG) {
             setBaoPaiIcon(UIOff);
         }
 
@@ -2754,8 +2676,8 @@ function reconnectShowCurrentPutCardAndLayout(UIOff)
         MjClient.gameType != MjClient.GAME_TYPE.LV_LIANG_DA_QI &&
         MjClient.gameType != MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN &&
         MjClient.gameType != MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER &&
-        MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA && 
-        MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE && 
+        MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA &&
+        MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE &&
         MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN &&
         MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG &&
         MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG &&
@@ -2763,21 +2685,18 @@ function reconnectShowCurrentPutCardAndLayout(UIOff)
         MjClient.gameType != MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN &&
         MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K &&
         MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG &&
-        MjClient.gameType != MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI)
-    {
+        MjClient.gameType != MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI) {
         //检查同花顺
         checkTongHuaShun();
     }
 
     //排序牌桌上的牌
-    if(putCards.length > 0)
-    {
+    if (putCards.length > 0) {
         MjClient.playui.CardLayoutDesk(node, putCards, UIOff);
     }
 }
 //剩余牌的张数
-function currentLeftCardCount(UIoff,clientOut)
-{
+function currentLeftCardCount(UIoff, clientOut) {
     if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA ||
         MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
         MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
@@ -2788,32 +2707,28 @@ function currentLeftCardCount(UIoff,clientOut)
         MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
         MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT ||
         MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN
-        )
-    {
-        return currentLeftCardCount_paodekuai(UIoff,clientOut);
+    ) {
+        return currentLeftCardCount_paodekuai(UIoff, clientOut);
     }
-    else if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY ||
+    else if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY ||
         MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY ||
 
-        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC )
-    {
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC) {
         return currentLeftCardCount_TY(UIoff);
     }
-    else if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ||
-        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO||
-            MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG||
-        MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI||
-            MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_XIN_ZHOU || 
-        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ)
-    {
+    else if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG ||
+        MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_XIN_ZHOU ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ) {
         return currentLeftCardCount_JZ(UIoff);
     }
-    else if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN)
-    {
+    else if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN) {
         return currentLeftCardCount_LF(UIoff);
     }
-    else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
-        MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
+    else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
+        MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
         MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
@@ -2821,16 +2736,15 @@ function currentLeftCardCount(UIoff,clientOut)
         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
         MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K)
-        return currentLeftCardCount_NiuShiBie(UIoff,clientOut);
+        return currentLeftCardCount_NiuShiBie(UIoff, clientOut);
 
     var node = getNode_cards(UIoff);
-    if(UIoff != 0)//自己不需要显示张数
+    if (UIoff != 0)//自己不需要显示张数
     {
         var _countNode = node.getChildByName("head").getChildByName("tingCard").getChildByName("Text_count");
         cc.log("===================================================剩余张数----- ");
         var pl = getUIPlayer(UIoff);
-        if((pl.handCount || pl.handCount == 0) && _countNode)
-        {
+        if ((pl.handCount || pl.handCount == 0) && _countNode) {
             node.getChildByName("head").getChildByName("tingCard").visible = true;
             //cc.log("pl.mjhand.length = " + pl.handCount);
             _countNode.setString(pl.handCount);
@@ -2839,24 +2753,22 @@ function currentLeftCardCount(UIoff,clientOut)
 }
 
 //剩余牌的张数
-function currentLeftCardCount_chongYangDaGun(UIoff, clientOut, needShowCount)
-{
+function currentLeftCardCount_chongYangDaGun(UIoff, clientOut, needShowCount) {
     var node = getNode_cards(UIoff);
-    if(UIoff == 0)//自己不需要显示
+    if (UIoff == 0)//自己不需要显示
         return;
 
     var countNode = node.getChildByName("head").getChildByName("tingCard");
     if (!countNode)
         return;
 
-    if(!clientOut)
+    if (!clientOut)
         return;
 
     var pl = getUIPlayer(UIoff);
     var sData = MjClient.data.sData;
     var tData = MjClient.data.sData.tData;
-    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1)
-    {
+    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1) {
         countNode.visible = false;
         return;
     }
@@ -2866,8 +2778,7 @@ function currentLeftCardCount_chongYangDaGun(UIoff, clientOut, needShowCount)
     var alarm = countNode.getChildByName("alarm")
     var count = needShowCount ? needShowCount : 5;
     // 警报
-    if (pl.handCount <= count)
-    {
+    if (pl.handCount <= count) {
         countNode.visible = true;
 
         textCount.setString(pl.handCount);
@@ -2879,11 +2790,11 @@ function currentLeftCardCount_chongYangDaGun(UIoff, clientOut, needShowCount)
             fadeAction.setTag(51839);
             shining.runAction(fadeAction);
         }
-    } else{
+    } else {
         countNode.visible = false;
     }
 
-    if(tData.areaSelectMode.showHandCount){
+    if (tData.areaSelectMode.showHandCount) {
 
         countNode.visible = true;
         alarm.visible = pl.handCount <= count ? true : false;
@@ -2894,32 +2805,30 @@ function currentLeftCardCount_chongYangDaGun(UIoff, clientOut, needShowCount)
 }
 
 //剩余牌的张数
-function currentLeftCardCount_paodekuai(UIoff,clientOut)
-{
+function currentLeftCardCount_paodekuai(UIoff, clientOut) {
     var pl = getUIPlayer(UIoff);
     var sData = MjClient.data.sData;
 
     var tData = MjClient.data.sData.tData;
     var needHide = false;
-    
-    if( MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN && !tData.areaSelectMode.showHandCount){
+
+    if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN && !tData.areaSelectMode.showHandCount) {
         needHide = true;
     }
 
     //自己不需要显示张数
-    if(UIoff == 0) {
+    if (UIoff == 0) {
         // 跑得快特殊处理
         if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
 
             var _sprite_single = MjClient.playui._spriteSingle;
-            if (!pl || !pl.handCount || pl.handCount <= 0 )
-            {
+            if (!pl || !pl.handCount || pl.handCount <= 0) {
                 _sprite_single.visible = false;
                 return;
             }
 
             var _leftRet = pl.handCount == 1;
-            if(MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN){
+            if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
 
                 _leftRet = pl.handCount == 1;
             }
@@ -2934,7 +2843,7 @@ function currentLeftCardCount_paodekuai(UIoff,clientOut)
                     fadeAction.setTag(51839);
                     shining.runAction(fadeAction);
 
-                    var rotateAction = cc.sequence(cc.RotateTo(0.4,-15), cc.RotateTo(0.4,0)).repeatForever();
+                    var rotateAction = cc.sequence(cc.RotateTo(0.4, -15), cc.RotateTo(0.4, 0)).repeatForever();
                     alarm.runAction(rotateAction);
                 }
             }
@@ -2950,8 +2859,7 @@ function currentLeftCardCount_paodekuai(UIoff,clientOut)
     if (!_countNode)
         return;
 
-    if (!pl || !pl.handCount || pl.handCount < 0 )
-    {
+    if (!pl || !pl.handCount || pl.handCount < 0) {
         _countNode.visible = false;
         return;
     }
@@ -2974,11 +2882,9 @@ function currentLeftCardCount_paodekuai(UIoff,clientOut)
     _Text_count.visible = true;
 
     //没有确定地主之前不用显示张数
-    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU)
-    {
+    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
         var tData = sData.tData;
-        if(tData.zhuang === -1)
-        {
+        if (tData.zhuang === -1) {
             _sprite_single.visible = false;
             _unKnow.visible = false;
             _Text_count.visible = false;
@@ -2988,30 +2894,28 @@ function currentLeftCardCount_paodekuai(UIoff,clientOut)
 
     _Text_count.visible = showCardNumber || pl.handCount <= 1;
 
-    
 
-    if (showCardNumber || pl.handCount <= 1)
-    {
+
+    if (showCardNumber || pl.handCount <= 1) {
         _Text_count.setString(pl.handCount);
     }
 
 
     var _showWuXueGeBan = false;
-    if(MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN ){
-        if(pl.handCount <= 1){
+    if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
+        if (pl.handCount <= 1) {
             _showWuXueGeBan = true;
-        }else{
-            if(!tData.areaSelectMode.showHandCount){
+        } else {
+            if (!tData.areaSelectMode.showHandCount) {
                 _countNode.visible = false;
             }
         }
-        
+
     }
     // 报单
-    if ( pl.handCount == 1 && (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI || 
-        (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN))  
-        || _showWuXueGeBan )
-    {
+    if (pl.handCount == 1 && (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
+        (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU && MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN))
+        || _showWuXueGeBan) {
         _unKnow.visible = !_Text_count.visible;
 
         // 跑得快特殊处理
@@ -3027,19 +2931,19 @@ function currentLeftCardCount_paodekuai(UIoff,clientOut)
                 fadeAction.setTag(51839);
                 shining.runAction(fadeAction);
 
-                var rotateAction = cc.sequence(cc.RotateTo(0.4,-15), cc.RotateTo(0.4,0)).repeatForever();
+                var rotateAction = cc.sequence(cc.RotateTo(0.4, -15), cc.RotateTo(0.4, 0)).repeatForever();
                 alarm.runAction(rotateAction);
             }
         } else {
-            var func1 = function() {
+            var func1 = function () {
 
                 _sprite_single.setTexture("playing/paodekuaiTable/baodan.png");
             }
-            var func2 = function() {
+            var func2 = function () {
                 _sprite_single.setTexture("playing/paodekuaiTable/baodan_s.png");
             }
 
-            if(! _sprite_single.visible){
+            if (!_sprite_single.visible) {
                 _sprite_single.visible = pl.handCount == 1;
                 _sprite_single.runAction(cc.repeatForever(
                     cc.sequence(cc.callFunc(func1, _sprite_single), cc.delayTime(0.5), cc.callFunc(func2, _sprite_single), cc.delayTime(0.5))));
@@ -3052,10 +2956,9 @@ function currentLeftCardCount_paodekuai(UIoff,clientOut)
     }
 }
 
-function currentLeftCardCount_TY(UIoff)
-{
+function currentLeftCardCount_TY(UIoff) {
     var node = getNode_cards(UIoff);
-    if(UIoff == 0)//自己不需要显示张数
+    if (UIoff == 0)//自己不需要显示张数
         return;
     var _countNode = node.getChildByName("head").getChildByName("tingCard");
     if (!_countNode)
@@ -3063,8 +2966,7 @@ function currentLeftCardCount_TY(UIoff)
 
     var pl = getUIPlayer(UIoff);
     var sData = MjClient.data.sData;
-    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1)
-    {
+    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1) {
         _countNode.visible = false;
         return;
     }
@@ -3081,8 +2983,7 @@ function currentLeftCardCount_TY(UIoff)
     _Text_count.visible = showCardNumber || pl.handCount <= 1;
 
     var tData = MjClient.data.sData.tData;
-    if(tData.areaSelectMode.showHandCount)
-    {
+    if (tData.areaSelectMode.showHandCount) {
         _Text_count.setString(pl.handCount);
         _unKnow.visible = false;
     }
@@ -3093,16 +2994,15 @@ function currentLeftCardCount_TY(UIoff)
 
 
     // 报单
-    if (pl.handCount == 1)
-    {
+    if (pl.handCount == 1) {
         _sprite_single.visible = pl.handCount == 1;
         _unKnow.visible = !_Text_count.visible;
 
-        var func1 = function() {
+        var func1 = function () {
 
             _sprite_single.setTexture("playing/paodekuaiTable/baodan.png");
         }
-        var func2 = function() {
+        var func2 = function () {
             _sprite_single.setTexture("playing/paodekuaiTable/baodan_s.png");
         }
         _sprite_single.runAction(cc.repeatForever(
@@ -3110,10 +3010,9 @@ function currentLeftCardCount_TY(UIoff)
     }
 }
 
-function currentLeftCardCount_JZ(UIoff)
-{
+function currentLeftCardCount_JZ(UIoff) {
     var node = getNode_cards(UIoff);
-    if(UIoff == 0)//自己不需要显示张数
+    if (UIoff == 0)//自己不需要显示张数
         return;
 
     var _countNode = node.getChildByName("head").getChildByName("tingCard");
@@ -3122,8 +3021,7 @@ function currentLeftCardCount_JZ(UIoff)
 
     var pl = getUIPlayer(UIoff);
     var sData = MjClient.data.sData;
-    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1)
-    {
+    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1) {
         _countNode.visible = false;
         return;
     }
@@ -3147,16 +3045,15 @@ function currentLeftCardCount_JZ(UIoff)
     cc.log("------------_Text_count------");
 
     // 报单
-    if (pl.handCount == 1)
-    {
+    if (pl.handCount == 1) {
         _sprite_single.visible = pl.handCount == 1;
         _unKnow.visible = !_Text_count.visible;
 
-        var func1 = function() {
+        var func1 = function () {
 
             _sprite_single.setTexture("playing/paodekuaiTable/baodan.png");
         }
-        var func2 = function() {
+        var func2 = function () {
             _sprite_single.setTexture("playing/paodekuaiTable/baodan_s.png");
         }
         _sprite_single.runAction(cc.repeatForever(
@@ -3164,10 +3061,9 @@ function currentLeftCardCount_JZ(UIoff)
     }
 }
 
-function currentLeftCardCount_LF(UIoff)
-{
+function currentLeftCardCount_LF(UIoff) {
     var node = getNode_cards(UIoff);
-    if(UIoff == 0)//自己不需要显示张数
+    if (UIoff == 0)//自己不需要显示张数
         return;
 
     var _countNode = node.getChildByName("head").getChildByName("tingCard");
@@ -3176,8 +3072,7 @@ function currentLeftCardCount_LF(UIoff)
 
     var pl = getUIPlayer(UIoff);
     var sData = MjClient.data.sData;
-    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1)
-    {
+    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1) {
         _countNode.visible = false;
         return;
     }
@@ -3201,16 +3096,15 @@ function currentLeftCardCount_LF(UIoff)
     cc.log("------------_Text_count------");
 
     // 报单
-    if (pl.handCount == 1)
-    {
+    if (pl.handCount == 1) {
         _sprite_single.visible = pl.handCount == 1;
         _unKnow.visible = !_Text_count.visible;
 
-        var func1 = function() {
+        var func1 = function () {
 
             _sprite_single.setTexture("playing/paodekuaiTable/baodan.png");
         }
-        var func2 = function() {
+        var func2 = function () {
             _sprite_single.setTexture("playing/paodekuaiTable/baodan_s.png");
         }
         _sprite_single.runAction(cc.repeatForever(
@@ -3218,27 +3112,26 @@ function currentLeftCardCount_LF(UIoff)
     }
 }
 
-function currentLeftCardCount_NiuShiBie(UIoff)
-{
-    if(MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
+function currentLeftCardCount_NiuShiBie(UIoff) {
+    if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-        MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K){
+        MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K) {
         currentLeftCardCount_chongYangDaGun(UIoff, true)
         return;
     }
-    if(MjClient.gameType ===  MjClient.GAME_TYPE.WU_XUE_510K) {
+    if (MjClient.gameType === MjClient.GAME_TYPE.WU_XUE_510K) {
         var tData = MjClient.data.sData.tData;
         var isOpenAlarm = tData.areaSelectMode.baoJing;
         return currentLeftCardCount_chongYangDaGun(UIoff, isOpenAlarm, 2);
     }
-    if(MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN){
+    if (MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN) {
         currentLeftCardCount_chongYangDaGun(UIoff, true, 2);
         return;
     }
     var node = getNode_cards(UIoff);
-    if(UIoff == 0)//自己不需要显示
+    if (UIoff == 0)//自己不需要显示
         return;
 
     var countNode = node.getChildByName("head").getChildByName("tingCard");
@@ -3247,8 +3140,7 @@ function currentLeftCardCount_NiuShiBie(UIoff)
 
     var pl = getUIPlayer(UIoff);
     var sData = MjClient.data.sData;
-    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1)
-    {
+    if (!pl || !pl.handCount || pl.handCount <= 0 || sData.tData.zhuang == -1) {
         countNode.visible = false;
         return;
     }
@@ -3256,8 +3148,7 @@ function currentLeftCardCount_NiuShiBie(UIoff)
     cc.log("pl.handCount = " + pl.handCount);
 
     // 警报
-    if (pl.handCount <= 5)
-    {
+    if (pl.handCount <= 5) {
         countNode.visible = true;
 
         countNode.getChildByName("textCount").setString(pl.handCount);
@@ -3274,21 +3165,19 @@ function currentLeftCardCount_NiuShiBie(UIoff)
 }
 
 //获取UIoff的位置 0 ，1， 2，3
-function card_getUiOffByUid(uid,uids)
-{
+function card_getUiOffByUid(uid, uids) {
     var selfIndex = uids.indexOf(SelfUid());
     var targetIndex = uids.indexOf(uid);
     return (targetIndex - selfIndex + MjClient.MaxPlayerNum) % MjClient.MaxPlayerNum;
 }
 
 //换座位
-function changePositionByUIoff(fromOff,ToPos)
-{
+function changePositionByUIoff(fromOff, ToPos) {
     var _fromNode = getNode_cards(fromOff).getChildByName("head");
     var _fromZoder = _fromNode.zIndex;
     //_fromNode.zIndex = 500;
 
-    var seq1 = cc.sequence(cc.moveTo(0.2,ToPos), cc.callFunc(function () {
+    var seq1 = cc.sequence(cc.moveTo(0.2, ToPos), cc.callFunc(function () {
         _fromNode.zIndex = _fromZoder;
     }));
     _fromNode.runAction(seq1);
@@ -3296,24 +3185,19 @@ function changePositionByUIoff(fromOff,ToPos)
 
 
 //重置四个玩家的位置
-function resetPlayerHead()
-{
+function resetPlayerHead() {
     cc.log("重置头像信息位置");
-    for(var off = 0;off < MjClient.MaxPlayerNum;off++)
-    {
+    for (var off = 0; off < MjClient.MaxPlayerNum; off++) {
         var node = getNode_cards(off);
         var pl = getUIPlayer(off);
 
-        if(!pl)
-        {
+        if (!pl) {
             return;
         }
         //初始化玩家金币和名称
         // InitUserCoinAndName(node, off);
-        if(off != 0)
-        {
-            if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU)
-            {
+        if (off != 0) {
+            if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU) {
                 currentLeftCardCount(off);
             }
 
@@ -3326,9 +3210,9 @@ function resetPlayerHead()
                 SetUserVisible_DaMaZiZhuZhou(node, off)
             else if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN)
                 SetUserVisible_ChongYangDaGun(node, off)
-            else if(MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG)
+            else if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG)
                 SetUserVisible_DaYeDaGun(node, off)
-            else if(MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG)
+            else if (MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG)
                 SetUserVisible_TongShanDaGong(node, off)
             else if (MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG)
                 SetUserVisible_QiChunDaGong(node, off)
@@ -3343,11 +3227,10 @@ function resetPlayerHead()
         }
 
         //重置房主
-        showFangzhuTagIcon(node.getChildByName("head"),off)
+        showFangzhuTagIcon(node.getChildByName("head"), off)
 
         //回放的时候需要刷新手牌
-        if(MjClient.rePlayVideo != -1)
-        {
+        if (MjClient.rePlayVideo != -1) {
             refreshHandCardForReplay(off);
         }
     }
@@ -3355,8 +3238,8 @@ function resetPlayerHead()
     reConectHeadLayout_card(node.parent);
 
     if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI &&
-        GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU && 
-        MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE && 
+        GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU &&
+        MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE &&
         MjClient.gameType != MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI &&
         MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG &&
         MjClient.gameType != MjClient.GAME_TYPE.DA_YE_510K &&
@@ -3364,60 +3247,55 @@ function resetPlayerHead()
         MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K &&
         MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG &&
         MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG &&
-        MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN )
-    {
+        MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
         //重新刷新中间的四个位置，东南西北
         setArrowFengDir(node.parent.getChildByName("arrowbk"));
     }
 }
 
 //开始打牌前的抽一张牌的翻滚动画
-function cardRollAction(selectCard,cb)
-{
+function cardRollAction(selectCard, cb) {
     var _time = 0.1;
-    var cardMsg =  selectCard;
+    var cardMsg = selectCard;
 
-    setCardSprite_card(MjClient.playui._positionCard,cardMsg, 0);
+    setCardSprite_card(MjClient.playui._positionCard, cardMsg, 0);
 
     var _scale = MjClient.playui._positionCard.getScale();
-    var a1 = cc.scaleTo(_time,0,_scale*1);
-    var calfuc1 = cc.callFunc(function(){
+    var a1 = cc.scaleTo(_time, 0, _scale * 1);
+    var calfuc1 = cc.callFunc(function () {
         MjClient.playui._positionCard.loadTexture("playing/cardPic/baidi_puke.png")
         var children = MjClient.playui._positionCard.children;
-        for (var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ni = children[i];
             ni.visible = true;
         }
     });
 
-    var a2 = cc.scaleTo(_time,_scale*1,_scale*1);
-    var a3 = cc.scaleTo(_time,0,_scale*1);
-    var calfuc2 = cc.callFunc(function(){
+    var a2 = cc.scaleTo(_time, _scale * 1, _scale * 1);
+    var a3 = cc.scaleTo(_time, 0, _scale * 1);
+    var calfuc2 = cc.callFunc(function () {
         MjClient.playui._positionCard.loadTexture("playing/cardPic/beimian_puke.png")
         var children = MjClient.playui._positionCard.children;
-        for (var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ni = children[i];
             ni.visible = false;
         }
     });
 
-    var calfucEnd = cc.callFunc(function(){
+    var calfucEnd = cc.callFunc(function () {
         MjClient.playui._positionCard.loadTexture("playing/cardPic/baidi_puke.png")
         var children = MjClient.playui._positionCard.children;
-        for (var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ni = children[i];
             ni.visible = true;
         }
     });
 
-    var a4 = cc.scaleTo(_time,_scale*1,_scale*1);
-    var seq = cc.sequence(a1,calfuc1,a2,a3,calfuc2,a4).repeat(1);
+    var a4 = cc.scaleTo(_time, _scale * 1, _scale * 1);
+    var seq = cc.sequence(a1, calfuc1, a2, a3, calfuc2, a4).repeat(1);
 
-    var seqEnd = cc.sequence(seq,a3,calfucEnd,a2,cc.delayTime(1),cc.callFunc(function(){
-        if(cb) cb();
+    var seqEnd = cc.sequence(seq, a3, calfucEnd, a2, cc.delayTime(1), cc.callFunc(function () {
+        if (cb) cb();
         MjClient.playui._positionCard.visible = false;
     }));
     MjClient.playui._positionCard.runAction(seqEnd);
@@ -3427,10 +3305,9 @@ function cardRollAction(selectCard,cb)
 function putOutCardTips(delDaipai)//delDaipai提示时是否不提示带牌
 {
     var tData = MjClient.data.sData.tData;
-    if(cc.isUndefined(MjClient.tipCardsArray))
-    {
+    if (cc.isUndefined(MjClient.tipCardsArray)) {
         MjClient.selectCards_card = [];
-        if(MjClient.sortClassType == 0) {
+        if (MjClient.sortClassType == 0) {
             setCardToNormalPos();
         }
         else {
@@ -3440,10 +3317,9 @@ function putOutCardTips(delDaipai)//delDaipai提示时是否不提示带牌
     }
 
     var tipsLength = MjClient.tipCardsArray.length;
-    if(tipsLength <= 0)
-    {
+    if (tipsLength <= 0) {
         MjClient.selectCards_card = [];
-        if(MjClient.sortClassType == 0) {
+        if (MjClient.sortClassType == 0) {
             setCardToNormalPos();
         }
         else {
@@ -3453,8 +3329,7 @@ function putOutCardTips(delDaipai)//delDaipai提示时是否不提示带牌
     }
 
 
-    if(MjClient.tipsIdx < 0 || MjClient.tipsIdx >= tipsLength || !MjClient.tipCardsArray[MjClient.tipsIdx])
-    {
+    if (MjClient.tipsIdx < 0 || MjClient.tipsIdx >= tipsLength || !MjClient.tipCardsArray[MjClient.tipsIdx]) {
         MjClient.tipsIdx = 0;
     }
     var tipsCardArray = MjClient.tipCardsArray[MjClient.tipsIdx].slice();
@@ -3464,12 +3339,12 @@ function putOutCardTips(delDaipai)//delDaipai提示时是否不提示带牌
     selectUICards(tipsCardArray);
     //待出的牌
     MjClient.selectCards_card = tipsCardArray;//MjClient.tipCardsArray[MjClient.tipsIdx].slice();
-    cc.log("------MjClient.selectCards_card----- = "+ JSON.stringify(MjClient.selectCards_card));
+    cc.log("------MjClient.selectCards_card----- = " + JSON.stringify(MjClient.selectCards_card));
 
-    if( (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) && 
-        (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ|| MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ) ){
+    if ((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) &&
+        (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ)) {
 
-        if (tData.areaSelectMode && tData.areaSelectMode.zhaDanBuChai && MjClient.majiang.isZhaDan(tipsCardArray, tData.areaSelectMode) ){
+        if (tData.areaSelectMode && tData.areaSelectMode.zhaDanBuChai && MjClient.majiang.isZhaDan(tipsCardArray, tData.areaSelectMode)) {
             MjClient.showToast("炸弹不可拆");
         }
     }
@@ -3481,8 +3356,7 @@ function putOutCardTips(delDaipai)//delDaipai提示时是否不提示带牌
 }
 
 //弹出选择的牌
-function selectUICards(_tipsCardArray)
-{
+function selectUICards(_tipsCardArray) {
     cc.log("tipsCardArray selectUICards= " + JSON.stringify(_tipsCardArray));
 
     if (MjClient.playui.selectUICards)
@@ -3490,8 +3364,7 @@ function selectUICards(_tipsCardArray)
 
     var tipsCardArray = _tipsCardArray.concat();
 
-    if(!tipsCardArray)
-    {
+    if (!tipsCardArray) {
         return;
     }
 
@@ -3500,15 +3373,13 @@ function selectUICards(_tipsCardArray)
     var children = downNode.getChildren();
     var upSize = standUI.getSize();
     var upS = standUI.scale;
-    var cardY = upSize.width * upS*1.5; //一张牌的长度
-    var cardOut = parseInt(cardY/4);//点击牌弹起的高度,以前是20像素
+    var cardY = upSize.width * upS * 1.5; //一张牌的长度
+    var cardOut = parseInt(cardY / 4);//点击牌弹起的高度,以前是20像素
 
-    if(MjClient.sortClassType == 0)
-    {
+    if (MjClient.sortClassType == 0) {
         setCardToNormalPos();
     }
-    else
-    {
+    else {
         setCardToNormalColor();
     }
 
@@ -3517,47 +3388,37 @@ function selectUICards(_tipsCardArray)
 
     //var _children = children.concat();
 
-    var specialType = (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA || 
+    var specialType = (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA ||
         MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA);
 
-    for(var m = 0; m < children.length; m++)
-    {
-        for(var n = 0;n < tipsCardArray.length;n++)
-        {
-            if(children[m].name == "mjhand")
-            {
-                if(children[m].tag == tipsCardArray[n])
-                {
-                    if(checkUIHave(MjClient.colloctionCurrentSelcetUIArray,children[m]))
-                    {
+    for (var m = 0; m < children.length; m++) {
+        for (var n = 0; n < tipsCardArray.length; n++) {
+            if (children[m].name == "mjhand") {
+                if (children[m].tag == tipsCardArray[n]) {
+                    if (checkUIHave(MjClient.colloctionCurrentSelcetUIArray, children[m])) {
                         break;
                     }
                     tipsCardArray[n] = -1;
                     cc.log("======弹出选择的牌===== colloctionCurrentSelcetUIArray = " + children[m].tag);
                     MjClient.colloctionCurrentSelcetUIArray.push(children[m]);
-                    if(MjClient.sortClassType == 0)
-                    {
+                    if (MjClient.sortClassType == 0) {
                         var pos = children[m].getPosition();
                         var dy = Math.round(pos.y - standUI.y);
-                        if(dy < standUI.y+cardOut && specialType)
-                        {
-                            if(children[m].isUp) children[m].setPositionY(standUI.y*2 + cardOut);
+                        if (dy < standUI.y + cardOut && specialType) {
+                            if (children[m].isUp) children[m].setPositionY(standUI.y * 2 + cardOut);
                             else children[m].setPositionY(standUI.y + cardOut);
                             break;
                         }
-                        else{
-                            if(dy < cardOut)
-                            {
+                        else {
+                            if (dy < cardOut) {
                                 children[m].setPositionY(standUI.y + cardOut);
                                 break;
                             }
                         }
 
                     }
-                    else
-                    {
-                        if(!children[m].isGray)
-                        {
+                    else {
+                        if (!children[m].isGray) {
                             children[m].isGray = true;
                             children[m].setColor(MjClient.grayColor);
                         }
@@ -3613,18 +3474,16 @@ function selectUICards(_tipsCardArray)
 
 
 
-    for(var i  =  0;i < MjClient.colloctionCurrentSelcetUIArray.length;i++)
-    {
+    for (var i = 0; i < MjClient.colloctionCurrentSelcetUIArray.length; i++) {
         var _colloctionUICards = MjClient.colloctionCurrentSelcetUIArray[i];
-        for(var j = 0;j < _colloctionUICards.length;j++) {
+        for (var j = 0; j < _colloctionUICards.length; j++) {
             cc.log("00000==当前变灰的牌" + _colloctionUICards[j].tag);
             cc.log("00000==当前变灰的牌 DATA ：" + _colloctionUICards[j].getUserData());
         }
     }
 
     //弹出牌的时候显示理牌按钮
-    if(MjClient.playui._bg_sort)
-    {
+    if (MjClient.playui._bg_sort) {
         MjClient.playui._bg_sort.getChildByName("Button_sort").visible = true;
         MjClient.isSorting = true;
     }
@@ -3634,14 +3493,13 @@ function selectUICards(_tipsCardArray)
 /*
     没有大过上家的牌，自动过
  */
-function autoSendPass()
-{
+function autoSendPass() {
     MjClient.playui._btnPutCard.visible = false;
     MjClient.playui._btnHimt.visible = false;
     MjClient.playui._btnNoPut.visible = false;
     var delay = 1;
-    var func = function() {
-        PKPassConfirmToServer_card({cmd: "PKPass", autoPass: true});
+    var func = function () {
+        PKPassConfirmToServer_card({ cmd: "PKPass", autoPass: true });
         MjClient.playui.recoverCannotOutCard();
     };
     var actions = cc.sequence(cc.delayTime(delay), cc.callFunc(func));
@@ -3650,77 +3508,74 @@ function autoSendPass()
 }
 
 //初始化提示的牌数组
-function InitPutOutCardTips(off)
-{
+function InitPutOutCardTips(off) {
     cc.log("===InitPutOutCardTips==");
 
     var sData = MjClient.data.sData;
     var tData = sData.tData;
 
-    if(IsTurnToMe() && tData.tState == TableState.waitPut)
-    {
-        if (tData.lastPutPlayer != tData.curPlayer)
-        {
+    if (IsTurnToMe() && tData.tState == TableState.waitPut) {
+        if (tData.lastPutPlayer != tData.curPlayer) {
             var pl = getUIPlayer(off);
-            if(!pl) return;
+            if (!pl) return;
 
             if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
 
                 var pl2 = getUIPlayer(off + 1);
-                var isNextPlayerOneCard = pl2 ? pl2.handCount==1 : false;
+                var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
                 var majiang = MjClient.majiang;
                 var tData = MjClient.data.sData.tData;
 
                 if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI) {
                     var selectData = {}
-                    for(var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
+                    for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
                     var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-                    if(1 == firstPutRuleNum || 3 == firstPutRuleNum) {
+                    if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
                         selectData.firstHeiTao3 = true;  // 必须出黑桃3
-                    } else if(2 == firstPutRuleNum || 4 == firstPutRuleNum){
+                    } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
                         selectData.firstHeiTao3 = false; // 可以不出黑桃3
                     }
 
                     var isFirstRound = tData.roundAll == tData.roundNum;
                     var isSmartTip = true;
-                    MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData, 
+                    MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData,
                         isNextPlayerOneCard, isFirstRound, isSmartTip);
 
-                    if(majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
+                    if (majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
                         majiang.useNewTip = true;
-                        MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData, 
+                        MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData,
                             isNextPlayerOneCard, isFirstRound, majiang.allTipsNoOrder);
                         majiang.useNewTip = false;
                     }
 
-                }else{
+                } else {
                     var mustPutHongTaoSan = tData.areaSelectMode.mustPutHongTaoSan;
                     MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, mustPutHongTaoSan, isNextPlayerOneCard, true);
-                    
-                    if(majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
+
+                    if (majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
                         majiang.useNewTip = true;
-                        MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, mustPutHongTaoSan, 
+                        MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, mustPutHongTaoSan,
                             isNextPlayerOneCard, majiang.allTipsNoOrder);
                         majiang.useNewTip = false;
                     }
                 }
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA || 
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA ||
                 MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
-                MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI ){
+                MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI) {
                 var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, 
+                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,
                     tData.areaSelectMode.chou6, tData.areaSelectMode.daWuZhu27NotTuoLaJi, tData.areaSelectMode.allowTuoLaJiXiaoDui);
-            }else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER){
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
                 var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,tData);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI){
+                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData);
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {
                 var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
                 MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA){
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
                 var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"]);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
-                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
+                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"]);
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
+                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                 MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
                 MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
@@ -3728,38 +3583,34 @@ function InitPutOutCardTips(off)
                 MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
                 MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
                 MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN){
+                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
                 MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, tData.areaSelectMode);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA || 
-                MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA){
+            } else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
                 var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                var bteshutuolaji=tData.areaSelectMode.teshutuolaji;
+                var bteshutuolaji = tData.areaSelectMode.teshutuolaji;
                 var bchou6 = tData.areaSelectMode.chou6;
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,bteshutuolaji,bchou6);
+                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, bteshutuolaji, bchou6);
             }
-            else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA){
+            else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA) {
                 var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"],tData);
-            }else{
+                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"], tData);
+            } else {
                 cc.log("tipCardsArray = ....... lastPutCard = " + JSON.stringify(MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard)));
                 MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard);
             }
 
             MjClient.tipsIdx = 0;//提示第几组牌
-            cc.log("tipCardsArray = "+ JSON.stringify(MjClient.tipCardsArray));
-            cc.log("tipCardsArray = "+ MjClient.tipCardsArray.length);
-            if(MjClient.tipCardsArray.length <= 0)
-            {
+            cc.log("tipCardsArray = " + JSON.stringify(MjClient.tipCardsArray));
+            cc.log("tipCardsArray = " + MjClient.tipCardsArray.length);
+            if (MjClient.tipCardsArray.length <= 0) {
                 //开局是自己出牌时候
-                if (tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1)
-                {
+                if (tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1) {
                     if (MjClient.playui._noPutTips)
                         MjClient.playui._noPutTips.visible = false;
                 }
-                else
-                {
-                    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
-                    {
+                else {
+                    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
                         MjClient.playui._btnPutCard.visible = false;
                         MjClient.playui._btnHimt.visible = false;
                         MjClient.playui._btnNoPut.visible = false;
@@ -3767,8 +3618,8 @@ function InitPutOutCardTips(off)
                         var delay = 0.75;
                         if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ || isJinZhongAPPType())
                             delay = 1.0;
-                            
-                        if ((MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ || 
+
+                        if ((MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ ||
                             MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ ||
                             MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
                             MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
@@ -3779,34 +3630,31 @@ function InitPutOutCardTips(off)
                             MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
                             MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
                             MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) &&
-                            !tData.areaSelectMode.mustPut /*&& getUIPlayer(0).handCount != 1*/)
-                        {
+                            !tData.areaSelectMode.mustPut /*&& getUIPlayer(0).handCount != 1*/) {
                             delay = 3.0;
                         }
 
                         // 跑得必管模式没有牌大过上家不显示“没有牌大过上家”提示，server自动过牌，客户端也不再发送过牌请求
                         var isShouldSendPass = true;
-                        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI && tData.areaSelectMode.mustPut != false){
+                        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI && tData.areaSelectMode.mustPut != false) {
                             delay = 0.1;
                             MjClient.playui._noPutTips.visible = false;
                             // 新增字段，某些地区服务器自动过牌还未同步
-                            if (tData.hadTipCards === false){
+                            if (tData.hadTipCards === false) {
                                 isShouldSendPass = false;
                             }
-                        }else{
+                        } else {
                             MjClient.playui._noPutTips.visible = true;
                             isShouldSendPass = true;
                             //每个游戏可能需求不一样，自己在各自的InitC_Data里赋值
-                            if (MjClient.data.c_Data && MjClient.data.c_Data.bMustputIsAutoPass != undefined)
-                            {
+                            if (MjClient.data.c_Data && MjClient.data.c_Data.bMustputIsAutoPass != undefined) {
                                 isShouldSendPass = MjClient.data.c_Data.bMustputIsAutoPass;
                                 MjClient.playui._btnPutCard.visible = !MjClient.data.c_Data.bMustputIsAutoPass;
                                 MjClient.playui._btnHimt.visible = !MjClient.data.c_Data.bMustputIsAutoPass;
                                 MjClient.playui._btnNoPut.visible = !MjClient.data.c_Data.bMustputIsAutoPass;
                             }
                             //非必管，要不起闹钟显示3秒
-                            if (tData.areaSelectMode.mustPut == false && MjClient.playui._clock)
-                            {
+                            if (tData.areaSelectMode.mustPut == false && MjClient.playui._clock) {
                                 var nodeNum = MjClient.playui._clock.getChildByName("number");
                                 if (nodeNum)
                                     arrowbkNumberUpdate(nodeNum, null, 3);
@@ -3814,24 +3662,22 @@ function InitPutOutCardTips(off)
                         }
 
                         if (isShouldSendPass)
-                            isShouldSendPass = (getUIPlayer(0).trust!=true);
+                            isShouldSendPass = (getUIPlayer(0).trust != true);
 
                         if (isShouldSendPass) {
-                            var func = function() {
-                                PKPassConfirmToServer_card({cmd: "PKPass", autoPass: true, Opt : 1/*自动过*/});
+                            var func = function () {
+                                PKPassConfirmToServer_card({ cmd: "PKPass", autoPass: true, Opt: 1/*自动过*/ });
                                 MjClient.playui.recoverCannotOutCard();
                             };
                             var actions = cc.sequence(cc.delayTime(delay), cc.callFunc(func));
                             actions.setTag(212);
                             MjClient.playui.runAction(actions);
-                        }else{
+                        } else {
                             cc.log("=====not need send pass,server auto pass=====")
                         }
                     }
-                    else
-                    {
-                        if (MjClient.playui._noPutTips)
-                        {
+                    else {
+                        if (MjClient.playui._noPutTips) {
                             MjClient.playui._noPutTips.visible = true;
                             // if(
                             //     MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG ||
@@ -3842,7 +3688,7 @@ function InitPutOutCardTips(off)
                         }
                     }
                 }
-            }else{
+            } else {
                 if (MjClient.playui._noPutTips)
                     MjClient.playui._noPutTips.visible = false;
             }
@@ -3853,13 +3699,12 @@ function InitPutOutCardTips(off)
                 MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
                 MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI
-            )
-            {
+            ) {
                 // 跑得快必管模式没牌可压不置灰
                 var isPaodekuai = GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI
                 var isMustPut = tData.areaSelectMode.mustPut != false
                 var isShouldMakeCardGrey = !(isPaodekuai && isMustPut && MjClient.tipCardsArray.length <= 0)
-                if (isShouldMakeCardGrey){
+                if (isShouldMakeCardGrey) {
                     MjClient.playui.cannotOutCardGrey();
                 }
             }
@@ -3875,103 +3720,102 @@ function InitPutOutCardTips(off)
             //     }
             // }
         }
-        else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
-        {
+        else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
             var pl = getUIPlayer(off);
-            if(!pl) return;
+            if (!pl) return;
             var pl2 = getUIPlayer(off + 1);
-            var isNextPlayerOneCard = pl2 ? pl2.handCount==1 : false;
+            var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
             var majiang = MjClient.majiang;
             var tData = MjClient.data.sData.tData;
 
-            if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI){
-                
+            if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI) {
+
                 var selectData = {}
-                for(var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
+                for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
                 var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-                if(1 == firstPutRuleNum || 3 == firstPutRuleNum) {
+                if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
                     selectData.firstHeiTao3 = true;  // 必须出黑桃3
-                } else if(2 == firstPutRuleNum || 4 == firstPutRuleNum){
+                } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
                     selectData.firstHeiTao3 = false; // 可以不出黑桃3
                 }
 
                 var isFirstRound = tData.roundAll == tData.roundNum;
                 var isSmartTip = true;
-                MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, [], selectData, 
+                MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, [], selectData,
                     isNextPlayerOneCard, isFirstRound, isSmartTip);
 
-                if(majiang.allTipsNoOrder && MjClient.tipCardsArray.length > 0 && !MjClient.selectTipCardsArray) {
+                if (majiang.allTipsNoOrder && MjClient.tipCardsArray.length > 0 && !MjClient.selectTipCardsArray) {
                     majiang.useNewTip = true;
-                    MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, [], selectData, 
+                    MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, [], selectData,
                         isNextPlayerOneCard, isFirstRound, majiang.allTipsNoOrder);
                     majiang.useNewTip = false;
                 }
 
-            }else{
+            } else {
                 var mustPutHongTaoSan = tData.areaSelectMode.mustPutHongTaoSan;
                 MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, [], mustPutHongTaoSan, isNextPlayerOneCard, true);
-            
-                if(majiang.allTipsNoOrder && MjClient.tipCardsArray.length > 0 && !MjClient.selectTipCardsArray) {
+
+                if (majiang.allTipsNoOrder && MjClient.tipCardsArray.length > 0 && !MjClient.selectTipCardsArray) {
                     majiang.useNewTip = true;
-                    MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, [], mustPutHongTaoSan, 
+                    MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, [], mustPutHongTaoSan,
                         isNextPlayerOneCard, majiang.allTipsNoOrder);
                     majiang.useNewTip = false;
                 }
             }
             MjClient.tipsIdx = 0;//提示第几组牌
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA || 
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA ||
             MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW || MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI ||
-             MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO){
+            MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO) {
             var pl = getUIPlayer(off);
-            if(!pl || !pl.mjhand) return;
+            if (!pl || !pl.mjhand) return;
             var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType ,
-                tData.areaSelectMode.chou6,tData.areaSelectMode.daWuZhu27NotTuoLaJi,tData.areaSelectMode.allowTuoLaJiXiaoDui);
+            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,
+                tData.areaSelectMode.chou6, tData.areaSelectMode.daWuZhu27NotTuoLaJi, tData.areaSelectMode.allowTuoLaJiXiaoDui);
             MjClient.tipsIdx = 0;//提示第几组牌
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
             var pl = getUIPlayer(off);
-            if(!pl || !pl.mjhand) return;
+            if (!pl || !pl.mjhand) return;
             var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,tData);
+            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData);
             MjClient.tipsIdx = 0;//提示第几组牌
-        }else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {
             var pl = getUIPlayer(off);
-            if(!pl || !pl.mjhand) return;
-            var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
-            MjClient.tipsIdx = 0;//提示第几组牌
-        }else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA){
-            var pl = getUIPlayer(off);
-            if(!pl || !pl.mjhand) return;
+            if (!pl || !pl.mjhand) return;
             var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
             MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
             MjClient.tipsIdx = 0;//提示第几组牌
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
+            var pl = getUIPlayer(off);
+            if (!pl || !pl.mjhand) return;
+            var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
+            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
+            MjClient.tipsIdx = 0;//提示第几组牌
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE) {
             var pl = getUIPlayer(off);
             MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, tData.areaSelectMode);
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI) {
             var pl = getUIPlayer(off);
             MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, tData.areaSelectMode);
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
             var pl = getUIPlayer(off);
             MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard);
         } else if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K){
+            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
             var pl = getUIPlayer(off);
             MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, tData.areaSelectMode);
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA || 
-            MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA){
+        } else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
+            MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
             var pl = getUIPlayer(off);
-            if(!pl || !pl.mjhand) return;
+            if (!pl || !pl.mjhand) return;
             var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
             MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
             MjClient.tipsIdx = 0;//提示第几组牌
         }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA){
+        else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA) {
             var pl = getUIPlayer(off);
-            if(!pl || !pl.mjhand) return;
+            if (!pl || !pl.mjhand) return;
             var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"],tData);
+            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"], tData);
             MjClient.tipsIdx = 0;//提示第几组牌
         }
     }
@@ -3980,13 +3824,12 @@ function InitPutOutCardTips(off)
 }
 
 // 发牌结束的处理
-function postCardsEnded()
-{
+function postCardsEnded() {
     MjClient.playui.runAction(cc.sequence(cc.delayTime(0.1), cc.callFunc(function () {
         postEvent("PostCardsEnded");
 
         // 连云港的发完牌  要自动提牌
-        if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG||
+        if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG ||
             MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
             var pl = getUIPlayer(0);
             if (!pl) return;
@@ -4006,8 +3849,8 @@ function postCardsToMe(cards) {
     // 设置一个标识 表示当前为发牌动画
     MjClient.playui.isFaPai = 1;
 
-    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.NIU_SHI_BIE && 
-        GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DA_MA_ZI && MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN 
+    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.NIU_SHI_BIE &&
+        GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DA_MA_ZI && MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN
         && MjClient.gameType != MjClient.GAME_TYPE.DA_YE_510K && MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG
         && MjClient.gameType != MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN
         && MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG && MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG
@@ -4017,13 +3860,12 @@ function postCardsToMe(cards) {
         MjClient.originalCardsPositions = [];
 
         // 执行一系列的动作
-        for(var i = 0; i < cards.length; i++) 
-        {
+        for (var i = 0; i < cards.length; i++) {
             var card = cards[i];
             var nowPos = card.getPosition();
             card.setPosition(initPos);
             card.setOpacity(0);
-            
+
             MjClient.originalCardsPositions.push(nowPos);
 
             if (i == cards.length - 1) {
@@ -4035,24 +3877,22 @@ function postCardsToMe(cards) {
                     ),
                     cc.callFunc(function () {
                         MjClient.playui.stopActionByTag(8635921);
-                        
+
                         delete MjClient.playui.isFaPai;
 
                         MjClient.playui.CardLayoutRestore(getNode(0), 0);
 
-                        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI)
-                        {
+                        if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
                             // 计算牌型提示比较耗时，放到播完飞牌动画之后
                             var flyCard = MjClient.playui.getChildByName("playUINode").getChildByName("flyCard");
-                            if (!flyCard || !flyCard.isVisible())
-                            {
+                            if (!flyCard || !flyCard.isVisible()) {
                                 postCardsEnded();
                             }
                         }
                         else
                             postCardsEnded();
                     }
-                )));
+                    )));
             }
             else {
                 card.runAction(cc.sequence(
@@ -4060,29 +3900,29 @@ function postCardsToMe(cards) {
                     cc.spawn(
                         cc.moveTo(0.25, nowPos),
                         cc.fadeIn(0.25))
-                    ));
+                ));
             }
         }
     } else {
         // 发牌初始的位置
         var initPos = cc.p(cc.director.getWinSize().width * 0.5, cc.director.getWinSize().height * 0.5 + 50);
 
-        for(var i = 0; i < cards.length; i++) {
+        for (var i = 0; i < cards.length; i++) {
             cards[i].setOpacity(0);
         }
 
         var cardBackStandBy = [];
         var baseCardBack = null;
-        var screenScale = Math.min(MjClient.size.width/1280,MjClient.size.height/720);
+        var screenScale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
         for (var j = 0; j <= 3; j++) {
             var cardBack = null;
             if (j == 0)
                 cardBack = new ccui.ImageView("playing/shaoyangOptimize/PAIBEI.png");
             else
                 cardBack = baseCardBack.clone();
-            
+
             cardBack.setPosition(initPos);
-            cardBack.setScale(0.6*screenScale);
+            cardBack.setScale(0.6 * screenScale);
             MjClient.playui.addChild(cardBack, 10, "postingCard");
 
             if (j == 0)
@@ -4094,15 +3934,13 @@ function postCardsToMe(cards) {
         var indexFinished = -1;
         var indexNext = -1;
         var moveTimes = 15;
-        var beginMove = function(cardBack)
-        {
+        var beginMove = function (cardBack) {
             if (!cardBack)
                 return;
 
             indexNext++;
 
-            if (indexNext >= cards.length)
-            {
+            if (indexNext >= cards.length) {
                 cardBack.removeFromParent();
 
                 for (var m = cardBackStandBy.length - 1; m >= 0; m--) {
@@ -4120,13 +3958,13 @@ function postCardsToMe(cards) {
             var xDistance = targetPos.x - initPos.x;
             var yDistance = targetPos.y - initPos.y;
             for (var k = 1; k <= moveTimes; k++) {
-                movePositions.push(cc.p(initPos.x + xDistance/moveTimes*k,initPos.y + yDistance/moveTimes*k));
+                movePositions.push(cc.p(initPos.x + xDistance / moveTimes * k, initPos.y + yDistance / moveTimes * k));
             }
 
             var moveIndex = 0;
-            var moveCallBack = function() {
+            var moveCallBack = function () {
                 if (moveIndex <= moveTimes - 1) {
-                    if (moveIndex == moveTimes/3)
+                    if (moveIndex == moveTimes / 3)
                         beginMove(cardBackStandBy.shift());
 
                     this.setPosition(movePositions[moveIndex]);
@@ -4135,8 +3973,7 @@ function postCardsToMe(cards) {
                 } else {
                     indexFinished++;
 
-                    if (indexNext >= cards.length - 1)
-                    {
+                    if (indexNext >= cards.length - 1) {
                         this.removeFromParent();
 
                         for (var m = cardBackStandBy.length - 1; m >= 0; m--) {
@@ -4144,8 +3981,7 @@ function postCardsToMe(cards) {
                         }
                         cardBackStandBy.length = 0;
                     }
-                    else
-                    {
+                    else {
                         this.unscheduleAllCallbacks();
                         cardBackStandBy.push(this);
                         this.setPosition(initPos);
@@ -4169,17 +4005,17 @@ function postCardsToMe(cards) {
 }
 
 // 给其他同志发牌 根据索引来发 off是位置的偏移 added by Joey
-function postCardsToOther(off,cardsCount) {
-    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.NIU_SHI_BIE && 
+function postCardsToOther(off, cardsCount) {
+    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.NIU_SHI_BIE &&
         GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DA_MA_ZI && MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN
         && MjClient.gameType != MjClient.GAME_TYPE.DA_YE_510K && MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG
         && MjClient.gameType != MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN
-        && MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG &&  MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG
+        && MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG && MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG
         && MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K) {
         // 发牌初始的位置
         var initPos = cc.p(cc.director.getWinSize().width * 0.5, cc.director.getWinSize().height * 0.5 + 100);
         var head = getNode_cards(off).getChildByName("head");
-        var point = head.convertToWorldSpace(cc.p(head.width/2, head.height/2));
+        var point = head.convertToWorldSpace(cc.p(head.width / 2, head.height / 2));
         point = head.getParent().convertToNodeSpace(point);
         for (var i = 0; i != 6; i++) {
             var sprBack = new cc.Sprite("playing/shaoyangOptimize/PAIBEI.png");
@@ -4204,7 +4040,7 @@ function postCardsToOther(off,cardsCount) {
         // 发牌初始的位置
         var initPos = cc.p(cc.director.getWinSize().width * 0.5, cc.director.getWinSize().height * 0.5 + 50);
         var head = getNode_cards(off).getChildByName("head");
-        var targetPos = head.convertToWorldSpace(cc.p(head.width/2, head.height/2));
+        var targetPos = head.convertToWorldSpace(cc.p(head.width / 2, head.height / 2));
         targetPos = head.getParent().convertToNodeSpace(targetPos);
 
         var movePositions = [];
@@ -4212,12 +4048,12 @@ function postCardsToOther(off,cardsCount) {
         var xDistance = targetPos.x - initPos.x;
         var yDistance = targetPos.y - initPos.y;
         for (var k = 1; k <= moveTimes; k++) {
-            movePositions.push(cc.p(initPos.x + xDistance/moveTimes*k,initPos.y + yDistance/moveTimes*k));
+            movePositions.push(cc.p(initPos.x + xDistance / moveTimes * k, initPos.y + yDistance / moveTimes * k));
         }
 
         var cardBackStandBy = [];
         var baseCardBack = null;
-        var screenScale = Math.min(MjClient.size.width/1280,MjClient.size.height/720);
+        var screenScale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
         for (var j = 0; j <= 3; j++) {
             var cardBack = null;
             if (j == 0)
@@ -4226,7 +4062,7 @@ function postCardsToOther(off,cardsCount) {
                 cardBack = baseCardBack.clone();
 
             cardBack.setPosition(initPos);
-            cardBack.setScale(0.6*screenScale);
+            cardBack.setScale(0.6 * screenScale);
             MjClient.playui.addChild(cardBack, 10, "postingCard");
 
             if (j == 0)
@@ -4237,15 +4073,13 @@ function postCardsToOther(off,cardsCount) {
 
         var indexFinished = -1;
         var indexNext = -1;
-        var beginMove = function(cardBack)
-        {
+        var beginMove = function (cardBack) {
             if (!cardBack)
                 return;
 
             indexNext++;
 
-            if (indexNext >= cardsCount)
-            {
+            if (indexNext >= cardsCount) {
                 cardBack.removeFromParent();
 
                 for (var m = cardBackStandBy.length - 1; m >= 0; m--) {
@@ -4259,9 +4093,9 @@ function postCardsToOther(off,cardsCount) {
             cardBack.zIndex += indexNext;
 
             var moveIndex = 0;
-            var moveCallBack = function() {
+            var moveCallBack = function () {
                 if (moveIndex <= moveTimes - 1) {
-                    if (moveIndex == moveTimes/3)
+                    if (moveIndex == moveTimes / 3)
                         beginMove(cardBackStandBy.shift());
 
                     this.setPosition(movePositions[moveIndex]);
@@ -4270,8 +4104,7 @@ function postCardsToOther(off,cardsCount) {
                 } else {
                     indexFinished++;
 
-                    if (indexNext >= cardsCount - 1)
-                    {
+                    if (indexNext >= cardsCount - 1) {
                         this.removeFromParent();
 
                         for (var m = cardBackStandBy.length - 1; m >= 0; m--) {
@@ -4279,8 +4112,7 @@ function postCardsToOther(off,cardsCount) {
                         }
                         cardBackStandBy.length = 0;
                     }
-                    else
-                    {
+                    else {
                         this.unscheduleAllCallbacks();
                         cardBackStandBy.push(this);
                         this.setPosition(initPos);
@@ -4294,15 +4126,15 @@ function postCardsToOther(off,cardsCount) {
     }
 }
 
-function playPostCardAnim(){
-    if(MjClient.rePlayVideo != -1){
+function playPostCardAnim() {
+    if (MjClient.rePlayVideo != -1) {
         return
     }
     var tData = MjClient.data.sData.tData;
 
     var unit = tData.areaSelectMode.postCardsWay == 0 ? 1 : 4;
-    var cardCount = tData.areaSelectMode.jokerNum == 4 ? 108 : 112 ;
-    var _perCardsCount = cardCount/MjClient.MaxPlayerNum;
+    var cardCount = tData.areaSelectMode.jokerNum == 4 ? 108 : 112;
+    var _perCardsCount = cardCount / MjClient.MaxPlayerNum;
 
     var _index = null;
     var _uioff = null;
@@ -4315,31 +4147,31 @@ function playPostCardAnim(){
     var cardNext = {};
     var children = {};
 
-    var screenScale = Math.min(MjClient.size.width/1280,MjClient.size.height/720);
+    var screenScale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
 
-    function _finishedExe(){
+    function _finishedExe() {
         MjClient.playui.CardLayoutRestore(getNode(0), 0);
         delete MjClient.playui.isFaPai;
-        postCardsEnded();  
+        postCardsEnded();
     }
 
-    function _generate(cardBackStandBy, destPos){
-        for(var _item = 0; _item < cardBackStandBy.length; _item++){
+    function _generate(cardBackStandBy, destPos) {
+        for (var _item = 0; _item < cardBackStandBy.length; _item++) {
 
-            cardBackStandBy[_item].runAction(cc.sequence(cc.delayTime(0.135 +(_item*0.03)), cc.moveTo(0.4+0.1/**_item*/, destPos), cc.callFunc(function(){
+            cardBackStandBy[_item].runAction(cc.sequence(cc.delayTime(0.135 + (_item * 0.03)), cc.moveTo(0.4 + 0.1/**_item*/, destPos), cc.callFunc(function () {
 
-                if(this.indexTag == cardCount - 1){
+                if (this.indexTag == cardCount - 1) {
                     _finishedExe();
                 }
 
-                if(this.uiOff == 0){
-                    if(children[this._itemIndex]){
-                       children[this._itemIndex].setOpacity(255);
+                if (this.uiOff == 0) {
+                    if (children[this._itemIndex]) {
+                        children[this._itemIndex].setOpacity(255);
                     }
                 }
 
                 this.removeFromParent();
-                
+
             }.bind(cardBackStandBy[_item]))));
         }
         cardBackStandBy = [];
@@ -4347,55 +4179,55 @@ function playPostCardAnim(){
 
     var _count = 0
 
-    var sendCards = function(){
-        if(_count == cardCount){
-            return ;
+    var sendCards = function () {
+        if (_count == cardCount) {
+            return;
         }
 
-        for(var i = 0; i < MjClient.MaxPlayerNum; i++){
-            _index = (i + tData.zhuang + MjClient.MaxPlayerNum)%MjClient.MaxPlayerNum;
+        for (var i = 0; i < MjClient.MaxPlayerNum; i++) {
+            _index = (i + tData.zhuang + MjClient.MaxPlayerNum) % MjClient.MaxPlayerNum;
             _uioff = getUiOffByUid(tData.uids[_index]);
             _node = getNode(_uioff);
 
-            if(!cardNext[_uioff] && _uioff == 0){
+            if (!cardNext[_uioff] && _uioff == 0) {
                 children = _node.children;
 
-                children.sort(function(n1, n2) {
+                children.sort(function (n1, n2) {
                     if (n1.x > n2.x) return -1;
                     else return 1;
                 });
 
-                children = children.filter(function(node) {
+                children = children.filter(function (node) {
                     return node.isPKImg;
                 });
 
-                for(var n = 0; n < children.length; n++) {
+                for (var n = 0; n < children.length; n++) {
                     children[n].setOpacity(0);
                 }
             }
 
-            (function(uioff){
+            (function (uioff) {
                 var cardBackStandBy = [];
                 var baseCardBack = null;
                 var _uioff = uioff;
-            
-                for(var j = 0; j < unit; j++){
 
-                    if(cardNext[_uioff]){
+                for (var j = 0; j < unit; j++) {
+
+                    if (cardNext[_uioff]) {
                         cardNext[_uioff]++;
-                    }else{
+                    } else {
                         cardNext[_uioff] = 1;
                     }
                     cc.log("----66+++++_uioff---cardNext-", _uioff, cardNext[_uioff])
                     var head = getNode_cards(_uioff).getChildByName("head");
-                    var destPos = head.convertToWorldSpace(cc.p(head.width/2, head.height/2));
+                    var destPos = head.convertToWorldSpace(cc.p(head.width / 2, head.height / 2));
                     destPos = head.getParent().convertToNodeSpace(destPos);
-                    
-                    if(cardNext[_uioff] > _perCardsCount){
+
+                    if (cardNext[_uioff] > _perCardsCount) {
                         return;
                     }
 
-                    if(_uioff == 0 ){
+                    if (_uioff == 0) {
                         destPos = children[cardNext[_uioff] - 1].getPosition();
                     }
 
@@ -4404,51 +4236,51 @@ function playPostCardAnim(){
                         cardBack = new ccui.ImageView("playing/shaoyangOptimize/PAIBEI.png");
                     else
                         cardBack = baseCardBack.clone();
-                    
+
                     var _Pos = srcPos;
 
                     cardBack.setPosition(_Pos);
-                    cardBack.setScale(0.6*screenScale);
+                    cardBack.setScale(0.6 * screenScale);
                     cardBack.indexTag = _count;
                     cardBack.uiOff = _uioff;
                     cardBack._itemIndex = cardNext[_uioff] - 1;
                     MjClient.playui.addChild(cardBack, 10, "postingCard");
 
-                    if (j == 0){
+                    if (j == 0) {
                         baseCardBack = cardBack;
                     }
 
                     cardBackStandBy.push(cardBack);
 
-                    if(tData.areaSelectMode.postCardsWay == 0){
-                        var _time = cardNext[_uioff]%3;
-                        cardBack.runAction(cc.sequence(cc.delayTime(0.135 +(_time*0.03)), cc.moveTo(0.4/*+_time*0.03*/, destPos), cc.callFunc(function(){
+                    if (tData.areaSelectMode.postCardsWay == 0) {
+                        var _time = cardNext[_uioff] % 3;
+                        cardBack.runAction(cc.sequence(cc.delayTime(0.135 + (_time * 0.03)), cc.moveTo(0.4/*+_time*0.03*/, destPos), cc.callFunc(function () {
 
-                            if(cardBack.indexTag == cardCount - 1){
+                            if (cardBack.indexTag == cardCount - 1) {
                                 _finishedExe();
                             }
-                            if(cardBack.uiOff == 0){
-                                if(children[cardBack._itemIndex]){
-                                   children[cardBack._itemIndex].setOpacity(255);
+                            if (cardBack.uiOff == 0) {
+                                if (children[cardBack._itemIndex]) {
+                                    children[cardBack._itemIndex].setOpacity(255);
                                 }
                             }
                             //cc.removeSelf();
                             cardBack.removeFromParent();
                             cardBackStandBy = [];
                         })));
-                    }else{
-                        if(tData.areaSelectMode.jokerNum == 4){//每人27张的
-                            if(cardNext[_uioff] >= _perCardsCount){
-                                if( j == unit - 2){
+                    } else {
+                        if (tData.areaSelectMode.jokerNum == 4) {//每人27张的
+                            if (cardNext[_uioff] >= _perCardsCount) {
+                                if (j == unit - 2) {
                                     _generate(cardBackStandBy, destPos)
                                 }
-                            }else{
-                                if( j == unit - 1){
+                            } else {
+                                if (j == unit - 1) {
                                     _generate(cardBackStandBy, destPos)
                                 }
                             }
-                        }else{
-                            if(j == unit -1){
+                        } else {
+                            if (j == unit - 1) {
                                 _generate(cardBackStandBy, destPos)
                                 // cc.log("-----555dfff-j---_uioff----",j, _uioff, _perCardsCount);
                                 // (function(cardBackStandBy){
@@ -4464,21 +4296,22 @@ function playPostCardAnim(){
             })(_uioff);
         }
 
-        if(_count == cardCount){
-            return ;
+        if (_count == cardCount) {
+            return;
         }
 
         MjClient.playui.scheduleOnce(sendCards, _roundDelayTime);
     }
 
     sendCards();
- 
+
 }
 
 // 添加发牌动画
-function showPostCardAnimation() {
-    var  isHaveRes = jsb.fileUtils.isFileExist('playing/shaoyangOptimize/PAIBEI.png');
-    
+function showPostCardAnimation(url) {
+    if (!url) url = 'playing/shaoyangOptimize/PAIBEI.png'
+    var isHaveRes = jsb.fileUtils.isFileExist(url);
+
     if (isHaveRes && MjClient.rePlayVideo == -1) {
         // 先设置自己发牌的动画
         // 获取所有的牌
@@ -4486,13 +4319,13 @@ function showPostCardAnimation() {
         var children = node.children;
 
         // 对牌进行x的位置关系进行排序
-        children.sort(function(n1, n2) {
+        children.sort(function (n1, n2) {
             if (n1.x > n2.x) return -1;
             else return 1;
         });
 
         // 剔除不是牌的child
-        children = children.filter(function(node) {
+        children = children.filter(function (node) {
             return node.isPKImg;
         });
 
@@ -4501,7 +4334,7 @@ function showPostCardAnimation() {
         // 给其他玩家发牌动画
         for (var i = 1; i != 4; i++) {
             if (getNode(i).visible) {
-                postCardsToOther(i,children.length);
+                postCardsToOther(i, children.length);
             }
         }
 
@@ -4515,16 +4348,15 @@ function showPostCardAnimation() {
 
                 var node = getNode(0);
                 var child = node.children;
-                child.sort(function(n1, n2) {
+                child.sort(function (n1, n2) {
                     if (n1.x > n2.x) return -1;
                     else return 1;
                 });
-                child = child.filter(function(node) {
+                child = child.filter(function (node) {
                     return node.isPKImg;
                 });
 
-                for(var i = 0; i < child.length; i++)
-                {
+                for (var i = 0; i < child.length; i++) {
                     child[i].setOpacity(255);
                     child[i].setPosition(MjClient.originalCardsPositions[i]);
                 }
@@ -4533,8 +4365,7 @@ function showPostCardAnimation() {
 
                 // 计算牌型提示比较耗时，放到播完飞牌动画之后
                 var flyCard = MjClient.playui.getChildByName("playUINode").getChildByName("flyCard");
-                if (!flyCard || !flyCard.isVisible())
-                {
+                if (!flyCard || !flyCard.isVisible()) {
                     postCardsEnded();
                 }
             }));
@@ -4546,8 +4377,8 @@ function showPostCardAnimation() {
 
 // 添加三打哈发牌动画
 function showSanDaHaPostCardAnimation() {
-    var  isHaveRes = jsb.fileUtils.isFileExist('playing/shaoyangOptimize/PAIBEI.png');
-    
+    var isHaveRes = jsb.fileUtils.isFileExist('playing/shaoyangOptimize/PAIBEI.png');
+
     if (isHaveRes && MjClient.rePlayVideo == -1) {
         // 设置一个标识 表示当前为发牌动画
         MjClient.playui.isFaPai = 1;
@@ -4557,13 +4388,13 @@ function showSanDaHaPostCardAnimation() {
         var children = node.children;
 
         // 剔除不是牌的child
-        children = children.filter(function(node) {
+        children = children.filter(function (node) {
             return node.isPKImg;
         });
 
         // 隐藏手牌
         var cardCount = children.length;
-        for(var i = 0; i < cardCount; i++) {
+        for (var i = 0; i < cardCount; i++) {
             children[i].setOpacity(0);
         }
 
@@ -4573,19 +4404,19 @@ function showSanDaHaPostCardAnimation() {
         var cardBacks = [];
         var indexGenerated = 0;
         var baseZorder = 10;
-        var screenScale = Math.min(MjClient.size.width/1280,MjClient.size.height/720);
+        var screenScale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
         var radius = 80 * screenScale;
         var center = cc.p(MjClient.size.width * 0.5, MjClient.size.height * 0.5);
         var baseAngle = -360 / totalCount;
 
-        var uiOffs = [0,1,2,3];
+        var uiOffs = [0, 1, 2, 3];
         if (MjClient.MaxPlayerNum < 4)
-            uiOffs.splice(2,1);
+            uiOffs.splice(2, 1);
 
         var targetPoints = [];
         for (var i = 0; i < MjClient.MaxPlayerNum; i++) {
             var head = getNode_cards(uiOffs[i]).getChildByName("head");
-            var targetPos = head.convertToWorldSpace(cc.p(head.width/2, head.height/2));
+            var targetPos = head.convertToWorldSpace(cc.p(head.width / 2, head.height / 2));
             targetPos = head.getParent().convertToNodeSpace(targetPos);
 
             targetPoints.push(targetPos);
@@ -4595,14 +4426,14 @@ function showSanDaHaPostCardAnimation() {
         MjClient.playui.addChild(scheduleNode, 0, "postingCard");
 
         var baseCardBack = new ccui.ImageView("playing/shaoyangOptimize/PAIBEI.png");
-        baseCardBack.setScale(0.7*screenScale);
+        baseCardBack.setScale(0.7 * screenScale);
         MjClient.playui.addChild(baseCardBack, baseZorder, "postingCard");
 
         // 开始移动一张牌
-        var beginMove = function(cardIndex,uiIndex) {
+        var beginMove = function (cardIndex, uiIndex) {
             if (!MjClient.playui.isFaPai)
                 return;
-            
+
             var cardBack = cardBacks[cardIndex];
             var cardBackPos = cardBack.getPosition();
             var controlPoints = [
@@ -4611,37 +4442,37 @@ function showSanDaHaPostCardAnimation() {
                 targetPoints[uiIndex]
             ];
 
-            var action = cc.spawn(cc.bezierTo(0.5, controlPoints).easing(cc.easeSineOut()),cc.rotateBy(0.5, -cardBack.getRotation()).easing(cc.easeSineOut()));
+            var action = cc.spawn(cc.bezierTo(0.5, controlPoints).easing(cc.easeSineOut()), cc.rotateBy(0.5, -cardBack.getRotation()).easing(cc.easeSineOut()));
             if (cardIndex == 0) {
-                action = cc.sequence(action, cc.callFunc(function() {
-                        MjClient.playui.isFaPai = 0;
+                action = cc.sequence(action, cc.callFunc(function () {
+                    MjClient.playui.isFaPai = 0;
 
-                        // 发牌结束
-                        scheduleNode.unscheduleAllCallbacks();
+                    // 发牌结束
+                    scheduleNode.unscheduleAllCallbacks();
 
-                        // 清空动画
-                        clearPostingCards();
-                        cardBacks = null;
+                    // 清空动画
+                    clearPostingCards();
+                    cardBacks = null;
 
-                        // 显示手牌
-                        for(var i = 0; i < cardCount; i++) {
-                            children[i].setOpacity(255);
-                        }
-
-                        // 弹出叫分面板
-                        var tData = MjClient.data.sData.tData;
-                        if (tData.tState == TableState.waitJiaoFen) {   // 叫分
-                            MjClient.playui.showJiaoFenPanel();
-                            MjClient.playui.showWaitTip();
-                        }
+                    // 显示手牌
+                    for (var i = 0; i < cardCount; i++) {
+                        children[i].setOpacity(255);
                     }
+
+                    // 弹出叫分面板
+                    var tData = MjClient.data.sData.tData;
+                    if (tData.tState == TableState.waitJiaoFen) {   // 叫分
+                        MjClient.playui.showJiaoFenPanel();
+                        MjClient.playui.showWaitTip();
+                    }
+                }
                 ))
             }
             cardBack.runAction(action);
         }
 
         var postedPerDir = {}
-        var postCards = function(uiIndex) {
+        var postCards = function (uiIndex) {
             if (uiIndex >= MjClient.MaxPlayerNum)
                 return;
 
@@ -4655,14 +4486,14 @@ function showSanDaHaPostCardAnimation() {
 
                 var cardIndex = (MjClient.MaxPlayerNum - uiIndex) * cardCountPerDir - postedPerDir[uiIndex];
 
-                beginMove(cardIndex,uiIndex);
+                beginMove(cardIndex, uiIndex);
             }
         }
 
-        var doSomething = function() {
+        var doSomething = function () {
             if (indexGenerated < totalCount) {
                 // 摆牌
-                for (var i  = 1; i <= cardCountPerFrame; i++) {
+                for (var i = 1; i <= cardCountPerFrame; i++) {
                     indexGenerated++;
 
                     var cardBack = null;
@@ -4675,9 +4506,9 @@ function showSanDaHaPostCardAnimation() {
                         cardBack = baseCardBack;
 
                     var rotateAngle = indexGenerated * baseAngle;
-                    var realAngle = (rotateAngle-90)*Math.PI/180;
+                    var realAngle = (rotateAngle - 90) * Math.PI / 180;
                     cardBack.setRotation(Math.abs(rotateAngle));
-                    cardBack.setPosition(cc.p(center.x + radius * Math.cos(realAngle),center.y + radius * Math.sin(realAngle)));
+                    cardBack.setPosition(cc.p(center.x + radius * Math.cos(realAngle), center.y + radius * Math.sin(realAngle)));
 
                     cardBacks.push(cardBack);
                 }
@@ -4712,54 +4543,52 @@ function clearPostingCards() {
     delete MjClient.playui.isFaPai;
 
     var children = MjClient.playui.children;
-    for(var i = 0; i < children.length; i++)
-    {
+    for (var i = 0; i < children.length; i++) {
         var ni = children[i];
 
-        if(ni.name == "postingCard")
+        if (ni.name == "postingCard")
             ni.removeFromParent();
     }
 }
 
-function playCardAni_Hu(UIoff)
-{
+function playCardAni_Hu(UIoff) {
     var speed = 0.8;
     var node = getNode_cards(UIoff);
 
     var anmPic = cc.Sprite("playing/paohuzi/ani/hu/ani_hu10.png");
-    for (var i = 9; i >= 0; i --) {
+    for (var i = 9; i >= 0; i--) {
         anmPic.setTexture("playing/paohuzi/ani/hu/ani_hu" + i + ".png");
     }
 
-    var p = cc.p(MjClient.size.width/2, MjClient.size.height * 0.55);
+    var p = cc.p(MjClient.size.width / 2, MjClient.size.height * 0.55);
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     anmPic.setScale(scale * 1.2);
 
     if (UIoff == 0)
-        anmPic.setPosition(0, -anmPic.height*scale);
+        anmPic.setPosition(0, -anmPic.height * scale);
     else if (UIoff == 1)
-        anmPic.setPosition(MjClient.size.width + anmPic.width*scale, MjClient.size.height * 0.9);
+        anmPic.setPosition(MjClient.size.width + anmPic.width * scale, MjClient.size.height * 0.9);
     else if (UIoff == 2)
-        anmPic.setPosition(0, MjClient.size.height + anmPic.height*scale);
+        anmPic.setPosition(0, MjClient.size.height + anmPic.height * scale);
     else if (UIoff == 3)
-        anmPic.setPosition(-anmPic.width*scale, MjClient.size.height * 0.9);
-    
+        anmPic.setPosition(-anmPic.width * scale, MjClient.size.height * 0.9);
 
-    node.addChild(anmPic,9999);
+
+    node.addChild(anmPic, 9999);
     anmPic.setRotation(180);
     var zhadanIndex = 0;
     var startP = anmPic.getPosition();
     anmPic.runAction(cc.sequence(
         cc.delayTime(0.2 * speed),
         cc.spawn(
-            cc.bezierTo(0.5 * speed, [startP, cc.p((startP.x + p.y)/2, (startP.y + p.y)/2 + 100 * scale), p]),
+            cc.bezierTo(0.5 * speed, [startP, cc.p((startP.x + p.y) / 2, (startP.y + p.y) / 2 + 100 * scale), p]),
             cc.rotateTo(0.5 * speed, 0)
         ),
         cc.repeat(cc.sequence(
             cc.delayTime(0.05 * speed),
-            cc.callFunc(function() {
-                zhadanIndex ++;
+            cc.callFunc(function () {
+                zhadanIndex++;
                 anmPic.setTexture("playing/paohuzi/ani/hu/ani_hu" + zhadanIndex + ".png");
                 // if (zhadanIndex == 9){
                 //     playEffectInPlay("ani_zhadan");
@@ -4772,35 +4601,34 @@ function playCardAni_Hu(UIoff)
     ));
 }
 
-function playCardAni_huangZhuang(UIoff)
-{
+function playCardAni_huangZhuang(UIoff) {
     var UIoff = 0
     var speed = 0.8;
     var node = getNode_cards(UIoff);
 
     var anmPic = cc.Sprite("playing/paohuzi/ani/haungzhuang/1.png");
-    for (var i = 2; i <=12; i++) {
+    for (var i = 2; i <= 12; i++) {
         anmPic.setTexture("playing/paohuzi/ani/haungzhuang/" + i + ".png");
     }
 
-    var p = cc.p(MjClient.size.width/2, MjClient.size.height * 0.55);
+    var p = cc.p(MjClient.size.width / 2, MjClient.size.height * 0.55);
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     anmPic.setScale(scale * 1.2);
 
     if (UIoff == 0)
-        anmPic.setPosition(0, -anmPic.height*scale);
+        anmPic.setPosition(0, -anmPic.height * scale);
     else if (UIoff == 1)
-        anmPic.setPosition(MjClient.size.width + anmPic.width*scale, MjClient.size.height * 0.9);
+        anmPic.setPosition(MjClient.size.width + anmPic.width * scale, MjClient.size.height * 0.9);
     else if (UIoff == 2)
-        anmPic.setPosition(0, MjClient.size.height + anmPic.height*scale);
+        anmPic.setPosition(0, MjClient.size.height + anmPic.height * scale);
     else if (UIoff == 3)
-        anmPic.setPosition(-anmPic.width*scale, MjClient.size.height * 0.9);
+        anmPic.setPosition(-anmPic.width * scale, MjClient.size.height * 0.9);
 
-    
+
     anmPic.setPosition(p)
 
-    node.addChild(anmPic,9999);
+    node.addChild(anmPic, 9999);
     anmPic.setRotation(180);
     var zhadanIndex = 1;
     var startP = anmPic.getPosition();
@@ -4808,8 +4636,8 @@ function playCardAni_huangZhuang(UIoff)
         cc.delayTime(0.2 * speed),
         cc.repeat(cc.sequence(
             cc.delayTime(0.05 * speed),
-            cc.callFunc(function() {
-                zhadanIndex ++;
+            cc.callFunc(function () {
+                zhadanIndex++;
                 anmPic.setTexture("playing/paohuzi/ani/haungzhuang/" + zhadanIndex + ".png");
                 // if (zhadanIndex == 9)
                 //     playEffectInPlay("ani_zhadan");
@@ -4822,72 +4650,67 @@ function playCardAni_huangZhuang(UIoff)
 
     var zhadanPic = cc.Sprite("playing/paohuzi/ani/haungzhuang/huangzhuang_liuju.png");
     zhadanPic.setPosition(p);
-    node.addChild(zhadanPic,9999);
+    node.addChild(zhadanPic, 9999);
     //zhadanPic.setOpacity(0);
     zhadanPic.setScale(0.1 * scale);
     zhadanPic.runAction(cc.sequence(
-        cc.sequence(cc.delayTime(0.2 * speed), cc.scaleTo(0.7*speed, 1*scale), 
-             cc.scaleTo(0.3*speed, 0.5*scale), cc.scaleTo(0.2*speed, 1*scale) ).repeat(1),
+        cc.sequence(cc.delayTime(0.2 * speed), cc.scaleTo(0.7 * speed, 1 * scale),
+            cc.scaleTo(0.3 * speed, 0.5 * scale), cc.scaleTo(0.2 * speed, 1 * scale)).repeat(1),
 
         cc.delayTime(0.1 * speed),
         cc.removeSelf())
     );
 }
 
-function playCardAni_siwang(UIoff)
-{
-    cc.spriteFrameCache.addSpriteFrames("playing/cardTable/siwang.plist","playing/cardTable/siwang.png");
+function playCardAni_siwang(UIoff) {
+    cc.spriteFrameCache.addSpriteFrames("playing/cardTable/siwang.plist", "playing/cardTable/siwang.png");
     var _frames = [];
     var prefix = "img_siwang_";
     var fc = cc.spriteFrameCache;
     for (var i = 1; i <= 16; i++) {
         var name = prefix + i + ".png";
         var f = fc.getSpriteFrame(name);
-        if(f)
-        {
+        if (f) {
             _frames.push(f);
         }
     }
 
     var _sprite = cc.Sprite();
-    var _animate = cc.animate(new cc.Animation(_frames, 1.5/16, 1));
-    _sprite.runAction(cc.sequence( _animate,cc.removeSelf()));
+    var _animate = cc.animate(new cc.Animation(_frames, 1.5 / 16, 1));
+    _sprite.runAction(cc.sequence(_animate, cc.removeSelf()));
     _sprite.initWithSpriteFrame(_frames[0]);
     var _node = getNode_cards(UIoff);
     var _nodeAni = _node.getChildByName("deskCard");
-    _sprite.setScale(_nodeAni.getScale()*4);
-    _sprite.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y+_sprite.getContentSize().height/4);
-    _node.addChild(_sprite,9999);
+    _sprite.setScale(_nodeAni.getScale() * 4);
+    _sprite.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y + _sprite.getContentSize().height / 4);
+    _node.addChild(_sprite, 9999);
 }
 
-function playCardAni_tonghuashun(UIoff)
-{
-    cc.spriteFrameCache.addSpriteFrames("playing/cardTable/tonghuashunAni.plist","playing/cardTable/tonghuashunAni.png");
+function playCardAni_tonghuashun(UIoff) {
+    cc.spriteFrameCache.addSpriteFrames("playing/cardTable/tonghuashunAni.plist", "playing/cardTable/tonghuashunAni.png");
     var _frames = [];
     var prefix = "img_tonghuashun_";
     var fc = cc.spriteFrameCache;
     for (var i = 1; i <= 13; i++) {
         var name = prefix + i + ".png";
         var f = fc.getSpriteFrame(name);
-        if(f)
-        {
+        if (f) {
             _frames.push(f);
         }
     }
     var _sprite = cc.Sprite();
     _sprite.initWithSpriteFrame(_frames[0]);
-    var _animate = cc.animate(new cc.Animation(_frames, 1.2/13, 1));
-    _sprite.runAction(cc.sequence( _animate,cc.removeSelf()));
+    var _animate = cc.animate(new cc.Animation(_frames, 1.2 / 13, 1));
+    _sprite.runAction(cc.sequence(_animate, cc.removeSelf()));
 
     var _node = getNode_cards(UIoff);
     var _nodeAni = _node.getChildByName("deskCard");
-    _sprite.setScale(_nodeAni.getScale()*4);
-    _sprite.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y+_sprite.getContentSize().height/4);
-    _node.addChild(_sprite,9999);
+    _sprite.setScale(_nodeAni.getScale() * 4);
+    _sprite.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y + _sprite.getContentSize().height / 4);
+    _node.addChild(_sprite, 9999);
 }
 
-function playCardAni_xunhangdaodan(UIoff) 
-{
+function playCardAni_xunhangdaodan(UIoff) {
     var sp = new cc.Sprite("playing/Ani/xunhangdaodan/0.png");
     var ac = createAnimation("playing/Ani/xunhangdaodan/", 14, cc.rect(0, 0, 382, 278), 0.1);
     sp.runAction(cc.sequence(ac, cc.delayTime(0.1), cc.removeSelf()));
@@ -4899,70 +4722,65 @@ function playCardAni_xunhangdaodan(UIoff)
     node.addChild(sp, 9999);
 }
 
-function playCardAni_tonghuashun_PDK(UIoff)
-{
-    cc.spriteFrameCache.addSpriteFrames("playing/cardTable/tonghuashunAni_PDK.plist","playing/cardTable/tonghuashunAni_PDK.png");
+function playCardAni_tonghuashun_PDK(UIoff) {
+    cc.spriteFrameCache.addSpriteFrames("playing/cardTable/tonghuashunAni_PDK.plist", "playing/cardTable/tonghuashunAni_PDK.png");
     var _frames = [];
     var prefix = "img_tonghuashun_PDK_";
     var fc = cc.spriteFrameCache;
     for (var i = 1; i <= 13; i++) {
         var name = prefix + i + ".png";
         var f = fc.getSpriteFrame(name);
-        if(f)
-        {
+        if (f) {
             _frames.push(f);
         }
     }
     var _sprite = cc.Sprite();
     _sprite.initWithSpriteFrame(_frames[0]);
-    var _animate = cc.animate(new cc.Animation(_frames, 1.2/13, 1));
-    _sprite.runAction(cc.sequence( _animate,cc.removeSelf()));
+    var _animate = cc.animate(new cc.Animation(_frames, 1.2 / 13, 1));
+    _sprite.runAction(cc.sequence(_animate, cc.removeSelf()));
 
     var _node = getNode_cards(UIoff);
     var _nodeAni = _node.getChildByName("deskCard");
-    _sprite.setScale(_nodeAni.getScale()*4);
-    _sprite.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y+_sprite.getContentSize().height/4);
-    _node.addChild(_sprite,9999);
+    _sprite.setScale(_nodeAni.getScale() * 4);
+    _sprite.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y + _sprite.getContentSize().height / 4);
+    _node.addChild(_sprite, 9999);
 }
 
-function playCardAni_chuntian(UIoff)
-{
+function playCardAni_chuntian(UIoff) {
     if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU) {
         return;
     }
 
-    cc.spriteFrameCache.addSpriteFrames("playing/cardTable/chuntian.plist","playing/cardTable/chuntian.png");
+    cc.spriteFrameCache.addSpriteFrames("playing/cardTable/chuntian.plist", "playing/cardTable/chuntian.png");
     var _frames = [];
     var prefix = "lord_anim_spring_";
     var fc = cc.spriteFrameCache;
     for (var i = 1; i <= 17; i++) {
         var name = prefix + i + ".png";
         var f = fc.getSpriteFrame(name);
-        if(f)
-        {
+        if (f) {
             _frames.push(f);
         }
     }
     var _sprite = cc.Sprite();
     _sprite.initWithSpriteFrame(_frames[0]);
-    var _animate = cc.animate(new cc.Animation(_frames, 1.2/13, 1));
-    _sprite.runAction(cc.sequence( _animate,cc.removeSelf()));
+    var _animate = cc.animate(new cc.Animation(_frames, 1.2 / 13, 1));
+    _sprite.runAction(cc.sequence(_animate, cc.removeSelf()));
 
     var _node = getNode_cards(UIoff);
     var _nodeAni = _node.getChildByName("deskCard");
-    _sprite.setScale(_nodeAni.getScale()*1.5);
+    _sprite.setScale(_nodeAni.getScale() * 1.5);
     _sprite.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
-    _node.addChild(_sprite,9999);
+    _node.addChild(_sprite, 9999);
 }
-function playCardAni_feiji(cards,UIoff)
-{
+function playCardAni_feiji(cards, UIoff) {
     if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
         playEffectInPlay("ani_feiji");
 
         var anmPic = cc.Sprite("playing/shaoyangOptimize/feiji.png");
         var _node = getNode_cards(UIoff);
         var _nodeAni = _node.getChildByName("deskCard");
-        anmPic.setScale(_nodeAni.getScale()*2);
+        anmPic.setScale(_nodeAni.getScale() * 2);
         // 需要根据当前的位置以及牌的数量调整图片x坐标 added by Joey
         var xOffset = 0;
         if (UIoff == 2) {// 左上角
@@ -4972,7 +4790,7 @@ function playCardAni_feiji(cards,UIoff)
             xOffset = -35 - cards.length * 1;
         }
         anmPic.setPosition(_nodeAni.getPosition().x - 40 + xOffset, _nodeAni.getPosition().y - 30);
-        _node.addChild(anmPic,9999);
+        _node.addChild(anmPic, 9999);
         anmPic.runAction(cc.sequence(
             cc.moveBy(0.3, 40, 0),
             cc.delayTime(1.5),
@@ -4990,8 +4808,8 @@ function playCardAni_feiji(cards,UIoff)
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU&&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN){
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU &&
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
             return;
         }
 
@@ -5008,14 +4826,14 @@ function playCardAni_feiji(cards,UIoff)
         _armature.animation.play("Animation1");    // 站立
         var _node = getNode_cards(UIoff);
         var _nodeAni = _node.getChildByName("deskCard");
-        _armature.setScale(_nodeAni.getScale()*1.5);
-        _armature.setPosition(cc.winSize.width/2, cc.winSize.height/2);
-        _node.addChild(_armature,9999);
+        _armature.setScale(_nodeAni.getScale() * 1.5);
+        _armature.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
+        _node.addChild(_armature, 9999);
 
         var a1 = cc.fadeOut(1);
-        var b1 = cc.moveBy(0.5,cc.p(-cc.winSize.width/4,0));
+        var b1 = cc.moveBy(0.5, cc.p(-cc.winSize.width / 4, 0));
 
-        var seq = cc.sequence(cc.delayTime(1),cc.spawn(b1,a1),cc.removeSelf());
+        var seq = cc.sequence(cc.delayTime(1), cc.spawn(b1, a1), cc.removeSelf());
         _armature.runAction(seq);
     }
 }
@@ -5025,7 +4843,7 @@ function playCardAni_feiji_new(cards, UIoff) {
     var speed = 0.7;
     var node = getNode_cards(UIoff);
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     var anmPic = cc.Sprite("playing/paodekuaiTable_new/ani/feiji/feiji.png");
     anmPic.setPosition(MjClient.size.width / 2, MjClient.size.height / 2);
     anmPic.setScale(scale * 0.5);
@@ -5066,9 +4884,8 @@ function playCardAni_feiji_new(cards, UIoff) {
     ));
     feijiPic.setScaleX(-feijiPic.getScale());
 }
-function playCardAni_huojian(UIoff)
-{
-    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU){
+function playCardAni_huojian(UIoff) {
+    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU) {
         return;
     }
 
@@ -5082,17 +4899,16 @@ function playCardAni_huojian(UIoff)
     _armature.animation.play("Animation1");    // 站立
     var _node = getNode_cards(UIoff);
     var _nodeAni = _node.getChildByName("deskCard");
-    _armature.setScale(_nodeAni.getScale()*2);
-    _armature.setPosition(cc.winSize.width/2, cc.winSize.height/2);
-    _node.addChild(_armature,9999);
+    _armature.setScale(_nodeAni.getScale() * 2);
+    _armature.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
+    _node.addChild(_armature, 9999);
 
     var a1 = cc.fadeOut(0.5);
-    var b1 = cc.moveBy(0.5,cc.p(0,cc.winSize.height/2));
-    var seq = cc.sequence(cc.delayTime(1.5),cc.spawn(b1,a1),cc.removeSelf());
+    var b1 = cc.moveBy(0.5, cc.p(0, cc.winSize.height / 2));
+    var seq = cc.sequence(cc.delayTime(1.5), cc.spawn(b1, a1), cc.removeSelf());
     _armature.runAction(seq);
 }
-function playCardAni_shunzi(cards,UIoff)
-{
+function playCardAni_shunzi(cards, UIoff) {
     if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
@@ -5101,7 +4917,7 @@ function playCardAni_shunzi(cards,UIoff)
         var anmPic = cc.Sprite("playing/shaoyangOptimize/shunzi.png");
         var _node = getNode_cards(UIoff);
         var _nodeAni = _node.getChildByName("deskCard");
-        anmPic.setScale(_nodeAni.getScale()*2);
+        anmPic.setScale(_nodeAni.getScale() * 2);
         // 需要根据当前的位置以及牌的数量调整图片x坐标 added by Joey
         var xOffset = 0;
         if (UIoff == 2) {// 左上角
@@ -5111,7 +4927,7 @@ function playCardAni_shunzi(cards,UIoff)
             xOffset = -35 - cards.length * 1;
         }
         anmPic.setPosition(_nodeAni.getPosition().x - 40 + xOffset, _nodeAni.getPosition().y - 30);
-        _node.addChild(anmPic,9999);
+        _node.addChild(anmPic, 9999);
         anmPic.runAction(cc.sequence(
             cc.moveBy(0.3, 40, 0),
             cc.delayTime(1.5),
@@ -5129,8 +4945,8 @@ function playCardAni_shunzi(cards,UIoff)
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU&&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN){
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU &&
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
             return;
         }
 
@@ -5140,20 +4956,19 @@ function playCardAni_shunzi(cards,UIoff)
         _armature.animation.play("Animation1");
         var _node = getNode_cards(UIoff);
         var _nodeAni = _node.getChildByName("deskCard");
-        _armature.setScale(_nodeAni.getScale()*2);
+        _armature.setScale(_nodeAni.getScale() * 2);
         _armature.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
-        _node.addChild(_armature,9999);
+        _node.addChild(_armature, 9999);
     }
 }
 
-function playCardAni_liandui(cards,UIoff)
-{
+function playCardAni_liandui(cards, UIoff) {
     if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
         playEffectInPlay("ani_liandui");
         var anmPic = cc.Sprite("playing/shaoyangOptimize/liandui.png");
         var _node = getNode_cards(UIoff);
         var _nodeAni = _node.getChildByName("deskCard");
-        anmPic.setScale(_nodeAni.getScale()*2);
+        anmPic.setScale(_nodeAni.getScale() * 2);
         // 需要根据当前的位置以及牌的数量调整图片x坐标 added by Joey
         var xOffset = 0;
         if (UIoff == 2) {// 左上角
@@ -5163,7 +4978,7 @@ function playCardAni_liandui(cards,UIoff)
             xOffset = -35 - cards.length * 1;
         }
         anmPic.setPosition(_nodeAni.getPosition().x - 40 + xOffset, _nodeAni.getPosition().y - 30);
-        _node.addChild(anmPic,9999);
+        _node.addChild(anmPic, 9999);
         anmPic.runAction(cc.sequence(
             cc.moveBy(0.3, 40, 0),
             cc.delayTime(1.5),
@@ -5181,8 +4996,8 @@ function playCardAni_liandui(cards,UIoff)
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
             MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU&&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN){
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU &&
+            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
             return;
         }
         playEffectInPlay("ani_liandui");
@@ -5191,51 +5006,50 @@ function playCardAni_liandui(cards,UIoff)
         _armature.animation.play("Animation1");
         var _node = getNode_cards(UIoff);
         var _nodeAni = _node.getChildByName("deskCard");
-        _armature.setScale(_nodeAni.getScale()*2);
+        _armature.setScale(_nodeAni.getScale() * 2);
         _armature.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
-        _node.addChild(_armature,9999);
+        _node.addChild(_armature, 9999);
     }
 }
 
-function playCardAni_WangZha(UIoff, numWang)
-{
+function playCardAni_WangZha(UIoff, numWang) {
     var speed = 0.8;
     var node = getNode_cards(UIoff);
 
     var anmPic = cc.Sprite("playing/paodekuaiTable_new/ani/zhadan/16.png");
-    for (var i = 15; i >= 0; i --) {
+    for (var i = 15; i >= 0; i--) {
         anmPic.setTexture("playing/paodekuaiTable_new/ani/zhadan/" + i + ".png");
     }
 
-    var p = cc.p(MjClient.size.width/2, MjClient.size.height * 0.55);
+    var p = cc.p(MjClient.size.width / 2, MjClient.size.height * 0.55);
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     anmPic.setScale(scale * 1.2);
 
     if (UIoff == 0)
-        anmPic.setPosition(0, -anmPic.height*scale);
+        anmPic.setPosition(0, -anmPic.height * scale);
     else if (UIoff == 1)
-        anmPic.setPosition(MjClient.size.width + anmPic.width*scale, MjClient.size.height * 0.9);
+        anmPic.setPosition(MjClient.size.width + anmPic.width * scale, MjClient.size.height * 0.9);
     else if (UIoff == 2)
-        anmPic.setPosition(0, MjClient.size.height + anmPic.height*scale);
+        anmPic.setPosition(0, MjClient.size.height + anmPic.height * scale);
     else if (UIoff == 3)
-        anmPic.setPosition(-anmPic.width*scale, MjClient.size.height * 0.9);
-    
+        anmPic.setPosition(-anmPic.width * scale, MjClient.size.height * 0.9);
 
-    node.addChild(anmPic,9999);
+
+    node.addChild(anmPic, 9999);
     anmPic.setRotation(180);
     var zhadanIndex = 0;
     var startP = anmPic.getPosition();
     anmPic.runAction(cc.sequence(
         cc.delayTime(0.2 * speed),
         cc.spawn(
-            cc.bezierTo(0.5 * speed, [startP, cc.p((startP.x + p.y)/2, (startP.y + p.y)/2 + 100 * scale), p]),
+            cc.bezierTo(0.5 * speed, [startP, cc.p((startP.x + p.y) / 2, (startP.y + p.y) / 2 + 100 * scale), p]),
             cc.rotateTo(0.5 * speed, 0)
         ),
         cc.repeat(cc.sequence(
             cc.delayTime(0.05 * speed),
-            cc.callFunc(function() {
-                zhadanIndex ++;
+            cc.callFunc(function () {
+                zhadanIndex++;
                 anmPic.setTexture("playing/paodekuaiTable_new/ani/zhadan/" + zhadanIndex + ".png");
                 if (zhadanIndex == 9)
                     playEffectInPlay("ani_zhadan");
@@ -5248,7 +5062,7 @@ function playCardAni_WangZha(UIoff, numWang)
 
     var zhadanPic = cc.Sprite("playing/paodekuaiTable_new/ani/zhadan/wangzha.png");
     zhadanPic.setPosition(p);
-    node.addChild(zhadanPic,9999);
+    node.addChild(zhadanPic, 9999);
     zhadanPic.setOpacity(0);
     zhadanPic.setScale(0.1 * scale);
     zhadanPic.runAction(cc.sequence(
@@ -5272,51 +5086,50 @@ function playCardAni_WangZha(UIoff, numWang)
     ));
 
     var lvguang = cc.Sprite("playing/paodekuaiTable_new/ani/lvguang.png");
-    lvguang.setPosition(zhadanPic.width/2, zhadanPic.height/2);
-    lvguang.setScale(zhadanPic.width/lvguang.width * 1.3);
+    lvguang.setPosition(zhadanPic.width / 2, zhadanPic.height / 2);
+    lvguang.setScale(zhadanPic.width / lvguang.width * 1.3);
     zhadanPic.setCascadeOpacityEnabled(true);
     zhadanPic.addChild(lvguang, -1);
 }
 
-function playCardAni_gunLong(UIoff)
-{
+function playCardAni_gunLong(UIoff) {
     var speed = 0.8;
     var node = getNode_cards(UIoff);
 
     var anmPic = cc.Sprite("playing/paodekuaiTable_new/ani/zhadan/16.png");
-    for (var i = 15; i >= 0; i --) {
+    for (var i = 15; i >= 0; i--) {
         anmPic.setTexture("playing/paodekuaiTable_new/ani/zhadan/" + i + ".png");
     }
 
-    var p = cc.p(MjClient.size.width/2, MjClient.size.height * 0.55);
+    var p = cc.p(MjClient.size.width / 2, MjClient.size.height * 0.55);
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     anmPic.setScale(scale * 1.2);
 
     if (UIoff == 0)
-        anmPic.setPosition(0, -anmPic.height*scale);
+        anmPic.setPosition(0, -anmPic.height * scale);
     else if (UIoff == 1)
-        anmPic.setPosition(MjClient.size.width + anmPic.width*scale, MjClient.size.height * 0.9);
+        anmPic.setPosition(MjClient.size.width + anmPic.width * scale, MjClient.size.height * 0.9);
     else if (UIoff == 2)
-        anmPic.setPosition(0, MjClient.size.height + anmPic.height*scale);
+        anmPic.setPosition(0, MjClient.size.height + anmPic.height * scale);
     else if (UIoff == 3)
-        anmPic.setPosition(-anmPic.width*scale, MjClient.size.height * 0.9);
-    
+        anmPic.setPosition(-anmPic.width * scale, MjClient.size.height * 0.9);
 
-    node.addChild(anmPic,9999);
+
+    node.addChild(anmPic, 9999);
     anmPic.setRotation(180);
     var zhadanIndex = 0;
     var startP = anmPic.getPosition();
     anmPic.runAction(cc.sequence(
         cc.delayTime(0.2 * speed),
         cc.spawn(
-            cc.bezierTo(0.5 * speed, [startP, cc.p((startP.x + p.y)/2, (startP.y + p.y)/2 + 100 * scale), p]),
+            cc.bezierTo(0.5 * speed, [startP, cc.p((startP.x + p.y) / 2, (startP.y + p.y) / 2 + 100 * scale), p]),
             cc.rotateTo(0.5 * speed, 0)
         ),
         cc.repeat(cc.sequence(
             cc.delayTime(0.05 * speed),
-            cc.callFunc(function() {
-                zhadanIndex ++;
+            cc.callFunc(function () {
+                zhadanIndex++;
                 anmPic.setTexture("playing/paodekuaiTable_new/ani/zhadan/" + zhadanIndex + ".png");
                 if (zhadanIndex == 9)
                     playEffectInPlay("ani_zhadan");
@@ -5329,7 +5142,7 @@ function playCardAni_gunLong(UIoff)
 
     var zhadanPic = cc.Sprite("playing/paodekuaiTable_new/ani/zhadan/gunlong.png");
     zhadanPic.setPosition(p);
-    node.addChild(zhadanPic,9999);
+    node.addChild(zhadanPic, 9999);
     zhadanPic.setOpacity(0);
     zhadanPic.setScale(0.1 * scale);
     zhadanPic.runAction(cc.sequence(
@@ -5353,40 +5166,39 @@ function playCardAni_gunLong(UIoff)
     ));
 
     var lvguang = cc.Sprite("playing/paodekuaiTable_new/ani/lvguang.png");
-    lvguang.setPosition(zhadanPic.width/2, zhadanPic.height/2);
-    lvguang.setScale(zhadanPic.width/lvguang.width * 1.3);
+    lvguang.setPosition(zhadanPic.width / 2, zhadanPic.height / 2);
+    lvguang.setScale(zhadanPic.width / lvguang.width * 1.3);
     zhadanPic.setCascadeOpacityEnabled(true);
     zhadanPic.addChild(lvguang, -1);
 }
 
 function playCardAni_huochepi(uiOff) {
     //playEffectInPlay("ani_liandui");
-    var _armature =createSpine("playing/Ani/huochepi/huoche.json", "playing/Ani/huochepi/huoche.atlas");
+    var _armature = createSpine("playing/Ani/huochepi/huoche.json", "playing/Ani/huochepi/huoche.atlas");
     _armature.setAnimation(0, "animation", true);
 
     var _node = getNode_cards(uiOff);
     var _nodeAni = _node.getChildByName("deskCard");
-    _armature.setScale(_nodeAni.getScale()*2);
+    _armature.setScale(_nodeAni.getScale() * 2);
     _armature.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
-    _node.addChild(_armature,9999);
+    _node.addChild(_armature, 9999);
 
     var a1 = cc.fadeOut(1);
-    var b1 = cc.moveBy(0.5,cc.p(-cc.winSize.width/3,0));
+    var b1 = cc.moveBy(0.5, cc.p(-cc.winSize.width / 3, 0));
 
-    var seq = cc.sequence(cc.delayTime(0.5),cc.spawn(b1,a1),cc.removeSelf());
+    var seq = cc.sequence(cc.delayTime(0.5), cc.spawn(b1, a1), cc.removeSelf());
     _armature.runAction(seq);
 }
 
-function playCardAni_zhadan(cards,UIoff)
-{
-    
+function playCardAni_zhadan(cards, UIoff) {
+
     if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
         playEffectInPlay("ani_zhadan");
 
         var anmPic = cc.Sprite("playing/shaoyangOptimize/zhadan.png");
         var _node = getNode_cards(UIoff);
         var _nodeAni = _node.getChildByName("deskCard");
-        anmPic.setScale(_nodeAni.getScale()*2);
+        anmPic.setScale(_nodeAni.getScale() * 2);
         // 需要根据当前的位置以及牌的数量调整图片x坐标 added by Joey
         var xOffset = 0;
         if (UIoff == 2) {// 左上角
@@ -5396,7 +5208,7 @@ function playCardAni_zhadan(cards,UIoff)
             xOffset = -35 - cards.length * 1;
         }
         anmPic.setPosition(_nodeAni.getPosition().x - 40 + xOffset, _nodeAni.getPosition().y - 30);
-        _node.addChild(anmPic,9999);
+        _node.addChild(anmPic, 9999);
         anmPic.runAction(cc.sequence(
             cc.moveBy(0.3, 40, 0),
             cc.delayTime(1.5),
@@ -5404,12 +5216,12 @@ function playCardAni_zhadan(cards,UIoff)
         ));
     } else {
         if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU &&
-             MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_JZ &&
+            MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_JZ &&
             MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_XIN_ZHOU &&
-             MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN &&
+            MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN &&
             MjClient.gameType != MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI &&
-             MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG && 
-            MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_GZ){
+            MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG &&
+            MjClient.gameType != MjClient.GAME_TYPE.DOU_DI_ZHU_GZ) {
             return;
         }
 
@@ -5420,21 +5232,21 @@ function playCardAni_zhadan(cards,UIoff)
         _armature.animation.play("Animation1");
         var _node = getNode_cards(UIoff);
         var _nodeAni = _node.getChildByName("deskCard");
-        _armature.setScale(_nodeAni.getScale()*2);
+        _armature.setScale(_nodeAni.getScale() * 2);
         _armature.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
-        _node.addChild(_armature,9999);
+        _node.addChild(_armature, 9999);
 
-        var a1 = cc.callFunc(function(){
+        var a1 = cc.callFunc(function () {
             playMusic("doudizhu/table_background_music");
         });
-        var _seq = cc.sequence(cc.delayTime(15),a1);
+        var _seq = cc.sequence(cc.delayTime(15), a1);
         _nodeAni.runAction(_seq);
     }
 }
 
 function playCardAni_shunzi_new(cards, UIoff) {
     playEffectInPlay("ani_shunzi");
-    if(MjClient.playui.playCardAni_shunzi_new) {
+    if (MjClient.playui.playCardAni_shunzi_new) {
         MjClient.playui.playCardAni_shunzi_new(UIoff);
         return;
     }
@@ -5442,7 +5254,7 @@ function playCardAni_shunzi_new(cards, UIoff) {
     var node = getNode_cards(UIoff);
     var nodeAni = node.getChildByName("deskCard");
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     var x1 = x2 = nodeAni.x;
     var children = node.children;
     for (var i = 0; i < children.length; i++) {
@@ -5455,7 +5267,7 @@ function playCardAni_shunzi_new(cards, UIoff) {
     }
     var anmPic = cc.Sprite("playing/paodekuaiTable_new/ani/shunzi/shunzi.png");
     anmPic.setScale(scale);
-    anmPic.setPosition((x1 + x2)/2 - 60 * scale, nodeAni.y - 45 * scale);
+    anmPic.setPosition((x1 + x2) / 2 - 60 * scale, nodeAni.y - 45 * scale);
     node.addChild(anmPic, 9999);
     anmPic.setOpacity(0);
     anmPic.setCascadeOpacityEnabled(true);
@@ -5497,7 +5309,7 @@ function playCardAni_shunzi_new(cards, UIoff) {
 
 function playCardAni_liandui_new(cards, UIoff) {
     playEffectInPlay("ani_liandui");
-    if(MjClient.playui.playCardAni_liandui_new) {
+    if (MjClient.playui.playCardAni_liandui_new) {
         MjClient.playui.playCardAni_liandui_new(UIoff);
         return;
     }
@@ -5510,7 +5322,7 @@ function playCardAni_liandui_new(cards, UIoff) {
     var duiPic1 = cc.Sprite("playing/paodekuaiTable_new/ani/liandui/dui.png");
     var duiPic2 = cc.Sprite("playing/paodekuaiTable_new/ani/liandui/dui1.png");
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     var x1 = x2 = nodeAni.x;
     var children = node.children;
     for (var i = 0; i < children.length; i++) {
@@ -5521,7 +5333,7 @@ function playCardAni_liandui_new(cards, UIoff) {
         if (children[i].x > x2 || x2 == 0)
             x2 = children[i].x;
     }
-    var p = cc.p((x1 + x2)/2, nodeAni.y - 45 * scale);
+    var p = cc.p((x1 + x2) / 2, nodeAni.y - 45 * scale);
     var lvguang = cc.Sprite("playing/paodekuaiTable_new/ani/lvguang.png");
     lvguang.setPosition(p);
     lvguang.setScale(0.45 * scale);
@@ -5583,7 +5395,7 @@ function playCardAni_liandui_new(cards, UIoff) {
         cc.delayTime(0.2 * speed),
         cc.spawn(
             cc.scaleTo(0.2 * speed, 0.9),
-            cc.sequence(cc.fadeTo(0.2, 200), cc.fadeTo(0.2 *speed, 0))
+            cc.sequence(cc.fadeTo(0.2, 200), cc.fadeTo(0.2 * speed, 0))
         )
     ));
 
@@ -5607,7 +5419,7 @@ function playCardAni_feiji_new(cards, UIoff) {
     var speed = 0.7;
     var node = getNode_cards(UIoff);
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     var anmPic = cc.Sprite("playing/paodekuaiTable_new/ani/feiji/feiji.png");
     anmPic.setPosition(MjClient.size.width / 2, MjClient.size.height / 2);
     anmPic.setScale(scale * 0.5);
@@ -5649,23 +5461,22 @@ function playCardAni_feiji_new(cards, UIoff) {
     feijiPic.setScaleX(-feijiPic.getScale());
 }
 
-function playCardAni_zhadan_new(cards, UIoff)
-{
+function playCardAni_zhadan_new(cards, UIoff) {
     var speed = 0.8;
     var node = getNode_cards(UIoff);
 
     var anmPic = cc.Sprite("playing/paodekuaiTable_new/ani/zhadan/16.png");
-    for (var i = 15; i >= 0; i --) {
+    for (var i = 15; i >= 0; i--) {
         anmPic.setTexture("playing/paodekuaiTable_new/ani/zhadan/" + i + ".png");
     }
 
-    var p = cc.p(MjClient.size.width/2, MjClient.size.height * 0.55);
+    var p = cc.p(MjClient.size.width / 2, MjClient.size.height * 0.55);
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     anmPic.setScale(scale * 1.2);
 
-    if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE && 
-        MjClient.gameType != MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI && 
+    if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE &&
+        MjClient.gameType != MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI &&
         MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN &&
         MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG &&
         MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG &&
@@ -5674,36 +5485,36 @@ function playCardAni_zhadan_new(cards, UIoff)
         MjClient.gameType != MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
         MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_510K) {
         if (UIoff == 0)
-            anmPic.setPosition(0, -anmPic.height*scale);
+            anmPic.setPosition(0, -anmPic.height * scale);
         else if (UIoff == 1)
-            anmPic.setPosition(MjClient.size.width + anmPic.width*scale, MjClient.size.height * 0.9);
+            anmPic.setPosition(MjClient.size.width + anmPic.width * scale, MjClient.size.height * 0.9);
         else if (UIoff == 2)
-            anmPic.setPosition(-anmPic.width*scale, MjClient.size.height * 0.9);
+            anmPic.setPosition(-anmPic.width * scale, MjClient.size.height * 0.9);
     } else {
         if (UIoff == 0)
-            anmPic.setPosition(0, -anmPic.height*scale);
+            anmPic.setPosition(0, -anmPic.height * scale);
         else if (UIoff == 1)
-            anmPic.setPosition(MjClient.size.width + anmPic.width*scale, MjClient.size.height * 0.9);
+            anmPic.setPosition(MjClient.size.width + anmPic.width * scale, MjClient.size.height * 0.9);
         else if (UIoff == 2)
-            anmPic.setPosition(0, MjClient.size.height + anmPic.height*scale);
+            anmPic.setPosition(0, MjClient.size.height + anmPic.height * scale);
         else if (UIoff == 3)
-            anmPic.setPosition(-anmPic.width*scale, MjClient.size.height * 0.9);
+            anmPic.setPosition(-anmPic.width * scale, MjClient.size.height * 0.9);
     }
 
-    node.addChild(anmPic,9999);
+    node.addChild(anmPic, 9999);
     anmPic.setRotation(180);
     var zhadanIndex = 0;
     var startP = anmPic.getPosition();
     anmPic.runAction(cc.sequence(
         cc.delayTime(0.2 * speed),
         cc.spawn(
-            cc.bezierTo(0.5 * speed, [startP, cc.p((startP.x + p.y)/2, (startP.y + p.y)/2 + 100 * scale), p]),
+            cc.bezierTo(0.5 * speed, [startP, cc.p((startP.x + p.y) / 2, (startP.y + p.y) / 2 + 100 * scale), p]),
             cc.rotateTo(0.5 * speed, 0)
         ),
         cc.repeat(cc.sequence(
             cc.delayTime(0.05 * speed),
-            cc.callFunc(function() {
-                zhadanIndex ++;
+            cc.callFunc(function () {
+                zhadanIndex++;
                 anmPic.setTexture("playing/paodekuaiTable_new/ani/zhadan/" + zhadanIndex + ".png");
                 if (zhadanIndex == 9)
                     playEffectInPlay("ani_zhadan");
@@ -5716,7 +5527,7 @@ function playCardAni_zhadan_new(cards, UIoff)
 
     var zhadanPic = cc.Sprite("playing/paodekuaiTable_new/ani/zhadan/zhadan.png");
     zhadanPic.setPosition(p);
-    node.addChild(zhadanPic,9999);
+    node.addChild(zhadanPic, 9999);
     zhadanPic.setOpacity(0);
     zhadanPic.setScale(0.1 * scale);
     zhadanPic.runAction(cc.sequence(
@@ -5740,8 +5551,8 @@ function playCardAni_zhadan_new(cards, UIoff)
     ));
 
     var lvguang = cc.Sprite("playing/paodekuaiTable_new/ani/lvguang.png");
-    lvguang.setPosition(zhadanPic.width/2, zhadanPic.height/2);
-    lvguang.setScale(zhadanPic.width/lvguang.width * 1.3);
+    lvguang.setPosition(zhadanPic.width / 2, zhadanPic.height / 2);
+    lvguang.setScale(zhadanPic.width / lvguang.width * 1.3);
     zhadanPic.setCascadeOpacityEnabled(true);
     zhadanPic.addChild(lvguang, -1);
 
@@ -5765,17 +5576,16 @@ function playCardAni_zhadan_new(cards, UIoff)
     // ));
 }
 
-function playCardAni_zhadan_qianFen(cards, UIoff)
-{
+function playCardAni_zhadan_qianFen(cards, UIoff) {
     var speed = 0.8;
     //var p = cc.p(MjClient.size.width/2, MjClient.size.height * 0.55);
     var node = getNode_cards(UIoff);
     var p = MjClient.playui.getAniPos(UIoff);
 
-    var scale = Math.min(MjClient.size.width/1280, MjClient.size.height/720);
+    var scale = Math.min(MjClient.size.width / 1280, MjClient.size.height / 720);
     var zhadanPic = cc.Sprite("playing/paodekuaiTable_new/ani/zhadan/zhadan.png");
     zhadanPic.setPosition(p);
-    node.addChild(zhadanPic,9999);
+    node.addChild(zhadanPic, 9999);
     zhadanPic.setOpacity(0);
     zhadanPic.setScale(0.1 * scale);
     zhadanPic.runAction(cc.sequence(
@@ -5800,19 +5610,19 @@ function playCardAni_zhadan_qianFen(cards, UIoff)
     ));
 
     var lvguang = cc.Sprite("playing/paodekuaiTable_new/ani/lvguang.png");
-    lvguang.setPosition(zhadanPic.width/2, zhadanPic.height/2);
-    lvguang.setScale(zhadanPic.width/lvguang.width * 1.3);
+    lvguang.setPosition(zhadanPic.width / 2, zhadanPic.height / 2);
+    lvguang.setScale(zhadanPic.width / lvguang.width * 1.3);
     zhadanPic.setCascadeOpacityEnabled(true);
     zhadanPic.addChild(lvguang, -1);
 }
 function getAniPos(UIoff) {
     var node = getNode_cards(UIoff);
-    var x1 = 0, x2 = 0, y1 =0;
+    var x1 = 0, x2 = 0, y1 = 0;
     var children = node.children;
     for (var i = 0; i < children.length; i++) {
         if (children[i].name != "out")
             continue;
-        if(y1 == 0) {
+        if (y1 == 0) {
             y1 = children[i].y;
         }
         if (children[i].x < x1 || x1 == 0)
@@ -5820,33 +5630,30 @@ function getAniPos(UIoff) {
         if (children[i].x > x2 || x2 == 0)
             x2 = children[i].x;
     }
-    var pos = cc.p((x1 + x2)/2,y1);
+    var pos = cc.p((x1 + x2) / 2, y1);
     return node.convertToWorldSpaceAR(pos);
 }
 //播放牌型动画
-function playCardAni(cards,UIoff)
-{
+function playCardAni(cards, UIoff) {
     var tData = MjClient.data.sData.tData;
     var cardType;
 
-    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DA_QI && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.SAN_DA_HA ) {
+    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DA_QI && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.SAN_DA_HA) {
         cardType = MjClient.majiang.cardsType(cards, tData.areaSelectMode, tData);
-    } else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || 
-        MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA || 
+    } else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA ||
+        MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
         MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
         cardType = MjClient.majiang.cardsType(cards, tData.zhuPaiType, tData.areaSelectMode.teshutuolaji, tData.areaSelectMode.chou6);
     } else
         cardType = MjClient.majiang.cardsType(cards, tData.zhuPaiType, tData.areaSelectMode.chou6, tData.areaSelectMode.daWuZhu27NotTuoLaJi);
 
-    cc.log("牌型 = "+cardType);
+    cc.log("牌型 = " + cardType);
     var CARDTPYE = MjClient.majiang.CARDTPYE;
-    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU)
-    {
+    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
         var tData = MjClient.data.sData.tData;
         var pl = getUIPlayer(UIoff);
         var cardCount = 17;
-        if(tData.uids[tData.zhuang] == pl.info.uid)
-        {
+        if (tData.uids[tData.zhuang] == pl.info.uid) {
             cardCount = 20;
         }
         //playCardAni_liandui(UIoff);
@@ -5854,20 +5661,18 @@ function playCardAni(cards,UIoff)
         //playCardAni_huojian(UIoff);
         //playCardAni_feiji(UIoff);
         //playCardAni_zhadan(UIoff);
-        if(pl.isChunTian)
-        {
+        if (pl.isChunTian) {
             //春天的动画
             playCardAni_chuntian(UIoff);
             return;
         }
     }
 
-    if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA) {
-        MjClient.playui.AniLayer.loadCardTypeAni(cardType,getAniPos(UIoff),UIoff);
+    if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA) {
+        MjClient.playui.AniLayer.loadCardTypeAni(cardType, getAniPos(UIoff), UIoff);
         return;
     }
-    switch (cardType)
-    {   
+    switch (cardType) {
         case CARDTPYE.mantianfei:
         case CARDTPYE.zhadan:
         case CARDTPYE.ruanzha2:
@@ -5877,21 +5682,21 @@ function playCardAni(cards,UIoff)
         case CARDTPYE.zhadan8:
         case CARDTPYE.tianjian:
         case CARDTPYE.wang382a:
-            if( MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_XIN_ZHOU||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_DA_TONG||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO||
-                MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC||
-                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE||
-                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN || 
-                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_XIN_ZHOU ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_DA_TONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO ||
+                MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC ||
+                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
+                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN ||
+                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                 MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
                 MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
@@ -5899,15 +5704,14 @@ function playCardAni(cards,UIoff)
                 MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
                 MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
                 MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ || 
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ ||
                 MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
-                MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN)
-            {
+                MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
                 if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN) {
                     cc.log("playCardAni_zhadan_qianFen ");
-                    playCardAni_zhadan_qianFen(cards,UIoff);
+                    playCardAni_zhadan_qianFen(cards, UIoff);
                 } else {
-                    playCardAni_zhadan_new(cards,UIoff);
+                    playCardAni_zhadan_new(cards, UIoff);
                 }
             }
             break;
@@ -5918,7 +5722,7 @@ function playCardAni(cards,UIoff)
             playCardAni_huojian(UIoff);
             break;
         case CARDTPYE.huochepi:
-            if(MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO){
+            if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO) {
                 playCardAni_huochepi(UIoff)
             }
             break;
@@ -5930,25 +5734,23 @@ function playCardAni(cards,UIoff)
         case CARDTPYE.sanshun:
         case CARDTPYE.feiji:
         case CARDTPYE.feiji2:
-            if((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
-                 MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
-                 MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN || 
-                 MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
-                 MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
-                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                 MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
-                 MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
+            if ((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
+                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN ||
+                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
+                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
+                MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
                 MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
-                 MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) &&
-                !MjClient.data.c_Data.bPutCardAnimOld)
-            {
+                MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) &&
+                !MjClient.data.c_Data.bPutCardAnimOld) {
                 cc.log("playCardAni_feiji_new qianfen");
-                playCardAni_feiji_new(cards,UIoff);
+                playCardAni_feiji_new(cards, UIoff);
             }
-                else
-            {
-                playCardAni_feiji(cards,UIoff);
+            else {
+                playCardAni_feiji(cards, UIoff);
             }
 
             break;
@@ -5957,26 +5759,23 @@ function playCardAni(cards,UIoff)
         case CARDTPYE.sangeA://AAA
         case CARDTPYE.sange3://AAA
         case CARDTPYE.sizha:
-            if(GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI&&
-                !MjClient.data.c_Data.bPutCardAnimOld)
-            {
-                playCardAni_zhadan_new(cards,UIoff);
+            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI &&
+                !MjClient.data.c_Data.bPutCardAnimOld) {
+                playCardAni_zhadan_new(cards, UIoff);
             }
-            else
-            {
+            else {
                 playCardAni_tonghuashun(UIoff);
             }
             break;
         case CARDTPYE.sidaiyi:
         case CARDTPYE.sangeAdaiyi:
         case CARDTPYE.sange3daiyi:
-            if ((MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW||
+            if ((MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW ||
                 MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN)
-                &&!MjClient.data.c_Data.bPutCardAnimOld)
-            {
+                && !MjClient.data.c_Data.bPutCardAnimOld) {
                 var tData = MjClient.data.sData.tData;
-                if (tData.areaSelectMode.canZhaDanDai1 && tData.areaSelectMode.canZhaDanDai1 )
-                    playCardAni_zhadan_new(cards,UIoff);
+                if (tData.areaSelectMode.canZhaDanDai1 && tData.areaSelectMode.canZhaDanDai1)
+                    playCardAni_zhadan_new(cards, UIoff);
                 else
                     playCardAni_tonghuashun(UIoff);
             }
@@ -5985,18 +5784,18 @@ function playCardAni(cards,UIoff)
         case CARDTPYE.tianwangzha://四个王
         case CARDTPYE.wangzha:
             {
-                if(MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG){
+                if (MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG) {
                     playEffectInPlay("ani_wangzha");
                     playCardAni_WangZha(UIoff, cards.length);
                     break;
                 }
 
                 playCardAni_siwang(UIoff);
-            
+
                 // if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
                 //     playEffectInPlay("ani_wangzha");
 
-                if (MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
+                if (MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                     MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
                     MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
                     MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
@@ -6008,55 +5807,51 @@ function playCardAni(cards,UIoff)
 
             break;
         case CARDTPYE.shunzi:
-            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+            if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
                 MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                 MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN )
+                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN)
                 break;
 
-            if((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
-                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN || 
-                MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)&&
-                !MjClient.data.c_Data.bPutCardAnimOld)
-            {
+            if ((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN ||
+                MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) &&
+                !MjClient.data.c_Data.bPutCardAnimOld) {
                 cc.log("playCardAni_shunzi_new qianfen");
-                playCardAni_shunzi_new(cards,UIoff);
+                playCardAni_shunzi_new(cards, UIoff);
             }
-            else
-            {
-                playCardAni_shunzi(cards,UIoff);
+            else {
+                playCardAni_shunzi(cards, UIoff);
             }
             break;
         case CARDTPYE.liandui:
             if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
                 break;
 
-            if((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI || 
-                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
+            if ((GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                 MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
-                MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG || 
-                MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG || 
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
                 MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
                 MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
-                MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN || 
-                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN)&&
-                !MjClient.data.c_Data.bPutCardAnimOld)
-            {
+                MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
+                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN) &&
+                !MjClient.data.c_Data.bPutCardAnimOld) {
                 cc.log("playCardAni_liandui_new qianfen");
-                playCardAni_liandui_new(cards,UIoff);
+                playCardAni_liandui_new(cards, UIoff);
             }
-            else if(MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA 
+            else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA
                 || MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA
-                || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA 
-                || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA 
-                || MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA){
+                || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA
+                || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA
+                || MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
                 MjClient.playui.playCardAni_liandui();
             }
-            else
-            {
-                playCardAni_liandui(cards,UIoff);
+            else {
+                playCardAni_liandui(cards, UIoff);
             }
             break;
         case CARDTPYE.tonghuashun:
@@ -6088,23 +5883,19 @@ function playCardAni(cards,UIoff)
 }
 
 //播放牌型动画----文字贴图版本
-function playCardAni_txtsprite(cards,UIoff)
-{
+function playCardAni_txtsprite(cards, UIoff) {
     var cardType = MjClient.majiang.cardsType(cards, MjClient.data.sData.tData.areaSelectMode);
-    cc.log("牌型 = "+cardType);
+    cc.log("牌型 = " + cardType);
     var CARDTPYE = MjClient.majiang.CARDTPYE;
 
-    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU)
-    {
+    if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
         var tData = MjClient.data.sData.tData;
         var pl = getUIPlayer(UIoff);
         var cardCount = 17;
-        if(tData.uids[tData.zhuang] == pl.info.uid)
-        {
+        if (tData.uids[tData.zhuang] == pl.info.uid) {
             cardCount = 20;
         }
-        if(pl.isChunTian)
-        {
+        if (pl.isChunTian) {
             //春天的动画
             playCardAni_chuntian(UIoff);
             return;
@@ -6131,13 +5922,12 @@ function playCardAni_txtsprite(cards,UIoff)
     // duizi: 2,
     // danpai: 1,
     var strSpritePath = "";
-    switch (cardType)
-    {
+    switch (cardType) {
         case CARDTPYE.xunhangdaodan:
-        {
-            strSpritePath = "playing/paodekuaiTable_new/txtsprite/xunhangdaodan.png";
-            break;
-        }
+            {
+                strSpritePath = "playing/paodekuaiTable_new/txtsprite/xunhangdaodan.png";
+                break;
+            }
         case CARDTPYE.zhadan:
         case CARDTPYE.ruanzha:
         case CARDTPYE.huojian:
@@ -6149,75 +5939,73 @@ function playCardAni_txtsprite(cards,UIoff)
         case CARDTPYE.qizha:
         case CARDTPYE.bazha:
         case CARDTPYE.jiuzha:
-        case CARDTPYE.shizha:;
+        case CARDTPYE.shizha: ;
         case CARDTPYE.tianwangzha:
-        {
-            strSpritePath = "playing/paodekuaiTable_new/txtsprite/zhadan.png";
-            break;
-        }
+            {
+                strSpritePath = "playing/paodekuaiTable_new/txtsprite/zhadan.png";
+                break;
+            }
         case CARDTPYE.sanshun:
-        {
-            strSpritePath = "playing/paodekuaiTable_new/txtsprite/sanshun.png";
-            break;
-        }
+            {
+                strSpritePath = "playing/paodekuaiTable_new/txtsprite/sanshun.png";
+                break;
+            }
         case CARDTPYE.feiji:
-        {
-            strSpritePath = "playing/paodekuaiTable_new/txtsprite/feiji.png";
-            break;
-        }
+            {
+                strSpritePath = "playing/paodekuaiTable_new/txtsprite/feiji.png";
+                break;
+            }
         case CARDTPYE.sztonghua:
         case CARDTPYE.tonghuashun:
-        {
-            strSpritePath = "playing/paodekuaiTable_new/txtsprite/tonghuashun.png";
-            break;
-        }
+            {
+                strSpritePath = "playing/paodekuaiTable_new/txtsprite/tonghuashun.png";
+                break;
+            }
         case CARDTPYE.shunzi:
-        {
-            strSpritePath = "playing/paodekuaiTable_new/txtsprite/shunzi.png";
-            break;
-        }
+            {
+                strSpritePath = "playing/paodekuaiTable_new/txtsprite/shunzi.png";
+                break;
+            }
         case CARDTPYE.liandui:
-        {
-            strSpritePath = "playing/paodekuaiTable_new/txtsprite/liandui.png";
-            break;
-        }
+            {
+                strSpritePath = "playing/paodekuaiTable_new/txtsprite/liandui.png";
+                break;
+            }
         case CARDTPYE.sidaiyi:
         case CARDTPYE.sangeAdaiyi:
         case CARDTPYE.sange3daiyi:
-        {
-            if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW||
-                MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN)
             {
-                var tData = MjClient.data.sData.tData;
-                if (tData.areaSelectMode.canZhaDanDai1 && tData.areaSelectMode.canZhaDanDai1 )
-                    strSpritePath = "playing/paodekuaiTable_new/txtsprite/zhadan.png";
-            }
-
-            if(MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI ){
-                var tData = MjClient.data.sData.tData;
-                if (tData.areaSelectMode.can4dai1 ){
-                    strSpritePath = "playing/paodekuaiTable_new/txtsprite/zhadan.png";
-                    break;
+                if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW ||
+                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN) {
+                    var tData = MjClient.data.sData.tData;
+                    if (tData.areaSelectMode.canZhaDanDai1 && tData.areaSelectMode.canZhaDanDai1)
+                        strSpritePath = "playing/paodekuaiTable_new/txtsprite/zhadan.png";
                 }
+
+                if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI) {
+                    var tData = MjClient.data.sData.tData;
+                    if (tData.areaSelectMode.can4dai1) {
+                        strSpritePath = "playing/paodekuaiTable_new/txtsprite/zhadan.png";
+                        break;
+                    }
+                }
+                return;
             }
-            return;
-        }
 
     }
 
     var txtSprite = cc.Sprite(strSpritePath);
     var _node = getNode_cards(UIoff);
     var _nodeAni = _node.getChildByName("deskCard");
-    txtSprite.setScale(_nodeAni.getScale()*2);
+    txtSprite.setScale(_nodeAni.getScale() * 2);
     txtSprite.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y - 20);
-    _node.addChild(txtSprite,9999);
-    txtSprite.runAction(cc.sequence( cc.moveBy(0.5, 50, 0),cc.removeSelf()));
+    _node.addChild(txtSprite, 9999);
+    txtSprite.runAction(cc.sequence(cc.moveBy(0.5, 50, 0), cc.removeSelf()));
 }
 
 
 //播放牌型音效
-function playCardEffect(putCards, handCount)
-{
+function playCardEffect(putCards, handCount) {
     var tData = MjClient.data.sData.tData;
 
     var cardType;
@@ -6238,12 +6026,12 @@ function playCardEffect(putCards, handCount)
         cardType = MjClient.majiang.cardsType(putCards, tData.areaSelectMode, tData);
     }
 
-    cc.log("牌型 =-------- "+cardType);
+    cc.log("牌型 =-------- " + cardType);
 
-    function _removeLaiZiSignAndGetValue(cards){
+    function _removeLaiZiSignAndGetValue(cards) {
         var cd = cards;
-        if(MjClient.majiang && MjClient.majiang.removeLaiziSign && MjClient.majiang.haveLaiziSign){
-            if(MjClient.majiang.haveLaiziSign(cd)){
+        if (MjClient.majiang && MjClient.majiang.removeLaiziSign && MjClient.majiang.haveLaiziSign) {
+            if (MjClient.majiang.haveLaiziSign(cd)) {
                 cd = MjClient.majiang.removeLaiziSign(cd);
             }
         }
@@ -6253,7 +6041,7 @@ function playCardEffect(putCards, handCount)
 
     var CARDTPYE = MjClient.majiang.CARDTPYE;
     if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
-        GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU || 
+        GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU ||
         MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
         MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
         MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
@@ -6264,8 +6052,7 @@ function playCardEffect(putCards, handCount)
         MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
         MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
-        MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN )
-    {
+        MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN) {
 
         // 解决问题：矫正同花顺带牌作为顺子压牌时的语音
         if (cardType == CARDTPYE.szdaipai) {
@@ -6274,8 +6061,7 @@ function playCardEffect(putCards, handCount)
         } else if (MjClient.putTypeSaved)
             delete MjClient.putTypeSaved;
 
-        switch (cardType)
-        {
+        switch (cardType) {
             case CARDTPYE.danpai:
                 var card = putCards[0];
                 if (card == 53 || card == 54)//小王大王
@@ -6283,8 +6069,7 @@ function playCardEffect(putCards, handCount)
                     cc.log("============= 大小王 = " + card);
                     playEffectInPlay(card);
                 }
-                else
-                {
+                else {
                     card = Math.ceil(card / 4);
                     playEffectInPlay(card);
                 }
@@ -6292,28 +6077,27 @@ function playCardEffect(putCards, handCount)
             case CARDTPYE.duizi:
                 var card = putCards[1];
                 card = _removeLaiZiSignAndGetValue(card);
-                if (card != 53 && card != 54)
-                {
+                if (card != 53 && card != 54) {
                     card = Math.ceil(card / 4);
                 }
-                playEffectInPlay("d"+card);
+                playEffectInPlay("d" + card);
                 break;
             case CARDTPYE.sanzhang:
                 var card = putCards[1];
                 card = _removeLaiZiSignAndGetValue(card);
-                if(MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG && 
-                    (card == 53 || card == 54)){
+                if (MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG &&
+                    (card == 53 || card == 54)) {
                     playEffectInPlay("sgui");
                     break;
                 }
                 card = Math.ceil(card / 4);
-                playEffectInPlay("s"+card);
+                playEffectInPlay("s" + card);
                 break;
             case CARDTPYE.sizhang:
                 var card = putCards[1];
                 card = _removeLaiZiSignAndGetValue(card);
                 card = Math.ceil(card / 4);
-                playEffectInPlay("sizhang"+card);
+                playEffectInPlay("sizhang" + card);
                 break;
             case CARDTPYE.sanwang:
                 playEffectInPlay("sgui");
@@ -6327,21 +6111,20 @@ function playCardEffect(putCards, handCount)
                 break;
             case CARDTPYE.liandui:
                 {
-                    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
-                    {
+                    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE) {
                         if (putCards.length == 6)
                             playEffectInPlay("lian3dui");
                         else
                             playEffectInPlay("liandui");
                     } else if (MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
-                         MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
-                         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                         MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
-                         MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-                         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
+                        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
+                        MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
+                        MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
+                        MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
+                        MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
                         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
-                         MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
-                        playEffectInPlay("lian" + putCards.length/2 + "dui");
+                        MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
+                        playEffectInPlay("lian" + putCards.length / 2 + "dui");
                     }
                     else
                         playEffectInPlay("liandui");
@@ -6381,24 +6164,25 @@ function playCardEffect(putCards, handCount)
             case CARDTPYE.sange3://AAA
             case CARDTPYE.tianjian:
             case CARDTPYE.wang382a:
-                if( MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
+            case CARDTPYE.sanzha:
+                if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
                     MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                    MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG || 
-                    MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG || 
+                    MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
+                    MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
                     MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
                     MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K){
+                    MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
                     playEffectInPlay("zhandan");
                     playEffectInPlay("bomb1");
                     break;
                 }
 
                 if (putCards.length == 5) {
-                    if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN && 
+                    if (MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN &&
                         MjClient.gameType != MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
                         var card = putCards[1];
                         card = Math.ceil(card / 4);
-                        playEffectInPlay("wuzhang"+card);
+                        playEffectInPlay("wuzhang" + card);
                     } else {
                         playEffectInPlay("bomb1");
                     }
@@ -6411,7 +6195,7 @@ function playCardEffect(putCards, handCount)
             case CARDTPYE.sidaiyi:
             case CARDTPYE.sangeAdaiyi:
             case CARDTPYE.sange3daiyi:
-                if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW||
+                if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW ||
                     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN)
                     playEffectInPlay("bomb1");
                 break;
@@ -6435,27 +6219,27 @@ function playCardEffect(putCards, handCount)
                 playEffectInPlay("z_510k");
                 break;
             case CARDTPYE.wangzha:// 王炸
-                if(MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-                    MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K){
-                    if(putCards.length == 3){
+                if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
+                    MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
+                    if (putCards.length == 3) {
                         playEffectInPlay("sgui");
                         break;
-                    }else if(putCards.length == 2 ){
-                        if(putCards[0] == putCards[1]){
-                            if(putCards[0] == 53 ){
+                    } else if (putCards.length == 2) {
+                        if (putCards[0] == putCards[1]) {
+                            if (putCards[0] == 53) {
                                 playEffectInPlay("d53");
-                            }else{
+                            } else {
                                 playEffectInPlay("d54");
                             }
-                        }else{
-                            playEffectInPlay("d5354"); 
+                        } else {
+                            playEffectInPlay("d5354");
                         }
                         break;
                     }
                 }
-                if(MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ){
+                if (MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG) {
                     //playEffectInPlay("wangzha");
-                    playEffectInPlay("wangzhan_new"); 
+                    playEffectInPlay("wangzhan_new");
                     break;
                 }
                 playEffectInPlay("wangzha");
@@ -6477,17 +6261,16 @@ function playCardEffect(putCards, handCount)
                 break;
         }
 
-        switch (cardType)
-        {
+        switch (cardType) {
             case CARDTPYE.sizha:
             case CARDTPYE.sange3:
             case CARDTPYE.sange3daiyi:
                 playEffect("guandan/bombAct");
                 break;
             case CARDTPYE.sidaiyi:
-                if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW )
+                if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW)
                     playEffect("guandan/bombAct");
-                if(MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI){
+                if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI) {
                     playEffect("guandan/bombAct");
                     playEffectInPlay("bomb1");
                 }
@@ -6499,7 +6282,7 @@ function playCardEffect(putCards, handCount)
                 break;
         }
 
-        if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+        if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
             MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
             MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
             MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
@@ -6508,17 +6291,15 @@ function playCardEffect(putCards, handCount)
             MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
             MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
             MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) &&
-            handCount == 0 && 
-            MjClient.CheckPlayerCount(function(pl){return pl.handCount == 0;}) == 1)
-        {
+            handCount == 0 &&
+            MjClient.CheckPlayerCount(function (pl) { return pl.handCount == 0; }) == 1) {
             playEffectInPlay("touyou");
         }
     }
     else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA ||
-             MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
-             MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI)
-    {
-        if((MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {
+        if ((MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
             MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA ||
             MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
             MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI ||
@@ -6528,16 +6309,15 @@ function playCardEffect(putCards, handCount)
             MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
             MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA ||
             MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA ||
-            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA || 
+            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA ||
             MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) &&
-        tData.firstPutCardUid != tData.uids[tData.curPlayer]){
+            tData.firstPutCardUid != tData.uids[tData.curPlayer]) {
             //三打哈和打七玩法只有第一张有语音
         }
-        else if(MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI){
+        else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {
             cardType = MjClient.majiang.cardsType(putCards, tData.zhuPaiType);
             var isZhu = MjClient.majiang.isZhuCard(putCards[0], tData.zhuPaiType);
-            switch (cardType)
-            {
+            switch (cardType) {
                 case MjClient.majiang.CARDTPYE.liandui:
                     playEffectInPlay(isZhu ? "diaozhu" : "tractor");
                     break;
@@ -6552,11 +6332,10 @@ function playCardEffect(putCards, handCount)
                         playEffectInPlay("swingcard");
             }
         }
-        else if(MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER){
+        else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
             cardType = MjClient.majiang.cardsType(putCards, tData.zhuPaiType);
-            var isZhu = MjClient.majiang.isZhuCard(putCards[0], tData.zhuPaiType,tData.areaSelectMode["twoIsChangZhu"]);
-            switch (cardType)
-            {
+            var isZhu = MjClient.majiang.isZhuCard(putCards[0], tData.zhuPaiType, tData.areaSelectMode["twoIsChangZhu"]);
+            switch (cardType) {
                 case MjClient.majiang.CARDTPYE.liandui:
                     playEffectInPlay(isZhu ? "tractormain" : "tractor");
                     break;
@@ -6565,14 +6344,14 @@ function playCardEffect(putCards, handCount)
                     // break;
                     var card = putCards[1];
                     card = Math.ceil(card / 4);
-                    playEffectInPlay(isZhu ?"diaozhu":"duiPai_"+card);
+                    playEffectInPlay(isZhu ? "diaozhu" : "duiPai_" + card);
                     break;
                 case MjClient.majiang.CARDTPYE.danpai:
                     // playEffectInPlay(isZhu ? "oneMainCard" : "oneCard");
                     // break;
                     var card = putCards[0];
                     card = Math.ceil(card / 4);
-                    playEffectInPlay(isZhu ?"oneMainCard":"oneCard");
+                    playEffectInPlay(isZhu ? "oneMainCard" : "oneCard");
                     break;
                 default:
                     if (tData.isCanShuaiPai && tData.firstPutCardUid == tData.uids[tData.curPlayer] && isZhu)
@@ -6580,67 +6359,60 @@ function playCardEffect(putCards, handCount)
             }
         }
         else {
-            if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || 
-                MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA || 
+            if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
                 MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
                 cardType = MjClient.majiang.cardsType(putCards, tData.zhuPaiType, tData.areaSelectMode.teshutuolaji, tData.areaSelectMode.chou6);
             } else
                 cardType = MjClient.majiang.cardsType(putCards, tData.zhuPaiType, tData.areaSelectMode.chou6, tData.areaSelectMode.daWuZhu27NotTuoLaJi);
 
             var isZhu = MjClient.majiang.isZhuCard(putCards[0], tData.zhuPaiType, tData.areaSelectMode["twoIsChangZhu"]);
-            
-            switch (cardType)
-            {
-            case MjClient.majiang.CARDTPYE.liandui:
-                playEffectInPlay(isZhu ? "tractormain" : "tractor");
-                break;
-            case MjClient.majiang.CARDTPYE.duizi:
-                // playEffectInPlay(isZhu ? "pairsMain" : "pair");
-                // break;
-                var card = putCards[1];
-                card = Math.ceil(card / 4);
-                playEffectInPlay(isZhu ?"diaozhu":"duiPai_"+card);
-                break;
-            case MjClient.majiang.CARDTPYE.danpai:
-                // playEffectInPlay(isZhu ? "oneMainCard" : "oneCard");
-                // break;
-                var card = putCards[0];
-                card = Math.ceil(card / 4);
-                playEffectInPlay(isZhu ?"diaozhu":"danpai_"+card);
-                break;
-            default:
-                if (tData.isCanShuaiPai && tData.firstPutCardUid == tData.uids[tData.curPlayer] && isZhu)
-                    playEffectInPlay("swingcard");
+
+            switch (cardType) {
+                case MjClient.majiang.CARDTPYE.liandui:
+                    playEffectInPlay(isZhu ? "tractormain" : "tractor");
+                    break;
+                case MjClient.majiang.CARDTPYE.duizi:
+                    // playEffectInPlay(isZhu ? "pairsMain" : "pair");
+                    // break;
+                    var card = putCards[1];
+                    card = Math.ceil(card / 4);
+                    playEffectInPlay(isZhu ? "diaozhu" : "duiPai_" + card);
+                    break;
+                case MjClient.majiang.CARDTPYE.danpai:
+                    // playEffectInPlay(isZhu ? "oneMainCard" : "oneCard");
+                    // break;
+                    var card = putCards[0];
+                    card = Math.ceil(card / 4);
+                    playEffectInPlay(isZhu ? "diaozhu" : "danpai_" + card);
+                    break;
+                default:
+                    if (tData.isCanShuaiPai && tData.firstPutCardUid == tData.uids[tData.curPlayer] && isZhu)
+                        playEffectInPlay("swingcard");
             }
         }
     }
-    else
-    {
+    else {
 
-        if (handCount == 0 && MjClient.CheckPlayerCount(function(pl){return pl.handCount == 0;}) == 1)
-        {
+        if (handCount == 0 && MjClient.CheckPlayerCount(function (pl) { return pl.handCount == 0; }) == 1) {
             playEffectInPlay("touyou");
         }
-        else
-        {
-            switch (cardType)
-            {
+        else {
+            switch (cardType) {
                 case CARDTPYE.danpai:
                     var card = putCards[0];
                     if (card == 53 || card == 54)//小王大王
                     {
                         playEffectInPlay(card);
                     }
-                    else
-                    {
+                    else {
                         card = Math.ceil(card / 4);
                         playEffectInPlay(card);
                     }
                     break;
                 case CARDTPYE.duizi:
                     var card = putCards[0];
-                    if (card == 7)
-                    {
+                    if (card == 7) {
                         card = putCards[1];
                     }
 
@@ -6648,10 +6420,9 @@ function playCardEffect(putCards, handCount)
                     {
 
                     }
-                    else
-                    {
+                    else {
                         card = Math.ceil(card / 4);
-                        playEffectInPlay("d"+card);
+                        playEffectInPlay("d" + card);
                     }
                     break;
                 case CARDTPYE.sanzhang:
@@ -6689,8 +6460,7 @@ function playCardEffect(putCards, handCount)
             }
         }
 
-        switch (cardType)
-        {
+        switch (cardType) {
             case CARDTPYE.sizha:
             case CARDTPYE.wuzha:
             case CARDTPYE.liuzha:
@@ -6710,30 +6480,25 @@ function playCardEffect(putCards, handCount)
     }
 
 
-    
+
 }
 
 //回放的时候换了位置重新刷新手牌
-function refreshHandCardForReplay(UIOff)
-{
+function refreshHandCardForReplay(UIOff) {
     cc.log("refreshHandCardForReplay----------------" + UIOff);
-    if(UIOff == 0)
-    {
+    if (UIOff == 0) {
         return;
     }
 
     var pl = getUIPlayer(UIOff);
-    if(!pl || cc.isUndefined(pl.mjhand))
-    {
+    if (!pl || cc.isUndefined(pl.mjhand)) {
         return;
     }
 
     var _UINode = getNode_cards(UIOff);
     var children = _UINode.getChildren();
-    for(var i = 0; i < children.length; i++)
-    {
-        if(children[i].name == "mjhand_replay")
-        {
+    for (var i = 0; i < children.length; i++) {
+        if (children[i].name == "mjhand_replay") {
             //cc.log("============mjhand_replay remove children============");
             children[i].removeFromParent();
         }
@@ -6741,7 +6506,7 @@ function refreshHandCardForReplay(UIOff)
 
     //cc.log("============refreshHandCardForReplay============" + UIOff);
 
-    for (var i = 0; i < pl.mjhand.length ; i++) {
+    for (var i = 0; i < pl.mjhand.length; i++) {
         getNewCard_card(_UINode, "stand", "mjhand_replay", pl.mjhand[i], UIOff);
     }
     MjClient.playui.CardLayoutRestore(_UINode, UIOff);
@@ -6749,8 +6514,7 @@ function refreshHandCardForReplay(UIOff)
 
 
 //理牌
-function collectionCards()
-{
+function collectionCards() {
 
     ///当前选中的牌的UI节点
     var _tempColloctionCardArray = [];
@@ -6760,31 +6524,27 @@ function collectionCards()
 
     //for(var k = 0 ; k < _copySelcetCardArray.length;k++)
     {
-        for(var i = 0;i< MjClient.colloctionCardsUIArray.length;i++) {
+        for (var i = 0; i < MjClient.colloctionCardsUIArray.length; i++) {
             var _colloctionUICards = MjClient.colloctionCardsUIArray[i];
             var _colloctionCards = [];
             var _colloctionCardsUI = [];
-            for(var j = 0;j < _colloctionUICards.length;j++) {
+            for (var j = 0; j < _colloctionUICards.length; j++) {
                 var bExist = false;
-                for(var k = 0 ; k < _copySelcetCardArray.length;)
-                {
+                for (var k = 0; k < _copySelcetCardArray.length;) {
                     if (_copySelcetCardArray[k].tag == _colloctionUICards[j].tag &&
                         _copySelcetCardArray[k].getUserData() == _colloctionUICards[j].getUserData()
-                    )
-                    {
+                    ) {
                         cc.log("continue----" + _copySelcetCardArray[k].tag);
                         var index = _copySelcetCardArray.indexOf(_copySelcetCardArray[k]);
                         _copySelcetCardArray.splice(index, 1);
                         bExist = true;
                     }
-                    else
-                    {
+                    else {
                         k++;
                     }
                 }
 
-                if(!bExist)
-                {
+                if (!bExist) {
                     cc.log("%%%%%%%%%   " + _colloctionUICards[j].tag);
                     _colloctionCards.push(_colloctionUICards[j].tag);
                     _colloctionCardsUI.push(_colloctionUICards[j]);
@@ -6797,15 +6557,14 @@ function collectionCards()
     }
 
 
-    MjClient.colloctionCardsArray  = _tempColloctionCardArray;
+    MjClient.colloctionCardsArray = _tempColloctionCardArray;
     MjClient.colloctionCardsUIArray = _tempColloctionCardsUIArray;
 
 
     //利好的牌
-    for(var i  =  0;i < MjClient.colloctionCardsUIArray.length;i++)
-    {
+    for (var i = 0; i < MjClient.colloctionCardsUIArray.length; i++) {
         var _colloctionUICards = MjClient.colloctionCardsUIArray[i];
-        for(var j = 0;j < _colloctionUICards.length;j++) {
+        for (var j = 0; j < _colloctionUICards.length; j++) {
             cc.log("理牌堆里面的牌000：" + _colloctionUICards[j].tag);
             //cc.log("理牌堆里面的牌 DATA ：" + _colloctionUICards[j].getUserData());
         }
@@ -6823,25 +6582,22 @@ function collectionCards()
     cc.log("MjClient.colloctionCardsArray = " + JSON.stringify(MjClient.colloctionCardsArray));
     var node = getNode_cards(0);
     MjClient.selectCards_card = [];
-    if(MjClient.sortClassType == 0)
-    {
+    if (MjClient.sortClassType == 0) {
         setCardToNormalPos();
     }
-    else
-    {
+    else {
         setCardToNormalColor();
     }
-    MjClient.playui.CardLayoutRestore(node,0);
+    MjClient.playui.CardLayoutRestore(node, 0);
     UpdataCurrentPutCard();
 }
 
 //恢复
-function recoverCards()
-{
+function recoverCards() {
     MjClient.colloctionCardsArray = [];
     MjClient.colloctionCardsUIArray = [];
     MjClient.selectCards_card = [];
-    if(MjClient.sortClassType == 0) {
+    if (MjClient.sortClassType == 0) {
         setCardToNormalPos();
     }
     else {
@@ -6853,29 +6609,24 @@ function recoverCards()
 }
 
 //从手牌mjhand中排除，excludeCards的牌后的牌
-function getExcludeCards(mjhand,_excludeCards)
-{
+function getExcludeCards(mjhand, _excludeCards) {
     //cc.log("================excludeCards = " + _excludeCards);
     var excludeCards = _excludeCards.slice();
     var mjhand_copy = mjhand.slice();
     var _getCardS = [];
     //弹出选择的牌
-    for(var m = 0; m < mjhand_copy.length; m++)
-    {
+    for (var m = 0; m < mjhand_copy.length; m++) {
         var bExsit = false;
-        for(var n = 0;n < excludeCards.length;n++)
-        {
-            if(mjhand_copy[m] == excludeCards[n])
-            {
+        for (var n = 0; n < excludeCards.length; n++) {
+            if (mjhand_copy[m] == excludeCards[n]) {
                 var index = excludeCards.indexOf(excludeCards[n]);
-                excludeCards.splice(index,1);
+                excludeCards.splice(index, 1);
                 bExsit = true;
                 break;
             }
         }
 
-        if(!bExsit)
-        {
+        if (!bExsit) {
             _getCardS[_getCardS.length] = mjhand_copy[m];
         }
     }
@@ -6884,11 +6635,9 @@ function getExcludeCards(mjhand,_excludeCards)
 
 
 //检查同花顺
-function checkTongHuaShun()
-{
+function checkTongHuaShun() {
     var mjhand = getUIPlayer(0).mjhand;
-    if (cc.isUndefined(mjhand) || mjhand == null)
-    {
+    if (cc.isUndefined(mjhand) || mjhand == null) {
         return;
     }
 
@@ -6899,15 +6648,11 @@ function checkTongHuaShun()
     MjClient.tongHuaShunArray = MjClient.majiang.tipTonghuashuns(mjhand);
     cc.log("---checkTongHuaShun MjClient.tongHuaShunArray = " + JSON.stringify(MjClient.tongHuaShunArray));
     var _path = "playing/cardTable/";
-    if(MjClient.tongHuaShunArray.length > 0)
-    {
-        for(var i = 0;i < 4;i++)
-        {
+    if (MjClient.tongHuaShunArray.length > 0) {
+        for (var i = 0; i < 4; i++) {
             var flowerNode = UI_bg.getChildByName("Button_" + i);
-            if(MjClient.tongHuaShunArray[i].length > 0)
-            {
-                switch (i)
-                {
+            if (MjClient.tongHuaShunArray[i].length > 0) {
+                switch (i) {
                     case 0:
                         flowerNode.loadTextureNormal(_path + "heitao_n" + ".png");
                         break;
@@ -6923,10 +6668,8 @@ function checkTongHuaShun()
                 }
                 flowerNode.setTouchEnabled(true);
             }
-            else
-            {
-                switch (i)
-                {
+            else {
+                switch (i) {
                     case 0:
                         flowerNode.loadTextureNormal(_path + "heitao_hui" + ".png");
                         break;
@@ -6948,17 +6691,15 @@ function checkTongHuaShun()
 
 
 //排除当前存在的UI节点
-function checkUINodeHave(uiNodeArray,currentUI)
-{
+function checkUINodeHave(uiNodeArray, currentUI) {
     var bHave = false;
-    for(var i = 0; i < uiNodeArray.length; i++) {
+    for (var i = 0; i < uiNodeArray.length; i++) {
         var _uiArray = uiNodeArray[i];
-        if(!_uiArray) continue;
-        for(var j = 0; j < _uiArray.length; j++) {
+        if (!_uiArray) continue;
+        for (var j = 0; j < _uiArray.length; j++) {
 
-            if(_uiArray[j].tag == currentUI.tag &&
-                _uiArray[j].getUserData() == currentUI.getUserData() )
-            {
+            if (_uiArray[j].tag == currentUI.tag &&
+                _uiArray[j].getUserData() == currentUI.getUserData()) {
                 bHave = true;
                 break;
             }
@@ -6967,40 +6708,34 @@ function checkUINodeHave(uiNodeArray,currentUI)
     return bHave;
 }
 
-function checkUIHave(uiNodeArray,currentUI)
-{
+function checkUIHave(uiNodeArray, currentUI) {
     var bHave = false;
-    for(var i = 0; i < uiNodeArray.length; i++) {
-            if(uiNodeArray[i].tag == currentUI.tag &&
-                uiNodeArray[i].getUserData() == currentUI.getUserData() )
-            {
-                bHave = true;
-                break;
-            }
+    for (var i = 0; i < uiNodeArray.length; i++) {
+        if (uiNodeArray[i].tag == currentUI.tag &&
+            uiNodeArray[i].getUserData() == currentUI.getUserData()) {
+            bHave = true;
+            break;
         }
+    }
     return bHave;
 }
 
 
-function initSortUI()
-{
+function initSortUI() {
     var UI_bg = MjClient.playui._bg_sort;
     UI_bg.setTouchEnabled(false);
     MjClient.cardIdx = 0;
     cc.log('wwwwww333')
-    function _eventCallBack(sender,type)
-    {
-        if(type == 2)
-        {
+    function _eventCallBack(sender, type) {
+        if (type == 2) {
             var itag = sender.getTag();
             checkTongHuaShun();
-            if( MjClient.cardIdx >= MjClient.tongHuaShunArray[itag].length)
-            {
+            if (MjClient.cardIdx >= MjClient.tongHuaShunArray[itag].length) {
                 MjClient.cardIdx = 0;
             }
 
-            selectUICards(MjClient.tongHuaShunArray[itag][ MjClient.cardIdx]);
-            MjClient.selectCards_card = MjClient.tongHuaShunArray[itag][ MjClient.cardIdx];
+            selectUICards(MjClient.tongHuaShunArray[itag][MjClient.cardIdx]);
+            MjClient.selectCards_card = MjClient.tongHuaShunArray[itag][MjClient.cardIdx];
 
             cc.log("after tonghuashun  = " + JSON.stringify(MjClient.tongHuaShunArray));
             cc.log('xxxxxx999')
@@ -7009,12 +6744,10 @@ function initSortUI()
         }
     }
 
-    for(var i = 0;i < 4;i++)
-    {
+    for (var i = 0; i < 4; i++) {
         var flowerNode = UI_bg.getChildByName("Button_" + i);
-        if (flowerNode)
-        {
-            flowerNode.addTouchEventListener(_eventCallBack,MjClient.playui);
+        if (flowerNode) {
+            flowerNode.addTouchEventListener(_eventCallBack, MjClient.playui);
             flowerNode.setTag(i);
         }
     }
@@ -7022,11 +6755,9 @@ function initSortUI()
     //理牌
     var _ButtonSort = UI_bg.getChildByName("Button_sort");
     _ButtonSort.visible = false;
-    _ButtonSort.addTouchEventListener(function(sender,type){
-        if(type == 2)
-        {
-            if(MjClient.isSorting)
-            {
+    _ButtonSort.addTouchEventListener(function (sender, type) {
+        if (type == 2) {
+            if (MjClient.isSorting) {
                 cc.log("理牌");
                 //理牌
                 _ButtonSort.loadTextureNormal("playing/cardTable/huifu.png");
@@ -7034,8 +6765,7 @@ function initSortUI()
                 //_ButtonSort.setTouchEnabled(false)
                 collectionCards();
             }
-            else
-            {
+            else {
                 _ButtonSort.loadTextureNormal("playing/cardTable/lipai.png");
                 MjClient.isSorting = true;
                 _ButtonSort.visible = false;
@@ -7046,42 +6776,36 @@ function initSortUI()
             }
             MjClient.colloctionCurrentSelcetUIArray = [];
         }
-    },MjClient.playui);
+    }, MjClient.playui);
 
 }
 
 
 //设置地区信息
-function setAreaTypeInfo_card(isVisible)
-{
+function setAreaTypeInfo_card(isVisible) {
     var info = MjClient.playui.jsBind.gameName._node;
-    if(isVisible && info)
-    {
+    if (isVisible && info) {
         cc.log("----- sking -----" + MjClient.gameType);
         var text = GameBg[MjClient.gameType];
         info.loadTexture(text);
     }
-    if(cc.sys.isObjectValid(MjClient.roundnumImgNode) && MjClient.roundnumImgNode.getChildByName("roundnumText"))
-    {
+    if (cc.sys.isObjectValid(MjClient.roundnumImgNode) && MjClient.roundnumImgNode.getChildByName("roundnumText")) {
         var _text = MjClient.roundnumImgNode.getChildByName("roundnumText");
         var contentSizeWidth = _text.getUserData();
-        if (!contentSizeWidth)
-        {
+        if (!contentSizeWidth) {
             contentSizeWidth = _text.getContentSize().width;
             _text.setUserData(contentSizeWidth);
         }
-        _text.setContentSize(contentSizeWidth + 2,_text.getContentSize().height);
+        _text.setContentSize(contentSizeWidth + 2, _text.getContentSize().height);
     }
-    if(cc.sys.isObjectValid(MjClient.cardNumImgNode) && MjClient.cardNumImgNode.getChildByName("cardNumText"))
-    {
+    if (cc.sys.isObjectValid(MjClient.cardNumImgNode) && MjClient.cardNumImgNode.getChildByName("cardNumText")) {
         var _text = MjClient.cardNumImgNode.getChildByName("cardNumText");
         var contentSizeWidth = _text.getUserData();
-        if (!contentSizeWidth)
-        {
+        if (!contentSizeWidth) {
             contentSizeWidth = _text.getContentSize().width;
             _text.setUserData(contentSizeWidth);
         }
-        _text.setContentSize(contentSizeWidth + 2,_text.getContentSize().height);
+        _text.setContentSize(contentSizeWidth + 2, _text.getContentSize().height);
     }
 }
 
@@ -7091,8 +6815,7 @@ function setAreaTypeInfo_card(isVisible)
 /*
     抢地主
  */
-function sendQiangdizhu(bQiang)
-{
+function sendQiangdizhu(bQiang) {
     MjClient.gamenet.request("pkroom.handler.tableMsg", {
         cmd: "Qiangdizhu",
         qiang: bQiang
@@ -7102,8 +6825,7 @@ function sendQiangdizhu(bQiang)
 /*
     设置抢地主标志
 */
-function setQiangDiZhu(msg)
-{
+function setQiangDiZhu(msg) {
 
 
 }
@@ -7112,10 +6834,8 @@ function setQiangDiZhu(msg)
 /*
     处理抢地主,晋中斗地主
  */
-function DealQiangdizhu_jinzhong(msg)
-{
-    if(!MjClient.playui.isJD())
-    {
+function DealQiangdizhu_jinzhong(msg) {
+    if (!MjClient.playui.isJD()) {
         return DealQiangdizhu(msg);
     }
 
@@ -7124,7 +6844,7 @@ function DealQiangdizhu_jinzhong(msg)
     var _qiang = msg.qiang;
     var _hasJiao = msg.hasJiao;
     var tData = MjClient.data.sData.tData;
-    if(typeof(msg.curPlayer) != "undefined"){
+    if (typeof (msg.curPlayer) != "undefined") {
         tData.curPlayer = msg.curPlayer;
     }
 
@@ -7136,31 +6856,28 @@ function DealQiangdizhu_jinzhong(msg)
     var _dizhutag = _node.getChildByName("jiaodizhuTag");
     _dizhutag.visible = true;
     _dizhutag.ignoreContentAdaptWithSize(true);
-    if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA||
-        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT){
+    if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT) {
         _dizhutag.setScale(1);
-    }else{
+    } else {
         _dizhutag.setScale(1.3);
     }
 
     cc.log('wwwwww444')
-    if(_qiang != 0)
-    {
+    if (_qiang != 0) {
 
         MjClient.selectCards_card = [];
-        _dizhutag.loadTexture("playing/doudizhu/fen_"+_qiang + ".png");
-        playEffectInPlay("robDZScore"+_qiang.toString())
+        _dizhutag.loadTexture("playing/doudizhu/fen_" + _qiang + ".png");
+        playEffectInPlay("robDZScore" + _qiang.toString())
     }
-    else
-    {
-        if(_hasJiao)
-        {
+    else {
+        if (_hasJiao) {
             //不抢
             playEffectInPlay("notRobDZ");
-            if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT){
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT) {
                 _dizhutag.loadTexture("playing/doudizhu/buqiang2.png");
-            }else{
+            } else {
                 _dizhutag.loadTexture("playing/paodekuaiTable/buqiang2.png");
             }
 
@@ -7168,10 +6885,10 @@ function DealQiangdizhu_jinzhong(msg)
         else {
             //不叫
             playEffectInPlay("bujiao");
-            if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT){
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT) {
                 _dizhutag.loadTexture("playing/doudizhu/bujiao.png");
-            }else{
+            } else {
                 _dizhutag.loadTexture("playing/paodekuaiTable/bujiao.png");
             }
 
@@ -7183,13 +6900,12 @@ function DealQiangdizhu_jinzhong(msg)
 /*
     处理抢地主
  */
-function DealQiangdizhu(msg)
-{
+function DealQiangdizhu(msg) {
     var _uid = msg.uid;
     var _qiang = msg.qiang;
     var _hasJiao = msg.hasJiao;
     var tData = MjClient.data.sData.tData;
-    if(typeof(msg.curPlayer) != "undefined"){
+    if (typeof (msg.curPlayer) != "undefined") {
         tData.curPlayer = msg.curPlayer;
     }
 
@@ -7202,53 +6918,48 @@ function DealQiangdizhu(msg)
     _dizhutag.visible = true;
     _dizhutag.ignoreContentAdaptWithSize(true);
 
-    if(_qiang)
-    {
+    if (_qiang) {
         MjClient.selectCards_card = [];
-        if(_hasJiao)
-        {
+        if (_hasJiao) {
             //抢地主音效缺失
             playEffectInPlay("robDZ");
-            if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT){
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT) {
                 _dizhutag.loadTexture("playing/doudizhu/qiangdizhu2.png");
-            }else{
+            } else {
                 _dizhutag.loadTexture("playing/paodekuaiTable/qiangdizhu2.png");
             }
 
         }
-        else
-        {
+        else {
             //叫地主
             playEffectInPlay("jiaodizhu");
-            if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT){
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT) {
                 _dizhutag.loadTexture("playing/doudizhu/jiaodizhu.png");
-            }else{
+            } else {
                 _dizhutag.loadTexture("playing/paodekuaiTable/jiaodizhu.png");
             }
         }
     }
-    else
-    {
-        if(_hasJiao)
-        {
+    else {
+        if (_hasJiao) {
             //不抢
             playEffectInPlay("notRobDZ");
-            if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT){
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT) {
                 _dizhutag.loadTexture("playing/doudizhu/buqiang2.png");
-            }else{
+            } else {
                 _dizhutag.loadTexture("playing/paodekuaiTable/buqiang2.png");
             }
         }
         else {
             //不叫
             playEffectInPlay("bujiao");
-            if(MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT){
+            if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT) {
                 _dizhutag.loadTexture("playing/doudizhu/bujiao.png");
-            }else{
+            } else {
                 _dizhutag.loadTexture("playing/paodekuaiTable/bujiao.png");
             }
         }
@@ -7264,22 +6975,22 @@ function dizhufrommiddleTOHead(msg) {
     var pl = getUIPlayer(UIOff);
     var _node = getNode_cards(UIOff); //设置谁是地主的标记
     _node.getChildByName("head").getChildByName("icon_dizhu").visible = true;
-    var orgPos= _node.getChildByName("head").getChildByName("icon_dizhu").getPosition();
-    var scencesize=MjClient.size;
-    var centerPos1= _node.convertToNodeSpace(cc.p(scencesize.width/2,scencesize.height/2));
-    var  headnode=_node.getChildByName("head");
-    var centerPos2= headnode.convertToNodeSpace(cc.p(centerPos1.x,centerPos1.y));
-    var dizhunode=headnode.getChildByName("icon_dizhu");
-    dizhunode.setPosition(cc.p(centerPos2.x,centerPos2.y+80));
+    var orgPos = _node.getChildByName("head").getChildByName("icon_dizhu").getPosition();
+    var scencesize = MjClient.size;
+    var centerPos1 = _node.convertToNodeSpace(cc.p(scencesize.width / 2, scencesize.height / 2));
+    var headnode = _node.getChildByName("head");
+    var centerPos2 = headnode.convertToNodeSpace(cc.p(centerPos1.x, centerPos1.y));
+    var dizhunode = headnode.getChildByName("icon_dizhu");
+    dizhunode.setPosition(cc.p(centerPos2.x, centerPos2.y + 80));
     dizhunode.setScale(3);
-    var ac1=cc.MoveTo(0.3,orgPos);
-    var ac2=cc.ScaleTo(0.3,1);
-    dizhunode.runAction(cc.sequence(cc.DelayTime(0.6),cc.spawn(ac1,ac2)));
+    var ac1 = cc.MoveTo(0.3, orgPos);
+    var ac2 = cc.ScaleTo(0.3, 1);
+    dizhunode.runAction(cc.sequence(cc.DelayTime(0.6), cc.spawn(ac1, ac2)));
 
 
 }
 //清空常规地主牌
-function clearddzcardthree(node,isLF) {
+function clearddzcardthree(node, isLF) {
     var _card0 = node.getChildByName("dizhuCards_0");
     var _card1 = node.getChildByName("dizhuCards_1");
     var _card2 = node.getChildByName("dizhuCards_2");
@@ -7292,15 +7003,15 @@ function clearddzcardthree(node,isLF) {
     _card0.loadTexture("playing/cardPic2/beimian_puke.png");
     _card1.loadTexture("playing/cardPic2/beimian_puke.png");
     _card2.loadTexture("playing/cardPic2/beimian_puke.png");
-    _card0.tag=-1;
-    _card1.tag=-1;
-    _card2.tag=-1;
-    if(isLF){
+    _card0.tag = -1;
+    _card1.tag = -1;
+    _card2.tag = -1;
+    if (isLF) {
         var _card3 = node.getChildByName("dizhuCards_3");
         _card3.removeAllChildren();
         _card3.isPKImg = false;
         _card3.loadTexture("playing/cardPic2/beimian_puke.png");
-        _card3.tag=-1;
+        _card3.tag = -1;
     }
 }
 
@@ -7308,11 +7019,10 @@ function clearddzcardthree(node,isLF) {
     翻地主的三张牌
     isfly bool值，为true ,地主会飞到头像旁边
  */
-function DealDDZdipai(node,msg)
-{
+function DealDDZdipai(node, msg) {
     var tData = MjClient.data.sData.tData;
-    var _cards    = msg.diCards;
-    var _dizhuUid =  msg.zhuang;
+    var _cards = msg.diCards;
+    var _dizhuUid = msg.zhuang;
     tData.zhuang = msg.zhuang;
 
     var _card0 = node.getChildByName("dizhuCards_0");
@@ -7321,35 +7031,32 @@ function DealDDZdipai(node,msg)
     _card0.visible = true;
     _card1.visible = true;
     _card1.visible = true;
-    setCardSprite_card(_card0,_cards[0],false);
-    setCardSprite_card(_card1,_cards[1],false);
-    setCardSprite_card(_card2,_cards[2],false);
+    setCardSprite_card(_card0, _cards[0], false);
+    setCardSprite_card(_card1, _cards[1], false);
+    setCardSprite_card(_card2, _cards[2], false);
 
     var UIOff = getOffByIndex(msg.zhuang);
     var pl = getUIPlayer(UIOff);
     var _node = getNode_cards(UIOff); //设置谁是地主的标记
 
-    if( tData.tState == TableState.waitPut) {
+    if (tData.tState == TableState.waitPut) {
         _node.getChildByName("head").getChildByName("icon_dizhu").visible = true;
-    }else if(tData.tState == TableState.waitReady){
+    } else if (tData.tState == TableState.waitReady) {
         _node.getChildByName("head").getChildByName("icon_dizhu").visible = false;
     }
-  /*  if(isfly==true)
-    {
-        _node.getChildByName("head").getChildByName("icon_dizhu").visible = true;
-        dizhufrommiddleTOHead(_node);
-    }
-*/
+    /*  if(isfly==true)
+      {
+          _node.getChildByName("head").getChildByName("icon_dizhu").visible = true;
+          dizhufrommiddleTOHead(_node);
+      }
+  */
     var children = _node.children;
-    for(var i = 0; i < children.length; i++)
-    {
+    for (var i = 0; i < children.length; i++) {
         var ci = children[i];
-        if(ci.name == "mjhand")
-        {
+        if (ci.name == "mjhand") {
             ci.removeFromParent();
         }
-        else if(ci.name == "mjhand_replay")
-        {
+        else if (ci.name == "mjhand_replay") {
             ci.removeFromParent();
         }
     }
@@ -7358,94 +7065,85 @@ function DealDDZdipai(node,msg)
 /*
     翻地主的牌  临汾需特殊处理
  */
-function DealDDZdipai_LF(node,msg,isRoundEnd)
-{
+function DealDDZdipai_LF(node, msg, isRoundEnd) {
     var tData = MjClient.data.sData.tData;
-    var _cards    = msg.diCards;
-    var _dizhuUid =  msg.zhuang;
+    var _cards = msg.diCards;
+    var _dizhuUid = msg.zhuang;
     tData.zhuang = msg.zhuang;
     var UIOff = getOffByIndex(msg.zhuang);
     var pl = getUIPlayer(UIOff);
 
-    if ((pl.info.uid  == SelfUid() || isRoundEnd) || MjClient.rePlayVideo != -1){//自己是地主才能翻牌
+    if ((pl.info.uid == SelfUid() || isRoundEnd) || MjClient.rePlayVideo != -1) {//自己是地主才能翻牌
         var _card0 = node.getChildByName("dizhuCards_0");
         var _card1 = node.getChildByName("dizhuCards_1");
         var _card2 = node.getChildByName("dizhuCards_2");
-        if(MjClient.getAppType()!=MjClient.APP_TYPE.QXNTQP)
-        var _card3 = node.getChildByName("dizhuCards_3");
+        if (MjClient.getAppType() != MjClient.APP_TYPE.QXNTQP)
+            var _card3 = node.getChildByName("dizhuCards_3");
         _card0.visible = true;
         _card1.visible = true;
         _card2.visible = true;
-        setCardSprite_card(_card0,_cards[0],false);
-        setCardSprite_card(_card1,_cards[1],false);
-        setCardSprite_card(_card2,_cards[2],false);
-        if(MjClient.getAppType()!=MjClient.APP_TYPE.QXNTQP)
-        {
-            if(MjClient.MaxPlayerNum != 2 && _cards[3]){
+        setCardSprite_card(_card0, _cards[0], false);
+        setCardSprite_card(_card1, _cards[1], false);
+        setCardSprite_card(_card2, _cards[2], false);
+        if (MjClient.getAppType() != MjClient.APP_TYPE.QXNTQP) {
+            if (MjClient.MaxPlayerNum != 2 && _cards[3]) {
                 _card3.visible = true;
-                setCardSprite_card(_card3,_cards[3],false);
-            }else{
+                setCardSprite_card(_card3, _cards[3], false);
+            } else {
                 _card3.visible = false;
             }
         }
     }
     var _node = getNode_cards(UIOff); //设置谁是地主的标记
-   if( tData.tState == TableState.waitPut) {
+    if (tData.tState == TableState.waitPut) {
         _node.getChildByName("head").getChildByName("icon_dizhu").visible = true;
-    }else if(tData.tState == TableState.waitReady){
+    } else if (tData.tState == TableState.waitReady) {
         _node.getChildByName("head").getChildByName("icon_dizhu").visible = false;
     }
 
-/*    if(isfly==true)
-    {
-       // _node.getChildByName("head").getChildByName("icon_dizhu").visible = true;
-        dizhufrommiddleTOHead(_node);
-    }
-*/
- //   dizhufrommiddleTOHead(_node);
-    var children = _node.children;
-    for(var i = 0; i < children.length; i++)
-    {
-        var ci = children[i];
-        if(ci.name == "mjhand")
+    /*    if(isfly==true)
         {
+           // _node.getChildByName("head").getChildByName("icon_dizhu").visible = true;
+            dizhufrommiddleTOHead(_node);
+        }
+    */
+    //   dizhufrommiddleTOHead(_node);
+    var children = _node.children;
+    for (var i = 0; i < children.length; i++) {
+        var ci = children[i];
+        if (ci.name == "mjhand") {
             ci.removeFromParent();
         }
-        else if(ci.name == "mjhand_replay")
-        {
+        else if (ci.name == "mjhand_replay") {
             ci.removeFromParent();
         }
     }
     InitUserHandUI_doudizhu(_node, UIOff);
 }
-function InitUserHandUI_doudizhu(node, off)
-{
+function InitUserHandUI_doudizhu(node, off) {
     var sData = MjClient.data.sData;
     var tData = sData.tData;
     MjClient.selectCards_card = []; // 在之前已经清空手牌了，需要把数组也清除
     var pl = getUIPlayer(off);
-    if(!pl)
-    {
+    if (!pl) {
         return;
     }
 
     //初始化玩家金币和名称
-    if(MjClient.gameType==MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN||
-        MjClient.gameType==MjClient.GAME_TYPE.DOU_DI_ZHU_JZ||
-        MjClient.gameType==MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO||
-        MjClient.gameType==MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI||
-        MjClient.gameType==MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG||
-        MjClient.gameType==MjClient.GAME_TYPE.DOU_DI_ZHU_XIN_ZHOU ||
-        MjClient.gameType==MjClient.GAME_TYPE.DOU_DI_ZHU_NT ||
-        MjClient.gameType==MjClient.GAME_TYPE.DOU_DI_ZHU_HA || 
+    if (MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LIN_FEN ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_JZ ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_ZERO ||
+        MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_LV_LIANG ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_XIN_ZHOU ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT ||
+        MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA ||
         MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_GZ
-    )
-    {
+    ) {
         InitUserCoinAndName_jinzhong(node, off);
     }
 
-    else
-    {
+    else {
         InitUserCoinAndName(node, off);
     }
     setAreaTypeInfo(true);
@@ -7454,21 +7152,20 @@ function InitUserHandUI_doudizhu(node, off)
 
     //initSortUI();
 
-    if(
+    if (
         tData.tState != TableState.waitPut &&
         tData.tState != TableState.waitEat &&
         tData.tState != TableState.waitCard &&
         tData.tState != TableState.waitJiazhu
 
-    )
-    {
+    ) {
         cc.log("=========================添加手牌22=============");
         return;
     }
 
     cc.log("=========================添加手牌=============");
     //添加手牌
-    if(MjClient.rePlayVideo == -1)// 表示正常游戏
+    if (MjClient.rePlayVideo == -1)// 表示正常游戏
     {
         if (pl.mjhand && off == 0) {//只初始化自己的手牌
             var vcard = [];
@@ -7476,12 +7173,10 @@ function InitUserHandUI_doudizhu(node, off)
 
                 var card = getNewCard_card(node, "stand", "mjhand", pl.mjhand[i], off);
                 var index = vcard.indexOf(pl.mjhand[i]);//区分2张一样的牌
-                if(index >= 0)
-                {
+                if (index >= 0) {
                     card.setUserData(1);
                 }
-                else
-                {
+                else {
                     card.setUserData(0);
                 }
                 vcard.push(pl.mjhand[i]);
@@ -7492,22 +7187,18 @@ function InitUserHandUI_doudizhu(node, off)
 
         }
     }
-    else
-    {
+    else {
         /*
             播放录像
         */
-        if (pl.mjhand)
-        {
-            if(off == 0)
-            {
+        if (pl.mjhand) {
+            if (off == 0) {
                 for (var i = 0; i < pl.mjhand.length; i++) {
                     getNewCard_card(node, "stand", "mjhand", pl.mjhand[i], off);
                 }
             }
-            else
-            {
-                for (var i = 0; i < pl.mjhand.length ; i++) {
+            else {
+                for (var i = 0; i < pl.mjhand.length; i++) {
                     getNewCard_card(node, "stand", "mjhand_replay", pl.mjhand[i], off);
                 }
             }
@@ -7520,8 +7211,7 @@ function InitUserHandUI_doudizhu(node, off)
 /*
  踢的操作，tiMun  1 踢  -1 不踢
  */
-function sendTi(tiNum)
-{
+function sendTi(tiNum) {
     MjClient.gamenet.request("pkroom.handler.tableMsg", {
         cmd: "MJJiazhu",
         jiazhuNum: tiNum,
@@ -7531,14 +7221,13 @@ function sendTi(tiNum)
 /*
     处理踢
  */
-function DealTi(node,msg) {
-    cc.log("DealTi = " +"=====================DealTi msg = " + JSON.stringify(msg));
+function DealTi(node, msg) {
+    cc.log("DealTi = " + "=====================DealTi msg = " + JSON.stringify(msg));
     var _uid = msg.uid;
     var _rates = msg.rates;
     var _isTi = msg.jiazhuNum;
     var tData = MjClient.data.sData.tData;
-    if(_uid == SelfUid())
-    {
+    if (_uid == SelfUid()) {
         node.visible = false;
     }
     else {
@@ -7549,7 +7238,7 @@ function DealTi(node,msg) {
 /*
  处理踢
  */
-function setTiTag(msg,off) {
+function setTiTag(msg, off) {
     cc.log("setTiTag ===DealTi msg = " + JSON.stringify(msg));
     var _uid = msg.uid;
     var _rates = msg.rates;
@@ -7558,28 +7247,24 @@ function setTiTag(msg,off) {
     var tData = MjClient.data.sData.tData;
     var _node = getNode_cards(off);
     cc.log(off + " = off =====================DealTi msg = " + pl.info.uid);
-    if(_uid == pl.info.uid)
-    {
+    if (_uid == pl.info.uid) {
         var iconNode = _node.getChildByName("head").getChildByName("tiTagicon");
-        if(_isTi == 1)
-        {
-            if(tData.zhuang == getPlayerIndex(off)) //如果是庄
+        if (_isTi == 1) {
+            if (tData.zhuang == getPlayerIndex(off)) //如果是庄
             {
-                 //todo 反踢
+                //todo 反踢
                 playEffectInPlay("fanti");
                 cc.log("todo 反踢fffffffffffffffffffffff");
                 iconNode.loadTexture("playing/paodekuaiTable/fantiTag.png");
             }
-            else
-            {
+            else {
                 //todo 踢
                 playEffectInPlay("ti");
                 cc.log("踢nnnnnnnnnnnnnnnnnnnn");
                 iconNode.loadTexture("playing/paodekuaiTable/tiTag.png");
             }
         }
-        else
-        {
+        else {
             //todo 不踢
             playEffectInPlay("buti");
             cc.log("不踢888888888888888");
@@ -7591,20 +7276,16 @@ function setTiTag(msg,off) {
 /*
     设置倍数
  */
-function DealBeishu(node,msg,off)
-{
+function DealBeishu(node, msg, off) {
     var _off = getUiOffByUid(msg.uid);
     var pl = getUIPlayer(off);
     //if(_off == off)
-    if(pl)
-    {
+    if (pl) {
         //if(msg.jiazhuNum == 1)
         {
-            for(var k in msg.rates)
-            {
+            for (var k in msg.rates) {
                 cc.log("=====DealBeishu==========k = " + k);
-                if(pl.info.uid == k)
-                {
+                if (pl.info.uid == k) {
                     node.setString("×" + msg.rates[k] + "倍");
                     node.ignoreContentAdaptWithSize(true);
                     node.visible = true;
@@ -7615,19 +7296,18 @@ function DealBeishu(node,msg,off)
 }
 
 //设置牌的渲染
-function setCardSpriteByCardPic2(node, cd, isOnDesk)
-{
+function setCardSpriteByCardPic2(node, cd, isOnDesk) {
     if (MjClient.data.sData.tData.hunCard == cd)//小王，大王, 癞子牌
     {
         cc.log("setCardSpriteByCardPic2: param error!!!");
         return;
     }
 
-    if(MjClient.data.sData.tData.mcTransValue == cd && 
-        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI){//明牌
+    if (MjClient.data.sData.tData.mcTransValue == cd &&
+        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {//明牌
         node.isMing = true;
         cd = MjClient.data.sData.tData.mingCard;
-    }else{
+    } else {
         node.isMing = false;
     }
 
@@ -7647,8 +7327,8 @@ function setCardSpriteByCardPic2(node, cd, isOnDesk)
         node.removeChildByName("cardType2");
     if (node.getChildByName("smallFlower2"))
         node.removeChildByName("smallFlower2");
-	node.tag = cd;
-    if(node.isMing == true){
+    node.tag = cd;
+    if (node.isMing == true) {
         node.tag = MjClient.data.sData.tData.mcTransValue;
     }
     node.isOnDesk = isOnDesk;
@@ -7656,9 +7336,8 @@ function setCardSpriteByCardPic2(node, cd, isOnDesk)
 
     //牌的类型
     var cardTypeNode = new ccui.ImageView();
-    if(cd == 53 || cd == 54)
-    {
-        if(cd == 53)
+    if (cd == 53 || cd == 54) {
+        if (cd == 53)
             cardTypeNode.loadTexture(path + "joker_xiao.png");
         else
             cardTypeNode.loadTexture(path + "joker_da.png");
@@ -7670,12 +7349,10 @@ function setCardSpriteByCardPic2(node, cd, isOnDesk)
         var flowerTypeNode = new ccui.ImageView();
         flowerTypeNode.setName("imgNode");
         node.addChild(flowerTypeNode);
-        if(cd == 53)
-        {
+        if (cd == 53) {
             flowerTypeNode.loadTexture(path + "xiaowang_hua.png");
         }
-        else
-        {
+        else {
             flowerTypeNode.loadTexture(path + "dawang_hua.png");
         }
 
@@ -7687,12 +7364,11 @@ function setCardSpriteByCardPic2(node, cd, isOnDesk)
         node.addChild(smallFlowerNode);
 
         var nodeSize = node.getContentSize();
-        cardTypeNode.setPosition(7 + cardTypeNode.getContentSize().width/2, nodeSize.height - 7 - cardTypeNode.getContentSize().height/2);
-        flowerTypeNode.setPosition(nodeSize.width - 10 - flowerTypeNode.getContentSize().width/2, 10 + flowerTypeNode.getContentSize().height/2);
+        cardTypeNode.setPosition(7 + cardTypeNode.getContentSize().width / 2, nodeSize.height - 7 - cardTypeNode.getContentSize().height / 2);
+        flowerTypeNode.setPosition(nodeSize.width - 10 - flowerTypeNode.getContentSize().width / 2, 10 + flowerTypeNode.getContentSize().height / 2);
     }
-    else
-    {
-        if(flowerType == 0 || flowerType == 2)
+    else {
+        if (flowerType == 0 || flowerType == 2)
             cardTypeNode.loadTexture(path + "hei_" + cardType + ".png");
         else
             cardTypeNode.loadTexture(path + "hong_" + cardType + ".png");
@@ -7715,30 +7391,30 @@ function setCardSpriteByCardPic2(node, cd, isOnDesk)
         node.addChild(smallFlowerNode);
 
         var nodeSize = node.getContentSize();
-        cardTypeNode.setPosition(7 + cardTypeNode.getContentSize().width/2, nodeSize.height - 7 - cardTypeNode.getContentSize().height/2);
-        flowerTypeNode.setPosition(nodeSize.width - 10 - flowerTypeNode.getContentSize().width*flowerTypeNode.getScaleX()/2, 10 + flowerTypeNode.getContentSize().height/2);
+        cardTypeNode.setPosition(7 + cardTypeNode.getContentSize().width / 2, nodeSize.height - 7 - cardTypeNode.getContentSize().height / 2);
+        flowerTypeNode.setPosition(nodeSize.width - 10 - flowerTypeNode.getContentSize().width * flowerTypeNode.getScaleX() / 2, 10 + flowerTypeNode.getContentSize().height / 2);
 
-        if(MjClient.sortClassType == 0 || isOnDesk)
+        if (MjClient.sortClassType == 0 || isOnDesk)
             smallFlowerNode.setPosition(cardTypeNode.getPositionX(), nodeSize.height - 80);
         else
-            smallFlowerNode.setPosition(65,80);
+            smallFlowerNode.setPosition(65, 80);
 
     }
 
     //添加明牌标记
-    if(node.isMing == true){
+    if (node.isMing == true) {
         var nodeSize = node.getContentSize();
         var mingTagNode = new ccui.ImageView();
         mingTagNode.loadTexture(path + "ming_puke.png");
-        mingTagNode.setPosition(mingTagNode.getContentSize().width/2, mingTagNode.getContentSize().height/2);
+        mingTagNode.setPosition(mingTagNode.getContentSize().width / 2, mingTagNode.getContentSize().height / 2);
         node.addChild(mingTagNode);
     }
 }
 
 
 // 掂坨用法 用的CardPic3的资源
-function setCardSpriteByCardPic3DIanTuo(node, cd){ 
-    var path = "playing/diantuo/cards/"; 
+function setCardSpriteByCardPic3DIanTuo(node, cd) {
+    var path = "playing/diantuo/cards/";
     node.setScale(0.7 * MjClient.size.height / 720);
     node.tag = cd;
 
@@ -7751,7 +7427,7 @@ function setCardSpriteByCardPic3DIanTuo(node, cd){
     //     // 重新拼接名称
     //     node.loadTexture(path + cd  + ".png");
     // }else{
-        node.loadTexture(path + cd + ".png");
+    node.loadTexture(path + cd + ".png");
     // }
 
     // if(jsb.fileUtils.isFileExist("playing/cardPic3/" + cd + ".png")){
@@ -7759,7 +7435,7 @@ function setCardSpriteByCardPic3DIanTuo(node, cd){
     // }else{
     //     cc.log("err = ","playing/cardPic3/" + cd + ".png");
     // } 
-    
+
 }
 
 // 设置晋中牌的渲染 基于CardPic3的素材
@@ -7770,11 +7446,11 @@ function setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk) {
         return;
     }
 
-    if(MjClient.data.sData.tData.mcTransValue == cd &&
-        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI){//明牌
+    if (MjClient.data.sData.tData.mcTransValue == cd &&
+        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {//明牌
         node.isMing = true;
         cd = MjClient.data.sData.tData.mingCard;
-    }else{
+    } else {
         node.isMing = false;
     }
 
@@ -7795,7 +7471,7 @@ function setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk) {
     if (node.getChildByName("smallFlower2"))
         node.removeChildByName("smallFlower2");
     node.tag = cd;
-    if(node.isMing == true){
+    if (node.isMing == true) {
         node.tag = MjClient.data.sData.tData.mcTransValue;
     }
     node.isOnDesk = isOnDesk;
@@ -7804,9 +7480,8 @@ function setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk) {
     //牌的类型
     var cardTypeNode = new ccui.ImageView();
     var nodeSize = node.getContentSize();
-    if(cd == 53 || cd == 54)
-    {
-        if(cd == 53)
+    if (cd == 53 || cd == 54) {
+        if (cd == 53)
             cardTypeNode.loadTexture(path + "joker_xiao.png");
         else
             cardTypeNode.loadTexture(path + "joker_da.png");
@@ -7818,16 +7493,14 @@ function setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk) {
         var flowerTypeNode = new ccui.ImageView();
         flowerTypeNode.setName("imgNode");
         node.addChild(flowerTypeNode);
-        if(cd == 53)
-        {
+        if (cd == 53) {
             flowerTypeNode.loadTexture(path + "xiaowang_hua.png");
         }
-        else
-        {
+        else {
             flowerTypeNode.loadTexture(path + "dawang_hua.png");
         }
 
-        cardTypeNode.setPosition(7 + cardTypeNode.getContentSize().width/2, nodeSize.height - cardTypeNode.getContentSize().height/2 - 12);
+        cardTypeNode.setPosition(7 + cardTypeNode.getContentSize().width / 2, nodeSize.height - cardTypeNode.getContentSize().height / 2 - 12);
         flowerTypeNode.setPosition(nodeSize.width / 2, nodeSize.height / 2);
 
         var cardTypeNode2 = cardTypeNode.clone();
@@ -7837,7 +7510,7 @@ function setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk) {
         node.addChild(cardTypeNode2);
     }
     else {
-        if(flowerType == 0 || flowerType == 2) {
+        if (flowerType == 0 || flowerType == 2) {
             cardTypeNode.loadTexture(path + "hei_" + cardType + ".png");
         }
         else {
@@ -7846,7 +7519,7 @@ function setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk) {
 
         cardTypeNode.setName("cardType");
         node.addChild(cardTypeNode);
-        cardTypeNode.setPosition(7 + cardTypeNode.getContentSize().width/2, nodeSize.height - cardTypeNode.getContentSize().height/2 - 12);
+        cardTypeNode.setPosition(7 + cardTypeNode.getContentSize().width / 2, nodeSize.height - cardTypeNode.getContentSize().height / 2 - 12);
 
         var cardTypeNode2 = cardTypeNode.clone();
         cardTypeNode2.setPosition(nodeSize.width - cardTypeNode.getPositionX(), nodeSize.height - cardTypeNode.getPositionY());
@@ -7861,10 +7534,10 @@ function setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk) {
         smallFlowerNode.setScale(1.1);
         node.addChild(smallFlowerNode);
 
-        if(MjClient.sortClassType == 0 || isOnDesk)
+        if (MjClient.sortClassType == 0 || isOnDesk)
             smallFlowerNode.setPosition(cardTypeNode.getPositionX(), nodeSize.height - 75);
         else
-            smallFlowerNode.setPosition(65,80);
+            smallFlowerNode.setPosition(65, 80);
 
         // 小花2
         var smallFlowerNode2 = new ccui.ImageView();
@@ -7874,35 +7547,34 @@ function setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk) {
         smallFlowerNode2.setRotation(180);
         node.addChild(smallFlowerNode2);
 
-        if(MjClient.sortClassType == 0 || isOnDesk)
+        if (MjClient.sortClassType == 0 || isOnDesk)
             smallFlowerNode2.setPosition(nodeSize.width - cardTypeNode.getPositionX(), nodeSize.height - (nodeSize.height - 75));
         else
             smallFlowerNode2.setPosition(nodeSize.width - 65, nodeSize.height - 80);
     }
 
     //添加明牌标记
-    if(node.isMing == true){
+    if (node.isMing == true) {
         var mingTagNode = new ccui.ImageView();
         mingTagNode.loadTexture(path + "ming_puke.png");
-        mingTagNode.setPosition(mingTagNode.getContentSize().width/2, mingTagNode.getContentSize().height/2);
+        mingTagNode.setPosition(mingTagNode.getContentSize().width / 2, mingTagNode.getContentSize().height / 2);
         node.addChild(mingTagNode);
     }
 }
 
 //设置牌的渲染
-function setCardSpriteByCardPic3(node, cd, isOnDesk)
-{
+function setCardSpriteByCardPic3(node, cd, isOnDesk) {
     if (MjClient.data.sData.tData.hunCard == cd)//小王，大王, 癞子牌
     {
         cc.log("setCardSpriteByCardPic3: param error!!!");
         return;
     }
 
-    if(MjClient.data.sData.tData.mcTransValue == cd && 
-        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI){//明牌
+    if (MjClient.data.sData.tData.mcTransValue == cd &&
+        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {//明牌
         node.isMing = true;
         cd = MjClient.data.sData.tData.mingCard;
-    }else{
+    } else {
         node.isMing = false;
     }
 
@@ -7918,21 +7590,19 @@ function setCardSpriteByCardPic3(node, cd, isOnDesk)
     if (node.getChildByName("smallFlower2"))
         node.removeChildByName("smallFlower2");
     node.tag = cd;
-    if(node.isMing == true){
+    if (node.isMing == true) {
         node.tag = MjClient.data.sData.tData.mcTransValue;
     }
     node.isOnDesk = isOnDesk;
     node.isPKImg = true;
 
-    if(cd == 53 || cd == 54)
-    {
-        if(cd == 53)
+    if (cd == 53 || cd == 54) {
+        if (cd == 53)
             node.loadTexture(path + "501.png");
         else
             node.loadTexture(path + "502.png");
     }
-    else
-    {
+    else {
         var cardType = Math.ceil(cd / 4);// A,2 ,3, 4, 。。。。 j ,Q .k
         var flowerType = cd % 4;// 0 黑桃 ，1 方块 ，2 梅花 ，3 红桃
         if (flowerType == 0)    // 0 黑桃对印的图牌是4
@@ -7958,13 +7628,13 @@ function setCardSpriteByCardPic3(node, cd, isOnDesk)
     smallFlowerNode.setName("smallFlower");
     smallFlowerNode.visible = false;
     node.addChild(smallFlowerNode);
-    
+
     //添加明牌标记
-    if(node.isMing == true && MjClient.data.sData.tData.mcTransValue > 0){
+    if (node.isMing == true && MjClient.data.sData.tData.mcTransValue > 0) {
         var nodeSize = node.getContentSize();
         var mingTagNode = new ccui.ImageView();
         mingTagNode.loadTexture(path + "ming_puke.png");
-        mingTagNode.setPosition(mingTagNode.getContentSize().width/2, mingTagNode.getContentSize().height/2);
+        mingTagNode.setPosition(mingTagNode.getContentSize().width / 2, mingTagNode.getContentSize().height / 2);
         node.addChild(mingTagNode);
     }
 }
@@ -8023,19 +7693,18 @@ function setCardSpriteByCardPic4(node, cd, isOnDesk) {
 }
 
 //设置牌的渲染
-function setCardSpriteByCardPicYueYangNiuShiBie(node, cd, isOnDesk, imageType)
-{
+function setCardSpriteByCardPicYueYangNiuShiBie(node, cd, isOnDesk, imageType) {
     if (MjClient.data.sData.tData.hunCard == cd)//小王，大王, 癞子牌
     {
         cc.log("setCardSpriteByCardPicYueYangNiuShiBie: param error!!!");
         return;
     }
 
-    if(MjClient.data.sData.tData.mcTransValue == cd && 
-        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI){//明牌
+    if (MjClient.data.sData.tData.mcTransValue == cd &&
+        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {//明牌
         node.isMing = true;
         cd = MjClient.data.sData.tData.mingCard;
-    }else{
+    } else {
         node.isMing = false;
     }
 
@@ -8053,24 +7722,22 @@ function setCardSpriteByCardPicYueYangNiuShiBie(node, cd, isOnDesk, imageType)
     if (node.getChildByName("smallFlower2"))
         node.removeChildByName("smallFlower2");
     node.tag = cd;
-    if(node.isMing == true){
+    if (node.isMing == true) {
         node.tag = MjClient.data.sData.tData.mcTransValue;
     }
     node.isOnDesk = isOnDesk;
     node.isPKImg = true;
 
-    if(cd == 53 || cd == 54)
-    {
-        if(cd == 53)
+    if (cd == 53 || cd == 54) {
+        if (cd == 53)
             node.loadTexture(path + "501.png");
         else
             node.loadTexture(path + "502.png");
     }
-    else if(cd == 55 ){
+    else if (cd == 55) {
         node.loadTexture(path + "503.png");
     }
-    else
-    {
+    else {
         var cardType = Math.ceil(cd / 4);// A,2 ,3, 4, 。。。。 j ,Q .k
         var flowerType = cd % 4;// 0 黑桃 ，1 方块 ，2 梅花 ，3 红桃
         if (flowerType == 0)    // 0 黑桃对印的图牌是4
@@ -8096,13 +7763,13 @@ function setCardSpriteByCardPicYueYangNiuShiBie(node, cd, isOnDesk, imageType)
     smallFlowerNode.setName("smallFlower");
     smallFlowerNode.visible = false;
     node.addChild(smallFlowerNode);
-    
+
     //添加明牌标记
-    if(node.isMing == true && MjClient.data.sData.tData.mcTransValue > 0){
+    if (node.isMing == true && MjClient.data.sData.tData.mcTransValue > 0) {
         var nodeSize = node.getContentSize();
         var mingTagNode = new ccui.ImageView();
         mingTagNode.loadTexture(path + "ming_puke.png");
-        mingTagNode.setPosition(mingTagNode.getContentSize().width/2, mingTagNode.getContentSize().height/2);
+        mingTagNode.setPosition(mingTagNode.getContentSize().width / 2, mingTagNode.getContentSize().height / 2);
         node.addChild(mingTagNode);
     }
 }
@@ -8146,7 +7813,7 @@ function setCardMiniSprite(node, cd) {
     node.addChild(cardTypeNode);
 
     node.tag = cd;
-	node.isPKMiniImg = true;
+    node.isPKMiniImg = true;
 }
 
 function setCardMiniSpriteByCardPic3(node, cd) {
@@ -8178,11 +7845,10 @@ function setCardMiniSpriteByCardPic3(node, cd) {
     }
 
     node.tag = cd;
-	node.isPKMiniImg = true;
+    node.isPKMiniImg = true;
 }
 
-function setCardMiniSpriteByCardPicYueYangNiuShiBie(node, cd)
-{
+function setCardMiniSpriteByCardPicYueYangNiuShiBie(node, cd) {
     var path = "playing/niushibie/miniCardPic/";
 
     //麻将的底牌公用图，4张
@@ -8206,77 +7872,72 @@ function setCardMiniSpriteByCardPicYueYangNiuShiBie(node, cd)
     node.isPKMiniImg = true;
 }
 
-function setZhuangPaiIcon(off){
+function setZhuangPaiIcon(off) {
 
     var tData = MjClient.data.sData.tData;
     var node = getNode_cards(off);
 
     var pl = getUIPlayer(off);
-    if(tData.zhuang == null || tData.zhuang == -1 || tData.uids[tData.zhuang] !== pl.info.uid ||
+    if (tData.zhuang == null || tData.zhuang == -1 || tData.uids[tData.zhuang] !== pl.info.uid ||
         tData.tState == TableState.isReady || tData.tState == TableState.roundFinish /*|| (tData.chickenCard != -1)*/ ||
-        tData.tState == TableState.waitJiazhu  || tData.tState == TableState.waitCard )
-    {
+        tData.tState == TableState.waitJiazhu || tData.tState == TableState.waitCard) {
         return;
     }
 
     _path = "playing/damazi/jiaobiao-zhuangjia.png";
-    if(tData.chickenCard == -1){ //1v3
+    if (tData.chickenCard == -1) { //1v3
         _path = "playing/damazi/jiaobiao-mingdu.png"
     }
 
-    function _addTagIcon(name){
+    function _addTagIcon(name) {
         var children = node.children;
         var _max = -9999;
         var _endCard = null;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == name){
-                if(ci.zIndex > _max){
+            if (ci.name == name) {
+                if (ci.zIndex > _max) {
                     _max = ci.zIndex
                     _endCard = ci;
                 }
 
                 var _tag = ci.getChildByName("hongPaiTag");
-                if(_tag){
+                if (_tag) {
                     _tag.removeFromParent();
                 }
             }
         }
-        
-        if(_endCard){
+
+        if (_endCard) {
             var _cardTag = new ccui.ImageView(_path);
-            if(name == "out"){
+            if (name == "out") {
                 _cardTag.setScale(1.8)
             }
             var _scale = _cardTag.getScale();
-            _cardTag.setPosition(_endCard.width - _scale*_cardTag.width/2, _endCard.height - _scale*_cardTag.height/2);
+            _cardTag.setPosition(_endCard.width - _scale * _cardTag.width / 2, _endCard.height - _scale * _cardTag.height / 2);
             _cardTag.setName("hongPaiTag");
             _endCard.addChild(_cardTag);
         }
     }
 
-    if(off === 0)
-    {
+    if (off === 0) {
         _addTagIcon("mjhand");
         _addTagIcon("out");
     }
-    else
-    {
+    else {
         _addTagIcon("out");
     }
 }
 
-function setBaoPaiIcon(off){
+function setBaoPaiIcon(off) {
 
     var tData = MjClient.data.sData.tData;
     var node = getNode_cards(off);
 
     var pl = getUIPlayer(off);
-    if(tData.zhuang == null || tData.zhuang == -1 || tData.uids[tData.zhuang] !== pl.info.uid ||
+    if (tData.zhuang == null || tData.zhuang == -1 || tData.uids[tData.zhuang] !== pl.info.uid ||
         tData.tState == TableState.isReady || tData.tState == TableState.roundFinish ||
-        tData.tState == TableState.waitJiazhu  || tData.tState == TableState.waitCard )
-    {
+        tData.tState == TableState.waitJiazhu || tData.tState == TableState.waitCard) {
         return;
     }
 
@@ -8285,19 +7946,15 @@ function setBaoPaiIcon(off){
         _path = "playing/damazi/jiaobiao-zhuangjia.png";
     }
 
-    if(off === 0)
-    {
+    if (off === 0) {
         //手牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "mjhand")
-            {
-                if(!ci.getChildByName("hongPaiTag"))
-                {
+            if (ci.name == "mjhand") {
+                if (!ci.getChildByName("hongPaiTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("hongPaiTag");
                     ci.addChild(_cardTag);
                 }
@@ -8306,38 +7963,31 @@ function setBaoPaiIcon(off){
 
         //打出去的牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "out")
-            {
-                if(!ci.getChildByName("hongPaiTag"))
-                {
+            if (ci.name == "out") {
+                if (!ci.getChildByName("hongPaiTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("hongPaiTag");
                     ci.addChild(_cardTag);
                 }
             }
         }
     }
-    else
-    {
+    else {
         //手牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "mjhand_replay")
-            {
-                if(MjClient.rePlayVideo != -1 ){
+            if (ci.name == "mjhand_replay") {
+                if (MjClient.rePlayVideo != -1) {
                     break;
                 }
-                
-                if(!ci.getChildByName("hongPaiTag"))
-                {
+
+                if (!ci.getChildByName("hongPaiTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     ci.addChild(_cardTag);
                     _cardTag.setName("hongPaiTag");
                 }
@@ -8346,15 +7996,12 @@ function setBaoPaiIcon(off){
 
         //打出去的牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "out")
-            {
-                if(!ci.getChildByName("hongPaiTag"))
-                {
+            if (ci.name == "out") {
+                if (!ci.getChildByName("hongPaiTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("hongPaiTag");
                     ci.addChild(_cardTag);
                 }
@@ -8363,34 +8010,29 @@ function setBaoPaiIcon(off){
     }
 }
 
-function setHongPaiIcon(off){
+function setHongPaiIcon(off) {
 
     var tData = MjClient.data.sData.tData;
     var node = getNode_cards(off);
 
     var pl = getUIPlayer(off);
-    if(tData.zhuang == null || tData.zhuang == -1 || tData.uids[tData.zhuang] !== pl.info.uid ||
+    if (tData.zhuang == null || tData.zhuang == -1 || tData.uids[tData.zhuang] !== pl.info.uid ||
         tData.tState == TableState.isReady || tData.tState == TableState.roundFinish || !(tData.chickenCard == -1) ||
-        tData.tState == TableState.waitJiazhu  || tData.tState == TableState.waitCard )
-    {
+        tData.tState == TableState.waitJiazhu || tData.tState == TableState.waitCard) {
         return;
     }
 
     var _path = "playing/damazi/icon-houpai.png";
 
-    if(off === 0)
-    {
+    if (off === 0) {
         //手牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "mjhand")
-            {
-                if(!ci.getChildByName("hongPaiTag"))
-                {
+            if (ci.name == "mjhand") {
+                if (!ci.getChildByName("hongPaiTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("hongPaiTag");
                     ci.addChild(_cardTag);
                 }
@@ -8399,38 +8041,31 @@ function setHongPaiIcon(off){
 
         //打出去的牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "out")
-            {
-                if(!ci.getChildByName("hongPaiTag"))
-                {
+            if (ci.name == "out") {
+                if (!ci.getChildByName("hongPaiTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("hongPaiTag");
                     ci.addChild(_cardTag);
                 }
             }
         }
     }
-    else
-    {
+    else {
         //手牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "mjhand_replay")
-            {
-                if(MjClient.rePlayVideo != -1 ){
+            if (ci.name == "mjhand_replay") {
+                if (MjClient.rePlayVideo != -1) {
                     break;
                 }
-                
-                if(!ci.getChildByName("hongPaiTag"))
-                {
+
+                if (!ci.getChildByName("hongPaiTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     ci.addChild(_cardTag);
                     _cardTag.setName("hongPaiTag");
                 }
@@ -8439,15 +8074,12 @@ function setHongPaiIcon(off){
 
         //打出去的牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "out")
-            {
-                if(!ci.getChildByName("hongPaiTag"))
-                {
+            if (ci.name == "out") {
+                if (!ci.getChildByName("hongPaiTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("hongPaiTag");
                     ci.addChild(_cardTag);
                 }
@@ -8456,35 +8088,29 @@ function setHongPaiIcon(off){
     }
 }
 
-function setDiZhuCards(off)
-{
+function setDiZhuCards(off) {
 
 
     var tData = MjClient.data.sData.tData;
     var node = getNode_cards(off);
 
     var pl = getUIPlayer(off);
-    if(tData.zhuang == -1 || tData.uids[tData.zhuang] !== pl.info.uid)
-    {
+    if (tData.zhuang == -1 || tData.uids[tData.zhuang] !== pl.info.uid) {
         return;
     }
 
     cc.log(off + "= off =================================== tData.zhuang = " + tData.zhuang);
 
     var _path = "playing/cardPic2/dizhu_biao.png";
-    if(off === 0)
-    {
+    if (off === 0) {
         //手牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "mjhand")
-            {
-                if(!ci.getChildByName("dizhuTag"))
-                {
+            if (ci.name == "mjhand") {
+                if (!ci.getChildByName("dizhuTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("dizhuTag");
                     ci.addChild(_cardTag);
                 }
@@ -8493,34 +8119,27 @@ function setDiZhuCards(off)
 
         //打出去的牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "out")
-            {
-                if(!ci.getChildByName("dizhuTag"))
-                {
+            if (ci.name == "out") {
+                if (!ci.getChildByName("dizhuTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("dizhuTag");
                     ci.addChild(_cardTag);
                 }
             }
         }
     }
-    else
-    {
+    else {
         //手牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "mjhand_replay")
-            {
-                if(!ci.getChildByName("dizhuTag"))
-                {
+            if (ci.name == "mjhand_replay") {
+                if (!ci.getChildByName("dizhuTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     ci.addChild(_cardTag);
                     _cardTag.setName("dizhuTag");
                 }
@@ -8531,15 +8150,12 @@ function setDiZhuCards(off)
 
         //打出去的牌
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
+        for (var i = 0; i < children.length; i++) {
             var ci = children[i];
-            if(ci.name == "out")
-            {
-                if(!ci.getChildByName("dizhuTag"))
-                {
+            if (ci.name == "out") {
+                if (!ci.getChildByName("dizhuTag")) {
                     var _cardTag = new ccui.ImageView(_path);
-                    _cardTag.setPosition(ci.width - _cardTag.width/2, ci.height - _cardTag.height/2);
+                    _cardTag.setPosition(ci.width - _cardTag.width / 2, ci.height - _cardTag.height / 2);
                     _cardTag.setName("dizhuTag");
                     ci.addChild(_cardTag);
                 }
@@ -8559,18 +8175,15 @@ function setDiZhuCards(off)
     滑动选牌
 */
 //取消选中的牌
-function cancelSelectCard(cardnode)
-{
+function cancelSelectCard(cardnode) {
     if (!cc.sys.isObjectValid(cardnode)) {
         return;
     }
-    for(var i = 0; i < MjClient.touchMoveSelcetCardArray.length; i++)
-    {
+    for (var i = 0; i < MjClient.touchMoveSelcetCardArray.length; i++) {
         if (!cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[i])) { continue; }
-        if(MjClient.touchMoveSelcetCardArray[i].tag  == cardnode.tag  &&
+        if (MjClient.touchMoveSelcetCardArray[i].tag == cardnode.tag &&
             MjClient.touchMoveSelcetCardArray[i].getUserData() == cardnode.getUserData()
-        )
-        {
+        ) {
             MjClient.touchMoveSelcetCardArray[i].isGray = false;
             MjClient.touchMoveSelcetCardArray[i].setColor(MjClient.whiteColor);
             MjClient.touchMoveSelcetCardArray.splice(i, 1);
@@ -8579,35 +8192,29 @@ function cancelSelectCard(cardnode)
     }
 }
 //是否取消最后选中的牌
-function IsCancelSelect(lastMouseIn, curMouseIn)
-{
+function IsCancelSelect(lastMouseIn, curMouseIn) {
     if (!cc.sys.isObjectValid(lastMouseIn) || !cc.sys.isObjectValid(curMouseIn)) return false;
 
-    if(lastMouseIn.tag  == curMouseIn.tag  &&
+    if (lastMouseIn.tag == curMouseIn.tag &&
         lastMouseIn.getUserData() == curMouseIn.getUserData()
-    )
-    {
+    ) {
         return false;
     }
-    else if (checkIsHave(curMouseIn) && lastMouseIn.cannotOut != true)
-    {
+    else if (checkIsHave(curMouseIn) && lastMouseIn.cannotOut != true) {
         cancelSelectCard(lastMouseIn);
         return true;
     }
-    else
-    {
+    else {
         return false;
     }
 }
 var bTouchMove = false;//是否滑动出牌
 var lastMouseIn = null;//触碰中当前最后的一张牌
 
-var begPos=null;
+var begPos = null;
 var bsleep = false;//onmove隔次处理。提高效率
-var OnSelectCrad = function(curPos, isTchBge/*是否是touchbegin*/)
-{
-    if (bsleep&&!isTchBge)
-    {
+var OnSelectCrad = function (curPos, isTchBge/*是否是touchbegin*/) {
+    if (bsleep && !isTchBge) {
         bsleep = false;
         return;
     }
@@ -8615,7 +8222,7 @@ var OnSelectCrad = function(curPos, isTchBge/*是否是touchbegin*/)
         bsleep = true;
 
     var IsSelect = false;
-    var _begPos = isTchBge?curPos:begPos;
+    var _begPos = isTchBge ? curPos : begPos;
     if (_begPos == null) return IsSelect;
 
     var minx = Math.min(_begPos.x, curPos.x);
@@ -8626,22 +8233,19 @@ var OnSelectCrad = function(curPos, isTchBge/*是否是touchbegin*/)
 
     var _childrens = MjClient.playui._downNode.getChildren();
 
-    for(var i = 0; i  < _childrens.length; i++)
-    {
-        if(_childrens[i].name == "mjhand")
-        {
+    for (var i = 0; i < _childrens.length; i++) {
+        if (_childrens[i].name == "mjhand") {
             if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI ||
                 MjClient.gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY ||
                 MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT ||
                 MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA ||
                 MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
-                MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA || 
+                MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA ||
                 MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY ||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC ||
                 GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI
-                )
-            {
+            ) {
                 if (_childrens[i].cannotOut)
                     continue;
             }
@@ -8650,43 +8254,36 @@ var OnSelectCrad = function(curPos, isTchBge/*是否是touchbegin*/)
 
             var _boundingBox = _childrens[i].getBoundingBox();
 
-            if(MjClient.sortClassType == 0)
-            {
+            if (MjClient.sortClassType == 0) {
                 if (getLashCardX(_childrens) != parseInt(_childrens[i].x)) {
                     if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA ||
                         MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
-                        MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA || 
-                        MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+                        MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA ||
+                        MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
                         MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
                         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
                         MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
-                        MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG || 
+                        MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
                         MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN ||
                         MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
                         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN )
-                    {
+                        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
                         _boundingBox.width = _childrens[i].showWidth;
                     }
                     else
                         _boundingBox.width -= _boundingBox.width / 2;
                 }
             }
-            else
-            {
-                _boundingBox = cc.rect(_boundingBox.x ,_boundingBox.y +  60,_boundingBox.width,_boundingBox.height/4);
+            else {
+                _boundingBox = cc.rect(_boundingBox.x, _boundingBox.y + 60, _boundingBox.width, _boundingBox.height / 4);
             }
-            if ( _boundingBox.x+_boundingBox.width < minx || _boundingBox.x > maxx)
-            {
+            if (_boundingBox.x + _boundingBox.width < minx || _boundingBox.x > maxx) {
                 //么有选中。。。。。。。
             }
-            else
-            {
-                if (isTchBge )
-                {
-                    if (curPos.y >= _boundingBox.y && curPos.y <= (_boundingBox.y + _boundingBox.height))
-                    {
+            else {
+                if (isTchBge) {
+                    if (curPos.y >= _boundingBox.y && curPos.y <= (_boundingBox.y + _boundingBox.height)) {
                         bTouchMove = true;
                         _childrens[i].setColor(MjClient.grayColor);
                         MjClient.touchMoveSelcetCardArray.push(_childrens[i]);
@@ -8694,8 +8291,7 @@ var OnSelectCrad = function(curPos, isTchBge/*是否是touchbegin*/)
                         IsSelect = true;
                     }
                 }
-                else
-                {
+                else {
                     bTouchMove = true;
                     _childrens[i].setColor(MjClient.grayColor);
                     MjClient.touchMoveSelcetCardArray.push(_childrens[i]);
@@ -8707,23 +8303,22 @@ var OnSelectCrad = function(curPos, isTchBge/*是否是touchbegin*/)
     return IsSelect;
 }
 
-function getTouchListener_card()
-{
-    return{
+function getTouchListener_card() {
+    return {
         event: cc.EventListener.TOUCH_ONE_BY_ONE,
         swallowTouches: false,                       // 设置是否吞没事件，在 onTouchBegan 方法返回 true 时吞没
         onTouchBegan: function (touch, event) {
             var pl = getUIPlayer(0);
-            if ( !pl ) return false;
+            if (!pl) return false;
 
-            if(pl.mjState == TableState.roundFinish)//已经完成
+            if (pl.mjState == TableState.roundFinish)//已经完成
             {
                 return false;
             }
 
             if (MjClient.playui.isFaPai)
                 return false;
-            if (MjClient.playui.isDeal ==true)
+            if (MjClient.playui.isDeal == true)
                 return false;
 
             if (MjClient.selectCards_card.length == 0) {
@@ -8731,8 +8326,8 @@ function getTouchListener_card()
             }
 
             var target = event.getCurrentTarget();  // 获取事件所绑定的 target,这个target 就是down
-            
-            if(isSelectDiCards_HuaQuanJiao() ){
+
+            if (isSelectDiCards_HuaQuanJiao()) {
                 target = MjClient.playui._rightNode;
                 // var BtnTouXiang = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildByName("BtnTouXiang");
                 var BtnMaiPai = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildByName("BtnMaiPai");
@@ -8740,7 +8335,7 @@ function getTouchListener_card()
                 var tempPt = target.convertToNodeSpace(touch.getLocation());
                 var _destPt = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").convertToNodeSpace(tempPt);
 
-                if (cc.rectContainsPoint(btn_boundingBox, _destPt)){
+                if (cc.rectContainsPoint(btn_boundingBox, _destPt)) {
                     return false;
                 }
             }
@@ -8750,8 +8345,8 @@ function getTouchListener_card()
             var _childrens = MjClient.playui._downNode.getChildren();
             var _standui = MjClient.playui._downNode.getChildByName("stand");
 
-        
-            if(isSelectDiCards_HuaQuanJiao()){
+
+            if (isSelectDiCards_HuaQuanJiao()) {
                 _childrens = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildren(); //MjClient.playui.panel
                 _standui = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildByName("stand");
                 locationInNode = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").convertToNodeSpace(locationInNode);
@@ -8759,98 +8354,85 @@ function getTouchListener_card()
 
             var upSize = _standui.getSize();
             var upS = _standui.scale;
-            var cardX = upSize.width * upS*1.28;//一张牌的宽度
-            var cardY = upSize.width * upS*1.5; //一张牌的长度
+            var cardX = upSize.width * upS * 1.28;//一张牌的宽度
+            var cardY = upSize.width * upS * 1.5; //一张牌的长度
             MjClient.touchMoveSelcetCardArray = [];
 
             var _bg_sort = MjClient.playui._bg_sort;
-            if (_bg_sort && cc.rectContainsPoint(_bg_sort.getBoundingBox(), locationInNode))
-            {
+            if (_bg_sort && cc.rectContainsPoint(_bg_sort.getBoundingBox(), locationInNode)) {
                 return false;
             }
 
             bTouchMove = false;
-            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI||
-            MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY || 
-            MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY||
-            MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC||
-            MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN ||
-            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
-            MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
-            MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
-            MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-            MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
-            MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-            MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
-            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
-            MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K)
-            {//无间断选牌
-                if  (OnSelectCrad(locationInNode,true))return true;
+            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC ||
+                MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN ||
+                MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
+                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
+                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
+                MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
+                MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
+                MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
+                MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {//无间断选牌
+                if (OnSelectCrad(locationInNode, true)) return true;
             }
-            else
-            {
-                for(var i = 0; i < _childrens.length; i++)
-                {
-                    if(_childrens[i].name == "mjhand")
-                    {
+            else {
+                for (var i = 0; i < _childrens.length; i++) {
+                    if (_childrens[i].name == "mjhand") {
                         if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
                             GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU ||
                             GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA ||
                             MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
                             MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
-                            MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)
-                        {
+                            MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
                             if (_childrens[i].cannotOut)
                                 continue;
                         }
 
                         var _boundingBox = _childrens[i].getBoundingBox();
 
-                        if(isSelectDiCards_HuaQuanJiao()){
+                        if (isSelectDiCards_HuaQuanJiao()) {
                         }
 
-                        if(MjClient.sortClassType == 0)
-                        {
+                        if (MjClient.sortClassType == 0) {
                             if (getLashCardX(_childrens) != parseInt(_childrens[i].x)) {
                                 if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA ||
                                     MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
-                                    MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || 
-                                    MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
-                                    MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
+                                    MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+                                    MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
+                                    MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                                     MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
                                     MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                                    MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG || 
+                                    MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
                                     MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
                                     MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
                                     MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
                                     MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
                                     MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-                                    MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)
-                                {
+                                    MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) {
                                     _boundingBox.width = _childrens[i].showWidth;
                                 }
                                 else
                                     _boundingBox.width -= _boundingBox.width / 2;
                             }
                         }
-                        else
-                        {
-                            if(Math.round(_childrens[i].y) == Math.round(_standui.y))
-                            {
-                                _boundingBox = cc.rect(_boundingBox.x ,_boundingBox.y,_boundingBox.width,_boundingBox.height);
+                        else {
+                            if (Math.round(_childrens[i].y) == Math.round(_standui.y)) {
+                                _boundingBox = cc.rect(_boundingBox.x, _boundingBox.y, _boundingBox.width, _boundingBox.height);
                             }
-                            else
-                            {
-                                var _value  = (MjClient.currentCardPileCount - 13)*cardX/13;
-                                if(_value <= 0 ) _value  = 0;
-                                _boundingBox = cc.rect(_boundingBox.x ,_boundingBox.y + cardY*0.9,cardX - _value ,cardY*0.3);
+                            else {
+                                var _value = (MjClient.currentCardPileCount - 13) * cardX / 13;
+                                if (_value <= 0) _value = 0;
+                                _boundingBox = cc.rect(_boundingBox.x, _boundingBox.y + cardY * 0.9, cardX - _value, cardY * 0.3);
                             }
                         }
 
-                        if (cc.rectContainsPoint(_boundingBox, locationInNode))
-                        {
-                            if(!checkIsHave(_childrens[i]))
-                            {
+                        if (cc.rectContainsPoint(_boundingBox, locationInNode)) {
+                            if (!checkIsHave(_childrens[i])) {
                                 //_childrens[i].isGray = true;
                                 _childrens[i].setColor(MjClient.grayColor);
                                 MjClient.touchMoveSelcetCardArray.push(_childrens[i]);
@@ -8862,9 +8444,8 @@ function getTouchListener_card()
             }
 
             //点击空白出，所有的牌复原
-            if(MjClient.touchMoveSelcetCardArray.length <= 0)
-            {
-                if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN || 
+            if (MjClient.touchMoveSelcetCardArray.length <= 0) {
+                if (MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN ||
                     MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
                     MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
                     MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
@@ -8875,26 +8456,22 @@ function getTouchListener_card()
 
                 MjClient.selectCards_card = [];
                 MjClient.colloctionCurrentSelcetUIArray = [];
-                if(MjClient.sortClassType == 0) {
+                if (MjClient.sortClassType == 0) {
                     setCardToNormalPos();
                 }
                 else {
                     setCardToNormalColor();
                 }
                 MjClient.isSorting = false;
-                if(MjClient.colloctionCardsArray.length > 0)
-                {
-                    if (MjClient.playui._bg_sort)
-                    {
+                if (MjClient.colloctionCardsArray.length > 0) {
+                    if (MjClient.playui._bg_sort) {
                         MjClient.playui._bg_sort.getChildByName("Button_sort").loadTextureNormal("playing/cardTable/huifu.png");
                         MjClient.playui._bg_sort.getChildByName("Button_sort").visible = true;
                         MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(true);
                     }
                 }
-                else
-                {
-                    if(MjClient.playui._bg_sort)
-                    {
+                else {
+                    if (MjClient.playui._bg_sort) {
                         MjClient.playui._bg_sort.getChildByName("Button_sort").visible = false;
                         MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(false);
                     }
@@ -8908,10 +8485,10 @@ function getTouchListener_card()
             // 获取当前点击点所在相对按钮的位置坐标
             var locationInNode = target.convertToNodeSpace(touch.getLocation());
             if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY || 
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY||
-                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC||
-                MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN || 
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY ||
+                MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC ||
+                MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN ||
                 MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
                 MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
@@ -8920,82 +8497,74 @@ function getTouchListener_card()
                 MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
                 MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
                 MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN )
-            {//无间断选牌
-                 OnSelectCrad(locationInNode);
-                 return false;
+                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {//无间断选牌
+                OnSelectCrad(locationInNode);
+                return false;
             }
-            
+
             var _childrens = MjClient.playui._downNode.getChildren();
 
-            if(isSelectDiCards_HuaQuanJiao()){
+            if (isSelectDiCards_HuaQuanJiao()) {
                 _childrens = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildren(); //MjClient.playui.panel
-                
+
                 locationInNode = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").convertToNodeSpace(locationInNode);
             }
 
-            for(var i = 0; i < _childrens.length; i++)
-            {
-                if(_childrens[i].name == "mjhand")
-                {
+            for (var i = 0; i < _childrens.length; i++) {
+                if (_childrens[i].name == "mjhand") {
                     var _boundingBox = _childrens[i].getBoundingBox();
-                    if(MjClient.sortClassType == 0)
-                    {
+                    if (MjClient.sortClassType == 0) {
                         if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA ||
                             MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
                             MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI ||
                             MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA ||
                             MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW ||
                             MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
-                            MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || 
-                            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+                            MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+                            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
                             MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
                             MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN
-                            )
+                        )
                             _boundingBox.width = _childrens[i].showWidth;
                         else
                             _boundingBox.width -= _boundingBox.width / 2;
                     }
-                    else
-                    {
+                    else {
                         if (MjClient.gameType == MjClient.GAME_TYPE.TUAN_TUAN_ZHUAN) {
                             var _standui = MjClient.playui._downNode.getChildByName("stand");
                             var upSize = _standui.getSize();
                             var upS = _standui.scale;
-                            var cardX = upSize.width * upS*1.28;//一张牌的宽度
-                            var cardY = upSize.width * upS*1.5; //一张牌的长度
+                            var cardX = upSize.width * upS * 1.28;//一张牌的宽度
+                            var cardY = upSize.width * upS * 1.5; //一张牌的长度
                             if (Math.round(_childrens[i].y) == Math.round(_standui.y)) {
-                                _boundingBox = cc.rect(_boundingBox.x ,_boundingBox.y,_boundingBox.width,_boundingBox.height);
+                                _boundingBox = cc.rect(_boundingBox.x, _boundingBox.y, _boundingBox.width, _boundingBox.height);
                             }
                             else {
-                                var _value  = (MjClient.currentCardPileCount - 13)*cardX/13;
-                                if(_value <= 0 ) _value  = 0;
-                                _boundingBox = cc.rect(_boundingBox.x ,_boundingBox.y + cardY*0.9,cardX - _value ,cardY*0.3);
+                                var _value = (MjClient.currentCardPileCount - 13) * cardX / 13;
+                                if (_value <= 0) _value = 0;
+                                _boundingBox = cc.rect(_boundingBox.x, _boundingBox.y + cardY * 0.9, cardX - _value, cardY * 0.3);
                             }
                         }
                         else {
-                            _boundingBox = cc.rect(_boundingBox.x ,_boundingBox.y +  60,_boundingBox.width,_boundingBox.height/4);
+                            _boundingBox = cc.rect(_boundingBox.x, _boundingBox.y + 60, _boundingBox.width, _boundingBox.height / 4);
                         }
                     }
 
-                    if (cc.rectContainsPoint(_boundingBox, locationInNode))
-                    {
+                    if (cc.rectContainsPoint(_boundingBox, locationInNode)) {
                         ///////////////////监测取消刚才选中的牌
-                        if (IsCancelSelect(lastMouseIn, _childrens[i]))
-                        {
+                        if (IsCancelSelect(lastMouseIn, _childrens[i])) {
                             lastMouseIn = _childrens[i];
                             continue;
                         }
                         lastMouseIn = _childrens[i];
                         /////////////////////////////////////
-                        if(!checkIsHave(_childrens[i]))
-                        {
+                        if (!checkIsHave(_childrens[i])) {
                             cc.log("选中了");
                             bTouchMove = true;
-                            if((MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || 
-                                MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER || 
-                                MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI || 
-                                MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN)  && 
+                            if ((MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+                                MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+                                MjClient.gameType == MjClient.GAME_TYPE.DA_TONG_ZHA_GU_ZI ||
+                                MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN) &&
                                 _childrens[i].cannotOut && _childrens[i].cannotOut == true) {
                                 //打七中置灰的牌不可提起
                             } else {
@@ -9008,12 +8577,12 @@ function getTouchListener_card()
             }
         },
         onTouchEnded: function (touch, event) {         // 点击事件结束处理
-            begPos=null;
+            begPos = null;
             var target = event.getCurrentTarget();
             playEffectInPlay("clickCards");
 
             // 处理斗地主智能提示
-            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU){
+            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU) {
                 handleDoudizhuCardsAutoUp();
             }
 
@@ -9023,12 +8592,10 @@ function getTouchListener_card()
                 MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K)
                 postEvent("CloseSelectPutCardsPanel");
 
-            if(MjClient.sortClassType == 0)
-            {
+            if (MjClient.sortClassType == 0) {
                 showTouchSelectHorCards();
             }
-            else
-            {
+            else {
                 showTouchSelectVerCards()
             }
         }
@@ -9038,53 +8605,53 @@ function getTouchListener_card()
 // 处理斗地主智能提牌
 function handleDoudizhuCardsAutoUp() {
     var tData = MjClient.data.sData.tData;
-    if(!IsTurnToMe() || tData.tState != TableState.waitPut) { return; }
+    if (!IsTurnToMe() || tData.tState != TableState.waitPut) { return; }
     if (!MjClient.isDoudizhuValidAutoUpCards) { return; } // 智能提牌已经失效
     if (MjClient.selectCards_card.length > 0 && bTouchMove) {
         // 已有提出牌，划牌，智能提牌失效
         MjClient.isDoudizhuValidAutoUpCards = false;
         return;
     }
-    if(tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1){//首出没有提示
+    if (tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1) {//首出没有提示
         // 首出
         handleAutoUpWithFirstOut(bTouchMove);
     } else {
         // 接牌
         handleAutoUpWithTipCards(bTouchMove);
     }
-    
+
 }
 
 // 首出牌处理自动提牌
 function handleAutoUpWithFirstOut(bTouchMove) {
-    if(!MjClient.majiang || !MjClient.majiang.calAutoPutCardWithFirstOut) { return; }
+    if (!MjClient.majiang || !MjClient.majiang.calAutoPutCardWithFirstOut) { return; }
 
     if (bTouchMove && MjClient.touchMoveSelcetCardArray.length > 0) { // 首出牌，滑动会出顺子
         var upSelectCards = [];
         for (var i = 0; i < MjClient.touchMoveSelcetCardArray.length; i++) {
-            if( !cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[i]) ) continue;
+            if (!cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[i])) continue;
             upSelectCards.push(MjClient.touchMoveSelcetCardArray[i].tag);
         }
         var hands = [];
         var children = MjClient.playui._downNode.children;
-        for(var i = 0; i < children.length; i++) {
-            if( !cc.sys.isObjectValid(children[i]) ) continue;
-            if(children[i].name == "mjhand") {
+        for (var i = 0; i < children.length; i++) {
+            if (!cc.sys.isObjectValid(children[i])) continue;
+            if (children[i].name == "mjhand") {
                 hands.push(children[i].tag);
             }
         }
         var data = MjClient.majiang.calAutoPutCardWithFirstOut(upSelectCards, hands);
         changeSelectToValidCards(data, bTouchMove);
     }
-    return;    
+    return;
 }
 
 //  接牌处理自动提牌
 function handleAutoUpWithTipCards(bTouchMove) {
     var tData = MjClient.data.sData.tData;
     if (MjClient.tipCardsArray == null || MjClient.tipCardsArray.length == 0) { return; } // 没有提示
-    if(!MjClient.majiang || !MjClient.majiang.calType) { return; }
-    if(!MjClient.majiang || !MjClient.majiang.calAutoPutCards) { return; }
+    if (!MjClient.majiang || !MjClient.majiang.calType) { return; }
+    if (!MjClient.majiang || !MjClient.majiang.calAutoPutCards) { return; }
 
     var cType = MjClient.majiang.calType(tData.lastPutCard);
     var CARDTPYE = MjClient.majiang.CARDTPYE;
@@ -9095,7 +8662,7 @@ function handleAutoUpWithTipCards(bTouchMove) {
     var upSelectCards = [];
     var lastSelectCards = MjClient.selectCards_card.slice();
     for (var i = 0; i < MjClient.touchMoveSelcetCardArray.length; i++) {
-        if( !cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[i]) ) continue;
+        if (!cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[i])) continue;
         var tag = MjClient.touchMoveSelcetCardArray[i].tag;
         var idx = lastSelectCards.indexOf(tag);
         if (idx == -1) { // 增加提牌
@@ -9122,28 +8689,25 @@ function changeSelectToValidCards(data, bTouchMove) {
         MjClient.selectCards_card = [];
         MjClient.touchMoveSelcetCardArray = [];
         var children = MjClient.playui._downNode.children;
-        for(var i = 0; i < children.length; i++) {
-            if( !cc.sys.isObjectValid(children[i]) ) continue;
-            if(children[i].name == "mjhand" && tSelectCards.indexOf(children[i].tag) > -1) {
+        for (var i = 0; i < children.length; i++) {
+            if (!cc.sys.isObjectValid(children[i])) continue;
+            if (children[i].name == "mjhand" && tSelectCards.indexOf(children[i].tag) > -1) {
                 MjClient.touchMoveSelcetCardArray.push(children[i]);
             }
         }
     }
 }
 
-function checkIsHave(cardnode)
-{
-    if( !cc.sys.isObjectValid(cardnode) ) {
+function checkIsHave(cardnode) {
+    if (!cc.sys.isObjectValid(cardnode)) {
         return false;
     }
     var bHave = false;
-    for(var i = 0; i < MjClient.touchMoveSelcetCardArray.length; i++)
-    {
-        if(!cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[i])) continue;
-        if(MjClient.touchMoveSelcetCardArray[i].tag  == cardnode.tag  &&
-                MjClient.touchMoveSelcetCardArray[i].getUserData() == cardnode.getUserData()
-        )
-        {
+    for (var i = 0; i < MjClient.touchMoveSelcetCardArray.length; i++) {
+        if (!cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[i])) continue;
+        if (MjClient.touchMoveSelcetCardArray[i].tag == cardnode.tag &&
+            MjClient.touchMoveSelcetCardArray[i].getUserData() == cardnode.getUserData()
+        ) {
             bHave = true;
             break;
         }
@@ -9159,15 +8723,11 @@ function checkIsHave(cardnode)
     return bHave;
 }
 
-function getLashCardX(_childrens)
-{
+function getLashCardX(_childrens) {
     var lastX = 0;
-    for(var i = 0; i < _childrens.length; i++)
-    {
-        if (_childrens[i].name == "mjhand")
-        {
-            if(_childrens[i].x > lastX)
-            {
+    for (var i = 0; i < _childrens.length; i++) {
+        if (_childrens[i].name == "mjhand") {
+            if (_childrens[i].x > lastX) {
                 lastX = _childrens[i].x;
             }
         }
@@ -9176,11 +8736,9 @@ function getLashCardX(_childrens)
 }
 
 // 获取牌型点数总和
-function getCardsSum(cards)
-{
+function getCardsSum(cards) {
     var sum = 0;
-    for(var i in cards)
-    {
+    for (var i in cards) {
         sum += MjClient.majiang.calPoint(cards[i]);
     }
 
@@ -9188,11 +8746,9 @@ function getCardsSum(cards)
 }
 
 // 获取牌型点数乘积
-function getCardsProduct(cards)
-{
+function getCardsProduct(cards) {
     var product = 1;
-    for(var i in cards)
-    {
+    for (var i in cards) {
         product *= MjClient.majiang.calPoint(cards[i]);
     }
 
@@ -9200,77 +8756,61 @@ function getCardsProduct(cards)
 }
 
 // 从同类牌型数组中挑选最小的一组
-function getMinCards(cardsArray, type, areaSelectMode)
-{
+function getMinCards(cardsArray, type, areaSelectMode) {
     var majiang = MjClient.majiang;
 
     // 三带二关于带单牌或带对子的处理
-    if (majiang.CARDTPYE.sandaier == type && cardsArray.length > 2)
-    {
-        var value_1,value_2,value_3,value_4,value_5;
+    if (majiang.CARDTPYE.sandaier == type && cardsArray.length > 2) {
+        var value_1, value_2, value_3, value_4, value_5;
         value_1 = value_2 = value_3 = value_4 = value_5 = 0;
 
         // 筛选出所有对子的点数
         var duiziValues = [];
-        for(var i in cardsArray) 
-        {
+        for (var i in cardsArray) {
             value_1 = majiang.calPoint(cardsArray[i][0]);
             value_2 = majiang.calPoint(cardsArray[i][1]);
             value_4 = majiang.calPoint(cardsArray[i][3]);
             value_5 = majiang.calPoint(cardsArray[i][4]);
 
-            if (value_1 == value_2 && value_4 == value_5)
-            {
-                if (value_1 == majiang.calPoint(cardsArray[i][2]))
-                {
+            if (value_1 == value_2 && value_4 == value_5) {
+                if (value_1 == majiang.calPoint(cardsArray[i][2])) {
                     if (duiziValues.indexOf(value_5) < 0)
                         duiziValues.push(value_5);
                 }
-                else
-                {
+                else {
                     if (duiziValues.indexOf(value_1) < 0)
                         duiziValues.push(value_1);
                 }
             }
         }
 
-        if (duiziValues.length > 0)
-        {
+        if (duiziValues.length > 0) {
             // 如果存在完全不同于对子点数的单牌组合，则优先提示带单牌组合
             var danPrior = false;
-            for(var i in cardsArray) 
-            {
+            for (var i in cardsArray) {
                 value_1 = majiang.calPoint(cardsArray[i][0]);
                 value_2 = majiang.calPoint(cardsArray[i][1]);
                 value_4 = majiang.calPoint(cardsArray[i][3]);
                 value_5 = majiang.calPoint(cardsArray[i][4]);
 
-                if (value_1 != value_2 || value_4 != value_5)
-                {
-                    if (value_1 != value_2)
-                    {
-                        if (value_2 == majiang.calPoint(cardsArray[i][2]))
-                        {
-                            if (duiziValues.indexOf(value_1) < 0 && duiziValues.indexOf(value_5) < 0)
-                            {
+                if (value_1 != value_2 || value_4 != value_5) {
+                    if (value_1 != value_2) {
+                        if (value_2 == majiang.calPoint(cardsArray[i][2])) {
+                            if (duiziValues.indexOf(value_1) < 0 && duiziValues.indexOf(value_5) < 0) {
                                 danPrior = true;
                                 break;
                             }
                         }
-                        else
-                        {
-                            if (duiziValues.indexOf(value_1) < 0 && duiziValues.indexOf(value_2) < 0)
-                            {
+                        else {
+                            if (duiziValues.indexOf(value_1) < 0 && duiziValues.indexOf(value_2) < 0) {
                                 danPrior = true;
                                 break;
                             }
                         }
-                        
+
                     }
-                    else
-                    {
-                        if (duiziValues.indexOf(value_4) < 0 && duiziValues.indexOf(value_5) < 0)
-                        {
+                    else {
+                        if (duiziValues.indexOf(value_4) < 0 && duiziValues.indexOf(value_5) < 0) {
                             danPrior = true;
                             break;
                         }
@@ -9279,8 +8819,7 @@ function getMinCards(cardsArray, type, areaSelectMode)
             }
 
             // 带单牌优先，移除包含对子点数的组合
-            if (danPrior)
-            {
+            if (danPrior) {
                 var bRemove = false;
                 var cmpValue = 0;
 
@@ -9289,22 +8828,19 @@ function getMinCards(cardsArray, type, areaSelectMode)
 
                     value_3 = majiang.calPoint(cardsArray[i][2]);
 
-                    for (var j = 0; j < 5; j++)
-                    {
+                    for (var j = 0; j < 5; j++) {
                         cmpValue = majiang.calPoint(cardsArray[i][j]);
 
                         if (value_3 == cmpValue)
                             continue;
 
-                        if (duiziValues.indexOf(cmpValue) >= 0)
-                        {
+                        if (duiziValues.indexOf(cmpValue) >= 0) {
                             bRemove = true;
                             break;
                         }
                     }
 
-                    if (bRemove)
-                    {
+                    if (bRemove) {
                         cardsArray.splice(i, 1);
                         i--;
                     }
@@ -9315,12 +8851,11 @@ function getMinCards(cardsArray, type, areaSelectMode)
 
     var minCards = cardsArray[0];
 
-    for(var i in cardsArray) 
-    {
+    for (var i in cardsArray) {
         if (i == 0)
             continue;
 
-        if (majiang.calCardsValue(cardsArray[i],type,areaSelectMode) < majiang.calCardsValue(minCards,type,areaSelectMode) || 
+        if (majiang.calCardsValue(cardsArray[i], type, areaSelectMode) < majiang.calCardsValue(minCards, type, areaSelectMode) ||
             getCardsSum(cardsArray[i]) < getCardsSum(minCards) || getCardsProduct(cardsArray[i]) < getCardsProduct(minCards))
             minCards = cardsArray[i];
     }
@@ -9329,39 +8864,38 @@ function getMinCards(cardsArray, type, areaSelectMode)
 }
 
 // 获取选择的牌的提示   / 滑牌提示
-function getSelectCardsTips()
-{
-    if(GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI) {
+function getSelectCardsTips() {
+    if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI) {
         return [];
     }
 
-    if(!MjClient.majiang || !MjClient.majiang.allTipsNoOrder) {
+    if (!MjClient.majiang || !MjClient.majiang.allTipsNoOrder) {
         return [];
     }
 
     var pl = getUIPlayer(0);
     var pl2 = getUIPlayer(1);
-    var isNextPlayerOneCard = pl2 ? pl2.handCount==1 : false;
+    var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
     var majiang = MjClient.majiang;
     var tData = MjClient.data.sData.tData;
     var selectData = {}
-    for(var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
+    for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
     var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-    if(1 == firstPutRuleNum || 3 == firstPutRuleNum) {
+    if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
         selectData.firstHeiTao3 = true;  // 必须出黑桃3
-    } else if(2 == firstPutRuleNum || 4 == firstPutRuleNum){
+    } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
         selectData.firstHeiTao3 = false; // 可以不出黑桃3
     }
 
     var isFirstRound = tData.roundAll == tData.roundNum;
 
     var selectCard = [];
-    for(var index in MjClient.touchMoveSelcetCardArray) {
+    for (var index in MjClient.touchMoveSelcetCardArray) {
         var selectnode = MjClient.touchMoveSelcetCardArray[index];
-        if (cc.sys.isObjectValid(selectnode))    
+        if (cc.sys.isObjectValid(selectnode))
             selectCard.push(selectnode.tag);
     }
-    if(MjClient.selectCards_card && MjClient.selectCards_card.length > 0 ) {
+    if (MjClient.selectCards_card && MjClient.selectCards_card.length > 0) {
         return selectCard;
     }
 
@@ -9372,26 +8906,26 @@ function getSelectCardsTips()
     }
 
     var isCanPut = majiang.checkPut(pl.mjhand, selectCard, lastPutCards, selectData, isNextPlayerOneCard, isFirstRound);
-    if(isCanPut) {
+    if (isCanPut) {
         return selectCard;
     }
 
     // 选择的牌全为3张， 直接提起
     var isAllSanZhang = true;
-    for(var i in selectCard) {
+    for (var i in selectCard) {
         var find = majiang.findNSameCard(selectCard, majiang.calPoint(selectCard[i]), 3);
-        if(!find) isAllSanZhang = false;
+        if (!find) isAllSanZhang = false;
     }
-    if(isAllSanZhang) {
+    if (isAllSanZhang) {
         return selectCard;
     }
 
-    if(!MjClient.selectTipCardsArray) return selectCard;
+    if (!MjClient.selectTipCardsArray) return selectCard;
 
     // 原有提示上筛选合适的提示
     var tipCardsArray = [];
     var allTipCards = MjClient.selectTipCardsArray.slice();
-    allTipCards.sort(function(a, b){
+    allTipCards.sort(function (a, b) {
         return b.length - a.length
     })
 
@@ -9400,7 +8934,7 @@ function getSelectCardsTips()
     //var lastDuiziIndex = -1;
     var sameIndexs = {};
 
-    for(var i in allTipCards) {
+    for (var i in allTipCards) {
         var tipcards = allTipCards[i];
 
         // cc.log("----------------------------------------------");
@@ -9414,22 +8948,20 @@ function getSelectCardsTips()
         //     lastDuiziIndex = i;
         // }
 
-        if(tipcards.length <= selectCard.length) { 
+        if (tipcards.length <= selectCard.length) {
             var sameNum = 0;
 
             // 完全从原有提示中挑选，如果提示牌不在选中的牌中，则丢弃这组提示
-            for(var j in tipcards) {
-                if(selectCard.indexOf(tipcards[j]) >= 0) 
+            for (var j in tipcards) {
+                if (selectCard.indexOf(tipcards[j]) >= 0)
                     sameNum++;
-                else if ((!majiang.CARDTPYE.szdaipai || majiang.CARDTPYE.szdaipai < 0) && 
-                    (!majiang.CARDTPYE.sztonghua || majiang.CARDTPYE.sztonghua < 0) && 
-                    !selectData.tongHuaShun && (!isFirstRound || !selectData.firstHeiTao3))
-                {
+                else if ((!majiang.CARDTPYE.szdaipai || majiang.CARDTPYE.szdaipai < 0) &&
+                    (!majiang.CARDTPYE.sztonghua || majiang.CARDTPYE.sztonghua < 0) &&
+                    !selectData.tongHuaShun && (!isFirstRound || !selectData.firstHeiTao3)) {
                     // 修正提示点数匹配，但是牌值不能匹配的情况
                     var bContain = false;
-                    for(var k = selectCard.length - 1; k >= 0; k--) {
-                        if (majiang.calPoint(selectCard[k]) == majiang.calPoint(tipcards[j]) && tipcards.indexOf(selectCard[k]) < 0)
-                        {
+                    for (var k = selectCard.length - 1; k >= 0; k--) {
+                        if (majiang.calPoint(selectCard[k]) == majiang.calPoint(tipcards[j]) && tipcards.indexOf(selectCard[k]) < 0) {
                             bContain = true;
                             sameNum++;
                             tipcards[j] = selectCard[k];
@@ -9439,22 +8971,21 @@ function getSelectCardsTips()
 
                     if (!bContain)
                         break;
-                } 
+                }
                 else
                     break;
             }
 
-            if (sameNum > 0 && sameNum == tipcards.length)
-            {
+            if (sameNum > 0 && sameNum == tipcards.length) {
                 if (!sameIndexs["_" + sameNum])
                     sameIndexs["_" + sameNum] = [];
 
                 sameIndexs["_" + sameNum].push(i);
 
-                if(maxSameNum < sameNum) {
+                if (maxSameNum < sameNum) {
                     maxSameNum = sameNum;
                 }
-            }    
+            }
         }
     }
 
@@ -9480,37 +9011,33 @@ function getSelectCardsTips()
 
     // 加入同花顺和同花顺带牌的类型
     if (majiang.CARDTPYE.sztonghua && majiang.CARDTPYE.sztonghua > 0)
-        putOrders.splice(0,0,majiang.CARDTPYE.sztonghua);
+        putOrders.splice(0, 0, majiang.CARDTPYE.sztonghua);
 
     if (majiang.CARDTPYE.szdaipai && majiang.CARDTPYE.szdaipai > 0)
-        putOrders.splice(0,0,majiang.CARDTPYE.szdaipai);
+        putOrders.splice(0, 0, majiang.CARDTPYE.szdaipai);
 
     // 加入巡航导弹类型
-    if (majiang.CARDTPYE.xunhangdaodan && majiang.CARDTPYE.xunhangdaodan > 0)
-    {
+    if (majiang.CARDTPYE.xunhangdaodan && majiang.CARDTPYE.xunhangdaodan > 0) {
         var index = putOrders.indexOf(majiang.CARDTPYE.liandui);
-        putOrders.splice(index,0,majiang.CARDTPYE.xunhangdaodan);
+        putOrders.splice(index, 0, majiang.CARDTPYE.xunhangdaodan);
     }
 
     // 加入sange3daiyi类型
-    if (majiang.CARDTPYE.sange3daiyi && majiang.CARDTPYE.sange3daiyi > 0)
-    {
+    if (majiang.CARDTPYE.sange3daiyi && majiang.CARDTPYE.sange3daiyi > 0) {
         var index = putOrders.indexOf(majiang.CARDTPYE.sange3);
-        putOrders.splice(index,0,majiang.CARDTPYE.sange3daiyi);
+        putOrders.splice(index, 0, majiang.CARDTPYE.sange3daiyi);
     }
 
     // 加入sidaiyi类型
-    if (majiang.CARDTPYE.sidaiyi && majiang.CARDTPYE.sidaiyi > 0)
-    {
+    if (majiang.CARDTPYE.sidaiyi && majiang.CARDTPYE.sidaiyi > 0) {
         var index = putOrders.indexOf(majiang.CARDTPYE.sizha);
-        putOrders.splice(index,0,majiang.CARDTPYE.sidaiyi);
+        putOrders.splice(index, 0, majiang.CARDTPYE.sidaiyi);
     }
 
     // 加入sangeAdaiyi类型
-    if (majiang.CARDTPYE.sangeAdaiyi && majiang.CARDTPYE.sangeAdaiyi > 0)
-    {
+    if (majiang.CARDTPYE.sangeAdaiyi && majiang.CARDTPYE.sangeAdaiyi > 0) {
         var index = putOrders.indexOf(majiang.CARDTPYE.sangeA);
-        putOrders.splice(index,0,majiang.CARDTPYE.sangeAdaiyi);
+        putOrders.splice(index, 0, majiang.CARDTPYE.sangeAdaiyi);
     }
 
     // 加入sanshun类型
@@ -9526,7 +9053,7 @@ function getSelectCardsTips()
         // 对张数相同的提示牌进行分类
         var classifiedCards = {};
 
-        for(var i in indexs) {
+        for (var i in indexs) {
             var cardType = majiang.cardsType(allTipCards[indexs[i]], selectData);
 
             if (!classifiedCards[cardType])
@@ -9537,12 +9064,10 @@ function getSelectCardsTips()
             classifiedCards[cardType].push(cards);
         }
 
-        for(var i in putOrders)
-        {
-            if (classifiedCards[putOrders[i]])
-            {   
+        for (var i in putOrders) {
+            if (classifiedCards[putOrders[i]]) {
                 // 挑一组同类型的最小牌组合
-                return getMinCards(classifiedCards[putOrders[i]],putOrders[i],selectData);;
+                return getMinCards(classifiedCards[putOrders[i]], putOrders[i], selectData);;
             }
         }
     }
@@ -9555,194 +9080,179 @@ function getSelectCardsTips()
     return selectCard;
 }
 
-function isSelectDiCards_HuaQuanJiao(){
+function isSelectDiCards_HuaQuanJiao() {
     var tData = MjClient.data.sData.tData;
     var _isSelectDiCards = false;
 
-    if(MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO &&
-        tData.tState == TableState.waitMaiPai && 0 == getOffByIndex(tData.curPlayer) ){
+    if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO &&
+        tData.tState == TableState.waitMaiPai && 0 == getOffByIndex(tData.curPlayer)) {
         _isSelectDiCards = true;
     }
 
     return _isSelectDiCards;
 }
 
-function showTouchSelectHorCards()
-{
+function showTouchSelectHorCards() {
     var downNode = MjClient.playui._downNode;
     var standUI = downNode.getChildByName("stand");
     var children = downNode.children;
 
     var tData = MjClient.data.sData.tData;
-    if(isSelectDiCards_HuaQuanJiao()){
+    if (isSelectDiCards_HuaQuanJiao()) {
         children = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildren(); //MjClient.playui.panel
         standUI = MjClient.playui._downNode.getChildByName("selectDiCardPannel_New").getChildByName("stand");
     }
 
     var upSize = standUI.getSize();
     var upS = standUI.scale;
-    var cardY = upSize.width * upS*1.5; //一张牌的长度
-    var cardOut = parseInt(cardY/4);//点击牌弹起的高度,以前是20像素
+    var cardY = upSize.width * upS * 1.5; //一张牌的长度
+    var cardOut = parseInt(cardY / 4);//点击牌弹起的高度,以前是20像素
 
-    cc.log('standUIstandUI'+JSON.stringify(standUI))
-    cc.log('childrenchildren'+JSON.stringify(children))
+    cc.log('standUIstandUI' + JSON.stringify(standUI))
+    cc.log('childrenchildren' + JSON.stringify(children))
 
     MjClient.colloctionCurrentSelcetUIArray = [];
     var tipcards = getSelectCardsTips();
 
-    var specialType_1 = (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI || 
-        GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU || 
-        GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA || 
-        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI || 
-        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER || 
-        MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
-        MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI || 
+    var specialType_1 = (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
+        GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DOU_DI_ZHU ||
+        GameClass[MjClient.gameType] == MjClient.GAME_CLASS.SAN_DA_HA ||
+        MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
+        MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
+        MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
+        MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
         MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
         MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
-        MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||  
+        MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN);
 
-    var specialType_2 = (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA || 
+    var specialType_2 = (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA ||
         MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA);
 
-    for(var i = 0; i < children.length; i++)
-    {
-        if( !cc.sys.isObjectValid(children[i]) ) continue;
+    for (var i = 0; i < children.length; i++) {
+        if (!cc.sys.isObjectValid(children[i])) continue;
 
-        if(children[i].name == "mjhand")
-        {
-            if (specialType_1)
-            {
+        if (children[i].name == "mjhand") {
+            if (specialType_1) {
                 if (!children[i].cannotOut)
-                    children[i].setColor(cc.color(255,255,255));
+                    children[i].setColor(cc.color(255, 255, 255));
             }
-            else
-            {
-                children[i].setColor(cc.color(255,255,255));
+            else {
+                children[i].setColor(cc.color(255, 255, 255));
             }
 
             //如果是理牌的牌，则继续灰色
-            for(var m = 0;m< MjClient.colloctionCardsArray.length;m++)
-            {
+            for (var m = 0; m < MjClient.colloctionCardsArray.length; m++) {
                 var _colloctionCards = MjClient.colloctionCardsArray[m].slice();
 
                 for (var k = 0; k < _colloctionCards.length; k++) {
                     if (children[i].tag == _colloctionCards[k] &&
-                        checkUINodeHave(MjClient.colloctionCardsUIArray,children[i])//判断是否是此UI节点
+                        checkUINodeHave(MjClient.colloctionCardsUIArray, children[i])//判断是否是此UI节点
                     ) {
-                        children[i].setColor(cc.color(190,190,190));
+                        children[i].setColor(cc.color(190, 190, 190));
                         var index = _colloctionCards.indexOf(_colloctionCards[k]);
-                        _colloctionCards.splice(index,1);
+                        _colloctionCards.splice(index, 1);
                     }
                 }
             }
 
             var standUI_2RowY = null;
-            if(isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex ){
-                if(children[i]){
-                    standUI_2RowY = standUI.y - standUI.height*1.3//children[i].height*1.3
+            if (isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex) {
+                if (children[i]) {
+                    standUI_2RowY = standUI.y - standUI.height * 1.3//children[i].height*1.3
                 }
             }
 
             // var tipcards = getSelectCardsTips();
-            for(var j = 0;j < MjClient.touchMoveSelcetCardArray.length;j++)
-            {
-                if(!cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[j])) continue;
-                if(children[i].tag == MjClient.touchMoveSelcetCardArray[j].tag &&
+            for (var j = 0; j < MjClient.touchMoveSelcetCardArray.length; j++) {
+                if (!cc.sys.isObjectValid(MjClient.touchMoveSelcetCardArray[j])) continue;
+                if (children[i].tag == MjClient.touchMoveSelcetCardArray[j].tag &&
                     children[i].getUserData() == MjClient.touchMoveSelcetCardArray[j].getUserData()
-                )
-                {
+                ) {
                     var dy = Math.round(children[i].y - standUI.y);
 
-                    if(isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex ){
+                    if (isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex) {
 
                         dy = Math.round(children[i].y - standUI_2RowY);
                     }
 
-                    if(children[i]&&children[i].isUp && dy < Math.round(standUI.y + cardOut) && specialType_2)
-                    {
+                    if (children[i] && children[i].isUp && dy < Math.round(standUI.y + cardOut) && specialType_2) {
                         if (MjClient.majiang && MjClient.majiang.allTipsNoOrder) {
-                            if(tipcards.indexOf(MjClient.touchMoveSelcetCardArray[j].tag) >= 0) {
-                                children[i].y = standUI.y*2 + cardOut;
+                            if (tipcards.indexOf(MjClient.touchMoveSelcetCardArray[j].tag) >= 0) {
+                                children[i].y = standUI.y * 2 + cardOut;
                                 MjClient.selectCards_card.push(children[i].tag);
                             }
                         } else {
-                            children[i].y = standUI.y*2 + cardOut;
+                            children[i].y = standUI.y * 2 + cardOut;
                             MjClient.selectCards_card.push(children[i].tag);
                         }
                     }
-                    else if(dy < cardOut)
-                    {
+                    else if (dy < cardOut) {
                         if (MjClient.majiang && MjClient.majiang.allTipsNoOrder) {
-                            if(tipcards.indexOf(MjClient.touchMoveSelcetCardArray[j].tag) >= 0) {
+                            if (tipcards.indexOf(MjClient.touchMoveSelcetCardArray[j].tag) >= 0) {
                                 children[i].y = standUI.y + cardOut;
                                 MjClient.selectCards_card.push(children[i].tag);
                             }
                         } else {
                             children[i].y = standUI.y + cardOut;
 
-                            if(isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex ){
+                            if (isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex) {
                                 children[i].y = standUI_2RowY + cardOut;
                             }
                             MjClient.selectCards_card.push(children[i].tag);
                         }
                     }
-                    else
-                    {
-                        if(bTouchMove)
-                        {
-                            if(children[i]&&children[i].isUp && specialType_2) {
-                                children[i].y = standUI.y*2;
+                    else {
+                        if (bTouchMove) {
+                            if (children[i] && children[i].isUp && specialType_2) {
+                                children[i].y = standUI.y * 2;
                             }
-                            else 
-                            {
+                            else {
                                 children[i].y = standUI.y;
 
-                                if(isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex ){
+                                if (isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex) {
                                     children[i].y = standUI_2RowY + cardOut;
 
-                                    if(children[i].y > standUI_2RowY ){ //提起来的放下
+                                    if (children[i].y > standUI_2RowY) { //提起来的放下
                                         children[i].y = standUI_2RowY;
                                     }
                                 }
                             }
                             var index = MjClient.selectCards_card.indexOf(children[i].tag);//把这张牌从数组删除
 
-                            if(index >= 0)  
-                                MjClient.selectCards_card.splice(index,1);
+                            if (index >= 0)
+                                MjClient.selectCards_card.splice(index, 1);
                             else if (children[i].replacement) {
                                 index = MjClient.selectCards_card.indexOf(children[i].replacement);
 
                                 if (index >= 0)
-                                    MjClient.selectCards_card.splice(index,1);
+                                    MjClient.selectCards_card.splice(index, 1);
                             }
                         }
-                        else
-                        {
-                            if(children[i]&&children[i].isUp && specialType_2) {
-                                children[i].y = standUI.y*2;
-                            } 
-                            else 
-                            {
+                        else {
+                            if (children[i] && children[i].isUp && specialType_2) {
+                                children[i].y = standUI.y * 2;
+                            }
+                            else {
                                 children[i].y = standUI.y;
 
-                                if(isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex){
+                                if (isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex) {
                                     children[i].y = standUI_2RowY;
                                 }
                             }
 
                             var index = MjClient.selectCards_card.indexOf(children[i].tag);//把这张牌从数组删除
-                            if(index >= 0)  
-                                MjClient.selectCards_card.splice(index,1);
+                            if (index >= 0)
+                                MjClient.selectCards_card.splice(index, 1);
                             else if (children[i].replacement) {
                                 index = MjClient.selectCards_card.indexOf(children[i].replacement);
 
                                 if (index >= 0)
-                                    MjClient.selectCards_card.splice(index,1);
+                                    MjClient.selectCards_card.splice(index, 1);
                             }
                         }
                     }
@@ -9752,27 +9262,23 @@ function showTouchSelectHorCards()
 
             var dy = Math.round(children[i].y - standUI.y);
 
-            if(isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex ){
+            if (isSelectDiCards_HuaQuanJiao() && i >= MjClient.playui.secondRowStartIndex) {
                 dy = Math.round(children[i].y - standUI_2RowY);
             }
 
-            if(dy >= cardOut)
-            {
+            if (dy >= cardOut) {
                 //排除已选的牌UI
                 var bExist = false;
-                for(var w  = 0 ;w < MjClient.colloctionCurrentSelcetUIArray.length;w++)
-                {
-                    if(MjClient.colloctionCurrentSelcetUIArray[w].tag == children[i].tag &&
+                for (var w = 0; w < MjClient.colloctionCurrentSelcetUIArray.length; w++) {
+                    if (MjClient.colloctionCurrentSelcetUIArray[w].tag == children[i].tag &&
                         MjClient.colloctionCurrentSelcetUIArray[w].getUserData() == children[i].getUserData()
-                    )
-                    {
+                    ) {
                         bExist = true;
                         break;
                     }
                 }
 
-                if(!bExist)
-                {
+                if (!bExist) {
                     MjClient.colloctionCurrentSelcetUIArray.push(children[i]);
                 }
             }
@@ -9780,26 +9286,21 @@ function showTouchSelectHorCards()
     }
 
     //理牌按钮状态修改
-    if(MjClient.playui._bg_sort)
-    {
-        if(MjClient.selectCards_card.length > 0)
-        {
+    if (MjClient.playui._bg_sort) {
+        if (MjClient.selectCards_card.length > 0) {
             MjClient.isSorting = true;
             MjClient.playui._bg_sort.getChildByName("Button_sort").loadTextureNormal("playing/cardTable/lipai.png");
             MjClient.playui._bg_sort.getChildByName("Button_sort").visible = true;
             MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(true);
         }
-        else
-        {
+        else {
             MjClient.isSorting = false;
-            if(MjClient.colloctionCardsArray.length > 0)
-            {
+            if (MjClient.colloctionCardsArray.length > 0) {
                 MjClient.playui._bg_sort.getChildByName("Button_sort").loadTextureNormal("playing/cardTable/huifu.png");
                 MjClient.playui._bg_sort.getChildByName("Button_sort").visible = true;
                 MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(true);
             }
-            else
-            {
+            else {
                 MjClient.playui._bg_sort.getChildByName("Button_sort").visible = false;
                 MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(false);
             }
@@ -9809,22 +9310,18 @@ function showTouchSelectHorCards()
     UpdataCurrentPutCard(true);
 }
 
-function showTouchSelectVerCards()
-{
+function showTouchSelectVerCards() {
     var downNode = MjClient.playui._downNode;
     var standUI = downNode.getChildByName("stand");
     var children = downNode.children;
 
-    for(var i = 0; i < children.length; i++)
-    {
-        if(cc.sys.isObjectValid(children[i]) && children[i].name == "mjhand")
-        {
+    for (var i = 0; i < children.length; i++) {
+        if (cc.sys.isObjectValid(children[i]) && children[i].name == "mjhand") {
 
             // children[i].setColor(MjClient.whiteColor);
             // children[i].isGray = false;
             // //如果是理牌的牌，则继续灰色
-            if(children[i].isGray)
-            {
+            if (children[i].isGray) {
                 cc.log(" children[i] = " + children[i].tag);
                 children[i].setColor(MjClient.grayColor);
             }
@@ -9847,34 +9344,28 @@ function showTouchSelectVerCards()
             // }
 
 
-            for(var j = 0;j < MjClient.touchMoveSelcetCardArray.length;j++)
-            {
+            for (var j = 0; j < MjClient.touchMoveSelcetCardArray.length; j++) {
                 cc.log('wwwwww777')
-                if(children[i].tag == MjClient.touchMoveSelcetCardArray[j].tag &&
+                if (children[i].tag == MjClient.touchMoveSelcetCardArray[j].tag &&
                     children[i].getUserData() == MjClient.touchMoveSelcetCardArray[j].getUserData()
-                )
-                {
+                ) {
 
-                    cc.log("=========gray tag = " +children[i].tag);
+                    cc.log("=========gray tag = " + children[i].tag);
 
-                    if(!children[i].isGray)
-                    {
+                    if (!children[i].isGray) {
                         children[i].isGray = true;
                         MjClient.selectCards_card.push(children[i].tag);
                         children[i].setColor(MjClient.grayColor);
                     }
-                    else
-                    {
-                        if(bTouchMove)
-                        {
+                    else {
+                        if (bTouchMove) {
                             var index = MjClient.selectCards_card.indexOf(children[i].tag);//把这张牌从数组删除
-                            MjClient.selectCards_card.splice(index,1);
+                            MjClient.selectCards_card.splice(index, 1);
                         }
-                        else
-                        {
+                        else {
 
                             var index = MjClient.selectCards_card.indexOf(children[i].tag);//把这张牌从数组删除
-                            MjClient.selectCards_card.splice(index,1);
+                            MjClient.selectCards_card.splice(index, 1);
                         }
                         children[i].setColor(MjClient.whiteColor);
                         children[i].isGray = false;
@@ -9887,8 +9378,7 @@ function showTouchSelectVerCards()
 
     MjClient.colloctionCurrentSelcetUIArray = [];
     //MjClient.currentSelectCards = [];
-    for(var k = 0; k < children.length; k++)
-    {
+    for (var k = 0; k < children.length; k++) {
         if (children[k].isGray)//能这样判断？
         {
             //排除已选的牌UI
@@ -9911,7 +9401,7 @@ function showTouchSelectVerCards()
     }
 
 
-    for(var m  =  0;m < MjClient.colloctionCurrentSelcetUIArray.length;m++) {
+    for (var m = 0; m < MjClient.colloctionCurrentSelcetUIArray.length; m++) {
         cc.log("33333333333333：" + MjClient.colloctionCurrentSelcetUIArray[m].tag);
         cc.log("333333333333333DATA ：" + MjClient.colloctionCurrentSelcetUIArray[m].getUserData());
     }
@@ -9930,24 +9420,20 @@ function showTouchSelectVerCards()
 
 
     //理牌按钮状态修改
-    if(MjClient.selectCards_card.length > 0)
-    {
+    if (MjClient.selectCards_card.length > 0) {
         MjClient.isSorting = true;
         MjClient.playui._bg_sort.getChildByName("Button_sort").loadTextureNormal("playing/cardTable/lipai.png");
         MjClient.playui._bg_sort.getChildByName("Button_sort").visible = true;
         MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(true);
     }
-    else
-    {
+    else {
         MjClient.isSorting = false;
-        if(MjClient.colloctionCardsArray.length > 0)
-        {
+        if (MjClient.colloctionCardsArray.length > 0) {
             MjClient.playui._bg_sort.getChildByName("Button_sort").loadTextureNormal("playing/cardTable/huifu.png");
             MjClient.playui._bg_sort.getChildByName("Button_sort").visible = true;
             MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(true);
         }
-        else
-        {
+        else {
             MjClient.playui._bg_sort.getChildByName("Button_sort").visible = false;
             MjClient.playui._bg_sort.getChildByName("Button_sort").setTouchEnabled(false);
         }
@@ -9960,8 +9446,7 @@ function showTouchSelectVerCards()
     end of 滑动选牌
  */
 
-function CardLayoutRestoreForEndOne_ty (node, plNode)
-{
+function CardLayoutRestoreForEndOne_ty(node, plNode) {
     var layoutType = false;//默认排序
     var newVal = 0; //新牌的值，是几万，几筒，几条....为数字
     var pl; //player 信息
@@ -9986,43 +9471,37 @@ function CardLayoutRestoreForEndOne_ty (node, plNode)
     var uihun = [];//癞子牌在最左边
     // var sData = MjClient.data.sData;
     // var tData = sData.tData;
-    for(var i = 0; i < children.length; i++) //children 为 "down" 节点下的字节点
+    for (var i = 0; i < children.length; i++) //children 为 "down" 节点下的字节点
     {
         var ci = children[i];
-        if(ci.name == "mjhand")
-        {
-            if(MjClient.data.sData.tData.hunCard == ci.tag)
-            {
+        if (ci.name == "mjhand") {
+            if (MjClient.data.sData.tData.hunCard == ci.tag) {
                 uihun.push(ci);
             }
-            else
-            {
+            else {
                 uistand.push(ci);
             }
 
-            if(MjClient.data.sData.tData.hunCard == ci.tag)
-            {
+            if (MjClient.data.sData.tData.hunCard == ci.tag) {
                 //ci.setColor(cc.color(255,255,63));
             }
 
-            var _smallFlower = ci.getChildByName("cardType").getChildByName("smallFlower");
-            if(_smallFlower)
-            {
-                _smallFlower.setPosition(22,35)
+            var ct = ci.getChildByName("cardType"),
+                _smallFlower = ct ? ct.getChildByName("smallFlower") : null;
+            if (_smallFlower) {
+                _smallFlower.setPosition(22, 35)
             }
 
         }
-        else if(ci.name == "standPri")
-        {
+        else if (ci.name == "standPri") {
             uistand.push(ci);
         }
-        else if(ci.name == "mjhand_replay")
-        {
+        else if (ci.name == "mjhand_replay") {
             uistand.push(ci);
-            var _smallFlower = ci.getChildByName("cardType").getChildByName("smallFlower");
-            if(_smallFlower)
-            {
-                _smallFlower.setPosition(22,35)
+            var ct = ci.getChildByName("cardType"),
+                _smallFlower = ct ? ct.getChildByName("smallFlower") : null;
+            if (_smallFlower) {
+                _smallFlower.setPosition(22, 35)
             }
         }
     }
@@ -10032,38 +9511,31 @@ function CardLayoutRestoreForEndOne_ty (node, plNode)
      */
     var rankType = 1;//0 从小到大排序 ，1 按照算法排序
     var pro_rankType = false;
-    if(!layoutType)
-    {
+    if (!layoutType) {
         pro_rankType = false;
     }
-    else
-    {
+    else {
         pro_rankType = true;
     }
 
-    if(rankType == 0)
-    {
+    if (rankType == 0) {
         uistand.sort(TagOrder);
     }
-    else
-    {   
+    else {
         var handcards = pl.mjhandRecord || pl.mjhand;   // 有mjhandRecord则显示所有牌， 打出的牌显示遮罩
-        if(handcards && handcards.length > 0)
-        {
+        if (handcards && handcards.length > 0) {
             var mjhandPai = tempMaJiang.sortHandCards(handcards, pro_rankType);
             var cardCount = 0;
             var tempuistand = uistand.slice();
             cc.log(pro_rankType + "=========  mjhandPai = " + JSON.stringify(mjhandPai));
             var myUiStand = []; //重新排序后
-            for(var j = 0;j < mjhandPai.length;j++)
-            {
+            for (var j = 0; j < mjhandPai.length; j++) {
                 for (var i = 0; i < tempuistand.length; i++) {
                     var tag = tempuistand[i].tag;
-                    if (tag == mjhandPai[j])
-                    {
+                    if (tag == mjhandPai[j]) {
                         myUiStand.push(tempuistand[i]);
                         var index = tempuistand.indexOf(tempuistand[i]);
-                        tempuistand.splice(index,1);
+                        tempuistand.splice(index, 1);
                         cardCount++;
                     }
                 }
@@ -10073,10 +9545,9 @@ function CardLayoutRestoreForEndOne_ty (node, plNode)
     }
 
 
-    if(uihun.length > 0) //是否有柰子，有则放在最前面 by sking
+    if (uihun.length > 0) //是否有柰子，有则放在最前面 by sking
     {
-        for(var i = 0; i < uihun.length; i++)
-        {
+        for (var i = 0; i < uihun.length; i++) {
             uistand.unshift(uihun[i]); //向数组开头添加一个元素 unshift
         }
     }
@@ -10084,17 +9555,15 @@ function CardLayoutRestoreForEndOne_ty (node, plNode)
     var uiOrder = [uigang1, uigang0, uipeng, uichi, uistand];
 
     var orders = []; //重新排序后装到数组里 by sking
-    for(var j = 0; j < uiOrder.length; j++)
-    {
+    for (var j = 0; j < uiOrder.length; j++) {
         var uis = uiOrder[j];
-        for(var i = 0; i < uis.length; i++)
-        {
+        for (var i = 0; i < uis.length; i++) {
             orders.push(uis[i]);
         }
     }
 
     //设置麻将位置
-    for(var i = 0; i < orders.length; i++) {
+    for (var i = 0; i < orders.length; i++) {
         var ci = orders[i];
         if (i != 0) {
             if (ci.name == orders[i - 1].name) {
@@ -10111,16 +9580,13 @@ function CardLayoutRestoreForEndOne_ty (node, plNode)
     }
 };
 
-function setjiaBeiTag_card(msg,off)
-{
-     cc.log("============setMaizhuangTag===========" + JSON.stringify(msg));
+function setjiaBeiTag_card(msg, off) {
+    cc.log("============setMaizhuangTag===========" + JSON.stringify(msg));
     var _node = getNode_cards(off);
     var _maizhuangNode = _node.getChildByName("head").getChildByName("icon_jiabei");
     var pl = getUIPlayer(off);
-    if(pl && msg.uid === pl.info.uid)
-    {
-        if(msg.jiazhuNum == 2)
-        {
+    if (pl && msg.uid === pl.info.uid) {
+        if (msg.jiazhuNum == 2) {
             cc.log("加倍。。。。。。。。。。。");
             _maizhuangNode.visible = true;
         }
@@ -10152,17 +9618,17 @@ function setPKImg(node, cd, isOnDesk, type) {
         MjClient.getAppType() != MjClient.APP_TYPE.QXYZQP &&
         MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ &&
         MjClient.getAppType() != MjClient.APP_TYPE.HUNANWANGWANG &&
-        MjClient.getAppType() != MjClient.APP_TYPE.QXXXGHZ && 
-        MjClient.getAppType() != MjClient.APP_TYPE.QXLYQP && 
+        MjClient.getAppType() != MjClient.APP_TYPE.QXXXGHZ &&
+        MjClient.getAppType() != MjClient.APP_TYPE.QXLYQP &&
         MjClient.getAppType() != MjClient.APP_TYPE.YLHUNANMJ &&
-        MjClient.getAppType() != MjClient.APP_TYPE.QXXZMJ && 
+        MjClient.getAppType() != MjClient.APP_TYPE.QXXZMJ &&
         MjClient.getAppType() != MjClient.APP_TYPE.TXJINZHONGMJ &&
         MjClient.getAppType() != MjClient.APP_TYPE.DQSHANXIMJ &&
         MjClient.getAppType() != MjClient.APP_TYPE.QXNTQP &&
         MjClient.getAppType() != MjClient.APP_TYPE.QXHAMJ &&
-        MjClient.getAppType() != MjClient.APP_TYPE.AYGUIZHOUMJ) || 
-        (MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI) || 
-        (MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI) || 
+        MjClient.getAppType() != MjClient.APP_TYPE.AYGUIZHOUMJ) ||
+        (MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI) ||
+        (MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI) ||
         (MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI) ||
         (MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ && GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_DE_KUAI)) {
         setCardSpriteByCardPic2(node, cd, isOnDesk);
@@ -10174,7 +9640,7 @@ function setPKImg(node, cd, isOnDesk, type) {
     if (arguments.length < 4)
         type = getCurrentPKImgType();
 
-    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
         MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
@@ -10182,11 +9648,11 @@ function setPKImg(node, cd, isOnDesk, type) {
         MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ) {
+        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
         setCardSpriteByCardPicYueYangNiuShiBie(node, cd, isOnDesk, type);
         return;
     }
-    
+
     switch (type) {
         case 0:
             setCardSpriteByCardPic2(node, cd, isOnDesk);
@@ -10194,8 +9660,8 @@ function setPKImg(node, cd, isOnDesk, type) {
         case 1:
             if (isJinZhongAPPType() || MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP)
                 setCardSpriteByCardPic3JinZhong(node, cd, isOnDesk);
-            else if(MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO)
-                 setCardSpriteByCardPic3DIanTuo(node, cd, isOnDesk);
+            else if (MjClient.gameType == MjClient.GAME_TYPE.DIAN_TUO)
+                setCardSpriteByCardPic3DIanTuo(node, cd, isOnDesk);
             else
                 setCardSpriteByCardPic3(node, cd, isOnDesk);
             break;
@@ -10204,28 +9670,28 @@ function setPKImg(node, cd, isOnDesk, type) {
             break;
     }
 
-    if(cd == -1 && MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ){
+    if (cd == -1 && MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO) {
         var beiMain = new cc.Sprite("playing/cardPic2/beimian_puke.png");
         beiMain.setName("beiMain");
-        beiMain.setScale(node.width/beiMain.width, node.height/beiMain.height);
-        beiMain.setPosition(node.width/2, node.height/2);
+        beiMain.setScale(node.width / beiMain.width, node.height / beiMain.height);
+        beiMain.setPosition(node.width / 2, node.height / 2);
         node.addChild(beiMain, 111);
     }
 
     var dizhuTag = node.getChildByName("dizhuTag");
     if (dizhuTag)
-        dizhuTag.setPosition(node.width - dizhuTag.width/2, node.height - dizhuTag.height/2);
+        dizhuTag.setPosition(node.width - dizhuTag.width / 2, node.height - dizhuTag.height / 2);
 
     var beiMain = node.getChildByName("beiMain");
     if (beiMain) {
-        beiMain.setPosition(node.width/2, node.height/2);
-        beiMain.setScale(node.width/beiMain.width, node.height/beiMain.height);
+        beiMain.setPosition(node.width / 2, node.height / 2);
+        beiMain.setScale(node.width / beiMain.width, node.height / beiMain.height);
     }
 }
 
 function setPKMiniImg(node, cd, type) {
 
-    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE || 
+    if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
         MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
         MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
@@ -10233,16 +9699,15 @@ function setPKMiniImg(node, cd, type) {
         MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
         MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN  ) {
+        MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
 
-        if( (type == "mjhand_you" || (type == "mjhand_replay") || (node && node.isPKMiniImg)) && (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
+        if ((type == "mjhand_you" || (type == "mjhand_replay") || (node && node.isPKMiniImg)) && (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
             MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
             MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) )
-        {
+            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K)) {
             setYouPaiSprite(node, cd);
             return;
-        }else{
+        } else {
             setCardMiniSpriteByCardPicYueYangNiuShiBie(node, cd);
             return;
         }
@@ -10264,8 +9729,7 @@ function setPKMiniImg(node, cd, type) {
     }
 }
 
-function setPKImgDif(node)
-{
+function setPKImgDif(node) {
     if (isJinZhongAPPType())
         return;
 
@@ -10287,7 +9751,7 @@ function setPKImgDif(node)
     if (condition_1 || condition_2 || condition_3) {
         if (condition_1) {
             isDownHandNode = isDownHandNode || (node.getParent() && node.getParent().getName() == "partner" && node.name == "mjhand_partner")    // 队友的手牌
-            
+
             node.width = 157;
             node.height = 218;
         }
@@ -10301,15 +9765,15 @@ function setPKImgDif(node)
 
         if (isDownHandNode) {
             if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE)
-                node.setScale(MjClient.size.width/1280 * 0.8);
+                node.setScale(MjClient.size.width / 1280 * 0.8);
             else if (MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI)
-                node.setScale(MjClient.size.width/1280 * 0.88);
+                node.setScale(MjClient.size.width / 1280 * 0.88);
             else
-                node.setScale(MjClient.size.width/1280 * 1.0);
+                node.setScale(MjClient.size.width / 1280 * 1.0);
         }
         else {
-            var scaleX = node.srcWidth*node.srcScale/node.width;
-            var scaleY = node.srcHeight*node.srcScale/node.height;
+            var scaleX = node.srcWidth * node.srcScale / node.width;
+            var scaleY = node.srcHeight * node.srcScale / node.height;
             node.setScale(scaleX < scaleY ? scaleX : scaleY);
         }
     } else {
@@ -10326,16 +9790,16 @@ function setPKImgDif(node)
         }
 
         var baseY = 0;
-        if (node.isUp &&  (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA
+        if (node.isUp && (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA
             || MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA)) {
-            if (stand.srcY - node.height*node.scaleX*0.5 < 0)
-                baseY = node.height*node.scaleX;
+            if (stand.srcY - node.height * node.scaleX * 0.5 < 0)
+                baseY = node.height * node.scaleX;
             else
-                baseY = stand.srcY*2;
+                baseY = stand.srcY * 2;
         }
         else {
-            if (stand.srcY - node.height*node.scaleX*0.5 < 0)
-                baseY = node.height*node.scaleX*0.5;
+            if (stand.srcY - node.height * node.scaleX * 0.5 < 0)
+                baseY = node.height * node.scaleX * 0.5;
             else
                 baseY = stand.srcY;
 
@@ -10348,18 +9812,17 @@ function setPKImgDif(node)
         var cardY = upSize.width * upS * 1.5; //一张牌的长度
         var cardOut = cardY / 4; //点击牌弹起的高度,以前是20像素
         var difY = node.y - baseY;
-        if (difY > cardOut/2)
+        if (difY > cardOut / 2)
             node.y = baseY + cardOut;
         else
             node.y = baseY;
     }
 }
 
-function changePKImg(node, type)
-{
+function changePKImg(node, type) {
     if (MjClient.playui.isFaPai) {
         node.stopActionByTag(20180723);
-        var action = cc.sequence(cc.delayTime(0.1), cc.callFunc(function() {
+        var action = cc.sequence(cc.delayTime(0.1), cc.callFunc(function () {
             changePKImg(node, type);
         }));
         action.setTag(20180723);
@@ -10375,35 +9838,34 @@ function changePKImg(node, type)
     }
 
     var childArray = node.getChildren();
-    for(var index in childArray)
-    {
+    for (var index in childArray) {
         var child = childArray[index];
         changePKImg(child, type);
     }
 }
 function setReadyHide(node) {
 
-   function callfunc(node1) {
-        node1.getChildByName("ready").visible=false;
-       cc.log("setReadyHide"+node1._name);
+    function callfunc(node1) {
+        node1.getChildByName("ready").visible = false;
+        cc.log("setReadyHide" + node1._name);
     }
-    var ready1=callfunc.call(null,node);
+    var ready1 = callfunc.call(null, node);
 
 }
 function setNoPutHide(node) {
 
     function callfunc(node1) {
-        node1.getChildByName("noPutTag").visible=false;
-        cc.log("setNoputHide"+node1._name);
+        node1.getChildByName("noPutTag").visible = false;
+        cc.log("setNoputHide" + node1._name);
     }
-    var ready1=callfunc.call(null,node);
+    var ready1 = callfunc.call(null, node);
 
 }
 
-function setTuoGuanCountDown(msg,countDownNode,uiOff) {
+function setTuoGuanCountDown(msg, countDownNode, uiOff) {
     var player = getUIPlayer(uiOff);
 
-    if(player && player.info.uid == msg.uid){
+    if (player && player.info.uid == msg.uid) {
         countDownNode.visible = true;
 
         var tipCountDown = msg.tipCountDown;
@@ -10412,7 +9874,7 @@ function setTuoGuanCountDown(msg,countDownNode,uiOff) {
             countDownText = countDownNode;
 
         countDownText.setString(tipCountDown);
-        
+
         countDownNode.schedule(function () {
             if (tipCountDown > 0)
                 tipCountDown--;
@@ -10428,33 +9890,32 @@ function setTuoGuanCountDown(msg,countDownNode,uiOff) {
 }
 
 // 播放闲家得分动画
-function showSanDaHaScoreAddedAnim(curScore,scoreAdded,scoreNode)
-{
+function showSanDaHaScoreAddedAnim(curScore, scoreAdded, scoreNode) {
     if (scoreAdded <= 0)
         return;
 
     var scoreText = new ccui.TextAtlas("+" + scoreAdded, "playing/sanDaHa/xian_add_score.png", 36, 48, "+");
-    scoreText.setAnchorPoint(cc.p(0.5,0.5));
-    MjClient.playui.addChild(scoreText,10);
+    scoreText.setAnchorPoint(cc.p(0.5, 0.5));
+    MjClient.playui.addChild(scoreText, 10);
 
     setWgtLayout(scoreText, [scoreText.width / 1280, scoreText.height / 720], [0.3, 0.7], [0, 0]);
 
     var originalScale = scoreText.getScale();
     scoreText.setScale(0.9 * originalScale);
 
-    var desPoint = scoreNode.convertToWorldSpace(cc.p(scoreNode.getContentSize().width/2, 0));
-    desPoint = cc.p(desPoint.x,desPoint.y - 10 * Math.min(MjClient.size.width/1280,MjClient.size.height/720));
+    var desPoint = scoreNode.convertToWorldSpace(cc.p(scoreNode.getContentSize().width / 2, 0));
+    desPoint = cc.p(desPoint.x, desPoint.y - 10 * Math.min(MjClient.size.width / 1280, MjClient.size.height / 720));
 
-    scoreText.runAction(cc.sequence(cc.delayTime(1),cc.spawn(cc.moveTo(0.5, desPoint).easing(cc.easeSineIn()),cc.scaleTo(0.5, 0.5 * originalScale).easing(cc.easeSineIn())), 
-        cc.callFunc(function() {
+    scoreText.runAction(cc.sequence(cc.delayTime(1), cc.spawn(cc.moveTo(0.5, desPoint).easing(cc.easeSineIn()), cc.scaleTo(0.5, 0.5 * originalScale).easing(cc.easeSineIn())),
+        cc.callFunc(function () {
             scoreText.removeFromParent();
-            
+
             scoreNode.setString(curScore);
 
             originalScale = scoreNode.getScale();
-            scoreNode.runAction(cc.sequence(cc.scaleTo(0.2, 1.5 * originalScale),cc.scaleTo(0.2, originalScale)));
+            scoreNode.runAction(cc.sequence(cc.scaleTo(0.2, 1.5 * originalScale), cc.scaleTo(0.2, originalScale)));
         }
-    )));
+        )));
 }
 
 // 显示计分面板
@@ -10464,10 +9925,9 @@ function showSanDaHaJiFenPanel(jiFenPanel) {
     jiFenPanel.visible = true;
 
     var remainNum = 200;
-    for(var i = 0; i < fenPaiArr.length; i++)
-    {
+    for (var i = 0; i < fenPaiArr.length; i++) {
         var cardType = Math.ceil(fenPaiArr[i] / 4)
-        if(cardType == 5) {
+        if (cardType == 5) {
             remainNum -= 5;
         }
         else {
@@ -10478,59 +9938,49 @@ function showSanDaHaJiFenPanel(jiFenPanel) {
     remainPointNode.ignoreContentAdaptWithSize(true);
     remainPointNode.setString(remainNum);
 
-    var func = function(node, type){
+    var func = function (node, type) {
         var children = node.children;
-        for(var i = 0; i < children.length; i++)
-        {
-            if(i == 0 || i == 1)
-            {
-                setCardSprite_card(children[i],20 - type);
+        for (var i = 0; i < children.length; i++) {
+            if (i == 0 || i == 1) {
+                setCardSprite_card(children[i], 20 - type);
                 var index = fenPaiArr.indexOf(20 - type);
                 var flag = false;
-                children[i].setColor(cc.color(255,255,255));
-                if(index != -1)
-                {
+                children[i].setColor(cc.color(255, 255, 255));
+                if (index != -1) {
                     flag = true;
-                    fenPaiArr.splice(index,1);
+                    fenPaiArr.splice(index, 1);
                 }
-                if(flag)
-                {
+                if (flag) {
                     flag = false;
-                    children[i].setColor(cc.color(127,127,127));
+                    children[i].setColor(cc.color(127, 127, 127));
                 }
             }
-            if(i == 2 || i == 3)
-            {
-                setCardSprite_card(children[i],40 - type);
+            if (i == 2 || i == 3) {
+                setCardSprite_card(children[i], 40 - type);
                 var index = fenPaiArr.indexOf(40 - type);
                 var flag = false;
-                children[i].setColor(cc.color(255,255,255));
-                if(index != -1)
-                {
+                children[i].setColor(cc.color(255, 255, 255));
+                if (index != -1) {
                     flag = true;
-                    fenPaiArr.splice(index,1);
+                    fenPaiArr.splice(index, 1);
                 }
-                if(flag)
-                {
+                if (flag) {
                     flag = false;
-                    children[i].setColor(cc.color(127,127,127));
+                    children[i].setColor(cc.color(127, 127, 127));
                 }
             }
-            if(i == 4 || i == 5)
-            {
-                setCardSprite_card(children[i],52 - type);
+            if (i == 4 || i == 5) {
+                setCardSprite_card(children[i], 52 - type);
                 var index = fenPaiArr.indexOf(52 - type);
                 var flag = false;
-                children[i].setColor(cc.color(255,255,255));
-                if(index != -1)
-                {
+                children[i].setColor(cc.color(255, 255, 255));
+                if (index != -1) {
                     flag = true;
-                    fenPaiArr.splice(index,1);
+                    fenPaiArr.splice(index, 1);
                 }
-                if(flag)
-                {
+                if (flag) {
                     flag = false;
-                    children[i].setColor(cc.color(127,127,127));
+                    children[i].setColor(cc.color(127, 127, 127));
                 }
             }
         }
@@ -10539,81 +9989,80 @@ function showSanDaHaJiFenPanel(jiFenPanel) {
     var hongT = jiFenPanel.getChildByName("hongT");
     var meiH = jiFenPanel.getChildByName("meiH");
     var fangK = jiFenPanel.getChildByName("fangK");
-    func(heiT,0);
-    func(hongT,1);
-    func(meiH,2);
-    func(fangK,3);
+    func(heiT, 0);
+    func(hongT, 1);
+    func(meiH, 2);
+    func(fangK, 3);
 }
 
-function setChickenCardIcon(eD)
-{
+function setChickenCardIcon(eD) {
     var tData = MjClient.data.sData.tData;
 
     var _isZhuangPut = false;
     var _isZhuangPartnerWrong = false;
     var _isZhuangPartnerPut = false;
 
-    if(eD){
+    if (eD) {
         _isZhuangPut = eD.uid == tData.uids[tData.zhuang];
-        _isZhuangPartnerWrong =(eD.zhuangPartner == null || eD.zhuangPartner < 0);
+        _isZhuangPartnerWrong = (eD.zhuangPartner == null || eD.zhuangPartner < 0);
 
-        if(_isZhuangPartnerWrong){ //首次才有zhuangPartner；
-            _isZhuangPartnerWrong = typeof(tData.zhuangPartner) == "undefined" ||  tData.zhuangPartner < 0 || tData.zhuangPartner == null;
+        if (_isZhuangPartnerWrong) { //首次才有zhuangPartner；
+            _isZhuangPartnerWrong = typeof (tData.zhuangPartner) == "undefined" || tData.zhuangPartner < 0 || tData.zhuangPartner == null;
         }
-        
+
         var _zhuangPartnerUid = eD.zhuangPartner;
-        if(_zhuangPartnerUid >= 0){
+        if (_zhuangPartnerUid >= 0) {
             _zhuangPartnerUid = tData.uids[eD.zhuangPartner];
         }
-        
-        if(typeof(_zhuangPartnerUid) ==  "undefined" && tData.zhuangPartner >= 0){
+
+        if (typeof (_zhuangPartnerUid) == "undefined" && tData.zhuangPartner >= 0) {
             _zhuangPartnerUid = tData.uids[tData.zhuangPartner];
         }
 
-        if( (_zhuangPartnerUid > 0) && (!(tData.zhuangPartner >= 0)) ){
+        if ((_zhuangPartnerUid > 0) && (!(tData.zhuangPartner >= 0))) {
             tData.zhuangPartner = tData.uids.indexOf(_zhuangPartnerUid);
         }
     }
-    else{
-        _isZhuangPut = tData.lastPutPlayer == tData.zhuang; 
-        _isZhuangPartnerWrong = (typeof(tData.zhuangPartner) == "undefined" || tData.zhuangPartner < 0); 
+    else {
+        _isZhuangPut = tData.lastPutPlayer == tData.zhuang;
+        _isZhuangPartnerWrong = (typeof (tData.zhuangPartner) == "undefined" || tData.zhuangPartner < 0);
         _isZhuangPartnerPut = tData.lastPutPlayer == tData.zhuangPartner;
 
-        if(_isZhuangPut){
+        if (_isZhuangPut) {
             _isZhuangPut = false;//重连忽略
         }
     }
 
-    _isZhuangPartnerPut = (eD ? (eD.uid == _zhuangPartnerUid ) : true) ;//重连忽略
+    _isZhuangPartnerPut = (eD ? (eD.uid == _zhuangPartnerUid) : true);//重连忽略
 
-    if( tData.chickenCard == -1 || tData.chickenCard == null || tData.zhuang == -1 || _isZhuangPut || _isZhuangPartnerWrong || !_isZhuangPartnerPut
-        || tData.tState == TableState.isReady || tData.tState == TableState.roundFinish || tData.tState == TableState.waitJiazhu ){
+    if (tData.chickenCard == -1 || tData.chickenCard == null || tData.zhuang == -1 || _isZhuangPut || _isZhuangPartnerWrong || !_isZhuangPartnerPut
+        || tData.tState == TableState.isReady || tData.tState == TableState.roundFinish || tData.tState == TableState.waitJiazhu) {
         return
     }
 
-    if(!eD ){ //(tData.lastPutPlayer > 0 && (tData.lastPutPlayer ==  tData.zhuangPartner) )
-        if(tData.lastPutPlayer == tData.zhuang){
+    if (!eD) { //(tData.lastPutPlayer > 0 && (tData.lastPutPlayer ==  tData.zhuangPartner) )
+        if (tData.lastPutPlayer == tData.zhuang) {
             _isZhuangPut = true;
         }
 
-        if(tData.uids[tData.zhuang] == SelfUid() && _isZhuangPut){
-            return ;
+        if (tData.uids[tData.zhuang] == SelfUid() && _isZhuangPut) {
+            return;
         }
 
-        if( tData.uids[tData.zhuangPartner] == tData.uids[tData.lastPutPlayer]) {
+        if (tData.uids[tData.zhuangPartner] == tData.uids[tData.lastPutPlayer]) {
 
             MjClient.playui.addChickenCardIcon(getUiOffByUid(tData.uids[tData.lastPutPlayer]));
-        }else{
-            if(SelfUid() == tData.uids[tData.zhuangPartner] ){
+        } else {
+            if (SelfUid() == tData.uids[tData.zhuangPartner]) {
                 MjClient.playui.addChickenCardIcon(0);
             }
         }
 
-        return ;
+        return;
     }
 
-    var off = getUiOffByUid(tData.uids[tData.lastPutPlayer]) ;
-    if(eD){
+    var off = getUiOffByUid(tData.uids[tData.lastPutPlayer]);
+    if (eD) {
         off = getUiOffByUid(eD.uid);
         MjClient.playui.addChickenCardIcon(off);
     }
