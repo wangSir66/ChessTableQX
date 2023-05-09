@@ -17,7 +17,6 @@ var GameRuleView = cc.Layer.extend({
     },
     jsBind1: {
         bg_shuyang: {
-            _layout: [[0.8, 0.6], [0.25, 0.17], [0, 0]],
             view: {
 
             },
@@ -48,7 +47,8 @@ var GameRuleView = cc.Layer.extend({
     initAll: function (url) {
         let node = ccs.load("gamerulebg.json").node;
         let bg_node = ccs.load(url + ".json").node;
-        node.addChild(bg_node);
+        node.getChildByName('back').getChildByName('content').addChild(bg_node);
+        bg_node.setPosition(20,-85)
         this.bg_node = bg_node.getChildByName("bg_shuyang");
         this._view = this.bg_node.getChildByName("view");
         this.addChild(node);
@@ -88,8 +88,7 @@ var GameRuleView = cc.Layer.extend({
             pPriceCfg = MjClient.data.gamePrice[gameType],
             rule = MjClient.data.sData.tData.areaSelectMode,
             pIndx = Object.keys(pPriceCfg).indexOf(rule.maxPlayer + "");
-        cc.log('------rule-------------', JSON.stringify(rule))
-        this.RedioGroup['jushu'].selectItem(Object.keys(pPriceCfg[pIndx]).indexOf(rule.round + ""));
+        this.RedioGroup['jushu'].selectItem(Object.keys(pPriceCfg[rule.maxPlayer]).indexOf(rule.round + ""));
         this.RedioGroup['zhifufangshi'].selectItem(rule.payWay);
         this.RedioGroup['renshu'].selectItem(pIndx);
         this._view.getChildByName('difen').getChildByName('BaseScore').setString(rule.difen + '');
@@ -112,5 +111,13 @@ var GameRuleView = cc.Layer.extend({
             if (cc.sys.isObjectValid(btn) && btn.name == str) return btn.isSelected();
         }
         return false;
+    },
+    selectedCB: function (text, isSelected) {
+        if (isSelected) {
+            text.setTextColor(BTNCOLOR1);
+        } else {
+            text.setTextColor(BTNCOLOR3);
+        }
+
     },
 });

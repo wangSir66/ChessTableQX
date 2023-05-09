@@ -41,10 +41,5 @@ var GameRule_YARunFaster = GameRuleView.extend({
     },
     initEnd: function () {
         this._super();
-        const p = this.bg_node.getParent();
-        if (p) {
-            p.setScale(p.scale + 0.2);
-            p.setPosition(p.x-50,p.y-50)
-        }
      },
 });

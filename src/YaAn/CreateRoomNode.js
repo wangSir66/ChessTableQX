@@ -54,17 +54,57 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             var _text = this.payWayNodeArray[0].getChildByName("text");
             _text.setString("群主付");
         }
-        const pNums = Object.keys(this.getGamePriceConfig()), list = this.RedioGroup['renshu']._nodeList;
-        for (let _i = 0; _i < list.length; _i++) {
-            const n = list[_i];
-            if (pNums[_i]) {
-                n.getChildByName('text').setString(pNums[_i]+' 人');
-                n.visible = true;
-            }else n.visible = false;
+        if (this.RedioGroup['renshu']) {
+            const pNums = Object.keys(this.getGamePriceConfig()), list = this.RedioGroup['renshu']._nodeList;
+            for (let _i = 0; _i < list.length; _i++) {
+                const n = list[_i];
+                if (pNums[_i]) {
+                    n.getChildByName('text').setString(pNums[_i] + ' 人');
+                    n.visible = true;
+                } else n.visible = false;
+            }
         }
     },
     /**设置当前选中状态 */
     setPlayNodeCurrentSelect: function (isFriendCard) {
+    },
+    InitCurrentSelect: function (key_nameR, key_nameC) {
+        const cacheRule = JSON.parse(util.localStorageEncrypt.getStringItem(KEYCURRGAMERULE + this._data.gameType, '{}')),
+            isClub = this._isFriendCard;
+        let len = Object.keys(key_nameR);
+        for (let _i = 0; _i < len.length; _i++) {
+            let key = len[_i], val = key_nameR[key];
+            let _current, selectIndex, currObj;
+            if (isClub) {
+                if (typeof val[1] === 'number')
+                    _current = this.getNumberItem(val[0], val[1]);
+                else if (typeof val[1] === 'boolean')
+                    _current = this.getBoolItem(val[0], val[1]);
+            }
+            else
+                _current = cacheRule[val[0]] != undefined ? cacheRule[val[0]] : val[1];
+            selectIndex = val[2].indexOf(_current);
+            if (val[0] == 'EnableTTF') cc.log('-----ssss--', cacheRule[val[0]], selectIndex, _current)
+            currObj = this.RedioGroup[key];
+            currObj.selectItem(selectIndex);
+            this.radioBoxSelectCB(selectIndex, currObj._nodeList[selectIndex], currObj._nodeList);
+        }
+        len = Object.keys(key_nameC);
+        for (let _i = 0; _i < len.length; _i++) {
+            let key1 = len[_i], val = key_nameC[key1];
+            let isTrue;
+            if (isClub)
+                isTrue = this.getBoolItem(val[0], val[1]);
+            else
+                isTrue = cacheRule[val[0]] != undefined ? cacheRule[val[0]] : val[1];
+            let btnNode = this._btnItems.find(b => b.name == key1);
+            if (btnNode) {
+                btnNode.setSelected(isTrue);
+                var text = btnNode.getChildByName("text");
+                this.selectedCB(text, isTrue);
+            }
+        }
+        this.setExtraPlayNodeCurrentSelect(isClub);
     },
     selectedCB: function (text, isSelected) {
         if (isSelected) {
@@ -127,6 +167,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 switch (Type) {
                     case ccui.Widget.TOUCH_ENDED:
                         let num = Number(baseScoreT.getString());
+                        cc.log('---------baseScoreT.getString()------', baseScoreT.getString())
                         if (num >= this.rangeScore[1]) {
                             baseScoreT.setString(this.rangeScore[0]);
                         } else {
@@ -331,7 +372,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             let p = item.getParent();
             if (p) {
                 const currObj = this.RedioGroup[p.name];
-                if(p.name == 'renshu')this.changePayForPlayerNum(indx);
+                if (p.name == 'renshu') this.changePayForPlayerNum(indx);
                 this.radioBoxSelectCB(indx, currObj._nodeList[indx], currObj._nodeList);
             }
         } else if (indx != null && indx != undefined) {
@@ -414,9 +455,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         var _helpNode = new ccui.ImageView("createNewPng/tip.png");
         var _helpImage = new ccui.ImageView("createNewPng/tip_di.png");
         var _helpText = new ccui.Text();
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() === MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {//岳阳同一使用方正兰亭
-            _helpText.setFontName("fonts/lanting.TTF");
-        }
+        _helpText.setFontName("fonts/lanting.TTF");
         _helpText.setPosition(201.50, 49.80);
         _helpText.setColor(_selectCol);
         _helpText.setFontSize(22);
@@ -424,11 +463,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         _helpText.setFontName(MjClient.fzcyfont);
         _helpImage.addChild(_helpText);
         _helpImage.setVisible(false);
-        _helpImage.setPosition(129.42, 86.80);
-        if (this._data && (this._data.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
-            this._data.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG)) {
-            _helpImage.setPosition(-120, 86.80);
-        }
+        _helpImage.setPosition(-120, 86.80);
         _helpNode.setScale(0.8);
         _helpNode.addChild(_helpImage);
         this._nodeGPS.addChild(_helpNode);
@@ -568,7 +603,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         MjClient.createui.addChild(dialog);
     },
     getSelectPlayNum: function () {
-        let indx = this.RedioGroup['renshu'].getSelectIndex(),
+        let indx = this.RedioGroup['renshu'] ? this.RedioGroup['renshu'].getSelectIndex() : 0,
             pConfig = this.getGamePriceConfig();
         return Number(Object.keys(pConfig)[indx]) || 2;
     },
@@ -1071,7 +1106,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         //底分
         para.difen = parseFloat(this.difen.getString());
         // 托管
-        para.trustTime = this.trustTimes ? this.trustTimes[this.RedioGroup['tuoguan'].getSelectIndex()] : 0;
+        para.trustTime = this.trustTimes ? this.trustTimes[this.RedioGroup['tuoguan'] ? this.RedioGroup['tuoguan'].getSelectIndex() : 0] : 0;
         if (this.fanbei_radio) {
             var labelString = this.nodeListFanBei[1].getChildByName("score").getString();
 
@@ -1189,7 +1224,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         }
 
         let roundNumObj = this.getRoundNumObj(),
-            pNums = Object.keys(this.getGamePriceConfig()).map(a=>Number(a)),
+            pNums = Object.keys(this.getGamePriceConfig()).map(a => Number(a)),
             cacheRule = JSON.parse(util.localStorageEncrypt.getStringItem(KEYCURRGAMERULE + this._data.gameType, '{}'));
         const key_nameR = {
             'jushu': ['round', Number(roundNumObj[0]), roundNumObj],
@@ -1210,9 +1245,11 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 _current = cacheRule[val[0]] || val[1];
             selectIndex = val[2].indexOf(_current);
             currObj = this.RedioGroup[key];
-            currObj.selectItem(selectIndex);
-            this.radioBoxSelectCB(selectIndex, currObj._nodeList[selectIndex], currObj._nodeList);
-            if (key === 'renshu') this.changePayForPlayerNum(selectIndex);
+            if (currObj) {
+                currObj.selectItem(selectIndex);
+                this.radioBoxSelectCB(selectIndex, currObj._nodeList[selectIndex], currObj._nodeList);
+                if (key === 'renshu') this.changePayForPlayerNum(selectIndex);
+            }
         }
     },
 });

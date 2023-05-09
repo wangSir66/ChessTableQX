@@ -626,129 +626,117 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         },
         banner: {
             _layout: [
-                [0.5, 0.5],
-                [0.5, 1],
+                [1, 1],
+                [0, 0.95],
                 [0, 0]
             ],
-            roomNumBg2: {
+            bg_time: {
                 _run: function () {
-                    setWgtLayout(this, [0.21, 0.21], [-0.35, 0.1], [-0.15, 0.2]);
-                },
-                bg_time: {
-                    _run: function () {
-                        var text = new ccui.Text();
-                        text.setFontName("fonts/lanting.TTF");
-                        text.setFontSize(24);
-                        text.setTextColor(cc.color("#EFD196"));
-                        text.setAnchorPoint(0.5, 0.5);
-                        text.setPosition(this.getContentSize().width / 2, this.getContentSize().height / 2);
-                        this.addChild(text);
-                        text.schedule(function () {
+                    var text = new ccui.Text();
+                    text.setFontName("fonts/lanting.TTF");
+                    text.setFontSize(24);
+                    text.setTextColor(cc.color("#FFF9C8"));
+                    text.setAnchorPoint(0.5, 0.5);
+                    text.setPosition(this.getContentSize().width / 2, this.getContentSize().height / 2);
+                    this.addChild(text);
+                    text.schedule(function () {
 
-                            var time = MjClient.getCurrentTime();
-                            var str = (time[3] < 10 ? "0" + time[3] : time[3]) + ":" +
-                                (time[4] < 10 ? "0" + time[4] : time[4]);
-                            this.setString(str);
-                        });
-                    }
+                        var time = MjClient.getCurrentTime();
+                        var str = (time[3] < 10 ? "0" + time[3] : time[3]) + ":" +
+                            (time[4] < 10 ? "0" + time[4] : time[4]);
+                        this.setString(str);
+                    });
+                }
 
-                },
-                wifi: {
-                    _run: function () {
-                        updateWifiState_new(this);
-                        // updateWifiState(this);
-                    }
-                },
-                powerBar: {
-                    _run: function () {
-                        cc.log("powerBar_run");
-                        updateBattery(this);
-                    },
-                    _event: {
-                        nativePower: function (d) {
-                            this.setPercent(Number(d));
-                        }
-                    }
-                },
             },
-            roomNumBg1: {
+            wifi: {
                 _run: function () {
-                    setWgtLayout(this, [0.35, 0.35], [-0.35, 0], [-0.1, 0]);
+                    updateWifiState_new(this);
+                    // updateWifiState(this);
+                }
+            },
+            powerBar: {
+                _run: function () {
+                    cc.log("powerBar_run");
+                    updateBattery(this);
                 },
-                tableid: {
-                    _run: function () {
+                _event: {
+                    nativePower: function (d) {
+                        this.setPercent(Number(d));
+                    }
+                }
+            },
+            tableid: {
+                _run: function () {
+                    this.ignoreContentAdaptWithSize(true);
+                    if (MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
+                        this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
+                    }
+                },
+                _event: {
+                    initSceneData: function () {
                         this.ignoreContentAdaptWithSize(true);
-                        if (MjClient.data.sData && MjClient.data.sData.tData && MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
+                        if (MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
                             this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
-                        }
-                    },
-                    _event: {
-                        initSceneData: function () {
-                            this.ignoreContentAdaptWithSize(true);
-                            if (MjClient.data.sData.tData.fieldId) {//金币场显示场次名称
-                                this.setString("底分 " + getJinbiStr(MjClient.data.sData.tData.fieldBase) + "金币");
-                            } else {
-                                this.setString('房间号：' + MjClient.data.sData.tData.tableid);
+                        } else {
+                            this.setString('房间号：' + MjClient.data.sData.tData.tableid);
 
-                            }
                         }
                     }
-                },
-                roundnumAtlas: {
-                    _visible: function () {
-                        var sData = MjClient.data.sData;
-                        var tData = sData.tData;
-                        if (tData) {
-                            if (tData.fieldId) {//金币场显示场次名称
-                                return false;
-                            }
-                        }
-                        return true;
-                    },
-                    _run: function () {
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _text: function () {
-                        var sData = MjClient.data.sData;
-                        var tData = sData.tData;
-                        if (tData) return "第" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll + "局";
-                    },
-                    _event: {
-                        mjhand: function () {
-                            var sData = MjClient.data.sData;
-                            var tData = sData.tData;
-                            if (tData) return this.setString("第" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll + "局");
+                }
+            },
+            roundnumAtlas: {
+                _visible: function () {
+                    var sData = MjClient.data.sData;
+                    var tData = sData.tData;
+                    if (tData) {
+                        if (tData.fieldId) {//金币场显示场次名称
+                            return false;
                         }
                     }
+                    return true;
                 },
+                _run: function () {
+                    this.ignoreContentAdaptWithSize(true);
+                },
+                _text: function () {
+                    var sData = MjClient.data.sData;
+                    var tData = sData.tData;
+                    if (tData) return "局数：" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll;
+                },
+                _event: {
+                    mjhand: function () {
+                        var sData = MjClient.data.sData;
+                        var tData = sData.tData;
+                        if (tData) return this.setString("局数：" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll);
+                    }
+                }
             },
             rule_btn: {
                 _run: function () {
                     cc.eventManager.addListener(getTouchListener(), this);
-                    this.setScale(0.6);
-                    this.setPositionX(this.getParent().getContentSize().width * 1.3);
+                    this.setScale(0.9);
                     var banner = this.parent;
                     var waitNode = banner.parent.getChildByName("wait");
                     var delroom = waitNode.getChildByName("delroom");
                     var backHomebtn = waitNode.getChildByName("backHomebtn");
                     var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
-                    distanceX *= 1.5;
-                    delroom.setScale(0.4);
-                    backHomebtn.setScale(0.4);
-                    delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY() * 0.9))))
-                    backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY() * 0.9))))
+                    // distanceX *= 1.5;
+                    delroom.setScale(0.9);
+                    backHomebtn.setScale(0.9);
+                    delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
+                    backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))))
                 },
                 _touch: function (btn, eT) {
                     if (eT == 2) {
-                        MjClient.showRuleView = new ShowGameRule_red20();
+                        MjClient.showRuleView = new GameRule_YARed20('bg_red20');
                         MjClient.Scene.addChild(MjClient.showRuleView)
                     }
                 },
             },
             setting: {
                 _run: function () {
-                    this.setScale(0.6);
-                    this.setPositionX(this.getParent().getContentSize().width * 1.43);
+                    this.setScale(0.9);
                 },
                 _click: function () {
                     var settringLayer = new RoomSettingView();

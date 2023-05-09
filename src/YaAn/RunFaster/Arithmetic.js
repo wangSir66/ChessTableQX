@@ -25,7 +25,7 @@
             if (2 == cardType) this.cardCfg.hx[cardValue] = i;
             if (3 == cardType) this.cardCfg.ht[cardValue] = i;
         }
-        this.cardCfg.firstOutCard = this.cardCfg.ht[3];
+        this.cardCfg.firstOutCard = this.cardCfg.ht[5];
         //先手规则
         this.GameBankerRule = {
             /** 每局黑桃3先出 */
@@ -1179,9 +1179,9 @@
 
         let bankerRule = areaSelectMode && areaSelectMode.mustPutHongTaoSan;
         needFindSpade3 = false;
-        // if (bankerRule === this.GameBankerRule.FirstRoundMustPlaySpade3 && isFirstRound) {
-        //     needFindSpade3 = true;
-        // }
+        if (bankerRule === this.GameBankerRule.EveryRoundPlaySpade3) {
+            needFindSpade3 = true;
+        }
         // 第一局 红桃三先出时 有红桃三必须出
         if (needFindSpade3 && cards.indexOf(this.cardCfg.firstOutCard) < 0 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0) {
             return null;
@@ -2180,7 +2180,6 @@
             includeCard = this.cardCfg.firstOutCard;
         } else if (lastCards.length > 0) {
             lastType = this.calType(lastCards, areaSelectMode);
-            cc.log('---------------lastType----------------1', lastType)
         }
         if (!putOrder)
             putOrder = pdk_putOrder[lastType];
@@ -2436,9 +2435,9 @@
     GameLogic_RunFaster.prototype.isMustPutCard3 = function (oHands, areaSelectMode, isFirstRound) {
         let bankerRule = areaSelectMode && areaSelectMode.mustPutHongTaoSan;
         needFindSpade3 = false;
-        // if (bankerRule === this.GameBankerRule.FirstRoundMustPlaySpade3 && isFirstRound) {
-        //     needFindSpade3 = true;
-        // }
+        if (bankerRule === this.GameBankerRule.EveryRoundPlaySpade3) {
+            needFindSpade3 = true;
+        }
         return needFindSpade3 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0;
     }
 
@@ -2453,13 +2452,33 @@
      * @return {array} 提示的牌
      */
     GameLogic_RunFaster.prototype.tipCards = function (oHands, oLastCards, areaSelectMode, isNextPlayerOneCard, isFirstRound, isSmartTip) {
+        var rets = [];
         if (isSmartTip) {
             this.canPutTypesCache = [];
-
             this.useNewTip = true;
             var ret = this.findPutTipCards(oHands, oLastCards, areaSelectMode, isNextPlayerOneCard, isFirstRound);
+            if (areaSelectMode.can4geZha) {
+                var booms = this.findCardByType(oHands, 0, PDK_CARDTPYE.sizha);
+                // 不是压三带二的时候， 最后提示炸弹
+                for (var i = 0; i < booms.length; i++) {
+                    if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
+                        rets.push(booms[i]);
+                    }
+                }
+            }
+
+            if (areaSelectMode.can3geZha) {
+                var booms = this.findCardByType(oHands, 0, PDK_CARDTPYE.sanzha);
+                // 不是压三带二的时候， 最后提示炸弹
+                for (var i = 0; i < booms.length; i++) {
+                    if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
+                        rets.push(booms[i]);
+                    }
+                }
+            }
             this.useNewTip = false;
-            if (ret.length > 0) return ret;
+            if (ret.length > 0) rets.push(...ret);
+            if (rets.length > 0) return rets;
         }
 
         //  第一个局 当勾“先出黑桃三”选项时，提示出黑桃三
@@ -2478,7 +2497,6 @@
         var hands = [];
         var handLaizi = this.transformAndGetLaizi(oHands, hands);
         var lastCardsType = this.calType(oLastCards, areaSelectMode);
-        var rets = [];
 
         for (var laizi = 0; laizi <= handLaizi; laizi++) {
             if (lastCardsType == PDK_CARDTPYE.sizha) break;
@@ -2550,6 +2568,26 @@
             for (var i = 0; i < cardtypes.length; i++) {
                 if (this.canPut(cardtypes[i], oLastCards, oHands.length, areaSelectMode)) {
                     rets.push(cardtypes[i]);
+                }
+            }
+        }
+        
+        if (areaSelectMode.can4geZha) {
+            var booms = this.findCardByType(hands, 0, PDK_CARDTPYE.sizha);
+            // 不是压三带二的时候， 最后提示炸弹
+            for (var i = 0; i < booms.length; i++) {
+                if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
+                    rets.push(booms[i]);
+                }
+            }
+        }
+
+        if (areaSelectMode.can3geZha) {
+            var booms = this.findCardByType(hands, 0, PDK_CARDTPYE.sanzha);
+            // 不是压三带二的时候， 最后提示炸弹
+            for (var i = 0; i < booms.length; i++) {
+                if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
+                    rets.push(booms[i]);
                 }
             }
         }

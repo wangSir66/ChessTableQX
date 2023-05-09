@@ -397,7 +397,7 @@ function reConectHeadLayout_card(node) {
                         appType == MjClient.APP_TYPE.QXLYQP)
                         // 邵阳、耒阳特殊处理
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
-                    else if (isYongZhouProject()){
+                    else if (isYongZhouProject()) {
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
                         setWgtLayout(left, [0.13, 0.13], [0, 1.0], [1.1, -2], false, false);
                     }
@@ -414,7 +414,7 @@ function reConectHeadLayout_card(node) {
                         appType == MjClient.APP_TYPE.QXLYQP)
                         // 邵阳、耒阳特殊处理
                         setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
-                    else if (isYongZhouProject()){
+                    else if (isYongZhouProject()) {
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
                         setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -2], false, false);
                     }
@@ -425,7 +425,7 @@ function reConectHeadLayout_card(node) {
 
                     setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.8], false, false);
                 }
-            } else  {//if (tData.maxPlayer == 3)
+            } else if (tData.maxPlayer == 3) {
                 setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
                 if (isIPhoneX()) {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
@@ -454,36 +454,35 @@ function reConectHeadLayout_card(node) {
 
                     setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
                 }
-            } 
-            // else {
-            //     if (isIPhoneX()) {
-            //         if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-            //             setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
-            //         else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
-            //             appType == MjClient.APP_TYPE.QXLYQP)
-            //             // 邵阳、耒阳特殊处理
-            //             setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
-            //         else if (isYongZhouProject())
-            //             setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
-            //         else
-            //             setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
+            } else {
+                if (isIPhoneX()) {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+                    else if (isYongZhouProject())
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
+                    else
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
 
-            //         setWgtLayout(right, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
-            //     } else {
-            //         if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-            //             setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
-            //         else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
-            //             appType == MjClient.APP_TYPE.QXLYQP)
-            //             // 邵阳、耒阳特殊处理
-            //             setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
-            //         else if (isYongZhouProject())
-            //             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
-            //         else
-            //             setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                    setWgtLayout(right, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                } else {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+                    else if (isYongZhouProject())
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                    else
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
 
-            //         setWgtLayout(right, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
-            //     }
-            // }
+                    setWgtLayout(right, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                }
+            }
         }
         else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.DA_QI ||
             MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
@@ -669,40 +668,40 @@ function reConectHeadLayout_card(node) {
                 setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
                 if (isIPhoneX()) {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.2], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
                     else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
                         appType == MjClient.APP_TYPE.QXLYQP)
                         // 邵阳、耒阳特殊处理
-                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.1], false, false);
-                    else if (isYongZhouProject()){
-                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.4], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+                    else if (isYongZhouProject()) {
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
                         setWgtLayout(left, [0.13, 0.13], [0, 1.0], [1.1, -2], false, false);
                     }
                     else {
-                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.1], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
                         setWgtLayout(left, [0.13, 0.13], [0.05, 1.0], [0.6, -2], false, false);
                     }
 
                     setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.8], false, false);
                 } else {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
-                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.1], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
                     else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
                         appType == MjClient.APP_TYPE.QXLYQP)
                         // 邵阳、耒阳特殊处理
-                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.4], false, false);
-                    else if (isYongZhouProject()){
-                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.1], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+                    else if (isYongZhouProject()) {
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
                         setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -2], false, false);
                     }
                     else {
-                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.1], false, false);
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
                         setWgtLayout(left, [0.13, 0.13], [0, 1.0], [0.6, -2], false, false);
                     }
 
                     setWgtLayout(top, [0.13, 0.13], [0.5, 1], [0, -0.8], false, false);
                 }
-            } else {
+            } else if (tData.maxPlayer == 3) {
                 setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
                 if (isIPhoneX()) {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
@@ -730,6 +729,34 @@ function reConectHeadLayout_card(node) {
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
 
                     setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                }
+            } else {
+                if (isIPhoneX()) {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 4.4], false, false);
+                    else if (isYongZhouProject())
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [1.1, 3.7], false, false);
+                    else
+                        setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
+
+                    setWgtLayout(right, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
+                } else {
+                    if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
+                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || appType == MjClient.APP_TYPE.QXSYDTZ ||
+                        appType == MjClient.APP_TYPE.QXLYQP)
+                        // 邵阳、耒阳特殊处理
+                        setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.7], false, false);
+                    else if (isYongZhouProject())
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+                    else
+                        setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
+
+                    setWgtLayout(right, [0.13, 0.13], [0.5, 1], [-0.5, -0.8], false, false);
                 }
             }
         }
@@ -1223,10 +1250,7 @@ function UpdataCurrentPutCard(isTouch) {
 
             var isFirstRound = tData.roundAll == tData.roundNum;
             isCanPut = majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards, selectData, isNextPlayerOneCard, isFirstRound);
-            cc.log("currentSelectCards =2 ", majiang.calType(currentSelectCards, selectData));
         } else {
-
-            cc.log("currentSelectCards =1 " + JSON.stringify(MjClient.selectCards_card));
             var mustPutHongTaoSan = MjClient.data.sData.tData.areaSelectMode.mustPutHongTaoSan
             isCanPut = MjClient.majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards, mustPutHongTaoSan, isNextPlayerOneCard)
         }
@@ -3540,7 +3564,8 @@ function InitPutOutCardTips(off) {
                     var isSmartTip = true;
                     MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData,
                         isNextPlayerOneCard, isFirstRound, isSmartTip);
-
+                    var ret = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData, isNextPlayerOneCard, isFirstRound);
+                    cc.log('------------InitPutOutCardTips----------------',JSON.stringify(ret))
                     if (majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
                         majiang.useNewTip = true;
                         MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData,

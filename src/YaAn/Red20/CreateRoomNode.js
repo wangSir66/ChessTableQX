@@ -1,7 +1,4 @@
 var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
-    ctor: function (layer, data) {
-        this._super(layer, data);
-    },
     //创建ui 以及变量保存
     initAll: function (IsFriendCard) {
         let bg_node = ccs.load("bg_red20.json").node;
@@ -10,27 +7,31 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
         bg_node.setPosition(-200, 10);
         this.bg_node = bg_node.getChildByName("bg_shuyang");
         this._view = this.bg_node.getChildByName("view");
-        // this.bg_node.setContentSize(cc.size(893.00, 565.00));
-        // this.bg_node.setAnchorPoint(0.0, 0.0);
-        // this.payWayNodeArray[2].setEnabled(false);
+        //初始化固定数据
+        this.rangeScore = [1, 20];
+        this.trustTimes = [0, 30, 60, 90];
     },
-
+    /**初始化结束 */
+    initEnd: function () {
+        this._super();
+        cc.log('红20 规则界面初始化成功')
+    },
+    /**按钮事件回调 */
     callSelectBack: function (indx, item, list) {
-        cc.log('callSelectBack------->red20', indx, JSON.stringify(item));
-        if (typeof item == "number") {//复选框
+        this._super(indx, item, list);
+        cc.log('callSelectBack------->red20', indx, item);
+        const isNum = parseInt(indx);
+        if (isNum >= 0 && item) {
+            indx = Number(indx);
+            let p = item.getParent();
+            if (p.name == 'renshu') this.initChiRule(indx);
+            else if (p.name == 'suanfan') this.initFanRule(indx);
+        } else if (indx != null && indx != undefined) {
             if (indx.name == 'btnCheck4Pairs') this.initLongSiDui();
-        } else {//单选框
-            let checkItem = ['btnRadio3', 'btnRadio4', 'btnRadio5'], sIndx = checkItem.indexOf(item.name);
-            if (sIndx > -1) {
-                this.initChiRule(sIndx);
-            }
-            checkItem = ['btnRadio6', 'btnRadio7'], sIndx = checkItem.indexOf(item.name);
-            if (sIndx > -1) {
-                this.initFanRule(sIndx);
-            }
+        } else if (!indx && item) {
+            if (item.name == 'btnCheck4Pairs') this.initLongSiDui();
         }
     },
-
     /**龙四对相关 */
     initLongSiDui: function () {
         const checked = this.getCheckboxSelectedByName('btnCheck4Pairs'),
@@ -39,19 +40,23 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
         cc.log('-------------------checked---------------------', checked)
         l4.setEnabled(checked);
         sl4.setEnabled(checked);
+        var text = sl4.getChildByName("text");
+        this.selectedCB(text, checked && sl4.isSelected());
+        text = l4.getChildByName("text");
+        this.selectedCB(text, checked && l4.isSelected());
     },
-
     /**算番规则 */
     initFanRule: function (indx) {
         const group = this.RedioGroup['fengding'];
         if (group) {
             for (let _i = 0; _i < group._nodeList.length; _i++) {
                 const item = group._nodeList[_i];
-                item.setEnabled(indx != 0)
+                item.setEnabled(indx != 0);
+                let text = item.getChildByName("text");
+                this.selectedCB(text, item.isSelected() && indx != 0);
             }
         }
     },
-
     /**吃牌规则显示 */
     initChiRule: function (indx) {
         const group = this.RedioGroup['chipai'];
@@ -59,18 +64,52 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             group.getSelectIndex() == 0 && indx == 0 && group.selectItem(1);
             group._nodeList[0].setEnabled(indx != 0);
         }
+        group._nodeList.map(n => {
+            let text = n.getChildByName("text");
+            this.selectedCB(text, n.isSelected());
+        })
     },
-    initEnd: function () {
+    /**还原规则 */
+    setPlayNodeCurrentSelect: function (isClub) {
         this._super();
-        this.initChiRule(0);
-        this.initFanRule(0);
+        const key_nameR = {
+            'suanfan': ['EnableTTF', true, [true, false]],
+            'fengding': ['MaxFan', 4, [4, 5, 6]],
+            'wangpai': ['MaxKingCount', 3, [3, 6, 9, 12, 15, 18]],
+            'chipai': ['EnableChi', true, [true, false]],
+            'baotinghongdian': ['EnableRed20Ting', true, [true, false]],
+            'liuju': ['IsCheckTing', true, [true, false]],
+            'pinghu': ['IsCheckFan', false, [false, true]],
+            '7dianjiawang': ['Allow7AsKing', true, [true, false]],
+            '7dianwangdian': ['IsPoint7AsKing', true, [true, false]],
+        },
+            key_nameC = {
+                'btnCheck4Pairs': ['Enable4Pairs', false],
+                'btnCheck50': ['Red50', false],
+                'btnCheckD4Pairs': ['EnableDragon4Pairs', false],
+                'btnCheckDD4Pairs': ['EnableDoubleDragon4Pairs', false],
+                'btnCheckGangHua': ['EnableGSH', false],
+                'btnCheckJGG': ['EnableJinGouDiao', false],
+                'btnCheckZiMo': ['EnableZiMo', false],
+                'btnCheckjin20': ['EnableGolden20', false],
+            };
+        this.InitCurrentSelect(key_nameR, key_nameC);
+    },
+    /**规则还原最后按钮状态*/
+    setExtraPlayNodeCurrentSelect: function (isClub) {
+        this._super(isClub);
+        //初始化按钮状态
         this.initLongSiDui();
+        let sIndx = this.RedioGroup['renshu'].getSelectIndex();
+        if (sIndx > -1) {
+            this.initChiRule(sIndx);
+        }
+        sIndx = this.RedioGroup['suanfan'].getSelectIndex();
+        if (sIndx > -1) {
+            this.initFanRule(sIndx);
+        }
     },
-
-    initPlayNode: function () {
-        this._super();
-    },
-
+    /**获取已选规则信息 */
     getSelectedPara: function () {
         const gameType = this._data.gameType,
             pPriceCfg = MjClient.data.gamePrice[gameType];

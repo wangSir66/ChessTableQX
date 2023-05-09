@@ -231,6 +231,62 @@
                 },
                 "Name": "close",
                 "ctype": "ButtonObjectData"
+              },
+              {
+                "ClipAble": true,
+                "BackColorAlpha": 206,
+                "SingleColor": {
+                  "R": 0,
+                  "G": 0,
+                  "B": 0
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 475.0,
+                  "Y": 265.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4974,
+                  "Y": 0.4553
+                },
+                "PreSize": {
+                  "X": 0.9424,
+                  "Y": 0.8247
+                },
+                "HorizontalEdge": "LeftEdge",
+                "VerticalEdge": "BottomEdge",
+                "LeftMargin": 25.0,
+                "RightMargin": 30.0,
+                "TopMargin": 77.0,
+                "BottomMargin": 25.0,
+                "Tag": 770,
+                "ActionTag": 1986842580,
+                "Size": {
+                  "X": 900.0,
+                  "Y": 480.0
+                },
+                "Name": "content",
+                "ctype": "PanelObjectData"
               }
             ],
             "ActionTag": -108244162,

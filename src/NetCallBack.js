@@ -3787,7 +3787,7 @@ MjClient.netCallBack = {
         }
 
         //pl.fristPutCard = d.fristPutCard;
-        if(MjClient.gameType != MjClient.GAME_TYPE.RED_20_POKER)pl.mjput.push(d.card);
+        if (MjClient.gameType != MjClient.GAME_TYPE.RED_20_POKER) pl.mjput.push(d.card);
 
         if ((MjClient.gameType == MjClient.GAME_TYPE.HUANG_SHI_HH_MJ ||
             MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_HH_MJ) &&
@@ -4584,6 +4584,11 @@ MjClient.netCallBack = {
                 }
             }
         }
+        //时时炸弹分
+        if (d.showBoomScore == true) {
+            var p = sData.players[tData.uids[d.curPlayer]];
+            postEvent('ShowBoomScore', { uid: p.info.uid });
+        }
     }],
     showQiShouHu: [0, function (d) {
         cc.log("====================showQiShouHu" + JSON.stringify(d));
@@ -4775,7 +4780,7 @@ MjClient.netCallBack = {
         //cc.log("收到碰的消息");
         var sData = MjClient.data.sData;
         if (!sData) return;
-        
+
         if (MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) {
             var pl = sData.players[d.uid];
             pl.eatFlag = 0;
@@ -6026,7 +6031,7 @@ MjClient.netCallBack = {
                 }
             }
             if (MjClient.GAME_TYPE.PING_JIANG_ZHA_NIAO == MjClient.gameType ||
-                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI||
+                MjClient.gameType == MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI ||
                 MjClient.gameType == MjClient.GAME_TYPE.RED_20_POKER) {
                 pl.eatFlag = 0;//海底胡之后刷新按钮
             }

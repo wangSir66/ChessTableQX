@@ -30,6 +30,12 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
             }
         }
     },
+    
+    getSelectPlayNum: function () {
+        // let indx = this.RedioGroup['renshu'] ? this.RedioGroup['renshu'].getSelectIndex() : 0,
+        //     pConfig = this.getGamePriceConfig();
+        return 4;
+    },
 
     /**龙四对相关 */
     initLongSiDui: function () {

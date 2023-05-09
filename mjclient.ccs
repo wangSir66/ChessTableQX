@@ -4140,6 +4140,7 @@
             <Image Name="plus-1.png" />
             <Image Name="pop_bg_big-1.png" />
             <Image Name="RadioForbidden.png" />
+            <Image Name="RoomInfoBG_RunFaster.png" />
           </Folder>
           <Folder Name="Controller">
             <Image Name="btn_cancel.png" />
@@ -4174,6 +4175,7 @@
             <Image Name="btnReady.png" />
             <Image Name="btnReady2.png" />
             <Image Name="BtnRule.png" />
+            <Image Name="BtnRuleBtnRule.png" />
             <Image Name="btnShare.png" />
             <Image Name="cancelBg.png" />
             <Image Name="cancelTuoGuan.png" />
@@ -5140,6 +5142,7 @@
         <Project Name="setting_new.csd" Type="Layer" />
         <Project Name="setting_poker.csd" Type="Layer" />
         <Project Name="setting_table.csd" Type="Layer" />
+        <Project Name="setting_yaan.csd" Type="Layer" />
         <Project Name="shareCaishenLayer.csd" Type="Layer" />
         <Project Name="ShareLayer.csd" Type="Layer" />
         <Project Name="ShareNewLayer.csd" Type="Layer" />
@@ -5180,7 +5183,6 @@
         <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
         <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
         <Project Name="ZiXunLayer.csd" Type="Layer" />
-        <Project Name="setting_yaan.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

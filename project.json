@@ -288,11 +288,11 @@
 
         "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
 
-        "src/YaAn/Red20/Arithmetic_Red20.js",
-        "src/YaAn/Red20/CreateRoomNode_red20.js",
-        "src/YaAn/Red20/PlayerGamePanel_Red20.js",
+        "src/YaAn/Red20/Arithmetic.js",
+        "src/YaAn/Red20/CreateRoomNode.js",
+        "src/YaAn/Red20/PlayerGamePanel.js",
         "src/YaAn/Red20/WinGamePanel.js",
-        "src/YaAn/Red20/ShowGameRule.js",
+        "src/YaAn/Red20/GameRuleView.js",
 
         "src/YaAn/XueZhanMahjong/Arithmetic.js",
         "src/YaAn/XueZhanMahjong/CreateRoomNode.js",

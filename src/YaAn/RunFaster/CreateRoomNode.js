@@ -61,15 +61,14 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
     },
     setPlayNodeCurrentSelect: function (isClub) {
         this._super();
-        const cacheRule = JSON.parse(util.localStorageEncrypt.getStringItem(KEYCURRGAMERULE + this._data.gameType, '{}')),
-            key_nameR = {
-                'xianshou': ['mustPutHongTaoSan', 0, [0, 1]],
-                'paizhang': ['HandCutRule', 0, [0, 1]],
-                'zhadan': ['isZhaDanJiaFen', false, [false, true]],
-                'mingtangfen': ['XiScore', 20, [20, 10]],
-                'xifen': ['BombScore', 20, [20, 10]],
-                'zidongzhunbei': ['AutoReady', false, [false, true]]
-            },
+        const key_nameR = {
+            'xianshou': ['mustPutHongTaoSan', 0, [0, 1]],
+            'paizhang': ['HandCutRule', 0, [0, 1]],
+            'zhadan': ['isZhaDanJiaFen', false, [false, true]],
+            'mingtangfen': ['XiScore', 20, [20, 10]],
+            'xifen': ['BombScore', 20, [20, 10]],
+            'zidongzhunbei': ['AutoReady', false, [false, true]]
+        },
             key_nameC = {
                 'btnCheckpaishu': ['showCardNumber', false],
                 'btnCheckpaixing': ['Sisters', false],
@@ -86,39 +85,8 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
                 'btnCheck3zhang': ['can3geZha', false],
                 'btnCheck4zhang': ['can4geZha', false]
             };
-        let len = Object.keys(key_nameR);
-        for (let _i = 0; _i < len.length; _i++) {
-            let key = len[_i], val = key_nameR[key];
-            let _current, selectIndex, currObj;
-            if (isClub) {
-                if (typeof val[1] === 'number')
-                    _current = this.getNumberItem(val[0], val[1]);
-                else if (typeof val[1] === 'boolean')
-                    _current = this.getBoolItem(val[0], val[1]);
-            }
-            else
-                _current = cacheRule[val[0]] || val[1];
-            selectIndex = val[2].indexOf(_current);
-            currObj = this.RedioGroup[key];
-            currObj.selectItem(selectIndex);
-            this.radioBoxSelectCB(selectIndex, currObj._nodeList[selectIndex], currObj._nodeList);
-        }
-        len = Object.keys(key_nameC);
-        for (let _i = 0; _i < len.length; _i++) {
-            let key1 = len[_i], val = key_nameC[key1];
-            let isTrue;
-            if (isClub)
-                isTrue = this.getBoolItem(val[0], val[1]);
-            else
-                isTrue = cacheRule[val[0]] || val[1];
-            let btnNode = this._btnItems.find(b => b.name == key1);
-            if (btnNode) {
-                btnNode.setSelected(isTrue);
-                var text = btnNode.getChildByName("text");
-                this.selectedCB(text, isTrue);
-            }
-        }
-        this.setExtraPlayNodeCurrentSelect(isClub);
+
+        this.InitCurrentSelect(key_nameR, key_nameC);
     },
     getSelectedPara: function () {
         var para = {};

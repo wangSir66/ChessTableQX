@@ -76,7 +76,7 @@
                 <PreSize X="0.0000" Y="0.0000" />
                 <FileData Type="Normal" Path="playing/gameTable/zhuobian_07_2.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="leftTop" ActionTag="1427002629" Tag="214" RotationSkewX="90.0000" RotationSkewY="90.0000" IconVisible="False" LeftMargin="-22.8426" RightMargin="-93.1574" TopMargin="-741.1112" BottomMargin="625.1112" LeftEage="25" RightEage="25" TopEage="22" BottomEage="22" Scale9OriginX="25" Scale9OriginY="22" Scale9Width="66" Scale9Height="72" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="leftTop" ActionTag="1427002629" Tag="214" RotationSkewX="90.0000" RotationSkewY="90.0000" IconVisible="False" LeftMargin="-23.1702" RightMargin="-92.8298" TopMargin="-741.1113" BottomMargin="625.1113" LeftEage="25" RightEage="25" TopEage="22" BottomEage="22" Scale9OriginX="25" Scale9OriginY="22" Scale9Width="66" Scale9Height="72" ctype="ImageViewObjectData">
                 <Size X="116.0000" Y="116.0000" />
                 <Children>
                   <AbstractNodeData Name="line" ActionTag="-1490921532" VisibleForFrame="False" Tag="479" RotationSkewX="270.0000" RotationSkewY="270.0000" IconVisible="False" LeftMargin="176.7527" RightMargin="-1192.7527" TopMargin="-527.7928" BottomMargin="636.7928" LeftEage="25" RightEage="25" TopEage="22" BottomEage="22" Scale9OriginX="25" Scale9OriginY="-10" Scale9Width="998" Scale9Height="32" ctype="ImageViewObjectData">
@@ -91,7 +91,7 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="35.1574" Y="683.1112" />
+                <Position X="34.8298" Y="683.1113" />
                 <Scale ScaleX="0.9677" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition />
@@ -185,106 +185,92 @@
             <PreSize X="0.0773" Y="0.1125" />
             <FileData Type="Normal" Path="Red20/DeskTexture/phz_icon_007.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="banner" ActionTag="716468587" Tag="5885" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="377.9360" RightMargin="330.0640" TopMargin="3.1680" BottomMargin="651.8320" LeftEage="15" RightEage="15" TopEage="3" BottomEage="3" Scale9OriginX="15" Scale9OriginY="3" Scale9Width="542" Scale9Height="59" ctype="ImageViewObjectData">
-            <Size X="572.0000" Y="65.0000" />
+          <AbstractNodeData Name="banner" ActionTag="716468587" Tag="5885" IconVisible="False" PositionPercentYEnabled="True" HorizontalEdge="BothEdge" TopMargin="3.1400" BottomMargin="651.8600" LeftEage="15" RightEage="15" TopEage="3" BottomEage="3" Scale9OriginX="15" Scale9OriginY="3" Scale9Width="542" Scale9Height="59" ctype="ImageViewObjectData">
+            <Size X="1280.0000" Y="65.0000" />
             <Children>
-              <AbstractNodeData Name="roomNumBg2" ActionTag="-807834616" Tag="1254" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-366.0228" RightMargin="743.0228" TopMargin="3.2410" BottomMargin="15.7590" Scale9Enable="True" LeftEage="61" RightEage="61" TopEage="11" BottomEage="11" Scale9OriginX="61" Scale9OriginY="11" Scale9Width="261" Scale9Height="24" ctype="ImageViewObjectData">
-                <Size X="195.0000" Y="46.0000" />
-                <Children>
-                  <AbstractNodeData Name="powerBar" ActionTag="505020810" Tag="5888" IconVisible="False" LeftMargin="10.6093" RightMargin="137.3907" TopMargin="12.3778" BottomMargin="14.6222" ProgressInfo="100" ProgressType="Right_To_Left" ctype="LoadingBarObjectData">
-                    <Size X="47.0000" Y="19.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="34.1093" Y="24.1222" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1749" Y="0.5244" />
-                    <PreSize X="0.2410" Y="0.4130" />
-                    <ImageFileData Type="Normal" Path="playing/paodekuaiTable_new/dianliang1.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="power_9" ActionTag="1491556159" Tag="5889" IconVisible="False" LeftMargin="13.7607" RightMargin="134.2393" TopMargin="12.3779" BottomMargin="14.6221" ctype="SpriteObjectData">
-                    <Size X="47.0000" Y="19.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="37.2607" Y="24.1221" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.1911" Y="0.5244" />
-                    <PreSize X="0.2410" Y="0.4130" />
-                    <FileData Type="Normal" Path="playing/paodekuaiTable_new/dianliang2.png" Plist="" />
-                    <BlendFunc Src="1" Dst="771" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="bg_time" ActionTag="994748139" Tag="5886" IconVisible="False" LeftMargin="65.4978" RightMargin="49.5022" TopMargin="9.0838" BottomMargin="8.9162" LeftEage="38" RightEage="38" TopEage="9" BottomEage="9" Scale9OriginX="38" Scale9OriginY="9" Scale9Width="42" Scale9Height="10" ctype="ImageViewObjectData">
-                    <Size X="80.0000" Y="28.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="105.4978" Y="22.9162" />
-                    <Scale ScaleX="0.8000" ScaleY="0.8000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5410" Y="0.4982" />
-                    <PreSize X="0.4103" Y="0.6087" />
-                    <FileData Type="Normal" Path="playing/gameTable/bg_time.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="wifi" ActionTag="915138536" Tag="5887" IconVisible="False" LeftMargin="152.0361" RightMargin="15.9639" TopMargin="12.9337" BottomMargin="13.0663" LeftEage="8" RightEage="8" TopEage="7" BottomEage="7" Scale9OriginX="8" Scale9OriginY="7" Scale9Width="11" Scale9Height="6" ctype="ImageViewObjectData">
-                    <Size X="27.0000" Y="20.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="165.5361" Y="23.0663" />
-                    <Scale ScaleX="1.0000" ScaleY="0.9215" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.8489" Y="0.5014" />
-                    <PreSize X="0.1385" Y="0.4348" />
-                    <FileData Type="Normal" Path="playing/paodekuaiTable_new/WIFI_3.png" Plist="" />
-                  </AbstractNodeData>
-                </Children>
+              <AbstractNodeData Name="roomNumBg" ActionTag="-807834616" Tag="1254" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-1.5360" RightMargin="795.5360" TopMargin="-4.5000" BottomMargin="4.5000" Scale9Enable="True" LeftEage="61" RightEage="61" TopEage="11" BottomEage="11" Scale9OriginX="61" Scale9OriginY="11" Scale9Width="364" Scale9Height="43" ctype="ImageViewObjectData">
+                <Size X="486.0000" Y="65.0000" />
                 <AnchorPoint ScaleY="0.5000" />
-                <Position X="-366.0228" Y="38.7590" />
+                <Position X="-1.5360" Y="37.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="-0.6399" Y="0.5963" />
-                <PreSize X="0.3409" Y="0.7077" />
-                <FileData Type="Normal" Path="playing/paodekuaiTable_new/fangjiandi.png" Plist="" />
+                <PrePosition X="-0.0012" Y="0.5692" />
+                <PreSize X="0.3797" Y="1.0000" />
+                <FileData Type="Normal" Path="Red20/Common/RoomInfoBG_RunFaster.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="roomNumBg1" ActionTag="-1213606425" Tag="1255" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-366.0228" RightMargin="618.0228" TopMargin="56.0010" BottomMargin="-37.0010" Scale9Enable="True" LeftEage="61" RightEage="61" TopEage="11" BottomEage="11" Scale9OriginX="61" Scale9OriginY="11" Scale9Width="261" Scale9Height="24" ctype="ImageViewObjectData">
-                <Size X="320.0000" Y="46.0000" />
-                <Children>
-                  <AbstractNodeData Name="tableid" ActionTag="1556708115" Tag="8079" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="14.7773" RightMargin="136.2227" TopMargin="10.5000" BottomMargin="10.5000" FontSize="22" LabelText="房间号：125468" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="169.0000" Y="25.0000" />
-                    <AnchorPoint ScaleY="0.5000" />
-                    <Position X="14.7773" Y="23.0000" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="239" G="209" B="150" />
-                    <PrePosition X="0.0462" Y="0.5000" />
-                    <PreSize X="0.5281" Y="0.5435" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="roundnumAtlas" ActionTag="640381544" Tag="151" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="197.5193" RightMargin="18.4807" TopMargin="10.5000" BottomMargin="10.5000" FontSize="22" LabelText="第10/20局" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="104.0000" Y="25.0000" />
-                    <AnchorPoint ScaleY="0.5000" />
-                    <Position X="197.5193" Y="23.0000" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="239" G="209" B="150" />
-                    <PrePosition X="0.6172" Y="0.5000" />
-                    <PreSize X="0.3250" Y="0.5435" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleY="0.5000" />
-                <Position X="-366.0228" Y="-14.0010" />
+              <AbstractNodeData Name="powerBar" ActionTag="505020810" Tag="5888" IconVisible="False" LeftMargin="416.1124" RightMargin="816.8876" TopMargin="20.8363" BottomMargin="25.1637" ProgressInfo="100" ProgressType="Right_To_Left" ctype="LoadingBarObjectData">
+                <Size X="47.0000" Y="19.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="439.6124" Y="34.6637" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="-0.6399" Y="-0.2154" />
-                <PreSize X="0.5594" Y="0.7077" />
-                <FileData Type="Normal" Path="playing/paodekuaiTable_new/fangjiandi.png" Plist="" />
+                <PrePosition X="0.3434" Y="0.5333" />
+                <PreSize X="0.0367" Y="0.2923" />
+                <ImageFileData Type="Normal" Path="playing/paodekuaiTable_new/dianliang1.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Button_1" ActionTag="-1509439817" VisibleForFrame="False" Tag="5890" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="954.8892" RightMargin="-424.8892" TopMargin="15.6790" BottomMargin="8.3210" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="11" Scale9Height="19" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="power_9" ActionTag="1491556159" Tag="5889" IconVisible="False" LeftMargin="419.2636" RightMargin="813.7364" TopMargin="20.8363" BottomMargin="25.1637" ctype="SpriteObjectData">
+                <Size X="47.0000" Y="19.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="442.7636" Y="34.6637" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.3459" Y="0.5333" />
+                <PreSize X="0.0367" Y="0.2923" />
+                <FileData Type="Normal" Path="playing/paodekuaiTable_new/dianliang2.png" Plist="" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="bg_time" ActionTag="994748139" Tag="5886" IconVisible="False" LeftMargin="318.3749" RightMargin="861.6251" TopMargin="16.8971" BottomMargin="20.1029" LeftEage="38" RightEage="38" TopEage="9" BottomEage="9" Scale9OriginX="38" Scale9OriginY="9" Scale9Width="42" Scale9Height="10" ctype="ImageViewObjectData">
+                <Size X="100.0000" Y="28.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="368.3749" Y="34.1029" />
+                <Scale ScaleX="0.8000" ScaleY="0.8000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.2878" Y="0.5247" />
+                <PreSize X="0.0781" Y="0.4308" />
+                <FileData Type="Normal" Path="playing/gameTable/bg_time.png" Plist="" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="wifi" Visible="False" ActionTag="915138536" VisibleForFrame="False" Tag="5887" IconVisible="False" LeftMargin="455.7259" RightMargin="797.2741" TopMargin="-58.2519" BottomMargin="103.2519" LeftEage="8" RightEage="8" TopEage="7" BottomEage="7" Scale9OriginX="8" Scale9OriginY="7" Scale9Width="11" Scale9Height="6" ctype="ImageViewObjectData">
+                <Size X="27.0000" Y="20.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="469.2259" Y="113.2519" />
+                <Scale ScaleX="1.0000" ScaleY="0.9215" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.3666" Y="1.7423" />
+                <PreSize X="0.0211" Y="0.3077" />
+                <FileData Type="Normal" Path="playing/paodekuaiTable_new/WIFI_3.png" Plist="" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="tableid" ActionTag="1556708115" Tag="8079" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="14.7200" RightMargin="1096.2800" TopMargin="17.9720" BottomMargin="22.0280" FontSize="22" LabelText="房间号：125468" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="169.0000" Y="25.0000" />
+                <AnchorPoint ScaleY="0.5000" />
+                <Position X="14.7200" Y="34.5280" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="249" B="200" />
+                <PrePosition X="0.0115" Y="0.5312" />
+                <PreSize X="0.1320" Y="0.3846" />
+                <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="roundnumAtlas" ActionTag="640381544" Tag="151" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="194.8640" RightMargin="971.1360" TopMargin="17.8030" BottomMargin="22.1970" FontSize="22" LabelText="局数：1/20" HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="114.0000" Y="25.0000" />
+                <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
+                <Position X="308.8640" Y="34.6970" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="249" B="200" />
+                <PrePosition X="0.2413" Y="0.5338" />
+                <PreSize X="0.0891" Y="0.3846" />
+                <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="Button_1" ActionTag="-1509439817" VisibleForFrame="False" Tag="5890" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="2162.8081" RightMargin="-924.8081" TopMargin="15.6790" BottomMargin="8.3210" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="11" Scale9Height="19" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="42.0000" Y="41.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="975.8892" Y="28.8210" />
+                <Position X="2183.8081" Y="28.8210" />
                 <Scale ScaleX="1.8754" ScaleY="1.8967" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="1.7061" Y="0.4434" />
-                <PreSize X="0.0734" Y="0.6308" />
+                <PreSize X="0.0328" Y="0.6308" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
                 <PressedFileData Type="Normal" Path="playing/gameTable/youxizhong-1_04_1.png" Plist="" />
@@ -292,37 +278,35 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="setting" ActionTag="2074528519" Tag="5891" IconVisible="False" LeftMargin="771.1365" RightMargin="-264.1365" TopMargin="12.3894" BottomMargin="-12.3894" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="43" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="65.0000" Y="65.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="803.6365" Y="20.1106" />
+              <AbstractNodeData Name="setting" ActionTag="2074528519" Tag="5891" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1183.5002" RightMargin="31.4998" TopMargin="-1.0001" BottomMargin="-0.9999" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="65.0000" Y="67.0000" />
+                <AnchorPoint ScaleX="0.5792" ScaleY="0.7474" />
+                <Position X="1221.1469" Y="49.0784" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="1.4050" Y="0.3094" />
-                <PreSize X="0.1136" Y="1.0000" />
+                <PrePosition X="0.9540" Y="0.7551" />
+                <PreSize X="0.0508" Y="1.0308" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="playing/gameTable/youxizhong-1_06_1.png" Plist="" />
                 <NormalFileData Type="Normal" Path="playing/gameTable/youxizhong-1_06.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="rule_btn" ActionTag="-1287056415" Tag="1530" IconVisible="False" LeftMargin="673.2740" RightMargin="-166.2740" TopMargin="13.6340" BottomMargin="-19.6340" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="49" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="65.0000" Y="71.0000" />
+              <AbstractNodeData Name="rule_btn" ActionTag="-1287056415" Tag="1530" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1093.9000" RightMargin="121.1000" TopMargin="0.3000" BottomMargin="-2.3000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="65.0000" Y="67.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="705.7740" Y="15.8660" />
+                <Position X="1126.4000" Y="31.2000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="1.2339" Y="0.2441" />
-                <PreSize X="0.1136" Y="1.0923" />
+                <PrePosition X="0.8800" Y="0.4800" />
+                <PreSize X="0.0508" Y="1.0308" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
                 <PressedFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
+                <NormalFileData Type="Normal" Path="Red20/DeskTexture/BtnRuleBtnRule.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="scroll" ActionTag="1425767849" VisibleForFrame="False" Tag="5901" IconVisible="False" LeftMargin="-520.8049" RightMargin="59.8049" TopMargin="-36.1845" BottomMargin="58.1845" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="245" RightEage="294" TopEage="14" BottomEage="14" Scale9OriginX="-294" Scale9OriginY="-14" Scale9Width="539" Scale9Height="28" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
+              <AbstractNodeData Name="scroll" ActionTag="1425767849" VisibleForFrame="False" Tag="5901" IconVisible="False" LeftMargin="-520.8049" RightMargin="767.8049" TopMargin="-36.1845" BottomMargin="58.1845" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="245" RightEage="294" TopEage="14" BottomEage="14" Scale9OriginX="-294" Scale9OriginY="-14" Scale9Width="539" Scale9Height="28" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
                 <Size X="1033.0000" Y="43.0000" />
                 <Children>
                   <AbstractNodeData Name="msg" ActionTag="-1006679025" Tag="5902" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-694.0000" RightMargin="-694.0000" TopMargin="-5.5880" BottomMargin="10.5880" FontSize="46" LabelText="文明娱乐，严禁赌博，皮皮游戏没有任何外挂，请大家放心游戏。不要轻信下载恶意软件，防止上当受骗泄露个人身份信息。" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -342,8 +326,8 @@
                 <Position X="-520.8049" Y="79.6845" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="-0.9105" Y="1.2259" />
-                <PreSize X="1.8059" Y="0.6615" />
+                <PrePosition X="-0.4069" Y="1.2259" />
+                <PreSize X="0.8070" Y="0.6615" />
                 <SingleColor A="255" R="255" G="150" B="100" />
                 <FirstColor A="255" R="255" G="150" B="100" />
                 <EndColor A="255" R="255" G="255" B="255" />
@@ -351,12 +335,12 @@
                 <InnerNodeSize Width="1118" Height="60" />
               </AbstractNodeData>
             </Children>
-            <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
-            <Position X="663.9360" Y="716.8320" />
+            <AnchorPoint ScaleY="0.5000" />
+            <Position Y="684.3600" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5187" Y="0.9956" />
-            <PreSize X="0.4469" Y="0.0903" />
+            <PrePosition Y="0.9505" />
+            <PreSize X="1.0000" Y="0.0903" />
             <FileData Type="Normal" Path="playing/gameTable/GAME_03.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="waitChangePos" ActionTag="-1368446960" Tag="627" IconVisible="False" LeftMargin="342.6071" RightMargin="360.3929" TopMargin="182.6361" BottomMargin="450.3639" FontSize="72" LabelText="系统随机调整座位" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -2837,32 +2821,28 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="chat_btn" ActionTag="1600943711" Tag="133" IconVisible="False" LeftMargin="1331.7445" RightMargin="-116.7445" TopMargin="485.3798" BottomMargin="169.6202" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="43" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="65.0000" Y="65.0000" />
+          <AbstractNodeData Name="chat_btn" ActionTag="1600943711" Tag="133" IconVisible="False" LeftMargin="1331.7445" RightMargin="-116.7445" TopMargin="484.3798" BottomMargin="168.6202" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="65.0000" Y="67.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1364.2445" Y="202.1202" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="1.0658" Y="0.2807" />
-            <PreSize X="0.0508" Y="0.0903" />
+            <PreSize X="0.0508" Y="0.0931" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="Normal" Path="playing/gameTable/btn_chat_press.png" Plist="" />
-            <PressedFileData Type="Normal" Path="playing/gameTable/btn_chat_press.png" Plist="" />
             <NormalFileData Type="Normal" Path="playing/gameTable/btn_chat_normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="voice_btn" ActionTag="-417783035" Tag="305" IconVisible="False" LeftMargin="1325.3466" RightMargin="-110.3466" TopMargin="377.3000" BottomMargin="277.7000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="43" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-            <Size X="65.0000" Y="65.0000" />
+          <AbstractNodeData Name="voice_btn" ActionTag="-417783035" Tag="305" IconVisible="False" LeftMargin="1325.3466" RightMargin="-110.3466" TopMargin="376.3000" BottomMargin="276.7000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="65.0000" Y="67.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1357.8466" Y="310.2000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="1.0608" Y="0.4308" />
-            <PreSize X="0.0508" Y="0.0903" />
+            <PreSize X="0.0508" Y="0.0931" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="Normal" Path="playing/gameTable/btn_yuyin_press.png" Plist="" />
-            <PressedFileData Type="Normal" Path="playing/gameTable/btn_yuyin_press.png" Plist="" />
             <NormalFileData Type="Normal" Path="playing/gameTable/btn_yuyin_normal.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
@@ -2885,8 +2865,8 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="delroom" ActionTag="-1917350536" Tag="649" IconVisible="False" LeftMargin="-31.1778" RightMargin="-33.8222" TopMargin="-39.5000" BottomMargin="-39.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="57" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="65.0000" Y="79.0000" />
+              <AbstractNodeData Name="delroom" ActionTag="-1917350536" Tag="649" IconVisible="False" LeftMargin="-31.1778" RightMargin="-33.8222" TopMargin="-33.5000" BottomMargin="-33.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="65.0000" Y="67.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1.3222" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -2894,14 +2874,12 @@
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Normal" Path="playing/gameTable/yaoqing_13.png" Plist="" />
-                <PressedFileData Type="Normal" Path="playing/gameTable/yaoqing_13.png" Plist="" />
                 <NormalFileData Type="Normal" Path="playing/gameTable/yaoqing_14.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="backHomebtn" ActionTag="-205225343" Tag="367" IconVisible="False" LeftMargin="217.5000" RightMargin="-282.5000" TopMargin="-39.2472" BottomMargin="-39.7528" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="57" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="65.0000" Y="79.0000" />
+              <AbstractNodeData Name="backHomebtn" ActionTag="-205225343" Tag="367" IconVisible="False" LeftMargin="217.5000" RightMargin="-282.5000" TopMargin="-33.2472" BottomMargin="-33.7528" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="65.0000" Y="67.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="250.0000" Y="-0.2528" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
@@ -2909,8 +2887,6 @@
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                <PressedFileData Type="Normal" Path="playing/gameTable/yaoqing_17.png" Plist="" />
                 <NormalFileData Type="Normal" Path="playing/gameTable/yaoqing_18.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
