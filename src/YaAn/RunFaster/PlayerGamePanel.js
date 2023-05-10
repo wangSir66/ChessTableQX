@@ -848,7 +848,8 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     },
                     _event: {
                         trustTip: function (msg) {
-                            setTuoGuanCountDown(msg, this, 0);
+                            //头像不显示倒计时
+                            // setTuoGuanCountDown(msg, this, 0);
                         },
                         PKPut: function (msg) {
                             this.visible = false;
@@ -988,11 +989,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 },
             },
             deskCard: {
-                // _layout: [
-                //     [0.1, 0.15],
-                //     [0.6, 0],
-                //     [-1.8, 2]
-                // ],
                 _run: function () {
                     setWgtLayout(this, [0.052, 0], [0.5, 0.06], [0, 3.3]);
                 },
@@ -1161,7 +1157,8 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     },
                     _event: {
                         trustTip: function (msg) {
-                            setTuoGuanCountDown(msg, this, 1);
+                            //头像不显示倒计时
+                            // setTuoGuanCountDown(msg, this, 1);
                         },
                         PKPut: function (msg) {
                             this.visible = false;
@@ -1446,7 +1443,8 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     },
                     _event: {
                         trustTip: function (msg) {
-                            setTuoGuanCountDown(msg, this, 2);
+                            //头像不显示倒计时
+                            // setTuoGuanCountDown(msg, this, 2);
                         },
                         PKPut: function (msg) {
                             this.visible = false;
@@ -1733,7 +1731,8 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     },
                     _event: {
                         trustTip: function (msg) {
-                            setTuoGuanCountDown(msg, this, 3);
+                            //头像不显示倒计时
+                            // setTuoGuanCountDown(msg, this, 3);
                         },
                         PKPut: function (msg) {
                             this.visible = false;
@@ -2355,7 +2354,8 @@ PlayLayer_RunFasterYA.prototype.recoverCannotOutCard = function () {
 }
 
 PlayLayer_RunFasterYA.prototype.clockNumberUpdate = function (node, endFunc) {
-    return arrowbkNumberUpdate(node, endFunc, 20);
+    const rt = MjClient.data.sData.tData.areaSelectMode['trustTime'], t = rt > 0 ? rt : 30;
+    return arrowbkNumberUpdate(node, endFunc, t);
 }
 
 PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
@@ -2366,15 +2366,22 @@ PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
     var curPlayerNode = null;
     var deskCardPosOffset = {
         x: 44,
-        y: -34
+        y: 26
     };
-    if (curPlayerIndex == 1)
+    if (curPlayerIndex == 1) {
         curPlayerNode = this._rightNode;
+        if (MjClient.MaxPlayerNum == 2) {
+            deskCardPosOffset.x = 0;
+        }
+    }
     else if (curPlayerIndex == 2) {
         curPlayerNode = this._topNode;
-        deskCardPosOffset.x = 0 - deskCardPosOffset.x;
+        if (MjClient.MaxPlayerNum == 4) {
+            deskCardPosOffset.x = 0;
+        } else deskCardPosOffset.x = 0 - deskCardPosOffset.x;
     } else if (curPlayerIndex == 3) {
         curPlayerNode = this._leftNode;
+        deskCardPosOffset.x = 0 - deskCardPosOffset.x;
     }
     if (curPlayerNode != null) {
         var deskCardPos = curPlayerNode.getChildByName("deskCard").getPosition();

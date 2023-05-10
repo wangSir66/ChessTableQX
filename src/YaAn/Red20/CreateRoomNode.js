@@ -19,7 +19,6 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
     /**按钮事件回调 */
     callSelectBack: function (indx, item, list) {
         this._super(indx, item, list);
-        cc.log('callSelectBack------->red20', indx, item);
         const isNum = parseInt(indx);
         if (isNum >= 0 && item) {
             indx = Number(indx);
@@ -126,7 +125,7 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
 
             MaxPlayerCount: maxP,
             MaxGameCount: Number(Object.keys(pPriceCfg[maxP])[this.getRedioSelectByName('jushu')]),
-            MaxFan: [4, 5, 6][this.getRedioSelectByName('fengding')],//最大番数 
+            EnableTTF: [true, false][this.getRedioSelectByName('suanfan')],//是否开启梯梯番模式否则为跟斗番
             MaxKingCount: [3, 6, 9, 12, 15, 18][this.getRedioSelectByName('wangpai')],//最大大王数量
             EnableChi: [true, false][this.getRedioSelectByName('chipai')], //是否开启吃牌（这里的吃牌是指吃上家的牌）
             EnableZiMo: this.getCheckboxSelectedByName('btnCheckZiMo'),//true: 自摸加番
@@ -145,13 +144,13 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             EnableRed20Hu: true,//是否必须满足红点>=20才能胡牌 默认true
             Red50: this.getCheckboxSelectedByName('btnCheck50'),  //红50
             Black50: this.getCheckboxSelectedByName('btnCheck50'),//黑50
-            EnableTTF: [true, false][this.getRedioSelectByName('suanfan')],//是否开启梯梯番模式否则为跟斗番
             EnableGSH: this.getCheckboxSelectedByName('btnCheckGangHua'),//是否开启杠上花
             BaseScore: Number(score),
             AllowSameIP: true,
             SubRuleName: '雅安'
         };
-        cc.log("createara: " + JSON.stringify(Rule));
+        Rule.MaxFan = Rule.EnableTTF ? 0 : [4, 5, 6][this.getRedioSelectByName('fengding')]//最大番数 
+        this.getExtraSelectedPara(Rule);
         return Rule;
     }
 });

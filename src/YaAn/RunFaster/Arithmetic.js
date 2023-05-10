@@ -1181,6 +1181,8 @@
         needFindSpade3 = false;
         if (bankerRule === this.GameBankerRule.EveryRoundPlaySpade3) {
             needFindSpade3 = true;
+        } else if (bankerRule === this.GameBankerRule.FirstRoundPlaySpade3 && isFirstRound) {
+            needFindSpade3 = true;
         }
         // 第一局 红桃三先出时 有红桃三必须出
         if (needFindSpade3 && cards.indexOf(this.cardCfg.firstOutCard) < 0 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0) {
@@ -2436,6 +2438,8 @@
         let bankerRule = areaSelectMode && areaSelectMode.mustPutHongTaoSan;
         needFindSpade3 = false;
         if (bankerRule === this.GameBankerRule.EveryRoundPlaySpade3) {
+            needFindSpade3 = true;
+        }else if (bankerRule === this.GameBankerRule.FirstRoundPlaySpade3 && isFirstRound) {
             needFindSpade3 = true;
         }
         return needFindSpade3 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0;

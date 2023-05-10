@@ -361,6 +361,11 @@ GameCnDesc[MjClient.GAME_TYPE.PAO_HU_ZI] = {
         return "整场不封顶";
     },
 };
+GameCnDesc[MjClient.GAME_TYPE.RED_20_POKER] = {
+    MaxFan: (v) => v ? '封顶:' + v + '番' : '不封顶',
+    EnableTTF: (v) => v ? '阶梯番' : '跟斗番',
+    MaxKingCount: (v) => '王牌:' + v + '张',
+};
 
 GameCnDesc[MjClient.GAME_TYPE.PAO_HU_ZI_King] = {
     minHu: { 15: "15胡起胡", 18: "18胡起胡", 21: "21胡起胡" },
@@ -1454,7 +1459,7 @@ GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI] = {
     }
 }
 
-GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_LYG] =GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN]= GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_HA];
+GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_LYG] = GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_HA];
 GameCnDesc[MjClient.GAME_TYPE.SHU_YANG] = {
     flowerCount: { 2: "胡牌底花2点", 5: "胡牌底花5点" },
     duoHu: function (v) { return v ? "一炮多响" : "截胡" },

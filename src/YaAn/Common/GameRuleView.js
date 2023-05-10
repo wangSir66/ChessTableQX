@@ -92,7 +92,8 @@ var GameRuleView = cc.Layer.extend({
         this.RedioGroup['zhifufangshi'].selectItem(rule.payWay);
         this.RedioGroup['renshu'].selectItem(pIndx);
         this._view.getChildByName('difen').getChildByName('BaseScore').setString(rule.difen + '');
-        this.RedioGroup['tuoguan'].selectItem(this.TunGuanTime.indexOf(rule.trustTime));
+        //因为服务器 +1
+        this.RedioGroup['tuoguan'].selectItem(this.TunGuanTime.indexOf(rule.trustTime <= 0 ? 0 : rule.trustTime - 1));
     },
     callSelectBack: function (indx, item, list) {
     },
@@ -112,12 +113,7 @@ var GameRuleView = cc.Layer.extend({
         }
         return false;
     },
-    selectedCB: function (text, isSelected) {
-        if (isSelected) {
-            text.setTextColor(BTNCOLOR1);
-        } else {
-            text.setTextColor(BTNCOLOR3);
-        }
-
+    selectedCB: function (text) {
+        text.setTextColor('#602E1A');
     },
 });

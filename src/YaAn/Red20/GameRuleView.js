@@ -1,5 +1,6 @@
 var GameRule_YARed20 = GameRuleView.extend({
     reductionRule: function () {
+        this._super();
         if (!MjClient || !MjClient.data || !MjClient.data.sData || !MjClient.data.sData.tData || !MjClient.data.sData.tData.Rule) return;
         const gameType = MjClient.gameType,
             pPriceCfg = MjClient.data.gamePrice[gameType],
@@ -37,9 +38,7 @@ var GameRule_YARed20 = GameRuleView.extend({
         l4.setEnabled(checked);
         sl4.setEnabled(checked);
         var text = sl4.getChildByName("text");
-        this.selectedCB(text, checked && sl4.isSelected());
         text = l4.getChildByName("text");
-        this.selectedCB(text, checked && l4.isSelected());
     },
     /**算番规则 */
     initFanRule: function (indx) {
@@ -48,8 +47,6 @@ var GameRule_YARed20 = GameRuleView.extend({
             for (let _i = 0; _i < group._nodeList.length; _i++) {
                 const item = group._nodeList[_i];
                 item.setEnabled(indx != 0);
-                let text = item.getChildByName("text");
-                this.selectedCB(text, item.isSelected() && indx != 0);
             }
         }
     },
@@ -60,9 +57,5 @@ var GameRule_YARed20 = GameRuleView.extend({
             group.getSelectIndex() == 0 && indx == 0 && group.selectItem(1);
             group._nodeList[0].setEnabled(indx != 0);
         }
-        group._nodeList.map(n => {
-            let text = n.getChildByName("text");
-            this.selectedCB(text, n.isSelected());
-        })
     },
 });

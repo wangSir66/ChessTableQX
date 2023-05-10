@@ -12,7 +12,7 @@
               <AbstractNodeData Name="view" ActionTag="104901085" Tag="541" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" BottomMargin="85.0000" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
                 <Size X="893.0000" Y="480.0000" />
                 <Children>
-                  <AbstractNodeData Name="jushu" ActionTag="1885353511" Tag="503" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="1.0718" BottomMargin="988.9283" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="jushu" ActionTag="1885353511" Tag="503" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="0.8721" BottomMargin="1019.1279" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="-1901797520" Tag="1804" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="局    数：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -149,14 +149,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="1018.9283" />
+                    <Position X="445.0000" Y="1049.1279" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.9704" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.9714" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="zhifufangshi" ActionTag="347263156" Tag="252" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="61.0738" BottomMargin="928.9262" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="zhifufangshi" ActionTag="347263156" Tag="252" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="60.8752" BottomMargin="959.1248" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="1645486736" Tag="253" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="支付方式：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -257,14 +257,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="958.9262" />
+                    <Position X="445.0000" Y="989.1248" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.9133" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.9159" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="renshu" ActionTag="-1496830279" Tag="325" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="121.0729" BottomMargin="868.9271" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="renshu" ActionTag="-1496830279" Tag="325" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="120.8744" BottomMargin="899.1256" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="-407501687" Tag="326" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="人    数：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -365,14 +365,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="898.9271" />
+                    <Position X="445.0000" Y="929.1256" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.8561" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.8603" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="difen" ActionTag="-476369984" Tag="333" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="181.0742" BottomMargin="808.9258" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="difen" ActionTag="-476369984" Tag="333" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="180.8756" BottomMargin="839.1244" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="-1976098977" Tag="334" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="底    分：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -443,14 +443,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="838.9258" />
+                    <Position X="445.0000" Y="869.1244" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.7990" />
+                    <PrePosition X="0.4983" Y="0.8047" />
                     <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="xianshou" ActionTag="-771264369" Tag="588" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="241.0731" BottomMargin="748.9269" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="xianshou" ActionTag="-771264369" Tag="588" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="240.8749" BottomMargin="779.1251" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="1948259506" Tag="589" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="先    手：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -523,14 +523,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="778.9269" />
+                    <Position X="445.0000" Y="809.1251" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.7418" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.7492" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="paizhang" ActionTag="1111529708" Tag="596" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="301.0747" BottomMargin="688.9253" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="paizhang" ActionTag="1111529708" Tag="596" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="300.8763" BottomMargin="719.1237" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="1030377126" Tag="597" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="牌    张：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -603,14 +603,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="718.9253" />
+                    <Position X="445.0000" Y="749.1237" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.6847" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.6936" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="paishu" CanEdit="False" ActionTag="1768509652" VisibleForFrame="False" Tag="604" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="370.0000" BottomMargin="820.0000" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="paishu" CanEdit="False" ActionTag="1768509652" VisibleForFrame="False" Tag="604" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="170.0000" BottomMargin="820.0000" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="610996801" Tag="605" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="牌    数：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -658,11 +658,11 @@
                     <Position X="445.0000" Y="850.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.6800" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.8095" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="paixing" ActionTag="631015283" Tag="130" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="361.0748" BottomMargin="628.9252" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="paixing" ActionTag="631015283" Tag="130" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="360.8766" BottomMargin="659.1234" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="1454737689" Tag="131" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="牌    型：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -707,14 +707,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="658.9252" />
+                    <Position X="445.0000" Y="689.1234" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.6275" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.6381" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="fangzuobi" ActionTag="2064619338" Tag="134" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="421.0748" BottomMargin="568.9252" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="fangzuobi" ActionTag="2064619338" Tag="134" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="420.8766" BottomMargin="599.1234" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="-1725998356" Tag="135" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="防 作 弊：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -787,14 +787,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="598.9252" />
+                    <Position X="445.0000" Y="629.1234" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.5704" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.5825" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="mingtang" ActionTag="1474451257" Tag="140" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="481.0751" BottomMargin="508.9249" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="mingtang" ActionTag="1474451257" Tag="140" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="480.8772" BottomMargin="539.1228" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="-1449255160" Tag="141" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="名    堂：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1035,14 +1035,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="538.9249" />
+                    <Position X="445.0000" Y="569.1228" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.5133" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.5270" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="zhadan" ActionTag="-8440738" Tag="618" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="661.0781" BottomMargin="328.9219" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="zhadan" ActionTag="-8440738" Tag="618" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="660.8819" BottomMargin="359.1181" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="1779073506" Tag="619" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="炸    弹：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1115,14 +1115,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="358.9219" />
+                    <Position X="445.0000" Y="389.1181" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.3418" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.3603" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="zhadan34" ActionTag="-883343852" Tag="160" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="721.0793" BottomMargin="268.9207" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="zhadan34" ActionTag="-883343852" Tag="160" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="720.8816" BottomMargin="299.1184" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="235378107" VisibleForFrame="False" Tag="161" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="防 作 弊：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1195,14 +1195,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="298.9207" />
+                    <Position X="445.0000" Y="329.1184" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.2847" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.3047" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="mingtangfen" ActionTag="852854733" Tag="626" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="781.0795" BottomMargin="208.9205" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="mingtangfen" ActionTag="852854733" Tag="626" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="780.8823" BottomMargin="239.1177" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="1045278095" Tag="627" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="名 堂 分：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1275,14 +1275,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="238.9205" />
+                    <Position X="445.0000" Y="269.1177" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.2275" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.2492" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="xifen" ActionTag="1380405101" Tag="632" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="841.0805" BottomMargin="148.9195" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="xifen" ActionTag="1380405101" Tag="632" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="840.8820" BottomMargin="179.1180" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="1906305979" Tag="633" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="喜    分：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1355,14 +1355,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="178.9195" />
+                    <Position X="445.0000" Y="209.1180" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.1704" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.1936" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="zidongzhunbei" CanEdit="False" ActionTag="-1575875202" VisibleForFrame="False" Tag="660" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="970.0000" BottomMargin="220.0000" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="zidongzhunbei" ActionTag="-1575875202" Tag="660" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="900.8826" BottomMargin="119.1174" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="1116207630" Tag="661" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="自动准备：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1435,14 +1435,14 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="250.0000" />
+                    <Position X="445.0000" Y="149.1174" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.2000" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.1381" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="tuoguan" ActionTag="-1536484261" Tag="666" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="901.0793" BottomMargin="88.9207" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="tuoguan" ActionTag="-1536484261" Tag="666" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="960.8828" BottomMargin="59.1172" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="110905352" Tag="667" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="托    管：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1571,11 +1571,11 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="118.9207" />
+                    <Position X="445.0000" Y="89.1172" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.1133" />
-                    <PreSize X="1.0000" Y="0.0480" />
+                    <PrePosition X="0.4983" Y="0.0825" />
+                    <PreSize X="1.0000" Y="0.0571" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
@@ -1589,7 +1589,7 @@
                 <FirstColor A="255" R="255" G="150" B="100" />
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
-                <InnerNodeSize Width="893" Height="1050" />
+                <InnerNodeSize Width="893" Height="1080" />
               </AbstractNodeData>
               <AbstractNodeData Name="btn_create" ActionTag="2032158414" Tag="516" IconVisible="False" LeftMargin="426.4700" RightMargin="164.5300" TopMargin="477.8421" BottomMargin="-10.8421" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="272" Scale9Height="76" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="302.0000" Y="98.0000" />

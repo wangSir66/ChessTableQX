@@ -47,6 +47,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         this.initPlayNode();
         this.initEnd();
         this.setPlayNodeCurrentSelect(this._isFriendCard);
+        this.changeUiForClubMode();
     },
     //初始化结束需要做的事情
     initEnd: function () {
@@ -507,8 +508,12 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     },
 
     getRedioSelectByName: function (str) {
-        if (!this._view) return 0;
-        let childs = this._view.getChildByName(str).children.filter(n => n.name.indexOf('btnRadio') > -1 || n.name.indexOf('btnCheck') > -1);
+        if (!this._view || !str) return 0;
+        let childs = this._view.getChildByName(str).children.filter(n => {
+            cc.log('-------getRedioSelectByName--------', JSON.stringify(n))
+            if (n && n.name) return n.name.indexOf('btnRadio') > -1 || n.name.indexOf('btnCheck') > -1;
+            else return false;
+        });
         for (let _i = 0; _i < childs.length; _i++) {
             const btn = childs[_i];
             if (cc.sys.isObjectValid(btn) && btn.isSelected()) return _i;
@@ -1107,6 +1112,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         para.difen = parseFloat(this.difen.getString());
         // 托管
         para.trustTime = this.trustTimes ? this.trustTimes[this.RedioGroup['tuoguan'] ? this.RedioGroup['tuoguan'].getSelectIndex() : 0] : 0;
+        cc.log('------------sdwadw---------', this.RedioGroup['tuoguan'].getSelectIndex())
         if (this.fanbei_radio) {
             var labelString = this.nodeListFanBei[1].getChildByName("score").getString();
 
@@ -1160,28 +1166,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             this.fanBeiRadioBoxSelectCB(fanBeiOption, this.nodeListFanBei[fanBeiOption], this.nodeListFanBei);
         }
 
-        //托管
-        if (this.tuoguanNodeList && this.tuoguanNodeList.length) {
-            var trustTime;
-            if (isClub)
-                trustTime = this.getNumberItem("trustTime", 0);
-            else
-                trustTime = util.localStorageEncrypt.getNumberItem(this.localStorageKey.tuoGuan, 0);
-
-            var trustTimes = this.trustTimes;
-            var index = 0;
-            for (var i = 0; i < this.tuoguanNodeList.length; i++) {
-                var bSelected = trustTime == trustTimes[i];
-                this.tuoguanNodeList[i].setSelected(bSelected);
-
-                if (bSelected)
-                    index = i;
-            }
-            this.radioBoxSelectCB(index, this.tuoguanNodeList[index], this.tuoguanNodeList);
-
-            // this.refreshTrustWays(index, true);
-        }
-
         //积分底分
         if (this.jieSuanDiFen) {
             var diFen;
@@ -1230,6 +1214,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             'jushu': ['round', Number(roundNumObj[0]), roundNumObj],
             'zhifufangshi': ['payWay', 0, [0, 1, 2]],
             'renshu': ['maxPlayer', Number(pNums[0]), pNums],
+            'tuoguan': ['trustTime', 0, this.trustTimes || [0, 30, 60, 90]],
         }
         let len = Object.keys(key_nameR);
         for (let _i = 0; _i < len.length; _i++) {
@@ -1242,7 +1227,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                     _current = this.getBoolItem(val[0], val[1]);
             }
             else
-                _current = cacheRule[val[0]] || val[1];
+                _current = cacheRule[val[0]] != undefined ? cacheRule[val[0]] : val[1];
             selectIndex = val[2].indexOf(_current);
             currObj = this.RedioGroup[key];
             if (currObj) {
@@ -1251,5 +1236,975 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 if (key === 'renshu') this.changePayForPlayerNum(selectIndex);
             }
         }
+    },
+    //----------------------------亲友圈相关-------------------------------------------------------------
+    changeUiForClubMode: function () {
+        var parentNode = this._view;
+        //房卡模式,有房费的保留位置，没有的放在人数下面，没有人数放在局数下面  item hegith 63
+        this.getTextNodeByValue = function (node, value, notValues) {
+            var childrens = node.getChildren();
+            if (childrens) {
+                for (var i in childrens) {
+                    if (childrens[i].getChildren() && childrens[i].getChildren().length > 0) {
+                        var fenShuNode = this.getTextNodeByValue(childrens[i], value, notValues);
+                        if (fenShuNode) {
+                            return fenShuNode;
+                        }
+                    } else {
+                        var type_name = childrens[i].getDescription();
+                        if (type_name == "Label") {
+                            var text = childrens[i].getString().replace(/\s+/g, "");
+                            //cc.log("getTextNodeByValue ",text);
+                            if (text.indexOf(value) != -1) {
+                                if (notValues) {
+                                    var hasFind = false;
+                                    for (var j = 0; j < notValues.length; j++) {
+                                        if (text.indexOf(notValues[j]) != -1) {
+                                            hasFind = true;
+                                        }
+                                    }
+                                    if (!hasFind) {
+                                        return childrens[i];
+                                    }
+                                } else {
+                                    return childrens[i];
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            var type_name = node.getDescription();
+            if (type_name == "Label" && node.getString().replace(/\s+/g, "").indexOf(value) != -1) {
+                return node;
+            }
+        };
+
+        this.changeItemY = function (node, topNodePos, dy, offset) {//offset偏差
+            if (!node) {
+                cc.log("changeItemY node is null");
+                return;
+            } else {
+                
+            }
+            if (typeof (offset) == 'undefined') {
+                offset = 15;
+            }
+            var childrens = node.getChildren();
+            if (childrens) {
+                for (var i in childrens) {
+                    if (childrens[i].name == "play" || childrens[i].name == "round") {
+                        continue;
+                    }
+                    if (childrens[i].name == "play_way" && this._cardRoomOptNode == node) {
+                        continue;
+                    }
+                    if (childrens[i].name == "title" && childrens[i].getChildren() && childrens[i].getChildren().length > 0) {
+                        continue;
+                    }
+
+                    if (this._cardRoomOptNode == node && childrens[i].name == "difen" && childrens[i].getChildren() && childrens[i].getChildren().length > 0) {
+                        continue;
+                    }
+                    if (childrens[i].name == "roomCardPayModeTipText") {
+                        continue;
+                    }
+                    if (this._cardRoomOptNode == node) {
+                        if (childrens[i].name == "btn_create" || childrens[i].name == "btn_ruleretain" || childrens[i].name == "btn_create_diamond"
+                            || childrens[i].name == "Image_3" || childrens[i].name == "btn_add" || childrens[i].name == "txt_fen" || childrens[i].name == "btn_sub"
+                        ) {
+                            continue;
+                        }
+                    }
+                    if (childrens[i].name && (childrens[i].name.indexOf("keep_position") != -1)) {
+                        continue;
+                    }
+                    var nodePos = childrens[i].getParent().convertToWorldSpace(childrens[i].getPosition());
+                    if (topNodePos) {
+                        if (this._ziYouRenNode && this._ziYouRenNode.getParent() == childrens[i]) {
+                            continue;
+                        }
+                        if (this._realTimeVoiceNode && this._realTimeVoiceNode.getParent() == childrens[i]) {
+                            if (topNodePos.y - nodePos.y > offset + dy) {
+                                childrens[i].setPositionY(childrens[i].getPosition().y - dy);
+                            }
+                            continue;
+                        }
+                        if (topNodePos.y - nodePos.y > offset) {
+                            childrens[i].setPositionY(childrens[i].getPosition().y - dy);
+                        }
+                    } else {
+                        childrens[i].setPositionY(childrens[i].getPosition().y - dy);
+                    }
+
+                }
+            }
+        };
+
+        this.findNodeByNameKey = function (node, keyValue, func) {
+            var childrens = node.getChildren();
+            if (childrens) {
+                for (var i in childrens) {
+                    if (childrens[i].name && childrens[i].name.indexOf(keyValue) != -1) {
+                        if (func) {
+                            func(childrens[i])
+                        }
+                    } else {
+                        if (childrens[i].getChildren() && childrens[i].getChildren().length > 0) {
+                            this.findNodeByNameKey(childrens[i], keyValue, func);
+                        }
+                    }
+                }
+            }
+        }
+
+        this.getListTextNodeByValue = function (node, value, callFunc, list) {
+            var childrens = node.getChildren();
+
+            if (childrens) {
+                for (var i in childrens) {
+                    if (childrens[i].getChildren() && childrens[i].getChildren().length > 0) {
+                        var fenShuNode = this.getListTextNodeByValue(childrens[i], value, callFunc, list);
+                        if (fenShuNode) {
+                            //fenShuNode.visible = false
+                            list.push(fenShuNode);
+                        }
+                    } else {
+                        var type_name = childrens[i].getDescription();
+                        if (type_name == "Label") {
+                            var text = childrens[i].getString().replace(/\s+/g, "");
+                            if (text.indexOf(value) != -1) {
+                                //childrens[i].visible = false;
+                                list.push(childrens[i]);
+                            }
+
+                        }
+                    }
+                }
+            }
+            var type_name = node.getDescription();
+            if (type_name == "Label" && node.getString().replace(/\s+/g, "").indexOf(value) != -1) {
+                list.push(node);
+                //node.visible = false;
+            }
+            callFunc(list);
+        };
+
+        this.changeUiForMatchMode(parentNode);
+        this.changeUiForRoomCardMode(parentNode);
+    },
+    //亲友圈比赛插入节点
+    changeUiForMatchMode: function (parentNode) {
+        if (!this._isMatchMode) {
+            return;
+        }
+        var that = this;
+        var dy = 64;
+        var matchModeNodeMoreHeight = 0;//拓展的时候高度在这里增加
+        if (FriendCard_Common.isOpenMatchDissolveLimit(this._data.gameType)) {
+            matchModeNodeMoreHeight += 64;
+        }
+        if (FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType)) {
+            matchModeNodeMoreHeight += 64;
+        }
+        this._matchModeNode = parentNode.getChildByName("matchModeNode");//一些难兼容的玩法，直接在创建房间ui加入节点
+        if (!this._matchModeNode) {
+            if (parentNode.setInnerContainerSize) {//增加scrollview的高度
+                //修正scrollView的滑动区域增加插入ui的高度
+                parentNode.setInnerContainerSize(cc.size(parentNode.getInnerContainerSize().width, parentNode.getInnerContainerSize().height + dy + matchModeNodeMoreHeight));
+                //添加房卡模式选项node
+                var matchModeNode = ccs.load("CreateRoomMatchMode.json").node;
+                //matchModeNode.zIndex = -1;
+                matchModeNode.setPosition(cc.p(0, parentNode.getInnerContainerSize().height - dy / 2))
+                this._matchModeNode = matchModeNode;
+                //顶部插入点
+                parentNode.addChild(matchModeNode)
+            } else {
+                MjClient.showToast("此玩法未兼容比赛场!!!")
+            }
+
+        }
+        if (this._matchModeNode) {
+
+            //以下是比赛模式节点
+            this._matchModeNode.visible = true;
+            this._matchModeNode = this._matchModeNode.getChildByName("matchMode");
+            this._matchModeNode.config = {
+                limitMin: -2000,
+                limitMax: 10000,
+                dValue: 1,
+                defaultValue: 100,
+                defaultOpenIndex: 0
+            }
+
+            //比赛场进入房间规则start
+            this._matchModeLimitScore = this._matchModeNode.getChildByName("txt_fen");//不需要text了，改成可editbox
+            this._matchModeLimitScore.ignoreContentAdaptWithSize(true);
+            var image_fen_bg = this._matchModeNode.getChildByName("Image_3");
+            var edtContentSize = image_fen_bg.getContentSize();
+            var edt_input = new cc.EditBox(edtContentSize, new cc.Scale9Sprite());
+            this._matchModeLimitScoreEdt = edt_input;
+            edt_input.setFontColor(this._matchModeLimitScore.getTextColor());
+            edt_input.setPlaceholderFontColor(cc.color(0xFF, 0xFF, 0xFF));
+            edt_input.setMaxLength(10);
+            edt_input.setFontSize(this._matchModeLimitScore.getFontSize());
+            edt_input.setInputFlag(cc.EDITBOX_INPUT_FLAG_INITIAL_CAPS_ALL_CHARACTERS);
+            edt_input.setInputMode(cc.EDITBOX_INPUT_MODE_SINGLELINE);
+            edt_input.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
+            edt_input.setPlaceHolder("");
+            edt_input.setPlaceholderFontSize(this._matchModeLimitScore.getFontSize());
+            edt_input.setPosition(edtContentSize.width / 2, edtContentSize.height / 2);
+
+            edt_input.editBoxEditingDidEnd = function (editBox) {
+                var str = editBox.getString();
+                while (str != "0" && str.indexOf("0") == 0) {
+                    //避免parseInt转化八进制或十六进制
+                    str = str.substring(1, str.length);
+                }
+                var input = parseInt(str);
+                if (editBox.getString().length == 0 || input == null || isNaN(input)) {
+                    input = that._matchModeNode.config.defaultValue
+                } else if (input > that._matchModeNode.config.limitMax) {
+                    input = that._matchModeNode.config.limitMax
+                } else if (input < that._matchModeNode.config.limitMin) {
+                    input = that._matchModeNode.config.limitMin
+                }
+                that._matchModeLimitScoreEdt.value = parseInt(input);
+                that.setMatchModeLimitScore();
+            };
+
+            edt_input.setDelegate(edt_input);
+            image_fen_bg.addChild(edt_input);
+            this._matchModeLimitScore.visible = false;
+
+
+            this._matchModeLimitScoreNodes = [];
+            this._matchModeLimitScoreNodes.push(this._matchModeNode.getChildByName("match_no_limit"));
+            this._matchModeLimitScoreNodes.push(this._matchModeNode.getChildByName("match_limit"));
+
+            this._matchModeLimitScoreRadio = createRadioBoxForCheckBoxs(this._matchModeLimitScoreNodes, function (index) {
+                this.radioBoxSelectCB(index, this._matchModeLimitScoreNodes[index], this._matchModeLimitScoreNodes);
+            }.bind(this));
+            this.addListenerText(this._matchModeLimitScoreNodes, this._matchModeLimitScoreRadio, function (index) {
+
+            }.bind(this));
+
+            this._matchModeLimitScoreSub = this._matchModeNode.getChildByName("btn_sub");
+            this._matchModeLimitScoreSub.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    this.setMatchModeLimitScore("sub");
+                }
+            }, this);
+            this._matchModeLimitScoreAdd = this._matchModeNode.getChildByName("btn_add");
+            this._matchModeLimitScoreAdd.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    this.setMatchModeLimitScore("add");
+                }
+            }, this);
+
+            this.setMatchModeLimitScore = function (action) {
+                if (action == "sub") {
+                    this._matchModeLimitScoreEdt.value -= this._matchModeNode.config.dValue;
+                } else if (action == "add") {
+                    this._matchModeLimitScoreEdt.value += this._matchModeNode.config.dValue;
+                }
+                if (this._matchModeLimitScoreEdt.value < this._matchModeNode.config.limitMin) {
+                    this._matchModeLimitScoreEdt.value = this._matchModeNode.config.limitMax;
+                }
+                if (this._matchModeLimitScoreEdt.value > this._matchModeNode.config.limitMax) {
+                    this._matchModeLimitScoreEdt.value = this._matchModeNode.config.limitMin;
+                }
+                this._matchModeLimitScoreEdt.setString("" + this._matchModeLimitScoreEdt.value);
+            }
+            var currentSelect = this.getNumberItem("isMatchLimit", this._matchModeNode.config.defaultOpenIndex);
+            this._matchModeLimitScoreEdt.value = this.getNumberItem("matchLimitScore", this._matchModeNode.config.defaultValue);
+            this._matchModeLimitScoreRadio.selectItem(currentSelect);
+            this.setMatchModeLimitScore();
+            //比赛场进入房间规则end
+
+
+            //比赛场解散房间start
+            var endGameNode = this._matchModeNode.getChildByName("endRoomConfigNode");
+            if (FriendCard_Common.isOpenMatchDissolveLimit(this._data.gameType)) {
+                endGameNode.config = {
+                    limitMin: 0,
+                    limitMax: 10000,
+                    dValue: 1,
+                    defaultValue: 100,
+                    defaultOpenIndex: 0,
+                    defaultScoreNeedEnough: 0,
+                }
+                var textEndGameScore = endGameNode.getChildByName("txt_fen");//不需要text了，改成可editbox
+                textEndGameScore.ignoreContentAdaptWithSize(true);
+                var image_fen_bg = endGameNode.getChildByName("Image_3");
+                var edtContentSize = image_fen_bg.getContentSize();
+                var edt_input_endGame = new cc.EditBox(edtContentSize, new cc.Scale9Sprite());
+                this._matchModeEndGameScoreEdt = edt_input_endGame;
+                edt_input_endGame.setFontColor(textEndGameScore.getTextColor());
+                edt_input_endGame.setPlaceholderFontColor(cc.color(0xFF, 0xFF, 0xFF));
+                edt_input_endGame.setMaxLength(10);
+                edt_input_endGame.setFontSize(textEndGameScore.getFontSize());
+                edt_input_endGame.setInputFlag(cc.EDITBOX_INPUT_FLAG_INITIAL_CAPS_ALL_CHARACTERS);
+                edt_input_endGame.setInputMode(cc.EDITBOX_INPUT_MODE_SINGLELINE);
+                edt_input_endGame.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
+                edt_input_endGame.setPlaceHolder("");
+                edt_input_endGame.setPlaceholderFontSize(textEndGameScore.getFontSize());
+                edt_input_endGame.setPosition(edtContentSize.width / 2, edtContentSize.height / 2);
+
+                edt_input_endGame.editBoxEditingDidEnd = function (editBox) {
+                    var str = editBox.getString();
+                    while (str != "0" && str.indexOf("0") == 0) {
+                        //避免parseInt转化八进制或十六进制
+                        str = str.substring(1, str.length);
+                    }
+                    var input = parseInt(str);
+                    if (editBox.getString().length == 0 || input == null || isNaN(input)) {
+                        input = endGameNode.config.defaultValue
+                    } else if (input > endGameNode.config.limitMax) {
+                        input = endGameNode.config.limitMax
+                    } else if (input < endGameNode.config.limitMin) {
+                        input = endGameNode.config.limitMin
+                    }
+                    that._matchModeEndGameScoreEdt.value = parseInt(input);
+                    that.setMatchModeEndGameScore();
+                };
+
+                edt_input_endGame.setDelegate(edt_input_endGame);
+                image_fen_bg.addChild(edt_input_endGame);
+                textEndGameScore.visible = false;
+
+                this._checkBox_not_zone_score = endGameNode.getChildByName("checkBox_not_zone_score");
+                if (!FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType)) {
+                    this._checkBox_not_zone_score.visible = false;
+                }
+                this.addListenerText(this._checkBox_not_zone_score);
+                this._checkBox_not_zone_score.addEventListener(this.clickCB, this._checkBox_not_zone_score);
+
+                var scoreNeedEnough = this.getNumberItem("scoreNeedEnough", endGameNode.config.defaultScoreNeedEnough);
+                this._checkBox_not_zone_score.setSelected(scoreNeedEnough);
+                var text = this._checkBox_not_zone_score.getChildByName("text");
+                this.selectedCB(text, scoreNeedEnough);
+
+                this._matchModeEndGameScoreNodes = [];
+                this._matchModeEndGameScoreNodes.push(endGameNode.getChildByName("match_no_limit"));
+                this._matchModeEndGameScoreNodes.push(endGameNode.getChildByName("match_limit"));
+
+                this._matchModeEndGameScoreRadio = createRadioBoxForCheckBoxs(this._matchModeEndGameScoreNodes, function (index) {
+                    this._checkBox_not_zone_score.visible = (index == 1 && FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType))
+                    this.radioBoxSelectCB(index, this._matchModeEndGameScoreNodes[index], this._matchModeEndGameScoreNodes);
+                }.bind(this));
+                this.addListenerText(this._matchModeEndGameScoreNodes, this._matchModeEndGameScoreRadio, function (index) {
+                    this._checkBox_not_zone_score.visible = (index == 1 && FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType))
+                }.bind(this));
+
+                this._matchModeEndGameScoreSub = endGameNode.getChildByName("btn_sub");
+                this._matchModeEndGameScoreSub.addTouchEventListener(function (sender, type) {
+                    if (type == 2) {
+                        this.setMatchModeEndGameScore("sub");
+                    }
+                }, this);
+                this._matchModeEndGameScoreAdd = endGameNode.getChildByName("btn_add");
+                this._matchModeEndGameScoreAdd.addTouchEventListener(function (sender, type) {
+                    if (type == 2) {
+                        this.setMatchModeEndGameScore("add");
+                    }
+                }, this);
+
+                this.setMatchModeEndGameScore = function (action) {
+                    if (action == "sub") {
+                        this._matchModeEndGameScoreEdt.value -= endGameNode.config.dValue;
+                    } else if (action == "add") {
+                        this._matchModeEndGameScoreEdt.value += endGameNode.config.dValue;
+                    }
+                    if (this._matchModeEndGameScoreEdt.value < endGameNode.config.limitMin) {
+                        this._matchModeEndGameScoreEdt.value = endGameNode.config.limitMax;
+                    }
+                    if (this._matchModeEndGameScoreEdt.value > endGameNode.config.limitMax) {
+                        this._matchModeEndGameScoreEdt.value = endGameNode.config.limitMin;
+                    }
+                    this._matchModeEndGameScoreEdt.setString("" + this._matchModeEndGameScoreEdt.value);
+                }
+                var currentSelect = this.getNumberItem("isMatchDissolveLimit", endGameNode.config.defaultOpenIndex);
+                this._matchModeEndGameScoreEdt.value = this.getNumberItem("matchDissolveLimitScore", endGameNode.config.defaultValue);
+                this._matchModeEndGameScoreRadio.selectItem(currentSelect);
+                this._checkBox_not_zone_score.visible = (currentSelect == 1 && FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType))
+                this.setMatchModeEndGameScore();
+
+
+                //积分不为负提示
+
+                var btn_Tip = this._checkBox_not_zone_score.getChildByName("btn_Tip");
+                var image_Tip = this._checkBox_not_zone_score.getChildByName("image_Tip");
+                image_Tip.visible = false;
+                btn_Tip.addTouchEventListener(function (sender, type) {
+                    if (type == 2) {
+                        image_Tip.visible = true;
+                    }
+                })
+                cc.eventManager.addListener({
+                    event: cc.EventListener.TOUCH_ONE_BY_ONE,
+                    swallowTouches: false,
+                    status: null,
+                    onTouchBegan: function (touch, event) {
+                        if (image_Tip.isVisible()) {
+                            image_Tip.setVisible(false);
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                }, image_Tip);
+            } else {
+                if (endGameNode) {
+                    endGameNode.visible = false;
+                }
+            }
+            //比赛场解散房间end
+
+        }
+    },
+    //亲友圈钻石插入节点
+    changeUiForRoomCardMode: function (parentNode) {//亲友圈钻石模式
+        if (!this._isRoomCardMode) {
+            return;
+        }
+        var that = this;
+        cc.log("begin changeUiForRoomCardMode");
+
+        cc.log("parentNode name ", parentNode.name);
+        this._cardRoomOptNode = parentNode;
+
+
+        var dy = 64;
+        var roomCardModeNodeMoreHeight = (FriendCard_Common.isOpenMiankoujiashi(this._data.gameType) && !FriendCard_Common.isOpenForceMiankoujiashi()) ? 150 : 100;
+        this._roomCardModeNode = parentNode.getChildByName("roomCardModeNode");//一些难兼容的玩法，直接在创建房间ui加入节点
+        if (!this._roomCardModeNode) {
+            //寻找插入点
+
+            var selectNode = this.getTextNodeByValue(parentNode, "支付：");
+            if (!selectNode) {
+                selectNode = this.getTextNodeByValue(parentNode, "支付:");
+            }
+            if (!selectNode) {
+                selectNode = this.getTextNodeByValue(parentNode, "房费：");
+            }
+            if (!selectNode) {
+                selectNode = this.getTextNodeByValue(parentNode, "房费:");
+            }
+            if (!selectNode) {
+                selectNode = this.getTextNodeByValue(parentNode, "黄金:");
+            }
+            if (!selectNode) {
+                selectNode = this.getTextNodeByValue(parentNode, "黄金：");
+            }
+            if (!selectNode) {
+                selectNode = this.getTextNodeByValue(parentNode, "付费:");
+            }
+            if (!selectNode) {
+                selectNode = this.getTextNodeByValue(parentNode, "付费：");
+            }
+
+            //隐藏包含"黄金"的节点 刘雨楠 
+            this.getListTextNodeByValue(parentNode, "黄金", function (nodeList) {
+                for (var i = 0; i < nodeList.length; i++) {
+                    //后面会通过判定selectNode是否隐藏做其他逻辑 所以这时候不做隐藏
+                    if (nodeList[i] != selectNode) {
+                        nodeList[i].visible = false;
+                    }
+                }
+            }, [])
+
+            if (selectNode) {
+                if (!selectNode.visible) {
+                    selectNode = null;
+                }
+            }
+            if (selectNode) {
+                var localPos = selectNode.getPosition();
+                var selectNodePos = selectNode.getParent().convertToWorldSpace(localPos);
+                selectNode.visible = false;
+                //cc.log("房费pos ",JSON.stringify(selectNodePos));
+                this.findNodeByNameKey(parentNode, "payWay_", function (node) {
+                    //cc.log("payWay_ find");
+                    node.visible = false;
+                });
+                if (parseInt(selectNodePos.y) > 720 || parseInt(selectNodePos.y) < 0) {
+                    selectNode = null;
+                } else {
+                    dy = 0;
+                }
+            }
+            var notValues = [];
+            notValues.push("自由人数");
+            if (!selectNode) {
+                cc.log("find 人数");
+                selectNode = this.getTextNodeByValue(parentNode, "人数", notValues);
+                if (selectNode && !selectNode.visible) {
+                    cc.log("人数 node not visible");
+                    selectNode = null;
+                }
+                if (selectNode) {
+                    this._ziYouRenNode = this.getTextNodeByValue(parentNode, "自由人数");
+                } else {
+                    this._ziYouRenNode = null;
+                }
+            }
+            if (!selectNode) {
+                cc.log("find 局数");
+                selectNode = this.getTextNodeByValue(parentNode, "局数");
+                if (selectNode && !selectNode.visible) {
+                    cc.log("局数 node not visible");
+                    selectNode = null;
+                }
+            }
+            if (selectNode) {
+                var roomCardModeNodePos = selectNode.getPosition();
+                var selectNodePos = selectNode.getParent().convertToWorldSpace(selectNode.getPosition());
+                //修正选中item的y下标 start
+
+                var fixYNode = [];
+                fixYNode.push(this._ziYouRenNode)
+                var _realTimeVoiceNode = this.getTextNodeByValue(parentNode, "实时语音");
+                fixYNode.push(_realTimeVoiceNode)
+                this.findNodeByNameKey(parentNode, "round_4", function (node) {
+                    fixYNode.push(node);
+                });
+                for (var i = 0; i < fixYNode.length; i++) {
+                    if (fixYNode[i]) {
+                        var pos0 = fixYNode[i].getParent().convertToWorldSpace(fixYNode[i].getPosition());
+                        var difY = selectNodePos.y - pos0.y
+                        if (difY > 10) {
+                            if (pos0.y < selectNodePos.y) {
+                                selectNodePos.y = pos0.y;
+                                var pos1 = selectNode.getParent().convertToWorldSpace(selectNode.getPosition());
+                                if (pos0.y < pos1.y) {
+                                    roomCardModeNodePos.y = selectNode.getPosition().y + (pos0.y - pos1.y);
+                                }
+                            }
+                        }
+                    }
+                }//修正选中item的y下标 end
+
+                //插入点下面的节点下移
+                this.changeItemY(parentNode.getChildByName("play"), selectNodePos, dy + roomCardModeNodeMoreHeight);
+                if (that._data.gameType == MjClient.GAME_TYPE.ML_HONGZHONG
+                    || that._data.gameType == MjClient.GAME_TYPE.ML_HONGZHONG_ZERO) {
+                    this.changeItemY(parentNode.getChildByName("play").getChildByName("quanZhong1Niao"), selectNodePos, dy + roomCardModeNodeMoreHeight);
+                    this.changeItemY(parentNode.getChildByName("play").getChildByName("zhongNiao159"), selectNodePos, dy + roomCardModeNodeMoreHeight);
+                }
+                this.changeItemY(parentNode.getChildByName("play_way"), selectNodePos, dy + roomCardModeNodeMoreHeight);
+                this.changeItemY(parentNode.getChildByName("round"), selectNodePos, dy + roomCardModeNodeMoreHeight);
+                this.changeItemY(parentNode.getChildByName("title"), selectNodePos, dy + roomCardModeNodeMoreHeight);
+                this.changeItemY(parentNode.getChildByName("difen"), selectNodePos, dy + roomCardModeNodeMoreHeight);
+                this.changeItemY(parentNode, selectNodePos, dy + roomCardModeNodeMoreHeight);
+
+                //添加房卡模式选项node
+                var roomCardModeNode = ccs.load("CreateRoomCardMode.json").node;
+                if (MjClient.getAppType() == MjClient.APP_TYPE.TXJINZHONGMJ || MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ || MjClient.getAppType() == MjClient.APP_TYPE.DQSHANXIMJ) {
+                    roomCardModeNodePos.y = roomCardModeNodePos.y - dy - 20;
+                } else {
+                    roomCardModeNodePos.y = roomCardModeNodePos.y - dy - 10;
+                }
+                if (selectNode.getAnchorPoint().x == 1)
+                    roomCardModeNode.setPosition(roomCardModeNodePos.x - selectNode.width, roomCardModeNodePos.y);
+                else if (selectNode.getAnchorPoint().x == 0.5)
+                    roomCardModeNode.setPosition(roomCardModeNodePos.x - selectNode.width / 2, roomCardModeNodePos.y);
+                else
+                    roomCardModeNode.setPosition(roomCardModeNodePos);
+
+                roomCardModeNode.setAnchorPoint(selectNode.getAnchorPoint())
+                selectNode.getParent().addChild(roomCardModeNode);
+                this._roomCardModeNode = roomCardModeNode;
+
+            } else {
+                cc.log("selectNode null");
+            }
+        }
+        if (this._roomCardModeNode) {
+            if (this.getNodePlayAndRound().roundPanel && cc.sys.isObjectValid(this.getNodePlayAndRound().roundPanel)) {
+                this.getNodePlayAndRound().roundPanel.zIndex = 100
+            }
+            if (parentNode.setInnerContainerSize) {//增加scrollview的高度
+                if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() === MjClient.APP_TYPE.HUBEIMJ) {
+                    //减少高度,留白下面增加文字(岳阳原高度485左右)
+                    var preHeight = parentNode.height;
+                    parentNode.height = 465;
+                    var parentNodeDy = preHeight - parentNode.height;
+                    if (parentNodeDy > 0) {
+                        parentNode.y += parentNodeDy * (1 - parentNode.getAnchorPoint().y);
+                    }
+                } else if (MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
+                    //减少高度,留白下面增加文字(永利原高度450)
+                    var preHeight = parentNode.height;
+                    parentNode.height = 430;
+                    var parentNodeDy = preHeight - parentNode.height;
+                    if (parentNodeDy > 0) {
+                        parentNode.y += parentNodeDy * (1 - parentNode.getAnchorPoint().y);
+                    }
+                }
+                //修正scrollView的滑动区域
+                parentNode.setInnerContainerSize(cc.size(parentNode.getInnerContainerSize().width, parentNode.getInnerContainerSize().height + dy + roomCardModeNodeMoreHeight));
+                this.changeItemY(parentNode.getChildByName("play"), null, -(dy + roomCardModeNodeMoreHeight));
+
+                if (that._data.gameType == MjClient.GAME_TYPE.ML_HONGZHONG
+                    || that._data.gameType == MjClient.GAME_TYPE.ML_HONGZHONG_ZERO) {
+                    this.changeItemY(parentNode.getChildByName("play").getChildByName("quanZhong1Niao"), null, -(dy + roomCardModeNodeMoreHeight));
+                    this.changeItemY(parentNode.getChildByName("play").getChildByName("zhongNiao159"), null, -(dy + roomCardModeNodeMoreHeight));
+                }
+
+                this.changeItemY(parentNode.getChildByName("play_way"), null, -(dy + roomCardModeNodeMoreHeight));
+                this.changeItemY(parentNode.getChildByName("round"), null, -(dy + roomCardModeNodeMoreHeight));
+                this.changeItemY(parentNode.getChildByName("title"), null, -(dy + roomCardModeNodeMoreHeight));
+                this.changeItemY(parentNode.getChildByName("difen"), null, -(dy + roomCardModeNodeMoreHeight));
+                this.changeItemY(parentNode, null, -(dy + roomCardModeNodeMoreHeight));
+            }
+            //以下是房卡模式节点
+            this._roomCardModeNode.visible = true;
+            this._roomCardPayModeNode = this._roomCardModeNode.getChildByName("roomCardMode");
+            this._roomCardPayModeFen = this._roomCardPayModeNode.getChildByName("txt_fen");
+            this._roomCardPayModeFen.ignoreContentAdaptWithSize(true);
+
+
+            var currentSelect = this.getNumberItem("fangkaSource", 1) - 1;
+            this._roomCardPayModeFen.minValue = currentSelect > 1 ? 10 : 20;
+            this._roomCardPayModeFen.value = this.getNumberItem("fangkaCount", 1);
+            this._roomCardPayModeFen.valueArr = FriendCard_Common.getFangkaPayArr(currentSelect + 1, this.getSelectedRoundNum() == 1);
+
+            this._roomCardPayModeFen.valueIndex = FriendCard_Common.getArrLimit(this._roomCardPayModeFen.valueArr, this._roomCardPayModeFen.value).index;
+            this._roomCardPayModeFen.value = this._roomCardPayModeFen.valueArr[this._roomCardPayModeFen.valueIndex];
+            //邵阳剥皮自由人数AA付单独处理
+            this.AAPayAndSYBP = function (index) {
+                //邵阳剥皮自由人数AA付单独处理
+                if (index == 2 && (this._data.gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI)) {
+                    this.maxPlayerList_radio.selectItem(1);
+                    this.bg_node.getChildByName("play").getChildByName("maxPlayer_0").visible = false;
+                } else if (this._data.gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI) {
+                    this.bg_node.getChildByName("play").getChildByName("maxPlayer_0").visible = true;
+                }
+                //邵阳字牌自由人数AA付单独处理
+                if (index == 2 && (this._data.gameType == MjClient.GAME_TYPE.SHAO_YANG_ZI_PAI)) {
+                    this.maxPlayerList_radio.selectItem(1);
+                    this.bg_node.getChildByName("play").getChildByName("maxPlayer1").visible = false;
+                } else if (this._data.gameType == MjClient.GAME_TYPE.SHAO_YANG_ZI_PAI) {
+                    this.bg_node.getChildByName("play").getChildByName("maxPlayer1").visible = true;
+                }
+            }
+            var roomCardPayModeNodes = [];
+            roomCardPayModeNodes.push(this._roomCardPayModeNode.getChildByName("club_payWay_1"));
+            roomCardPayModeNodes.push(this._roomCardPayModeNode.getChildByName("club_payWay_2"));
+            roomCardPayModeNodes.push(this._roomCardPayModeNode.getChildByName("club_payWay_3"));
+            if ((this._data && this._data.isLM) || FriendCard_Common.getClubisLM()) {//联盟房卡模式不需要输家付
+                var club_payWay_2 = this._roomCardPayModeNode.getChildByName("club_payWay_2")
+                club_payWay_2.visible = false;
+                this._roomCardPayModeNode.getChildByName("club_payWay_3").setPosition(club_payWay_2.getPosition())
+            }
+            this.roomCardPayMode_radio = createRadioBoxForCheckBoxs(roomCardPayModeNodes, function (index) {
+                cc.log("index--", index);
+                this.radioBoxSelectCB(index, this.roomCardPayModeNodes[index], this.roomCardPayModeNodes);
+                this.setRoomCardPayModeFen(index);
+                this.setPayNodeIsShow(index);
+                this.AAPayAndSYBP(index);
+            }.bind(this));
+            this.addListenerText(roomCardPayModeNodes, this.roomCardPayMode_radio, function (index) {
+                this.setRoomCardPayModeFen(index);
+                this.setPayNodeIsShow(index);
+                this.AAPayAndSYBP(index);
+            }.bind(this));
+            this.roomCardPayModeNodes = roomCardPayModeNodes;
+            this.roomCardPayMode_radio.selectItem(currentSelect);
+            this.radioBoxSelectCB(currentSelect, this.roomCardPayModeNodes[currentSelect], this.roomCardPayModeNodes);
+            this.setRoomCardPayModeFen = function (index) {
+                this._roomCardPayModeFen.valueArr = FriendCard_Common.getFangkaPayArr(Number(index) + 1, this.getSelectedRoundNum() == 1);
+
+                if (!this._roomCardPayModeFen.valueArr[this._roomCardPayModeFen.valueIndex]) {
+                    this._roomCardPayModeFen.valueIndex = this._roomCardPayModeFen.valueArr.length - 1;
+                }
+                var value = this._roomCardPayModeFen.valueArr[this._roomCardPayModeFen.valueIndex];
+
+                this._roomCardPayModeFen.value = value;
+                this._roomCardPayModeFen.setString(value + "钻石");
+                this.setLevelText();
+            }
+            this._roomCardPayModeSub = this._roomCardPayModeNode.getChildByName("btn_sub");
+            this._roomCardPayModeSub.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    this._roomCardPayModeFen.valueIndex--;
+                    this._roomCardPayModeFen.valueIndex = this._roomCardPayModeFen.valueIndex < 0 ? this._roomCardPayModeFen.valueArr.length - 1 : this._roomCardPayModeFen.valueIndex;
+                    this.setRoomCardPayModeFen(this.roomCardPayMode_radio.getSelectIndex());
+                }
+            }, this);
+            this._roomCardPayModeAdd = this._roomCardPayModeNode.getChildByName("btn_add");
+            this._roomCardPayModeAdd.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    this._roomCardPayModeFen.valueIndex++;
+                    this._roomCardPayModeFen.valueIndex = this._roomCardPayModeFen.valueIndex > this._roomCardPayModeFen.valueArr.length - 1 ? 0 : this._roomCardPayModeFen.valueIndex;
+                    this.setRoomCardPayModeFen(this.roomCardPayMode_radio.getSelectIndex());
+                }
+            }, this);
+
+            this._roomCardModeTisNode = parentNode.getChildByName("roomCardPayModeTipText");
+            if (!this._roomCardModeTisNode) {
+                //增加文字提示
+                this.findNodeByNameKey(this.bg_node.getParent(), "btn_delete", function (node) {
+                    cc.log("find out btn_delete");
+                    var tipText = new ccui.Text();
+                    if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() === MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {//岳阳同一使用方正兰亭
+                        tipText.setFontName("fonts/lanting.TTF");
+                    }
+                    tipText.setName("roomCardPayModeTipText");
+                    tipText.setFontSize(28);
+                    tipText.setAnchorPoint(cc.p(0, 0.5));
+                    tipText.setPosition(cc.p(node.x - node.width / 2, node.y + node.height / 2 + 20));
+                    node.getParent().addChild(tipText);
+                    this._roomCardModeTisNode = tipText;
+                }.bind(this))
+            }
+            this._roomCardModeTisNode.visible = this.roomCardPayMode_radio.getSelectIndex() == 2 ? false : true;
+            this._roomCardModeTisNode.ignoreContentAdaptWithSize(true);
+            this._roomCardModeTisNode.setColor(CREATEROOM_COLOR_1);
+            this._roomCardModeTisNode.setString("该玩法不足10分不扣钻石");
+            this._roomCardModeTisNode.visible = false;
+
+            //fangkaFree
+            this.onClickFangkaFree = function () {
+                var selectColor = MjClient.createRoomNode._selectColor;
+                var unSelectColor = MjClient.createRoomNode._unSelectColor;
+
+                mianKouJiaShi.visible = difenMianKou.visible && difenMianKou.isSelected() && FriendCard_Common.isOpenMiankoujiashi(this._data.gameType) && !FriendCard_Common.isOpenForceMiankoujiashi();
+                difenBtn_sub.setEnabled(difenMianKou.isSelected());
+                difenBtn_add.setEnabled(difenMianKou.isSelected());
+                difenMianKou.getChildByName("text").setTextColor(difenMianKou.isSelected() ? selectColor : unSelectColor);
+            }
+            this.setFangkaFree = function (value) {
+                if (this.difenMianKouConfig.mustMultiple && this.difenMianKouConfig.anIncrease >= 1) {
+                    var remainder = (value % this.difenMianKouConfig.anIncrease);
+                    if (remainder != 0) {
+                        value = parseInt(value / this.difenMianKouConfig.anIncrease) * this.difenMianKouConfig.anIncrease;
+                    }
+                }
+                if (value < this.difenMianKouConfig.min) {
+                    difenMianKou.value = this.difenMianKouConfig.max;
+                } else if (value > this.difenMianKouConfig.max) {
+                    difenMianKou.value = this.difenMianKouConfig.min;
+                } else {
+                    difenMianKou.value = value;
+                }
+
+                difenTxt_fen.setString("低于" + difenMianKou.value + "分");
+            }
+            var difenMianKou = this._roomCardPayModeNode.getChildByName("difenMianKou");
+            this._roomCardDifenMianKou = difenMianKou;
+            difenMianKou.addEventListener(function (sender, type) {
+                switch (type) {
+                    case ccui.CheckBox.EVENT_SELECTED:
+                    case ccui.CheckBox.EVENT_UNSELECTED:
+                        this.onClickFangkaFree();
+                        break;
+                }
+            }, this);
+            difenMianKou.getChildByName("text").addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    difenMianKou.setSelected(!difenMianKou.isSelected())
+                    this.onClickFangkaFree();
+                }
+            }, this);
+            var mianKouJiaShi = difenMianKou.getChildByName("mianKouJiaShi");
+            mianKouJiaShi.getChildByName("text").setTouchEnabled(false)
+            difenMianKou.mianKouJiaShi = mianKouJiaShi;
+            this.setRoomCardModeFree();
+            difenMianKou.setSelected(true);
+            mianKouJiaShi.setSelected(this.getNumberItem("isMianKouJiaShi", false))
+            mianKouJiaShi.getChildByName("text").setString("免扣加时（最多2局）")
+            this.addListenerText(mianKouJiaShi);
+            //贵州 联盟中玩法默认勾选免扣加时
+            if ((this._data && this._data.isLM || FriendCard_Common.getClubisLM()) && MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ) {
+                mianKouJiaShi.setSelected(this.getNumberItem("isMianKouJiaShi", true));
+            }
+            if (FriendCard_Common.isOpenForceMiankoujiashi()) {
+                mianKouJiaShi.setSelected(true);
+            }
+
+            difenMianKou.value = this.getNumberItem("fangkaFree", 0); //默认值
+            if (!difenMianKou.value) {
+                difenMianKou.value = this.difenMianKouConfig.default;
+                difenMianKou.setSelected(false);
+            }
+            this.difenMianKou = difenMianKou;
+
+            var difenBtn_add = difenMianKou.getChildByName("difenBtn_add");
+            difenBtn_add.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    if (this.difenMianKouConfig.valueList) {
+                        var index = this.difenMianKouConfig.valueList.indexOf(Number(difenMianKou.value));
+                        var indexNext = (index + 1 + this.difenMianKouConfig.valueList.length) % this.difenMianKouConfig.valueList.length;
+                        var value = this.difenMianKouConfig.valueList[indexNext];
+                    } else {
+                        var value = difenMianKou.value + this.difenMianKouConfig.anIncrease;
+                    }
+                    this.setFangkaFree(value);
+                }
+            }, this);
+
+            var difenBtn_sub = difenMianKou.getChildByName("difenBtn_sub");
+            difenBtn_sub.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    if (this.difenMianKouConfig.valueList) {
+                        var index = this.difenMianKouConfig.valueList.indexOf(Number(difenMianKou.value));
+                        var indexNext = (index - 1 + this.difenMianKouConfig.valueList.length) % this.difenMianKouConfig.valueList.length;
+                        var value = this.difenMianKouConfig.valueList[indexNext];
+                    } else {
+                        var value = difenMianKou.value - this.difenMianKouConfig.anIncrease;
+                    }
+                    this.setFangkaFree(value);
+                }
+            }, this);
+
+            var difenTxt_fen = difenMianKou.getChildByName("difenTxt_fen");
+            difenTxt_fen.ignoreContentAdaptWithSize(true);
+
+            //winnerPayNode
+            this.onClickWinnerAdded = function () {
+                var selectColor = MjClient.createRoomNode._selectColor;
+                var unSelectColor = MjClient.createRoomNode._unSelectColor;
+                addedBtn_sub.setEnabled(winnerAdded.isSelected())
+                addedBtn_add.setEnabled(winnerAdded.isSelected())
+                winnerAdded.getChildByName("text").setTextColor(winnerAdded.isSelected() ? selectColor : unSelectColor);
+                this.setLevelText();
+            }
+            this.setWinnerAdded = function (value) {
+                if (value < winnerAdded.minValue) {
+                    winnerAdded.value = winnerAdded.minValue;
+                } else if (value > winnerAdded.maxValue) {
+                    winnerAdded.value = winnerAdded.minValue;
+                } else {
+                    winnerAdded.value = value;
+                }
+                text_added.setString(winnerAdded.value + "钻石");
+                this.setLevelText();
+            }
+            this.setPayNodeIsShow = function (index) {
+                winnerPayNode.visible = (index == 0 || index == 1);
+                //_AAPayNode.visible = (index == 2 && (this.getSelectedRoundNum() != 1));
+                _AAPayNode.visible = false;//【风控】【亲友圈&联盟】房卡模式，AA支付模式下，最高分加收功能去除
+                this.setLevelText();
+            }
+            var winnerPayNode = this._roomCardPayModeNode.getChildByName("winnerPayNode");
+            var winnerPayNodes = [];
+            winnerPayNodes.push(winnerPayNode.getChildByName("winner_1"));
+            winnerPayNodes.push(winnerPayNode.getChildByName("winner_2"));
+            this.winnerPayNodes_radio = createRadioBoxForCheckBoxs(winnerPayNodes, function (index) {
+                //cc.log("index--",index);
+                this.radioBoxSelectCB(index, winnerPayNodes[index], winnerPayNodes);
+            }.bind(this));
+            this.addListenerText(winnerPayNodes, this.winnerPayNodes_radio, function (index) { }.bind(this));
+            this.radioBoxSelectCB(0, winnerPayNodes[0], winnerPayNodes);
+            this.winnerPayNodes_radio.selectItem(this.getNumberItem("fangkaExtra", 0) > 1 ? 0 : this.getNumberItem("fangkaExtra", 0));
+            var _AAPayNode = this._roomCardPayModeNode.getChildByName("AAPayNode");
+            this._roomCardAAPayNode = _AAPayNode;
+            var winnerAdded = _AAPayNode.getChildByName("winnerAdded");
+            var addedBtn_sub = _AAPayNode.getChildByName("addedBtn_sub");
+            var addedBtn_add = _AAPayNode.getChildByName("addedBtn_add");
+            var text_added = _AAPayNode.getChildByName("text_added");
+            text_added.ignoreContentAdaptWithSize(true)
+            winnerAdded.minValue = 10;
+            winnerAdded.maxValue = 999999;
+            winnerAdded.value = this.getNumberItem("fangkaExtra", 0);
+            winnerAdded.setSelected(true);
+            if (winnerAdded.value < 10 || this.roomCardPayMode_radio.getSelectIndex() != 2) {
+                winnerAdded.value = 10
+                winnerAdded.setSelected(false);
+            }
+
+            this.winnerAdded = winnerAdded;
+            winnerAdded.addEventListener(function (sender, type) {
+                switch (type) {
+                    case ccui.CheckBox.EVENT_SELECTED:
+                    case ccui.CheckBox.EVENT_UNSELECTED:
+                        this.onClickWinnerAdded();
+                        break;
+                }
+            }, this);
+            winnerAdded.getChildByName("text").addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    winnerAdded.setSelected(!winnerAdded.isSelected())
+                    this.onClickWinnerAdded();
+                }
+            }, this);
+            addedBtn_sub.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    var value = winnerAdded.value - 1;
+                    this.setWinnerAdded(value);
+                }
+            }, this);
+            addedBtn_add.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    var value = winnerAdded.value + 1;
+                    this.setWinnerAdded(value);
+                }
+            }, this);
+
+            var levelImage = this._roomCardPayModeNode.getChildByName("Image_level");
+            this.setLevelText = function () {
+                if (!levelImage) return;
+                var levelStrs = FriendCard_Common.fangkaPayConfig.levelStrs; //["普通", "高级", "皇冠","尊贵"];
+                var fangkaCount = this._roomCardPayModeFen.value;
+                var fangkaSource = this.roomCardPayMode_radio.getSelectIndex() + 1;
+                var maxPlayer = this.getSelectPlayNum();
+                if (typeof (maxPlayer) == typeof ([]))
+                    maxPlayer = maxPlayer[0];
+                var fangkaExtra = (this._roomCardAAPayNode.isVisible() && this.winnerAdded.isSelected()) ? this.winnerAdded.value : 0;
+                var index = FriendCard_Common.getFangkaLevel(fangkaCount, fangkaSource, fangkaExtra, maxPlayer, this.getSelectedRoundNum() == 1).index;
+                if (levelStrs[index]) {
+                    if (levelText.getString() != levelStrs[index] + "房间") {
+                        levelText.setString(levelStrs[index] + "房间");
+                        levelImage.loadTexture("fangKa/level/level" + ([0, 1, 6, 7][index] || 0) + ".png");
+                    }
+                }
+            }
+            if (levelImage) {
+                var levelText = levelImage.getChildByName("text");
+                levelText.setTextColor(this._selectColor);
+                levelText.setFontName("fonts/lanting.TTF");
+
+                levelText.addTouchEventListener(function (sender, type) {
+                    if (type == 2) {
+                        this.showFangkaRoomLevelInfo();
+                    }
+                }, this)
+            }
+
+            //默认
+            this.setRoomCardPayModeFen(this.roomCardPayMode_radio.getSelectIndex());
+            this.setWinnerAdded(winnerAdded.value)
+            this.setPayNodeIsShow(currentSelect);
+            this.setFangkaFree(difenMianKou.value);
+            this.onClickFangkaFree();
+            this.onClickWinnerAdded();
+        }
+    },
+    setRoomCardModeFree: function (difen) {
+        if (this._roomCardModeNode) {
+            if (difen || difen == 0) {
+                this.difenMianKouConfig = FriendCard_Common.getFangkaFreeConfig(this._data.gameType, difen);
+            } else {
+                if (this.jieSuanDiFen) {
+                    this.difenMianKouConfig = FriendCard_Common.getFangkaFreeConfig(this._data.gameType, (this.difenIndex || this.difenIndex == 0) ? this.difenAry[this.difenIndex] : null);
+                } else {
+                    if (this.difenAry && (this.difenIndex || this.difenIndex == 0)) {
+                        this.difenMianKouConfig = FriendCard_Common.getFangkaFreeConfig(this._data.gameType, this.difenAry[this.difenIndex]);
+                    } else {
+                        difen = (this._ZhuNum ? Number(this._ZhuNum.getString()) : ((this._zhuIdx || this._zhuIdx == 0) ? this._zhuIdx : null));
+                        if (isNaN(difen)) {
+                            difen = null;
+                        }
+                        this.difenMianKouConfig = FriendCard_Common.getFangkaFreeConfig(this._data.gameType, difen);
+                    }
+
+                }
+            }
+
+        }
+
     },
 });

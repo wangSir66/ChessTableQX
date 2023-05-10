@@ -6272,8 +6272,8 @@
                 ],
                 "ActionTag": 925379314,
                 "Size": {
-                  "X": 739.968,
-                  "Y": 32.976
+                  "X": 739.0,
+                  "Y": 32.0
                 },
                 "Name": "scroll",
                 "ctype": "ScrollViewObjectData"

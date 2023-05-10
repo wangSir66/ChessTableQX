@@ -389,7 +389,7 @@ function reConectHeadLayout_card(node) {
         // 跑得快要固定位置
         else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
             if (tData.maxPlayer == 4) {
-                setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
+                setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -2], false, false);
                 if (isIPhoneX()) {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
                         setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
@@ -439,7 +439,7 @@ function reConectHeadLayout_card(node) {
                     else
                         setWgtLayout(down, [0.13, 0.13], [0.05, 0.03], [0.6, 3.5], false, false);
 
-                    setWgtLayout(top, [0.13, 0.13], [0, 1.0], [1.1, -1.7], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0, 1.0], [1.1, -2], false, false);
                 } else {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
                         setWgtLayout(down, [0.13, 0.13], [0, 0.03], [0.6, 3.5], false, false);
@@ -665,7 +665,7 @@ function reConectHeadLayout_card(node) {
         // 跑得快要固定位置
         else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
             if (tData.maxPlayer == 4) {
-                setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -1.7], false, false);
+                setWgtLayout(right, [0.13, 0.13], [1, 1.0], [-0.6, -2], false, false);
                 if (isIPhoneX()) {
                     if (appType == MjClient.APP_TYPE.QXYYQP || appType == MjClient.APP_TYPE.HUBEIMJ)
                         setWgtLayout(down, [0.13, 0.13], [0.05, 0.05], [0.6, 3.5], false, false);
@@ -728,7 +728,7 @@ function reConectHeadLayout_card(node) {
                     else
                         setWgtLayout(down, [0.13, 0.13], [0, 0], [0.6, 3.5], false, false);
 
-                    setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -1.7], false, false);
+                    setWgtLayout(top, [0.13, 0.13], [0, 1.0], [0.6, -2], false, false);
                 }
             } else {
                 if (isIPhoneX()) {
@@ -999,7 +999,7 @@ function UpdataCurrentPutCard(isTouch) {
         /*
          清除自己上次打的牌
          */
-        var children = MjClient.playui._downNode.children;
+        var children = MjClient.playui._downNode.children.concat(MjClient.playui._rightNode.children).concat(MjClient.playui._topNode.children).concat(MjClient.playui._leftNode.children);
         for (var i = 0; i < children.length; i++) {
             var ni = children[i];
             if (ni.name == "out" || ni.name == "cardTypeTietu") {

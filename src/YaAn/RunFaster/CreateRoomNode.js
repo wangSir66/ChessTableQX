@@ -130,7 +130,7 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
         para.can4geZha = para.isZhaDanJiaFen ? this.getCheckboxSelectedByName('btnCheck4zhang') : false;//4张算炸
         para.XiScore = mt ? [20, 10][this.RedioGroup['mingtangfen'].getSelectIndex()] : 0;//名堂分
         para.BombScore = para.isZhaDanJiaFen ? [20, 10][this.RedioGroup['xifen'].getSelectIndex()] : 0;//炸弹分
-        para.AutoReady = true;  //this.RedioGroup['zidongzhunbei'].getSelectIndex() == 1;//自动准备
+        para.AutoReady = this.RedioGroup['zidongzhunbei'].getSelectIndex() == 1;//自动准备
 
         this.getExtraSelectedPara(para);
 
