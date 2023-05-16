@@ -720,7 +720,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_isShowStats1" ActionTag="-524679" Tag="278" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="578.2999" RightMargin="376.7001" TopMargin="463.1200" BottomMargin="292.8800" TouchEnable="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_isShowStats1" ActionTag="-524679" Tag="278" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="578.3000" RightMargin="376.7000" TopMargin="463.1200" BottomMargin="292.8800" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="45.0000" Y="44.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="-894969163" Tag="279" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="47.0010" RightMargin="-58.0010" TopMargin="7.0000" BottomMargin="7.0000" TouchEnable="True" FontSize="26" LabelText="3天   " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -737,7 +737,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="600.7999" Y="314.8800" />
+                        <Position X="600.8000" Y="314.8800" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.6008" Y="0.3936" />
@@ -748,7 +748,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/setSkin/chexbox_xz.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/setSkin/chexbox_xz_n.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_isShowStats2" ActionTag="96934335" Tag="276" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="384.4000" RightMargin="570.6000" TopMargin="463.1599" BottomMargin="292.8401" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_isShowStats2" ActionTag="96934335" Tag="276" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="384.4000" RightMargin="570.6000" TopMargin="463.1200" BottomMargin="292.8800" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="45.0000" Y="44.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="1057204265" Tag="277" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="47.0010" RightMargin="-58.0010" TopMargin="7.0000" BottomMargin="7.0000" TouchEnable="True" FontSize="26" LabelText="7天   " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -765,7 +765,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="406.9000" Y="314.8401" />
+                        <Position X="406.9000" Y="314.8800" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.4069" Y="0.3936" />
@@ -776,7 +776,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/setSkin/chexbox_xz.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/setSkin/chexbox_xz_n.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_isShowStats3" ActionTag="803070652" Tag="436" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="746.9001" RightMargin="208.0999" TopMargin="463.1599" BottomMargin="292.8401" TouchEnable="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_isShowStats3" ActionTag="803070652" Tag="436" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="746.9000" RightMargin="208.1000" TopMargin="463.1200" BottomMargin="292.8800" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="45.0000" Y="44.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="1565527096" Tag="437" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="47.0010" RightMargin="-82.0010" TopMargin="7.0000" BottomMargin="7.0000" TouchEnable="True" FontSize="26" LabelText="今天     " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -793,7 +793,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="769.4001" Y="314.8401" />
+                        <Position X="769.4000" Y="314.8800" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.7694" Y="0.3936" />
@@ -804,7 +804,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/setSkin/chexbox_xz.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/setSkin/chexbox_xz_n.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_isShowStats0" ActionTag="-1107242403" Tag="413" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.5178" RightMargin="919.4822" TopMargin="476.0447" BottomMargin="287.9553" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_isShowStats0" ActionTag="-1107242403" Tag="413" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="44.5000" RightMargin="919.5000" TopMargin="476.0800" BottomMargin="287.9200" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="36.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="755740596" Tag="414" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0001" RightMargin="-228.0001" TopMargin="2.0964" BottomMargin="3.9036" TouchEnable="True" FontSize="26" LabelText="允许玩家查看统计   " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -821,7 +821,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="62.5178" Y="305.9553" />
+                        <Position X="62.5000" Y="305.9200" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0625" Y="0.3824" />
@@ -958,7 +958,7 @@
                         <OutlineColor A="255" R="82" G="54" B="33" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_unStartCount" ActionTag="1619370367" Tag="406" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="46.2669" RightMargin="919.7332" TopMargin="662.4280" BottomMargin="101.5721" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_unStartCount" ActionTag="1619370367" Tag="406" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="46.2670" RightMargin="919.7330" TopMargin="662.4236" BottomMargin="101.5764" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="34.0000" Y="36.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="1479884194" Tag="407" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0001" RightMargin="-193.0001" TopMargin="2.0964" BottomMargin="3.9036" TouchEnable="True" FontSize="26" LabelText="不满人不开新桌 " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -989,7 +989,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.4745" ScaleY="0.5051" />
-                        <Position X="62.3999" Y="119.7557" />
+                        <Position X="62.4000" Y="119.7600" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0624" Y="0.1497" />
@@ -1000,7 +1000,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_hideTable" ActionTag="1308053791" Tag="440" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.6000" RightMargin="770.4000" TopMargin="734.0427" BottomMargin="35.9573" FontSize="26" LabelText="隐藏已开打桌子" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="play_hideTable" ActionTag="1308053791" Tag="440" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.6000" RightMargin="770.4000" TopMargin="734.0400" BottomMargin="35.9600" FontSize="26" LabelText="隐藏已开打桌子" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="184.0000" Y="30.0000" />
                         <Children>
                           <AbstractNodeData Name="hidetable1" ActionTag="679822256" Tag="441" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="222.7600" RightMargin="-83.7600" TopMargin="-7.9000" BottomMargin="-6.1000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
@@ -1117,7 +1117,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position X="45.6000" Y="50.9573" />
+                        <Position X="45.6000" Y="50.9600" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="96" G="46" B="26" />
                         <PrePosition X="0.0456" Y="0.0637" />
@@ -1126,7 +1126,7 @@
                         <OutlineColor A="255" R="82" G="54" B="33" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_isNoShowTable" ActionTag="-1848737331" Tag="409" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.2781" RightMargin="918.7219" TopMargin="797.1256" BottomMargin="-33.1256" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_isNoShowTable" ActionTag="-1848737331" Tag="409" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.2784" RightMargin="918.7216" TopMargin="797.1228" BottomMargin="-33.1228" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="36.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="7254460" Tag="410" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0001" RightMargin="-216.0001" TopMargin="2.0964" BottomMargin="3.9036" TouchEnable="True" FontSize="26" LabelText="不展示亲友圈桌子 " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1169,7 +1169,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5006" ScaleY="0.5423" />
-                        <Position X="63.2997" Y="-13.6028" />
+                        <Position X="63.3000" Y="-13.6000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0633" Y="-0.0170" />
@@ -1180,7 +1180,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_isNoAttackProp" ActionTag="1384788470" Tag="611" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.2781" RightMargin="918.7219" TopMargin="868.4858" BottomMargin="-104.4859" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_isNoAttackProp" ActionTag="1384788470" Tag="611" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.2784" RightMargin="918.7216" TopMargin="868.4828" BottomMargin="-104.4828" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="36.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="748342668" Tag="612" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0001" RightMargin="-169.0001" TopMargin="2.0964" BottomMargin="3.9036" TouchEnable="True" FontSize="26" LabelText="禁用攻击表情  " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1211,7 +1211,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5006" ScaleY="0.5423" />
-                        <Position X="63.2997" Y="-84.9631" />
+                        <Position X="63.3000" Y="-84.9600" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0633" Y="-0.1062" />
@@ -1222,7 +1222,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_isHideCount" ActionTag="-2027726240" Tag="292" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.2781" RightMargin="918.7219" TopMargin="941.2842" BottomMargin="-177.2842" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_isHideCount" ActionTag="-2027726240" Tag="292" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.2784" RightMargin="918.7216" TopMargin="941.2828" BottomMargin="-177.2828" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="36.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="-25269619" Tag="293" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0001" RightMargin="-117.0001" TopMargin="2.0964" BottomMargin="3.9036" TouchEnable="True" FontSize="26" LabelText="隐藏人数  " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1253,7 +1253,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5006" ScaleY="0.5423" />
-                        <Position X="63.2997" Y="-157.7614" />
+                        <Position X="63.3000" Y="-157.7600" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0633" Y="-0.1972" />
@@ -1264,7 +1264,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_isLimitDelRoom" ActionTag="-1116586121" Tag="156" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.2781" RightMargin="918.7219" TopMargin="1007.2828" BottomMargin="-243.2828" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                      <AbstractNodeData Name="play_isLimitDelRoom" ActionTag="-1116586121" Tag="156" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="45.2784" RightMargin="918.7216" TopMargin="1007.2828" BottomMargin="-243.2828" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="36.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="-1794009213" Tag="157" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0001" RightMargin="-169.0001" TopMargin="2.0964" BottomMargin="3.9036" TouchEnable="True" FontSize="26" LabelText="限制解散次数  " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1295,7 +1295,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5006" ScaleY="0.5423" />
-                        <Position X="63.2997" Y="-223.7600" />
+                        <Position X="63.3000" Y="-223.7600" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0633" Y="-0.2797" />
@@ -1306,7 +1306,7 @@
                         <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
                         <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_antiCheat" ActionTag="-491033891" Tag="425" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="424.0000" RightMargin="468.0000" TopMargin="1140.4005" BottomMargin="-380.4005" FontSize="35" LabelText="防作弊 " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="play_antiCheat" ActionTag="-491033891" Tag="425" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="424.0000" RightMargin="468.0000" TopMargin="1140.4000" BottomMargin="-380.4000" FontSize="35" LabelText="防作弊 " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="108.0000" Y="40.0000" />
                         <Children>
                           <AbstractNodeData Name="text" ActionTag="-1803184537" Tag="631" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="124.1700" RightMargin="-171.1700" TopMargin="9.5000" BottomMargin="9.5000" FontSize="18" LabelText="（2人场不受影响） " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1463,7 +1463,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position X="424.0000" Y="-360.4005" />
+                        <Position X="424.0000" Y="-360.4000" />
                         <Scale ScaleX="0.9000" ScaleY="0.9000" />
                         <CColor A="255" R="96" G="46" B="26" />
                         <PrePosition X="0.4240" Y="-0.4505" />
@@ -1472,7 +1472,7 @@
                         <OutlineColor A="255" R="82" G="54" B="33" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_jieSan" ActionTag="-397502257" Tag="417" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="41.6000" RightMargin="838.4000" TopMargin="1081.6017" BottomMargin="-313.6017" FontSize="28" LabelText="解散方式  " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="play_jieSan" ActionTag="-397502257" Tag="417" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="41.6000" RightMargin="838.4000" TopMargin="1081.6000" BottomMargin="-313.6000" FontSize="28" LabelText="解散方式  " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="120.0000" Y="32.0000" />
                         <Children>
                           <AbstractNodeData Name="bg" ActionTag="1534214150" VisibleForFrame="False" Alpha="0" Tag="197" IconVisible="False" LeftMargin="-178.7200" RightMargin="-981.2800" TopMargin="-455.6956" BottomMargin="-232.3044" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -1698,7 +1698,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position X="41.6000" Y="-297.6017" />
+                        <Position X="41.6000" Y="-297.6000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="211" G="60" B="0" />
                         <PrePosition X="0.0416" Y="-0.3720" />
@@ -1707,7 +1707,7 @@
                         <OutlineColor A="255" R="82" G="54" B="33" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="play_jieSanTime" ActionTag="677327558" Tag="163" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.6000" RightMargin="422.4000" TopMargin="1080.3210" BottomMargin="-312.3210" FontSize="28" LabelText="解散时间  " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="play_jieSanTime" ActionTag="677327558" Tag="163" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.6000" RightMargin="422.4000" TopMargin="1080.3201" BottomMargin="-312.3200" FontSize="28" LabelText="解散时间  " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="120.0000" Y="32.0000" />
                         <Children>
                           <AbstractNodeData Name="bg" Visible="False" ActionTag="-1904536771" VisibleForFrame="False" Alpha="0" Tag="198" IconVisible="False" LeftMargin="-636.6600" RightMargin="-523.3400" TopMargin="-482.0600" BottomMargin="-265.9400" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -2020,7 +2020,7 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position X="457.6000" Y="-296.3210" />
+                        <Position X="457.6000" Y="-296.3200" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="211" G="60" B="0" />
                         <PrePosition X="0.4576" Y="-0.3704" />
@@ -2044,7 +2044,7 @@
                             <OutlineColor A="255" R="82" G="54" B="33" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
-                          <AbstractNodeData Name="btn_tip" ActionTag="423539879" Tag="302" IconVisible="False" LeftMargin="215.1530" RightMargin="-227.1530" TopMargin="-5.6165" BottomMargin="-5.3835" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="25" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                          <AbstractNodeData Name="btn_tip" ActionTag="423539879" Tag="302" IconVisible="False" LeftMargin="215.1530" RightMargin="-227.1530" TopMargin="-5.6165" BottomMargin="-5.3835" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="9" Scale9Height="17" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                             <Size X="46.0000" Y="47.0000" />
                             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                             <Position X="238.1530" Y="18.1165" />
@@ -2057,7 +2057,7 @@
                             <OutlineColor A="255" R="255" G="0" B="0" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
-                          <AbstractNodeData Name="image_tip" ActionTag="992201974" Tag="303" IconVisible="False" LeftMargin="-212.4793" RightMargin="-213.5207" TopMargin="11.3344" BottomMargin="-140.3344" LeftEage="151" RightEage="151" TopEage="54" BottomEage="54" Scale9OriginX="151" Scale9OriginY="54" Scale9Width="158" Scale9Height="57" ctype="ImageViewObjectData">
+                          <AbstractNodeData Name="image_tip" ActionTag="992201974" Tag="303" IconVisible="False" LeftMargin="-212.4793" RightMargin="-213.5207" TopMargin="11.3344" BottomMargin="-140.3344" LeftEage="151" RightEage="151" TopEage="54" BottomEage="54" Scale9OriginX="-105" Scale9OriginY="-8" Scale9Width="256" Scale9Height="62" ctype="ImageViewObjectData">
                             <Size X="460.0000" Y="165.0000" />
                             <Children>
                               <AbstractNodeData Name="text_1" ActionTag="1117176124" Tag="304" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="51.7459" RightMargin="61.2541" TopMargin="43.5045" BottomMargin="67.4955" TouchEnable="True" FontSize="24" LabelText="在大结算时，点击【再来一局】，&#xA;可以同样的玩法再玩一场。   " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -2079,7 +2079,7 @@
                             <CColor A="255" R="255" G="255" B="255" />
                             <PrePosition X="0.5153" Y="-1.6065" />
                             <PreSize X="13.5294" Y="4.5833" />
-                            <FileData Type="Normal" Path="friendCards/gaojiSet/bg_zlyj.png" Plist="" />
+                            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

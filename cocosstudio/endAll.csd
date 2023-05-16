@@ -22,13 +22,13 @@
           <AbstractNodeData Name="back" ActionTag="601031859" Tag="75" IconVisible="False" LeftMargin="103.0475" RightMargin="91.9525" TopMargin="20.7868" BottomMargin="10.2132" TouchEnable="True" Scale9Enable="True" LeftEage="380" RightEage="422" TopEage="248" BottomEage="255" Scale9OriginX="380" Scale9OriginY="248" Scale9Width="283" Scale9Height="186" ctype="ImageViewObjectData">
             <Size X="1085.0000" Y="689.0000" />
             <Children>
-              <AbstractNodeData Name="Image_bg" ActionTag="-1522982919" Tag="8405" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="30.0235" RightMargin="31.9766" TopMargin="94.8830" BottomMargin="30.1170" Scale9Enable="True" LeftEage="20" RightEage="20" TopEage="18" BottomEage="18" Scale9OriginX="20" Scale9OriginY="18" Scale9Width="21" Scale9Height="21" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_bg" ActionTag="-1522982919" Tag="8405" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="30.0236" RightMargin="31.9764" TopMargin="93.1682" BottomMargin="31.8318" Scale9Enable="True" LeftEage="20" RightEage="20" TopEage="18" BottomEage="18" Scale9OriginX="20" Scale9OriginY="18" Scale9Width="21" Scale9Height="21" ctype="ImageViewObjectData">
                 <Size X="1023.0000" Y="564.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="541.5235" Y="312.1170" />
+                <Position X="541.5236" Y="313.8318" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4991" Y="0.4530" />
+                <PrePosition X="0.4991" Y="0.4555" />
                 <PreSize X="0.9429" Y="0.8186" />
                 <FileData Type="Normal" Path="game_picture/diban.png" Plist="" />
               </AbstractNodeData>
@@ -1549,26 +1549,26 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btnCopy" Visible="False" ActionTag="1955922202" Tag="149" IconVisible="False" LeftMargin="241.1946" RightMargin="634.8054" TopMargin="577.5972" BottomMargin="34.4028" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="179" Scale9Height="55" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btnCopy" ActionTag="1955922202" Tag="149" IconVisible="False" LeftMargin="250.9446" RightMargin="625.0554" TopMargin="582.7408" BottomMargin="29.2592" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="179" Scale9Height="55" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="209.0000" Y="77.0000" />
                 <AnchorPoint ScaleX="0.5206" ScaleY="0.4942" />
-                <Position X="350.0000" Y="72.4562" />
+                <Position X="359.7500" Y="67.3126" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3226" Y="0.1052" />
+                <PrePosition X="0.3316" Y="0.0977" />
                 <PreSize X="0.1926" Y="0.1118" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <NormalFileData Type="Normal" Path="gameOver/btn_copy.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btnReplay" ActionTag="-1953946573" Tag="913" IconVisible="False" LeftMargin="626.7321" RightMargin="249.2679" TopMargin="577.5972" BottomMargin="33.4028" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="179" Scale9Height="56" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btnReplay" ActionTag="-1953946573" Tag="913" IconVisible="False" LeftMargin="806.7909" RightMargin="69.2091" TopMargin="581.7682" BottomMargin="29.2317" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="179" Scale9Height="56" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="209.0000" Y="78.0000" />
                 <AnchorPoint ScaleX="0.5206" ScaleY="0.4942" />
-                <Position X="735.5375" Y="71.9504" />
+                <Position X="915.5963" Y="67.7793" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.6779" Y="0.1044" />
+                <PrePosition X="0.8439" Y="0.0984" />
                 <PreSize X="0.1926" Y="0.1132" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <PressedFileData Type="Normal" Path="gameOver/zailaiyiju_p.png" Plist="" />
@@ -1576,7 +1576,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="share" ActionTag="-546708211" Tag="72" IconVisible="False" LeftMargin="367.5204" RightMargin="508.4796" TopMargin="578.1322" BottomMargin="33.8678" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="179" Scale9Height="55" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="share" ActionTag="-546708211" Tag="72" IconVisible="False" LeftMargin="535.5326" RightMargin="340.4674" TopMargin="585.7327" BottomMargin="26.2674" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="179" Scale9Height="55" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="209.0000" Y="77.0000" />
                 <Children>
                   <AbstractNodeData Name="img_txt" CanEdit="False" Visible="False" ActionTag="898025463" Tag="414" IconVisible="False" LeftMargin="220.1474" RightMargin="-249.1474" TopMargin="0.0172" BottomMargin="-1.0172" LeftEage="78" RightEage="78" TopEage="25" BottomEage="25" Scale9OriginX="78" Scale9OriginY="25" Scale9Width="82" Scale9Height="28" ctype="ImageViewObjectData">
@@ -1611,10 +1611,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="472.0204" Y="72.3678" />
+                <Position X="640.0326" Y="64.7674" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4350" Y="0.1050" />
+                <PrePosition X="0.5899" Y="0.0940" />
                 <PreSize X="0.1926" Y="0.1118" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <PressedFileData Type="Normal" Path="gameOver/duihuan_50.png" Plist="" />

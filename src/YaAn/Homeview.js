@@ -514,11 +514,11 @@ var HomeView_yaan = cc.Layer.extend({
         var _scroll = this._guangbo.getChildByName("scroll");
         var _msg = _scroll.getChildByName("msg");
         var scrollDataArr = [];
-        scrollDataArr.push(MjClient.remoteCfg.guestLogin ? "欢迎来到七星江苏棋牌，快和朋友一起对战吧！" : MjClient.systemConfig.homeScroll);
+        scrollDataArr.push(MjClient.remoteCfg.guestLogin ? "欢迎来到天涯棋牌，快和朋友一起对战吧！" : MjClient.systemConfig.homeScroll);
         homePageRunText(_msg, scrollDataArr);
         function getMsg() {
             var content = "" + MjClient.systemConfig.homeScroll;
-            return MjClient.remoteCfg.guestLogin ? "欢迎来到七星江苏棋牌，快和朋友一起对战吧！" : content;
+            return MjClient.remoteCfg.guestLogin ? "欢迎来到天涯棋牌，快和朋友一起对战吧！" : content;
         }
         _msg.setString(getMsg());
         UIEventBind(null, _scroll, "userReportPush", function (scrollData) {

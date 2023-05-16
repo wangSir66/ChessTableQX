@@ -974,7 +974,7 @@ var FriendCard_main = cc.Layer.extend({
 			}
 			//头像框
 			var head_kuang = cell.getChildByName("head_kuang");
-			//head_kuang.loadTexture(list[i].clubId == this.clubId ? "friendCards/main/img_head_kuang_n.png" : "friendCards/main/img_head_kuang_s.png");
+			head_kuang.loadTexture(list[i].clubId == this.clubId ? "friendCards/main/img_head_kuang_n.png" : "friendCards/main/img_head_kuang_s.png");
 			//房卡标签
 			var img_fangka = cell.getChildByName("img_fangka");
 			if (img_fangka) {

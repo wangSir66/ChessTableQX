@@ -48,12 +48,13 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         this.initEnd();
         this.setPlayNodeCurrentSelect(this._isFriendCard);
         this.changeUiForClubMode();
+        this._view.setScrollBarEnabled(false);
     },
     //初始化结束需要做的事情
     initEnd: function () {
         if (this._isFriendCard && cc.sys.isObjectValid(this.payWayNodeArray[0])) {
             var _text = this.payWayNodeArray[0].getChildByName("text");
-            _text.setString("群主付");
+            _text.setString("圈主付");
         }
         if (this.RedioGroup['renshu']) {
             const pNums = Object.keys(this.getGamePriceConfig()), list = this.RedioGroup['renshu']._nodeList;
@@ -469,7 +470,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         _helpNode.addChild(_helpImage);
         this._nodeGPS.addChild(_helpNode);
         _helpNode.setTouchEnabled(true);
-        _helpNode.setPosition(this._nodeGPS.getContentSize().width * 4.6, this._nodeGPS.getContentSize().height / 2);
+        _helpNode.setPosition(this._nodeGPS.getContentSize().width * 3.8, this._nodeGPS.getContentSize().height / 2);
         _helpNode.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 _helpImage.setVisible(true);
@@ -603,8 +604,20 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                     break;
             }
         }, this);
+        const close = dialog.getChildByName("Image_bg").getChildByName("close");
+        if (close) {
+            close.visible = true;
+            close.addTouchEventListener(function (sender, Type) {
+                switch (Type) {
+                    case ccui.Widget.TOUCH_ENDED:
+                        dialog.removeFromParent(true);
+                        break;
+                    default:
+                        break;
+                }
+            }, this);
+        }
 
-        dialog.getChildByName("Image_bg").getChildByName("close").visible = false;
         MjClient.createui.addChild(dialog);
     },
     getSelectPlayNum: function () {
@@ -920,21 +933,25 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         } else {
             para.ruleName = escape(GameCnName[this._data.gameType]);
         }
-        if (this._isMatchMode) {
-            para.isMatchLimit = this._matchModeLimitScoreRadio.getSelectIndex();
-            para.matchLimitScore = this._matchModeLimitScoreEdt.value;
+        // if (this._isMatchMode) {
+        //     para.isMatchLimit = this._matchModeLimitScoreRadio.getSelectIndex();
+        //     para.matchLimitScore = this._matchModeLimitScoreEdt.value;
 
-            if (FriendCard_Common.isOpenMatchDissolveLimit(this._data.gameType)) {
-                para.isMatchDissolveLimit = this._matchModeEndGameScoreRadio.getSelectIndex();
-                para.matchDissolveLimitScore = this._matchModeEndGameScoreEdt.value;
-                if (FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType)) {
-                    para.scoreNeedEnough = (this._checkBox_not_zone_score.visible && this._checkBox_not_zone_score.isSelected()) ? 1 : 0;
-                } else {
-                    para.scoreNeedEnough = 0;
-                }
-            }
+        //     if (FriendCard_Common.isOpenMatchDissolveLimit(this._data.gameType)) {
+        //         para.isMatchDissolveLimit = this._matchModeEndGameScoreRadio.getSelectIndex();
+        //         para.matchDissolveLimitScore = this._matchModeEndGameScoreEdt.value;
+        //         if (FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType)) {
+        //             para.scoreNeedEnough = (this._checkBox_not_zone_score.visible && this._checkBox_not_zone_score.isSelected()) ? 1 : 0;
+        //         } else {
+        //             para.scoreNeedEnough = 0;
+        //         }
+        //     }
+        // }
+
+        if (FriendCard_Common.isOpenMatchDissolveLimit(this._data.gameType)) {
+            para.isDissolveLimit = true//this._matchModeEndGameScoreRadio.getSelectIndex();
+            para.dissolveLimitScore = 10 * para.difen//this._matchModeEndGameScoreEdt.value;
         }
-
         para.round = this.getSelectedRoundNum();
 
         if (this._isRoomCardMode) {
@@ -1286,7 +1303,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 cc.log("changeItemY node is null");
                 return;
             } else {
-                
+
             }
             if (typeof (offset) == 'undefined') {
                 offset = 15;
@@ -2182,6 +2199,33 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             this.onClickFangkaFree();
             this.onClickWinnerAdded();
         }
+    },
+
+    showFangkaRoomLevelInfo: function () {
+        var infoDialog = ccs.load("fangkaRoomLevelInfo.json").node;
+        var bgImage = infoDialog.getChildByName("Image_bg");
+        var contentText = bgImage.getChildByName("Text_content");
+        var closeBtn = bgImage.getChildByName("close");
+
+
+        var cfg = FriendCard_Common.fangkaPayConfig;
+        var str = "";
+        for (var i = 0; i < cfg.infoStrs.length; i++) {
+            str += cfg.infoStrs[i] + "\n\n";
+        }
+
+        contentText.setString(str);
+        contentText.setFontSize(22);
+        closeBtn.addTouchEventListener(function (sender, type) {
+            if (type == 2) {
+                infoDialog.removeFromParent();
+            }
+        }, this);
+
+        infoDialog.setPosition(MjClient.createui.width / 2, MjClient.createui.height / 2);
+        setWgtLayout(infoDialog.getChildByName("Image_di"), [1, 1], [0, 0], [0, 0], true);
+        setWgtLayout(bgImage, [bgImage.width / 1280, bgImage.height / 720], [0, 0], [0, 0]);
+        MjClient.createui.addChild(infoDialog, 999);
     },
     setRoomCardModeFree: function (difen) {
         if (this._roomCardModeNode) {

@@ -965,6 +965,7 @@
             <Image Name="btn_addRule.png" />
             <Image Name="btn_bangding_n.png" />
             <Image Name="btn_createQYQ.png" />
+            <Image Name="btn_detail_n.png" />
             <Image Name="btn_fanhui.png" />
             <Image Name="btn_gonggao_n.png" />
             <Image Name="btn_join_n.png" />
@@ -982,6 +983,7 @@
             <Image Name="btn_record2_n.png" />
             <Image Name="btn_refind_n.png" />
             <Image Name="btn_refind_s.png" />
+            <Image Name="btn_rule_n.png" />
             <Image Name="btn_setting_n.png" />
             <Image Name="btn_shenqing_n.png" />
             <Image Name="btn_shenqing_s.png" />
@@ -1152,6 +1154,8 @@
             <Image Name="cy_jujue_n.png" />
             <Image Name="cy_jujue_s.png" />
             <Image Name="cy_member_n.png" />
+            <Image Name="cy_member_record_n.png" />
+            <Image Name="cy_member_record_s.png" />
             <Image Name="cy_member_s.png" />
             <Image Name="cy_shenhe_n.png" />
             <Image Name="cy_shenhe_s.png" />

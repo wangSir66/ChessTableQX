@@ -22,8 +22,8 @@ var FriendCard_info = cc.Layer.extend({
         this._ruleBtnNum = FriendCard_Common.getRuleNumber();
         this._sourceName = sourceName;
         this._isMatch = this._data ? (this._data.info.matchIsOpen & 2) : false;
-        // this._clubType = this._data ?  this._data.info.type : 0; //房卡俱乐部 普通俱乐部
-        this._clubType = 1; //房卡俱乐部 普通俱乐部
+        this._clubType = this._data ?  this._data.info.type : 0; //房卡俱乐部 普通俱乐部
+        // this._clubType = 1; //房卡俱乐部 普通俱乐部
         for (var i = 1; i <= this._ruleBtnNum; i++) {
             MjClient.RuleParam["rule" + i] = null;
         }

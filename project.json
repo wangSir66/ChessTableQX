@@ -200,6 +200,7 @@
         "src/friendCard/FriendCard_find.js",
         "src/friendCard/FriendCard_yaoqingMember.js",
         "src/friendCard/FriendCard_init.js",
+        "src/friendCard_Match/FriendCard_Match_Main.js",
 
         "src/activity_all/MerryChristmasLayer.js",
         "src/activity_all/WinterLayer.js",

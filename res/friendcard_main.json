@@ -487,7 +487,7 @@
                       },
                       {
                         "FontSize": 22,
-                        "LabelText": "10",
+                        "LabelText": "1000000",
                         "FontResource": {
                           "Type": "Normal",
                           "Path": "fonts/lanting.TTF",
@@ -509,8 +509,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 130.0526,
-                          "Y": 29.5299
+                          "X": 142.2711,
+                          "Y": 30.3446
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -523,21 +523,21 @@
                         },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.6253,
-                          "Y": 0.3691
+                          "X": 0.684,
+                          "Y": 0.3793
                         },
                         "PreSize": {
-                          "X": 0.1394,
+                          "X": 0.4519,
                           "Y": 0.3125
                         },
-                        "LeftMargin": 115.5526,
-                        "RightMargin": 63.4474,
-                        "TopMargin": 37.9701,
-                        "BottomMargin": 17.0299,
+                        "LeftMargin": 95.2711,
+                        "RightMargin": 18.7289,
+                        "TopMargin": 37.1554,
+                        "BottomMargin": 17.8446,
                         "Tag": 502,
                         "ActionTag": -1734461770,
                         "Size": {
-                          "X": 29.0,
+                          "X": 94.0,
                           "Y": 25.0
                         },
                         "Name": "text_fangka",
@@ -992,8 +992,8 @@
                             "Scale9Enable": true,
                             "Scale9OriginX": 27,
                             "Scale9OriginY": 6,
-                            "Scale9Width": 90,
-                            "Scale9Height": 12,
+                            "Scale9Width": 65,
+                            "Scale9Height": 14,
                             "AnchorPoint": {
                               "ScaleY": 0.5
                             },
@@ -1098,8 +1098,8 @@
                             },
                             "Scale9OriginX": 12,
                             "Scale9OriginY": 8,
-                            "Scale9Width": 25,
-                            "Scale9Height": 20,
+                            "Scale9Width": 18,
+                            "Scale9Height": 15,
                             "AnchorPoint": {
                               "ScaleX": 0.4775,
                               "ScaleY": 0.535
@@ -2010,7 +2010,7 @@
                       "Y": 1.6043
                     },
                     "PreSize": {
-                      "X": 0.1563,
+                      "X": 0.1562,
                       "Y": 1.9608
                     },
                     "LeftMargin": 3.1682,
@@ -2028,13 +2028,13 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/main/img_searchBg.png",
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
                       "Plist": ""
                     },
-                    "Scale9OriginX": 68,
+                    "Scale9OriginX": -22,
                     "Scale9OriginY": 15,
-                    "Scale9Width": 72,
+                    "Scale9Width": 90,
                     "Scale9Height": 16,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
@@ -2072,16 +2072,11 @@
                           "G": 65,
                           "B": 70
                         },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/main/btn_search.png",
-                          "Plist": ""
-                        },
                         "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 10,
-                        "Scale9Height": 18,
+                        "Scale9OriginX": -15,
+                        "Scale9OriginY": -11,
+                        "Scale9Width": 30,
+                        "Scale9Height": 22,
                         "OutlineColor": {
                           "G": 0,
                           "B": 0
@@ -2168,7 +2163,7 @@
                 "AnchorPoint": {},
                 "Position": {
                   "X": 0.0,
-                  "Y": 1.7771
+                  "Y": 4.9608
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -2178,7 +2173,7 @@
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.0,
-                  "Y": 0.0025
+                  "Y": 0.0069
                 },
                 "PercentWidthEnable": true,
                 "PercentHeightEnable": true,
@@ -2188,8 +2183,8 @@
                   "X": 1.0,
                   "Y": 1.0
                 },
-                "TopMargin": -1.7771,
-                "BottomMargin": 1.7771,
+                "TopMargin": -4.9608,
+                "BottomMargin": 4.9608,
                 "Tag": 271,
                 "Children": [
                   {
@@ -4841,16 +4836,11 @@
                           "G": 65,
                           "B": 70
                         },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/main/btn_personal_shop_n.png",
-                          "Plist": ""
-                        },
                         "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 139,
-                        "Scale9Height": 29,
+                        "Scale9OriginX": -15,
+                        "Scale9OriginY": -11,
+                        "Scale9Width": 30,
+                        "Scale9Height": 22,
                         "OutlineColor": {
                           "G": 0,
                           "B": 0
@@ -5882,13 +5872,13 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards_LM/club_List_LM.png",
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 11,
-                    "Scale9Width": 12,
-                    "Scale9Height": 58,
+                    "Scale9Width": 24,
+                    "Scale9Height": 46,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 1.0
@@ -6120,13 +6110,13 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "friendCards/main/paomadeng_di.png",
+              "Path": "game_picture/dating-1_81.png",
               "Plist": ""
             },
             "Scale9OriginX": 214,
             "Scale9OriginY": 14,
-            "Scale9Width": 312,
-            "Scale9Height": 5,
+            "Scale9Width": 642,
+            "Scale9Height": 17,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -6152,13 +6142,13 @@
             "PercentWidthEnabled": true,
             "PercentHeightEnabled": true,
             "PreSize": {
-              "X": 0.5781,
-              "Y": 0.0458
+              "X": 0.8359,
+              "Y": 0.0625
             },
-            "LeftMargin": 270.016,
-            "RightMargin": 270.016,
-            "TopMargin": 174.312,
-            "BottomMargin": 512.712,
+            "LeftMargin": 105.024,
+            "RightMargin": 105.0239,
+            "TopMargin": 168.3,
+            "BottomMargin": 506.7,
             "Tag": 646,
             "Children": [
               {
@@ -6191,7 +6181,7 @@
                 },
                 "Position": {
                   "X": 0.0,
-                  "Y": 16.488
+                  "Y": 22.5
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -6213,6 +6203,7 @@
                   "X": 1.0,
                   "Y": 1.0
                 },
+                "RightMargin": -0.048,
                 "Tag": 647,
                 "Children": [
                   {
@@ -6272,8 +6263,8 @@
                 ],
                 "ActionTag": 925379314,
                 "Size": {
-                  "X": 739.0,
-                  "Y": 32.0
+                  "X": 1070.0,
+                  "Y": 45.0
                 },
                 "Name": "scroll",
                 "ctype": "ScrollViewObjectData"
@@ -6281,8 +6272,8 @@
             ],
             "ActionTag": 384131351,
             "Size": {
-              "X": 739.968,
-              "Y": 32.976
+              "X": 1069.952,
+              "Y": 45.0
             },
             "Name": "gonggao_bg",
             "ctype": "ImageViewObjectData"
@@ -6295,6 +6286,66 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "Default/Button_Normal.png",
+        "Default/Button_Press.png",
+        "Default/ImageFile.png",
+        "fonts/fzcy.ttf",
+        "fonts/lanting.TTF",
+        "friendCards/common/btn_club_n.png",
+        "friendCards/common/btn_club_s.png",
+        "friendCards/common/head/headMask_clubList.png",
+        "friendCards/common/head/headMask_desk.png",
+        "friendCards/common/img_xian.png",
+        "friendCards/common/Z_offline.png",
+        "friendCards/main/bg_clubList.png",
+        "friendCards/main/btn_add.png",
+        "friendCards/main/btn_bangding_n.png",
+        "friendCards/main/btn_createQYQ.png",
+        "friendCards/main/btn_detail_n.png",
+        "friendCards/main/btn_fanhui.png",
+        "friendCards/main/btn_join_n.png",
+        "friendCards/main/btn_join_s.png",
+        "friendCards/main/btn_joinQYQ.png",
+        "friendCards/main/btn_memberlist_n.png",
+        "friendCards/main/btn_play_add.png",
+        "friendCards/main/btn_play_n.png",
+        "friendCards/main/btn_play_s.png",
+        "friendCards/main/btn_record_n.png",
+        "friendCards/main/btn_record2_n.png",
+        "friendCards/main/btn_rule_n.png",
+        "friendCards/main/btn_showClubList.png",
+        "friendCards/main/btn_skin.png",
+        "friendCards/main/btn_tongji_n.png",
+        "friendCards/main/btn_webZhanji.png",
+        "friendCards/main/btn_yaoqing.png",
+        "friendCards/main/check_kaifang.png",
+        "friendCards/main/club_point.png",
+        "friendCards/main/fangka_kuang.png",
+        "friendCards/main/fangkashuliang_di.png",
+        "friendCards/main/icon_stop_tishi.png",
+        "friendCards/main/icon_table.png",
+        "friendCards/main/icon_tipPoint.png",
+        "friendCards/main/icon_tipText.png",
+        "friendCards/main/icon_yizi2.png",
+        "friendCards/main/image_bottomBG.png",
+        "friendCards/main/img_createRoom9.png",
+        "friendCards/main/img_createRoom9_s.png",
+        "friendCards/main/img_fangka.png",
+        "friendCards/main/img_fanhui.png",
+        "friendCards/main/img_feixuanzhongMem.png",
+        "friendCards/main/img_guanjia.png",
+        "friendCards/main/img_isShowZhuozi.png",
+        "friendCards/main/img_name_di.png",
+        "friendCards/main/img_qian.png",
+        "friendCards/main/img_ZTKF.png",
+        "friendCards/main/info_bg.png",
+        "friendCards/setSkin/bg1_0.jpg",
+        "friendCards/setSkin/bg2_0.png",
+        "game_picture/dating-1_81.png",
+        "game_picture/dating-hd.png",
+        "game_picture/ico_zuanshi.png"
+      ],
       "ctype": "GameFileData"
     }
   },

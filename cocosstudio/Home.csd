@@ -1064,13 +1064,13 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="julebu" ActionTag="1316259825" VisibleForFrame="False" Tag="68" IconVisible="False" LeftMargin="-51.9846" RightMargin="1072.9846" TopMargin="805.2664" BottomMargin="-147.2664" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="229" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="julebu" ActionTag="1316259825" Tag="68" IconVisible="False" LeftMargin="1528.2190" RightMargin="-507.2190" TopMargin="570.7200" BottomMargin="87.2800" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="229" Scale9Height="40" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="259.0000" Y="62.0000" />
             <AnchorPoint ScaleY="0.5000" />
-            <Position X="-51.9846" Y="-116.2664" />
+            <Position X="1528.2190" Y="118.2800" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="-0.0406" Y="-0.1615" />
+            <PrePosition X="1.1939" Y="0.1643" />
             <PreSize X="0.2023" Y="0.0861" />
             <TextColor A="255" R="65" G="65" B="70" />
             <NormalFileData Type="Normal" Path="game_picture/jlb_a.png" Plist="" />

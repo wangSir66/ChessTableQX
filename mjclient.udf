@@ -28,16 +28,5 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="friendcard_main.csd" />
-          <FilePathData Path="bg_red20.csd" />
-          <FilePathData Path="Play_RunFasterYN.csd" />
-          <FilePathData Path="bg_RunFasterYaAn.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="bg_RunFasterYaAn.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

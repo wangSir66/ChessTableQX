@@ -761,7 +761,7 @@ var storeLayer2 = cc.Layer.extend({
 
         var _Text_yuanbaoCount = null;
         var _Text_jinbiCount = null;
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
+        if ( MjClient.getAppType() === MjClient.APP_TYPE.YAAN ||MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
             _Text_yuanbaoCount = _back.getChildByName("Text_goldCount");
             _Text_jinbiCount = _back.getChildByName("Text_goldCount_jinbi");
         }
@@ -771,7 +771,8 @@ var storeLayer2 = cc.Layer.extend({
         }
 
         // 自适应显示
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ ||
+        if (
+            MjClient.getAppType() === MjClient.APP_TYPE.YAAN || MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ ||
             MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
             this._back = _back;
             this.adaptation(); 
@@ -856,7 +857,7 @@ var storeLayer2 = cc.Layer.extend({
         }
 
         var Button_jinbi_tab = null, Button_yuanbao_tab = null;
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
+        if (MjClient.getAppType() === MjClient.APP_TYPE.YAAN ||MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
             Button_jinbi_tab = _back.getChildByName("Button_jinbi_tab");
             Button_yuanbao_tab = _back.getChildByName("Button_yuanbao_tab");
         }
@@ -1453,14 +1454,16 @@ var storeLayer2 = cc.Layer.extend({
             if (index == 0){
                 this._jinbiNode.setVisible(false);
                 this._yuanbaNode.setVisible(true);
-                if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
+                if (
+                    MjClient.getAppType() === MjClient.APP_TYPE.YAAN ||MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
                     this._back.getChildByName("Button_jinbi_tab").setEnabled(true);
                     this._back.getChildByName("Button_yuanbao_tab").setEnabled(false);
                 }
             }else if(index == 1){
                 this._jinbiNode.setVisible(true);
                 this._yuanbaNode.setVisible(false);
-                if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
+                if (
+                    MjClient.getAppType() === MjClient.APP_TYPE.YAAN ||MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
                     this._back.getChildByName("Button_jinbi_tab").setEnabled(false);
                     this._back.getChildByName("Button_yuanbao_tab").setEnabled(true);
                 }
@@ -1473,7 +1476,8 @@ var storeLayer2 = cc.Layer.extend({
 
         //按钮隐藏  金币场优化
         var Button_jinbi_tab = null, Button_yuanbao_tab = null;
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
+        if (
+            MjClient.getAppType() === MjClient.APP_TYPE.YAAN ||MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
             Button_jinbi_tab = this._back.getChildByName("Button_jinbi_tab");
             Button_yuanbao_tab = this._back.getChildByName("Button_yuanbao_tab");
             var _leftMask_bg = this._back.getChildByName("leftMask_bg");
@@ -7335,7 +7339,8 @@ var CosPlayShopSelectGift = cc.Layer.extend({
 var storeLayer = storeLayer1;
 
 //岳阳已经是新房卡模式 不要添加到这个判断了  加代码之前看看 整个 if 判断语句
-if (MjClient.getAppType() === MjClient.APP_TYPE.QXJSMJ ){
+if (
+    MjClient.getAppType() === MjClient.APP_TYPE.YAAN || MjClient.getAppType() === MjClient.APP_TYPE.QXJSMJ ){
     storeLayer = storeLayer2;
 }
 else if (MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ ||
@@ -7348,7 +7353,8 @@ else if (  MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
     MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
     MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
     MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ ||
-    MjClient.getAppType() === MjClient.APP_TYPE.TXJINZHONGMJ || MjClient.getAppType() == MjClient.APP_TYPE.DQSHANXIMJ) {
+    MjClient.getAppType() === MjClient.APP_TYPE.TXJINZHONGMJ ||
+    MjClient.getAppType() == MjClient.APP_TYPE.DQSHANXIMJ) {
     storeLayer = storeLayer4;
 }
 else if (MjClient.getAppType() === MjClient.APP_TYPE.QXYYQP ||

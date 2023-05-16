@@ -28,12 +28,12 @@ FriendCard_Common.maxAllStartRoomLM = 20;
 
 
 //重置玩法规则，修复进入玩法设置的bug
-FriendCard_Common.reSetRuleParm = function(){
+FriendCard_Common.reSetRuleParm = function () {
     var infoData = FriendCard_Common.getClubInfo();
     for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {
         if (infoData["rule" + i] && infoData["rule" + i].ruleName) {
             MjClient.RuleParam["rule" + i] = infoData["rule" + i];
-        }else{
+        } else {
             MjClient.RuleParam["rule" + i] = null;
         }
     }
@@ -43,15 +43,15 @@ FriendCard_Common.reSetRuleParm = function(){
 *存在本地数据的key
 */
 FriendCard_Common.LocalKey = {
-    quickGameSwitch:"KEY_FRIEND_CARD_QUICK_GAME_SWITCH_",//快速游戏开关
-    lastIntoClub:"LAST_INTO_CLUB_ID",//最近进入的一个亲友圈
-    onlyOutLineDesk:"ONLY_ONT_LINE_DESK",//亲友圈大厅只看离线桌子
+    quickGameSwitch: "KEY_FRIEND_CARD_QUICK_GAME_SWITCH_",//快速游戏开关
+    lastIntoClub: "LAST_INTO_CLUB_ID",//最近进入的一个亲友圈
+    onlyOutLineDesk: "ONLY_ONT_LINE_DESK",//亲友圈大厅只看离线桌子
 }
 
 /*
 *请求服务端失败通用toast
 */
-FriendCard_Common.serverFailToast = function(rtn) {
+FriendCard_Common.serverFailToast = function (rtn) {
     if (rtn.message) {
         MjClient.showToast(rtn.message);
     } else {
@@ -67,18 +67,18 @@ FriendCard_Common.serverFailToast = function(rtn) {
 //老皮肤   return 0  
 
 //同步UI时注意 岳阳皮肤 main.csd 贵州有区别
-FriendCard_Common.getSkinType = function() {
-    if(FriendCard_Common.skinType)
+FriendCard_Common.getSkinType = function () {
+    if (FriendCard_Common.skinType)
         return FriendCard_Common.skinType;
-    
+
     if (MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
-        isJinZhongAPPType())  {
+        isJinZhongAPPType()) {
         FriendCard_Common.skinType = 1;
         return 1;
     } else if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
         MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ ||
-        MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP  ||
+        MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ ||
         MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG) {
         FriendCard_Common.skinType = 2;
@@ -88,11 +88,11 @@ FriendCard_Common.getSkinType = function() {
         MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ ||
-        MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ ||
+        MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ || MjClient.getAppType() == MjClient.APP_TYPE.YAAN ||
         MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
         FriendCard_Common.skinType = 3;
         return 3;
-    }else if (MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ){
+    } else if (MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ) {
         FriendCard_Common.skinType = 4;
         return 4;
     }
@@ -101,11 +101,11 @@ FriendCard_Common.getSkinType = function() {
 }
 
 //是不是联盟俱乐部
-FriendCard_Common.isLMClub = function(info) {
+FriendCard_Common.isLMClub = function (info) {
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return false;
     }
     return info.leagueId ? true : false;
@@ -114,28 +114,28 @@ FriendCard_Common.isLMClub = function(info) {
 //是   return 几组组长
 //不是 return false  uid如果不传就用自己ID
 //ps: return false 的时候 当分组为0  0==false 为ture 要用"==="
-FriendCard_Common.isGroupLeader = function(info,uid) {
+FriendCard_Common.isGroupLeader = function (info, uid) {
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return false;
     }
-    if(!uid){
+    if (!uid) {
         uid = MjClient.data.pinfo.uid
     }
-    if(FriendCard_Common.isLMClub(info)){
+    if (FriendCard_Common.isLMClub(info)) {
         //联盟俱乐部用角色判断
         var group = info.roleMap.group[uid.toString()];
-        if(group){
+        if (group) {
             return group;
-        }else{
+        } else {
             return false;
         }
     }
-    
-    var isGroupLeader =  info && info.groupMap; 
-    if(isGroupLeader && info.groupMap[uid.toString()])
+
+    var isGroupLeader = info && info.groupMap;
+    if (isGroupLeader && info.groupMap[uid.toString()])
         return info.groupMap[uid.toString()];
 
     return false;
@@ -143,21 +143,21 @@ FriendCard_Common.isGroupLeader = function(info,uid) {
 
 
 //是不是助理
-FriendCard_Common.isAssistants = function(info,uid) {
+FriendCard_Common.isAssistants = function (info, uid) {
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return false;
     }
-    if(!uid){
+    if (!uid) {
         uid = MjClient.data.pinfo.uid
     }
-    if(FriendCard_Common.isLMClub(info)){
+    if (FriendCard_Common.isLMClub(info)) {
         var assistant = info.roleMap.assistant[uid.toString()];
-        if(assistant){
+        if (assistant) {
             return assistant;
-        }else{
+        } else {
             return false;
         }
     }
@@ -166,36 +166,36 @@ FriendCard_Common.isAssistants = function(info,uid) {
 }
 
 //是否是俱乐部会长，联盟盟主最高级别
-FriendCard_Common.isLeader = function(info,uid){
+FriendCard_Common.isLeader = function (info, uid) {
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return false;
     }
-    if(!uid){
+    if (!uid) {
         uid = MjClient.data.pinfo.uid;
     }
-    if(FriendCard_Common.isLMClub(info)){
+    if (FriendCard_Common.isLMClub(info)) {
         //联盟俱乐部用角色判断
         return (info.roleMap.leader == uid);
     }
     return (info.creator == uid);
 }
 
-FriendCard_Common.isLMChair = function(info,uid){
-    
+FriendCard_Common.isLMChair = function (info, uid) {
+
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return false;
     }
-    if(!uid){
+    if (!uid) {
         uid = MjClient.data.pinfo.uid;
     }
-    if(FriendCard_Common.isLMClub(info)){
-        if(FriendCard_Common.isLeader(info,uid)){
+    if (FriendCard_Common.isLMClub(info)) {
+        if (FriendCard_Common.isLeader(info, uid)) {
             return true;
         }
         return ((info.roleMap.admin.indexOf(uid) > -1));
@@ -203,22 +203,22 @@ FriendCard_Common.isLMChair = function(info,uid){
     return false;
 }
 
-FriendCard_Common.isSupperManger = function(info,uid) {
-    if(FriendCard_Common.isLeader(info,uid)){
+FriendCard_Common.isSupperManger = function (info, uid) {
+    if (FriendCard_Common.isLeader(info, uid)) {
         return true;
     }
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return false;
     }
-    if(!uid){
+    if (!uid) {
         uid = MjClient.data.pinfo.uid;
     }
-    if(FriendCard_Common.isLMClub(info)){
+    if (FriendCard_Common.isLMClub(info)) {
         //联盟俱乐部用角色判断
-        if(info.roleMap.topzone){
+        if (info.roleMap.topzone) {
             return ((info.roleMap.topzone.indexOf(uid) > -1));
         }
     }
@@ -226,20 +226,20 @@ FriendCard_Common.isSupperManger = function(info,uid) {
 }
 
 
-FriendCard_Common.isManager = function(info,uid) {
+FriendCard_Common.isManager = function (info, uid) {
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return false;
     }
-    if(!uid){
+    if (!uid) {
         uid = MjClient.data.pinfo.uid;
     }
-    if(FriendCard_Common.isSupperManger(info,uid)){
+    if (FriendCard_Common.isSupperManger(info, uid)) {
         return true;
     }
-    if(FriendCard_Common.isLMClub(info)){
+    if (FriendCard_Common.isLMClub(info)) {
         //联盟俱乐部用角色判断
         return ((info.roleMap.admin.indexOf(uid) > -1) || (info.roleMap.subzone.indexOf(uid) > -1));
     }
@@ -247,17 +247,17 @@ FriendCard_Common.isManager = function(info,uid) {
 }
 
 //联盟俱乐部管理员，权限比isManager低。
-FriendCard_Common.isLMClubManager = function(info,uid) {
+FriendCard_Common.isLMClubManager = function (info, uid) {
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return false;
     }
-    if(!uid){
+    if (!uid) {
         uid = MjClient.data.pinfo.uid;
     }
-    if(FriendCard_Common.isLMClub(info)){
+    if (FriendCard_Common.isLMClub(info)) {
         //联盟俱乐部用角色判断
         return ((info.roleMap.subzone.indexOf(uid) > -1));
     }
@@ -265,146 +265,147 @@ FriendCard_Common.isLMClubManager = function(info,uid) {
 }
 
 //联盟俱乐部普通成员，是否是普通成员 什么权限都没有
-FriendCard_Common.isOrdinaryMember = function(info,uid) {
+FriendCard_Common.isOrdinaryMember = function (info, uid) {
     if (!info && cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         info = MjClient.FriendCard_main_ui.data.info;
     }
-    if(!info){
+    if (!info) {
         return true;
     }
-    if(!uid){
+    if (!uid) {
         uid = MjClient.data.pinfo.uid;
     }
-    if("roleId" in info){
+    if ("roleId" in info) {
         return info.roleId == 0;
     }
-    if(FriendCard_Common.isManager(info,uid)){
+    if (FriendCard_Common.isManager(info, uid)) {
         return false;
     }
-    if(FriendCard_Common.isSupperManger(info,uid)){
+    if (FriendCard_Common.isSupperManger(info, uid)) {
         return false;
     }
-    if(FriendCard_Common.isAssistants(info,uid)){
+    if (FriendCard_Common.isAssistants(info, uid)) {
         return false;
     }
-    if(FriendCard_Common.isGroupLeader(info,uid)){
+    if (FriendCard_Common.isGroupLeader(info, uid)) {
         return false;
     }
-    if(FriendCard_Common.isLMClubManager(info,uid)){
+    if (FriendCard_Common.isLMClubManager(info, uid)) {
         return false
     }
     return true;
 }
 
 //比赛场低分解散开关
-FriendCard_Common.isOpenMatchDissolveLimit = function(gameType){
+FriendCard_Common.isOpenMatchDissolveLimit = function (gameType) {
+
+    if (MjClient.getAppType() == MjClient.APP_TYPE.YAAN) {
+        return true;
+    }
     if (MjClient.getAppType() != MjClient.APP_TYPE.QXYYQP && MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ) {
         return false;
     }
-    // if(gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI){
-    //     return false;
-    // }
     // if(gameType == MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA){
     //     return false;
     // }
-    
-    if(gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG){
+
+    if (gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG) {
         return false;
     }
-    if(gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN){
+    if (gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN) {
         return false;
     }
-    if(gameType == MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI){
+    if (gameType == MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI) {
         return false;
     }
-    cc.log("isOpenMatchDissolveLimit gameType",gameType," true");
+    cc.log("isOpenMatchDissolveLimit gameType", gameType, " true");
     return true;
 }
 
 //比赛场积分不为负开关
-FriendCard_Common.isOpenMatchScoreNeedEnough = function(gameType){
-    cc.log("isOpenMatchScoreNeedEnough gameType",gameType);
-    if(!FriendCard_Common.isOpenMatchDissolveLimit(gameType)){
+FriendCard_Common.isOpenMatchScoreNeedEnough = function (gameType) {
+    cc.log("isOpenMatchScoreNeedEnough gameType", gameType);
+    if (!FriendCard_Common.isOpenMatchDissolveLimit(gameType)) {
         return false;
     }
     if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP) {
-        if(gameType == MjClient.GAME_TYPE.CHANG_SHA || gameType == MjClient.GAME_TYPE.CHANG_SHA_ER_REN){
+        if (gameType == MjClient.GAME_TYPE.CHANG_SHA || gameType == MjClient.GAME_TYPE.CHANG_SHA_ER_REN) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY){
+        if (gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN){
+        if (gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.ML_HONGZHONG){
+        if (gameType == MjClient.GAME_TYPE.ML_HONGZHONG) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU){
+        if (gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.YY_AN_HUA_PAO_HU_ZI){
+        if (gameType == MjClient.GAME_TYPE.YY_AN_HUA_PAO_HU_ZI) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN){
+        if (gameType == MjClient.GAME_TYPE.YUE_YANG_YUAN_JIANG_QIAN_FEN) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG){
+        if (gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG){
+        if (gameType == MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.YUAN_JIANG_MJ){
+        if (gameType == MjClient.GAME_TYPE.YUAN_JIANG_MJ) {
             return true;
         }
 
     }
-    if(MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
-        if(gameType == MjClient.GAME_TYPE.LUO_DI_SAO){
+    if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
+        if (gameType == MjClient.GAME_TYPE.LUO_DI_SAO) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY){
+        if (gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.PAO_HU_ZI_King 
+        if (gameType == MjClient.GAME_TYPE.PAO_HU_ZI_King
             || gameType == MjClient.GAME_TYPE.PAO_HU_ZI_SR
             || gameType == MjClient.GAME_TYPE.PAO_HU_ZI_SR_King
             || gameType == MjClient.GAME_TYPE.PAO_HU_ZI_ER
             || gameType == MjClient.GAME_TYPE.PAO_HU_ZI_LR_King
-            || gameType == MjClient.GAME_TYPE.PAO_HU_ZI){
+            || gameType == MjClient.GAME_TYPE.PAO_HU_ZI) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.TY_HONGZHONG){
+        if (gameType == MjClient.GAME_TYPE.TY_HONGZHONG) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.WANG_DIAO_MA_JIANG){
+        if (gameType == MjClient.GAME_TYPE.WANG_DIAO_MA_JIANG) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI){
+        if (gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI) {
             return true;
         }
-        if(gameType == MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA){
+        if (gameType == MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA) {
             return true;
         }
     }
-    
+
     return false;
 }
 
 //是否开放修改业绩模式
-FriendCard_Common.isOpenChangeYejiMode = function(){
-    if (FriendCard_Common.IsOpenRoomCardPay()){
+FriendCard_Common.isOpenChangeYejiMode = function () {
+    if (FriendCard_Common.IsOpenRoomCardPay()) {
         return true;
     }
-    if(FriendCard_Common.isOpenLM()){
+    if (FriendCard_Common.isOpenLM()) {
         return true;
     }
     return false;
 }
 
 //是否开启亲友圈代理商城
-FriendCard_Common.isOpenFriendShop = function(){
+FriendCard_Common.isOpenFriendShop = function () {
     var isOpe = false;
     if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
@@ -416,22 +417,22 @@ FriendCard_Common.isOpenFriendShop = function(){
 }
 
 //获取分组个数
-FriendCard_Common.getGroupNumber = function(){
-    
+FriendCard_Common.getGroupNumber = function () {
+
     return 60;
 }
 
 
 //或者文字选中/不选择颜色
-FriendCard_Common.getTextColor = function(){
-    if(FriendCard_Common.getSkinType() == 2){
-        return {black:cc.color("#443333"),red:cc.color("#C32929")};
-    }else if(FriendCard_Common.getSkinType() == 1){
-        return {black:cc.color("#2B344C"),red:cc.color("#AB3215")};
-    }else if(FriendCard_Common.getSkinType() == 4){
-        return {black:cc.color("#738875"),red:cc.color("#ff6f20")};
-    }else{
-        return {black:cc.color("#602E1A"),red:cc.color("#D33C00")};
+FriendCard_Common.getTextColor = function () {
+    if (FriendCard_Common.getSkinType() == 2) {
+        return { black: cc.color("#443333"), red: cc.color("#C32929") };
+    } else if (FriendCard_Common.getSkinType() == 1) {
+        return { black: cc.color("#2B344C"), red: cc.color("#AB3215") };
+    } else if (FriendCard_Common.getSkinType() == 4) {
+        return { black: cc.color("#738875"), red: cc.color("#ff6f20") };
+    } else {
+        return { black: cc.color("#602E1A"), red: cc.color("#D33C00") };
     }
 }
 
@@ -441,8 +442,8 @@ FriendCard_Common.yejiModeConfig = [
     "参与玩家均分",
 ]
 
-FriendCard_Common.getClubRoomModeNameByType = function(type){
-    switch(type){
+FriendCard_Common.getClubRoomModeNameByType = function (type) {
+    switch (type) {
         case 1:
             return "房卡"
             break;
@@ -452,7 +453,7 @@ FriendCard_Common.getClubRoomModeNameByType = function(type){
 //得到当前俱乐部是否开启准备选项  ps : 后期所有地区都有该选项后 此函数删除
 //开启   return true
 //非开启 return false
-FriendCard_Common.IsOpeNeedReady = function() {
+FriendCard_Common.IsOpeNeedReady = function () {
     var isOpe = false;
     if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
         MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
@@ -460,7 +461,7 @@ FriendCard_Common.IsOpeNeedReady = function() {
         MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP || MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP || MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ ||
-        MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ ) {
+        MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
         isOpe = true;
     }
 
@@ -470,7 +471,7 @@ FriendCard_Common.IsOpeNeedReady = function() {
 /*
 获取当前俱乐部信息
 */
-FriendCard_Common.getClubInfo = function() {
+FriendCard_Common.getClubInfo = function () {
     if (cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         return MjClient.FriendCard_main_ui.data.info;
     }
@@ -480,7 +481,7 @@ FriendCard_Common.getClubInfo = function() {
 /*
 获取当前俱乐部数据
 */
-FriendCard_Common.getClub = function() {
+FriendCard_Common.getClub = function () {
     if (cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.data) {
         return MjClient.FriendCard_main_ui.data;
     }
@@ -490,7 +491,7 @@ FriendCard_Common.getClub = function() {
 /*
 *是否开启了成员导入功能
 */
-FriendCard_Common.isOpenMemberDaoru = function() {
+FriendCard_Common.isOpenMemberDaoru = function () {
     var isOpe = true;
     if (MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
         isOpe = false;
@@ -501,11 +502,11 @@ FriendCard_Common.isOpenMemberDaoru = function() {
 /*
 *是否开启了联盟
 */
-FriendCard_Common.isOpenLM = function() {
+FriendCard_Common.isOpenLM = function () {
     var isOpe = false;
     if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
-        MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || 
+        MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
         MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
@@ -521,12 +522,12 @@ FriendCard_Common.isOpenLM = function() {
 /*
 *判断是否联盟亲友圈
 */
-FriendCard_Common.getClubisLM = function(info) {
+FriendCard_Common.getClubisLM = function (info) {
     var isLM = false;
     if (!info) {
         info = FriendCard_Common.getClubInfo();
     }
-    if(!info || !info.clubId){
+    if (!info || !info.clubId) {
         return false;
     }
 
@@ -538,7 +539,7 @@ FriendCard_Common.getClubisLM = function(info) {
 
 //是否开启房卡免扣加时
 //已开启地区 岳阳、邵阳、永利、旺旺 跑得快玩法 转转麻将 红中麻将 长沙麻将
-FriendCard_Common.isOpenMiankoujiashi = function(gameType) {
+FriendCard_Common.isOpenMiankoujiashi = function (gameType) {
     var isOpe = false;
     if (MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ) {
         isOpe = false;
@@ -567,7 +568,7 @@ FriendCard_Common.isOpenMiankoujiashi = function(gameType) {
             gameType == MjClient.GAME_TYPE.XIN_NING_MA_JIANG || gameType == MjClient.GAME_TYPE.LEI_YANG_GMJ ||
             gameType == MjClient.GAME_TYPE.AN_HUA_PAO_HU_ZI) {
             isOpe = true;
-        } 
+        }
     }
 
     return isOpe;
@@ -578,35 +579,35 @@ FriendCard_Common.isOpenMiankoujiashi = function(gameType) {
 //岳阳歪胡子 益阳歪胡子 南县鬼胡子  沅江鬼胡子 最大值为80 默认40
 //difen 底分
 //return object 
-FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
+FriendCard_Common.getFangkaFreeConfig = function (gameType, difen) {
     var fangkaFrer = {};
-    cc.log("getFangkaFreeConfig gameType",gameType,"difen",difen)
-    if((difen || difen == 0) && FriendCard_Common.roomCardFreeConfig){
+    cc.log("getFangkaFreeConfig gameType", gameType, "difen", difen)
+    if ((difen || difen == 0) && FriendCard_Common.roomCardFreeConfig) {
         //寻找最近的下标
         maxCloseIndex = -1;
         minCloseIndex = -1;
-        for(var i = 0 ; i < FriendCard_Common.roomCardFreeConfig.length; i++){
-            if(FriendCard_Common.roomCardFreeConfig[i].gameType == gameType){
-                if(FriendCard_Common.roomCardFreeConfig[i].difen > difen 
-                    && (maxCloseIndex < 0 || FriendCard_Common.roomCardFreeConfig[i].difen < FriendCard_Common.roomCardFreeConfig[maxCloseIndex].difen)){
+        for (var i = 0; i < FriendCard_Common.roomCardFreeConfig.length; i++) {
+            if (FriendCard_Common.roomCardFreeConfig[i].gameType == gameType) {
+                if (FriendCard_Common.roomCardFreeConfig[i].difen > difen
+                    && (maxCloseIndex < 0 || FriendCard_Common.roomCardFreeConfig[i].difen < FriendCard_Common.roomCardFreeConfig[maxCloseIndex].difen)) {
                     maxCloseIndex = i;
-                }else if(FriendCard_Common.roomCardFreeConfig[i].difen < difen 
-                    && (minCloseIndex < 0 || FriendCard_Common.roomCardFreeConfig[i].difen > FriendCard_Common.roomCardFreeConfig[minCloseIndex].difen)){
+                } else if (FriendCard_Common.roomCardFreeConfig[i].difen < difen
+                    && (minCloseIndex < 0 || FriendCard_Common.roomCardFreeConfig[i].difen > FriendCard_Common.roomCardFreeConfig[minCloseIndex].difen)) {
                     minCloseIndex = i;
-                }else if(FriendCard_Common.roomCardFreeConfig[i].difen == difen){
+                } else if (FriendCard_Common.roomCardFreeConfig[i].difen == difen) {
                     minCloseIndex = i;
                     maxCloseIndex = -1;
                     break;
                 }
             }
         }
-        if(minCloseIndex > -1 || maxCloseIndex > -1){
+        if (minCloseIndex > -1 || maxCloseIndex > -1) {
             fangkaFrer.min = 1; //最小值
             fangkaFrer.default = 20; //默认值
-            if(minCloseIndex > -1){//优先向下取
+            if (minCloseIndex > -1) {//优先向下取
                 fangkaFrer.max = FriendCard_Common.roomCardFreeConfig[minCloseIndex].miankouCap;
                 fangkaFrer.anIncrease = FriendCard_Common.roomCardFreeConfig[minCloseIndex].difen; //每次加减递增多少
-            }else{
+            } else {
                 fangkaFrer.max = FriendCard_Common.roomCardFreeConfig[maxCloseIndex].miankouCap;
                 fangkaFrer.anIncrease = FriendCard_Common.roomCardFreeConfig[maxCloseIndex].difen; //每次加减递增多少
             }
@@ -614,7 +615,7 @@ FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
             return fangkaFrer;
         }
     }
-    
+
     fangkaFrer.min = 1; //最小值
     fangkaFrer.max = 20; //最大值
     fangkaFrer.default = 10; //默认值
@@ -632,12 +633,12 @@ FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
         fangkaFrer.max = 120;
         fangkaFrer.default = 40;
         fangkaFrer.anIncrease = 1;
-    } else if (gameType == MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA ) {//娄底放炮罚 
+    } else if (gameType == MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA) {//娄底放炮罚 
         fangkaFrer.min = 1;
         fangkaFrer.max = 100;
         fangkaFrer.default = 40;
         fangkaFrer.anIncrease = 1;
-    } else if (gameType == MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI ) {//湘乡告胡子
+    } else if (gameType == MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI) {//湘乡告胡子
         fangkaFrer.min = 1;
         fangkaFrer.max = 100;
         fangkaFrer.default = 50;
@@ -647,17 +648,17 @@ FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
         fangkaFrer.max = 1000;
         fangkaFrer.default = 600;
         fangkaFrer.valueList = [];
-        for(var i = 5; i <= 40; i++){
+        for (var i = 5; i <= 40; i++) {
             //5~40
             fangkaFrer.valueList.push(i);
         }
-        for(var i = 0; i < 5; i++){
+        for (var i = 0; i < 5; i++) {
             //50、60、70、80、90
             fangkaFrer.valueList.push(10 * (5 + i));
         }
-        for(var i = 1; i <= 10; i++){
+        for (var i = 1; i <= 10; i++) {
             //100,200,300,400,500,600,700,800,900,1000
-            fangkaFrer.valueList.push(i*100);
+            fangkaFrer.valueList.push(i * 100);
         }
     } else if (gameType == MjClient.GAME_TYPE.XIANG_TAN_PAO_HU_ZI) {//湘潭跑胡子
         fangkaFrer.min = 1;
@@ -675,7 +676,7 @@ FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
         fangkaFrer.default = 10;
         fangkaFrer.anIncrease = 1;
     } else if (gameType == MjClient.GAME_TYPE.XIANG_XIANG_PAO_HU_ZI ||
-               gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI) {//湘乡跑胡子  邵阳剥皮
+        gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI) {//湘乡跑胡子  邵阳剥皮
         fangkaFrer.min = 1;
         fangkaFrer.max = 80;
         fangkaFrer.default = 50;
@@ -698,7 +699,7 @@ FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
         //10~800 10间隔  还有个15
         fangkaFrer.valueList.push(10);
         fangkaFrer.valueList.push(15);
-        for(var i = 20; i <= 800; i = i + 10){
+        for (var i = 20; i <= 800; i = i + 10) {
             fangkaFrer.valueList.push(i);
         }
     } else if (gameType == MjClient.GAME_TYPE.AN_XIANG_WEI_MA_QUE) {//安乡偎麻雀
@@ -706,31 +707,31 @@ FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
         fangkaFrer.max = 150;
         fangkaFrer.default = 100;
         fangkaFrer.anIncrease = 10;
-    }else if (gameType == MjClient.GAME_TYPE.DA_ZI_BO_PI) {//大字剥皮
+    } else if (gameType == MjClient.GAME_TYPE.DA_ZI_BO_PI) {//大字剥皮
         fangkaFrer.min = 1;
         fangkaFrer.max = 80;
         fangkaFrer.default = 50;
         fangkaFrer.anIncrease = 1;
-    }else if (gameType == MjClient.GAME_TYPE.XU_PU_LAO_PAI) {//溆浦老牌
+    } else if (gameType == MjClient.GAME_TYPE.XU_PU_LAO_PAI) {//溆浦老牌
         fangkaFrer.max = 40;
-    }else if(gameType == MjClient.GAME_TYPE.ML_HONGZHONG){//岳阳红中麻将
+    } else if (gameType == MjClient.GAME_TYPE.ML_HONGZHONG) {//岳阳红中麻将
         fangkaFrer.max = 25;
     }
     //岳阳安化七王麻将、安化四王麻将、宁乡开王麻将
-    if ( MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP) {
-        if(gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG ||
+    if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP) {
+        if (gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG ||
             MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
-            gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG_SW|| 
-            gameType == MjClient.GAME_TYPE.NING_XIANG_KAI_WANG){
+            gameType == MjClient.GAME_TYPE.AN_HUA_MA_JIANG_SW ||
+            gameType == MjClient.GAME_TYPE.NING_XIANG_KAI_WANG) {
             fangkaFrer.max = 30;
-        }         
-    } 
+        }
+    }
     // 邵阳 岳阳 十胡卡 六胡抢
     if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP) {
-        if(gameType == MjClient.GAME_TYPE.HY_SHI_HU_KA || gameType == MjClient.GAME_TYPE.HY_LIU_HU_QIANG){
+        if (gameType == MjClient.GAME_TYPE.HY_SHI_HU_KA || gameType == MjClient.GAME_TYPE.HY_LIU_HU_QIANG) {
             fangkaFrer.max = 50;
-        }         
-    } 
+        }
+    }
     //永州 邵阳 跑胡子 落地扫
     if (MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
         if (gameType == MjClient.GAME_TYPE.PAO_HU_ZI || gameType == MjClient.GAME_TYPE.PAO_HU_ZI_King ||
@@ -738,28 +739,28 @@ FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
             gameType == MjClient.GAME_TYPE.PAO_HU_ZI_SR_King || gameType == MjClient.GAME_TYPE.PAO_HU_ZI_SR ||
             gameType == MjClient.GAME_TYPE.LUO_DI_SAO) {
             fangkaFrer.max = 100;
-        }         
-    } 
+        }
+    }
     // 湘乡 衡阳 的低分免扣 优化~~~
-    if(MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ || MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP){
+    if (MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ || MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
         if (GameClass[gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI || GameClass[gameType] == MjClient.GAME_CLASS.MA_JIANG ||
-            GameClass[gameType] == MjClient.GAME_CLASS.PAO_HU_ZI ) { // 
+            GameClass[gameType] == MjClient.GAME_CLASS.PAO_HU_ZI) { // 
             fangkaFrer.max = 50;
-        } 
-        if(gameType == MjClient.GAME_TYPE.LOU_DI_FANG_PAO_FA || gameType == MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI){
+        }
+        if (gameType == MjClient.GAME_TYPE.LOU_DI_FANG_PAO_FA || gameType == MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI) {
             fangkaFrer.max = 100;
         }
-        if(gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA){
+        if (gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA) {
             fangkaFrer.max = 50;
         }
-        
+
     }
 
-    if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
+    if (MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
         if (gameType == MjClient.GAME_TYPE.TY_HONGZHONG ||
             gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN ||
             gameType == MjClient.GAME_TYPE.HUAI_HUA_HONG_GUAI_WAN ||
-            gameType == MjClient.GAME_TYPE.CHANG_SHA){
+            gameType == MjClient.GAME_TYPE.CHANG_SHA) {
             fangkaFrer.max = 50;
         }
     }
@@ -768,14 +769,14 @@ FriendCard_Common.getFangkaFreeConfig = function(gameType,difen) {
 
 
 FriendCard_Common.fangkaPayConfig = {
-    levelStrs: ["普通", "高级", "皇冠","尊贵"],//这个昵称会影响互动道具
+    levelStrs: ["普通", "高级", "皇冠", "尊贵"],//这个昵称会影响互动道具
     zhuangYunPropMaxTimes: [0, 1, 3, 5],
-    maxPayArr: [20, 30,  40, 50],
+    maxPayArr: [20, 30, 40, 50],
     AAPayArr: [10, 15, 20, 30],
     oneRoundMaxPayArr: [20],
     oneRoundAAPayArr: [10],
     infoStrs: [
-        "普通：20钻石 ，无转运道具，推广比例65%", 
+        "普通：20钻石 ，无转运道具，推广比例65%",
         "高级：30钻石 ，转运道具1次/人，互动道具+1，推广费比例70%",
         "皇冠：40钻石 ，转运道具3次/人，互动道具+2，推广费比例75%",
         "尊贵：50钻石 ，转运道具5次/人，互动道具+3，推广费比例80%"]
@@ -783,7 +784,7 @@ FriendCard_Common.fangkaPayConfig = {
 
 //得到当前玩法的档位置,  付费房卡.  fangkaSource:1"赢家出"、2"输家出"、3"AA"
 //return array 
-FriendCard_Common.getFangkaPayArr = function(fangkaSource, isOneRound) {
+FriendCard_Common.getFangkaPayArr = function (fangkaSource, isOneRound) {
     cc.log("isOneRound", isOneRound)
     if (isOneRound) {
         if (fangkaSource == 3) {
@@ -801,7 +802,7 @@ FriendCard_Common.getFangkaPayArr = function(fangkaSource, isOneRound) {
 }
 
 // 房卡房间的房间等级名称
-FriendCard_Common.getFangkaRoomLevelName = function() {
+FriendCard_Common.getFangkaRoomLevelName = function () {
     if (!MjClient.data.sData)
         return "";
 
@@ -814,14 +815,14 @@ FriendCard_Common.getFangkaRoomLevelName = function() {
     return FriendCard_Common.fangkaPayConfig.levelStrs[index] || "";
 }
 
-FriendCard_Common.getFangkaLevelByAreaSelectMode = function() {
+FriendCard_Common.getFangkaLevelByAreaSelectMode = function () {
     if (!MjClient.data.sData)
-        return {num: 0, index: 0};
+        return { num: 0, index: 0 };
 
     var tData = MjClient.data.sData.tData;
     var areaSelectMode = tData.areaSelectMode;
     if (!areaSelectMode.fangkaCount)    // 不是房卡房间
-        return {num: 0, index: 0};
+        return { num: 0, index: 0 };
 
     return FriendCard_Common.getFangkaLevel(
         areaSelectMode.fangkaCount,
@@ -832,7 +833,7 @@ FriendCard_Common.getFangkaLevelByAreaSelectMode = function() {
 }
 
 //得到 向下取接近值. 用来适配付费房卡值 fangkaSource:1"赢家出"、2"输家出"、3"AA"
-FriendCard_Common.getFangkaLevel = function(fangkaCount, fangkaSource, fangkaExtra, maxPlayer, isOneRound) {
+FriendCard_Common.getFangkaLevel = function (fangkaCount, fangkaSource, fangkaExtra, maxPlayer, isOneRound) {
     if (fangkaSource == 3) {
         fangkaCount *= maxPlayer;
         fangkaCount += fangkaExtra;
@@ -841,9 +842,9 @@ FriendCard_Common.getFangkaLevel = function(fangkaCount, fangkaSource, fangkaExt
     return FriendCard_Common.getArrLimit(FriendCard_Common.fangkaPayConfig.maxPayArr, fangkaCount);
 }
 
-FriendCard_Common.getArrLimit = function(arr, num) {
+FriendCard_Common.getArrLimit = function (arr, num) {
     var index = 0;
-    for (var i = arr.length - 1; i > 0; i --) {
+    for (var i = arr.length - 1; i > 0; i--) {
         if (arr[i] <= num) {
             index = i;
             break;
@@ -859,16 +860,16 @@ FriendCard_Common.getArrLimit = function(arr, num) {
 //已开启地区 邵阳,岳阳,耒阳,衡阳 永利 永州 湘乡 山西 贵州 旺旺
 //开启   return true
 //非开启 return false
-FriendCard_Common.IsOpenRoomCardPay = function() {
+FriendCard_Common.IsOpenRoomCardPay = function () {
     var isOpe = false;
 
     //永利不读取roomCardEnable 直接return true
-    if(MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ)
+    if (MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ)
         return true;
     //cms没配置
     if (MjClient.systemConfig && (MjClient.systemConfig.roomCardEnable == "false" || !MjClient.systemConfig.roomCardEnable))
         return false;
-    
+
     if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
         MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP || MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
@@ -880,9 +881,9 @@ FriendCard_Common.IsOpenRoomCardPay = function() {
 }
 
 //是否强制开启免扣加时，true,创建房间将不会显示加时Ui,默认勾选
-FriendCard_Common.isOpenForceMiankoujiashi = function() {
+FriendCard_Common.isOpenForceMiankoujiashi = function () {
     var isOpe = false;
-    if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ ||
+    if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ ||
         MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG) {
         isOpe = true;
     }
@@ -895,88 +896,88 @@ FriendCard_Common.isOpenForceMiankoujiashi = function() {
 isSameScreen是否可以多选
 -1全部，index存的是rule1，rule2中的1,2
 */
-FriendCard_Common.reSetClubRulesSelect = function(clubId,index,isSelect,isSameScreen) {
-    if(!index || index < 0){
+FriendCard_Common.reSetClubRulesSelect = function (clubId, index, isSelect, isSameScreen) {
+    if (!index || index < 0) {
         var clubRulesSelect = [-1];
-        util.localStorageEncrypt.setStringItem("clubRulesSelect_" + clubId,JSON.stringify(clubRulesSelect));
-    }else{
-        if(isSameScreen){
+        util.localStorageEncrypt.setStringItem("clubRulesSelect_" + clubId, JSON.stringify(clubRulesSelect));
+    } else {
+        if (isSameScreen) {
             var clubRulesSelect = FriendCard_Common.getClubRulesSelect(clubId);
-            if(clubRulesSelect.indexOf(-1) > -1){
-                clubRulesSelect.splice(clubRulesSelect.indexOf(-1),1);
+            if (clubRulesSelect.indexOf(-1) > -1) {
+                clubRulesSelect.splice(clubRulesSelect.indexOf(-1), 1);
             }
-            if(isSelect){
-                if(clubRulesSelect.indexOf(index) < 0){
+            if (isSelect) {
+                if (clubRulesSelect.indexOf(index) < 0) {
                     clubRulesSelect.push(index);
                 }
-            }else{
-                if(clubRulesSelect.indexOf(index) > -1){
-                    clubRulesSelect.splice(clubRulesSelect.indexOf(index),1);
+            } else {
+                if (clubRulesSelect.indexOf(index) > -1) {
+                    clubRulesSelect.splice(clubRulesSelect.indexOf(index), 1);
                 }
-                if(clubRulesSelect.length < 1){
+                if (clubRulesSelect.length < 1) {
                     clubRulesSelect.push(-1);
                 }
             }
-        }else{
+        } else {
             var clubRulesSelect = [index];
         }
-        util.localStorageEncrypt.setStringItem("clubRulesSelect_" + clubId,JSON.stringify(clubRulesSelect));
+        util.localStorageEncrypt.setStringItem("clubRulesSelect_" + clubId, JSON.stringify(clubRulesSelect));
     }
 }
 
 //是否只看离线桌子
-FriendCard_Common.isOnlyShowOutLineDesk = function(){
-    var result = util.localStorageEncrypt.getNumberItem(FriendCard_Common.LocalKey.onlyOutLineDesk,0) ? true : false;
+FriendCard_Common.isOnlyShowOutLineDesk = function () {
+    var result = util.localStorageEncrypt.getNumberItem(FriendCard_Common.LocalKey.onlyOutLineDesk, 0) ? true : false;
     return result;
 }
 //设置是否只看离线桌子，按钮只有管理员能看 isManager
-FriendCard_Common.setOnlyShowOutLineDesk = function(value){
-    util.localStorageEncrypt.setNumberItem(FriendCard_Common.LocalKey.onlyOutLineDesk,value);
+FriendCard_Common.setOnlyShowOutLineDesk = function (value) {
+    util.localStorageEncrypt.setNumberItem(FriendCard_Common.LocalKey.onlyOutLineDesk, value);
 }
 /*
 *获取右上角选择的玩法
 */
-FriendCard_Common.getClubRulesSelect = function(clubId){
-    if(!FriendCard_Common.getOSDClub()){
-        var defaultIndex = util.localStorageEncrypt.getNumberItem("clubLastIntoRule" + clubId,MjClient.FriendCard_main_ui.ruleIndex ? MjClient.FriendCard_main_ui.ruleIndex : 1);
-        var clubRulesSelect = JSON.parse(util.localStorageEncrypt.getStringItem("clubRulesSelect_" + clubId,("["+defaultIndex+"]")));
-        if(clubRulesSelect.indexOf(-1) > -1){
+FriendCard_Common.getClubRulesSelect = function (clubId) {
+    if (!FriendCard_Common.getOSDClub()) {
+        var defaultIndex = util.localStorageEncrypt.getNumberItem("clubLastIntoRule" + clubId, MjClient.FriendCard_main_ui.ruleIndex ? MjClient.FriendCard_main_ui.ruleIndex : 1);
+        var clubRulesSelect = JSON.parse(util.localStorageEncrypt.getStringItem("clubRulesSelect_" + clubId, ("[" + defaultIndex + "]")));
+        if (clubRulesSelect.indexOf(-1) > -1) {
             clubRulesSelect = [MjClient.FriendCard_main_ui.ruleIndex];
         }
         return clubRulesSelect;
-    }else{
-        var clubRulesSelect = JSON.parse(util.localStorageEncrypt.getStringItem("clubRulesSelect_" + clubId,"[-1]"));
+    } else {
+        var clubRulesSelect = JSON.parse(util.localStorageEncrypt.getStringItem("clubRulesSelect_" + clubId, "[-1]"));
         return clubRulesSelect;
     }
 }
 /*
 *获取右上角选择的玩法对应是否同屏玩法
 */
-FriendCard_Common.getClubRulesSelectOSD = function(clubId){
-    return util.localStorageEncrypt.getBoolItem("clubRulesSelectOSD_" + clubId,FriendCard_Common.getOSDClub());
+FriendCard_Common.getClubRulesSelectOSD = function (clubId) {
+    return util.localStorageEncrypt.getBoolItem("clubRulesSelectOSD_" + clubId, FriendCard_Common.getOSDClub());
 }
-FriendCard_Common.setClubRulesSelectOSD = function(clubId,isSameScreen){
-    util.localStorageEncrypt.setBoolItem("clubRulesSelectOSD_" + clubId,isSameScreen);
+FriendCard_Common.setClubRulesSelectOSD = function (clubId, isSameScreen) {
+    util.localStorageEncrypt.setBoolItem("clubRulesSelectOSD_" + clubId, isSameScreen);
 }
 
 /*
 *修正右上角选中的规则
 */
-FriendCard_Common.reSetCurSelectRule = function(){
+FriendCard_Common.reSetCurSelectRule = function () {
     var that = MjClient.FriendCard_main_ui;
     var clubRulesSelect = FriendCard_Common.getClubRulesSelect(that.clubId);
     that.ruleBtnNum = FriendCard_Common.getRuleNumber();
-    if(FriendCard_Common.getOSDClub(that)){
+    if (FriendCard_Common.getOSDClub(that)) {
         for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {
             if (!that.data.info["rule" + i] || that.data.info["rule" + i] == "delete") {
-                FriendCard_Common.reSetClubRulesSelect(that.clubId,i,false,true);
+                FriendCard_Common.reSetClubRulesSelect(that.clubId, i, false, true);
             }
         }
     }
-    
-    if (that.data.info["rule" + that.ruleIndex] && that.data.info["rule" + that.ruleIndex] != "delete"){
-        
-    }else{
+
+    if (that.data.info["rule" + that.ruleIndex] && that.data.info["rule" + that.ruleIndex] != "delete") {
+
+    } else {
         for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {
             if (that.data.info["rule" + i] && that.data.info["rule" + i] != "delete") {
                 that.ruleIndex = i;
@@ -984,21 +985,21 @@ FriendCard_Common.reSetCurSelectRule = function(){
             }
         }
     }
-    if(!FriendCard_Common.getOSDClub(that)){
-        FriendCard_Common.reSetClubRulesSelect(that.clubId,that.ruleIndex,true,false)
+    if (!FriendCard_Common.getOSDClub(that)) {
+        FriendCard_Common.reSetClubRulesSelect(that.clubId, that.ruleIndex, true, false)
     }
-    
+
     //todo这里可以处理getClubRulesSelect有可能一个玩法选中都没有的问题
 
 }
 //得到当前俱乐部是否是同屏玩法
 //同屏   return true
 //非同屏 return false
-FriendCard_Common.getOSDClub = function(that) {
-    if (FriendCard_Common.getClubDisplay(that) == 2){
+FriendCard_Common.getOSDClub = function (that) {
+    if (FriendCard_Common.getClubDisplay(that) == 2) {
         return true;
     }
-    else{
+    else {
         return false;
     }
 }
@@ -1007,9 +1008,9 @@ FriendCard_Common.getOSDClub = function(that) {
 //分开显示   return 1
 //合并显示   return 2
 //ps 判断是否全屏用FriendCard_Common.getOSDClub()
-FriendCard_Common.getClubDisplay = function(that) {
-    if(!that)
-        that =  MjClient.FriendCard_main_ui;
+FriendCard_Common.getClubDisplay = function (that) {
+    if (!that)
+        that = MjClient.FriendCard_main_ui;
 
     var display = that.data.info.display;
     if (!display) {
@@ -1034,16 +1035,16 @@ FriendCard_Common.getClubDisplay = function(that) {
 
 //得到俱乐部 sortord
 //0.地区默认 1.开打在前 2.开打在后 4.开打在中
-FriendCard_Common.getClubsortord = function(that) {
-    if(!that)
-        that =  MjClient.FriendCard_main_ui;
+FriendCard_Common.getClubsortord = function (that) {
+    if (!that)
+        that = MjClient.FriendCard_main_ui;
 
-    var sortord =that.data.info.sortord;
+    var sortord = that.data.info.sortord;
     if (!sortord) {
         //衡阳默认开打在前
-        if (MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP || 
+        if (MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
             MjClient.getAppType() == MjClient.APP_TYPE.TXJINZHONGMJ ||
-             MjClient.getAppType() == MjClient.APP_TYPE.DQSHANXIMJ) {
+            MjClient.getAppType() == MjClient.APP_TYPE.DQSHANXIMJ) {
             return 1
         } else {
             return 2
@@ -1054,7 +1055,7 @@ FriendCard_Common.getClubsortord = function(that) {
 }
 
 //得到玩法的超大类型改变桌子图片
-FriendCard_Common.getGameCalssType = function(gameType) {
+FriendCard_Common.getGameCalssType = function (gameType) {
     if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) //邵阳玩法list
     {
         var listArray = getAllGameListArray()._gameTypeList;
@@ -1082,12 +1083,12 @@ FriendCard_Common.getGameCalssType = function(gameType) {
 };
 
 //得到当前app俱乐部是几个玩法
-FriendCard_Common.getRuleNumber = function() {
+FriendCard_Common.getRuleNumber = function () {
     return 30;
 };
 
 //俱乐部弹窗
-FriendCard_Common.isPopView = function(node) {
+FriendCard_Common.isPopView = function (node) {
 
     this.localStorageKey = {};
     this.localStorageKey.KEY_FIENDCARDS_TIME = "KEY_FIENDCARDS_TIME";
@@ -1100,18 +1101,18 @@ FriendCard_Common.isPopView = function(node) {
     var layer;
     var oldScale;
     cc.log("======= _config ", JSON.stringify(_config));
-    
+
     if (_config && _config.bullet) {
         if (_config.bullet.rate == 2) {
             layer = new showAdvLayer(2);
-            node.addChild(layer,1000);
+            node.addChild(layer, 1000);
             oldScale = layer.getScale();
             layer.setScale(0);
             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-        } else if(_config.bullet.rate == 1){
+        } else if (_config.bullet.rate == 1) {
             if (_data != _lastData) {
                 layer = new showAdvLayer(2);
-                node.addChild(layer,1000);
+                node.addChild(layer, 1000);
                 oldScale = layer.getScale();
                 layer.setScale(0);
                 layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
@@ -1132,8 +1133,8 @@ FriendCard_Common.isPopView = function(node) {
 /*
 *红包局宣传图
 */
-FriendCard_Common.showRedPackageAd = function() {
-    if(!cc.sys.isObjectValid(MjClient.FriendCard_main_ui)){
+FriendCard_Common.showRedPackageAd = function () {
+    if (!cc.sys.isObjectValid(MjClient.FriendCard_main_ui)) {
         return;
     }
     var layer = new friendcard_redPackage_ad();
@@ -1146,25 +1147,25 @@ FriendCard_Common.showRedPackageAd = function() {
 //3.fullDeskNum   满人桌子数量
 //sortRuleIndex对应rule1中的1
 //justRoom true 只是返回组合后的桌子列表
-FriendCard_Common.deskSort = function(that,sortRuleIndex,justRoom) {
+FriendCard_Common.deskSort = function (that, sortRuleIndex, justRoom) {
 
-    var setRuleIndex = function(_ruleRoom, ruleIndex) {
+    var setRuleIndex = function (_ruleRoom, ruleIndex) {
         for (var i = 0; i < _ruleRoom.length; i++) {
             _ruleRoom[i].ruleIndex = ruleIndex;
         }
     }
-    
+
     ruleRoom = [];
 
     var frontNoStartRoom = []; //未开始但在最前面的房间
     var noStartRoom = []; //未开始的房间
     var startRoom = []; //开始的房间
-    var startIndex = sortRuleIndex ? (sortRuleIndex - 1) : (FriendCard_Common.getOSDClub(that) ? 0 : that.ruleIndex -1);
+    var startIndex = sortRuleIndex ? (sortRuleIndex - 1) : (FriendCard_Common.getOSDClub(that) ? 0 : that.ruleIndex - 1);
     var endIndex = sortRuleIndex ? sortRuleIndex : (FriendCard_Common.getOSDClub(that) ? FriendCard_Common.getRuleNumber() : that.ruleIndex);
     for (var i = startIndex; i < endIndex; i++) {
-        var otherRuleIndex = i+1;
+        var otherRuleIndex = i + 1;
         var otherRule = that.data.info["rule" + otherRuleIndex];
-        if (otherRule && otherRule != "delete" && (!otherRule.customInfo || sortRuleIndex) && (!that.data["rule" + otherRuleIndex+"Forbid"])) {
+        if (otherRule && otherRule != "delete" && (!otherRule.customInfo || sortRuleIndex) && (!that.data["rule" + otherRuleIndex + "Forbid"])) {
             if (!that.data.room["roomList" + otherRuleIndex])
                 that.data.room["roomList" + otherRuleIndex] = [];
             var otherRuleRoom = that.data.room["roomList" + otherRuleIndex].slice();
@@ -1175,24 +1176,24 @@ FriendCard_Common.deskSort = function(that,sortRuleIndex,justRoom) {
             ruleRoom = ruleRoom.concat(otherRuleRoom);
         }
     }
-    if(justRoom){
+    if (justRoom) {
         //只是返回组合后的桌子列表
         return ruleRoom;
     }
     var _roomNum = [];
     for (var i = startIndex; i < endIndex; i++) {
-        _roomNum[i] =[];
-        for(var j = 0;j < ruleRoom.length;j++){
-            if (_roomNum[i] && ruleRoom[j] && ruleRoom[j].ruleIndex == (i+1))
+        _roomNum[i] = [];
+        for (var j = 0; j < ruleRoom.length; j++) {
+            if (_roomNum[i] && ruleRoom[j] && ruleRoom[j].ruleIndex == (i + 1))
                 _roomNum[i].push(ruleRoom[j]);
         }
     }
     ruleRoom = [];
-    
+
     var extraFullRoomNum = 0;
-    var roomArrOpe = function(roomArr) {
-        var _roomArr = FriendCard_Common.roomArrOpe(roomArr,{
-            noSortByPlayerNum : true
+    var roomArrOpe = function (roomArr) {
+        var _roomArr = FriendCard_Common.roomArrOpe(roomArr, {
+            noSortByPlayerNum: true
         });
         frontNoStartRoom = frontNoStartRoom.concat(_roomArr.frontNoStartRoom);
         noStartRoom = noStartRoom.concat(_roomArr.noStartRoom);
@@ -1202,7 +1203,7 @@ FriendCard_Common.deskSort = function(that,sortRuleIndex,justRoom) {
     //为了得到所有玩法的满人桌子，和未满人桌子，要对所有roomList进行处理
     for (var i = startIndex; i < endIndex; i++) {
         //右上角玩法选中过滤
-        if(clubRulesSelect.indexOf(-1) > -1 || clubRulesSelect.indexOf((i+1)) > -1){
+        if (clubRulesSelect.indexOf(-1) > -1 || clubRulesSelect.indexOf((i + 1)) > -1) {
             roomArrOpe(_roomNum[i]);
         }
     }
@@ -1213,78 +1214,78 @@ FriendCard_Common.deskSort = function(that,sortRuleIndex,justRoom) {
     //         return b.players.length - a.players.length;
     //     });
     // }
-    if(FriendCard_Common.isOnlyShowOutLineDesk() && FriendCard_Common.isManager()){
+    if (FriendCard_Common.isOnlyShowOutLineDesk() && FriendCard_Common.isManager()) {
         //只显示离线桌子
-        var arrs = [noStartRoom,frontNoStartRoom,startRoom];
-        for(var k = 0 ; k < arrs.length; k++){
-            for(var i = arrs[k].length -1; i >= 0; i--){
+        var arrs = [noStartRoom, frontNoStartRoom, startRoom];
+        for (var k = 0; k < arrs.length; k++) {
+            for (var i = arrs[k].length - 1; i >= 0; i--) {
                 var hasOffLine = false;
-                if(arrs[k][i].players){
-                    for(var j = 0; j < arrs[k][i].players.length; j++){
-                        if(arrs[k][i].players[j].offline == true){
+                if (arrs[k][i].players) {
+                    for (var j = 0; j < arrs[k][i].players.length; j++) {
+                        if (arrs[k][i].players[j].offline == true) {
                             hasOffLine = true;
                             break;
                         }
                     }
                 }
-                if(!hasOffLine){
-                    arrs[k].splice(i,1)
+                if (!hasOffLine) {
+                    arrs[k].splice(i, 1)
                 }
             }
         }
-    }else{
+    } else {
         //隐藏已开打桌子处理
-        if(FriendCard_Common.isLMClub()){
-            if(that.data.info.isTableHidden === 4){
+        if (FriendCard_Common.isLMClub()) {
+            if (that.data.info.isTableHidden === 4) {
                 //隐藏全部
                 startRoom = [];
-                
-            }else if (that.data.info.isTableHidden === 2){
+
+            } else if (that.data.info.isTableHidden === 2) {
                 //隐藏1/2
                 var beginIndex = startRoom.length - startRoom.length % 2;
-                for(var i = beginIndex; i > 0; i--){
-                    if(i % 2 == 0){
-                        startRoom.splice(i-1,1);
+                for (var i = beginIndex; i > 0; i--) {
+                    if (i % 2 == 0) {
+                        startRoom.splice(i - 1, 1);
                     }
                 }
-            }else if (that.data.info.isTableHidden === 3){
+            } else if (that.data.info.isTableHidden === 3) {
                 //联盟最多展示20张开打桌子，与玩法无关
-                for(var i = startRoom.length - 1; i >= 20 ; i--){
-                    startRoom.splice(i,1);
+                for (var i = startRoom.length - 1; i >= 20; i--) {
+                    startRoom.splice(i, 1);
                 }
-            }else{
+            } else {
                 //联盟每个玩法最多留2张开打桌子
                 var ruleIndex = -1;
                 var ruleIndexNum = -1;
-                for(var i = startRoom.length -1; i >= 0; i--){
-                    if(ruleIndex != startRoom[i].ruleIndex){
+                for (var i = startRoom.length - 1; i >= 0; i--) {
+                    if (ruleIndex != startRoom[i].ruleIndex) {
                         ruleIndex = startRoom[i].ruleIndex;
                         ruleIndexNum = 0;
                     }
                     ruleIndexNum++;
-                    if(ruleIndexNum > FriendCard_Common.maxPreStartRoomLM){
-                        startRoom.splice(i,1)
+                    if (ruleIndexNum > FriendCard_Common.maxPreStartRoomLM) {
+                        startRoom.splice(i, 1)
                     }
                 }
             }
-        }else{
+        } else {
             //只对玩家进行隐藏，盟主、会长、管理员、组长、助理照常显示,隐藏已开打桌子
-            if(FriendCard_Common.isOrdinaryMember()){
-                if(that.data.info.isTableHidden === 2 || that.data.info.isTableHidden === 3){
+            if (FriendCard_Common.isOrdinaryMember()) {
+                if (that.data.info.isTableHidden === 2 || that.data.info.isTableHidden === 3) {
                     //2:隐藏1/2已经开打的桌子  3:隐藏1/3已经开打的桌子
                     var beginIndex = startRoom.length - startRoom.length % that.data.info.isTableHidden;
-                    for(var i = beginIndex; i > 0; i--){
-                        if(i % that.data.info.isTableHidden == 0){
-                            startRoom.splice(i-1,1);
+                    for (var i = beginIndex; i > 0; i--) {
+                        if (i % that.data.info.isTableHidden == 0) {
+                            startRoom.splice(i - 1, 1);
                         }
                     }
-                }else if (that.data.info.isTableHidden === 4){
+                } else if (that.data.info.isTableHidden === 4) {
                     startRoom = [];
                 }
             }
         }
     }
-    
+
 
     var allEmptyRoom = [];
     var allWaitStartRoom = [];
@@ -1294,31 +1295,31 @@ FriendCard_Common.deskSort = function(that,sortRuleIndex,justRoom) {
         var emptyRoom = [];//假桌子
 
         //拆分桌子
-        for (var j = noStartRoom.length -1; j >= 0; j--) {
-            if(noStartRoom[j].ruleIndex == (i+1)){
-                var itemData = (noStartRoom.splice(j,1))[0];
-                if(itemData.roomNum){
+        for (var j = noStartRoom.length - 1; j >= 0; j--) {
+            if (noStartRoom[j].ruleIndex == (i + 1)) {
+                var itemData = (noStartRoom.splice(j, 1))[0];
+                if (itemData.roomNum) {
                     ruleWaitStartRoom.unshift(itemData);
-                }else{
+                } else {
                     emptyRoom.unshift(itemData);
                 }
             }
         }
-        for (var j = frontNoStartRoom.length -1; j >= 0; j--) {
-            if(frontNoStartRoom[j].ruleIndex == (i+1)){
-                var itemData = (frontNoStartRoom.splice(j,1))[0];
-                if(itemData.roomNum){
+        for (var j = frontNoStartRoom.length - 1; j >= 0; j--) {
+            if (frontNoStartRoom[j].ruleIndex == (i + 1)) {
+                var itemData = (frontNoStartRoom.splice(j, 1))[0];
+                if (itemData.roomNum) {
                     ruleWaitStartRoom.unshift(itemData);
-                }else{
+                } else {
                     emptyRoom.unshift(itemData);
                 }
             }
         }
         allWaitStartRoom = allWaitStartRoom.concat(ruleWaitStartRoom);
         allEmptyRoom = allEmptyRoom.concat(emptyRoom);
-        
+
     }
-    ruleRoom = FriendCard_Common.sortRoom(that,allWaitStartRoom,allEmptyRoom,startRoom);
+    ruleRoom = FriendCard_Common.sortRoom(that, allWaitStartRoom, allEmptyRoom, startRoom);
 
     var msg = {};
     msg.ruleRoom = ruleRoom;
@@ -1328,10 +1329,10 @@ FriendCard_Common.deskSort = function(that,sortRuleIndex,justRoom) {
 
     msg.nofullDeskNum = 0;
     msg.fullDeskNum = 0;
-    for(var i = 0; i < ruleRoom.length; i++){
-        if(ruleRoom[i].players.length >= ruleRoom[i].maxPlayer || (ruleRoom[i].roundNum && ruleRoom[i].roundNum > 0)){
+    for (var i = 0; i < ruleRoom.length; i++) {
+        if (ruleRoom[i].players.length >= ruleRoom[i].maxPlayer || (ruleRoom[i].roundNum && ruleRoom[i].roundNum > 0)) {
             msg.fullDeskNum++;
-        }else{
+        } else {
             msg.nofullDeskNum++;
         }
     }
@@ -1341,13 +1342,13 @@ FriendCard_Common.deskSort = function(that,sortRuleIndex,justRoom) {
 /*
 *本地处理俱乐部桌子2，增量更新，目前的isTableHidden只处理了联盟
 */
-FriendCard_Common.reHandleDeskSort = function(that,params){
-    
+FriendCard_Common.reHandleDeskSort = function (that, params) {
+
     var optRoomData;
 
-    var ruleIndexRooms = FriendCard_Common.deskSort(that,params.data.ruleId,true);
-    for(var i = 0 ; i < ruleIndexRooms.length; i++){
-        if(ruleIndexRooms[i].roomNum == params.data.roomNum){
+    var ruleIndexRooms = FriendCard_Common.deskSort(that, params.data.ruleId, true);
+    for (var i = 0; i < ruleIndexRooms.length; i++) {
+        if (ruleIndexRooms[i].roomNum == params.data.roomNum) {
             optRoomData = JSON.parse(JSON.stringify(ruleIndexRooms[i]));
             break;
         }
@@ -1357,20 +1358,20 @@ FriendCard_Common.reHandleDeskSort = function(that,params){
     var isStartRoomLocal = false;//本地桌子信息是否已经开打
     var indexLocal = -1;
 
-    if(optRoomData && optRoomData.roundNum){
+    if (optRoomData && optRoomData.roundNum) {
         isStartRoomServer = true;
     }
-    
-    for(var i = 0; i < that._deskRoomData.startRoom.length; i++){
-        if(that._deskRoomData.startRoom[i].roomNum == params.data.roomNum){
+
+    for (var i = 0; i < that._deskRoomData.startRoom.length; i++) {
+        if (that._deskRoomData.startRoom[i].roomNum == params.data.roomNum) {
             isStartRoomLocal = true;
             indexLocal = i;
             break;
         }
     }
-    if(indexLocal < 0){
-        for(var i = 0; i < that._deskRoomData.allWaitStartRoom.length; i++){
-            if(that._deskRoomData.allWaitStartRoom[i].roomNum == params.data.roomNum){
+    if (indexLocal < 0) {
+        for (var i = 0; i < that._deskRoomData.allWaitStartRoom.length; i++) {
+            if (that._deskRoomData.allWaitStartRoom[i].roomNum == params.data.roomNum) {
                 indexLocal = i;
                 break;
             }
@@ -1380,403 +1381,403 @@ FriendCard_Common.reHandleDeskSort = function(that,params){
     var conditionType0 = optRoomData && (params.data.type == 0 && params.data.roomNum);
     var conditionType1 = !optRoomData && (params.data.type == 1 && params.data.roomNum) && (indexLocal > -1);
     var conditionType2 = optRoomData && (params.data.type == 2 && params.data.roomNum) && (indexLocal > -1);
-    if(conditionType0 || conditionType1 || conditionType2){
+    if (conditionType0 || conditionType1 || conditionType2) {
         if (FriendCard_Common.getClubsortord(that) == 2) {
             //开打的在后
-            if(params.data.type == 0){
+            if (params.data.type == 0) {
                 //新增桌子，需要避免后端重复消息bug导致重复添加
-                if(indexLocal < 0){
+                if (indexLocal < 0) {
                     that._deskRoomData.allWaitStartRoom.push(optRoomData);
-                    if(that._deskRoomData.startRoom.length > 1){
-                        FriendCard_Common.toTailArr(that._deskRoomData.startRoom,0);
+                    if (that._deskRoomData.startRoom.length > 1) {
+                        FriendCard_Common.toTailArr(that._deskRoomData.startRoom, 0);
                     }
-                }else{
-                    if(isStartRoomLocal){
+                } else {
+                    if (isStartRoomLocal) {
                         that._deskRoomData.startRoom[indexLocal] = optRoomData;
-                    }else{
+                    } else {
                         that._deskRoomData.allWaitStartRoom[indexLocal] = optRoomData;
                     }
                 }
-                
-            }else if(params.data.type == 1){
+
+            } else if (params.data.type == 1) {
                 //移除桌子
-                if(isStartRoomLocal){
-                    if(that._deskRoomData.startRoom.length > 1){
-                        FriendCard_Common.swapArr(that._deskRoomData.startRoom,indexLocal,that._deskRoomData.startRoom.length-1);
+                if (isStartRoomLocal) {
+                    if (that._deskRoomData.startRoom.length > 1) {
+                        FriendCard_Common.swapArr(that._deskRoomData.startRoom, indexLocal, that._deskRoomData.startRoom.length - 1);
                     }
-                    that._deskRoomData.startRoom.splice(that._deskRoomData.startRoom.length-1,1);
-                }else{
-                    if(that._deskRoomData.allWaitStartRoom.length > 1){
-                        FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom,indexLocal,that._deskRoomData.allWaitStartRoom.length-1);
+                    that._deskRoomData.startRoom.splice(that._deskRoomData.startRoom.length - 1, 1);
+                } else {
+                    if (that._deskRoomData.allWaitStartRoom.length > 1) {
+                        FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom, indexLocal, that._deskRoomData.allWaitStartRoom.length - 1);
                     }
-                    that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length-1,1);
-                    if(that._deskRoomData.startRoom.length > 1){
-                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length-1);
+                    that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length - 1, 1);
+                    if (that._deskRoomData.startRoom.length > 1) {
+                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                     }
                 }
-            }else{
+            } else {
                 //修改桌子
-                if(isStartRoomServer){
-                    if(isStartRoomLocal){
+                if (isStartRoomServer) {
+                    if (isStartRoomLocal) {
                         that._deskRoomData.startRoom[indexLocal] = optRoomData;
-                    }else{
+                    } else {
                         //未开局变成开局
-                        if(that._deskRoomData.allWaitStartRoom.length > 1){
-                            FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom,indexLocal,that._deskRoomData.allWaitStartRoom.length-1);
+                        if (that._deskRoomData.allWaitStartRoom.length > 1) {
+                            FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom, indexLocal, that._deskRoomData.allWaitStartRoom.length - 1);
                         }
 
-                        that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length-1,1);
-                        
-                        if(FriendCard_Common.isLMClub()){
-                            if(that.data.info.isTableHidden == 3){
+                        that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length - 1, 1);
+
+                        if (FriendCard_Common.isLMClub()) {
+                            if (that.data.info.isTableHidden == 3) {
                                 //开打桌子全部玩法最多20张
-                                if(that._deskRoomData.startRoom.length < FriendCard_Common.maxAllStartRoomLM){
+                                if (that._deskRoomData.startRoom.length < FriendCard_Common.maxAllStartRoomLM) {
                                     that._deskRoomData.startRoom.unshift(optRoomData);
-                                }else{
-                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                } else {
+                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                 }
-                            }else if(that.data.info.isTableHidden == 2){
+                            } else if (that.data.info.isTableHidden == 2) {
                                 //开打桌子隐藏1/2
                                 var serverStartRoomNum = 0;
-                                for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                    if(ruleIndexRooms[i].roundNum){
+                                for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                    if (ruleIndexRooms[i].roundNum) {
                                         serverStartRoomNum++;
                                     }
                                 }
-                                if(that._deskRoomData.startRoom.length * 2 < serverStartRoomNum){
+                                if (that._deskRoomData.startRoom.length * 2 < serverStartRoomNum) {
                                     that._deskRoomData.startRoom.unshift(optRoomData);
-                                }else{
-                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                } else {
+                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                 }
-                            }else if(that.data.info.isTableHidden == 4){
+                            } else if (that.data.info.isTableHidden == 4) {
                                 //开打桌子全部隐藏
-                            }else{
+                            } else {
                                 //开打桌子每个玩法最多2张
                                 var ruleIndexNum = 0;
-                                for(var i = 0; i < that._deskRoomData.startRoom.length; i++){
-                                    if(that._deskRoomData.startRoom[i].ruleIndex == params.data.ruleId){
+                                for (var i = 0; i < that._deskRoomData.startRoom.length; i++) {
+                                    if (that._deskRoomData.startRoom[i].ruleIndex == params.data.ruleId) {
                                         ruleIndexNum++;
                                     }
                                 }
-                                if(ruleIndexNum < FriendCard_Common.maxPreStartRoomLM){
+                                if (ruleIndexNum < FriendCard_Common.maxPreStartRoomLM) {
                                     that._deskRoomData.startRoom.unshift(optRoomData);
-                                }else{
-                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                } else {
+                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                 }
                             }
-                        }else{
+                        } else {
                             //亲友圈只对玩家进行隐藏，盟主、会长、管理员、组长、助理照常显示,隐藏已开打桌子
-                            if(FriendCard_Common.isOrdinaryMember()){
-                                if(that.data.info.isTableHidden === 2){
+                            if (FriendCard_Common.isOrdinaryMember()) {
+                                if (that.data.info.isTableHidden === 2) {
                                     //2:隐藏1/2已经开打的桌子
                                     var serverStartRoomNum = 0;
-                                    for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                        if(ruleIndexRooms[i].roundNum){
+                                    for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                        if (ruleIndexRooms[i].roundNum) {
                                             serverStartRoomNum++;
                                         }
                                     }
-                                    if(that._deskRoomData.startRoom.length * 2 < serverStartRoomNum){
+                                    if (that._deskRoomData.startRoom.length * 2 < serverStartRoomNum) {
                                         that._deskRoomData.startRoom.unshift(optRoomData);
-                                    }else{
-                                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                    } else {
+                                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                     }
-                                }else if(that.data.info.isTableHidden === 3){
+                                } else if (that.data.info.isTableHidden === 3) {
                                     //3:隐藏1/3已经开打的桌子
                                     var serverStartRoomNum = 0;
-                                    for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                        if(ruleIndexRooms[i].roundNum){
+                                    for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                        if (ruleIndexRooms[i].roundNum) {
                                             serverStartRoomNum++;
                                         }
                                     }
-                                    if(that._deskRoomData.startRoom.length * 3 / 2 < serverStartRoomNum){
+                                    if (that._deskRoomData.startRoom.length * 3 / 2 < serverStartRoomNum) {
                                         that._deskRoomData.startRoom.unshift(optRoomData);
-                                    }else{
-                                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                    } else {
+                                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                     }
-                                }else if (that.data.info.isTableHidden === 4){
+                                } else if (that.data.info.isTableHidden === 4) {
                                     //开打桌子全部隐藏
-                                }else{
+                                } else {
                                     //不隐藏
                                     that._deskRoomData.startRoom.unshift(optRoomData);
                                 }
-                            }else{
+                            } else {
                                 that._deskRoomData.startRoom.unshift(optRoomData);
                             }
                         }
-                        
+
                     }
-                }else{
-                    if(isStartRoomLocal){
-                        if(that._deskRoomData.startRoom.length > 1){
-                            FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,indexLocal);
+                } else {
+                    if (isStartRoomLocal) {
+                        if (that._deskRoomData.startRoom.length > 1) {
+                            FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, indexLocal);
                         }
-                        that._deskRoomData.startRoom.splice(0,1);
+                        that._deskRoomData.startRoom.splice(0, 1);
                         that._deskRoomData.allWaitStartRoom.push(optRoomData);
-                    }else{
+                    } else {
                         that._deskRoomData.allWaitStartRoom[indexLocal] = optRoomData;
                     }
                 }
             }
-        }else if (FriendCard_Common.getClubsortord(that) == 4) {
+        } else if (FriendCard_Common.getClubsortord(that) == 4) {
             //开打的在中
-            if(params.data.type == 0){
+            if (params.data.type == 0) {
                 //新增桌子，需要避免后端重复消息bug导致重复添加
-                if(indexLocal < 0){
+                if (indexLocal < 0) {
                     that._deskRoomData.allWaitStartRoom.push(optRoomData);
-                    if(that._deskRoomData.startRoom.length > 1){
-                        FriendCard_Common.toTailArr(that._deskRoomData.startRoom,0);
+                    if (that._deskRoomData.startRoom.length > 1) {
+                        FriendCard_Common.toTailArr(that._deskRoomData.startRoom, 0);
                     }
-                }else{
-                    if(isStartRoomLocal){
+                } else {
+                    if (isStartRoomLocal) {
                         that._deskRoomData.startRoom[indexLocal] = optRoomData;
-                    }else{
+                    } else {
                         that._deskRoomData.allWaitStartRoom[indexLocal] = optRoomData;
                     }
                 }
-                
-            }else if(params.data.type == 1){
+
+            } else if (params.data.type == 1) {
                 //移除桌子
-                if(isStartRoomLocal){
-                    if(that._deskRoomData.startRoom.length > 1){
-                        FriendCard_Common.swapArr(that._deskRoomData.startRoom,indexLocal,that._deskRoomData.startRoom.length-1);
+                if (isStartRoomLocal) {
+                    if (that._deskRoomData.startRoom.length > 1) {
+                        FriendCard_Common.swapArr(that._deskRoomData.startRoom, indexLocal, that._deskRoomData.startRoom.length - 1);
                     }
-                    that._deskRoomData.startRoom.splice(that._deskRoomData.startRoom.length-1,1);
-                }else{
-                    if(that._deskRoomData.allWaitStartRoom.length > 1){
-                        FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom,indexLocal,that._deskRoomData.allWaitStartRoom.length-1);
+                    that._deskRoomData.startRoom.splice(that._deskRoomData.startRoom.length - 1, 1);
+                } else {
+                    if (that._deskRoomData.allWaitStartRoom.length > 1) {
+                        FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom, indexLocal, that._deskRoomData.allWaitStartRoom.length - 1);
                     }
-                    that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length-1,1);
-                    if(that._deskRoomData.startRoom.length > 1){
-                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length-1);
+                    that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length - 1, 1);
+                    if (that._deskRoomData.startRoom.length > 1) {
+                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                     }
                 }
-            }else{
+            } else {
                 //修改桌子
-                if(isStartRoomServer){
-                    if(isStartRoomLocal){
+                if (isStartRoomServer) {
+                    if (isStartRoomLocal) {
                         that._deskRoomData.startRoom[indexLocal] = optRoomData;
-                    }else{
+                    } else {
                         //未开局变成开局
-                        if(that._deskRoomData.allWaitStartRoom.length > 1){
-                            FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom,indexLocal,that._deskRoomData.allWaitStartRoom.length-1);
+                        if (that._deskRoomData.allWaitStartRoom.length > 1) {
+                            FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom, indexLocal, that._deskRoomData.allWaitStartRoom.length - 1);
                         }
 
-                        that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length-1,1);
-                        if(FriendCard_Common.isLMClub()){
-                            if(that.data.info.isTableHidden == 3){
+                        that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length - 1, 1);
+                        if (FriendCard_Common.isLMClub()) {
+                            if (that.data.info.isTableHidden == 3) {
                                 //开打桌子全部玩法最多20张
-                                if(that._deskRoomData.startRoom.length < FriendCard_Common.maxAllStartRoomLM){
+                                if (that._deskRoomData.startRoom.length < FriendCard_Common.maxAllStartRoomLM) {
                                     that._deskRoomData.startRoom.unshift(optRoomData);
-                                }else{
-                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                } else {
+                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                 }
-                            }else if(that.data.info.isTableHidden == 2){
+                            } else if (that.data.info.isTableHidden == 2) {
                                 //开打桌子隐藏1/2
                                 var serverStartRoomNum = 0;
-                                for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                    if(ruleIndexRooms[i].roundNum){
+                                for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                    if (ruleIndexRooms[i].roundNum) {
                                         serverStartRoomNum++;
                                     }
                                 }
-                                if(that._deskRoomData.startRoom.length * 2 < serverStartRoomNum){
+                                if (that._deskRoomData.startRoom.length * 2 < serverStartRoomNum) {
                                     that._deskRoomData.startRoom.unshift(optRoomData);
-                                }else{
-                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                } else {
+                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                 }
-                            }else if(that.data.info.isTableHidden == 4){
+                            } else if (that.data.info.isTableHidden == 4) {
                                 //开打桌子全部隐藏
-                            }else{
+                            } else {
                                 //开打桌子每个玩法最多2张
                                 var ruleIndexNum = 0;
-                                for(var i = 0; i < that._deskRoomData.startRoom.length; i++){
-                                    if(that._deskRoomData.startRoom[i].ruleIndex == params.data.ruleId){
+                                for (var i = 0; i < that._deskRoomData.startRoom.length; i++) {
+                                    if (that._deskRoomData.startRoom[i].ruleIndex == params.data.ruleId) {
                                         ruleIndexNum++;
                                     }
                                 }
-                                if(ruleIndexNum < FriendCard_Common.maxPreStartRoomLM){
+                                if (ruleIndexNum < FriendCard_Common.maxPreStartRoomLM) {
                                     that._deskRoomData.startRoom.unshift(optRoomData);
-                                }else{
-                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                } else {
+                                    FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                 }
                             }
-                        }else{
+                        } else {
                             //亲友圈只对玩家进行隐藏，盟主、会长、管理员、组长、助理照常显示,隐藏已开打桌子
-                            if(FriendCard_Common.isOrdinaryMember()){
-                                if(that.data.info.isTableHidden === 2){
+                            if (FriendCard_Common.isOrdinaryMember()) {
+                                if (that.data.info.isTableHidden === 2) {
                                     //2:隐藏1/2已经开打的桌子
                                     var serverStartRoomNum = 0;
-                                    for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                        if(ruleIndexRooms[i].roundNum){
+                                    for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                        if (ruleIndexRooms[i].roundNum) {
                                             serverStartRoomNum++;
                                         }
                                     }
 
-                                    if(that._deskRoomData.startRoom.length * 2 < serverStartRoomNum){
+                                    if (that._deskRoomData.startRoom.length * 2 < serverStartRoomNum) {
                                         that._deskRoomData.startRoom.unshift(optRoomData);
-                                    }else{
-                                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                    } else {
+                                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                     }
-                                }else if(that.data.info.isTableHidden === 3){
+                                } else if (that.data.info.isTableHidden === 3) {
                                     //3:隐藏1/3已经开打的桌子
                                     var serverStartRoomNum = 0;
-                                    for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                        if(ruleIndexRooms[i].roundNum){
+                                    for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                        if (ruleIndexRooms[i].roundNum) {
                                             serverStartRoomNum++;
                                         }
                                     }
-                                    if(that._deskRoomData.startRoom.length * 3 / 2 < serverStartRoomNum){
+                                    if (that._deskRoomData.startRoom.length * 3 / 2 < serverStartRoomNum) {
                                         that._deskRoomData.startRoom.unshift(optRoomData);
-                                    }else{
-                                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,that._deskRoomData.startRoom.length -1);
+                                    } else {
+                                        FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, that._deskRoomData.startRoom.length - 1);
                                     }
-                                }else if (that.data.info.isTableHidden === 4){
+                                } else if (that.data.info.isTableHidden === 4) {
                                     //开打桌子全部隐藏
-                                }else{
+                                } else {
                                     //不隐藏
                                     that._deskRoomData.startRoom.unshift(optRoomData);
                                 }
-                            }else{
+                            } else {
                                 that._deskRoomData.startRoom.unshift(optRoomData);
                             }
                         }
                     }
-                }else{
-                    if(isStartRoomLocal){
-                        if(that._deskRoomData.startRoom.length > 1){
-                            FriendCard_Common.toFirstArr(that._deskRoomData.startRoom,indexLocal);
+                } else {
+                    if (isStartRoomLocal) {
+                        if (that._deskRoomData.startRoom.length > 1) {
+                            FriendCard_Common.toFirstArr(that._deskRoomData.startRoom, indexLocal);
                         }
-                        that._deskRoomData.startRoom.splice(0,1);
+                        that._deskRoomData.startRoom.splice(0, 1);
                         that._deskRoomData.allWaitStartRoom.push(optRoomData);
-                    }else{
+                    } else {
                         that._deskRoomData.allWaitStartRoom[indexLocal] = optRoomData;
                     }
                 }
             }
-        }else{
+        } else {
             //开打在前
-            if(params.data.type == 0){
+            if (params.data.type == 0) {
                 //新增桌子，需要避免后端重复消息bug导致重复添加
-                if(indexLocal < 0){
+                if (indexLocal < 0) {
                     that._deskRoomData.allWaitStartRoom.push(optRoomData);
-                }else{
-                    if(isStartRoomLocal){
+                } else {
+                    if (isStartRoomLocal) {
                         that._deskRoomData.startRoom[indexLocal] = optRoomData;
-                    }else{
+                    } else {
                         that._deskRoomData.allWaitStartRoom[indexLocal] = optRoomData;
                     }
                 }
-            }else if(params.data.type == 1){
+            } else if (params.data.type == 1) {
                 //移除桌子
-                if(isStartRoomLocal){
-                    if(that._deskRoomData.startRoom.length > 1){
-                        FriendCard_Common.swapArr(that._deskRoomData.startRoom,indexLocal,that._deskRoomData.startRoom.length-1);
+                if (isStartRoomLocal) {
+                    if (that._deskRoomData.startRoom.length > 1) {
+                        FriendCard_Common.swapArr(that._deskRoomData.startRoom, indexLocal, that._deskRoomData.startRoom.length - 1);
                     }
-                    that._deskRoomData.startRoom.splice(that._deskRoomData.startRoom.length-1,1);
-                    if(that._deskRoomData.allWaitStartRoom.length > 1){
-                        FriendCard_Common.toFirstArr(that._deskRoomData.allWaitStartRoom,that._deskRoomData.allWaitStartRoom.length-1);
+                    that._deskRoomData.startRoom.splice(that._deskRoomData.startRoom.length - 1, 1);
+                    if (that._deskRoomData.allWaitStartRoom.length > 1) {
+                        FriendCard_Common.toFirstArr(that._deskRoomData.allWaitStartRoom, that._deskRoomData.allWaitStartRoom.length - 1);
                     }
-                }else{
-                    if(that._deskRoomData.allWaitStartRoom.length > 1){
-                        FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom,indexLocal,that._deskRoomData.allWaitStartRoom.length-1);
+                } else {
+                    if (that._deskRoomData.allWaitStartRoom.length > 1) {
+                        FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom, indexLocal, that._deskRoomData.allWaitStartRoom.length - 1);
                     }
-                    that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length-1,1);
+                    that._deskRoomData.allWaitStartRoom.splice(that._deskRoomData.allWaitStartRoom.length - 1, 1);
                 }
-            }else{
+            } else {
                 //修改桌子
-                if(isStartRoomServer){
-                    if(isStartRoomLocal){
+                if (isStartRoomServer) {
+                    if (isStartRoomLocal) {
                         that._deskRoomData.startRoom[indexLocal] = optRoomData;
-                    }else{
+                    } else {
                         //未开局变成开局
-                        if(that._deskRoomData.allWaitStartRoom.length > 1){
-                            FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom,indexLocal,0);
+                        if (that._deskRoomData.allWaitStartRoom.length > 1) {
+                            FriendCard_Common.swapArr(that._deskRoomData.allWaitStartRoom, indexLocal, 0);
                         }
-                        that._deskRoomData.allWaitStartRoom.splice(0,1);
+                        that._deskRoomData.allWaitStartRoom.splice(0, 1);
 
                         var ruleIndexNum = 0;
-                        for(var i = 0; i < that._deskRoomData.startRoom.length; i++){
-                            if(that._deskRoomData.startRoom[i].ruleIndex == params.data.ruleId){
+                        for (var i = 0; i < that._deskRoomData.startRoom.length; i++) {
+                            if (that._deskRoomData.startRoom[i].ruleIndex == params.data.ruleId) {
                                 ruleIndexNum++;
                             }
                         }
 
                         if (FriendCard_Common.isLMClub()) {
-                            if(that.data.info.isTableHidden == 3){
+                            if (that.data.info.isTableHidden == 3) {
                                 //开打桌子全部玩法最多20张
-                                if(that._deskRoomData.startRoom.length < FriendCard_Common.maxAllStartRoomLM){
+                                if (that._deskRoomData.startRoom.length < FriendCard_Common.maxAllStartRoomLM) {
                                     that._deskRoomData.startRoom.push(optRoomData);
                                 }
-                            }else if(that.data.info.isTableHidden == 2){
+                            } else if (that.data.info.isTableHidden == 2) {
                                 //开打桌子隐藏1/2
                                 var serverStartRoomNum = 0;
-                                for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                    if(ruleIndexRooms[i].roundNum){
+                                for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                    if (ruleIndexRooms[i].roundNum) {
                                         serverStartRoomNum++;
                                     }
                                 }
-                                if(that._deskRoomData.startRoom.length * 2 < serverStartRoomNum){
+                                if (that._deskRoomData.startRoom.length * 2 < serverStartRoomNum) {
                                     that._deskRoomData.startRoom.push(optRoomData);
                                 }
-                            }else if(that.data.info.isTableHidden == 4){
+                            } else if (that.data.info.isTableHidden == 4) {
                                 //开打桌子全部隐藏
-                            }else{
+                            } else {
                                 //开打桌子每个玩法最多2张
                                 var ruleIndexNum = 0;
-                                for(var i = 0; i < that._deskRoomData.startRoom.length; i++){
-                                    if(that._deskRoomData.startRoom[i].ruleIndex == params.data.ruleId){
+                                for (var i = 0; i < that._deskRoomData.startRoom.length; i++) {
+                                    if (that._deskRoomData.startRoom[i].ruleIndex == params.data.ruleId) {
                                         ruleIndexNum++;
                                     }
                                 }
-                                if(ruleIndexNum < FriendCard_Common.maxPreStartRoomLM){
+                                if (ruleIndexNum < FriendCard_Common.maxPreStartRoomLM) {
                                     that._deskRoomData.startRoom.push(optRoomData);
                                 }
                             }
-                        }else{
+                        } else {
                             //亲友圈只对玩家进行隐藏，盟主、会长、管理员、组长、助理照常显示,隐藏已开打桌子
-                            if(FriendCard_Common.isOrdinaryMember()){
-                                if(that.data.info.isTableHidden === 2){
+                            if (FriendCard_Common.isOrdinaryMember()) {
+                                if (that.data.info.isTableHidden === 2) {
                                     //2:隐藏1/2已经开打的桌子
                                     var serverStartRoomNum = 0;
-                                    for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                        if(ruleIndexRooms[i].roundNum){
+                                    for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                        if (ruleIndexRooms[i].roundNum) {
                                             serverStartRoomNum++;
                                         }
                                     }
 
-                                    if(that._deskRoomData.startRoom.length * 2 < serverStartRoomNum){
+                                    if (that._deskRoomData.startRoom.length * 2 < serverStartRoomNum) {
                                         that._deskRoomData.startRoom.push(optRoomData);
                                     }
-                                }else if(that.data.info.isTableHidden === 3){
+                                } else if (that.data.info.isTableHidden === 3) {
                                     //3:隐藏1/3已经开打的桌子
                                     var serverStartRoomNum = 0;
-                                    for(var i = 0 ; i < ruleIndexRooms.length; i++){
-                                        if(ruleIndexRooms[i].roundNum){
+                                    for (var i = 0; i < ruleIndexRooms.length; i++) {
+                                        if (ruleIndexRooms[i].roundNum) {
                                             serverStartRoomNum++;
                                         }
                                     }
-                                    if(that._deskRoomData.startRoom.length * 3 / 2 < serverStartRoomNum){
+                                    if (that._deskRoomData.startRoom.length * 3 / 2 < serverStartRoomNum) {
                                         that._deskRoomData.startRoom.push(optRoomData);
                                     }
-                                }else if (that.data.info.isTableHidden === 4){
+                                } else if (that.data.info.isTableHidden === 4) {
                                     //开打桌子全部隐藏
-                                }else{
+                                } else {
                                     //不隐藏
                                     that._deskRoomData.startRoom.push(optRoomData);
                                 }
-                            }else{
+                            } else {
                                 that._deskRoomData.startRoom.push(optRoomData);
                             }
                         }
-                        
+
                     }
-                }else{
-                    if(isStartRoomLocal){
-                        if(that._deskRoomData.startRoom.length > 1){
-                            FriendCard_Common.swapArr(that._deskRoomData.startRoom,indexLocal,that._deskRoomData.startRoom.length-1);
+                } else {
+                    if (isStartRoomLocal) {
+                        if (that._deskRoomData.startRoom.length > 1) {
+                            FriendCard_Common.swapArr(that._deskRoomData.startRoom, indexLocal, that._deskRoomData.startRoom.length - 1);
                         }
-                        that._deskRoomData.startRoom.splice(that._deskRoomData.startRoom.length-1,1);
+                        that._deskRoomData.startRoom.splice(that._deskRoomData.startRoom.length - 1, 1);
                         that._deskRoomData.allWaitStartRoom.unshift(optRoomData);
-                    }else{
+                    } else {
                         that._deskRoomData.allWaitStartRoom[indexLocal] = optRoomData;
                     }
                 }
@@ -1796,19 +1797,19 @@ FriendCard_Common.reHandleDeskSort = function(that,params){
                 mylog("这很可能是一个bug，找开发确认")
             }
         }*/
-        that._deskRoomData.ruleRoom = FriendCard_Common.sortRoom(that,that._deskRoomData.allWaitStartRoom,that._deskRoomData.allEmptyRoom,that._deskRoomData.startRoom);
-        
+        that._deskRoomData.ruleRoom = FriendCard_Common.sortRoom(that, that._deskRoomData.allWaitStartRoom, that._deskRoomData.allEmptyRoom, that._deskRoomData.startRoom);
+
         that._deskRoomData.nofullDeskNum = 0;
         that._deskRoomData.fullDeskNum = 0;
-        for(var i = 0; i < that._deskRoomData.ruleRoom.length; i++){
-            if(that._deskRoomData.ruleRoom[i].players.length >= that._deskRoomData.ruleRoom[i].maxPlayer || (that._deskRoomData.ruleRoom[i].roundNum && that._deskRoomData.ruleRoom[i].roundNum > 0)){
+        for (var i = 0; i < that._deskRoomData.ruleRoom.length; i++) {
+            if (that._deskRoomData.ruleRoom[i].players.length >= that._deskRoomData.ruleRoom[i].maxPlayer || (that._deskRoomData.ruleRoom[i].roundNum && that._deskRoomData.ruleRoom[i].roundNum > 0)) {
                 that._deskRoomData.fullDeskNum++;
-            }else{
+            } else {
                 that._deskRoomData.nofullDeskNum++;
             }
         }
         return true;
-    }else{
+    } else {
         return false;
         //that._deskRoomData = ruleRoomData;
     }
@@ -1816,43 +1817,43 @@ FriendCard_Common.reHandleDeskSort = function(that,params){
 /*
 *数组交换位置
 */
-FriendCard_Common.swapArr = function(arr, index1, index2) {
+FriendCard_Common.swapArr = function (arr, index1, index2) {
     var a = arr[index1];
     arr[index1] = arr[index2];
     arr[index2] = a;
     return arr;
 }
 
-FriendCard_Common.toFirstArr = function(arr,index) {
-    if(index != 0){
-        arr.unshift(arr.splice(index , 1)[0]);
-    }
+FriendCard_Common.toFirstArr = function (arr, index) {
+    if (index != 0) {
+        arr.unshift(arr.splice(index, 1)[0]);
+    }
 }
-FriendCard_Common.toTailArr = function(arr,index) {
-    if(index != arr.length - 1){
-        arr.push(arr.splice(index , 1)[0]);
-    }
+FriendCard_Common.toTailArr = function (arr, index) {
+    if (index != arr.length - 1) {
+        arr.push(arr.splice(index, 1)[0]);
+    }
 }
 /*
 *桌子排序开打排序
 */
-FriendCard_Common.sortRoom = function(that,allWaitStartRoom,allEmptyRoom,startRoom){
+FriendCard_Common.sortRoom = function (that, allWaitStartRoom, allEmptyRoom, startRoom) {
     var ruleRoom = [];
     if (FriendCard_Common.getClubsortord(that) == 2) {
         //开打的在后
         ruleRoom = ruleRoom.concat(allWaitStartRoom)
-        if(that.data.info.isEmptyDeskFirst){////空桌在前
+        if (that.data.info.isEmptyDeskFirst) {////空桌在前
             ruleRoom = allEmptyRoom.concat(ruleRoom);
-        }else{
+        } else {
             ruleRoom = ruleRoom.concat(allEmptyRoom);
         }
         ruleRoom = ruleRoom.concat(startRoom);
-    }else if (FriendCard_Common.getClubsortord(that) == 4) {
+    } else if (FriendCard_Common.getClubsortord(that) == 4) {
         //开打的在中
         ruleRoom = ruleRoom.concat(allWaitStartRoom);
         ruleRoom = ruleRoom.concat(startRoom);
         ruleRoom = ruleRoom.concat(allEmptyRoom);
-    }else{
+    } else {
         //开打在前
         ruleRoom = ruleRoom.concat(startRoom);
         ruleRoom = ruleRoom.concat(allWaitStartRoom);
@@ -1863,10 +1864,10 @@ FriendCard_Common.sortRoom = function(that,allWaitStartRoom,allEmptyRoom,startRo
 /* 
     亲友圈主界面：添加空桌子
 */
-FriendCard_Common.addNullRoom = function(that, rule, ruleRoom) {
+FriendCard_Common.addNullRoom = function (that, rule, ruleRoom) {
     if ((!that.data.info.useClose || (that.data.info.useClose == 1 && !FriendCard_Common.isInDaYangTime())) && that.data.info.createSwitch != 0) {
-        var isStopRoom = ((!((rule.ruleIndex+"") in that.data.info.ruleSwitch)) || that.data.info.ruleSwitch[rule.ruleIndex+""]) ? false : true;
-        if(isStopRoom){
+        var isStopRoom = ((!((rule.ruleIndex + "") in that.data.info.ruleSwitch)) || that.data.info.ruleSwitch[rule.ruleIndex + ""]) ? false : true;
+        if (isStopRoom) {
             return;
         }
         var unRoomNumber = 0;
@@ -1877,20 +1878,20 @@ FriendCard_Common.addNullRoom = function(that, rule, ruleRoom) {
         }
         //rule.customInfo 是否自主创建房间，有这个选项，不增加假桌子 
         var customInfo = false;
-        if (rule && rule.customInfo){
+        if (rule && rule.customInfo) {
             customInfo = rule.customInfo;
         }
         //联盟忽略不满人不开新桌选项
         var maxUnStartCount = FriendCard_Common.isLMClub() ? (that.data.info.unStartCount > 1 ? that.data.info.unStartCount : 4) : that.data.info.unStartCount;
         if (unRoomNumber < maxUnStartCount && rule && !customInfo) {
             var fakeRoom = {
-                "roomNum":      null,
-                "gameType":     rule.gameType,
-                "maxPlayer":    rule.maxPlayer,
-                "createTime":   -1,
-                "ruleDesc":     "",
-                "players":      [],
-                "ruleIndex":    rule.ruleIndex
+                "roomNum": null,
+                "gameType": rule.gameType,
+                "maxPlayer": rule.maxPlayer,
+                "createTime": -1,
+                "ruleDesc": "",
+                "players": [],
+                "ruleIndex": rule.ruleIndex
             };
             ruleRoom.push(fakeRoom);
         }
@@ -1900,9 +1901,9 @@ FriendCard_Common.addNullRoom = function(that, rule, ruleRoom) {
 /* 
 得到roomArr的 未开始但在最前面的房间 未开始的房间 开始的房间
 */
-FriendCard_Common.roomArrOpe = function(roomArr,params) {
+FriendCard_Common.roomArrOpe = function (roomArr, params) {
     //cc.log("FriendCard_Common.roomArrOpe")
-    if(!params){
+    if (!params) {
         params = {};
     }
     var that = MjClient.FriendCard_main_ui;
@@ -1911,7 +1912,7 @@ FriendCard_Common.roomArrOpe = function(roomArr,params) {
     _roomArr.noStartRoom = []; //未开始的房间
     _roomArr.startRoom = []; //开始的房间
     _roomArr.emptytRoom = []; //假桌子，联盟才维护
-    if(!params.noSortByPlayerNum){
+    if (!params.noSortByPlayerNum) {
         var maxPlayerDesk = 0; //当前玩法未开始桌子的最大人数
         for (var i = 0; i < roomArr.length; i++) {
             if ((!roomArr[i].roundNum || roomArr[i].roundNum <= 0) && (roomArr[i].players.length > maxPlayerDesk)) {
@@ -1922,7 +1923,7 @@ FriendCard_Common.roomArrOpe = function(roomArr,params) {
             }
         }
     }
-    
+
     var roomArrBool = false
     for (var i = 0; i < roomArr.length; i++) {
         if ((!roomArr[i].roundNum || roomArr[i].roundNum <= 0) && !roomArrBool) {
@@ -1934,29 +1935,29 @@ FriendCard_Common.roomArrOpe = function(roomArr,params) {
     }
     if (!roomArrBool && roomArr[0]) {
         var b = roomArr.shift();
-        var isStopRoom = ((!((b.ruleIndex+"") in that.data.info.ruleSwitch)) || 
-            that.data.info.ruleSwitch[b.ruleIndex+""]) ? false : true;
-        if(isStopRoom){
+        var isStopRoom = ((!((b.ruleIndex + "") in that.data.info.ruleSwitch)) ||
+            that.data.info.ruleSwitch[b.ruleIndex + ""]) ? false : true;
+        if (isStopRoom) {
             //勾选暂停开房之后，解散该玩法所有未开打桌子，并且前端屏蔽该玩法的假桌子和已开打桌子，但是不影响已经开打的桌子继续游戏。
-        }else{
+        } else {
             _roomArr.frontNoStartRoom.push(b);
         }
-        
+
     }
 
     for (var i = 0; i < roomArr.length; i++) {
         if (roomArr[i].players.length < roomArr[i].maxPlayer && (!roomArr[i].roundNum || roomArr[i].roundNum <= 0)) {
             _roomArr.noStartRoom = _roomArr.noStartRoom.concat(roomArr[i])
         } else {
-            var isStopRoom = ((!((roomArr[i].ruleIndex+"") in that.data.info.ruleSwitch)) || 
-                that.data.info.ruleSwitch[roomArr[i].ruleIndex+""]) ? false : true;
-            if(isStopRoom){
+            var isStopRoom = ((!((roomArr[i].ruleIndex + "") in that.data.info.ruleSwitch)) ||
+                that.data.info.ruleSwitch[roomArr[i].ruleIndex + ""]) ? false : true;
+            if (isStopRoom) {
                 //勾选暂停开房之后，解散该玩法所有未开打桌子，并且前端屏蔽该玩法的假桌子和已开打桌子，但是不影响已经开打的桌子继续游戏。
-            }else{
+            } else {
 
-                if(roomArr[i].roundNum){
+                if (roomArr[i].roundNum) {
                     _roomArr.startRoom = _roomArr.startRoom.concat(roomArr[i])
-                }else{
+                } else {
                     _roomArr.noStartRoom = _roomArr.noStartRoom.concat(roomArr[i])
                 }
 
@@ -1978,7 +1979,7 @@ FriendCard_Common.roomArrOpe = function(roomArr,params) {
 
 
 //俱乐部桌子上文本处理
-FriendCard_Common.deskRoundNumText = function(that,roundNumText, room) {
+FriendCard_Common.deskRoundNumText = function (that, roundNumText, room) {
     //var that = MjClient.FriendCard_main_ui;
     roundNumText.ignoreContentAdaptWithSize(true);
     roundNumText.visible = true;
@@ -2001,10 +2002,10 @@ FriendCard_Common.deskRoundNumText = function(that,roundNumText, room) {
             roundNumText.setString("加入");
         } else {
             var splitRuleName = FriendCard_Common.splitClubRuleName(unescape(that.data.info["rule" + room.ruleIndex].ruleName));
-            
+
             var ruleName = splitRuleName[1];
-            if(!splitRuleName[0]){
-                ruleName = GameCnName[that.data.info["rule" + room.ruleIndex].gameType]+"";
+            if (!splitRuleName[0]) {
+                ruleName = GameCnName[that.data.info["rule" + room.ruleIndex].gameType] + "";
             }
             if (ruleName.length > 6) {
                 roundNumText.setFontSize(20);
@@ -2016,13 +2017,13 @@ FriendCard_Common.deskRoundNumText = function(that,roundNumText, room) {
 
 
 //俱乐部事件绑定
-FriendCard_Common.eventBind = function(that) {
-    UIEventBind(null, that, "audit_diamond_order_seller", function(rtn) {
+FriendCard_Common.eventBind = function (that) {
+    UIEventBind(null, that, "audit_diamond_order_seller", function (rtn) {
         that.setShopSheetTip();
     });
 
     // 刷新房间
-    UIEventBind(null, that, "club_refresh_room", function(rtn) {
+    UIEventBind(null, that, "club_refresh_room", function (rtn) {
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:服务刷新亲友圈房间, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
             return;
@@ -2035,7 +2036,7 @@ FriendCard_Common.eventBind = function(that) {
         }
     });
     // 更新房间
-    UIEventBind(null, that, "club_update_room", function(rtn) {
+    UIEventBind(null, that, "club_update_room", function (rtn) {
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:服务更新亲友圈房间, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
             return;
@@ -2045,19 +2046,19 @@ FriendCard_Common.eventBind = function(that) {
             if (rtn.type == 0) {
                 //兼容后端bug，连续推了相同的数据
                 var hasEqual = false;
-                for(var i = 0; i < roomList.length; i++){
-                    if(roomList[i] && roomList[i].roomNum == rtn.data.roomNum){
+                for (var i = 0; i < roomList.length; i++) {
+                    if (roomList[i] && roomList[i].roomNum == rtn.data.roomNum) {
                         roomList[i] = rtn.data;
                         hasEqual = true;
                         break;
                     }
                 }
-                if(!hasEqual){
+                if (!hasEqual) {
                     roomList.push(rtn.data);
                 }
             } else {
                 var room;
-                for (var i = 0; i < roomList.length; ++ i) {
+                for (var i = 0; i < roomList.length; ++i) {
                     if (rtn.roomNum == roomList[i].roomNum) {
                         room = roomList[i];
                         break;
@@ -2072,7 +2073,7 @@ FriendCard_Common.eventBind = function(that) {
                 } else {
                     if (rtn.uid) {
                         var pl;
-                        for (var i = 0; i < room.players.length; ++ i) {
+                        for (var i = 0; i < room.players.length; ++i) {
                             if (room.players[i].uid == rtn.uid) {
                                 pl = room.players[i];
                                 break;
@@ -2081,7 +2082,7 @@ FriendCard_Common.eventBind = function(that) {
                         if (pl) {
                             for (k in rtn.data) {
                                 pl[k] = rtn.data[k];
-                            }    
+                            }
                         }
                     } else {
                         for (k in rtn.data) {
@@ -2092,20 +2093,20 @@ FriendCard_Common.eventBind = function(that) {
             }
             var clubRulesSelect = FriendCard_Common.getClubRulesSelect(that.clubId);
             //右上角玩法选中过滤
-            if(clubRulesSelect.indexOf(-1) > -1 || clubRulesSelect.indexOf(rtn.ruleId) > -1){
-                if(FriendCard_Common.isOnlyShowOutLineDesk() && FriendCard_Common.isManager()){
+            if (clubRulesSelect.indexOf(-1) > -1 || clubRulesSelect.indexOf(rtn.ruleId) > -1) {
+                if (FriendCard_Common.isOnlyShowOutLineDesk() && FriendCard_Common.isManager()) {
                     that.refreshDeskList();
-                }else{
+                } else {
                     that.refreshDeskList({
-                        isUpdate:true,
-                        data:rtn,
+                        isUpdate: true,
+                        data: rtn,
                     });
                 }
             }
         }
     });
     // 联盟 刷新房间
-    UIEventBind(null, that, "league_refresh_room", function(rtn) {
+    UIEventBind(null, that, "league_refresh_room", function (rtn) {
         rtn.clubId = rtn.leagueId
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:服务刷新亲友圈房间, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
@@ -2119,8 +2120,8 @@ FriendCard_Common.eventBind = function(that) {
         }
     });
 
-     // 联盟 更新房间
-    UIEventBind(null, that, "league_update_room", function(rtn) {
+    // 联盟 更新房间
+    UIEventBind(null, that, "league_update_room", function (rtn) {
         rtn.clubId = rtn.leagueId
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:服务刷新亲友圈房间, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
@@ -2131,19 +2132,19 @@ FriendCard_Common.eventBind = function(that) {
             if (rtn.type == 0) {
                 //兼容后端bug，连续推了相同的数据
                 var hasEqual = false;
-                for(var i = 0; i < roomList.length; i++){
-                    if(roomList[i] && roomList[i].roomNum == rtn.data.roomNum){
+                for (var i = 0; i < roomList.length; i++) {
+                    if (roomList[i] && roomList[i].roomNum == rtn.data.roomNum) {
                         roomList[i] = rtn.data;
                         hasEqual = true;
                         break;
                     }
                 }
-                if(!hasEqual){
+                if (!hasEqual) {
                     roomList.push(rtn.data);
                 }
             } else {
                 var room;
-                for (var i = 0; i < roomList.length; ++ i) {
+                for (var i = 0; i < roomList.length; ++i) {
                     if (rtn.roomNum == roomList[i].roomNum) {
                         room = roomList[i];
                         break;
@@ -2158,7 +2159,7 @@ FriendCard_Common.eventBind = function(that) {
                 } else {
                     if (rtn.uid) {
                         var pl;
-                        for (var i = 0; i < room.players.length; ++ i) {
+                        for (var i = 0; i < room.players.length; ++i) {
                             if (room.players[i].uid == rtn.uid) {
                                 pl = room.players[i];
                                 break;
@@ -2167,7 +2168,7 @@ FriendCard_Common.eventBind = function(that) {
                         if (pl) {
                             for (k in rtn.data) {
                                 pl[k] = rtn.data[k];
-                            }    
+                            }
                         }
                     } else {
                         for (k in rtn.data) {
@@ -2178,29 +2179,29 @@ FriendCard_Common.eventBind = function(that) {
             }
             var clubRulesSelect = FriendCard_Common.getClubRulesSelect(that.clubId);
             //右上角玩法选中过滤
-            if(clubRulesSelect.indexOf(-1) > -1 || clubRulesSelect.indexOf(rtn.ruleId) > -1){
-                if(FriendCard_Common.isOnlyShowOutLineDesk() && FriendCard_Common.isManager()){
+            if (clubRulesSelect.indexOf(-1) > -1 || clubRulesSelect.indexOf(rtn.ruleId) > -1) {
+                if (FriendCard_Common.isOnlyShowOutLineDesk() && FriendCard_Common.isManager()) {
                     that.refreshDeskList();
-                }else{
+                } else {
                     that.refreshDeskList({
-                        isUpdate:true,
-                        data:rtn,
+                        isUpdate: true,
+                        data: rtn,
                     });
                 }
-                
+
             }
-            
+
         }
     });
-    UIEventBind(null, that, "league_rule_forbid_user", function(rtn) {
+    UIEventBind(null, that, "league_rule_forbid_user", function (rtn) {
         rtn.clubId = rtn.leagueId
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:服务刷新亲友圈房间, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
             return;
         }
         if (that.data) {
-            for(var key in rtn){
-                if(key.indexOf("rule") == 0){
+            for (var key in rtn) {
+                if (key.indexOf("rule") == 0) {
                     that.data[key] = rtn[key].indexOf(MjClient.data.pinfo.uid) < 0 ? 0 : 1;
                 }
             }
@@ -2208,14 +2209,14 @@ FriendCard_Common.eventBind = function(that) {
         }
     });
 
-    UIEventBind(null, that, "club_rule_forbid_user", function(rtn) {
+    UIEventBind(null, that, "club_rule_forbid_user", function (rtn) {
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:服务刷新亲友圈房间, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
             return;
         }
         if (that.data) {
-            for(var key in rtn){
-                if(key.indexOf("rule") == 0){
+            for (var key in rtn) {
+                if (key.indexOf("rule") == 0) {
                     that.data[key] = rtn[key].indexOf(MjClient.data.pinfo.uid) < 0 ? 0 : 1;
                 }
             }
@@ -2224,7 +2225,7 @@ FriendCard_Common.eventBind = function(that) {
     });
 
     // 刷新当前亲友圈信息
-    UIEventBind(null, that, "club_refresh_info", function(rtn) {
+    UIEventBind(null, that, "club_refresh_info", function (rtn) {
         that.refreshClubListPlayerCount(rtn);
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:服务刷新亲友圈信息, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
@@ -2243,14 +2244,14 @@ FriendCard_Common.eventBind = function(that) {
             that.refreshDeskList();
             if (that.syncClubList())
                 that.refreshClubList();
-            if (FriendCard_Common.getSkinType() != 1 && FriendCard_Common.getSkinType() != 0 && that.setMainBG){
+            if (FriendCard_Common.getSkinType() != 1 && FriendCard_Common.getSkinType() != 0 && that.setMainBG) {
                 that.setMainBG();
             }
         }
     });
 
     // 更新当前亲友圈信息
-    UIEventBind(null, that, "club_update_info", function(rtn) {
+    UIEventBind(null, that, "club_update_info", function (rtn) {
         that.refreshClubListPlayerCount();
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:服务更新亲友圈信息, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
@@ -2265,7 +2266,7 @@ FriendCard_Common.eventBind = function(that) {
     });
 
     // 联盟 刷新当前亲友圈信息
-    UIEventBind(null, that, "league_refresh_info", function(rtn) {
+    UIEventBind(null, that, "league_refresh_info", function (rtn) {
         rtn.clubId = rtn.leagueId;
         that.refreshClubListPlayerCount(rtn);
         if (that.data && rtn.clubId != that.clubId) {
@@ -2273,7 +2274,7 @@ FriendCard_Common.eventBind = function(that) {
             return;
         }
         if (that.data) {
-            rtn.rankOpenType = rtn.clubRankOpenType[that.data.subClubId+""]
+            rtn.rankOpenType = rtn.clubRankOpenType[that.data.subClubId + ""]
             that.ruleIndex = FriendCard_Common.getClubRulesSelect(that.clubId)[0];
             that.data.info = rtn;
             that.data.info.notice = "请遵守法律法规，健康游戏，禁止赌博！";
@@ -2283,14 +2284,14 @@ FriendCard_Common.eventBind = function(that) {
             that.refreshInfo();
             that.initBottom();
             that.refreshDeskList();
-            if (FriendCard_Common.getSkinType() != 1 && FriendCard_Common.getSkinType() != 0 && that.setMainBG){
+            if (FriendCard_Common.getSkinType() != 1 && FriendCard_Common.getSkinType() != 0 && that.setMainBG) {
                 that.setMainBG();
             }
         }
     });
 
     // 联盟 更新亲友圈信息
-    UIEventBind(null, that, "league_update_info", function(rtn) {
+    UIEventBind(null, that, "league_update_info", function (rtn) {
         rtn.clubId = rtn.leagueId;
         that.refreshClubListPlayerCount(rtn);
         if (that.data && rtn.clubId != that.clubId) {
@@ -2306,54 +2307,54 @@ FriendCard_Common.eventBind = function(that) {
     });
 
     // 联盟 比赛信息推送,解决进入亲友圈接口没有返回比赛信息的bug
-    UIEventBind(null, that, "league_match_user", function(rtn) {
+    UIEventBind(null, that, "league_match_user", function (rtn) {
         rtn.clubId = rtn.leagueId;
         if (that.data && rtn.clubId != that.clubId) {
             cc.log("warning:league_match_user, clubId有误！！ rtn.clubId=" + rtn.clubId + " this.clubId=" + that.clubId);
             return;
         }
         that._matchData = rtn.matchUser;
-        if(that.data && that.data.info){
+        if (that.data && that.data.info) {
             that.data.info.matchConf = rtn.matchConf
         }
         that.refreshInfo();
     });
-    
+
     // 被踢出亲友圈或亲友圈被解散（服务器推送)
-    UIEventBind(null, that, "club_remove_player", function(rtn) {
+    UIEventBind(null, that, "club_remove_player", function (rtn) {
         that.requestLeaveClub(false);
     });
 
     // 联盟 被踢出亲友圈或亲友圈被解散（服务器推送)
-    UIEventBind(null, that, "league_remove_player", function(rtn) {
+    UIEventBind(null, that, "league_remove_player", function (rtn) {
         that.requestLeaveClub(false);
     });
 
     // 申请列表有变动
-    UIEventBind(null, that, "club_player_apply", function(rtn) {
-        if(!that.data || !that.data.info){
+    UIEventBind(null, that, "club_player_apply", function (rtn) {
+        if (!that.data || !that.data.info) {
             return;
         }
-        if (MjClient.clubPlayerApplyList.indexOf(that.clubId) != -1){
+        if (MjClient.clubPlayerApplyList.indexOf(that.clubId) != -1) {
             FriendCard_Common.reSetCurSelectRule();
         }
         that.refreshInfo();
     });
 
     // 联盟 申请列表有变动
-    UIEventBind(null, that, "league_player_apply", function(rtn) {
-        if(!that.data || !that.data.info){
+    UIEventBind(null, that, "league_player_apply", function (rtn) {
+        if (!that.data || !that.data.info) {
             return;
         }
-        if (MjClient.clubPlayerApplyList.indexOf(that.clubId) != -1){
+        if (MjClient.clubPlayerApplyList.indexOf(that.clubId) != -1) {
             FriendCard_Common.reSetCurSelectRule();
         }
         that.refreshInfo();
     });
 
     // 审核列表有变动
-    UIEventBind(null, that, "cancel_club_player_apply", function(rtn) {
-        if(!that.data || !that.data.info){
+    UIEventBind(null, that, "cancel_club_player_apply", function (rtn) {
+        if (!that.data || !that.data.info) {
             return;
         }
         FriendCard_Common.reSetCurSelectRule();
@@ -2361,12 +2362,12 @@ FriendCard_Common.eventBind = function(that) {
     });
 
     // 自己新创建了亲友圈
-    UIEventBind(null, that, "friendCard_clubListUpdate", function(rtn) {
+    UIEventBind(null, that, "friendCard_clubListUpdate", function (rtn) {
         that.requestClubList(rtn.clubId);
     });
 
     // 自己申请恳请出亲友圈
-    UIEventBind(null, that, "clubExit", function(clubId) {
+    UIEventBind(null, that, "clubExit", function (clubId) {
         // if (that.data.info.clubId == clubId) {
         //  that.removeFromParent(true);
         // }
@@ -2374,21 +2375,21 @@ FriendCard_Common.eventBind = function(that) {
     });
 
     // 亲友圈列表有更新
-    UIEventBind(null, that, "club_refresh_list", function(eD) {
-        if(eD && eD.leagueId){
+    UIEventBind(null, that, "club_refresh_list", function (eD) {
+        if (eD && eD.leagueId) {
             that.requestClubList(eD.leagueId);
-        }else{
+        } else {
             that.requestClubList();
         }
     });
 
     // 联盟 亲友圈列表有更新
-    UIEventBind(null, that, "league_refresh_list", function() {
+    UIEventBind(null, that, "league_refresh_list", function () {
         that.requestClubList();
     });
 
     // 更新体力值
-    UIEventBind(null, that, "club_update_user_mp", function(eD) {
+    UIEventBind(null, that, "club_update_user_mp", function (eD) {
         if (eD.clubId == that.data.info.clubId && that.data) {
             that.data.mp = eD.mp;
             if (that.mpNode)
@@ -2396,69 +2397,69 @@ FriendCard_Common.eventBind = function(that) {
         }
     });
 
-    UIEventBind(null, that, "league_update_user_mp", function(eD) {
+    UIEventBind(null, that, "league_update_user_mp", function (eD) {
         if (eD.leagueId == that.data.info.clubId && that.data) {
             that.data.mp = eD.mp;
             if (that.mpNode)
                 that.mpNode.refreshMp();
         }
     });
-    
-    UIEventBind(null, that, "redpoint_member_button", function(eD) {
+
+    UIEventBind(null, that, "redpoint_member_button", function (eD) {
         if (eD.leagueId == that.data.info.clubId || eD.clubId == that.data.info.clubId) {
             that.data.redpointMemberButton = 1;
             postEvent("update_member_record")
         }
     });
 
-    UIEventBind(null, that, "update_member_record", function(eD) {
+    UIEventBind(null, that, "update_member_record", function (eD) {
         that.updateMemberRedPoint();
     });
 
-    UIEventBind(null, that, "club_join_match", function(d) {
+    UIEventBind(null, that, "club_join_match", function (d) {
 
     });
 
-    UIEventBind(null, that, "club_quit_match", function(eD) {
+    UIEventBind(null, that, "club_quit_match", function (eD) {
     });
 
-    UIEventBind(null, that, "club_audit_match", function(d) {
+    UIEventBind(null, that, "club_audit_match", function (d) {
         that.refreshClubMatch(d)
-        
+
     });
 
-    UIEventBind(null, that, "league_audit_match", function(d) {
+    UIEventBind(null, that, "league_audit_match", function (d) {
         that.refreshClubMatch(d)
-        
+
     });
 
-    UIEventBind(null, that, "redpoint_match_button", function(eD) {
+    UIEventBind(null, that, "redpoint_match_button", function (eD) {
         if (eD.leagueId == that.data.info.clubId || eD.clubId == that.data.info.clubId) {
             postEvent("update_match_check", eD)
         }
     });
 
-    UIEventBind(null, that, "update_match_check", function(eD) {
+    UIEventBind(null, that, "update_match_check", function (eD) {
         that.data.redpointMatchButton = eD.isShow;
         that.updateMatchRedPoint();
     });
 
-    UIEventBind(null, that, "league_match_aduit", function(d) {
-        if(that.data.info.leagueId == d.leagueId){
+    UIEventBind(null, that, "league_match_aduit", function (d) {
+        if (that.data.info.leagueId == d.leagueId) {
             that.data.matchQuotaAudit = d.matchQuotaAudit;
         }
-        
+
     });
 
-    UIEventBind(null, that, "club_match_aduit", function(d) {
-        if(that.data.info.clubId == d.clubId){
+    UIEventBind(null, that, "club_match_aduit", function (d) {
+        if (that.data.info.clubId == d.clubId) {
             that.data.matchQuotaAudit = d.matchQuotaAudit;
         }
-        
+
     });
 
-    UIEventBind(null, that, "match_overdue_notice", function(d) {
-        var msg = unescape(d.name) + "比赛于"+ d.date + "日到期，比赛进入决赛轮。";
+    UIEventBind(null, that, "match_overdue_notice", function (d) {
+        var msg = unescape(d.name) + "比赛于" + d.date + "日到期，比赛进入决赛轮。";
 
         //跑马灯内容
         if (!MjClient.FriendCard_main_ui.matchNotice) {
@@ -2467,45 +2468,45 @@ FriendCard_Common.eventBind = function(that) {
             MjClient.FriendCard_main_ui.matchNotice.playIdx = 0;
         }
         MjClient.FriendCard_main_ui.matchNotice.msgs.push(msg);
-        
+
 
         //联盟的盟主、亲友圈的会长第一次收到弹窗提示
         if (FriendCard_Common.isLeader() && !d.wasSend) {
             var param = {};
             param.title = "决赛通知";
-            if (FriendCard_Common.getSkinType() == 1){
-                param.title ="决   赛   通   知";
+            if (FriendCard_Common.getSkinType() == 1) {
+                param.title = "决   赛   通   知";
             }
-            param.content = msg+"\n";
+            param.content = msg + "\n";
             param.bHideBtnCancel = true;
-            param.yesCallback = function(){
+            param.yesCallback = function () {
                 if (checkBox.isSelected()) {
                     var api = FriendCard_Common.isLMClub() ? "leagueMatchCloseOverdueNotice" : "clubMatchCloseOverdueNotice";
                     var sendInfo = {
-                        matchId: d.id,                      
+                        matchId: d.id,
                     }
-                    if(FriendCard_Common.isLMClub()){
+                    if (FriendCard_Common.isLMClub()) {
                         sendInfo.leagueId = that.clubId;
-                    }else{
+                    } else {
                         sendInfo.clubId = that.clubId;
                     }
                     MjClient.block();
-                    MjClient.gamenet.request("pkplayer.handler."+api, sendInfo,
-                        function(rtn) {
+                    MjClient.gamenet.request("pkplayer.handler." + api, sendInfo,
+                        function (rtn) {
                             MjClient.unblock();
                             if (rtn.code != 0)
                                 FriendCard_Common.serverFailToast(rtn);
                         });
-                    }
+                }
             }
             var confirmBox = new Friendcard_Match_confirmBox(param);
-            MjClient.FriendCard_main_ui.addChild(confirmBox); 
+            MjClient.FriendCard_main_ui.addChild(confirmBox);
 
             //增加【今日不再提示】按钮
             var back = confirmBox.uiNode.getChildByName("back");
             var checkBox = new ccui.CheckBox("friendCards/common/btn_chebox_fang.png", "friendCards/common/img_gou.png");
             var btn_confirm = back.getChildByName("btn_confirm");
-            checkBox.y = btn_confirm.y + btn_confirm.height/2 + checkBox.height/2 + 3;
+            checkBox.y = btn_confirm.y + btn_confirm.height / 2 + checkBox.height / 2 + 3;
             if (FriendCard_Common.getSkinType() == 4) {
                 checkBox.y += 30;
             }
@@ -2520,51 +2521,51 @@ FriendCard_Common.eventBind = function(that) {
             if (FriendCard_Common.getSkinType() == 4) {
                 text.y -= 8;
             }
-            checkBox.x = btn_confirm.x - checkBox.width/2 -text.width/2;
-            text.x = checkBox.x + checkBox.width/2 + 5;
-            back.addChild(text);     
-       }
-         
+            checkBox.x = btn_confirm.x - checkBox.width / 2 - text.width / 2;
+            text.x = checkBox.x + checkBox.width / 2 + 5;
+            back.addChild(text);
+        }
+
     });
 
-    UIEventBind(null, that, "league_transfer_creator_match", function(d) {
-        if(that.data.info.leagueId == d.leagueId) {
+    UIEventBind(null, that, "league_transfer_creator_match", function (d) {
+        if (that.data.info.leagueId == d.leagueId) {
             MjClient.showMsg(d.message);
-        }   
+        }
     });
 
-    
 
-    UIEventBind(null, that, "club_fangkaju_hongbao_draw", function(d) {
-        if(that.data.info.clubId == d.clubId){
-            if(!that.redPackageAwardToastList){
+
+    UIEventBind(null, that, "club_fangkaju_hongbao_draw", function (d) {
+        if (that.data.info.clubId == d.clubId) {
+            if (!that.redPackageAwardToastList) {
                 that.redPackageAwardToastList = [];
             }
-            if(d.level > 0 && d.level <= 10){
+            if (d.level > 0 && d.level <= 10) {
                 that.redPackageAwardToastList.unshift(d);
-            }else{
+            } else {
                 that.redPackageAwardToastList.push(d);
             }
         }
     });
 
-    UIEventBind(null, that, "league_fangkaju_hongbao_draw", function(d) {
-        if(that.data.info.leagueId == d.leagueId){
-            if(!that.redPackageAwardToastList){
+    UIEventBind(null, that, "league_fangkaju_hongbao_draw", function (d) {
+        if (that.data.info.leagueId == d.leagueId) {
+            if (!that.redPackageAwardToastList) {
                 that.redPackageAwardToastList = [];
             }
-            if(d.level > 0 && d.level <= 10){
+            if (d.level > 0 && d.level <= 10) {
                 that.redPackageAwardToastList.unshift(d);
-            }else{
+            } else {
                 that.redPackageAwardToastList.push(d);
             }
         }
-        
+
     });
-   
+
 }
 
-FriendCard_Common.requestUpdateClub = function(that, msg) {
+FriendCard_Common.requestUpdateClub = function (that, msg) {
     if (that.data.info.clubId <= 9999) {
         FriendCard_Common.requestUpdateClub_LM(that, msg);
         return;
@@ -2573,51 +2574,51 @@ FriendCard_Common.requestUpdateClub = function(that, msg) {
     msg.clubId = that.data.info.clubId
     MjClient.block();
     MjClient.gamenet.request("pkplayer.handler.clubUpdate", msg,
-        function(rtn) {
+        function (rtn) {
             MjClient.unblock();
             if (rtn.code != 0)
                 FriendCard_Common.serverFailToast(rtn);
         });
 }
 
-FriendCard_Common.requestUpdateClub_LM = function(that, msg) {
+FriendCard_Common.requestUpdateClub_LM = function (that, msg) {
     var that = that;
     msg.leagueId = that.data.info.clubId
     MjClient.block();
     MjClient.gamenet.request("pkplayer.handler.leagueUpdate", msg,
-        function(rtn) {
+        function (rtn) {
             MjClient.unblock();
             if (rtn.code != 0)
                 FriendCard_Common.serverFailToast(rtn);
         });
 }
 
-FriendCard_Common.requestClubList = function(that, clubId) {
+FriendCard_Common.requestClubList = function (that, clubId) {
     var that = that;
 
     clubId = clubId || that.clubId;
-    if (!clubId || clubId == -1){
+    if (!clubId || clubId == -1) {
         clubId = util.localStorageEncrypt.getNumberItem(FriendCard_Common.LocalKey.lastIntoClub, 0);
-        if(MjClient._canNotBackToHallClubIds && 
-            MjClient._canNotBackToHallClubIds.indexOf(clubId) > -1){
+        if (MjClient._canNotBackToHallClubIds &&
+            MjClient._canNotBackToHallClubIds.indexOf(clubId) > -1) {
             var index = MjClient._canNotBackToHallClubIds.indexOf(clubId);
             clubId = MjClient._backToHallToLMClubIds[index];
-            
+
         }
     }
-    if(MjClient._canNotBackToHallClubIds){
+    if (MjClient._canNotBackToHallClubIds) {
         var index = MjClient._backToHallToLMClubIds.indexOf(clubId);
-        if(index > -1){
-            MjClient._canNotBackToHallClubIds.splice(index,1);
-            MjClient._backToHallToLMClubIds.splice(index,1);
+        if (index > -1) {
+            MjClient._canNotBackToHallClubIds.splice(index, 1);
+            MjClient._backToHallToLMClubIds.splice(index, 1);
         }
-        
+
     }
     MjClient.block();
     MjClient.gamenet.request("pkplayer.handler.clubList", {
-            clubId: clubId
-        },
-        function(rtn) {
+        clubId: clubId
+    },
+        function (rtn) {
             MjClient.unblock();
             if (!cc.sys.isObjectValid(that))
                 return;
@@ -2628,31 +2629,31 @@ FriendCard_Common.requestClubList = function(that, clubId) {
             }
             that.clubList = rtn.data.list;
             that.leagueList = rtn.data.leagueList;
-            if(!that.leagueList){
+            if (!that.leagueList) {
                 that.leagueList = [];
             }
-            if(that.leagueList){
+            if (that.leagueList) {
                 for (var i = 0; i < that.leagueList.length; i++) {
                     that.leagueList[i].clubId = that.leagueList[i].leagueId
                 }
             }
-            that.clubList = FriendCard_Common.clubListSort(that.clubList,that.leagueList)
+            that.clubList = FriendCard_Common.clubListSort(that.clubList, that.leagueList)
             if (rtn.data.lastEnter) {
-                if(!rtn.data.lastEnter.info.clubId){
+                if (!rtn.data.lastEnter.info.clubId) {
                     rtn.data.lastEnter.info.clubId = rtn.data.lastEnter.info.leagueId;
-                    rtn.data.lastEnter.info.rankOpenType = rtn.data.lastEnter.info.clubRankOpenType[rtn.data.lastEnter.subClubId+""]
+                    rtn.data.lastEnter.info.rankOpenType = rtn.data.lastEnter.info.clubRankOpenType[rtn.data.lastEnter.subClubId + ""]
                 }
                 rtn.data.lastEnter.info.notice = "请遵守法律法规，健康游戏，禁止赌博！";
                 that.enterClubRet(rtn.data.lastEnter);
-                
+
 
             } else {
                 that.refreshClubList();
             }
-            if(rtn.data.notifyData){
-                if(rtn.data.notifyData.leagueAvatar)
+            if (rtn.data.notifyData) {
+                if (rtn.data.notifyData.leagueAvatar)
                     MjClient.FriendCard_main_ui.addChild(new Friendcard_tipSetRatioDialog(rtn.data.notifyData));
-                else{
+                else {
                     var data = rtn.data.notifyData;
                     var title = data.leagueTitle ? "你的联盟：" + unescape(data.leagueTitle) : "你的俱乐部：" + unescape(data.clubTitle);
                     var _id = data.leagueId ? data.leagueId : data.clubId;
@@ -2669,7 +2670,7 @@ FriendCard_Common.requestClubList = function(that, clubId) {
 /* 
     亲友圈主界面：进入俱乐部
 */
-FriendCard_Common.requestEnterClub = function(that, clubId) {
+FriendCard_Common.requestEnterClub = function (that, clubId) {
     if (clubId <= 9999) {
         FriendCard_Common.requestEnterClub_LM(that, clubId)
         return;
@@ -2680,7 +2681,7 @@ FriendCard_Common.requestEnterClub = function(that, clubId) {
         clubId: clubId ? clubId : that.clubId
     }
     MjClient.block();
-    MjClient.gamenet.request("pkplayer.handler.clubEnter", sendInfo, function(rtn) {
+    MjClient.gamenet.request("pkplayer.handler.clubEnter", sendInfo, function (rtn) {
         MjClient.unblock();
 
         if (!cc.sys.isObjectValid(that)) {
@@ -2700,13 +2701,13 @@ FriendCard_Common.requestEnterClub = function(that, clubId) {
 /* 
     联盟 - 亲友圈主界面：进入俱乐部
 */
-FriendCard_Common.requestEnterClub_LM = function(that, clubId) {
+FriendCard_Common.requestEnterClub_LM = function (that, clubId) {
     var that = that;
     var sendInfo = {
         leagueId: clubId ? clubId : that.clubId
     }
     MjClient.block();
-    MjClient.gamenet.request("pkplayer.handler.leagueEnter", sendInfo, function(rtn) {
+    MjClient.gamenet.request("pkplayer.handler.leagueEnter", sendInfo, function (rtn) {
         MjClient.unblock();
 
         if (!cc.sys.isObjectValid(that)) {
@@ -2715,16 +2716,16 @@ FriendCard_Common.requestEnterClub_LM = function(that, clubId) {
         }
 
         if (rtn.code == 0 && rtn.data) {
-            if(rtn.data.info.leagueId){
+            if (rtn.data.info.leagueId) {
                 rtn.data.info.clubId = rtn.data.info.leagueId;
-                rtn.data.info.rankOpenType = rtn.data.info.clubRankOpenType[rtn.data.subClubId+""]
+                rtn.data.info.rankOpenType = rtn.data.info.clubRankOpenType[rtn.data.subClubId + ""]
             }
             rtn.data.info.notice = "请遵守法律法规，健康游戏，禁止赌博！";
             that.enterClubRet(rtn.data);
 
-            if(that._openTongjiAfterEnterData &&　that._openTongjiAfterEnterData.leagueId == rtn.data.info.clubId){
+            if (that._openTongjiAfterEnterData && that._openTongjiAfterEnterData.leagueId == rtn.data.info.clubId) {
                 var openPage = that._openTongjiAfterEnterData.targetRoleId == 2 ? "btn_groupTJ" : "btn_chairmanTJ";
-                that.addChild(new FriendCard_LM_tongji(that.data,openPage));
+                that.addChild(new FriendCard_LM_tongji(that.data, openPage));
                 that._openTongjiAfterEnterData = null;
             }
         } else {
@@ -2736,7 +2737,7 @@ FriendCard_Common.requestEnterClub_LM = function(that, clubId) {
 /* 
     亲友圈主界面：获得房间信息
 */
-FriendCard_Common.requestRoomInfo = function(that, room) {
+FriendCard_Common.requestRoomInfo = function (that, room) {
     MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Zhujiemian_Chakanfangjianxinxi", {
         uid: SelfUid()
     });
@@ -2744,7 +2745,7 @@ FriendCard_Common.requestRoomInfo = function(that, room) {
     MjClient.block();
     MjClient.gamenet.request("pkplayer.handler.roomInfo", {
         roomNum: room.roomNum
-    }, function(rtn) {
+    }, function (rtn) {
         MjClient.unblock();
 
         if (!cc.sys.isObjectValid(that)) {
@@ -2763,7 +2764,7 @@ FriendCard_Common.requestRoomInfo = function(that, room) {
 /* 
     亲友圈主界面：底部button排序
 */
-FriendCard_Common.bottomBtnSort = function(that, arr) {
+FriendCard_Common.bottomBtnSort = function (that, arr) {
     var posIndex = 0;
     var dx = 0;
     var preVisibleName = null;
@@ -2774,8 +2775,8 @@ FriendCard_Common.bottomBtnSort = function(that, arr) {
             that[arr[i]].x = that.bottomBtnsPos[posIndex].x + dx;
             if (FriendCard_Common.getSkinType() == 3) {
                 if (arr[i] == "_btn_personal_shop" && preVisibleName == "_btn_webZhanji") {
-                    that[arr[i]].x = preVisibleBtn.x + 10 + preVisibleBtn.width/2 + that[arr[i]].width/2;
-                    dx += that[arr[i]].x -that.bottomBtnsPos[posIndex].x;
+                    that[arr[i]].x = preVisibleBtn.x + 10 + preVisibleBtn.width / 2 + that[arr[i]].width / 2;
+                    dx += that[arr[i]].x - that.bottomBtnsPos[posIndex].x;
                 }
             }
             preVisibleName = arr[i];
@@ -2788,11 +2789,11 @@ FriendCard_Common.bottomBtnSort = function(that, arr) {
 /* 
     亲友圈主界面：初始化底部按钮 只适用于新版皮肤
 */
-FriendCard_Common.initBottom = function(allBtns,par) {
+FriendCard_Common.initBottom = function (allBtns, par) {
     var that = MjClient.FriendCard_main_ui;
     var _btnList = par ? par : that._image_bottom.getChildByName("btnList");
     var skinType = FriendCard_Common.getSkinType()
-    var btnAddLight = function(btn) {
+    var btnAddLight = function (btn) {
         if (skinType != 3) return;
         if (btn.getChildByName("light")) return;
 
@@ -2801,7 +2802,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
         light.setName("light")
         btn.addChild(light, -1);
     }
-    var btnDelLight = function(btn) {
+    var btnDelLight = function (btn) {
         if (skinType != 3) return;
 
         if (btn.getChildByName("light")) {
@@ -2815,7 +2816,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 邀请加入按钮
     if (allBtns.indexOf("_btn_yaoqing") >= 0) {
         that._btn_yaoqing = _btnList.getChildByName("btn_yaoqing");
-        that._btn_yaoqing.addTouchEventListener(function(sender, type) {
+        that._btn_yaoqing.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -2834,27 +2835,27 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     //商城授权
     if (allBtns.indexOf("_btn_shangChengShouQuan") >= 0) {
         that._btn_shangChengShouQuan = _btnList.getChildByName("btn_shangChengShouQuan");
-        that._btn_shangChengShouQuan.addTouchEventListener(function(sender, type) {
+        that._btn_shangChengShouQuan.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 MjClient.Scene.addChild(new authorizationStoreLayer())
             }
         }, that);
     }
 
-     // 战绩网页
+    // 战绩网页
     if (allBtns.indexOf("_btn_webZhanji") >= 0) {
         that._btn_webZhanji = _btnList.getChildByName("btn_webZhanji");
-        that._btn_webZhanji.addTouchEventListener(function(sender, type) {
+        that._btn_webZhanji.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
-                var func = function() {
+                var func = function () {
                     var sendInfo = {
                         type: 13,
                     }
                     var infoData = FriendCard_Common.getClubInfo();
-                    if(FriendCard_Common.isLMClub()){
+                    if (FriendCard_Common.isLMClub()) {
                         sendInfo.leagueId = infoData.clubId;
-                    }else{
+                    } else {
                         sendInfo.clubId = infoData.clubId;
                     }
                     MjClient.block();
@@ -2877,12 +2878,12 @@ FriendCard_Common.initBottom = function(allBtns,par) {
                         }
                     });
                 }
-                
+
                 if (util.localStorageEncrypt.getBoolItem("btn_webZhanji_first", true)) {
                     util.localStorageEncrypt.setBoolItem("btn_webZhanji_first", false);
-                    MjClient.showMsg("这是你的专属战绩链接，请不要分享给其他人", function() {
+                    MjClient.showMsg("这是你的专属战绩链接，请不要分享给其他人", function () {
                         func();
-                    }, function() {});
+                    }, function () { });
                 }
                 else {
                     func();
@@ -2896,7 +2897,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 房间记录按钮
     if (allBtns.indexOf("_btn_record") >= 0) {
         that._btn_record = _btnList.getChildByName("btn_record");
-        that._btn_record.addTouchEventListener(function(sender, type) {
+        that._btn_record.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -2923,7 +2924,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 查看战绩按钮
     if (allBtns.indexOf("_btn_record2") >= 0) {
         that._btn_record2 = _btnList.getChildByName("btn_record2");
-        that._btn_record2.addTouchEventListener(function(sender, type) {
+        that._btn_record2.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -2950,7 +2951,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 成员列表
     if (allBtns.indexOf("_btn_member") >= 0) {
         that._btn_member = _btnList.getChildByName("btn_member");
-        that._btn_member.addTouchEventListener(function(sender, type) {
+        that._btn_member.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -2960,9 +2961,9 @@ FriendCard_Common.initBottom = function(allBtns,par) {
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Chengyuan", {
                     uid: SelfUid()
                 });
-                if(FriendCard_Common.isLMClub(that.data.info)){
+                if (FriendCard_Common.isLMClub(that.data.info)) {
                     that.addChild(new FriendCard_LM_member(that.data.info));
-                }else{
+                } else {
                     that.addChild(new FriendCard_member(that.data.info));
                 }
             }
@@ -2972,7 +2973,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 亲友圈设置
     if (allBtns.indexOf("_btn_setting") >= 0) {
         that._btn_setting = _btnList.getChildByName("btn_setting");
-        that._btn_setting.addTouchEventListener(function(sender, type) {
+        that._btn_setting.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -2982,9 +2983,9 @@ FriendCard_Common.initBottom = function(allBtns,par) {
                     uid: SelfUid()
                 });
                 that.closeClubList();
-                if(FriendCard_Common.isLMClub()){
+                if (FriendCard_Common.isLMClub()) {
                     that.addChild(new FriendCard_LM_info(that.data, MjClient.FriendCard_main_ui));
-                }else{
+                } else {
                     that.addChild(new FriendCard_info(that.data, MjClient.FriendCard_main_ui));
                 }
             }
@@ -2994,7 +2995,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 亲友圈统计
     if (allBtns.indexOf("_btn_tongji") >= 0) {
         that._btn_tongji = _btnList.getChildByName("btn_tongji");
-        that._btn_tongji.addTouchEventListener(function(sender, type) {
+        that._btn_tongji.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -3007,9 +3008,9 @@ FriendCard_Common.initBottom = function(allBtns,par) {
                 });
                 var groupLeader = FriendCard_Common.isGroupLeader(that.data.info)
                 that.data.groupLeader = groupLeader;
-                if(FriendCard_Common.isLMClub()){
+                if (FriendCard_Common.isLMClub()) {
                     that.addChild(new FriendCard_LM_tongji(that.data));
-                }else{
+                } else {
                     that.addChild(new FriendCard_tongji(that.data));
                 }
             }
@@ -3019,7 +3020,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 主界面规则
     if (allBtns.indexOf("_btn_rule") >= 0) {
         that._btn_rule = _btnList.getChildByName("btn_rule");
-        that._btn_rule.addTouchEventListener(function(sender, type) {
+        that._btn_rule.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -3027,12 +3028,12 @@ FriendCard_Common.initBottom = function(allBtns,par) {
             } else if (type == 2) {
                 that.closeClubList();
 
-                if(that.data.info.matchIsOpen & 2){
+                if (that.data.info.matchIsOpen & 2) {
                     that.addChild(new FriendCard_Match_ruleLayer(that.data.info, that.clubId));
-                }else{
+                } else {
                     that.addChild(new FriendCard_ruleLayer(that.data.info));
                 }
-                
+
             }
         }, that);
     }
@@ -3041,7 +3042,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     if (allBtns.indexOf("btn_gonggao") >= 0) {
         that.btn_gonggao = _btnList.getChildByName("btn_gonggao");
         that.gonggao_image_point = that.btn_gonggao.getChildByName("Image_point");
-        that.btn_gonggao.addTouchEventListener(function(sender, type) {
+        that.btn_gonggao.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -3058,7 +3059,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
                     event: "friendCard_main_gonggao",
                     isManager: that.isManager(),
                     gonggao: that.data.info.notice,
-                    isCreator : that.isCreator()
+                    isCreator: that.isCreator()
                 };
                 MjClient.FriendCard_main_ui.addChild(new friendcard_gonggao(data));
             }
@@ -3068,7 +3069,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 绑定
     if (allBtns.indexOf("_agentBtn") >= 0) {
         that._agentBtn = _btnList.getChildByName("btn_daili");
-        that._agentBtn.addTouchEventListener(function(sender, type) {
+        that._agentBtn.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -3089,7 +3090,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     // 亲友圈换皮
     if (allBtns.indexOf("_btn_setSkin") >= 0) {
         that._btn_setSkin = _btnList.getChildByName("btn_setSkin");
-        that._btn_setSkin.addTouchEventListener(function(sender, type) {
+        that._btn_setSkin.addTouchEventListener(function (sender, type) {
             if (type == 0) {
                 btnAddLight(sender);
             } else if (type == 3) {
@@ -3112,20 +3113,20 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     if (allBtns.indexOf("_btn_FCM") >= 0) {
         that._btn_FCM = _btnList.getChildByName("btn_FCM");
         if (that._btn_FCM) {
-            that._btn_FCM.addTouchEventListener(function(sender, type) {
+            that._btn_FCM.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     that.addChild(new FriendCard_FCM_tongji(that.data));
                 }
             });
         }
     }
-    
+
 
 
     if (allBtns.indexOf("_btn_match") >= 0) {
         that._btn_match = _btnList.getChildByName("btn_match");
         if (that._btn_match) {
-            that._btn_match.addTouchEventListener(function(sender, type) {
+            that._btn_match.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     that.addChild(new Friendcard_Match_Main(that.data));
                 }
@@ -3136,7 +3137,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
     if (allBtns.indexOf("_btn_rankList") >= 0) {
         that._btn_rankList = _btnList.getChildByName("btn_rankList");
         if (that._btn_rankList) {
-            that._btn_rankList.addTouchEventListener(function(sender, type) {
+            that._btn_rankList.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     that.addChild(new FriendCard_Match_rankLayer(that.data.info, that.clubId, that._matchData.matchId, that.data.subClubId));
                 }
@@ -3148,7 +3149,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
         //个人商城点击
         that._btn_personal_shop = _btnList.getChildByName("btn_personal_shop");
         if (that._btn_personal_shop) {
-            that._btn_personal_shop.addTouchEventListener(function(sender, type) {
+            that._btn_personal_shop.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     that.addChild(new authorizationStoreTipLayer());
                 }
@@ -3156,12 +3157,12 @@ FriendCard_Common.initBottom = function(allBtns,par) {
         }
     }
 
-    
+
     //按钮位置
     if (!that.bottomBtnsPos) {
         that.bottomBtnsPos = [];
         for (var i = 0; i < allBtns.length; i++) {
-            if(!that[allBtns[i]]) continue;
+            if (!that[allBtns[i]]) continue;
             if (allBtns[i] != "_btn_record2" && allBtns[i] != "_btn_FCM") {
                 that.bottomBtnsPos.push(that[allBtns[i]].getPosition());
             }
@@ -3172,7 +3173,7 @@ FriendCard_Common.initBottom = function(allBtns,par) {
 /* 
     亲友圈主界面：离开亲友圈
 */
-FriendCard_Common.requestLeaveClub = function(that, isClose) {
+FriendCard_Common.requestLeaveClub = function (that, isClose) {
     if (that.clubId <= 9999) {
         FriendCard_Common.requestLeaveClub_LM(that, isClose);
         return;
@@ -3194,7 +3195,7 @@ FriendCard_Common.requestLeaveClub = function(that, isClose) {
     var sendInfo = {
         clubId: that.clubId
     }
-    MjClient.gamenet.request("pkplayer.handler.clubLeave", sendInfo, function(rtn) {
+    MjClient.gamenet.request("pkplayer.handler.clubLeave", sendInfo, function (rtn) {
         if (!isClose)
             MjClient.unblock();
         if (rtn.code != 0)
@@ -3210,7 +3211,7 @@ FriendCard_Common.requestLeaveClub = function(that, isClose) {
 /* 
     联盟 - 亲友圈主界面：离开亲友圈
 */
-FriendCard_Common.requestLeaveClub_LM = function(that, isClose) {
+FriendCard_Common.requestLeaveClub_LM = function (that, isClose) {
     if (that.clubId <= 0) {
         if (isClose)
             that.removeFromParent(true);
@@ -3227,7 +3228,7 @@ FriendCard_Common.requestLeaveClub_LM = function(that, isClose) {
     var sendInfo = {
         leagueId: that.clubId
     }
-    MjClient.gamenet.request("pkplayer.handler.leagueLeave", sendInfo, function(rtn) {
+    MjClient.gamenet.request("pkplayer.handler.leagueLeave", sendInfo, function (rtn) {
         if (!isClose)
             MjClient.unblock();
         if (rtn.code != 0)
@@ -3243,7 +3244,7 @@ FriendCard_Common.requestLeaveClub_LM = function(that, isClose) {
 /* 
     亲友圈主界面：删除规则
 */
-FriendCard_Common.requestDeleteRule = function(that, index) {
+FriendCard_Common.requestDeleteRule = function (that, index) {
     var that = that;
     var msg = {
         clubId: that.data.info.clubId
@@ -3251,7 +3252,7 @@ FriendCard_Common.requestDeleteRule = function(that, index) {
     msg["rule" + index] = "delete";
     MjClient.block();
     MjClient.gamenet.request("pkplayer.handler.clubUpdate", msg,
-        function(rtn) {
+        function (rtn) {
             MjClient.unblock();
             if (rtn.code != 0)
                 FriendCard_Common.serverFailToast(rtn);
@@ -3261,7 +3262,7 @@ FriendCard_Common.requestDeleteRule = function(that, index) {
 /* 
     亲友圈主界面：
 */
-FriendCard_Common.syncClubList = function(that) {
+FriendCard_Common.syncClubList = function (that) {
     var list = that.clubList;
     var haveChange = false;
     for (var i = 0; i < list.length; i++) {
@@ -3297,10 +3298,10 @@ FriendCard_Common.syncClubList = function(that) {
 /* 
     亲友圈主界面：快速加入游戏
 */
-FriendCard_Common.quicklyJoinGame = function(that, ruleIndex,failTime) {
+FriendCard_Common.quicklyJoinGame = function (that, ruleIndex, failTime) {
     if (cc.sys.isObjectValid(MjClient.blockui)) // 规避因多点触屏，MjClient.block()后再次进入到这里 by cyc
         return;
-    if(!failTime){
+    if (!failTime) {
         failTime = 0
     }
     cc.log(" ======== 快速加入游戏 ===============");
@@ -3313,29 +3314,29 @@ FriendCard_Common.quicklyJoinGame = function(that, ruleIndex,failTime) {
     for (var key in ruleRoom) {
         var room = ruleRoom[key];
         if (room.players.length >= playerNum && room.players.length < room.maxPlayer && (!room.roundNum || room.roundNum <= 0)) {
-            if(room.players.length == playerNum){
+            if (room.players.length == playerNum) {
                 var curOutLineCount = 0
-                for(var i = 0; i < room.players.length;i++){
-                    if(room.players[i].offline == true){
+                for (var i = 0; i < room.players.length; i++) {
+                    if (room.players[i].offline == true) {
                         curOutLineCount++;
                     }
                 }
-                if(curOutLineCount < maxRoomOutLineCount){
+                if (curOutLineCount < maxRoomOutLineCount) {
                     roomId = room.roomNum;
                     playerNum = room.players.length;
                     maxRoomOutLineCount = curOutLineCount;
                 }
-            }else{
+            } else {
                 roomId = room.roomNum;
                 playerNum = room.players.length;
                 maxRoomOutLineCount = 0;
-                for(var i = 0; i < room.players.length;i++){
-                    if(room.players[i].offline == true){
+                for (var i = 0; i < room.players.length; i++) {
+                    if (room.players[i].offline == true) {
                         maxRoomOutLineCount++;
                     }
                 }
             }
-            
+
         }
     }
 
@@ -3358,7 +3359,7 @@ FriendCard_Common.quicklyJoinGame = function(that, ruleIndex,failTime) {
             if (FriendCard_Common.getSkinType() == 0) {
                 _btn_join.loadTextures("friendCards/btn_join_n.png", "friendCards/btn_join_n.png", "");
                 _btn_join.textureType = "快速加入";
-            }else if (FriendCard_Common.getSkinType() == 4) {
+            } else if (FriendCard_Common.getSkinType() == 4) {
                 _btn_join.loadTextureNormal("friendCards/btn_join_n.png");
             } else {
                 _btn_join.loadTextureNormal("friendCards/main/btn_join_n.png");
@@ -3370,13 +3371,13 @@ FriendCard_Common.quicklyJoinGame = function(that, ruleIndex,failTime) {
     }
 
     if (roomId > 0 && failTime < 1) {
-        MjClient.joinGame(roomId, function(rtn){
-            if(rtn && rtn.code == -1){
-                FriendCard_Common.quicklyJoinGame(that, ruleIndex,failTime+1)
-            }else{
+        MjClient.joinGame(roomId, function (rtn) {
+            if (rtn && rtn.code == -1) {
+                FriendCard_Common.quicklyJoinGame(that, ruleIndex, failTime + 1)
+            } else {
                 FriendCard_Common.serverFailToast(rtn);
             }
-        }, false, gameType,false,{notShowErrorMsg:true});
+        }, false, gameType, false, { notShowErrorMsg: true });
     } else if (that.customInfo) {
         var uiPara = {}
         uiPara.msg = "暂无可加入的房间。";
@@ -3397,7 +3398,7 @@ FriendCard_Common.quicklyJoinGame = function(that, ruleIndex,failTime) {
                 ruleId: ruleIndex,
             }
         }
-        MjClient.gamenet.request(jiekouName, sendInfo , function(rtn) {
+        MjClient.gamenet.request(jiekouName, sendInfo, function (rtn) {
             if (rtn.code == 0) {
                 MjClient.joinGame(rtn.data, null, false, gameType);
             } else {
@@ -3411,7 +3412,7 @@ FriendCard_Common.quicklyJoinGame = function(that, ruleIndex,failTime) {
 /* 
     亲友圈主界面：修改本地保存的皮肤数据
 */
-FriendCard_Common.setNativeSkinCfg = function(that, info) {
+FriendCard_Common.setNativeSkinCfg = function (that, info) {
     var skinCfg = info.skinCfg
     util.localStorageEncrypt.setNumberItem("Friendcard_SkinCfg_MJBG_" + that.clubId, skinCfg.MJBG);
     util.localStorageEncrypt.setNumberItem("Friendcard_SkinCfg_ZPBG_" + that.clubId, skinCfg.ZPBG);
@@ -3423,13 +3424,13 @@ FriendCard_Common.setNativeSkinCfg = function(that, info) {
         if (info["rule" + i] && info["rule" + i].tableBoardCfg != null)
             util.localStorageEncrypt.setNumberItem("Friendcard_SkinCfg_rule" + i + "_" + that.clubId, info["rule" + i].tableBoardCfg);
     }
-   
+
 }
 
 /* 
     亲友圈主界面：获得本地保存的皮肤数据
 */
-FriendCard_Common.getNativeSkinCfg = function(that) {
+FriendCard_Common.getNativeSkinCfg = function (that) {
     var skinCfg = {};
     skinCfg.MJBG = util.localStorageEncrypt.getNumberItem("Friendcard_SkinCfg_MJBG_" + that.clubId, 0);
     skinCfg.ZPBG = util.localStorageEncrypt.getNumberItem("Friendcard_SkinCfg_ZPBG_" + that.clubId, 0);
@@ -3449,7 +3450,7 @@ FriendCard_Common.getNativeSkinCfg = function(that) {
 return  false 不显示桌子
 return  true 显示桌子
 */
-FriendCard_Common.isShowTable = function(that) {
+FriendCard_Common.isShowTable = function (that) {
     if ((that.data.info.useClose == 1 && FriendCard_Common.isInDaYangTime()) && that.data.info.isShowTable == 0 && that.data.info.createSwitch != 0 && !that.isManager()) {
         that._img_stop.setVisible(false);
         that.listView_table.removeAllItems();
@@ -3467,14 +3468,14 @@ FriendCard_Common.isShowTable = function(that) {
 /* 
 亲友圈主界面：是否展示提示界面
 */
-FriendCard_Common.guideLayer = function(that) {
+FriendCard_Common.guideLayer = function (that) {
     var guideLayerStr = "_clubFirstInto"
     if (that.isManager())
         guideLayerStr = "_clubFirstInto_IsManager"
 
     if (util.localStorageEncrypt.getBoolItem(guideLayerStr, true)) {
         util.localStorageEncrypt.setBoolItem(guideLayerStr, false);
-        that.runAction(cc.sequence(cc.delayTime(0.1), cc.callFunc(function() {
+        that.runAction(cc.sequence(cc.delayTime(0.1), cc.callFunc(function () {
             that.closeClubList();
         })))
         that.data.btnsPos = [that._btn_member.getPosition(), that._btn_yaoqing.getPosition()]
@@ -3487,7 +3488,7 @@ FriendCard_Common.guideLayer = function(that) {
 /* 
     亲友圈主界面：删除俱乐部
 */
-FriendCard_Common.removeClub = function(that, clubId) {
+FriendCard_Common.removeClub = function (that, clubId) {
     that.clubList = [];
     that.clubId = -1;
     that.data = {
@@ -3504,7 +3505,7 @@ FriendCard_Common.removeClub = function(that, clubId) {
 /* 
     亲友圈主界面：箭头图片
 */
-FriendCard_Common.tipCheck = function(that) {
+FriendCard_Common.tipCheck = function (that) {
     that._imgPoint.visible = false;
     that._imgtext.visible = false;
 
@@ -3514,7 +3515,7 @@ FriendCard_Common.tipCheck = function(that) {
     var end = false;
     var x = that._imgPoint.x;
     that.unscheduleAllCallbacks();
-    that.schedule(function() {
+    that.schedule(function () {
         if (end)
             return;
 
@@ -3555,14 +3556,14 @@ FriendCard_Common.tipCheck = function(that) {
 /* 
     绑定代理
 */
-FriendCard_Common.bindingAgent = function(that) {
+FriendCard_Common.bindingAgent = function (that) {
     var that = that;
-    var binding = function(ID) {
+    var binding = function (ID) {
         MjClient.block();
         MjClient.gamenet.request("pkplayer.handler.setUserMember", {
-                memberId: that.data.info.memberId
-            },
-            function(rtn) {
+            memberId: that.data.info.memberId
+        },
+            function (rtn) {
                 MjClient.unblock();
                 if (rtn.code == 0 && cc.sys.isObjectValid(that._agentBtn)) {
                     that._agentBtn.visible = false;
@@ -3577,10 +3578,10 @@ FriendCard_Common.bindingAgent = function(that) {
     MjClient.block();
     MjClient.gamenet.request("pkcon.handler.getMemberInfo", {
         memberId: that.data.info.memberId
-    }, function(rtn) {
+    }, function (rtn) {
         MjClient.unblock();
         if (rtn.code == 0) {
-            var layer = new Friendcard_bindingCodeLayer(rtn.data, function() {
+            var layer = new Friendcard_bindingCodeLayer(rtn.data, function () {
                 binding();
             });
             if (cc.sys.isObjectValid(that))
@@ -3598,7 +3599,7 @@ FriendCard_Common.bindingAgent = function(that) {
 /* 
     时间转换 将年月日转换成时间戳
 */
-FriendCard_Common.transdate = function(year, month, day, hour ,minute) {
+FriendCard_Common.transdate = function (year, month, day, hour, minute) {
     var date = new Date(); //当前时区的时间
     date.setFullYear(year, month, day);
     date.setHours(hour);
@@ -3616,7 +3617,7 @@ FriendCard_Common.transdate = function(year, month, day, hour ,minute) {
 /* 
     输入名称操作
 */
-FriendCard_Common.strReplace = function(str) {
+FriendCard_Common.strReplace = function (str) {
     //str = str.replace(/\s+/g,"");   //去除所有空格
     str = str.replace(/^\s+|\s+$/g, ""); //去掉左右空格
     str = str.replace(/\n/g, "");
@@ -3629,27 +3630,27 @@ FriendCard_Common.strReplace = function(str) {
 *eg (0511)跑得快
 * return [0] 编号 [1] 玩法默认名称
 */
-FriendCard_Common.splitClubRuleName = function(str) {
+FriendCard_Common.splitClubRuleName = function (str) {
     var result = [];
-    if(!str){
+    if (!str) {
         result.push("");
         result.push(str);
         return result;
     }
     var index1 = str.indexOf("(");
     var index2 = str.indexOf(")");
-    if(index1 > -1 && index2 > -1 && index1 == 0){
+    if (index1 > -1 && index2 > -1 && index1 == 0) {
 
-        var no = str.substring(index1+1,index2);
-        if(FriendCard_Common.isNumber(no)){
-            result.push(str.substring(index1+1,index2));
-            result.push(str.substring(index2+1,str.length));
-        }else{
+        var no = str.substring(index1 + 1, index2);
+        if (FriendCard_Common.isNumber(no)) {
+            result.push(str.substring(index1 + 1, index2));
+            result.push(str.substring(index2 + 1, str.length));
+        } else {
             result.push("");
             result.push(str);
         }
-        
-    }else{
+
+    } else {
         result.push("");
         result.push(str);
     }
@@ -3657,9 +3658,9 @@ FriendCard_Common.splitClubRuleName = function(str) {
 }
 
 
-FriendCard_Common.isNumber = function(str) {
+FriendCard_Common.isNumber = function (str) {
     var n = Number(str);
-    if (!isNaN(n)){
+    if (!isNaN(n)) {
         return true;
     }
     return false;
@@ -3667,23 +3668,23 @@ FriendCard_Common.isNumber = function(str) {
 
 
 
-FriendCard_Common.doDaYangAction = function(that){
+FriendCard_Common.doDaYangAction = function (that) {
     var clubInfo = FriendCard_Common.getClubInfo();
     var actionTag = 20190819;
     that.stopActionByTag(actionTag);
-    if(!clubInfo){
-        return ;
+    if (!clubInfo) {
+        return;
     }
-    if(!clubInfo.useClose){
-        return ;
+    if (!clubInfo.useClose) {
+        return;
     }
-    if(!clubInfo.dailyCloseTime || clubInfo.dailyCloseTime == ""){
-        return ;
+    if (!clubInfo.dailyCloseTime || clubInfo.dailyCloseTime == "") {
+        return;
     }
-    var startHour = parseInt(clubInfo.dailyCloseTime.substring(0,2));
-    var startMinute = parseInt(clubInfo.dailyCloseTime.substring(3,5));
-    var endHour = parseInt(clubInfo.dailyCloseTime.substring(6,8));
-    var endMinute = parseInt(clubInfo.dailyCloseTime.substring(9,11));
+    var startHour = parseInt(clubInfo.dailyCloseTime.substring(0, 2));
+    var startMinute = parseInt(clubInfo.dailyCloseTime.substring(3, 5));
+    var endHour = parseInt(clubInfo.dailyCloseTime.substring(6, 8));
+    var endMinute = parseInt(clubInfo.dailyCloseTime.substring(9, 11));
     var serverDateTime = FriendCard_Common.getServerTime();
     var startDate = new Date(serverDateTime);
     startDate.setHours(startHour);
@@ -3700,48 +3701,48 @@ FriendCard_Common.doDaYangAction = function(that){
     var oneDayTime = 24 * 60 * 60 * 1000;
 
     var dyTime = 0;
-    if(startDateTime > endDateTime){
-        if((startDateTime - oneDayTime) <= serverDateTime && serverDateTime < endDateTime){
+    if (startDateTime > endDateTime) {
+        if ((startDateTime - oneDayTime) <= serverDateTime && serverDateTime < endDateTime) {
             dyTime = endDateTime - serverDateTime;
         }
-        if(startDateTime <= serverDateTime && serverDateTime < (endDateTime + oneDayTime)){
-           dyTime = endDateTime + oneDayTime - serverDateTime;
+        if (startDateTime <= serverDateTime && serverDateTime < (endDateTime + oneDayTime)) {
+            dyTime = endDateTime + oneDayTime - serverDateTime;
         }
-    }else{
-        if(startDateTime <= serverDateTime && serverDateTime < endDateTime){
+    } else {
+        if (startDateTime <= serverDateTime && serverDateTime < endDateTime) {
             dyTime = endDateTime - serverDateTime;
         }
     }
-    if(!dyTime){
-        if(startDateTime > serverDateTime){
+    if (!dyTime) {
+        if (startDateTime > serverDateTime) {
             dyTime = startDateTime - serverDateTime;
-        }else{
+        } else {
             dyTime = startDateTime - serverDateTime + oneDayTime;
         }
     }
-    var actionTime = dyTime/1000+2;
-    cc.log("actionTime",actionTime)
-    var action = cc.sequence(cc.delayTime(actionTime),cc.callFunc(function(){
+    var actionTime = dyTime / 1000 + 2;
+    cc.log("actionTime", actionTime)
+    var action = cc.sequence(cc.delayTime(actionTime), cc.callFunc(function () {
         that.refreshDeskList();
         FriendCard_Common.doDaYangAction(that);
     }))
     action.setTag(actionTag);
     that.runAction(action);
 }
-FriendCard_Common.isInDaYangTime = function(){
+FriendCard_Common.isInDaYangTime = function () {
     var clubInfo = FriendCard_Common.getClubInfo();
-    if(!clubInfo){
+    if (!clubInfo) {
         return false;
     }
 
-    if(!clubInfo.dailyCloseTime || clubInfo.dailyCloseTime == ""){
+    if (!clubInfo.dailyCloseTime || clubInfo.dailyCloseTime == "") {
         return false;
     }
     /*cc.log("isInDaYangTime dailyCloseTime ",clubInfo.dailyCloseTime)*/
-    var startHour = parseInt(clubInfo.dailyCloseTime.substring(0,2));
-    var startMinute = parseInt(clubInfo.dailyCloseTime.substring(3,5));
-    var endHour = parseInt(clubInfo.dailyCloseTime.substring(6,8));
-    var endMinute = parseInt(clubInfo.dailyCloseTime.substring(9,11));
+    var startHour = parseInt(clubInfo.dailyCloseTime.substring(0, 2));
+    var startMinute = parseInt(clubInfo.dailyCloseTime.substring(3, 5));
+    var endHour = parseInt(clubInfo.dailyCloseTime.substring(6, 8));
+    var endMinute = parseInt(clubInfo.dailyCloseTime.substring(9, 11));
     var serverDateTime = FriendCard_Common.getServerTime();
     var startDate = new Date(serverDateTime);
     startDate.setHours(startHour);
@@ -3760,15 +3761,15 @@ FriendCard_Common.isInDaYangTime = function(){
     /*cc.log("startDateTime",startDateTime)
     cc.log("endDateTime",endDateTime)
     cc.log("serverDateTime",serverDateTime)*/
-    if(startDateTime > endDateTime){
-        if((startDateTime - oneDayTime) <= serverDateTime && serverDateTime < endDateTime){
+    if (startDateTime > endDateTime) {
+        if ((startDateTime - oneDayTime) <= serverDateTime && serverDateTime < endDateTime) {
             return true;
         }
-        if(startDateTime <= serverDateTime && serverDateTime < (endDateTime + oneDayTime)){
+        if (startDateTime <= serverDateTime && serverDateTime < (endDateTime + oneDayTime)) {
             return true;
         }
-    }else{
-        if(startDateTime <= serverDateTime && serverDateTime < endDateTime){
+    } else {
+        if (startDateTime <= serverDateTime && serverDateTime < endDateTime) {
             return true;
         }
     }
@@ -3780,7 +3781,7 @@ FriendCard_Common.isInDaYangTime = function(){
 /* 
     俱乐部公共方法 EditBox
 */
-FriendCard_Common.setEditBoxConfig = function(_parent, _child, str, MaxLength) {
+FriendCard_Common.setEditBoxConfig = function (_parent, _child, str, MaxLength) {
     _child.setFontColor(cc.color(0x77, 0x77, 0x77));
     if (MaxLength)
         _child.setMaxLength(MaxLength);
@@ -3798,9 +3799,9 @@ FriendCard_Common.setEditBoxConfig = function(_parent, _child, str, MaxLength) {
 /* 
     俱乐部主界面返回大厅功能事件
 */
-FriendCard_Common.toTheHallEvent = function(that, _btn_join) {
+FriendCard_Common.toTheHallEvent = function (that, _btn_join) {
     // 俱乐部返回大厅功能：by_jcw
-    UIEventBind(null, _btn_join, "addPlayer", function(eD) {
+    UIEventBind(null, _btn_join, "addPlayer", function (eD) {
         var sData = MjClient.data.sData;
         if (sData && !MjClient.PopUpMsgBackHall) {
             var _playerCount = Object.keys(MjClient.data.sData.players).length;
@@ -3808,7 +3809,7 @@ FriendCard_Common.toTheHallEvent = function(that, _btn_join) {
             if (_needCount == 0) {
                 MjClient.PopUpMsgBackHall = true;
                 MjClient.showMsg("你加入的房间已准备就绪，请立即返回房间！",
-                    function() {
+                    function () {
                         var roomId = MjClient.data.sData && MjClient.data.sData.tData.tableid;
                         if (roomId > 0) {
                             MjClient.joinGame(roomId, null, false, MjClient.gameType);
@@ -3820,11 +3821,11 @@ FriendCard_Common.toTheHallEvent = function(that, _btn_join) {
     });
 
     // 亲友圈房间解散消息处理：by_jcw
-    UIEventBind(null, _btn_join, "endRoom", function(eD) {
+    UIEventBind(null, _btn_join, "endRoom", function (eD) {
         //新老俱乐部图片位置不一样
         if (FriendCard_Common.getSkinType() == 0) {
             _btn_join.loadTextures("friendCards/btn_join_n.png", "friendCards/btn_join_n.png", "");
-        }else if (FriendCard_Common.getSkinType() == 4) {
+        } else if (FriendCard_Common.getSkinType() == 4) {
             _btn_join.loadTextureNormal("friendCards/btn_join_n.png");
         } else {
             _btn_join.loadTextureNormal("friendCards/main/btn_join_n.png");
@@ -3835,12 +3836,12 @@ FriendCard_Common.toTheHallEvent = function(that, _btn_join) {
     });
 
     // 俱乐部返回大厅功能：by_jcw
-    UIEventBind(null, that, "FreeBegin", function(rtn) {
+    UIEventBind(null, that, "FreeBegin", function (rtn) {
         var sData = MjClient.data.sData;
         if (sData && !MjClient.PopUpMsgBackHall) {
             MjClient.PopUpMsgBackHall = true;
             MjClient.showMsg("你加入的房间已准备就绪，请立即返回房间！",
-                function() {
+                function () {
                     var roomId = MjClient.data.sData && MjClient.data.sData.tData.tableid;
                     if (roomId > 0) {
                         MjClient.joinGame(roomId, null, false, MjClient.gameType);
@@ -3854,8 +3855,8 @@ FriendCard_Common.toTheHallEvent = function(that, _btn_join) {
 /* 
     俱乐部主界面加入房间功能
 */
-FriendCard_Common.joinGame = function(that, sender) {
-    var join_Game = function() {
+FriendCard_Common.joinGame = function (that, sender) {
+    var join_Game = function () {
         //岳阳 邵阳房间未开始也显示房间信息界面
         var isShowRoomInfo = false;
         sender.room.players = sender.room.players ? sender.room.players : [];
@@ -3876,12 +3877,12 @@ FriendCard_Common.joinGame = function(that, sender) {
                     uid: SelfUid()
                 });
                 var params = {};
-                if(FriendCard_Common.isLMClub()){
+                if (FriendCard_Common.isLMClub()) {
                     params.leagueId = that.clubId;
-                }else{
+                } else {
                     params.clubId = that.clubId;
                 }
-                MjClient.joinGame(sender.room.roomNum, null, false, sender.room.gameType,false,params);
+                MjClient.joinGame(sender.room.roomNum, null, false, sender.room.gameType, false, params);
             }
         } else {
             MjClient.block();
@@ -3899,19 +3900,19 @@ FriendCard_Common.joinGame = function(that, sender) {
                     ruleId: sender.room.ruleIndex || that.ruleIndex,
                 }
             }
-            MjClient.gamenet.request(jiekouName, sendInfo, function(rtn) {
-                        MjClient.unblock();
-                        if (rtn.code == 0) {
-                            var params = {};
-                            if(FriendCard_Common.isLMClub()){
-                                params.leagueId = that.clubId;
-                            }else{
-                                params.clubId = that.clubId;
-                            }
-                            MjClient.joinGame(rtn.data, null, false, sender.room.gameType,false,params);
-                        } else {
-                            FriendCard_Common.serverFailToast(rtn);
-                        }
+            MjClient.gamenet.request(jiekouName, sendInfo, function (rtn) {
+                MjClient.unblock();
+                if (rtn.code == 0) {
+                    var params = {};
+                    if (FriendCard_Common.isLMClub()) {
+                        params.leagueId = that.clubId;
+                    } else {
+                        params.clubId = that.clubId;
+                    }
+                    MjClient.joinGame(rtn.data, null, false, sender.room.gameType, false, params);
+                } else {
+                    FriendCard_Common.serverFailToast(rtn);
+                }
             });
             MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Chuangjianfangjian", {
                 uid: SelfUid()
@@ -3944,15 +3945,15 @@ FriendCard_Common.joinGame = function(that, sender) {
     return true  离开房间
     return false 不在房间内不需离开
 */
-FriendCard_Common.leaveGame = function(func) {
+FriendCard_Common.leaveGame = function (func) {
     MjClient._lastTableId = "";
-    util.localStorageEncrypt.setStringItem("_lastTableId",(MjClient._lastTableId+""));
+    util.localStorageEncrypt.setStringItem("_lastTableId", (MjClient._lastTableId + ""));
     // 俱乐部返回大厅功能：by_jcw
     // 加入其他房间前先离开未离开的房间
     var sData = MjClient.data.sData;
     if (sData) {
         MjClient.block();
-        MjClient.gamenet.request("pkplayer.handler.LeaveGame", {}, function(rtn) {
+        MjClient.gamenet.request("pkplayer.handler.LeaveGame", {}, function (rtn) {
             MjClient.unblock();
             if (rtn.result == 0 || rtn.code == 0) {
                 delete MjClient.data.sData;
@@ -3975,11 +3976,11 @@ FriendCard_Common.leaveGame = function(func) {
 }
 
 //统计清除分数
-FriendCard_Common.clubStatisClear = function (params,callback) {
-    cc.log("clubStatisClear sendInfo",JSON.stringify(params));
-    if(params.leagueId){
+FriendCard_Common.clubStatisClear = function (params, callback) {
+    cc.log("clubStatisClear sendInfo", JSON.stringify(params));
+    if (params.leagueId) {
         MjClient.block();
-        MjClient.gamenet.request("pkplayer.handler.leagueStatisClear", params, function(rtn) {
+        MjClient.gamenet.request("pkplayer.handler.leagueStatisClear", params, function (rtn) {
             MjClient.unblock();
             if (rtn.result == 0 || rtn.code == 0) {
                 if (callback)
@@ -3988,9 +3989,9 @@ FriendCard_Common.clubStatisClear = function (params,callback) {
                 MjClient.showMsg(rtn.message);
             }
         });
-    }else{
+    } else {
         MjClient.block();
-        MjClient.gamenet.request("pkplayer.handler.clubStatisClear", params, function(rtn) {
+        MjClient.gamenet.request("pkplayer.handler.clubStatisClear", params, function (rtn) {
             MjClient.unblock();
             if (rtn.result == 0 || rtn.code == 0) {
                 if (callback)
@@ -4002,33 +4003,33 @@ FriendCard_Common.clubStatisClear = function (params,callback) {
         });
     }
 }
-FriendCard_Common.getRoomCardFreeConfig = function(callback) {
-    if(FriendCard_Common.roomCardFreeConfig){
+FriendCard_Common.getRoomCardFreeConfig = function (callback) {
+    if (FriendCard_Common.roomCardFreeConfig) {
         callback();
         return;
     }
-    
+
     MjClient.block();
-    MjClient.gamenet.request("pkplayer.handler.gameDifenConf", {},function(rtn) {
-            MjClient.unblock();
-            if (rtn.code == 0) {
-                /*//转化成键值对格式
-                var roomCardFreeConfig = {};
-                for(var i = 0; i < rtn.data.list.length; i++){
-                    if(!roomCardFreeConfig[rtn.data.list[i].gameType]){
-                        roomCardFreeConfig[rtn.data.list[i].gameType] = {};
-                    }
-                    roomCardFreeConfig[rtn.data.list[i].gameType][rtn.data.list[i].difen] = rtn.data.list[i].miankouCap
-                }*/
-                FriendCard_Common.roomCardFreeConfig = rtn.data ? rtn.data.list : [] ;
-            }
-            callback();
+    MjClient.gamenet.request("pkplayer.handler.gameDifenConf", {}, function (rtn) {
+        MjClient.unblock();
+        if (rtn.code == 0) {
+            /*//转化成键值对格式
+            var roomCardFreeConfig = {};
+            for(var i = 0; i < rtn.data.list.length; i++){
+                if(!roomCardFreeConfig[rtn.data.list[i].gameType]){
+                    roomCardFreeConfig[rtn.data.list[i].gameType] = {};
+                }
+                roomCardFreeConfig[rtn.data.list[i].gameType][rtn.data.list[i].difen] = rtn.data.list[i].miankouCap
+            }*/
+            FriendCard_Common.roomCardFreeConfig = rtn.data ? rtn.data.list : [];
         }
+        callback();
+    }
     );
 };
 
 //将节点下面的所有子节点 按钮 文本 复选框 都不可点击
-FriendCard_Common.setNodeChiTouch = function(node) {
+FriendCard_Common.setNodeChiTouch = function (node) {
     var childrens = node.getChildren();
     if (childrens) {
         for (var i in childrens) {
@@ -4059,7 +4060,7 @@ FriendCard_Common.setNodeChiTouch = function(node) {
 };
 
 
-FriendCard_Common.getLastDay = function(year,month) {
+FriendCard_Common.getLastDay = function (year, month) {
     var year = Number(year);
     var month = Number(month);
     var new_year = year; //取当前的年份
@@ -4073,9 +4074,9 @@ FriendCard_Common.getLastDay = function(year,month) {
     return (new Date(new_date.getTime() - 1000 * 60 * 60 * 24)).getDate(); //获取当月最后一天日期
 }
 
-FriendCard_Common.setDay = function(year,month,day) {
-     /* 获取当前月份 */
-    var maxDay = FriendCard_Common.getLastDay(year,month)
+FriendCard_Common.setDay = function (year, month, day) {
+    /* 获取当前月份 */
+    var maxDay = FriendCard_Common.getLastDay(year, month)
     if (maxDay < day)
         return "01"
 
@@ -4092,19 +4093,18 @@ FriendCard_Common.setDay = function(year,month,day) {
 }
 
 //给数组添加字段
-FriendCard_Common.runAll = function(arr,key,value){
-    if(!arr || typeof(arr) != 'object'){
+FriendCard_Common.runAll = function (arr, key, value) {
+    if (!arr || typeof (arr) != 'object') {
         return;
     }
-    for(var i = 0 ; i < arr.length; i++){
+    for (var i = 0; i < arr.length; i++) {
         arr[i][key] = value;
     }
 }
 
-FriendCard_Common.getRoleTextByRoleId = function(roleId){
-    if(FriendCard_Common.isLMClub()){
-        switch(roleId)
-        {
+FriendCard_Common.getRoleTextByRoleId = function (roleId) {
+    if (FriendCard_Common.isLMClub()) {
+        switch (roleId) {
             case 1:
                 return "会长"
             case 3:
@@ -4119,9 +4119,8 @@ FriendCard_Common.getRoleTextByRoleId = function(roleId){
                 return "超级管理员"
         }
         return "未知身份";
-    }else{
-        switch(roleId)
-        {
+    } else {
+        switch (roleId) {
             case 1:
                 return "管理员"
             case 3:
@@ -4135,31 +4134,31 @@ FriendCard_Common.getRoleTextByRoleId = function(roleId){
     }
 }
 
-FriendCard_Common.createCommonBtn = function(params){
-    if(!params){
+FriendCard_Common.createCommonBtn = function (params) {
+    if (!params) {
         params = {};
     }
-    if(!params.resArr){
+    if (!params.resArr) {
         params.resArr = [];
     }
-    if(!params.text){
+    if (!params.text) {
         params.text = "";
     }
-    if(!params.color){
-        if(FriendCard_Common.getSkinType() == 4){
+    if (!params.color) {
+        if (FriendCard_Common.getSkinType() == 4) {
             params.color = "#A38238";
-        }else{
+        } else {
             params.color = "#A38238";
         }
-        
+
     }
-    if(!params.fontSize){
-        if(FriendCard_Common.getSkinType() == 4){
+    if (!params.fontSize) {
+        if (FriendCard_Common.getSkinType() == 4) {
             params.fontSize = 24;
-        }else{
+        } else {
             params.fontSize = 24;
         }
-        
+
     }
     var button = new ccui.Button(
         params.resArr[0] ? params.resArr[0] : "friendCards/common/btn_common_n.png",
@@ -4171,39 +4170,39 @@ FriendCard_Common.createCommonBtn = function(params){
     return button;
 }
 //主界面跑马灯
-FriendCard_Common.pageRunText = function(gonggaoParent,notice){
+FriendCard_Common.pageRunText = function (gonggaoParent, notice) {
     var bg_text = gonggaoParent.getChildByName("scroll");
     var msg = bg_text.getChildByName("msg");
     msg.ignoreContentAdaptWithSize(true);
     msg.anchorX = 0;
     msg.disableEffect();
-    if(!MjClient.FriendCard_main_ui.redPackageAwardToastList){
+    if (!MjClient.FriendCard_main_ui.redPackageAwardToastList) {
         MjClient.FriendCard_main_ui.redPackageAwardToastList = [];
     }
     var optNode = msg;
     var msgIntervalTime = 10;
-    if(MjClient.FriendCard_main_ui.redPackageAwardToastList.length > 0){
-        if(optNode.getActionByTag(20191010)){
+    if (MjClient.FriendCard_main_ui.redPackageAwardToastList.length > 0) {
+        if (optNode.getActionByTag(20191010)) {
             return;
         }
         var awardData = MjClient.FriendCard_main_ui.redPackageAwardToastList[0];
-        MjClient.FriendCard_main_ui.redPackageAwardToastList.splice(0,1);
+        MjClient.FriendCard_main_ui.redPackageAwardToastList.splice(0, 1);
         var clubInfo = FriendCard_Common.getClubInfo();
-        if(clubInfo.clubId != awardData.clubId && clubInfo.leagueId != awardData.leagueId){
+        if (clubInfo.clubId != awardData.clubId && clubInfo.leagueId != awardData.leagueId) {
             //不是同一个俱乐部或联盟
-            FriendCard_Common.pageRunText(gonggaoParent,gonggaoParent._notice ? gonggaoParent._notice : notice);
+            FriendCard_Common.pageRunText(gonggaoParent, gonggaoParent._notice ? gonggaoParent._notice : notice);
             return;
         }
         optNode.setString(unescape(awardData.text));
-    }else{
-        if(gonggaoParent._notice != notice){
+    } else {
+        if (gonggaoParent._notice != notice) {
             optNode.stopAllActions();
             gonggaoParent._notice = notice;
 
-        }else{
+        } else {
             gonggaoParent._notice = notice;
             //已经在运行
-            if(optNode.getActionByTag(20191010)){
+            if (optNode.getActionByTag(20191010)) {
                 return;
             }
         }
@@ -4214,7 +4213,7 @@ FriendCard_Common.pageRunText = function(gonggaoParent,notice){
         if (MjClient.FriendCard_main_ui.matchNotice) {
             if (MjClient.FriendCard_main_ui.matchNotice.playIdx < MjClient.FriendCard_main_ui.matchNotice.msgs.length) {
                 optNode.setString(MjClient.FriendCard_main_ui.matchNotice.msgs[MjClient.FriendCard_main_ui.matchNotice.playIdx++]);
-            }else{
+            } else {
                 MjClient.FriendCard_main_ui.matchNotice.playIdx = 0;
             }
             msgIntervalTime = 10;
@@ -4223,35 +4222,35 @@ FriendCard_Common.pageRunText = function(gonggaoParent,notice){
     optNode.visible = true;
     var dx = 30;
     var otherActionTime = 0;
-    if(bg_text.getInnerContainerSize()){
+    if (bg_text.getInnerContainerSize()) {
         optNode.y = bg_text.getInnerContainerSize().height - optNode.height * optNode.anchorY - 2;
-    }else{
+    } else {
         optNode.y = bg_text.height - optNode.height * optNode.anchorY;
     }
     optNode.x = bg_text.width + dx;
 
 
-   
-    var callBack2 = new cc.CallFunc(function() {
-        gonggaoParent.runAction(cc.sequence(cc.delayTime(msgIntervalTime),cc.callFunc(function(){
-            FriendCard_Common.pageRunText(gonggaoParent,gonggaoParent._notice ? gonggaoParent._notice : notice);
+
+    var callBack2 = new cc.CallFunc(function () {
+        gonggaoParent.runAction(cc.sequence(cc.delayTime(msgIntervalTime), cc.callFunc(function () {
+            FriendCard_Common.pageRunText(gonggaoParent, gonggaoParent._notice ? gonggaoParent._notice : notice);
         })));
     })
-   
+
     var time2 = (bg_text.width + optNode.width + 2 * dx) / 75;
-    var action2 = cc.sequence(cc.delayTime(otherActionTime),cc.moveTo(time2, cc.p(-(dx + optNode.width), optNode.y)), callBack2);
+    var action2 = cc.sequence(cc.delayTime(otherActionTime), cc.moveTo(time2, cc.p(-(dx + optNode.width), optNode.y)), callBack2);
     action2.setTag(20191010);
     optNode.runAction(action2);
 
 }
 
-FriendCard_Common.getHideIdStr = function(uid){
-    var hideIdStr = uid +"";
-    if(hideIdStr.length >= 4){
+FriendCard_Common.getHideIdStr = function (uid) {
+    var hideIdStr = uid + "";
+    if (hideIdStr.length >= 4) {
         if (MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ) {
-            hideIdStr = hideIdStr.slice(0,2) + "**" + hideIdStr.slice(4,hideIdStr.length);
-        }else{
-            hideIdStr = hideIdStr.slice(0,1) + "***" + hideIdStr.slice(4,hideIdStr.length);    
+            hideIdStr = hideIdStr.slice(0, 2) + "**" + hideIdStr.slice(4, hideIdStr.length);
+        } else {
+            hideIdStr = hideIdStr.slice(0, 1) + "***" + hideIdStr.slice(4, hideIdStr.length);
         }
     }
     return hideIdStr;
@@ -4261,26 +4260,26 @@ FriendCard_Common.getHideIdStr = function(uid){
 //俱乐部列表拖动的延迟时间
 FriendCard_Common.touchBeginTime = 1000;
 //俱乐部列表拖动功能
-FriendCard_Common.clublistDrag = function(that){
+FriendCard_Common.clublistDrag = function (that) {
     var touchNodeCell = that._node_clubList.getChildByName("touchNode");
-    if(!touchNodeCell){
+    if (!touchNodeCell) {
         return;
     }
     touchNodeCell.visible = false;
     var listView = that._node_clubList.getChildByName("clubListView");
     touchNode = listView.getChildByName("touchNode")
-    if(touchNode){
+    if (touchNode) {
         touchNode.removeFromParent(true);
     }
-    if(!touchNode){
+    if (!touchNode) {
         touchNode = touchNodeCell.clone();
         touchNode.setName("touchNode");
         touchNode.visible = true;
-        listView.addChild(touchNode,1);
+        listView.addChild(touchNode, 1);
     }
     var clubItems = [];
-    for(var i = 0 ; i < listView.getChildren().length; i++){
-        if(listView.getChildren()[i].name && listView.getChildren()[i].name.indexOf("clubListViewItem_") > -1){
+    for (var i = 0; i < listView.getChildren().length; i++) {
+        if (listView.getChildren()[i].name && listView.getChildren()[i].name.indexOf("clubListViewItem_") > -1) {
             clubItems.push(listView.getChildren()[i]);
             clubItems[i].tempP = clubItems[i].getPosition();
         }
@@ -4288,181 +4287,181 @@ FriendCard_Common.clublistDrag = function(that){
     var listViewPos = listView.getPosition();
     listViewPos.x = listViewPos.x - (listView.getAnchorPoint().x - 0.5) * listView.width;
     listViewPos.y = listViewPos.y - (listView.getAnchorPoint().y - 0.5) * listView.height;
-    var listBottomP = listView.getParent().convertToWorldSpace(cc.p(listViewPos.x,listViewPos.y - listView.height/2));
-    var listTopP = listView.getParent().convertToWorldSpace(cc.p(listViewPos.x,listViewPos.y + listView.height/2));
- 
+    var listBottomP = listView.getParent().convertToWorldSpace(cc.p(listViewPos.x, listViewPos.y - listView.height / 2));
+    var listTopP = listView.getParent().convertToWorldSpace(cc.p(listViewPos.x, listViewPos.y + listView.height / 2));
+
     function intoMoveClubListMode() {
-            clubItems.sort(function(a, b) {
-                if (a.y > b.y) {
-                    return -1;
-                } else if (a.y == b.y) {
-                    return a.x < b.x ? -1 : 1;
-                } else {
-                    return 1;
-                }
-            })
-            that.canMoveClubItem = true;
-            that.touchListener = cc.EventListener.create(getTouchListener());
-            cc.eventManager.addListener(that.touchListener, touchNode);
-            
+        clubItems.sort(function (a, b) {
+            if (a.y > b.y) {
+                return -1;
+            } else if (a.y == b.y) {
+                return a.x < b.x ? -1 : 1;
+            } else {
+                return 1;
+            }
+        })
+        that.canMoveClubItem = true;
+        that.touchListener = cc.EventListener.create(getTouchListener());
+        cc.eventManager.addListener(that.touchListener, touchNode);
+
     }
 
     function getTouchListener() {
-            var curIndex = -1;
-            var curCloneItem = null;
-            var ret = {
-                event: cc.EventListener.TOUCH_ONE_BY_ONE,
-                swallowTouches: false,
-                onTouchBegan: function(touch, event) {
-                    //防止多点触摸异常
-                    if(!cc.sys.isObjectValid(clubItems[0])){
+        var curIndex = -1;
+        var curCloneItem = null;
+        var ret = {
+            event: cc.EventListener.TOUCH_ONE_BY_ONE,
+            swallowTouches: false,
+            onTouchBegan: function (touch, event) {
+                //防止多点触摸异常
+                if (!cc.sys.isObjectValid(clubItems[0])) {
+                    return;
+                }
+                if (curIndex != -1 && curCloneItem) {
+                    clubItems[curIndex].visible = true;
+                    clubItems[curIndex].setPosition(clubItems[curIndex].tempP);
+                    curCloneItem.removeFromParent(true);
+                    delete curCloneItem;
+                    curCloneItem = null;
+                }
+
+                if (!that.canMoveClubItem) {
+                    return false;
+                }
+
+                curIndex = -1;
+                that.touchBeginTime = new Date().getTime();
+                var p = touchNode.getParent().convertToNodeSpace(touch.getLocation());
+
+                for (var i = 0; i < clubItems.length; i++) {
+                    if (clubItems[i].visible && cc.rectContainsPoint(clubItems[i].getBoundingBox(), p)) {
+                        curIndex = i;
+                    }
+                }
+
+                return curIndex != -1;
+            },
+            onTouchMoved: function (touch, event) {
+                if (curIndex == -1) {
+                    return;
+                }
+                if (!curCloneItem) {
+                    var nowTime = new Date().getTime();
+                    if (nowTime - that.touchBeginTime > FriendCard_Common.touchBeginTime && true) {
+                        curCloneItem = clubItems[curIndex].clone();
+                        var head = curCloneItem.getChildByName("head")
+                        head.isMask = true;
+                        that.refreshHead(clubItems[curIndex].itemData.avatar, head);
+                        clubItems[curIndex].visible = false;
+                        listView.addChild(curCloneItem);
+                    } else {
                         return;
                     }
-                    if (curIndex != -1 && curCloneItem) {
-                        clubItems[curIndex].visible = true;
-                        clubItems[curIndex].setPosition(clubItems[curIndex].tempP);
-                        curCloneItem.removeFromParent(true);
-                        delete curCloneItem;
-                        curCloneItem = null;
-                    }
+                }
+                listView.setTouchEnabled(false);
 
+
+                var p = touchNode.getParent().convertToNodeSpace(touch.getLocation());
+                p.x = p.x + (curCloneItem.getAnchorPoint().x - 0.5) * curCloneItem.width;
+                p.y = p.y + (curCloneItem.getAnchorPoint().y - 0.5) * curCloneItem.height;
+                curCloneItem.setPosition(p);
+                //判断是否在俱乐部列表ui内
+                //找到最近的目标
+                var distance = -1;
+                var moveToIndex = -1;
+                for (var i = 0; i < clubItems.length; i++) {
+                    if (i != curIndex && clubItems[i].visible) {
+                        if (cc.rectOverlapsRect(curCloneItem, clubItems[i])) {
+                            var tempDistance = Math.sqrt(Math.pow(curCloneItem.x - clubItems[i].x, 2) + Math.pow(curCloneItem.y - clubItems[i].y, 2));
+                            if (distance == -1 || tempDistance < distance) {
+                                distance = tempDistance;
+                                moveToIndex = i;
+                            }
+                        }
+
+                    }
+                }
+                cc.log("rectIntersectsRect true", "moveToIndex", moveToIndex, "distance", distance)
+                //最近的目标中心点偏移25内可移动
+                if (moveToIndex > -1 && distance < curCloneItem.width / 2) {
+                    //cc.log("onTouchMoved friend info can moveToIndex =  " + moveToIndex);
                     if (!that.canMoveClubItem) {
-                        return false;
-                    }
-
-                    curIndex = -1;
-                    that.touchBeginTime = new Date().getTime();
-                    var p = touchNode.getParent().convertToNodeSpace(touch.getLocation());
-
-                    for (var i = 0; i < clubItems.length; i++) {
-                        if (clubItems[i].visible && cc.rectContainsPoint(clubItems[i].getBoundingBox(), p)) {
-                            curIndex = i;
-                        }
-                    }
-
-                    return curIndex != -1;
-                },
-                onTouchMoved: function(touch, event) {
-                    if (curIndex == -1) {
                         return;
                     }
-                    if (!curCloneItem) {
-                        var nowTime = new Date().getTime();
-                        if (nowTime - that.touchBeginTime > FriendCard_Common.touchBeginTime && true) {
-                            curCloneItem = clubItems[curIndex].clone();
-                            var head = curCloneItem.getChildByName("head")
-                            head.isMask = true;
-                            that.refreshHead(clubItems[curIndex].itemData.avatar, head);
-                            clubItems[curIndex].visible = false;
-                            listView.addChild(curCloneItem);
-                        } else {
-                            return;
-                        }
-                    }
-                    listView.setTouchEnabled(false);
-                    
-                    
-                    var p = touchNode.getParent().convertToNodeSpace(touch.getLocation());
-                    p.x = p.x + (curCloneItem.getAnchorPoint().x- 0.5) * curCloneItem.width;
-                    p.y = p.y + (curCloneItem.getAnchorPoint().y- 0.5) * curCloneItem.height;
-                    curCloneItem.setPosition(p);
-                    //判断是否在俱乐部列表ui内
-                    //找到最近的目标
-                    var distance = -1;
-                    var moveToIndex = -1;
-                    for (var i = 0; i < clubItems.length; i++) {
-                        if (i != curIndex && clubItems[i].visible) {
-                            if(cc.rectOverlapsRect(curCloneItem,clubItems[i])){
-                                var tempDistance = Math.sqrt(Math.pow(curCloneItem.x - clubItems[i].x, 2) + Math.pow(curCloneItem.y - clubItems[i].y, 2));
-                                if (distance == -1 || tempDistance < distance) {
-                                    distance = tempDistance;
-                                    moveToIndex = i;
-                                }
-                            }
-                            
-                        }
-                    }
-                    cc.log("rectIntersectsRect true","moveToIndex",moveToIndex,"distance",distance)
-                    //最近的目标中心点偏移25内可移动
-                    if (moveToIndex > -1 && distance < curCloneItem.width/2) {
-                        //cc.log("onTouchMoved friend info can moveToIndex =  " + moveToIndex);
-                        if (!that.canMoveClubItem) {
-                            return;
-                        }
-                        that.canMoveClubItem = false;
+                    that.canMoveClubItem = false;
 
-                        //交换数据
-                        var tempP = clubItems[curIndex].tempP;
-                        var moveAction = cc.moveTo(0.3, clubItems[curIndex].tempP);
-                        clubItems[curIndex].tempP = clubItems[moveToIndex].tempP;
-                        clubItems[curIndex].setPosition(clubItems[curIndex].tempP);
-                        clubItems[moveToIndex].tempP = tempP;
-                       
-                        clubItems[moveToIndex].runAction(cc.sequence(moveAction, cc.callFunc(function() {
-                            that.canMoveClubItem = true;
-                        })));
-                        //这里用用tempP，因为有0.3秒的动画
-                        clubItems.sort(function(a, b) {
-                            if (a.tempP.y > b.tempP.y) {
-                                return -1;
-                            } else if (a.tempP.y == b.tempP.y) {
-                                return a.tempP.x < b.tempP.x ? -1 : 1;
-                            } else {
-                                return 1;
-                            }
-                        })
-                        curIndex = moveToIndex;
-                    }
-                    if(moveToIndex > -1){
-                        var oneItemtime = 0.3;//画过1个item要0.5秒
-                        var nowP = touch.getLocation()
-                        cc.log("nowP",JSON.stringify(nowP),"listBottomP",JSON.stringify(listBottomP),"listTopP",JSON.stringify(listTopP));
-                        if(nowP.y - listBottomP.y < 20){//滑到列表低（不是指最后一个）
-                            listView.scrollToBottom(oneItemtime * (clubItems.length - moveToIndex),false);
-                        }else if(listTopP.y - nowP.y < 20){//滑到列表顶（不是指第一个）
-                            listView.scrollToTop(oneItemtime * (moveToIndex + 1),false);
-                        }else{
-                            listView.stopAutoScroll();
+                    //交换数据
+                    var tempP = clubItems[curIndex].tempP;
+                    var moveAction = cc.moveTo(0.3, clubItems[curIndex].tempP);
+                    clubItems[curIndex].tempP = clubItems[moveToIndex].tempP;
+                    clubItems[curIndex].setPosition(clubItems[curIndex].tempP);
+                    clubItems[moveToIndex].tempP = tempP;
+
+                    clubItems[moveToIndex].runAction(cc.sequence(moveAction, cc.callFunc(function () {
+                        that.canMoveClubItem = true;
+                    })));
+                    //这里用用tempP，因为有0.3秒的动画
+                    clubItems.sort(function (a, b) {
+                        if (a.tempP.y > b.tempP.y) {
+                            return -1;
+                        } else if (a.tempP.y == b.tempP.y) {
+                            return a.tempP.x < b.tempP.x ? -1 : 1;
+                        } else {
+                            return 1;
                         }
-                    }else{
+                    })
+                    curIndex = moveToIndex;
+                }
+                if (moveToIndex > -1) {
+                    var oneItemtime = 0.3;//画过1个item要0.5秒
+                    var nowP = touch.getLocation()
+                    cc.log("nowP", JSON.stringify(nowP), "listBottomP", JSON.stringify(listBottomP), "listTopP", JSON.stringify(listTopP));
+                    if (nowP.y - listBottomP.y < 20) {//滑到列表低（不是指最后一个）
+                        listView.scrollToBottom(oneItemtime * (clubItems.length - moveToIndex), false);
+                    } else if (listTopP.y - nowP.y < 20) {//滑到列表顶（不是指第一个）
+                        listView.scrollToTop(oneItemtime * (moveToIndex + 1), false);
+                    } else {
                         listView.stopAutoScroll();
                     }
-                    
-                    
-                },
-                onTouchEnded: function(touch, event) {
-                    if (curCloneItem && curIndex > -1) {
-                        clubItems[curIndex].setPosition(curCloneItem.getPosition());
-                        clubItems[curIndex].visible = true;
-                        curCloneItem.visible = false;
-                        curCloneItem.removeFromParent(true);
-                        delete curCloneItem;
-                        curCloneItem = null;
-                        that.canMoveClubItem = false;
-                        var moveAction = cc.moveTo(0.3, clubItems[curIndex].tempP);
-                        clubItems[curIndex].runAction(cc.sequence(moveAction, cc.callFunc(function() {
-                            that.canMoveClubItem = true;
-                            //可以在这里遍历，赋值一些标记给
-                            FriendCard_Common.setLocalClubListSort(clubItems,that.clubList)
-                        })));
-                    }
-                    curIndex = -1;
-                    listView.setTouchEnabled(true);
-                    listView.stopAutoScroll();
-                },
-                onTouchCancelled: function(touch, event) {
-                    ret.onTouchEnded(touch, event);
-                    listView.setTouchEnabled(true);
+                } else {
                     listView.stopAutoScroll();
                 }
-            };
-            return ret;
+
+
+            },
+            onTouchEnded: function (touch, event) {
+                if (curCloneItem && curIndex > -1) {
+                    clubItems[curIndex].setPosition(curCloneItem.getPosition());
+                    clubItems[curIndex].visible = true;
+                    curCloneItem.visible = false;
+                    curCloneItem.removeFromParent(true);
+                    delete curCloneItem;
+                    curCloneItem = null;
+                    that.canMoveClubItem = false;
+                    var moveAction = cc.moveTo(0.3, clubItems[curIndex].tempP);
+                    clubItems[curIndex].runAction(cc.sequence(moveAction, cc.callFunc(function () {
+                        that.canMoveClubItem = true;
+                        //可以在这里遍历，赋值一些标记给
+                        FriendCard_Common.setLocalClubListSort(clubItems, that.clubList)
+                    })));
+                }
+                curIndex = -1;
+                listView.setTouchEnabled(true);
+                listView.stopAutoScroll();
+            },
+            onTouchCancelled: function (touch, event) {
+                ret.onTouchEnded(touch, event);
+                listView.setTouchEnabled(true);
+                listView.stopAutoScroll();
+            }
+        };
+        return ret;
     }
-    intoMoveClubListMode()  
+    intoMoveClubListMode()
 }
 
 //修改俱乐部列表排序
-FriendCard_Common.setLocalClubListSort = function(clubItems,clublist){
+FriendCard_Common.setLocalClubListSort = function (clubItems, clublist) {
     var curClubListSort = ""
     for (var i = 0; i < clubItems.length; i++) {
         if (clubItems[i].name && clubItems[i].name.indexOf("clubListViewItem_") > -1) {
@@ -4473,32 +4472,32 @@ FriendCard_Common.setLocalClubListSort = function(clubItems,clublist){
             }
         }
     }
-    util.localStorageEncrypt.setStringItem("FriendCard_Common_LocalClubListSort" + SelfUid() + MjClient.getAppType() , curClubListSort);
+    util.localStorageEncrypt.setStringItem("FriendCard_Common_LocalClubListSort" + SelfUid() + MjClient.getAppType(), curClubListSort);
     clublist = FriendCard_Common.getLocalClubListSort(clublist)
 }
 
 //获得俱乐部列表排序
-FriendCard_Common.getLocalClubListSort = function(curList){
-    var localClubSort = util.localStorageEncrypt.getStringItem("FriendCard_Common_LocalClubListSort" + SelfUid() + MjClient.getAppType() , "");
-    if(localClubSort == ""){
+FriendCard_Common.getLocalClubListSort = function (curList) {
+    var localClubSort = util.localStorageEncrypt.getStringItem("FriendCard_Common_LocalClubListSort" + SelfUid() + MjClient.getAppType(), "");
+    if (localClubSort == "") {
         return curList;
     }
     var list = localClubSort.split('-');
 
-    curList.sort(function(a,b){
-        var indexA =  list.indexOf(a.clubId.toString())
-        var indexB =  list.indexOf(b.clubId.toString())
+    curList.sort(function (a, b) {
+        var indexA = list.indexOf(a.clubId.toString())
+        var indexB = list.indexOf(b.clubId.toString())
 
-        if ( indexA != -1) {
+        if (indexA != -1) {
             if (indexB != -1) {
                 return indexA - indexB
-            }else{
+            } else {
                 return -1
             }
-        }else{
+        } else {
             if (indexA != -1) {
                 return indexA - indexB
-            }else{
+            } else {
                 return 1
             }
         }
@@ -4509,28 +4508,28 @@ FriendCard_Common.getLocalClubListSort = function(curList){
 }
 
 //亲友圈列表默认排序  联盟 -> 自己的亲友圈 -> 其他人的亲友圈
-FriendCard_Common.clubListSort = function(clubList,leagueList) {
-    leagueList.sort(function(a,b){
-        if ( a.creator != MjClient.data.pinfo.uid && b.creator != MjClient.data.pinfo.uid) {
+FriendCard_Common.clubListSort = function (clubList, leagueList) {
+    leagueList.sort(function (a, b) {
+        if (a.creator != MjClient.data.pinfo.uid && b.creator != MjClient.data.pinfo.uid) {
             return false;
         }
 
         return a.creator != MjClient.data.pinfo.uid;
-    })  
-    clubList.sort(function(a,b){
-        if ( a.creator != MjClient.data.pinfo.uid && b.creator != MjClient.data.pinfo.uid) {
+    })
+    clubList.sort(function (a, b) {
+        if (a.creator != MjClient.data.pinfo.uid && b.creator != MjClient.data.pinfo.uid) {
             return false;
         }
-        
-        return a.creator != MjClient.data.pinfo.uid;
-    })  
-    var list =  leagueList.concat(clubList);
 
-    return  FriendCard_Common.getLocalClubListSort(list);
+        return a.creator != MjClient.data.pinfo.uid;
+    })
+    var list = leagueList.concat(clubList);
+
+    return FriendCard_Common.getLocalClubListSort(list);
 }
 
-FriendCard_Common.getServerTime = function(){
-    if(!MjClient.data || !MjClient.data.serverTime){
+FriendCard_Common.getServerTime = function () {
+    if (!MjClient.data || !MjClient.data.serverTime) {
         return Date.now();
     }
     return (Date.now() - MjClient._localTime + MjClient.data.serverTime);
@@ -4546,13 +4545,13 @@ FriendCard_Common.clubQuitMatch = function (matchId) {
                 if (rtn.message) {
                     MjClient.showToast(rtn.message);
                 }
-                if(that && rtn.matchUser){
+                if (that && rtn.matchUser) {
                     var rank = that._matchData.rank;
                     that._matchData = rtn.matchUser;
-                    that._matchData.rank = rank; 
+                    that._matchData.rank = rank;
                     that.refreshInfo();
                 }
-                
+
             } else {
                 MjClient.showToast(rtn.message);
             }
@@ -4571,13 +4570,13 @@ FriendCard_Common.leagueQuitMatch = function (matchId) {
                 if (rtn.message) {
                     MjClient.showToast(rtn.message);
                 }
-                if(that && rtn.matchUser){
+                if (that && rtn.matchUser) {
                     var rank = that._matchData.rank;
                     that._matchData = rtn.matchUser;
-                    that._matchData.rank = rank; 
+                    that._matchData.rank = rank;
                     that.refreshInfo();
                 }
-                
+
             } else {
                 MjClient.showToast(rtn.message);
             }
@@ -4590,53 +4589,53 @@ FriendCard_Common.leagueQuitMatch = function (matchId) {
 var FriendCard_UI = FriendCard_UI || {};
 
 //设置主界面的桌子触摸事件
-FriendCard_UI.setClubDeskTouchEvent = function(parNode){
-    parNode.scheduleUpdate(); 
-    parNode.update = function(dt){
+FriendCard_UI.setClubDeskTouchEvent = function (parNode) {
+    parNode.scheduleUpdate();
+    parNode.update = function (dt) {
         MjClient.FriendCard_main_ui._deskScrollx = -parNode.getInnerContainerPosition().x;
         MjClient.FriendCard_main_ui.refreshDeskItem();
     }
     return;
 }
 //type == 1正在加载...，，type == 2上拉加载更多，type == 3没有更多了
-FriendCard_UI.addListBottomTipUi = function(listView,type){
+FriendCard_UI.addListBottomTipUi = function (listView, type) {
     var items = listView.getItems();
-    for (var i = 0; i < items.length; i ++){
+    for (var i = 0; i < items.length; i++) {
         if (items[i].getChildByName("moreTextTip"))
             items[i].removeChildByName("moreTextTip");
     }
-    if (items.length > 0){
+    if (items.length > 0) {
         var item = items[items.length - 1];
         var moreTextTip = new ccui.Text("没有更多了", "lanting.TTF", 26);
-        if(type == 1){
+        if (type == 1) {
             moreTextTip.setString("正在加载")
-        }else if(type == 2){
+        } else if (type == 2) {
             moreTextTip.setString("上拉加载更多")
         }
         moreTextTip.setColor(cc.color("#2B344C"));
         moreTextTip.setName("moreTextTip");
-        moreTextTip.setPosition(item.width/2, -30);
+        moreTextTip.setPosition(item.width / 2, -30);
         item.addChild(moreTextTip);
     }
 }
-FriendCard_UI.setListAutoLoadMore = function(listView,callBackFunc,checkFunc){
-    listView.addCCSEventListener(function(sender,type){
+FriendCard_UI.setListAutoLoadMore = function (listView, callBackFunc, checkFunc) {
+    listView.addCCSEventListener(function (sender, type) {
         // **新老引擎bug**
         var EVENT_AUTOSCROLL_ENDED = ccui.ScrollView.EVENT_AUTOSCROLL_ENDED;
-        if (cc.sys.OS_WINDOWS == cc.sys.os || cc.ENGINE_VERSION.indexOf("3.16") >= 0){
+        if (cc.sys.OS_WINDOWS == cc.sys.os || cc.ENGINE_VERSION.indexOf("3.16") >= 0) {
             EVENT_AUTOSCROLL_ENDED = 12;
         }
         switch (type) {
             case ccui.ScrollView.EVENT_SCROLLING:
             case EVENT_AUTOSCROLL_ENDED:
                 var curItemBottom = sender.getBottommostItemInCurrentView();
-                if(curItemBottom && curItemBottom.dataIndex >= sender.getItems().length -2){
+                if (curItemBottom && curItemBottom.dataIndex >= sender.getItems().length - 2) {
                     var canCallBack = true;
-                    if(checkFunc){
+                    if (checkFunc) {
                         canCallBack = checkFunc(curItemBottom);
                     }
-                    if(canCallBack){
-                        if(callBackFunc){
+                    if (canCallBack) {
+                        if (callBackFunc) {
                             callBackFunc();
                         }
                     }
@@ -4645,7 +4644,16 @@ FriendCard_UI.setListAutoLoadMore = function(listView,callBackFunc,checkFunc){
         }
     });
 }
-
+//type == 1正在加载...，，type == 2上拉加载更多，type == 3没有更多了
+FriendCard_UI.getCurClubHonorVal = function (clubId = 0, list) {
+    if (!clubId) return '';
+    !list && (list = [])
+    for (let _i = 0; _i < list.length; _i++) {
+        const item = list[_i];
+        if(item.clubId === clubId)return item.honorVal || ''
+    }
+    return '';
+}
 
 
 

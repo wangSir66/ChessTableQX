@@ -39,9 +39,6 @@ CreateViewYaAn = cc.Layer.extend({
                 newRoomNode.setTag(newType);
                 newRoomNode.setName("room");
                 newRoomNode.setPosition(440, 45.5);
-                if (MjClient.getAppType() == MjClient.APP_TYPE.TXLINFENMJ) {//临汾需要偏移
-                    newRoomNode.setPosition(540, 45.5);
-                }
 
                 this._back.addChild(newRoomNode);
             }
@@ -75,9 +72,18 @@ CreateViewYaAn = cc.Layer.extend({
     },
     loadItemTexture: function (item, index) {
         var textureNormal, texturePress;
-        var preStr = GameButton[index];
-        textureNormal = preStr + "_n.png";
-        texturePress = preStr + "_s.png";
+        var preStr = 'Red20/Common/';
+        textureNormal = preStr + "yellow_bg.png";
+        texturePress = preStr + "orange_bg.png";
+        var text = new ccui.Text();
+        // text.setFontName("fonts/lanting.TTF");
+        text.setFontSize(24);
+        text.setTextColor(cc.color("#602E1A"));
+        text.setAnchorPoint(0.5, 0.5);
+        text.setString(GameCnName[index] || '未  知');
+        text.setPosition(item.getContentSize().width / 2, item.getContentSize().height / 2);
+        item.addChild(text);
+        text.setName('gameName');
         item.loadTextures(textureNormal, texturePress, texturePress);
     },
     refreshGameListUI: function () {
@@ -123,6 +129,7 @@ CreateViewYaAn = cc.Layer.extend({
             this._gameBtnList.jumpToBottom();
         }
         this.clickButton(this._gameBtnList.getChildByTag(lastGameType));
+        this._gameBtnList.setScrollBarEnabled(false);
     },
     ctor: function (data) {
         //isFriendCard,data.isShowTitleCreate,data.typeList

@@ -1042,16 +1042,11 @@
                   "G": 65,
                   "B": 70
                 },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards_LM/yaoqingLM_n.png",
-                  "Plist": ""
-                },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 158,
-                "Scale9Height": 44,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -1115,7 +1110,7 @@
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 159,
+                "Scale9Width": 158,
                 "Scale9Height": 44,
                 "OutlineColor": {
                   "G": 0,
@@ -1181,6 +1176,22 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "fonts/lanting.TTF",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/join/img_hehua.png",
+        "friendCards/nvguanjia/btn_changeToFangkaClub_n.png",
+        "friendCards/nvguanjia/btn_gaojiset_n.png",
+        "friendCards/nvguanjia/btn_guanlijilv_n.png",
+        "friendCards/nvguanjia/btn_huci_n.png",
+        "friendCards/nvguanjia/btn_set_n.png",
+        "friendCards/nvguanjia/btn_yaoqing_n.png",
+        "friendCards/nvguanjia/checkBox_close.png",
+        "friendCards/nvguanjia/checkBox_open.png",
+        "friendCards/nvguanjia/img_di.png",
+        "friendCards/nvguanjia/img_dianxiaoer.png",
+        "friendCards/nvguanjia/img_xian.png"
+      ],
       "ctype": "GameFileData"
     }
   },

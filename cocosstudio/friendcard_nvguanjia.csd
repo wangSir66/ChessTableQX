@@ -215,7 +215,7 @@
                 <PreSize X="0.3523" Y="0.2917" />
                 <FileData Type="Normal" Path="friendCards/join/img_hehua.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_yaoqingLM" ActionTag="-1204851125" Tag="4176" IconVisible="False" LeftMargin="703.6100" RightMargin="388.3900" TopMargin="458.1900" BottomMargin="195.8100" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="158" Scale9Height="44" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btn_yaoqingLM" ActionTag="-1204851125" Tag="4176" IconVisible="False" LeftMargin="703.6100" RightMargin="388.3900" TopMargin="458.1900" BottomMargin="195.8100" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="-15" Scale9OriginY="-11" Scale9Width="30" Scale9Height="22" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="188.0000" Y="66.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="797.6100" Y="228.8100" />
@@ -224,11 +224,10 @@
                 <PrePosition X="0.6231" Y="0.3178" />
                 <PreSize X="0.1469" Y="0.0917" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards_LM/yaoqingLM_n.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_changeToFangkaClub" ActionTag="-1807576079" Tag="304" IconVisible="False" LeftMargin="703.6101" RightMargin="388.3899" TopMargin="458.1862" BottomMargin="195.8138" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="159" Scale9Height="44" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btn_changeToFangkaClub" ActionTag="-1807576079" Tag="304" IconVisible="False" LeftMargin="703.6101" RightMargin="388.3899" TopMargin="458.1862" BottomMargin="195.8138" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="158" Scale9Height="44" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="188.0000" Y="66.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="797.6101" Y="228.8138" />

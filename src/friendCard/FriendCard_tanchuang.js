@@ -1373,14 +1373,13 @@ var Friendcard_popUpMeg = cc.Layer.extend({
               this._back.visible = true;
               popupAnm(this._back)
             }
-		}
+		}else this._back.visible = true;
 		
-       
         return true;
     },
     initPopUpMegUI: function(node,uiPara) {
         var _back = node.getChildByName("back");
-        setWgtLayout(_back, [0.64, 0.78], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.5, 0.5], [0.5, 0.5], [0, 0]);
         _back.visible = false;
         this._back = _back;
 

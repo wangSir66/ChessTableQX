@@ -187,7 +187,7 @@ var Friendcard_nvguanjia = cc.Layer.extend({
                 if (type == 2) {
                     var uiPara = {}
                     uiPara.msg = "该操作会解散当前元宝亲友圈，\n并为您创建钻石亲友圈，是否确认？";
-                    //uiPara.uiStyle = "friendcard_posUpMsg_daoshu";
+                    uiPara.uiStyle = "friendcard_posUpMsg_daoshu";
                     uiPara.yes = function() {
                         MjClient.block();
                         MjClient.gamenet.request("pkplayer.handler.changeToFangkaClub", { clubId: that.clubId }, function (rtn) {

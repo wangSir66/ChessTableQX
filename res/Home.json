@@ -4722,12 +4722,13 @@
             },
             "ShadowOffsetX": 2.0,
             "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
             "AnchorPoint": {
               "ScaleY": 0.5
             },
             "Position": {
-              "X": -51.9846,
-              "Y": -116.2664
+              "X": 1528.219,
+              "Y": 118.28
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -4736,24 +4737,23 @@
             "CColor": {},
             "IconVisible": false,
             "PrePosition": {
-              "X": -0.0406,
-              "Y": -0.1615
+              "X": 1.1939,
+              "Y": 0.1643
             },
             "PreSize": {
               "X": 0.2023,
               "Y": 0.0861
             },
-            "LeftMargin": -51.9846,
-            "RightMargin": 1072.9846,
-            "TopMargin": 805.2664,
-            "BottomMargin": -147.2664,
+            "LeftMargin": 1528.219,
+            "RightMargin": -507.219,
+            "TopMargin": 570.72,
+            "BottomMargin": 87.28,
             "Tag": 68,
             "ActionTag": 1316259825,
             "Size": {
               "X": 259.0,
               "Y": 62.0
             },
-            "VisibleForFrame": false,
             "Name": "julebu",
             "ctype": "ButtonObjectData"
           },
