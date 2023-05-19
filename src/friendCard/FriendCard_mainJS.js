@@ -998,10 +998,10 @@ var FriendCard_main = cc.Layer.extend({
 		var text_clubId = this._clubInfo.getChildByName("text_clubId");
 		text_clubId.ignoreContentAdaptWithSize(true);
 		let str = "ID:" + this.data.info.clubId;
-		if (cc.sys.OS_WINDOWS == cc.sys.os) {
+		// if (cc.sys.OS_WINDOWS == cc.sys.os) {
 			let val = FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList);
 			val && (str += '-' + val)
-		}
+		// }
 		text_clubId.setString(str);
 		//黄金
 		var moneyback = this._clubInfo.getChildByName("moneyback");

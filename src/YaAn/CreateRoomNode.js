@@ -21,7 +21,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         this._isMatchMode = data.isMatch;
         this._textInput = null;
         this._nodeGPS = null;
-        this._costName = '黄金';
+        this._costName = '元宝';
         this.localStorageKey = {};
         this.localStorageKey.KEY_RondType = "_ROUND_TYPE"; //局数选定
         this.localStorageKey.KEY_PayWay = "_PAY_WAY"; //付房卡的方式
@@ -34,8 +34,13 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         this._selectColor = BTNCOLOR1;
         this._unSelectColor = BTNCOLOR3;
 
-        if (this._isFriendCard) this.clubRule = {};
-        cc.log("++++++++++ this.clubRule ++++++++" + JSON.stringify(this.clubRule) + "\n" + JSON.stringify(this._data));
+        if (this._isFriendCard) {
+            if (this._data.clubRule)
+                this.clubRule = this._data.clubRule;
+            else
+                this.clubRule = {};
+
+        }
         util.localStorageEncrypt.setNumberItem(this.localStorageKey.KEY_PayWay, 0);
         this.rangeScore = [1, 20];
         this.trustTimes = [0, 30, 60, 90];
@@ -120,7 +125,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         if (sender) {
             var selectColor = this._selectColor;
             var unSelectColor = this._unSelectColor;
-            cc.log('--------radioBoxSelectCB-----', 1)
             var txt = sender.getChildByName("text");
             txt.ignoreContentAdaptWithSize(true);
             txt.setTextColor(selectColor);
@@ -129,7 +133,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 var radioBox = list[i];
 
                 if (radioBox !== sender || sender.isSelected() == false) {
-                    cc.log('--------radioBoxSelectCB-----', 2)
                     txt = radioBox.getChildByName("text");
                     txt.ignoreContentAdaptWithSize(true);
                     txt.setTextColor(unSelectColor);
@@ -209,6 +212,10 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         for (let _i = 0; _i < this._view.children.length; _i++) {
             const row = this._view.children[_i];
             let btns = [];
+            if (row.name == 'fuwufei') {
+                this.initFuwuFeiNode(row);
+                continue;
+            }
             for (let _j = 0; _j < row.children.length; _j++) {
                 const col = row.children[_j];
                 if (col.name.indexOf('btnRadio') > -1 || col.name.indexOf('btnCheck') > -1) {
@@ -373,18 +380,228 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             indx = Number(indx);
             let p = item.getParent();
             if (p) {
-                const currObj = this.RedioGroup[p.name];
-                if (p.name == 'renshu') this.changePayForPlayerNum(indx);
-                this.radioBoxSelectCB(indx, currObj._nodeList[indx], currObj._nodeList);
+                if (p.name === 'fuwufei') {
+                    let txt = null;
+                    if (item.name == 'btnRadiotf1' || item.name == 'btnRadiotf2') {
+                        txt = 'tongfenpay';
+                    } else txt = 'fuwufeipay';
+                    if (txt) {
+                        let currObj = this.RedioGroup[txt];
+                        if (currObj) this.radioBoxSelectCB(indx, currObj._nodeList[indx], currObj._nodeList);
+                        this.setFuwufeiNode();
+                    }
+                } else {
+                    let currObj = this.RedioGroup[p.name];
+                    if (p.name == 'renshu') this.changePayForPlayerNum(indx);
+                    if (currObj) this.radioBoxSelectCB(indx, currObj._nodeList[indx], currObj._nodeList);
+                }
             }
         } else if (indx != null && indx != undefined) {
             var text = indx.getChildByName("text");
             this.selectedCB(text, indx.isSelected());
+            if (indx.name == 'btnCheckdfmc') this.initDFMKbTNS();
+            if (indx.name == 'btnCheckdfjs') this.initDFjsbTNS();
         } else if (!indx && item) {
             item = this._btnItems.find(b => b.name == item);
             if (item) {
                 var text = item.getChildByName("text");
                 this.selectedCB(text, item.isSelected());
+            }
+            this.initDFMKbTNS();
+            this.initDFjsbTNS();
+        }
+    },
+    initFuWuFeiNodeFC: function (indx = 0) {
+        if (this._view) {
+            const n = this._view.getChildByName('fuwufei'), fg = n ? n.visible : false;
+            if (fg) {
+                let dy = 60 + 180 * indx;
+                //修正scrollView的滑动区域
+                this._view.setInnerContainerSize(cc.size(this._view.getInnerContainerSize().width, this._view.getInnerContainerSize().height + dy));
+                let isH = false;
+                for (let _i = 0; _i < this._view.children.length; _i++) {
+                    const item = this._view.children[_i];
+                    item.y += dy;
+                    if (item.name === 'fuwufei') {
+                        break;
+                    }
+                }
+            }
+        }
+    },
+
+    initDFMKbTNS: function () {
+        return
+        if (this._data.clubType != 0) return;
+        const checked = this.getCheckboxSelectedByName('btnCheckdfmc'),
+            addb = this.getBtnByName('Btnadd1'),
+            muins = this.getBtnByName('Btnmiuns1');
+        addb.setEnabled(checked);
+        muins.setEnabled(checked);
+        this.dfmk.setEnabled(checked);
+    },
+
+
+    initDFjsbTNS: function () {
+        if (this._data.clubType != 0) return;
+        const checked = this.getCheckboxSelectedByName('btnCheckdfjs'),
+            addb = this.getBtnByName('Btnadd2'),
+            muins = this.getBtnByName('Btnmiuns2');
+        addb.setEnabled(checked);
+        muins.setEnabled(checked);
+        this.dfjs.setEnabled(checked);
+    },
+
+    setFuwufeiNode: function () {
+        if (this._data.clubType != 0) return;
+        let currObj = this.RedioGroup['fuwufeipay'];
+        let currObj1 = this.RedioGroup['tongfenpay'];
+        let isTrue = currObj.getSelectIndex() != 1;
+        currObj1._nodeList.map(n => {
+            n.setEnabled(isTrue);
+            let text = n.getChildByName("text");
+            this.selectedCB(text, n.isSelected() && isTrue);
+        })
+    },
+
+    initFuwuFeiNode: function (row) {
+        row.visible = this._data.clubType === 0;
+        if (row.visible) {
+            this.qujianItems = [];
+            //区间item
+            this.qujianItem = row.getChildByName('qujian').getChildByName('qujian0');
+            this.qujianItems.push(this.qujianItem);
+            this.initQuJianItem();
+            this.initFuWuFeiNodeFC(1);
+            //大赢家 所有赢家
+            let btns = [row.getChildByName('btnRadiogf'), row.getChildByName('btnRadiodf')];
+            let _radio = createRadioBoxForCheckBoxs(btns, this.callSelectBack.bind(this), 0);
+            this.RedioGroup['fuwufeipay'] = _radio;
+            this.addListenerText(btns, _radio, this.callSelectBack.bind(this));
+            //同分
+            btns = [row.getChildByName('btnRadiotf1'), row.getChildByName('btnRadiotf2')];
+            _radio = createRadioBoxForCheckBoxs(btns, this.callSelectBack.bind(this), 0);
+            this.RedioGroup['tongfenpay'] = _radio;
+            this.addListenerText(btns, _radio, this.callSelectBack.bind(this));
+            //低分解散
+            col = row.getChildByName('btnCheckdfjs');
+            this._btnItems.push(col);
+            col.addEventListener(this.callSelectBack.bind(this), col);
+            this.addListenerText(col, null, this.callSelectBack.bind(this));
+            //底分加減（1-20）
+            let Btnadd = row.getChildByName('qujian').getChildByName('Btnadd');
+            if (Btnadd) {
+                Btnadd.addTouchEventListener((sender, Type) => {
+                    switch (Type) {
+                        case ccui.Widget.TOUCH_ENDED:
+                            this.qujianItems.push(this.qujianItem.clone());
+                            this.initQuJianItem();
+                            this.initFuWuFeiNodeFC();
+                            break;
+                        default:
+                            break;
+                    }
+                }, this);
+            }
+            let panel = row.getChildByName('Panel2');
+            if (panel) {
+                var _textFeildName0 = new cc.EditBox(cc.size(60, 45), new cc.Scale9Sprite());
+                _textFeildName0.setFontColor(cc.color(255, 255, 255));
+                _textFeildName0.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+                _textFeildName0.setPlaceHolder("");
+                _textFeildName0.setFontSize(20);
+                _textFeildName0.setPosition(panel.getContentSize().width / 2, panel.getContentSize().height / 2);
+                panel.addChild(_textFeildName0);
+                let baseScoreT = this.dfjs = _textFeildName0;
+                baseScoreT.setString(1);
+                this._btnItems.push(row.getChildByName('Btnadd2'))
+                row.getChildByName('Btnadd2').addTouchEventListener((sender, Type) => {
+                    switch (Type) {
+                        case ccui.Widget.TOUCH_ENDED:
+                            let num = Number(baseScoreT.getString());
+                            baseScoreT.setString(num + 1);
+                            break;
+                        default:
+                            break;
+                    }
+                }, this);
+                this._btnItems.push(row.getChildByName('Btnmiuns2'))
+                row.getChildByName('Btnmiuns2').addTouchEventListener((sender, Type) => {
+                    switch (Type) {
+                        case ccui.Widget.TOUCH_ENDED:
+                            let num = Number(baseScoreT.getString());
+                            if (num === 0) {
+                                baseScoreT.setString(0);
+                            } else {
+                                baseScoreT.setString(num - 1);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }, this);
+            }
+        }
+    },
+    //初始化区间
+    initQuJianItem: function (msg = { min: 1, max: 50, score: 10 }) {
+        if (!this.qujianItems) return;
+        const len = this.qujianItems.length - 1, item = this.qujianItems[len];
+        if (item) {
+            const fun = (image, data, indx) => {
+                var s = image.getContentSize(), off = cc.size(s.width - (indx == 2 ? 80 : 10), s.height - 5)
+                var textInput = new cc.EditBox(off, new cc.Scale9Sprite());
+                textInput.setFontColor(cc.color(0x40, 0x40, 0x40));
+                textInput.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+                textInput.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
+                textInput.setPosition(s.width / 2, s.height / 2);
+                image.addChild(textInput);
+                textInput.name = 'txt';
+                textInput.setString(data);
+                return textInput;
+            };
+            let baseScoreT = null;
+            item.getParent() || this.qujianItem.getParent().addChild(item);
+            item.setPositionY(30 - 60 * len);
+            for (let _i = 0; _i < 3; _i++) {
+                const txt = item['txt' + _i] ? item['txt' + _i] : fun(item.getChildByName('Panel' + _i), msg[{ 0: 'min', 1: 'max', 2: 'score' }[_i]], _i);
+                _i == 2 && (baseScoreT = txt);
+                item['txt' + _i] = txt;
+                txt.setString(msg[{ 0: 'min', 1: 'max', 2: 'score' }[_i]])
+            }
+            if (baseScoreT) {
+                let btn = item.getChildByName('Btnadd');
+                if (btn) {
+                    this._btnItems.push(btn)
+                    btn.addTouchEventListener((sender, Type) => {
+                        switch (Type) {
+                            case ccui.Widget.TOUCH_ENDED:
+                                let num = Number(baseScoreT.getString());
+                                baseScoreT.setString(num + 1);
+                                break;
+                            default:
+                                break;
+                        }
+                    }, this);
+                }
+                btn = item.getChildByName('Btnmiuns');
+                if (btn) {
+                    this._btnItems.push(btn)
+                    btn.addTouchEventListener((sender, Type) => {
+                        switch (Type) {
+                            case ccui.Widget.TOUCH_ENDED:
+                                let num = Number(baseScoreT.getString());
+                                if (num <= 0) {
+                                    baseScoreT.setString(0);
+                                } else {
+                                    baseScoreT.setString(num - 1);
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                    }, this);
+                }
             }
         }
     },
@@ -933,25 +1150,39 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         } else {
             para.ruleName = escape(GameCnName[this._data.gameType]);
         }
-        // if (this._isMatchMode) {
-        //     para.isMatchLimit = this._matchModeLimitScoreRadio.getSelectIndex();
-        //     para.matchLimitScore = this._matchModeLimitScoreEdt.value;
+        if (this._isMatchMode) {
+            para.isMatchLimit = this._matchModeLimitScoreRadio.getSelectIndex();
+            para.matchLimitScore = this._matchModeLimitScoreEdt.value;
 
-        //     if (FriendCard_Common.isOpenMatchDissolveLimit(this._data.gameType)) {
-        //         para.isMatchDissolveLimit = this._matchModeEndGameScoreRadio.getSelectIndex();
-        //         para.matchDissolveLimitScore = this._matchModeEndGameScoreEdt.value;
-        //         if (FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType)) {
-        //             para.scoreNeedEnough = (this._checkBox_not_zone_score.visible && this._checkBox_not_zone_score.isSelected()) ? 1 : 0;
-        //         } else {
-        //             para.scoreNeedEnough = 0;
-        //         }
-        //     }
-        // }
-
-        if (FriendCard_Common.isOpenMatchDissolveLimit(this._data.gameType)) {
-            para.isDissolveLimit = true//this._matchModeEndGameScoreRadio.getSelectIndex();
-            para.dissolveLimitScore = 10 * para.difen//this._matchModeEndGameScoreEdt.value;
+            if (FriendCard_Common.isOpenMatchDissolveLimit(this._data.gameType)) {
+                para.isMatchDissolveLimit = this._matchModeEndGameScoreRadio.getSelectIndex();
+                para.matchDissolveLimitScore = this._matchModeEndGameScoreEdt.value;
+                if (FriendCard_Common.isOpenMatchScoreNeedEnough(this._data.gameType)) {
+                    para.scoreNeedEnough = (this._checkBox_not_zone_score.visible && this._checkBox_not_zone_score.isSelected()) ? 1 : 0;
+                } else {
+                    para.scoreNeedEnough = 0;
+                }
+            }
         }
+
+        if (this._data.clubType === 0) {
+            para.isDissolveLimit = this.getCheckboxSelectedByName('btnCheckdfjs');
+            para.dissolveLimitScore = Number(this.dfjs.getString());
+            para.serverCharge = this.RedioGroup['fuwufeipay'].getSelectIndex();
+            let counts = [];
+            for (let _i = 0; _i < this.qujianItems.length; _i++) {
+                const item = this.qujianItems[_i];
+                counts.push({
+                    min: Number(item.txt0.getString()),
+                    max: Number(item.txt1.getString()),
+                    score: Number(item.txt2.getString()),
+                })
+            }
+            para.serverCount = counts;
+            para.serverFreeScore = 0;//this.getCheckboxSelectedByName('btnCheckdfmc') ? Number(this.dfmk.getString()) : 0;
+            para.serverExtra = para.serverCharge === 2 ? 0 : this.RedioGroup['tongfenpay'].getSelectIndex() + 1;
+        }
+
         para.round = this.getSelectedRoundNum();
 
         if (this._isRoomCardMode) {
@@ -1223,6 +1454,12 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 this._nodeGPS.getChildByName("text").setColor(this._unSelectColor);
             }
         }
+        let num = 1;
+        if (isClub)
+            num = this.getNumberItem('difen', 1);
+        else
+            isTrue = cacheRule['difen'] != undefined ? cacheRule['difen'] : 1;
+        if (this.difen) this.difen.setString(num);
 
         let roundNumObj = this.getRoundNumObj(),
             pNums = Object.keys(this.getGamePriceConfig()).map(a => Number(a)),
@@ -1232,6 +1469,8 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             'zhifufangshi': ['payWay', 0, [0, 1, 2]],
             'renshu': ['maxPlayer', Number(pNums[0]), pNums],
             'tuoguan': ['trustTime', 0, this.trustTimes || [0, 30, 60, 90]],
+            'fuwufeipay': ['serverCharge', 0, [0, 1]],
+            'tongfenpay': ['serverExtra', 1, [1, 2]],
         }
         let len = Object.keys(key_nameR);
         for (let _i = 0; _i < len.length; _i++) {
@@ -1253,6 +1492,39 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 if (key === 'renshu') this.changePayForPlayerNum(selectIndex);
             }
         }
+        if (this._data.clubType === 0) {
+            let isTrue;
+            if (isClub)
+                isTrue = this.getBoolItem('isDissolveLimit', false);
+            else
+                isTrue = cacheRule['isDissolveLimit'] != undefined ? cacheRule['isDissolveLimit'] : false;
+            let btnNode = this._btnItems.find(b => b.name == 'btnCheckdfjs');
+            if (btnNode) {
+                btnNode.setSelected(isTrue);
+                var text = btnNode.getChildByName("text");
+                this.selectedCB(text, isTrue);
+            }
+            let num = 1;
+            if (isClub)
+                num = this.getNumberItem('dissolveLimitScore', 1);
+            else
+                isTrue = cacheRule['dissolveLimitScore'] != undefined ? cacheRule['dissolveLimitScore'] : 1;
+            if (this.dfjs) this.dfjs.setString(num);
+            let counts = [];
+            if (isClub)
+                counts = this.clubRule['serverCount'] || [{ min: 1, max: 50, score: 10 }];
+            else
+                counts = cacheRule['serverCount'] != undefined ? cacheRule['serverCount'] : [{ min: 1, max: 50, score: 10 }];
+            for (let _i = 0; _i < counts.length; _i++) {
+                const cnt = counts[_i];
+                _i == 0 || this.qujianItems.push(this.qujianItem.clone());
+                this.initQuJianItem(cnt);
+                _i == 0 || this.initFuWuFeiNodeFC();
+            }
+        }
+        this.setFuwufeiNode();
+        this.initDFMKbTNS();
+        this.initDFjsbTNS();
     },
     //----------------------------亲友圈相关-------------------------------------------------------------
     changeUiForClubMode: function () {

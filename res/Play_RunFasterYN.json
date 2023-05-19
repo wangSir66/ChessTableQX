@@ -1442,7 +1442,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 1222.3997,
+                  "X": 1222.4,
                   "Y": 33.935
                 },
                 "Scale": {
@@ -1460,8 +1460,8 @@
                   "X": 0.0508,
                   "Y": 1.0308
                 },
-                "LeftMargin": 1189.8997,
-                "RightMargin": 25.1003,
+                "LeftMargin": 1189.9,
+                "RightMargin": 25.1,
                 "TopMargin": -2.435,
                 "BottomMargin": 0.435,
                 "Tag": 1303,
@@ -1472,6 +1472,115 @@
                 },
                 "Name": "setting",
                 "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Red20/Common/RoomInfoBG_RunFaster.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 61,
+                "Scale9OriginY": 11,
+                "Scale9Width": 364,
+                "Scale9Height": 43,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": -279.8337,
+                  "Y": -17.1557
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": -0.2186,
+                  "Y": -0.2639
+                },
+                "PreSize": {
+                  "X": 0.3125,
+                  "Y": 0.7692
+                },
+                "LeftMargin": -279.8337,
+                "RightMargin": 1159.8337,
+                "TopMargin": 57.1557,
+                "BottomMargin": -42.1557,
+                "Tag": 614,
+                "Children": [
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 22,
+                    "LabelText": "125468",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/lanting.TTF",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 332.9326,
+                      "Y": 22.714
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "G": 249,
+                      "B": 200
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.8323,
+                      "Y": 0.4543
+                    },
+                    "PreSize": {
+                      "X": 0.25,
+                      "Y": 0.5
+                    },
+                    "LeftMargin": 282.9326,
+                    "RightMargin": 17.0674,
+                    "TopMargin": 14.786,
+                    "BottomMargin": 10.214,
+                    "Tag": 615,
+                    "ActionTag": 240534507,
+                    "Size": {
+                      "X": 100.0,
+                      "Y": 25.0
+                    },
+                    "Name": "tableid",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -514185941,
+                "Size": {
+                  "X": 400.0,
+                  "Y": 50.0
+                },
+                "Name": "goldBg",
+                "ctype": "ImageViewObjectData"
               },
               {
                 "FontSize": 14,
@@ -1518,7 +1627,7 @@
                   "ScaleY": 0.4746
                 },
                 "Position": {
-                  "X": 1132.9281,
+                  "X": 1132.928,
                   "Y": 29.475
                 },
                 "Scale": {
@@ -1536,8 +1645,8 @@
                   "X": 0.0508,
                   "Y": 1.0308
                 },
-                "LeftMargin": 1100.5061,
-                "RightMargin": 114.4939,
+                "LeftMargin": 1100.506,
+                "RightMargin": 114.494,
                 "TopMargin": 0.3232,
                 "BottomMargin": -2.3232,
                 "Tag": 556,
@@ -7595,7 +7704,7 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 992.0313,
+                "LeftMargin": 992.0312,
                 "RightMargin": -1125.0312,
                 "TopMargin": -379.5733,
                 "BottomMargin": 327.5733,

@@ -9,7 +9,7 @@
           <AbstractNodeData Name="bg_shuyang" ActionTag="-1723040621" Tag="500" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" RightMargin="-893.0000" TopMargin="-565.0000" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="893.0000" Y="565.0000" />
             <Children>
-              <AbstractNodeData Name="view" CanEdit="False" ActionTag="104901085" Tag="541" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" BottomMargin="85.0000" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
+              <AbstractNodeData Name="view" ActionTag="104901085" Tag="541" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" BottomMargin="85.0000" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
                 <Size X="893.0000" Y="480.0000" />
                 <Children>
                   <AbstractNodeData Name="jushu" ActionTag="1885353511" Tag="503" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="-0.3777" BottomMargin="1160.3777" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
@@ -264,7 +264,356 @@
                     <PreSize X="1.0000" Y="0.0492" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="renshu" ActionTag="-1496830279" Tag="325" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="119.6229" BottomMargin="1040.3771" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="fuwufei" ActionTag="-369967946" Tag="634" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="119.6200" BottomMargin="1040.3800" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                    <Size X="893.0000" Y="60.0000" />
+                    <Children>
+                      <AbstractNodeData Name="text_1" ActionTag="-472064633" Tag="635" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="服 务 费：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="140.0000" Y="28.0000" />
+                        <AnchorPoint ScaleY="0.5000" />
+                        <Position X="10.0000" Y="30.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="96" G="46" B="26" />
+                        <PrePosition X="0.0112" Y="0.5000" />
+                        <PreSize X="0.1568" Y="0.4667" />
+                        <FontResource Type="Default" Path="" Plist="" />
+                        <OutlineColor A="255" R="82" G="54" B="33" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnRadiogf" ActionTag="1696990547" Tag="636" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="152.0000" RightMargin="705.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                        <Size X="36.0000" Y="37.0000" />
+                        <Children>
+                          <AbstractNodeData Name="text" ActionTag="22202489" Tag="637" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-90.0000" TopMargin="3.1347" BottomMargin="5.8653" FontSize="28" LabelText="大赢家" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="84.0000" Y="28.0000" />
+                            <AnchorPoint ScaleY="0.5000" />
+                            <Position X="42.0000" Y="19.8653" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="96" G="46" B="26" />
+                            <PrePosition X="1.1667" Y="0.5369" />
+                            <PreSize X="2.3333" Y="0.7568" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="82" G="54" B="33" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="170.0000" Y="30.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1904" Y="0.5000" />
+                        <PreSize X="0.0403" Y="0.6167" />
+                        <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
+                        <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnRadiodf" ActionTag="1375972345" Tag="638" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" ctype="CheckBoxObjectData">
+                        <Size X="36.0000" Y="37.0000" />
+                        <Children>
+                          <AbstractNodeData Name="text" ActionTag="-815571884" Tag="639" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-118.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="所有赢家" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="112.0000" Y="28.0000" />
+                            <AnchorPoint ScaleY="0.5000" />
+                            <Position X="42.0000" Y="18.5000" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="96" G="46" B="26" />
+                            <PrePosition X="1.1667" Y="0.5000" />
+                            <PreSize X="3.1111" Y="0.7568" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="82" G="54" B="33" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="435.0000" Y="30.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.4871" Y="0.5000" />
+                        <PreSize X="0.0403" Y="0.6167" />
+                        <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
+                        <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnRadiotf1" ActionTag="541195146" Tag="2100" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="152.0000" RightMargin="705.0000" TopMargin="71.5000" BottomMargin="-48.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                        <Size X="36.0000" Y="37.0000" />
+                        <Children>
+                          <AbstractNodeData Name="text" ActionTag="-608603459" Tag="2101" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-146.0000" TopMargin="3.1347" BottomMargin="5.8653" FontSize="28" LabelText="同分一人出" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="140.0000" Y="28.0000" />
+                            <AnchorPoint ScaleY="0.5000" />
+                            <Position X="42.0000" Y="19.8653" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="96" G="46" B="26" />
+                            <PrePosition X="1.1667" Y="0.5369" />
+                            <PreSize X="3.8889" Y="0.7568" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="82" G="54" B="33" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="170.0000" Y="-30.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1904" Y="-0.5000" />
+                        <PreSize X="0.0403" Y="0.6167" />
+                        <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
+                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnRadiotf2" ActionTag="1326088303" Tag="2098" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="71.5000" BottomMargin="-48.5000" TouchEnable="True" ctype="CheckBoxObjectData">
+                        <Size X="36.0000" Y="37.0000" />
+                        <Children>
+                          <AbstractNodeData Name="text" ActionTag="1939736923" Tag="2099" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-118.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="同分平摊" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="112.0000" Y="28.0000" />
+                            <AnchorPoint ScaleY="0.5000" />
+                            <Position X="42.0000" Y="18.5000" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="96" G="46" B="26" />
+                            <PrePosition X="1.1667" Y="0.5000" />
+                            <PreSize X="3.1111" Y="0.7568" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="82" G="54" B="33" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="435.0000" Y="-30.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.4871" Y="-0.5000" />
+                        <PreSize X="0.0403" Y="0.6167" />
+                        <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
+                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnCheckdfjs" ActionTag="-1326408363" Tag="2110" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="151.0000" RightMargin="704.0000" TopMargin="130.0000" BottomMargin="-110.0000" TouchEnable="True" ctype="CheckBoxObjectData">
+                        <Size X="38.0000" Y="40.0000" />
+                        <Children>
+                          <AbstractNodeData Name="text" ActionTag="-253042974" Tag="2111" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-116.0000" TopMargin="6.6960" BottomMargin="5.3040" FontSize="28" LabelText="低分解散" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="112.0000" Y="28.0000" />
+                            <AnchorPoint ScaleY="0.5000" />
+                            <Position X="42.0000" Y="19.3040" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="96" G="46" B="26" />
+                            <PrePosition X="1.1053" Y="0.4826" />
+                            <PreSize X="2.9474" Y="0.7000" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="82" G="54" B="33" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="170.0000" Y="-90.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1904" Y="-1.5000" />
+                        <PreSize X="0.0426" Y="0.6667" />
+                        <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
+                        <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
+                        <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
+                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
+                        <NodeDisableFileData Type="Normal" Path="Red20/Common/CheckBoxForbidden.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Panel2" ActionTag="-882931757" Tag="2109" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="433.2376" RightMargin="299.7624" TopMargin="131.0000" BottomMargin="-109.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                        <Size X="160.0000" Y="38.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="513.2376" Y="-90.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.5747" Y="-1.5000" />
+                        <PreSize X="0.1792" Y="0.6333" />
+                        <SingleColor A="255" R="93" G="89" B="90" />
+                        <FirstColor A="255" R="150" G="200" B="255" />
+                        <EndColor A="255" R="255" G="255" B="255" />
+                        <ColorVector ScaleY="1.0000" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Btnmiuns2" ActionTag="1606754926" Tag="2107" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="408.2366" RightMargin="430.7634" TopMargin="123.0000" BottomMargin="-117.0000" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="24" Scale9Height="32" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="54.0000" Y="54.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="435.2366" Y="-90.0000" />
+                        <Scale ScaleX="0.8000" ScaleY="0.8000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.4874" Y="-1.5000" />
+                        <PreSize X="0.0605" Y="0.9000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <PressedFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="Btnadd2" ActionTag="-439218403" Tag="2108" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="564.2314" RightMargin="274.7686" TopMargin="123.0000" BottomMargin="-117.0000" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="24" Scale9Height="32" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="54.0000" Y="54.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="591.2314" Y="-90.0000" />
+                        <Scale ScaleX="0.8000" ScaleY="0.8000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.6621" Y="-1.5000" />
+                        <PreSize X="0.0605" Y="0.9000" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <PressedFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                        <NormalFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="qujian" ActionTag="1516975778" Tag="1912" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="180.0000" BottomMargin="-180.0000" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                        <Size X="893.0000" Y="60.0000" />
+                        <Children>
+                          <AbstractNodeData Name="text_1" ActionTag="1526268537" Tag="1913" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="区    间：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="140.0000" Y="28.0000" />
+                            <AnchorPoint ScaleY="0.5000" />
+                            <Position X="10.0000" Y="30.0000" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="96" G="46" B="26" />
+                            <PrePosition X="0.0112" Y="0.5000" />
+                            <PreSize X="0.1568" Y="0.4667" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="82" G="54" B="33" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                          <AbstractNodeData Name="Btnadd" ActionTag="2130155872" Tag="1941" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="683.4489" RightMargin="164.5511" TopMargin="7.5000" BottomMargin="7.5000" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="24" Scale9Height="32" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                            <Size X="45.0000" Y="45.0000" />
+                            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                            <Position X="705.9489" Y="30.0000" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="255" G="255" B="255" />
+                            <PrePosition X="0.7905" Y="0.5000" />
+                            <PreSize X="0.0504" Y="0.7500" />
+                            <TextColor A="255" R="65" G="65" B="70" />
+                            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                            <PressedFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                            <NormalFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                            <OutlineColor A="255" R="255" G="0" B="0" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                          <AbstractNodeData Name="qujian0" ActionTag="-1248306792" Tag="1935" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="416.6304" RightMargin="276.3696" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                            <Size X="200.0000" Y="60.0000" />
+                            <Children>
+                              <AbstractNodeData Name="Panel0" ActionTag="544528162" Tag="1942" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-262.4395" RightMargin="402.4395" TopMargin="11.0000" BottomMargin="11.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                                <Size X="60.0000" Y="38.0000" />
+                                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                <Position X="-232.4395" Y="30.0000" />
+                                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                                <CColor A="255" R="255" G="255" B="255" />
+                                <PrePosition X="-1.1622" Y="0.5000" />
+                                <PreSize X="0.3000" Y="0.6333" />
+                                <SingleColor A="255" R="93" G="89" B="90" />
+                                <FirstColor A="255" R="150" G="200" B="255" />
+                                <EndColor A="255" R="255" G="255" B="255" />
+                                <ColorVector ScaleY="1.0000" />
+                              </AbstractNodeData>
+                              <AbstractNodeData Name="text1" ActionTag="1803992667" Tag="1944" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-185.9595" RightMargin="371.9595" TopMargin="16.0000" BottomMargin="16.0000" IsCustomSize="True" FontSize="28" LabelText="-" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                                <Size X="14.0000" Y="28.0000" />
+                                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                <Position X="-178.9595" Y="30.0000" />
+                                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                                <CColor A="255" R="96" G="46" B="26" />
+                                <PrePosition X="-0.8948" Y="0.5000" />
+                                <PreSize X="0.0700" Y="0.4667" />
+                                <FontResource Type="Default" Path="" Plist="" />
+                                <OutlineColor A="255" R="82" G="54" B="33" />
+                                <ShadowColor A="255" R="110" G="110" B="110" />
+                              </AbstractNodeData>
+                              <AbstractNodeData Name="text1_0" ActionTag="-505010401" Tag="1945" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-69.8277" RightMargin="213.8277" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="抽取" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                                <Size X="56.0000" Y="28.0000" />
+                                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                <Position X="-41.8277" Y="30.0000" />
+                                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                                <CColor A="255" R="96" G="46" B="26" />
+                                <PrePosition X="-0.2091" Y="0.5000" />
+                                <PreSize X="0.2800" Y="0.4667" />
+                                <FontResource Type="Default" Path="" Plist="" />
+                                <OutlineColor A="255" R="82" G="54" B="33" />
+                                <ShadowColor A="255" R="110" G="110" B="110" />
+                              </AbstractNodeData>
+                              <AbstractNodeData Name="Panel1" ActionTag="1183630324" Tag="1943" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-157.9915" RightMargin="297.9915" TopMargin="11.0000" BottomMargin="11.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                                <Size X="60.0000" Y="38.0000" />
+                                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                <Position X="-127.9915" Y="30.0000" />
+                                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                                <CColor A="255" R="255" G="255" B="255" />
+                                <PrePosition X="-0.6400" Y="0.5000" />
+                                <PreSize X="0.3000" Y="0.6333" />
+                                <SingleColor A="255" R="93" G="89" B="90" />
+                                <FirstColor A="255" R="150" G="200" B="255" />
+                                <EndColor A="255" R="255" G="255" B="255" />
+                                <ColorVector ScaleY="1.0000" />
+                              </AbstractNodeData>
+                              <AbstractNodeData Name="Panel2" ActionTag="-1765461604" Tag="1937" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="20.9298" RightMargin="19.0702" TopMargin="11.0000" BottomMargin="11.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+                                <Size X="160.0000" Y="38.0000" />
+                                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                <Position X="100.9298" Y="30.0000" />
+                                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                                <CColor A="255" R="255" G="255" B="255" />
+                                <PrePosition X="0.5046" Y="0.5000" />
+                                <PreSize X="0.8000" Y="0.6333" />
+                                <SingleColor A="255" R="93" G="89" B="90" />
+                                <FirstColor A="255" R="150" G="200" B="255" />
+                                <EndColor A="255" R="255" G="255" B="255" />
+                                <ColorVector ScaleY="1.0000" />
+                              </AbstractNodeData>
+                              <AbstractNodeData Name="Btnadd" ActionTag="-2055281952" Tag="1938" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="151.3484" RightMargin="-5.3484" TopMargin="3.0000" BottomMargin="3.0000" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="24" Scale9Height="32" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                                <Size X="54.0000" Y="54.0000" />
+                                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                <Position X="178.3484" Y="30.0000" />
+                                <Scale ScaleX="0.8000" ScaleY="0.8000" />
+                                <CColor A="255" R="255" G="255" B="255" />
+                                <PrePosition X="0.8917" Y="0.5000" />
+                                <PreSize X="0.2700" Y="0.9000" />
+                                <TextColor A="255" R="65" G="65" B="70" />
+                                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                                <PressedFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                                <NormalFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                                <OutlineColor A="255" R="255" G="0" B="0" />
+                                <ShadowColor A="255" R="110" G="110" B="110" />
+                              </AbstractNodeData>
+                              <AbstractNodeData Name="Btnmiuns" ActionTag="-420620051" Tag="1939" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-4.6561" RightMargin="150.6561" TopMargin="3.0000" BottomMargin="3.0000" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="24" Scale9Height="32" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                                <Size X="54.0000" Y="54.0000" />
+                                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                <Position X="22.3439" Y="30.0000" />
+                                <Scale ScaleX="0.8000" ScaleY="0.8000" />
+                                <CColor A="255" R="255" G="255" B="255" />
+                                <PrePosition X="0.1117" Y="0.5000" />
+                                <PreSize X="0.2700" Y="0.9000" />
+                                <TextColor A="255" R="65" G="65" B="70" />
+                                <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+                                <PressedFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                                <NormalFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                                <OutlineColor A="255" R="255" G="0" B="0" />
+                                <ShadowColor A="255" R="110" G="110" B="110" />
+                              </AbstractNodeData>
+                            </Children>
+                            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                            <Position X="516.6304" Y="30.0000" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="255" G="255" B="255" />
+                            <PrePosition X="0.5785" Y="0.5000" />
+                            <PreSize X="0.2240" Y="1.0000" />
+                            <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="445.0000" Y="-150.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.4983" Y="-2.5000" />
+                        <PreSize X="1.0000" Y="1.0000" />
+                        <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="445.0000" Y="1070.3800" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4983" Y="0.8774" />
+                    <PreSize X="1.0000" Y="0.0492" />
+                    <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="renshu" Visible="False" ActionTag="-1496830279" Tag="325" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="119.6229" BottomMargin="1040.3771" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="-407501687" Tag="326" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="人    数：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -372,7 +721,7 @@
                     <PreSize X="1.0000" Y="0.0492" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="difen" ActionTag="-476369984" Tag="333" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="179.6227" BottomMargin="980.3773" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="difen" Visible="False" ActionTag="-476369984" Tag="333" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="179.6227" BottomMargin="980.3773" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="-1976098977" Tag="334" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="底    分：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -1150,7 +1499,7 @@
                     <PreSize X="1.0000" Y="0.0492" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="teshu" ActionTag="1955772249" Tag="648" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="719.6241" BottomMargin="440.3758" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="teshu" ActionTag="1955772249" Tag="648" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="719.6242" BottomMargin="440.3758" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="-688500383" Tag="649" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="特    殊：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">

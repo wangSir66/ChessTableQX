@@ -419,6 +419,25 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 [0, 0.95],
                 [0, 0]
             ],
+            goldBg: {
+                _run: function () {
+                    var sData = MjClient.data.sData;
+                    var tData = sData.tData;
+                    if (tData && tData.areaSelectMode) {
+                        this.visible = !!tData.areaSelectMode.clubId;
+                    } else this.visible = false;
+                },
+                tableid: {
+                    _event: {
+                        initSceneData: function () {
+                            let pl = getUIPlayer(0);
+                            if (pl) {
+                                this.setString(pl.info.honorVal+'');
+                            }
+                        }
+                    }
+                }
+            },
             bg_time: {
                 _run: function () {
                     var text = new ccui.Text();

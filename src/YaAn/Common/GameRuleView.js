@@ -63,6 +63,10 @@ var GameRuleView = cc.Layer.extend({
         for (let _i = 0; _i < this._view.children.length; _i++) {
             const row = this._view.children[_i];
             let btns = [];
+            if (row.name == 'fuwufei') {
+                row.visible = false;
+                continue;
+            }
             for (let _j = 0; _j < row.children.length; _j++) {
                 const col = row.children[_j];
                 if (col.name.indexOf('btnRadio') > -1 || col.name.indexOf('btnCheck') > -1) {

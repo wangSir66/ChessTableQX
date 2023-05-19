@@ -22,7 +22,7 @@
           <AbstractNodeData Name="back" ActionTag="755369775" Tag="1595" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="TopEdge" TopMargin="-1.4999" BottomMargin="91.4999" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="156" ctype="ImageViewObjectData">
             <Size X="1280.0000" Y="630.0000" />
             <Children>
-              <AbstractNodeData Name="ready" ActionTag="294184368" Tag="1597" IconVisible="False" LeftMargin="557.0753" RightMargin="526.9247" TopMargin="631.9266" BottomMargin="-83.9266" TouchEnable="True" FontSize="14" ButtonText="3s" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="ready" ActionTag="294184368" Tag="1597" IconVisible="False" LeftMargin="557.0753" RightMargin="526.9247" TopMargin="631.9266" BottomMargin="-83.9266" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="196.0000" Y="82.0000" />
                 <Children>
                   <AbstractNodeData Name="countDown" ActionTag="-949488951" Tag="2035" IconVisible="False" LeftMargin="117.3767" RightMargin="14.6233" TopMargin="22.6424" BottomMargin="26.3576" FontSize="32" LabelText="(3s)" ShadowOffsetX="1.0000" ShadowOffsetY="1.0000" ShadowEnabled="True" ctype="TextObjectData">

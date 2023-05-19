@@ -106,7 +106,7 @@
             "Children": [
               {
                 "FontSize": 14,
-                "ButtonText": "3s",
+                "ButtonText": "",
                 "TextColor": {
                   "R": 65,
                   "G": 65,

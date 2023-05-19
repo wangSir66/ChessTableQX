@@ -184,6 +184,7 @@ var FriendCard_member = cc.Layer.extend({
         var Button_addMember = ListView_left.getChildByName("Button_addMember");
         var Button_league = ListView_left.getChildByName("Button_league");
         var Button_member_record = ListView_left.getChildByName("Button_member_record");
+        var Button_honor_record = ListView_left.getChildByName("Button_honor");
         Button_member_record.addChild(Button_shenhe.getChildByName("Image_point").clone());
 
         if (Button_league) {
@@ -237,7 +238,7 @@ var FriendCard_member = cc.Layer.extend({
         if (!this.isGroupLeader) {
             Button_zhuli.removeFromParent(true);
         }
-        this.leftViews = [Button_member, Button_shenhe, Button_daoru, Button_addMember, Button_group, Button_zhuli, null, Button_member_record];
+        this.leftViews = [Button_member, Button_shenhe, Button_daoru, Button_addMember, Button_group, Button_zhuli, null, Button_member_record, Button_honor_record];
         for (var i in this.leftViews) {
             if (this.leftViews[i] && cc.sys.isObjectValid(this.leftViews[i])) {
                 this.leftViews[i].tag = i;
@@ -271,7 +272,8 @@ var FriendCard_member = cc.Layer.extend({
         var Panel_tianjia = this._Image_bg.getChildByName("Panel_tianjia");
         var Panel_daochu = this._Image_bg.getChildByName("Panel_daochu");
         var Panel_member_record = this._Image_bg.getChildByName("Panel_member_record");
-        this.panelViews = [Panel_member, Panel_check_member, Panel_daoru, Panel_tianjia, Panel_group, Panel_zhuli, Panel_daochu, Panel_member_record];
+        var Panel_honor_record = this._Image_bg.getChildByName("Panel_honor_record");
+        this.panelViews = [Panel_member, Panel_check_member, Panel_daoru, Panel_tianjia, Panel_group, Panel_zhuli, Panel_daochu, Panel_member_record, Panel_honor_record];
 
         if (this.node.getChildByName("Panle_LMListManage")) {
             this.node.getChildByName("Panle_LMListManage").removeFromParent(true);
@@ -543,6 +545,8 @@ var FriendCard_member = cc.Layer.extend({
             this.showNewMemberDaoChuView();
         } else if (index == 7) {
             this.showMemberRecordView();
+        }else if (index == 8) {
+            this.showHonorRecordView();
         }
     },
     showMemberRecordView: function () {
@@ -805,6 +809,222 @@ var FriendCard_member = cc.Layer.extend({
         _panel.visible = true;
         MjClient.FriendCard_main_ui.data.redpointMemberButton = 0;
         postEvent("update_member_record");
+    },
+    showHonorRecordView: function () {
+        var that = this;
+        var _panel = this.panelViews[8];
+
+        if (!this.hasInitHonorRecordView) {
+            _panel._hasMoreData = true;
+            _panel._listView = _panel.getChildByName("ListView");
+            _panel._listView._curPage = 0;
+            _panel._cell = _panel.getChildByName("Cell");
+            _panel._cell.visible = false;
+            _panel._data = {};
+            _panel._data.list = [];
+
+            _panel._prePageLength = 5;//本地测试分页
+            if (cc.sys.OS_WINDOWS != cc.sys.os) {
+                _panel._prePageLength = 50;
+            }
+            var btn_all = _panel.getChildByName("Button_all");
+            var btn_join = _panel.getChildByName("Button_join");
+            var btn_quit = _panel.getChildByName("Button_quit");
+            var _selectTypeViews = [btn_all, btn_join, btn_quit];
+            _selectTypeViews[0].setBright(false);
+            _panel._reflashTypeViews = function (view) {
+                for (var i = 0; i < _selectTypeViews.length; i++) {
+                    if (_selectTypeViews[i] != view) {
+                        _selectTypeViews[i].setBright(true);
+                    } else {
+                        _selectTypeViews[i].setBright(false);
+                    }
+                }
+            }
+            btn_all.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    _panel._type = 0;
+                    _panel._reflashTypeViews(sender);
+                    that.rquestHonorRecordList(null);
+                }
+            })
+            btn_join.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    _panel._type = 1;
+                    _panel._reflashTypeViews(sender);
+                    that.rquestHonorRecordList(null);
+                }
+            })
+            btn_quit.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    _panel._type = 2;
+                    _panel._reflashTypeViews(sender);
+                    that.rquestHonorRecordList(null);
+                }
+            })
+
+            var image_search = _panel.getChildByName("Image_search");
+            _panel._edtInput = this.initEditView(_panel, "请输入玩家信息...");
+            var button_find = image_search.getChildByName("Button_find");
+            button_find.zIndex = 1;
+            image_search.visible = button_find.visible =false;
+            button_find.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    that.rquestHonorRecordList(null);
+                }
+            }, this);
+
+            this.createHonorRecordItem = function (item, index, data) {
+                var itemData = data;
+                //createTime
+                var addTime1 = item.getChildByName("Text_addTime1");
+                var addTime2 = item.getChildByName("Text_addTime2");
+                addTime1.ignoreContentAdaptWithSize(true);
+                addTime2.ignoreContentAdaptWithSize(true);
+                var timeStr = MjClient.dateFormat(new Date(parseInt(itemData.createTime)), 'yyyy-MM-dd hh:mm:ss');
+                timeStr = timeStr.split(" ");
+                addTime1.setString(timeStr[0]);
+                addTime2.setString(timeStr[1]);
+                var text_content = item.getChildByName("Text_content");
+                text_content.ignoreContentAdaptWithSize(false);
+                text_content.setTextAreaSize(cc.size(item.width - text_content.x - 20, item.height))
+                text_content.setTextVerticalAlignment(cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
+                var str = "", flag = cc.sys.OS_WINDOWS == cc.sys.os
+                if (itemData.type == 0) {//赠送
+                    str = itemData.Unick + "赠给" + itemData.Tnick + itemData.amount + '贡献' + (flag ? " (Befor:"+ itemData.tAfterAmount +")" : '');
+                } else if (itemData.type == 1) {
+                    str = "在房间"+ GameCnName[itemData.tAfterAmount] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献'+ (flag ? " (Befor:"+ itemData.uAfterAmount +")" : '');
+                } else if (itemData.type == 2) {
+                    str = "服务费："+ GameCnName[itemData.tAfterAmount] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献'+ (flag ? " (Befor:"+ itemData.uAfterAmount +")" : '');
+                } 
+                text_content.setString(str);
+                return item;
+            }
+
+            this.refreshHonorRecordList = function (shouldClear) {
+                cc.log("refreshHonorRecordList")
+
+                var preItemNum = _panel._listView.getItems().length;
+                var curentPoint = _panel._listView.getInnerContainerPosition();
+                if (curentPoint.y > 0) {
+                    curentPoint.y = 0;
+                }
+                var initPointY = _panel._listView.height - _panel._listView.getInnerContainerSize().height;
+                var cell = _panel._cell;
+                cell.visible = false;
+                if (shouldClear || (_panel._data.list.length == 0)) {
+                    cc.log("refreshHonorRecordList removeAllItems")
+                    _panel._listView.removeAllItems();
+                    preItemNum = 0;
+                }
+                var isEmpty = this.dealEmptyView(_panel);
+                if (isEmpty) {
+                    return;
+                }
+                for (var i = 0; i < _panel._data.list.length; i++) {
+                    var item = _panel._listView.getItems()[i];
+                    if (!item) {
+                        item = cell.clone();
+                        _panel._listView.pushBackCustomItem(item);
+                    }
+                    item.visible = true;
+                    item.dataIndex = i
+                    this.createHonorRecordItem(item, i, _panel._data.list[i])
+                }
+
+                for (var i = preItemNum - 1; i >= _panel._data.list.length; i--) {
+                    _panel._listView.getItems()[i].removeFromParent(true);
+                }
+                FriendCard_UI.addListBottomTipUi(_panel._listView, _panel._hasMoreData ? 2 : 3)
+                _panel._listView.forceDoLayout();
+                if (preItemNum > 0) {
+                    curentPoint.y = curentPoint.y + _panel._listView.getInnerContainerPosition().y - initPointY;
+                    var totalY = (_panel._listView.height - _panel._listView.getInnerContainerSize().height);
+                    if (totalY == 0) {
+                        var percent = 0;
+                    } else {
+                        var percent = 100 - curentPoint.y * 100 / totalY;
+                    }
+                    _panel._listView.jumpToPercentVertical(percent)
+                }
+            };
+            FriendCard_UI.setListAutoLoadMore(_panel._listView, function () {
+                FriendCard_UI.addListBottomTipUi(_panel._listView, 1)
+                that.rquestHonorRecordList(_panel._listView._curPage + 1);
+            }, function () {
+                if (!_panel._isLoadingData &&
+                    _panel._hasMoreData &&
+                    !_panel._edtInput.lastText &&
+                    (_panel._data.list.length > 0)) {
+                    return true;
+                }
+                return false;
+            })
+
+
+            this.rquestHonorRecordList = function (lastId) {
+                if (_panel._isLoadingData) {
+                    return;
+                }
+                var lastId = _panel._edtInput.lastText ? 0 : lastId;
+                if (!lastId) {
+                    lastId = 0;
+                }
+                var sendInfo = {
+                    clubId: this.clubInfo.clubId,
+                    pageLen: _panel._prePageLength,
+                    keyword: _panel._edtInput.lastText,
+                    pageIdx: lastId,
+                }
+                if ((!_panel._edtInput.lastText || _panel._edtInput.lastText == "") && _panel._type) {
+                    sendInfo.type = _panel._type;
+                }
+                cc.log("rquestHonorRecordList sendInfo ", JSON.stringify(sendInfo));
+                MjClient.block();
+                _panel._isLoadingData = true;
+                MjClient.gamenet.request("pkplayer.handler.clubPlayerHonorRecord", sendInfo, function (rtn) {
+                    MjClient.unblock();
+                    if (!cc.sys.isObjectValid(that)) {
+                        return;
+                    }
+                    _panel._isLoadingData = false;
+                    cc.log('------------rtn-----------------', JSON.stringify(rtn))
+                    if (rtn.code == 0) {
+                        if (!rtn.data) {
+                            rtn.data = [];
+                        }
+                        var dataLength = rtn.data.length;
+                        _panel._hasMoreData = dataLength >= _panel._prePageLength;
+
+                        if (lastId == 0) {
+                            _panel._data.list = [];
+                        }
+                        _panel._listView._curPage = lastId;
+                        var addDatas = [];
+                        for (var i = 0; i < rtn.data.length; i++) {
+                            var hasLocal = false;
+                            for (var j = 0; j < _panel._data.list.length; j++) {
+                                if (JSON.stringify(rtn.data[i]) == JSON.stringify(_panel._data.list[j])) {
+                                    hasLocal = true;
+                                }
+                            }
+                            if (!hasLocal) {
+                                addDatas.push(rtn.data[i]);
+                            }
+                        }
+                        _panel._data.list = _panel._data.list.concat(addDatas)
+                        that.refreshHonorRecordList(lastId == 0 ? true : false);
+                    }
+                    else {
+                        FriendCard_Common.serverFailToast(rtn);
+                    }
+                });
+            };
+            this.hasInitHonorRecordView = true;
+        }
+
+        this.rquestHonorRecordList();
+        _panel.visible = true;
     },
     //成员 - 助理界面
     showZhuliView: function () {

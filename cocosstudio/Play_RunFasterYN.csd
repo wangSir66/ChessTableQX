@@ -311,10 +311,10 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="setting" ActionTag="549565556" Tag="1303" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1189.8997" RightMargin="25.1003" TopMargin="-2.4350" BottomMargin="0.4350" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="setting" ActionTag="549565556" Tag="1303" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1189.9000" RightMargin="25.1000" TopMargin="-2.4350" BottomMargin="0.4350" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="65.0000" Y="67.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1222.3997" Y="33.9350" />
+                <Position X="1222.4000" Y="33.9350" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.9550" Y="0.5221" />
@@ -324,10 +324,34 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="rule_btn" ActionTag="-1281697366" Tag="556" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1100.5061" RightMargin="114.4939" TopMargin="0.3232" BottomMargin="-2.3232" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="goldBg" ActionTag="-514185941" Tag="614" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-279.8337" RightMargin="1159.8337" TopMargin="57.1557" BottomMargin="-42.1557" LeftEage="61" RightEage="61" TopEage="11" BottomEage="11" Scale9OriginX="61" Scale9OriginY="11" Scale9Width="364" Scale9Height="43" ctype="ImageViewObjectData">
+                <Size X="400.0000" Y="50.0000" />
+                <Children>
+                  <AbstractNodeData Name="tableid" ActionTag="240534507" Tag="615" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="282.9326" RightMargin="17.0674" TopMargin="14.7860" BottomMargin="10.2140" IsCustomSize="True" FontSize="22" LabelText="125468" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="100.0000" Y="25.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="332.9326" Y="22.7140" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="249" B="200" />
+                    <PrePosition X="0.8323" Y="0.4543" />
+                    <PreSize X="0.2500" Y="0.5000" />
+                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
+                <AnchorPoint ScaleY="0.5000" />
+                <Position X="-279.8337" Y="-17.1557" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="-0.2186" Y="-0.2639" />
+                <PreSize X="0.3125" Y="0.7692" />
+                <FileData Type="Normal" Path="Red20/Common/RoomInfoBG_RunFaster.png" Plist="" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="rule_btn" ActionTag="-1281697366" Tag="556" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1100.5060" RightMargin="114.4940" TopMargin="0.3232" BottomMargin="-2.3232" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="65.0000" Y="67.0000" />
                 <AnchorPoint ScaleX="0.4988" ScaleY="0.4746" />
-                <Position X="1132.9281" Y="29.4750" />
+                <Position X="1132.9280" Y="29.4750" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.8851" Y="0.4535" />
