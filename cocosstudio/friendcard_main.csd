@@ -519,16 +519,16 @@
                                         <OutlineColor A="255" R="21" G="99" B="74" />
                                         <ShadowColor A="255" R="110" G="110" B="110" />
                                       </AbstractNodeData>
-                                      <AbstractNodeData Name="text_rule_no" ActionTag="591206851" Tag="307" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="86.6482" RightMargin="83.3518" TopMargin="71.8200" BottomMargin="142.1800" IsCustomSize="True" FontSize="18" LabelText="(2020)" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                                      <AbstractNodeData Name="text_rule_no" ActionTag="591206851" Tag="307" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="86.6482" RightMargin="83.3518" TopMargin="71.8200" BottomMargin="142.1800" IsCustomSize="True" FontSize="16" LabelText="(2020)" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                                         <Size X="76.0000" Y="36.0000" />
                                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                                         <Position X="124.6482" Y="160.1800" />
                                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                                        <CColor A="255" R="0" G="48" B="36" />
+                                        <CColor A="255" R="255" G="255" B="255" />
                                         <PrePosition X="0.5067" Y="0.6407" />
                                         <PreSize X="0.3089" Y="0.1440" />
                                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
-                                        <OutlineColor A="255" R="21" G="99" B="74" />
+                                        <OutlineColor A="255" R="0" G="48" B="36" />
                                         <ShadowColor A="255" R="110" G="110" B="110" />
                                       </AbstractNodeData>
                                       <AbstractNodeData Name="Button_detail" ActionTag="1528315954" Tag="671" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="87.6482" RightMargin="84.3518" TopMargin="103.5000" BottomMargin="113.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="44" Scale9Height="11" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -1350,8 +1350,8 @@
           <AbstractNodeData Name="gonggao_bg" ActionTag="384131351" Tag="646" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="105.0240" RightMargin="105.0239" TopMargin="168.3000" BottomMargin="506.7000" LeftEage="214" RightEage="214" TopEage="14" BottomEage="14" Scale9OriginX="214" Scale9OriginY="14" Scale9Width="642" Scale9Height="17" ctype="ImageViewObjectData">
             <Size X="1069.9520" Y="45.0000" />
             <Children>
-              <AbstractNodeData Name="scroll" ActionTag="925379314" Tag="647" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" RightMargin="-0.0480" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="245" RightEage="294" TopEage="14" BottomEage="14" Scale9OriginX="-294" Scale9OriginY="-14" Scale9Width="539" Scale9Height="28" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
-                <Size X="1070.0000" Y="45.0000" />
+              <AbstractNodeData Name="scroll" ActionTag="925379314" Tag="647" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="245" RightEage="294" TopEage="14" BottomEage="14" Scale9OriginX="-294" Scale9OriginY="-14" Scale9Width="539" Scale9Height="28" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
+                <Size X="1069.9520" Y="45.0000" />
                 <Children>
                   <AbstractNodeData Name="msg" ActionTag="-1592027223" Tag="648" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-289.1936" RightMargin="80.1936" TopMargin="2.3760" BottomMargin="27.6240" FontSize="25" LabelText="亲友圈公告亲友圈公告亲友圈公告亲友圈公告亲友圈公告亲友圈公告亲友圈公告亲友圈公告亲友圈公告亲友圈公告亲友圈" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="1327.0000" Y="30.0000" />

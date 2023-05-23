@@ -1042,7 +1042,7 @@
                   },
                   {
                     "FontSize": 34,
-                    "ButtonText": "贡献记录",
+                    "ButtonText": "",
                     "TextColor": {
                       "R": 128,
                       "G": 0,
@@ -1050,17 +1050,17 @@
                     },
                     "DisabledFileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/memberManage/cy_add_s.png",
+                      "Path": "friendCards/memberManage/cy_add_gongxian1.png",
                       "Plist": ""
                     },
                     "PressedFileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/memberManage/cy_add_s.png",
+                      "Path": "friendCards/memberManage/cy_add_gongxian1.png",
                       "Plist": ""
                     },
                     "NormalFileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/memberManage/cy_add_n.png",
+                      "Path": "friendCards/memberManage/cy_add_gongxian.png",
                       "Plist": ""
                     },
                     "Scale9Enable": true,
@@ -18800,18 +18800,28 @@
                   },
                   {
                     "FontSize": 30,
-                    "ButtonText": "设置贡献",
+                    "ButtonText": "",
                     "TextColor": {},
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "friendCards/memberManage/btn_setgongxian2.png",
+                      "Plist": ""
+                    },
+                    "PressedFileData": {
+                      "Type": "Normal",
+                      "Path": "friendCards/memberManage/btn_setgongxian2.png",
+                      "Plist": ""
+                    },
                     "NormalFileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/memberManage/btn_group.png",
+                      "Path": "friendCards/memberManage/btn_setgongxian1.png",
                       "Plist": ""
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
                     "Scale9OriginY": 11,
-                    "Scale9Width": 90,
-                    "Scale9Height": 25,
+                    "Scale9Width": 174,
+                    "Scale9Height": 51,
                     "OutlineColor": {
                       "G": 0,
                       "B": 0
@@ -18845,17 +18855,17 @@
                       "Y": 0.064
                     },
                     "PreSize": {
-                      "X": 0.2544,
+                      "X": 0.2595,
                       "Y": 0.1457
                     },
-                    "LeftMargin": 1114.2358,
-                    "RightMargin": -528.1879,
+                    "LeftMargin": 1112.1545,
+                    "RightMargin": -530.1066,
                     "TopMargin": 434.5598,
                     "BottomMargin": -6.5837,
                     "Tag": 2783,
                     "ActionTag": -1708344248,
                     "Size": {
-                      "X": 200.0,
+                      "X": 204.0,
                       "Y": 73.0
                     },
                     "Name": "Button_Xinyu",
@@ -21938,7 +21948,7 @@
                   },
                   {
                     "FontSize": 32,
-                    "LabelText": "编    辑：",
+                    "LabelText": "增加贡献：",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "fonts/lanting.TTF",
@@ -21982,17 +21992,17 @@
                       "Y": 0.483
                     },
                     "PreSize": {
-                      "X": 0.0891,
+                      "X": 0.1109,
                       "Y": 0.0514
                     },
-                    "LeftMargin": 447.32,
-                    "RightMargin": 718.68,
+                    "LeftMargin": 433.32,
+                    "RightMargin": 704.68,
                     "TopMargin": 353.74,
                     "BottomMargin": 329.26,
                     "Tag": 470,
                     "ActionTag": -671755602,
                     "Size": {
-                      "X": 114.0,
+                      "X": 142.0,
                       "Y": 37.0
                     },
                     "Name": "Text",
@@ -22220,7 +22230,7 @@
                     "Tag": 474,
                     "Children": [
                       {
-                        "FontSize": 22,
+                        "FontSize": 26,
                         "LabelText": "0",
                         "HorizontalAlignmentType": "HT_Center",
                         "VerticalAlignmentType": "VT_Center",
@@ -22260,18 +22270,18 @@
                           "Y": 0.5
                         },
                         "PreSize": {
-                          "X": 0.0407,
-                          "Y": 0.3793
+                          "X": 0.0481,
+                          "Y": 0.4483
                         },
-                        "LeftMargin": 129.5,
-                        "RightMargin": 129.5,
-                        "TopMargin": 18.0,
-                        "BottomMargin": 18.0,
+                        "LeftMargin": 128.5,
+                        "RightMargin": 128.5,
+                        "TopMargin": 16.0,
+                        "BottomMargin": 16.0,
                         "Tag": 476,
                         "ActionTag": 1812025832,
                         "Size": {
-                          "X": 11.0,
-                          "Y": 22.0
+                          "X": 13.0,
+                          "Y": 26.0
                         },
                         "Name": "Text",
                         "ctype": "TextObjectData"
@@ -22287,7 +22297,7 @@
                   },
                   {
                     "FontSize": 32,
-                    "LabelText": "当    前：",
+                    "LabelText": "当前贡献：",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "fonts/lanting.TTF",
@@ -22331,17 +22341,17 @@
                       "Y": 0.603
                     },
                     "PreSize": {
-                      "X": 0.0891,
+                      "X": 0.1109,
                       "Y": 0.0514
                     },
-                    "LeftMargin": 448.472,
-                    "RightMargin": 717.528,
+                    "LeftMargin": 434.472,
+                    "RightMargin": 703.528,
                     "TopMargin": 267.34,
                     "BottomMargin": 415.66,
                     "Tag": 475,
                     "ActionTag": -953735892,
                     "Size": {
-                      "X": 114.0,
+                      "X": 142.0,
                       "Y": 37.0
                     },
                     "Name": "Text_0",
@@ -22407,13 +22417,14 @@
         "friendCards/memberManage/btn_daoru_s.png",
         "friendCards/memberManage/btn_frozen_n.png",
         "friendCards/memberManage/btn_frozen_s.png",
-        "friendCards/memberManage/btn_group.png",
         "friendCards/memberManage/btn_group_n.png",
         "friendCards/memberManage/btn_group_s.png",
         "friendCards/memberManage/btn_mamager_n.png",
         "friendCards/memberManage/btn_mamager_s.png",
         "friendCards/memberManage/btn_notAdmit_n.png",
         "friendCards/memberManage/btn_notAdmit_s.png",
+        "friendCards/memberManage/btn_setgongxian1.png",
+        "friendCards/memberManage/btn_setgongxian2.png",
         "friendCards/memberManage/btn_tichu_n.png",
         "friendCards/memberManage/btn_tichu_s.png",
         "friendCards/memberManage/btn_tongbu_n.png",
@@ -22427,6 +22438,8 @@
         "friendCards/memberManage/btn_zhuli_s.png",
         "friendCards/memberManage/btna_group_n.png",
         "friendCards/memberManage/btna_unGroup_n.png",
+        "friendCards/memberManage/cy_add_gongxian.png",
+        "friendCards/memberManage/cy_add_gongxian1.png",
         "friendCards/memberManage/cy_add_n.png",
         "friendCards/memberManage/cy_add_s.png",
         "friendCards/memberManage/cy_all_member_n.png",

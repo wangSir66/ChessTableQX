@@ -60,19 +60,19 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Text" ActionTag="2068807774" Tag="574" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="396.0511" RightMargin="746.9489" TopMargin="355.9000" BottomMargin="327.1000" FontSize="32" LabelText="玩法编号  " HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="137.0000" Y="37.0000" />
+              <AbstractNodeData Name="Text" ActionTag="2068807774" Tag="574" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="400.5511" RightMargin="751.4489" TopMargin="355.9000" BottomMargin="327.1000" FontSize="32" LabelText="玩法别名 " HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="128.0000" Y="37.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="464.5511" Y="345.6000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="96" G="46" B="26" />
                 <PrePosition X="0.3629" Y="0.4800" />
-                <PreSize X="0.1070" Y="0.0514" />
+                <PreSize X="0.1000" Y="0.0514" />
                 <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Text_tip" ActionTag="-1403603223" Tag="196" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="378.0000" RightMargin="378.0000" TopMargin="423.4000" BottomMargin="250.6000" IsCustomSize="True" FontSize="20" LabelText="最多输入4位玩法编号，仅可输入数字，用于区分玩法规则。&#xA;如跑的快15张可添加“15”" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="Text_tip" ActionTag="-1403603223" Tag="196" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="378.0000" RightMargin="378.0000" TopMargin="423.4000" BottomMargin="250.6000" IsCustomSize="True" FontSize="20" LabelText="输入玩法别名，用于区分玩法规则。&#xA;如跑的快15张" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="524.0000" Y="46.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="640.0000" Y="273.6000" />

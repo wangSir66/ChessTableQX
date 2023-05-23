@@ -411,14 +411,13 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             this.initDFjsbTNS();
         }
     },
-    initFuWuFeiNodeFC: function (indx = 0) {
+    initFuWuFeiNodeFC: function (indx = 0, isAdd = true) {
         if (this._view) {
             const n = this._view.getChildByName('fuwufei'), fg = n ? n.visible : false;
             if (fg) {
-                let dy = 60 + 180 * indx;
+                let dy = 60 * (isAdd ? 1 : -1) + 240 * indx;
                 //修正scrollView的滑动区域
                 this._view.setInnerContainerSize(cc.size(this._view.getInnerContainerSize().width, this._view.getInnerContainerSize().height + dy));
-                let isH = false;
                 for (let _i = 0; _i < this._view.children.length; _i++) {
                     const item = this._view.children[_i];
                     item.y += dy;
@@ -440,7 +439,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         muins.setEnabled(checked);
         this.dfmk.setEnabled(checked);
     },
-
 
     initDFjsbTNS: function () {
         if (this._data.clubType != 0) return;
@@ -541,6 +539,45 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                     }
                 }, this);
             }
+            let df = row.getChildByName('difen');
+            if (df) {
+                var pn = df.getChildByName('Panel_3'),
+                    _textFeildName0 = new cc.EditBox(cc.size(60, 45), new cc.Scale9Sprite());
+                _textFeildName0.setFontColor(cc.color(255, 255, 255));
+                _textFeildName0.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+                _textFeildName0.setPlaceHolder("");
+                _textFeildName0.setFontSize(20);
+                _textFeildName0.setPosition(pn.getContentSize().width / 2, pn.getContentSize().height / 2);
+                pn.addChild(_textFeildName0);
+                this.rcdf = _textFeildName0;
+                this.rcdf.setString(1);
+                this._btnItems.push(df.getChildByName('BtnPlusrc2'))
+                df.getChildByName('BtnPlusrc2').addTouchEventListener((sender, Type) => {
+                    switch (Type) {
+                        case ccui.Widget.TOUCH_ENDED:
+                            let num = Number(this.rcdf.getString());
+                            this.rcdf.setString(num + 1);
+                            break;
+                        default:
+                            break;
+                    }
+                }, this);
+                this._btnItems.push(df.getChildByName('BtnMinusrc1'))
+                df.getChildByName('BtnMinusrc1').addTouchEventListener((sender, Type) => {
+                    switch (Type) {
+                        case ccui.Widget.TOUCH_ENDED:
+                            let num = Number(this.rcdf.getString());
+                            if (num <= 0) {
+                                this.rcdf.setString(0);
+                            } else {
+                                this.rcdf.setString(num - 1);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }, this);
+            }
         }
     },
     //初始化区间
@@ -551,7 +588,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             const fun = (image, data, indx) => {
                 var s = image.getContentSize(), off = cc.size(s.width - (indx == 2 ? 80 : 10), s.height - 5)
                 var textInput = new cc.EditBox(off, new cc.Scale9Sprite());
-                textInput.setFontColor(cc.color(0x40, 0x40, 0x40));
+                textInput.setFontColor(cc.color(255, 255, 255));
                 textInput.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
                 textInput.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
                 textInput.setPosition(s.width / 2, s.height / 2);
@@ -602,6 +639,35 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                         }
                     }, this);
                 }
+            }
+
+            let BtnJian = item.getChildByName('Btnjian');
+            if (BtnJian) {
+                BtnJian.visible = len != 0;
+                BtnJian._indx = len;
+                BtnJian.addTouchEventListener((sender, Type) => {
+                    switch (Type) {
+                        case ccui.Widget.TOUCH_ENDED:
+                            if (sender._indx >= 0) {
+                                let delItem = this.qujianItems.splice(sender._indx, 1)[0];
+                                let posArr = [];
+                                for (let _i = 0; _i < this.qujianItems.length; _i++) {
+                                    const hItem = this.qujianItems[_i], btnItem = hItem.getChildByName('Btnjian');
+                                    btnItem.visible = _i != 0;
+                                    btnItem._indx = _i;
+                                    posArr.push(hItem.getPosition());
+                                    if (_i < sender._indx) continue;
+                                    else if (_i == sender._indx) hItem.setPosition(delItem.getPosition());
+                                    else hItem.setPosition(posArr[_i - 1]);
+                                }
+                                delItem.removeFromParent(true);
+                                this.initFuWuFeiNodeFC(0, false);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }, this);
             }
         }
     },
@@ -783,9 +849,9 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         var image = dialog.getChildByName("Image_bg").getChildByName("Image");
         var textInput = new cc.EditBox(image.getContentSize(), new cc.Scale9Sprite("friendCards/int_playwords.png"));
         textInput.setFontColor(cc.color(0x40, 0x40, 0x40));
-        textInput.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+        // textInput.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
         textInput.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
-        textInput.setPlaceHolder("填写编号");
+        textInput.setPlaceHolder("填写别名");
 
         if (isJinZhongAPPType()) {
             textInput.setFontSize(38);
@@ -808,12 +874,12 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             switch (Type) {
                 case ccui.Widget.TOUCH_ENDED:
                     var rule = FriendCard_Common.strReplace(textInput.getString());
-                    if (rule && !FriendCard_Common.isNumber(rule)) {
-                        MjClient.showToast("请填写0-4位的阿拉伯数字");
-                        return;
-                    }
-                    if (rule && rule.length > 4)
-                        MjClient.showToast("最多输入4位玩法编号");
+                    // if (rule && !FriendCard_Common.isNumber(rule)) {
+                    //     MjClient.showToast("请填写0-4位的阿拉伯数字");
+                    //     return;
+                    // }
+                    if (!rule || rule.length == 0)
+                        MjClient.showToast("玩法别名不能为空");
                     else
                         this.retainRule();
                     break;
@@ -1181,6 +1247,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             para.serverCount = counts;
             para.serverFreeScore = 0;//this.getCheckboxSelectedByName('btnCheckdfmc') ? Number(this.dfmk.getString()) : 0;
             para.serverExtra = para.serverCharge === 2 ? 0 : this.RedioGroup['tongfenpay'].getSelectIndex() + 1;
+            para.enterScore = Number(this.rcdf.getString());
         }
 
         para.round = this.getSelectedRoundNum();
@@ -1454,12 +1521,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 this._nodeGPS.getChildByName("text").setColor(this._unSelectColor);
             }
         }
-        let num = 1;
-        if (isClub)
-            num = this.getNumberItem('difen', 1);
-        else
-            isTrue = cacheRule['difen'] != undefined ? cacheRule['difen'] : 1;
-        if (this.difen) this.difen.setString(num);
 
         let roundNumObj = this.getRoundNumObj(),
             pNums = Object.keys(this.getGamePriceConfig()).map(a => Number(a)),
@@ -1472,6 +1533,14 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             'fuwufeipay': ['serverCharge', 0, [0, 1]],
             'tongfenpay': ['serverExtra', 1, [1, 2]],
         }
+        //底分
+        let num = 1;
+        if (isClub)
+            num = this.getNumberItem('difen', 1);
+        else
+            isTrue = cacheRule['difen'] != undefined ? cacheRule['difen'] : 1;
+        if (this.difen) this.difen.setString(num);
+
         let len = Object.keys(key_nameR);
         for (let _i = 0; _i < len.length; _i++) {
             let key = len[_i], val = key_nameR[key];
@@ -1510,6 +1579,11 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             else
                 isTrue = cacheRule['dissolveLimitScore'] != undefined ? cacheRule['dissolveLimitScore'] : 1;
             if (this.dfjs) this.dfjs.setString(num);
+            if (isClub)
+                num = this.getNumberItem('enterScore', 1);
+            else
+                isTrue = cacheRule['enterScore'] != undefined ? cacheRule['enterScore'] : 1;
+            if (this.rcdf) this.rcdf.setString(num);
             let counts = [];
             if (isClub)
                 counts = this.clubRule['serverCount'] || [{ min: 1, max: 50, score: 10 }];

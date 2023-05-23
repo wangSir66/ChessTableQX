@@ -1129,6 +1129,8 @@
             <Image Name="btn_mamager_s.png" />
             <Image Name="btn_notAdmit_n.png" />
             <Image Name="btn_notAdmit_s.png" />
+            <Image Name="btn_setgongxian1.png" />
+            <Image Name="btn_setgongxian2.png" />
             <Image Name="btn_tichu_n.png" />
             <Image Name="btn_tichu_s.png" />
             <Image Name="btn_tichuRoom.png" />
@@ -1145,6 +1147,8 @@
             <Image Name="btna_unGroup_n.png" />
             <Image Name="checkbg.png" />
             <Image Name="checked.png" />
+            <Image Name="cy_add_gongxian.png" />
+            <Image Name="cy_add_gongxian1.png" />
             <Image Name="cy_add_n.png" />
             <Image Name="cy_add_s.png" />
             <Image Name="cy_all_member_n.png" />

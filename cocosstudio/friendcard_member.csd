@@ -210,7 +210,7 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Button_honor" ActionTag="-488033975" ZOrder="8" Tag="1224" IconVisible="False" TopMargin="576.0000" TouchEnable="True" FontSize="34" ButtonText="贡献记录" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="174" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="Button_honor" ActionTag="-488033975" ZOrder="8" Tag="1224" IconVisible="False" TopMargin="576.0000" TouchEnable="True" FontSize="34" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="174" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="204.0000" Y="72.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="102.0000" Y="36.0000" />
@@ -219,9 +219,9 @@
                     <PrePosition X="0.5000" Y="0.0556" />
                     <PreSize X="1.0000" Y="0.1111" />
                     <TextColor A="255" R="128" G="0" B="128" />
-                    <DisabledFileData Type="Normal" Path="friendCards/memberManage/cy_add_s.png" Plist="" />
-                    <PressedFileData Type="Normal" Path="friendCards/memberManage/cy_add_s.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="friendCards/memberManage/cy_add_n.png" Plist="" />
+                    <DisabledFileData Type="Normal" Path="friendCards/memberManage/cy_add_gongxian1.png" Plist="" />
+                    <PressedFileData Type="Normal" Path="friendCards/memberManage/cy_add_gongxian1.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="friendCards/memberManage/cy_add_gongxian.png" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -1459,7 +1459,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_group" Visible="False" ActionTag="1209895024" Tag="166" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="244.9920" RightMargin="45.0081" TopMargin="100.5440" BottomMargin="39.4560" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_group" ActionTag="1209895024" Tag="166" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="244.9920" RightMargin="45.0081" TopMargin="100.5440" BottomMargin="39.4560" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="990.0000" Y="580.0000" />
                 <Children>
                   <AbstractNodeData Name="Image_bg" ActionTag="-647439658" Tag="167" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" RightMargin="9.9000" TopMargin="61.1980" BottomMargin="38.8020" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="32" BottomEage="32" Scale9OriginX="22" Scale9OriginY="28" Scale9Width="16" Scale9Height="4" ctype="ImageViewObjectData">
@@ -2899,7 +2899,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_member_record" ActionTag="193373193" Tag="1177" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="244.9920" RightMargin="45.0081" TopMargin="100.5440" BottomMargin="39.4560" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_member_record" Visible="False" ActionTag="193373193" Tag="1177" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="244.9920" RightMargin="45.0081" TopMargin="100.5440" BottomMargin="39.4560" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="990.0000" Y="580.0000" />
                 <Children>
                   <AbstractNodeData Name="Image_bg" ActionTag="1031104662" Tag="1178" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" RightMargin="9.9000" TopMargin="61.2120" BottomMargin="10.7880" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="32" BottomEage="32" Scale9OriginX="22" Scale9OriginY="28" Scale9Width="16" Scale9Height="4" ctype="ImageViewObjectData">
@@ -3514,7 +3514,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="close" ActionTag="570404447" Tag="315" IconVisible="False" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="1189.0240" RightMargin="14.9440" TopMargin="12.5280" BottomMargin="631.4400" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="46" Scale9Height="54" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="close" Visible="False" ActionTag="570404447" Tag="315" IconVisible="False" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="1189.0240" RightMargin="14.9440" TopMargin="12.5280" BottomMargin="631.4400" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="46" Scale9Height="54" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="76.0320" Y="76.0320" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="1227.0400" Y="669.4560" />
@@ -3748,7 +3748,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_honor_record" ActionTag="1599788940" Tag="1211" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="244.9920" RightMargin="45.0081" TopMargin="100.5440" BottomMargin="39.4560" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_honor_record" Visible="False" ActionTag="1599788940" Tag="1211" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="244.9920" RightMargin="45.0081" TopMargin="100.5440" BottomMargin="39.4560" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="990.0000" Y="580.0000" />
                 <Children>
                   <AbstractNodeData Name="Image_bg" ActionTag="1662849669" Tag="1212" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" RightMargin="9.9000" TopMargin="61.2120" BottomMargin="10.7880" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="32" BottomEage="32" Scale9OriginX="22" Scale9OriginY="28" Scale9Width="16" Scale9Height="4" ctype="ImageViewObjectData">
@@ -3920,7 +3920,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panle_memberManage" ActionTag="-334501672" VisibleForFrame="False" Tag="393" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="204" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panle_memberManage" Visible="False" ActionTag="-334501672" VisibleForFrame="False" Tag="393" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="204" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <Children>
               <AbstractNodeData Name="block" ActionTag="362368676" Alpha="204" Tag="324" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.6639" RightMargin="-1.6639" TopMargin="-1.6560" BottomMargin="1.6560" TouchEnable="True" ClipAble="False" BackColorAlpha="153" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -4183,16 +4183,18 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Button_Xinyu" ActionTag="-1708344248" Tag="2783" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1114.2358" RightMargin="-528.1879" TopMargin="434.5598" BottomMargin="-6.5837" TouchEnable="True" FontSize="30" ButtonText="设置贡献" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="90" Scale9Height="25" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                    <Size X="200.0000" Y="73.0000" />
+                  <AbstractNodeData Name="Button_Xinyu" ActionTag="-1708344248" Tag="2783" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1112.1545" RightMargin="-530.1066" TopMargin="434.5598" BottomMargin="-6.5837" TouchEnable="True" FontSize="30" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="174" Scale9Height="51" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="204.0000" Y="73.0000" />
                     <AnchorPoint ScaleX="0.5203" ScaleY="0.5294" />
                     <Position X="1218.2958" Y="32.0625" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="1.5499" Y="0.0640" />
-                    <PreSize X="0.2544" Y="0.1457" />
+                    <PreSize X="0.2595" Y="0.1457" />
                     <TextColor A="255" R="255" G="255" B="255" />
-                    <NormalFileData Type="Normal" Path="friendCards/memberManage/btn_group.png" Plist="" />
+                    <DisabledFileData Type="Normal" Path="friendCards/memberManage/btn_setgongxian2.png" Plist="" />
+                    <PressedFileData Type="Normal" Path="friendCards/memberManage/btn_setgongxian2.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="friendCards/memberManage/btn_setgongxian1.png" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -4879,14 +4881,14 @@
                     <PreSize X="0.2109" Y="0.0806" />
                     <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Text" ActionTag="-671755602" Tag="470" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="447.3200" RightMargin="718.6800" TopMargin="353.7400" BottomMargin="329.2600" FontSize="32" LabelText="编    辑：" HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="114.0000" Y="37.0000" />
+                  <AbstractNodeData Name="Text" ActionTag="-671755602" Tag="470" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="433.3200" RightMargin="704.6800" TopMargin="353.7400" BottomMargin="329.2600" FontSize="32" LabelText="增加贡献：" HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="142.0000" Y="37.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="504.3200" Y="347.7600" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="96" G="46" B="26" />
                     <PrePosition X="0.3940" Y="0.4830" />
-                    <PreSize X="0.0891" Y="0.0514" />
+                    <PreSize X="0.1109" Y="0.0514" />
                     <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -4931,14 +4933,14 @@
                   <AbstractNodeData Name="Image1" ActionTag="-1001301384" Tag="474" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="606.0007" RightMargin="403.9993" TopMargin="256.8400" BottomMargin="405.1600" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="11" BottomEage="11" Scale9OriginX="22" Scale9OriginY="11" Scale9Width="16" Scale9Height="38" ctype="ImageViewObjectData">
                     <Size X="270.0000" Y="58.0000" />
                     <Children>
-                      <AbstractNodeData Name="Text" ActionTag="1812025832" Tag="476" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="129.5000" RightMargin="129.5000" TopMargin="18.0000" BottomMargin="18.0000" FontSize="22" LabelText="0" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="11.0000" Y="22.0000" />
+                      <AbstractNodeData Name="Text" ActionTag="1812025832" Tag="476" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="128.5000" RightMargin="128.5000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="26" LabelText="0" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="13.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="135.0000" Y="29.0000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="139" G="105" B="20" />
                         <PrePosition X="0.5000" Y="0.5000" />
-                        <PreSize X="0.0407" Y="0.3793" />
+                        <PreSize X="0.0481" Y="0.4483" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -4951,14 +4953,14 @@
                     <PreSize X="0.2109" Y="0.0806" />
                     <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Text_0" ActionTag="-953735892" Tag="475" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="448.4720" RightMargin="717.5280" TopMargin="267.3400" BottomMargin="415.6600" FontSize="32" LabelText="当    前：" HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="114.0000" Y="37.0000" />
+                  <AbstractNodeData Name="Text_0" ActionTag="-953735892" Tag="475" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="434.4720" RightMargin="703.5280" TopMargin="267.3400" BottomMargin="415.6600" FontSize="32" LabelText="当前贡献：" HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="142.0000" Y="37.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="505.4720" Y="434.1600" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="96" G="46" B="26" />
                     <PrePosition X="0.3949" Y="0.6030" />
-                    <PreSize X="0.0891" Y="0.0514" />
+                    <PreSize X="0.1109" Y="0.0514" />
                     <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />

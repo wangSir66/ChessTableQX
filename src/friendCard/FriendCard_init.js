@@ -3657,6 +3657,38 @@ FriendCard_Common.splitClubRuleName = function (str) {
     return result;
 }
 
+/*
+*切割有编号的ruleName
+*eg (0511)跑得快
+* return [0] 编号 [1] 玩法默认名称
+*/
+FriendCard_Common.splitClubRuleName1 = function (str) {
+    var result = [];
+    if (!str) {
+        result.push("");
+        result.push(str);
+        return result;
+    }
+    var index1 = str.indexOf("(");
+    var index2 = str.indexOf(")");
+    if (index1 > -1 && index2 > -1 && index1 == 0) {
+
+        var no = str.substring(index1 + 1, index2);
+        // if (FriendCard_Common.isNumber(no)) {
+        result.push(str.substring(index1 + 1, index2));
+        result.push(str.substring(index2 + 1, str.length));
+        // } else {
+        //     result.push("");
+        //     result.push(str);
+        // }
+
+    } else {
+        result.push("");
+        result.push(str);
+    }
+    return result;
+}
+
 
 FriendCard_Common.isNumber = function (str) {
     var n = Number(str);
@@ -3882,6 +3914,7 @@ FriendCard_Common.joinGame = function (that, sender) {
                 } else {
                     params.clubId = that.clubId;
                 }
+                params.ruleId = sender.room.ruleIndex || that.ruleIndex;
                 MjClient.joinGame(sender.room.roomNum, null, false, sender.room.gameType, false, params);
             }
         } else {
@@ -3909,6 +3942,7 @@ FriendCard_Common.joinGame = function (that, sender) {
                     } else {
                         params.clubId = that.clubId;
                     }
+                    params.ruleId = sender.room.ruleIndex || that.ruleIndex;
                     MjClient.joinGame(rtn.data, null, false, sender.room.gameType, false, params);
                 } else {
                     FriendCard_Common.serverFailToast(rtn);
@@ -4650,7 +4684,7 @@ FriendCard_UI.getCurClubHonorVal = function (clubId = 0, list) {
     !list && (list = [])
     for (let _i = 0; _i < list.length; _i++) {
         const item = list[_i];
-        if(item.clubId === clubId)return item.honorVal || ''
+        if (item.clubId === clubId) return item.honorVal || ''
     }
     return '';
 }

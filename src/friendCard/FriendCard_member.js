@@ -9,7 +9,8 @@ MjClient.isWarnScoreOpen = function () {
         apptype == MjClient.APP_TYPE.QXSYDTZ ||
         apptype == MjClient.APP_TYPE.HUBEIMJ ||
         apptype == MjClient.APP_TYPE.QXYZQP ||
-        apptype == MjClient.APP_TYPE.TXJINZHONGMJ 
+        apptype == MjClient.APP_TYPE.TXJINZHONGMJ ||
+        apptype == MjClient.APP_TYPE.YAAN
     ) {
         return true;
     } else {
@@ -291,11 +292,11 @@ var FriendCard_member = cc.Layer.extend({
             }
         }, this);
         Panle_memberManage_block = this.Panle_ExitXY.getChildByName("block");
-        Panle_memberManage_block.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                that.Panle_ExitXY.visible = false;
-            }
-        }, this);
+        // Panle_memberManage_block.addTouchEventListener(function (sender, type) {
+        //     if (type == 2) {
+        //         that.Panle_ExitXY.visible = false;
+        //     }
+        // }, this);
         setWgtLayout(Panle_memberManage_block, [1, 1], [0.5, 0.5], [0, 0], true);
         var Panle_memberManage_Image_bg = this.Panle_memberManage.getChildByName("Image_bg");
         if (isIPhoneX()) {
@@ -889,13 +890,14 @@ var FriendCard_member = cc.Layer.extend({
                 text_content.ignoreContentAdaptWithSize(false);
                 text_content.setTextAreaSize(cc.size(item.width - text_content.x - 20, item.height))
                 text_content.setTextVerticalAlignment(cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
-                var str = "", flag = cc.sys.OS_WINDOWS == cc.sys.os
+                var str = "", flag = true; //cc.sys.OS_WINDOWS == cc.sys.os
                 if (itemData.type == 0) {//赠送
-                    str = itemData.Unick + "赠给" + itemData.Tnick + itemData.amount + '贡献' + (flag ? " (Befor:"+ itemData.tAfterAmount +")" : '');
+                    str = itemData.Unick + "赠给" + itemData.Tnick + '，' + itemData.amount + '贡献值' + (flag ? " (当前贡献:"+ (itemData.tAfterAmount + itemData.amount).toFixed(1) +")" : '');
                 } else if (itemData.type == 1) {
-                    str = "在房间"+ GameCnName[itemData.tAfterAmount] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献'+ (flag ? " (Befor:"+ itemData.uAfterAmount +")" : '');
+                    cc.log('0000000000000',parseInt(itemData.tAfterAmount))
+                    str = "在房间"+ GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献值'+ (flag ? " (当前贡献:"+ (itemData.uAfterAmount + itemData.amount).toFixed(1) +")" : '');
                 } else if (itemData.type == 2) {
-                    str = "服务费："+ GameCnName[itemData.tAfterAmount] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献'+ (flag ? " (Befor:"+ itemData.uAfterAmount +")" : '');
+                    str = "服务费："+ GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献值'+ (flag ? " (当前贡献:"+ (itemData.uAfterAmount + itemData.amount).toFixed(1) +")" : '');
                 } 
                 text_content.setString(str);
                 return item;
@@ -4039,14 +4041,16 @@ var FriendCard_member = cc.Layer.extend({
         var image_bg = this.Panle_ExitXY.getChildByName("Image_bg");
         var image = image_bg.getChildByName("Image");
         var txt = image_bg.getChildByName("Image1").getChildByName('Text');
-        txt.setString(itemData.honorVal + '')
+        txt.setString(itemData.honorVal.toFixed(1));
         image.removeChildByName("textInput");
-        var textInput = new cc.EditBox(image.getContentSize(), new cc.Scale9Sprite("friendCards/main/int_playwords.png"));
+        var s = image.getContentSize(), off = cc.size(s.width -  10, s.height - 10)
+        var textInput = new cc.EditBox(off, new cc.Scale9Sprite("friendCards/main/int_playwords.png"));
         textInput.setName("textInput");
-        textInput.setFontColor(cc.color(0x40, 0x40, 0x40));
-        textInput.setInputMode(cc.EDITBOX_INPUT_MODE_ANY);
+        textInput.setFontColor(txt.getTextColor());
+        textInput.setFontSize(txt.getFontSize());
+        // textInput.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
         textInput.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
-        textInput.setPlaceHolder("最多6个字");
+        textInput.setPlaceHolder("");
         textInput.setPosition(image.getContentSize().width / 2, image.getContentSize().height / 2);
         image.addChild(textInput);
         image_bg.getChildByName("close").addTouchEventListener(function (sender, type) {
@@ -4055,9 +4059,10 @@ var FriendCard_member = cc.Layer.extend({
         var finishBtn = image_bg.getChildByName("Button_finish");
         finishBtn.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                // MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Chengyuan_Chengyuanliebiao_Caozuo_Tianjiabeizhu_Wancheng", { uid: SelfUid() });
                 var remarkStr = textInput.getString();
-                if (!remarkStr || remarkStr.length <= 0)
+                var reg = /(^[0-9]*\.([0-9]{1}\d*)$)|(^[0-9]*$)/;
+                cc.log('/^d+.d+$/.test(remarkStr)',reg.test(remarkStr))
+                if (!remarkStr || remarkStr.length <= 0 || !(reg.test(remarkStr)))
                     MjClient.showToast("请输入有效数字！");
                 else {
                     MjClient.block();
@@ -4073,18 +4078,6 @@ var FriendCard_member = cc.Layer.extend({
                             MjClient.showToast(rtn.message);
                             if (cc.sys.isObjectValid(that)) {
                                 itemData.honorVal = rtn.data.tAcount;
-                                
-        // if (cc.sys.isObjectValid(MjClient.FriendCard_main_ui) && MjClient.FriendCard_main_ui.clubList) {
-        //     var clubList = MjClient.FriendCard_main_ui.clubList;
-        //     for (var i = 0; i < clubList.length; i++) {
-        //         if (clubList[i].clubId != this.clubInfo.clubId) {
-        //             if (clubList[i].roleId == 3 || (clubList[i].roleId == 1 && clubList[i].leagueId)) {
-        //                 hasOtherLeaderClub = true;
-        //                 break;
-        //             }
-        //         }
-        //     }
-        // }
                                 const opt = that.clubInfo.groupMap[rtn.data.uId + ""];
                                 if (opt) opt.honorVal = rtn.data.uAcount;
                                 that.reLoadCurPanleListUI();

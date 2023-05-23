@@ -1099,8 +1099,8 @@ GameCnName[MjClient.GAME_TYPE.TONG_CHENG_GE_ZI_PAI] = "通城个子牌";
 GameCnName[MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG] = "蕲春红中杠";
 GameCnName[MjClient.GAME_TYPE.EN_SHI_SHAO_HU] = "恩施绍胡";
 GameCnName[MjClient.GAME_TYPE.WU_XUE_510K] = "武穴510K";
-GameCnName[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = "跑 得 快";
-GameCnName[MjClient.GAME_TYPE.RED_20_POKER] = "红 20";
+GameCnName[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = "跑得快";
+GameCnName[MjClient.GAME_TYPE.RED_20_POKER] = "红20";
 GameCnName[MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG] = "血战到底";
 
 var GameClass = {};
@@ -9035,6 +9035,9 @@ MjClient.joinGame = function (tableid, callback, isByInvite, gameType, notCheckR
                 joinPara.leagueId = params.leagueId
             } else if (params.clubId) {
                 joinPara.clubId = params.clubId
+            }
+            if (params.ruleId) {
+                joinPara.ruleId = params.ruleId
             }
             if (isByInvite)
                 joinPara.isByInvite = true;

@@ -2573,7 +2573,7 @@
                                       },
                                       {
                                         "IsCustomSize": true,
-                                        "FontSize": 18,
+                                        "FontSize": 16,
                                         "LabelText": "(2020)",
                                         "FontResource": {
                                           "Type": "Normal",
@@ -2583,10 +2583,11 @@
                                         "HorizontalAlignmentType": "HT_Center",
                                         "VerticalAlignmentType": "VT_Center",
                                         "OutlineColor": {
-                                          "R": 21,
-                                          "G": 99,
-                                          "B": 74
+                                          "R": 0,
+                                          "G": 48,
+                                          "B": 36
                                         },
+                                        "OutlineEnabled": true,
                                         "ShadowColor": {
                                           "R": 110,
                                           "G": 110,
@@ -2606,11 +2607,7 @@
                                           "ScaleX": 1.0,
                                           "ScaleY": 1.0
                                         },
-                                        "CColor": {
-                                          "R": 0,
-                                          "G": 48,
-                                          "B": 36
-                                        },
+                                        "CColor": {},
                                         "IconVisible": false,
                                         "PositionPercentXEnabled": true,
                                         "PrePosition": {
@@ -6203,7 +6200,6 @@
                   "X": 1.0,
                   "Y": 1.0
                 },
-                "RightMargin": -0.048,
                 "Tag": 647,
                 "Children": [
                   {
@@ -6263,7 +6259,7 @@
                 ],
                 "ActionTag": 925379314,
                 "Size": {
-                  "X": 1070.0,
+                  "X": 1069.952,
                   "Y": 45.0
                 },
                 "Name": "scroll",

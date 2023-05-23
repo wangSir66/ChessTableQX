@@ -1100,29 +1100,6 @@
         if (cardsType == -1)
             return false;
 
-        // 不能出3张 或 3顺不能出
-        if (cardsType == PDK_CARDTPYE.sanzhang) {
-            // if (oCards.length == handsNum && !oLastCards) {// 如果最后一手牌是3张或3顺
-            //     return true;
-            // } else {
-            //     return false;
-
-            // }
-            return true;
-        }
-
-        // 单张翅膀 和 不带翅膀的飞机最后一手可以出
-        // if (cardsType == PDK_CARDTPYE.feiji){
-        //     var feijiInfo = this.formatFeiJiType(oCards);
-        //     if(feijiInfo.type != feijiInfo.DAI_CHI_BANG){
-        //         if(oCards.length == handsNum){
-        //             return true;
-        //         }else{
-        //             return false;
-        //         }
-        //     }
-        // }
-
         // 没有上次打的牌，三家过自己再出牌
         if (!oLastCards || oLastCards.length == 0 || oLastCards == 'undefined')
             return true;

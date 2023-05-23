@@ -314,7 +314,7 @@
               },
               {
                 "FontSize": 32,
-                "LabelText": "玩法编号  ",
+                "LabelText": "玩法别名 ",
                 "FontResource": {
                   "Type": "Normal",
                   "Path": "fonts/lanting.TTF",
@@ -357,17 +357,17 @@
                   "Y": 0.48
                 },
                 "PreSize": {
-                  "X": 0.107,
+                  "X": 0.1,
                   "Y": 0.0514
                 },
-                "LeftMargin": 396.0511,
-                "RightMargin": 746.9489,
+                "LeftMargin": 400.5511,
+                "RightMargin": 751.4489,
                 "TopMargin": 355.9,
                 "BottomMargin": 327.1,
                 "Tag": 574,
                 "ActionTag": 2068807774,
                 "Size": {
-                  "X": 137.0,
+                  "X": 128.0,
                   "Y": 37.0
                 },
                 "Name": "Text",
@@ -376,12 +376,13 @@
               {
                 "IsCustomSize": true,
                 "FontSize": 20,
-                "LabelText": "最多输入4位玩法编号，仅可输入数字，用于区分玩法规则。\n如跑的快15张可添加“15”",
+                "LabelText": "输入玩法别名，用于区分玩法规则。\n如跑的快15张",
                 "FontResource": {
                   "Type": "Normal",
                   "Path": "fonts/lanting.TTF",
                   "Plist": ""
                 },
+                "HorizontalAlignmentType": "HT_Center",
                 "VerticalAlignmentType": "VT_Center",
                 "OutlineColor": {
                   "G": 0,

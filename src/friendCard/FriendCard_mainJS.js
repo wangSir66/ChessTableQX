@@ -617,7 +617,7 @@ var FriendCard_main = cc.Layer.extend({
 		}
 
 		if (isIPhoneX()) {
-			this._listView_rule.x = this._image_top.width - (back.width * a - back.width) / 2 
+			this._listView_rule.x = this._image_top.width - (back.width * a - back.width) / 2
 		}
 
 	},
@@ -999,8 +999,8 @@ var FriendCard_main = cc.Layer.extend({
 		text_clubId.ignoreContentAdaptWithSize(true);
 		let str = "ID:" + this.data.info.clubId;
 		// if (cc.sys.OS_WINDOWS == cc.sys.os) {
-			let val = FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList);
-			val && (str += '-' + val)
+		let val = FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList);
+		val && (str += '-' + val)
 		// }
 		text_clubId.setString(str);
 		//黄金
@@ -1349,7 +1349,7 @@ var FriendCard_main = cc.Layer.extend({
 			var rule = this.data.info["rule" + indexs[i]];
 			if (rule.ruleName) {
 				var splitRuleName = FriendCard_Common.splitClubRuleName(unescape(rule.ruleName));
-				textRuleNo.setString(splitRuleName[0] + "");
+				// textRuleNo.setString(splitRuleName[0] + "");
 				var ruleName = splitRuleName[1];
 				if (!splitRuleName[0]) {
 					ruleName = GameCnName[rule.gameType] + "";
@@ -1734,11 +1734,11 @@ var FriendCard_main = cc.Layer.extend({
 
 		var textRuleNo = table.getChildByName("text_rule_no");
 		textRuleNo.ignoreContentAdaptWithSize(true);
-		var splitRuleName = FriendCard_Common.splitClubRuleName(unescape(this.data.info["rule" + room.ruleIndex].ruleName));
+		var splitRuleName = FriendCard_Common.splitClubRuleName1(unescape(this.data.info["rule" + room.ruleIndex].ruleName));
 		if (splitRuleName[0]) {
 			textRuleNo.setString("(" + splitRuleName[0] + ")")
 		} else {
-			textRuleNo.setString("");
+			textRuleNo.setString("(未设置)");
 		}
 		var btn_detail = table.getChildByName("Button_detail");
 		if (btn_detail) {
