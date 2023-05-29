@@ -2769,7 +2769,7 @@ function currentLeftCardCount(UIoff, clientOut) {
         cc.log("===================================================剩余张数----- ");
         var pl = getUIPlayer(UIoff);
         if ((pl.handCount || pl.handCount == 0) && _countNode) {
-            node.getChildByName("head").getChildByName("tingCard").visible = true;
+            node.getChildByName("head").getChildByName("tingCard").visible = MjClient.rePlayVideo == -1;
             //cc.log("pl.mjhand.length = " + pl.handCount);
             _countNode.setString(pl.handCount);
         }
@@ -2803,7 +2803,7 @@ function currentLeftCardCount_chongYangDaGun(UIoff, clientOut, needShowCount) {
     var count = needShowCount ? needShowCount : 5;
     // 警报
     if (pl.handCount <= count) {
-        countNode.visible = true;
+        countNode.visible = MjClient.rePlayVideo == -1;
 
         textCount.setString(pl.handCount);
 
@@ -2888,7 +2888,7 @@ function currentLeftCardCount_paodekuai(UIoff, clientOut) {
         return;
     }
 
-    _countNode.visible = true;
+    _countNode.visible = MjClient.rePlayVideo == -1;
 
     var showCardNumber = null;
     if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
@@ -2995,7 +2995,7 @@ function currentLeftCardCount_TY(UIoff) {
         return;
     }
 
-    _countNode.visible = true;
+    _countNode.visible = MjClient.rePlayVideo == -1;
 
     var showCardNumber = 20;//MjClient.data.sData.tData.areaSelectMode.showCardNumber;
 
@@ -3050,7 +3050,7 @@ function currentLeftCardCount_JZ(UIoff) {
         return;
     }
 
-    _countNode.visible = true;
+    _countNode.visible = MjClient.rePlayVideo == -1;
 
     var showCardNumber = 20;//MjClient.data.sData.tData.areaSelectMode.showCardNumber;
 
@@ -3101,7 +3101,7 @@ function currentLeftCardCount_LF(UIoff) {
         return;
     }
 
-    _countNode.visible = true;
+    _countNode.visible = MjClient.rePlayVideo == -1;
 
     var showCardNumber = 20;//MjClient.data.sData.tData.areaSelectMode.showCardNumber;
 
@@ -3173,7 +3173,7 @@ function currentLeftCardCount_NiuShiBie(UIoff) {
 
     // 警报
     if (pl.handCount <= 5) {
-        countNode.visible = true;
+        countNode.visible = MjClient.rePlayVideo == -1;
 
         countNode.getChildByName("textCount").setString(pl.handCount);
 

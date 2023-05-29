@@ -50,7 +50,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="load_logo" ActionTag="1661784405" Tag="28" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="40.6800" RightMargin="985.3200" TopMargin="15.0840" BottomMargin="587.9160" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="224" Scale9Height="89" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="load_logo" Visible="False" ActionTag="1661784405" VisibleForFrame="False" Tag="28" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="40.6800" RightMargin="985.3200" TopMargin="15.0840" BottomMargin="587.9160" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="224" Scale9Height="89" ctype="ImageViewObjectData">
                 <Size X="254.0000" Y="117.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="167.6800" Y="646.4160" />

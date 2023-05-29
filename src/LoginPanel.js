@@ -401,43 +401,43 @@ function ResetLoginPanel(back){
     downRight.runAction(cc.sequence(downRightMoveAction,downRightCallFunc));
 
     //闪光动作
-    var logoNode = back.getChildByName("load");
+    // var logoNode = back.getChildByName("load");
     var weichatNode = back.getParent().getChildByName("wechatLogin");
     var createChipNode = function(pos){
-        var clipper = cc.ClippingNode.create();
-        var sten = cc.Sprite.create("game_picture/logo_da.png");
-        var stenSize = sten.getContentSize();
-        clipper.setInverted(false);
-        clipper.setContentSize(stenSize);
-        clipper.setStencil(sten);
-        clipper.setAlphaThreshold(0.5);
-        sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-        logoNode.addChild(clipper);
-        var sprite = new cc.Sprite("login/guang.png");
-        sprite.setBlendFunc(cc.ONE,cc.ONE);
-        sprite.setOpacity(255);
-        sprite.setScale(1.5);
-        sprite.setPosition(pos);
-        clipper.addChild(sprite, 1);
+        // var clipper = cc.ClippingNode.create();
+        // var sten = cc.Sprite.create("game_picture/logo_da.png");
+        // var stenSize = sten.getContentSize();
+        // clipper.setInverted(false);
+        // clipper.setContentSize(stenSize);
+        // clipper.setStencil(sten);
+        // clipper.setAlphaThreshold(0.5);
+        // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+        // // logoNode.addChild(clipper);
+        // var sprite = new cc.Sprite("login/guang.png");
+        // sprite.setBlendFunc(cc.ONE,cc.ONE);
+        // sprite.setOpacity(255);
+        // sprite.setScale(1.5);
+        // sprite.setPosition(pos);
+        // clipper.addChild(sprite, 1);
 
-        var repeatAction = cc.RepeatForever.create(cc.Sequence.create(
-            cc.MoveTo.create(1.5, cc.p(logoNode.width - pos.x, sten.height / 2)),
-            cc.CallFunc.create(function(){
-                sprite.visible = false;
-            }),
-            cc.delayTime(1),
-            cc.CallFunc.create(function(){
-                sprite.visible = true;
-            }),
-            cc.MoveTo.create(1.5, cc.p(pos.x, sten.height / 2)),
-            cc.CallFunc.create(function(){
-                sprite.visible = false;
-            }),
-            cc.delayTime(1)));
-        sprite.runAction(repeatAction);
+        // var repeatAction = cc.RepeatForever.create(cc.Sequence.create(
+        //     cc.MoveTo.create(1.5, cc.p(logoNode.width - pos.x, sten.height / 2)),
+        //     cc.CallFunc.create(function(){
+        //         sprite.visible = false;
+        //     }),
+        //     cc.delayTime(1),
+        //     cc.CallFunc.create(function(){
+        //         sprite.visible = true;
+        //     }),
+        //     cc.MoveTo.create(1.5, cc.p(pos.x, sten.height / 2)),
+        //     cc.CallFunc.create(function(){
+        //         sprite.visible = false;
+        //     }),
+        //     cc.delayTime(1)));
+        // sprite.runAction(repeatAction);
     };
-    createChipNode(cc.p(0, logoNode.height / 2));
-    createChipNode(cc.p(logoNode.width, logoNode.height / 2));
+    // createChipNode(cc.p(0, logoNode.height / 2));
+    // createChipNode(cc.p(logoNode.width, logoNode.height / 2));
 }
 
 
@@ -492,40 +492,40 @@ LoginView = cc.Layer.extend({
             _back.getChildByName("load").setZOrder(10);
             _back.getChildByName("agree").setZOrder(10);
 
-            this._title = _back.getChildByName("load");
-            this._title.setScale(0);
-            this._title.setOpacity(0);
-            setWgtLayout(this._title, [1, 1], [0.12, 0.9], [0, 0], false, true);
+            // this._title = _back.getChildByName("load");
+            // this._title.setScale(0);
+            // this._title.setOpacity(0);
+            // setWgtLayout(this._title, [1, 1], [0.12, 0.9], [0, 0], false, true);
 
-            var logo = _back.getChildByName("load");
-            var clipper = new cc.ClippingNode();
-            var sten = cc.Sprite.create("login/logo.png");
-            var stenSize = sten.getContentSize();
-            sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-            clipper.setContentSize(stenSize);
-            clipper.setStencil(sten);
-            clipper.setAlphaThreshold(0.5);
-            logo.addChild(clipper);
-            var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
-            sprite1.setBlendFunc(cc.ONE,cc.ONE);
-            sprite1.setOpacity(255);
-            sprite1.setScale(1.5);
-            clipper.addChild(sprite1, 1);
-            var repeatAction = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            sprite1.runAction(repeatAction); //进行向右移动的重复动作
-            var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
-            sprite2.setBlendFunc(cc.ONE,cc.ONE);
-            sprite2.setOpacity(255);
-            sprite2.setScale(1.5);
-            clipper.addChild(sprite2, 1);
-            var repeatAction2 = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+            // var logo = _back.getChildByName("load");
+            // var clipper = new cc.ClippingNode();
+            // var sten = cc.Sprite.create("login/logo.png");
+            // var stenSize = sten.getContentSize();
+            // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+            // clipper.setContentSize(stenSize);
+            // clipper.setStencil(sten);
+            // clipper.setAlphaThreshold(0.5);
+            // logo.addChild(clipper);
+            // var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
+            // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+            // sprite1.setOpacity(255);
+            // sprite1.setScale(1.5);
+            // clipper.addChild(sprite1, 1);
+            // var repeatAction = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+            // var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
+            // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+            // sprite2.setOpacity(255);
+            // sprite2.setScale(1.5);
+            // clipper.addChild(sprite2, 1);
+            // var repeatAction2 = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
         }
         else if(isJinZhongAPPType()) {
             // 粒子
@@ -536,35 +536,35 @@ LoginView = cc.Layer.extend({
                 _back.addChild(star111);
 
                 //扫光
-                var logo = _back.getChildByName("logo");
-                var clipper = new cc.ClippingNode();
-                var sten = cc.Sprite.create("login/logo.png");
-                var stenSize = sten.getContentSize();
-                sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-                clipper.setContentSize(stenSize);
-                clipper.setStencil(sten);
-                clipper.setAlphaThreshold(0.5);
-                logo.addChild(clipper);
-                var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
-                sprite1.setBlendFunc(cc.ONE,cc.ONE);
-                sprite1.setOpacity(255);
-                sprite1.setScale(1.5);
-                clipper.addChild(sprite1, 1);
-                var repeatAction = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                    cc.delayTime(0.5)));
-                sprite1.runAction(repeatAction); //进行向右移动的重复动作
-                var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
-                sprite2.setBlendFunc(cc.ONE,cc.ONE);
-                sprite2.setOpacity(255);
-                sprite2.setScale(1.5);
-                clipper.addChild(sprite2, 1);
-                var repeatAction2 = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                    cc.delayTime(0.5)));
-                sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+                // var logo = _back.getChildByName("logo");
+                // var clipper = new cc.ClippingNode();
+                // var sten = cc.Sprite.create("login/logo.png");
+                // var stenSize = sten.getContentSize();
+                // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+                // clipper.setContentSize(stenSize);
+                // clipper.setStencil(sten);
+                // clipper.setAlphaThreshold(0.5);
+                // logo.addChild(clipper);
+                // var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
+                // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+                // sprite1.setOpacity(255);
+                // sprite1.setScale(1.5);
+                // clipper.addChild(sprite1, 1);
+                // var repeatAction = cc.repeatForever(cc.sequence(
+                //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+                //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+                //     cc.delayTime(0.5)));
+                // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+                // var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
+                // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+                // sprite2.setOpacity(255);
+                // sprite2.setScale(1.5);
+                // clipper.addChild(sprite2, 1);
+                // var repeatAction2 = cc.repeatForever(cc.sequence(
+                //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+                //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+                //     cc.delayTime(0.5)));
+                // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
             }
             else {
                 var star111 = new cc.ParticleSystem("Particle/star.plist");
@@ -631,46 +631,46 @@ LoginView = cc.Layer.extend({
             particle.setTotalParticles(2);
             yanHuaNode.addChild(particle);
 
-            _back.getChildByName("load").setZOrder(10);
+            // _back.getChildByName("load").setZOrder(10);
             _back.getChildByName("agree").setZOrder(10);
 
-            var logo = _back.getChildByName("load");
-            setWgtLayout(logo, [0.25, 0.25], [0.14, 0.90], [0, 0], false, true);
+            // var logo = _back.getChildByName("load");
+            // setWgtLayout(logo, [0.25, 0.25], [0.14, 0.90], [0, 0], false, true);
 
             //扫光
-            var logo = _back.getChildByName("load");
-            var clipper = new cc.ClippingNode();
-            var sten = cc.Sprite.create("login/loginAni/logo_da.png");
-            var stenSize = sten.getContentSize();
-            sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-            clipper.setContentSize(stenSize);
-            clipper.setStencil(sten);
-            clipper.setAlphaThreshold(0.5);
-            logo.addChild(clipper);
-            var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
-            sprite1.setBlendFunc(cc.ONE,cc.ONE);
-            sprite1.setOpacity(255);
-            sprite1.setScale(1.5);
-            clipper.addChild(sprite1, 1);
-            var repeatAction = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            sprite1.runAction(repeatAction); //进行向右移动的重复动作
-            var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
-            sprite2.setBlendFunc(cc.ONE,cc.ONE);
-            sprite2.setOpacity(255);
-            sprite2.setScale(1.5);
-            clipper.addChild(sprite2, 1);
-            var repeatAction2 = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+            // var logo = _back.getChildByName("load");
+            // var clipper = new cc.ClippingNode();
+            // var sten = cc.Sprite.create("login/loginAni/logo_da.png");
+            // var stenSize = sten.getContentSize();
+            // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+            // clipper.setContentSize(stenSize);
+            // clipper.setStencil(sten);
+            // clipper.setAlphaThreshold(0.5);
+            // logo.addChild(clipper);
+            // var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
+            // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+            // sprite1.setOpacity(255);
+            // sprite1.setScale(1.5);
+            // clipper.addChild(sprite1, 1);
+            // var repeatAction = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+            // var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
+            // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+            // sprite2.setOpacity(255);
+            // sprite2.setScale(1.5);
+            // clipper.addChild(sprite2, 1);
+            // var repeatAction2 = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
         }
         else if (MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
-            var load = loginui.node.getChildByName("load");
-            setWgtLayout(load, [0.3, 0.3], [0, 1], [0.05, -0.1]);
+            // var load = loginui.node.getChildByName("load");
+            // setWgtLayout(load, [0.3, 0.3], [0, 1], [0.05, -0.1]);
 
             //美女动画
             // var _roleNode = _back.getChildByName("roleNode");
@@ -725,37 +725,37 @@ LoginView = cc.Layer.extend({
             // this._title.setScale(0);
             // this._title.setOpacity(0);
 
-            //扫光
-            var logo = _back.getChildByName("load");
-            setWgtLayout(logo, [0.23, 0.23], [0.12, 0.89], [0, 0], false, true);
-            var clipper = new cc.ClippingNode();
-            var sten = cc.Sprite.create("login/loginAni/logo_da.png");
-            var stenSize = sten.getContentSize();
-            sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-            clipper.setContentSize(stenSize);
-            clipper.setStencil(sten);
-            clipper.setAlphaThreshold(0.5);
-            logo.addChild(clipper);
-            var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
-            sprite1.setBlendFunc(cc.ONE,cc.ONE);
-            sprite1.setOpacity(255);
-            sprite1.setScale(1.5);
-            clipper.addChild(sprite1, 1);
-            var repeatAction = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            sprite1.runAction(repeatAction); //进行向右移动的重复动作
-            var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
-            sprite2.setBlendFunc(cc.ONE,cc.ONE);
-            sprite2.setOpacity(255);
-            sprite2.setScale(1.5);
-            clipper.addChild(sprite2, 1);
-            var repeatAction2 = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+            // //扫光
+            // var logo = _back.getChildByName("load");
+            // setWgtLayout(logo, [0.23, 0.23], [0.12, 0.89], [0, 0], false, true);
+            // var clipper = new cc.ClippingNode();
+            // var sten = cc.Sprite.create("login/loginAni/logo_da.png");
+            // var stenSize = sten.getContentSize();
+            // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+            // clipper.setContentSize(stenSize);
+            // clipper.setStencil(sten);
+            // clipper.setAlphaThreshold(0.5);
+            // logo.addChild(clipper);
+            // var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
+            // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+            // sprite1.setOpacity(255);
+            // sprite1.setScale(1.5);
+            // clipper.addChild(sprite1, 1);
+            // var repeatAction = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+            // var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
+            // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+            // sprite2.setOpacity(255);
+            // sprite2.setScale(1.5);
+            // clipper.addChild(sprite2, 1);
+            // var repeatAction2 = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
         }
         else if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP) {
 
@@ -790,27 +790,27 @@ LoginView = cc.Layer.extend({
             yanHuaNode.addChild(particle);
 
 
-            // logo扫光
-            var logo = _back.getChildByName("load");
-            setWgtLayout(logo, [0.23, 0.23], [0.12, 0.89], [0, 0], false, true);
-            var clipper = new cc.ClippingNode();
-            var sten = cc.Sprite.create("game_picture/logo_da.png");
-            var stenSize = sten.getContentSize();
-            sten.setPosition(stenSize.width/2, stenSize.height/2);
-            clipper.setContentSize(stenSize);
-            clipper.setStencil(sten);
-            clipper.setAlphaThreshold(0.03);
-            logo.addChild(clipper);
-            var scanningLight = new cc.Sprite("game_picture/effect/saoguang1.png");
-            scanningLight.setBlendFunc(cc.ONE,cc.ONE);
-            scanningLight.setOpacity(50);
-            scanningLight.setScale(1.5);
-            clipper.addChild(scanningLight, 1004);
-            var repeatAction = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            scanningLight.runAction(repeatAction); //进行向右移动的重复动作
+            // // logo扫光
+            // var logo = _back.getChildByName("load");
+            // setWgtLayout(logo, [0.23, 0.23], [0.12, 0.89], [0, 0], false, true);
+            // var clipper = new cc.ClippingNode();
+            // var sten = cc.Sprite.create("game_picture/logo_da.png");
+            // var stenSize = sten.getContentSize();
+            // sten.setPosition(stenSize.width/2, stenSize.height/2);
+            // clipper.setContentSize(stenSize);
+            // clipper.setStencil(sten);
+            // clipper.setAlphaThreshold(0.03);
+            // logo.addChild(clipper);
+            // var scanningLight = new cc.Sprite("game_picture/effect/saoguang1.png");
+            // scanningLight.setBlendFunc(cc.ONE,cc.ONE);
+            // scanningLight.setOpacity(50);
+            // scanningLight.setScale(1.5);
+            // clipper.addChild(scanningLight, 1004);
+            // var repeatAction = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // scanningLight.runAction(repeatAction); //进行向右移动的重复动作
         } 
         else if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG){
             var logoImg = loginui.node.getChildByName("img_title");
@@ -1356,35 +1356,35 @@ LoginView = cc.Layer.extend({
                     _back.addChild(butterflys2);
 
                     //扫光动画
-                    var logo = _back.getChildByName("logo_bg").getChildByName("sp_logo");
-                    var clipper = new cc.ClippingNode();
-                    var sten = cc.Sprite.create("login/logo.png");
-                    var stenSize = sten.getContentSize();
-                    sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-                    clipper.setContentSize(stenSize);
-                    clipper.setStencil(sten);
-                    clipper.setAlphaThreshold(0.5);
-                    logo.addChild(clipper);
-                    var sprite1 = new cc.Sprite("ui/login/saog3.png");
-                    sprite1.setBlendFunc(cc.ONE,cc.ONE);
-                    sprite1.setOpacity(255);
-                    sprite1.setScale(1.5);
-                    clipper.addChild(sprite1, 1);
-                    var repeatAction = cc.repeatForever(cc.sequence(
-                        cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                        cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                        cc.delayTime(0.5)));
-                    sprite1.runAction(repeatAction); //进行向右移动的重复动作
-                    var sprite2 = new cc.Sprite("ui/login/saog3.png");
-                    sprite2.setBlendFunc(cc.ONE,cc.ONE);
-                    sprite2.setOpacity(255);
-                    sprite2.setScale(1.5);
-                    clipper.addChild(sprite2, 1);
-                    var repeatAction2 = cc.repeatForever(cc.sequence(
-                        cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                        cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                        cc.delayTime(0.5)));
-                    sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+                    // var logo = _back.getChildByName("logo_bg").getChildByName("sp_logo");
+                    // var clipper = new cc.ClippingNode();
+                    // var sten = cc.Sprite.create("login/logo.png");
+                    // var stenSize = sten.getContentSize();
+                    // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+                    // clipper.setContentSize(stenSize);
+                    // clipper.setStencil(sten);
+                    // clipper.setAlphaThreshold(0.5);
+                    // logo.addChild(clipper);
+                    // var sprite1 = new cc.Sprite("ui/login/saog3.png");
+                    // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+                    // sprite1.setOpacity(255);
+                    // sprite1.setScale(1.5);
+                    // clipper.addChild(sprite1, 1);
+                    // var repeatAction = cc.repeatForever(cc.sequence(
+                    //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+                    //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+                    //     cc.delayTime(0.5)));
+                    // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+                    // var sprite2 = new cc.Sprite("ui/login/saog3.png");
+                    // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+                    // sprite2.setOpacity(255);
+                    // sprite2.setScale(1.5);
+                    // clipper.addChild(sprite2, 1);
+                    // var repeatAction2 = cc.repeatForever(cc.sequence(
+                    //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+                    //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+                    //     cc.delayTime(0.5)));
+                    // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
                 });
                 _agree.runAction(cc.sequence(showAni.clone(), cb));
                 _btnWeChat.runAction(showAni.clone());
@@ -1453,35 +1453,35 @@ LoginView = cc.Layer.extend({
                 }
 
                 //扫光动画
-                var logo = _back.getChildByName("load");
-                var clipper = new cc.ClippingNode();
-                var sten = cc.Sprite.create("ui/login/logo.png");
-                var stenSize = sten.getContentSize();
-                sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-                clipper.setContentSize(stenSize);
-                clipper.setStencil(sten);
-                clipper.setAlphaThreshold(0.5);
-                logo.addChild(clipper);
-                var sprite1 = new cc.Sprite("ui/login/liuguang.png");
-                sprite1.setBlendFunc(cc.ONE,cc.ONE);
-                sprite1.setOpacity(255);
-                sprite1.setScale(1.5);
-                clipper.addChild(sprite1, 1);
-                var repeatAction = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                    cc.delayTime(0.5)));
-                sprite1.runAction(repeatAction); //进行向右移动的重复动作
-                var sprite2 = new cc.Sprite("ui/login/liuguang.png");
-                sprite2.setBlendFunc(cc.ONE,cc.ONE);
-                sprite2.setOpacity(255);
-                sprite2.setScale(1.5);
-                clipper.addChild(sprite2, 1);
-                var repeatAction2 = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                    cc.delayTime(0.5)));
-                sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+                // var logo = _back.getChildByName("load");
+                // var clipper = new cc.ClippingNode();
+                // var sten = cc.Sprite.create("ui/login/logo.png");
+                // var stenSize = sten.getContentSize();
+                // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+                // clipper.setContentSize(stenSize);
+                // clipper.setStencil(sten);
+                // clipper.setAlphaThreshold(0.5);
+                // logo.addChild(clipper);
+                // var sprite1 = new cc.Sprite("ui/login/liuguang.png");
+                // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+                // sprite1.setOpacity(255);
+                // sprite1.setScale(1.5);
+                // clipper.addChild(sprite1, 1);
+                // var repeatAction = cc.repeatForever(cc.sequence(
+                //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+                //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+                //     cc.delayTime(0.5)));
+                // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+                // var sprite2 = new cc.Sprite("ui/login/liuguang.png");
+                // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+                // sprite2.setOpacity(255);
+                // sprite2.setScale(1.5);
+                // clipper.addChild(sprite2, 1);
+                // var repeatAction2 = cc.repeatForever(cc.sequence(
+                //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+                //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+                //     cc.delayTime(0.5)));
+                // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
             })
         }
 
@@ -1575,34 +1575,34 @@ LoginView = cc.Layer.extend({
             shuimo.runAction(cc.sequence(cc.delayTime(1), cc.fadeIn(0.5)));
 
 
-            var clipper = new cc.ClippingNode();
-            var sten = cc.Sprite.create("login/logo.png");
-            var stenSize = sten.getContentSize();
-            sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-            clipper.setContentSize(stenSize);
-            clipper.setStencil(sten);
-            clipper.setAlphaThreshold(0.5);
-            logo.addChild(clipper);
-            var sprite1 = new cc.Sprite("login/saog3.png");
-            sprite1.setBlendFunc(cc.ONE,cc.ONE);
-            sprite1.setOpacity(255);
-            sprite1.setScale(1.5);
-            clipper.addChild(sprite1, 1);
-            var repeatAction = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            sprite1.runAction(repeatAction); //进行向右移动的重复动作
-            var sprite2 = new cc.Sprite("login/saog3.png");
-            sprite2.setBlendFunc(cc.ONE,cc.ONE);
-            sprite2.setOpacity(255);
-            sprite2.setScale(1.5);
-            clipper.addChild(sprite2, 1);
-            var repeatAction2 = cc.repeatForever(cc.sequence(
-                cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                cc.delayTime(0.5)));
-            sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+            // var clipper = new cc.ClippingNode();
+            // var sten = cc.Sprite.create("login/logo.png");
+            // var stenSize = sten.getContentSize();
+            // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+            // clipper.setContentSize(stenSize);
+            // clipper.setStencil(sten);
+            // clipper.setAlphaThreshold(0.5);
+            // logo.addChild(clipper);
+            // var sprite1 = new cc.Sprite("login/saog3.png");
+            // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+            // sprite1.setOpacity(255);
+            // sprite1.setScale(1.5);
+            // clipper.addChild(sprite1, 1);
+            // var repeatAction = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+            // var sprite2 = new cc.Sprite("login/saog3.png");
+            // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+            // sprite2.setOpacity(255);
+            // sprite2.setScale(1.5);
+            // clipper.addChild(sprite2, 1);
+            // var repeatAction2 = cc.repeatForever(cc.sequence(
+            //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+            //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+            //     cc.delayTime(0.5)));
+            // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
 
         }
         else if(MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() === MjClient.APP_TYPE.QXYYQP) {
@@ -1651,50 +1651,50 @@ LoginView_sy = cc.Layer.extend({
             */
             //流光裁切动画
             //左扫光
-            var tt = logo.getChildByName("img_tiantian");
-            var lClipper = new cc.ClippingNode();
-            var lSp = cc.Sprite.create("ui/login/tiantain.png");
-            var lSize = lSp.getContentSize();
-            lSp.setPosition(lSize.width/2, lSize.height/2);
-            lClipper.setContentSize(lSize);
-            lClipper.setStencil(lSp);
-            lClipper.setAlphaThreshold(0.5);
-            tt.addChild(lClipper, 1);
-            var lSpLight = new cc.Sprite("ui/login/saog3.png");
-            lSpLight.setBlendFunc(cc.ONE,cc.ONE);
-            lSpLight.setOpacity(255);
-            lSpLight.setScale(1.5);
-            lClipper.addChild(lSpLight, 1);
-            lSpLight.setPosition(-lSp.width/2, lSp.height/2);
-            var lMove = cc.MoveTo.create(1, cc.p(lSp.width, lSp.height/2));
-            var lMove1 = cc.MoveTo.create(1, cc.p(-lSp.width/2, lSp.height/2));
-            lSpLight.runAction(cc.repeatForever(cc.sequence(
-                lMove, cc.delayTime(0.5), lMove1, cc.delayTime(0.5)))); //进行向左右移动的重复动作
-            //右扫光
-            var qp = logo.getChildByName("img_qipai");
-            var rClipper = new cc.ClippingNode();
-            var rSp = cc.Sprite.create("ui/login/qipai.png");
-            var rSize = rSp.getContentSize();
-            rSp.setPosition(rSize.width/2, rSize.height/2);
-            rClipper.setContentSize(rSize);
-            rClipper.setStencil(rSp);
-            rClipper.setAlphaThreshold(0.5);
-            qp.addChild(rClipper, 1);
-            var rSpLight = new cc.Sprite("ui/login/saog3.png");
-            rClipper.addChild(rSpLight, 1);
-            rSpLight.setBlendFunc(cc.ONE,cc.ONE);
-            rSpLight.setOpacity(255);
-            rSpLight.setScale(1.5);
-            rSpLight.setPosition(rSp.width + rSp.width/2, rSp.height/2);
-            var rMove = cc.MoveTo.create(1.4, cc.p(-rSp.width, rSp.height/2));
-            var rMove1 = cc.MoveTo.create(1.4, cc.p(rSp.width + rSp.width/2, rSp.height/2));
-            rSpLight.runAction(cc.repeatForever(cc.sequence(
-                rMove, cc.delayTime(0.1), rMove1, cc.delayTime(0.1)))); //进行向左右移动的重复动作
+            // var tt = logo.getChildByName("img_tiantian");
+            // var lClipper = new cc.ClippingNode();
+            // var lSp = cc.Sprite.create("ui/login/tiantain.png");
+            // var lSize = lSp.getContentSize();
+            // lSp.setPosition(lSize.width/2, lSize.height/2);
+            // lClipper.setContentSize(lSize);
+            // lClipper.setStencil(lSp);
+            // lClipper.setAlphaThreshold(0.5);
+            // tt.addChild(lClipper, 1);
+            // var lSpLight = new cc.Sprite("ui/login/saog3.png");
+            // lSpLight.setBlendFunc(cc.ONE,cc.ONE);
+            // lSpLight.setOpacity(255);
+            // lSpLight.setScale(1.5);
+            // lClipper.addChild(lSpLight, 1);
+            // lSpLight.setPosition(-lSp.width/2, lSp.height/2);
+            // var lMove = cc.MoveTo.create(1, cc.p(lSp.width, lSp.height/2));
+            // var lMove1 = cc.MoveTo.create(1, cc.p(-lSp.width/2, lSp.height/2));
+            // lSpLight.runAction(cc.repeatForever(cc.sequence(
+            //     lMove, cc.delayTime(0.5), lMove1, cc.delayTime(0.5)))); //进行向左右移动的重复动作
+            // //右扫光
+            // var qp = logo.getChildByName("img_qipai");
+            // var rClipper = new cc.ClippingNode();
+            // var rSp = cc.Sprite.create("ui/login/qipai.png");
+            // var rSize = rSp.getContentSize();
+            // rSp.setPosition(rSize.width/2, rSize.height/2);
+            // rClipper.setContentSize(rSize);
+            // rClipper.setStencil(rSp);
+            // rClipper.setAlphaThreshold(0.5);
+            // qp.addChild(rClipper, 1);
+            // var rSpLight = new cc.Sprite("ui/login/saog3.png");
+            // rClipper.addChild(rSpLight, 1);
+            // rSpLight.setBlendFunc(cc.ONE,cc.ONE);
+            // rSpLight.setOpacity(255);
+            // rSpLight.setScale(1.5);
+            // rSpLight.setPosition(rSp.width + rSp.width/2, rSp.height/2);
+            // var rMove = cc.MoveTo.create(1.4, cc.p(-rSp.width, rSp.height/2));
+            // var rMove1 = cc.MoveTo.create(1.4, cc.p(rSp.width + rSp.width/2, rSp.height/2));
+            // rSpLight.runAction(cc.repeatForever(cc.sequence(
+            //     rMove, cc.delayTime(0.1), rMove1, cc.delayTime(0.1)))); //进行向左右移动的重复动作
 
-            //协议动画
-            var pnlBtn = _back.getChildByName("img_txtBg");
-            var fade = cc.FadeTo(20/60, 255);
-            pnlBtn.runAction(fade);
+            // //协议动画
+            // var pnlBtn = _back.getChildByName("img_txtBg");
+            // var fade = cc.FadeTo(20/60, 255);
+            // pnlBtn.runAction(fade);
         })
         
         //灯笼动画
@@ -2131,35 +2131,35 @@ var showLoginAni_qxyyqp = function(_aniNode) {
     wei.runAction(cc.sequence(cc.rotateBy(2,10).easing(cc.easeQuadraticActionInOut()), cc.rotateBy(2,-10).easing(cc.easeQuadraticActionInOut())).repeatForever());
 
     //扫光
-    var logo = _aniNode.getChildByName("load");
-    var clipper = new cc.ClippingNode();
-    var sten = cc.Sprite.create("login/loginAni/logo_da.png");
-    var stenSize = sten.getContentSize();
-    sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-    clipper.setContentSize(stenSize);
-    clipper.setStencil(sten);
-    clipper.setAlphaThreshold(0.5);
-    logo.addChild(clipper);
-    var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
-    sprite1.setBlendFunc(cc.ONE,cc.ONE);
-    sprite1.setOpacity(255);
-    sprite1.setScale(1.5);
-    clipper.addChild(sprite1, 1);
-    var repeatAction = cc.repeatForever(cc.sequence(
-        cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-        cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-        cc.delayTime(0.5)));
-    sprite1.runAction(repeatAction); //进行向右移动的重复动作
-    var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
-    sprite2.setBlendFunc(cc.ONE,cc.ONE);
-    sprite2.setOpacity(255);
-    sprite2.setScale(1.5);
-    clipper.addChild(sprite2, 1);
-    var repeatAction2 = cc.repeatForever(cc.sequence(
-        cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-        cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-        cc.delayTime(0.5)));
-    sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+    // var logo = _aniNode.getChildByName("load");
+    // var clipper = new cc.ClippingNode();
+    // var sten = cc.Sprite.create("login/loginAni/logo_da.png");
+    // var stenSize = sten.getContentSize();
+    // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+    // clipper.setContentSize(stenSize);
+    // clipper.setStencil(sten);
+    // clipper.setAlphaThreshold(0.5);
+    // logo.addChild(clipper);
+    // var sprite1 = new cc.Sprite("login/loginAni/saog3.png");
+    // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+    // sprite1.setOpacity(255);
+    // sprite1.setScale(1.5);
+    // clipper.addChild(sprite1, 1);
+    // var repeatAction = cc.repeatForever(cc.sequence(
+    //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+    //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+    //     cc.delayTime(0.5)));
+    // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+    // var sprite2 = new cc.Sprite("login/loginAni/saog3.png");
+    // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+    // sprite2.setOpacity(255);
+    // sprite2.setScale(1.5);
+    // clipper.addChild(sprite2, 1);
+    // var repeatAction2 = cc.repeatForever(cc.sequence(
+    //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+    //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+    //     cc.delayTime(0.5)));
+    // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
 
 
     //飞鸟
@@ -2291,37 +2291,37 @@ var showLoginAni_ylhunan = function (back) {
 
 
 
-    //扫光
-    if(logo){
-        var clipper = new cc.ClippingNode();
-        var sten = cc.Sprite.create("login/logo2.png");
-        var stenSize = sten.getContentSize();
-        sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-        clipper.setContentSize(stenSize);
-        clipper.setStencil(sten);
-        clipper.setAlphaThreshold(0.5);
-        logo.addChild(clipper);
-        var sprite1 = new cc.Sprite("login/shao.png");
-        sprite1.setBlendFunc(cc.ONE,cc.ONE);
-        sprite1.setOpacity(255);
-        sprite1.setScale(1.5);
-        clipper.addChild(sprite1, 1);
-        var repeatAction = cc.repeatForever(cc.sequence(
-            cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-            cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-            cc.delayTime(0.5)));
-        sprite1.runAction(repeatAction); //进行向右移动的重复动作
-        var sprite2 = new cc.Sprite("login/shao.png");
-        sprite2.setBlendFunc(cc.ONE,cc.ONE);
-        sprite2.setOpacity(255);
-        sprite2.setScale(1.5);
-        clipper.addChild(sprite2, 1);
-        var repeatAction2 = cc.repeatForever(cc.sequence(
-            cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-            cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-            cc.delayTime(0.5)));
-        sprite2.runAction(repeatAction2); //进行向右移动的重复动作
-    }
+    // //扫光
+    // if(logo){
+    //     var clipper = new cc.ClippingNode();
+    //     var sten = cc.Sprite.create("login/logo2.png");
+    //     var stenSize = sten.getContentSize();
+    //     sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+    //     clipper.setContentSize(stenSize);
+    //     clipper.setStencil(sten);
+    //     clipper.setAlphaThreshold(0.5);
+    //     logo.addChild(clipper);
+    //     var sprite1 = new cc.Sprite("login/shao.png");
+    //     sprite1.setBlendFunc(cc.ONE,cc.ONE);
+    //     sprite1.setOpacity(255);
+    //     sprite1.setScale(1.5);
+    //     clipper.addChild(sprite1, 1);
+    //     var repeatAction = cc.repeatForever(cc.sequence(
+    //         cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+    //         cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+    //         cc.delayTime(0.5)));
+    //     sprite1.runAction(repeatAction); //进行向右移动的重复动作
+    //     var sprite2 = new cc.Sprite("login/shao.png");
+    //     sprite2.setBlendFunc(cc.ONE,cc.ONE);
+    //     sprite2.setOpacity(255);
+    //     sprite2.setScale(1.5);
+    //     clipper.addChild(sprite2, 1);
+    //     var repeatAction2 = cc.repeatForever(cc.sequence(
+    //         cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+    //         cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+    //         cc.delayTime(0.5)));
+    //     sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+    // }
 };
 
 // 登录界面动画(邵阳，耒阳)

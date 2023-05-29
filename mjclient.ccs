@@ -1129,6 +1129,8 @@
             <Image Name="btn_mamager_s.png" />
             <Image Name="btn_notAdmit_n.png" />
             <Image Name="btn_notAdmit_s.png" />
+            <Image Name="btn_rule_n.png" />
+            <Image Name="btn_rule_s.png" />
             <Image Name="btn_setgongxian1.png" />
             <Image Name="btn_setgongxian2.png" />
             <Image Name="btn_tichu_n.png" />

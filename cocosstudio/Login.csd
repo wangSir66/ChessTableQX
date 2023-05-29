@@ -38,7 +38,7 @@
                 <PreSize X="1.0000" Y="0.1528" />
                 <FileData Type="Normal" Path="login/bg_mask.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="load" ActionTag="-1055163546" Tag="623" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="33.3840" RightMargin="992.6160" TopMargin="-0.3240" BottomMargin="603.3240" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="224" Scale9Height="89" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="load" Visible="False" ActionTag="-1055163546" Tag="623" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="33.3840" RightMargin="992.6160" TopMargin="-0.3240" BottomMargin="603.3240" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="224" Scale9Height="89" ctype="ImageViewObjectData">
                 <Size X="254.0000" Y="117.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="160.3840" Y="661.8240" />

@@ -3395,6 +3395,102 @@ var FriendCard_setRatio = cc.Layer.extend({
     },
 });
 
+//俱乐部 分组抽成比例
+var FriendCard_setRatio1 = cc.Layer.extend({
+    ctor: function (data) {
+        this._super();
+        var uiNode = ccs.load("friendCard_setRatio.json").node;
+
+        this.addChild(uiNode);
+        var that = this;
+        var block = uiNode.getChildByName("block");
+        setWgtLayout(block, [1, 1], [0.5, 0.5], [0, 0], true);
+
+        var back = uiNode.getChildByName("back");
+        setWgtLayout(back, [0.64, 0.78], [0.5, 0.5], [0, 0]);
+        popupAnm(back)
+        COMMON_UI.setNodeTextAdapterSize(back);
+
+
+        var setEditBoxConfig = function (_parent, _child, str, MaxLength) {
+            if (FriendCard_Common.getSkinType() == 3) {
+                _child.setFontColor(cc.color("#AD8F64"));
+                _child.setPlaceholderFontColor(cc.color("#AD8F64"));
+
+            } else {
+                _child.setFontColor(cc.color(0x77, 0x77, 0x77));
+            }
+            _child.setMaxLength(MaxLength);
+            _child.setFontSize(20);
+            _child.setInputFlag(cc.EDITBOX_INPUT_FLAG_INITIAL_CAPS_ALL_CHARACTERS);
+            _child.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+            _child.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
+            _child.setPlaceHolder(str);
+            _child.setPlaceholderFontSize(20);
+            _child.setPosition(_parent.getContentSize().width / 2, _parent.getContentSize().height / 2);
+            _parent.addChild(_child);
+        }.bind(this);
+
+        var image_input = back.getChildByName("image_input");
+        var btn_close = back.getChildByName("btn_close");
+        var btn_yes = back.getChildByName("btn_yes");
+
+        var text_tip = back.getChildByName("Text_tip");//比例可设置范围
+        if (!text_tip) {
+            text_tip = back.getChildByName("text_tip");
+        }
+        text_tip.setString(" 比例可设置范围为0%-100%");
+        var text_desc = back.getChildByName("text");//比列计算公式
+        // text_desc.setString("当天实收*自己比例=贡献值")
+        text_desc.setString("")
+        var editText = new cc.EditBox(image_input.getContentSize(), new cc.Scale9Sprite("friendCards/tongji/rank/img_remark_bg.png"));
+        editText.setName("editText");
+        editText.setString(Number(data.groupRatio * 100).toFixed(0) + "")
+        setEditBoxConfig(image_input, editText, Number(data.groupRatio * 100).toFixed(0), 3);
+
+        btn_close.addTouchEventListener(function (sender, type) {
+            if (type == 2) {
+                this.removeFromParent(true)
+            }
+        }, this);
+
+        btn_yes.addTouchEventListener(function (sender, type) {
+            if (type == 2) {
+                var sendInfo = {};
+                var rebate = Number(editText.getString());
+                if (rebate > 100) {
+                    MjClient.showToast("比例不能超过100");
+                    return;
+                }
+                sendInfo.ratio = rebate / 100;
+                sendInfo.clubId = data.clubId;
+                sendInfo.group = data.group;
+                MjClient.block();
+                cc.log("updateLeagueGroupStatisRebate sendInfo 1", JSON.stringify(sendInfo))
+                MjClient.gamenet.request("pkplayer.handler.updateClubGroupRebate", sendInfo,
+                    function (rtn) {
+                        MjClient.unblock();
+                        if (!cc.sys.isObjectValid(that))
+                            return;
+                        if (rtn.code == 0) {
+                            MjClient.showToast("修改比例成功");
+                            data.msg.groupRatio = sendInfo.ratio;
+                            that.removeFromParent();
+                        } else {
+                            if (rtn.message) {
+                                MjClient.showToast(rtn.message);
+                            } else {
+                                MjClient.showToast("修改比例失败");
+                            }
+                        }
+                    }
+                );
+            }
+        }, this);
+
+        return true;
+    },
+});
 
 
 /*主界面桌子详情
@@ -3683,11 +3779,7 @@ var FriendCard_ruleLayer = cc.Layer.extend({
             }
         })));
         text_wanfaNum.setString("玩法" + (i + 1) + ":")
-        var splitRuleName = FriendCard_Common.splitClubRuleName1(unescape(itemData.ruleName));
-        var ruleName = splitRuleName[1];
-        let str = unescape(splitRuleName[0]);
-        if (str.length > 4) str = str.slice(0, 4) + '...';
-        text_ruleName.setString('(' + str + ')' + ruleName);
+        text_ruleName.setString(FriendCard_Common.resetRuleNameLen(itemData.ruleName));
         btn_setRule.visible = this.isJurisdiction;
         btn_setRule._wanFaIndex = itemData._index;
         var isShowLibertyCreRoom = false;

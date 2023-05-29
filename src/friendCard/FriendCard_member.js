@@ -546,7 +546,7 @@ var FriendCard_member = cc.Layer.extend({
             this.showNewMemberDaoChuView();
         } else if (index == 7) {
             this.showMemberRecordView();
-        }else if (index == 8) {
+        } else if (index == 8) {
             this.showHonorRecordView();
         }
     },
@@ -868,7 +868,7 @@ var FriendCard_member = cc.Layer.extend({
             _panel._edtInput = this.initEditView(_panel, "请输入玩家信息...");
             var button_find = image_search.getChildByName("Button_find");
             button_find.zIndex = 1;
-            image_search.visible = button_find.visible =false;
+            image_search.visible = button_find.visible = false;
             button_find.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     that.rquestHonorRecordList(null);
@@ -892,13 +892,13 @@ var FriendCard_member = cc.Layer.extend({
                 text_content.setTextVerticalAlignment(cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
                 var str = "", flag = true; //cc.sys.OS_WINDOWS == cc.sys.os
                 if (itemData.type == 0) {//赠送
-                    str = itemData.Unick + "赠给" + itemData.Tnick + '，' + itemData.amount + '贡献值' + (flag ? " (当前贡献:"+ (itemData.tAfterAmount + itemData.amount).toFixed(1) +")" : '');
+                    str = itemData.Unick + "赠给" + itemData.Tnick + '，' + itemData.amount + '贡献值' + (flag ? " (当前贡献:" + (itemData.tAfterAmount + itemData.amount).toFixed(1) + ")" : '');
                 } else if (itemData.type == 1) {
-                    cc.log('0000000000000',parseInt(itemData.tAfterAmount))
-                    str = "在房间"+ GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献值'+ (flag ? " (当前贡献:"+ (itemData.uAfterAmount + itemData.amount).toFixed(1) +")" : '');
+                    cc.log('0000000000000', parseInt(itemData.tAfterAmount))
+                    str = "在房间" + GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献值' + (flag ? " (当前贡献:" + (itemData.uAfterAmount + itemData.amount).toFixed(1) + ")" : '');
                 } else if (itemData.type == 2) {
-                    str = "服务费："+ GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献值'+ (flag ? " (当前贡献:"+ (itemData.uAfterAmount + itemData.amount).toFixed(1) +")" : '');
-                } 
+                    str = "服务费：" + GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')获得' + itemData.amount + '贡献值' + (flag ? " (当前贡献:" + (itemData.uAfterAmount + itemData.amount).toFixed(1) + ")" : '');
+                }
                 text_content.setString(str);
                 return item;
             }
@@ -3219,6 +3219,7 @@ var FriendCard_member = cc.Layer.extend({
         var button_unfrozen = this.memberManage.getChildByName("Button_unfrozen");
         var button_checkCY = this.memberManage.getChildByName("Button_checkCY");//查看成员
         var Button_Xinyu = this.memberManage.getChildByName("Button_Xinyu");//信誉
+        var Button_chouchengbili = this.memberManage.getChildByName("Button_chouchengbili");//抽成比例
 
         //下面是动态添加的按钮
         var button_tickAll = this.memberManage.getChildByName("Button_tickAll");//踢出全部人
@@ -3248,6 +3249,7 @@ var FriendCard_member = cc.Layer.extend({
 
         button_tickAll.visible = false;
         Button_Xinyu.visible = false;
+        Button_chouchengbili.visible = false;
         var isUnAdmit = 0;
         if (openType == "member_member") {
             isUnAdmit = (itemData.userStatus & 2) || (itemData.userStatus & 32);
@@ -3256,7 +3258,6 @@ var FriendCard_member = cc.Layer.extend({
                 Button_tichu.visible = false;
             } else {
                 Button_tichu.visible = true;
-                Button_Xinyu.visible = itemData.userStatus & 1;
             }
             if (!Button_tichu.visible) {
                 if ((this.isLeader || (this.isGroupLeader && itemData.group == this.curUserGrp)) &&
@@ -3264,12 +3265,14 @@ var FriendCard_member = cc.Layer.extend({
                     Button_tichu.visible = true;
                 }
             }
+            Button_Xinyu.visible = this.showingIndex == 0 ? (this.isLeader || this.isGroupLeader) : (this.isLeader && !!isGroupLeader);
         } else if (openType == "member_group") {
             isUnAdmit = itemData.userStatus & 8;
             if (this.isLeader) {
                 button_tickAll.visible = true;
                 Button_tichu.visible = false;
-                Button_Xinyu.visible = true;
+                Button_Xinyu.visible = !!isGroupLeader;
+                Button_chouchengbili.visible = !!isGroupLeader;
             } else {
                 button_tickAll.visible = false;
                 Button_tichu.visible = true;
@@ -3284,7 +3287,6 @@ var FriendCard_member = cc.Layer.extend({
                 Button_tichu.visible = true;
             }
         }
-        cc.log("openType", openType, "button_tickAll.visible", button_tickAll.visible)
         // 踢出
         //Button_tichu.visible = (this.isLeader || (this.isManager && itemData.position == 0)) && itemData.userId != MjClient.data.pinfo.uid;
         // 设为管理
@@ -3297,7 +3299,6 @@ var FriendCard_member = cc.Layer.extend({
 
         button_group.visible = this.isManager && !isGroupLeader;
         //组长
-        cc.log("this.isGroupLeader", this.isGroupLeader)
         Button_remarks.visible = true;
         if (this.isGroupLeader) {
             Button_groupMag.visible = false;
@@ -3349,7 +3350,8 @@ var FriendCard_member = cc.Layer.extend({
             Button_unMamager, button_group, Button_remarks,
             Button_admit, Button_unAdmit, Button_AddOtherClub,
             Button_zhuli, Button_unZhuli, Button_tichu,
-            button_frozen, button_unfrozen, button_tickAll, Button_Xinyu
+            button_frozen, button_unfrozen, button_tickAll, Button_Xinyu,
+            Button_chouchengbili
         ];
         //查看成员
         if (openType === "member_group") {
@@ -4032,6 +4034,16 @@ var FriendCard_member = cc.Layer.extend({
                 }
             }, this);
         }
+        if (Button_chouchengbili.visible) {
+            let c = Button_chouchengbili.getChildByName('Text').getColor()
+            Button_chouchengbili.addTouchEventListener(function (sender, type) {
+                if (type == 0) sender.getChildByName('Text').setColor(cc.color(150, 150, 150));
+                else if (type == 2) {
+                    sender.getChildByName('Text').setColor(c);
+                    this.Panle_memberManage.addChild(new FriendCard_setRatio1({ clubId: this.clubInfo.clubId, groupRatio: itemData.groupRatio, group: itemData.group, msg: itemData }));
+                } else if (type == 3) sender.getChildByName('Text').setColor(c);
+            }.bind(this), this);
+        }
     },
     /**设置固定值 */
     showOption1Panel: function (itemData) {
@@ -4043,7 +4055,7 @@ var FriendCard_member = cc.Layer.extend({
         var txt = image_bg.getChildByName("Image1").getChildByName('Text');
         txt.setString(itemData.honorVal.toFixed(1));
         image.removeChildByName("textInput");
-        var s = image.getContentSize(), off = cc.size(s.width -  10, s.height - 10)
+        var s = image.getContentSize(), off = cc.size(s.width - 10, s.height - 10)
         var textInput = new cc.EditBox(off, new cc.Scale9Sprite("friendCards/main/int_playwords.png"));
         textInput.setName("textInput");
         textInput.setFontColor(txt.getTextColor());
@@ -4061,7 +4073,7 @@ var FriendCard_member = cc.Layer.extend({
             if (type == 2) {
                 var remarkStr = textInput.getString();
                 var reg = /(^[0-9]*\.([0-9]{1}\d*)$)|(^[0-9]*$)/;
-                cc.log('/^d+.d+$/.test(remarkStr)',reg.test(remarkStr))
+                cc.log('/^d+.d+$/.test(remarkStr)', reg.test(remarkStr))
                 if (!remarkStr || remarkStr.length <= 0 || !(reg.test(remarkStr)))
                     MjClient.showToast("请输入有效数字！");
                 else {

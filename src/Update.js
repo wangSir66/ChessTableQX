@@ -610,11 +610,11 @@ UpdateView = cc.Layer.extend({
             setWgtLayout(_warnText, [0.9, 0], [0.5, 0.06], [0, 0], true);
         }
         else if(MjClient.getAppType() === MjClient.APP_TYPE.YLHUNANMJ){
-            var logo = _back.getChildByName("logo");
+            // var logo = _back.getChildByName("logo");
             var barbk = _back.getChildByName("barbk");
             var bgMask = _back.getChildByName("bg_mask");
             var textLoad = _back.getChildByName("load_percent");
-            setWgtLayout(logo, [0.5, 0.5], [0.5, 0.62], [0, 0], false, true);
+            // setWgtLayout(logo, [0.5, 0.5], [0.5, 0.62], [0, 0], false, true);
             setWgtLayout(bgMask, [1, 1], [0.5, 0], [0, 0], false, true);
             setWgtLayout(barbk, [1, 1], [0.5, 0.17], [0, 0], false, true);
             setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.14], [0, 0], false, true);
@@ -671,35 +671,35 @@ UpdateView = cc.Layer.extend({
                 }
 
                 //扫光动画
-                var logo = _back.getChildByName("load");
-                var clipper = new cc.ClippingNode();
-                var sten = cc.Sprite.create("ui/login/logo.png");
-                var stenSize = sten.getContentSize();
-                sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-                clipper.setContentSize(stenSize);
-                clipper.setStencil(sten);
-                clipper.setAlphaThreshold(0.5);
-                logo.addChild(clipper);
-                var sprite1 = new cc.Sprite("ui/login/liuguang.png");
-                sprite1.setBlendFunc(cc.ONE,cc.ONE);
-                sprite1.setOpacity(255);
-                sprite1.setScale(1.5);
-                clipper.addChild(sprite1, 1);
-                var repeatAction = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                    cc.delayTime(0.5)));
-                sprite1.runAction(repeatAction); //进行向右移动的重复动作
-                var sprite2 = new cc.Sprite("ui/login/liuguang.png");
-                sprite2.setBlendFunc(cc.ONE,cc.ONE);
-                sprite2.setOpacity(255);
-                sprite2.setScale(1.5);
-                clipper.addChild(sprite2, 1);
-                var repeatAction2 = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                    cc.delayTime(0.5)));
-                sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+                // var logo = _back.getChildByName("load");
+                // var clipper = new cc.ClippingNode();
+                // var sten = cc.Sprite.create("ui/login/logo.png");
+                // var stenSize = sten.getContentSize();
+                // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+                // clipper.setContentSize(stenSize);
+                // clipper.setStencil(sten);
+                // clipper.setAlphaThreshold(0.5);
+                // logo.addChild(clipper);
+                // var sprite1 = new cc.Sprite("ui/login/liuguang.png");
+                // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+                // sprite1.setOpacity(255);
+                // sprite1.setScale(1.5);
+                // clipper.addChild(sprite1, 1);
+                // var repeatAction = cc.repeatForever(cc.sequence(
+                //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+                //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+                //     cc.delayTime(0.5)));
+                // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+                // var sprite2 = new cc.Sprite("ui/login/liuguang.png");
+                // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+                // sprite2.setOpacity(255);
+                // sprite2.setScale(1.5);
+                // clipper.addChild(sprite2, 1);
+                // var repeatAction2 = cc.repeatForever(cc.sequence(
+                //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+                //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+                //     cc.delayTime(0.5)));
+                // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
             })
 
             //层级
@@ -754,14 +754,14 @@ UpdateView = cc.Layer.extend({
                 loadBar.y += 50;
             }
         }else if(MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
-            var logo = updateui.node.getChildByName("pnl_logo");
+            // var logo = updateui.node.getChildByName("pnl_logo");
             var logo_leiyang = updateui.node.getChildByName("img_title");
             setWgtLayout(logo_leiyang,[logo_leiyang.width/(1280*1.5), 0], [0.12, 0.9], [0, 0]);
-            setWgtLayout(logo,[logo.width/1280, 0], [0.5, 0.64], [0, 0]);
+            // setWgtLayout(logo,[logo.width/1280, 0], [0.5, 0.64], [0, 0]);
 
             //动画
             // if(logo) showLoginAni(logo);
-            logo.runAction(updateui.action);
+            // logo.runAction(updateui.action);
             updateui.action.gotoFrameAndPlay(0, 63, false);
             updateui.action.setTimeSpeed(1.2);
             updateui.action.setLastFrameCallFunc(function() {
@@ -781,45 +781,45 @@ UpdateView = cc.Layer.extend({
 
                 //流光裁切动画
                 //左扫光
-                var tt = logo.getChildByName("img_tiantian");
-                var lClipper = new cc.ClippingNode();
-                var lSp = cc.Sprite.create("ui/login/tiantain.png");
-                var lSize = lSp.getContentSize();
-                lSp.setPosition(lSize.width/2, lSize.height/2);
-                lClipper.setContentSize(lSize);
-                lClipper.setStencil(lSp);
-                lClipper.setAlphaThreshold(0.5);
-                tt.addChild(lClipper, 1);
-                var lSpLight = new cc.Sprite("ui/login/saog3.png");
-                lSpLight.setBlendFunc(cc.ONE,cc.ONE);
-                lSpLight.setOpacity(255);
-                lSpLight.setScale(1.5);
-                lClipper.addChild(lSpLight, 1);
-                lSpLight.setPosition(-lSp.width/2, lSp.height/2);
-                var lMove = cc.MoveTo.create(1, cc.p(lSp.width, lSp.height/2));
-                var lMove1 = cc.MoveTo.create(1, cc.p(-lSp.width/2, lSp.height/2));
-                lSpLight.runAction(cc.repeatForever(cc.sequence(
-                    lMove, cc.delayTime(0.5), lMove1, cc.delayTime(0.5)))); //进行向左右移动的重复动作
-                //右扫光
-                var qp = logo.getChildByName("img_qipai");
-                var rClipper = new cc.ClippingNode();
-                var rSp = cc.Sprite.create("ui/login/qipai.png");
-                var rSize = rSp.getContentSize();
-                rSp.setPosition(rSize.width/2, rSize.height/2);
-                rClipper.setContentSize(rSize);
-                rClipper.setStencil(rSp);
-                rClipper.setAlphaThreshold(0.5);
-                qp.addChild(rClipper, 1);
-                var rSpLight = new cc.Sprite("ui/login/saog3.png");
-                rClipper.addChild(rSpLight, 1);
-                rSpLight.setBlendFunc(cc.ONE,cc.ONE);
-                rSpLight.setOpacity(255);
-                rSpLight.setScale(1.5);
-                rSpLight.setPosition(rSp.width + rSp.width/2, rSp.height/2);
-                var rMove = cc.MoveTo.create(1.4, cc.p(-rSp.width, rSp.height/2));
-                var rMove1 = cc.MoveTo.create(1.4, cc.p(rSp.width + rSp.width/2, rSp.height/2));
-                rSpLight.runAction(cc.repeatForever(cc.sequence(
-                    rMove, cc.delayTime(0.1), rMove1, cc.delayTime(0.1)))); //进行向左右移动的重复动作
+                // var tt = logo.getChildByName("img_tiantian");
+                // var lClipper = new cc.ClippingNode();
+                // var lSp = cc.Sprite.create("ui/login/tiantain.png");
+                // var lSize = lSp.getContentSize();
+                // lSp.setPosition(lSize.width/2, lSize.height/2);
+                // lClipper.setContentSize(lSize);
+                // lClipper.setStencil(lSp);
+                // lClipper.setAlphaThreshold(0.5);
+                // tt.addChild(lClipper, 1);
+                // var lSpLight = new cc.Sprite("ui/login/saog3.png");
+                // lSpLight.setBlendFunc(cc.ONE,cc.ONE);
+                // lSpLight.setOpacity(255);
+                // lSpLight.setScale(1.5);
+                // lClipper.addChild(lSpLight, 1);
+                // lSpLight.setPosition(-lSp.width/2, lSp.height/2);
+                // var lMove = cc.MoveTo.create(1, cc.p(lSp.width, lSp.height/2));
+                // var lMove1 = cc.MoveTo.create(1, cc.p(-lSp.width/2, lSp.height/2));
+                // lSpLight.runAction(cc.repeatForever(cc.sequence(
+                //     lMove, cc.delayTime(0.5), lMove1, cc.delayTime(0.5)))); //进行向左右移动的重复动作
+                // //右扫光
+                // var qp = logo.getChildByName("img_qipai");
+                // var rClipper = new cc.ClippingNode();
+                // var rSp = cc.Sprite.create("ui/login/qipai.png");
+                // var rSize = rSp.getContentSize();
+                // rSp.setPosition(rSize.width/2, rSize.height/2);
+                // rClipper.setContentSize(rSize);
+                // rClipper.setStencil(rSp);
+                // rClipper.setAlphaThreshold(0.5);
+                // qp.addChild(rClipper, 1);
+                // var rSpLight = new cc.Sprite("ui/login/saog3.png");
+                // rClipper.addChild(rSpLight, 1);
+                // rSpLight.setBlendFunc(cc.ONE,cc.ONE);
+                // rSpLight.setOpacity(255);
+                // rSpLight.setScale(1.5);
+                // rSpLight.setPosition(rSp.width + rSp.width/2, rSp.height/2);
+                // var rMove = cc.MoveTo.create(1.4, cc.p(-rSp.width, rSp.height/2));
+                // var rMove1 = cc.MoveTo.create(1.4, cc.p(rSp.width + rSp.width/2, rSp.height/2));
+                // rSpLight.runAction(cc.repeatForever(cc.sequence(
+                //     rMove, cc.delayTime(0.1), rMove1, cc.delayTime(0.1)))); //进行向左右移动的重复动作
             });
 
             //灯笼动画
@@ -904,35 +904,35 @@ UpdateView = cc.Layer.extend({
                 _back.addChild(butterflys2);
 
                 //扫光动画
-                var logo = _back.getChildByName("logo_bg").getChildByName("sp_logo");
-                var clipper = new cc.ClippingNode();
-                var sten = cc.Sprite.create("login/logo.png");
-                var stenSize = sten.getContentSize();
-                sten.setPosition(stenSize.width / 2, stenSize.height / 2);
-                clipper.setContentSize(stenSize);
-                clipper.setStencil(sten);
-                clipper.setAlphaThreshold(0.5);
-                logo.addChild(clipper);
-                var sprite1 = new cc.Sprite("ui/login/saog3.png");
-                sprite1.setBlendFunc(cc.ONE,cc.ONE);
-                sprite1.setOpacity(255);
-                sprite1.setScale(1.5);
-                clipper.addChild(sprite1, 1);
-                var repeatAction = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
-                    cc.delayTime(0.5)));
-                sprite1.runAction(repeatAction); //进行向右移动的重复动作
-                var sprite2 = new cc.Sprite("ui/login/saog3.png");
-                sprite2.setBlendFunc(cc.ONE,cc.ONE);
-                sprite2.setOpacity(255);
-                sprite2.setScale(1.5);
-                clipper.addChild(sprite2, 1);
-                var repeatAction2 = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
-                    cc.delayTime(0.5)));
-                sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+                // var logo = _back.getChildByName("logo_bg").getChildByName("sp_logo");
+                // var clipper = new cc.ClippingNode();
+                // var sten = cc.Sprite.create("login/logo.png");
+                // var stenSize = sten.getContentSize();
+                // sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+                // clipper.setContentSize(stenSize);
+                // clipper.setStencil(sten);
+                // clipper.setAlphaThreshold(0.5);
+                // logo.addChild(clipper);
+                // var sprite1 = new cc.Sprite("ui/login/saog3.png");
+                // sprite1.setBlendFunc(cc.ONE,cc.ONE);
+                // sprite1.setOpacity(255);
+                // sprite1.setScale(1.5);
+                // clipper.addChild(sprite1, 1);
+                // var repeatAction = cc.repeatForever(cc.sequence(
+                //     cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+                //     cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+                //     cc.delayTime(0.5)));
+                // sprite1.runAction(repeatAction); //进行向右移动的重复动作
+                // var sprite2 = new cc.Sprite("ui/login/saog3.png");
+                // sprite2.setBlendFunc(cc.ONE,cc.ONE);
+                // sprite2.setOpacity(255);
+                // sprite2.setScale(1.5);
+                // clipper.addChild(sprite2, 1);
+                // var repeatAction2 = cc.repeatForever(cc.sequence(
+                //     cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+                //     cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+                //     cc.delayTime(0.5)));
+                // sprite2.runAction(repeatAction2); //进行向右移动的重复动作
             })
 
             var loadBar = _back.getChildByName("bar");
@@ -957,14 +957,14 @@ UpdateView = cc.Layer.extend({
             }
         }
         else if(MjClient.getAppType() != MjClient.APP_TYPE.QXYZQP && MjClient.getAppType() != MjClient.APP_TYPE.QXXXGHZ){
-            var logo = _back.getChildByName("load_logo");
+            // var logo = _back.getChildByName("load_logo");
             var textLoad = _back.getChildByName("load_percent");
             var textWarn = _back.getChildByName("warn_text");
             var barbk = _back.getChildByName("barbk");
             var bgMask = _back.getChildByName("bg_mask");
-            if(logo) logo.setAnchorPoint(cc.p(0, 1));
+            // if(logo) logo.setAnchorPoint(cc.p(0, 1));
             if(textWarn) textWarn.ignoreContentAdaptWithSize(true);
-            setWgtLayout(logo, [0.25, 0.25], [0.01, 0.98], [0, 0], false, true);
+            // setWgtLayout(logo, [0.25, 0.25], [0.01, 0.98], [0, 0], false, true);
             setWgtLayout(barbk, [1, 1], [0.5, 0.17], [0, 0], false, true);
             setWgtLayout(bgMask, [1, 1], [0.5, 0], [0, 0], false, true);
             setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.14], [0, 0], false, true);
@@ -1072,7 +1072,7 @@ UpdateView = cc.Layer.extend({
             this.barHead = updateui.node.getChildByName("back").getChildByName("barbk");
             this.barNode.setPercent(0);  //初始化
         }else if(MjClient.getAppType() === MjClient.APP_TYPE.QXYZQP) {
-            var logo = updateui.node.getChildByName("back").getChildByName("load");
+            // var logo = updateui.node.getChildByName("back").getChildByName("load");
             this.lightNode = updateui.node.getChildByName("back").getChildByName("barbk").getChildByName("light");
             ccs.armatureDataManager.addArmatureFileInfo("login/loginAni/JZjindutiao.ExportJson");
             cc.spriteFrameCache.addSpriteFrames("login/loginAni/JZjindutiao0.plist","login/loginAni/JZjindutiao0.png");
@@ -1080,13 +1080,13 @@ UpdateView = cc.Layer.extend({
             _armature.animation.play("JZjindutiao");
             this.lightNode.addChild(_armature);
             if (this.lightNode) this.lightNode.x = 0;
-            setWgtLayout(logo,[0.12,0.12],[0.03,0.97],[0,0],true,true);
+            // setWgtLayout(logo,[0.12,0.12],[0.03,0.97],[0,0],true,true);
         }else if(MjClient.getAppType() === MjClient.APP_TYPE.AYGUIZHOUMJ){
             this.lightNode = updateui.node.getChildByName("back").getChildByName("barbk").getChildByName("light");
             this.lightNode.addChild(new ccui.ImageView("login/light"));
             if (this.lightNode) this.lightNode.x = 0;
-            var logo = updateui.node.getChildByName("back").getChildByName("logo");
-            setWgtLayout(logo, [0.12,0.12],[0.85,0.9],[0,0],true,true)
+            // var logo = updateui.node.getChildByName("back").getChildByName("logo");
+            // setWgtLayout(logo, [0.12,0.12],[0.85,0.9],[0,0],true,true)
         }
 
         return true;

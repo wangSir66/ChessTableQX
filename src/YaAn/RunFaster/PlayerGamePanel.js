@@ -432,7 +432,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                         initSceneData: function () {
                             let pl = getUIPlayer(0);
                             if (pl) {
-                                this.setString(pl.info.honorVal+'');
+                                this.setString(pl.info.honorVal + '');
                             }
                         }
                     }
@@ -1279,7 +1279,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                         initSceneData: function (eD) {
                             var pl = getUIPlayer(1);
                             if (pl && pl.handCount) {
-                                this.visible = true;
+                                this.visible = MjClient.rePlayVideo == -1;
                             }
                             else {
                                 this.visible = false;
@@ -1289,7 +1289,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                             this.visible = false;
                         },
                         changePosition: function () {
-                            this.visible = true;
+                            this.visible = MjClient.rePlayVideo == -1;
                         }
                     }
                 },
@@ -1334,11 +1334,13 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
             stand: {
                 _run: function () {
                     if (MjClient.MaxPlayerNum == 2) {
+                        this.setRotation(0);
                         if (isIPhoneX() && !MjClient.data.sData.tData.fieldId)
-                            setWgtLayout(this, [0, 0.13], [0.5, 1], [0, 0]);
+                            setWgtLayout(this, [0, 0.13], [0.5, 1], [-1, -0.8]);
                         else
-                            setWgtLayout(this, [0, 0.13], [0.5, 1], [0, 0]);
+                            setWgtLayout(this, [0, 0.13], [0.5, 1], [-1, -0.8]);
                     } else {
+                        this.setRotation(270);
                         if (isIPhoneX() && !MjClient.data.sData.tData.fieldId)
                             setWgtLayout(this, [0, 0.13], [1, 1], [-2.1, 0]);
                         else
@@ -1565,7 +1567,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                         initSceneData: function (eD) {
                             var pl = getUIPlayer(2);
                             if (pl && pl.handCount) {
-                                this.visible = true;
+                                this.visible = MjClient.rePlayVideo == -1;
                             }
                             else {
                                 this.visible = false;
@@ -1576,7 +1578,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                             this.visible = false;
                         },
                         changePosition: function () {
-                            this.visible = true;
+                            this.visible = MjClient.rePlayVideo == -1;
                         }
                     }
                 },
@@ -1620,15 +1622,17 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
             stand: {
                 _run: function () {
                     if (MjClient.MaxPlayerNum == 3) {
+                        this.setRotation(90);
                         if (isIPhoneX() && !MjClient.data.sData.tData.fieldId)
                             setWgtLayout(this, [0, 0.13], [0, 1], [3.15, 0]);
                         else
                             setWgtLayout(this, [0, 0.13], [0, 1], [2.5, 0]);
                     } else {
+                        this.setRotation(0);
                         if (isIPhoneX() && !MjClient.data.sData.tData.fieldId)
-                            setWgtLayout(this, [0, 0.13], [0.5, 1], [0, 0]);
+                            setWgtLayout(this, [0, 0.13], [0.5, 1], [-0.5, -0.8]);
                         else
-                            setWgtLayout(this, [0, 0.13], [0.5, 1], [0, 0]);
+                            setWgtLayout(this, [0, 0.13], [0.5, 1], [-0.5, -0.8]);
                     }
                     this.visible = false;
                 }
@@ -1853,7 +1857,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                         initSceneData: function (eD) {
                             var pl = getUIPlayer(3);
                             if (pl && pl.handCount) {
-                                this.visible = true;
+                                this.visible = MjClient.rePlayVideo == -1;
                             }
                             else {
                                 this.visible = false;
@@ -1864,7 +1868,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                             this.visible = false;
                         },
                         changePosition: function () {
-                            this.visible = true;
+                            this.visible = MjClient.rePlayVideo == -1;
                         }
                     }
                 },
@@ -2823,7 +2827,6 @@ PlayLayer_RunFasterYA.prototype.horSort = function (node, off, needSort) {
     }
 
     //设置麻将位置
-
     if (off == 0)//自己或者对家
     {
         var cardWidth = orders[0] ? orders[0].width * orders[0].scale : 0;
@@ -2838,8 +2841,21 @@ PlayLayer_RunFasterYA.prototype.horSort = function (node, off, needSort) {
             startX += width;
             ci.zIndex = i;
         }
+    } else if ((MjClient.MaxPlayerNum == 2 && off == 1) || (MjClient.MaxPlayerNum == 4 && off == 2)) {
+        for (var i = 0; i < uistand.length; i++) {
+            var ci = uistand[i];
+            if (ci.name == "mjhand_replay") {
+                if (i != 0) {
+                    ci.x = uistand[i - 1].x + upSize.width * upS * 0.3 + (27 - uistand.length) * 0.3;//调牌的距离的，todo...
+                }
+                else {
+                    ci.x = start.x + ((27 - uistand.length) * upSize.width * upS * 0.3) / 3;
+                }
+                ci.zIndex = i;
+            }
+        }
     }
-    else if (off == 1 || off == 3)//右侧的
+    else if (off == 1 || off == 3 || off == 2)//右侧的
     {
         for (var i = orders.length - 1; i >= 0; i--) {
             var ci = orders[i];
@@ -2857,26 +2873,7 @@ PlayLayer_RunFasterYA.prototype.horSort = function (node, off, needSort) {
         }
 
         for (var i = 0; i < orders.length; i++) {
-            orders[i].zIndex = i;
-        }
-    }
-    else if (off == 2)//左侧的
-    {
-        for (var i = 0; i < orders.length; i++) {
-            var ci = orders[i];
-            //if(ci.name == orders[i - 1].name)
-            {
-                if (ci.name == "mjhand_replay") {
-                    if (i != 0) {
-                        ci.y = orders[i - 1].y - upSize.width * upS * 0.3 - (27 - orders.length) * 0.3;//调牌的距离的，todo...
-                    }
-                    else {
-                        ci.y = start.y - upSize.width * upS * 0.2 - ((27 - orders.length) * upSize.width * upS * 0.3) / 3;
-                    }
-
-                    ci.zIndex = i;
-                }
-            }
+            orders[i].zIndex = (off == 3 || off == 2) ? 20 - i : i;
         }
     }
 }

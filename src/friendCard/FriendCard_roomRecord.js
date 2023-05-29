@@ -33,7 +33,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
 
 
 		var UI = ccs.load("friendcard_roomRecord.json");
-		this.addChild(UI.node);
+        this.addChild(UI.node);
 		var that = this;
         this.uinode = UI.node;
 		var _block = UI.node.getChildByName("block");
@@ -148,7 +148,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
         popupAnm(_back);
         this.reqRecord(data.info.clubId, this._lastId, this._gameType);
         that.doAutoReflash();
-
+        return true;
 	},
     doAutoReflash:function () {
         if(this.isManager || this.isGroupLeader){
@@ -576,7 +576,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
         var gameType = copyNode.getChildByName("gameType");
         gameType.ignoreContentAdaptWithSize(true);
         if (oneData.ruleName) {
-            gameType.setString(unescape(oneData.ruleName));
+            gameType.setString(FriendCard_Common.resetRuleNameLen(oneData.ruleName));
         }
         else if ((MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP || 
             MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ || 
@@ -882,12 +882,13 @@ var FriendCard_roomRecord = cc.Layer.extend({
                 }
                 if (rep)
                 {
-                    var keys = Object.keys(rep[0].data.players);
-                    if (keys.indexOf(SelfUid() + "") == -1)
-                    {
-                        MjClient.otherReplayUid = Number(keys[0]); // 代理查看其他牌局的视角
-                        FriendCard_Common.club_roleId = Number(keys[0]);
-                    }
+                    cc.log('----------rep--------------',JSON.stringify(rep))
+                    // var keys = Object.keys(rep[0].data.players);
+                    // if (keys.indexOf(SelfUid() + "") == -1)
+                    // {
+                    //     MjClient.otherReplayUid = Number(keys[0]); // 代理查看其他牌局的视角
+                    //     FriendCard_Common.club_roleId = Number(keys[0]);
+                    // }
                     MjClient.playLogOne(rep);
                 }
             }

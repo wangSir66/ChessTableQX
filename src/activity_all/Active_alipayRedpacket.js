@@ -29,8 +29,8 @@ var alipayRedPaketLayer = cc.Layer.extend({
             }
         }, this);
 
-        var logo = this._back.getChildByName("logo");
-        logo.ignoreContentAdaptWithSize(true);
+        // var logo = this._back.getChildByName("logo");
+        // logo.ignoreContentAdaptWithSize(true);
 
         var textDes = this._back.getChildByName("Text_des");
         textDes.ignoreContentAdaptWithSize(true);

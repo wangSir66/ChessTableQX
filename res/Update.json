@@ -271,6 +271,7 @@
                   "X": 254.0,
                   "Y": 117.0
                 },
+                "VisibleForFrame": false,
                 "Name": "load_logo",
                 "ctype": "ImageViewObjectData"
               },

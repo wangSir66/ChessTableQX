@@ -3920,7 +3920,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panle_memberManage" Visible="False" ActionTag="-334501672" VisibleForFrame="False" Tag="393" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="204" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panle_memberManage" ActionTag="-334501672" Tag="393" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="204" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <Children>
               <AbstractNodeData Name="block" ActionTag="362368676" Alpha="204" Tag="324" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.6639" RightMargin="-1.6639" TopMargin="-1.6560" BottomMargin="1.6560" TouchEnable="True" ClipAble="False" BackColorAlpha="153" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -4195,6 +4195,35 @@
                     <DisabledFileData Type="Normal" Path="friendCards/memberManage/btn_setgongxian2.png" Plist="" />
                     <PressedFileData Type="Normal" Path="friendCards/memberManage/btn_setgongxian2.png" Plist="" />
                     <NormalFileData Type="Normal" Path="friendCards/memberManage/btn_setgongxian1.png" Plist="" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="Button_chouchengbili" ActionTag="-1433107972" Tag="408" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1116.8956" RightMargin="-534.8477" TopMargin="530.4469" BottomMargin="-102.4709" TouchEnable="True" FontSize="30" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="116" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="204.0000" Y="73.0000" />
+                    <Children>
+                      <AbstractNodeData Name="Text" ActionTag="-1653308636" Tag="410" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="36.0000" RightMargin="36.0000" TopMargin="14.4873" BottomMargin="17.5127" FontSize="32" LabelText="抽成比例" HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="132.0000" Y="41.0000" />
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="102.0000" Y="38.0127" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="254" G="245" B="234" />
+                        <PrePosition X="0.5000" Y="0.5207" />
+                        <PreSize X="0.6471" Y="0.5616" />
+                        <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                        <OutlineColor A="255" R="187" G="104" B="57" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5203" ScaleY="0.5294" />
+                    <Position X="1223.0369" Y="-63.8247" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="1.5559" Y="-0.1274" />
+                    <PreSize X="0.2595" Y="0.1457" />
+                    <TextColor A="255" R="255" G="255" B="255" />
+                    <DisabledFileData Type="Normal" Path="friendCards/memberManage/btn_rule_s.png" Plist="" />
+                    <PressedFileData Type="Normal" Path="friendCards/memberManage/btn_rule_s.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="friendCards/memberManage/btn_rule_n.png" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

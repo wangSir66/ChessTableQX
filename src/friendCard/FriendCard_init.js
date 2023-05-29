@@ -26,6 +26,15 @@ FriendCard_Common.maxPreStartRoomLM = 2;
 FriendCard_Common.maxAllStartRoomLM = 20;
 
 
+//修正club rulename过长问题
+FriendCard_Common.resetRuleNameLen = function (ruleName) {
+    if (!ruleName) return '';
+    var splitRuleName = FriendCard_Common.splitClubRuleName1(unescape(ruleName));
+    var n = splitRuleName[1];
+    let str = unescape(splitRuleName[0]);
+    if (str.length > 4) str = str.slice(0, 4) + '...';
+    return (str ? '(' + str + ')' : '') + n;
+}
 
 //重置玩法规则，修复进入玩法设置的bug
 FriendCard_Common.reSetRuleParm = function () {
@@ -4688,9 +4697,3 @@ FriendCard_UI.getCurClubHonorVal = function (clubId = 0, list) {
     }
     return '';
 }
-
-
-
-
-
-

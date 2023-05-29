@@ -10240,7 +10240,8 @@ MjClient.netCallBack = {
     OptBtnShow: [0, function (d) {
         cc.log('-----------OptBtnShow----------------', JSON.stringify(d));
         var sData = MjClient.data.sData;
-        var pl = sData.players[SelfUid()];
+        var pl = sData.players[d.uid];
+        if (!pl) return;
         pl.eatFlag = d.eatFlag;
         if (d.eatFlag > 0) {
             //清空
@@ -10317,7 +10318,7 @@ MjClient.netCallBack = {
     }],
     CancelAction: [0, function (d) {
         var sData = MjClient.data.sData;
-        let pl = sData.players[SelfUid()];
+        let pl = sData.players[d.uid];
         if (pl) pl.eatFlag = d.eatFlag;
     }]
 };
