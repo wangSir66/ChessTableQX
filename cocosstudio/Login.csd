@@ -38,7 +38,7 @@
                 <PreSize X="1.0000" Y="0.1528" />
                 <FileData Type="Normal" Path="login/bg_mask.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="load" Visible="False" ActionTag="-1055163546" Tag="623" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="33.3840" RightMargin="992.6160" TopMargin="-0.3240" BottomMargin="603.3240" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="224" Scale9Height="89" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="load" ActionTag="-1055163546" VisibleForFrame="False" Tag="623" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="33.3840" RightMargin="992.6160" TopMargin="-0.3240" BottomMargin="603.3240" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="224" Scale9Height="89" ctype="ImageViewObjectData">
                 <Size X="254.0000" Y="117.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="160.3840" Y="661.8240" />
@@ -175,7 +175,7 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="warn_text" ActionTag="298465890" Tag="288" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="218.5000" RightMargin="218.5000" TopMargin="650.0000" BottomMargin="16.0000" FontSize="15" LabelText="抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。&#xA;文网游备字[2017]M-CBG 0810号;批准文号:新广出审[2017]6240号;游戏出版物号(ISBN):978-7-7979-9436-1;&#xA;琼网文[2019] 2993-231号 ICP经营许可证编号：琼B2-20190460 运营单位:海南柠檬网络科技有限公司" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="warn_text" ActionTag="298465890" Tag="288" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="218.5000" RightMargin="218.5000" TopMargin="650.0000" BottomMargin="16.0000" FontSize="15" LabelText="抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。&#xA;天涯游备字[2023]G-TYG 1010号;批准文号:文艺出审[2023]2540号;游戏出版物号(NSB1):584-2-8751-3654-1;&#xA;出版服务单位:云影库音像出版社;运营单位:白嫖小分队网络科技有限公司" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="843.0000" Y="54.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="640.0000" Y="43.0000" />

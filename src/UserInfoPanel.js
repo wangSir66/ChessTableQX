@@ -2251,6 +2251,7 @@ var PlayerInfoBindView2 = cc.Layer.extend({
             if(this.isJS_skin()){
                 _zuanshi.visible = false;
             }
+            _zuanshi.visible = false;
         }
 
 
@@ -2263,6 +2264,7 @@ var PlayerInfoBindView2 = cc.Layer.extend({
             if(this.isJS_skin()){
                 liquan.x -= 150;
             }
+            _zuanshi && liquan.setPosition(_zuanshi.getPosition())
         }
         
 
@@ -2341,7 +2343,8 @@ var PlayerInfoBindView2 = cc.Layer.extend({
                     that.removeFromParent();
                     MjClient.Scene.addChild(new bindPhoneNumLayer(1));
                 }
-            },this)
+            }, this)
+            bindPhoneNum.visible = false
         }
         if(MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ){
             var bindWeixin = _node_info.getChildByName("ScrollView_5").getChildByName("bindWeixin");

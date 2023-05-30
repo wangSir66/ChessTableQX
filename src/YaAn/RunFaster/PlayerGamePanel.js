@@ -530,8 +530,8 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     var backHomebtn = waitNode.getChildByName("backHomebtn");
                     var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
 
-                    delroom.setScale(0.93);
-                    backHomebtn.setScale(0.94);
+                    delroom.setScale(0.9);
+                    backHomebtn.setScale(0.9);
                     delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
                     backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))))
                 }

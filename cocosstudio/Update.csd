@@ -92,7 +92,7 @@
                 <PreSize X="1.0000" Y="0.0097" />
                 <FileData Type="Normal" Path="login/loading_bar_bg.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="warn_text" ActionTag="483611256" Tag="30" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="216.4520" RightMargin="220.5480" TopMargin="659.9525" BottomMargin="6.0475" FontSize="15" LabelText="抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。&#xA;文网游备字[2017]M-CBG 0810号;批准文号:新广出审[2017]6240号;游戏出版物号(ISBN):978-7-7979-9436-1;&#xA;出版服务单位:三辰影库音像出版社;运营单位:海南柠檬网络科技有限公司" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="warn_text" ActionTag="483611256" Tag="30" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="216.4520" RightMargin="220.5480" TopMargin="659.9525" BottomMargin="6.0475" FontSize="15" LabelText="抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。&#xA;天涯游备字[2023]G-TYG 1010号;批准文号:文艺出审[2023]2540号;游戏出版物号(NSB1):584-2-8751-3654-1;&#xA;出版服务单位:云影库音像出版社;运营单位:白嫖小分队网络科技有限公司" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="843.0000" Y="54.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="637.9520" Y="33.0475" />

@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="mobilePhoneLogin" Type="Layer" ID="47456d50-ce5a-44e9-92e3-41c97ece8f87" Version="3.10.0.0" />
+  <PropertyGroup Name="mobilePhoneLogin-yzm" Type="Layer" ID="47456d50-ce5a-44e9-92e3-41c97ece8f87" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />

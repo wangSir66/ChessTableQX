@@ -45,7 +45,7 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
             this._bindPhoneNum0 = new cc.EditBox(cc.size(imagePhoneNum.width,imagePhoneNum.height), new cc.Scale9Sprite());
         }
         else {
-            this._bindPhoneNum0 = new cc.EditBox(cc.size(imagePhoneNum.width,imagePhoneNum.height), new cc.Scale9Sprite("store/into_number.png"));
+            this._bindPhoneNum0 = new cc.EditBox(cc.size(imagePhoneNum.width,imagePhoneNum.height), new cc.Scale9Sprite());
         }
 
         if (MjClient.isUseUIv3 && MjClient.isUseUIv3()) {
@@ -59,8 +59,8 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
             this._bindPhoneNum0.setPlaceholderFontColor(cc.color("#e4ecf0"));
         }
         this._bindPhoneNum0.setMaxLength(11);
-        this._bindPhoneNum0.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
-        this._bindPhoneNum0.setPlaceHolder("请输入手机号码");
+        // this._bindPhoneNum0.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+        this._bindPhoneNum0.setPlaceHolder("请输入账号");
         this._bindPhoneNum0.setPosition(imagePhoneNum.getContentSize().width/2, imagePhoneNum.getContentSize().height/2);
         imagePhoneNum.addChild(this._bindPhoneNum0);
 
@@ -77,7 +77,7 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
             this._hintNum0 = new cc.EditBox(cc.size(imageSecurityCode.width,imageSecurityCode.height), new cc.Scale9Sprite());
         }
         else {
-            this._hintNum0 = new cc.EditBox(cc.size(imageSecurityCode.width,imageSecurityCode.height), new cc.Scale9Sprite("store/into_number.png"));
+            this._hintNum0 = new cc.EditBox(cc.size(imageSecurityCode.width,imageSecurityCode.height), new cc.Scale9Sprite());
         }
         if (MjClient.isUseUIv3 && MjClient.isUseUIv3()) {
             this._hintNum0.setFontColor(cc.color("#ff6f20"));
@@ -157,9 +157,13 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
         btnSureBind.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 var mobileNum = self._bindPhoneNum0.getString();
-                if(mobileNum.length != 11 || parseInt(mobileNum) == 0)
-                {
-                    MjClient.showToast("请输入正确的手机号码");
+                if (mobileNum.length < 6) {
+                    MjClient.showToast("账号长度6位以上");
+                    return;
+                }
+                var regEn = /^[a-zA-Z][a-zA-Z0-9]*$/g;
+                if (!regEn.test(mobileNum)) {//不可以有特殊字符
+                    MjClient.showToast('格式错误（字母+数字）');
                     return;
                 }
 

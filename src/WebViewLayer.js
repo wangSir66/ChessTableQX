@@ -66,7 +66,7 @@ WebViewLayer=cc.Layer.extend({
         var appTypeObj = {
             "jinzhong": MjClient.APP_TYPE.TXJINZHONGMJ,
             "yueyang": MjClient.APP_TYPE.QXYYQP,
-            "jiangsu": MjClient.APP_TYPE.QXJSMJ,
+            "jiangsu": MjClient.APP_TYPE.YAAN,
             "nantong": MjClient.APP_TYPE.QXNTQP,
             "xuzhou" : MjClient.APP_TYPE.QXXZMJ,
             "huaian" : MjClient.APP_TYPE.QXHAMJ,
@@ -76,6 +76,7 @@ WebViewLayer=cc.Layer.extend({
             "sichuan": MjClient.APP_TYPE.LYSICHUANMJ,
             "shanxi": MjClient.APP_TYPE.DQSHANXIMJ,
             "hubei": MjClient.APP_TYPE.HUBEIMJ,
+            "yaan": MjClient.APP_TYPE.YAAN,
         };
 
         for (var key in appTypeObj)
@@ -388,7 +389,7 @@ WebViewLayer=cc.Layer.extend({
                 {
                     if(curType === "jinzhong" || curType === "yueyang" || curType === "nantong" || curType === "ylhunan" ||
                         curType === "jiangsu" || curType === "xuzhou" || curType === "huaian" || curType === "haian" ||
-                        curType === "guizhou" || curType === "shanxi" || curType === "hubei")
+                        curType === "guizhou" || curType === "shanxi" || curType === "hubei" || curType === "yaan" )
                     {
                         pactPanel && pactPanel.setVisible(true);
                         that.webView.setAnchorPoint(cc.p(0, 0));

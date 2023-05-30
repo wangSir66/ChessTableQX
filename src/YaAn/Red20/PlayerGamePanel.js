@@ -642,7 +642,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         initSceneData: function () {
                             if (MjClient.rePlayVideo != -1) return;
                             let pl = getUIPlayer(0);
-                            if (pl) {
+                            if (pl && pl.info.honorVal) {
                                 this.visible = true;
                                 this.setString(pl.info.honorVal.honorVal + '');
                             }
@@ -650,7 +650,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         roundEnd: function () {
                             if (MjClient.rePlayVideo != -1) return;
                             let pl = getUIPlayer(0);
-                            if (pl) {
+                            if (pl && pl.info.honorVal) {
                                 this.visible = true;
                                 this.setString(pl.info.honorVal.honorVal + '');
                             }

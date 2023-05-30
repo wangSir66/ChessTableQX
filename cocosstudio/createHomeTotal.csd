@@ -22,10 +22,10 @@
           <AbstractNodeData Name="back" ActionTag="-1649403039" Tag="27" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="97.5000" RightMargin="97.5000" TopMargin="15.5000" BottomMargin="15.5000" TouchEnable="True" LeftEage="170" RightEage="170" TopEage="127" BottomEage="127" Scale9OriginX="170" Scale9OriginY="127" Scale9Width="745" Scale9Height="435" ctype="ImageViewObjectData">
             <Size X="1085.0000" Y="689.0000" />
             <Children>
-              <AbstractNodeData Name="Image_1" ActionTag="1057993185" Tag="46" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="33.3506" RightMargin="28.6494" TopMargin="96.9998" BottomMargin="28.0002" Scale9Enable="True" LeftEage="20" RightEage="20" TopEage="18" BottomEage="18" Scale9OriginX="20" Scale9OriginY="18" Scale9Width="21" Scale9Height="21" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="Image_1" ActionTag="1057993185" Tag="46" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="33.3870" RightMargin="28.6130" TopMargin="96.9998" BottomMargin="28.0002" Scale9Enable="True" LeftEage="20" RightEage="20" TopEage="18" BottomEage="18" Scale9OriginX="20" Scale9OriginY="18" Scale9Width="21" Scale9Height="21" ctype="ImageViewObjectData">
                 <Size X="1023.0000" Y="564.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="544.8506" Y="310.0002" />
+                <Position X="544.8870" Y="310.0002" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5022" Y="0.4499" />
@@ -75,13 +75,13 @@
                 <PrePosition X="0.0059" Y="-0.0056" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="titleCreate" Visible="False" ActionTag="-987851914" Alpha="245" Tag="42" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="286.7160" RightMargin="309.2840" TopMargin="-17.8180" BottomMargin="634.8180" ctype="SpriteObjectData">
+              <AbstractNodeData Name="titleCreate" Visible="False" ActionTag="-987851914" Alpha="245" Tag="42" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="298.0000" RightMargin="298.0000" BottomMargin="617.0000" ctype="SpriteObjectData">
                 <Size X="489.0000" Y="72.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
-                <Position X="531.2160" Y="706.8180" />
+                <Position X="542.5000" Y="689.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4896" Y="1.0259" />
+                <PrePosition X="0.5000" Y="1.0000" />
                 <PreSize X="0.4507" Y="0.1045" />
                 <FileData Type="Normal" Path="joinGame/zhongtan-1_03.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />

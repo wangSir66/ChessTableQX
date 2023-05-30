@@ -160,26 +160,16 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "Normal",
-                  "Path": "game_picture/btn_x_press.png",
-                  "Plist": ""
-                },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "game_picture/btn_x_press.png",
-                  "Plist": ""
-                },
                 "NormalFileData": {
                   "Type": "Normal",
                   "Path": "game_picture/btn_x_normal.png",
                   "Plist": ""
                 },
-                "Scale9Enable": true,
+                "Scale9Enable": false,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 97,
-                "Scale9Height": 106,
+                "Scale9Width": 127,
+                "Scale9Height": 128,
                 "OutlineSize": 0,
                 "OutlineColor": {
                   "R": 0,
@@ -203,8 +193,8 @@
                   "Y": 466.0
                 },
                 "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
+                  "ScaleX": 0.6,
+                  "ScaleY": 0.6
                 },
                 "CColor": {},
                 "IconVisible": false,
@@ -243,7 +233,7 @@
                 },
                 "Position": {
                   "X": 393.0854,
-                  "Y": 458.1753
+                  "Y": 462.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -303,7 +293,7 @@
                 "Children": [
                   {
                     "FontSize": 28,
-                    "LabelText": "手机号:",
+                    "LabelText": "账号:",
                     "FontResource": {
                       "Type": "Normal",
                       "Path": "fonts/lanting.TTF",
@@ -956,8 +946,8 @@
                       "Y": -176.7148
                     },
                     "Scale": {
-                      "ScaleX": 1.1195,
-                      "ScaleY": 0.8894
+                      "ScaleX": 1,
+                      "ScaleY": 1
                     },
                     "CColor": {},
                     "IconVisible": false,

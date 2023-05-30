@@ -624,7 +624,7 @@ MjClient.native =
     {
         if (!MjClient.native.appVersion)
         {
-            var versionName = "1.0.0";
+            var versionName = "0.0.1";
             try
             {
                 if (cc.sys.OS_ANDROID == cc.sys.os)

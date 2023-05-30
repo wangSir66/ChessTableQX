@@ -403,6 +403,7 @@ function ResetLoginPanel(back){
     //闪光动作
     // var logoNode = back.getChildByName("load");
     var weichatNode = back.getParent().getChildByName("wechatLogin");
+    weichatNode.visible = false;
     var createChipNode = function(pos){
         // var clipper = cc.ClippingNode.create();
         // var sten = cc.Sprite.create("game_picture/logo_da.png");
@@ -491,6 +492,7 @@ LoginView = cc.Layer.extend({
 
             _back.getChildByName("load").setZOrder(10);
             _back.getChildByName("agree").setZOrder(10);
+            _back.getChildByName("load").visible = false;
 
             // this._title = _back.getChildByName("load");
             // this._title.setScale(0);
@@ -849,7 +851,7 @@ LoginView = cc.Layer.extend({
         this._privacy = _privacy;
 
         var _logo = _back.getChildByName("load");
-
+        _logo.visible = false;
         if(MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP) 
         {
             _logo.setAnchorPoint(0, 1);
@@ -944,7 +946,7 @@ LoginView = cc.Layer.extend({
         this._btnWeChat = _btnWeChat;
         if (_btnWeChat) {
             _btnWeChat.setVisible(false);
-            loginBtns.push(_btnWeChat);
+            // loginBtns.push(_btnWeChat);
         }
 
 
@@ -1232,7 +1234,7 @@ LoginView = cc.Layer.extend({
                 acceptNode.setVisible(true);
             }
             if (_btnWeChat) {
-                _btnWeChat.visible = !MjClient.remoteCfg.guestLogin;
+                _btnWeChat.visible = false //!MjClient.remoteCfg.guestLogin;
             }
             if (_guestLogin) {
                 _guestLogin.visible = MjClient.remoteCfg.guestLogin;

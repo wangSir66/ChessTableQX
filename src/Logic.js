@@ -726,9 +726,9 @@ GamePlaybackUrlPrefix[MjClient.APP_TYPE.HUNANWANGWANG] = "http://wangwang.jtcfga
 GamePlaybackUrlPrefix[MjClient.APP_TYPE.DQSHANXIMJ] = "http://shanxi.jtcfgame.com/playback/js3mj/";
 GamePlaybackUrlPrefix[MjClient.APP_TYPE.HUBEIMJ] = "http://hubei.jtcfgame.com/playback/js3mj/";
 
-var GameDownloadCfgUrl = {};
+var GameDownloadCfgUrl = {};//http://121.196.214.144:9990/update/jiangshu/configuration.json
 GameDownloadCfgUrl[MjClient.APP_TYPE.QXJSMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/jiangshu/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/jiangshu/";
+GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/yaan/";
 GameDownloadCfgUrl[MjClient.APP_TYPE.JSMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/nanjing/";
 GameDownloadCfgUrl[MjClient.APP_TYPE.QXHAMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/huaian/";
 GameDownloadCfgUrl[MjClient.APP_TYPE.QXXZMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/xuzhou/";

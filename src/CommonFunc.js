@@ -13512,7 +13512,7 @@ function addClubYaoqingBtn(pos) {
         setWgtLayout(clubYaoqingBtn, [219 / 1280, 0], [0.5, 0.12], [0, 0]);
         setWgtLayout(wxinviteBtn, [219 / 1280, 0], [0.697, 0.12], [0, 0]);
         var backHomebtn = waitNode.getChildByName("backHomebtn");
-        setWgtLayout(backHomebtn, [219 / 1280, 0], [0.30, 0.12], [0, 0]);
+        // setWgtLayout(backHomebtn, [219 / 1280, 0], [0.30, 0.12], [0, 0]);
     }
 
     // 江苏，淮安 邀请牌友位置重设
@@ -13755,8 +13755,8 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
     _backHomeBtn.zIndex = 500;
     _backHomeBtn.setTouchEnabled(true);
     if (!needAdjust) {
-        _backHomeBtn.setContentSize(tempSize.w, tempSize.h);
-        setWgtLayout(_backHomeBtn, [0.11, 0.11], [0.05, 0.6], [0, 0]);
+        // _backHomeBtn.setContentSize(tempSize.w, tempSize.h);
+        // setWgtLayout(_backHomeBtn, [0.11, 0.11], [0.05, 0.6], [0, 0]);
     }
     _backHomeBtn.addTouchEventListener(function (sender, type) {
         if (type === 2) {
@@ -13785,8 +13785,8 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
     }, this);
 
     if (isIPhoneX() && !needAdjust) {
-        setWgtLayout(_delroomBtn, [0.11, 0.11], [0.1, 0.45], [0, 0]);
-        setWgtLayout(_backHomeBtn, [0.11, 0.11], [0.1, 0.6], [0, 0]);
+        // setWgtLayout(_delroomBtn, [0.11, 0.11], [0.1, 0.45], [0, 0]);
+        // setWgtLayout(_backHomeBtn, [0.11, 0.11], [0.1, 0.6], [0, 0]);
     }
 
     UIEventBind(null, _backHomeBtn, "returnPlayerLayer", function (eD) {

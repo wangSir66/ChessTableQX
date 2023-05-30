@@ -188,11 +188,11 @@
                 },
                 "Position": {
                   "X": 790.7611,
-                  "Y": 405.7261
+                  "Y": 466
                 },
                 "Scale": {
-                  "ScaleX": 0.8,
-                  "ScaleY": 0.8
+                  "ScaleX": 0.6,
+                  "ScaleY": 0.6
                 },
                 "CColor": {},
                 "IconVisible": false,
@@ -231,7 +231,7 @@
                 },
                 "Position": {
                   "X": 411.5,
-                  "Y": 394.6501
+                  "Y": 465
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -255,8 +255,8 @@
                 "Tag": 123,
                 "ActionTag": -718157796,
                 "Size": {
-                  "X": 198.0,
-                  "Y": 54.0
+                  "X": 339,
+                  "Y": 58.0
                 },
                 "Name": "title",
                 "ctype": "ImageViewObjectData"
@@ -289,12 +289,7 @@
                 "Children": [
                   {
                     "FontSize": 28,
-                    "LabelText": "手机号码",
-                    "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/fzcy.ttf",
-                      "Plist": ""
-                    },
+                    "LabelText": "账号",
                     "OutlineColor": {
                       "R": 0,
                       "G": 0,
@@ -312,7 +307,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": -250.0001,
+                      "X": -236.0001,
                       "Y": 75.0
                     },
                     "Scale": {
@@ -395,11 +390,6 @@
                   {
                     "FontSize": 28,
                     "LabelText": "密码",
-                    "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/fzcy.ttf",
-                      "Plist": ""
-                    },
                     "OutlineColor": {
                       "R": 0,
                       "G": 0,
@@ -676,7 +666,7 @@
                     },
                     "Scale": {
                       "ScaleX": 0.52,
-                      "ScaleY": 0.42
+                      "ScaleY": 0.45
                     },
                     "CColor": {},
                     "IconVisible": false,

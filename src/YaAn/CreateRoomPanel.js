@@ -160,12 +160,18 @@ CreateViewYaAn = cc.Layer.extend({
             this._lastGameType[0] = -1;
         }
         else {
-            this._curTabIndex = 0;
-            this._lastGameType[1] = -1;
-            if (this._gameTypeList[0].indexOf(lastGameType) != -1)
-                this._lastGameType[0] = lastGameType;
-            else
-                this._lastGameType[0] = this._gameTypeList[0][0];
+            if (this._gameTypeList[0].length == 0) {
+                this._curTabIndex = 1;
+                this._lastGameType[this._curTabIndex] = this._gameTypeList[this._curTabIndex][0];
+                this._lastGameType[0] = -1;
+            } else {
+                this._curTabIndex = 0;
+                this._lastGameType[1] = -1;
+                if (this._gameTypeList[0].indexOf(lastGameType) != -1)
+                    this._lastGameType[0] = lastGameType;
+                else
+                    this._lastGameType[0] = this._gameTypeList[0][0];
+            }
         }
 
         var jsonui = ccs.load(res.Create_json);

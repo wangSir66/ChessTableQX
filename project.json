@@ -10,7 +10,7 @@
     "engineDir": "frameworks/cocos2d-html5",
 
     "modules": [ "cocos2d", "cocostudio", "extensions" ],
-    "appType": 0,
+    "appType": 25,
     "jsList": [
         "TestConfig.js",
         "src/h5/amapHelper.js",
