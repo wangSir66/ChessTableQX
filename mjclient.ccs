@@ -4904,30 +4904,8 @@
         <Project Name="advShowLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreTipLayer.csd" Type="Layer" />
-        <Project Name="bg_donghai.csd" Type="Node" />
-        <Project Name="bg_doudizhuTY.csd" Type="Node" />
-        <Project Name="bg_ganyu.csd" Type="Node" />
-        <Project Name="bg_guannan.csd" Type="Node" />
-        <Project Name="bg_guanyun.csd" Type="Node" />
-        <Project Name="bg_HZMJ.csd" Type="Node" />
-        <Project Name="bg_lianyungang.csd" Type="Node" />
-        <Project Name="bg_lianyungang2.csd" Type="Node" />
-        <Project Name="bg_nanjing.csd" Type="Node" />
-        <Project Name="bg_paodekuai.csd" Type="Node" />
-        <Project Name="bg_paodekuai2.csd" Type="Node" />
-        <Project Name="bg_PaoDeKuaiLYG.csd" Type="Node" />
-        <Project Name="bg_PaoDeKuaiTY.csd" Type="Node" />
-        <Project Name="bg_paodekuaiXS.csd" Type="Node" />
         <Project Name="bg_red20.csd" Type="Node" />
         <Project Name="bg_RunFasterYaAn.csd" Type="Node" />
-        <Project Name="bg_shuyang.csd" Type="Node" />
-        <Project Name="bg_siyang.csd" Type="Node" />
-        <Project Name="bg_siyang_new.csd" Type="Node" />
-        <Project Name="bg_siyanghh.csd" Type="Node" />
-        <Project Name="bg_suqian.csd" Type="Node" />
-        <Project Name="bg_tuantuanzhuan.csd" Type="Node" />
-        <Project Name="bg_TYHZ.csd" Type="Node" />
-        <Project Name="bg_xiangshui.csd" Type="Node" />
         <Project Name="bg_xuezhan.csd" Type="Node" />
         <Project Name="BindingCodeEnterLayer.csd" Type="Layer" />
         <Project Name="BindingCodeLayer.csd" Type="Layer" />
@@ -4964,30 +4942,8 @@
         <Project Name="endAll2p.csd" Type="Layer" />
         <Project Name="endAll3p.csd" Type="Layer" />
         <Project Name="endOne.csd" Type="Layer" />
-        <Project Name="endOne_donghai.csd" Type="Layer" />
-        <Project Name="endOne_doudizhuTY.csd" Type="Layer" />
-        <Project Name="endOne_ganyu.csd" Type="Layer" />
-        <Project Name="endOne_guannan.csd" Type="Layer" />
-        <Project Name="endOne_guanyun.csd" Type="Layer" />
-        <Project Name="endOne_HA14D.csd" Type="Layer" />
-        <Project Name="endOne_HAHZ.csd" Type="Layer" />
-        <Project Name="endOne_huaian.csd" Type="Layer" />
-        <Project Name="endOne_HZMJ.csd" Type="Layer" />
-        <Project Name="endOne_nanjing.csd" Type="Layer" />
-        <Project Name="endOne_paodekuai.csd" Type="Layer" />
-        <Project Name="endOne_PaoDeKuaiLYG.csd" Type="Layer" />
-        <Project Name="endOne_PaoDeKuaiTY.csd" Type="Layer" />
-        <Project Name="endOne_PaoDeKuaiXS.csd" Type="Layer" />
         <Project Name="endOne_Red20.csd" Type="Layer" />
         <Project Name="endOne_RunFasterYA.csd" Type="Layer" />
-        <Project Name="endOne_shuyang.csd" Type="Layer" />
-        <Project Name="endOne_siyang.csd" Type="Layer" />
-        <Project Name="endOne_siyang_new.csd" Type="Layer" />
-        <Project Name="endOne_suqian.csd" Type="Layer" />
-        <Project Name="endOne_tuantuanzhuan.csd" Type="Layer" />
-        <Project Name="endOne_TYHZ.csd" Type="Layer" />
-        <Project Name="endOne_xiangshui.csd" Type="Layer" />
-        <Project Name="endOne_xuzhou.csd" Type="Layer" />
         <Project Name="EndRoom.csd" Type="Node" />
         <Project Name="enter.csd" Type="Layer" />
         <Project Name="ExportDataLayer.csd" Type="Layer" />
@@ -5083,35 +5039,8 @@
         <Project Name="PayWayLayer.csd" Type="Layer" />
         <Project Name="PersonalMallLayer.csd" Type="Layer" />
         <Project Name="Play.csd" Type="Layer" />
-        <Project Name="Play_AS.csd" Type="Layer" />
-        <Project Name="Play_donghai.csd" Type="Layer" />
-        <Project Name="Play_doudizhuTongYong.csd" Type="Layer" />
-        <Project Name="Play_doudizhuTY.csd" Type="Layer" />
-        <Project Name="Play_ganyu.csd" Type="Layer" />
-        <Project Name="Play_guannan.csd" Type="Layer" />
-        <Project Name="Play_guanyun.csd" Type="Layer" />
-        <Project Name="Play_HA14D.csd" Type="Layer" />
-        <Project Name="Play_HAHZ.csd" Type="Layer" />
-        <Project Name="Play_huaian.csd" Type="Layer" />
-        <Project Name="Play_HZMJ.csd" Type="Layer" />
-        <Project Name="Play_nanjing.csd" Type="Layer" />
-        <Project Name="Play_niuniu.csd" Type="Layer" />
-        <Project Name="Play_paodekuai.csd" Type="Layer" />
-        <Project Name="Play_PaoDeKuaiLYG.csd" Type="Layer" />
-        <Project Name="Play_PaoDeKuaiTY.csd" Type="Layer" />
         <Project Name="Play_Red20.csd" Type="Layer" />
         <Project Name="Play_RunFasterYN.csd" Type="Layer" />
-        <Project Name="Play_shuyang.csd" Type="Layer" />
-        <Project Name="Play_siyang.csd" Type="Layer" />
-        <Project Name="Play_siyang_new.csd" Type="Layer" />
-        <Project Name="Play_siyanghh.csd" Type="Layer" />
-        <Project Name="Play_suqian.csd" Type="Layer" />
-        <Project Name="Play_TDH.csd" Type="Layer" />
-        <Project Name="Play_tuantuanzhuan.csd" Type="Layer" />
-        <Project Name="Play_TYHZ.csd" Type="Layer" />
-        <Project Name="Play_xiangshui.csd" Type="Layer" />
-        <Project Name="Play_xuzhou.csd" Type="Layer" />
-        <Project Name="Play_yanchenghh.csd" Type="Layer" />
         <Project Name="PlayaroundInfo.csd" Type="Layer" />
         <Project Name="playBackLayer.csd" Type="Layer" />
         <Project Name="PlayerChat.csd" Type="Layer" />

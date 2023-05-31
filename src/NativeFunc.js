@@ -655,7 +655,7 @@ MjClient.native =
     {
         if (!MjClient.native.appPackageName)
         {
-            var packageName = "com.leyihuyu.qxjsmj";
+            var packageName = "com.tianyayule.yaan";
             try
             {
                 if (cc.sys.OS_ANDROID == cc.sys.os && isCurrentNativeVersionBiggerThan("2.4.2"))

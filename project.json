@@ -43,28 +43,8 @@
         "src/CommonFunc.js",
         "src/CommonFunc_UI.js",
         "src/CommonFunc_UI3D.js",
-        "src/CommonFunc_NN.js",
-        "src/CommonFunc_changpai.js",
         "src/CommonFunc_card.js",
-        "src/CommonFunc_paohuzi.js",
-        "src/CommonFunc_paohuzi_SR.js",
         "src/CommonFunc_Layer.js",
-        "src/Arithmetic_LYG.js",
-        "src/Arithmetic_shuyang.js",
-        "src/Arithmetic_guanyun.js",
-        "src/Arithmetic_guannan.js",
-        "src/Arithmetic_donghai.js",
-        "src/Arithmetic_suqian.js",
-        "src/Arithmetic_HZMJ.js",
-        "src/Arithmetic_nanjing.js",
-
-        "src/Arithmetic_tuantuanzhuan.js",
-
-        "src/Arithmetic_siyang.js",
-        "src/Arithmetic_siyanghh.js",
-
-        "src/Arithmetic_ganyu.js",
-
         "src/LoginPanel.js",
         "src/LoginLegalDialog.js",
         "src/MobilePhoneLoginLayer.js",
@@ -72,68 +52,14 @@
         "src/FreeNumberVoteDialog.js",
         "src/ShiMingRenZhengLayer.js",
         "src/SelectPanel.js",
-        "src/SelectPanel_qxjsmj.js",
         "src/UserSettingPanel.js",
         "src/DisclaimerLayer.js",
         "src/ReportPlayerLayer.js",
-        "src/CreateRoomNode.js",
-        "src/CreateRoomNode_LYG.js",
-        "src/CreateRoomNode_donghai.js",
-        "src/CreateRoomNode_guanyun.js",
-        "src/CreateRoomNode_guannan.js",
-
-        "src/CreateRoomNode_HAHZ.js",
-
-        "src/CreateRoomNode_shuyang.js",
-        "src/CreateRoomNode_suqian.js",
-
-        "src/CreateRoomNode_tuantuanzhuan.js",
-        "src/CreateRoomNode_HZMJ.js",
-
-        "src/CreateRoomNode_siyang.js",
-        "src/CreateRoomNode_siyanghh.js",
-        "src/CreateRoomNode_ganyu.js",
-        "src/CreateRoomNode_nanjing.js",
-
-        "src/CreateRoomPanel.js",
         "src/JoinRoomPanel.js",
-        "src/PlayerGamePanel_LYG.js",
-        "src/PlayerGamePanel_shuyang.js",
-        "src/PlayerGamePanel_guanyun.js",
-        "src/PlayerGamePanel_guannan.js",
-        "src/PlayerGamePanel_donghai.js",
-        "src/PlayerGamePanel_suqian.js",
-        "src/PlayerGamePanel_nanjing.js",
-
-        "src/PlayerGamePanel_tuantuanzhuan.js",
-        "src/PlayerGamePanel_HZMJ.js",
-
-        "src/PlayerGamePanel_ganyu.js",
-
-        "src/PlayerGamePanel_siyang.js",
-        "src/PlayerGamePanel_siyanghh.js",
-
         "src/PlaygroundLayer.js",
         "src/PlaybackLayer.js",
         "src/LoseGameLayer.js",
         "src/WinGameLayer.js",
-
-        "src/WinGamePanel_LYG.js",
-        "src/WinGamePanel_shuyang.js",
-        "src/WinGamePanel_guanyun.js",
-        "src/WinGamePanel_guannan.js",
-        "src/WinGamePanel_donghai.js",
-
-        "src/WinGamePanel_suqian.js",
-
-        "src/WinGamePanel_tuantuanzhuan.js",
-        "src/WinGamePanel_HZMJ.js",
-
-        "src/WinGamePanel_siyang.js",
-        "src/WinGamePanel_siyanghh.js",
-        "src/WinGamePanel_nanjing.js",
-
-        "src/WinGamePanel_ganyu.js",
         "src/GameOverPanel.js",
         "src/GameRecordLayer.js",
         "src/GameDesLayer.js",
@@ -226,59 +152,6 @@
         "src/activity_all/Active_flyAKite.js",
         "src/activity_all/Active_collectSpringBean.js",
         "src/activity_all/ClubCost_layer.js",
-
-        "src/poker_doudizhuTY/Arithmetic_doudizhuTY.js",
-        "src/poker_doudizhuTY/CreateRoomNode_doudizhuTY.js",
-        "src/poker_doudizhuTY/WinGamePanel_doudizhuTY.js",
-        "src/poker_doudizhuTY/PlayerGamePanel_doudizhuTongYong.js",
-
-        "src/poker_doudizhu_wegt/PokerCardNode_Doudizhu.js",
-        "src/poker_doudizhu_wegt/PokerHeadNode_Doudizhu.js",
-        "src/poker_doudizhu_wegt/PokerHeadNode_Doudizhulyg.js",
-        "src/poker_doudizhu_wegt/PokerWaitNode_Doudizhu.js",
-        "src/poker_doudizhu_wegt/Animature_Doudizhu.js",
-
-        "src/poker_doudizhu/Arithmetic_doudizhu.js",
-        "src/poker_doudizhu/CreateRoomNode_doudizhu.js",
-        "src/poker_doudizhu/PlayerGamePanel_doudizhu.js",
-        "src/poker_doudizhu/WinGamePanel_doudizhu.js",
-
-        "src/majiang_xiangshui/Arithmetic_xiangshui.js",
-        "src/majiang_xiangshui/CreateRoomNode_xiangshui.js",
-        "src/majiang_xiangshui/PlayerGamePanel_xiangshui.js",
-        "src/majiang_xiangshui/WinGamePanel_xiangshui.js",
-
-        "src/majiang_siyang_new/Arithmetic_siyang_new.js",
-        "src/majiang_siyang_new/CreateRoomNode_siyang_new.js",
-        "src/majiang_siyang_new/PlayerGamePanel_siyang_new.js",
-        "src/majiang_siyang_new/WinGamePanel_siyang_new.js",
-
-        "src/majiang_TYHZ/Arithmetic_TYHZ.js",
-        "src/majiang_TYHZ/CreateRoomNode_TYHZ.js",
-        "src/majiang_TYHZ/PlayerGamePanel_TYHZ.js",
-        "src/majiang_TYHZ/WinGamePanel_TYHZ.js",
-
-        "src/poker_paodekuaiBase/Arithmetic_PaoDeKuaiBase.js",
-        "src/poker_paodekuaiBase/PlayPanel_PDK.js",
-        "src/poker_paodekuaiBase/WinGamePanel_PaoDeKuai.js",
-
-        "src/poker_paodekuaiXS/Arithmetic_pdkXS.js",
-        "src/poker_paodekuaiXS/CreateRoomNode_PaoDeKuaiXS.js",
-        "src/poker_paodekuaiXS/PlayPanel_PaoDeKuaiXS.js",
-        "src/poker_paodekuaiXS/WinGamePanel_PDKXS.js",
-
-
-        "src/poker_paodekuai/CreateRoomNode_paodekuai.js",
-        "src/poker_paodekuaiLYG/CreateRoomNode_PaoDeKuaiLYG.js",
-
-        "src/poker_paodekuai/Arithmetic_pdk.js",
-        "src/poker_paodekuaiLYG/Arithmetic_pdkLYG.js",
-
-        "src/poker_paodekuai/PlayPanel_paodekuai.js",
-        "src/poker_paodekuaiLYG/PlayPanel_PaoDeKuaiLYG.js",
-
-        "src/poker_paodekuai/WinGamePanel_PDK.js",
-        "src/poker_paodekuaiLYG/WinGamePanel_PDKLYG.js",
 
         "src/YaAn/Homeview.js",
         "src/YaAn/CreateRoomPanel.js",

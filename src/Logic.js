@@ -268,7 +268,8 @@ MjClient.GAME_CLASS = {
     DA_MA_ZI: 14,  //打码子
     DA_TONG_ZI: 15,   //打筒子
     BA_ZHA_DAN: 16,   //霸炸弹
-    GAN_DENG_YAN: 17   //干瞪眼
+    GAN_DENG_YAN: 17,  //干瞪眼
+    POKER: 18   //扑克
 };
 
 //资源分类类型（需要添加类型请找毛羽）
@@ -826,6 +827,7 @@ GameTypeList[MjClient.GAME_CLASS.PAO_DE_KUAI] = function () { return MjClient.ga
 GameTypeList[MjClient.GAME_CLASS.DOU_DI_ZHU] = function () { return MjClient.gameListConfig.doudizhulist; };
 GameTypeList[MjClient.GAME_CLASS.NIU_SHI_BIE] = function () { return MjClient.gameListConfig.niushibieList; };
 GameTypeList[MjClient.GAME_CLASS.DA_MA_ZI] = function () { return MjClient.gameListConfig.damaziList; };
+GameTypeList[MjClient.GAME_CLASS.POKER] = function () { return MjClient.gameListConfig.pokerList; };
 
 
 var GameCnName = {};
@@ -1910,8 +1912,8 @@ GameHelpUrl[MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG] = "http://8.139.4.112:99
 GameHelpUrl[MjClient.GAME_TYPE.EN_SHI_SHAO_HU] = "http://8.139.4.112:9993/protocol/tips/helpEnShiShaoHu/helpEnShiShaoHu.html";
 GameHelpUrl[MjClient.GAME_TYPE.WU_XUE_510K] = "http://8.139.4.112:9993/protocol/tips/helpWuXue510k/helpWuXue510k.html";
 
-GameHelpUrl[MjClient.GAME_TYPE.RED_20_POKER] = "http://8.139.4.112:9993/protocol/tips/helpWuXue510k/helpWuXue510k.html";
-GameHelpUrl[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = "http://8.139.4.112:9993/protocol/tips/helpWuXue510k/helpWuXue510k.html";
+GameHelpUrl[MjClient.GAME_TYPE.RED_20_POKER] = "http://8.139.4.112:9993/protocol/tips/helpRed20/helpRed20.html";
+GameHelpUrl[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = "http://8.139.4.112:9993/protocol/tips/helpRunFasterYa/helpRunFasterYa.html";
 
 var GameButton = {};
 
@@ -11721,27 +11723,7 @@ var JSScene = cc.Scene.extend({
                 cc.log("creat room layer --- by sking YYYYYYYYY ");
 
                 var callbackFunc = function () {
-                    //为了体验流畅，下次打开新配置才生效
-                    if (isJinZhongAPPType() ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.LYSICHUANMJ ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
-                        MjClient.Scene.addChild(new CreateView2(data));
-                    } else if (MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
-                        MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
-                        MjClient.Scene.addChild(new CreateViewNew(data));
-                    } else if (MjClient.getAppType() == MjClient.APP_TYPE.YAAN) {//雅安
-                        MjClient.Scene.addChild(new CreateViewYaAn(data));
-                    } else {
-                        MjClient.Scene.addChild(new CreateView(data));
-                    }
-
+                    MjClient.Scene.addChild(new CreateViewYaAn(data));
                     if (!data.IsFriendCard) {
                         MjClient.gamenet.request("pkplayer.handler.getRoomConfig", {
                             appid: "jiangshu"
@@ -12542,29 +12524,7 @@ var JSScene = cc.Scene.extend({
 
         setMusicVolume(-1);
         BindUiAndLogic(this, this.jsBind);
-        // this.addChild(new BlockView());
         this.addChild(new UpdateView());
-
-        // if (MjClient.isShenhe)
-        //     this.addChild(new startLayer(), 9999999);
-
-        // var text = new ccui.Text();
-        // if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ) { //岳阳同一使用方正兰亭
-        //     text.setFontName("fonts/lanting.TTF");
-        // } else {
-        //     text.setFontName("fonts/fzcy.ttf");
-        // }
-        // text.setFontSize(20);
-        // text.setAnchorPoint(1, 1);
-        // text.setPosition(cc.winSize.width - 60, cc.winSize.height);
-        // text.setString("v" + MjClient.native.GetVersionName() + "(" + MjClient.resVersion + ")");
-        // text.schedule(function() {
-        //     text.setString("v" + MjClient.native.GetVersionName() + "(" + MjClient.resVersion + ")");
-        // }, 1);
-        // this.addChild(text, 9999999);
-        // if (MjClient.isShenhe == true) {
-        //     text.setVisible(false);
-        // }
 
         this.scheduleUpdate();
     }

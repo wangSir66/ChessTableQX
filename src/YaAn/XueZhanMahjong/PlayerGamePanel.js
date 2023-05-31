@@ -61,44 +61,6 @@ MjClient.MJPass2NetForLianYunGang = function()
     }
 }
 
-// 判断停牌操作
-//function TingVisibleCheckForLianYunGang(eat) {
-//
-//    var sData = MjClient.data.sData;
-//    var tData = sData.tData;
-//    var pl = sData.players[SelfUid() + ""];
-//
-//    eat.ting._node.visible = false;
-//    eat.noTing._node.visible = false;
-//
-//    var vnode = [];
-//    cc.log("");
-//    if(tData.areaSelectMode.tingType != TingCardType.noTing && tData.tState == TableState.waitEat && !pl.isTing)
-//    {
-//        if(IsTurnToMe())
-//        {
-//            if (pl.isTing != undefined && !pl.isTing) {
-//                var isTing = canTingForLianYn(pl.mjhand);
-//                if (isTing)
-//                {
-//                    vnode.push(eat.ting._node);
-//                    vnode.push(eat.noTing._node);
-//                }
-//            }
-//
-//            cc.log();
-//            cc.log("-----check isting" + JSON.stringify(pl));
-//        }
-//    }
-//
-//    for(var i = 0; i < vnode.length; i++)
-//    {
-//        setWgtLayout(vnode[i], [0, 0.16], [0.5, 0], [(1 - vnode.length) / 1.6 + i * 1.6, 1.8], false, false);
-//        vnode[i].visible = true;
-//    }
-//}
-
-
 // 这个没看懂干嘛的
 // off 是四个位置，根据off 显示四个位置的信息 by sking
 function SetUserVisible_YNXueZhan(node, off)

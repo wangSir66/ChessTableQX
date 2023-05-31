@@ -60,7 +60,7 @@ h5.nativeHelper = {
 
     getVersionName:function()
     {
-        return "4.0.3";
+        return "0.0.1";
     },
 
     getPackageName:function()
