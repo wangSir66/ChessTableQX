@@ -133,7 +133,7 @@ AppCnName[MjClient.APP_TYPE.HUBEIMJ] = "湖北麻将";
 
 var AppEnv = {};
 AppEnv[MjClient.APP_TYPE.QXJSMJ] = "yueyang-test";
-AppEnv[MjClient.APP_TYPE.YAAN] = "yueyang-test";
+AppEnv[MjClient.APP_TYPE.YAAN] = "yaan";
 AppEnv[MjClient.APP_TYPE.JSMJ] = "nanjing";
 AppEnv[MjClient.APP_TYPE.QXHAMJ] = "huaian";
 AppEnv[MjClient.APP_TYPE.QXXZMJ] = "xuzhou";
@@ -1102,6 +1102,7 @@ GameCnName[MjClient.GAME_TYPE.WU_XUE_510K] = "武穴510K";
 GameCnName[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = "跑得快";
 GameCnName[MjClient.GAME_TYPE.RED_20_POKER] = "红20";
 GameCnName[MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG] = "血战到底";
+GameCnName[MjClient.GAME_TYPE.YA_AN_MAHJONG] = "雅安麻将";
 
 var GameClass = {};
 GameClass[MjClient.GAME_TYPE.LIAN_YUN_GANG] = MjClient.GAME_CLASS.MA_JIANG;
