@@ -320,7 +320,7 @@ WebViewLayer = cc.Layer.extend({
                     if (that.webView) {
                         if (curType === "shanxi" || curType === "jinzhong" || curType === "yueyang" ||
                             curType === "guizhou" || curType === "nantong" || curType === "jiangsu" || curType === "hubei" ||
-                            curType === "ylhunan" || curType === "xuzhou" || curType === "huaian" || curType === "haian") {
+                            curType === "ylhunan" || curType === "xuzhou" || curType === "huaian" || curType === "haian" || curType == 'yaan') {
                             gamePanel && gamePanel.setVisible(true);
                             that.webView.setAnchorPoint(cc.p(0, 0));
                             that.webView.setContentSize(gamePanel.width, gamePanel.height);
