@@ -147,7 +147,8 @@ function isCanChangePlayerNum() {
         MjClient.gameType == MjClient.GAME_TYPE.FEN_XI_YING_KOU ||
         MjClient.gameType == MjClient.GAME_TYPE.HUAI_AN ||
         MjClient.gameType == MjClient.GAME_TYPE.HA_HONGZHONG ||
-        MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI
+        MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI||
+        MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG
     ) {
         return true;
     } else {

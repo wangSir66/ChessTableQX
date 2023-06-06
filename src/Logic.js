@@ -699,34 +699,6 @@ MjClient.CARD_FLOWER_TYPE = {
     HONG_TAO: 3,
 }
 
-var GamePlaybackUrlPrefix = {};
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXJSMJ] = "http://8.139.4.112/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.YAAN] = "http://8.139.4.112/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.JSMJ] = "http://nanjing.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXHAMJ] = "http://huaian.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXXZMJ] = "http://xuzhou.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXYZQP] = "http://yongzhou.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXNTQP] = "http://nantong.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXYCQP] = "http://yancheng.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXTHMJ] = "http://tonghua.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXYYQP] = "http://yueyang.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXHAIANMJ] = "http://haian.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.TXJINZHONGMJ] = "http://jinzhong.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.TXLVLIANGMJ] = "http://lvliang.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.TXLINFENMJ] = "http://linfen.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.YLHUNANMJ] = "http://ylhunan.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXLYQP] = "http://leiyang.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.BDHYZP] = "http://hengyang.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.BDYZPHZ] = "http://beidouyongzhou.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXSYDTZ] = "http://shaoyang.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXXXGHZ] = "http://xiangxiang.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.QXHHZP] = "http://huaihua.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.AYGUIZHOUMJ] = "http://guizhou.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.LYSICHUANMJ] = "http://sichuan.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.HUNANWANGWANG] = "http://wangwang.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.DQSHANXIMJ] = "http://shanxi.jtcfgame.com/playback/js3mj/";
-GamePlaybackUrlPrefix[MjClient.APP_TYPE.HUBEIMJ] = "http://hubei.jtcfgame.com/playback/js3mj/";
-
 var GameDownloadCfgUrl = {};//http://8.139.4.112:9993/update/jiangshu/configuration.json
 GameDownloadCfgUrl[MjClient.APP_TYPE.QXJSMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/jiangshu/";
 GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/yaan/";

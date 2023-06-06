@@ -61,6 +61,44 @@ MjClient.MJPass2NetForLianYunGang = function()
     }
 }
 
+// 判断停牌操作
+//function TingVisibleCheckForLianYunGang(eat) {
+//
+//    var sData = MjClient.data.sData;
+//    var tData = sData.tData;
+//    var pl = sData.players[SelfUid() + ""];
+//
+//    eat.ting._node.visible = false;
+//    eat.noTing._node.visible = false;
+//
+//    var vnode = [];
+//    cc.log("");
+//    if(tData.areaSelectMode.tingType != TingCardType.noTing && tData.tState == TableState.waitEat && !pl.isTing)
+//    {
+//        if(IsTurnToMe())
+//        {
+//            if (pl.isTing != undefined && !pl.isTing) {
+//                var isTing = canTingForLianYn(pl.mjhand);
+//                if (isTing)
+//                {
+//                    vnode.push(eat.ting._node);
+//                    vnode.push(eat.noTing._node);
+//                }
+//            }
+//
+//            cc.log();
+//            cc.log("-----check isting" + JSON.stringify(pl));
+//        }
+//    }
+//
+//    for(var i = 0; i < vnode.length; i++)
+//    {
+//        setWgtLayout(vnode[i], [0, 0.16], [0.5, 0], [(1 - vnode.length) / 1.6 + i * 1.6, 1.8], false, false);
+//        vnode[i].visible = true;
+//    }
+//}
+
+
 // 这个没看懂干嘛的
 // off 是四个位置，根据off 显示四个位置的信息 by sking
 function SetUserVisible_YNXueZhan(node, off)
@@ -299,10 +337,10 @@ function InitUserHandUI_YNXueZhan(node, off)
         else if (off > 0) {
             var CardCount = 0;
             if (tData.tState == TableState.waitPut && tData.uids[tData.curPlayer] == pl.info.uid) {
-                CardCount = 14;
+                CardCount = MjClient.majiang.handCount + 1;
             }
             else {
-                CardCount = 13;
+                CardCount = MjClient.majiang.handCount;
             }
 
             var upCardCount = CardCount - ((pl.mjpeng.length + pl.mjgang0.length + pl.mjgang1.length) * 3 + pl.mjchi.length);
@@ -926,113 +964,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
 
             },
         },
-        // arrowbk: {
-        //     _layout: [
-        //         [0.2, 0.2],
-        //         [0.5, 0.5],
-        //         [0, 0.25]
-        //     ],
-        //     _run:function () {
-        //         MjClient.arrowbkNode = this;
-        //         setDirVisible(this, true);
-        //         setArrowFengDir(this);
-        //         // windObj["dong"] = this.getChildByName("dir_right");
-        //         // windObj["nan"] = this.getChildByName("dir_down");
-        //         // windObj["xi"] = this.getChildByName("dir_left");
-        //         // windObj["bei"] = this.getChildByName("dir_up");
-        //         // windPos["dong"] = windObj["dong"].getPosition();
-        //         // windPos["nan"]   = windObj["nan"].getPosition();
-        //         // windPos["xi"]   =  windObj["xi"].getPosition();
-        //         // windPos["bei"]  = windObj["bei"].getPosition();
-        //     },
-        //     _event: {
-        //         initSceneData: function(eD) {
-        //             this.visible = IsArrowVisible();
-        //             SetArrowRotation(this)
-        //         },
-        //         mjhand: function(eD) {
-        //             this.visible = IsArrowVisible();
-        //             SetArrowRotation(this);
-        //         },
-        //         onlinePlayer: function(eD) {
-        //             //this.visible = IsArrowVisible();
-        //         },
-        //         waitPut: function() {
-        //             SetArrowRotation(this)
-        //         },
-        //         MJPeng: function(eD) {
-        //             SetArrowRotation(this)
-        //         },
-        //         MJChi: function(eD) {
-        //             SetArrowRotation(this)
-        //         },
-        //         MJGang: function(eD) {
-        //             SetArrowRotation(this)
-        //         },
-        //         MJFlower: function(eD) {
-        //             SetArrowRotation(this)
-        //         },
-        //
-        //     },
-        //     number: {
-        //         _run: function() {
-        //             this.setString("00");
-        //             //arrowbkNumberUpdate(this);
-        //             this.ignoreContentAdaptWithSize(true);
-        //         },
-        //         _event: {
-        //             MJPeng: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 playTimeUpEff = null;
-        //                 arrowbkNumberUpdate(this);
-        //             },
-        //             MJChi: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 playTimeUpEff = null;
-        //                 arrowbkNumberUpdate(this);
-        //             },
-        //             waitPut: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 var eat = MjClient.playui.jsBind.eat;
-        //                 var endFunc = null;
-        //                 if (IsTurnToMe()
-        //                     && !eat.ting._node.visible
-        //                     && !eat.hu._node.visible
-        //                     && !eat.peng._node.visible
-        //                     && !eat.chi0._node.visible
-        //                     && !eat.gang0._node.visible
-        //                     && !eat.gang1._node.visible
-        //                     && !eat.gang2._node.visible) {
-        //                     endFunc = MjClient.playui.jsBind.BtnPutCard._click;
-        //                 }
-        //                 arrowbkNumberUpdate(this, endFunc);
-        //             },
-        //             MJPut: function(msg) {
-        //                 //if (msg.uid == SelfUid()) {
-        //                 //    this.stopAllActions();
-        //                 //    stopEffect(playTimeUpEff);
-        //                 //    playTimeUpEff = null;
-        //                 //    //arrowbkNumberUpdate(this);
-        //                 //    this.setString("00");
-        //                 //}
-        //             },
-        //             roundEnd: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 playTimeUpEff = null;
-        //             },
-        //             LeaveGame: function() {
-        //                 this.stopAllActions();
-        //                 stopEffect(playTimeUpEff);
-        //                 playTimeUpEff = null;
-        //             }
-        //
-        //         }
-        //     },
-        // },
         BtnPutCard:{ //add by  sking for put card button
             _run: function () {
 
@@ -1258,34 +1189,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 },
                 _click: function(btn) {
                     showPlayerInfo(0, btn);
-
-                    //cc.log("点击出牌");
-                    /////*
-                    ////    for sking 出牌 测试
-                    ////    todo..还需要判断出牌按钮的状态
-                    ////*/tData.tState
-                    //
-                    //var sData = MjClient.data.sData;
-                    //cc.log("sData.tState == " + sData.tState);
-                    ////if(!IsTurnToMe() || sData.tState != TableState.waitPut)
-                    ////{
-                    ////    mylog("not my turn");
-                    ////    return;
-                    ////}
-                    //var downNode = MjClient.playui._downNode;
-                    //var standUI = downNode.getChildByName("stand");
-                    //var children = downNode.children;
-                    //for(var i = 0; i < children.length; i++)
-                    //{
-                    //    if(children[i].name == "mjhand")
-                    //    {
-                    //        if(children[i].y > standUI.y + 10)
-                    //        {
-                    //            PutOutCard(children[i], children[i].tag); //可以出牌
-                    //            break;
-                    //        }
-                    //    }
-                    //}
                 },
                 _event: {
                     loadWxHead: function(d) {
@@ -1300,7 +1203,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
 
                 },
                 _run: function () {
-                    // this.zIndex = 600;
                     showFangzhuTagIcon(this,0);
                 },
                 score_bg:{_visible:false},
