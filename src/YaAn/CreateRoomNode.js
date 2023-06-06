@@ -91,7 +91,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             else
                 _current = cacheRule[val[0]] != undefined ? cacheRule[val[0]] : val[1];
             selectIndex = val[2].indexOf(_current);
-            if (val[0] == 'EnableTTF') cc.log('-----ssss--', cacheRule[val[0]], selectIndex, _current)
             currObj = this.RedioGroup[key];
             currObj.selectItem(selectIndex);
             this.radioBoxSelectCB(selectIndex, currObj._nodeList[selectIndex], currObj._nodeList);
@@ -792,9 +791,9 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     },
 
     getRedioSelectByName: function (str) {
+        cc.log('-------getRedioSelectByName--------', str)
         if (!this._view || !str) return 0;
         let childs = this._view.getChildByName(str).children.filter(n => {
-            cc.log('-------getRedioSelectByName--------', JSON.stringify(n))
             if (n && n.name) return n.name.indexOf('btnRadio') > -1 || n.name.indexOf('btnCheck') > -1;
             else return false;
         });
@@ -1024,7 +1023,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             btn.loadTextureNormal("createNewPng/btn_create_n.png");
             btn.loadTexturePressed("createNewPng/btn_create_s.png");
             btn.setAnchorPoint(1, 0.5)
-            var oldWidth = btn.width;
             btn.width = 199
             btn.x = btn.getParent().width * 0.95;
             if (diamondNumNode) diamondNumNode.visible = false;
@@ -2056,10 +2054,10 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 selectNode = this.getTextNodeByValue(parentNode, "房费:");
             }
             if (!selectNode) {
-                selectNode = this.getTextNodeByValue(parentNode, "黄金:");
+                selectNode = this.getTextNodeByValue(parentNode, "元宝:");
             }
             if (!selectNode) {
-                selectNode = this.getTextNodeByValue(parentNode, "黄金：");
+                selectNode = this.getTextNodeByValue(parentNode, "元宝：");
             }
             if (!selectNode) {
                 selectNode = this.getTextNodeByValue(parentNode, "付费:");
@@ -2068,8 +2066,8 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 selectNode = this.getTextNodeByValue(parentNode, "付费：");
             }
 
-            //隐藏包含"黄金"的节点 刘雨楠 
-            this.getListTextNodeByValue(parentNode, "黄金", function (nodeList) {
+            //隐藏包含"元宝"的节点 刘雨楠 
+            this.getListTextNodeByValue(parentNode, "元宝", function (nodeList) {
                 for (var i = 0; i < nodeList.length; i++) {
                     //后面会通过判定selectNode是否隐藏做其他逻辑 所以这时候不做隐藏
                     if (nodeList[i] != selectNode) {

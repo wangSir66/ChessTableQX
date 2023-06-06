@@ -1,7 +1,4 @@
 var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
-    ctor: function (layer, data) {
-        this._super(layer, data);
-    },
     //创建ui 以及变量保存
     initAll: function (IsFriendCard) {
         let bg_node = ccs.load("bg_xuezhan.json").node;
@@ -10,113 +7,123 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
         bg_node.setPosition(-200, 10);
         this.bg_node = bg_node.getChildByName("bg_shuyang");
         this._view = this.bg_node.getChildByName("view");
-        // this.bg_node.setContentSize(cc.size(893.00, 565.00));
-        // this.bg_node.setAnchorPoint(0.0, 0.0);
-        // this.payWayNodeArray[2].setEnabled(false);
+        //初始化固定数据
+        this.rangeScore = [1, 20];
+        this.trustTimes = [0, 30, 60, 90];
     },
 
     callSelectBack: function (indx, item, list) {
-        cc.log('callSelectBack------->red20', indx, JSON.stringify(item));
-        if (typeof item == "number") {//复选框
-            if (indx.name == 'btnCheck4Pairs') this.initLongSiDui();
-        } else {//单选框
-            let checkItem = ['btnRadio3', 'btnRadio4', 'btnRadio5'], sIndx = checkItem.indexOf(item.name);
-            if (sIndx > -1) {
-                this.initChiRule(sIndx);
-            }
-            checkItem = ['btnRadio6', 'btnRadio7'], sIndx = checkItem.indexOf(item.name);
-            if (sIndx > -1) {
-                this.initFanRule(sIndx);
-            }
+        this._super(indx, item, list);
+        const isNum = parseInt(indx);
+        if (isNum >= 0 && item) {
+            indx = Number(indx);
+            let p = item.getParent();
+            if (p.name == 'fangshu') this.initFangShu();
         }
     },
-    
+
+    setExtraPlayNodeCurrentSelect: function (isClub) {
+        this._super(isClub);
+        //初始化按钮状态
+        this.initFangShu();
+    },
+
+    initFangShu: function () {
+        const Indx = this.RedioGroup['fangshu'].getSelectIndex(),
+            pz = this.RedioGroup['paizhang'],
+            bdt = this.getBtnByName('btnCheck_badaotang'),
+            dq = this.getBtnByName('btnCheck_DesignatingUnwantedEnabled'),
+            phkh = this.getBtnByName('btnCheck_Pinghudianpao');
+        if (Indx === 0 || Indx === 1) {
+            pz._nodeList[0].x = 170;
+            pz._nodeList[1].x = 435;
+            pz._nodeList[1].visible = true;
+            pz._nodeList[2].visible = false;
+            if (pz.getSelectIndex() == 2) pz.selectItem(0);
+        } else if (Indx === 2 || Indx === 3) {
+            pz._nodeList[0].x = 435;
+            pz._nodeList[1].x = 700;
+            pz._nodeList[2].x = 170;
+            pz._nodeList[1].visible = true;
+            pz._nodeList[2].visible = true;
+        } else {
+            pz._nodeList[0].x = 435;
+            pz._nodeList[1].visible = false;
+            if (pz.getSelectIndex() == 2) pz.selectItem(0);
+            pz._nodeList[2].x = 170;
+            pz._nodeList[2].visible = true;
+        }
+        dq.visible = Indx === 0 || Indx === 1;
+        phkh.visible = !(Indx === 0 || Indx === 1);
+        bdt.visible = !(Indx === 3 || Indx === 4);
+        this.setDiaNumData(this.bg_node);
+    },
+
     getSelectPlayNum: function () {
-        // let indx = this.RedioGroup['renshu'] ? this.RedioGroup['renshu'].getSelectIndex() : 0,
-        //     pConfig = this.getGamePriceConfig();
-        return 4;
+        const maxP = [4, 3, 3, 2, 2][this.RedioGroup['fangshu'].getSelectIndex()];
+        return maxP;
     },
 
-    /**龙四对相关 */
-    initLongSiDui: function () {
-        const checked = this.getCheckboxSelectedByName('btnCheck4Pairs'),
-            l4 = this.getBtnByName('btnCheckD4Pairs'),
-            sl4 = this.getBtnByName('btnCheckDD4Pairs');
-        cc.log('-------------------checked---------------------', checked)
-        l4.setEnabled(checked);
-        sl4.setEnabled(checked);
-    },
-
-    /**算番规则 */
-    initFanRule: function (indx) {
-        const group = this.RedioGroup['fengding'];
-        if (group) {
-            for (let _i = 0; _i < group._nodeList.length; _i++) {
-                const item = group._nodeList[_i];
-                item.setEnabled(indx != 0)
-            }
-        }
-    },
-
-    /**吃牌规则显示 */
-    initChiRule: function (indx) {
-        const group = this.RedioGroup['chipai'];
-        if (group) {
-            group.getSelectIndex() == 0 && indx == 0 && group.selectItem(1);
-            group._nodeList[0].setEnabled(indx != 0);
-        }
-    },
-    initEnd: function () {
+    //重置、初始化规则
+    setPlayNodeCurrentSelect: function (isClub) {
         this._super();
-        // this.initChiRule(0);
-        // this.initFanRule(0);
-        // this.initLongSiDui();
-    },
+        const key_nameR = {
+            'fangshu': ['subRule', 0, [0, 1, 2, 3, 4]],
+            'fengding': ['PointsLimit', 3, [3, 4, 5]],
+            'dianganghua': ['DianGangHua', 1, [1, 0]],
+            'paizhang': ['Forming', 10, [10, 13, 7]],
+            'huansanzhang': ['SwappingType', 0, [0, 1, 2]],
+            'zimojia': ['PointOfWinning', 0, [2, 1, 0]]
+        },
+            key_nameC = {
+                'btnCheck_DesignatingUnwantedEnabled': ['DesignatingUnwantedEnabled', false],
+                'btnCheck_Pinghudianpao': ['PingHuCanWinningByOther', false],
+                'btnCheck_badaotang': ['BaDaoTang', false],
+                'btnCheck_CallForwardingEnabled': ['CallForwardingEnabled', false],
+                'btnCheck_duiduihu': ['DuiDuiHuPoints', false],
+                'btnCheck_MenQingEnabled': ['MenQingEnabled', false],
+                'btnCheck_ZhongZhangEnabled': ['ZhongZhangEnabled', false],
+                'btnCheck_WinningFanEnabled': ['WinningFanEnabled', false],
+                'btnCheck_WinningLastEnabled': ['WinningLastEnabled', false],
+                'btnCheck_YaoJiuJiangDuiEnabled': ['YaoJiuJiangDuiEnabled', false],
+                'btnCheck_KaXingWu': ['KaxingwuEnabled', false],
+            };
 
-    initPlayNode: function () {
-        this._super();
+        this.InitCurrentSelect(key_nameR, key_nameC);
     },
 
     getSelectedPara: function () {
-        const gameType = this._data.gameType,
-            pPriceCfg = MjClient.data.gamePrice[gameType];
-        cc.log('服务器配置----', gameType, JSON.stringify(pPriceCfg));
-        const maxP = Number(Object.keys(pPriceCfg)[this.getRedioSelectByName('renshu')]),
-            score = this._view.getChildByName('difen').getChildByName('BaseScore').getString(),
-            x4d = this.getCheckboxSelectedByName('btnCheck4Pairs');
+        const gameType = this._data.gameType;
         const Rule = {
             gameType: gameType,
-            maxPlayer: maxP,
-            trustTime: 0, //托管时间
-
-            MaxPlayerCount: maxP,
-            MaxGameCount: Number(Object.keys(pPriceCfg[maxP])[this.getRedioSelectByName('jushu')]),
-            MaxFan: [4, 5, 6][this.getRedioSelectByName('fengding')],//最大番数 
-            MaxKingCount: [3, 6, 9, 12, 15, 18][this.getRedioSelectByName('wangpai')],//最大大王数量
-            EnableChi: [true, false][this.getRedioSelectByName('chipai')], //是否开启吃牌（这里的吃牌是指吃上家的牌）
-            EnableZiMo: this.getCheckboxSelectedByName('btnCheckZiMo'),//true: 自摸加番
-            Enable4Pairs: x4d, //是否开启小四对（汉源叫对子胡）
-            EnableDragon4Pairs: this.getCheckboxSelectedByName('btnCheckD4Pairs') && x4d, //是否开启龙四队
-            EnableDoubleDragon4Pairs: this.getCheckboxSelectedByName('btnCheckDD4Pairs') && x4d, //是否开启双龙四队
-            EnableJinGouDiao: this.getCheckboxSelectedByName('btnCheckJGG'),//是否开启金钩钓
-            EnableGolden20: this.getCheckboxSelectedByName('btnCheckjin20'),//是否开启金20
-            Golden20Fan: 1,//金20番薯 默认1 
-            IsCheckTing: [true, false][this.getRedioSelectByName('liuju')],//是否查叫
-            IsCheckFan: [false, true][this.getRedioSelectByName('pinghu')],//是否1番起胡(true：1番起胡 false：平胡可胡)
-            Allow7AsKing: [true, false][this.getRedioSelectByName('7dianjiawang')],//是否允许7当王
-            AllowBaoTing: true,//是否允许报听 默认true
-            IsPoint7AsKing: [true, false][this.getRedioSelectByName('7dianwangdian')],//是否允许7当王算点
-            EnableRed20Ting: [true, false][this.getRedioSelectByName('baotinghongdian')],//是否必需满足红点>=20听牌(false：补一张够20可听牌)
-            EnableRed20Hu: true,//是否必须满足红点>=20才能胡牌 默认true
-            Red50: this.getCheckboxSelectedByName('btnCheck50'),  //红50
-            Black50: this.getCheckboxSelectedByName('btnCheck50'),//黑50
-            EnableTTF: [true, false][this.getRedioSelectByName('suanfan')],//是否开启梯梯番模式否则为跟斗番
-            EnableGSH: this.getCheckboxSelectedByName('btnCheckGangHua'),//是否开启杠上花
-            MustOpenGPS: this._nodeGPS.isSelected(),//GPS
-            BaseScore: Number(score),
-            AllowSameIP: false,
+            maxPlayer: this.getSelectPlayNum(),
+            subRule: this.RedioGroup['fangshu'].getSelectIndex(),
+            PointsLimit: [3, 4, 5][this.RedioGroup['fengding'].getSelectIndex()],
+            DianGangHua: [1, 0][this.RedioGroup['dianganghua'].getSelectIndex()],
+            Forming: [10, 13, 7][this.RedioGroup['paizhang'].getSelectIndex()],
+            SwappingType: this.RedioGroup['huansanzhang'].getSelectIndex(),
+            PointOfWinning: [2, 1, 0][this.RedioGroup['zimojia'].getSelectIndex()],
+            CallForwardingEnabled: this.getCheckboxSelectedByName('btnCheck_CallForwardingEnabled'),
+            DuiDuiHuPoints: this.getCheckboxSelectedByName('btnCheck_duiduihu'),
+            MenQingEnabled: this.getCheckboxSelectedByName('btnCheck_MenQingEnabled'),
+            ZhongZhangEnabled: this.getCheckboxSelectedByName('btnCheck_ZhongZhangEnabled'),
+            WinningFanEnabled: this.getCheckboxSelectedByName('btnCheck_WinningFanEnabled'),
+            WinningLastEnabled: this.getCheckboxSelectedByName('btnCheck_WinningLastEnabled'),
+            YaoJiuJiangDuiEnabled: this.getCheckboxSelectedByName('btnCheck_YaoJiuJiangDuiEnabled'),
+            KaxingwuEnabled: this.getCheckboxSelectedByName('btnCheck_KaXingWu'),
         };
-        cc.log("createara: " + JSON.stringify(Rule));
+        
+        for (let _i = 0; _i < this._btnItems.length; _i++) {
+            const item = this._btnItems[_i];
+            if (item.name == 'btnCheck_DesignatingUnwantedEnabled') {
+                Rule.DesignatingUnwantedEnabled = item.visible ? item.isSelected() : false;
+            }else if (item.name == 'btnCheck_Pinghudianpao') {
+                Rule.PingHuCanWinningByOther = item.visible ? item.isSelected() : false;
+            }else if (item.name == 'btnCheck_badaotang') {
+                Rule.BaDaoTang = item.visible ? item.isSelected() : false;
+            }
+        }
+        this.getExtraSelectedPara(Rule);
         return Rule;
     }
 });

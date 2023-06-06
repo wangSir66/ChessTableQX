@@ -546,6 +546,7 @@ MjClient.netCallBack = {
                     break;
                 case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
                     MjClient.majiang = MjClient.majiang_ynxuezhan;
+                    MjClient.majiang.initAreaSelectMode(d.tData.areaSelectMode);
                     break;
                 case MjClient.GAME_TYPE.RED_20_POKER://红20
                     MjClient.majiang = MjClient.majiang_red20;

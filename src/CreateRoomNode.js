@@ -37,7 +37,7 @@ var CreateRoomNode = cc.Node.extend({
         this._isMatchMode = data.isMatch;
         this._textInput = null;
         this._nodeGPS = null;
-        this._costName = '黄金';
+        this._costName = '元宝';
         this.localStorageKey = {};
         this.localStorageKey.KEY_RondType = "_ROUND_TYPE"; //局数选定
         this.localStorageKey.KEY_PayWay = "_PAY_WAY"; //付房卡的方式
@@ -1106,10 +1106,10 @@ var CreateRoomNode = cc.Node.extend({
                 selectNode = this.getTextNodeByValue(parentNode, "房费:");
             }
             if (!selectNode) {
-                selectNode = this.getTextNodeByValue(parentNode, "黄金:");
+                selectNode = this.getTextNodeByValue(parentNode, "元宝:");
             }
             if (!selectNode) {
-                selectNode = this.getTextNodeByValue(parentNode, "黄金：");
+                selectNode = this.getTextNodeByValue(parentNode, "元宝：");
             }
             if (!selectNode) {
                 selectNode = this.getTextNodeByValue(parentNode, "付费:");
@@ -1118,8 +1118,8 @@ var CreateRoomNode = cc.Node.extend({
                 selectNode = this.getTextNodeByValue(parentNode, "付费：");
             }
 
-            //隐藏包含"黄金"的节点 刘雨楠 
-            this.getListTextNodeByValue(parentNode, "黄金", function (nodeList) {
+            //隐藏包含"元宝"的节点 刘雨楠 
+            this.getListTextNodeByValue(parentNode, "元宝", function (nodeList) {
                 for (var i = 0; i < nodeList.length; i++) {
                     //后面会通过判定selectNode是否隐藏做其他逻辑 所以这时候不做隐藏
                     if (nodeList[i] != selectNode) {
@@ -2383,23 +2383,23 @@ var CreateRoomNode = cc.Node.extend({
         //var _text16_0 = this._text16_0;
         //if (str_type == MjClient.GAME_TYPE.LIAN_YUN_GANG || str_type == MjClient.GAME_TYPE.XU_ZHOU) {
         //    _text4.setString("2圈");
-        //    _text4_0 && _text4_0.setString("(" + str_pay[0] + "黄金)");
+        //    _text4_0 && _text4_0.setString("(" + str_pay[0] + "元宝)");
         //    _text8.setString(roundNumObj[1] + "局");
-        //    _text8_0 && _text8_0.setString("(" + str_pay[1] + "黄金)");
+        //    _text8_0 && _text8_0.setString("(" + str_pay[1] + "元宝)");
         //    _text16.setString(roundNumObj[2] + "局");
-        //    _text16_0 && _text16_0.setString("(" + str_pay[2] + "黄金)");
+        //    _text16_0 && _text16_0.setString("(" + str_pay[2] + "元宝)");
         //} else {
         //    if (_text4_0 || _text16_0 || _text8_0) {
         //        _text4.setString(roundNumObj[0] + "局");
-        //        _text4_0 && _text4_0.setString("(" + str_pay[0] + "黄金)");
+        //        _text4_0 && _text4_0.setString("(" + str_pay[0] + "元宝)");
         //        _text8.setString(roundNumObj[1] + "局");
-        //        _text8_0 && _text8_0.setString("(" + str_pay[1] + "黄金)");
+        //        _text8_0 && _text8_0.setString("(" + str_pay[1] + "元宝)");
         //        _text16.setString(roundNumObj[2] + "局");
-        //        _text16_0 && _text16_0.setString("(" + str_pay[2] + "黄金)");
+        //        _text16_0 && _text16_0.setString("(" + str_pay[2] + "元宝)");
         //    } else {
-        //        _text4.setString(roundNumObj[0] + "局(" + str_pay[0] + "黄金)");
-        //        _text8.setString(roundNumObj[1] + "局(" + str_pay[1] + "黄金)");
-        //        _text16.setString(roundNumObj[2] + "局(" + str_pay[2] + "黄金)");
+        //        _text4.setString(roundNumObj[0] + "局(" + str_pay[0] + "元宝)");
+        //        _text8.setString(roundNumObj[1] + "局(" + str_pay[1] + "元宝)");
+        //        _text16.setString(roundNumObj[2] + "局(" + str_pay[2] + "元宝)");
         //    }
         //}
 
