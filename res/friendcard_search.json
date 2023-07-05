@@ -409,13 +409,6 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
-      "UsedResources": [
-        "friendCards/common/btn_search.png",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_xiaotanchuang.png",
-        "friendCards/common/title_search.png"
-      ],
       "ctype": "GameFileData"
     }
   },

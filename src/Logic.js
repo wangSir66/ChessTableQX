@@ -235,7 +235,7 @@ MjClient.FUNCTION_CONFIG_TYPE = {
 MjClient.isOpentFunctionType = function (funcType) {
     var openFuncs = MjClient.systemConfig.functionConfig;
     if (!openFuncs || typeof (openFuncs) == 'undefined' || openFuncs.length == 0) {
-        cc.log('warn 没有配置 MjClient.systemConfig.functionConfig');
+        // cc.log('warn 没有配置 MjClient.systemConfig.functionConfig');
         return false;
     }
 
@@ -9662,11 +9662,10 @@ MjClient.ConnectServer = function (openID, callback) {
             }
             ports = [16010, 16011];
         }
-        if (MjClient.isAbroad() && serversAbroad.length > 0 && portsAbroad.length > 0) {
-            serversGF = serversAbroad;
-            portsGF = portsAbroad;
-        }
-
+        // if (MjClient.isAbroad() && serversAbroad.length > 0 && portsAbroad.length > 0) {
+        //     serversGF = serversAbroad;
+        //     portsGF = portsAbroad;
+        // }
         function doConnectServer() {
             if (servers.length == 0 || (tryCount >= 2 && serversGF.length > 0)) {
                 doConnectServerGF();
@@ -10129,107 +10128,8 @@ MjClient.addHomeView = function (type) {
 
     var homeView = null;
     switch (MjClient.getAppType()) {
-        case MjClient.APP_TYPE.QXJSMJ: //七星江苏麻将
-            homeView = new HomeView_qxjsmj();
-            break;
         case MjClient.APP_TYPE.YAAN: //雅安
             homeView = new HomeView_yaan();
-            break;
-        case MjClient.APP_TYPE.JSMJ: //七星南京麻将
-            homeView = new HomeView_jsmj();
-            break;
-        case MjClient.APP_TYPE.QXHAMJ: //七星淮安麻将
-            homeView = new HomeView_qxhamj();
-            break;
-        case MjClient.APP_TYPE.QXXZMJ: //七星徐州麻将
-            homeView = new HomeView_qxxzmj();
-            break;
-        case MjClient.APP_TYPE.QXNTQP: //七星南通棋牌
-            homeView = new HomeView_qxntqp();
-            break;
-        case MjClient.APP_TYPE.QXYCQP: //七星盐城棋牌
-            homeView = new HomeView_qxycqp();
-            break;
-        case MjClient.APP_TYPE.QXTHMJ: //七星通化麻将
-            homeView = new HomeView_qxthmj();
-            break;
-        case MjClient.APP_TYPE.QXYYQP: //七星岳阳棋牌
-            //不用选新旧UI版本了
-            //var selectUiIndex = util.localStorageEncrypt.getNumberItem(MjClient.KEY_uiSelect, 1);
-            // if (MjClient.isUseUIv3 && MjClient.isUseUIv3())
-            //     homeView = new HomeView_qxyyqp_v3();
-            // else if (selectUiIndex == 1)
-            homeView = new HomeView_qxyyqp();
-            // else
-            //     homeView = new HomeView_qxyyqp_old();
-            break;
-        case MjClient.APP_TYPE.YLHUNANMJ: //永利
-            homeView = new HomeView_ylhunanmj();
-            // var selectUiIndex = util.localStorageEncrypt.getNumberItem(MjClient.KEY_uiSelect, 1);
-            // if (selectUiIndex == 1)
-            //     homeView = new HomeView_ylhunanmj();
-            // else
-            //     homeView = new HomeView_ylhunanmj_old();
-            break;
-        case MjClient.APP_TYPE.QXHAIANMJ: //七星海安麻将
-            homeView = new HomeView_qxhaianmj();
-            break;
-        case MjClient.APP_TYPE.TXJINZHONGMJ: //天星晋中麻将
-            homeView = new HomeView_txjinzhongmj();
-            break;
-        case MjClient.APP_TYPE.TXLVLIANGMJ: //天星吕梁麻将
-            homeView = new HomeView_txlvliangmj();
-            break;
-        case MjClient.APP_TYPE.TXLINFENMJ: //天星临汾麻将
-            homeView = new HomeView_txlinfenmj();
-            break;
-        case MjClient.APP_TYPE.QXYZQP://七星永州棋牌
-            homeView = new HomeView_qxyzqp();
-            break;
-        case MjClient.APP_TYPE.QXLYQP://七星耒阳麻将
-            homeView = new HomeView_qxlyqp();
-            break;
-        case MjClient.APP_TYPE.BDHYZP://北斗衡阳字牌
-            homeView = new HomeView_bdhyzp();
-            break;
-        case MjClient.APP_TYPE.BDYZPHZ://北斗永州字牌
-            homeView = new HomeView_bdyzphz();
-            break;
-        case MjClient.APP_TYPE.QXSYDTZ://七星邵阳打筒子
-            if (type === undefined) {
-                type = util.localStorageEncrypt.getNumberItem(MjClient.KEY_QXSYDTZ_HOME_UI_TYPE, 1);
-            }
-            if (MjClient.isUseUIv3 && MjClient.isUseUIv3())
-                homeView = new HomeView_qxsydtz_v3();
-            else if (type == 0) {
-                homeView = new HomeView_qxsydtzOld();
-            } else {
-                homeView = new HomeView_qxsydtz();
-            }
-            break;
-        case MjClient.APP_TYPE.HUNANWANGWANG://湖南旺旺
-            homeView = new HomeView_hnwangwang();
-            break;
-        case MjClient.APP_TYPE.QXXXGHZ://七星湘乡
-            homeView = new HomeView_qxxxghz();
-            break;
-        case MjClient.APP_TYPE.AYGUIZHOUMJ: //爱游贵州麻将
-            homeView = new HomeView_ayguizhoumj();
-            break;
-        case MjClient.APP_TYPE.LYSICHUANMJ: //乐易四川麻将
-            homeView = new HomeView_lysichuanmj();
-            break;
-        case MjClient.APP_TYPE.DQSHANXIMJ: //逗趣山西麻将
-            homeView = new HomeView_douqushanxi();
-            break;
-        case MjClient.APP_TYPE.HUBEIMJ: //七星岳阳棋牌
-            var selectUiIndex = util.localStorageEncrypt.getNumberItem(MjClient.KEY_uiSelect, 1);
-            if (MjClient.isUseUIv3 && MjClient.isUseUIv3())
-                homeView = new HomeView_hbqp_v3();
-            else if (selectUiIndex == 1)
-                homeView = new HomeView_hbqp();
-            else
-                homeView = new HomeView_hbqp_old();
             break;
     }
     MjClient.Scene.addChild(homeView, -1);
@@ -10605,787 +10505,787 @@ var JSScene = cc.Scene.extend({
 
                     //登录成功加载主界面
                     MjClient.addHomeView();
-                    MjClient.updateWXLoginData();
-                    //MjClient.getRechargeLadder();
+                    // MjClient.updateWXLoginData();
+                    // MjClient.getRechargeLadder();
                     //MjClient.getActivityConfig();
 
 
-                    //剪贴板没有复制房号
-                    var clipboardStr = MjClient.native.doGetPasteBoard();
-                    if ((cc.isUndefined(clipboardStr) ||
-                        clipboardStr.length == 0 ||
-                        clipboardStr.substring(clipboardStr.indexOf('[') + 1, clipboardStr.indexOf(']')).length != 6) &&
-                        !MjClient.remoteCfg.guestLogin &&
-                        !rtn.vipTable &&
-                        !rtn.matchTable &&
-                        !rtn.matchOngoing &&
-                        !rtn.matchs
-                    ) {
-                        var allActivity = MjClient.FUNCTION_CONFIG_TYPE;
-                        var isPopView = function (activityType) {
-                            if (MjClient.systemConfig.functionConfigXY && MjClient.systemConfig.functionConfigXY[activityType]) {
-                                cc.log(" ======= 有 字段 functionConfigXY ", MjClient.systemConfig.functionConfigXY[activityType].popup);
-                                return MjClient.systemConfig.functionConfigXY[activityType].popup;
-                            }
-                            return false;
-                        };
-                        var isLastAtToday = function () {
-                            if (!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime))
-                                return false;
-
-                            var nowDate = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyy/MM/dd");
-                            var lastDate = MjClient.dateFormat(new Date(MjClient.data.pinfo.lastLoginTime), "yyyy/MM/dd");
-                            return lastDate == nowDate;
-                        };
-
-                        var isOldPlayer = function () {
-                            var nowDate = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyyMMdd");
-                            var lastDate = MjClient.dateFormat(new Date(MjClient.data.pinfo.createTime), "yyyyMMdd");
-                            return (nowDate - lastDate) >= 1;
-                        }
-                        // 每周一 弹一次
-                        var isLastAtWeekend = function () {
-                            if (!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime))
-                                return false;
-
-                            var lastDate = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyy/MM/dd");
-                            var nowDate = MjClient.dateFormat(new Date(MjClient.data.pinfo.lastLoginTime), "yyyy/MM/dd");
-                            var str = "日一二三四五六".charAt(new Date().getDay());
-                            var isShow = (lastDate !== nowDate) && (str == "一");
-                            return isShow;
-                        };
-
-
-                        //活动
-                        var popActivityLayer = function (callback) {
-                            if (MjClient.systemConfig && MjClient.systemConfig.activity && MjClient.systemConfig.activity.popup) {
-                                var layer = new activityLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //招募
-                        var popAdvLayer = function (callback) {
-                            if (MjClient.systemConfig.advConfig) {
-                                var layer = new showAdvLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-                        //大转盘
-                        var popLuckyLayer = function (callback) {
-                            var popup = isPopView(allActivity.DA_ZHUAN_PAN);
-
-                            if (MjClient.remoteCfg.guestLogin != true && MjClient.isOpentFunctionType(allActivity.DA_ZHUAN_PAN) && popup) {
-                                var layer = new luckyTableLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //理财宝箱
-                        var popLCBXLayer = function (callback) {
-                            var popup = isPopView(allActivity.LI_CAI_BAO_XIANG);
-                            if (MjClient.isOpentFunctionType(allActivity.LI_CAI_BAO_XIANG) && popup) {
-                                var layer = new LiCaiBaoXiang_Layer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //钻石宝箱
-                        var popLCBXZSLayer = function (callback) {
-                            var popup = isPopView(allActivity.LI_CAI_BAO_XIANG_ZS);
-                            if (MjClient.isOpentFunctionType(allActivity.LI_CAI_BAO_XIANG_ZS) && popup) {
-                                var layer = new ZuanShiBaoXiang();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //广告
-                        var popAdvShowLayer = function (callback) {
-                            var lastAtToday = isLastAtToday();
-                            if (!lastAtToday) {
-                                util.localStorageEncrypt.setNumberItem("advShowNum", 1);
-                            }
-
-                            if (cc.sys.os != cc.sys.OS_IOS && lastAtToday && util.localStorageEncrypt.getNumberItem("advShowNum", 1) <= 2 && MjClient.systemConfig.popAdvShow == "true") {
-                                var layer = new advPopLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.setCloseCallback(callback);
-
-                                UIEventBind(null, layer, MjClient.native.mobgiAdsCallbackEvent.NATIVE_ADS_INVALID, function (data) {
-                                    if (data.type != MjClient.native.mobgiAdsType.YUANSHENG_CHONGQI) {
-                                        return;
-                                    }
-                                    layer.removeFromParent();
-                                    if (callback) callback();
-                                });
-                                UIEventBind(null, layer, MjClient.native.mobgiAdsCallbackEvent.NATIVE_ADS_INFO, function (str) {
-                                    try {
-                                        var data = str;
-                                        if (cc.isString(str)) {
-                                            data = JSON.parse(str);
-                                        }
-
-                                        if (data.type != MjClient.native.mobgiAdsType.YUANSHENG_CHONGQI) {
-                                            return;
-                                        }
-                                        var url = data.imageUrl[0];
-                                        if (url.length > 0) {
-                                            layer.loadImage(data);
-                                            var advShowNum = util.localStorageEncrypt.getNumberItem("advShowNum", 1) + 1;
-                                            util.localStorageEncrypt.setNumberItem("advShowNum", advShowNum);
-                                            layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                        } else {
-                                            layer.removeFromParent();
-                                            if (callback) callback();
-                                        }
-                                    } catch (e) {
-                                        layer.removeFromParent();
-                                        if (callback) callback();
-                                    }
-                                });
-                                MjClient.native.mobgiAds.getNativeAdsInfo(MjClient.native.mobgiAdsType.YUANSHENG_CHONGQI);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //朋友圈对战
-                        var popFriendsPKLayer = function (callback) {
-                            var popup = isPopView(allActivity.FRIENDS_PK);
-
-                            if (MjClient.isOpentFunctionType(allActivity.FRIENDS_PK) && popup) {
-                                var layer;
-                                layer = new FriendsPK_Layer();
-
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-                        //娃娃机
-                        var popZhuaWaWaLayer = function (callback) {
-                            var popup = isPopView(allActivity.ZHUA_ZHUA_LE);
-
-                            if (MjClient.remoteCfg.guestLogin != true && MjClient.isOpentFunctionType(allActivity.ZHUA_ZHUA_LE) && popup) {
-                                var layer = new ZhuaWaWa_mainLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //加油红包
-                        var popJiaYouRedPacketLayer = function (callback) {
-                            var popup = isPopView(allActivity.JIA_YOU_HONG_BAO);
-                            if (MjClient.remoteCfg.guestLogin != true && MjClient.isOpentFunctionType(allActivity.JIA_YOU_HONG_BAO) && popup) {
-                                var layer = new jiaYouRedPacketLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        // 充值
-                        var popChongZhiLayer = function (callback) {
-                            var popup = isPopView(allActivity.CHONG_ZHI_YOU_LI);
-                            var time = "2018-04-16";
-                            var day = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyy-MM-dd");
-                            if (MjClient.isOpentFunctionType(allActivity.CHONG_ZHI_YOU_LI) && popup) {
-                                var layer = new ChargePrize_Layer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        // 签到
-                        var popQiandaoLayer = function (callback) {
-                            var popup = isPopView(allActivity.QIAN_DAO_YOU_LI);
-                            // var time = "2018-04-17";
-                            // var day = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyy-MM-dd");
-                            if (MjClient.isOpentFunctionType(allActivity.QIAN_DAO_YOU_LI) && popup) {
-                                var layer = new QiandaoLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        // 签到抽奖
-                        var popQiandaoChoujiangLayer = function (callback) {
-                            var popup = isPopView(allActivity.QIAN_DAO_CHOU_JIANG);
-                            if (MjClient.isOpentFunctionType(allActivity.QIAN_DAO_CHOU_JIANG) && popup) {
-                                var layer = new luckyTableNew_layer();
-                                var selectUiIndex = MjClient.isUseUIv3 && MjClient.isUseUIv3();
-                                if (selectUiIndex) {
-                                    layer = new luckyTableNew_layer_30();
-                                }
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-                        // 中秋节88元红包
-                        var popZhongQiuJie88YuanLayer = function (callback) {
-                            var popup = isPopView(allActivity.ZHONG_QIU_JIE_88_YUAN);
-                            if (MjClient.isOpentFunctionType(allActivity.ZHONG_QIU_JIE_88_YUAN) && popup) {
-                                var layer = new ActiveZhongQiuJie_enter();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //排行榜活动
-                        var popRankLayer = function (callback) {
-
-                            var popup = isPopView(allActivity.ACTIVE_RANK);
-                            if (MjClient.remoteCfg.guestLogin != true &&
-                                MjClient.isOpentFunctionType(allActivity.ACTIVE_RANK) &&
-                                popup && MjClient.getAppType() != MjClient.APP_TYPE.QXNTQP &&
-                                MjClient.getAppType() != MjClient.APP_TYPE.QXHAMJ) {
-                                cc.log(" ======fffffff ");
-                                var layer = new Active_rankLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //中秋排行榜
-                        var popZhongQiuJieRankLayer = function (callback) {
-                            var popup = isPopView(allActivity.ZHONG_QIU_JIE_RANK);
-                            if (MjClient.remoteCfg.guestLogin != true && MjClient.isOpentFunctionType(allActivity.ZHONG_QIU_JIE_RANK) && popup) {
-                                var layer = new Active_zhongQiuRank();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            }
-                            else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //主页分享弹窗
-                        var popShareLayer = function (callback) {
-                            var popup = isPopView(allActivity.DA_TING_FEN_XIANG);
-                            if (MjClient.isOpentFunctionType(allActivity.DA_TING_FEN_XIANG) && popup) {
-                                var layer = new shareTodayLayer(true);
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //永州中秋节策划方案
-                        var popZhongQiuJieYZLayer = function (callback) {
-                            var popup = isPopView(allActivity.ZHONG_QIU_JIE_YONGZHOU);
-                            if (MjClient.isOpentFunctionType(allActivity.ZHONG_QIU_JIE_YONGZHOU) && popup) {
-                                var layer = new ZhongQiuJie_layer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            }
-                            else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        // 新手礼包
-                        var popXinShouLiBaoLayer = function (callback) {
-                            var popup = isPopView(allActivity.XIN_SHOU_LI_BAO);
-                            var isOpen = false;
-                            var _timeStr = MjClient.dateFormat(new Date(parseInt(MjClient.data.pinfo.createTime)), 'yyyy-MM-dd');
-                            cc.log(" ======222  出生日期 ", _timeStr);
-                            var time_1 = Date.parse(_timeStr);
-                            // cc.log(" ====== time_1 ",time_1);
-                            var _timeStr = MjClient.dateFormat(new Date(parseInt(MjClient.data.serverTime)), 'yyyy-MM-dd');
-                            cc.log(" ======2222  服务器时间 ", _timeStr);
-                            var _timeStr = MjClient.dateFormat(new Date(parseInt(time_1 + 6 * 86400000)), 'yyyy-MM-dd');
-                            cc.log(" ======222 活动寄截止时间 ", _timeStr);
-
-
-                            if (time_1 + 6 * 86400000 > MjClient.data.serverTime && MjClient.isOpentFunctionType(MjClient.FUNCTION_CONFIG_TYPE.XIN_SHOU_LI_BAO)) {
-                                isOpen = true;
-                            } else {
-                                isOpen = false;
-                            }
-                            cc.log(" ====== popup", popup, "  --- isOpen", isOpen);
-                            if (MjClient.isOpentFunctionType(allActivity.XIN_SHOU_LI_BAO) && popup && isOpen) {
-                                var layer = new NewPlayerPrizeLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-
-
-                        // 圣诞节活动 元旦活动
-                        var popChristmasLayer = function (callback) {
-                            var popup = isPopView(allActivity.ZA_JIN_DAN);
-                            if (MjClient.isOpentFunctionType(allActivity.ZA_JIN_DAN) && !MjClient.isShenhe && popup) {
-                                var layer = new NewYearLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        // 淮安新手活动
-                        var popNewPlayerLayer = function (callback) {
-                            var lastAtToday = isLastAtToday();
-                            if ((!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime)) && !lastAtToday && MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ) {
-                                var layer = new newPlayerLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //新玩家第一次弹绑定电话
-                        var popBindPhoneLayer = function (callback) {
-                            var pinfo = MjClient.data.pinfo;
-
-                            if (isOldPlayer() && !pinfo.mobileNum) {
-                                var layer = new bindPhoneNumNewLayer("autoPop");
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //新玩家第一次弹实名认证
-                        var popSMRZLayer = function (callback) {
-                            //每周 弹出一次
-                            var lastAtWeekend = isLastAtWeekend();
-                            if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP || MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP
-                                || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP) {
-                                if (MjClient.systemConfig.verifiedOpen) lastAtWeekend = true;
-                            }
-                            // 已经注册是不弹这个 特别重要 可能导致 上面四个地区 炸锅
-                            if (MjClient.data.pinfo.identityNum) {
-                                lastAtWeekend = false;
-                            }
-
-                            if ((!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime)) || lastAtWeekend) {
-                                var layer = new shiMingRenZhengLayer("autoPop");
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-
-                        //邀请红包
-                        var yaoQingHBLayer = function (callback) {
-                            var popup = isPopView(allActivity.YAO_QING_HONG_BAO);
-
-                            if (MjClient.isOpentFunctionType(allActivity.YAO_QING_HONG_BAO) && popup) {
-                                var layer;
-                                if (MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP)
-                                    layer = new YaoQingHaoBao_layer();
-                                else
-                                    layer = new YaoQingHaoBaoNT_layer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //新手引导
-                        var popGuidLayer = function (callback) {
-                            //if (MjClient.getAppType() != MjClient.APP_TYPE.TXJINZHONGMJ
-                            //    &&(!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime) ||
-                            //    !util.localStorageEncrypt.getBoolItem("SHOW_GUIDLAYER", false)) )
-                            //{
-                            //    var layer = new guidLayer();
-                            //    MjClient.Scene.addChild(layer);
-                            //    util.localStorageEncrypt.setBoolItem("SHOW_GUIDLAYER", true);
-                            //
-                            //    var oldScale = layer.getScale();
-                            //    layer.setScale(0);
-                            //    layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                            //    layer.setCloseCallback(callback);
-                            //}
-                            //else
-                            {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-
-                        //绑定邀请码
-                        var popBindingCodeLayer = function (callback) {
-                            var lastAtToday = isLastAtToday();
-                            if (MjClient.data.pinfo.downloadFrom && parseInt(MjClient.data.pinfo.downloadFrom) > 0 && !MjClient.data.pinfo.memberId && !lastAtToday) {
-                                var layer = new autoBindingCodeLayer_tips(parseInt(MjClient.data.pinfo.downloadFrom));
-                                MjClient.Scene.addChild(layer);
-
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-
-                        //每日任务
-                        var meiRiRenWuLayer = function (callback) {
-                            var popup = isPopView(allActivity.MEI_RI_REN_WU);
-
-                            if (MjClient.isOpentFunctionType(allActivity.MEI_RI_REN_WU) && popup) {
-                                var layer = new activeDailyTaskLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //新亲友圈对战
-                        var friendsPKNEWLayer = function (callback) {
-                            var popup = isPopView(allActivity.FRIENDS_PK_NEW);
-
-                            if (MjClient.isOpentFunctionType(allActivity.FRIENDS_PK_NEW) && popup) {
-                                var layer = new friendsPKNewLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //春节抽签
-                        var chunJieChouQianLayer = function (callback) {
-                            var popup = isPopView(allActivity.CHUN_JIE_CHOU_QIAN);
-
-                            if (MjClient.isOpentFunctionType(allActivity.CHUN_JIE_CHOU_QIAN) && popup) {
-                                var layer = new chunjiechouqianLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-
-                        //传奇来了
-                        var ChuanQiLaiLeLayer = function (callback) {
-                            var popup = isPopView(allActivity.CHUAN_QI_LAI_LE);
-                            cc.log("wxd===========ChuanQiLaiLeLayer")
-                            if (MjClient.isOpentFunctionType(allActivity.CHUAN_QI_LAI_LE) && popup) {
-                                var layer = new ChuanQiLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-
-                        //清明节放风筝活动
-                        var FlyAKiteLayer = function (callback) {
-                            var popup = isPopView(allActivity.FLY_A_KITE);
-                            cc.log("wxd===========FlyAKiteLayer");
-                            if (MjClient.isOpentFunctionType(allActivity.FLY_A_KITE) && popup) {
-                                var layer = new flyAKiteLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //五一集春豆活动
-                        var CollectSpringBeanLayer = function (callback) {
-                            var popup = isPopView(allActivity.COLLECT_SPRING_BEAN);
-                            cc.log("wxd===========CollectSpringBeanLayer");
-                            if (MjClient.isOpentFunctionType(allActivity.COLLECT_SPRING_BEAN) && popup) {
-                                var layer = new collectSpringBeanLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-
-                        //场次增长活动
-                        var MonthGrowthLayer = function (callback) {
-                            var popup = isPopView(allActivity.ACTIVITY_CLUB_MONTH);
-                            cc.log("wxd===========CollectSpringBeanLayer");
-                            if (MjClient.isOpentFunctionType(allActivity.ACTIVITY_CLUB_MONTH) && popup) {
-                                var layer = new Active_growthLayer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //亲友圈元宝消耗活动(新版)
-                        var popClubCostLayer = function (callback) {
-                            var popup = isPopView(allActivity.CLUB_COST_ACTIVITY);
-
-                            if (MjClient.isOpentFunctionType(allActivity.CLUB_COST_ACTIVITY) && popup) {
-                                var layer;
-                                layer = new ClubCost_Layer();
-
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //双11活动
-                        var popDouble11Layer = function (callback) {
-                            var popup = isPopView(allActivity.ACTIVITY_DOUBLE_11);
-
-                            if (MjClient.isOpentFunctionType(allActivity.ACTIVITY_DOUBLE_11) && popup) {
-                                var layer = new Active_double11_Layer();
-                                MjClient.Scene.addChild(layer);
-                                var oldScale = layer.getScale();
-                                layer.setScale(0);
-                                layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
-                                layer.setCloseCallback(callback);
-                            } else {
-                                if (callback) {
-                                    callback();
-                                }
-                            }
-                        };
-
-                        //if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP)
-                        //{
-                        //   //依次弹出
-                        //   popBindingCodeLayer.bind(this, popGuidLayer.bind(this, popAdvLayer.bind(this, popActivityLayer)))();
-                        //}
-                        //else
-                        //{
-                        //   var lastDate = util.localStorageEncrypt.getNumberItem("lastDate", 0);
-                        //   var nowDate = new Date();
-                        //   var iNowDate = (((nowDate.getYear() + 1900)*10000) + ((nowDate.getMonth() + 1)*100) + nowDate.getDate());
-                        //   cc.log("最后一次登录日期：" + iNowDate);
-                        //   if (iNowDate != lastDate)
-                        //   {
-                        //       util.localStorageEncrypt.setNumberItem("lastDate", iNowDate);
-                        //
-                        //       popBindingCodeLayer.bind(this, popGuidLayer.bind(this, popAdvLayer.bind(this, popActivityLayer.bind(this, popChristmasLayer))))();
-                        //   }
-                        //   else
-                        //   {
-                        //       popBindingCodeLayer();
-                        //   }
-                        //}
-
-                        ChuanQiLaiLeLayer.bind(this, popBindingCodeLayer.bind(this, popGuidLayer.bind(this, popAdvLayer.bind(this,
-                            chunJieChouQianLayer.bind(this, popDouble11Layer.bind(this, popClubCostLayer.bind(this, MonthGrowthLayer.bind(this,
-                                popLCBXZSLayer.bind(this, FlyAKiteLayer.bind(this,
-                                    popActivityLayer.bind(this, popShareLayer.bind(this, popNewPlayerLayer.bind(this, popZhuaWaWaLayer.bind(this,
-                                        popJiaYouRedPacketLayer.bind(this, popChongZhiLayer.bind(this, popLuckyLayer.bind(this, popQiandaoLayer.bind(this,
-                                            popChristmasLayer.bind(this, yaoQingHBLayer.bind(this, popXinShouLiBaoLayer.bind(this, popFriendsPKLayer.bind(this,
-                                                popQiandaoChoujiangLayer.bind(this, popBindPhoneLayer.bind(this, popSMRZLayer.bind(this, popRankLayer.bind(this,
-                                                    popLCBXLayer.bind(this, popZhongQiuJie88YuanLayer.bind(this, popZhongQiuJieRankLayer.bind(this, meiRiRenWuLayer.bind(this,
-                                                        popAdvShowLayer.bind(this, CollectSpringBeanLayer))))))
-                                                )))
-                                            )))
-                                            )))
-                                        )))
-                                    )))))))))
-                        ))))();
-
-
-                    }
+                    // //剪贴板没有复制房号
+                    // var clipboardStr = MjClient.native.doGetPasteBoard();
+                    // if ((cc.isUndefined(clipboardStr) ||
+                    //     clipboardStr.length == 0 ||
+                    //     clipboardStr.substring(clipboardStr.indexOf('[') + 1, clipboardStr.indexOf(']')).length != 6) &&
+                    //     !MjClient.remoteCfg.guestLogin &&
+                    //     !rtn.vipTable &&
+                    //     !rtn.matchTable &&
+                    //     !rtn.matchOngoing &&
+                    //     !rtn.matchs
+                    // ) {
+                    //     var allActivity = MjClient.FUNCTION_CONFIG_TYPE;
+                    //     var isPopView = function (activityType) {
+                    //         if (MjClient.systemConfig.functionConfigXY && MjClient.systemConfig.functionConfigXY[activityType]) {
+                    //             cc.log(" ======= 有 字段 functionConfigXY ", MjClient.systemConfig.functionConfigXY[activityType].popup);
+                    //             return MjClient.systemConfig.functionConfigXY[activityType].popup;
+                    //         }
+                    //         return false;
+                    //     };
+                    //     var isLastAtToday = function () {
+                    //         if (!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime))
+                    //             return false;
+
+                    //         var nowDate = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyy/MM/dd");
+                    //         var lastDate = MjClient.dateFormat(new Date(MjClient.data.pinfo.lastLoginTime), "yyyy/MM/dd");
+                    //         return lastDate == nowDate;
+                    //     };
+
+                    //     var isOldPlayer = function () {
+                    //         var nowDate = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyyMMdd");
+                    //         var lastDate = MjClient.dateFormat(new Date(MjClient.data.pinfo.createTime), "yyyyMMdd");
+                    //         return (nowDate - lastDate) >= 1;
+                    //     }
+                    //     // 每周一 弹一次
+                    //     var isLastAtWeekend = function () {
+                    //         if (!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime))
+                    //             return false;
+
+                    //         var lastDate = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyy/MM/dd");
+                    //         var nowDate = MjClient.dateFormat(new Date(MjClient.data.pinfo.lastLoginTime), "yyyy/MM/dd");
+                    //         var str = "日一二三四五六".charAt(new Date().getDay());
+                    //         var isShow = (lastDate !== nowDate) && (str == "一");
+                    //         return isShow;
+                    //     };
+
+
+                    //     //活动
+                    //     var popActivityLayer = function (callback) {
+                    //         if (MjClient.systemConfig && MjClient.systemConfig.activity && MjClient.systemConfig.activity.popup) {
+                    //             var layer = new activityLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //招募
+                    //     var popAdvLayer = function (callback) {
+                    //         if (MjClient.systemConfig.advConfig) {
+                    //             var layer = new showAdvLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+                    //     //大转盘
+                    //     var popLuckyLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.DA_ZHUAN_PAN);
+
+                    //         if (MjClient.remoteCfg.guestLogin != true && MjClient.isOpentFunctionType(allActivity.DA_ZHUAN_PAN) && popup) {
+                    //             var layer = new luckyTableLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //理财宝箱
+                    //     var popLCBXLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.LI_CAI_BAO_XIANG);
+                    //         if (MjClient.isOpentFunctionType(allActivity.LI_CAI_BAO_XIANG) && popup) {
+                    //             var layer = new LiCaiBaoXiang_Layer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //钻石宝箱
+                    //     var popLCBXZSLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.LI_CAI_BAO_XIANG_ZS);
+                    //         if (MjClient.isOpentFunctionType(allActivity.LI_CAI_BAO_XIANG_ZS) && popup) {
+                    //             var layer = new ZuanShiBaoXiang();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //广告
+                    //     var popAdvShowLayer = function (callback) {
+                    //         var lastAtToday = isLastAtToday();
+                    //         if (!lastAtToday) {
+                    //             util.localStorageEncrypt.setNumberItem("advShowNum", 1);
+                    //         }
+
+                    //         if (cc.sys.os != cc.sys.OS_IOS && lastAtToday && util.localStorageEncrypt.getNumberItem("advShowNum", 1) <= 2 && MjClient.systemConfig.popAdvShow == "true") {
+                    //             var layer = new advPopLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.setCloseCallback(callback);
+
+                    //             UIEventBind(null, layer, MjClient.native.mobgiAdsCallbackEvent.NATIVE_ADS_INVALID, function (data) {
+                    //                 if (data.type != MjClient.native.mobgiAdsType.YUANSHENG_CHONGQI) {
+                    //                     return;
+                    //                 }
+                    //                 layer.removeFromParent();
+                    //                 if (callback) callback();
+                    //             });
+                    //             UIEventBind(null, layer, MjClient.native.mobgiAdsCallbackEvent.NATIVE_ADS_INFO, function (str) {
+                    //                 try {
+                    //                     var data = str;
+                    //                     if (cc.isString(str)) {
+                    //                         data = JSON.parse(str);
+                    //                     }
+
+                    //                     if (data.type != MjClient.native.mobgiAdsType.YUANSHENG_CHONGQI) {
+                    //                         return;
+                    //                     }
+                    //                     var url = data.imageUrl[0];
+                    //                     if (url.length > 0) {
+                    //                         layer.loadImage(data);
+                    //                         var advShowNum = util.localStorageEncrypt.getNumberItem("advShowNum", 1) + 1;
+                    //                         util.localStorageEncrypt.setNumberItem("advShowNum", advShowNum);
+                    //                         layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //                     } else {
+                    //                         layer.removeFromParent();
+                    //                         if (callback) callback();
+                    //                     }
+                    //                 } catch (e) {
+                    //                     layer.removeFromParent();
+                    //                     if (callback) callback();
+                    //                 }
+                    //             });
+                    //             MjClient.native.mobgiAds.getNativeAdsInfo(MjClient.native.mobgiAdsType.YUANSHENG_CHONGQI);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //朋友圈对战
+                    //     var popFriendsPKLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.FRIENDS_PK);
+
+                    //         if (MjClient.isOpentFunctionType(allActivity.FRIENDS_PK) && popup) {
+                    //             var layer;
+                    //             layer = new FriendsPK_Layer();
+
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+                    //     //娃娃机
+                    //     var popZhuaWaWaLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.ZHUA_ZHUA_LE);
+
+                    //         if (MjClient.remoteCfg.guestLogin != true && MjClient.isOpentFunctionType(allActivity.ZHUA_ZHUA_LE) && popup) {
+                    //             var layer = new ZhuaWaWa_mainLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //加油红包
+                    //     var popJiaYouRedPacketLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.JIA_YOU_HONG_BAO);
+                    //         if (MjClient.remoteCfg.guestLogin != true && MjClient.isOpentFunctionType(allActivity.JIA_YOU_HONG_BAO) && popup) {
+                    //             var layer = new jiaYouRedPacketLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     // 充值
+                    //     var popChongZhiLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.CHONG_ZHI_YOU_LI);
+                    //         var time = "2018-04-16";
+                    //         var day = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyy-MM-dd");
+                    //         if (MjClient.isOpentFunctionType(allActivity.CHONG_ZHI_YOU_LI) && popup) {
+                    //             var layer = new ChargePrize_Layer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     // 签到
+                    //     var popQiandaoLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.QIAN_DAO_YOU_LI);
+                    //         // var time = "2018-04-17";
+                    //         // var day = MjClient.dateFormat(new Date(MjClient.data.serverTime), "yyyy-MM-dd");
+                    //         if (MjClient.isOpentFunctionType(allActivity.QIAN_DAO_YOU_LI) && popup) {
+                    //             var layer = new QiandaoLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     // 签到抽奖
+                    //     var popQiandaoChoujiangLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.QIAN_DAO_CHOU_JIANG);
+                    //         if (MjClient.isOpentFunctionType(allActivity.QIAN_DAO_CHOU_JIANG) && popup) {
+                    //             var layer = new luckyTableNew_layer();
+                    //             var selectUiIndex = MjClient.isUseUIv3 && MjClient.isUseUIv3();
+                    //             if (selectUiIndex) {
+                    //                 layer = new luckyTableNew_layer_30();
+                    //             }
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+                    //     // 中秋节88元红包
+                    //     var popZhongQiuJie88YuanLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.ZHONG_QIU_JIE_88_YUAN);
+                    //         if (MjClient.isOpentFunctionType(allActivity.ZHONG_QIU_JIE_88_YUAN) && popup) {
+                    //             var layer = new ActiveZhongQiuJie_enter();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //排行榜活动
+                    //     var popRankLayer = function (callback) {
+
+                    //         var popup = isPopView(allActivity.ACTIVE_RANK);
+                    //         if (MjClient.remoteCfg.guestLogin != true &&
+                    //             MjClient.isOpentFunctionType(allActivity.ACTIVE_RANK) &&
+                    //             popup && MjClient.getAppType() != MjClient.APP_TYPE.QXNTQP &&
+                    //             MjClient.getAppType() != MjClient.APP_TYPE.QXHAMJ) {
+                    //             cc.log(" ======fffffff ");
+                    //             var layer = new Active_rankLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //中秋排行榜
+                    //     var popZhongQiuJieRankLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.ZHONG_QIU_JIE_RANK);
+                    //         if (MjClient.remoteCfg.guestLogin != true && MjClient.isOpentFunctionType(allActivity.ZHONG_QIU_JIE_RANK) && popup) {
+                    //             var layer = new Active_zhongQiuRank();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         }
+                    //         else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //主页分享弹窗
+                    //     var popShareLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.DA_TING_FEN_XIANG);
+                    //         if (MjClient.isOpentFunctionType(allActivity.DA_TING_FEN_XIANG) && popup) {
+                    //             var layer = new shareTodayLayer(true);
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //永州中秋节策划方案
+                    //     var popZhongQiuJieYZLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.ZHONG_QIU_JIE_YONGZHOU);
+                    //         if (MjClient.isOpentFunctionType(allActivity.ZHONG_QIU_JIE_YONGZHOU) && popup) {
+                    //             var layer = new ZhongQiuJie_layer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         }
+                    //         else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     // 新手礼包
+                    //     var popXinShouLiBaoLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.XIN_SHOU_LI_BAO);
+                    //         var isOpen = false;
+                    //         var _timeStr = MjClient.dateFormat(new Date(parseInt(MjClient.data.pinfo.createTime)), 'yyyy-MM-dd');
+                    //         cc.log(" ======222  出生日期 ", _timeStr);
+                    //         var time_1 = Date.parse(_timeStr);
+                    //         // cc.log(" ====== time_1 ",time_1);
+                    //         var _timeStr = MjClient.dateFormat(new Date(parseInt(MjClient.data.serverTime)), 'yyyy-MM-dd');
+                    //         cc.log(" ======2222  服务器时间 ", _timeStr);
+                    //         var _timeStr = MjClient.dateFormat(new Date(parseInt(time_1 + 6 * 86400000)), 'yyyy-MM-dd');
+                    //         cc.log(" ======222 活动寄截止时间 ", _timeStr);
+
+
+                    //         if (time_1 + 6 * 86400000 > MjClient.data.serverTime && MjClient.isOpentFunctionType(MjClient.FUNCTION_CONFIG_TYPE.XIN_SHOU_LI_BAO)) {
+                    //             isOpen = true;
+                    //         } else {
+                    //             isOpen = false;
+                    //         }
+                    //         cc.log(" ====== popup", popup, "  --- isOpen", isOpen);
+                    //         if (MjClient.isOpentFunctionType(allActivity.XIN_SHOU_LI_BAO) && popup && isOpen) {
+                    //             var layer = new NewPlayerPrizeLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+
+
+                    //     // 圣诞节活动 元旦活动
+                    //     var popChristmasLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.ZA_JIN_DAN);
+                    //         if (MjClient.isOpentFunctionType(allActivity.ZA_JIN_DAN) && !MjClient.isShenhe && popup) {
+                    //             var layer = new NewYearLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     // 淮安新手活动
+                    //     var popNewPlayerLayer = function (callback) {
+                    //         var lastAtToday = isLastAtToday();
+                    //         if ((!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime)) && !lastAtToday && MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ) {
+                    //             var layer = new newPlayerLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //新玩家第一次弹绑定电话
+                    //     var popBindPhoneLayer = function (callback) {
+                    //         var pinfo = MjClient.data.pinfo;
+
+                    //         if (isOldPlayer() && !pinfo.mobileNum) {
+                    //             var layer = new bindPhoneNumNewLayer("autoPop");
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //新玩家第一次弹实名认证
+                    //     var popSMRZLayer = function (callback) {
+                    //         //每周 弹出一次
+                    //         var lastAtWeekend = isLastAtWeekend();
+                    //         if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP || MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP
+                    //             || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP) {
+                    //             if (MjClient.systemConfig.verifiedOpen) lastAtWeekend = true;
+                    //         }
+                    //         // 已经注册是不弹这个 特别重要 可能导致 上面四个地区 炸锅
+                    //         if (MjClient.data.pinfo.identityNum) {
+                    //             lastAtWeekend = false;
+                    //         }
+
+                    //         if ((!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime)) || lastAtWeekend) {
+                    //             var layer = new shiMingRenZhengLayer("autoPop");
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+
+                    //     //邀请红包
+                    //     var yaoQingHBLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.YAO_QING_HONG_BAO);
+
+                    //         if (MjClient.isOpentFunctionType(allActivity.YAO_QING_HONG_BAO) && popup) {
+                    //             var layer;
+                    //             if (MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP)
+                    //                 layer = new YaoQingHaoBao_layer();
+                    //             else
+                    //                 layer = new YaoQingHaoBaoNT_layer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //新手引导
+                    //     var popGuidLayer = function (callback) {
+                    //         //if (MjClient.getAppType() != MjClient.APP_TYPE.TXJINZHONGMJ
+                    //         //    &&(!MjClient.data.pinfo.lastLoginTime || cc.isUndefined(MjClient.data.pinfo.lastLoginTime) ||
+                    //         //    !util.localStorageEncrypt.getBoolItem("SHOW_GUIDLAYER", false)) )
+                    //         //{
+                    //         //    var layer = new guidLayer();
+                    //         //    MjClient.Scene.addChild(layer);
+                    //         //    util.localStorageEncrypt.setBoolItem("SHOW_GUIDLAYER", true);
+                    //         //
+                    //         //    var oldScale = layer.getScale();
+                    //         //    layer.setScale(0);
+                    //         //    layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //         //    layer.setCloseCallback(callback);
+                    //         //}
+                    //         //else
+                    //         {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+
+                    //     //绑定邀请码
+                    //     var popBindingCodeLayer = function (callback) {
+                    //         var lastAtToday = isLastAtToday();
+                    //         if (MjClient.data.pinfo.downloadFrom && parseInt(MjClient.data.pinfo.downloadFrom) > 0 && !MjClient.data.pinfo.memberId && !lastAtToday) {
+                    //             var layer = new autoBindingCodeLayer_tips(parseInt(MjClient.data.pinfo.downloadFrom));
+                    //             MjClient.Scene.addChild(layer);
+
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+
+                    //     //每日任务
+                    //     var meiRiRenWuLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.MEI_RI_REN_WU);
+
+                    //         if (MjClient.isOpentFunctionType(allActivity.MEI_RI_REN_WU) && popup) {
+                    //             var layer = new activeDailyTaskLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //新亲友圈对战
+                    //     var friendsPKNEWLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.FRIENDS_PK_NEW);
+
+                    //         if (MjClient.isOpentFunctionType(allActivity.FRIENDS_PK_NEW) && popup) {
+                    //             var layer = new friendsPKNewLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //春节抽签
+                    //     var chunJieChouQianLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.CHUN_JIE_CHOU_QIAN);
+
+                    //         if (MjClient.isOpentFunctionType(allActivity.CHUN_JIE_CHOU_QIAN) && popup) {
+                    //             var layer = new chunjiechouqianLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+
+                    //     //传奇来了
+                    //     var ChuanQiLaiLeLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.CHUAN_QI_LAI_LE);
+                    //         cc.log("wxd===========ChuanQiLaiLeLayer")
+                    //         if (MjClient.isOpentFunctionType(allActivity.CHUAN_QI_LAI_LE) && popup) {
+                    //             var layer = new ChuanQiLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+
+                    //     //清明节放风筝活动
+                    //     var FlyAKiteLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.FLY_A_KITE);
+                    //         cc.log("wxd===========FlyAKiteLayer");
+                    //         if (MjClient.isOpentFunctionType(allActivity.FLY_A_KITE) && popup) {
+                    //             var layer = new flyAKiteLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //五一集春豆活动
+                    //     var CollectSpringBeanLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.COLLECT_SPRING_BEAN);
+                    //         cc.log("wxd===========CollectSpringBeanLayer");
+                    //         if (MjClient.isOpentFunctionType(allActivity.COLLECT_SPRING_BEAN) && popup) {
+                    //             var layer = new collectSpringBeanLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+
+                    //     //场次增长活动
+                    //     var MonthGrowthLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.ACTIVITY_CLUB_MONTH);
+                    //         cc.log("wxd===========CollectSpringBeanLayer");
+                    //         if (MjClient.isOpentFunctionType(allActivity.ACTIVITY_CLUB_MONTH) && popup) {
+                    //             var layer = new Active_growthLayer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //亲友圈元宝消耗活动(新版)
+                    //     var popClubCostLayer = function (callback) {
+                    //         var popup = isPopView(allActivity.CLUB_COST_ACTIVITY);
+
+                    //         if (MjClient.isOpentFunctionType(allActivity.CLUB_COST_ACTIVITY) && popup) {
+                    //             var layer;
+                    //             layer = new ClubCost_Layer();
+
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //双11活动
+                    //     var popDouble11Layer = function (callback) {
+                    //         var popup = isPopView(allActivity.ACTIVITY_DOUBLE_11);
+
+                    //         if (MjClient.isOpentFunctionType(allActivity.ACTIVITY_DOUBLE_11) && popup) {
+                    //             var layer = new Active_double11_Layer();
+                    //             MjClient.Scene.addChild(layer);
+                    //             var oldScale = layer.getScale();
+                    //             layer.setScale(0);
+                    //             layer.runAction(cc.scaleTo(0.3, oldScale).easing(cc.easeBackOut()));
+                    //             layer.setCloseCallback(callback);
+                    //         } else {
+                    //             if (callback) {
+                    //                 callback();
+                    //             }
+                    //         }
+                    //     };
+
+                    //     //if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP)
+                    //     //{
+                    //     //   //依次弹出
+                    //     //   popBindingCodeLayer.bind(this, popGuidLayer.bind(this, popAdvLayer.bind(this, popActivityLayer)))();
+                    //     //}
+                    //     //else
+                    //     //{
+                    //     //   var lastDate = util.localStorageEncrypt.getNumberItem("lastDate", 0);
+                    //     //   var nowDate = new Date();
+                    //     //   var iNowDate = (((nowDate.getYear() + 1900)*10000) + ((nowDate.getMonth() + 1)*100) + nowDate.getDate());
+                    //     //   cc.log("最后一次登录日期：" + iNowDate);
+                    //     //   if (iNowDate != lastDate)
+                    //     //   {
+                    //     //       util.localStorageEncrypt.setNumberItem("lastDate", iNowDate);
+                    //     //
+                    //     //       popBindingCodeLayer.bind(this, popGuidLayer.bind(this, popAdvLayer.bind(this, popActivityLayer.bind(this, popChristmasLayer))))();
+                    //     //   }
+                    //     //   else
+                    //     //   {
+                    //     //       popBindingCodeLayer();
+                    //     //   }
+                    //     //}
+
+                    //     // ChuanQiLaiLeLayer.bind(this, popBindingCodeLayer.bind(this, popGuidLayer.bind(this, popAdvLayer.bind(this,
+                    //     //     chunJieChouQianLayer.bind(this, popDouble11Layer.bind(this, popClubCostLayer.bind(this, MonthGrowthLayer.bind(this,
+                    //     //         popLCBXZSLayer.bind(this, FlyAKiteLayer.bind(this,
+                    //     //             popActivityLayer.bind(this, popShareLayer.bind(this, popNewPlayerLayer.bind(this, popZhuaWaWaLayer.bind(this,
+                    //     //                 popJiaYouRedPacketLayer.bind(this, popChongZhiLayer.bind(this, popLuckyLayer.bind(this, popQiandaoLayer.bind(this,
+                    //     //                     popChristmasLayer.bind(this, yaoQingHBLayer.bind(this, popXinShouLiBaoLayer.bind(this, popFriendsPKLayer.bind(this,
+                    //     //                         popQiandaoChoujiangLayer.bind(this, popBindPhoneLayer.bind(this, popSMRZLayer.bind(this, popRankLayer.bind(this,
+                    //     //                             popLCBXLayer.bind(this, popZhongQiuJie88YuanLayer.bind(this, popZhongQiuJieRankLayer.bind(this, meiRiRenWuLayer.bind(this,
+                    //     //                                 popAdvShowLayer.bind(this, CollectSpringBeanLayer))))))
+                    //     //                         )))
+                    //     //                     )))
+                    //     //                     )))
+                    //     //                 )))
+                    //     //             )))))))))
+                    //     // ))))();
+
+
+                    // }
                 } else {
                     postEvent("updateInfo");
                 }

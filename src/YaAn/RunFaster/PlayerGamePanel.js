@@ -413,6 +413,27 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 },
             }
         },
+        wait: {
+            _layout: [
+                [1, 1],
+                [0, 0],
+                [0, 0]
+            ],
+            backHomebtn: {
+                _layout: [
+                    [0.1, 0.1],
+                    [0, 0],
+                    [0, 0]
+                ]
+            },
+            delroom: {
+                _layout: [
+                    [0.1, 0.1],
+                    [0, 0],
+                    [0, 0]
+                ]
+            },
+        },
         banner: {
             _layout: [
                 [1, 1],
@@ -512,26 +533,19 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     MjClient.Scene.addChild(settringLayer);
                     MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
                 },
-                _run: function () {
-                    this.setScale(0.9)
-                }
             },
             rule_btn: {
                 _visible: true,
                 _click: function () {
-                    MjClient.showRuleView = new GameRule_YARunFaster('bg_RunFasterYaAn');
+                    MjClient.showRuleView = new GameRule_YARunFaster();
                     MjClient.Scene.addChild(MjClient.showRuleView);
                 },
                 _run: function () {
-                    this.setScale(0.9);
                     var banner = this.parent;
                     var waitNode = MjClient.playui.getChildByName("playUINode").getChildByName("wait");
                     var delroom = waitNode.getChildByName("delroom");
                     var backHomebtn = waitNode.getChildByName("backHomebtn");
                     var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
-
-                    delroom.setScale(0.9);
-                    backHomebtn.setScale(0.9);
                     delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
                     backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))))
                 }
@@ -586,7 +600,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 }
             },
         },
-
         BtnHimt: { //add by  sking for put card button
             _run: function () {
                 this.visible = false;
@@ -1067,32 +1080,16 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     //setTaiInfo("");
                 },
                 newCard: function (eD) {
-                    // cdsNums++;
                     console.log("客户端发牌组合...... ");
-                    //cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>newCard---------------");
-                    //var putButtn = this.getChildByName("BtnPutCard");
-                    //putButtn.visible = true;
-                    //MjClient.playui._btnPutCard.visible = true;
                     if (typeof (eD) == "number") {
                         eD = { newCard: eD };
                     }
-
-                    //掼蛋不需要发牌
-                    //DealNewCard(this,eD.newCard,0);// checkCanTing(eD);
                 },
                 PKPut: function (eD) {
                     //cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PKPut---------------");
                     var pl = getUIPlayer(0);
                     if (pl && pl.trust || eD.uid != SelfUid() || MjClient.rePlayVideo != -1)
                         DealMJPut_card(this, eD, 0);
-                    // var pl = getUIPlayer(0);
-                    // cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PKPut---------------" + pl.isTing);
-                    // if (eD.uid == SelfUid() && pl.isTing)
-                    // {
-                    //     var _tingCards = this.getChildByName("tingCardsNode");
-                    //     var tingSet = calTingSet(pl.mjhand, MjClient.data.sData.tData.hunCard);
-                    //     setTingCards(_tingCards,tingSet);
-                    // }
                     setUserOffline(this, 0);
                 },
                 waitPut: function (eD) {

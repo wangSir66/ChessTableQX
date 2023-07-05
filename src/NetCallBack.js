@@ -3372,28 +3372,6 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         if (!sData) return;
         var tData = sData.tData;
-        //sData.players[d.uid].que = parseInt(d.que);
-        if (MjClient.GAME_TYPE.XUE_ZHAN === MjClient.gameType ||
-            MjClient.GAME_TYPE.XUE_LIU === MjClient.gameType) {
-            if (d.uid == SelfUid()) {
-                sData.players[SelfUid()].que = parseInt(d.que);
-                sData.players[SelfUid()].eatFlag = d.eatFlag;
-            }
-            tData.tState = d.tState;
-        }
-
-        if (MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_PU_DING_MJ
-            || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_SAN_DING_GUAI
-            || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_ER_DING_GUAI
-            || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_XMY_GUI_YANG_ZHUO_JI
-            || MjClient.gameType === MjClient.GAME_TYPE.GUI_ZHOU_GUI_YANG_ZHUO_JI) {
-            if (d.uid === SelfUid()) {
-                sData.players[SelfUid()].que = d.que;
-                sData.players[SelfUid()].eatFlag = d.eatFlag;
-            }
-            tData.tState = d.tState;
-
-        }
         if (MjClient.GAME_TYPE.LUAN_GUA_FENG == MjClient.gameType) {
             if (d.liangfengInfo && d.uid == SelfUid()) {
                 if (d.tDataChanged) {
@@ -3435,6 +3413,12 @@ MjClient.netCallBack = {
             }
             var lp = sData.players[d.uid];
             lp.mjState = TableState.waitPut;
+        } else {
+            if (d.uid === SelfUid()) {
+                sData.players[SelfUid()].que = d.que;
+                sData.players[SelfUid()].eatFlag = d.eatFlag;
+            }
+            tData.tState = d.tState;
         }
     }]
     , PKPass: [0, function (d) {
@@ -9934,9 +9918,9 @@ MjClient.netCallBack = {
     waitHuanPai: [0, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
-        tData.tState = TableState.waitHuanPai;
+        tData.tState = TableState.waitChooseCard;
         for (var uid in sData.players) {
-            sData.players[uid].mjState = TableState.waitHuanPai;
+            sData.players[uid].mjState = TableState.waitChooseCard;
         }
     }],
 
@@ -10321,5 +10305,36 @@ MjClient.netCallBack = {
         var sData = MjClient.data.sData;
         let pl = sData.players[d.uid];
         if (pl) pl.eatFlag = d.eatFlag;
-    }]
+    }],
+
+    chooseCards: [0, function (d) {
+        var sData = MjClient.data.sData,
+            pl = sData.players[d.uid];
+        let selfId = SelfUid();
+        if (pl) {
+            pl.chooseCards = d.chooseCards;   // 换之前的三张牌
+            if (d.uid == selfId) {
+                for (let _i = 0; _i < d.chooseCards.length; _i++) {
+                    const delC = d.chooseCards[_i],
+                        _indx = pl.mjhand.indexOf(delC);
+                    if (_indx > -1) pl.mjhand.splice(_indx, 1);
+                }
+            }
+        }
+        sData.tData.tState = d.tState;
+        if (d.isDone && d.cards) {
+            pl = sData.players[selfId];
+            if (pl) {
+                pl.mjhand = d.cards[selfId].concat(pl.mjhand);
+            }
+        }
+    }],
+    waitDingQue: [0, function (d) {
+        var sData = MjClient.data.sData;
+        var tData = sData.tData;
+        tData.tState = TableState.waitSelect;
+        for (var uid in sData.players) {
+            sData.players[uid].mjState = TableState.waitSelect;
+        }
+    }],
 };

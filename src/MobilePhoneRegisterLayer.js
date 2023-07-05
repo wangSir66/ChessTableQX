@@ -79,7 +79,6 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
         this.checkBox_nan.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 self.sex = 1;
-                self.checkBox_nan.setSelected(true);
                 self.checkBox_nv.setSelected(false);
             }
         }, this);
@@ -87,7 +86,6 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
             if (type == 2) {
                 self.sex = 2;
                 self.checkBox_nan.setSelected(false);
-                self.checkBox_nv.setSelected(true);
             }
         }, this);
 

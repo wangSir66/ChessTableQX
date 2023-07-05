@@ -1934,6 +1934,11 @@
                   "G": 65,
                   "B": 70
                 },
+                "PressedFileData": {
+                  "Type": "Normal",
+                  "Path": "createNewPng/quanbu_s.png",
+                  "Plist": ""
+                },
                 "NormalFileData": {
                   "Type": "Normal",
                   "Path": "createNewPng/quanbu_n.png",
@@ -1960,8 +1965,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 120.0,
-                  "Y": 380.0
+                  "X": 138.1414,
+                  "Y": 383.6284
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1970,17 +1975,17 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.1527,
-                  "Y": 0.7585
+                  "X": 0.1758,
+                  "Y": 0.7657
                 },
                 "PreSize": {
                   "X": 0.2595,
                   "Y": 0.1437
                 },
-                "LeftMargin": 18.0,
-                "RightMargin": 564.0,
-                "TopMargin": 85.0,
-                "BottomMargin": 344.0,
+                "LeftMargin": 36.1414,
+                "RightMargin": 545.8586,
+                "TopMargin": 81.3716,
+                "BottomMargin": 347.6284,
                 "Tag": 1348,
                 "ActionTag": 1321337306,
                 "Size": {
@@ -2008,6 +2013,29 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
+      "UsedResources": [
+        "createNewPng/quanbu_n.png",
+        "createNewPng/quanbu_s.png",
+        "createNewPng/record_title1.png",
+        "createNewPng/record_title2.png",
+        "fonts/fzcy.ttf",
+        "game_picture/bac_datanchuan.png",
+        "game_picture/bac_xiaotanchuan.png",
+        "game_picture/btn_x_normal.png",
+        "game_picture/daTC3_18.png",
+        "game_picture/daTC3_19.png",
+        "game_picture/dengdai.png",
+        "game_picture/diban.png",
+        "game_picture/numBg.png",
+        "game_picture/tishixiushi.png",
+        "game_picture/xiaotanchuan_48.png",
+        "game_picture/zanwuzhanji.png",
+        "gameOver/btn_copy.png",
+        "gameOver/btn_copy_s.png",
+        "gameOver/huifang.png",
+        "gameOver/qita.png",
+        "gameOver/tarenhuifang.png"
+      ],
       "ctype": "GameFileData"
     }
   },

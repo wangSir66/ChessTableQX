@@ -2464,7 +2464,7 @@
 
         //  第一个局 当勾“先出黑桃三”选项时，提示出黑桃三
         if (this.isMustPutCard3(oHands, areaSelectMode, isFirstRound)) {
-            return [[this.cardCfg.hx[3]]]
+            return [[this.cardCfg.firstOutCard]]
         }
 
         // 第一个出牌时

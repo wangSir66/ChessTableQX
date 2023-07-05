@@ -91,8 +91,8 @@
             "Children": [
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/zhuozi.png",
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 422,

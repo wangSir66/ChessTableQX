@@ -276,7 +276,7 @@
                 "PercentHeightEnable": true,
                 "PercentHeightEnabled": true,
                 "PreSize": {
-                  "X": 0.6562,
+                  "X": 0.6563,
                   "Y": 0.36
                 },
                 "LeftMargin": 220.0,
@@ -331,7 +331,7 @@
                   "Y": 0.5383
                 },
                 "PreSize": {
-                  "X": 0.6562,
+                  "X": 0.6563,
                   "Y": 0.125
                 },
                 "LeftMargin": 220.0,
@@ -1005,16 +1005,6 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
-      "UsedResources": [
-        "fonts/lanting.TTF",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/headMask.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_hengxian.png",
-        "friendCards/common/img_xiaotanchuang.png",
-        "friendCards/mian_rule/blackList/btn_add_n.png",
-        "friendCards/mian_rule/blackList/btn_delete_n.png"
-      ],
       "ctype": "GameFileData"
     }
   },

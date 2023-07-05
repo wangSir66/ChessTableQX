@@ -1,0 +1,513 @@
+{
+  "ID": "cdf6405e-d010-4617-b4fe-f99f817779e5",
+  "Version": "2.3.4",
+  "Name": "DingQueLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 4,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 56,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 3.35
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -640.0,
+            "RightMargin": -640.0,
+            "TopMargin": -363.35,
+            "BottomMargin": -356.65,
+            "Tag": 6,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/bg_H_G.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 145,
+                "Scale9Height": 122,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 395.0,
+                  "Y": 252.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3086,
+                  "Y": 0.35
+                },
+                "PreSize": {
+                  "X": 0.1156,
+                  "Y": 0.1694
+                },
+                "LeftMargin": 321.0,
+                "RightMargin": 811.0,
+                "TopMargin": 407.0,
+                "BottomMargin": 191.0,
+                "Tag": 414,
+                "ActionTag": 1294059106,
+                "Size": {
+                  "X": 148.0,
+                  "Y": 122.0
+                },
+                "Name": "light_wan",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/n_playLabel_16.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 92,
+                "Scale9Height": 104,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 395.0,
+                  "Y": 250.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3086,
+                  "Y": 0.3472
+                },
+                "PreSize": {
+                  "X": 0.0953,
+                  "Y": 0.175
+                },
+                "LeftMargin": 334.0,
+                "RightMargin": 824.0,
+                "TopMargin": 407.0,
+                "BottomMargin": 187.0,
+                "Tag": 5,
+                "ActionTag": 1090726936,
+                "Size": {
+                  "X": 122.0,
+                  "Y": 126.0
+                },
+                "Name": "quewan",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/bg_T_L.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 145,
+                "Scale9Height": 122,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 252.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.35
+                },
+                "PreSize": {
+                  "X": 0.1156,
+                  "Y": 0.1694
+                },
+                "LeftMargin": 566.0,
+                "RightMargin": 566.0,
+                "TopMargin": 407.0,
+                "BottomMargin": 191.0,
+                "Tag": 416,
+                "ActionTag": -1645966481,
+                "Size": {
+                  "X": 148.0,
+                  "Y": 122.0
+                },
+                "Name": "light_tiao",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/n_playLabel_13.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 90,
+                "Scale9Height": 104,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 250.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.3472
+                },
+                "PreSize": {
+                  "X": 0.0938,
+                  "Y": 0.175
+                },
+                "LeftMargin": 580.0,
+                "RightMargin": 580.0,
+                "TopMargin": 407.0,
+                "BottomMargin": 187.0,
+                "Tag": 417,
+                "ActionTag": 607932993,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 126.0
+                },
+                "Name": "quetiao",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/bg_C_P_G.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 145,
+                "Scale9Height": 122,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 884.9989,
+                  "Y": 252.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6914,
+                  "Y": 0.35
+                },
+                "PreSize": {
+                  "X": 0.1156,
+                  "Y": 0.1694
+                },
+                "LeftMargin": 810.9989,
+                "RightMargin": 321.0011,
+                "TopMargin": 407.0,
+                "BottomMargin": 191.0,
+                "Tag": 418,
+                "ActionTag": 2071120045,
+                "Size": {
+                  "X": 148.0,
+                  "Y": 122.0
+                },
+                "Name": "light_tong",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "playing/gameTable/n_playLabel_15.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 92,
+                "Scale9Height": 104,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 885.0,
+                  "Y": 250.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6914,
+                  "Y": 0.3472
+                },
+                "PreSize": {
+                  "X": 0.0953,
+                  "Y": 0.175
+                },
+                "LeftMargin": 824.0,
+                "RightMargin": 334.0,
+                "TopMargin": 407.0,
+                "BottomMargin": 187.0,
+                "Tag": 419,
+                "ActionTag": 325528427,
+                "Size": {
+                  "X": 122.0,
+                  "Y": 126.0
+                },
+                "Name": "quetong",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1240075291,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "playing/gameTable/bg_C_P_G.png",
+        "playing/gameTable/bg_H_G.png",
+        "playing/gameTable/bg_T_L.png",
+        "playing/gameTable/n_playLabel_13.png",
+        "playing/gameTable/n_playLabel_15.png",
+        "playing/gameTable/n_playLabel_16.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

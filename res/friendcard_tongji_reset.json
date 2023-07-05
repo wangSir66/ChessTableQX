@@ -1421,17 +1421,6 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
-      "UsedResources": [
-        "fonts/lanting.TTF",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_hengxian.png",
-        "friendCards/common/img_title.png",
-        "friendCards/common/img_zhongtanchuang.png",
-        "friendCards/tongji/btn_clear_n.png",
-        "friendCards/tongji/btn_leftDay.png",
-        "friendCards/tongji/btn_rightDay.png",
-        "friendCards/tongji/inputbg.png"
-      ],
       "ctype": "GameFileData"
     }
   },

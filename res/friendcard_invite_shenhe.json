@@ -1408,19 +1408,6 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
-      "UsedResources": [
-        "fonts/lanting.TTF",
-        "friendCards/common/btn_agree_n.png",
-        "friendCards/common/btn_agree_s.png",
-        "friendCards/common/btn_refuse_n.png",
-        "friendCards/common/btn_refuse_s.png",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/headMask.png",
-        "friendCards/common/img_datanchuang.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_hengxian.png",
-        "friendCards/tongji/title_img.png"
-      ],
       "ctype": "GameFileData"
     }
   },

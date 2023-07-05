@@ -318,11 +318,15 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                         return pl.winone == 0;
                     }
                     return false;
-                }, _run: function () {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
+                }, 
+                _run: function () {
                     if (MjClient.isDismiss) {
                         this.loadTexture("gameOver/jiesan.png");
+                    }
+                },
+                lb: {
+                    _run: function () {
+                        this.visible = !MjClient.isDismiss;
                     }
                 }
             },

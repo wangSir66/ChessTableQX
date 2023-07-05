@@ -39,6 +39,7 @@ var GameRuleView = cc.Layer.extend({
         this.initAllBtns();
         this.reductionRule();
         this.initEnd();
+        this._view.setScrollBarEnabled(false);
     },
     initEnd: function () {
         cc.log('-------GameRuleView----初始化结束---')
@@ -94,7 +95,7 @@ var GameRuleView = cc.Layer.extend({
             pIndx = Object.keys(pPriceCfg).indexOf(rule.maxPlayer + "");
         this.RedioGroup['jushu'].selectItem(Object.keys(pPriceCfg[rule.maxPlayer]).indexOf(rule.round + ""));
         this.RedioGroup['zhifufangshi'].selectItem(rule.payWay);
-        this.RedioGroup['renshu'].selectItem(pIndx);
+        this.RedioGroup['renshu'] && this.RedioGroup['renshu'].selectItem(pIndx);
         this._view.getChildByName('difen').getChildByName('BaseScore').setString(rule.difen + '');
         //因为服务器 +1
         this.RedioGroup['tuoguan'].selectItem(this.TunGuanTime.indexOf(rule.trustTime <= 0 ? 0 : rule.trustTime - 1));

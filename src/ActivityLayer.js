@@ -110,15 +110,8 @@ var activityLayer = cc.Layer.extend({
         _Image_notice.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 // 新版江苏/晋中活动选项卡设置
-                if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ
-                    || isJinZhongAPPType()
-                    || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ 
-                    || MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP
-                    || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ
-                    || MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
-                    _Image_notice.enabled = false;
-                    _Image_activity.enabled = true;
-                }
+                _Image_notice.enabled = false;
+                _Image_activity.enabled = true;
                 cc.log("===== notice ");
                 if(that._currentType != 1)
                 {
@@ -132,16 +125,9 @@ var activityLayer = cc.Layer.extend({
 
         _Image_activity.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                // 新版江苏/晋中活动选项卡设置
-                if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ
-                    || isJinZhongAPPType()
-                    || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ
-                    || MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP 
-                    || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ 
-                    || MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
-                    _Image_notice.enabled = true;
-                    _Image_activity.enabled = false;
-                }
+                
+                _Image_notice.enabled = true;
+                _Image_activity.enabled = false;
                 cc.log("===== _Image_activity ");
                 if(that._currentType != 0)
                 {

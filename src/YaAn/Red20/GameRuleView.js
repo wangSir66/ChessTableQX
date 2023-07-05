@@ -1,4 +1,7 @@
 var GameRule_YARed20 = GameRuleView.extend({
+    ctor: function () {
+        this._super('bg_red20');
+    },
     reductionRule: function () {
         this._super();
         if (!MjClient || !MjClient.data || !MjClient.data.sData || !MjClient.data.sData.tData || !MjClient.data.sData.tData.Rule) return;

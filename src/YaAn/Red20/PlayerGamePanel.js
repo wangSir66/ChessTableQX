@@ -622,6 +622,27 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             }
         },
+        wait: {
+            _layout: [
+                [1, 1],
+                [0, 0],
+                [0, 0]
+            ],
+            backHomebtn: {
+                _layout: [
+                    [0.1, 0.1],
+                    [0, 0],
+                    [0, 0]
+                ]
+            },
+            delroom: {
+                _layout: [
+                    [0.1, 0.1],
+                    [0, 0],
+                    [0, 0]
+                ]
+            },
+        },
         banner: {
             _layout: [
                 [1, 1],
@@ -743,29 +764,22 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             rule_btn: {
                 _run: function () {
                     cc.eventManager.addListener(getTouchListener(), this);
-                    this.setScale(0.9);
                     var banner = this.parent;
                     var waitNode = banner.parent.getChildByName("wait");
                     var delroom = waitNode.getChildByName("delroom");
                     var backHomebtn = waitNode.getChildByName("backHomebtn");
                     var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
-                    // distanceX *= 1.5;
-                    delroom.setScale(0.9);
-                    backHomebtn.setScale(0.9);
                     delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
                     backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))))
                 },
                 _touch: function (btn, eT) {
                     if (eT == 2) {
-                        MjClient.showRuleView = new GameRule_YARed20('bg_red20');
+                        MjClient.showRuleView = new GameRule_YARed20();
                         MjClient.Scene.addChild(MjClient.showRuleView)
                     }
                 },
             },
             setting: {
-                _run: function () {
-                    this.setScale(0.9);
-                },
                 _click: function () {
                     var settringLayer = new RoomSettingView();
                     MjClient.Scene.addChild(settringLayer);

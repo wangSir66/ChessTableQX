@@ -585,7 +585,7 @@ MjClient.native =
             }
             else if(cc.sys.OS_IOS==cc.sys.os && isCurrentNativeVersionBiggerThan("2.3.1"))
             {
-                addressStr = jsb.reflection.callStaticMethod("AppController","getAddress");
+                // addressStr = jsb.reflection.callStaticMethod("AppController","getAddress");
             }
         }
         catch(e)
@@ -2152,34 +2152,34 @@ MjClient.native =
     },
     setOrientation:function(isLandscape)
     {
-        if (!isCurrentNativeVersionBiggerThan("20.0.0"))
-        {
-            MjClient.showMsg("请下载最新版本游戏客户端来支持竖屏", function () {
-                MjClient.native.OpenUrl(MjClient.remoteCfg.wxShareUrl);
-            }, function () {});
-            return false;
-        }
+        // if (!isCurrentNativeVersionBiggerThan("20.0.0"))
+        // {
+        //     MjClient.showMsg("请下载最新版本游戏客户端来支持竖屏", function () {
+        //         MjClient.native.OpenUrl(MjClient.remoteCfg.wxShareUrl);
+        //     }, function () {});
+        //     return false;
+        // }
 
         var methodName = "setOrientationLandscape";
         if (!isLandscape) {
-            methodName = "setOrientationPortrait";
-        }
+            return false;
+         }
 
-        try{
-            if (cc.sys.OS_ANDROID == cc.sys.os)
-            {
+         try{
+         if (cc.sys.OS_ANDROID == cc.sys.os)
+           {
                 jsb.reflection.callStaticMethod("org.cocos2dx.javascript.AppActivity", methodName, "()V");
             }
-            else if(cc.sys.OS_IOS==cc.sys.os)
-            {
+         else if(cc.sys.OS_IOS==cc.sys.os)
+             {
                 jsb.reflection.callStaticMethod("AppController", methodName);
-            }
+           }
             else
-            {
+           {
                 cc.log("setOrientation:"+methodName);
             }
         }
-        catch(e)
+         catch(e)
         {
             MjClient.native.HelloOC("setOrientation throw: " + JSON.stringify(e));
         }

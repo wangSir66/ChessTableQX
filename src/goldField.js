@@ -119,28 +119,28 @@ var goldField_checkJingMoUpdate = function() {
         return;
     }
 
-    // var check = function() {
-    //     var isNetGood = MjClient.reqPingPong < 400;
-    //     if (!isNetGood && cc.sys.isObjectValid(MjClient.updateResourceClassUI))
-    //         return;
+    var check = function() {
+        var isNetGood = MjClient.reqPingPong < 400;
+        if (!isNetGood && cc.sys.isObjectValid(MjClient.updateResourceClassUI))
+            return;
 
-    //     MjClient.UpdateResourceClassViewCallback = true;
-    //     MjClient.native.umengEvent4CountWithProperty("goldField_JingMoUpdate_start", {uid:SelfUid()});
-    //     var updateView = new UpdateResourceClassView(MjClient.RESOURCE_CLASS.GOLD_FIELD, function() {
-    //         MjClient.native.umengEvent4CountWithProperty("goldField_JingMoUpdate_success", {uid:SelfUid()});
-    //     });
-    //     MjClient.goldFieldJingMoUpdate = true;
-    //     updateView.setVisible(false);
-    //     MjClient.Scene.addChild(updateView, 9999999);
-    //     MjClient.Scene.stopActionByTag(20191225);
-    // }
+        MjClient.UpdateResourceClassViewCallback = true;
+        MjClient.native.umengEvent4CountWithProperty("goldField_JingMoUpdate_start", {uid:SelfUid()});
+        var updateView = new UpdateResourceClassView(MjClient.RESOURCE_CLASS.GOLD_FIELD, function() {
+            MjClient.native.umengEvent4CountWithProperty("goldField_JingMoUpdate_success", {uid:SelfUid()});
+        });
+        MjClient.goldFieldJingMoUpdate = true;
+        updateView.setVisible(false);
+        MjClient.Scene.addChild(updateView, 9999999);
+        MjClient.Scene.stopActionByTag(20191225);
+    }
 
-    // var action = cc.sequence(cc.delayTime(3.0), cc.callFunc(check)).repeatForever();
-    // action.setTag(20191225);
-    // MjClient.Scene.runAction(action);
+    var action = cc.sequence(cc.delayTime(3.0), cc.callFunc(check)).repeatForever();
+    action.setTag(20191225);
+    MjClient.Scene.runAction(action);
 }
 
-var goldField_start = function(byShare) {
+var goldField_start = function (byShare) {
     if (!MjClient.data.fieldServers || !MjClient.data.fieldServers.ip || MjClient.data.fieldServers.ip.length <= 0) {
         MjClient.showToast("即将开放,敬请期待");
         return;
@@ -154,26 +154,26 @@ var goldField_start = function(byShare) {
         MjClient.showToast("正在加载资源，请加载完成后再试");
         return;
     }
-
-    // util.localStorageEncrypt.setBoolItem("goldField_needTipInto", false);
-    // if (util.localStorageEncrypt.getStringItem("VERSION_RESOURCE_CLASS_" + MjClient.RESOURCE_CLASS.GOLD_FIELD).length > 0 ||
-    //     (cc.sys.OS_WINDOWS == cc.sys.os && !MjClient.windowUpdate)) {//资源存在
-    //     goldField_into(byShare);
-    // }
-    // else {
-    //     MjClient.UpdateResourceClassViewCallback = true;
-    //     MjClient.goldFieldJingMoUpdate = false;
-    //     var updateView = new UpdateResourceClassView(MjClient.RESOURCE_CLASS.GOLD_FIELD, function() {
-    //         if (/*byShare && */!cc.sys.isObjectValid(MjClient.playui) && !cc.sys.isObjectValid(MjClient.FriendCard_main_ui)) {
-    //             goldField_into(byShare);
-    //         }
-    //         else {
-    //             //MjClient.showToast("娱乐场资源加载成功！");
-    //             util.localStorageEncrypt.setBoolItem("goldField_needTipInto", true);
-    //         }
-    //     });
-    //     MjClient.Scene.addChild(updateView, 9999999);
-    // }
+    
+    util.localStorageEncrypt.setBoolItem("goldField_needTipInto", false);
+    if (util.localStorageEncrypt.getStringItem("VERSION_RESOURCE_CLASS_" + MjClient.RESOURCE_CLASS.GOLD_FIELD).length > 0 ||
+        (cc.sys.OS_WINDOWS == cc.sys.os && !MjClient.windowUpdate)) {//资源存在
+        goldField_into(byShare);
+    }
+    else {
+        MjClient.UpdateResourceClassViewCallback = true;
+        MjClient.goldFieldJingMoUpdate = false;
+        var updateView = new UpdateResourceClassView(MjClient.RESOURCE_CLASS.GOLD_FIELD, function() {
+            if (/*byShare && */!cc.sys.isObjectValid(MjClient.playui) && !cc.sys.isObjectValid(MjClient.FriendCard_main_ui)) {
+                goldField_into(byShare);
+            }
+            else {
+                //MjClient.showToast("娱乐场资源加载成功！");
+                util.localStorageEncrypt.setBoolItem("goldField_needTipInto", true);
+            }
+        });
+        MjClient.Scene.addChild(updateView, 9999999);
+    }
 }
 
 var goldField_registerApi = function() {
@@ -232,7 +232,7 @@ var goldField_into = function(byShare) {
         goldFieldMainPath = jsb.fileUtils.getWritablePath() + MjClient.RESOURCE_DIR[MjClient.RESOURCE_CLASS.GOLD_FIELD] + "/src/GoldField_main.js";
     }
     else {
-        goldFieldMainPath = MjClient.Window_AppPath + "../goldField/src/GoldField_main.js";
+        goldFieldMainPath = MjClient.Window_AppPath + "goldField/src/GoldField_main.js";
     }
 
     cc.log("-----goldFieldMainPath=" + goldFieldMainPath);

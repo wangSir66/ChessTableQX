@@ -442,15 +442,6 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
-      "UsedResources": [
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_xiaotanchuang.png",
-        "friendCards/memberManage/title_caozuo.png",
-        "friendCards/tongji/opt/btn_checkMember_n.png",
-        "friendCards/tongji/opt/btn_checkMember_s.png",
-        "friendCards/tongji/opt/btn_gongxiangDetail_n.png",
-        "friendCards/tongji/opt/btn_gongxiangDetail_s.png"
-      ],
       "ctype": "GameFileData"
     }
   },

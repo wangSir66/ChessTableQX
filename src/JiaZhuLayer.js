@@ -3,9 +3,9 @@
  */
 //东海加注
 var jiaZhuLayer = cc.Layer.extend({
-    _zhuIdx:5,
-    _Button_sub:null,
-    _Button_add:null,
+    _zhuIdx: 5,
+    _Button_sub: null,
+    _Button_add: null,
     ctor: function (sureCB) {
         this._super();
         var UI = ccs.load("JiaZhu.json");
@@ -17,7 +17,7 @@ var jiaZhuLayer = cc.Layer.extend({
 
 
         var _back = UI.node.getChildByName("back");
-        setWgtLayout(_back,[0.7, 0.7], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.7, 0.7], [0.5, 0.5], [0, 0]);
         this._zhuIdx = 5;
 
         this._ZhuNum = _back.getChildByName("Text_1");
@@ -30,8 +30,7 @@ var jiaZhuLayer = cc.Layer.extend({
         this._Button_sub.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
-                if(this._zhuIdx > 1)
-                {
+                if (this._zhuIdx > 1) {
                     this._zhuIdx--;
                     this._ZhuNum.setString(this._zhuIdx);
                     this._Button_add.setTouchEnabled(true);
@@ -39,8 +38,7 @@ var jiaZhuLayer = cc.Layer.extend({
                     cc.log("----------------this._guidIdx = " + this._zhuIdx);
                 }
 
-                if(this._zhuIdx == 1)
-                {
+                if (this._zhuIdx == 1) {
                     this._Button_sub.setTouchEnabled(false);
                     this._Button_sub.setBright(false);
                 }
@@ -54,15 +52,14 @@ var jiaZhuLayer = cc.Layer.extend({
         this._Button_add = _back.getChildByName("Button_add");
         this._Button_add.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                if(this._zhuIdx < 5)
-                {
+                if (this._zhuIdx < 5) {
                     this._zhuIdx++;
                     this._ZhuNum.setString(this._zhuIdx);
                     this._Button_sub.setTouchEnabled(true);
                     this._Button_sub.setBright(true);
                 }
 
-                if(this._zhuIdx == 5){
+                if (this._zhuIdx == 5) {
                     this._Button_add.setTouchEnabled(false);
                     this._Button_add.setBright(false);
                 }
@@ -84,8 +81,7 @@ var jiaZhuLayer = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB();
                 }
                 that.removeFromParent();
@@ -107,20 +103,17 @@ var jiaZhuLayer = cc.Layer.extend({
                     uid: SelfUid(),
                     jiazhuNum: parseInt(_str),
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB();
                 }
                 that.removeFromParent();
             }
         }, this);
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
 
@@ -130,9 +123,9 @@ var jiaZhuLayer = cc.Layer.extend({
 
 //徐州加嘴
 var jiaZhuXuzhouLayer = cc.Layer.extend({
-    _zhuIdx:1,
-    _Button_sub:null,
-    _Button_add:null,
+    _zhuIdx: 1,
+    _Button_sub: null,
+    _Button_add: null,
     ctor: function (sureCB) {
         this._super();
         var UI = ccs.load("JiaZhu_xuzhou.json");
@@ -144,10 +137,10 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
 
 
         var _back = UI.node.getChildByName("back");
-        setWgtLayout(_back,[0.7, 0.7], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.7, 0.7], [0.5, 0.5], [0, 0]);
         this._zhuIdx = 1;
 
-        var zhuArr = [1,2];
+        var zhuArr = [1, 2];
         this._ZhuNum = _back.getChildByName("Text_1");
         this._ZhuNum.setString(zhuArr[this._zhuIdx]);
 
@@ -161,8 +154,7 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
         this._Button_sub.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
-                if(this._zhuIdx > 0)
-                {
+                if (this._zhuIdx > 0) {
                     this._zhuIdx--;
                     this._ZhuNum.setString(zhuArr[this._zhuIdx]);
                     this._Button_add.setTouchEnabled(true);
@@ -170,8 +162,7 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
                     cc.log("----------------this._guidIdx = " + this._zhuIdx);
                 }
 
-                if(this._zhuIdx == 0)
-                {
+                if (this._zhuIdx == 0) {
                     this._Button_sub.setTouchEnabled(false);
                     this._Button_sub.setBright(false);
                 }
@@ -185,15 +176,14 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
         this._Button_add = _back.getChildByName("Button_add");
         this._Button_add.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                if(this._zhuIdx < 1)
-                {
+                if (this._zhuIdx < 1) {
                     this._zhuIdx++;
                     this._ZhuNum.setString(zhuArr[this._zhuIdx]);
                     this._Button_sub.setTouchEnabled(true);
                     this._Button_sub.setBright(true);
                 }
 
-                if(this._zhuIdx == 1){
+                if (this._zhuIdx == 1) {
                     this._Button_add.setTouchEnabled(false);
                     this._Button_add.setBright(false);
                 }
@@ -204,8 +194,7 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
 
 
         var tData = MjClient.data.sData.tData;
-        if(tData.areaSelectMode.isJiaZhuyizui)
-        {
+        if (tData.areaSelectMode.isJiaZhuyizui) {
             this._ZhuNum.setString(zhuArr[0]);
             this._Button_sub.setTouchEnabled(false);
             this._Button_sub.setBright(false);
@@ -226,8 +215,7 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB();
                 }
                 that.removeFromParent();
@@ -249,8 +237,7 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
                     uid: SelfUid(),
                     jiazhuNum: parseInt(_str),
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB();
                 }
                 that.removeFromParent();
@@ -258,12 +245,10 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
         }, this);
 
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
     }
@@ -272,9 +257,9 @@ var jiaZhuXuzhouLayer = cc.Layer.extend({
 
 //道州加嘴
 var jiaZhuDaoZhouLayer = cc.Layer.extend({
-    _zhuIdx:1,
-    _Button_sub:null,
-    _Button_add:null,
+    _zhuIdx: 1,
+    _Button_sub: null,
+    _Button_add: null,
     ctor: function (sureCB) {
         this._super();
         var UI = ccs.load("JiaZhu_daozhou.json");
@@ -286,10 +271,10 @@ var jiaZhuDaoZhouLayer = cc.Layer.extend({
 
 
         var _back = UI.node.getChildByName("back");
-        setWgtLayout(_back,[0.7, 0.7], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.7, 0.7], [0.5, 0.5], [0, 0]);
         this._zhuIdx = 1;
 
-        var zhuArr = [2,3,5];
+        var zhuArr = [2, 3, 5];
         this._ZhuNum = _back.getChildByName("Text_1");
         this._ZhuNum.setString(zhuArr[this._zhuIdx]);
 
@@ -300,8 +285,7 @@ var jiaZhuDaoZhouLayer = cc.Layer.extend({
         this._Button_sub.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
-                if(this._zhuIdx > 0)
-                {
+                if (this._zhuIdx > 0) {
                     this._zhuIdx--;
                     this._ZhuNum.setString(zhuArr[this._zhuIdx]);
                     this._Button_add.setTouchEnabled(true);
@@ -309,8 +293,7 @@ var jiaZhuDaoZhouLayer = cc.Layer.extend({
                     cc.log("----------------this._guidIdx = " + this._zhuIdx);
                 }
 
-                if(this._zhuIdx == 0)
-                {
+                if (this._zhuIdx == 0) {
                     this._Button_sub.setTouchEnabled(false);
                     this._Button_sub.setBright(false);
                 }
@@ -324,15 +307,14 @@ var jiaZhuDaoZhouLayer = cc.Layer.extend({
         this._Button_add = _back.getChildByName("Button_add");
         this._Button_add.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                if(this._zhuIdx < 3)
-                {
+                if (this._zhuIdx < 3) {
                     this._zhuIdx++;
                     this._ZhuNum.setString(zhuArr[this._zhuIdx]);
                     this._Button_sub.setTouchEnabled(true);
                     this._Button_sub.setBright(true);
                 }
 
-                if(this._zhuIdx == 2){
+                if (this._zhuIdx == 2) {
                     this._Button_add.setTouchEnabled(false);
                     this._Button_add.setBright(false);
                 }
@@ -354,8 +336,7 @@ var jiaZhuDaoZhouLayer = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB();
                 }
                 that.removeFromParent();
@@ -377,8 +358,7 @@ var jiaZhuDaoZhouLayer = cc.Layer.extend({
                     uid: SelfUid(),
                     jiazhuNum: parseInt(_str),
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB();
                 }
                 that.removeFromParent();
@@ -392,7 +372,7 @@ var jiaZhuXuzhouLayer_new = cc.Layer.extend({
     ctor: function (sureCB) {
         this._super();
         var UI = ccs.load("JiaZhu_xuzhou.json");
-        if(this.getChildByName("jiazhu_xuzhou")) this.removeChildByName("jiazhu_xuzhou")
+        if (this.getChildByName("jiazhu_xuzhou")) this.removeChildByName("jiazhu_xuzhou")
         this.addChild(UI.node);
         UI.node.setName("jiazhu_xuzhou");
         var that = this;
@@ -406,19 +386,17 @@ var jiaZhuXuzhouLayer_new = cc.Layer.extend({
         var _back;
 
         var tData = MjClient.data.sData.tData;
-        if(tData.areaSelectMode.isJiaZhuyizui)
-        {
+        if (tData.areaSelectMode.isJiaZhuyizui) {
             back1.setVisible(false);
             back2.setVisible(true);
             _back = back2;
         }
-        else
-        {
+        else {
             back1.setVisible(true);
             back2.setVisible(false);
             _back = back1;
         }
-        setWgtLayout(_back,[1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0]);
         /*
          不加注
          */
@@ -430,8 +408,7 @@ var jiaZhuXuzhouLayer_new = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB();
                 }
                 that.removeFromParent();
@@ -450,8 +427,7 @@ var jiaZhuXuzhouLayer_new = cc.Layer.extend({
                     uid: SelfUid(),
                     jiazhuNum: 1,
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB();
                 }
                 that.removeFromParent();
@@ -462,8 +438,7 @@ var jiaZhuXuzhouLayer_new = cc.Layer.extend({
          加注2
          */
         var _Button_jia2 = _back.getChildByName("Button_jia2");
-        if(_Button_jia2)
-        {
+        if (_Button_jia2) {
             _Button_jia2.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     MjClient.gamenet.request("pkroom.handler.tableMsg", {
@@ -471,8 +446,7 @@ var jiaZhuXuzhouLayer_new = cc.Layer.extend({
                         uid: SelfUid(),
                         jiazhuNum: 2,
                     });
-                    if(sureCB)
-                    {
+                    if (sureCB) {
                         sureCB();
                     }
                     that.removeFromParent();
@@ -480,12 +454,10 @@ var jiaZhuXuzhouLayer_new = cc.Layer.extend({
             }, this);
         }
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
     }
@@ -494,10 +466,10 @@ var jiaZhuXuzhouLayer_new = cc.Layer.extend({
 
 // 湘阴推倒胡
 var jiaZhuXYTDH = cc.Layer.extend({
-    nopiao:null,
-    piao1:null,
-    piao2:null,
-    piao3:null,
+    nopiao: null,
+    piao1: null,
+    piao2: null,
+    piao3: null,
     ctor: function (reqCallBack) {
         this._super();
         var UI = ccs.load("Jiazhu_XYTDH.json");
@@ -505,7 +477,7 @@ var jiaZhuXYTDH = cc.Layer.extend({
         var that = this;
 
         this.block = UI.node.getChildByName("block");
-        setWgtLayout(this.block,[1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(this.block, [1, 1], [0.5, 0.5], [0, 0]);
 
         this.nopiao = this.block.getChildByName("nopiao");
         this.nopiao.addTouchEventListener(function (sender, type) {
@@ -515,8 +487,7 @@ var jiaZhuXYTDH = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -537,8 +508,7 @@ var jiaZhuXYTDH = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 1,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -557,8 +527,7 @@ var jiaZhuXYTDH = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 2,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -578,8 +547,7 @@ var jiaZhuXYTDH = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 3,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -588,12 +556,10 @@ var jiaZhuXYTDH = cc.Layer.extend({
 
         //setWgtLayout(this.piao3,[0.13,0.13],[0.8,0.2],[0,0]);
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
     }
@@ -608,10 +574,10 @@ var jiazhuXiangLouLayer = cc.Layer.extend({
         var that = this;
 
         var _block = UI.node.getChildByName("block");
-        setWgtLayout(_block, [1,1],[0.5,0.5],[0,0],true);
+        setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
         _block.setSwallowTouches(false);
-        
-        cc.log("_block:"+ JSON.stringify(_block.getPosition()));
+
+        cc.log("_block:" + JSON.stringify(_block.getPosition()));
 
         // var _back = UI.node.getChildByName("back");
         // setWgtLayout(_back,[1,1],[0.5,0.5],[0,0],true);
@@ -623,7 +589,7 @@ var jiazhuXiangLouLayer = cc.Layer.extend({
             不打坨
          */
         var _Button_buJia = _block.getChildByName("Button_buJia");
-        if(MjClient.gameType === MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI){
+        if (MjClient.gameType === MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI) {
             _Button_buJia.loadTextureNormal("playing/other/budatuo_XX.png");
             _Button_buJia.loadTexturePressed("playing/other/budatuo_XX.png");
         }
@@ -634,8 +600,7 @@ var jiazhuXiangLouLayer = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB(false);
                 }
                 that.removeFromParent();
@@ -647,7 +612,7 @@ var jiazhuXiangLouLayer = cc.Layer.extend({
             打坨
          */
         var _Button_jia = _block.getChildByName("Button_jia");
-        if(MjClient.gameType === MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI){
+        if (MjClient.gameType === MjClient.GAME_TYPE.XIANG_XIANG_GAO_HU_ZI) {
             _Button_jia.loadTextureNormal("playing/other/datuo_XX.png");
             _Button_jia.loadTexturePressed("playing/other/datuo_XX.png");
         }
@@ -659,8 +624,7 @@ var jiazhuXiangLouLayer = cc.Layer.extend({
                     uid: SelfUid(),
                     jiazhuNum: 1,
                 });
-                if(sureCB)
-                {
+                if (sureCB) {
                     sureCB(true);
                 }
                 that.removeFromParent();
@@ -671,10 +635,10 @@ var jiazhuXiangLouLayer = cc.Layer.extend({
 
 // 长沙麻将加注界面
 var jiaZhuCS = cc.Layer.extend({
-    nopiao:null,
-    piao1:null,
-    piao2:null,
-    piao3:null,
+    nopiao: null,
+    piao1: null,
+    piao2: null,
+    piao3: null,
     ctor: function (reqCallBack) {
         this._super();
         var UI = ccs.load("Jiazhu_changsha.json");
@@ -683,7 +647,7 @@ var jiaZhuCS = cc.Layer.extend({
         var that = this;
 
         this.block = UI.node.getChildByName("block");
-        setWgtLayout(this.block,[1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(this.block, [1, 1], [0.5, 0.5], [0, 0]);
 
         this.nopiao = this.block.getChildByName("nopiao");
         this.nopiao.setTag(0);
@@ -698,25 +662,23 @@ var jiaZhuCS = cc.Layer.extend({
         for (var i = 1; i <= 3; i++) {
             this["piao" + i] = this.block.getChildByName("piao" + i);
             this["piao" + i].setTag(i);
-            this["piao" + i].addTouchEventListener(function(sender, type) {
+            this["piao" + i].addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     this.requestJZ(sender.getTag(), reqCallBack)
                 }
             }, this);
 
         }
-       
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
     },
-    requestJZ: function(tag, reqCallBack) {
+    requestJZ: function (tag, reqCallBack) {
         MjClient.gamenet.request("pkroom.handler.tableMsg", {
             cmd: "MJJiazhu",
             jiazhuNum: tag,
@@ -736,10 +698,10 @@ var jiaZhuCS = cc.Layer.extend({
 
 // 通用加注
 var jiaZhuComLayer = cc.Layer.extend({
-    _zhuIdx:5,
-    _maxIdx:5,
-    _Button_sub:null,
-    _Button_add:null,
+    _zhuIdx: 5,
+    _maxIdx: 5,
+    _Button_sub: null,
+    _Button_add: null,
     ctor: function (maxNum, btnImg1, btnImg2, reqCallBack) {
         this._super();
         var UI = ccs.load("JiaZhu.json");
@@ -751,7 +713,7 @@ var jiaZhuComLayer = cc.Layer.extend({
 
 
         var _back = UI.node.getChildByName("back");
-        setWgtLayout(_back,[0.7, 0.7], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.7, 0.7], [0.5, 0.5], [0, 0]);
         this._zhuIdx = maxNum || 5;
         this._maxIdx = maxNum || 5;
 
@@ -765,8 +727,7 @@ var jiaZhuComLayer = cc.Layer.extend({
         this._Button_sub.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
-                if(this._zhuIdx > 1)
-                {
+                if (this._zhuIdx > 1) {
                     this._zhuIdx--;
                     this._ZhuNum.setString(this._zhuIdx);
                     this._Button_add.setTouchEnabled(true);
@@ -774,8 +735,7 @@ var jiaZhuComLayer = cc.Layer.extend({
                     cc.log("----------------this._guidIdx = " + this._zhuIdx);
                 }
 
-                if(this._zhuIdx == 1)
-                {
+                if (this._zhuIdx == 1) {
                     this._Button_sub.setTouchEnabled(false);
                     this._Button_sub.setBright(false);
                 }
@@ -789,15 +749,14 @@ var jiaZhuComLayer = cc.Layer.extend({
         this._Button_add = _back.getChildByName("Button_add");
         this._Button_add.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                if(this._zhuIdx < this._maxIdx)
-                {
+                if (this._zhuIdx < this._maxIdx) {
                     this._zhuIdx++;
                     this._ZhuNum.setString(this._zhuIdx);
                     this._Button_sub.setTouchEnabled(true);
                     this._Button_sub.setBright(true);
                 }
 
-                if(this._zhuIdx == this._maxIdx){
+                if (this._zhuIdx == this._maxIdx) {
                     this._Button_add.setTouchEnabled(false);
                     this._Button_add.setBright(false);
                 }
@@ -812,7 +771,7 @@ var jiaZhuComLayer = cc.Layer.extend({
             不加注
          */
         var _Button_buJia = _back.getChildByName("Button_buJia");
-        if(btnImg1)  _Button_buJia.loadTextureNormal(btnImg1);
+        if (btnImg1) _Button_buJia.loadTextureNormal(btnImg1);
         _Button_buJia.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
@@ -820,8 +779,7 @@ var jiaZhuComLayer = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -833,7 +791,7 @@ var jiaZhuComLayer = cc.Layer.extend({
          加注
          */
         var _Button_jia = _back.getChildByName("Button_jia");
-        if(btnImg2)  _Button_jia.loadTextureNormal(btnImg2);
+        if (btnImg2) _Button_jia.loadTextureNormal(btnImg2);
         _Button_jia.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
@@ -844,20 +802,17 @@ var jiaZhuComLayer = cc.Layer.extend({
                     uid: SelfUid(),
                     jiazhuNum: parseInt(_str),
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
             }
         }, this);
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
     }
@@ -886,8 +841,7 @@ var JiaZhu_MLHZ = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -898,13 +852,11 @@ var JiaZhu_MLHZ = cc.Layer.extend({
         /*
          加注
          */
-        for (var i = 1; i < 4; i ++ )
-        {
-            var _Button_jia = _back.getChildByName("Button_jia"+i);
+        for (var i = 1; i < 4; i++) {
+            var _Button_jia = _back.getChildByName("Button_jia" + i);
             _Button_jia.setTag(i)
             _Button_jia.addTouchEventListener(function (sender, type) {
-                if (type == 2)
-                {
+                if (type == 2) {
                     var _str = sender.getTag()
                     cc.log("  加注数量 _str = " + _str);
                     MjClient.gamenet.request("pkroom.handler.tableMsg", {
@@ -912,22 +864,19 @@ var JiaZhu_MLHZ = cc.Layer.extend({
                         uid: SelfUid(),
                         jiazhuNum: parseInt(_str),
                     });
-                    if(reqCallBack)
-                    {
+                    if (reqCallBack) {
                         reqCallBack();
                     }
                     that.removeFromParent();
                 }
-            }, this); 
+            }, this);
         }
 
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
     }
@@ -935,16 +884,16 @@ var JiaZhu_MLHZ = cc.Layer.extend({
 
 
 // 岳阳跑得快
-var JiaZhu_PaodekuaiTY= cc.Layer.extend({
-    nopiao:null,
-    piao1:null,
-    piao2:null,
-    piao3:null,
+var JiaZhu_PaodekuaiTY = cc.Layer.extend({
+    nopiao: null,
+    piao1: null,
+    piao2: null,
+    piao3: null,
     //参数：jiazhuflag
     //1: 1 2 3 分
     //2: 2 3 5 分
     //3: 2 5 8 分
-    ctor: function ( JiaZhuFlag, reqCallBack) {
+    ctor: function (JiaZhuFlag, reqCallBack) {
         this._super();
         //服用湘阴推倒胡的界面
         var UI = ccs.load("Jiazhu_XYTDH.json");
@@ -952,7 +901,7 @@ var JiaZhu_PaodekuaiTY= cc.Layer.extend({
         var that = this;
 
         this.block = UI.node.getChildByName("block");
-        setWgtLayout(this.block,[1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(this.block, [1, 1], [0.5, 0.5], [0, 0]);
         /*
          不飘
         */
@@ -964,8 +913,7 @@ var JiaZhu_PaodekuaiTY= cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -975,14 +923,13 @@ var JiaZhu_PaodekuaiTY= cc.Layer.extend({
 
         //飘分选项定义
         var piaoFlagAry =
-            {
-                1:[1,2,3],
-                2:[2,3,5],
-                3:[2,5,8]
-            };
-        var curpiaoFlag = piaoFlagAry[JiaZhuFlag];
-        if (!curpiaoFlag)
         {
+            1: [1, 2, 3],
+            2: [2, 3, 5],
+            3: [2, 5, 8]
+        };
+        var curpiaoFlag = piaoFlagAry[JiaZhuFlag];
+        if (!curpiaoFlag) {
             curpiaoFlag = piaoFlagAry[1];
         }
         var _path = "playing/gameTable/";
@@ -1000,8 +947,7 @@ var JiaZhu_PaodekuaiTY= cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: curpiaoFlag[0],
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1021,8 +967,7 @@ var JiaZhu_PaodekuaiTY= cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: curpiaoFlag[1],
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1042,8 +987,7 @@ var JiaZhu_PaodekuaiTY= cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: curpiaoFlag[2],
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1052,47 +996,42 @@ var JiaZhu_PaodekuaiTY= cc.Layer.extend({
 
         //setWgtLayout(this.piao3,[0.13,0.13],[0.8,0.2],[0,0]);
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "after_ready", function()
-        {
+        UIEventBind(null, this, "after_ready", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "mjhand", function()
-        {
+        UIEventBind(null, this, "mjhand", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "s2cMJJiazhu", function(msg)
-        {   
+        UIEventBind(null, this, "s2cMJJiazhu", function (msg) {
             var mySelf = getUIPlayer(0);
             if (!mySelf)
                 return;
 
             if (mySelf.info.uid != msg.uid)
                 return;
-            
+
             that.removeFromParent();
         });
     }
 });
 
 var PiaoFen4ChaoGu = cc.Layer.extend({
-    nopiao:null,
-    piao1:null,
-    piao2:null,
-    piao3:null,
-    piao4:null,
+    nopiao: null,
+    piao1: null,
+    piao2: null,
+    piao3: null,
+    piao4: null,
     //参数：jiazhuflag
     //1: 1 2 3 分
     //2: 2 3 5 分
     //3: 2 5 8 分
-    ctor: function ( JiaZhuFlag, reqCallBack) {
+    ctor: function (JiaZhuFlag, reqCallBack) {
         this._super();
         //服用湘阴推倒胡的界面
         var UI = ccs.load("Jiazhu_CG.json");
@@ -1100,7 +1039,7 @@ var PiaoFen4ChaoGu = cc.Layer.extend({
         var that = this;
 
         this.block = UI.node.getChildByName("block");
-        setWgtLayout(this.block,[1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(this.block, [1, 1], [0.5, 0.5], [0, 0]);
         /*
          不飘
         */
@@ -1112,8 +1051,7 @@ var PiaoFen4ChaoGu = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: 0,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1123,15 +1061,14 @@ var PiaoFen4ChaoGu = cc.Layer.extend({
 
         //飘分选项定义
         var piaoFlagAry =
-            {
-                1:[1,2,3],
-                2:[2,3,5],
-                3:[2,5,8],
-                4:[1,2,3,4],
-            };
-        var curpiaoFlag = piaoFlagAry[JiaZhuFlag];
-        if (!curpiaoFlag)
         {
+            1: [1, 2, 3],
+            2: [2, 3, 5],
+            3: [2, 5, 8],
+            4: [1, 2, 3, 4],
+        };
+        var curpiaoFlag = piaoFlagAry[JiaZhuFlag];
+        if (!curpiaoFlag) {
             curpiaoFlag = piaoFlagAry[1];
         }
         var _path = "playing/gameTable/";
@@ -1149,8 +1086,7 @@ var PiaoFen4ChaoGu = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: curpiaoFlag[0],
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1170,8 +1106,7 @@ var PiaoFen4ChaoGu = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: curpiaoFlag[1],
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1191,17 +1126,16 @@ var PiaoFen4ChaoGu = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: curpiaoFlag[2],
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
             }
         }, this);
 
-                /*
-            飘分3
-         */
+        /*
+    飘分3
+ */
         this.piao4 = this.block.getChildByName("piao4");
         this.piao4.loadTextureNormal(_path + "piao" + curpiaoFlag[3] + ".png");
         this.piao4.loadTexturePressed(_path + "piao" + curpiaoFlag[3] + ".png");
@@ -1212,8 +1146,7 @@ var PiaoFen4ChaoGu = cc.Layer.extend({
                     cmd: "MJJiazhu",
                     jiazhuNum: curpiaoFlag[3],
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1222,36 +1155,34 @@ var PiaoFen4ChaoGu = cc.Layer.extend({
 
         //setWgtLayout(this.piao3,[0.13,0.13],[0.8,0.2],[0,0]);
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
     }
 });
 
 var DingQueLayer = cc.Layer.extend({
-    quewan:null,
-    quetiao:null,
-    quetong:null,
-    quementip:null,
-    quese:-1,
-    ctor: function (reqCallBack,pl) {
+    quewan: null,
+    quetiao: null,
+    quetong: null,
+    quementip: null,
+    quese: -1,
+    ctor: function (reqCallBack, pl) {
         this._super();
         var UI = ccs.load("DingQueLayer.json");
         this.addChild(UI.node);
         var that = this;
 
         this.block = UI.node.getChildByName("block");
-        setWgtLayout(this.block,[1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(this.block, [1, 1], [0.5, 0.5], [0, 0]);
 
         this.quewan = this.block.getChildByName("quewan");
         var light_wan = this.block.getChildByName("light_wan");
         light_wan.visible = false;
-        light_wan.runAction(cc.sequence(cc.fadeIn(0),cc.scaleTo(1,1.2),cc.fadeOut(1),cc.scaleTo(0,1)).repeatForever());
+        light_wan.runAction(cc.sequence(cc.fadeIn(0), cc.scaleTo(1, 1.2), cc.fadeOut(1), cc.scaleTo(0, 1)).repeatForever());
         this.quewan.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
@@ -1259,8 +1190,7 @@ var DingQueLayer = cc.Layer.extend({
                     cmd: "MJSelect",
                     que: 1,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1276,7 +1206,7 @@ var DingQueLayer = cc.Layer.extend({
         this.quetiao = this.block.getChildByName("quetiao");
         var light_tiao = this.block.getChildByName("light_tiao");
         light_tiao.visible = false;
-        light_tiao.runAction(cc.sequence(cc.fadeIn(0),cc.scaleTo(1,1.2),cc.fadeOut(1),cc.scaleTo(0,1)).repeatForever());
+        light_tiao.runAction(cc.sequence(cc.fadeIn(0), cc.scaleTo(1, 1.2), cc.fadeOut(1), cc.scaleTo(0, 1)).repeatForever());
         this.quetiao.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
@@ -1284,8 +1214,7 @@ var DingQueLayer = cc.Layer.extend({
                     cmd: "MJSelect",
                     que: 0,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1299,7 +1228,7 @@ var DingQueLayer = cc.Layer.extend({
         this.quetong = this.block.getChildByName("quetong");
         var light_tong = this.block.getChildByName("light_tong");
         light_tong.visible = false;
-        light_tong.runAction(cc.sequence(cc.fadeIn(0),cc.scaleTo(1,1.2),cc.fadeOut(1),cc.scaleTo(0,1)).repeatForever());
+        light_tong.runAction(cc.sequence(cc.fadeIn(0), cc.scaleTo(1, 1.2), cc.fadeOut(1), cc.scaleTo(0, 1)).repeatForever());
         this.quetong.addTouchEventListener(function (sender, type) {
             if (type == 2) {
 
@@ -1307,8 +1236,7 @@ var DingQueLayer = cc.Layer.extend({
                     cmd: "MJSelect",
                     que: 2,
                 });
-                if(reqCallBack)
-                {
+                if (reqCallBack) {
                     reqCallBack();
                 }
                 that.removeFromParent();
@@ -1317,46 +1245,36 @@ var DingQueLayer = cc.Layer.extend({
 
         this.getquenum(pl);
 
-        if (this.quese == 0) 
-        {
+        if (this.quese == 0) {
             light_tiao.visible = true;
         }
-        else if (this.quese == 1) 
-        {
+        else if (this.quese == 1) {
             light_wan.visible = true;
         }
-        else if (this.quese == 2) 
-        {
+        else if (this.quese == 2) {
             light_tong.visible = true;
         }
         //setWgtLayout(this.piao2,[0.13,0.13],[0.6,0.2],[0,0]);
 
         //setWgtLayout(this.piao3,[0.13,0.13],[0.8,0.2],[0,0]);
 
-        UIEventBind(null, this, "initSceneData", function()
-        {
+        UIEventBind(null, this, "initSceneData", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "LeaveGame", function()
-        {
+        UIEventBind(null, this, "LeaveGame", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "endRoom", function()
-        {
+        UIEventBind(null, this, "endRoom", function () {
             that.removeFromParent();
         });
-        UIEventBind(null, this, "MJPut", function()
-        {
-            if (MjClient.rePlayVideo != -1) 
-            {
+        UIEventBind(null, this, "MJPut", function () {
+            if (MjClient.rePlayVideo != -1) {
                 that.removeFromParent();
             }
         });
     },
-    getquenum: function(pl)
-    {
-        if (!pl.mjhand) 
-        {
+    getquenum: function (pl) {
+        if (!pl.mjhand) {
             return;
         }
         var hands = pl.mjhand;
@@ -1364,32 +1282,26 @@ var DingQueLayer = cc.Layer.extend({
         var tiaonum = 0;
         var tongnum = 0;
         for (var i = 0; i < hands.length; i++) {
-            if (Math.floor(hands[i]) / 10 < 1) 
-            {
+            if (Math.floor(hands[i] / 10) < 1) {
                 tiaonum += 1;
             }
-            else if (Math.floor(hands[i]) / 10 < 2) 
-            {
+            else if (Math.floor(hands[i] / 10) < 2) {
                 wannum += 1;
             }
-            else
-            {
+            else {
                 tongnum += 1;
             }
         }
 
         var maxNum = tiaonum < wannum ? tiaonum : wannum;
         maxNum = maxNum < tongnum ? maxNum : tongnum;
-        if (maxNum == tiaonum) 
-        {
+        if (maxNum == tiaonum) {
             this.quese = 0;
         }
-        else if (maxNum == wannum)
-        {
+        else if (maxNum == wannum) {
             this.quese = 1;
         }
-        else if (maxNum == tongnum) 
-        {
+        else if (maxNum == tongnum) {
             this.quese = 2;
         }
     }

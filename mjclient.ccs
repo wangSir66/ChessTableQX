@@ -663,6 +663,7 @@
           <Image Name="kaifangjilu.png" />
           <Image Name="loading_16.png" />
           <Image Name="majiang_n.png" />
+          <Image Name="quanbu_n.png" />
           <Image Name="quanbu_s.png" />
           <Image Name="record_title1.png" />
           <Image Name="record_title2.png" />
@@ -2351,6 +2352,7 @@
           <Image Name="pjjs_29.png" />
           <Image Name="pjjs_299.png" />
           <Image Name="pjjs_9.png" />
+          <Image Name="qita.png" />
           <Image Name="quanguan.png" />
           <Image Name="queding.png" />
           <Image Name="shuru.png" />
@@ -3318,7 +3320,6 @@
             <Image Name="zongxiang.png" />
           </Folder>
           <Folder Name="doudizhu">
-            <Image Name="beijing.png" />
             <Image Name="beishu.png" />
             <Image Name="beishu_shuzi.png" />
             <Image Name="btn_yaobuqi.png" />
@@ -3518,6 +3519,9 @@
             <Image Name="juNum.png" />
             <Image Name="loseNum.png" />
             <Image Name="mingzi.png" />
+            <Image Name="n_playLabel_13.png" />
+            <Image Name="n_playLabel_15.png" />
+            <Image Name="n_playLabel_16.png" />
             <Image Name="power.png" />
             <Image Name="powerBar.png" />
             <Image Name="qiang.png" />
@@ -3593,10 +3597,6 @@
             <Image Name="zhuobian_06.png" />
             <Image Name="zhuobian_07.png" />
             <Image Name="zhuobian_07_2.png" />
-            <Image Name="zhuozi.png" />
-            <Image Name="zhuozi_2.png" />
-            <Image Name="zhuozi_3.png" />
-            <Image Name="zhuozi_4.jpg" />
           </Folder>
           <Folder Name="MJ">
             <Folder Name="MJBg1">
@@ -4819,6 +4819,22 @@
           <Image Name="icon_pm_7.png" />
           <Image Name="icon_pm_8.png" />
         </Folder>
+        <Folder Name="XueZhanDaoDi">
+          <Image Name="errenliangfang.png" />
+          <Image Name="errenyifang.png" />
+          <Image Name="n_play_label21.png" />
+          <Image Name="n_play_label22.png" />
+          <Image Name="n2_history_btn05.png" />
+          <Image Name="n2_popback09.png" />
+          <Image Name="sanrenliangfang.png" />
+          <Image Name="sanrensanfang.png" />
+          <Image Name="swappBg.png" />
+          <Image Name="swappPoint.png" />
+          <Image Name="swappPoint1.png" />
+          <Image Name="swappPoint2.png" />
+          <Image Name="swappTable.png" />
+          <Image Name="swappType1.png" />
+        </Folder>
         <Folder Name="ZhuaWaWa">
           <Image Name="bg_1.png" />
           <Image Name="bg_a.png" />
@@ -4870,75 +4886,25 @@
           <Image Name="zhua_guang.png" />
           <Image Name="zhua_guang2.png" />
         </Folder>
-        <Project Name="Act_duizhan.csd" Type="Layer" />
-        <Project Name="Active_alipay_redpacket.csd" Type="Layer" />
-        <Project Name="Active_caiShen.csd" Type="Layer" />
-        <Project Name="Active_caiShenRule.csd" Type="Layer" />
-        <Project Name="Active_chouqian_share.csd" Type="Layer" />
-        <Project Name="Active_chouqianReward.csd" Type="Layer" />
-        <Project Name="Active_chunjiechouqian.csd" Type="Layer" />
-        <Project Name="Active_clubCost.csd" Type="Layer" />
-        <Project Name="Active_clubCostrule.csd" Type="Layer" />
-        <Project Name="Active_clubCosttip.csd" Type="Layer" />
-        <Project Name="Active_collectSpringBean.csd" Type="Layer" />
-        <Project Name="Active_collectSpringBeanReward.csd" Type="Layer" />
-        <Project Name="Active_collectSpringBeanRule.csd" Type="Layer" />
-        <Project Name="Active_flyAKiteLayer.csd" Type="Layer" />
-        <Project Name="Active_flyAKiteRanking.csd" Type="Layer" />
-        <Project Name="Active_flyAKiteRule.csd" Type="Layer" />
-        <Project Name="Active_friendsPK.csd" Type="Layer" />
-        <Project Name="Active_friendsPKrule.csd" Type="Layer" />
-        <Project Name="Active_friendsPKtip.csd" Type="Layer" />
-        <Project Name="ActiveLayer.csd" Type="Layer" />
-        <Project Name="ActiveLCBX_des.csd" Type="Layer" />
-        <Project Name="ActiveLCBX_Investment.csd" Type="Layer" />
-        <Project Name="ActiveLCBX_main.csd" Type="Layer" />
-        <Project Name="ActiveLCBX_tuiJianMa.csd" Type="Layer" />
-        <Project Name="ActiveZhongQiuLayer_back.csd" Type="Layer" />
-        <Project Name="ActiveZhongQiuLayer_enter.csd" Type="Layer" />
-        <Project Name="ActiveZhongQiuLayer_main.csd" Type="Layer" />
-        <Project Name="ActiveZhongQiuLayer_rule.csd" Type="Layer" />
         <Project Name="ActivityLayer.csd" Type="Layer" />
-        <Project Name="AdvLayer.csd" Type="Layer" />
-        <Project Name="AdvShare.csd" Type="Layer" />
-        <Project Name="advShowLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreTipLayer.csd" Type="Layer" />
         <Project Name="bg_red20.csd" Type="Node" />
         <Project Name="bg_RunFasterYaAn.csd" Type="Node" />
         <Project Name="bg_xuezhan.csd" Type="Node" />
-        <Project Name="BindingCodeEnterLayer.csd" Type="Layer" />
         <Project Name="BindingCodeLayer.csd" Type="Layer" />
         <Project Name="bindingCodeLayer_tipss.csd" Type="Layer" />
-        <Project Name="BindingCodeNewLayer.csd" Type="Layer" />
-        <Project Name="bindingShouJi.csd" Type="Layer" />
-        <Project Name="bindingShoujiNewLayer.csd" Type="Layer" />
         <Project Name="bindShoujiRewardLayer.csd" Type="Layer" />
         <Project Name="block.csd" Type="Layer" />
-        <Project Name="CertificationGift.csd" Type="Layer" />
-        <Project Name="ChangCiMoneyLayer.csd" Type="Layer" />
-        <Project Name="ChangeIdLayer.csd" Type="Layer" />
-        <Project Name="Christmas_Back.csd" Type="Layer" />
-        <Project Name="Christmas_main.csd" Type="Layer" />
-        <Project Name="ChuanQiLayer.csd" Type="Layer" />
-        <Project Name="ClubBindingLayer.csd" Type="Layer" />
-        <Project Name="ClubLayer.csd" Type="Layer" />
         <Project Name="createHomeTotal.csd" Type="Layer" />
         <Project Name="createRoomRecord.csd" Type="Node" />
         <Project Name="DelRoom.csd" Type="Node" />
+        <Project Name="DingQueLayer.csd" Type="Node" />
         <Project Name="disclaimerMainLayer.csd" Type="Layer" />
         <Project Name="disclaimerReminderLayer.csd" Type="Layer" />
-        <Project Name="Doudizhu_CardNode.csd" Type="Node" />
-        <Project Name="Doudizhu_HeadNode.csd" Type="Node" />
-        <Project Name="Doudizhu_WaitNode.csd" Type="Node" />
-        <Project Name="DuanWuJie_Back.csd" Type="Layer" />
-        <Project Name="DuanWuJie_main.csd" Type="Layer" />
-        <Project Name="DuanWuJie_myteam.csd" Type="Layer" />
-        <Project Name="DuanWujie_rule.csd" Type="Layer" />
         <Project Name="eMailLayer.csd" Type="Layer" />
         <Project Name="eMailLayerReceive.csd" Type="Layer" />
         <Project Name="endAll.csd" Type="Layer" />
-        <Project Name="endAll_DDZTY.csd" Type="Layer" />
         <Project Name="endAll2p.csd" Type="Layer" />
         <Project Name="endAll3p.csd" Type="Layer" />
         <Project Name="endOne.csd" Type="Layer" />
@@ -4946,7 +4912,6 @@
         <Project Name="endOne_RunFasterYA.csd" Type="Layer" />
         <Project Name="EndRoom.csd" Type="Node" />
         <Project Name="enter.csd" Type="Layer" />
-        <Project Name="ExportDataLayer.csd" Type="Layer" />
         <Project Name="fangQiang.csd" Type="Layer" />
         <Project Name="FreeNumberVoteDialog.csd" Type="Layer" />
         <Project Name="friendcard_addMutexLayer.csd" Type="Layer" />
@@ -4958,27 +4923,48 @@
         <Project Name="friendcard_guideLayer.csd" Type="Layer" />
         <Project Name="friendcard_info.csd" Type="Layer" />
         <Project Name="friendcard_inputRuleNameDialog.csd" Type="Layer" />
+        <Project Name="friendcard_invite_shenhe.csd" Type="Layer" />
         <Project Name="friendcard_main.csd" Type="Layer" />
         <Project Name="friendcard_manageRecord.csd" Type="Node" />
         <Project Name="friendcard_member.csd" Type="Layer" />
+        <Project Name="friendcard_member_daoru_result.csd" Type="Layer" />
+        <Project Name="friendcard_member_group_daoru.csd" Type="Layer" />
         <Project Name="friendcard_mutexLayer.csd" Type="Layer" />
         <Project Name="friendcard_nvguanjia.csd" Type="Layer" />
+        <Project Name="friendcard_popMsgInvited.csd" Type="Layer" />
         <Project Name="friendcard_popMsgShenhe.csd" Type="Layer" />
         <Project Name="friendcard_popUpMsg.csd" Type="Node" />
         <Project Name="friendcard_posUpMsg_daoshu.csd" Type="Layer" />
+        <Project Name="friendcard_posUpMsg_daoshu2.csd" Type="Layer" />
         <Project Name="friendcard_roomInfoDialog.csd" Type="Node" />
         <Project Name="friendcard_roomRecord.csd" Type="Node" />
+        <Project Name="friendcard_rule_detail.csd" Type="Layer" />
+        <Project Name="friendcard_ruleBlackList.csd" Type="Layer" />
+        <Project Name="friendcard_ruleBlackListAdd.csd" Type="Layer" />
+        <Project Name="friendCard_ruleLayer.csd" Type="Node" />
         <Project Name="friendcard_ruleSelectDialog.csd" Type="Node" />
+        <Project Name="friendcard_search.csd" Type="Node" />
         <Project Name="friendcard_selectGroup.csd" Type="Node" />
+        <Project Name="friendcard_selectGroupTJ.csd" Type="Node" />
         <Project Name="friendcard_selectTime.csd" Type="Layer" />
+        <Project Name="friendcard_selectTime2.csd" Type="Layer" />
         <Project Name="friendcard_selectTJDay.csd" Type="Layer" />
         <Project Name="friendcard_selectWanfa.csd" Type="Node" />
+        <Project Name="friendcard_selectYejiMode.csd" Type="Layer" />
+        <Project Name="friendcard_selectZhuliTJ.csd" Type="Node" />
         <Project Name="friendcard_setMainSkin.csd" Type="Layer" />
         <Project Name="friendCard_setRatio.csd" Type="Node" />
+        <Project Name="friendcard_tip_club_guide.csd" Type="Layer" />
+        <Project Name="friendcard_tip_create_club_guide.csd" Type="Layer" />
         <Project Name="friendcard_tongji.csd" Type="Node" />
+        <Project Name="friendcard_tongji_liushui.csd" Type="Layer" />
+        <Project Name="friendcard_tongji_member.csd" Type="Layer" />
         <Project Name="friendcard_tongji_rankRemarkSet.csd" Type="Layer" />
         <Project Name="friendcard_tongji_rankSet.csd" Type="Layer" />
+        <Project Name="friendcard_tongji_reset.csd" Type="Layer" />
+        <Project Name="friendcard_tongji_selectOpt.csd" Type="Node" />
         <Project Name="friendCard_tongjiDetails.csd" Type="Node" />
+        <Project Name="friendcard_warningScore.csd" Type="Layer" />
         <Project Name="friendcard_yaoqing.csd" Type="Layer" />
         <Project Name="friendcard_yaoqingMember.csd" Type="Layer" />
         <Project Name="friendcard_yaoyingIntoGameDialog.csd" Type="Layer" />
@@ -5005,47 +4991,18 @@
         <Project Name="GuidLayer.csd" Type="Layer" />
         <Project Name="HAHZ_showCard.csd" Type="Layer" />
         <Project Name="Home.csd" Type="Layer" />
-        <Project Name="InfoLayer.csd" Type="Layer" />
-        <Project Name="JFHXJ_main.csd" Type="Layer" />
-        <Project Name="JFHXJ_rule.csd" Type="Layer" />
-        <Project Name="JFHXJ_tip.csd" Type="Layer" />
-        <Project Name="jiayouPacketRule.csd" Type="Layer" />
-        <Project Name="jiayouPacketShare.csd" Type="Layer" />
-        <Project Name="jiayouPacketSure.csd" Type="Layer" />
-        <Project Name="jiayouRedPacket.csd" Type="Layer" />
-        <Project Name="JiaZhu.csd" Type="Layer" />
-        <Project Name="JiaZhu_xuzhou.csd" Type="Layer" />
         <Project Name="JinBibuzuTip1.csd" Type="Layer" />
         <Project Name="JinBibuzuTip2.csd" Type="Layer" />
-        <Project Name="KaiFangMoneyLayer.csd" Type="Layer" />
-        <Project Name="lazhuangTips.csd" Type="Layer" />
         <Project Name="Login.csd" Type="Layer" />
-        <Project Name="Login_selectRole.csd" Type="Node" />
         <Project Name="LoginLegalDialog.csd" Type="Layer" />
-        <Project Name="loseGameLayer.csd" Type="Layer" />
-        <Project Name="Luckly_Back.csd" Type="Layer" />
-        <Project Name="Luckly_Rank.csd" Type="Layer" />
-        <Project Name="Luckly_Table.csd" Type="Layer" />
-        <Project Name="LucklyTable_new.csd" Type="Layer" />
-        <Project Name="LucklyTable_newBack.csd" Type="Layer" />
-        <Project Name="LucklyTable_newRank.csd" Type="Layer" />
-        <Project Name="LucklyTable_qianDaoBack.csd" Type="Layer" />
-        <Project Name="mobilePhoneLogin-yzm.csd" Type="Layer" />
-        <Project Name="NetError.csd" Type="Node" />
-        <Project Name="NewYear_Back.csd" Type="Layer" />
-        <Project Name="NewYear_main.csd" Type="Layer" />
-        <Project Name="niuniuReadyLayer.csd" Type="Layer" />
-        <Project Name="PayLayer.csd" Type="Layer" />
         <Project Name="PayWayLayer.csd" Type="Layer" />
         <Project Name="PersonalMallLayer.csd" Type="Layer" />
         <Project Name="Play.csd" Type="Layer" />
         <Project Name="Play_Red20.csd" Type="Layer" />
         <Project Name="Play_RunFasterYN.csd" Type="Layer" />
-        <Project Name="PlayaroundInfo.csd" Type="Layer" />
+        <Project Name="Play_XueZhanMahjong.csd" Type="Layer" />
         <Project Name="playBackLayer.csd" Type="Layer" />
         <Project Name="PlayerChat.csd" Type="Layer" />
-        <Project Name="playgroundLayer.csd" Type="Layer" />
-        <Project Name="playingInfo.csd" Type="Layer" />
         <Project Name="PlayLog.csd" Type="Node" />
         <Project Name="PlayLogInfo.csd" Type="Node" />
         <Project Name="PlayLogRole.csd" Type="Layer" />
@@ -5057,17 +5014,6 @@
         <Project Name="PopUpMsg3.csd" Type="Node" />
         <Project Name="PopUpMsg4.csd" Type="Node" />
         <Project Name="PopUpMsg5.csd" Type="Node" />
-        <Project Name="Qiandao_back.csd" Type="Layer" />
-        <Project Name="Qiandao_myPrize.csd" Type="Layer" />
-        <Project Name="Qiandao_tishi.csd" Type="Layer" />
-        <Project Name="QiandaoLayer.csd" Type="Layer" />
-        <Project Name="QiandaoPrize.csd" Type="Layer" />
-        <Project Name="QiandaoRule.csd" Type="Layer" />
-        <Project Name="RankLayer.csd" Type="Layer" />
-        <Project Name="RankRequstLayer.csd" Type="Layer" />
-        <Project Name="RecommendLayer_active.csd" Type="Layer" />
-        <Project Name="RecommendLayer_activeList.csd" Type="Layer" />
-        <Project Name="registerPhoneNumLayer-yzm.csd" Type="Layer" />
         <Project Name="Replay.csd" Type="Layer" />
         <Project Name="Replay_TDH.csd" Type="Layer" />
         <Project Name="ReplayUILayer.csd" Type="Layer" />
@@ -5087,18 +5033,6 @@
         <Project Name="ShareNewLayer.csd" Type="Layer" />
         <Project Name="shareToday.csd" Type="Layer" />
         <Project Name="ShiMingRenZheng.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_act.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_DB_code.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_DB_detail.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_DB_record.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_info.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_info_0.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_info_2.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_main.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_myCode.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_Rank.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_rule.csd" Type="Layer" />
-        <Project Name="ShopOfJiFen_share.csd" Type="Layer" />
         <Project Name="showDistance3PlayerTips.csd" Type="Layer" />
         <Project Name="showDistanceTips.csd" Type="Layer" />
         <Project Name="showFlowerTips.csd" Type="Node" />
@@ -5113,15 +5047,7 @@
         <Project Name="UserInfo_2.csd" Type="Layer" />
         <Project Name="UserInfo_playing.csd" Type="Layer" />
         <Project Name="WebView.csd" Type="Node" />
-        <Project Name="winGameLayer.csd" Type="Layer" />
-        <Project Name="Winter_Back.csd" Type="Layer" />
-        <Project Name="Winter_main.csd" Type="Layer" />
-        <Project Name="XiaZhu_NN.csd" Type="Layer" />
         <Project Name="YouJianLayer.csd" Type="Layer" />
-        <Project Name="ZhuaWaWa_Back.csd" Type="Layer" />
-        <Project Name="ZhuaWaWa_main.csd" Type="Layer" />
-        <Project Name="ZhuaWaWa_rule.csd" Type="Layer" />
-        <Project Name="ZiXunLayer.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

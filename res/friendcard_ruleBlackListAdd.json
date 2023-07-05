@@ -934,7 +934,7 @@
                   "Y": 0.2459
                 },
                 "PreSize": {
-                  "X": 0.1562,
+                  "X": 0.1563,
                   "Y": 0.0514
                 },
                 "LeftMargin": 797.9919,
@@ -1621,28 +1621,6 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
-      "UsedResources": [
-        "fonts/lanting.TTF",
-        "friendCards/common/btn_chebox_fang.png",
-        "friendCards/common/btn_ok_n.png",
-        "friendCards/common/btn_ok_s.png",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/headMask.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_gou.png",
-        "friendCards/common/img_hengxian.png",
-        "friendCards/mian_rule/blackList/btn_add_club_n.png",
-        "friendCards/mian_rule/blackList/btn_add_club_s.png",
-        "friendCards/mian_rule/blackList/btn_add_group_n.png",
-        "friendCards/mian_rule/blackList/btn_add_group_s.png",
-        "friendCards/mian_rule/blackList/btn_add_player_n.png",
-        "friendCards/mian_rule/blackList/btn_add_player_s.png",
-        "friendCards/mian_rule/blackList/image_bg.png",
-        "friendCards/mutexLayer/img_inquire_n.png",
-        "friendCards/tongji/tj_input.png",
-        "friendCards/warnScore/btn_back.png",
-        "friendCards/warnScore/btn_search.png"
-      ],
       "ctype": "GameFileData"
     }
   },

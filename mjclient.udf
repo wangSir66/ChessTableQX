@@ -28,24 +28,5 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="ShopOfJiFen_act.csd" />
-          <FilePathData Path="ShopOfJiFen_DB_code.csd" />
-          <FilePathData Path="ShopOfJiFen_DB_detail.csd" />
-          <FilePathData Path="ShopOfJiFen_DB_record.csd" />
-          <FilePathData Path="ShopOfJiFen_info_0.csd" />
-          <FilePathData Path="ShopOfJiFen_main.csd" />
-          <FilePathData Path="ShopOfJiFen_myCode.csd" />
-          <FilePathData Path="ShopOfJiFen_share.csd" />
-          <FilePathData Path="showDistance3PlayerTips.csd" />
-          <FilePathData Path="showDistanceTips.csd" />
-          <FilePathData Path="StoreBindingLayer.csd" />
-          <FilePathData Path="StoreLayer_0.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="StoreLayer_0.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

@@ -309,68 +309,21 @@ var PlayerInfoView = cc.Layer.extend({
         var _props = util.localStorageEncrypt.getBoolItem("_InteractiveProps", true);
         var _nodeProps;
         var _propsText = new ccui.Text();
-        if(MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ|| MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {//岳阳同一使用方正兰亭
-            _propsText.setFontName("fonts/lanting.TTF");
-        }
         _propsText.setName("text");
         _propsText.setString("使用互动道具");
         _propsText.setTouchEnabled(true);
 
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ) {
-            _nodeProps = new ccui.CheckBox("createNewPng/daTC1_19.png", "createNewPng/daTC1_20.png");
-            _nodeProps.setAnchorPoint(cc.p(0, 0));
-            _ID.addChild(_nodeProps, 100);
-            _nodeProps.setPosition(cc.p(0, -(_ID.height*3.1)));
-            _propsText.setFontName(MjClient.fzcyfont);
-            if (MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) 
-            {
-                _propsText.setFontName("fonts/lanting.TTF");
-            }
-            _fontSize = 27;
+        _nodeProps = new ccui.CheckBox("game_picture/btn_cjxx_normal.png", "game_picture/btn_cjxx_press.png");
+        if(MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP){
+            _nodeProps = new ccui.CheckBox("ui/createRoom/cb_di.png", "ui/createRoom/gou.png");
         }
-        else if(isJinZhongAPPType()) {
-            _nodeProps = new ccui.CheckBox("createNewPng/daTC1_19.png", "createNewPng/daTC1_20.png");
-            _nodeProps.setAnchorPoint(cc.p(0, 0));
-            _ID.addChild(_nodeProps, 100);
-            _nodeProps.setPosition(cc.p(0, -(_ID.height*1.8)));
-            _fontSize = 26;
-            _propsText.setFontName("fonts/lanting.TTF");
-        }
-        else{
-            _nodeProps = new ccui.CheckBox("game_picture/btn_cjxx_normal.png", "game_picture/btn_cjxx_press.png");
-            if(MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP){
-                _nodeProps = new ccui.CheckBox("ui/createRoom/cb_di.png", "ui/createRoom/gou.png");
-            }
-            _nodeProps.setAnchorPoint(cc.p(0, 0));
-            _IP.addChild(_nodeProps, 100);
-            _nodeProps.setPosition(cc.p(0, -(_IP.height*1.5)));
-            if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP|| MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
-                _propsText.setFontName("fonts/lanting.TTF");
-            }
-            else {
-                _propsText.setFontName(MjClient.fzcyfont);
-            }
-            var _fontSize = 30;
-        }
+        _nodeProps.setAnchorPoint(cc.p(0, 0));
+        _IP.addChild(_nodeProps, 100);
+        _nodeProps.setPosition(cc.p(0, -(_IP.height*3.5)));
+        _propsText.setFontName(MjClient.fzcyfont);
+        var _fontSize = 30;
         _propsText.setPosition(cc.p(_nodeProps.getContentSize().width*3.5 + 10, _nodeProps.getContentSize().height/2));
-        if(MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP || MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP || MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ)
-        {
-            _propsText.setPosition(cc.p(_nodeProps.getContentSize().width*3.5, _nodeProps.getContentSize().height/2));
-        }
-        if(MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP) {
-            _nodeProps.setPositionY(-(_IP.height*1.5) - 40);
-            _propsText.setFontName("fonts/lanting.TTF");
-            _fontSize = 28;
-        }
+    
         _propsText.setTouchEnabled(true);
         _propsText.setFontSize(_fontSize);
         _nodeProps.setSelected(_props);
@@ -1924,10 +1877,6 @@ var PlayerInfoBindView2 = cc.Layer.extend({
         _name.setString(getNewName (_nameStr,12));
         _name.setFontName("Arial");
         _name.setFontSize(_name.getFontSize());
-
-        
-
-        
         //头像
         var _headImg = _node_info.getChildByName("headImg");
         MjClient.loadWxHead(pinfo.uid,pinfo.headimgurl);

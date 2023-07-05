@@ -4693,7 +4693,7 @@ FriendCard_UI.getCurClubHonorVal = function (clubId = 0, list) {
     !list && (list = [])
     for (let _i = 0; _i < list.length; _i++) {
         const item = list[_i];
-        if (item.clubId === clubId) return item.honorVal || ''
+        if (item.clubId === clubId) return item.honorVal || '0'
     }
     return '';
 }

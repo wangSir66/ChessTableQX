@@ -91,13 +91,13 @@
                 <PreSize X="0.2394" Y="0.3892" />
                 <FileData Type="Normal" Path="home/homeHeadCusPic_2.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="ID" ActionTag="1331507143" Tag="127" IconVisible="False" LeftMargin="310.0000" RightMargin="382.0000" TopMargin="141.0000" BottomMargin="326.0000" FontSize="28" LabelText="ID:888888" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="ID" ActionTag="1331507143" Tag="127" IconVisible="False" LeftMargin="310.0000" RightMargin="382.0000" TopMargin="152.0000" BottomMargin="315.0000" FontSize="28" LabelText="ID:888888" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="131.0000" Y="34.0000" />
                 <AnchorPoint />
-                <Position X="310.0000" Y="326.0000" />
+                <Position X="310.0000" Y="315.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="211" G="60" B="0" />
-                <PrePosition X="0.3767" Y="0.6507" />
+                <PrePosition X="0.3767" Y="0.6287" />
                 <PreSize X="0.1592" Y="0.0679" />
                 <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
@@ -211,7 +211,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="money" ActionTag="-580872636" Tag="1185" IconVisible="True" LeftMargin="70.2200" RightMargin="752.7800" TopMargin="193.0000" BottomMargin="308.0000" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="money" ActionTag="-580872636" Tag="1185" IconVisible="True" LeftMargin="70.2200" RightMargin="752.7800" TopMargin="231.0000" BottomMargin="270.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="Image_18_bg" ActionTag="-2083023026" Tag="34" IconVisible="False" LeftMargin="252.0000" RightMargin="-402.0000" TopMargin="16.5000" BottomMargin="-43.5000" Scale9Enable="True" LeftEage="16" RightEage="16" TopEage="8" BottomEage="8" Scale9OriginX="16" Scale9OriginY="8" Scale9Width="89" Scale9Height="11" ctype="ImageViewObjectData">
@@ -250,10 +250,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="70.2200" Y="308.0000" />
+                <Position X="70.2200" Y="270.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0853" Y="0.6148" />
+                <PrePosition X="0.0853" Y="0.5389" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
               <AbstractNodeData Name="title" ActionTag="1218202931" Tag="1599" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="240.5000" RightMargin="240.5000" TopMargin="7.8500" BottomMargin="434.1500" LeftEage="83" RightEage="83" TopEage="18" BottomEage="18" Scale9OriginX="83" Scale9OriginY="18" Scale9Width="176" Scale9Height="23" ctype="ImageViewObjectData">
@@ -266,13 +266,13 @@
                 <PreSize X="0.4156" Y="0.1178" />
                 <FileData Type="Normal" Path="joinGame/xiaotanchuan_28.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="IP" ActionTag="-2001554182" Tag="58" IconVisible="False" LeftMargin="310.0000" RightMargin="335.0000" TopMargin="172.0000" BottomMargin="295.0000" FontSize="28" LabelText="IP:12132131321" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="IP" ActionTag="-2001554182" Tag="58" IconVisible="False" LeftMargin="310.0000" RightMargin="335.0000" TopMargin="197.0000" BottomMargin="270.0000" FontSize="28" LabelText="IP:12132131321" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
                 <Size X="178.0000" Y="34.0000" />
                 <AnchorPoint />
-                <Position X="310.0000" Y="295.0000" />
+                <Position X="310.0000" Y="270.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="159" G="106" B="54" />
-                <PrePosition X="0.3767" Y="0.5888" />
+                <PrePosition X="0.3767" Y="0.5389" />
                 <PreSize X="0.2163" Y="0.0679" />
                 <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />

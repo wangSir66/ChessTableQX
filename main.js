@@ -5,10 +5,10 @@ function screenChange(isW) {
         w = Math.max(size.width, size.height);
         h = Math.min(size.width, size.height);
     } else {
-        w = 1280;
-        h = 720;
-        w = 1040;
-        h = 500;
+        w = 640;
+        h = 360;
+        // w = 1480;
+        // h = 720;
     }
     MjClient.size = { width: w, height: h };
     cc.view.setFrameSize(w, h);

@@ -960,15 +960,6 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
-      "UsedResources": [
-        "Default/Button_Disable.png",
-        "fonts/lanting.TTF",
-        "friendCards/common/btn_sure_green_n.png",
-        "friendCards/common/btn_sure_green_s.png",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_xiaotanchuang.png",
-        "friendCards/selectGroup/title_select_zhuli.png"
-      ],
       "ctype": "GameFileData"
     }
   },

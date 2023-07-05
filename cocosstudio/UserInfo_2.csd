@@ -99,7 +99,7 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="123" G="78" B="63" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="money" ActionTag="-88904174" Tag="820" IconVisible="False" LeftMargin="210.2863" RightMargin="-386.2863" TopMargin="-401.7756" BottomMargin="369.7756" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="money" ActionTag="-88904174" Tag="820" IconVisible="False" LeftMargin="193.4464" RightMargin="-369.4464" TopMargin="-384.9349" BottomMargin="352.9349" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="176.0000" Y="32.0000" />
                     <Children>
                       <AbstractNodeData Name="yuanbao_BG" ActionTag="-966517013" Tag="90" IconVisible="False" HorizontalEdge="RightEdge" LeftMargin="-3.1298" RightMargin="130.1298" TopMargin="-6.1645" BottomMargin="2.1645" LeftEage="16" RightEage="16" TopEage="14" BottomEage="14" Scale9OriginX="16" Scale9OriginY="14" Scale9Width="10" Scale9Height="3" ctype="ImageViewObjectData">
@@ -136,7 +136,7 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="298.2863" Y="385.7756" />
+                    <Position X="281.4464" Y="368.9349" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
@@ -146,7 +146,7 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="zuanshi" ActionTag="967753738" Tag="821" IconVisible="False" LeftMargin="441.1647" RightMargin="-617.1647" TopMargin="-401.7756" BottomMargin="369.7756" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="zuanshi" ActionTag="967753738" Tag="821" IconVisible="False" LeftMargin="424.3248" RightMargin="-600.3248" TopMargin="-384.9349" BottomMargin="352.9349" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="176.0000" Y="32.0000" />
                     <Children>
                       <AbstractNodeData Name="yuanbao_BG" ActionTag="-1355633383" Tag="822" IconVisible="False" HorizontalEdge="RightEdge" LeftMargin="0.8702" RightMargin="134.1298" TopMargin="-7.6645" BottomMargin="0.6645" LeftEage="16" RightEage="16" TopEage="14" BottomEage="14" Scale9OriginX="16" Scale9OriginY="14" Scale9Width="9" Scale9Height="11" ctype="ImageViewObjectData">
@@ -183,7 +183,7 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="529.1647" Y="385.7756" />
+                    <Position X="512.3248" Y="368.9349" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
@@ -193,7 +193,7 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="liquan" ActionTag="-780119663" Tag="824" IconVisible="False" LeftMargin="672.0413" RightMargin="-848.0413" TopMargin="-401.7756" BottomMargin="369.7756" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="liquan" ActionTag="-780119663" Tag="824" IconVisible="False" LeftMargin="655.2021" RightMargin="-831.2021" TopMargin="-384.9349" BottomMargin="352.9349" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="176.0000" Y="32.0000" />
                     <Children>
                       <AbstractNodeData Name="yuanbao_BG" ActionTag="-885070931" Tag="825" IconVisible="False" HorizontalEdge="RightEdge" LeftMargin="2.3702" RightMargin="135.6298" TopMargin="-6.1645" BottomMargin="2.1645" LeftEage="16" RightEage="16" TopEage="14" BottomEage="14" Scale9OriginX="16" Scale9OriginY="14" Scale9Width="6" Scale9Height="8" ctype="ImageViewObjectData">
@@ -220,7 +220,7 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="760.0413" Y="385.7756" />
+                    <Position X="743.2021" Y="368.9349" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />

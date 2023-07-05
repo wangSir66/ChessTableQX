@@ -285,7 +285,7 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
                         MjClient.goldfieldEnter(tData.fieldId,tData.gameType);
                         return;
                     }else{
-                        MjClient.MJPass2NetForLianYunGang();
+                        MjClient.MJPass2NetForxuezhanMJ();
                     }
 				}
 			},

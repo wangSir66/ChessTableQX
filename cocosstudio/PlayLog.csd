@@ -410,15 +410,16 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btnWanFa_68" ActionTag="1321337306" Tag="1348" IconVisible="False" LeftMargin="18.0000" RightMargin="564.0000" TopMargin="85.0000" BottomMargin="344.0000" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="174" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btnWanFa_68" ActionTag="1321337306" Tag="1348" IconVisible="False" LeftMargin="36.1414" RightMargin="545.8586" TopMargin="81.3716" BottomMargin="347.6284" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="174" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="204.0000" Y="72.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="120.0000" Y="380.0000" />
+                <Position X="138.1414" Y="383.6284" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1527" Y="0.7585" />
+                <PrePosition X="0.1758" Y="0.7657" />
                 <PreSize X="0.2595" Y="0.1437" />
                 <TextColor A="255" R="65" G="65" B="70" />
+                <PressedFileData Type="Normal" Path="createNewPng/quanbu_s.png" Plist="" />
                 <NormalFileData Type="Normal" Path="createNewPng/quanbu_n.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />

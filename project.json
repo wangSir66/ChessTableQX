@@ -76,7 +76,6 @@
         "src/ChatLayer.js",
         "src/ShowLongLayer.js",
         "src/ShowFlowerLayer.js",
-        "src/AdvLayer.js",
         "src/ReplayUILayer.js",
         "src/RoundEndLayer.js",
         "src/ShareLayer.js",
@@ -104,7 +103,6 @@
         "src/ClubLayer.js",
         "src/RankLayer.js",
         "src/ActivityLayer.js",
-        "src/Active_caiShen.js",
         "src/BlockView.js",
         "src/putCardsLayer.js",
         "src/ShareRedPacket.js",
@@ -126,7 +124,6 @@
         "src/friendCard/FriendCard_find.js",
         "src/friendCard/FriendCard_yaoqingMember.js",
         "src/friendCard/FriendCard_init.js",
-        "src/friendCard_Match/FriendCard_Match_Main.js",
 
         "src/activity_all/MerryChristmasLayer.js",
         "src/activity_all/WinterLayer.js",
@@ -172,6 +169,7 @@
         "src/YaAn/XueZhanMahjong/CreateRoomNode.js",
         "src/YaAn/XueZhanMahjong/PlayerGamePanel.js",
         "src/YaAn/XueZhanMahjong/WinGamePanel.js",
+        "src/YaAn/XueZhanMahjong/GameRuleView.js",
         
         "src/YaAn/RunFaster/Arithmetic.js",
         "src/YaAn/RunFaster/CreateRoomNode.js",

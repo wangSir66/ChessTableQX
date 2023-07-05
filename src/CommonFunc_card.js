@@ -3565,7 +3565,7 @@ function InitPutOutCardTips(off) {
                     MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData,
                         isNextPlayerOneCard, isFirstRound, isSmartTip);
                     var ret = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData, isNextPlayerOneCard, isFirstRound);
-                    cc.log('------------InitPutOutCardTips----------------',JSON.stringify(ret))
+                    cc.log('------------InitPutOutCardTips----------------', JSON.stringify(ret))
                     if (majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
                         majiang.useNewTip = true;
                         MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData,
@@ -5784,8 +5784,7 @@ function playCardAni(cards, UIoff) {
         case CARDTPYE.sangeA://AAA
         case CARDTPYE.sange3://AAA
         case CARDTPYE.sizha:
-            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI &&
-                !MjClient.data.c_Data.bPutCardAnimOld) {
+            if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
                 playCardAni_zhadan_new(cards, UIoff);
             }
             else {
@@ -5966,6 +5965,7 @@ function playCardAni_txtsprite(cards, UIoff) {
         case CARDTPYE.jiuzha:
         case CARDTPYE.shizha: ;
         case CARDTPYE.tianwangzha:
+        case CARDTPYE.sanzha:
             {
                 strSpritePath = "playing/paodekuaiTable_new/txtsprite/zhadan.png";
                 break;

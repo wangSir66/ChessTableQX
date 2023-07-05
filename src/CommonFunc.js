@@ -2794,7 +2794,6 @@ function InitUserCoinAndName(node, off) {
                     //sk,todo,这里有问题，服务器的pl.winall没有赋值，这里加了有个毛用？
                     var coin = tData.initCoin;
                     //this.setString("" + coin);
-                    cc.log('----------------这里有问题，服务器的pl---------',coin , pl.winall)
                     changeAtalsForLabel(this, Math.floor(coin + pl.winall));
                 }
             }
@@ -6586,6 +6585,8 @@ function IsArrowVisible() {
         return bRtn;
     }
     if (
+        TableState.waitSelect == pl.mjState ||
+        TableState.waitChooseCard == pl.mjState ||
         TableState.waitPut == pl.mjState ||
         TableState.isReady == pl.mjState ||
         TableState.waitEat == pl.mjState ||
@@ -6626,6 +6627,9 @@ function clearCardUI(node) {
             && ni.getName() != "tingCardNumNode"
             && ni.getName() != "fangTag"
             && ni.name != "ouIcon"
+            && ni.name != "SwappingTip"
+            && ni.name != "swappType"
+            && ni.name != "huanpaizhong"
         ) {
             //CommonPool.putInPool(ni);
             ni.removeFromParent(true);
@@ -8606,31 +8610,6 @@ function ShowEatActionAnim(node, actType, off) {
                 kaigang.setPosition(cc.p(eatActionChild.width / 2, eatActionChild.height / 2));
                 eatActionChild.addChild(kaigang, 999999);
                 break;
-
-            case ActionType.BUGANG:
-                if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU ||
-                    MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU) {
-                    eatActionChild = eatActionNode.getChildByName("gang");
-                    eatActionChild.removeAllChildren();
-                    eatActionChild.visible = true;
-                    eatActionChild.runAction(cc.sequence(cc.delayTime(delayTime), cc.callFunc(callback)));
-                    var projNode = new cc.Sprite("spine/bu/chenglaizi.png");
-                    projNode.setScale(0.0);
-                    projNode.runAction(cc.sequence(cc.scaleTo(0.2, 1.2), cc.scaleTo(0.3, 1.0)));
-                    eatActionChild.addChild(projNode, 999999);
-                    break;
-                }
-
-                eatActionChild = eatActionNode.getChildByName("gang");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                eatActionChild.runAction(cc.sequence(cc.delayTime(delayTime), cc.callFunc(callback)));
-
-                var bugang = new ccs.Armature("chipenggang");
-                bugang.animation.play("bu", -1, 0);
-                bugang.setPosition(cc.p(eatActionChild.width / 2, eatActionChild.height / 2));
-                eatActionChild.addChild(bugang, 999999);
-                break;
         }
     }
     else {
@@ -8827,19 +8806,6 @@ function ShowEatActionAnim(node, actType, off) {
                 }
                 eatActionChild.addChild(projNode, 999999);
                 break;
-            case ActionType.GANGKAI:
-
-                eatActionChild = eatActionNode.getChildByName("hu");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                eatActionChild.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(callback)));
-                var projNode = createSpine("spine/dagangkaihua/dagangkaihua.json", "spine/dagangkaihua/dagangkaihua.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                projNode.setTimeScale(eTime_old);
-                eatActionChild.addChild(projNode, 999999);
-                break;
             case ActionType.ZIMO:
 
                 eatActionChild = eatActionNode.getChildByName("hu");
@@ -8852,38 +8818,6 @@ function ShowEatActionAnim(node, actType, off) {
                 projNode.setScale(0.5);
                 projNode.setTimeScale(eTime_old);
                 eatActionChild.addChild(projNode, 999999);
-                break;
-
-            case ActionType.FLOWER:
-                eatActionChild = eatActionNode.getChildByName("hua");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                eatActionChild.runAction(cc.sequence(cc.delayTime(delayTime), cc.callFunc(callback)));
-
-                var projNode = createSpine("spine/buhua/skeleton.json", "spine/buhua/skeleton.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setPosition(50, 50);
-                if (MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ)
-                    projNode.setScale(0.4);
-                else
-                    projNode.setScale(0.5);
-                projNode.setTimeScale(eTime_old);
-                eatActionChild.addChild(projNode, 999999);
-
-                break;
-            case ActionType.LIANG:
-                eatActionChild = eatActionNode.getChildByName("feng");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                eatActionChild.runAction(cc.sequence(cc.delayTime(delayTime), cc.callFunc(callback)));
-
-                var projNode = createSpine("spine/liangfeng/skeleton.json", "spine/liangfeng/skeleton.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                projNode.setTimeScale(eTime_old);
-                eatActionChild.addChild(projNode, 999999);
-
                 break;
             case ActionType.TING:
                 eatActionChild = eatActionNode.getChildByName("ting");
@@ -8909,53 +8843,6 @@ function ShowEatActionAnim(node, actType, off) {
                 projNode.runAction(cc.sequence(cc.scaleTo(0.2, 0.6), cc.scaleTo(0.3, 0.5)));
                 eatActionChild.addChild(projNode, 999999);
                 break;
-
-            case ActionType.LONG: //如皋长牌的龙
-                eatActionChild = eatActionNode.getChildByName("gang");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                eatActionChild.runAction(cc.sequence(cc.delayTime(delayTime), cc.callFunc(callback)));
-                var projNode = createSpine("spine/long/long.json", "spine/long/long.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setTimeScale(eTime);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                eatActionChild.addChild(projNode, 999999);
-                break;
-            case ActionType.SHUAIJIN: //乡宁摔金的摔金
-                eatActionChild = eatActionNode.getChildByName("gang");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                eatActionChild.runAction(cc.sequence(cc.delayTime(delayTime), cc.callFunc(callback)));
-                var projNode = createSpine("spine/shuaijin/skeleton.json", "spine/shuaijin/skeleton.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setTimeScale(eTime);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                eatActionChild.addChild(projNode, 999999);
-                break;
-            case ActionType.YITIAOLONG: // 一条龙
-                eatActionChild = eatActionNode.getChildByName("hu");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                var projNode = createSpine("spine/yitiaolong/skeleton.json", "spine/yitiaolong/skeleton.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                projNode.setTimeScale(eTime);
-                eatActionChild.addChild(projNode, 999999);
-                break;
-            case ActionType.YITIAOLONG_NEW: // 一条龙
-                eatActionChild = eatActionNode.getChildByName("hu");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                var projNode = createSpine("spine/yitiaolong_new/skeleton.json", "spine/yitiaolong_new/skeleton.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                projNode.setTimeScale(eTime);
-                eatActionChild.addChild(projNode, 999999);
-                break;
             case ActionType.DUIDUIHU: // 碰碰胡
                 eatActionChild = eatActionNode.getChildByName("hu");
                 eatActionChild.removeAllChildren();
@@ -8976,40 +8863,6 @@ function ShowEatActionAnim(node, actType, off) {
                 projNode.setPosition(50, 50);
                 projNode.setScale(0.5);
                 projNode.setTimeScale(eTime);
-                eatActionChild.addChild(projNode, 999999);
-                break;
-            case ActionType.DADIAOCHE: // 大吊车
-                eatActionChild = eatActionNode.getChildByName("hu");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                var projNode = createSpine("spine/dadiaoche/skeleton.json", "spine/dadiaoche/skeleton.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                projNode.setTimeScale(eTime);
-                eatActionChild.addChild(projNode, 999999);
-                break;
-            case ActionType.DAJUE: // 大绝
-                eatActionChild = eatActionNode.getChildByName("hu");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                var projNode = createSpine("spine/dajue/skeleton.json", "spine/dajue/skeleton.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                projNode.setTimeScale(eTime);
-                eatActionChild.addChild(projNode, 999999);
-                break;
-            case ActionType.QUANHUN:
-                eatActionChild = eatActionNode.getChildByName("hu");
-                eatActionChild.removeAllChildren();
-                eatActionChild.visible = true;
-                eatActionChild.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(callback)));
-                var projNode = createSpine("spine/quanhun/skeleton.json", "spine/quanhun/skeleton.atlas");
-                projNode.setAnimation(0, aniName, false);
-                projNode.setPosition(50, 50);
-                projNode.setScale(0.5);
-                projNode.setTimeScale(eTime_old);
                 eatActionChild.addChild(projNode, 999999);
                 break;
             case ActionType.QINGHU:
@@ -13756,8 +13609,8 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
     _backHomeBtn.zIndex = 500;
     _backHomeBtn.setTouchEnabled(true);
     if (!needAdjust) {
-        // _backHomeBtn.setContentSize(tempSize.w, tempSize.h);
-        // setWgtLayout(_backHomeBtn, [0.11, 0.11], [0.05, 0.6], [0, 0]);
+        _backHomeBtn.setContentSize(tempSize.w, tempSize.h);
+        setWgtLayout(_backHomeBtn, [0.11, 0.11], [0.05, 0.6], [0, 0]);
     }
     _backHomeBtn.addTouchEventListener(function (sender, type) {
         if (type === 2) {
@@ -16673,3 +16526,585 @@ var cosPlayTableInfo = function (node) {
     };
 
 };
+
+
+//处理出牌,放一张牌，打牌动作
+function DealMJPut_haian(node, msg, off, outNum)
+{
+    if(COMMON_UI3D.is3DUI()) return COMMON_UI3D.DealMJPut_3D(node, msg, off, outNum);
+    cc.log("======DealMJPut_haian======= " + off);
+    //cardPutted = false;
+    var sData = MjClient.data.sData;
+    var tData = sData.tData;
+
+    var uids = tData.uids;
+    var selfIndex = getPlayerIndex(off);
+    if(uids[selfIndex] == msg.uid)
+    {
+        var pl = sData.players[msg.uid];
+        var putnum = outNum >= 0 ? outNum : (pl.mjput.length - 1);
+        var tingIndex = pl.tingIndex;//沭阳麻将需要
+
+        cc.log( off + "------------- pl.tingIndex =" + pl.tingIndex);
+        cc.log("------------- pl.isTing =" + pl.isTing);
+
+        if(cc.isUndefined(tingIndex) || !pl.isTing)
+        {
+            tingIndex = -1;//为了不报错;
+        }
+
+
+        var out0 = node.getChildByName("out0");
+        var out1 = node.getChildByName("out1");
+        var out2 = node.getChildByName("out2");
+
+        var out0_self = getNode(0).getChildByName("out0");
+        var out1_self = getNode(0).getChildByName("out1");
+        var out2_self = getNode(0).getChildByName("out2");
+
+
+        var maxNum = 10;
+        if (MjClient.MaxPlayerNum == 2)
+            maxNum = 20;
+        else if (MjClient.MaxPlayerNum == 3 && off != 0)
+            maxNum = 13;
+
+
+        var out;
+        var out_self;
+
+        if (putnum >= maxNum*2 && out2)
+        {
+            out = out2.clone();
+            out_self = out2_self.clone();
+        }
+        else if(putnum >= maxNum)
+        {
+            out = out1.clone();
+            out_self = out1_self.clone();
+        }
+        else
+        {
+            out = out0.clone();
+            out_self = out0_self.clone();
+        }
+
+        //out = CommonPool.getFromPool("out");
+        //if (!out) {
+        //    out = out0.clone();
+        //}else{
+        //    COMMON_UI.CopyProperties(out, out0);
+        //    cc.log("COMMON_UI.CopyProperties(out, out0);");
+        //}
+
+
+        out.setScale(out.getScale()*1.3);
+        out_self.setScale(out_self.getScale()*1.3);
+        var oSize = out.getSize();
+        var oSc = out.scale;
+
+        if (off == 0 && putnum >= maxNum * 2 && out2)
+        {
+            node.addChild(out,putnum + 30);
+        }
+        else if (off == 0 && putnum >= maxNum)
+        {
+            node.addChild(out,putnum + 20);
+        }
+        else if(off == 0)
+        {
+            node.addChild(out,putnum + 10);
+        }
+        else if(off == 1 )
+        {
+            node.addChild(out, putnum);
+        }
+        else if(off == 2 || off == 3)
+        {
+            node.addChild(out, 20 - putnum);
+        }
+        else
+        {
+            node.addChild(out);
+        }
+
+        for(var i = 0; i < node.children.length; i++)
+        {
+            if(node.children[i].name == "newout")
+            {
+                node.children[i].name = "out";
+            }
+        }
+
+        out.visible = true;
+        out.name = "out";
+        setCardSprite(out, msg.card, off);
+
+        var endPoint = cc.p(0, 0);
+        var Midpoint = cc.p(0, 0);
+        var ws = cc.director.getWinSize();
+        if (putnum > maxNum*2 - 1 && out2)
+        {
+            out.x = out2.x;
+            out.y = out2.y;
+            putnum -= maxNum*2;
+            tingIndex -= maxNum*2;
+        }
+        else if (putnum > maxNum - 1)
+        {
+            out.x = out1.x;
+            out.y = out1.y;
+            putnum -= maxNum;
+            tingIndex -= maxNum;
+        }
+
+
+        //是否需要变宽
+        var addWide =  0;
+        if (tingIndex <= putnum && tingIndex >= 0 && MjClient.gameType != MjClient.GAME_TYPE.GUAN_NAN && MjClient.gameType != MjClient.GAME_TYPE.HUAI_AN_ERZ){
+            if(off == 0 || off == 2)
+            {
+                addWide =  oSize.width * oSc *0.91;
+            }
+            else if (off  == 1 || off == 3)
+            {
+                addWide =  oSize.height * oSc *0.73;
+            }
+        }
+
+
+        if(off == 0)
+        {
+            endPoint.y = out.y;
+            endPoint.x = out.x + oSize.width * oSc * putnum*0.95 + addWide;
+            Midpoint.x = ws.width / 2;
+            Midpoint.y = ws.height*0.3;
+            if(!(outNum >= 0))
+            {
+                if(RemoveNodeBack(node, "putOutCard", 1, msg.card) == 0)
+                {
+                    RemoveNodeBack(node, "mjhand", 1, msg.card);
+                }
+            }
+        }
+        else if (off == 1)
+        {
+            if(!(outNum >= 0))
+            {
+                if (MjClient.rePlayVideo == -1)
+                    RemoveFrontNode(node, "standPri", 1);
+                else//回放
+                    RemoveFrontNode(node, "mjhand_replay", 1, msg.card);
+            }
+            cc.log("DealMJPut_haian remove card  = " + msg.card);
+            endPoint.y = out.y + oSize.height * oSc * putnum * 0.7 + addWide;
+            endPoint.x = out.x;
+            Midpoint.x = ws.width *0.78;
+            Midpoint.y = ws.height*0.57;
+            out.zIndex = 100 - putnum;
+        }
+        else if(off == 2)
+        {
+            if(!(outNum >= 0))
+            {
+                if (MjClient.rePlayVideo == -1)
+                    RemoveFrontNode(node, "standPri", 1);
+                else//回放
+                    RemoveFrontNode(node, "mjhand_replay", 1, msg.card);
+            }
+
+            endPoint.x = out.x - oSize.width * oSc * putnum*0.95 - addWide;
+            endPoint.y = out.y;
+            Midpoint.x = ws.width / 2;
+            Midpoint.y = ws.height / 4 * 3;
+        }
+        else if (off == 3)
+        {
+            if(!(outNum >= 0))
+            {
+                if (MjClient.rePlayVideo == -1)
+                    RemoveNodeBack(node, "standPri", 1);
+                else
+                    RemoveNodeBack(node, "mjhand_replay", 1, msg.card);
+            }
+
+            endPoint.y = out.y - oSize.height * oSc * putnum * 0.7 - addWide;
+            endPoint.x = out.x;
+            Midpoint.x = ws.width*(1- 0.78);
+            Midpoint.y = ws.height * 0.57;
+            out.zIndex = putnum;
+        }
+
+
+
+
+
+        if(outNum >= 0) //重连
+        {
+            // cc.log("==================tData = "+ JSON.stringify(tData));
+            //断线重连的时候
+            if (tData.lastPutCard == msg.card && tData.lastPutPlayer == tData.uids.indexOf(msg.uid))
+            {
+                out.x = endPoint.x;
+                out.y = endPoint.y;
+                clearCurrentPutTag();
+                addCurrentPutTag(out, off);
+            }
+
+            if((outNum == pl.mjput.length - 1) && tData.curPlayer == selfIndex && tData.tState == TableState.waitEat)
+            {
+
+            }
+            else
+            {
+                out.x = endPoint.x;
+                out.y = endPoint.y;
+                return;
+            }
+        }
+        else //打牌
+        {
+            clearCurrentPutTag();
+            //if (off != 0) addCurrentPutTag(out, off);
+        }
+
+
+        var zoder = out.zIndex;
+        out.zIndex = 200;
+        out.visible = false;
+        out.x = Midpoint.x;
+        out.y = Midpoint.y;
+        out.scale = 2 * oSc;
+        out.name = "newout";
+
+
+
+        //var outAction = CommonPool.getFromPool("outAction");
+        //var muban;
+        //if (off != 0) {
+        //    muban = out0_self;
+        //}else{
+        //    muban = out;
+        //}
+        //if (!outAction) {
+        //    outAction = muban.clone();
+        //}else{
+        //    COMMON_UI.CopyProperties(outAction, muban);
+        //    cc.log("COMMON_UI.CopyProperties(outAction, muban);");
+        //}
+        //if (off != 0) {
+        //    outAction.setScale(outAction.getScale()*1.3);
+        //}
+
+        var outAction = null;
+        if (off != 0)
+        {
+            outAction = out_self.clone();
+            setCardSprite(outAction, msg.card, 0);
+        }
+        else
+        {
+            outAction = out.clone();
+            setCardSprite(outAction, msg.card, off);
+        }
+        outAction.name = "outAction";
+        outAction.visible = true;
+        node.addChild(outAction);
+        outAction.zIndex = 200;
+
+
+
+
+        var RemovePutCard = function (onlySelf, huNoAction)
+        {
+            if (!huNoAction) {
+                MjClient.lastCardposNode = null;//抢杠胡没有牌 可以劈
+            }
+
+            if (!cc.sys.isObjectValid(outAction))
+            {
+                return;
+            }
+
+            if (!onlySelf)
+            {
+                var _delayTime = 1;
+                if(off == 0) _delayTime = 0.5;
+
+                var delayNum = _delayTime - (Date.now() - putTime) / 1000;
+                if (delayNum < 0)
+                {
+                    delayNum = 0;
+                }
+                //outAction.setScale(outAction.getScale()*1.2);
+                if (huNoAction) {
+                    outAction.removeFromParent();
+                    if(cc.sys.isObjectValid(out))
+                    {
+                        out.visible = true;
+                        out.zIndex = zoder;
+                        out.setPosition(endPoint);
+                        out.setScale(oSc);
+                        addCurrentPutTag(out, off);
+                    }
+                }
+                else {
+                    outAction.runAction(cc.sequence(
+                        cc.delayTime(delayNum),
+                        cc.callFunc(function()
+                        {
+                            if(cc.sys.isObjectValid(out))
+                            {
+                                out.visible = true;
+                                out.runAction(cc.sequence(
+                                    cc.spawn(cc.moveTo(0.1, endPoint), cc.scaleTo(0.1, oSc)),
+                                    cc.callFunc(function(){
+                                        out.zIndex = zoder;
+                                        addCurrentPutTag(out, off);
+                                    })
+                                ));
+                            }
+                            //CommonPool.putInPool(outAction);
+                            //outAction.removeFromParent();
+                        }),
+                        cc.removeSelf()
+                    ));
+                }
+            }
+            else
+            {
+                //CommonPool.putInPool(outAction);
+                outAction.removeFromParent();
+            }
+        }
+
+
+
+        var outActionBind =
+        {
+            _event:
+            {
+                MJPass: function()
+                {
+                    RemovePutCard(false);
+                },
+                waitPut: function()
+                {
+                    RemovePutCard(false);
+                },
+                MJChi: function()
+                {
+                    RemovePutCard(true);
+                },
+                MJPeng: function()
+                {
+                    RemovePutCard(true);
+                },
+                MJGang: function(eD)
+                {
+                    RemovePutCard(true);
+                },
+                roundEnd: function()
+                {
+                    RemovePutCard(true);
+                },
+                MJHu:function()
+                {
+                    if (MjClient.gameType == MjClient.GAME_TYPE.XUE_LIU) { // 血流胡牌去除动画效果
+                        RemovePutCard_2(false,true);
+                    }
+                    else {
+                        RemovePutCard(false, true);
+                    }
+                }
+                //MJFlower: function () {
+                //    RemovePutCard(false);
+                //}
+            }
+        }
+
+
+
+        var RemovePutCard_2 = function (onlySelf,type)
+        {
+            if (!type) 
+            {
+                MjClient.lastCardposNode = null;//抢杠胡没有牌 可以劈
+            }
+
+            if (!onlySelf)
+            {
+                if (cc.sys.isObjectValid(outAction))
+                {
+                    outAction.runAction(cc.sequence(
+                        cc.delayTime(1),
+                        //cc.callFunc(function(){
+                        //    CommonPool.putInPool(outAction);
+                        //    outAction.removeFromParent();
+                        //})
+                        cc.removeSelf()
+                    ));
+                }
+            }
+            else
+            {
+                if (cc.sys.isObjectValid(outAction))
+                {
+                    if (type) 
+                    {                      
+                        outAction.runAction(cc.sequence(
+                            cc.delayTime(1),
+                            //cc.callFunc(function(){
+                            //    outAction.stopAllActions();
+                            //    CommonPool.putInPool(outAction);
+                            //    outAction.removeFromParent();
+                            //})
+                            cc.removeSelf()
+                        ));
+                    }
+                    else
+                    {                    
+                        outAction.stopAllActions();
+                        //CommonPool.putInPool(outAction);
+                        outAction.removeFromParent();
+                    }
+                }
+                if (cc.sys.isObjectValid(out))
+                {
+                    if (type) 
+                    {                    
+                        out.runAction(cc.sequence(
+                            cc.delayTime(1),
+                            cc.callFunc(function(){
+                                out.visible = false;
+                                clearCurrentPutTag();
+                            })
+                        ));
+                    }
+                    else
+                    {                    
+                        out.visible = false;
+                        clearCurrentPutTag();
+                    }
+                }
+            }
+        }
+
+        var outActionBind_2 =
+        {
+            _event:
+            {
+                waitPut: function()
+                {
+                    RemovePutCard_2(false);
+                },
+                MJChi: function()
+                {
+                    RemovePutCard_2(true);
+                },
+                MJPeng: function()
+                {
+                    RemovePutCard_2(true);
+                },
+                MJGang: function(eD)
+                {
+                    RemovePutCard_2(true);
+                },
+                roundEnd: function()
+                {
+                    RemovePutCard_2(true);
+                },
+                MJHu:function()
+                {
+                    if (MjClient.gameType == MjClient.GAME_TYPE.XUE_LIU) { // 血流胡牌去除动画效果
+                        RemovePutCard_2(false,true);
+                    }
+                }
+            }
+        }
+
+
+        var putTime = Date.now();
+        if (off == 0 && MjClient.rePlayVideo == -1)
+        {
+            outAction.x = Midpoint.x;
+            outAction.y = Midpoint.y;
+            outAction.scale = 2*oSc;
+            //RemovePutCard(false);
+            outAction.runAction(cc.sequence(
+                cc.delayTime(0.5),
+                cc.callFunc(function()
+                {
+                    if(cc.sys.isObjectValid(out))
+                    {
+                        out.visible = true;
+                        out.runAction(cc.sequence(
+                            cc.spawn(cc.moveTo(0.1, endPoint), cc.scaleTo(0.1, oSc)),
+                            cc.callFunc(function(){
+                                out.zIndex = zoder;
+                                addCurrentPutTag(out, off);
+                            })
+                        ));
+                    }
+                }),
+                cc.hide()
+            ));
+            BindUiAndLogic(outAction, outActionBind_2);
+        }
+        else
+        {
+            outAction.x = node.getChildByName("stand").x;
+            outAction.y = node.getChildByName("stand").y;
+            outAction.scale = oSc;
+            outAction.runAction(cc.spawn(cc.moveTo(0.1, Midpoint), cc.scaleTo(0.1, 2 * oSc)));
+            var pl = sData.players[SelfUid()+""];
+            if (tData.tState != TableState.waitEat || (pl && pl.eatFlag == 0))//自己没有吃碰杠等操作
+            {
+                //RemovePutCard(false);
+                outAction.runAction(cc.sequence(
+                    cc.delayTime(0.5),
+                    cc.callFunc(function()
+                    {
+                        if(cc.sys.isObjectValid(out))
+                        {
+                            out.visible = true;
+                            out.runAction(cc.sequence(
+                                cc.spawn(cc.moveTo(0.1, endPoint), cc.scaleTo(0.1, oSc)),
+                                cc.callFunc(function(){
+                                    out.zIndex = zoder;
+                                    addCurrentPutTag(out, off);
+                                })
+                            ));
+                        }
+                    }),
+                    cc.hide()
+                ));
+                BindUiAndLogic(outAction, outActionBind_2);
+            }
+            else
+            {
+                BindUiAndLogic(outAction, outActionBind);
+            }
+        }
+
+
+
+        if (!(outNum >= 0))
+        {
+            MjClient.playui.CardLayoutRestore(node, off);
+        }
+
+        //add by sking
+        if(off == 0 && getUIPlayer(0).mjhand)
+        {
+            cc.log("----------------重新排列--------00000---------");
+            MjClient.playui.CardLayoutRestore(node, off);
+        }
+
+
+        if (off != 0)
+        {
+            showMJOutBig(node, msg.card);
+        }
+    }
+}

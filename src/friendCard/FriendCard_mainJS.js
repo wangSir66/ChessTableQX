@@ -65,17 +65,17 @@ var FriendCard_main = cc.Layer.extend({
 
 		//亲友圈列表
 		this._node_clubList = UI.node.getChildByName("node_clubList");
-		//setWgtLayout(this._node_clubList, [0.4617, 1], [-0.3063, 0], [0, 0]);
-		if (isIPhoneX()) {
-			this._node_clubList.scale = MjClient.size.height / this._node_clubList.height;
-			this._node_clubList.y = 0;
-			this._node_clubList.x = -that._node_clubList.width * this._node_clubList.scale;
-		}
-		else {
-			this._node_clubList.scale = MjClient.size.height / this._node_clubList.height;
-			this._node_clubList.y = 0;
-			this._node_clubList.x = -that._node_clubList.width * this._node_clubList.scale * 0.65;
-		}
+		setWgtLayout(this._node_clubList, [0.4617, 1], [0, 0], [-0.5, 0]);
+		// if (isIPhoneX()) {
+		// 	this._node_clubList.scale = MjClient.size.height / this._node_clubList.height;
+		// 	this._node_clubList.y = 0;
+		// 	this._node_clubList.x = -that._node_clubList.width * this._node_clubList.scale;
+		// }
+		// // else {
+		// 	this._node_clubList.scale = MjClient.size.height / this._node_clubList.height;
+		// 	this._node_clubList.y = 0;
+		// 	this._node_clubList.x = -that._node_clubList.width * this._node_clubList.scale * 0.65;
+		// }
 		this._node_clubList.visible = false;
 		this._node_clubList.enabled = false;
 
@@ -1155,11 +1155,7 @@ var FriendCard_main = cc.Layer.extend({
 	},
 	showClubList: function (time) {
 		var that = this;
-		var px = 0;
-		if (isIPhoneX())
-			px = 0
-		else
-			px = -(MjClient.size.width * 0.06875)
+		var px = -(MjClient.size.width * 0.06);
 
 
 		if (this._node_clubList.isShow == true)
@@ -1172,7 +1168,7 @@ var FriendCard_main = cc.Layer.extend({
 
 
 		//俱乐部桌子
-		var listView_tableGoX = this.listView_table.x + that._node_clubList.width * 0.655
+		var listView_tableGoX = this.listView_table.x + that._node_clubList.width * 0.6
 
 		this.listView_table.runAction(cc.sequence(cc.callFunc(function () {
 			//that._node_clubList.visible = true;

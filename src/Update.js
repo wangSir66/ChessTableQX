@@ -1204,20 +1204,20 @@ var UpdateResourceClassView = cc.Layer.extend({
             //case jsb.EventAssetsManager.ERROR_UPDATING://单个文件失败
             case jsb.EventAssetsManager.ERROR_DECOMPRESS:
                 setSearchPathByPaths(this._oldSearchPaths, "UpdateResourceClassView oldSearchPaths");
-                MjClient.showMsg(getResourceClassName(this._resourceClass) + "资源加载失败(code:" + event.getEventCode() + ")，请重试", function () {
-                    jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "/project.manifest");
-                    jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp/project.manifest.temp");
-                    jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp/" + getManifestFilePath(this._resourceClass) + ".zip.tmp");
-                    jsb.fileUtils.removeDirectory(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp");
-                    this.close();
-                    CheckUpdateResourceClass(this._gameClass, this._callback);
-                }.bind(this), function () {
-                    this.close();
-                }.bind(this));
+                // MjClient.showMsg(getResourceClassName(this._resourceClass) + "资源加载失败(code:" + event.getEventCode() + ")，请重试", function () {
+                //     jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "/project.manifest");
+                //     jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp/project.manifest.temp");
+                //     jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp/" + getManifestFilePath(this._resourceClass) + ".zip.tmp");
+                //     jsb.fileUtils.removeDirectory(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp");
+                //     this.close();
+                //     CheckUpdateResourceClass(this._gameClass, this._callback);
+                // }.bind(this), function () {
+                //     this.close();
+                // }.bind(this));
 
-                if (this._gameClass == MjClient.RESOURCE_CLASS.GOLD_FIELD) {
-                    postEvent("goldField_refreshUpdateFail", {});
-                }
+                // if (this._gameClass == MjClient.RESOURCE_CLASS.GOLD_FIELD) {
+                //     postEvent("goldField_refreshUpdateFail", {});
+                // }
                 break;
             case jsb.EventAssetsManager.UPDATE_FAILED:
                 this.__failCount++;
@@ -1232,20 +1232,20 @@ var UpdateResourceClassView = cc.Layer.extend({
                     MjClient.updateResIndex = MjClient.updateResIndex == 2 ? 1 : 2;
 
                     setSearchPathByPaths(this._oldSearchPaths, "UpdateResourceClassView oldSearchPaths");
-                    MjClient.showMsg(getResourceClassName(this._resourceClass) + "资源加载失败(code:" + event.getEventCode() + ")，请重试", function () {
-                        jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "/project.manifest");
-                        jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp/project.manifest.temp");
-                        jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp/" + getManifestFilePath(this._resourceClass) + ".zip.tmp");
-                        jsb.fileUtils.removeDirectory(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp");
-                        this.close();
-                        CheckUpdateResourceClass(this._gameClass, this._callback);
-                    }.bind(this), function () {
-                        this.close();
-                    }.bind(this));
+                    // MjClient.showMsg(getResourceClassName(this._resourceClass) + "资源加载失败(code:" + event.getEventCode() + ")，请重试", function () {
+                    //     jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "/project.manifest");
+                    //     jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp/project.manifest.temp");
+                    //     jsb.fileUtils.removeFile(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp/" + getManifestFilePath(this._resourceClass) + ".zip.tmp");
+                    //     jsb.fileUtils.removeDirectory(jsb.fileUtils.getWritablePath() + "update/" + getManifestFilePath(this._resourceClass) + "_temp");
+                    //     this.close();
+                    //     CheckUpdateResourceClass(this._gameClass, this._callback);
+                    // }.bind(this), function () {
+                    //     this.close();
+                    // }.bind(this));
 
-                    if (this._gameClass == MjClient.RESOURCE_CLASS.GOLD_FIELD) {
-                        postEvent("goldField_refreshUpdateFail", {});
-                    }
+                    // if (this._gameClass == MjClient.RESOURCE_CLASS.GOLD_FIELD) {
+                    //     postEvent("goldField_refreshUpdateFail", {});
+                    // }
                 }
                 break;
             case jsb.EventAssetsManager.UPDATE_PROGRESSION:

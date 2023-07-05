@@ -392,6 +392,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                 } else {
                     let currObj = this.RedioGroup[p.name];
                     if (p.name == 'renshu') this.changePayForPlayerNum(indx);
+                    else if (p.name == 'zhifufangshi') this.setDiaNumData(this.bg_node);
                     if (currObj) this.radioBoxSelectCB(indx, currObj._nodeList[indx], currObj._nodeList);
                 }
             }
@@ -1536,7 +1537,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         if (isClub)
             num = this.getNumberItem('difen', 1);
         else
-            isTrue = cacheRule['difen'] != undefined ? cacheRule['difen'] : 1;
+            num = cacheRule['difen'] != undefined ? cacheRule['difen'] : 1;
         if (this.difen) this.difen.setString(num);
 
         let len = Object.keys(key_nameR);

@@ -1,27 +1,26 @@
 
 skeleton.png
-size: 1024,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-guang1
+di_3
   rotate: false
-  xy: 0, 521
-  size: 774, 253
-  orig: 774, 253
-  offset: 0, 0
+  xy: 2, 465
+  size: 627, 365
+  orig: 627, 409
+  offset: 0, 8
   index: -1
-mozhi1
+duiduihu1
   rotate: false
-  xy: 0, 142
-  size: 627, 179
-  orig: 627, 179
-  offset: 0, 0
+  xy: 2, 225
+  size: 546, 238
+  orig: 627, 409
+  offset: 41, 86
   index: -1
-zi1
+duiduihu2
   rotate: false
-  xy: 0, 321
-  size: 636, 200
-  orig: 636, 200
-  offset: 0, 0
+  xy: 2, 2
+  size: 534, 221
+  orig: 627, 409
+  offset: 47, 94
   index: -1

@@ -819,13 +819,6 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
-      "UsedResources": [
-        "fonts/lanting.TTF",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/headMask.png",
-        "friendCards/common/img_tongyong.png",
-        "friendCards/tongji/checkMember/img_liushui_bg.png"
-      ],
       "ctype": "GameFileData"
     }
   },

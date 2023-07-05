@@ -506,8 +506,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 298.2863,
-                      "Y": 385.7756
+                      "X": 281.4464,
+                      "Y": 368.9349
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -523,10 +523,10 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": 210.2863,
-                    "RightMargin": -386.2863,
-                    "TopMargin": -401.7756,
-                    "BottomMargin": 369.7756,
+                    "LeftMargin": 193.4464,
+                    "RightMargin": -369.4464,
+                    "TopMargin": -384.9349,
+                    "BottomMargin": 352.9349,
                     "Tag": 820,
                     "Children": [
                       {
@@ -726,8 +726,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 529.1647,
-                      "Y": 385.7756
+                      "X": 512.3248,
+                      "Y": 368.9349
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -743,10 +743,10 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": 441.1647,
-                    "RightMargin": -617.1647,
-                    "TopMargin": -401.7756,
-                    "BottomMargin": 369.7756,
+                    "LeftMargin": 424.3248,
+                    "RightMargin": -600.3248,
+                    "TopMargin": -384.9349,
+                    "BottomMargin": 352.9349,
                     "Tag": 821,
                     "Children": [
                       {
@@ -946,8 +946,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 760.0413,
-                      "Y": 385.7756
+                      "X": 743.2021,
+                      "Y": 368.9349
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -963,10 +963,10 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": 672.0413,
-                    "RightMargin": -848.0413,
-                    "TopMargin": -401.7756,
-                    "BottomMargin": 369.7756,
+                    "LeftMargin": 655.2021,
+                    "RightMargin": -831.2021,
+                    "TopMargin": -384.9349,
+                    "BottomMargin": 352.9349,
                     "Tag": 824,
                     "Children": [
                       {

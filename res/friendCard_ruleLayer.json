@@ -1343,21 +1343,6 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
-      "UsedResources": [
-        "fonts/lanting.TTF",
-        "friendCards/common/btn_chebox_fang.png",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_datanchuang.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_gou.png",
-        "friendCards/common/img_hengxian.png",
-        "friendCards/mian_rule/btn_black_list_n.png",
-        "friendCards/mian_rule/btn_black_list_s.png",
-        "friendCards/mian_rule/tianjiawanfa_n.png",
-        "friendCards/mian_rule/tianjiawanfa_s.png",
-        "friendCards/mian_rule/xiugaiwanfa_n.png",
-        "friendCards/mian_rule/xiugaiwanfa_s.png"
-      ],
       "ctype": "GameFileData"
     }
   },
