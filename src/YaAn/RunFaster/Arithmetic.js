@@ -54,16 +54,6 @@
         }
     }
 
-    if (typeof (cc) == 'undefined') {
-        var cc = function () { }
-        cc.log = function () {
-            var str = '';
-            for (var i = 0; i < arguments.length; i++) {
-                str = str + arguments[i] + ' ';
-            }
-        }
-    }
-
     var PDK_MINPOINT = 3;
     var PDK_KPOINT = 13;
     var PDK_APOINT = 14;
@@ -518,7 +508,7 @@
 
         return true;
     }
-    // console.log( GameLogic_RunFaster.prototype.isSanShun([3,3,3]) );
+    // cc.log( GameLogic_RunFaster.prototype.isSanShun([3,3,3]) );
 
     /**
      * 获取所有3顺的组合
@@ -722,9 +712,9 @@
             feijiInfo.value = sanShunList[sanShunList.length - 1];
         }
 
-        // console.log('sanSameList', sanSameList.toString());
-        // console.log('sanShunList', sanShunList.toString());
-        // console.log('sanPaiList', sanPaiList.toString());
+        // cc.log('sanSameList', sanSameList.toString());
+        // cc.log('sanShunList', sanShunList.toString());
+        // cc.log('sanPaiList', sanPaiList.toString());
         return feijiInfo;
     }
 
@@ -1839,7 +1829,7 @@
         return rets;
     };
     // var fc = GameLogic_RunFaster.prototype.findCardByType([19,19,19,15,15], 0, PDK_CARDTPYE.sandaier, [9,9,9,15,15])
-    // console.log( fc )
+    // cc.log( fc )
 
     GameLogic_RunFaster.prototype.getAllMaxCard = function (oCards) {
         var sortHands = oCards.slice();

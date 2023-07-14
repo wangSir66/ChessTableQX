@@ -855,6 +855,7 @@
             <Image Name="img_shuxian.png" />
             <Image Name="img_tishi.png" />
             <Image Name="img_title.png" />
+            <Image Name="img_title_bg.png" />
             <Image Name="img_tongyong.png" />
             <Image Name="img_xian.png" />
             <Image Name="img_xiaotanchuang.png" />
@@ -2388,6 +2389,9 @@
           <Image Name="lingqu.png" />
           <Image Name="way.png" />
           <Image Name="yilingqu.png" />
+        </Folder>
+        <Folder Name="GameRuleOption">
+          <Folder Name="Imgs" />
         </Folder>
         <Folder Name="gameTable">
           <Image Name="game_paodekuai_ty.png" />

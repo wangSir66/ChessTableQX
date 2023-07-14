@@ -2,7 +2,7 @@ var LocationAppsLayer = cc.Layer.extend({
     jsBind:{
         _event: {
             initSceneData:function (d) {
-                console.log("checkChangeLocationApp");
+                cc.log("checkChangeLocationApp");
                 MjClient.checkChangeLocationApp();
             },
             locationApps : function(d){

@@ -32,18 +32,18 @@
                 <PreSize X="0.7641" Y="0.8625" />
                 <FileData Type="Normal" Path="friendCards/common/img_zhongtanchuang.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="img_title" ActionTag="-515671988" Tag="717" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="444.5000" RightMargin="444.5000" TopMargin="64.5000" BottomMargin="588.5000" LeftEage="110" RightEage="110" TopEage="19" BottomEage="19" Scale9OriginX="110" Scale9OriginY="19" Scale9Width="171" Scale9Height="29" ctype="ImageViewObjectData">
-                <Size X="391.0000" Y="67.0000" />
+              <AbstractNodeData Name="img_title" ActionTag="-515671988" Tag="717" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="617.0000" RightMargin="617.0000" TopMargin="75.0000" BottomMargin="599.0000" LeftEage="15" RightEage="15" TopEage="19" BottomEage="19" Scale9OriginX="15" Scale9OriginY="19" Scale9Width="16" Scale9Height="8" ctype="ImageViewObjectData">
+                <Size X="46.0000" Y="46.0000" />
                 <Children>
-                  <AbstractNodeData Name="Image_6" ActionTag="-1347451772" Tag="532" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="128.5000" RightMargin="128.5000" TopMargin="11.5000" BottomMargin="11.5000" LeftEage="44" RightEage="44" TopEage="14" BottomEage="14" Scale9OriginX="44" Scale9OriginY="14" Scale9Width="46" Scale9Height="16" ctype="ImageViewObjectData">
-                    <Size X="134.0000" Y="44.0000" />
+                  <AbstractNodeData Name="Image_6" ActionTag="-1347451772" Tag="532" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-145.3225" RightMargin="-146.6775" TopMargin="-6.6777" BottomMargin="-5.3223" LeftEage="44" RightEage="44" TopEage="14" BottomEage="14" Scale9OriginX="44" Scale9OriginY="14" Scale9Width="250" Scale9Height="30" ctype="ImageViewObjectData">
+                    <Size X="338.0000" Y="58.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="195.5000" Y="33.5000" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="23.6775" Y="23.6777" />
+                    <Scale ScaleX="1.0700" ScaleY="1.0700" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5000" Y="0.5000" />
-                    <PreSize X="0.3427" Y="0.6567" />
-                    <FileData Type="Normal" Path="friendCards/main/title_rule_detail.png" Plist="" />
+                    <PrePosition X="0.5147" Y="0.5147" />
+                    <PreSize X="7.3478" Y="1.2609" />
+                    <FileData Type="Normal" Path="friendCards/tongji/img_title_xiangqing.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -51,8 +51,8 @@
                 <Scale ScaleX="1.2000" ScaleY="1.2000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.8639" />
-                <PreSize X="0.3055" Y="0.0931" />
-                <FileData Type="Normal" Path="friendCards/common/img_title_bg.png" Plist="" />
+                <PreSize X="0.0359" Y="0.0639" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="Image_line" ActionTag="42052346" Tag="531" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="234.5000" RightMargin="234.5000" TopMargin="273.1000" BottomMargin="445.9000" LeftEage="267" RightEage="267" Scale9OriginX="267" Scale9Width="277" Scale9Height="1" ctype="ImageViewObjectData">
                 <Size X="811.0000" Y="1.0000" />

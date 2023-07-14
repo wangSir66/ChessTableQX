@@ -10,7 +10,7 @@ MjClient.netCallBack = {
     MJOuCard: [0, function (d) {
     }],
     MJJiaGang: [0, function (d) {
-        console.log("---------call MJJiaGang=========");
+        cc.log("---------call MJJiaGang=========");
         var sData = MjClient.data.sData;
         if (sData) {
             var pl = sData.players[d.uid.toString()];
@@ -535,7 +535,7 @@ MjClient.netCallBack = {
             return -1;
         }
         else {
-            console.log("=====doomsky say:d.tData.gameType======", d.tData.gameType);
+            cc.log("=====doomsky say:d.tData.gameType======", d.tData.gameType);
             if ((typeof d.tData.gameType) != 'undefined')
                 MjClient.gameType = d.tData.gameType;
             // MjClient.majiang 保存当前游戏玩法
@@ -3248,7 +3248,7 @@ MjClient.netCallBack = {
         pl.skipPeng = d.skipPeng;
         pl.skipHu = d.skipHu;
         pl.isQiHu = d.isQiHu;
-        //console.log("====isQiHu---", JSON.stringify(d));
+        //cc.log("====isQiHu---", JSON.stringify(d));
         if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_HU_ZI) {
             pl.passHu = (pl.eatFlag & 32);
         }
@@ -3557,7 +3557,7 @@ MjClient.netCallBack = {
             MjClient.selectedCard = null;
             pl.skipHu = d.skipHu;
             pl.isQiHu = d.isQiHu;
-            //console.log("====isQiHu---", JSON.stringify(d));
+            //cc.log("====isQiHu---", JSON.stringify(d));
             if (MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) {
                 for (var uid in d.tingListAfterPut) {
                     sData.players[uid].tingListAfterPut = d.tingListAfterPut[uid];
@@ -3660,7 +3660,7 @@ MjClient.netCallBack = {
             MjClient.selectedCard = null;
             pl.skipHu = d.skipHu;
             pl.isQiHu = d.isQiHu;
-            //console.log("====isQiHu---", JSON.stringify(d));
+            //cc.log("====isQiHu---", JSON.stringify(d));
             if ("tingListAfterPut" in d) {
                 pl.tingListAfterPut = d.tingListAfterPut;
             }
@@ -3827,7 +3827,7 @@ MjClient.netCallBack = {
             tData.isKaigang = false;
         }
 
-        //console.log("=====doomsky say:pl.mjhand====== , pl.ting", pl.mjhand);
+        //cc.log("=====doomsky say:pl.mjhand====== , pl.ting", pl.mjhand);
         if (d.card < 111) { //补花在MJFlower播放
             if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ || MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ ||
@@ -4016,7 +4016,7 @@ MjClient.netCallBack = {
                     pl.tingListAfterPut = pl.jiangjianghuLists[d.card];
                 }
             }
-            //console.log("====isQiHu---", JSON.stringify(d));
+            //cc.log("====isQiHu---", JSON.stringify(d));
         }
         else {
             sData.players[SelfUid() + ""].mjState = TableState.waitEat;
@@ -4190,7 +4190,7 @@ MjClient.netCallBack = {
         }
 
         //cc.log(" ========PUT CARD ======== pl.putCount = " + pl.putCount);
-        //console.log("=====doomsky say:JSON.stringify(pl.mjhand)======", JSON.stringify(pl.mjhand));
+        //cc.log("=====doomsky say:JSON.stringify(pl.mjhand)======", JSON.stringify(pl.mjhand));
     }]
     , PKPut: [0, function (d) {
         var sData = MjClient.data.sData;
@@ -4642,7 +4642,7 @@ MjClient.netCallBack = {
 
     }],
     MJChi: [0, function (d) {
-        //console.log("-------MJChi ;;------");
+        //cc.log("-------MJChi ;;------");
         var sData = MjClient.data.sData;
         if (!sData) return;
         sData.players[d.cpginfo.id + ""].pengchigang = d.cpginfo.pengchigang;
@@ -5587,7 +5587,7 @@ MjClient.netCallBack = {
         if ("curFanCount" in d.cpginfo) {
             pl.curFanCount = d.cpginfo.curFanCount;
         }
-        //console.log("=====doomsky say:pl.openDoorState======", pl.openDoorState);
+        //cc.log("=====doomsky say:pl.openDoorState======", pl.openDoorState);
 
         if (MjClient.getAppType() == MjClient.APP_TYPE.QXTHMJ) {
             if (tData.hunCard == d.card)
@@ -5802,7 +5802,7 @@ MjClient.netCallBack = {
 
         pl.mjflower.push(d.card);
         pl.putType = d.putType;
-        console.log("=====doomsky say:pl.putType======", pl.putType);
+        cc.log("=====doomsky say:pl.putType======", pl.putType);
         cc.log("pl--------------", pl.mjhand);
     }],
     MJTing: [0, function (d) {
@@ -5889,10 +5889,10 @@ MjClient.netCallBack = {
         if (!sData) return;
         var tData = sData.tData;
         var pl = sData.players[d.cpginfo.id + ""];
-        //console.log("=====doomsky say:JSON.stringify(pl.xuanfengGang)======", JSON.stringify(pl.xuanfengGang));
+        //cc.log("=====doomsky say:JSON.stringify(pl.xuanfengGang)======", JSON.stringify(pl.xuanfengGang));
         // pl.xuanfengGang = d.cpginfo.xuanfenggang;
         //pl.xuanfengGang.push(31);
-        //console.log("=====doomsky say  2:JSON.stringify(pl.xuanfengGang)======", JSON.stringify(pl.xuanfengGang));
+        //cc.log("=====doomsky say  2:JSON.stringify(pl.xuanfengGang)======", JSON.stringify(pl.xuanfengGang));
         // if (pl.xuanfengGang.length > 0)
         // {
         if (d.cpginfo.id == SelfUid()) {
@@ -5921,7 +5921,7 @@ MjClient.netCallBack = {
         if (!sData) return;
         var tData = sData.tData;
         var pl = sData.players[d.cpginfo.id + ""];
-        //console.log("=====doomsky say:JSON.stringify(pl.xuanfengPeng)======", JSON.stringify(pl.xuanfengGang));
+        //cc.log("=====doomsky say:JSON.stringify(pl.xuanfengPeng)======", JSON.stringify(pl.xuanfengGang));
         // pl.xuanfengGang = d.cpginfo.xuanfenggang;
         //pl.xuanfengGang.push(71);
         // if (pl.xuanfengGang.length > 0)

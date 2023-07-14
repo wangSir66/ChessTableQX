@@ -35,7 +35,7 @@ util.Timer = {
 // 是否是对象(非数组 null)
 util.isObject = function(obj) {
     // return !!obj && !Array.isArray(obj) && typeof obj === 'object';
-    // console.log(toString.call(obj));
+    // cc.log(toString.call(obj));
     return toString.call(obj) === '[object Object]';
 };
 
@@ -131,7 +131,7 @@ function test() {
         }
         stringify(obj);
 
-        console.log(JSON.stringify(obj));
+        cc.log(JSON.stringify(obj));
     };
 
     var a = {
@@ -155,11 +155,11 @@ function test() {
         head: {
             _layout: [[2, 2]],
             _run: function() {
-                console.log("2");
+                cc.log("2");
             },
             _event: {
                 push: function() {
-                    console.log("3");
+                    cc.log("3");
                 }
             }
         }

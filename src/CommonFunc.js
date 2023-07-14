@@ -2118,7 +2118,7 @@ function setCardSprite(node, cd, off) {
 
     }
     else if (node.isShowTing) {
-        console.log('node.isShowTing', node.isShowTing, offHunSet[off][0], offHunSet[off][1]);
+        cc.log('node.isShowTing', node.isShowTing, offHunSet[off][0], offHunSet[off][1]);
         var imgTingNode = new ccui.ImageView();
         var _zorder = 11;
         imgTingNode.setName("imgBaiDa");
@@ -8252,7 +8252,7 @@ function DealMJGang(node, msg, off) {
         || MjClient.gameType == MjClient.GAME_TYPE.CHANG_SHA_ER_REN
         || MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU
         || MjClient.gameType == MjClient.GAME_TYPE.NING_XIANG_MJ) {
-        console.log("msg.isKaiGang", msg.isKaiGang)
+        cc.log("msg.isKaiGang", msg.isKaiGang)
         if (msg.isKaiGang) {
             ShowEatActionAnim(node, ActionType.KAIGANG, off);
         } else {
@@ -9456,7 +9456,7 @@ function getVoiceStatusLayer() {
 
 //初始化声音data
 function initVoiceData() {
-    //console.log("MjClient.remoteCfg" + MjClient.remoteCfg.voiceUrl);
+    //cc.log("MjClient.remoteCfg" + MjClient.remoteCfg.voiceUrl);
     MjClient.data._tempRecordStatusLayer = null;
     MjClient.data._tempMessage = {};
     MjClient.data._JiaheTempTime = null;
@@ -9509,7 +9509,7 @@ function getTouchListener() {
         status: null,
 
         onTouchBegan: function (touch, event) {
-            console.log("在触摸东西");
+            cc.log("在触摸东西");
             var tData = MjClient.data.sData.tData;
             if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER ||
                 MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI ||
@@ -9530,11 +9530,11 @@ function getTouchListener() {
                 return false;
             }
 
-            //console.log("好吧");
+            //cc.log("好吧");
             return true;
         },
         onTouchMoved: function (touch, event) {
-            console.log("在移动东西");
+            cc.log("在移动东西");
             var target = event.getCurrentTarget();
             var pos = target.getParent().convertTouchToNodeSpace(touch); // 世界坐标转换 (子节点相对于父节点的位置)
             // 如果触碰起始地点在本区域中
@@ -9547,7 +9547,7 @@ function getTouchListener() {
                 }
 
                 this.status = 0;
-                console.log("松开手指取消发送");
+                cc.log("松开手指取消发送");
                 getVoiceStatusLayer().runToCancelRecord();
                 return true;
             }
@@ -9556,7 +9556,7 @@ function getTouchListener() {
                 return false;
             }
 
-            console.log("上滑取消发送");
+            cc.log("上滑取消发送");
             this.status = 1;
             getVoiceStatusLayer().runStartRecord();
             return true;
@@ -9641,7 +9641,7 @@ function cancelRecord() {
  * */
 function downAndPlayVoice(uid, filePath) {
     var index = getUiOffByUid(uid);
-    //console.log("index is downAndPlayVoice" + index);
+    //cc.log("index is downAndPlayVoice" + index);
     MjClient.native.DownLoadFile(jsb.fileUtils.getWritablePath(), index + ".mp3", MjClient.remoteCfg.voiceUrl + filePath, "playVoice");
 }
 
@@ -11602,15 +11602,15 @@ function schedulLoadTexture(node) {
  * @param {number} off 玩家偏移量
  */
 function dealGangLiJiJieSuan(thisNode, eD, off) {
-    console.log("dealGangLiJiJieSuan from: " + eD.from);
+    cc.log("dealGangLiJiJieSuan from: " + eD.from);
 
     // 杠的时候改变数据
     var sData = MjClient.data.sData;
     for (var uid in eD.players) {
         var pl = eD.players[uid];
         if (typeof pl.winall == 'number')
-            console.log("dealGangLiJiJieSuan data pl.uid: " + pl.uid);
-        console.log("dealGangLiJiJieSuan data pl.winall: " + pl.winall);
+            cc.log("dealGangLiJiJieSuan data pl.uid: " + pl.uid);
+        cc.log("dealGangLiJiJieSuan data pl.winall: " + pl.winall);
         sData.players[uid].winall = pl.winall;
     }
 
@@ -11625,14 +11625,14 @@ function dealGangLiJiJieSuan(thisNode, eD, off) {
     var selfOffUid = uids[selfOff];             // 此节点的uid
     var fromUid = eD.from >= 0 ? uids[eD.from] : 0;  // 被杠人的uid
 
-    console.log("dealGangLiJiJieSuan fromUid: " + fromUid);
+    cc.log("dealGangLiJiJieSuan fromUid: " + fromUid);
 
     // 点杠
     // 杠牌的人，不需要播放飞元宝的动画
     // 被明杠的人， 元宝飘到杠牌者的头像
     if (eD.gang == 1 && selfOffUid == fromUid) {
-        console.log("gangJieSuanAnim  1 off", off);
-        console.log("gangJieSuanAnim  1 gangPlayOff", gangPlayOff);
+        cc.log("gangJieSuanAnim  1 off", off);
+        cc.log("gangJieSuanAnim  1 gangPlayOff", gangPlayOff);
         // 此节点被杠，播放动画
         InitUserCoinAndName(thisNode, off);
         InitUserCoinAndName(endNode, gangPlayOff);
@@ -11640,8 +11640,8 @@ function dealGangLiJiJieSuan(thisNode, eD, off) {
 
         // 自摸杠牌， 3家元宝 黄金 飘到杠牌者的头像
     } else if (eD.gang != 1 && gangPlayUid != selfOffUid) {
-        console.log("gangJieSuanAnim 2 gangPlayOff:" + off);
-        console.log("gangJieSuanAnim 2 gangPlayOff:" + gangPlayOff);
+        cc.log("gangJieSuanAnim 2 gangPlayOff:" + off);
+        cc.log("gangJieSuanAnim 2 gangPlayOff:" + gangPlayOff);
         InitUserCoinAndName(thisNode, off);
         InitUserCoinAndName(endNode, gangPlayOff);
         gangJieSuanAnim(thisNode, endNode)
@@ -14388,7 +14388,7 @@ revise = function (num, times) {
     times = times || 1e6;
     return Math.round(num * times) / times;
 }
-// console.log("0.1+0.2="+(0.1+0.2), "精度修正="+revise(0.1+0.2));
+// cc.log("0.1+0.2="+(0.1+0.2), "精度修正="+revise(0.1+0.2));
 
 //头像倒计时动画
 function showAndHideHeadEffect() {
@@ -14998,7 +14998,7 @@ function ShowDayTaskTips(node, direct) {
             }
             let data = rtn.data
             let compData = new Array()
-            console.log(JSON.stringify(data))
+            cc.log(JSON.stringify(data))
             for (i = 0; i < data.length; i++) {
                 if (data[i].status == 1) {
                     compData.push(data[i])

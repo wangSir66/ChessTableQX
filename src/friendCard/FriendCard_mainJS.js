@@ -456,7 +456,9 @@ var FriendCard_main = cc.Layer.extend({
 	},
 	buildCopyImgBg: function (img_bg) {
 		img_bg.zIndex = -2;
-		img_bg.getParent().removeChildByName("copyImgBg1")
+		let pard = img_bg.getParent();
+		if (pard.getChildByName('copyImgBg1'))
+			pard.removeChildByName("copyImgBg1")
 		var copyImgBg1 = img_bg.clone();
 		copyImgBg1.setName("copyImgBg1");
 		this._copyImgBg1 = copyImgBg1;

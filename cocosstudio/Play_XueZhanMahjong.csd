@@ -2260,7 +2260,7 @@
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="down" Visible="False" ActionTag="332052040" Tag="92" IconVisible="True" RightMargin="1280.0000" TopMargin="720.0000" ctype="SingleNodeObjectData">
+          <AbstractNodeData Name="down" ActionTag="332052040" Tag="92" IconVisible="True" RightMargin="1280.0000" TopMargin="720.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
               <AbstractNodeData Name="ready" Visible="False" ActionTag="418500170" Tag="107" IconVisible="False" LeftMargin="580.6154" RightMargin="-712.6154" TopMargin="-309.3387" BottomMargin="252.3387" ctype="SpriteObjectData">
@@ -3490,13 +3490,13 @@
                     <PreSize X="1.3143" Y="0.7014" />
                     <FileData Type="Normal" Path="setting/pai_bottom.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="card1" ActionTag="597790505" Tag="3910" IconVisible="False" LeftMargin="-86.7670" RightMargin="156.7670" TopMargin="36.8554" BottomMargin="-50.8554" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="card1" ActionTag="597790505" Tag="3910" IconVisible="False" LeftMargin="126.5526" RightMargin="-56.5526" TopMargin="-5.2481" BottomMargin="-8.7519" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="83" Scale9Height="122" ctype="ImageViewObjectData">
                     <Size X="105.0000" Y="158.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-34.2670" Y="28.1446" />
+                    <Position X="179.0526" Y="70.2481" />
                     <Scale ScaleX="0.6000" ScaleY="0.6000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="-0.1958" Y="0.1954" />
+                    <PrePosition X="1.0232" Y="0.4878" />
                     <PreSize X="0.6000" Y="1.0972" />
                     <FileData Type="Normal" Path="playing/MJ/Mj_up_4.png" Plist="" />
                   </AbstractNodeData>

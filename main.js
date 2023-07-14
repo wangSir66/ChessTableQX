@@ -7,8 +7,8 @@ function screenChange(isW) {
     } else {
         w = 640;
         h = 360;
-        // w = 1480;
-        // h = 720;
+        w = 1480;
+        h = 720;
     }
     MjClient.size = { width: w, height: h };
     cc.view.setFrameSize(w, h);
@@ -17,7 +17,6 @@ function screenChange(isW) {
     cc.view.setDesignResolutionSize(w, h, cc.ResolutionPolicy.NO_BORDER);
     postEvent("resize");
 }
-
 cc.game.onStart = function () {
     if (!cc.sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
         document.body.removeChild(document.getElementById("cocosLoading"));
@@ -96,3 +95,17 @@ cc.game.onStart = function () {
     }, this);
 };
 cc.game.run();
+
+var cLogs = cc.log;
+cc.log = function (...pra) {
+    cLogs && cLogs('LOG:---game cc debug:', ...pra);
+}
+cc.warn = function (...pra) {
+    cLogs && cLogs('WARN:---game cc debug:', ...pra);
+}
+cc.error = function (...pra) {
+    cLogs && cLogs('ERROR:---game cc debug:', ...pra);
+}
+cc.assert= function (...pra) {
+    cLogs && cLogs('ASSERT:---game cc debug:', ...pra);
+}

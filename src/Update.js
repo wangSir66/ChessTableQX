@@ -144,7 +144,7 @@ function startUpdateCfg() {
     };
 
     xhr.onreadystatechange = function () {
-        //console.log("=====doomsky say:JSON.stringify(xhr)======", JSON.stringify(xhr));
+        //cc.log("=====doomsky say:JSON.stringify(xhr)======", JSON.stringify(xhr));
         if (xhr.readyState == 4 && xhr.status == 200) {
             try {
                 MjClient.updateCfg = /*formatStr*/(JSON.parse(xhr.responseText));

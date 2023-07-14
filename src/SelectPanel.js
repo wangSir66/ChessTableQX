@@ -84,20 +84,5 @@ function homePageRunText(node, data) {
             msg.runAction(cc.repeatForever(cc.sequence(cc.moveBy((msg.width+100)/125,cc.p(-(msg.width+100),0)), callBack1)));
         }
 	}
-
-
-
-    // node.ignoreContentAdaptWithSize(true);
-	// var length = node.getString().length * node.getFontSize() + node.getParent().getCustomSize().width;
-	// node.width = length;
-	// node.anchorX = 0;
-	// node.x += node.getParent().getCustomSize().width;
-	// var startPosX = node.x;
-	// var callback = function() {
-	// 	node.x = startPosX;
-	// }
-	//
-	// console.log("=====doomsky say:length======", length);
-	// node.runAction(cc.repeatForever(cc.sequence(cc.moveBy(length/125.0,cc.p(-length,0)),cc.callFunc(callback))));
 }
 

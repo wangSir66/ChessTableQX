@@ -104,9 +104,11 @@ PackageName2AppType["com.jtcf.lysichuan*"] = MjClient.APP_TYPE.LYSICHUANMJ;
 PackageName2AppType["com.jtcf.hunanwangwang"] = MjClient.APP_TYPE.HUNANWANGWANG;
 PackageName2AppType["com.jtcf.douqushanxi"] = MjClient.APP_TYPE.DQSHANXIMJ;
 PackageName2AppType["com.jtcf.hubeimj"] = MjClient.APP_TYPE.HUBEIMJ;
+PackageName2AppType["uni.UNI9711555"] = MjClient.APP_TYPE.YAAN;
+
 var AppCnName = {};
 AppCnName[MjClient.APP_TYPE.QXJSMJ] = "七星江苏麻将";
-AppCnName[MjClient.APP_TYPE.YAAN] = "雅安麻将";
+AppCnName[MjClient.APP_TYPE.YAAN] = "天涯互娱";
 AppCnName[MjClient.APP_TYPE.JSMJ] = "七星南京麻将";
 AppCnName[MjClient.APP_TYPE.QXHAMJ] = "七星淮安麻将";
 AppCnName[MjClient.APP_TYPE.QXXZMJ] = "七星徐州麻将";
@@ -8419,7 +8421,7 @@ MjClient.AllPlayerRun = function (func) {
     var sData = this.data.sData;
     for (var playerId in sData.players) {
         var pl = sData.players[playerId];
-        // console.log("playerId :" + playerId);
+        // cc.log("playerId :" + playerId);
         func(pl);
     }
 };
@@ -8431,7 +8433,7 @@ MjClient.CheckPlayerCount = function (func) {
     var sData = this.data.sData;
     for (var playerId in sData.players) {
         var pl = sData.players[playerId];
-        // console.log("playerId :" + playerId);
+        // cc.log("playerId :" + playerId);
         if (func(pl)) {
             count++;
         }

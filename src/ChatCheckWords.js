@@ -815,6 +815,6 @@ function checkChatWords(inputData)
     var strData = inputData.replace(/\s+/g,"");
     var pattern = new RegExp(SensitiveWords,"gi");
     var newString = strData.replace(pattern, "*");
-    console.log("new string " + newString);
+    cc.log("new string " + newString);
     return newString;
 }

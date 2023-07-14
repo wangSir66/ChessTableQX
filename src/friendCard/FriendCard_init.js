@@ -1022,22 +1022,7 @@ FriendCard_Common.getClubDisplay = function (that) {
         that = MjClient.FriendCard_main_ui;
 
     var display = that.data.info.display;
-    if (!display) {
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ) {
-            return 2;
-        } else {
-            return 1;
-        }
-    }
+    if (!display) return 2;
 
     return display;
 }

@@ -165,14 +165,14 @@
               },
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_title_bg.png",
+                  "Type": "Default",
+                  "Path": "Default/ImageFile.png",
                   "Plist": ""
                 },
-                "Scale9OriginX": 110,
+                "Scale9OriginX": 15,
                 "Scale9OriginY": 19,
-                "Scale9Width": 171,
-                "Scale9Height": 29,
+                "Scale9Width": 16,
+                "Scale9Height": 8,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
@@ -193,58 +193,58 @@
                   "Y": 0.8639
                 },
                 "PreSize": {
-                  "X": 0.3055,
-                  "Y": 0.0931
+                  "X": 0.0359,
+                  "Y": 0.0639
                 },
-                "LeftMargin": 444.5,
-                "RightMargin": 444.5,
-                "TopMargin": 64.5,
-                "BottomMargin": 588.5,
+                "LeftMargin": 617.0,
+                "RightMargin": 617.0,
+                "TopMargin": 75.0,
+                "BottomMargin": 599.0,
                 "Tag": 717,
                 "Children": [
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/main/title_rule_detail.png",
+                      "Path": "friendCards/tongji/img_title_xiangqing.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 44,
                     "Scale9OriginY": 14,
-                    "Scale9Width": 46,
-                    "Scale9Height": 16,
+                    "Scale9Width": 250,
+                    "Scale9Height": 30,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 195.5,
-                      "Y": 33.5
+                      "X": 23.6775,
+                      "Y": 23.6777
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 1.07,
+                      "ScaleY": 1.07
                     },
                     "CColor": {},
                     "IconVisible": false,
                     "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.5
+                      "X": 0.5147,
+                      "Y": 0.5147
                     },
                     "PreSize": {
-                      "X": 0.3427,
-                      "Y": 0.6567
+                      "X": 7.3478,
+                      "Y": 1.2609
                     },
-                    "LeftMargin": 128.5,
-                    "RightMargin": 128.5,
-                    "TopMargin": 11.5,
-                    "BottomMargin": 11.5,
+                    "LeftMargin": -145.3225,
+                    "RightMargin": -146.6775,
+                    "TopMargin": -6.6777,
+                    "BottomMargin": -5.3223,
                     "Tag": 532,
                     "ActionTag": -1347451772,
                     "Size": {
-                      "X": 134.0,
-                      "Y": 44.0
+                      "X": 338.0,
+                      "Y": 58.0
                     },
                     "Name": "Image_6",
                     "ctype": "ImageViewObjectData"
@@ -252,8 +252,8 @@
                 ],
                 "ActionTag": -515671988,
                 "Size": {
-                  "X": 391.0,
-                  "Y": 67.0
+                  "X": 46.0,
+                  "Y": 46.0
                 },
                 "Name": "img_title",
                 "ctype": "ImageViewObjectData"
@@ -584,6 +584,16 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "Default/ImageFile.png",
+        "fonts/lanting.TTF",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_hengxian.png",
+        "friendCards/common/img_zhongtanchuang.png",
+        "friendCards/roomInfo/btn_join_n.png",
+        "friendCards/roomInfo/btn_join_s.png",
+        "friendCards/tongji/img_title_xiangqing.png"
+      ],
       "ctype": "GameFileData"
     }
   },

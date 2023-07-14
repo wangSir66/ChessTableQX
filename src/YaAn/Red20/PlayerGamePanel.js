@@ -1326,7 +1326,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     //setTaiInfo("");
                 },
                 newCard: function (eD) {
-                    console.log("客户端发牌组合...... ");
+                    cc.log("客户端发牌组合...... ");
                     if (typeof (eD) == "number") {
                         eD = { newCard: eD };
                     }
@@ -2396,7 +2396,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [1.3, 2.5]
                 ],
                 _touch: function (btn, eT) {
-                    console.log(">>>> lf，点击吃按钮", btn.name, eT);
+                    cc.log(">>>> lf，点击吃按钮", btn.name, eT);
                     if (eT == 2) MjClient.playui.OnSendOption(0);
                 },
                 bg_img: {
@@ -2506,7 +2506,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     [0, 2.5]
                 ],
                 _touch: function (btn, eT) {
-                    console.log(">>>> lf，点击碰按钮", btn.name);
+                    cc.log(">>>> lf，点击碰按钮", btn.name);
                     if (eT == 2) MjClient.playui.OnSendOption(1);
                 },
                 bg_img: {
@@ -2560,7 +2560,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 },
                 card1: {},
                 _touch: function (btn, eT) {
-                    console.log(">>>> lf，点击杠按钮", btn.name);
+                    cc.log(">>>> lf，点击杠按钮", btn.name);
                     if (eT == 2) MjClient.playui.OnSendOption(2);
                 },
                 bgimg: {
@@ -2746,49 +2746,49 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     hideTingBtn();
                 },
                 MJPass: function (eD) {
-                    console.log("HHH :，MJPass------");
+                    cc.log("HHH :，MJPass------");
                     setSkipHuState();
                     setSkipPengState(); // 开启 过碰 机制
                     MjClient.playui.EatVisibleCheck();
                 },
                 mjhand: function (eD) {
-                    console.log("HHH :，mjhand------");
+                    cc.log("HHH :，mjhand------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 waitPut: function () {
-                    console.log("HHH :，waitPut------");
+                    cc.log("HHH :，waitPut------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 MJPut: function (eD) {
-                    console.log("HHH :，MJPut------");
+                    cc.log("HHH :，MJPut------");
                     MjClient.playui.EatVisibleCheck();
                     MjClient.playui.jsBind.eat.playercardtip._node.visible = false;
                 },
                 MJPeng: function (eD) {
-                    console.log("HHH :，MJPeng------");
+                    cc.log("HHH :，MJPeng------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 MJChi: function (eD) {
-                    console.log("HHH :，MJChi------");
+                    cc.log("HHH :，MJChi------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 MJGang: function (eD) {
-                    console.log("HHH :，MJGang------");
+                    cc.log("HHH :，MJGang------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 MJTing: function (eD) {
-                    console.log("HHH :，MJTing------");
+                    cc.log("HHH :，MJTing------");
                     hideTingBtn();
                     MjClient.playui.jsBind.eat.guo._node.visible = false;
                     isCheckedTing = false;
                 },
 
                 OptBtnShow: function (eD) {
-                    console.log("HHH :，OptBtnShow------", eD);
+                    cc.log("HHH :，OptBtnShow------", eD);
                     MjClient.playui.EatVisibleCheck();
                 },
                 roundEnd: function (eD) {
-                    console.log("HHH :，roundEnd------");
+                    cc.log("HHH :，roundEnd------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 initSceneData: function (eD) {
@@ -2859,14 +2859,14 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 },
                 sendVoice: function (fullFilePath) {
                     if (!fullFilePath) {
-                        console.log("sendVoice No fileName");
+                        cc.log("sendVoice No fileName");
                         return;
                     }
 
                     var getFileName = /[^\/]+$/;
                     var extensionName = getFileName.exec(fullFilePath);
                     var fileName = extensionName[extensionName.length - 1];
-                    console.log("sfileName is:" + fileName);
+                    cc.log("sfileName is:" + fileName);
 
                     MjClient.gamenet.request("pkroom.handler.tableMsg", {
                         cmd: "downAndPlayVoice",

@@ -629,7 +629,8 @@ var FriendCard_tongji = cc.Layer.extend({
             this._list_rank_data._changeRankType = changeRankType;
 
             var currentPanel = this.Panel_rank;
-            currentPanel.removeChildByName("emptyTextTip");
+            if (currentPanel.getChildByName("emptyTextTip"))
+                currentPanel.removeChildByName("emptyTextTip");
             if (this._rankData.length == 0) {
                 var emptyTxt = new ccui.Text();
                 emptyTxt.setFontName("fonts/lanting.TTF");
@@ -3529,7 +3530,8 @@ var FriendCard_tongji = cc.Layer.extend({
 
         var currentPanel = (this._isManager || this.isAssistants) ? this.Panel_playertongji_manager : this.Panel_tongji;
         this.showPanle((this._isManager || this.isAssistants) ? this.btn_func_name.btn_player : this.btn_func_name.btn_normal_player);
-        currentPanel.removeChildByName("emptyTextTip");
+        if (currentPanel.getChildByName("emptyTextTip"))
+            currentPanel.removeChildByName("emptyTextTip");
         if (!data || data.length == 0) {
             var emptyTxt = new ccui.Text();
             emptyTxt.setFontName("fonts/lanting.TTF");
@@ -3587,7 +3589,8 @@ var FriendCard_tongji = cc.Layer.extend({
     addItems_day: function (data) {
         this._ListView_day.removeAllItems();
         var currentPanel = this.Panel_daytongji_manager;
-        currentPanel.removeChildByName("emptyTextTip");
+        if (currentPanel.getChildByName("emptyTextTip"))
+            currentPanel.removeChildByName("emptyTextTip");
         if (!data || data.length == 0) {
             var emptyTxt = new ccui.Text();
             emptyTxt.setFontName("fonts/lanting.TTF");

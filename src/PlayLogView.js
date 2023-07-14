@@ -576,7 +576,7 @@ var playLogInfoItem = {};
                 {
                     playLog: function () {
                         var log = MjClient.data.playLog;
-                        console.log("----- log  sking ---- " + JSON.stringify(log));
+                        cc.log("----- log  sking ---- " + JSON.stringify(log));
 
                         uiList.removeAllItems();
                         var num = log.logs.length;
@@ -617,69 +617,10 @@ var playLogInfoItem = {};
                                     var wanFaBtn = playLogView.wanFaItem.clone();
                                     wanFaBtn.gameType = playLogView._gameTypeArr[k];
                                     playLogView._back0.addChild(wanFaBtn);
-
-                                    let txt = wanFaBtn.getChildByName("normalText");
-                                    if (!txt) {
-                                        var text = new ccui.Text();
-                                        text.setFontSize(35);
-                                        text.setTextColor(cc.color("#602E1A"));
-                                        text.setAnchorPoint(0.5, 0.5);
-                                        text.setPosition(wanFaBtn.getContentSize().width / 2, wanFaBtn.getContentSize().height / 2);
-                                        wanFaBtn.addChild(text);
-                                        text.setName('normalText');
-                                        var preStr = 'Red20/Common/';
-                                        textureNormal = preStr + "yellow_bg.png";
-                                        texturePress = preStr + "yellow_bg.png";
-                                        wanFaBtn.loadTextures(textureNormal, texturePress, texturePress);
-                                    }
-                                    wanFaBtn.getChildByName("normalText").setString(GameCnName[wanFaBtn.gameType]);
-
-                                    if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ ||
-                                        MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ ||
-                                        MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP ||
-                                        MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ) {
-                                        wanFaBtn.x = playLogView.wanFaItem.x + (k % 4) * 180;
-                                        wanFaBtn.y = playLogView.wanFaItem.y - Math.floor(k / 4) * 72;
-                                        playLogView.wanFaItem.setScale(0.85);
-                                        wanFaBtn.setScale(0.85);
-                                    } else if (isJinZhongAPPType()) {
-                                        wanFaBtn.x = playLogView.wanFaItem.x + (k % 4) * 160;
-                                        wanFaBtn.y = playLogView.wanFaItem.y - Math.floor(k / 4) * 65;
-                                        //playLogView.wanFaItem.setScale(0.70);
-                                        wanFaBtn.setScale(0.75);
-                                    }
-                                    else if (MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP) {
-                                        if (MjClient.isUseUIv3 && MjClient.isUseUIv3()) {
-                                            wanFaBtn.x = playLogView.wanFaItem.x + (k % 4) * 164;
-                                            wanFaBtn.y = playLogView.wanFaItem.y - Math.floor(k / 4) * 70;
-                                        }
-                                        else {
-                                            wanFaBtn.x = playLogView.wanFaItem.x + (k % 4) * 185;
-                                            wanFaBtn.y = playLogView.wanFaItem.y - Math.floor(k / 4) * 75;
-                                            playLogView.wanFaItem.setScale(0.8);
-                                            wanFaBtn.setScale(0.8);
-                                            wanFaBtn.loadTexturePressed(path_str + "_s.png");
-                                        }
-                                    }
-                                    else if (MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
-                                        wanFaBtn.x = playLogView.wanFaItem.x + (k % 4) * 200;
-                                        wanFaBtn.y = playLogView.wanFaItem.y - Math.floor(k / 4) * 75;
-                                        playLogView.wanFaItem.setScale(0.8);
-                                        wanFaBtn.setScale(0.8);
-                                        wanFaBtn.loadTexturePressed(path_str + "_s.png");
-                                    }
-                                    else if (MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ) {
-                                        wanFaBtn.loadTextureNormal(path_str + "_s.png");
-                                        wanFaBtn.x = playLogView.wanFaItem.x + (k % 3) * 185;
-                                        wanFaBtn.y = playLogView.wanFaItem.y - Math.floor(k / 3) * 75;
-                                        playLogView.wanFaItem.setScale(0.8);
-                                        wanFaBtn.setScale(0.8);
-                                    }
-                                    else {
-                                        wanFaBtn.x = playLogView.wanFaItem.x + (k % 4) * 204;
-                                        wanFaBtn.y = playLogView.wanFaItem.y - Math.floor(k / 4) * 68;
-                                        wanFaBtn.setScale(0.73);
-                                    }
+                                    let txt = wanFaBtn.getChildByName("text");
+                                    txt && txt.setString(GameCnName[wanFaBtn.gameType]);
+                                    wanFaBtn.x = playLogView.wanFaItem.x + (k % 4) * 190;
+                                    wanFaBtn.y = playLogView.wanFaItem.y - Math.floor(k / 4) * 68;
 
                                     wanFaBtn.addTouchEventListener(function (sender, type) {
                                         if (type == ccui.Widget.TOUCH_ENDED) {
@@ -751,7 +692,7 @@ var playLogInfoItem = {};
                     },
                     playLogViewChangeGameType: function () {
                         var log = MjClient.data.playLog;
-                        console.log("----- log  sking 222222 ---- " + JSON.stringify(log));
+                        cc.log("----- log  sking 222222 ---- " + JSON.stringify(log));
 
                         uiList.removeAllItems();
                         var num = log.logs.length;

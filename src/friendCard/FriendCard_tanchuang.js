@@ -251,17 +251,17 @@ var Friendcard_selectWanfa = cc.Layer.extend({
                 if (type == 2) {
                     if (that.data && that.data.event) {
                         //postEvent(that.data.event,{gameType:sender.type,gameName:sender.gameName});
-                        this.onClickWanfaBtn(sender);
+                        that.onClickWanfaBtn(sender);
                     }
 
                     //记忆点过的玩法排在前面
-                    if (this.frontGameTypeList) {
-                        for (var i = 0; i < this.frontGameTypeList.length; i++) {
-                            if (this.frontGameTypeList[i] == sender.type) {
-                                this.frontGameTypeList.splice(i, 1)
+                    if (that.frontGameTypeList) {
+                        for (var i = 0; i < that.frontGameTypeList.length; i++) {
+                            if (that.frontGameTypeList[i] == sender.type) {
+                                that.frontGameTypeList.splice(i, 1)
                             }
                         }
-                        util.localStorageEncrypt.setStringItem("Friendcard_selectWanfa_frontGameType" + this.clubId, sender.type + "," + this.frontGameTypeList.toString());
+                        util.localStorageEncrypt.setStringItem("Friendcard_selectWanfa_frontGameType" + that.clubId, sender.type + "," + that.frontGameTypeList.toString());
                     }
                     //that.logFilterLayer(false);
                 }

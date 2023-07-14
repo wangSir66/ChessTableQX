@@ -253,7 +253,7 @@
         },
         editBoxReturn: function(editBox) {
             cc.log("editBox  was returned !");
-            console.log("------发送消息");
+            cc.log("------发送消息");
             this.runAction(cc.sequence(cc.delayTime(0.2), cc.callFunc(SendChatMessage_xx)));
         },
         ctor: function() {
@@ -309,7 +309,7 @@
             send_btn.addTouchEventListener(function(sender, Type) {
                 switch (Type) {
                     case ccui.Widget.TOUCH_ENDED:
-                        console.log("------发送消息");
+                        cc.log("------发送消息");
                         SendChatMessage_xx();
                         break;
                     default:

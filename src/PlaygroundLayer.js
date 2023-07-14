@@ -90,7 +90,7 @@ var playgroundLayer = cc.Layer.extend({
                 node.x = startPosX;
             };
 
-            console.log("=====doomsky say:length======", length);
+            cc.log("=====doomsky say:length======", length);
             node.runAction(cc.repeatForever(cc.sequence(cc.callFunc(callback1),cc.moveBy(length/200.0,cc.p(-length,0)),cc.callFunc(callback2))));
         }
 

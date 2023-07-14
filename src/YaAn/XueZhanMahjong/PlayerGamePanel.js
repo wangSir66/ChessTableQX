@@ -6,7 +6,7 @@ MjClient.QueMenCounts = 0;//统计缺门剩余牌张
 var _isAniShow_xuezhanMJ = false; //为了控制mjhand之后播骰子动画时newCard的状态显示
 //向服务器发送 过消息
 MjClient.MJPass2NetForxuezhanMJ = function () {
-    // console.log(">>>>>>>>>普通  过 <<<<<<<<");
+    // cc.log(">>>>>>>>>普通  过 <<<<<<<<");
     cc.log("====================send======pass=====");
     var sData = MjClient.data.sData;
     var tData = sData.tData;
@@ -1007,7 +1007,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                         this.visible = false;
                     },
                     _event: {
-                        waitPut: function () {
+                        mjhand: function () {
                             showUserZhuangLogo(this, 0);
                         },
                         initSceneData: function () {
@@ -1446,7 +1446,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 newCard: function (eD) {
                     if (_isAniShow_xuezhanMJ) return;
                     // cdsNums++;
-                    console.log("客户端发牌组合......eD= " + JSON.stringify(eD));
+                    cc.log("客户端发牌组合......eD= " + JSON.stringify(eD));
                     //cc.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>newCard---------------");
                     //var putButtn = this.getChildByName("BtnPutCard");
                     //putButtn.visible = true;
@@ -1630,7 +1630,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                         this.visible = false;
                     },
                     _event: {
-                        waitPut: function () {
+                        mjhand: function () {
                             showUserZhuangLogo(this, 1);
                         },
                         initSceneData: function () {
@@ -2033,7 +2033,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                         this.visible = false;
                     },
                     _event: {
-                        waitPut: function () {
+                        mjhand: function () {
                             showUserZhuangLogo(this, 2);
                         },
                         initSceneData: function () {
@@ -2448,7 +2448,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                         this.visible = false;
                     },
                     _event: {
-                        waitPut: function () {
+                        mjhand: function () {
                             showUserZhuangLogo(this, 3);
                         },
                         initSceneData: function () {
@@ -3104,17 +3104,17 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                     hideTingBtn();
                 },
                 MJPass: function (eD) {
-                    console.log("HHH :，MJPass------");
+                    cc.log("HHH :，MJPass------");
                     setSkipHuState();
                     setSkipPengState(); // 开启 过碰 机制
                     MjClient.playui.EatVisibleCheck();
                 },
                 mjhand: function (eD) {
-                    console.log("HHH :，mjhand------");
+                    cc.log("HHH :，mjhand------");
                     //MjClient.playui.EatVisibleCheck();
                 },
                 waitPut: function () {
-                    console.log("HHH :，waitPut------");
+                    cc.log("HHH :，waitPut------");
                     MjClient.playui.EatVisibleCheck();
                     var pl = getUIPlayer(0);
                     if (typeof (pl.que) != "undefined" && pl.que != -1 && pl.huCards.length <= 0) {
@@ -3124,28 +3124,28 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                     }
                 },
                 MJPut: function (eD) {
-                    console.log("HHH :，MJPut------");
+                    cc.log("HHH :，MJPut------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 MJPeng: function (eD) {
-                    console.log("HHH :，MJPeng------");
+                    cc.log("HHH :，MJPeng------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 MJChi: function (eD) {
-                    console.log("HHH :，MJChi------");
+                    cc.log("HHH :，MJChi------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 MJGang: function (eD) {
-                    console.log("HHH :，MJGang------");
+                    cc.log("HHH :，MJGang------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 MJTing: function (eD) {
-                    console.log("HHH :，MJTing------");
+                    cc.log("HHH :，MJTing------");
                     hideTingBtn();
                     isCheckedTing = false;
                 },
                 roundEnd: function (eD) {
-                    console.log("HHH :，roundEnd------");
+                    cc.log("HHH :，roundEnd------");
                     MjClient.playui.EatVisibleCheck();
                 },
                 initSceneData: function (eD) {
@@ -3203,14 +3203,14 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 },
                 sendVoice: function (fullFilePath) {
                     if (!fullFilePath) {
-                        console.log("sendVoice No fileName");
+                        cc.log("sendVoice No fileName");
                         return;
                     }
 
                     var getFileName = /[^\/]+$/;
                     var extensionName = getFileName.exec(fullFilePath);
                     var fileName = extensionName[extensionName.length - 1];
-                    console.log("sfileName is:" + fileName);
+                    cc.log("sfileName is:" + fileName);
 
                     MjClient.gamenet.request("pkroom.handler.tableMsg", {
                         cmd: "downAndPlayVoice",

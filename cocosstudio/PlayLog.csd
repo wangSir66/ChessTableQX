@@ -374,7 +374,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="back_0" ActionTag="-566539942" VisibleForFrame="False" Tag="1273" IconVisible="False" LeftMargin="-393.0000" RightMargin="-393.0000" TopMargin="-250.5000" BottomMargin="-250.5000" LeftEage="222" RightEage="222" TopEage="149" BottomEage="149" Scale9OriginX="222" Scale9OriginY="149" Scale9Width="534" Scale9Height="323" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="back_0" Visible="False" ActionTag="-566539942" Tag="1273" IconVisible="False" LeftMargin="-393.0000" RightMargin="-393.0000" TopMargin="-250.5000" BottomMargin="-250.5000" LeftEage="222" RightEage="222" TopEage="149" BottomEage="149" Scale9OriginX="222" Scale9OriginY="149" Scale9Width="534" Scale9Height="323" ctype="ImageViewObjectData">
             <Size X="786.0000" Y="501.0000" />
             <Children>
               <AbstractNodeData Name="Image_bg" ActionTag="-208460427" Tag="14226" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="24.0000" RightMargin="24.0000" TopMargin="26.4600" BottomMargin="66.5400" Scale9Enable="True" LeftEage="20" RightEage="20" TopEage="18" BottomEage="18" Scale9OriginX="20" Scale9OriginY="18" Scale9Width="21" Scale9Height="21" ctype="ImageViewObjectData">
@@ -410,17 +410,32 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btnWanFa_68" ActionTag="1321337306" Tag="1348" IconVisible="False" LeftMargin="36.1414" RightMargin="545.8586" TopMargin="81.3716" BottomMargin="347.6284" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="174" Scale9Height="50" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="204.0000" Y="72.0000" />
+              <AbstractNodeData Name="btnWanFa_68" ActionTag="1321337306" Tag="1348" IconVisible="False" LeftMargin="25.7477" RightMargin="578.2523" TopMargin="82.9456" BottomMargin="352.0544" TouchEnable="True" FontSize="14" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="152" Scale9Height="44" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                <Size X="182.0000" Y="66.0000" />
+                <Children>
+                  <AbstractNodeData Name="text" ActionTag="1485371769" Tag="10873" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="5.9999" RightMargin="6.0001" TopMargin="11.1476" BottomMargin="16.8524" IsCustomSize="True" FontSize="28" LabelText="全部" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="170.0000" Y="38.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="90.9999" Y="35.8524" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.5000" Y="0.5432" />
+                    <PreSize X="0.9341" Y="0.5758" />
+                    <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
+                    <OutlineColor A="255" R="172" G="76" B="33" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
+                </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="138.1414" Y="383.6284" />
+                <Position X="116.7477" Y="385.0544" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1758" Y="0.7657" />
-                <PreSize X="0.2595" Y="0.1437" />
+                <PrePosition X="0.1485" Y="0.7686" />
+                <PreSize X="0.2316" Y="0.1317" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="Normal" Path="createNewPng/quanbu_s.png" Plist="" />
-                <NormalFileData Type="Normal" Path="createNewPng/quanbu_n.png" Plist="" />
+                <DisabledFileData Type="Normal" Path="friendCards/selectGroup/btn_s.png" Plist="" />
+                <PressedFileData Type="Normal" Path="friendCards/selectGroup/btn_s.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/selectGroup/btn_n.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

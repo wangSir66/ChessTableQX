@@ -1237,7 +1237,7 @@ function CardLayoutRestoreForEndOne(node, endonepl, isHu)
 
             if(i == orders.length - 1)
             {
-                console.log("--------newC--------"+newC);
+                cc.log("--------newC--------"+newC);
                 if(newC && endonepl)
                 {
                     ci.x = ci.x + slotwith + 10;

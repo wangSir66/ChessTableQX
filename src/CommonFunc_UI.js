@@ -2949,7 +2949,7 @@ COMMON_UI.showCurrentEatCards = function(vnode)
             guoNode.setPosition(guoNode.getPositionX()*0.95,guoNode.getPositionY()*0.99);
         }
         else {
-            guoNode.setScale(guoNode.getScale()*0.8);
+            guoNode.setScale(guoNode.getScale()+0.1);
             guoNode.setPosition(guoNode.getPositionX()*0.95,guoNode.getPositionY()*0.95);
         }
     }
@@ -3041,7 +3041,7 @@ COMMON_UI.showCurrentEatCards = function(vnode)
 
         var _scale = bingdingNode.getScale()*1.6;
         _cardbg.setScale(_scale*0.85);
-        _cardbg.setPosition(bingdingNode.getPosition().x - _cardbg.getScale() * _cardbg.getContentSize().width * (nameIdx + 2) +10, bingdingNode.getPosition().y);
+        _cardbg.setPosition(bingdingNode.getPosition().x - _cardbg.getScale() * _cardbg.getContentSize().width * (nameIdx + 2) +40, bingdingNode.getPosition().y);
         _cardNode.setScale(0.46);
         return _cardbg;
     }

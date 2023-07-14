@@ -372,7 +372,8 @@ var FriendCard_member = cc.Layer.extend({
             var cell = Image_bg.getChildByName("Cell");
             cell.visible = false;
             listView.removeAllItems();
-            Image_bg.removeChildByName("emptyTextTip");
+            if (Image_bg.getChildByName("emptyTextTip"))
+                Image_bg.removeChildByName("emptyTextTip");
             if (!this.daochu_data || this.daochu_data.length <= 1) {
                 var emptyTxt = new ccui.Text();
                 emptyTxt.setFontName("fonts/lanting.TTF");
@@ -4204,7 +4205,8 @@ var FriendCard_member = cc.Layer.extend({
         }
     },
     dealEmptyView: function (panel) {
-        panel.removeChildByName("emptyTextTip");
+        if (panel.getChildByName("emptyTextTip"))
+            panel.removeChildByName("emptyTextTip");
         if (!panel._data || !panel._data.list || panel._data.list.length == 0) {
             var emptyTxt = new ccui.Text();
             emptyTxt.setFontName("fonts/lanting.TTF");

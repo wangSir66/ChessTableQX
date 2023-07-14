@@ -1080,7 +1080,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     //setTaiInfo("");
                 },
                 newCard: function (eD) {
-                    console.log("客户端发牌组合...... ");
+                    cc.log("客户端发牌组合...... ");
                     if (typeof (eD) == "number") {
                         eD = { newCard: eD };
                     }
@@ -2108,14 +2108,14 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 },
                 sendVoice: function (fullFilePath) {
                     if (!fullFilePath) {
-                        console.log("sendVoice No fileName");
+                        cc.log("sendVoice No fileName");
                         return;
                     }
 
                     var getFileName = /[^\/]+$/;
                     var extensionName = getFileName.exec(fullFilePath);
                     var fileName = extensionName[extensionName.length - 1];
-                    console.log("sfileName is:" + fileName);
+                    cc.log("sfileName is:" + fileName);
 
                     MjClient.gamenet.request("pkroom.handler.tableMsg", {
                         cmd: "downAndPlayVoice",

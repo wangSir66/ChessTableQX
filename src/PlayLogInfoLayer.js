@@ -86,7 +86,7 @@ var doBefore = {
             var sData = MjClient.data.sData;
             var tData = sData.tData;
             var pl = sData.players[uid];
-            // console.log("确定过胡吗？", pl.eatFlag, tData.tState, TableState.waitPut, TableState.waitEat);
+            // cc.log("确定过胡吗？", pl.eatFlag, tData.tState, TableState.waitPut, TableState.waitEat);
             if (pl.eatFlag & 8 && (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.PAO_HU_ZI)) {
                 if (tData.tState == TableState.waitPut || tData.tState == TableState.waitEat) {
                     MjClient.showMsg("确定过胡吗？", function(){}, function(){}, "1");
@@ -116,7 +116,7 @@ var doBefore = {
         if(playLogIfoArry[num-1]) {
             //cc.log("--------item---------- log = " + JSON.stringify(item));
             for (var i = 0; i < playLogIfoArry[num-1].length; i++) {
-                // console.log("=====doomsky say:JSON.stringify(playLogIfoArry[num-1][i])======", JSON.stringify(playLogIfoArry[num-1][i]));
+                // cc.log("=====doomsky say:JSON.stringify(playLogIfoArry[num-1][i])======", JSON.stringify(playLogIfoArry[num-1][i]));
                 if(playLogIfoArry[num-1][i].cmd == "roundEnd")
                 {
                     for (var j = 0; j < tempPlayerValue; j++) {
@@ -294,7 +294,7 @@ var doBefore = {
 
                     var gameType = log_init.data.tData.gameType;
                     var isShowGameOver = false; // 是否先显示大结算
-                    // console.log("MjClient.getAppType()@ ", MjClient.getAppType(), " ")
+                    // cc.log("MjClient.getAppType()@ ", MjClient.getAppType(), " ")
                     if ((MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) && log_end.data.tData.roundNum <= 0) {
                         switch (gameType) {
                             //字牌
@@ -564,7 +564,7 @@ var doBefore = {
     {
         cc.log("--------item---------- log = " + JSON.stringify(item));
         for (var i = 0; i < playLogIfoArry[num-1].length; i++) {
-            console.log("=====doomsky say:JSON.stringify(playLogIfoArry[num-1][i])======", JSON.stringify(playLogIfoArry[num-1][i]));
+            cc.log("=====doomsky say:JSON.stringify(playLogIfoArry[num-1][i])======", JSON.stringify(playLogIfoArry[num-1][i]));
             if(playLogIfoArry[num-1][i].cmd == "roundEnd")
             {
                 for (var j = 0; j < tempPlayerValue; j++) {
@@ -656,7 +656,7 @@ var doBefore = {
                 _click:function()
                 {
                     // initReplayLayer();
-                    // console.log("NUM = " + (num -1));
+                    // cc.log("NUM = " + (num -1));
                     // createReplayLayer(playLogIfoArry[num-1]);
                     MjClient.block();
                     MjClient.rePlayVideo = item.gametype;
@@ -810,7 +810,7 @@ var doBefore = {
                 _click:function()
                 {
                     // initReplayLayer();
-                    // console.log("NUM = " + (num -1));
+                    // cc.log("NUM = " + (num -1));
                     // createReplayLayer(playLogIfoArry[num-1]);
                     MjClient.block();
                     MjClient.rePlayVideo = item.gametype;
@@ -890,18 +890,18 @@ var doBefore = {
         var logMsg = JSON.parse(JSON.stringify(msg));
 
         cc.log("================createReplayLayer================= logMsg = " + JSON.stringify(logMsg));
-        console.log("===================createReplayLayer=================");
+        cc.log("===================createReplayLayer=================");
 		var msgStr = JSON.stringify(logMsg);
         for (var i = 0; i < msgStr.length;) // by cyc 改成for循环，log输出太长，在win32上会报错
         {
             if (i + 1024 < msgStr.length)
             {
-                console.log(msgStr.substr(i, 1024));
+                cc.log(msgStr.substr(i, 1024));
                 i += 1024;
             }
             else
             {
-                console.log(msgStr.substr(i));
+                cc.log(msgStr.substr(i));
                 break;
             }
         }

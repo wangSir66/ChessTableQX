@@ -715,7 +715,7 @@ var playLogInfoItem = {};
 
                         changeLogType : function(){
                             var log=MjClient.data.playLog;
-                            // console.log("----- changeLogType log ---- " + JSON.stringify(log));
+                            // cc.log("----- changeLogType log ---- " + JSON.stringify(log));
                             uiList.removeAllItems();
                             if(!log){
                                 return;

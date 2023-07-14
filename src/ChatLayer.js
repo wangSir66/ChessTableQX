@@ -1396,7 +1396,7 @@
             send_btn.addTouchEventListener(function(sender, Type) {
                 switch (Type) {
                     case ccui.Widget.TOUCH_ENDED:
-                        console.log("------发送消息");
+                        cc.log("------发送消息");
                         SendChatMessage();
                         break;
                     default:
@@ -1793,7 +1793,7 @@
                 switch (Type)
                 {
                     case ccui.Widget.TOUCH_ENDED:
-                        console.log("------发送消息");
+                        cc.log("------发送消息");
                         SendChatMessage();
                         break;
                     default :

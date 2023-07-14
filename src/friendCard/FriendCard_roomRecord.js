@@ -5,10 +5,10 @@
 */
 
 var FriendCard_roomRecord = cc.Layer.extend({
-	ctor: function(data,openType,isByFCM) {
-		cc.log(" ======== FriendCard_roomRecord  data : ",JSON.stringify(data));
-		this._super();
-		this._numberRecord = 0;
+    ctor: function (data, openType, isByFCM) {
+        cc.log(" ======== FriendCard_roomRecord  data : ", JSON.stringify(data));
+        this._super();
+        this._numberRecord = 0;
         this._clubData = data;
         this._isByFCM = isByFCM;
         this._gameType = -1;
@@ -18,56 +18,54 @@ var FriendCard_roomRecord = cc.Layer.extend({
         this.isLMClub = FriendCard_Common.isLMClub(this._clubData.info);
         this.isManager = FriendCard_Common.isManager(this._clubData.info);
         this.isGroupLeader = FriendCard_Common.isGroupLeader(this._clubData.info);
-        this.isCreator =  FriendCard_Common.isSupperManger(this._clubData.info);
+        this.isCreator = FriendCard_Common.isSupperManger(this._clubData.info);
         //openType = 1是从玩家统计中打开
-        if( openType )
-        {
+        if (openType) {
             this.openType = openType;
             this.openPlayerInfo = data.openPlayerInfo;
         }
-        else
-        {
+        else {
             this.openType = null;
             this.openPlayerInfo = null;
         }
 
 
-		var UI = ccs.load("friendcard_roomRecord.json");
+        var UI = ccs.load("friendcard_roomRecord.json");
         this.addChild(UI.node);
-		var that = this;
+        var that = this;
         this.uinode = UI.node;
-		var _block = UI.node.getChildByName("block");
-		setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
+        var _block = UI.node.getChildByName("block");
+        setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
 
 
-		var _back = UI.node.getChildByName("back");
-		if(FriendCard_Common.getSkinType() == 3 || FriendCard_Common.getSkinType() == 4){
+        var _back = UI.node.getChildByName("back");
+        if (FriendCard_Common.getSkinType() == 3 || FriendCard_Common.getSkinType() == 4) {
             setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0]);
-        }else{
+        } else {
             setWgtLayout(_back, [0.99, 0.944], [0.5, 0.5], [0, 0]);
         }
-		this._node_1 = _back.getChildByName("Node_1");
+        this._node_1 = _back.getChildByName("Node_1");
 
 
         //玩法头像
         this.initPlayerInfo(_back);
         this.initPanelCheckView(_back)
 
-		var _close = _back.getChildByName("close");
+        var _close = _back.getChildByName("close");
         _close.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 if (FriendCard_Common.club_roleId) {
-                    FriendCard_Common.club_roleId =null;
+                    FriendCard_Common.club_roleId = null;
                 }
                 that.removeFromParent();
             }
         }, this);
         closeBtnAddLight(_close);
 
-        this.Button_showReflash =  _back.getChildByName("roomRecordPanel").getChildByName("Button_showReflash");
+        this.Button_showReflash = _back.getChildByName("roomRecordPanel").getChildByName("Button_showReflash");
         COMMON_UI.setNodeTextAdapterSize(this.Button_showReflash);
         this.Button_showReflash.visible = false;
-        this.Button_showReflash.addTouchEventListener(function(sender, type) {
+        this.Button_showReflash.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 this.Button_showReflash.visible = false;
                 this._lastId = -1;
@@ -77,19 +75,18 @@ var FriendCard_roomRecord = cc.Layer.extend({
             }
         }, this);
         this._listDataCount = 0;
-        this._ListView =  _back.getChildByName("roomRecordPanel").getChildByName("list");
+        this._ListView = _back.getChildByName("roomRecordPanel").getChildByName("list");
         var _listViewState = 0;
         var EVENT_AUTOSCROLL_ENDED = ccui.ScrollView.EVENT_AUTOSCROLL_ENDED;
         if (cc.sys.OS_WINDOWS == cc.sys.os || cc.ENGINE_VERSION.indexOf("3.16") >= 0)
             EVENT_AUTOSCROLL_ENDED = 12;
-        this._ListView.addCCSEventListener(function(sender,type){
+        this._ListView.addCCSEventListener(function (sender, type) {
             switch (type) {
                 case ccui.ScrollView.EVENT_SCROLL_TO_BOTTOM:
                     _listViewState = 1;
                     break;
                 case EVENT_AUTOSCROLL_ENDED:
-                    if (_listViewState == 1)
-                    {
+                    if (_listViewState == 1) {
                         that.reqRecord(data.info.clubId, that._lastId, that._gameType);
                     }
                     _listViewState = 0;
@@ -106,17 +103,15 @@ var FriendCard_roomRecord = cc.Layer.extend({
         this._itemTime.visible = false;
 
         this._nullTip_text = _back.getChildByName("nullTip_text");
-		if (this._nullTip_text)
-		{
-        	this._nullTip_text.visible = false;
-		}
-		this._text_record = _back.getChildByName("roomRecordPanel").getChildByName("Text_record");
+        if (this._nullTip_text) {
+            this._nullTip_text.visible = false;
+        }
+        this._text_record = _back.getChildByName("roomRecordPanel").getChildByName("Text_record");
         this._text_record.ignoreContentAdaptWithSize(true);
-        if ((!this.isManager && !this.isGroupLeader))
-        {
+        if ((!this.isManager && !this.isGroupLeader)) {
             this._text_record.setString("房间记录保留30天  战绩只保留3天");
-        }else{
-            if(this.isLMClub){
+        } else {
+            if (this.isLMClub) {
                 this._text_record.setString("回放只保留5天");
             }
         }
@@ -125,20 +120,20 @@ var FriendCard_roomRecord = cc.Layer.extend({
         COMMON_UI.setNodeTextAdapterSize(this.btnOtherFunc);
 
         this.btnOtherFunc.visible = (!this.isManager && !this.isGroupLeader) || this.openType === "1";
-        if(this.openPlayerInfo){
+        if (this.openPlayerInfo) {
             this._gameType = this.openPlayerInfo.gameType;
             var gameName = this._gameType != -1 ? GameCnName[this._gameType] : "全部玩法";
-            if(this.btnOtherFunc.getChildByName("Text")){
+            if (this.btnOtherFunc.getChildByName("Text")) {
                 this.btnOtherFunc.getChildByName("Text").setString(gameName);
-            }else{
+            } else {
                 this.btnOtherFunc.setTitleText(gameName);
             }
         }
-        if(!this.openPlayerInfo || this._gameType == -1){
-            this.btnOtherFunc.addTouchEventListener(function(sender, type) {
+        if (!this.openPlayerInfo || this._gameType == -1) {
+            this.btnOtherFunc.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
-                    MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Jilu_Xuanzewanfa", {uid: SelfUid()});
-                    var data = {event:"ROOM_WANFA"};
+                    MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Jilu_Xuanzewanfa", { uid: SelfUid() });
+                    var data = { event: "ROOM_WANFA" };
                     data._gameTypeList = this._gameTypeList;
                     UI.node.addChild(new Friendcard_selectWanfa(data));
                 }
@@ -149,55 +144,52 @@ var FriendCard_roomRecord = cc.Layer.extend({
         this.reqRecord(data.info.clubId, this._lastId, this._gameType);
         that.doAutoReflash();
         return true;
-	},
-    doAutoReflash:function () {
-        if(this.isManager || this.isGroupLeader){
-            var that= this;
+    },
+    doAutoReflash: function () {
+        if (this.isManager || this.isGroupLeader) {
+            var that = this;
             //管理员15秒自动刷新
             this.stopActionByTag(20190304);
-            this.runAction(cc.repeatForever(cc.sequence(cc.delayTime(15),cc.callFunc(function () {
-                that.reqRecord(that._clubData.info.clubId, -1, that._gameType,"autoReflash");
+            this.runAction(cc.repeatForever(cc.sequence(cc.delayTime(15), cc.callFunc(function () {
+                that.reqRecord(that._clubData.info.clubId, -1, that._gameType, "autoReflash");
             })))).setTag(20190304);
         }
     },
     //从亲友圈统计中打开, 显示玩家头像,  玩家头像初始化
-    initPlayerInfo:function(back)
-    {   
+    initPlayerInfo: function (back) {
         //this.openPlayerInfo
         var img_head = back.getChildByName("img_head");
-        if(img_head && this.openType && this.openType === "1")
-        {
+        if (img_head && this.openType && this.openType === "1") {
             img_head.isMask = true;
             COMMON_UI.refreshHead(this, this.openPlayerInfo.headimgurl ? this.openPlayerInfo.headimgurl : "png/default_headpic.png", img_head);
 
-            var  name = img_head.getChildByName("text_name");
+            var name = img_head.getChildByName("text_name");
             name.ignoreContentAdaptWithSize(true);
             name.setString(getNewName(unescape(this.openPlayerInfo.nickname)));
             name.setFontName("Arial");
             name.setFontSize(name.getFontSize());
             var id = img_head.getChildByName("text_id");
             id.ignoreContentAdaptWithSize(true);
-            id.setString("ID："+this.openPlayerInfo.userId);
+            id.setString("ID：" + this.openPlayerInfo.userId);
 
             img_head.visible = true;
         }
-        else if(img_head)
-        {
+        else if (img_head) {
             img_head.visible = false;
         }
     },
-    initPanelCheckView:function(_back) {
+    initPanelCheckView: function (_back) {
         var that = this;
         //Panel_playertongji_manager
         //修改年月日的EditBox配置
-        var setEditBoxConfig = function(_parent,_child,str,MaxLength) {
-            if(FriendCard_Common.getSkinType() == 3){
+        var setEditBoxConfig = function (_parent, _child, str, MaxLength) {
+            if (FriendCard_Common.getSkinType() == 3) {
                 _child.setFontColor(cc.color("#AD8F64"));
                 _child.setPlaceholderFontColor(cc.color("#AD8F64"));
-            }else if(FriendCard_Common.getSkinType() == 4){
+            } else if (FriendCard_Common.getSkinType() == 4) {
                 _child.setFontColor(cc.color("#b6b6b5"));
                 _child.setPlaceholderFontColor(cc.color("#b6b6b5"));
-            }else{
+            } else {
                 _child.setFontColor(cc.color(0x77, 0x77, 0x77));
             }
             _child.setMaxLength(MaxLength);
@@ -213,66 +205,66 @@ var FriendCard_roomRecord = cc.Layer.extend({
         //输入玩家ID
         var panel_check = _back.getChildByName("roomRecordPanel").getChildByName("panel_check");
 
-        if(this.openType === "1")
+        if (this.openType === "1")
             panel_check.visible = false;
         else
             panel_check.visible = this.isManager || this.isGroupLeader;
 
         var img_IDorName = panel_check.getChildByName("img_IDorName");
         this.img_IDorName = new cc.EditBox(img_IDorName.getContentSize(), new cc.Scale9Sprite("friendCards/tongji/inputbg.png"));
-        setEditBoxConfig(img_IDorName, this.img_IDorName,"请输入ID",10);
+        setEditBoxConfig(img_IDorName, this.img_IDorName, "请输入ID", 10);
 
         var nowTime = MjClient.getCurrentTime();
         var _start_Time = panel_check.getChildByName("image_date1_bg");
-        var  point1 = _start_Time.convertToWorldSpace(_start_Time.getAnchorPointInPoints());
+        var point1 = _start_Time.convertToWorldSpace(_start_Time.getAnchorPointInPoints());
 
-        point1.y = (point1.y-_start_Time.getBoundingBox().height/2);
-        _start_Time.addTouchEventListener(function(sender, type) {
+        point1.y = (point1.y - _start_Time.getBoundingBox().height / 2);
+        _start_Time.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                var str =that._start_Time_date_txt.getString();
-                str = str.replace(/-/g,"/");
+                var str = that._start_Time_date_txt.getString();
+                str = str.replace(/-/g, "/");
                 var date = new Date(str);
-                var data = {event:"ROOM_start_Time_date_txt",date:date,px:point1.x,py:point1.y,WASD:"S"};
+                var data = { event: "ROOM_start_Time_date_txt", date: date, px: point1.x, py: point1.y, WASD: "S" };
                 that.uinode.addChild(new friendcard_selectTime(data));
             }
         }, this);
         this._start_Time_date_txt = _start_Time.getChildByName("Text_date_start");
         this._start_Time_date_txt.setTextHorizontalAlignment(cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
-        this._start_Time_date_txt.setFontSize(this._start_Time_date_txt.getFontSize()-2)
+        this._start_Time_date_txt.setFontSize(this._start_Time_date_txt.getFontSize() - 2)
         this._start_Time_date_txt.ignoreContentAdaptWithSize(true);
         this._setShowTime(this._start_Time_date_txt, nowTime[0], nowTime[1], nowTime[2], "00", "00");
         UIEventBind(null, this._start_Time_date_txt, "ROOM_start_Time_date_txt", function (eD) {
-            this._setShowTime(this._start_Time_date_txt,eD.year,eD.month,eD.day,eD.hour,eD.minute);
+            this._setShowTime(this._start_Time_date_txt, eD.year, eD.month, eD.day, eD.hour, eD.minute);
         }.bind(this));
 
         var _end_Time = panel_check.getChildByName("image_date2_bg");
-        var  point2 = _end_Time.convertToWorldSpace(_end_Time.getAnchorPointInPoints());
-        point2.y = (point2.y-_end_Time.getBoundingBox().height/2);
-        _end_Time.addTouchEventListener(function(sender, type) {
+        var point2 = _end_Time.convertToWorldSpace(_end_Time.getAnchorPointInPoints());
+        point2.y = (point2.y - _end_Time.getBoundingBox().height / 2);
+        _end_Time.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                var str =that._end_Time_date_txt.getString();
-                str = str.replace(/-/g,"/");
+                var str = that._end_Time_date_txt.getString();
+                str = str.replace(/-/g, "/");
                 var date = new Date(str);
-                var data = {event:"ROOM_end_Time_date_txt",date:date,px:point2.x,py:point2.y,WASD:"S"};
+                var data = { event: "ROOM_end_Time_date_txt", date: date, px: point2.x, py: point2.y, WASD: "S" };
                 that.uinode.addChild(new friendcard_selectTime(data));
             }
         }, this);
         this._end_Time_date_txt = _end_Time.getChildByName("Text_date_end");
         this._end_Time_date_txt.setTextHorizontalAlignment(cc.VERTICAL_TEXT_ALIGNMENT_CENTER)
-        this._end_Time_date_txt.setFontSize(this._end_Time_date_txt.getFontSize()-2)
+        this._end_Time_date_txt.setFontSize(this._end_Time_date_txt.getFontSize() - 2)
         this._end_Time_date_txt.ignoreContentAdaptWithSize(true);
 
-        var nextDate = new Date(nowTime[0],nowTime[1]-1,nowTime[2] + 1);
+        var nextDate = new Date(nowTime[0], nowTime[1] - 1, nowTime[2] + 1);
         var nextTime = MjClient.getCurrentTime(nextDate);
-        this._setShowTime(this._end_Time_date_txt,nextTime[0],nextTime[1],nextTime[2],"00","00");
+        this._setShowTime(this._end_Time_date_txt, nextTime[0], nextTime[1], nextTime[2], "00", "00");
 
         UIEventBind(null, this._end_Time_date_txt, "ROOM_end_Time_date_txt", function (eD) {
-            this._setShowTime(this._end_Time_date_txt,eD.year,eD.month,eD.day,eD.hour,eD.minute);
+            this._setShowTime(this._end_Time_date_txt, eD.year, eD.month, eD.day, eD.hour, eD.minute);
         }.bind(this));
 
 
         this.btn_check = panel_check.getChildByName("btn_check");
-        this.btn_check.addTouchEventListener(function(sender, type) {
+        this.btn_check.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 this.getData();
             }
@@ -281,35 +273,35 @@ var FriendCard_roomRecord = cc.Layer.extend({
         //玩法
         this.btn_wanFa = panel_check.getChildByName("btn_wanFa");
         COMMON_UI.setNodeTextAdapterSize(this.btn_wanFa);
-        this.btn_wanFa.addTouchEventListener(function(sender, type) {
+        this.btn_wanFa.addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                var data = {event:"ROOM_WANFA"};
+                var data = { event: "ROOM_WANFA" };
                 data._gameTypeList = this._gameTypeList;
 
                 that.uinode.addChild(new Friendcard_selectWanfa(data));
             }
         }, this);
         UIEventBind(null, this.btn_wanFa, "ROOM_WANFA", function (eD) {
-            if (eD.gameType != -1){
-                if(this.btnOtherFunc.getChildByName("Text")){
+            if (eD.gameType != -1) {
+                if (this.btnOtherFunc.getChildByName("Text")) {
                     this.btnOtherFunc.getChildByName("Text").setString(eD.gameName);
-                }else{
+                } else {
                     this.btnOtherFunc.setTitleText(eD.gameName);
                 }
-                if(this.btn_wanFa.getChildByName("Text")){
+                if (this.btn_wanFa.getChildByName("Text")) {
                     this.btn_wanFa.getChildByName("Text").setString(eD.gameName);
-                }else{
+                } else {
                     this.btn_wanFa.setTitleText(eD.gameName);
                 }
-            }else{
-                if(this.btnOtherFunc.getChildByName("Text")){
+            } else {
+                if (this.btnOtherFunc.getChildByName("Text")) {
                     this.btnOtherFunc.getChildByName("Text").setString("全部玩法");
-                }else{
+                } else {
                     this.btnOtherFunc.setTitleText("全部玩法");
                 }
-                if(this.btn_wanFa.getChildByName("Text")){
+                if (this.btn_wanFa.getChildByName("Text")) {
                     this.btn_wanFa.getChildByName("Text").setString("全部玩法");
-                }else{
+                } else {
                     this.btn_wanFa.setTitleText("全部玩法");
                 }
             }
@@ -318,33 +310,33 @@ var FriendCard_roomRecord = cc.Layer.extend({
             this.getData();
         }.bind(this));
     },
-    _setShowTime:function(node,txt_1,txt_2,txt_3,txt_4,txt_5){
-        if((txt_2+"").length < 2){
-            txt_2 = "0"+txt_2;
+    _setShowTime: function (node, txt_1, txt_2, txt_3, txt_4, txt_5) {
+        if ((txt_2 + "").length < 2) {
+            txt_2 = "0" + txt_2;
         }
-        if((txt_3+"").length < 2){
-            txt_3 = "0"+txt_3;
+        if ((txt_3 + "").length < 2) {
+            txt_3 = "0" + txt_3;
         }
-        if((txt_4+"").length < 2){
-            txt_4 = "0"+txt_4;
+        if ((txt_4 + "").length < 2) {
+            txt_4 = "0" + txt_4;
         }
-        if((txt_5+"").length < 2){
-            txt_5 = "0"+txt_5;
+        if ((txt_5 + "").length < 2) {
+            txt_5 = "0" + txt_5;
         }
-        node.setString(txt_1+"-"+txt_2+"-"+txt_3+"\n"+txt_4+":"+txt_5);
+        node.setString(txt_1 + "-" + txt_2 + "-" + txt_3 + "\n" + txt_4 + ":" + txt_5);
     },
     //校准时间的合法性
-    is_RightData: function() {
+    is_RightData: function () {
         this._start_time = this._start_Time_date_txt.getString();
         this._end_time = this._end_Time_date_txt.getString();
-        var time_1 = FriendCard_Common.transdate(this._start_time.substring(0,4),Number(this._start_time.substring(5,7))-1,this._start_time.substring(8,10),this._start_time.substring(11,13),this._start_time.substring(14,16));
-        var time_2 = FriendCard_Common.transdate(this._end_time.substring(0,4),Number(this._end_time.substring(5,7))-1,this._end_time.substring(8,10),this._end_time.substring(11,13),this._end_time.substring(14,16));
+        var time_1 = FriendCard_Common.transdate(this._start_time.substring(0, 4), Number(this._start_time.substring(5, 7)) - 1, this._start_time.substring(8, 10), this._start_time.substring(11, 13), this._start_time.substring(14, 16));
+        var time_2 = FriendCard_Common.transdate(this._end_time.substring(0, 4), Number(this._end_time.substring(5, 7)) - 1, this._end_time.substring(8, 10), this._end_time.substring(11, 13), this._end_time.substring(14, 16));
 
-        if(!time_1 || !time_2) return false;
+        if (!time_1 || !time_2) return false;
 
-        this._start_time_date = time_1 < time_2 ? time_1:time_2;
-        this._end_time_date = time_1 > time_2 ? time_1:time_2;
-        if(time_1  > time_2){
+        this._start_time_date = time_1 < time_2 ? time_1 : time_2;
+        this._end_time_date = time_1 > time_2 ? time_1 : time_2;
+        if (time_1 > time_2) {
             var endTime = this._end_time;
             this._end_time = this._start_time;
             this._start_time = endTime;
@@ -379,20 +371,20 @@ var FriendCard_roomRecord = cc.Layer.extend({
         // }
     },
 
-    getData:function () {
-        this.reqRecord(this._clubData.info.clubId,-1,this._gameType);    
+    getData: function () {
+        this.reqRecord(this._clubData.info.clubId, -1, this._gameType);
     },
     //请求房间记录
-	reqRecord: function(clubId,lastId,gameType,reflashType) {
-		var that = this;
-        
-        var requestInfo =  {
+    reqRecord: function (clubId, lastId, gameType, reflashType) {
+        var that = this;
+
+        var requestInfo = {
             lastId: lastId == -1 ? null : lastId,
             gameType: gameType == -1 ? null : gameType
         };
-        if(this.isLMClub){
+        if (this.isLMClub) {
             requestInfo.leagueId = clubId;
-        }else{
+        } else {
             requestInfo.clubId = clubId;
         }
         if (this.openType === "1") {
@@ -413,7 +405,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
                     }
                     return;
                 }
-            } else if((this.isManager || this.isGroupLeader)){
+            } else if ((this.isManager || this.isGroupLeader)) {
                 MjClient.showToast("输入日期不合法")
                 return;
             }
@@ -424,11 +416,11 @@ var FriendCard_roomRecord = cc.Layer.extend({
         if (!(reflashType && reflashType == "autoReflash")) {
             MjClient.block();
         }
-    
+
         if (this._selectedRenshu != -1) { //人数
             requestInfo.playerNum = this._selectedRenshu
         }
-        
+
         var api = "";
         if (this._isByFCM) {
             api = this.isLMClub ? "pkplayer.handler.leagueMpGameRecord" : "pkplayer.handler.clubMpGameRecord";
@@ -438,12 +430,12 @@ var FriendCard_roomRecord = cc.Layer.extend({
         }
 
         cc.log(api + ":" + JSON.stringify(requestInfo));
-		MjClient.gamenet.request(api,requestInfo,
-			function(rtn) {
+        MjClient.gamenet.request(api, requestInfo,
+            function (rtn) {
                 MjClient.unblock();
                 if (!cc.sys.isObjectValid(that))
                     return;
-				if (rtn.code == 0) {
+                if (rtn.code == 0) {
 
                     //贵州需要隐藏用户id
                     if (MjClient.getAppType() == MjClient.APP_TYPE.AYGUIZHOUMJ) {
@@ -456,10 +448,10 @@ var FriendCard_roomRecord = cc.Layer.extend({
                         }
                     }
 
-                    if((reflashType && reflashType == "autoReflash")){
+                    if ((reflashType && reflashType == "autoReflash")) {
                         //自动刷新的先保存数据
                         that.checkHasNewData(rtn);
-                    }else{
+                    } else {
                         that._gameType = gameType;
                         that._lastId = lastId;
                         that.addItems(rtn.data.list);
@@ -467,60 +459,54 @@ var FriendCard_roomRecord = cc.Layer.extend({
                         that.updateBottomMsg(rtn);
                     }
 
-				} 
-                else 
-                {
-					if (rtn.message) {
-						MjClient.showToast(rtn.message);
+                }
+                else {
+                    if (rtn.message) {
+                        MjClient.showToast(rtn.message);
 
-					} else {
-						MjClient.showToast("获取数据失败,请重新打开");
-					}
-				}
-				that.doAutoReflash();
-			}
-		);
-	},
-    checkHasNewData:function(rtn){
+                    } else {
+                        MjClient.showToast("获取数据失败,请重新打开");
+                    }
+                }
+                that.doAutoReflash();
+            }
+        );
+    },
+    checkHasNewData: function (rtn) {
         var listData = rtn.data.list;
-        if(listData && listData.length > 0){
+        if (listData && listData.length > 0) {
             var tempFistId = listData[0].id;
-        }else{
+        } else {
             var tempFistId = -1;
         }
         this.Button_showReflash.visible = (tempFistId != this._firstId);
         this._tempRtn = rtn;
     },
     //更新底部信息
-    updateBottomMsg:function(rtn)
-    {
-        if ((this.isManager || this.isGroupLeader))
-        {
+    updateBottomMsg: function (rtn) {
+        if ((this.isManager || this.isGroupLeader)) {
             //从统计那里进来 显示的不一样
-            if (this.openType === "1")
-            {
-                var str =this.openPlayerInfo.fensuData.text +"  ";
+            if (this.openType === "1") {
+                var str = this.openPlayerInfo.fensuData.text + "  ";
                 if (this.openPlayerInfo.startTime && this.openPlayerInfo.endTime)
-                    str += this.passUxinGetTime(this.openPlayerInfo.startTime)+" - "+this.passUxinGetTime(this.openPlayerInfo.endTime)+"  ";
-                
-                if("all" in rtn.data){
-                    if( !this._gameType || this._gameType === -1 ){
+                    str += this.passUxinGetTime(this.openPlayerInfo.startTime) + " - " + this.passUxinGetTime(this.openPlayerInfo.endTime) + "  ";
+
+                if ("all" in rtn.data) {
+                    if (!this._gameType || this._gameType === -1) {
                         str += "所有玩法: ";
                     }
-                    else{
+                    else {
                         str += GameCnName[this._gameType] + ": ";
                     }
-                    str += (rtn.data.all+"次");
+                    str += (rtn.data.all + "次");
                 }
                 str += "   回放只保留5天";
                 this._text_record.setString(str);
             }
-            else if(this.img_IDorName && this.img_IDorName.getString().length > 2)
-            {
+            else if (this.img_IDorName && this.img_IDorName.getString().length > 2) {
                 this._text_record.setString("");
             }
-            else
-            {
+            else {
                 this._text_record.setString("回放只保留5天");
                 /*if(this.isLMClub){
                     this._text_record.setString("回放只保留5天");
@@ -533,8 +519,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
     },
 
     //通过时间戳来获得年月日
-    passUxinGetTime:function(Uxin)
-    {
+    passUxinGetTime: function (Uxin) {
         var date = new Date(Uxin);
         var Y = date.getFullYear() + '.';
         var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '.';
@@ -550,82 +535,80 @@ var FriendCard_roomRecord = cc.Layer.extend({
         h += ':'
         return Y + M + D + h + m;
     },
-    sortLog: function(oneData)
-    {
+    sortLog: function (oneData) {
         var players = oneData.players;
-        players.sort(function(p1, p2){
+        players.sort(function (p1, p2) {
             return p2.score - p1.score;
         })
     },
-    createItem:function(oneData)
-    {
+    createItem: function (oneData) {
         this.sortLog(oneData);
         var copyNode = null;
         var WinerId = oneData.winner;
         copyNode = this._cell0.clone();
-        
+
 
         copyNode.visible = true;
-        
-        this._numberRecord ++;
+
+        this._numberRecord++;
 
         var num = copyNode.getChildByName("num");
         num.ignoreContentAdaptWithSize(true);
         num.setString(this._numberRecord + "")
-        
+
         var gameType = copyNode.getChildByName("gameType");
         gameType.ignoreContentAdaptWithSize(true);
         if (oneData.ruleName) {
             gameType.setString(FriendCard_Common.resetRuleNameLen(oneData.ruleName));
         }
-        else if ((MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP || 
-            MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ || 
+        else if ((MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
+            MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ ||
             MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
             MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) && oneData.gameType == MjClient.GAME_TYPE.HY_LIU_HU_QIANG){
-            gameType.setString("六胡抢"); 
+            MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) && oneData.gameType == MjClient.GAME_TYPE.HY_LIU_HU_QIANG) {
+            gameType.setString("六胡抢");
         } else if ((MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
-             MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ || 
-             MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
+            MjClient.getAppType() == MjClient.APP_TYPE.BDYZPHZ ||
+            MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
             MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
-            MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) && oneData.gameType == MjClient.GAME_TYPE.HY_SHI_HU_KA){
+            MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) && oneData.gameType == MjClient.GAME_TYPE.HY_SHI_HU_KA) {
             gameType.setString("十胡卡");
         } else {
-            gameType.setString(GameCnName[oneData.gameType]); 
+            gameType.setString(GameCnName[oneData.gameType]);
         }
         var gameName = gameType.getString();
-        if(gameName.length >= 5){
-            if(gameName.length < 6){
+        if (gameName.length >= 5) {
+            if (gameName.length < 6) {
                 gameType.setFontSize(gameType.getFontSize() - 3);
-            }else{
+            } else {
                 gameType.setFontSize(gameType.getFontSize() - 6);
             }
-        }   
+        }
         this._gameTypeList.push(oneData.gameType);
         var tableid = copyNode.getChildByName("tableid"); //roomNum
         tableid.ignoreContentAdaptWithSize(true);
 
-        tableid.setString(" "+oneData.roomNum);//"房间ID:"+oneData.roomNum
+        tableid.setString(" " + oneData.roomNum);//"房间ID:"+oneData.roomNum
 
         var fangkaRebateText = copyNode.getChildByName("fangkaRebateText");
         fangkaRebateText.ignoreContentAdaptWithSize(true);
         fangkaRebateText.setVisible(true);
         fangkaRebateText.setString("");
-        if(oneData.fangkaRebate && ((this.isLMClub && this.isManager) ||  this.isCreator)){
+        if (oneData.fangkaRebate && ((this.isLMClub && this.isManager) || this.isCreator)) {
             fangkaRebateText.setVisible(true);
-            if(oneData.fangkaRebate == -1){
+            if (oneData.fangkaRebate == -1) {
                 fangkaRebateText.setString("免");
                 fangkaRebateText.setTextColor(tableid.getTextColor());
-            }else {
+            } else {
                 fangkaRebateText.setString(oneData.fangkaRebate);
-                if(FriendCard_Common.getSkinType() != 4){
+                if (FriendCard_Common.getSkinType() != 4) {
                     fangkaRebateText.setTextColor(cc.color("#000000"));
                 }
             }
         }
 
-        if(oneData.matchScoreLimitUser && Object.keys(oneData.matchScoreLimitUser).length > 0){
-            fangkaRebateText.setString(fangkaRebateText.getString() +"(低分解散)");
+        if (oneData.matchScoreLimitUser && Object.keys(oneData.matchScoreLimitUser).length > 0) {
+            fangkaRebateText.setString(fangkaRebateText.getString() + "(低分解散)");
         }
 
         var huifang = copyNode.getChildByName("huifang");
@@ -634,11 +617,11 @@ var FriendCard_roomRecord = cc.Layer.extend({
             huifang = copyNode.getChildByName(" huifang");
         }
         if (huifang) {
-            huifang.setVisible(oneData.playbackUrl?true:false);
+            huifang.setVisible(oneData.playbackUrl ? true : false);
         }
-        
+
         if (oneData.roundNum && oneData.roundNum < 40 && oneData.roundBeen) {
-            tableid.setString(" "+oneData.roomNum +" (" +oneData.roundBeen + "/" + oneData.roundNum + "" + ")");
+            tableid.setString(" " + oneData.roomNum + " (" + oneData.roundBeen + "/" + oneData.roundNum + "" + ")");
         }
 
         function nameText(idx) {
@@ -649,38 +632,35 @@ var FriendCard_roomRecord = cc.Layer.extend({
             var _name = copyNode.getChildByName("player" + idx);
             //ID
             var playerID = _name.getChildByName("playerID");
-            if(playerID)
-            {
+            if (playerID) {
                 playerID.ignoreContentAdaptWithSize(true);
-                if(oneData.players[idx].isDiffClub || oneData.players[idx].isHideId){
-                    playerID.setString("ID:"+FriendCard_Common.getHideIdStr(oneData.players[idx].userId));
-                }else{
-                    playerID.setString("ID:"+oneData.players[idx].userId);
+                if (oneData.players[idx].isDiffClub || oneData.players[idx].isHideId) {
+                    playerID.setString("ID:" + FriendCard_Common.getHideIdStr(oneData.players[idx].userId));
+                } else {
+                    playerID.setString("ID:" + oneData.players[idx].userId);
                 }
             }
             //分数
             var playerScore = _name.getChildByName("playerScore");
-            if(Number(oneData.players[idx].score) > 0  && playerScore)
-            {
+            if (Number(oneData.players[idx].score) > 0 && playerScore) {
                 playerScore.ignoreContentAdaptWithSize(true);
-                if(FriendCard_Common.getSkinType() != 4){
+                if (FriendCard_Common.getSkinType() != 4) {
                     playerScore.setTextColor(cc.color("#AB3215"));
-                }else{
+                } else {
                     playerScore.setTextColor(cc.color("#FF6F20"));
                 }
                 _name.zIndex = 1;
-                if(oneData.players[idx].score != undefined) playerScore.setString(" +" + Number(oneData.players[idx].score));
+                if (oneData.players[idx].score != undefined) playerScore.setString(" +" + Number(oneData.players[idx].score));
             }
-            else if(playerScore)
-            {
+            else if (playerScore) {
                 playerScore.ignoreContentAdaptWithSize(true);
-                if(FriendCard_Common.getSkinType() != 4){
+                if (FriendCard_Common.getSkinType() != 4) {
                     playerScore.setTextColor(cc.color("#0B9500"));
-                }else{
+                } else {
                     playerScore.setTextColor(cc.color("#38AE6F"));
                 }
                 _name.zIndex = 1;
-                if(oneData.players[idx].score != undefined) playerScore.setString(" " + Number(oneData.players[idx].score));
+                if (oneData.players[idx].score != undefined) playerScore.setString(" " + Number(oneData.players[idx].score));
             }
 
             return getPlayerName(unescape(oneData.players[idx].nickname), 5);
@@ -691,13 +671,13 @@ var FriendCard_roomRecord = cc.Layer.extend({
         player0.setString(nameText(0));
         player0.setFontName("Arial");
         player0.setFontSize(25);
-        
+
         var player1 = copyNode.getChildByName("player1");
         player1.ignoreContentAdaptWithSize(true);
         player1.setString(nameText(1));
         player1.setFontName("Arial");
         player1.setFontSize(25);
-        
+
         var player2 = copyNode.getChildByName("player2");
         player2.ignoreContentAdaptWithSize(true);
         player2.setFontName("Arial");
@@ -707,8 +687,8 @@ var FriendCard_roomRecord = cc.Layer.extend({
         } else {
             player2.visible = false;
         }
-        
-        
+
+
         var player3 = copyNode.getChildByName("player3");
         player3.ignoreContentAdaptWithSize(true);
         player3.setFontName("Arial");
@@ -720,61 +700,60 @@ var FriendCard_roomRecord = cc.Layer.extend({
         }
 
         var player4 = copyNode.getChildByName("player4");
-		if (player4) {
-	        player4.ignoreContentAdaptWithSize(true);
+        if (player4) {
+            player4.ignoreContentAdaptWithSize(true);
             player4.setFontName("Arial");
             player4.setFontSize(25);
-	        if (oneData.players.length >= 5) {
-	            player4.setString(nameText(4));
-	        } else {
-	            player4.visible = false;
-	        }
-		}
-    
-        if(isJinZhongAPPType())
-        {
+            if (oneData.players.length >= 5) {
+                player4.setString(nameText(4));
+            } else {
+                player4.visible = false;
+            }
+        }
+
+        if (isJinZhongAPPType()) {
             var player5 = copyNode.getChildByName("player5");
-    		if (player5) {
-    	        player5.ignoreContentAdaptWithSize(true);
+            if (player5) {
+                player5.ignoreContentAdaptWithSize(true);
                 player5.setFontName("Arial");
                 player5.setFontSize(25);
-    	        if (oneData.players.length >= 6) {
-    	            player5.setString(nameText(5));
-    	        } else {
-    	            player5.visible = false;
-    	        }
-    		}
+                if (oneData.players.length >= 6) {
+                    player5.setString(nameText(5));
+                } else {
+                    player5.visible = false;
+                }
+            }
         }
-        
 
 
-        
+
+
         var time = copyNode.getChildByName("time");
         var _timeStr = MjClient.dateFormat(new Date(parseInt(oneData.createTime)), 'yyyy-MM-dd hh:mm:ss');
         time.ignoreContentAdaptWithSize(true);
         if (oneData.showTime) {
             time.setString(oneData.showTime);
-        }else{
+        } else {
             time.setString(_timeStr);
         }
-        
+
         copyNode.setTag(this._numberRecord);
-        copyNode.addTouchEventListener(function(sender, type) {
+        copyNode.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 var playUrl = oneData.playbackUrl;
-                if(!playUrl){
+                if (!playUrl) {
                     return;
                 }
-                MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Jilu_Chakanhuifang", {uid:SelfUid()});
+                MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Jilu_Chakanhuifang", { uid: SelfUid() });
                 //var index = sender.getTag();
                 //cc.log(" ========= index", index);
                 this.reqRecord_one(oneData);
             }
-        },this);
+        }, this);
 
         var copyBtn = copyNode.getChildByName("copyBtn");
         if (copyBtn != null) {
-            copyBtn.addTouchEventListener(function(sender, Type) {
+            copyBtn.addTouchEventListener(function (sender, Type) {
                 if (Type != ccui.Widget.TOUCH_ENDED)
                     return;
 
@@ -785,18 +764,16 @@ var FriendCard_roomRecord = cc.Layer.extend({
         this._lastId = oneData.id;
         return copyNode;
     },
-    createTimeItem:function(oneData)
-    {   
+    createTimeItem: function (oneData) {
         var _timeStr = MjClient.dateFormat(new Date(parseInt(oneData.createTime)), 'yyyy-MM-dd');
-        if(this._ListView._timeStr == _timeStr)
-        {
+        if (this._ListView._timeStr == _timeStr) {
             return;
         }
         var copyNode = null;
         copyNode = this._itemTime.clone();
         this._ListView._timeStr = _timeStr
         copyNode.visible = true;
-        
+
         var text_time = copyNode.getChildByName("text_time");
         text_time.ignoreContentAdaptWithSize(true);
         text_time.setString(_timeStr);
@@ -804,8 +781,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
 
     },
     //房间记录
-    addItems:function(data)
-    {
+    addItems: function (data) {
         if (this._lastId == -1) {
             this._ListView.removeAllItems();
             this._numberRecord = 0;
@@ -817,12 +793,11 @@ var FriendCard_roomRecord = cc.Layer.extend({
         this._listDataCount += data.length;
         var _len = this._ListView.getItems().length;
         //将房间记录列表当天倒叙排列
-        data.sort(function(a, b) {
-             return b.createTime - a.createTime;
+        data.sort(function (a, b) {
+            return b.createTime - a.createTime;
         });
-        for(var i = 0;i < data.length ;i++)
-        {
-            if(i == 0 && _len == 0){
+        for (var i = 0; i < data.length; i++) {
+            if (i == 0 && _len == 0) {
                 this._firstId = data[i].id;
             }
             this.createTimeItem(data[i]);
@@ -830,33 +805,28 @@ var FriendCard_roomRecord = cc.Layer.extend({
         }
 
         this._ListView.jumpToItem(_len, cc.p(0.5, 1.0), cc.p(0.5, 1.0));
-        
-        if (this._listDataCount == 0)
-        {
-            if (this._nullTip_text)
-            {
+
+        if (this._listDataCount == 0) {
+            if (this._nullTip_text) {
                 this._nullTip_text.visible = true;
             }
-            else
-            {
+            else {
                 // MjClient.showToast("已显示所有房间记录");
-            }   
+            }
         }
-        else
-        {
-            if(this._nullTip_text)
+        else {
+            if (this._nullTip_text)
                 this._nullTip_text.visible = false;
         }
     },
-    reqRecord_one: function(oneData) {
+    reqRecord_one: function (oneData) {
         var playUrl = oneData.playbackUrl;
-        if(!playUrl){
+        if (!playUrl) {
             MjClient.showToast("文件已过期，不能回放");
             return;
         }
         var _timeStr = MjClient.dateFormat(new Date(parseInt(oneData.createTime)), 'yyyy-MM-dd hh:mm:ss');
-        for (var i = 0; i < oneData.players.length; i++)
-        {
+        for (var i = 0; i < oneData.players.length; i++) {
             oneData.players[i].uid = oneData.players[i].userId;
         }
         oneData.tableid = oneData.roomNum;
@@ -870,8 +840,8 @@ var FriendCard_roomRecord = cc.Layer.extend({
         //var playUrl = GamePlaybackUrlPrefix[MjClient.getAppType()] + _timeStr.substr(0, 10) + "/" + this._clubData.info.creator + "_" + oneData.roomNum + ".json";
         cc.log(" ==== playUrl : ", playUrl);
         xhr.open("GET", playUrl);
-        xhr.onreadystatechange = function() {
-            if(cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
+        xhr.onreadystatechange = function () {
+            if (cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
             if (xhr.readyState == 4 && xhr.status == 200) {
                 var rep = null;
                 try {
@@ -880,9 +850,8 @@ var FriendCard_roomRecord = cc.Layer.extend({
                     rep = null;
                     MjClient.showToast("网络不好，请稍后再试.");
                 }
-                if (rep)
-                {
-                    cc.log('----------rep--------------',JSON.stringify(rep))
+                if (rep) {
+                    cc.log('----------rep--------------', JSON.stringify(rep))
                     // var keys = Object.keys(rep[0].data.players);
                     // if (keys.indexOf(SelfUid() + "") == -1)
                     // {
@@ -893,27 +862,24 @@ var FriendCard_roomRecord = cc.Layer.extend({
                 }
             }
         };
-        xhr.onerror = function(event) {
-            if(cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
+        xhr.onerror = function (event) {
+            if (cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
             MjClient.showToast("网络请求错误，请稍后再试...");
         };
-        xhr.ontimeout = function (event)
-        {
-            if(cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
+        xhr.ontimeout = function (event) {
+            if (cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
             MjClient.showToast("网络超时，请稍后再试");
         };
-        xhr.onabort = function (event)
-        {
-            if(cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
+        xhr.onabort = function (event) {
+            if (cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
             MjClient.showToast("网络请求中断，请稍后再试");
         };
         xhr.timeout = 5000; //5s超时
         xhr.send();
     },
-    
+
     onExit: function () {
-        if(FriendCard_Common.getSkinType() == 3 && MjClient.FriendCard_main_ui)
-        {
+        if (FriendCard_Common.getSkinType() == 3 && MjClient.FriendCard_main_ui) {
             MjClient.FriendCard_main_ui.bottomBtnDelLight()
         }
         this._super();
@@ -922,7 +888,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
 
 //管理记录
 var FriendCard_managerRecordJZ = cc.Layer.extend({
-    ctor: function(data,openType) {
+    ctor: function (data, openType) {
         this._super();
         this._clubData = data;
         this._opeLastId = -1; //操作记录LastID
@@ -930,13 +896,11 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
         this.isManager = FriendCard_Common.isManager(this._clubData.info);
 
         //openType = 1是从玩家统计中打开
-        if( openType )
-        {
+        if (openType) {
             this.openType = openType;
             this.openPlayerInfo = data.openPlayerInfo;
         }
-        else
-        {
+        else {
             this.openType = null;
             this.openPlayerInfo = null;
         }
@@ -966,7 +930,7 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
         _close.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 if (FriendCard_Common.club_roleId) {
-                    FriendCard_Common.club_roleId =null;
+                    FriendCard_Common.club_roleId = null;
                 }
                 that.removeFromParent();
             }
@@ -975,8 +939,7 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
 
 
     },
-    initBtns:function(_back)
-    {
+    initBtns: function (_back) {
         var btn_quanbu = _back.getChildByName("btn_quanbu");
         var btn_chengyuan = _back.getChildByName("btn_chengyuan");
         var btn_fangjian = _back.getChildByName("btn_fangjian");
@@ -984,18 +947,18 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
         var btn_qita = _back.getChildByName("btn_qita");
         var btn_chazhao = _back.getChildByName("btn_chazhao");
 
-        this.btnList = [btn_quanbu,btn_chengyuan,btn_fangjian,btn_wanfa,btn_qita];
+        this.btnList = [btn_quanbu, btn_chengyuan, btn_fangjian, btn_wanfa, btn_qita];
 
         var inputimg = _back.getChildByName("inputimg");
 
         this.playerID = new cc.EditBox(cc.size(inputimg.width, inputimg.height), new cc.Scale9Sprite("friendCards/manageRecord/img_input.png"));
-        if(FriendCard_Common.getSkinType() == 1) {
+        if (FriendCard_Common.getSkinType() == 1) {
             this.playerID.setFontColor(cc.color("#8d8c8c"));
-        }else if(FriendCard_Common.getSkinType() == 2){
+        } else if (FriendCard_Common.getSkinType() == 2) {
             this.playerID.setFontColor(cc.color("#443333"));
-        }else if(FriendCard_Common.getSkinType() == 4){
+        } else if (FriendCard_Common.getSkinType() == 4) {
             this.playerID.setFontColor(cc.color("#b6b6b5"));
-        }else {
+        } else {
             this.playerID.setFontColor(cc.color("#ad8f64"));
         }
         this.playerID.setFontSize(20);
@@ -1009,25 +972,22 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
         inputimg.addChild(this.playerID)
         for (var i = 0; i < this.btnList.length; i++) {
             this.btnList[i]._index = i;
-            this.btnList[i].addTouchEventListener(function(sender, type) {
-                if (type == 2)
-                {   
+            this.btnList[i].addTouchEventListener(function (sender, type) {
+                if (type == 2) {
                     this.onClickBtn(sender._index)
                 }
             }, this);
         }
 
-        btn_chazhao.addTouchEventListener(function(sender, type) {
-            if (type == 2)
-            {   
+        btn_chazhao.addTouchEventListener(function (sender, type) {
+            if (type == 2) {
                 this._opeLastId = -1;
-                this.reqOpeRecord(this._clubData.info.clubId,this._opeLastId);
+                this.reqOpeRecord(this._clubData.info.clubId, this._opeLastId);
             }
         }, this);
     },
-    onClickBtn:function(index)
-    {
-        if(!this.btnList) return;
+    onClickBtn: function (index) {
+        if (!this.btnList) return;
 
         for (var i = 0; i < this.btnList.length; i++) {
             this.btnList[i].setEnabled(true);
@@ -1036,11 +996,10 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
 
         this.modeIndex = index;
         this._opeLastId = -1;
-        this.reqOpeRecord(this._clubData.info.clubId,this._opeLastId);
+        this.reqOpeRecord(this._clubData.info.clubId, this._opeLastId);
     },
     //init操作记录
-    initOpeRecord:function(_back)
-    {
+    initOpeRecord: function (_back) {
         var that = this;
         this.opeRecordPanel = _back.getChildByName("opeRecordPanel");
         this.opeList = this.opeRecordPanel.getChildByName("list");
@@ -1056,15 +1015,14 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
         var EVENT_AUTOSCROLL_ENDED = ccui.ScrollView.EVENT_AUTOSCROLL_ENDED;
         if (cc.sys.OS_WINDOWS == cc.sys.os || cc.ENGINE_VERSION.indexOf("3.16") >= 0)
             EVENT_AUTOSCROLL_ENDED = 12;
-        this.opeList.addCCSEventListener(function(sender,type){
+        this.opeList.addCCSEventListener(function (sender, type) {
             switch (type) {
                 case ccui.ScrollView.EVENT_SCROLL_TO_BOTTOM:
                     _opelistViewState = 1;
                     break;
                 case EVENT_AUTOSCROLL_ENDED:
-                    if (_opelistViewState == 1)
-                    {
-                        that.reqOpeRecord(that._clubData.info.clubId,that._opeLastId);
+                    if (_opelistViewState == 1) {
+                        that.reqOpeRecord(that._clubData.info.clubId, that._opeLastId);
                     }
                     _opelistViewState = 0;
                     break;
@@ -1072,15 +1030,15 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
         });
     },
     //请求操作记录
-    reqOpeRecord: function(clubId,lastId) {
+    reqOpeRecord: function (clubId, lastId) {
         var that = this;
         MjClient.block();
-        var requestInfo =  {clubId: clubId, lastId: lastId == -1 ? null : lastId};
+        var requestInfo = { clubId: clubId, lastId: lastId == -1 ? null : lastId };
         requestInfo.mode = this.modeIndex ? this.modeIndex : 0;
         var userId = this.playerID.getString();
-        if(userId.length >= 6)
+        if (userId.length >= 6)
             requestInfo.userId = userId;
-        else if(userId.length > 0 )
+        else if (userId.length > 0)
             MjClient.showToast("请输入玩家正确ID");
 
         var jiekouName = "pkplayer.handler.clubActionRecord";
@@ -1088,8 +1046,8 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
             jiekouName = "pkplayer.handler.leagueActionRecord"
             requestInfo.leagueId = requestInfo.clubId
         }
-        MjClient.gamenet.request(jiekouName,requestInfo,
-            function(rtn) {
+        MjClient.gamenet.request(jiekouName, requestInfo,
+            function (rtn) {
                 MjClient.unblock();
                 if (!cc.sys.isObjectValid(that))
                     return;
@@ -1097,10 +1055,9 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
                 if (rtn.code == 0) {
                     cc.log(" =====pkplayer.handler.clubActionRecord  === " + JSON.stringify(rtn.data));
                     that._opeLastId = lastId;
-                    that.addOpeItems(rtn.data);      
-                } 
-                else 
-                {
+                    that.addOpeItems(rtn.data);
+                }
+                else {
                     if (rtn.message) {
                         MjClient.showToast(rtn.message);
 
@@ -1111,15 +1068,14 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
             }
         );
     },
-    createOpeItem:function(oneData)
-    {
+    createOpeItem: function (oneData) {
         var copyNode = this.opeItem.clone();
         copyNode.visible = true;
-        this._opeNumberRecord ++;
-        
+        this._opeNumberRecord++;
+
         var time = copyNode.getChildByName("time");
         time.ignoreContentAdaptWithSize(true);
-        time.setString(oneData.time.substring(0,10));
+        time.setString(oneData.time.substring(0, 10));
 
         var time1 = copyNode.getChildByName("time1");
         time1.ignoreContentAdaptWithSize(true);
@@ -1128,33 +1084,33 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
         var info = copyNode.getChildByName("info"); //roomNum
         info.ignoreContentAdaptWithSize(true);
         info.setString(getNewName_new(unescape(oneData.title), 21));//unescape
-        copyNode.getChildByName("btn_xiangqing").addTouchEventListener(function(sender, type) {
+        copyNode.getChildByName("btn_xiangqing").addTouchEventListener(function (sender, type) {
             if (type == 2) {
-                MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Renwu_Guanlijilu_Xiangqing", {uid: SelfUid()});
+                MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Renwu_Guanlijilu_Xiangqing", { uid: SelfUid() });
                 MjClient.Scene.addChild(new UnclosedTipLayer_New(oneData.content));
             }
-        },this);
-        
+        }, this);
+
         this._opeLastId = oneData.id;
         return copyNode;
     },
     //添加操作记录Item
-    addOpeItems:function(data)
-    {
+    addOpeItems: function (data) {
         if (this._opeLastId == -1) {
             this.opeList.removeAllItems();
             this._opeNumberRecord = 0;
         }
 
-        this.opeRecordPanel.removeChildByName("emptyTextTip");
-        if ((!data || data.length <= 0) && this.opeList.getItems().length <= 0){
+        if (this.opeRecordPanel.getChildByName("emptyTextTip"))
+            this.opeRecordPanel.removeChildByName("emptyTextTip");
+        if ((!data || data.length <= 0) && this.opeList.getItems().length <= 0) {
             var emptyTxt = new ccui.Text();
             emptyTxt.setFontName("fonts/lanting.TTF");
             emptyTxt.setFontSize(30);
             emptyTxt.setString("暂无数据");
             emptyTxt.setColor(cc.color(0x79, 0x34, 0x12));
             emptyTxt.setName("emptyTextTip");
-            emptyTxt.setPosition(this.opeRecordPanel.width/2,this.opeRecordPanel.height/2);
+            emptyTxt.setPosition(this.opeRecordPanel.width / 2, this.opeRecordPanel.height / 2);
             this.opeRecordPanel.addChild(emptyTxt);
         }
 
@@ -1162,8 +1118,7 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
             return;
 
         var _len = this.opeList.getItems().length;
-        for(var i = 0;i < data.length ;i++)
-        {
+        for (var i = 0; i < data.length; i++) {
             this.opeList.pushBackCustomItem(this.createOpeItem(data[i]));
         }
 

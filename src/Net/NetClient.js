@@ -142,7 +142,7 @@
   };
 
   var connect = function(params, url, cb) {
-    console.log('connect to ' + url);
+    cc.log('connect to ' + url);
 
     var params = params || {};
     var maxReconnectAttempts = params.maxReconnectAttempts || DEFAULT_MAX_RECONNECT_ATTEMPTS;
@@ -183,12 +183,12 @@
     };
     var onerror = function(event) {
       pomelo.emit('io-error', event);
-      console.error('socket error: ', event);
+      cc.error('socket error: ', event);
     };
     var onclose = function(event) {
       pomelo.emit('close',event);
       pomelo.emit('disconnect', event);
-      console.error('socket close: ', event);
+      cc.error('socket close: ', event);
 	  pomelo.disconnect();
       if(!!params.reconnect && reconnectAttempts < maxReconnectAttempts) {
         reconnect = true;
@@ -344,7 +344,7 @@
       if (gap > gapThreshold) {
         heartbeatTimeoutId = setTimeout(heartbeatTimeoutCb, gap);
       } else {
-        console.error('server heartbeat timeout');
+        cc.error('server heartbeat timeout');
         pomelo.emit('heartbeat timeout');
         pomelo.disconnect();
       }

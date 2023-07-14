@@ -1358,7 +1358,7 @@ function SetGameOverLayer_changpai(node, off) {
             },
             item4: {
                 _text: function () {
-                    // console.log("=====doomsky say:pl.jiepaoTotal======", pl.jiepaoTotal);
+                    // cc.log("=====doomsky say:pl.jiepaoTotal======", pl.jiepaoTotal);
                     // return "接炮次数：" + (pl.jiepaoTotal  > 0? pl.jiepaoTotal +"":"0" );
                     return "";
                 }
@@ -3855,7 +3855,7 @@ function SetGameOverLayer_nanjing(node, off) {
         statistc: {
             item0: {
                 _text: function () {
-                    console.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
+                    cc.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
                     return "自摸次数：" + (pl.zimoTotal > 0 ? pl.zimoTotal + "" : "0");
                 }
             },
@@ -3867,19 +3867,19 @@ function SetGameOverLayer_nanjing(node, off) {
             },
             item2: {
                 _text: function () {
-                    console.log("=====doomsky say:pl.angangTotal======", pl.caibao);
+                    cc.log("=====doomsky say:pl.angangTotal======", pl.caibao);
                     return "菜包：" + pl.caibao;
                 }
             },
             item3: {
                 _text: function () {
-                    console.log("=====doomsky say:pl.minggangTotal======", pl.roubao);
+                    cc.log("=====doomsky say:pl.minggangTotal======", pl.roubao);
                     return "肉包：" + pl.roubao;
                 }
             },
             item4: {
                 _text: function () {
-                    // console.log("=====doomsky say:pl.jiepaoTotal======", pl.jiepaoTotal);
+                    // cc.log("=====doomsky say:pl.jiepaoTotal======", pl.jiepaoTotal);
                     // return "接炮次数：" + (pl.jiepaoTotal  > 0? pl.jiepaoTotal +"":"0" );
                     return "";
                 }
@@ -5432,7 +5432,7 @@ function SetGameOverLayer_majiang_jinzhongAPP(node, off) {
                     this.getChildByName("text").ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
-                    //console.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
+                    //cc.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
                     return "赢" + winCount + "局";
                 }
             },
@@ -5782,7 +5782,7 @@ function SetGameOverLayer_QXYYQP(node, off) {
                     this.ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
-                    console.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
+                    cc.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[0] == 'string') return pl.roomStatisticsDesc[0] + "";
 
                     if (MjClient.gameType == MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI) {
@@ -5957,7 +5957,7 @@ function SetGameOverLayer_QXYYQP(node, off) {
                 },
                 _text: function () {
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[3] == 'string') return pl.roomStatisticsDesc[3] + "";
-                    console.log("=====doomsky say:pl.angangTotal======", pl.angangTotal);
+                    cc.log("=====doomsky say:pl.angangTotal======", pl.angangTotal);
                     if (MjClient.gameType == MjClient.GAME_TYPE.TONG_HUA)
                         return "暗蛋次数";
                     else if (MjClient.gameType == MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI ||
@@ -6019,7 +6019,7 @@ function SetGameOverLayer_QXYYQP(node, off) {
                 },
                 _text: function () {
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[4] == 'string') return pl.roomStatisticsDesc[4] + "";
-                    console.log("=====doomsky say:pl.minggangTotal======", pl.minggangTotal);
+                    cc.log("=====doomsky say:pl.minggangTotal======", pl.minggangTotal);
                     if (MjClient.gameType == MjClient.GAME_TYPE.TONG_HUA)
                         return "明蛋次数";
                     else if (MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN)
@@ -6462,7 +6462,7 @@ function SetGameOverLayer_YJ(node, off) {
                     this.ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
-                    console.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
+                    cc.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[0] == 'string') return pl.roomStatisticsDesc[0] + "";
 
                     if (MjClient.gameType == MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI) {
@@ -6606,7 +6606,7 @@ function SetGameOverLayer_YJ(node, off) {
                 },
                 _text: function () {
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[3] == 'string') return pl.roomStatisticsDesc[3] + "";
-                    console.log("=====doomsky say:pl.angangTotal======", pl.angangTotal);
+                    cc.log("=====doomsky say:pl.angangTotal======", pl.angangTotal);
                     if (MjClient.gameType == MjClient.GAME_TYPE.TONG_HUA)
                         return "暗蛋次数";
                     else if (MjClient.gameType == MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI) {
@@ -6657,7 +6657,7 @@ function SetGameOverLayer_YJ(node, off) {
                 },
                 _text: function () {
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[4] == 'string') return pl.roomStatisticsDesc[4] + "";
-                    console.log("=====doomsky say:pl.minggangTotal======", pl.minggangTotal);
+                    cc.log("=====doomsky say:pl.minggangTotal======", pl.minggangTotal);
                     if (MjClient.gameType == MjClient.GAME_TYPE.TONG_HUA)
                         return "明蛋次数";
                     else if (MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN)
@@ -7057,7 +7057,7 @@ function SetGameOverLayer_majiang_linfenAPP(node, off) {
                     this.getChildByName("text").ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
-                    //console.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
+                    //cc.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
                     return "赢" + winCount + "局";
                 }
             },
@@ -10511,7 +10511,7 @@ function SetGameOverLayer_QXSYDTZ(node, off) {
                     this.ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
-                    console.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
+                    cc.log("=====doomsky say:pl.zimoTotal======", pl.zimoTotal);
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[0] == 'string') return pl.roomStatisticsDesc[0] + "";
 
                     if (MjClient.gameType == MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI) {
@@ -10653,7 +10653,7 @@ function SetGameOverLayer_QXSYDTZ(node, off) {
                 },
                 _text: function () {
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[3] == 'string') return pl.roomStatisticsDesc[3] + "";
-                    console.log("=====doomsky say:pl.angangTotal======", pl.angangTotal);
+                    cc.log("=====doomsky say:pl.angangTotal======", pl.angangTotal);
                     if (MjClient.gameType == MjClient.GAME_TYPE.TONG_HUA)
                         return "暗蛋次数";
                     else if (MjClient.gameType == MjClient.GAME_TYPE.MJ_ZHUO_XIA_ZI) {
@@ -10711,7 +10711,7 @@ function SetGameOverLayer_QXSYDTZ(node, off) {
                 },
                 _text: function () {
                     if (pl.roomStatisticsDesc && typeof pl.roomStatisticsDesc[4] == 'string') return pl.roomStatisticsDesc[4] + "";
-                    console.log("=====doomsky say:pl.minggangTotal======", pl.minggangTotal);
+                    cc.log("=====doomsky say:pl.minggangTotal======", pl.minggangTotal);
                     if (MjClient.gameType == MjClient.GAME_TYPE.TONG_HUA)
                         return "明蛋次数";
                     else if (MjClient.gameType == MjClient.GAME_TYPE.TY_ZHUANZHUAN
