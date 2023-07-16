@@ -399,8 +399,8 @@
                 "FontSize": 30,
                 "LabelText": "绑定后不可修改，确认绑定此用户的邀请码？",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -742,7 +742,6 @@
         "createNewPng/sure_xin_s.png",
         "createNewPng/tishi_xin.png",
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "friendCards/common/headMask1.png",
         "game_picture/bac_xiaotanchuan.png",
         "game_picture/diban.png"

@@ -290,8 +290,8 @@
                     "FontSize": 20,
                     "LabelText": "金币X50",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -486,7 +486,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "shareToday/bg_di.png",
         "shareToday/bg_kuan.png",
         "shareToday/btn_yes.png",

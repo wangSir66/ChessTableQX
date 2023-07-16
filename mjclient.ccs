@@ -551,6 +551,128 @@
           <Image Name="yuanbao.png" />
           <Image Name="zuanshi.png" />
         </Folder>
+        <Folder Name="blackList">
+          <Image Name="btn_add_club_n.png" />
+          <Image Name="btn_add_club_s.png" />
+          <Image Name="btn_add_group_n.png" />
+          <Image Name="btn_add_group_s.png" />
+          <Image Name="btn_add_n.png" />
+          <Image Name="btn_add_player_n.png" />
+          <Image Name="btn_add_player_s.png" />
+          <Image Name="btn_add_s.png" />
+          <Image Name="btn_delete_n.png" />
+          <Image Name="btn_delete_s.png" />
+          <Image Name="image_bg.png" />
+        </Folder>
+        <Folder Name="cardPic">
+          <Image Name="baidi_puke.png" />
+          <Image Name="beijing.png" />
+          <Image Name="beijing_2.jpg" />
+          <Image Name="beijing_3.jpg" />
+          <Image Name="beijing_4.jpg" />
+          <Image Name="beimian_puke.png" />
+          <Image Name="da_wujiaoxing.png" />
+          <Image Name="dawang_hua.png" />
+          <Image Name="di_xinxi.png" />
+          <Image Name="flower_0.png" />
+          <Image Name="flower_1.png" />
+          <Image Name="flower_2.png" />
+          <Image Name="flower_3.png" />
+          <Image Name="hei_1.png" />
+          <Image Name="hei_10.png" />
+          <Image Name="hei_11.png" />
+          <Image Name="hei_12.png" />
+          <Image Name="hei_13.png" />
+          <Image Name="hei_2.png" />
+          <Image Name="hei_3.png" />
+          <Image Name="hei_4.png" />
+          <Image Name="hei_5.png" />
+          <Image Name="hei_6.png" />
+          <Image Name="hei_7.png" />
+          <Image Name="hei_8.png" />
+          <Image Name="hei_9.png" />
+          <Image Name="hong_1.png" />
+          <Image Name="hong_10.png" />
+          <Image Name="hong_11.png" />
+          <Image Name="hong_12.png" />
+          <Image Name="hong_13.png" />
+          <Image Name="hong_2.png" />
+          <Image Name="hong_3.png" />
+          <Image Name="hong_4.png" />
+          <Image Name="hong_5.png" />
+          <Image Name="hong_6.png" />
+          <Image Name="hong_7.png" />
+          <Image Name="hong_8.png" />
+          <Image Name="hong_9.png" />
+          <Image Name="joker_da.png" />
+          <Image Name="joker_xiao.png" />
+          <Image Name="pei_puke.png" />
+          <Image Name="xiaowang_hua.png" />
+        </Folder>
+        <Folder Name="cardPic2">
+          <Image Name="baidi_puke.png" />
+          <Image Name="beimian_puke.png" />
+          <Image Name="beimian_puke_min.png" />
+          <Image Name="dawang_hua.png" />
+          <Image Name="dizhu_biao.png" />
+          <Image Name="flower_0.png" />
+          <Image Name="flower_1.png" />
+          <Image Name="flower_2.png" />
+          <Image Name="flower_3.png" />
+          <Image Name="hei_1.png" />
+          <Image Name="hei_10.png" />
+          <Image Name="hei_11.png" />
+          <Image Name="hei_12.png" />
+          <Image Name="hei_13.png" />
+          <Image Name="hei_2.png" />
+          <Image Name="hei_3.png" />
+          <Image Name="hei_4.png" />
+          <Image Name="hei_5.png" />
+          <Image Name="hei_6.png" />
+          <Image Name="hei_7.png" />
+          <Image Name="hei_8.png" />
+          <Image Name="hei_9.png" />
+          <Image Name="hong_1.png" />
+          <Image Name="hong_10.png" />
+          <Image Name="hong_11.png" />
+          <Image Name="hong_12.png" />
+          <Image Name="hong_13.png" />
+          <Image Name="hong_2.png" />
+          <Image Name="hong_3.png" />
+          <Image Name="hong_4.png" />
+          <Image Name="hong_5.png" />
+          <Image Name="hong_6.png" />
+          <Image Name="hong_7.png" />
+          <Image Name="hong_8.png" />
+          <Image Name="hong_9.png" />
+          <Image Name="joker_da.png" />
+          <Image Name="joker_xiao.png" />
+          <Image Name="xiaowang_hua.png" />
+        </Folder>
+        <Folder Name="cardTable">
+          <Image Name="buchu.png" />
+          <Image Name="chupai.png" />
+          <Image Name="daxiao.png" />
+          <Image Name="di_gd.png" />
+          <Image Name="dizhu.png" />
+          <Image Name="fangpian_hui.png" />
+          <Image Name="fangpian_n.png" />
+          <Image Name="heitao_hui.png" />
+          <Image Name="heitao_n.png" />
+          <Image Name="hengxiang.png" />
+          <Image Name="hongtao_hui.png" />
+          <Image Name="hongtao_n.png" />
+          <Image Name="huase.png" />
+          <Image Name="huifu.png" />
+          <Image Name="lipai.png" />
+          <Image Name="meihua_hui.png" />
+          <Image Name="meihua_n.png" />
+          <Image Name="putongpaixu.png" />
+          <Image Name="tishi.png" />
+          <Image Name="tonghuashun.png" />
+          <Image Name="zhangshu.png" />
+          <Image Name="zongxiang.png" />
+        </Folder>
         <Folder Name="chat">
           <Image Name="angry.png" />
           <Image Name="chat_chick.png" />
@@ -581,6 +703,18 @@
           <Image Name="yun.png" />
           <Image Name="Z_chat_bottom_1.png" />
           <Image Name="zhiya.png" />
+        </Folder>
+        <Folder Name="checkMember">
+          <Image Name="btn_arrow_left_n.png" />
+          <Image Name="btn_arrow_left_s.png" />
+          <Image Name="btn_arrow_right_n.png" />
+          <Image Name="btn_arrow_right_s.png" />
+          <Image Name="btn_liushui_n.png" />
+          <Image Name="btn_liushui_s.png" />
+          <Image Name="btn_zhanji_n.png" />
+          <Image Name="btn_zhanji_s.png" />
+          <Image Name="img_dikuang.png" />
+          <Image Name="img_liushui_bg.png" />
         </Folder>
         <Folder Name="chuanqi">
           <Image Name="beij.jpg" />
@@ -693,6 +827,22 @@
           <Image Name="zhanji_bg.png" />
           <Image Name="zhanji_text_bg.png" />
         </Folder>
+        <Folder Name="DDZ">
+          <Image Name="btn_changeBg_normal.png" />
+          <Image Name="btn_changeBg_press.png" />
+          <Image Name="btn_chat_normal.png" />
+          <Image Name="btn_chat_press.png" />
+          <Image Name="btn_yuyin_normal.png" />
+          <Image Name="btn_yuyin_press.png" />
+          <Image Name="dd.png" />
+          <Image Name="dd1.png" />
+          <Image Name="WIFI_1.png" />
+          <Image Name="WIFI_2.png" />
+          <Image Name="WIFI_3.png" />
+          <Image Name="WIFI_4.png" />
+          <Image Name="youxizhong-1_06.png" />
+          <Image Name="youxizhong-1_06_1.png" />
+        </Folder>
         <Folder Name="Default">
           <Image Name="Button_Disable.png" />
           <Image Name="Button_Normal.png" />
@@ -713,6 +863,61 @@
           <Image Name="icon_gantanhao.png" />
           <Image Name="line.png" />
           <Image Name="open_gps.png" />
+        </Folder>
+        <Folder Name="doudizhu">
+          <Image Name="beishu.png" />
+          <Image Name="beishu_shuzi.png" />
+          <Image Name="btn_buJiao.png" />
+          <Image Name="btn_yaobuqi.png" />
+          <Image Name="btnbujiabei.png" />
+          <Image Name="btnjiabei.png" />
+          <Image Name="btnSuperjiabei.png" />
+          <Image Name="buchu.png" />
+          <Image Name="bujiao.png" />
+          <Image Name="bujiaofen.png" />
+          <Image Name="buqiang.png" />
+          <Image Name="buqiang2.png" />
+          <Image Name="buqiangtongyong.png" />
+          <Image Name="buti.png" />
+          <Image Name="chupai.png" />
+          <Image Name="chupai_2.png" />
+          <Image Name="di_xinxi.png" />
+          <Image Name="di_xinxi_1.png" />
+          <Image Name="difen.png" />
+          <Image Name="difen_jinbi.png" />
+          <Image Name="dipai_bg.png" />
+          <Image Name="fangjianhao.png" />
+          <Image Name="fen_1.png" />
+          <Image Name="fen_2.png" />
+          <Image Name="fen_3.png" />
+          <Image Name="fen1.png" />
+          <Image Name="fen2.png" />
+          <Image Name="fen3.png" />
+          <Image Name="imgtime_2.png" />
+          <Image Name="imgtime_3.png" />
+          <Image Name="imgtime_4.png" />
+          <Image Name="jiabeiicon.png" />
+          <Image Name="jiaodizhu.png" />
+          <Image Name="liangfen.png" />
+          <Image Name="no_one.png" />
+          <Image Name="qiangdizhu.png" />
+          <Image Name="qiangdizhu2.png" />
+          <Image Name="qiangdizhutongyong.png" />
+          <Image Name="sanfen.png" />
+          <Image Name="Superjiabeiicon.png" />
+          <Image Name="tag_jiabei.png" />
+          <Image Name="tag_nojiabei.png" />
+          <Image Name="ti.png" />
+          <Image Name="ti_icon.png" />
+          <Image Name="tishi.png" />
+          <Image Name="titlebg.png" />
+          <Image Name="titlebgcoin.png" />
+          <Image Name="waitting_tag.png" />
+          <Image Name="xinxi_bg.png" />
+          <Image Name="yaobuqi.png" />
+          <Image Name="yifen.png" />
+          <Image Name="Z_zhunbei3.png" />
+          <Image Name="zhunbei.png" />
         </Folder>
         <Folder Name="DuanWuJie">
           <Image Name="bg_bisai.png" />
@@ -797,11 +1002,24 @@
           <TTF Name="fzcy.ttf" />
           <TTF Name="lanting.TTF" />
         </Folder>
+        <Folder Name="FreeNumber">
+          <Image Name="2PlayerStart_n.png" />
+          <Image Name="2PlayerStart_s.png" />
+          <Image Name="3PlayerStart_n.png" />
+          <Image Name="3PlayerStart_s.png" />
+          <Image Name="agree.png" />
+          <Image Name="Apply.png" />
+          <Image Name="line.png" />
+          <Image Name="line_2.png" />
+          <Image Name="start_n.png" />
+          <Image Name="time_di.png" />
+          <Image Name="title.png" />
+          <Image Name="wait_n.png" />
+          <Image Name="weibiaotai.png" />
+        </Folder>
         <Folder Name="friendCards">
           <Folder Name="common">
             <Folder Name="head">
-              <Image Name="head_club_mask.png" />
-              <Image Name="head_desk_mask.png" />
               <Image Name="headKuang_clubList.png" />
               <Image Name="headKuang_desk.png" />
               <Image Name="headMask_clubList.png" />
@@ -809,6 +1027,8 @@
             </Folder>
             <Image Name="btn_addYB_n.png" />
             <Image Name="btn_addYB_s.png" />
+            <Image Name="btn_agree_n.png" />
+            <Image Name="btn_agree_s.png" />
             <Image Name="btn_chebox_fang.png" />
             <Image Name="btn_chebox_yuan.png" />
             <Image Name="btn_close_n.png" />
@@ -824,12 +1044,17 @@
             <Image Name="btn_common_s.png" />
             <Image Name="btn_finish_n.png" />
             <Image Name="btn_finish_s.png" />
+            <Image Name="btn_gotoKefu_n.png" />
+            <Image Name="btn_gotoKefu_s.png" />
             <Image Name="btn_no_n.png" />
             <Image Name="btn_no_s.png" />
             <Image Name="btn_ok_n.png" />
             <Image Name="btn_ok_s.png" />
+            <Image Name="btn_refuse_n.png" />
+            <Image Name="btn_refuse_s.png" />
             <Image Name="btn_save_n.png" />
             <Image Name="btn_save_s.png" />
+            <Image Name="btn_search.png" />
             <Image Name="btn_sure_green_n.png" />
             <Image Name="btn_sure_green_s.png" />
             <Image Name="btn_x_normal.png" />
@@ -857,6 +1082,7 @@
             <Image Name="img_title.png" />
             <Image Name="img_title_bg.png" />
             <Image Name="img_tongyong.png" />
+            <Image Name="img_wenhao.png" />
             <Image Name="img_xian.png" />
             <Image Name="img_xiaotanchuang.png" />
             <Image Name="img_zhongtanchuang.png" />
@@ -870,6 +1096,7 @@
             <Image Name="titel_2_wuhuawen.png" />
             <Image Name="titel_3.png" />
             <Image Name="title_GG.png" />
+            <Image Name="title_search.png" />
             <Image Name="title_WFMC.png" />
             <Image Name="tongyongXiao_btnS.png" />
             <Image Name="Z_offline.png" />
@@ -964,7 +1191,6 @@
           <Folder Name="main">
             <Image Name="bg_clubList.png" />
             <Image Name="btn_add.png" />
-            <Image Name="btn_addRule.png" />
             <Image Name="btn_bangding_n.png" />
             <Image Name="btn_createQYQ.png" />
             <Image Name="btn_detail_n.png" />
@@ -978,6 +1204,7 @@
             <Image Name="btn_memberlist_n.png" />
             <Image Name="btn_ok_n.png" />
             <Image Name="btn_ok_s.png" />
+            <Image Name="btn_personal_shop_n.png" />
             <Image Name="btn_play_add.png" />
             <Image Name="btn_play_n.png" />
             <Image Name="btn_play_s.png" />
@@ -986,6 +1213,8 @@
             <Image Name="btn_refind_n.png" />
             <Image Name="btn_refind_s.png" />
             <Image Name="btn_rule_n.png" />
+            <Image Name="btn_search.png" />
+            <Image Name="btn_search_n.png" />
             <Image Name="btn_setting_n.png" />
             <Image Name="btn_shenqing_n.png" />
             <Image Name="btn_shenqing_s.png" />
@@ -1012,9 +1241,9 @@
             <Image Name="icon_yizi1.png" />
             <Image Name="icon_yizi2.png" />
             <Image Name="image_bottomBG.png" />
+            <Image Name="image_kefu.png" />
             <Image Name="img_2D.jpg" />
             <Image Name="img_baitian1.jpg" />
-            <Image Name="img_baitian1.png" />
             <Image Name="img_baitian2.png" />
             <Image Name="img_biaoti.png" />
             <Image Name="img_biaozhu.png" />
@@ -1048,12 +1277,7 @@
             <Image Name="img_member.png" />
             <Image Name="img_name_di.png" />
             <Image Name="img_qian.png" />
-            <Image Name="img_qian1.png" />
-            <Image Name="img_qian2.png" />
-            <Image Name="img_qian3.png" />
-            <Image Name="img_qian4.png" />
-            <Image Name="img_qian5.png" />
-            <Image Name="img_qian6.png" />
+            <Image Name="img_searchBg.png" />
             <Image Name="img_table_di.png" />
             <Image Name="img_tablebg.png" />
             <Image Name="img_wanshang1.png" />
@@ -1065,6 +1289,7 @@
             <Image Name="info_bg.png" />
             <Image Name="int_playwords.png" />
             <Image Name="main_bg.jpg" />
+            <Image Name="paomadeng_di.png" />
             <Image Name="ruleimg_1.png" />
             <Image Name="ruleimg_1_s.png" />
             <Image Name="ruleimg_2.png" />
@@ -1196,7 +1421,29 @@
             <Image Name="title_member.png" />
             <Image Name="userStop.png" />
             <Image Name="wenhao.png" />
+            <Image Name="xuanzhong.png" />
             <Image Name="yuan_img.png" />
+          </Folder>
+          <Folder Name="mian_rule">
+            <Folder Name="blackList">
+              <Image Name="btn_add_club_n.png" />
+              <Image Name="btn_add_club_s.png" />
+              <Image Name="btn_add_group_n.png" />
+              <Image Name="btn_add_group_s.png" />
+              <Image Name="btn_add_n.png" />
+              <Image Name="btn_add_player_n.png" />
+              <Image Name="btn_add_player_s.png" />
+              <Image Name="btn_add_s.png" />
+              <Image Name="btn_delete_n.png" />
+              <Image Name="btn_delete_s.png" />
+              <Image Name="image_bg.png" />
+            </Folder>
+            <Image Name="btn_black_list_n.png" />
+            <Image Name="btn_black_list_s.png" />
+            <Image Name="tianjiawanfa_n.png" />
+            <Image Name="tianjiawanfa_s.png" />
+            <Image Name="xiugaiwanfa_n.png" />
+            <Image Name="xiugaiwanfa_s.png" />
           </Folder>
           <Folder Name="mutexLayer">
             <Image Name="btn_achieve.png" />
@@ -1251,6 +1498,9 @@
             <Image Name="btn_tongyi_s.png" />
             <Image Name="igm_head.png" />
           </Folder>
+          <Folder Name="quickStartSelectRule">
+            <Image Name="img_kuang.png" />
+          </Folder>
           <Folder Name="roomInfo">
             <Image Name="btn_bul_n.png" />
             <Image Name="btn_bul_s.png" />
@@ -1265,6 +1515,8 @@
             <Image Name="img_1.png" />
             <Image Name="img_2.png" />
             <Image Name="img_3.png" />
+            <Image Name="img_online.png" />
+            <Image Name="img_outline.png" />
             <Image Name="reflash_di.png" />
             <Image Name="reflash_jian.png" />
           </Folder>
@@ -1290,6 +1542,7 @@
             <Image Name="btn_s.png" />
             <Image Name="title_select_group.png" />
             <Image Name="title_select_wanfa.png" />
+            <Image Name="title_select_zhuli.png" />
           </Folder>
           <Folder Name="selecttime">
             <Image Name="after_n.png" />
@@ -1372,6 +1625,24 @@
             <Image Name="zhuozi_9.png" />
           </Folder>
           <Folder Name="tongji">
+            <Folder Name="checkMember">
+              <Image Name="btn_arrow_left_n.png" />
+              <Image Name="btn_arrow_left_s.png" />
+              <Image Name="btn_arrow_right_n.png" />
+              <Image Name="btn_arrow_right_s.png" />
+              <Image Name="btn_liushui_n.png" />
+              <Image Name="btn_liushui_s.png" />
+              <Image Name="btn_zhanji_n.png" />
+              <Image Name="btn_zhanji_s.png" />
+              <Image Name="img_dikuang.png" />
+              <Image Name="img_liushui_bg.png" />
+            </Folder>
+            <Folder Name="opt">
+              <Image Name="btn_checkMember_n.png" />
+              <Image Name="btn_checkMember_s.png" />
+              <Image Name="btn_gongxiangDetail_n.png" />
+              <Image Name="btn_gongxiangDetail_s.png" />
+            </Folder>
             <Folder Name="rank">
               <Image Name="bg_xian.png" />
               <Image Name="btn_confirm_set1_n.png" />
@@ -1423,19 +1694,29 @@
             <Image Name="btn_after_day_s.png" />
             <Image Name="btn_before_day_n.png" />
             <Image Name="btn_before_day_s.png" />
+            <Image Name="btn_change_n.png" />
+            <Image Name="btn_change_s.png" />
+            <Image Name="btn_clear_n.png" />
             <Image Name="btn_cur_weekend_n.png" />
             <Image Name="btn_cur_weekend_s.png" />
             <Image Name="btn_day_n.png" />
             <Image Name="btn_day_s.png" />
+            <Image Name="btn_leftDay.png" />
             <Image Name="btn_n.png" />
+            <Image Name="btn_opt_n.png" />
+            <Image Name="btn_opt_s.png" />
+            <Image Name="btn_play_tongji_n.png" />
+            <Image Name="btn_play_tongji_s.png" />
             <Image Name="btn_player_n.png" />
             <Image Name="btn_player_s.png" />
             <Image Name="btn_qinyouquantongji_n.png" />
             <Image Name="btn_qinyouquantongji_s.png" />
+            <Image Name="btn_rightDay.png" />
             <Image Name="btn_s.png" />
             <Image Name="btn_search_n.png" />
             <Image Name="btn_search_s.png" />
             <Image Name="btn_selectDay.png" />
+            <Image Name="btn_statement_n.png" />
             <Image Name="btn_xiangqing_n.png" />
             <Image Name="btn_xiangqing_s.png" />
             <Image Name="btn_zhanji_n.png" />
@@ -1445,7 +1726,12 @@
             <Image Name="diliver.png" />
             <Image Name="ditiao.png" />
             <Image Name="huangse-anniu02-fs8.png" />
+            <Image Name="img_has_pay.png" />
             <Image Name="img_juanzhou.png" />
+            <Image Name="img_kuang.png" />
+            <Image Name="img_no_pay.png" />
+            <Image Name="img_question_new_tongji.png" />
+            <Image Name="img_statement_new_tongji.png" />
             <Image Name="img_title.png" />
             <Image Name="img_title_setbili.png" />
             <Image Name="img_title_xiangqing.png" />
@@ -1457,6 +1743,13 @@
             <Image Name="sanjiaoxing2.png" />
             <Image Name="title_img.png" />
             <Image Name="tj_input.png" />
+          </Folder>
+          <Folder Name="warnScore">
+            <Image Name="btn_back.png" />
+            <Image Name="btn_search.png" />
+            <Image Name="btn_setAll.png" />
+            <Image Name="btn_wanrScoreSet.png" />
+            <Image Name="title_setWarnScore.png" />
           </Folder>
           <Folder Name="yaoqing">
             <Image Name="btn_all_yaoqing_n.png" />
@@ -2390,12 +2683,430 @@
           <Image Name="way.png" />
           <Image Name="yilingqu.png" />
         </Folder>
-        <Folder Name="GameRuleOption">
-          <Folder Name="Imgs" />
-        </Folder>
         <Folder Name="gameTable">
+          <Folder Name="DDZ">
+            <Image Name="btn_changeBg_normal.png" />
+            <Image Name="btn_changeBg_press.png" />
+            <Image Name="btn_chat_normal.png" />
+            <Image Name="btn_chat_press.png" />
+            <Image Name="btn_yuyin_normal.png" />
+            <Image Name="btn_yuyin_press.png" />
+            <Image Name="dd.png" />
+            <Image Name="dd1.png" />
+            <Image Name="WIFI_1.png" />
+            <Image Name="WIFI_2.png" />
+            <Image Name="WIFI_3.png" />
+            <Image Name="WIFI_4.png" />
+            <Image Name="youxizhong-1_06.png" />
+            <Image Name="youxizhong-1_06_1.png" />
+          </Folder>
+          <Folder Name="FreeNumber">
+            <Image Name="2PlayerStart_n.png" />
+            <Image Name="2PlayerStart_s.png" />
+            <Image Name="3PlayerStart_n.png" />
+            <Image Name="3PlayerStart_s.png" />
+            <Image Name="agree.png" />
+            <Image Name="Apply.png" />
+            <Image Name="line.png" />
+            <Image Name="line_2.png" />
+            <Image Name="start_n.png" />
+            <Image Name="time_di.png" />
+            <Image Name="title.png" />
+            <Image Name="wait_n.png" />
+            <Image Name="weibiaotai.png" />
+          </Folder>
+          <Folder Name="shuzi">
+            <Image Name="shuzi_0.png" />
+            <Image Name="shuzi_1.png" />
+            <Image Name="shuzi_2.png" />
+            <Image Name="shuzi_3.png" />
+            <Image Name="shuzi_4.png" />
+            <Image Name="shuzi_5.png" />
+            <Image Name="shuzi_6.png" />
+            <Image Name="shuzi_7.png" />
+            <Image Name="shuzi_8.png" />
+            <Image Name="shuzi_9.png" />
+          </Folder>
+          <Image Name="bac_datanchuan.png" />
+          <Image Name="bac_dating.png" />
+          <Image Name="bac_datingtoushangzhezhao.png" />
+          <Image Name="bac_datingtouxiang.png" />
+          <Image Name="bac_paizuo.png" />
+          <Image Name="bac_xiaotanchuan.png" />
+          <Image Name="bac_zhongtanchuan.png" />
+          <Image Name="beijing_1.png" />
+          <Image Name="beijing_2.png" />
+          <Image Name="beijing_3.png" />
+          <Image Name="beijing_4.jpg" />
+          <Image Name="beijing3D_1.jpg" />
+          <Image Name="beijing3D_2.jpg" />
+          <Image Name="beijing3D_3.jpg" />
+          <Image Name="beijing3D_4.jpg" />
+          <Image Name="bg_C_P_G.png" />
+          <Image Name="bg_H_G.png" />
+          <Image Name="bg_T_L.png" />
+          <Image Name="bg_time.png" />
+          <Image Name="bg_time_2.png" />
+          <Image Name="btn_changeBg_normal.png" />
+          <Image Name="btn_changeBg_press.png" />
+          <Image Name="btn_chat_normal.png" />
+          <Image Name="btn_chat_press.png" />
+          <Image Name="btn_chuangjiangame_normal.png" />
+          <Image Name="btn_cjxx_normal.png" />
+          <Image Name="btn_cjxx_press.png" />
+          <Image Name="btn_du_normal.png" />
+          <Image Name="btn_duty_n.png" />
+          <Image Name="btn_duty_s.png" />
+          <Image Name="btn_fenxiang_normal.png" />
+          <Image Name="btn_fenxiang_press.png" />
+          <Image Name="btn_goumai_normal.png" />
+          <Image Name="btn_goumai_press.png" />
+          <Image Name="btn_help_normal.png" />
+          <Image Name="btn_help_press.png" />
+          <Image Name="btn_hua_normal.png" />
+          <Image Name="btn_hua_press.png" />
+          <Image Name="btn_jiarugame_normal.png" />
+          <Image Name="btn_jibichang_normal.png" />
+          <Image Name="btn_liang_n.png" />
+          <Image Name="btn_liang_s.png" />
+          <Image Name="btn_noliang_n.png" />
+          <Image Name="btn_noliang_s.png" />
+          <Image Name="btn_shezhi_normal.png" />
+          <Image Name="btn_shezhi_press.png" />
+          <Image Name="btn_shop_normal.png" />
+          <Image Name="btn_shop_press.png" />
+          <Image Name="btn_tuoguan_n.png" />
+          <Image Name="btn_tuoguan_s.png" />
+          <Image Name="btn_x_normal.png" />
+          <Image Name="btn_x_press.png" />
+          <Image Name="btn_xiaoxi_normal.png" />
+          <Image Name="btn_xiaoxi_press.png" />
+          <Image Name="btn_xiaoxi2_normal.png" />
+          <Image Name="btn_xiaoxi2_press.png" />
+          <Image Name="btn_xieyi_normal.png" />
+          <Image Name="btn_xieyi_press.png" />
+          <Image Name="btn_yuyin_normal.png" />
+          <Image Name="btn_yuyin_press.png" />
+          <Image Name="btn_zhanji_normal.png" />
+          <Image Name="btn_zhanji_press.png" />
+          <Image Name="btn_zhanji2_normal.png" />
+          <Image Name="btn_zhanji2_press.png" />
+          <Image Name="bupeng.png" />
+          <Image Name="chupai_1.png" />
+          <Image Name="chupai_2.png" />
+          <Image Name="coin_bg.png" />
+          <Image Name="coin_bg1.png" />
+          <Image Name="coinsNum.png" />
+          <Image Name="dapie.png" />
+          <Image Name="dating-1_73.png" />
+          <Image Name="dating-1_75.png" />
+          <Image Name="dating-1_81.png" />
+          <Image Name="dating-1_84.png" />
+          <Image Name="denglu_17.png" />
+          <Image Name="dir_normal_0.png" />
+          <Image Name="dir_normal_1.png" />
+          <Image Name="dir_normal_2.png" />
+          <Image Name="dir_normal_3.png" />
+          <Image Name="dir_press_0.png" />
+          <Image Name="dir_press_1.png" />
+          <Image Name="dir_press_2.png" />
+          <Image Name="dir_press_3.png" />
+          <Image Name="duci.png" />
+          <Image Name="duihuan_03.png" />
+          <Image Name="duihuan_05.png" />
+          <Image Name="duihuan_10.png" />
+          <Image Name="duihuan_16.png" />
+          <Image Name="duihuan_37.png" />
+          <Image Name="duihuan_39.png" />
+          <Image Name="duihuan_50.png" />
+          <Image Name="duihuan_51.png" />
+          <Image Name="duliu.png" />
+          <Image Name="empty.png" />
+          <Image Name="fanhuidating_btn.png" />
+          <Image Name="fanhuidating_btn_s.png" />
+          <Image Name="fengquan.png" />
+          <Image Name="flower.png" />
+          <Image Name="flower_new.png" />
+          <Image Name="flower_normal_111.png" />
+          <Image Name="flower_normal_121.png" />
+          <Image Name="flower_normal_131.png" />
+          <Image Name="flower_normal_141.png" />
+          <Image Name="flower_normal_151.png" />
+          <Image Name="flower_normal_161.png" />
+          <Image Name="flower_normal_171.png" />
+          <Image Name="flower_normal_181.png" />
+          <Image Name="flower_normal_71.png" />
+          <Image Name="flower_normal_81.png" />
+          <Image Name="flower_normal_91.png" />
+          <Image Name="flower_press_111.png" />
+          <Image Name="flower_press_121.png" />
+          <Image Name="flower_press_131.png" />
+          <Image Name="flower_press_141.png" />
+          <Image Name="flower_press_151.png" />
+          <Image Name="flower_press_161.png" />
+          <Image Name="flower_press_171.png" />
+          <Image Name="flower_press_181.png" />
+          <Image Name="flower_press_71.png" />
+          <Image Name="flower_press_81.png" />
+          <Image Name="flower_press_91.png" />
+          <Image Name="fuzhi.png" />
+          <Image Name="fuzhi_02.png" />
+          <Image Name="g_img.png" />
+          <Image Name="GAME_02.png" />
+          <Image Name="GAME_03.png" />
+          <Image Name="GAME_04.png" />
+          <Image Name="GAME_90.png" />
+          <Image Name="game_as.png" />
+          <Image Name="game_dd.png" />
+          <Image Name="game_fs.png" />
+          <Image Name="game_guanyun.png" />
+          <Image Name="game_jz.png" />
+          <Image Name="game_lyg.png" />
           <Image Name="game_paodekuai_ty.png" />
+          <Image Name="game_shuyang.png" />
+          <Image Name="game_suqian.png" />
+          <Image Name="game_sy.png" />
+          <Image Name="game_tdh.png" />
+          <Image Name="game_tl.png" />
+          <Image Name="game_yk.png" />
+          <Image Name="GAME2_17.png" />
+          <Image Name="GAME2_24.png" />
+          <Image Name="GAME2_26.png" />
+          <Image Name="guo_normal.png" />
+          <Image Name="guo_press.png" />
+          <Image Name="gx_18.png" />
+          <Image Name="gx_20.png" />
+          <Image Name="gx_22.png" />
+          <Image Name="gx_24.png" />
+          <Image Name="hua_2.png" />
+          <Image Name="huaIcon.png" />
+          <Image Name="huangzhuan_35.png" />
+          <Image Name="huapaiimg.png" />
+          <Image Name="huaX.png" />
+          <Image Name="ico_bt.png" />
+          <Image Name="ico_cb.png" />
+          <Image Name="ico_chi.png" />
+          <Image Name="ico_fcb.png" />
+          <Image Name="ico_gang.png" />
+          <Image Name="ico_gp.png" />
+          <Image Name="ico_hu.png" />
+          <Image Name="ico_hu-0.png" />
+          <Image Name="ico_hz.png" />
+          <Image Name="ico_jinbi.png" />
+          <Image Name="ico_jinbi-1.png" />
+          <Image Name="ico_jinbi-2.png" />
+          <Image Name="ico_jinbi-3.png" />
+          <Image Name="ico_jinbi-4.png" />
+          <Image Name="ico_jinbi-5.png" />
+          <Image Name="ico_jinbi-6.png" />
+          <Image Name="ico_lh.png" />
+          <Image Name="ico_pc.png" />
+          <Image Name="ico_peng.png" />
+          <Image Name="ico_pg.png" />
+          <Image Name="ico_sp.png" />
+          <Image Name="ico_zuanshi.png" />
+          <Image Name="icon_jiapai.png" />
+          <Image Name="icon_skipHu.png" />
+          <Image Name="icon_skipPeng.png" />
+          <Image Name="icon_ting.png" />
+          <Image Name="jg1.png" />
+          <Image Name="jg2.png" />
+          <Image Name="jg3.png" />
+          <Image Name="jg4.png" />
+          <Image Name="jiesu_03.png" />
+          <Image Name="jiesu_07.png" />
+          <Image Name="jiesu_11.png" />
+          <Image Name="jiesu_13.png" />
+          <Image Name="jinbi.png" />
+          <Image Name="juNum.png" />
+          <Image Name="lab_qidai.png" />
+          <Image Name="lab_tishi.png" />
+          <Image Name="liaot_03.png" />
+          <Image Name="liaot_05.png" />
+          <Image Name="liaot_07.png" />
+          <Image Name="liaot_12.png" />
+          <Image Name="liaot_15.png" />
+          <Image Name="liaot_20.png" />
+          <Image Name="liaot_23.png" />
+          <Image Name="liaot_26.png" />
+          <Image Name="loading_03.png" />
+          <Image Name="loading_06.png" />
+          <Image Name="loseNum.png" />
+          <Image Name="mingzi.png" />
+          <Image Name="n_playLabel_13.png" />
+          <Image Name="n_playLabel_15.png" />
+          <Image Name="n_playLabel_16.png" />
+          <Image Name="playDisc.png" />
+          <Image Name="playDisc_s.png" />
+          <Image Name="power.png" />
+          <Image Name="powerBar.png" />
+          <Image Name="qiandao_03.png" />
+          <Image Name="qiandao_07.png" />
+          <Image Name="qiandao_09.png" />
+          <Image Name="qiandao_11.png" />
+          <Image Name="qiandao_13.png" />
+          <Image Name="qiandao_16.png" />
+          <Image Name="qiandao_24.png" />
+          <Image Name="qiandao_26.png" />
+          <Image Name="qiandao_28.png" />
+          <Image Name="qiandao_31.png" />
+          <Image Name="qiang.png" />
+          <Image Name="qiang_bg1.png" />
+          <Image Name="qiang_flash.png" />
+          <Image Name="roomNo.png" />
+          <Image Name="roomNo_2.png" />
+          <Image Name="roomNo_3.png" />
+          <Image Name="roomNo_4.png" />
+          <Image Name="roomNo_bg.png" />
+          <Image Name="roomValue.png" />
+          <Image Name="sdgtfsdf_03.png" />
+          <Image Name="sdgtfsdf_07.png" />
+          <Image Name="sdgtfsdf_11.png" />
+          <Image Name="sdgtfsdf_13.png" />
+          <Image Name="sdgtfsdf_15.png" />
+          <Image Name="sdgtfsdf_17.png" />
+          <Image Name="sdgtfsdf_19.png" />
+          <Image Name="sdgtfsdf_26.png" />
+          <Image Name="sdgtfsdf_27.png" />
+          <Image Name="sdgtfsdf_28.png" />
+          <Image Name="sdgtfsdf_29.png" />
+          <Image Name="sdgtfsdf_30.png" />
+          <Image Name="sdgtfsdf_37.png" />
+          <Image Name="sdgtfsdf_39.png" />
+          <Image Name="sdgtfsdf_43.png" />
+          <Image Name="sdgtfsdf_44.png" />
+          <Image Name="shaozi_35.png" />
+          <Image Name="smallBg.png" />
+          <Image Name="suzi_11.png" />
+          <Image Name="suzi_13.png" />
+          <Image Name="suzi_15.png" />
+          <Image Name="suzi_17.png" />
+          <Image Name="suzi_19.png" />
+          <Image Name="suzi_26.png" />
+          <Image Name="suzi_27.png" />
+          <Image Name="suzi_28.png" />
+          <Image Name="suzi_29.png" />
+          <Image Name="suzi_30.png" />
+          <Image Name="t_chi.png" />
+          <Image Name="t_gang.png" />
+          <Image Name="t_hu.png" />
+          <Image Name="t_hua.png" />
+          <Image Name="t_peng.png" />
+          <Image Name="t_ting.png" />
+          <Image Name="TG_countDown.png" />
+          <Image Name="uHeadScore.png" />
+          <Image Name="uHeadScore2.png" />
+          <Image Name="WIFI_1.png" />
+          <Image Name="WIFI_2.png" />
+          <Image Name="WIFI_3.png" />
+          <Image Name="WIFI_4.png" />
+          <Image Name="winNum.png" />
+          <Image Name="xiaomajiang.png" />
+          <Image Name="xiaotanchuan_03.png" />
+          <Image Name="xiaotanchuan_06.png" />
+          <Image Name="xiaotanchuan_09.png" />
+          <Image Name="xiaotanchuan_13.png" />
+          <Image Name="xiaotanchuan_16.png" />
+          <Image Name="xiaotanchuan_17.png" />
+          <Image Name="xiaotanchuan_19.png" />
+          <Image Name="xiaotanchuan_21.png" />
+          <Image Name="xiaotanchuan_27.png" />
+          <Image Name="xiaotanchuan_31.png" />
+          <Image Name="xiaotanchuan_33.png" />
+          <Image Name="xiaotanchuan_35.png" />
+          <Image Name="xiaotanchuan_42.png" />
+          <Image Name="xiaotanchuan_45.png" />
+          <Image Name="xiaotanchuan_48.png" />
+          <Image Name="xiaotanchuan_50.png" />
+          <Image Name="xiaotanchuan_55.png" />
+          <Image Name="xiaotanchuan_57.png" />
+          <Image Name="xiaotanchuan_60.png" />
+          <Image Name="xiaotanchuan_65.png" />
+          <Image Name="xiaotanchuan_66.png" />
+          <Image Name="xiaotanchuan_67.png" />
+          <Image Name="xiaotanchuan_70.png" />
+          <Image Name="xiaotanchuan_72.png" />
+          <Image Name="xiaotanchuan_79.png" />
+          <Image Name="xiaotanchuan_80.png" />
+          <Image Name="xiaotanchuan_81.png" />
+          <Image Name="yaoqing_03.png" />
+          <Image Name="yaoqing_06.png" />
+          <Image Name="yaoqing_09.png" />
+          <Image Name="yaoqing_13.png" />
+          <Image Name="yaoqing_14.png" />
+          <Image Name="yaoqing_17.png" />
+          <Image Name="yaoqing_18.png" />
+          <Image Name="youxizhong-1_01.png" />
+          <Image Name="youxizhong-1_04.png" />
+          <Image Name="youxizhong-1_04_1.png" />
+          <Image Name="youxizhong-1_06.png" />
+          <Image Name="youxizhong-1_06_1.png" />
+          <Image Name="youxizhong-1_09.png" />
+          <Image Name="youxizhong-1_11.png" />
+          <Image Name="youxizhong-1_14.png" />
+          <Image Name="youxizhong-1_15.png" />
+          <Image Name="youxizhong-1_19.png" />
+          <Image Name="youxizhong-1_20.png" />
+          <Image Name="youxizhong-1_21.png" />
+          <Image Name="youxizhong-1_22.png" />
+          <Image Name="youxizhong-1_37.png" />
+          <Image Name="youxizhong-1_39.png" />
+          <Image Name="youxizhong-1_41.png" />
+          <Image Name="youxizhong-1_42.png" />
+          <Image Name="youxizhong-1_66.png" />
+          <Image Name="youxizhong-1_81.png" />
+          <Image Name="youxizhong-1_89.png" />
+          <Image Name="youxizhong-1_92.png" />
+          <Image Name="youxizhong-1_94.png" />
+          <Image Name="youxizhong-2_03.png" />
+          <Image Name="youxizhong-2_05.png" />
+          <Image Name="youxizhong-2_07.png" />
+          <Image Name="youxizhong-2_09.png" />
+          <Image Name="youxizhong-2_11.png" />
+          <Image Name="youxizhong-2_19.png" />
+          <Image Name="youxizhong-2_20.png" />
+          <Image Name="youxizhong-2_21.png" />
+          <Image Name="youxizhong-2_22.png" />
+          <Image Name="youxizhong-2_23.png" />
+          <Image Name="youxizhong-2_24.png" />
+          <Image Name="youxizhong-2_25.png" />
           <Image Name="youxizhong-2_29.png" />
+          <Image Name="youxizhong-2_35.png" />
+          <Image Name="youxizhong-2_40.png" />
+          <Image Name="youxizhong-2_44.png" />
+          <Image Name="youxizhong-2_53.png" />
+          <Image Name="youxizhong-2_54.png" />
+          <Image Name="youxizhong-2_55.png" />
+          <Image Name="youxizhong-2_57.png" />
+          <Image Name="youxizhong-2_58.png" />
+          <Image Name="youxizhong-2_59.png" />
+          <Image Name="youxizhong-2_61.png" />
+          <Image Name="youxizhong-2_66.png" />
+          <Image Name="youxizhong-2_67.png" />
+          <Image Name="z_Point.png" />
+          <Image Name="zhanji_03.png" />
+          <Image Name="zhanji_06.png" />
+          <Image Name="zhanji_10.png" />
+          <Image Name="zhanji_13.png" />
+          <Image Name="zhanji_17.png" />
+          <Image Name="zhongtan-1_03.png" />
+          <Image Name="zhongtan-1_06.png" />
+          <Image Name="zhongtan-1_09.png" />
+          <Image Name="zhongtan-1_10.png" />
+          <Image Name="zhongtan-1_12.png" />
+          <Image Name="zhongtan-1_15.png" />
+          <Image Name="zhongtan-1_20.png" />
+          <Image Name="zhongtan-1_22.png" />
+          <Image Name="zhongtan-1_25.png" />
+          <Image Name="zhongtan-1_28.png" />
+          <Image Name="zhongtan-1_44.png" />
+          <Image Name="zhongtan-1_45.png" />
+          <Image Name="zhongtan-1_46.png" />
+          <Image Name="zhunbei.png" />
+          <Image Name="zhuobian_02.png" />
+          <Image Name="zhuobian_06.png" />
+          <Image Name="zhuobian_07.png" />
+          <Image Name="zhuobian_07_2.png" />
         </Folder>
         <Folder Name="Guid">
           <Image Name="shangyiye.png" />
@@ -2555,6 +3266,12 @@
           <Image Name="bg_meng.jpg" />
           <Image Name="girl.png" />
           <Image Name="hall_bg.jpg" />
+        </Folder>
+        <Folder Name="head">
+          <Image Name="headKuang_clubList.png" />
+          <Image Name="headKuang_desk.png" />
+          <Image Name="headMask_clubList.png" />
+          <Image Name="headMask_desk.png" />
         </Folder>
         <Folder Name="help">
           <PlistImageFolder Image="Z_help.png" PListFile="Z_help.plist" Name=".Z_help_PList.Dir">
@@ -2764,27 +3481,22 @@
           <Image Name="shuzi_p_9.png" />
           <Image Name="tileJoinRoom.png" />
           <Image Name="time_top.png" />
-          <Image Name="tuichudenglu_02.png" />
           <Image Name="tuichudenglu_05.png" />
           <Image Name="wodefangjian.png" />
           <Image Name="wodefangjian_n.png" />
           <Image Name="wodefangjian_s.png" />
           <Image Name="xiao_bg2.png" />
-          <Image Name="xiaotanchuan_06.png" />
           <Image Name="xiaotanchuan_09.png" />
           <Image Name="xiaotanchuan_13.png" />
-          <Image Name="xiaotanchuan_17.png" />
           <Image Name="xiaotanchuan_19.png" />
           <Image Name="xiaotanchuan_20.png" />
           <Image Name="xiaotanchuan_21.png" />
           <Image Name="xiaotanchuan_22.png" />
           <Image Name="xiaotanchuan_23.png" />
-          <Image Name="xiaotanchuan_27.png" />
           <Image Name="xiaotanchuan_28.png" />
           <Image Name="xiaotanchuan_29.png" />
           <Image Name="xiaotanchuan_31.png" />
           <Image Name="xiaotanchuan_33.png" />
-          <Image Name="xiaotanchuan_35.png" />
           <Image Name="xiaotanchuan_42.png" />
           <Image Name="xiaotanchuan_45.png" />
           <Image Name="xiaotanchuan_48.png" />
@@ -3036,6 +3748,763 @@
           <Image Name="text_hongbao.png" />
           <Image Name="text_yuanbao.png" />
         </Folder>
+        <Folder Name="mian_rule">
+          <Folder Name="blackList">
+            <Image Name="btn_add_club_n.png" />
+            <Image Name="btn_add_club_s.png" />
+            <Image Name="btn_add_group_n.png" />
+            <Image Name="btn_add_group_s.png" />
+            <Image Name="btn_add_n.png" />
+            <Image Name="btn_add_player_n.png" />
+            <Image Name="btn_add_player_s.png" />
+            <Image Name="btn_add_s.png" />
+            <Image Name="btn_delete_n.png" />
+            <Image Name="btn_delete_s.png" />
+            <Image Name="image_bg.png" />
+          </Folder>
+          <Image Name="btn_black_list_n.png" />
+          <Image Name="btn_black_list_s.png" />
+          <Image Name="tianjiawanfa_n.png" />
+          <Image Name="tianjiawanfa_s.png" />
+          <Image Name="xiugaiwanfa_n.png" />
+          <Image Name="xiugaiwanfa_s.png" />
+        </Folder>
+        <Folder Name="MJ">
+          <Folder Name="bottom">
+            <PlistImageFolder Image="Z_bottom.png" PListFile="Z_bottom.plist" Name=".Z_bottom_PList.Dir">
+              <PlistImageFile Name="B_autumn.png" Key="B_autumn.png" />
+              <PlistImageFile Name="B_bamboo_1.png" Key="B_bamboo_1.png" />
+              <PlistImageFile Name="B_bamboo_2.png" Key="B_bamboo_2.png" />
+              <PlistImageFile Name="B_bamboo_3.png" Key="B_bamboo_3.png" />
+              <PlistImageFile Name="B_bamboo_4.png" Key="B_bamboo_4.png" />
+              <PlistImageFile Name="B_bamboo_5.png" Key="B_bamboo_5.png" />
+              <PlistImageFile Name="B_bamboo_6.png" Key="B_bamboo_6.png" />
+              <PlistImageFile Name="B_bamboo_7.png" Key="B_bamboo_7.png" />
+              <PlistImageFile Name="B_bamboo_8.png" Key="B_bamboo_8.png" />
+              <PlistImageFile Name="B_bamboo_9.png" Key="B_bamboo_9.png" />
+              <PlistImageFile Name="B_character_1.png" Key="B_character_1.png" />
+              <PlistImageFile Name="B_character_2.png" Key="B_character_2.png" />
+              <PlistImageFile Name="B_character_3.png" Key="B_character_3.png" />
+              <PlistImageFile Name="B_character_4.png" Key="B_character_4.png" />
+              <PlistImageFile Name="B_character_5.png" Key="B_character_5.png" />
+              <PlistImageFile Name="B_character_6.png" Key="B_character_6.png" />
+              <PlistImageFile Name="B_character_7.png" Key="B_character_7.png" />
+              <PlistImageFile Name="B_character_8.png" Key="B_character_8.png" />
+              <PlistImageFile Name="B_character_9.png" Key="B_character_9.png" />
+              <PlistImageFile Name="B_dot_1.png" Key="B_dot_1.png" />
+              <PlistImageFile Name="B_dot_2.png" Key="B_dot_2.png" />
+              <PlistImageFile Name="B_dot_3.png" Key="B_dot_3.png" />
+              <PlistImageFile Name="B_dot_4.png" Key="B_dot_4.png" />
+              <PlistImageFile Name="B_dot_5.png" Key="B_dot_5.png" />
+              <PlistImageFile Name="B_dot_6.png" Key="B_dot_6.png" />
+              <PlistImageFile Name="B_dot_7.png" Key="B_dot_7.png" />
+              <PlistImageFile Name="B_dot_8.png" Key="B_dot_8.png" />
+              <PlistImageFile Name="B_dot_9.png" Key="B_dot_9.png" />
+              <PlistImageFile Name="B_green.png" Key="B_green.png" />
+              <PlistImageFile Name="B_plum.png" Key="B_plum.png" />
+              <PlistImageFile Name="B_red.png" Key="B_red.png" />
+              <PlistImageFile Name="B_white.png" Key="B_white.png" />
+              <PlistImageFile Name="B_wind_east.png" Key="B_wind_east.png" />
+              <PlistImageFile Name="B_wind_north.png" Key="B_wind_north.png" />
+              <PlistImageFile Name="B_wind_south.png" Key="B_wind_south.png" />
+              <PlistImageFile Name="B_wind_west.png" Key="B_wind_west.png" />
+              <PlistImageFile Name="B_winter.png" Key="B_winter.png" />
+              <PlistImageFile Name="e_mj_b_up.png" Key="e_mj_b_up.png" />
+            </PlistImageFolder>
+            <Image Name="B_autumn.png" />
+            <Image Name="B_bamboo.png" />
+            <Image Name="B_bamboo_1.png" />
+            <Image Name="B_bamboo_2.png" />
+            <Image Name="B_bamboo_3.png" />
+            <Image Name="B_bamboo_4.png" />
+            <Image Name="B_bamboo_5.png" />
+            <Image Name="B_bamboo_6.png" />
+            <Image Name="B_bamboo_7.png" />
+            <Image Name="B_bamboo_8.png" />
+            <Image Name="B_bamboo_9.png" />
+            <Image Name="B_character_1.png" />
+            <Image Name="B_character_2.png" />
+            <Image Name="B_character_3.png" />
+            <Image Name="B_character_4.png" />
+            <Image Name="B_character_5.png" />
+            <Image Name="B_character_6.png" />
+            <Image Name="B_character_7.png" />
+            <Image Name="B_character_8.png" />
+            <Image Name="B_character_9.png" />
+            <Image Name="B_chrysanthemum.png" />
+            <Image Name="B_dot_1.png" />
+            <Image Name="B_dot_2.png" />
+            <Image Name="B_dot_3.png" />
+            <Image Name="B_dot_4.png" />
+            <Image Name="B_dot_5.png" />
+            <Image Name="B_dot_6.png" />
+            <Image Name="B_dot_7.png" />
+            <Image Name="B_dot_8.png" />
+            <Image Name="B_dot_9.png" />
+            <Image Name="B_green.png" />
+            <Image Name="B_orchid.png" />
+            <Image Name="B_plum.png" />
+            <Image Name="B_red.png" />
+            <Image Name="B_spring.png" />
+            <Image Name="B_summer.png" />
+            <Image Name="B_white.png" />
+            <Image Name="B_wind_east.png" />
+            <Image Name="B_wind_north.png" />
+            <Image Name="B_wind_south.png" />
+            <Image Name="B_wind_west.png" />
+            <Image Name="B_winter.png" />
+            <Image Name="e_mj_b_up.png" />
+            <File Name="Z_bottom.tps" />
+          </Folder>
+          <Folder Name="left">
+            <PlistImageFolder Image="Z_left.png" PListFile="Z_left.plist" Name=".Z_left_PList.Dir">
+              <PlistImageFile Name="L_autumn.png" Key="L_autumn.png" />
+              <PlistImageFile Name="L_bamboo.png" Key="L_bamboo.png" />
+              <PlistImageFile Name="L_bamboo_1.png" Key="L_bamboo_1.png" />
+              <PlistImageFile Name="L_bamboo_2.png" Key="L_bamboo_2.png" />
+              <PlistImageFile Name="L_bamboo_3.png" Key="L_bamboo_3.png" />
+              <PlistImageFile Name="L_bamboo_4.png" Key="L_bamboo_4.png" />
+              <PlistImageFile Name="L_bamboo_5.png" Key="L_bamboo_5.png" />
+              <PlistImageFile Name="L_bamboo_6.png" Key="L_bamboo_6.png" />
+              <PlistImageFile Name="L_bamboo_7.png" Key="L_bamboo_7.png" />
+              <PlistImageFile Name="L_bamboo_8.png" Key="L_bamboo_8.png" />
+              <PlistImageFile Name="L_bamboo_9.png" Key="L_bamboo_9.png" />
+              <PlistImageFile Name="L_character_1.png" Key="L_character_1.png" />
+              <PlistImageFile Name="L_character_2.png" Key="L_character_2.png" />
+              <PlistImageFile Name="L_character_3.png" Key="L_character_3.png" />
+              <PlistImageFile Name="L_character_4.png" Key="L_character_4.png" />
+              <PlistImageFile Name="L_character_5.png" Key="L_character_5.png" />
+              <PlistImageFile Name="L_character_6.png" Key="L_character_6.png" />
+              <PlistImageFile Name="L_character_7.png" Key="L_character_7.png" />
+              <PlistImageFile Name="L_character_8.png" Key="L_character_8.png" />
+              <PlistImageFile Name="L_character_9.png" Key="L_character_9.png" />
+              <PlistImageFile Name="L_chrysanthemum.png" Key="L_chrysanthemum.png" />
+              <PlistImageFile Name="L_dot_1.png" Key="L_dot_1.png" />
+              <PlistImageFile Name="L_dot_2.png" Key="L_dot_2.png" />
+              <PlistImageFile Name="L_dot_3.png" Key="L_dot_3.png" />
+              <PlistImageFile Name="L_dot_4.png" Key="L_dot_4.png" />
+              <PlistImageFile Name="L_dot_5.png" Key="L_dot_5.png" />
+              <PlistImageFile Name="L_dot_6.png" Key="L_dot_6.png" />
+              <PlistImageFile Name="L_dot_7.png" Key="L_dot_7.png" />
+              <PlistImageFile Name="L_dot_8.png" Key="L_dot_8.png" />
+              <PlistImageFile Name="L_dot_9.png" Key="L_dot_9.png" />
+              <PlistImageFile Name="L_green.png" Key="L_green.png" />
+              <PlistImageFile Name="L_orchid.png" Key="L_orchid.png" />
+              <PlistImageFile Name="L_plum.png" Key="L_plum.png" />
+              <PlistImageFile Name="L_red.png" Key="L_red.png" />
+              <PlistImageFile Name="L_spring.png" Key="L_spring.png" />
+              <PlistImageFile Name="L_summer.png" Key="L_summer.png" />
+              <PlistImageFile Name="L_white.png" Key="L_white.png" />
+              <PlistImageFile Name="L_wind_east.png" Key="L_wind_east.png" />
+              <PlistImageFile Name="L_wind_north.png" Key="L_wind_north.png" />
+              <PlistImageFile Name="L_wind_south.png" Key="L_wind_south.png" />
+              <PlistImageFile Name="L_wind_west.png" Key="L_wind_west.png" />
+              <PlistImageFile Name="L_winter.png" Key="L_winter.png" />
+            </PlistImageFolder>
+            <Image Name="L_autumn.png" />
+            <Image Name="L_bamboo.png" />
+            <Image Name="L_bamboo_1.png" />
+            <Image Name="L_bamboo_2.png" />
+            <Image Name="L_bamboo_3.png" />
+            <Image Name="L_bamboo_4.png" />
+            <Image Name="L_bamboo_5.png" />
+            <Image Name="L_bamboo_6.png" />
+            <Image Name="L_bamboo_7.png" />
+            <Image Name="L_bamboo_8.png" />
+            <Image Name="L_bamboo_9.png" />
+            <Image Name="L_character_1.png" />
+            <Image Name="L_character_2.png" />
+            <Image Name="L_character_3.png" />
+            <Image Name="L_character_4.png" />
+            <Image Name="L_character_5.png" />
+            <Image Name="L_character_6.png" />
+            <Image Name="L_character_7.png" />
+            <Image Name="L_character_8.png" />
+            <Image Name="L_character_9.png" />
+            <Image Name="L_chrysanthemum.png" />
+            <Image Name="L_dot_1.png" />
+            <Image Name="L_dot_2.png" />
+            <Image Name="L_dot_3.png" />
+            <Image Name="L_dot_4.png" />
+            <Image Name="L_dot_5.png" />
+            <Image Name="L_dot_6.png" />
+            <Image Name="L_dot_7.png" />
+            <Image Name="L_dot_8.png" />
+            <Image Name="L_dot_9.png" />
+            <Image Name="L_green.png" />
+            <Image Name="L_orchid.png" />
+            <Image Name="L_plum.png" />
+            <Image Name="L_red.png" />
+            <Image Name="L_spring.png" />
+            <Image Name="L_summer.png" />
+            <Image Name="L_white.png" />
+            <Image Name="L_wind_east.png" />
+            <Image Name="L_wind_north.png" />
+            <Image Name="L_wind_south.png" />
+            <Image Name="L_wind_west.png" />
+            <Image Name="L_winter.png" />
+            <File Name="Z_left.tps" />
+          </Folder>
+          <Folder Name="MJBg1">
+            <Image Name="Mj_01.png" />
+            <Image Name="Mj_04.png" />
+            <Image Name="Mj_06.png" />
+            <Image Name="Mj_2.png" />
+            <Image Name="Mj_3.png" />
+            <Image Name="Mj_up_0.png" />
+            <Image Name="Mj_up_1.png" />
+            <Image Name="Mj_up_2.png" />
+            <Image Name="Mj_up_3.png" />
+            <Image Name="Mj_up_4.png" />
+          </Folder>
+          <Folder Name="MJBg2">
+            <Image Name="Mj_01.png" />
+            <Image Name="Mj_04.png" />
+            <Image Name="Mj_06.png" />
+            <Image Name="Mj_2.png" />
+            <Image Name="Mj_3.png" />
+            <Image Name="Mj_up_0.png" />
+            <Image Name="Mj_up_1.png" />
+            <Image Name="Mj_up_2.png" />
+            <Image Name="Mj_up_3.png" />
+            <Image Name="Mj_up_4.png" />
+          </Folder>
+          <Folder Name="MJBg3">
+            <Image Name="Mj_2.png" />
+            <Image Name="Mj_up_4.png" />
+          </Folder>
+          <Folder Name="MJBg3D2">
+            <Image Name="Mj_01.png" />
+            <Image Name="Mj_04.png" />
+            <Image Name="Mj_06.png" />
+            <Image Name="Mj_2.png" />
+            <Image Name="Mj_3.png" />
+            <Image Name="Mj_f02.png" />
+            <Image Name="Mj_f03.png" />
+            <Image Name="Mj_up_0.png" />
+            <Image Name="Mj_up_1.png" />
+            <Image Name="Mj_up_2.png" />
+            <Image Name="Mj_up_3.png" />
+            <Image Name="Mj_up_4.png" />
+          </Folder>
+          <Folder Name="MJCard1">
+            <Image Name="Green.png" />
+          </Folder>
+          <Folder Name="MJCard2">
+            <Image Name="Green.png" />
+          </Folder>
+          <Folder Name="MJCard3">
+            <Image Name="Green.png" />
+          </Folder>
+          <Folder Name="MJCard3D2">
+            <Image Name="Bamboo_1.png" />
+            <Image Name="Bamboo_2.png" />
+            <Image Name="Bamboo_3.png" />
+            <Image Name="Bamboo_4.png" />
+            <Image Name="Bamboo_5.png" />
+            <Image Name="Bamboo_6.png" />
+            <Image Name="Bamboo_7.png" />
+            <Image Name="Bamboo_8.png" />
+            <Image Name="Bamboo_9.png" />
+            <Image Name="Character_1.png" />
+            <Image Name="Character_2.png" />
+            <Image Name="Character_3.png" />
+            <Image Name="Character_4.png" />
+            <Image Name="Character_5.png" />
+            <Image Name="Character_6.png" />
+            <Image Name="Character_7.png" />
+            <Image Name="Character_8.png" />
+            <Image Name="Character_9.png" />
+            <Image Name="Dot_1.png" />
+            <Image Name="Dot_2.png" />
+            <Image Name="Dot_3.png" />
+            <Image Name="Dot_4.png" />
+            <Image Name="Dot_5.png" />
+            <Image Name="Dot_6.png" />
+            <Image Name="Dot_7.png" />
+            <Image Name="Dot_8.png" />
+            <Image Name="Dot_9.png" />
+            <Image Name="flower_111.png" />
+            <Image Name="flower_121.png" />
+            <Image Name="flower_131.png" />
+            <Image Name="flower_141.png" />
+            <Image Name="flower_151.png" />
+            <Image Name="flower_161.png" />
+            <Image Name="flower_171.png" />
+            <Image Name="flower_181.png" />
+            <Image Name="Green.png" />
+            <Image Name="Red.png" />
+            <Image Name="White.png" />
+            <Image Name="Wind_east.png" />
+            <Image Name="Wind_north.png" />
+            <Image Name="Wind_south.png" />
+            <Image Name="Wind_west.png" />
+          </Folder>
+          <PlistImageFolder Image="mjEmpty.png" PListFile="mjEmpty.plist" Name=".mjEmpty_PList.Dir">
+            <PlistImageFile Name="e_mj_b_bottom.png" Key="e_mj_b_bottom.png" />
+            <PlistImageFile Name="e_mj_b_left.png" Key="e_mj_b_left.png" />
+            <PlistImageFile Name="e_mj_b_right.png" Key="e_mj_b_right.png" />
+            <PlistImageFile Name="e_mj_b_up.png" Key="e_mj_b_up.png" />
+            <PlistImageFile Name="e_mj_left.png" Key="e_mj_left.png" />
+            <PlistImageFile Name="e_mj_right.png" Key="e_mj_right.png" />
+            <PlistImageFile Name="e_mj_up.png" Key="e_mj_up.png" />
+            <PlistImageFile Name="e_mj_v.png" Key="e_mj_v.png" />
+            <PlistImageFile Name="e_mj_v_1.png" Key="e_mj_v_1.png" />
+          </PlistImageFolder>
+          <Folder Name="my">
+            <PlistImageFolder Image="Z_my.png" PListFile="Z_my.plist" Name=".Z_my_PList.Dir">
+              <PlistImageFile Name="M_autumn.png" Key="M_autumn.png" />
+              <PlistImageFile Name="M_bamboo.png" Key="M_bamboo.png" />
+              <PlistImageFile Name="M_bamboo_1.png" Key="M_bamboo_1.png" />
+              <PlistImageFile Name="M_bamboo_2.png" Key="M_bamboo_2.png" />
+              <PlistImageFile Name="M_bamboo_3.png" Key="M_bamboo_3.png" />
+              <PlistImageFile Name="M_bamboo_4.png" Key="M_bamboo_4.png" />
+              <PlistImageFile Name="M_bamboo_5.png" Key="M_bamboo_5.png" />
+              <PlistImageFile Name="M_bamboo_6.png" Key="M_bamboo_6.png" />
+              <PlistImageFile Name="M_bamboo_7.png" Key="M_bamboo_7.png" />
+              <PlistImageFile Name="M_bamboo_8.png" Key="M_bamboo_8.png" />
+              <PlistImageFile Name="M_bamboo_9.png" Key="M_bamboo_9.png" />
+              <PlistImageFile Name="M_character_1.png" Key="M_character_1.png" />
+              <PlistImageFile Name="M_character_2.png" Key="M_character_2.png" />
+              <PlistImageFile Name="M_character_3.png" Key="M_character_3.png" />
+              <PlistImageFile Name="M_character_4.png" Key="M_character_4.png" />
+              <PlistImageFile Name="M_character_5.png" Key="M_character_5.png" />
+              <PlistImageFile Name="M_character_6.png" Key="M_character_6.png" />
+              <PlistImageFile Name="M_character_7.png" Key="M_character_7.png" />
+              <PlistImageFile Name="M_character_8.png" Key="M_character_8.png" />
+              <PlistImageFile Name="M_character_9.png" Key="M_character_9.png" />
+              <PlistImageFile Name="M_chrysanthemum.png" Key="M_chrysanthemum.png" />
+              <PlistImageFile Name="M_dot_1.png" Key="M_dot_1.png" />
+              <PlistImageFile Name="M_dot_2.png" Key="M_dot_2.png" />
+              <PlistImageFile Name="M_dot_3.png" Key="M_dot_3.png" />
+              <PlistImageFile Name="M_dot_4.png" Key="M_dot_4.png" />
+              <PlistImageFile Name="M_dot_5.png" Key="M_dot_5.png" />
+              <PlistImageFile Name="M_dot_6.png" Key="M_dot_6.png" />
+              <PlistImageFile Name="M_dot_7.png" Key="M_dot_7.png" />
+              <PlistImageFile Name="M_dot_8.png" Key="M_dot_8.png" />
+              <PlistImageFile Name="M_dot_9.png" Key="M_dot_9.png" />
+              <PlistImageFile Name="M_green.png" Key="M_green.png" />
+              <PlistImageFile Name="M_orchid.png" Key="M_orchid.png" />
+              <PlistImageFile Name="M_plum.png" Key="M_plum.png" />
+              <PlistImageFile Name="M_red.png" Key="M_red.png" />
+              <PlistImageFile Name="M_spring.png" Key="M_spring.png" />
+              <PlistImageFile Name="M_summer.png" Key="M_summer.png" />
+              <PlistImageFile Name="M_white.png" Key="M_white.png" />
+              <PlistImageFile Name="M_wind_east.png" Key="M_wind_east.png" />
+              <PlistImageFile Name="M_wind_north.png" Key="M_wind_north.png" />
+              <PlistImageFile Name="M_wind_south.png" Key="M_wind_south.png" />
+              <PlistImageFile Name="M_wind_west.png" Key="M_wind_west.png" />
+              <PlistImageFile Name="M_winter.png" Key="M_winter.png" />
+            </PlistImageFolder>
+            <Image Name="M_autumn.png" />
+            <Image Name="M_bamboo.png" />
+            <Image Name="M_bamboo_1.png" />
+            <Image Name="M_bamboo_2.png" />
+            <Image Name="M_bamboo_3.png" />
+            <Image Name="M_bamboo_4.png" />
+            <Image Name="M_bamboo_5.png" />
+            <Image Name="M_bamboo_6.png" />
+            <Image Name="M_bamboo_7.png" />
+            <Image Name="M_bamboo_8.png" />
+            <Image Name="M_bamboo_9.png" />
+            <Image Name="M_character_1.png" />
+            <Image Name="M_character_2.png" />
+            <Image Name="M_character_3.png" />
+            <Image Name="M_character_4.png" />
+            <Image Name="M_character_5.png" />
+            <Image Name="M_character_6.png" />
+            <Image Name="M_character_7.png" />
+            <Image Name="M_character_8.png" />
+            <Image Name="M_character_9.png" />
+            <Image Name="M_chrysanthemum.png" />
+            <Image Name="M_dot_1.png" />
+            <Image Name="M_dot_2.png" />
+            <Image Name="M_dot_3.png" />
+            <Image Name="M_dot_4.png" />
+            <Image Name="M_dot_5.png" />
+            <Image Name="M_dot_6.png" />
+            <Image Name="M_dot_7.png" />
+            <Image Name="M_dot_8.png" />
+            <Image Name="M_dot_9.png" />
+            <Image Name="M_green.png" />
+            <Image Name="M_orchid.png" />
+            <Image Name="M_plum.png" />
+            <Image Name="M_red.png" />
+            <Image Name="M_spring.png" />
+            <Image Name="M_summer.png" />
+            <Image Name="M_white.png" />
+            <Image Name="M_wind_east.png" />
+            <Image Name="M_wind_north.png" />
+            <Image Name="M_wind_south.png" />
+            <Image Name="M_wind_west.png" />
+            <Image Name="M_winter.png" />
+            <File Name="Z_my.tps" />
+          </Folder>
+          <Folder Name="right">
+            <PlistImageFolder Image="Z_right.png" PListFile="Z_right.plist" Name=".Z_right_PList.Dir">
+              <PlistImageFile Name="R_autumn.png" Key="R_autumn.png" />
+              <PlistImageFile Name="R_bamboo.png" Key="R_bamboo.png" />
+              <PlistImageFile Name="R_bamboo_1.png" Key="R_bamboo_1.png" />
+              <PlistImageFile Name="R_bamboo_2.png" Key="R_bamboo_2.png" />
+              <PlistImageFile Name="R_bamboo_3.png" Key="R_bamboo_3.png" />
+              <PlistImageFile Name="R_bamboo_4.png" Key="R_bamboo_4.png" />
+              <PlistImageFile Name="R_bamboo_5.png" Key="R_bamboo_5.png" />
+              <PlistImageFile Name="R_bamboo_6.png" Key="R_bamboo_6.png" />
+              <PlistImageFile Name="R_bamboo_7.png" Key="R_bamboo_7.png" />
+              <PlistImageFile Name="R_bamboo_8.png" Key="R_bamboo_8.png" />
+              <PlistImageFile Name="R_bamboo_9.png" Key="R_bamboo_9.png" />
+              <PlistImageFile Name="R_character_1.png" Key="R_character_1.png" />
+              <PlistImageFile Name="R_character_2.png" Key="R_character_2.png" />
+              <PlistImageFile Name="R_character_3.png" Key="R_character_3.png" />
+              <PlistImageFile Name="R_character_4.png" Key="R_character_4.png" />
+              <PlistImageFile Name="R_character_5.png" Key="R_character_5.png" />
+              <PlistImageFile Name="R_character_6.png" Key="R_character_6.png" />
+              <PlistImageFile Name="R_character_7.png" Key="R_character_7.png" />
+              <PlistImageFile Name="R_character_8.png" Key="R_character_8.png" />
+              <PlistImageFile Name="R_character_9.png" Key="R_character_9.png" />
+              <PlistImageFile Name="R_chrysanthemum.png" Key="R_chrysanthemum.png" />
+              <PlistImageFile Name="R_dot_1.png" Key="R_dot_1.png" />
+              <PlistImageFile Name="R_dot_2.png" Key="R_dot_2.png" />
+              <PlistImageFile Name="R_dot_3.png" Key="R_dot_3.png" />
+              <PlistImageFile Name="R_dot_4.png" Key="R_dot_4.png" />
+              <PlistImageFile Name="R_dot_5.png" Key="R_dot_5.png" />
+              <PlistImageFile Name="R_dot_6.png" Key="R_dot_6.png" />
+              <PlistImageFile Name="R_dot_7.png" Key="R_dot_7.png" />
+              <PlistImageFile Name="R_dot_8.png" Key="R_dot_8.png" />
+              <PlistImageFile Name="R_dot_9.png" Key="R_dot_9.png" />
+              <PlistImageFile Name="R_green.png" Key="R_green.png" />
+              <PlistImageFile Name="R_orchid.png" Key="R_orchid.png" />
+              <PlistImageFile Name="R_plum.png" Key="R_plum.png" />
+              <PlistImageFile Name="R_red.png" Key="R_red.png" />
+              <PlistImageFile Name="R_spring.png" Key="R_spring.png" />
+              <PlistImageFile Name="R_summer.png" Key="R_summer.png" />
+              <PlistImageFile Name="R_white.png" Key="R_white.png" />
+              <PlistImageFile Name="R_wind_east.png" Key="R_wind_east.png" />
+              <PlistImageFile Name="R_wind_north.png" Key="R_wind_north.png" />
+              <PlistImageFile Name="R_wind_south.png" Key="R_wind_south.png" />
+              <PlistImageFile Name="R_wind_west.png" Key="R_wind_west.png" />
+              <PlistImageFile Name="R_winter.png" Key="R_winter.png" />
+            </PlistImageFolder>
+            <Image Name="R_autumn.png" />
+            <Image Name="R_bamboo.png" />
+            <Image Name="R_bamboo_1.png" />
+            <Image Name="R_bamboo_2.png" />
+            <Image Name="R_bamboo_3.png" />
+            <Image Name="R_bamboo_4.png" />
+            <Image Name="R_bamboo_5.png" />
+            <Image Name="R_bamboo_6.png" />
+            <Image Name="R_bamboo_7.png" />
+            <Image Name="R_bamboo_8.png" />
+            <Image Name="R_bamboo_9.png" />
+            <Image Name="R_character_1.png" />
+            <Image Name="R_character_2.png" />
+            <Image Name="R_character_3.png" />
+            <Image Name="R_character_4.png" />
+            <Image Name="R_character_5.png" />
+            <Image Name="R_character_6.png" />
+            <Image Name="R_character_7.png" />
+            <Image Name="R_character_8.png" />
+            <Image Name="R_character_9.png" />
+            <Image Name="R_chrysanthemum.png" />
+            <Image Name="R_dot_1.png" />
+            <Image Name="R_dot_2.png" />
+            <Image Name="R_dot_3.png" />
+            <Image Name="R_dot_4.png" />
+            <Image Name="R_dot_5.png" />
+            <Image Name="R_dot_6.png" />
+            <Image Name="R_dot_7.png" />
+            <Image Name="R_dot_8.png" />
+            <Image Name="R_dot_9.png" />
+            <Image Name="R_green.png" />
+            <Image Name="R_orchid.png" />
+            <Image Name="R_plum.png" />
+            <Image Name="R_red.png" />
+            <Image Name="R_spring.png" />
+            <Image Name="R_summer.png" />
+            <Image Name="R_white.png" />
+            <Image Name="R_wind_east.png" />
+            <Image Name="R_wind_north.png" />
+            <Image Name="R_wind_south.png" />
+            <Image Name="R_wind_west.png" />
+            <Image Name="R_winter.png" />
+            <File Name="Z_right.tps" />
+          </Folder>
+          <Folder Name="up">
+            <PlistImageFolder Image="Z_up.png" PListFile="Z_up.plist" Name=".Z_up_PList.Dir">
+              <PlistImageFile Name="U_autumn.png" Key="U_autumn.png" />
+              <PlistImageFile Name="U_bamboo.png" Key="U_bamboo.png" />
+              <PlistImageFile Name="U_bamboo_1.png" Key="U_bamboo_1.png" />
+              <PlistImageFile Name="U_bamboo_2.png" Key="U_bamboo_2.png" />
+              <PlistImageFile Name="U_bamboo_3.png" Key="U_bamboo_3.png" />
+              <PlistImageFile Name="U_bamboo_4.png" Key="U_bamboo_4.png" />
+              <PlistImageFile Name="U_bamboo_5.png" Key="U_bamboo_5.png" />
+              <PlistImageFile Name="U_bamboo_6.png" Key="U_bamboo_6.png" />
+              <PlistImageFile Name="U_bamboo_7.png" Key="U_bamboo_7.png" />
+              <PlistImageFile Name="U_bamboo_8.png" Key="U_bamboo_8.png" />
+              <PlistImageFile Name="U_bamboo_9.png" Key="U_bamboo_9.png" />
+              <PlistImageFile Name="U_character_1.png" Key="U_character_1.png" />
+              <PlistImageFile Name="U_character_2.png" Key="U_character_2.png" />
+              <PlistImageFile Name="U_character_3.png" Key="U_character_3.png" />
+              <PlistImageFile Name="U_character_4.png" Key="U_character_4.png" />
+              <PlistImageFile Name="U_character_5.png" Key="U_character_5.png" />
+              <PlistImageFile Name="U_character_6.png" Key="U_character_6.png" />
+              <PlistImageFile Name="U_character_7.png" Key="U_character_7.png" />
+              <PlistImageFile Name="U_character_8.png" Key="U_character_8.png" />
+              <PlistImageFile Name="U_character_9.png" Key="U_character_9.png" />
+              <PlistImageFile Name="U_chrysanthemum.png" Key="U_chrysanthemum.png" />
+              <PlistImageFile Name="U_dot_1.png" Key="U_dot_1.png" />
+              <PlistImageFile Name="U_dot_2.png" Key="U_dot_2.png" />
+              <PlistImageFile Name="U_dot_3.png" Key="U_dot_3.png" />
+              <PlistImageFile Name="U_dot_4.png" Key="U_dot_4.png" />
+              <PlistImageFile Name="U_dot_5.png" Key="U_dot_5.png" />
+              <PlistImageFile Name="U_dot_6.png" Key="U_dot_6.png" />
+              <PlistImageFile Name="U_dot_7.png" Key="U_dot_7.png" />
+              <PlistImageFile Name="U_dot_8.png" Key="U_dot_8.png" />
+              <PlistImageFile Name="U_dot_9.png" Key="U_dot_9.png" />
+              <PlistImageFile Name="U_green.png" Key="U_green.png" />
+              <PlistImageFile Name="U_orchid.png" Key="U_orchid.png" />
+              <PlistImageFile Name="U_plum.png" Key="U_plum.png" />
+              <PlistImageFile Name="U_red.png" Key="U_red.png" />
+              <PlistImageFile Name="U_spring.png" Key="U_spring.png" />
+              <PlistImageFile Name="U_summer.png" Key="U_summer.png" />
+              <PlistImageFile Name="U_white.png" Key="U_white.png" />
+              <PlistImageFile Name="U_wind_east.png" Key="U_wind_east.png" />
+              <PlistImageFile Name="U_wind_north.png" Key="U_wind_north.png" />
+              <PlistImageFile Name="U_wind_south.png" Key="U_wind_south.png" />
+              <PlistImageFile Name="U_wind_west.png" Key="U_wind_west.png" />
+              <PlistImageFile Name="U_winter.png" Key="U_winter.png" />
+            </PlistImageFolder>
+            <Image Name="U_autumn.png" />
+            <Image Name="U_bamboo.png" />
+            <Image Name="U_bamboo_1.png" />
+            <Image Name="U_bamboo_2.png" />
+            <Image Name="U_bamboo_3.png" />
+            <Image Name="U_bamboo_4.png" />
+            <Image Name="U_bamboo_5.png" />
+            <Image Name="U_bamboo_6.png" />
+            <Image Name="U_bamboo_7.png" />
+            <Image Name="U_bamboo_8.png" />
+            <Image Name="U_bamboo_9.png" />
+            <Image Name="U_character_1.png" />
+            <Image Name="U_character_2.png" />
+            <Image Name="U_character_3.png" />
+            <Image Name="U_character_4.png" />
+            <Image Name="U_character_5.png" />
+            <Image Name="U_character_6.png" />
+            <Image Name="U_character_7.png" />
+            <Image Name="U_character_8.png" />
+            <Image Name="U_character_9.png" />
+            <Image Name="U_chrysanthemum.png" />
+            <Image Name="U_dot_1.png" />
+            <Image Name="U_dot_2.png" />
+            <Image Name="U_dot_3.png" />
+            <Image Name="U_dot_4.png" />
+            <Image Name="U_dot_5.png" />
+            <Image Name="U_dot_6.png" />
+            <Image Name="U_dot_7.png" />
+            <Image Name="U_dot_8.png" />
+            <Image Name="U_dot_9.png" />
+            <Image Name="U_green.png" />
+            <Image Name="U_orchid.png" />
+            <Image Name="U_plum.png" />
+            <Image Name="U_red.png" />
+            <Image Name="U_spring.png" />
+            <Image Name="U_summer.png" />
+            <Image Name="U_white.png" />
+            <Image Name="U_wind_east.png" />
+            <Image Name="U_wind_north.png" />
+            <Image Name="U_wind_south.png" />
+            <Image Name="U_wind_west.png" />
+            <Image Name="U_winter.png" />
+            <File Name="Z_up.tps" />
+          </Folder>
+          <Image Name="Bamboo_1.png" />
+          <Image Name="Bamboo_2.png" />
+          <Image Name="Bamboo_3.png" />
+          <Image Name="Bamboo_4.png" />
+          <Image Name="Bamboo_5.png" />
+          <Image Name="Bamboo_6.png" />
+          <Image Name="Bamboo_7.png" />
+          <Image Name="Bamboo_8.png" />
+          <Image Name="Bamboo_9.png" />
+          <Image Name="bg.png" />
+          <Image Name="Character_1.png" />
+          <Image Name="Character_2.png" />
+          <Image Name="Character_3.png" />
+          <Image Name="Character_4.png" />
+          <Image Name="Character_5.png" />
+          <Image Name="Character_6.png" />
+          <Image Name="Character_7.png" />
+          <Image Name="Character_8.png" />
+          <Image Name="Character_9.png" />
+          <Image Name="Dot_1.png" />
+          <Image Name="Dot_2.png" />
+          <Image Name="Dot_3.png" />
+          <Image Name="Dot_4.png" />
+          <Image Name="Dot_5.png" />
+          <Image Name="Dot_6.png" />
+          <Image Name="Dot_7.png" />
+          <Image Name="Dot_8.png" />
+          <Image Name="Dot_9.png" />
+          <Image Name="flower_111.png" />
+          <Image Name="flower_121.png" />
+          <Image Name="flower_131.png" />
+          <Image Name="flower_141.png" />
+          <Image Name="flower_151.png" />
+          <Image Name="flower_161.png" />
+          <Image Name="flower_171.png" />
+          <Image Name="flower_181.png" />
+          <Image Name="g.png" />
+          <Image Name="Green.png" />
+          <Image Name="Mj_01.png" />
+          <Image Name="Mj_04.png" />
+          <Image Name="Mj_06.png" />
+          <Image Name="Mj_2.png" />
+          <Image Name="Mj_3.png" />
+          <Image Name="Mj_big.png" />
+          <Image Name="Mj_cai.png" />
+          <Image Name="Mj_up_0.png" />
+          <Image Name="Mj_up_1.png" />
+          <Image Name="Mj_up_2.png" />
+          <Image Name="Mj_up_3.png" />
+          <Image Name="Mj_up_4.png" />
+          <Image Name="Red.png" />
+          <Image Name="White.png" />
+          <Image Name="Wind_east.png" />
+          <Image Name="Wind_north.png" />
+          <Image Name="Wind_south.png" />
+          <Image Name="Wind_west.png" />
+          <Image Name="z_no_play_normal.png" />
+          <Image Name="z_no_play_press.png" />
+          <Image Name="z_play_normal.png" />
+          <Image Name="z_play_press.png" />
+        </Folder>
+        <Folder Name="MJ3D">
+          <Folder Name="arrowbk3D">
+            <Image Name="arrow_0.png" />
+            <Image Name="arrow_1.png" />
+            <Image Name="arrow_2.png" />
+            <Image Name="arrow_3.png" />
+            <Image Name="number.png" />
+            <Image Name="youxizhong-2_35.png" />
+            <Image Name="Z_arrow_top.png" />
+          </Folder>
+          <Folder Name="common">
+            <Image Name="1-1.png" />
+            <Image Name="1-2.png" />
+            <Image Name="1-3.png" />
+            <Image Name="1-4.png" />
+            <Image Name="1-5.png" />
+            <Image Name="1-6.png" />
+            <Image Name="1-7.png" />
+            <Image Name="1-8.png" />
+            <Image Name="2-1.png" />
+            <Image Name="2-2.png" />
+            <Image Name="2-3.png" />
+            <Image Name="2-4.png" />
+            <Image Name="2-5.png" />
+            <Image Name="2-6.png" />
+            <Image Name="2-7.png" />
+            <Image Name="2-8.png" />
+            <Image Name="heng2-1.png" />
+            <Image Name="heng2-10.png" />
+            <Image Name="heng2-11.png" />
+            <Image Name="heng2-12.png" />
+            <Image Name="heng2-13.png" />
+            <Image Name="heng2-14.png" />
+            <Image Name="heng2-2.png" />
+            <Image Name="heng2-3.png" />
+            <Image Name="heng2-4.png" />
+            <Image Name="heng2-5.png" />
+            <Image Name="heng2-6.png" />
+            <Image Name="heng2-7.png" />
+            <Image Name="heng2-8.png" />
+            <Image Name="heng2-9.png" />
+            <Image Name="ting-1.png" />
+            <Image Name="ting-10.png" />
+            <Image Name="ting-11.png" />
+            <Image Name="ting-12.png" />
+            <Image Name="ting-13.png" />
+            <Image Name="ting-14.png" />
+            <Image Name="ting-15.png" />
+            <Image Name="ting-16.png" />
+            <Image Name="ting-2.png" />
+            <Image Name="ting-3.png" />
+            <Image Name="ting-4.png" />
+            <Image Name="ting-5.png" />
+            <Image Name="ting-6.png" />
+            <Image Name="ting-7.png" />
+            <Image Name="ting-8.png" />
+            <Image Name="ting-9.png" />
+          </Folder>
+          <Folder Name="downCard">
+            <Image Name="eat1.png" />
+            <Image Name="eat10.png" />
+            <Image Name="eat11.png" />
+            <Image Name="eat111.png" />
+            <Image Name="eat12.png" />
+            <Image Name="eat2.png" />
+            <Image Name="eat21.png" />
+            <Image Name="eat3.png" />
+            <Image Name="eat4.png" />
+            <Image Name="eat5.png" />
+            <Image Name="eat51.png" />
+            <Image Name="eat6.png" />
+            <Image Name="eat7.png" />
+            <Image Name="eat8.png" />
+            <Image Name="eat81.png" />
+            <Image Name="eat9.png" />
+            <Image Name="handCard.png" />
+            <Image Name="out2-1.png" />
+            <Image Name="out2-10.png" />
+            <Image Name="out2-11.png" />
+            <Image Name="out2-12.png" />
+            <Image Name="out2-13.png" />
+            <Image Name="out2-14.png" />
+            <Image Name="out2-15.png" />
+            <Image Name="out2-16.png" />
+            <Image Name="out2-2.png" />
+            <Image Name="out2-3.png" />
+            <Image Name="out2-4.png" />
+            <Image Name="out2-5.png" />
+            <Image Name="out2-6.png" />
+            <Image Name="out2-7.png" />
+            <Image Name="out2-8.png" />
+            <Image Name="out2-9.png" />
+          </Folder>
+          <Folder Name="left">
+            <Image Name="1-2.png" />
+            <Image Name="1-3.png" />
+            <Image Name="1-4.png" />
+            <Image Name="2-1.png" />
+            <Image Name="leftStand.png" />
+          </Folder>
+          <Folder Name="rightCard">
+            <Image Name="1-5.png" />
+            <Image Name="1-6.png" />
+            <Image Name="1-7.png" />
+            <Image Name="rightStand.png" />
+          </Folder>
+          <Folder Name="top">
+            <Image Name="handCard.png" />
+            <Image Name="top1.png" />
+            <Image Name="top10.png" />
+            <Image Name="top11.png" />
+            <Image Name="top11-1.png" />
+            <Image Name="top12.png" />
+            <Image Name="top2.png" />
+            <Image Name="top2-1.png" />
+            <Image Name="top3.png" />
+            <Image Name="top4.png" />
+            <Image Name="top5.png" />
+            <Image Name="top5-1.png" />
+            <Image Name="top6.png" />
+            <Image Name="top7.png" />
+            <Image Name="top8.png" />
+            <Image Name="top8-1.png" />
+            <Image Name="top9.png" />
+          </Folder>
+        </Folder>
         <Folder Name="newYear">
           <Image Name="bg_1.png" />
           <Image Name="bg_8.png" />
@@ -3122,6 +4591,12 @@
           <Image Name="img_gold.png" />
           <Image Name="img_win_bg.png" />
         </Folder>
+        <Folder Name="opt">
+          <Image Name="btn_checkMember_n.png" />
+          <Image Name="btn_checkMember_s.png" />
+          <Image Name="btn_gongxiangDetail_n.png" />
+          <Image Name="btn_gongxiangDetail_s.png" />
+        </Folder>
         <Folder Name="other">
           <Folder Name="3DplayInfo">
             <Image Name="1.png" />
@@ -3133,6 +4608,12 @@
             <Image Name="time_bg.png" />
             <Image Name="wifi.png" />
           </Folder>
+          <PlistImageFolder Image="wifi.png" PListFile="wifi.plist" Name=".wifi_PList.Dir">
+            <PlistImageFile Name="GAME_08.png" Key="GAME_08.png" />
+            <PlistImageFile Name="GAME_21.png" Key="GAME_21.png" />
+            <PlistImageFile Name="GAME_28.png" Key="GAME_28.png" />
+            <PlistImageFile Name="GAME_34.png" Key="GAME_34.png" />
+          </PlistImageFolder>
           <PlistImageFolder Image="Z_wifi.png" PListFile="Z_wifi.plist" Name=".Z_wifi_PList.Dir">
             <PlistImageFile Name="Z_wifi_1.png" Key="Z_wifi_1.png" />
             <PlistImageFile Name="Z_wifi_2.png" Key="Z_wifi_2.png" />
@@ -3140,19 +4621,46 @@
             <PlistImageFile Name="Z_wifi_4.png" Key="Z_wifi_4.png" />
           </PlistImageFolder>
           <Image Name="arrow_top.png" />
+          <Image Name="bg_Disc.png" />
+          <Image Name="bujiazhu.png" />
+          <Image Name="bulazhuang.png" />
+          <Image Name="bupiaofen.png" />
+          <Image Name="buxiazui.png" />
           <Image Name="chatbg_ld.png" />
           <Image Name="chatbg_lt.png" />
           <Image Name="chatbg_rd.png" />
           <Image Name="count_down_num.png" />
+          <Image Name="imgTrust.png" />
+          <Image Name="info_n_send_0.png" />
+          <Image Name="info_n_send_1.png" />
+          <Image Name="info_n_send_2.png" />
+          <Image Name="info_n_send_3.png" />
+          <Image Name="info_n_send_4_0.png" />
+          <Image Name="info_n_send_5_0.png" />
+          <Image Name="info_n_send_6_0.png" />
+          <Image Name="info_n_send_bg.png" />
+          <Image Name="jiahao.png" />
+          <Image Name="jianhao.png" />
+          <Image Name="jiazhu.png" />
+          <Image Name="js_10.png" />
           <Image Name="lastcallnumber.png" />
+          <Image Name="lazhuang.png" />
+          <Image Name="piaofen.png" />
           <Image Name="play_method_258.png" />
           <Image Name="play_method_7dui.png" />
           <Image Name="play_method_zhong.png" />
           <Image Name="powerG.PNG" />
+          <Image Name="qipao_kaizhuo.png" />
           <Image Name="room_num.png" />
+          <Image Name="roomInfo1.png" />
+          <Image Name="roomInfo2.png" />
+          <Image Name="roomInfo3.png" />
+          <Image Name="roomInfo7.png" />
+          <Image Name="roomInfo8.png" />
           <Image Name="roomInfoBg.png" />
           <Image Name="roundnumbg.png" />
           <Image Name="saoyang_mj.png" />
+          <Image Name="xiazui.png" />
           <Image Name="Z_arrow.png" />
           <Image Name="Z_arrow_frame.png" />
           <Image Name="Z_arrow_top.png" />
@@ -3169,6 +4677,7 @@
           <Image Name="Z_count_down_num.png" />
           <Image Name="z_greenroundnumber.png" />
           <Image Name="Z_help.png" />
+          <Image Name="Z_leave.png" />
           <Image Name="Z_money_frame.png" />
           <Image Name="Z_morentouxiang.png" />
           <Image Name="Z_nobody.png" />
@@ -3186,6 +4695,80 @@
           <Image Name="Z_user.png" />
           <Image Name="Z_wan.png" />
           <Image Name="zhuanzhuan_mj.png" />
+        </Folder>
+        <Folder Name="paodekuaiTable">
+          <Image Name="baodan.png" />
+          <Image Name="baodan_alarm.png" />
+          <Image Name="baodan_new.png" />
+          <Image Name="baodan_s.png" />
+          <Image Name="baodan_shining.png" />
+          <Image Name="buchu.png" />
+          <Image Name="bujiao.png" />
+          <Image Name="buqiang.png" />
+          <Image Name="buqiang2.png" />
+          <Image Name="buqiangtongyong.png" />
+          <Image Name="chupai.png" />
+          <Image Name="chupai_2.png" />
+          <Image Name="head_bottom.png" />
+          <Image Name="jiaodizhu.png" />
+          <Image Name="naozhong.png" />
+          <Image Name="no_one.png" />
+          <Image Name="qiangdizhu.png" />
+          <Image Name="qiangdizhu2.png" />
+          <Image Name="qiangdizhutongyong.png" />
+          <Image Name="tishi.png" />
+          <Image Name="wenhao.png" />
+          <Image Name="yaobuqi.png" />
+          <Image Name="yaoqing_13.png" />
+          <Image Name="yaoqing_14.png" />
+          <Image Name="yaoqing_17.png" />
+          <Image Name="yaoqing_18.png" />
+        </Folder>
+        <Folder Name="paodekuaiTable_new">
+          <Image Name="baodan.png" />
+          <Image Name="baodan_s.png" />
+          <Image Name="beimian_puke.png" />
+          <Image Name="buchu.png" />
+          <Image Name="buchu_s.png" />
+          <Image Name="bujiao.png" />
+          <Image Name="buqiang.png" />
+          <Image Name="buqiang2.png" />
+          <Image Name="buqiangtongyong.png" />
+          <Image Name="buti.png" />
+          <Image Name="butiTag.png" />
+          <Image Name="chupai.png" />
+          <Image Name="chupai_2.png" />
+          <Image Name="coinsNum.png" />
+          <Image Name="dianliang1.png" />
+          <Image Name="dianliang2.png" />
+          <Image Name="fangjiandi.png" />
+          <Image Name="fantiTag.png" />
+          <Image Name="GPS_n.png" />
+          <Image Name="GPS_s.png" />
+          <Image Name="huanfu_n.png" />
+          <Image Name="huanfu_s.png" />
+          <Image Name="jiaodizhu.png" />
+          <Image Name="liaotian_n.png" />
+          <Image Name="liaotian_s.png" />
+          <Image Name="naozhong.png" />
+          <Image Name="no_one.png" />
+          <Image Name="paodekuai_di1.png" />
+          <Image Name="qiangdizhu.png" />
+          <Image Name="qiangdizhu2.png" />
+          <Image Name="qiangdizhutongyong.png" />
+          <Image Name="set_n.png" />
+          <Image Name="set_s.png" />
+          <Image Name="ti.png" />
+          <Image Name="tishi.png" />
+          <Image Name="tishi_s.png" />
+          <Image Name="tiTag.png" />
+          <Image Name="wenhao.png" />
+          <Image Name="WIFI_1.png" />
+          <Image Name="WIFI_2.png" />
+          <Image Name="WIFI_3.png" />
+          <Image Name="yaobuqi.png" />
+          <Image Name="yuyin_n.png" />
+          <Image Name="yuyin_s.png" />
         </Folder>
         <Folder Name="personalInfo">
           <Image Name="femal.png" />
@@ -3409,6 +4992,7 @@
               <Image Name="shuzi_8.png" />
               <Image Name="shuzi_9.png" />
             </Folder>
+            <Image Name="bac_paizuo.png" />
             <Image Name="beijing_1.png" />
             <Image Name="beijing_2.png" />
             <Image Name="beijing_3.png" />
@@ -3520,12 +5104,15 @@
             <Image Name="jg2.png" />
             <Image Name="jg3.png" />
             <Image Name="jg4.png" />
+            <Image Name="jinbi.png" />
             <Image Name="juNum.png" />
             <Image Name="loseNum.png" />
             <Image Name="mingzi.png" />
             <Image Name="n_playLabel_13.png" />
             <Image Name="n_playLabel_15.png" />
             <Image Name="n_playLabel_16.png" />
+            <Image Name="playDisc.png" />
+            <Image Name="playDisc_s.png" />
             <Image Name="power.png" />
             <Image Name="powerBar.png" />
             <Image Name="qiang.png" />
@@ -3559,6 +5146,7 @@
             <Image Name="yaoqing_14.png" />
             <Image Name="yaoqing_17.png" />
             <Image Name="yaoqing_18.png" />
+            <Image Name="youxizhong-1_01.png" />
             <Image Name="youxizhong-1_04.png" />
             <Image Name="youxizhong-1_04_1.png" />
             <Image Name="youxizhong-1_06.png" />
@@ -3980,15 +5568,63 @@
           <Image Name="qiandao_yuanbao.png" />
           <Image Name="title_qiandao.png" />
         </Folder>
+        <Folder Name="quickStartSelectRule">
+          <Image Name="img_kuang.png" />
+        </Folder>
         <Folder Name="rank">
           <Image Name="baoming.png" />
+          <Image Name="bg_xian.png" />
           <Image Name="biaoti.png" />
+          <Image Name="btn_confirm_set1_n.png" />
+          <Image Name="btn_confirm_set1_s.png" />
+          <Image Name="btn_confirm_set2_n.png" />
+          <Image Name="btn_confirm_set2_s.png" />
+          <Image Name="btn_day_n.png" />
+          <Image Name="btn_day_rank_remark_n.png" />
+          <Image Name="btn_day_rank_remark_s.png" />
+          <Image Name="btn_day_s.png" />
+          <Image Name="btn_group_n.png" />
+          <Image Name="btn_group_s.png" />
+          <Image Name="btn_join_rank_n.png" />
+          <Image Name="btn_join_rank_s.png" />
+          <Image Name="btn_now_week_n.png" />
+          <Image Name="btn_now_week_s.png" />
+          <Image Name="btn_player_n.png" />
+          <Image Name="btn_player_s.png" />
+          <Image Name="btn_pre_week_n.png" />
+          <Image Name="btn_pre_week_s.png" />
+          <Image Name="btn_qiantian_n.png" />
+          <Image Name="btn_qiantian_s.png" />
+          <Image Name="btn_rank_n.png" />
+          <Image Name="btn_rank_s.png" />
+          <Image Name="btn_score_rank_n.png" />
+          <Image Name="btn_score_rank_s.png" />
+          <Image Name="btn_setting_n.png" />
+          <Image Name="btn_setting_s.png" />
+          <Image Name="btn_today_n.png" />
+          <Image Name="btn_today_s.png" />
+          <Image Name="btn_week_rank_remark_n.png" />
+          <Image Name="btn_week_rank_remark_s.png" />
+          <Image Name="btn_winner_rank_n.png" />
+          <Image Name="btn_winner_rank_s.png" />
+          <Image Name="btn_yesterday_n.png" />
+          <Image Name="btn_yesterday_s.png" />
           <Image Name="heng.png" />
+          <Image Name="huangse-anniu02-fs8.png" />
+          <Image Name="huangse-anniu-fs8.png" />
           <Image Name="huodongjianjie_qss.png" />
+          <Image Name="img_line.png" />
+          <Image Name="img_line1.png" />
+          <Image Name="img_remark_bg.png" />
+          <Image Name="img_tips_icon.png" />
           <Image Name="jinpai.png" />
           <Image Name="kuang.png" />
           <Image Name="kuangjia.png" />
+          <Image Name="left_img.png" />
           <Image Name="liebiao.png" />
+          <Image Name="paihang_jb_01.png" />
+          <Image Name="paihang_jb_02.png" />
+          <Image Name="paihang_jb_03.png" />
           <Image Name="queshenbang.png" />
           <Image Name="shang_anniu.png" />
           <Image Name="tongpai.png" />
@@ -4698,13 +6334,13 @@
           <Image Name="rmb_1.png" />
           <Image Name="rmb_bg.png" />
           <Image Name="sc_anniu.png" />
-          <Image Name="shangcheng_font.png" />
           <Image Name="shangcheng_font2.png" />
           <Image Name="shangchengBG_1.png" />
           <Image Name="shangchengBG_2.png" />
           <Image Name="shouchong_store.png" />
           <Image Name="song_bg.png" />
           <Image Name="store_bg.jpg" />
+          <Image Name="store_bg.png" />
           <Image Name="tip_bg.png" />
           <Image Name="tip_bg_1.png" />
           <Image Name="tip_bg_2.png" />
@@ -4721,6 +6357,125 @@
           <Image Name="yuanbao_8.png" />
           <Image Name="yuanbaoc-icon.png" />
           <Image Name="zengsong.png" />
+        </Folder>
+        <Folder Name="tongji">
+          <Folder Name="checkMember">
+            <Image Name="btn_arrow_left_n.png" />
+            <Image Name="btn_arrow_left_s.png" />
+            <Image Name="btn_arrow_right_n.png" />
+            <Image Name="btn_arrow_right_s.png" />
+            <Image Name="btn_liushui_n.png" />
+            <Image Name="btn_liushui_s.png" />
+            <Image Name="btn_zhanji_n.png" />
+            <Image Name="btn_zhanji_s.png" />
+            <Image Name="img_dikuang.png" />
+            <Image Name="img_liushui_bg.png" />
+          </Folder>
+          <Folder Name="opt">
+            <Image Name="btn_checkMember_n.png" />
+            <Image Name="btn_checkMember_s.png" />
+            <Image Name="btn_gongxiangDetail_n.png" />
+            <Image Name="btn_gongxiangDetail_s.png" />
+          </Folder>
+          <Folder Name="rank">
+            <Image Name="bg_xian.png" />
+            <Image Name="btn_confirm_set1_n.png" />
+            <Image Name="btn_confirm_set1_s.png" />
+            <Image Name="btn_confirm_set2_n.png" />
+            <Image Name="btn_confirm_set2_s.png" />
+            <Image Name="btn_day_n.png" />
+            <Image Name="btn_day_rank_remark_n.png" />
+            <Image Name="btn_day_rank_remark_s.png" />
+            <Image Name="btn_day_s.png" />
+            <Image Name="btn_group_n.png" />
+            <Image Name="btn_group_s.png" />
+            <Image Name="btn_join_rank_n.png" />
+            <Image Name="btn_join_rank_s.png" />
+            <Image Name="btn_now_week_n.png" />
+            <Image Name="btn_now_week_s.png" />
+            <Image Name="btn_player_n.png" />
+            <Image Name="btn_player_s.png" />
+            <Image Name="btn_pre_week_n.png" />
+            <Image Name="btn_pre_week_s.png" />
+            <Image Name="btn_qiantian_n.png" />
+            <Image Name="btn_qiantian_s.png" />
+            <Image Name="btn_rank_n.png" />
+            <Image Name="btn_rank_s.png" />
+            <Image Name="btn_score_rank_n.png" />
+            <Image Name="btn_score_rank_s.png" />
+            <Image Name="btn_setting_n.png" />
+            <Image Name="btn_setting_s.png" />
+            <Image Name="btn_today_n.png" />
+            <Image Name="btn_today_s.png" />
+            <Image Name="btn_week_rank_remark_n.png" />
+            <Image Name="btn_week_rank_remark_s.png" />
+            <Image Name="btn_winner_rank_n.png" />
+            <Image Name="btn_winner_rank_s.png" />
+            <Image Name="btn_yesterday_n.png" />
+            <Image Name="btn_yesterday_s.png" />
+            <Image Name="huangse-anniu02-fs8.png" />
+            <Image Name="huangse-anniu-fs8.png" />
+            <Image Name="img_line.png" />
+            <Image Name="img_line1.png" />
+            <Image Name="img_remark_bg.png" />
+            <Image Name="img_tips_icon.png" />
+            <Image Name="left_img.png" />
+            <Image Name="paihang_jb_01.png" />
+            <Image Name="paihang_jb_02.png" />
+            <Image Name="paihang_jb_03.png" />
+          </Folder>
+          <Image Name="btn_after_day_n.png" />
+          <Image Name="btn_after_day_s.png" />
+          <Image Name="btn_before_day_n.png" />
+          <Image Name="btn_before_day_s.png" />
+          <Image Name="btn_change_n.png" />
+          <Image Name="btn_change_s.png" />
+          <Image Name="btn_clear_n.png" />
+          <Image Name="btn_cur_weekend_n.png" />
+          <Image Name="btn_cur_weekend_s.png" />
+          <Image Name="btn_day_n.png" />
+          <Image Name="btn_day_s.png" />
+          <Image Name="btn_leftDay.png" />
+          <Image Name="btn_n.png" />
+          <Image Name="btn_opt_n.png" />
+          <Image Name="btn_opt_s.png" />
+          <Image Name="btn_play_tongji_n.png" />
+          <Image Name="btn_play_tongji_s.png" />
+          <Image Name="btn_player_n.png" />
+          <Image Name="btn_player_s.png" />
+          <Image Name="btn_qinyouquantongji_n.png" />
+          <Image Name="btn_qinyouquantongji_s.png" />
+          <Image Name="btn_rightDay.png" />
+          <Image Name="btn_s.png" />
+          <Image Name="btn_search_n.png" />
+          <Image Name="btn_search_s.png" />
+          <Image Name="btn_selectDay.png" />
+          <Image Name="btn_statement_n.png" />
+          <Image Name="btn_xiangqing_n.png" />
+          <Image Name="btn_xiangqing_s.png" />
+          <Image Name="btn_zhanji_n.png" />
+          <Image Name="btn_zhanji_s.png" />
+          <Image Name="btn_zhuli_n.png" />
+          <Image Name="btn_zhuli_s.png" />
+          <Image Name="diliver.png" />
+          <Image Name="ditiao.png" />
+          <Image Name="huangse-anniu02-fs8.png" />
+          <Image Name="img_has_pay.png" />
+          <Image Name="img_kuang.png" />
+          <Image Name="img_no_pay.png" />
+          <Image Name="img_question_new_tongji.png" />
+          <Image Name="img_statement_new_tongji.png" />
+          <Image Name="img_title.png" />
+          <Image Name="img_title_setbili.png" />
+          <Image Name="img_title_xiangqing.png" />
+          <Image Name="img_tongji.png" />
+          <Image Name="inputbg.png" />
+          <Image Name="inputbg1.png" />
+          <Image Name="left_img.png" />
+          <Image Name="sanjiaoxing.png" />
+          <Image Name="sanjiaoxing2.png" />
+          <Image Name="title_img.png" />
+          <Image Name="tj_input.png" />
         </Folder>
         <Folder Name="usernfo">
           <Folder Name="shangCShouquan">
@@ -4774,21 +6529,37 @@
           <Image Name="bg.png" />
           <Image Name="bgHead.png" />
           <Image Name="bgRole.png" />
+          <Image Name="bigReplay.png" />
           <Image Name="graybg.png" />
           <Image Name="grayBt.png" />
           <Image Name="grayRect.png" />
           <Image Name="kuai-1.png" />
+          <Image Name="kuai-2.png" />
           <Image Name="kuaijin.png" />
+          <Image Name="kuaijin_h.png" />
+          <Image Name="kuaitui.png" />
+          <Image Name="kuaitui_j.png" />
           <Image Name="man-1.png" />
+          <Image Name="man-2.png" />
           <Image Name="OK.png" />
           <Image Name="pause.png" />
+          <Image Name="pause_h.png" />
           <Image Name="playbtn.png" />
+          <Image Name="playbtn_h.png" />
           <Image Name="replay.png" />
           <Image Name="replaybg.png" />
           <Image Name="return.png" />
+          <Image Name="return_h.png" />
           <Image Name="roles.png" />
           <Image Name="textTile.png" />
           <Image Name="zhong-1.png" />
+        </Folder>
+        <Folder Name="warnScore">
+          <Image Name="btn_back.png" />
+          <Image Name="btn_search.png" />
+          <Image Name="btn_setAll.png" />
+          <Image Name="btn_wanrScoreSet.png" />
+          <Image Name="title_setWarnScore.png" />
         </Folder>
         <Folder Name="winGame">
           <Image Name="erweima.png" />

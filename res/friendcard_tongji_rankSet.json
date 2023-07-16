@@ -316,8 +316,8 @@
                     "FontSize": 24,
                     "LabelText": "参与榜：",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -435,8 +435,8 @@
                         "FontSize": 24,
                         "LabelText": "开启参与榜",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -563,8 +563,8 @@
                         "FontSize": 24,
                         "LabelText": "隐藏成员信息",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -691,8 +691,8 @@
                         "FontSize": 24,
                         "LabelText": "隐藏参与房间数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -1062,8 +1062,8 @@
                     "FontSize": 20,
                     "LabelText": "提示：",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1120,8 +1120,8 @@
                     "FontSize": 16,
                     "LabelText": "开启参与榜：不开启则除会长/管理员外不显示这个榜单，参与榜入口直接屏蔽",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1178,8 +1178,8 @@
                     "FontSize": 16,
                     "LabelText": "开启赢家榜：不开启则除会长/管理员外不显示这个榜单，赢家榜入口直接屏蔽。",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1236,8 +1236,8 @@
                     "FontSize": 16,
                     "LabelText": "隐藏成员信息：除会长/管理员外，其他人不显示榜单内的用户昵称+ID。",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1294,8 +1294,8 @@
                     "FontSize": 16,
                     "LabelText": "隐藏大赢家数：除会长/管理员外，其他人不显示榜单内的数据。",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1352,8 +1352,8 @@
                     "FontSize": 16,
                     "LabelText": "开启战绩榜：不开启则除会长/管理员外不显示这个榜单，战绩榜入口直接屏蔽。",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1574,7 +1574,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "friendCards/common/btn_chebox_fang.png",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/img_datanchuang.png",

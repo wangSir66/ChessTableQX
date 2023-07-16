@@ -235,8 +235,8 @@
                     "FontSize": 18,
                     "LabelText": "请遵守国家法律法规，严禁赌博，绿色游戏",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -295,8 +295,8 @@
                     "FontSize": 30,
                     "LabelText": "亲友圈名字    ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -399,8 +399,8 @@
                     "FontSize": 30,
                     "LabelText": "亲友圈公告    ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TouchScaleChangeAble": true,
@@ -505,8 +505,8 @@
                     "FontSize": 30,
                     "LabelText": "牌友圈名字的荣誉牌友圈名字的\n荣誉牌友圈名字的荣誉\n\n\n",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -767,8 +767,8 @@
                     "FontSize": 25,
                     "LabelText": "玩法规则玩法规则玩法规则\n玩法规则\n玩法规则玩法规则\n玩法规则玩法规则\n\n",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -827,8 +827,8 @@
                     "FontSize": 35,
                     "LabelText": "淮安出统                                       ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1033,8 +1033,8 @@
                     "FontSize": 18,
                     "LabelText": "最多配置20种玩法，拖动玩法按钮可以修改排序   ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {},
@@ -1211,14 +1211,14 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/info/0.png",
+                          "Type": "Default",
+                          "Path": "Default/ImageFile.png",
                           "Plist": ""
                         },
                         "Scale9OriginX": 10,
                         "Scale9OriginY": 10,
-                        "Scale9Width": 16,
-                        "Scale9Height": 16,
+                        "Scale9Width": 26,
+                        "Scale9Height": 26,
                         "AnchorPoint": {
                           "ScaleX": 0.5,
                           "ScaleY": 0.5
@@ -1251,8 +1251,8 @@
                             "FontSize": 25,
                             "LabelText": "8",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "HorizontalAlignmentType": "HT_Center",
@@ -1323,8 +1323,8 @@
                         "FontSize": 20,
                         "ButtonText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {
@@ -1391,8 +1391,8 @@
                             "FontSize": 25,
                             "LabelText": "        玩法1          ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "HorizontalAlignmentType": "HT_Center",
@@ -1827,8 +1827,8 @@
                     "FontSize": 26,
                     "LabelText": "允许欠一次钻石   ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -1901,418 +1901,6 @@
             },
             "Name": "back",
             "ctype": "PanelObjectData"
-          },
-          {
-            "FileData": {
-              "Type": "Normal",
-              "Path": "friendCards/common/img_zhongtanchuang.png",
-              "Plist": ""
-            },
-            "Scale9OriginX": 170,
-            "Scale9OriginY": 127,
-            "Scale9Width": 638,
-            "Scale9Height": 367,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 640.0,
-              "Y": 360.0
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PositionPercentXEnabled": true,
-            "PositionPercentYEnabled": true,
-            "PrePosition": {
-              "X": 0.5,
-              "Y": 0.5
-            },
-            "PreSize": {
-              "X": 0.5859,
-              "Y": 0.6528
-            },
-            "LeftMargin": 265.0,
-            "RightMargin": 265.0,
-            "TopMargin": 125.0,
-            "BottomMargin": 125.0,
-            "Tag": 407,
-            "Children": [
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/info/YBQYQ.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 219,
-                "Scale9Height": 230,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 232.3845,
-                  "Y": 207.6602
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.3098,
-                  "Y": 0.4418
-                },
-                "PreSize": {
-                  "X": 0.3373,
-                  "Y": 0.5489
-                },
-                "LeftMargin": 105.8845,
-                "RightMargin": 391.1155,
-                "TopMargin": 133.3398,
-                "BottomMargin": 78.6602,
-                "Tag": 409,
-                "Children": [
-                  {
-                    "FontSize": 26,
-                    "LabelText": " 圈主建房  ",
-                    "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
-                      "Plist": ""
-                    },
-                    "OutlineColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 125.9434,
-                      "Y": 34.8816
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {
-                      "G": 242,
-                      "B": 192
-                    },
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.4978,
-                      "Y": 0.1352
-                    },
-                    "PreSize": {
-                      "X": 0.4664,
-                      "Y": 0.1163
-                    },
-                    "LeftMargin": 66.9434,
-                    "RightMargin": 68.0566,
-                    "TopMargin": 208.1184,
-                    "BottomMargin": 19.8816,
-                    "Tag": 102,
-                    "ActionTag": -168212203,
-                    "Size": {
-                      "X": 118.0,
-                      "Y": 30.0
-                    },
-                    "Name": "Text_5",
-                    "ctype": "TextObjectData"
-                  }
-                ],
-                "ActionTag": -1504798712,
-                "Size": {
-                  "X": 253.0,
-                  "Y": 258.0
-                },
-                "Name": "btn_type0",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 46,
-                "Scale9Height": 54,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 727.8799,
-                  "Y": 454.0292
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.9705,
-                  "Y": 0.966
-                },
-                "PreSize": {
-                  "X": 0.1013,
-                  "Y": 0.1617
-                },
-                "LeftMargin": 689.8799,
-                "RightMargin": -15.8799,
-                "TopMargin": -22.0292,
-                "BottomMargin": 416.0292,
-                "Tag": 410,
-                "ActionTag": 639181082,
-                "Size": {
-                  "X": 76.0,
-                  "Y": 76.0
-                },
-                "Name": "btn_close",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/info/FKQYQ.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 219,
-                "Scale9Height": 230,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 537.9126,
-                  "Y": 207.6603
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.7172,
-                  "Y": 0.4418
-                },
-                "PreSize": {
-                  "X": 0.3373,
-                  "Y": 0.5489
-                },
-                "LeftMargin": 411.4126,
-                "RightMargin": 85.5874,
-                "TopMargin": 133.3397,
-                "BottomMargin": 78.6603,
-                "Tag": 411,
-                "Children": [
-                  {
-                    "FontSize": 26,
-                    "LabelText": " 亲友自助  ",
-                    "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
-                      "Plist": ""
-                    },
-                    "OutlineColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 125.9434,
-                      "Y": 34.8816
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {
-                      "G": 242,
-                      "B": 192
-                    },
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.4978,
-                      "Y": 0.1352
-                    },
-                    "PreSize": {
-                      "X": 0.4664,
-                      "Y": 0.1163
-                    },
-                    "LeftMargin": 66.9434,
-                    "RightMargin": 68.0566,
-                    "TopMargin": 208.1184,
-                    "BottomMargin": 19.8816,
-                    "Tag": 103,
-                    "ActionTag": -1956771863,
-                    "Size": {
-                      "X": 118.0,
-                      "Y": 30.0
-                    },
-                    "Name": "Text_5",
-                    "ctype": "TextObjectData"
-                  }
-                ],
-                "ActionTag": 1694323173,
-                "Size": {
-                  "X": 253.0,
-                  "Y": 258.0
-                },
-                "Name": "btn_type1",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/info/biaotou_chuangjianqyq.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 110,
-                "Scale9OriginY": 19,
-                "Scale9Width": 140,
-                "Scale9Height": 24,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 375.0,
-                  "Y": 435.9264
-                },
-                "Scale": {
-                  "ScaleX": 0.9,
-                  "ScaleY": 0.9
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentXEnabled": true,
-                "PrePosition": {
-                  "X": 0.5,
-                  "Y": 0.9275
-                },
-                "PreSize": {
-                  "X": 0.48,
-                  "Y": 0.1319
-                },
-                "LeftMargin": 195.0,
-                "RightMargin": 195.0,
-                "TopMargin": 3.0736,
-                "BottomMargin": 404.9264,
-                "Tag": 412,
-                "ActionTag": -1653047600,
-                "Size": {
-                  "X": 360.0,
-                  "Y": 62.0
-                },
-                "Name": "img_title",
-                "ctype": "ImageViewObjectData"
-              }
-            ],
-            "ActionTag": 387852927,
-            "Size": {
-              "X": 750.0,
-              "Y": 470.0
-            },
-            "Name": "back_selectType",
-            "ctype": "ImageViewObjectData"
           }
         ],
         "Size": {
@@ -2322,6 +1910,30 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "Default/ImageFile.png",
+        "friendCards/common/btn_chebox_fang.png",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_datanchuang.png",
+        "friendCards/common/img_gou.png",
+        "friendCards/common/img_lianhua.png",
+        "friendCards/common/tanchuang_hua.png",
+        "friendCards/info/btn_addRule_n.png",
+        "friendCards/info/btn_addRule_s.png",
+        "friendCards/info/btn_chuangjian_n.png",
+        "friendCards/info/btn_chuangjian_s.png",
+        "friendCards/info/btn_rule_n.png",
+        "friendCards/info/btn_rule_s.png",
+        "friendCards/info/btn_save_n.png",
+        "friendCards/info/btn_save_s.png",
+        "friendCards/info/img_bg.png",
+        "friendCards/info/img_di.png",
+        "friendCards/info/img_di1.png",
+        "friendCards/info/img_jieshan.png",
+        "friendCards/info/img_title.png",
+        "friendCards/info/img_wanfaguize.png"
+      ],
       "ctype": "GameFileData"
     }
   },

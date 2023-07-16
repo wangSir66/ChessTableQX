@@ -151,8 +151,8 @@
                     "FontSize": 26,
                     "LabelText": " 正在加载娱乐场资源，请不要离开 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -234,7 +234,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "loading/goldField_di.png"
       ],
       "ctype": "GameFileData"

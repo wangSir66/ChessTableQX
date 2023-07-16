@@ -213,8 +213,8 @@
                 "FontSize": 26,
                 "LabelText": "你将从xxx导入",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -374,8 +374,8 @@
                     "FontSize": 30,
                     "LabelText": "  不保留分组  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -435,8 +435,8 @@
                     "FontSize": 20,
                     "LabelText": "所有组员将成为你的组员，原组长将失去\n组长身份",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -603,8 +603,8 @@
                     "FontSize": 30,
                     "LabelText": "保留分组",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -664,8 +664,8 @@
                     "FontSize": 20,
                     "LabelText": "1、将所有组长变成推荐人，所属成员跟随\n2、原推荐人成为普通组员，没有下级成员\n3、原无组长的分组成员成为你的组员\n4、管理员身份取消，成为你的普通组员\n5、重复人员：优先保留特殊身份；优先保留\n已在亲友圈的普通成员身份。",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -881,6 +881,15 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_ok_n.png",
+        "friendCards/common/btn_ok_s.png",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_dikuang.png",
+        "friendCards/common/img_title.png",
+        "friendCards/common/img_zhongtanchuang.png",
+        "friendCards/memberManage/xuanzhong.png"
+      ],
       "ctype": "GameFileData"
     }
   },

@@ -598,8 +598,8 @@
                             "FontSize": 22,
                             "LabelText": "99",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "HorizontalAlignmentType": "HT_Center",
@@ -1424,8 +1424,8 @@
                         "FontSize": 24,
                         "LabelText": "昵称昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1482,8 +1482,8 @@
                         "FontSize": 20,
                         "LabelText": "123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1540,8 +1540,8 @@
                         "FontSize": 24,
                         "LabelText": "666人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1598,8 +1598,8 @@
                         "FontSize": 24,
                         "LabelText": "2018-01-01",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -1658,8 +1658,8 @@
                         "FontSize": 20,
                         "LabelText": "00:00:00",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -1718,8 +1718,8 @@
                         "FontSize": 24,
                         "LabelText": "3天前",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1777,8 +1777,8 @@
                         "FontSize": 26,
                         "LabelText": "盟主",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2310,8 +2310,8 @@
                     "FontSize": 18,
                     "LabelText": "注：绿色ID为直属会员，红色ID为代理 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2367,8 +2367,8 @@
                     "FontSize": 24,
                     "LabelText": "     退出亲友圈  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2470,8 +2470,8 @@
                     "FontSize": 24,
                     "LabelText": "      禁玩30天未上线玩家  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2588,8 +2588,8 @@
                     "FontSize": 24,
                     "LabelText": "      全员禁止玩牌   ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2949,8 +2949,8 @@
                                 "FontSize": 28,
                                 "LabelText": "综合排序",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -3101,8 +3101,8 @@
                                 "FontSize": 28,
                                 "LabelText": "新加入在前",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -3254,8 +3254,8 @@
                                 "FontSize": 28,
                                 "LabelText": "新加入在后",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -3407,8 +3407,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看管理员",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -3560,8 +3560,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看组长",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -3713,8 +3713,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看在线",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -3866,8 +3866,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看对局中",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -4066,8 +4066,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看离线",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -4219,8 +4219,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看禁玩",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -4372,8 +4372,8 @@
                                 "FontSize": 28,
                                 "LabelText": "登录时间倒序",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -4574,8 +4574,8 @@
                         "FontSize": 26,
                         "LabelText": "综合排序",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4825,8 +4825,8 @@
                                 "FontSize": 28,
                                 "LabelText": "本组成员",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -4977,8 +4977,8 @@
                                 "FontSize": 28,
                                 "LabelText": "全部成员",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -5207,8 +5207,8 @@
                         "FontSize": 26,
                         "LabelText": "昵称昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5265,8 +5265,8 @@
                         "FontSize": 20,
                         "LabelText": "管理员",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5324,8 +5324,8 @@
                         "FontSize": 26,
                         "LabelText": "123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5382,8 +5382,8 @@
                         "FontSize": 26,
                         "LabelText": "2018-01-01",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -5442,8 +5442,8 @@
                         "FontSize": 20,
                         "LabelText": "00:00:00",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -5502,8 +5502,8 @@
                         "FontSize": 24,
                         "LabelText": "3天前",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5713,8 +5713,8 @@
                             "FontSize": 18,
                             "LabelText": "99",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -5778,8 +5778,8 @@
                         "FontSize": 20,
                         "LabelText": "(备注6个字哦)",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5836,8 +5836,8 @@
                         "FontSize": 20,
                         "LabelText": "A组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6209,8 +6209,8 @@
                         "FontSize": 28,
                         "LabelText": "牌友的昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6268,8 +6268,8 @@
                         "FontSize": 28,
                         "LabelText": "ID:123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -7022,8 +7022,8 @@
                                 "FontSize": 28,
                                 "LabelText": "综合排序",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -7174,8 +7174,8 @@
                                 "FontSize": 28,
                                 "LabelText": "新加入在前",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -7327,8 +7327,8 @@
                                 "FontSize": 28,
                                 "LabelText": "新加入在后",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -7480,8 +7480,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看管理员",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -7633,8 +7633,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看组长",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -7786,8 +7786,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看在线",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -7939,8 +7939,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看对局中",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -8139,8 +8139,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看离线",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -8292,8 +8292,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看禁玩",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -8445,8 +8445,8 @@
                                 "FontSize": 28,
                                 "LabelText": "登录时间倒序",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -8646,8 +8646,8 @@
                         "FontSize": 26,
                         "LabelText": "综合排序",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8856,8 +8856,8 @@
                         "FontSize": 24,
                         "LabelText": "昵称昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8914,8 +8914,8 @@
                         "FontSize": 20,
                         "LabelText": "管理员",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8973,8 +8973,8 @@
                         "FontSize": 24,
                         "LabelText": "123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9031,8 +9031,8 @@
                         "FontSize": 24,
                         "LabelText": "2018-01-01",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -9091,8 +9091,8 @@
                         "FontSize": 20,
                         "LabelText": "00:00:00",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -9151,8 +9151,8 @@
                         "FontSize": 24,
                         "LabelText": "3天前",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9324,8 +9324,8 @@
                         "FontSize": 24,
                         "LabelText": "1号",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9382,8 +9382,8 @@
                         "FontSize": 20,
                         "LabelText": "(备注6个字哦)",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9440,8 +9440,8 @@
                         "FontSize": 20,
                         "LabelText": "99人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9507,8 +9507,8 @@
                     "FontSize": 20,
                     "ButtonText": "什么是组长？",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -10155,8 +10155,8 @@
                                 "FontSize": 28,
                                 "LabelText": "综合排序",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -10307,8 +10307,8 @@
                                 "FontSize": 28,
                                 "LabelText": "新加入在前",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -10460,8 +10460,8 @@
                                 "FontSize": 28,
                                 "LabelText": "新加入在后",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -10613,8 +10613,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看管理员",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -10766,8 +10766,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看组长",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -10919,8 +10919,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看在线",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -11072,8 +11072,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看对局中",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -11272,8 +11272,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看离线",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -11425,8 +11425,8 @@
                                 "FontSize": 28,
                                 "LabelText": "只看禁玩",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -11578,8 +11578,8 @@
                                 "FontSize": 28,
                                 "LabelText": "登录时间倒序",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -11779,8 +11779,8 @@
                         "FontSize": 26,
                         "LabelText": "综合排序",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -11989,8 +11989,8 @@
                         "FontSize": 24,
                         "LabelText": "昵称昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12047,8 +12047,8 @@
                         "FontSize": 20,
                         "LabelText": "管理员",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12106,8 +12106,8 @@
                         "FontSize": 22,
                         "LabelText": "123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12164,8 +12164,8 @@
                         "FontSize": 22,
                         "LabelText": "2018-01-01",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -12224,8 +12224,8 @@
                         "FontSize": 20,
                         "LabelText": "00:00:00",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -12284,8 +12284,8 @@
                         "FontSize": 24,
                         "LabelText": "3天前",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12457,8 +12457,8 @@
                         "FontSize": 22,
                         "LabelText": "1号",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12515,8 +12515,8 @@
                         "FontSize": 20,
                         "LabelText": "(备注6个字哦)",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12573,8 +12573,8 @@
                         "FontSize": 20,
                         "LabelText": "99人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12640,8 +12640,8 @@
                     "FontSize": 20,
                     "ButtonText": "什么是助理？",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -13301,8 +13301,8 @@
                         "FontSize": 24,
                         "LabelText": "2018-01-01",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -13362,8 +13362,8 @@
                         "FontSize": 20,
                         "LabelText": "00:00:00",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -13423,8 +13423,8 @@
                         "FontSize": 24,
                         "LabelText": "内容\n两行",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -13545,8 +13545,8 @@
                     "FontSize": 20,
                     "LabelText": " 请选择导入俱乐部 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -13855,8 +13855,8 @@
                         "FontSize": 28,
                         "LabelText": "牌友的昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -13913,8 +13913,8 @@
                         "FontSize": 28,
                         "LabelText": "钻石（联盟）",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -13971,8 +13971,8 @@
                         "FontSize": 28,
                         "LabelText": "ID:123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14029,8 +14029,8 @@
                         "FontSize": 28,
                         "LabelText": "4人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14173,8 +14173,8 @@
                     "FontSize": 20,
                     "LabelText": "离线时间超过30天的玩家不会导入",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -14603,8 +14603,8 @@
                         "FontSize": 28,
                         "LabelText": "牌友的昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14662,8 +14662,8 @@
                         "FontSize": 28,
                         "LabelText": "ID:123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14722,8 +14722,8 @@
                         "FontSize": 28,
                         "LabelText": "圈成员",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14888,8 +14888,8 @@
                         "FontSize": 28,
                         "LabelText": "直属玩家",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14947,8 +14947,8 @@
                         "FontSize": 28,
                         "LabelText": "全选",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15064,8 +15064,8 @@
                         "FontSize": 28,
                         "LabelText": "1人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15335,8 +15335,8 @@
                         "FontSize": 28,
                         "LabelText": "牌友的昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15394,8 +15394,8 @@
                         "FontSize": 28,
                         "LabelText": "ID:123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15454,8 +15454,8 @@
                         "FontSize": 28,
                         "LabelText": "圈成员",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15752,8 +15752,8 @@
                     "FontSize": 28,
                     "LabelText": "添加成功！",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -15870,8 +15870,8 @@
                     "FontSize": 24,
                     "LabelText": "你还可以将玩家昵称（玩家ID）同步到其他亲友圈",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -16028,8 +16028,8 @@
                         "FontSize": 28,
                         "LabelText": "全选",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16357,8 +16357,8 @@
                         "FontSize": 28,
                         "LabelText": "牌友的昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16415,8 +16415,8 @@
                         "FontSize": 28,
                         "LabelText": "钻石（联盟）",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16473,8 +16473,8 @@
                         "FontSize": 28,
                         "LabelText": "ID:123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16531,8 +16531,8 @@
                         "FontSize": 28,
                         "LabelText": "4人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -17202,8 +17202,8 @@
                         "FontSize": 24,
                         "LabelText": "2018-01-01",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -17263,8 +17263,8 @@
                         "FontSize": 20,
                         "LabelText": "00:00:00",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -17324,8 +17324,8 @@
                         "FontSize": 24,
                         "LabelText": "内容\n两行",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -18940,8 +18940,8 @@
                         "FontSize": 32,
                         "LabelText": "抽成比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -19286,8 +19286,8 @@
                     "FontSize": 32,
                     "LabelText": "添加备注",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -19995,8 +19995,8 @@
                         "FontSize": 26,
                         "LabelText": "牌友的昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20053,8 +20053,8 @@
                         "FontSize": 22,
                         "LabelText": "ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20111,8 +20111,8 @@
                         "FontSize": 26,
                         "LabelText": "总共2人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20180,8 +20180,8 @@
                     "FontSize": 24,
                     "LabelText": "可将该成员导出至其他亲友圈",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -20517,8 +20517,8 @@
                         "FontSize": 28,
                         "LabelText": "全部分组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20669,8 +20669,8 @@
                         "FontSize": 28,
                         "LabelText": "本组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20886,8 +20886,8 @@
                         "FontSize": 28,
                         "LabelText": "推荐成员",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -21038,8 +21038,8 @@
                         "FontSize": 28,
                         "LabelText": "全部成员",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -22088,8 +22088,8 @@
                     "FontSize": 32,
                     "LabelText": "增加贡献：",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -22437,8 +22437,8 @@
                     "FontSize": 32,
                     "LabelText": "当前贡献：",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -22524,7 +22524,6 @@
       "UsedResources": [
         "createNewPng/daTC1_20.png",
         "Default/ImageFile.png",
-        "fonts/lanting.TTF",
         "friendCards/common/btn_chebox_fang.png",
         "friendCards/common/btn_finish_n.png",
         "friendCards/common/btn_finish_s.png",

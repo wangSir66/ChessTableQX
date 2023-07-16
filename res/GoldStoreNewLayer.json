@@ -366,8 +366,8 @@
                     "FontSize": 24,
                     "LabelText": "每日签到获得",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -424,8 +424,8 @@
                     "FontSize": 24,
                     "LabelText": "签到获得抽奖机会，抽奖奖励在第四天、第七天领取",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -483,8 +483,8 @@
                     "FontSize": 24,
                     "LabelText": "200",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -632,8 +632,8 @@
                     "FontSize": 36,
                     "LabelText": "礼券",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -774,8 +774,8 @@
                         "FontSize": 36,
                         "LabelText": "金币",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -959,14 +959,14 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "store/touming.png",
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
                       "Plist": ""
                     },
-                    "Scale9OriginX": 29,
-                    "Scale9OriginY": 39,
-                    "Scale9Width": 32,
-                    "Scale9Height": 42,
+                    "Scale9OriginX": 17,
+                    "Scale9OriginY": 7,
+                    "Scale9Width": 12,
+                    "Scale9Height": 32,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -1319,8 +1319,8 @@
                 "FontSize": 30,
                 "LabelText": "10000",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -1421,8 +1421,8 @@
                     "FontSize": 30,
                     "LabelText": "第一天",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2071,8 +2071,8 @@
                     "FontSize": 28,
                     "LabelText": "66666",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -2128,8 +2128,8 @@
                     "FontSize": 28,
                     "LabelText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -2370,8 +2370,8 @@
                         "FontSize": 40,
                         "LabelText": "_______",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -2527,8 +2527,8 @@
                         "FontSize": 40,
                         "LabelText": "88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -2638,8 +2638,8 @@
                         "FontSize": 26,
                         "LabelText": "送90000   ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -2942,8 +2942,8 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "store/touming.png",
+                      "Type": "Default",
+                      "Path": "Default/Sprite.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -2969,18 +2969,18 @@
                       "Y": 0.6749
                     },
                     "PreSize": {
-                      "X": 0.1145,
-                      "Y": 0.2395
+                      "X": 0.0585,
+                      "Y": 0.0918
                     },
-                    "LeftMargin": 359.8377,
-                    "RightMargin": 336.1623,
-                    "TopMargin": 102.885,
-                    "BottomMargin": 278.115,
+                    "LeftMargin": 381.8377,
+                    "RightMargin": 358.1623,
+                    "TopMargin": 139.885,
+                    "BottomMargin": 315.115,
                     "Tag": 112,
                     "ActionTag": -1312830863,
                     "Size": {
-                      "X": 90.0,
-                      "Y": 120.0
+                      "X": 46.0,
+                      "Y": 46.0
                     },
                     "Name": "buy_tool_image",
                     "ctype": "SpriteObjectData"
@@ -2990,8 +2990,8 @@
                     "FontSize": 24,
                     "LabelText": "可查看其他玩家打出的牌",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -3047,8 +3047,8 @@
                     "FontSize": 28,
                     "LabelText": "X66",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -3838,6 +3838,53 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "Default/ImageFile.png",
+        "Default/Sprite.png",
+        "fonts/fzcy.ttf",
+        "game_picture/gold/goldStore/buy_add.png",
+        "game_picture/gold/goldStore/buy_add_five.png",
+        "game_picture/gold/goldStore/buy_bkg.png",
+        "game_picture/gold/goldStore/buy_close.png",
+        "game_picture/gold/goldStore/buy_diban.png",
+        "game_picture/gold/goldStore/buy_iamge_bkg.png",
+        "game_picture/gold/goldStore/buy_minus.png",
+        "game_picture/gold/goldStore/buy_minus_diable.png",
+        "game_picture/gold/goldStore/buy_num_bkg.png",
+        "game_picture/gold/goldStore/store_bangdingyouli.png",
+        "game_picture/gold/goldStore/store_bkg.jpg",
+        "game_picture/gold/goldStore/store_btn_buy.png",
+        "game_picture/gold/goldStore/store_get_gold.png",
+        "game_picture/gold/goldStore/store_get_gold_disable.png",
+        "game_picture/gold/goldStore/store_get_liquan.png",
+        "game_picture/gold/goldStore/store_get_liquan_disable.png",
+        "game_picture/gold/goldStore/store_item_bkg.png",
+        "game_picture/gold/goldStore/store_item_song.png",
+        "game_picture/gold/goldStore/store_jinbi_icon.png",
+        "game_picture/gold/goldStore/store_left_bkg.png",
+        "game_picture/gold/goldStore/store_luck_draw.png",
+        "game_picture/gold/goldStore/store_luck_draw_disable.png",
+        "game_picture/gold/goldStore/store_num_bkg.png",
+        "game_picture/gold/goldStore/store_return.png",
+        "game_picture/gold/goldStore/store_sign_0.png",
+        "game_picture/gold/goldStore/store_sign_1.png",
+        "game_picture/gold/goldStore/store_sign_2.png",
+        "game_picture/gold/goldStore/store_sign_3.png",
+        "game_picture/gold/goldStore/store_sign_4.png",
+        "game_picture/gold/goldStore/store_sign_5.png",
+        "game_picture/gold/goldStore/store_sign_6.png",
+        "game_picture/gold/goldStore/store_sign_7.png",
+        "game_picture/gold/goldStore/store_sign_8.png",
+        "game_picture/gold/goldStore/store_sign_9.png",
+        "game_picture/gold/goldStore/store_sign_bottom.png",
+        "game_picture/gold/goldStore/store_sign_jinbi_bkg.png",
+        "game_picture/gold/goldStore/store_sign_liquan_bkg.png",
+        "game_picture/gold/goldStore/store_title.png",
+        "game_picture/gold/goldStore/store_tool_tile.png",
+        "game_picture/gold/goldStore/store_touming.png",
+        "shareToday/icon_liquan.png",
+        "store/rmb_1.png"
+      ],
       "ctype": "GameFileData"
     }
   },

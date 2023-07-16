@@ -1296,8 +1296,8 @@
                 "FontSize": 22,
                 "LabelText": "第1/4局",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Right",
@@ -1355,8 +1355,8 @@
                 "FontSize": 22,
                 "LabelText": "房间号：230620",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -1516,8 +1516,8 @@
                     "FontSize": 22,
                     "LabelText": "125468",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1602,7 +1602,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Red20/DeskTexture/BtnRuleBtnRule.png",
+                  "Path": "Red20/DeskTexture/BtnRule.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -2573,8 +2573,8 @@
                     "FontSize": 20,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -5628,8 +5628,8 @@
                     "FontSize": 20,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -6895,8 +6895,8 @@
                     "FontSize": 20,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -8959,8 +8959,8 @@
                 "FontSize": 20,
                 "LabelText": "笨笨的机器人正在为您托管出牌",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -9028,6 +9028,76 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "animate/voice/0.png",
+        "chat/happy.png",
+        "Default/Button_Disable.png",
+        "fonts/fzcy.ttf",
+        "game_picture/bac_datingtoushangzhezhao.png",
+        "game_picture/dating1_07.png",
+        "game_picture/dating-1_73.png",
+        "playground/TG_countDown.png",
+        "playground/tuoguan.png",
+        "playground/tuoguan_1.png",
+        "playing/cardPic/baidi_puke.png",
+        "playing/cardPic2/baidi_puke.png",
+        "playing/cardPic2/beimian_puke_min.png",
+        "playing/cardTable/di_gd.png",
+        "playing/cardTable/huase.png",
+        "playing/cardTable/lipai.png",
+        "playing/cardTable/zongxiang.png",
+        "playing/gameTable/btn_chat_normal.png",
+        "playing/gameTable/btn_yuyin_normal.png",
+        "playing/gameTable/fuzhi.png",
+        "playing/gameTable/fuzhi_02.png",
+        "playing/gameTable/GAME_04.png",
+        "playing/gameTable/shuzi/shuzi_0.png",
+        "playing/gameTable/yaoqing_09.png",
+        "playing/gameTable/yaoqing_14.png",
+        "playing/gameTable/yaoqing_18.png",
+        "playing/gameTable/youxizhong-1_04.png",
+        "playing/gameTable/youxizhong-1_04_1.png",
+        "playing/gameTable/youxizhong-1_06.png",
+        "playing/gameTable/youxizhong-1_89.png",
+        "playing/gameTable/zhunbei.png",
+        "playing/gameTable/zhuobian_02.png",
+        "playing/gameTable/zhuobian_06.png",
+        "playing/gameTable/zhuobian_07_2.png",
+        "playing/other/chatbg_ld.png",
+        "playing/other/chatbg_rd.png",
+        "playing/other/Z_offline.png",
+        "playing/paodekuaiTable/baodan_alarm.png",
+        "playing/paodekuaiTable/baodan_new.png",
+        "playing/paodekuaiTable/baodan_shining.png",
+        "playing/paodekuaiTable/head_bottom.png",
+        "playing/paodekuaiTable/no_one.png",
+        "playing/paodekuaiTable/wenhao.png",
+        "playing/paodekuaiTable/yaobuqi.png",
+        "playing/paodekuaiTable_new/beimian_puke.png",
+        "playing/paodekuaiTable_new/buchu.png",
+        "playing/paodekuaiTable_new/chupai.png",
+        "playing/paodekuaiTable_new/chupai_2.png",
+        "playing/paodekuaiTable_new/coinsNum.png",
+        "playing/paodekuaiTable_new/dianliang1.png",
+        "playing/paodekuaiTable_new/dianliang2.png",
+        "playing/paodekuaiTable_new/GPS_n.png",
+        "playing/paodekuaiTable_new/GPS_s.png",
+        "playing/paodekuaiTable_new/huanfu_n.png",
+        "playing/paodekuaiTable_new/huanfu_s.png",
+        "playing/paodekuaiTable_new/naozhong.png",
+        "playing/paodekuaiTable_new/tishi.png",
+        "playing/paodekuaiTable_new/WIFI_3.png",
+        "png/Z_zhunbeizhuangt.png",
+        "Red20/Card/0-1.png",
+        "Red20/Common/RoomInfoBG_RunFaster.png",
+        "Red20/DeskTexture/BtnRule.png",
+        "RunFasterYA/Game/boomlose.png",
+        "RunFasterYA/Game/boomwin.png",
+        "RunFasterYA/Game/GameBG.jpg",
+        "RunFasterYA/Game/GameName.png",
+        "RunFasterYA/Game/losejian.png",
+        "RunFasterYA/Game/winjia.png"
+      ],
       "ctype": "GameFileData"
     }
   },

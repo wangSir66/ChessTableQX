@@ -170,8 +170,8 @@
                 "FontSize": 30,
                 "ButtonText": "",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "TextColor": {
@@ -372,7 +372,6 @@
       },
       "UsedResources": [
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "friendCards/selecttime/touming.png",
         "friendCards/tongji/btn_selectDay.png"
       ],

@@ -50,7 +50,7 @@
                 <CColor A="255" R="211" G="60" B="0" />
                 <PrePosition X="0.5000" Y="0.6567" />
                 <PreSize X="0.7316" Y="0.3393" />
-                <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                <FontResource Type="Default" Path="" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -93,7 +93,7 @@
                     <CColor A="255" R="137" G="87" B="47" />
                     <PrePosition X="1.1053" Y="0.5059" />
                     <PreSize X="5.2895" Y="0.6250" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="82" G="54" B="33" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -134,7 +134,7 @@
                     <CColor A="255" R="137" G="87" B="47" />
                     <PrePosition X="1.1053" Y="0.5059" />
                     <PreSize X="2.3947" Y="0.6250" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="82" G="54" B="33" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

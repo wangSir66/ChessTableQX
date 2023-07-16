@@ -1162,8 +1162,8 @@
                     "FontSize": 22,
                     "LabelText": "500米",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1272,8 +1272,8 @@
                     "FontSize": 22,
                     "LabelText": "500米",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1382,8 +1382,8 @@
                     "FontSize": 22,
                     "LabelText": "500米",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1538,7 +1538,6 @@
         "distance/head_clip.png",
         "distance/icon_gantanhao.png",
         "distance/line.png",
-        "fonts/lanting.TTF",
         "game_picture/dating-1_73.png"
       ],
       "ctype": "GameFileData"

@@ -333,8 +333,8 @@
                 "FontSize": 24,
                 "LabelText": "ID:888888",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -474,8 +474,8 @@
                     "FontSize": 24,
                     "LabelText": "123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -629,8 +629,8 @@
                     "FontSize": 24,
                     "LabelText": "123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -746,8 +746,8 @@
                 "FontSize": 24,
                 "LabelText": "对局数：100",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -804,8 +804,8 @@
                 "FontSize": 24,
                 "LabelText": "胜率：80%",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -862,8 +862,8 @@
                 "FontSize": 24,
                 "LabelText": "最高连胜：11",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -1010,8 +1010,8 @@
                     "FontSize": 20,
                     "LabelText": " 点击图像发送 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2018,8 +2018,8 @@
                         "FontSize": 24,
                         "LabelText": " 胜局榜： ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2077,8 +2077,8 @@
                         "FontSize": 24,
                         "LabelText": "上榜0次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2274,8 +2274,8 @@
                         "FontSize": 30,
                         "LabelText": "x 3",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2335,8 +2335,8 @@
                         "FontSize": 30,
                         "LabelText": "x 3",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2396,8 +2396,8 @@
                         "FontSize": 30,
                         "LabelText": "x 3",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2520,8 +2520,8 @@
                         "FontSize": 24,
                         "LabelText": " 夺金榜： ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2579,8 +2579,8 @@
                         "FontSize": 24,
                         "LabelText": "上榜0次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2776,8 +2776,8 @@
                         "FontSize": 30,
                         "LabelText": "x 3",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2837,8 +2837,8 @@
                         "FontSize": 30,
                         "LabelText": "x 3",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2898,8 +2898,8 @@
                         "FontSize": 30,
                         "LabelText": "x 3",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2991,7 +2991,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/gold/g_icon_liquan.png",
         "game_picture/gold/goldCommon/bac_xiaotanchuan.png",
         "game_picture/gold/goldCommon/btn_x_normal.png",

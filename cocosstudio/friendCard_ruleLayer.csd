@@ -32,13 +32,13 @@
                 <PreSize X="0.9883" Y="0.9569" />
                 <FileData Type="Normal" Path="friendCards/common/img_datanchuang.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btn_close" ActionTag="-1915083773" Tag="787" IconVisible="False" LeftMargin="1136.6505" RightMargin="67.3495" TopMargin="4.0388" BottomMargin="639.9612" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="46" Scale9Height="54" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btn_close" ActionTag="-1915083773" Tag="787" IconVisible="False" LeftMargin="1188.7344" RightMargin="15.2656" TopMargin="22.1003" BottomMargin="621.8997" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="46" Scale9Height="54" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="76.0000" Y="76.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1174.6505" Y="677.9612" />
+                <Position X="1226.7344" Y="659.8997" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9177" Y="0.9416" />
+                <PrePosition X="0.9584" Y="0.9165" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
@@ -62,27 +62,27 @@
               <AbstractNodeData Name="item" ActionTag="-1976829465" Tag="553" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="55.0000" RightMargin="55.0000" TopMargin="270.0000" BottomMargin="315.0000" TouchEnable="True" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Enable="True" LeftEage="274" RightEage="221" TopEage="24" BottomEage="24" Scale9OriginX="-221" Scale9OriginY="-24" Scale9Width="495" Scale9Height="48" ctype="PanelObjectData">
                 <Size X="1170.0000" Y="135.0000" />
                 <Children>
-                  <AbstractNodeData Name="text_ruleName" ActionTag="861865254" Tag="583" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="140.4000" RightMargin="785.6000" TopMargin="14.4425" BottomMargin="88.5575" FontSize="28" LabelText="跑得快2人，非必管" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="244.0000" Y="32.0000" />
+                  <AbstractNodeData Name="text_ruleName" ActionTag="861865254" Tag="583" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="140.4000" RightMargin="791.6000" TopMargin="16.4425" BottomMargin="90.5575" FontSize="28" LabelText="跑得快2人，非必管" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="238.0000" Y="28.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="140.4000" Y="104.5575" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="211" G="60" B="0" />
                     <PrePosition X="0.1200" Y="0.7745" />
-                    <PreSize X="0.2085" Y="0.2370" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <PreSize X="0.2034" Y="0.2074" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="text_wanfaNum" ActionTag="-40156888" Tag="584" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="46.8000" RightMargin="1038.2000" TopMargin="14.4425" BottomMargin="88.5575" FontSize="28" LabelText="玩法1：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="85.0000" Y="32.0000" />
+                  <AbstractNodeData Name="text_wanfaNum" ActionTag="-40156888" Tag="584" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="46.8000" RightMargin="1025.2000" TopMargin="16.4425" BottomMargin="90.5575" FontSize="28" LabelText="玩法1：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="98.0000" Y="28.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="46.8000" Y="104.5575" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="211" G="60" B="0" />
                     <PrePosition X="0.0400" Y="0.7745" />
-                    <PreSize X="0.0726" Y="0.2370" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <PreSize X="0.0838" Y="0.2074" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -94,7 +94,7 @@
                     <CColor A="255" R="173" G="143" B="100" />
                     <PrePosition X="0.0400" Y="0.5944" />
                     <PreSize X="0.6761" Y="0.5037" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -123,10 +123,10 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="btn_black_list" ActionTag="304075799" Tag="419" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="848.4579" RightMargin="178.5421" TopMargin="58.7125" BottomMargin="24.2875" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="113" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="btn_black_list" ActionTag="304075799" Tag="419" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="848.4580" RightMargin="178.5420" TopMargin="58.7125" BottomMargin="24.2875" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="113" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="143.0000" Y="52.0000" />
                     <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
-                    <Position X="991.4579" Y="50.2875" />
+                    <Position X="991.4580" Y="50.2875" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.8474" Y="0.3725" />
@@ -141,15 +141,15 @@
                   <AbstractNodeData Name="cb_isStopRoom" ActionTag="291357174" Tag="340" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="414.1980" RightMargin="719.8020" TopMargin="12.9425" BottomMargin="87.0575" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                     <Size X="36.0000" Y="35.0000" />
                     <Children>
-                      <AbstractNodeData Name="text" ActionTag="-2043040122" Tag="341" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.9998" RightMargin="-134.9998" TopMargin="0.6215" BottomMargin="2.3785" TouchEnable="True" FontSize="28" LabelText="暂停开房   " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="128.0000" Y="32.0000" />
+                      <AbstractNodeData Name="text" ActionTag="-2043040122" Tag="341" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.9998" RightMargin="-160.9998" TopMargin="2.6215" BottomMargin="4.3785" TouchEnable="True" FontSize="28" LabelText="暂停开房   " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="154.0000" Y="28.0000" />
                         <AnchorPoint ScaleY="0.5000" />
                         <Position X="42.9998" Y="18.3785" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="96" G="46" B="26" />
                         <PrePosition X="1.1944" Y="0.5251" />
-                        <PreSize X="3.5556" Y="0.9143" />
-                        <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                        <PreSize X="4.2778" Y="0.8000" />
+                        <FontResource Type="Default" Path="" Plist="" />
                         <OutlineColor A="255" R="82" G="54" B="33" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -169,15 +169,15 @@
                   <AbstractNodeData Name="cb_isAcceptInvite" ActionTag="-1387682418" Tag="3303" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="603.1530" RightMargin="530.8470" TopMargin="12.9425" BottomMargin="87.0575" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                     <Size X="36.0000" Y="35.0000" />
                     <Children>
-                      <AbstractNodeData Name="text" ActionTag="1172393735" Tag="3304" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.9998" RightMargin="-222.9998" TopMargin="0.6215" BottomMargin="2.3785" TouchEnable="True" FontSize="28" LabelText="接受对局邀请       " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="216.0000" Y="32.0000" />
+                      <AbstractNodeData Name="text" ActionTag="1172393735" Tag="3304" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.9998" RightMargin="-272.9998" TopMargin="2.6215" BottomMargin="4.3785" TouchEnable="True" FontSize="28" LabelText="接受对局邀请       " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="266.0000" Y="28.0000" />
                         <AnchorPoint ScaleY="0.5000" />
                         <Position X="42.9998" Y="18.3785" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="96" G="46" B="26" />
                         <PrePosition X="1.1944" Y="0.5251" />
-                        <PreSize X="6.0000" Y="0.9143" />
-                        <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                        <PreSize X="7.3889" Y="0.8000" />
+                        <FontResource Type="Default" Path="" Plist="" />
                         <OutlineColor A="255" R="82" G="54" B="33" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -197,15 +197,15 @@
                   <AbstractNodeData Name="cb_isAddQuickStartList" ActionTag="740663970" Tag="3305" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="841.9500" RightMargin="292.0500" TopMargin="12.9425" BottomMargin="87.0575" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                     <Size X="36.0000" Y="35.0000" />
                     <Children>
-                      <AbstractNodeData Name="text" ActionTag="1039933414" Tag="3306" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.9998" RightMargin="-282.9998" TopMargin="0.6215" BottomMargin="2.3785" TouchEnable="True" FontSize="28" LabelText="添加至快速开始列表    " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="276.0000" Y="32.0000" />
+                      <AbstractNodeData Name="text" ActionTag="1039933414" Tag="3306" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.9998" RightMargin="-314.9998" TopMargin="2.6215" BottomMargin="4.3785" TouchEnable="True" FontSize="28" LabelText="添加至快速开始列表    " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="308.0000" Y="28.0000" />
                         <AnchorPoint ScaleY="0.5000" />
                         <Position X="42.9998" Y="18.3785" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="96" G="46" B="26" />
                         <PrePosition X="1.1944" Y="0.5251" />
-                        <PreSize X="7.6667" Y="0.9143" />
-                        <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                        <PreSize X="8.5556" Y="0.8000" />
+                        <FontResource Type="Default" Path="" Plist="" />
                         <OutlineColor A="255" R="82" G="54" B="33" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -252,15 +252,15 @@
               <AbstractNodeData Name="cb_isAcceptAllInvite" ActionTag="-413422909" Tag="3307" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="836.5040" RightMargin="409.4960" TopMargin="612.0000" BottomMargin="72.0000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                 <Size X="34.0000" Y="36.0000" />
                 <Children>
-                  <AbstractNodeData Name="text" ActionTag="-499641543" Tag="3308" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.9998" RightMargin="-292.9998" TopMargin="1.0964" BottomMargin="2.9036" TouchEnable="True" FontSize="28" LabelText="接受全玩法对局邀请     " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="284.0000" Y="32.0000" />
+                  <AbstractNodeData Name="text" ActionTag="-499641543" Tag="3308" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.9998" RightMargin="-330.9998" TopMargin="3.0964" BottomMargin="4.9036" TouchEnable="True" FontSize="28" LabelText="接受全玩法对局邀请     " OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="322.0000" Y="28.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="42.9998" Y="18.9036" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="96" G="46" B="26" />
                     <PrePosition X="1.2647" Y="0.5251" />
-                    <PreSize X="8.3529" Y="0.8889" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <PreSize X="9.4706" Y="0.7778" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="82" G="54" B="33" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

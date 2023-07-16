@@ -169,8 +169,8 @@
                 "FontSize": 22,
                 "LabelText": "每日邀请：邀请信息及奖励将会在24点更新哦！",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -559,8 +559,8 @@
                         "FontSize": 22,
                         "LabelText": "100金币",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -666,8 +666,8 @@
                         "FontSize": 22,
                         "LabelText": "100金币",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1726,8 +1726,8 @@
                         "FontSize": 20,
                         "LabelText": "10人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1780,8 +1780,8 @@
                         "FontSize": 20,
                         "LabelText": "1000金币",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1885,8 +1885,8 @@
                         "FontSize": 20,
                         "LabelText": "10人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1939,8 +1939,8 @@
                         "FontSize": 20,
                         "LabelText": "1000金币",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2044,8 +2044,8 @@
                         "FontSize": 20,
                         "LabelText": "10人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2098,8 +2098,8 @@
                         "FontSize": 20,
                         "LabelText": "1000金币",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2204,8 +2204,8 @@
                         "FontSize": 20,
                         "LabelText": "10人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2258,8 +2258,8 @@
                         "FontSize": 20,
                         "LabelText": "1000金币",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2363,8 +2363,8 @@
                         "FontSize": 20,
                         "LabelText": "10人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2417,8 +2417,8 @@
                         "FontSize": 20,
                         "LabelText": "1000金币",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2492,8 +2492,8 @@
                 "FontSize": 22,
                 "LabelText": "累计邀请100人",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -2623,7 +2623,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/gold/invite/YQguanbi001.png",
         "game_picture/gold/invite/YQguanbi002.png",
         "game_picture/gold/invite/YQjinbidi.png",

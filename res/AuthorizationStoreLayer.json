@@ -296,8 +296,8 @@
                     "FontSize": 30,
                     "LabelText": "会长授权 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -392,8 +392,8 @@
                         "FontSize": 30,
                         "LabelText": "请选择授权人",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -663,8 +663,8 @@
                         "FontSize": 24,
                         "LabelText": "会长ID（亲友圈名称）",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -765,8 +765,8 @@
                     "FontSize": 36,
                     "LabelText": "已授权会长 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -868,8 +868,8 @@
                     "FontSize": 26,
                     "LabelText": "ID:365241",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -925,8 +925,8 @@
                     "FontSize": 26,
                     "LabelText": "名字不详",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1070,7 +1070,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/bac_datingtoushangzhezhao2.png",
         "usernfo/shangCShouquan/back.png",
         "usernfo/shangCShouquan/btn_quxiao.png",

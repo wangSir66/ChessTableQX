@@ -599,8 +599,8 @@
                                 "FontSize": 20,
                                 "LabelText": "这是我的名字\n",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -654,8 +654,8 @@
                                 "FontSize": 20,
                                 "LabelText": "1000001\n",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -966,8 +966,8 @@
                                 "FontSize": 20,
                                 "LabelText": "这是我的名字\n",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1021,8 +1021,8 @@
                                 "FontSize": 20,
                                 "LabelText": "1000001\n",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1333,8 +1333,8 @@
                                 "FontSize": 20,
                                 "LabelText": "这是我的名字\n",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1388,8 +1388,8 @@
                                 "FontSize": 20,
                                 "LabelText": "1000001\n",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1700,8 +1700,8 @@
                                 "FontSize": 20,
                                 "LabelText": "这是我的名字\n",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1755,8 +1755,8 @@
                                 "FontSize": 20,
                                 "LabelText": "1000001\n",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1968,7 +1968,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/dating1_06.png",
         "wait/bg.png",
         "wait/bgHead.png",

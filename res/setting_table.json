@@ -159,8 +159,8 @@
                 "FontSize": 24,
                 "LabelText": "选择后，也可以在右上角“设置”中切游戏画面 ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -466,7 +466,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "setting/setting_table/2D_n.png",
         "setting/setting_table/2D_s.png",
         "setting/setting_table/3D_n.png",

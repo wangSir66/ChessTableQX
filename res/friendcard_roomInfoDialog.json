@@ -208,8 +208,8 @@
                     "FontSize": 36,
                     "LabelText": "玩法名称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -372,8 +372,8 @@
                     "FontSize": 24,
                     "LabelText": "昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -433,8 +433,8 @@
                     "FontSize": 24,
                     "LabelText": "积分",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -494,8 +494,8 @@
                     "FontSize": 24,
                     "LabelText": "会长",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -555,8 +555,8 @@
                     "FontSize": 24,
                     "LabelText": "分组",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -616,8 +616,8 @@
                     "FontSize": 24,
                     "LabelText": "在线",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -677,8 +677,8 @@
                     "FontSize": 24,
                     "LabelText": "状态",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -888,8 +888,8 @@
                     "FontSize": 24,
                     "LabelText": "牌友的昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -949,8 +949,8 @@
                     "FontSize": 24,
                     "LabelText": "操作人身份",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1010,8 +1010,8 @@
                     "FontSize": 24,
                     "LabelText": "牌友的id",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1071,8 +1071,8 @@
                     "FontSize": 24,
                     "LabelText": "分组",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1172,8 +1172,8 @@
                         "FontSize": 20,
                         "LabelText": "在线",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1239,8 +1239,8 @@
                     "FontSize": 20,
                     "LabelText": "00:00:05",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1339,8 +1339,8 @@
                         "FontSize": 20,
                         "LabelText": "离线",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1406,8 +1406,8 @@
                     "FontSize": 24,
                     "LabelText": "等待操作",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2022,8 +2022,8 @@
                 "FontSize": 30,
                 "LabelText": "该房间已开始对局，确认解散？",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -2085,8 +2085,8 @@
                 "FontSize": 24,
                 "LabelText": "点击解散将会立即解散，请慎重!!   ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -2361,6 +2361,28 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/headMask.png",
+        "friendCards/common/img_dikuang.png",
+        "friendCards/common/img_shuxian.png",
+        "friendCards/common/img_title.png",
+        "friendCards/common/img_title_bg.png",
+        "friendCards/common/img_zhongtanchuang.png",
+        "friendCards/roomInfo/btn_bul_n.png",
+        "friendCards/roomInfo/btn_bul_s.png",
+        "friendCards/roomInfo/btn_fenxiang_n.png",
+        "friendCards/roomInfo/btn_fenxiang_s.png",
+        "friendCards/roomInfo/btn_jiesan_n.png",
+        "friendCards/roomInfo/btn_jiesan_s.png",
+        "friendCards/roomInfo/btn_jiesan1_n.png",
+        "friendCards/roomInfo/btn_jiesan1_s.png",
+        "friendCards/roomInfo/btn_join_n.png",
+        "friendCards/roomInfo/btn_join_s.png",
+        "friendCards/roomInfo/img_1.png",
+        "friendCards/roomInfo/img_online.png",
+        "friendCards/roomInfo/img_outline.png"
+      ],
       "ctype": "GameFileData"
     }
   },

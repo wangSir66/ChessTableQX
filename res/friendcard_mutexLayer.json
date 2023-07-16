@@ -594,8 +594,8 @@
                 "FontSize": 24,
                 "LabelText": "  互斥的俩个玩家，将不能在同一张桌子，请慎重操作   ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -652,8 +652,8 @@
                 "FontSize": 24,
                 "LabelText": "暂无互斥玩家。。",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -938,8 +938,8 @@
                         "FontSize": 22,
                         "LabelText": "玩家昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -998,8 +998,8 @@
                         "FontSize": 22,
                         "LabelText": "ID: 1000220",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -1105,8 +1105,8 @@
                         "FontSize": 22,
                         "LabelText": "玩家昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -1164,8 +1164,8 @@
                         "FontSize": 22,
                         "LabelText": "ID: 1000220",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -1233,8 +1233,8 @@
                     "FontSize": 24,
                     "LabelText": "阿斯顿撒多阿斯顿撒多阿斯顿撒多多少",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1293,8 +1293,8 @@
                     "FontSize": 26,
                     "LabelText": "2018-07-07\n08-00-00",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1494,7 +1494,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/headMask.png",
         "friendCards/common/img_datanchuang.png",

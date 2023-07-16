@@ -3197,8 +3197,8 @@
                     "FontSize": 23,
                     "LabelText": "文明娱乐，严禁赌博，七星游戏没有任何外挂，请大家放心游戏。不要轻信下载恶意软件，防止上当受骗泄露个人身份信息。",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -4043,7 +4043,6 @@
         "Default/Button_Normal.png",
         "Default/Button_Press.png",
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "game_picture/dating-1_81.png",
         "game_picture/dt_06.png",
         "game_picture/fenxiang_tip.png",

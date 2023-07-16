@@ -17,6 +17,7 @@ function screenChange(isW) {
     cc.view.setDesignResolutionSize(w, h, cc.ResolutionPolicy.NO_BORDER);
     postEvent("resize");
 }
+var gameStartTime = 0;
 cc.game.onStart = function () {
     if (!cc.sys.isNative && document.getElementById("cocosLoading")) //If referenced loading.js, please remove it
         document.body.removeChild(document.getElementById("cocosLoading"));
@@ -93,6 +94,9 @@ cc.game.onStart = function () {
 
 
     }, this);
+
+    gameStartTime = new Date().getTime();
+
 };
 cc.game.run();
 

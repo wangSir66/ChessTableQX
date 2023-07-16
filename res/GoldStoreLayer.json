@@ -361,8 +361,8 @@
                     "FontSize": 28,
                     "LabelText": "999999",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -563,8 +563,8 @@
                         "FontSize": 32,
                         "LabelText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -727,8 +727,8 @@
                     "FontSize": 28,
                     "LabelText": "999999",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -929,8 +929,8 @@
                         "FontSize": 32,
                         "LabelText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1093,8 +1093,8 @@
                     "FontSize": 28,
                     "LabelText": "999999",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1295,8 +1295,8 @@
                         "FontSize": 32,
                         "LabelText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1388,7 +1388,6 @@
       "UsedResources": [
         "Default/ImageFile.png",
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "game_picture/gold/goldCommon/bg_xiaotanchuang.png",
         "game_picture/gold/goldCommon/btn_x_normal.png",
         "game_picture/gold/goldCommon/diban.png",

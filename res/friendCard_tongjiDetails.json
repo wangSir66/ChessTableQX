@@ -271,8 +271,8 @@
                     "FontSize": 28,
                     "LabelText": "2019-05-15",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -330,8 +330,8 @@
                     "FontSize": 24,
                     "LabelText": "实扣",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -388,8 +388,8 @@
                     "FontSize": 24,
                     "LabelText": "当天补收",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -494,8 +494,8 @@
                         "FontSize": 18,
                         "LabelText": "比例的销售房卡数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -552,8 +552,8 @@
                         "FontSize": 18,
                         "LabelText": "比例的销售房卡数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -611,8 +611,8 @@
                         "FontSize": 18,
                         "LabelText": "比例的销售房卡数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -670,8 +670,8 @@
                         "FontSize": 18,
                         "LabelText": "比例的销售房卡数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -728,8 +728,8 @@
                         "FontSize": 18,
                         "LabelText": "比例的销售房卡数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -787,8 +787,8 @@
                         "FontSize": 18,
                         "LabelText": "比例的销售房卡数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -855,8 +855,8 @@
                     "FontSize": 28,
                     "LabelText": "2019-05-15",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -914,8 +914,8 @@
                     "FontSize": 24,
                     "LabelText": "实扣详情",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -972,8 +972,8 @@
                     "FontSize": 28,
                     "LabelText": "2019-05-15",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1300,8 +1300,8 @@
                     "FontSize": 28,
                     "LabelText": "贡献详情",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1360,8 +1360,8 @@
                     "FontSize": 24,
                     "LabelText": "2019-05-15",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1419,8 +1419,8 @@
                     "FontSize": 20,
                     "LabelText": "实扣",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1477,8 +1477,8 @@
                     "FontSize": 20,
                     "LabelText": "当天补收",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1535,8 +1535,8 @@
                     "FontSize": 20,
                     "LabelText": "我的贡献",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1593,8 +1593,8 @@
                     "FontSize": 20,
                     "LabelText": "总体贡献",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1698,8 +1698,8 @@
                         "FontSize": 20,
                         "LabelText": "场次返利比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1758,8 +1758,8 @@
                         "FontSize": 20,
                         "LabelText": "钻石消耗",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1819,8 +1819,8 @@
                         "FontSize": 20,
                         "LabelText": "亲友圈分成比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1879,8 +1879,8 @@
                         "FontSize": 20,
                         "LabelText": "贡献",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1939,8 +1939,8 @@
                         "FontSize": 20,
                         "LabelText": "备注",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2112,8 +2112,8 @@
                         "FontSize": 20,
                         "LabelText": "场次返利比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2172,8 +2172,8 @@
                         "FontSize": 20,
                         "LabelText": "钻石消耗",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2233,8 +2233,8 @@
                         "FontSize": 20,
                         "LabelText": "亲友圈分成比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2293,8 +2293,8 @@
                         "FontSize": 20,
                         "LabelText": "贡献",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2353,8 +2353,8 @@
                         "FontSize": 20,
                         "LabelText": "备注",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2644,8 +2644,8 @@
                     "FontSize": 18,
                     "LabelText": "说明:\n\t我的贡献:代理当日所有亲友圈或联盟的贡献\n\t分组总贡献:当前分组的该日总贡献，若有代理角色变更，则包含变更前后代理角色的数据\n\t明细为我的贡献明细，包含不同返利和分成比例的数据",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2804,8 +2804,8 @@
                     "FontSize": 18,
                     "LabelText": "说明：\n       我的贡献为该代理当日所有亲友圈或联盟的贡献；\n       总体贡献为该亲友圈或分组该日总体的贡献，若有代理角色变更则包含变更前后代理角色的数据；\n        明细为我的贡献明细，包含不同的返利比例和分成比例的数据。",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2966,8 +2966,8 @@
                     "FontSize": 18,
                     "LabelText": "说明:\n\t我的贡献:代理当日所有亲友圈或联盟的贡献\n\t亲友圈总贡献:当前亲友圈的该日总贡献，若有代理角色变更，则包含变更前后代理角色的数据\n\t明细为我的贡献明细，包含不同返利和分成比例的数据",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -3046,6 +3046,15 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_tongyong.png",
+        "friendCards/common/img_zhongtanchuang.png",
+        "friendCards/tongji/btn_statement_n.png",
+        "friendCards/tongji/checkMember/img_liushui_bg.png",
+        "friendCards/tongji/img_kuang.png",
+        "friendCards/tongji/img_title_xiangqing.png"
+      ],
       "ctype": "GameFileData"
     }
   },

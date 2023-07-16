@@ -206,8 +206,8 @@
                 "FontSize": 30,
                 "LabelText": "您的金币不足，推荐您进入",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -265,8 +265,8 @@
                 "FontSize": 30,
                 "LabelText": "您的金币太多拉，推荐您进入",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -325,8 +325,8 @@
                 "FontSize": 30,
                 "LabelText": "高手场",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -539,7 +539,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/gold/goldCommon/bg_xiaotanchuang.png",
         "game_picture/gold/goldCommon/btn_enter_n.png",
         "game_picture/gold/goldCommon/btn_enter_s.png",

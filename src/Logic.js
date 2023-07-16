@@ -9312,11 +9312,13 @@ MjClient.getSystemConfig = function (successCallback, failCallback) {
                 cc.log("wxd============================shareImageConfig:" + JSON.stringify(MjClient.systemConfig.shareImageConfig));
                 for (var area in shareImages) {
                     var shareImageUrl = shareImages[area].url;
-                    var nameArr = shareImageUrl.split("/");
-                    var nameStr = nameArr[nameArr.length - 1];
-                    var filePath = jsb.fileUtils.getWritablePath() + nameStr;
-                    if (!jsb.fileUtils.isFileExist(filePath)) {
-                        MjClient.urlImageDown(shareImageUrl, nameStr);
+                    if (shareImageUrl) {
+                        var nameArr = shareImageUrl.split("/");
+                        var nameStr = nameArr[nameArr.length - 1];
+                        var filePath = jsb.fileUtils.getWritablePath() + nameStr;
+                        if (!jsb.fileUtils.isFileExist(filePath)) {
+                            MjClient.urlImageDown(shareImageUrl, nameStr);
+                        }
                     }
                 }
 
@@ -9324,11 +9326,13 @@ MjClient.getSystemConfig = function (successCallback, failCallback) {
                 cc.log("wxd============================shareImageMallConfig:" + JSON.stringify(MjClient.systemConfig.shareImageMallConfig));
                 for (var area in shareImagesMall) {
                     var shareImageUrl = shareImagesMall[area].url;
-                    var nameArr = shareImageUrl.split("/");
-                    var nameStr = nameArr[nameArr.length - 1];
-                    var filePath = jsb.fileUtils.getWritablePath() + nameStr;
-                    if (!jsb.fileUtils.isFileExist(filePath)) {
-                        MjClient.urlImageDown(shareImageUrl, nameStr);
+                    if (shareImageUrl) {
+                        var nameArr = shareImageUrl.split("/");
+                        var nameStr = nameArr[nameArr.length - 1];
+                        var filePath = jsb.fileUtils.getWritablePath() + nameStr;
+                        if (!jsb.fileUtils.isFileExist(filePath)) {
+                            MjClient.urlImageDown(shareImageUrl, nameStr);
+                        }
                     }
                 }
 

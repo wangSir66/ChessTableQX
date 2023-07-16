@@ -1218,8 +1218,8 @@
                             "FontSize": 26,
                             "LabelText": "定时打烊   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -1279,8 +1279,8 @@
                             "FontSize": 26,
                             "LabelText": "开始   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -1381,8 +1381,8 @@
                                 "FontSize": 24,
                                 "LabelText": "",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1450,8 +1450,8 @@
                             "FontSize": 26,
                             "LabelText": "结束   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -1552,8 +1552,8 @@
                                 "FontSize": 24,
                                 "LabelText": "",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1688,8 +1688,8 @@
                             "FontSize": 26,
                             "LabelText": "允许圈外人进房   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -1816,8 +1816,8 @@
                             "FontSize": 26,
                             "LabelText": "开启准备       ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -1944,8 +1944,8 @@
                             "FontSize": 26,
                             "LabelText": "玩家加入亲友圈需审核       ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2071,8 +2071,8 @@
                             "FontSize": 26,
                             "LabelText": "不接受进圈申请    ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2198,8 +2198,8 @@
                             "FontSize": 26,
                             "LabelText": "管理可清除分数    ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2326,8 +2326,8 @@
                             "FontSize": 26,
                             "LabelText": "开启邀请    ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2454,8 +2454,8 @@
                             "FontSize": 26,
                             "LabelText": "禁用语音     ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2582,8 +2582,8 @@
                             "FontSize": 26,
                             "LabelText": "禁用聊天   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2710,8 +2710,8 @@
                             "FontSize": 26,
                             "LabelText": "1个界面1个玩法 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2838,8 +2838,8 @@
                             "FontSize": 26,
                             "LabelText": "1个界面多个玩法 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2966,8 +2966,8 @@
                             "FontSize": 26,
                             "LabelText": "开打的桌子在前   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3094,8 +3094,8 @@
                             "FontSize": 26,
                             "LabelText": "开打的桌子在后   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3222,8 +3222,8 @@
                             "FontSize": 26,
                             "LabelText": "开打的桌子在中   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3350,8 +3350,8 @@
                             "FontSize": 26,
                             "LabelText": "允许组长、助理查看清除分数记录   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3477,8 +3477,8 @@
                             "FontSize": 26,
                             "LabelText": "3天   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3605,8 +3605,8 @@
                             "FontSize": 26,
                             "LabelText": "7天   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3732,8 +3732,8 @@
                             "FontSize": 26,
                             "LabelText": "今天     ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3860,8 +3860,8 @@
                             "FontSize": 26,
                             "LabelText": "允许玩家查看统计   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3988,8 +3988,8 @@
                             "FontSize": 26,
                             "LabelText": "允许玩家查看清除分数   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -4058,8 +4058,8 @@
                         "FontSize": 26,
                         "LabelText": "踢出占位置的离线玩家  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -4169,8 +4169,8 @@
                                 "FontSize": 26,
                                 "LabelText": "5分钟  ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -4296,8 +4296,8 @@
                                 "FontSize": 26,
                                 "LabelText": "2分钟  ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -4423,8 +4423,8 @@
                                 "FontSize": 26,
                                 "LabelText": "1分钟  ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -4560,8 +4560,8 @@
                             "FontSize": 26,
                             "LabelText": "不满人不开新桌 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -4614,8 +4614,8 @@
                                 "FontSize": 18,
                                 "LabelText": "（注：选中后，同玩法最多允许存在一个未开始的桌子） ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -4692,8 +4692,8 @@
                         "FontSize": 26,
                         "LabelText": "隐藏已开打桌子",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -4803,8 +4803,8 @@
                                 "FontSize": 26,
                                 "LabelText": "不隐藏    ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -4930,8 +4930,8 @@
                                 "FontSize": 26,
                                 "LabelText": "隐藏1/2   ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -5057,8 +5057,8 @@
                                 "FontSize": 26,
                                 "LabelText": "隐藏1/3   ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -5184,8 +5184,8 @@
                                 "FontSize": 26,
                                 "LabelText": "隐藏全部  ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -5321,8 +5321,8 @@
                             "FontSize": 26,
                             "LabelText": "不展示亲友圈桌子 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -5375,8 +5375,8 @@
                                 "FontSize": 18,
                                 "LabelText": "（注：选中后桌子不可见，只能通过                        进入房间） ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -5435,8 +5435,8 @@
                                 "FontSize": 18,
                                 "LabelText": "【快速加入】 ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -5572,8 +5572,8 @@
                             "FontSize": 26,
                             "LabelText": "禁用攻击表情  ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -5626,8 +5626,8 @@
                                 "FontSize": 18,
                                 "LabelText": "（注：选中后，游戏内不再可以使用扔鸡蛋、番茄、炸弹这三种表情） ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -5762,8 +5762,8 @@
                             "FontSize": 26,
                             "LabelText": "隐藏人数  ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -5816,8 +5816,8 @@
                                 "FontSize": 18,
                                 "LabelText": "（注：选中后，普通成员无法看到亲友圈在线人数和总人数） ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -5952,8 +5952,8 @@
                             "FontSize": 26,
                             "LabelText": "限制解散次数  ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -6006,8 +6006,8 @@
                                 "FontSize": 18,
                                 "LabelText": "（注：选中后，单人单场最多发起3次解散房间的申请） ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -6084,8 +6084,8 @@
                         "FontSize": 35,
                         "LabelText": "防作弊 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -6138,8 +6138,8 @@
                             "FontSize": 18,
                             "LabelText": "（2人场不受影响） ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -6255,8 +6255,8 @@
                                 "FontSize": 26,
                                 "LabelText": "无 ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -6382,8 +6382,8 @@
                                 "FontSize": 26,
                                 "LabelText": "进房须开启定位   ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -6509,8 +6509,8 @@
                                 "FontSize": 26,
                                 "LabelText": "同IP禁入   ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -6636,8 +6636,8 @@
                                 "FontSize": 26,
                                 "LabelText": "距离过近禁入   ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -6763,8 +6763,8 @@
                                 "FontSize": 26,
                                 "LabelText": "同组禁入   ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -6842,8 +6842,8 @@
                         "FontSize": 28,
                         "LabelText": "解散方式  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -6994,8 +6994,8 @@
                             "FontSize": 20,
                             "LabelText": "默认玩法解散机制  ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7285,8 +7285,8 @@
                                     "FontSize": 20,
                                     "LabelText": "默认玩法解散机制  ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -7496,8 +7496,8 @@
                                     "FontSize": 20,
                                     "LabelText": "所有人同意  ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -7703,8 +7703,8 @@
                                     "FontSize": 20,
                                     "LabelText": "超过一半人同意  ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -7859,8 +7859,8 @@
                         "FontSize": 28,
                         "LabelText": "解散时间  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -8011,8 +8011,8 @@
                             "FontSize": 20,
                             "LabelText": "默认，离线5分钟默认同意  ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -8300,8 +8300,8 @@
                                     "FontSize": 20,
                                     "LabelText": "默认，离线5分钟默认同意  ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -8460,8 +8460,8 @@
                                     "FontSize": 20,
                                     "LabelText": "1分钟，离线1分钟默认同意  ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -8620,8 +8620,8 @@
                                     "FontSize": 20,
                                     "LabelText": "3分钟，离线3分钟默认同意   ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -8780,8 +8780,8 @@
                                     "FontSize": 20,
                                     "LabelText": "5分钟，离线5分钟默认同意   ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -8940,8 +8940,8 @@
                                     "FontSize": 20,
                                     "LabelText": "10分钟，离线10分钟默认同意   ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -9098,8 +9098,8 @@
                                     "FontSize": 20,
                                     "LabelText": "15分钟，离线15分钟默认同意   ",
                                     "FontResource": {
-                                      "Type": "Normal",
-                                      "Path": "fonts/lanting.TTF",
+                                      "Type": "Default",
+                                      "Path": "",
                                       "Plist": ""
                                     },
                                     "OutlineColor": {
@@ -9311,8 +9311,8 @@
                             "FontSize": 26,
                             "LabelText": "开启再来一局     ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -9475,8 +9475,8 @@
                                 "FontSize": 24,
                                 "LabelText": "在大结算时，点击【再来一局】，\n可以同样的玩法再玩一场。   ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineSize": 2,
@@ -9730,7 +9730,6 @@
         "createNewPng/tip.png",
         "Default/Button_Disable.png",
         "Default/ImageFile.png",
-        "fonts/lanting.TTF",
         "friendCards/common/btn_chebox_fang.png",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/img_datanchuang.png",

@@ -43,13 +43,13 @@
                 <FileData Type="Normal" Path="joinGame/xiaotanchuan_33.png" Plist="" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
-              <AbstractNodeData Name="info" ActionTag="2068191731" Tag="42" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="91.5000" RightMargin="91.5000" TopMargin="175.5263" BottomMargin="259.4737" FontSize="44" LabelText="玩家[abcdhdfafdsij]申请解散房间&#xA;玩家[abcdhdfafdsij]申请解散房间&#xA;玩家[abcdhdfafdsij]申请解散房间" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="info" ActionTag="2068191731" Tag="42" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="89.9507" RightMargin="93.0493" TopMargin="175.5263" BottomMargin="259.4737" FontSize="44" LabelText="玩家[abcdhdfafdsij]申请解散房间&#xA;玩家[abcdhdfafdsij]申请解散房间&#xA;玩家[abcdhdfafdsij]申请解散房间" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="682.0000" Y="132.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="432.5000" Y="325.4737" />
+                <Position X="430.9507" Y="325.4737" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="123" G="78" B="63" />
-                <PrePosition X="0.5000" Y="0.5740" />
+                <PrePosition X="0.4982" Y="0.5740" />
                 <PreSize X="0.7884" Y="0.2328" />
                 <FontResource Type="Default" Path="" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />

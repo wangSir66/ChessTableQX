@@ -171,8 +171,8 @@
                 "FontSize": 30,
                 "LabelText": "暂时还没有邀请成功的人哦，赶快去邀请好友来玩游戏吧",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -396,7 +396,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/gold/invite/YQguanbi001.png",
         "game_picture/gold/invite/YQguanbi002.png",
         "game_picture/gold/invite/YQyaoqing001.png",

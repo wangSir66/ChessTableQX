@@ -54,7 +54,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4349" Y="1.8738" />
                 <PreSize X="0.7150" Y="0.1767" />
-                <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                <FontResource Type="Default" Path="" Plist="" />
                 <TextColor A="255" R="121" G="53" B="0" />
                 <NormalFileData Type="Normal" Path="friendCards/tongji/btn_selectDay.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />

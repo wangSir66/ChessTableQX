@@ -260,8 +260,8 @@
                     "FontSize": 28,
                     "LabelText": "编号",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -320,8 +320,8 @@
                     "FontSize": 28,
                     "LabelText": "助理",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -381,8 +381,8 @@
                     "FontSize": 28,
                     "LabelText": "人数",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -555,8 +555,8 @@
                     "FontSize": 24,
                     "LabelText": "编号",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -615,8 +615,8 @@
                     "FontSize": 24,
                     "LabelText": "昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -676,8 +676,8 @@
                     "FontSize": 24,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -737,8 +737,8 @@
                     "FontSize": 24,
                     "LabelText": "人数",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -960,6 +960,14 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
+      "UsedResources": [
+        "Default/Button_Disable.png",
+        "friendCards/common/btn_sure_green_n.png",
+        "friendCards/common/btn_sure_green_s.png",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/selectGroup/title_select_zhuli.png"
+      ],
       "ctype": "GameFileData"
     }
   },

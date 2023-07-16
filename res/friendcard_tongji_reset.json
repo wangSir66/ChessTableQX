@@ -263,8 +263,8 @@
                     "FontSize": 24,
                     "LabelText": "未清除分数",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -323,8 +323,8 @@
                     "FontSize": 24,
                     "LabelText": "0",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -385,8 +385,8 @@
                     "FontSize": 24,
                     "LabelText": "最后清除时间",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -445,8 +445,8 @@
                     "FontSize": 24,
                     "LabelText": "0\n0",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -678,8 +678,8 @@
                     "FontSize": 24,
                     "LabelText": "未清除大赢家次数",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -738,8 +738,8 @@
                     "FontSize": 24,
                     "LabelText": "0",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -800,8 +800,8 @@
                     "FontSize": 24,
                     "LabelText": "最后清除时间",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -860,8 +860,8 @@
                     "FontSize": 24,
                     "LabelText": "0\n0",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1042,8 +1042,8 @@
                 "FontSize": 26,
                 "LabelText": "当日所有玩法的分数和大赢家次数",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -1208,8 +1208,8 @@
                     "FontSize": 20,
                     "LabelText": "2019-01-01",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1421,6 +1421,16 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_hengxian.png",
+        "friendCards/common/img_title.png",
+        "friendCards/common/img_zhongtanchuang.png",
+        "friendCards/tongji/btn_clear_n.png",
+        "friendCards/tongji/btn_leftDay.png",
+        "friendCards/tongji/btn_rightDay.png",
+        "friendCards/tongji/inputbg.png"
+      ],
       "ctype": "GameFileData"
     }
   },

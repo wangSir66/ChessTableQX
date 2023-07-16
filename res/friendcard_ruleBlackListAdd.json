@@ -434,8 +434,8 @@
                     "FontSize": 30,
                     "LabelText": "玩家  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -607,8 +607,8 @@
                     "FontSize": 26,
                     "LabelText": "玩家昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -665,8 +665,8 @@
                     "FontSize": 26,
                     "LabelText": "1000220",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -723,8 +723,8 @@
                     "FontSize": 26,
                     "LabelText": "会长：会长昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -781,8 +781,8 @@
                     "FontSize": 26,
                     "LabelText": "分组：X组（助理编号）",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1225,8 +1225,8 @@
                     "FontSize": 28,
                     "LabelText": "牌友的昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1283,8 +1283,8 @@
                     "FontSize": 28,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1341,8 +1341,8 @@
                     "FontSize": 28,
                     "LabelText": "4人",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1621,6 +1621,27 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_chebox_fang.png",
+        "friendCards/common/btn_ok_n.png",
+        "friendCards/common/btn_ok_s.png",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/headMask.png",
+        "friendCards/common/img_dikuang.png",
+        "friendCards/common/img_gou.png",
+        "friendCards/common/img_hengxian.png",
+        "friendCards/mian_rule/blackList/btn_add_club_n.png",
+        "friendCards/mian_rule/blackList/btn_add_club_s.png",
+        "friendCards/mian_rule/blackList/btn_add_group_n.png",
+        "friendCards/mian_rule/blackList/btn_add_group_s.png",
+        "friendCards/mian_rule/blackList/btn_add_player_n.png",
+        "friendCards/mian_rule/blackList/btn_add_player_s.png",
+        "friendCards/mian_rule/blackList/image_bg.png",
+        "friendCards/mutexLayer/img_inquire_n.png",
+        "friendCards/tongji/tj_input.png",
+        "friendCards/warnScore/btn_back.png",
+        "friendCards/warnScore/btn_search.png"
+      ],
       "ctype": "GameFileData"
     }
   },

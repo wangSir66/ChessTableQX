@@ -296,8 +296,8 @@
                     "FontSize": 30,
                     "LabelText": "60",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -367,8 +367,8 @@
                 "FontSize": 20,
                 "LabelText": "xxxxxx",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Right",
@@ -427,8 +427,8 @@
                 "FontSize": 22,
                 "LabelText": "申请现在开局，当前人数为",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -484,8 +484,8 @@
                 "FontSize": 22,
                 "LabelText": "3",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -541,8 +541,8 @@
                 "FontSize": 20,
                 "LabelText": "人。60秒未表态将默认拒绝。",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -683,8 +683,8 @@
                     "FontSize": 20,
                     "LabelText": "昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -910,7 +910,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/bac_xiaotanchuan.png",
         "game_picture/dating1_06.png",
         "game_picture/diban.png",

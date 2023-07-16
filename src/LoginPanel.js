@@ -517,7 +517,11 @@
                 _fixBtn.addTouchEventListener(function (sender, Type) {
                     switch (Type) {
                         case ccui.Widget.TOUCH_ENDED:
-                            removeUpdataDirectory();
+                            let tm = new Date().getTime() - 120 * 1000;
+                            if (tm > gameStartTime) {
+                                _fixBtn.setTouchEnabled(false);
+                                removeUpdataDirectory();
+                            }
                             break;
                         default:
                             break;

@@ -252,8 +252,8 @@
                 "FontSize": 30,
                 "LabelText": "1000个",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -400,8 +400,8 @@
                 "FontSize": 30,
                 "LabelText": "1000个",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -823,8 +823,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -881,8 +881,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -1121,8 +1121,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -1315,8 +1315,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -1373,8 +1373,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -1613,8 +1613,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -1807,8 +1807,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -1865,8 +1865,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -2105,8 +2105,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -2299,8 +2299,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -2357,8 +2357,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -2597,8 +2597,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -2791,8 +2791,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -2849,8 +2849,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -3089,8 +3089,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -3283,8 +3283,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -3341,8 +3341,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -3581,8 +3581,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -3775,8 +3775,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -3833,8 +3833,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -4073,8 +4073,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -4267,8 +4267,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -4325,8 +4325,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -4565,8 +4565,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -4794,8 +4794,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -4852,8 +4852,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -5092,8 +5092,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -5286,8 +5286,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -5344,8 +5344,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -5584,8 +5584,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -5778,8 +5778,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -5836,8 +5836,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -6076,8 +6076,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -6270,8 +6270,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -6328,8 +6328,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -6568,8 +6568,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -6762,8 +6762,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -6820,8 +6820,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -7060,8 +7060,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -7254,8 +7254,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -7312,8 +7312,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -7552,8 +7552,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -7746,8 +7746,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -7804,8 +7804,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -8044,8 +8044,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -8238,8 +8238,8 @@
                         "FontSize": 28,
                         "LabelText": "3000个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -8296,8 +8296,8 @@
                         "FontSize": 28,
                         "LabelText": "折后888.88元",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -8536,8 +8536,8 @@
                         "FontSize": 28,
                         "LabelText": "送1322个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -8763,8 +8763,8 @@
                 "FontSize": 26,
                 "LabelText": "注: 折扣价不再返利，上级返利正常",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -8902,7 +8902,6 @@
       },
       "UsedResources": [
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "store/btn_bangdingyouli.png",
         "store/btn_jinbi_n.png",
         "store/btn_jinbi_s.png",

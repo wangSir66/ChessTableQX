@@ -127,8 +127,8 @@
                 "FontSize": 23,
                 "LabelText": "邀请人昵称",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -184,8 +184,8 @@
                 "FontSize": 23,
                 "LabelText": "（1000220）",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -285,8 +285,8 @@
                 "FontSize": 23,
                 "LabelText": "邀请你加入亲友圈",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -342,8 +342,8 @@
                 "FontSize": 23,
                 "LabelText": "(1000220)",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -662,8 +662,8 @@
                 "FontSize": 23,
                 "LabelText": "雀神争霸",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -735,7 +735,6 @@
       },
       "UsedResources": [
         "Default/Button_Disable.png",
-        "fonts/lanting.TTF",
         "friendCards/popMsgyaoqing/btn_close.png",
         "friendCards/popMsgyaoqing/btn_jujue_n.png",
         "friendCards/popMsgyaoqing/btn_jujue_s.png",

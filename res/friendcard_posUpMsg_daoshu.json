@@ -117,8 +117,8 @@
                 "FontSize": 28,
                 "LabelText": "请添加联系以下微信号,进行充值。\n请添加联系以下微信号,进行充值。\n请添加联系以下微信号,进行充值。",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -179,8 +179,8 @@
                 "FontSize": 26,
                 "LabelText": "红色字",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -567,7 +567,6 @@
       },
       "UsedResources": [
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "friendCards/common/btn_no_n.png",
         "friendCards/common/btn_no_s.png",
         "friendCards/common/btn_ok_n.png",

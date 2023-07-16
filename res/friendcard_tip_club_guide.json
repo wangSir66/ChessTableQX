@@ -229,8 +229,8 @@
                 "FontSize": 30,
                 "LabelText": "    亲友圈的优势？    ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -289,8 +289,8 @@
                 "FontSize": 26,
                 "LabelText": "1、好友之间快速组局，自动开房，一键邀请，无须等待。\n2、玩法多样，20种玩法满足你的个性需求。\n3、升级钻石亲友圈，管理更轻松，玩牌更安心！\n4、联盟模式，小组功能，强强联手，扩大你的朋友圈！\n5、完善、稳定、安全的系统给你极致、流畅体验。\n6、1对1客服指导，带你玩转亲友圈。",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -348,8 +348,8 @@
                 "FontSize": 30,
                 "LabelText": "    怎么加入亲友圈？    ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -408,8 +408,8 @@
                 "FontSize": 26,
                 "LabelText": "1、联系代理加入现有的亲友圈。\n2、成为代理创建元宝、钻石亲友圈，并邀请好友加入。",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -481,7 +481,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/img_tongyong.png"
       ],

@@ -6595,8 +6595,8 @@
                         "FontSize": 26,
                         "LabelText": "本游戏软件响应《关于防止未成年人沉迷网络游戏的通知》 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6656,8 +6656,8 @@
                         "FontSize": 20,
                         "LabelText": "亲爱的用户：\n    国家新闻出版署发布《关于防止未成年沉迷网络游戏的通知》，本公司始终高度重视未\n成年用户的网络保护工作，并不断努力为未成年用户创造良好的网络游戏环境。\n    为营造文明，健康，有序的游戏环境，切实保护未成年网络空间安全。2019年12月1日\n起，游戏已施行新版实名认证及未成年用户防沉迷保护机制。请您配合完成实名认证。本\n公司与您携手共创绿色，健康的游戏环境。\n   《关于防止未成年人沉迷网络游戏的通知》全文详情参见：\nhttp://www.sapprft.gov.cn/sapprft/contents/6588/407807.shtml\n\n                                                                                                                     运营团队\n                                                                                                             2019年12月1日",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6754,8 +6754,8 @@
                             "FontSize": 26,
                             "LabelText": "年 龄 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -6812,8 +6812,8 @@
                             "FontSize": 26,
                             "LabelText": "单次充值金额 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -6870,8 +6870,8 @@
                             "FontSize": 26,
                             "LabelText": "每月累计充值金额 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -6928,8 +6928,8 @@
                             "FontSize": 26,
                             "LabelText": "小于8周岁 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -6986,8 +6986,8 @@
                             "FontSize": 26,
                             "LabelText": "不提供游戏付费服务 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7044,8 +7044,8 @@
                             "FontSize": 26,
                             "LabelText": "8-16周岁 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7102,8 +7102,8 @@
                             "FontSize": 26,
                             "LabelText": "小于50元 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7160,8 +7160,8 @@
                             "FontSize": 26,
                             "LabelText": "200元 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7218,8 +7218,8 @@
                             "FontSize": 26,
                             "LabelText": "16周岁以上 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7276,8 +7276,8 @@
                             "FontSize": 26,
                             "LabelText": "100元 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7334,8 +7334,8 @@
                             "FontSize": 26,
                             "LabelText": "400元 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7403,8 +7403,8 @@
                         "FontSize": 20,
                         "LabelText": "因游戏玩法各不相同，部分游戏内防沉迷系统也会进行相应的调整，\n请以游戏内的实际规则为准。\n\n\n官方运营团队\n2019/12/20\n",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -7504,7 +7504,6 @@
         "createNewPng/youxigongg_n.png",
         "createNewPng/youxigongg_s.png",
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "game_picture/bac_datanchuan.png",
         "game_picture/bangding_1.png",
         "game_picture/btn_recommend.png",

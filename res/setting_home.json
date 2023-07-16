@@ -179,8 +179,8 @@
                 "FontSize": 30,
                 "LabelText": "音乐: ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -359,8 +359,8 @@
                 "FontSize": 30,
                 "LabelText": "音效: ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -661,8 +661,8 @@
                 "FontSize": 30,
                 "LabelText": "语音: ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -775,8 +775,8 @@
                     "FontSize": 30,
                     "LabelText": "本地话",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -897,8 +897,8 @@
                     "FontSize": 30,
                     "LabelText": "普通话",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -964,8 +964,8 @@
                 "FontSize": 30,
                 "LabelText": "语音: ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -1219,8 +1219,8 @@
                 "FontSize": 30,
                 "LabelText": "其他: ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -1333,8 +1333,8 @@
                     "FontSize": 30,
                     "LabelText": "自动准备 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -1459,8 +1459,8 @@
                     "FontSize": 30,
                     "LabelText": "震动 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -1733,7 +1733,6 @@
         "createNewPng/daTC1_18.png",
         "createNewPng/daTC1_19.png",
         "createNewPng/daTC1_20.png",
-        "fonts/lanting.TTF",
         "game_picture/btn_x_normal.png",
         "reportPlayer/btn_report.png",
         "setting/setting_home/bar.png",

@@ -279,8 +279,8 @@
                     "FontSize": 21,
                     "LabelText": "外挂作弊",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -400,8 +400,8 @@
                     "FontSize": 21,
                     "LabelText": "虚假欺诈",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -521,8 +521,8 @@
                     "FontSize": 21,
                     "LabelText": "非法赌博",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -642,8 +642,8 @@
                     "FontSize": 21,
                     "LabelText": "恶意挂机",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -763,8 +763,8 @@
                     "FontSize": 21,
                     "LabelText": "语言辱骂",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -884,8 +884,8 @@
                     "FontSize": 21,
                     "LabelText": "广告骚扰",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1076,7 +1076,6 @@
       "UsedResources": [
         "Default/CheckBox_Disable.png",
         "Default/CheckBoxNode_Disable.png",
-        "fonts/lanting.TTF",
         "reportPlayer/bg.png",
         "reportPlayer/btn_cancle.png",
         "reportPlayer/btn_sure.png",

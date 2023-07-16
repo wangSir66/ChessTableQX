@@ -170,8 +170,8 @@
                 "FontSize": 28,
                 "LabelText": "暂无房间记录   ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -312,8 +312,8 @@
                     "FontSize": 22,
                     "LabelText": "ID：123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -369,8 +369,8 @@
                     "FontSize": 22,
                     "LabelText": "LYN",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -590,8 +590,8 @@
                     "FontSize": 22,
                     "LabelText": "                          今日：    场       昨日：      场                            ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -800,8 +800,8 @@
                         "FontSize": 22,
                         "LabelText": "房间ID:123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -858,8 +858,8 @@
                         "FontSize": 22,
                         "LabelText": "800%",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -916,8 +916,8 @@
                         "FontSize": 22,
                         "LabelText": "2017-02-20 10:10:10",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -974,8 +974,8 @@
                         "FontSize": 26,
                         "LabelText": "游客阿德...",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1069,8 +1069,8 @@
                             "FontSize": 26,
                             "LabelText": "ID:123456",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1241,8 +1241,8 @@
                         "FontSize": 22,
                         "LabelText": "33",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 4,
@@ -1297,8 +1297,8 @@
                         "FontSize": 28,
                         "LabelText": "沭阳麻将",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -1356,8 +1356,8 @@
                         "FontSize": 26,
                         "LabelText": "游客阿德...",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1451,8 +1451,8 @@
                             "FontSize": 26,
                             "LabelText": "ID:123456",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1578,8 +1578,8 @@
                         "FontSize": 26,
                         "LabelText": "游客阿德...",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1673,8 +1673,8 @@
                             "FontSize": 26,
                             "LabelText": "ID:123456",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1800,8 +1800,8 @@
                         "FontSize": 26,
                         "LabelText": "游客阿德...",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1895,8 +1895,8 @@
                             "FontSize": 26,
                             "LabelText": "ID:123456",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -2022,8 +2022,8 @@
                         "FontSize": 26,
                         "LabelText": "游客阿德...",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2073,8 +2073,8 @@
                             "FontSize": 26,
                             "LabelText": "ID:123456",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -2379,8 +2379,8 @@
                         "FontSize": 20,
                         "LabelText": "2018-06-06",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2850,8 +2850,8 @@
                             "FontSize": 20,
                             "LabelText": "2018-08-08",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -2919,8 +2919,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3019,8 +3019,8 @@
                             "FontSize": 20,
                             "LabelText": "2018-08-08",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -3440,7 +3440,6 @@
       },
       "UsedResources": [
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "friendCards/common/headMask.png",
         "friendCards/common/img_datanchuang.png",
         "friendCards/common/img_hengxian.png",

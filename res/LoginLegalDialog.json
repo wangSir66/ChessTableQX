@@ -255,8 +255,8 @@
                 "FontSize": 32,
                 "LabelText": "柠檬游戏用户协议和隐私政策 ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -315,8 +315,8 @@
                 "FontSize": 28,
                 "LabelText": "感谢您使用本游戏，您使用本游戏前应当阅读并同意游戏用户协议及隐私保护指引，如您拒绝，将无法进入游戏。",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -374,8 +374,8 @@
                 "FontSize": 28,
                 "LabelText": "点击查看 ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -433,8 +433,8 @@
                 "FontSize": 30,
                 "ButtonText": "柠檬游戏用户协议>>",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "TextColor": {
@@ -498,8 +498,8 @@
                 "FontSize": 28,
                 "LabelText": "点击查看 ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -557,8 +557,8 @@
                 "FontSize": 30,
                 "ButtonText": "隐私保护指引>>",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "TextColor": {
@@ -835,7 +835,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/bac_xiaotanchuan.png",
         "game_picture/btn_x_normal.png",
         "game_picture/diban.png",

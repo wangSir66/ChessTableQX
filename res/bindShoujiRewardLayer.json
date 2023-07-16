@@ -514,8 +514,8 @@
                     "FontSize": 24,
                     "LabelText": "30元宝",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -627,8 +627,8 @@
                 "FontSize": 26,
                 "LabelText": "绑定成功，恭喜获得188礼券!",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -778,8 +778,7 @@
         "bindPhoneNum/xuanGuang.png",
         "bindPhoneNum/yuanbao.png",
         "createNewPng/sure_xin_n.png",
-        "createNewPng/sure_xin_s.png",
-        "fonts/lanting.TTF"
+        "createNewPng/sure_xin_s.png"
       ],
       "ctype": "GameFileData"
     }

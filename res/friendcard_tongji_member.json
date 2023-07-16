@@ -264,8 +264,8 @@
                     "FontSize": 24,
                     "LabelText": "总分:",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -323,8 +323,8 @@
                     "FontSize": 24,
                     "LabelText": "钻石业绩:",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -383,8 +383,8 @@
                     "FontSize": 24,
                     "LabelText": "有效场次:",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -443,8 +443,8 @@
                     "FontSize": 24,
                     "LabelText": "有效人次:",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -503,8 +503,8 @@
                     "FontSize": 24,
                     "LabelText": "大赢家:",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -563,8 +563,8 @@
                     "FontSize": 24,
                     "LabelText": "活跃人数:",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -729,8 +729,8 @@
                     "FontSize": 24,
                     "LabelText": "玩家",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -789,8 +789,8 @@
                     "FontSize": 24,
                     "LabelText": "分数",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -849,8 +849,8 @@
                     "FontSize": 24,
                     "LabelText": "大赢家",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -909,8 +909,8 @@
                     "FontSize": 24,
                     "LabelText": "有效场次",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -969,8 +969,8 @@
                     "FontSize": 24,
                     "LabelText": "有效人次",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1029,8 +1029,8 @@
                     "FontSize": 24,
                     "LabelText": "业绩",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1089,8 +1089,8 @@
                     "FontSize": 24,
                     "LabelText": "操作",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1359,8 +1359,8 @@
                     "FontSize": 24,
                     "LabelText": "昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1418,8 +1418,8 @@
                     "FontSize": 24,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1477,8 +1477,8 @@
                     "FontSize": 24,
                     "LabelText": "分数",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1538,8 +1538,8 @@
                     "FontSize": 24,
                     "LabelText": "大赢家",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1599,8 +1599,8 @@
                     "FontSize": 24,
                     "LabelText": "有效场次",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1660,8 +1660,8 @@
                     "FontSize": 24,
                     "LabelText": "有效人次",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1721,8 +1721,8 @@
                     "FontSize": 24,
                     "LabelText": "业绩",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -2054,8 +2054,8 @@
                     "FontSize": 20,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {},
@@ -2124,8 +2124,8 @@
                         "FontSize": 20,
                         "LabelText": "全部玩法",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2306,8 +2306,8 @@
                         "FontSize": 20,
                         "LabelText": "20190101",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2473,6 +2473,24 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/headMask.png",
+        "friendCards/common/img_datanchuang.png",
+        "friendCards/common/img_hengxian.png",
+        "friendCards/tongji/btn_n.png",
+        "friendCards/tongji/btn_s.png",
+        "friendCards/tongji/checkMember/btn_arrow_left_n.png",
+        "friendCards/tongji/checkMember/btn_arrow_left_s.png",
+        "friendCards/tongji/checkMember/btn_arrow_right_n.png",
+        "friendCards/tongji/checkMember/btn_arrow_right_s.png",
+        "friendCards/tongji/checkMember/btn_liushui_n.png",
+        "friendCards/tongji/checkMember/btn_liushui_s.png",
+        "friendCards/tongji/checkMember/btn_zhanji_n.png",
+        "friendCards/tongji/checkMember/btn_zhanji_s.png",
+        "friendCards/tongji/checkMember/img_dikuang.png",
+        "friendCards/tongji/inputbg.png"
+      ],
       "ctype": "GameFileData"
     }
   },

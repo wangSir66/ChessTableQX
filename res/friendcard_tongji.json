@@ -194,8 +194,8 @@
                     "FontSize": 45,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {},
@@ -269,8 +269,8 @@
                     "FontSize": 45,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -349,8 +349,8 @@
                     "FontSize": 45,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -429,8 +429,8 @@
                     "FontSize": 45,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -509,8 +509,8 @@
                     "FontSize": 45,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -589,8 +589,8 @@
                     "FontSize": 45,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -669,8 +669,8 @@
                     "FontSize": 45,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -749,8 +749,8 @@
                     "FontSize": 45,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {
@@ -822,8 +822,8 @@
                 "FontSize": 20,
                 "ButtonText": "不限分数 ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "TextColor": {},
@@ -898,8 +898,8 @@
                 "FontSize": 22,
                 "LabelText": "亲友圈ID",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Right",
@@ -956,8 +956,8 @@
                 "FontSize": 28,
                 "LabelText": "亲友圈名称",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -1107,8 +1107,8 @@
                         "FontSize": 22,
                         "LabelText": "场次: ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1165,8 +1165,8 @@
                         "FontSize": 22,
                         "LabelText": "888888",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1223,8 +1223,8 @@
                         "FontSize": 22,
                         "LabelText": "8888",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1281,8 +1281,8 @@
                         "FontSize": 22,
                         "LabelText": "分组人数:  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1339,8 +1339,8 @@
                         "FontSize": 22,
                         "LabelText": "活跃玩家:",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1397,8 +1397,8 @@
                         "FontSize": 22,
                         "LabelText": "8888",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1455,8 +1455,8 @@
                         "FontSize": 22,
                         "LabelText": "完整场次:  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1513,8 +1513,8 @@
                         "FontSize": 22,
                         "LabelText": "888888",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1571,8 +1571,8 @@
                         "FontSize": 22,
                         "LabelText": "参与人次:  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1629,8 +1629,8 @@
                         "FontSize": 22,
                         "LabelText": "888888",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1687,8 +1687,8 @@
                         "FontSize": 22,
                         "LabelText": "消耗元宝:  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1745,8 +1745,8 @@
                         "FontSize": 22,
                         "LabelText": "888888",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1803,8 +1803,8 @@
                         "FontSize": 22,
                         "LabelText": "大赢家:  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1861,8 +1861,8 @@
                         "FontSize": 22,
                         "LabelText": "8888",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1919,8 +1919,8 @@
                         "FontSize": 20,
                         "LabelText": "分组人数:  00",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1979,8 +1979,8 @@
                         "FontSize": 20,
                         "LabelText": "业绩总计:",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2038,8 +2038,8 @@
                         "FontSize": 22,
                         "LabelText": "0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2205,8 +2205,8 @@
                         "FontSize": 24,
                         "LabelText": "分组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2264,8 +2264,8 @@
                         "FontSize": 24,
                         "LabelText": "昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2323,8 +2323,8 @@
                         "FontSize": 24,
                         "LabelText": "大赢家",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2554,8 +2554,8 @@
                         "FontSize": 24,
                         "LabelText": "分数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2785,8 +2785,8 @@
                         "FontSize": 24,
                         "LabelText": "全部场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3016,8 +3016,8 @@
                         "FontSize": 24,
                         "LabelText": "完整场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3075,8 +3075,8 @@
                         "FontSize": 24,
                         "LabelText": "业绩",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3291,8 +3291,8 @@
                         "FontSize": 26,
                         "LabelText": "分组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3350,8 +3350,8 @@
                         "FontSize": 26,
                         "LabelText": "昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3409,8 +3409,8 @@
                         "FontSize": 26,
                         "LabelText": "大赢家",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3468,8 +3468,8 @@
                         "FontSize": 26,
                         "LabelText": "分数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3527,8 +3527,8 @@
                         "FontSize": 26,
                         "LabelText": "全部场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3707,8 +3707,8 @@
                         "FontSize": 26,
                         "LabelText": "完整场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3766,8 +3766,8 @@
                         "FontSize": 26,
                         "LabelText": "0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3880,8 +3880,8 @@
                         "FontSize": 20,
                         "ButtonText": "全部分组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {},
@@ -3956,8 +3956,8 @@
                         "FontSize": 20,
                         "ButtonText": "全部玩法",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {},
@@ -4120,8 +4120,8 @@
                             "FontSize": 20,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -4189,8 +4189,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4289,8 +4289,8 @@
                             "FontSize": 20,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -4493,8 +4493,8 @@
                             "FontSize": 30,
                             "LabelText": "今天",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -4571,8 +4571,8 @@
                     "FontSize": 20,
                     "ButtonText": "新版统计",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {},
@@ -4869,8 +4869,8 @@
                         "FontSize": 28,
                         "LabelText": "日期",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4928,8 +4928,8 @@
                         "FontSize": 28,
                         "LabelText": "活跃人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4987,8 +4987,8 @@
                         "FontSize": 28,
                         "LabelText": "全部场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5046,8 +5046,8 @@
                         "FontSize": 28,
                         "LabelText": "完整场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5105,8 +5105,8 @@
                         "FontSize": 28,
                         "LabelText": "有效场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5164,8 +5164,8 @@
                         "FontSize": 28,
                         "LabelText": "有效人次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5223,8 +5223,8 @@
                         "FontSize": 28,
                         "LabelText": "消耗元宝",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5714,8 +5714,8 @@
                         "FontSize": 26,
                         "LabelText": "日期",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5773,8 +5773,8 @@
                         "FontSize": 26,
                         "LabelText": "活跃人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5832,8 +5832,8 @@
                         "FontSize": 26,
                         "LabelText": "全部场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5891,8 +5891,8 @@
                         "FontSize": 26,
                         "LabelText": "完整场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5950,8 +5950,8 @@
                         "FontSize": 26,
                         "LabelText": "有效场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6009,8 +6009,8 @@
                         "FontSize": 26,
                         "LabelText": "有效人次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6068,8 +6068,8 @@
                         "FontSize": 26,
                         "LabelText": "消耗元宝",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6340,8 +6340,8 @@
                         "FontSize": 26,
                         "LabelText": "昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6399,8 +6399,8 @@
                         "FontSize": 26,
                         "LabelText": "全部场次 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6458,8 +6458,8 @@
                         "FontSize": 26,
                         "LabelText": "分数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6517,8 +6517,8 @@
                         "FontSize": 26,
                         "LabelText": "大赢家",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6576,8 +6576,8 @@
                         "FontSize": 26,
                         "LabelText": "分组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6680,8 +6680,8 @@
                         "FontSize": 26,
                         "LabelText": "完整场次 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6855,8 +6855,8 @@
                         "FontSize": 26,
                         "LabelText": "昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6914,8 +6914,8 @@
                         "FontSize": 26,
                         "LabelText": "场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6973,8 +6973,8 @@
                         "FontSize": 26,
                         "LabelText": "分数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -7032,8 +7032,8 @@
                         "FontSize": 26,
                         "LabelText": "大赢家",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -7091,8 +7091,8 @@
                         "FontSize": 26,
                         "LabelText": "分组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -7271,8 +7271,8 @@
                         "FontSize": 26,
                         "LabelText": "完整场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -7386,8 +7386,8 @@
                         "FontSize": 20,
                         "ButtonText": "全部玩法",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {},
@@ -7462,8 +7462,8 @@
                         "FontSize": 20,
                         "ButtonText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {
@@ -7542,8 +7542,8 @@
                         "FontSize": 20,
                         "ButtonText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {
@@ -7664,8 +7664,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -7733,8 +7733,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -7833,8 +7833,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -8146,8 +8146,8 @@
                         "FontSize": 28,
                         "LabelText": "会长",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8205,8 +8205,8 @@
                         "FontSize": 28,
                         "LabelText": "亲友圈",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8309,8 +8309,8 @@
                         "FontSize": 28,
                         "LabelText": "总分",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8463,8 +8463,8 @@
                         "FontSize": 20,
                         "LabelText": "有效人次\n有效场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8617,8 +8617,8 @@
                         "FontSize": 28,
                         "LabelText": "比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8771,8 +8771,8 @@
                         "FontSize": 28,
                         "LabelText": "贡献",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -8925,8 +8925,8 @@
                         "FontSize": 28,
                         "LabelText": "消耗钻石",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9079,8 +9079,8 @@
                         "FontSize": 28,
                         "LabelText": "操作",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9252,8 +9252,8 @@
                         "FontSize": 24,
                         "LabelText": "业绩模式：扣费玩家所属",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9472,8 +9472,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -9541,8 +9541,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9641,8 +9641,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -9844,8 +9844,8 @@
                         "FontSize": 20,
                         "LabelText": "昵称五个字",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9903,8 +9903,8 @@
                         "FontSize": 26,
                         "LabelText": "ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -9962,8 +9962,8 @@
                         "FontSize": 26,
                         "LabelText": "参与场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10021,8 +10021,8 @@
                         "FontSize": 26,
                         "LabelText": "参与场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10080,8 +10080,8 @@
                         "FontSize": 26,
                         "LabelText": "总分",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10139,8 +10139,8 @@
                         "FontSize": 20,
                         "LabelText": "亲友圈昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10198,8 +10198,8 @@
                         "FontSize": 26,
                         "LabelText": "ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10302,8 +10302,8 @@
                         "FontSize": 26,
                         "LabelText": "比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10361,8 +10361,8 @@
                         "FontSize": 26,
                         "LabelText": "修改",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10421,8 +10421,8 @@
                         "FontSize": 26,
                         "LabelText": "贡献",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10480,8 +10480,8 @@
                         "FontSize": 26,
                         "LabelText": "消耗钻石",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10782,8 +10782,8 @@
                         "FontSize": 28,
                         "LabelText": "组别",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10841,8 +10841,8 @@
                         "FontSize": 28,
                         "LabelText": "组长",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -10945,8 +10945,8 @@
                         "FontSize": 28,
                         "LabelText": "人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -11099,8 +11099,8 @@
                         "FontSize": 28,
                         "LabelText": "参与场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -11253,8 +11253,8 @@
                         "FontSize": 28,
                         "LabelText": "大赢家数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -11407,8 +11407,8 @@
                         "FontSize": 28,
                         "LabelText": "业绩",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -11621,8 +11621,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -11690,8 +11690,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -11790,8 +11790,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -11993,8 +11993,8 @@
                         "FontSize": 26,
                         "LabelText": "昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12052,8 +12052,8 @@
                         "FontSize": 26,
                         "LabelText": "ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12111,8 +12111,8 @@
                         "FontSize": 26,
                         "LabelText": "参与场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12170,8 +12170,8 @@
                         "FontSize": 26,
                         "LabelText": "人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12229,8 +12229,8 @@
                         "FontSize": 26,
                         "LabelText": "分组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12333,8 +12333,8 @@
                         "FontSize": 26,
                         "LabelText": "大赢家数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12392,8 +12392,8 @@
                         "FontSize": 26,
                         "LabelText": "0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12619,8 +12619,8 @@
                         "FontSize": 26,
                         "LabelText": "组长",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12678,8 +12678,8 @@
                         "FontSize": 26,
                         "LabelText": "组别",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12782,8 +12782,8 @@
                         "FontSize": 26,
                         "LabelText": "总数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -12936,8 +12936,8 @@
                         "FontSize": 26,
                         "LabelText": "人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -13090,8 +13090,8 @@
                         "FontSize": 20,
                         "LabelText": "有效人次\n有效场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -13244,8 +13244,8 @@
                         "FontSize": 26,
                         "LabelText": "比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -13398,8 +13398,8 @@
                         "FontSize": 26,
                         "LabelText": "贡献",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -13552,8 +13552,8 @@
                         "FontSize": 26,
                         "LabelText": "消耗钻石",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -13706,8 +13706,8 @@
                         "FontSize": 26,
                         "LabelText": "操作",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -13879,8 +13879,8 @@
                         "FontSize": 24,
                         "LabelText": "业绩模式：扣费玩家所属",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14099,8 +14099,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -14168,8 +14168,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14268,8 +14268,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -14471,8 +14471,8 @@
                         "FontSize": 26,
                         "LabelText": "昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14530,8 +14530,8 @@
                         "FontSize": 26,
                         "LabelText": "ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14589,8 +14589,8 @@
                         "FontSize": 24,
                         "LabelText": "参与场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14648,8 +14648,8 @@
                         "FontSize": 24,
                         "LabelText": "参与场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14707,8 +14707,8 @@
                         "FontSize": 26,
                         "LabelText": "人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14766,8 +14766,8 @@
                         "FontSize": 26,
                         "LabelText": "分组",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14870,8 +14870,8 @@
                         "FontSize": 24,
                         "LabelText": "比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14929,8 +14929,8 @@
                         "FontSize": 24,
                         "LabelText": "修改",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -14989,8 +14989,8 @@
                         "FontSize": 24,
                         "LabelText": "贡献",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15048,8 +15048,8 @@
                         "FontSize": 24,
                         "LabelText": "消耗钻石",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15167,8 +15167,8 @@
                         "FontSize": 26,
                         "LabelText": "总数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15394,8 +15394,8 @@
                         "FontSize": 28,
                         "LabelText": "助理",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15453,8 +15453,8 @@
                         "FontSize": 28,
                         "LabelText": "编号",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15557,8 +15557,8 @@
                         "FontSize": 28,
                         "LabelText": "人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15711,8 +15711,8 @@
                         "FontSize": 28,
                         "LabelText": "参与场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -15865,8 +15865,8 @@
                         "FontSize": 28,
                         "LabelText": "大赢家数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16174,8 +16174,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -16243,8 +16243,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16343,8 +16343,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -16546,8 +16546,8 @@
                         "FontSize": 26,
                         "LabelText": "昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16605,8 +16605,8 @@
                         "FontSize": 26,
                         "LabelText": "ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16664,8 +16664,8 @@
                         "FontSize": 26,
                         "LabelText": "参与场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16723,8 +16723,8 @@
                         "FontSize": 26,
                         "LabelText": "人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16782,8 +16782,8 @@
                         "FontSize": 26,
                         "LabelText": "编号",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -16886,8 +16886,8 @@
                         "FontSize": 26,
                         "LabelText": "大赢家数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -17113,8 +17113,8 @@
                         "FontSize": 28,
                         "LabelText": "助理",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -17172,8 +17172,8 @@
                         "FontSize": 28,
                         "LabelText": "编号",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -17276,8 +17276,8 @@
                         "FontSize": 28,
                         "LabelText": "人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -17430,8 +17430,8 @@
                         "FontSize": 20,
                         "LabelText": "有效人次\n有效场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -17584,8 +17584,8 @@
                         "FontSize": 28,
                         "LabelText": "比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -17738,8 +17738,8 @@
                         "FontSize": 28,
                         "LabelText": "贡献",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -17892,8 +17892,8 @@
                         "FontSize": 28,
                         "LabelText": "消耗钻石",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -18046,8 +18046,8 @@
                         "FontSize": 28,
                         "LabelText": "操作",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -18219,8 +18219,8 @@
                         "FontSize": 24,
                         "LabelText": "业绩模式：扣费玩家所属",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -18379,8 +18379,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -18448,8 +18448,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -18548,8 +18548,8 @@
                             "FontSize": 22,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -18751,8 +18751,8 @@
                         "FontSize": 26,
                         "LabelText": "昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -18810,8 +18810,8 @@
                         "FontSize": 26,
                         "LabelText": "ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -18869,8 +18869,8 @@
                         "FontSize": 26,
                         "LabelText": "有效人次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -18928,8 +18928,8 @@
                         "FontSize": 26,
                         "LabelText": "有效场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -18987,8 +18987,8 @@
                         "FontSize": 26,
                         "LabelText": "人数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -19046,8 +19046,8 @@
                         "FontSize": 26,
                         "LabelText": "编号",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -19150,8 +19150,8 @@
                         "FontSize": 26,
                         "LabelText": "比例",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -19209,8 +19209,8 @@
                         "FontSize": 26,
                         "LabelText": "修改",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -19269,8 +19269,8 @@
                         "FontSize": 26,
                         "LabelText": "贡献",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -19328,8 +19328,8 @@
                         "FontSize": 26,
                         "LabelText": "消耗钻石",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -19933,8 +19933,8 @@
                         "FontSize": 28,
                         "LabelText": "日排名",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -19993,8 +19993,8 @@
                         "FontSize": 28,
                         "LabelText": "选手",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20053,8 +20053,8 @@
                         "FontSize": 28,
                         "LabelText": "日参与房间数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20113,8 +20113,8 @@
                         "FontSize": 28,
                         "LabelText": "备注",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20380,8 +20380,8 @@
                         "FontSize": 26,
                         "LabelText": "排名",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20544,8 +20544,8 @@
                         "FontSize": 22,
                         "LabelText": "选手ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20603,8 +20603,8 @@
                         "FontSize": 26,
                         "LabelText": "参与场次数",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -20663,8 +20663,8 @@
                         "FontSize": 26,
                         "LabelText": "备注",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -21237,8 +21237,8 @@
                         "FontSize": 26,
                         "LabelText": "我的排名：1",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -21400,8 +21400,8 @@
                         "FontSize": 18,
                         "LabelText": "选手ID",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -21459,8 +21459,8 @@
                         "FontSize": 26,
                         "LabelText": "1",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -21759,8 +21759,8 @@
                         "FontSize": 24,
                         "LabelText": "玩法",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -21819,8 +21819,8 @@
                         "FontSize": 24,
                         "LabelText": "场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -22084,8 +22084,8 @@
                         "FontSize": 26,
                         "LabelText": "玩法",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -22144,8 +22144,8 @@
                         "FontSize": 26,
                         "LabelText": "场次",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -22304,8 +22304,8 @@
                         "FontSize": 20,
                         "ButtonText": "全部玩法",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {},
@@ -22379,8 +22379,8 @@
                         "FontSize": 20,
                         "LabelText": "场次为0的玩法不会显示",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -22479,8 +22479,8 @@
                             "FontSize": 20,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -22548,8 +22548,8 @@
                         "FontSize": 24,
                         "LabelText": "至",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -22648,8 +22648,8 @@
                             "FontSize": 20,
                             "LabelText": "",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -22852,8 +22852,8 @@
                             "FontSize": 30,
                             "LabelText": "今天",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -23273,8 +23273,8 @@
                         "FontSize": 32,
                         "LabelText": "统计所有场次 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -23399,8 +23399,8 @@
                         "FontSize": 32,
                         "LabelText": "只统计分数范围内的场次  ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -23514,8 +23514,8 @@
                     "FontSize": 32,
                     "LabelText": "分 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -23572,8 +23572,8 @@
                     "FontSize": 20,
                     "LabelText": "（0则不设置上限） ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -23900,8 +23900,8 @@
                     "FontSize": 20,
                     "LabelText": "为了增加查询时间跨度。新版统计减少了“不限分数”，“玩法选择”，“清除分数”的功能。可根据实际情况，选择不同的查询方式",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -23994,7 +23994,6 @@
         "Default/Button_Normal.png",
         "Default/Button_Press.png",
         "Default/ImageFile.png",
-        "fonts/lanting.TTF",
         "friendCards/common/btn_chebox_yuan.png",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/headMask.png",

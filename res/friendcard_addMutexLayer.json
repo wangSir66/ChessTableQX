@@ -662,8 +662,8 @@
                         "FontSize": 20,
                         "LabelText": "玩家昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -722,8 +722,8 @@
                         "FontSize": 20,
                         "LabelText": "ID: 1000220",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -827,8 +827,8 @@
                         "FontSize": 20,
                         "LabelText": "玩家昵称",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -887,8 +887,8 @@
                         "FontSize": 20,
                         "LabelText": "ID: 1000220",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -1000,8 +1000,8 @@
                     "FontSize": 26,
                     "LabelText": "原因  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1060,8 +1060,8 @@
                     "FontSize": 26,
                     "LabelText": "玩家  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1120,8 +1120,8 @@
                     "FontSize": 26,
                     "LabelText": "玩家  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -1250,7 +1250,6 @@
       },
       "UsedResources": [
         "Default/Button_Disable.png",
-        "fonts/lanting.TTF",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/headMask.png",
         "friendCards/common/img_dikuang.png",

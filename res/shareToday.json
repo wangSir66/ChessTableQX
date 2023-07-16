@@ -249,8 +249,8 @@
                 "FontSize": 20,
                 "LabelText": "金币X50",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -307,8 +307,8 @@
                 "FontSize": 24,
                 "LabelText": "      恭喜您获得 2.50元  礼券，请前往往邮件领取奖励     ",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -506,7 +506,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "shareToday/bg_di.png",
         "shareToday/bg_kuan.png",
         "shareToday/btn_yes.png",

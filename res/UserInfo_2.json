@@ -360,8 +360,8 @@
                     "FontSize": 28,
                     "LabelText": "ID:888888",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -418,8 +418,8 @@
                     "FontSize": 25,
                     "LabelText": "个性签名:个性签名:个性签名:个性签名:个性签名:个性签名:个性签名:个性签名:个性签名:个性签名:个性签名:",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -579,8 +579,8 @@
                         "FontSize": 28,
                         "LabelText": "123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -799,8 +799,8 @@
                         "FontSize": 28,
                         "LabelText": "123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -1019,8 +1019,8 @@
                         "FontSize": 28,
                         "LabelText": "123456",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -1090,8 +1090,8 @@
                     "FontSize": 28,
                     "LabelText": "IP:127.127.127.127",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1203,8 +1203,8 @@
                         "FontSize": 24,
                         "LabelText": "使用互动道具    ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1393,8 +1393,8 @@
                                 "FontSize": 24,
                                 "LabelText": "请绑定手机号码      ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "OutlineColor": {
@@ -1498,8 +1498,8 @@
                                 "FontSize": 20,
                                 "LabelText": "完成获得\n    100点贵族经验值        ",
                                 "FontResource": {
-                                  "Type": "Normal",
-                                  "Path": "fonts/lanting.TTF",
+                                  "Type": "Default",
+                                  "Path": "",
                                   "Plist": ""
                                 },
                                 "HorizontalAlignmentType": "HT_Center",
@@ -1575,8 +1575,8 @@
                         "FontSize": 28,
                         "ButtonText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {
@@ -1637,8 +1637,8 @@
                             "FontSize": 28,
                             "LabelText": "当前手机号",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1743,8 +1743,8 @@
                             "FontSize": 28,
                             "LabelText": "01234567890",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -2600,7 +2600,6 @@
       "UsedResources": [
         "bindPhoneNum/btn_bindPhong.png",
         "bindPhoneNum/btn_modifyBind_0.png",
-        "fonts/lanting.TTF",
         "game_picture/btn_x_normal.png",
         "game_picture/ico_zuanshi.png",
         "home/homeHeadCusPic_2.png",

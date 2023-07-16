@@ -717,7 +717,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="-0.0534" Y="0.6142" />
                     <PreSize X="1.1225" Y="0.4333" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

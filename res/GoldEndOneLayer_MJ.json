@@ -202,8 +202,8 @@
                     "FontSize": 30,
                     "LabelText": "本家自摸",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -581,8 +581,8 @@
                     "FontSize": 24,
                     "LabelText": "本家",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -638,8 +638,8 @@
                     "FontSize": 24,
                     "LabelText": "当当当当当当",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -696,8 +696,8 @@
                     "FontSize": 22,
                     "LabelText": "我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1169,8 +1169,8 @@
                     "FontSize": 24,
                     "LabelText": "上家",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1226,8 +1226,8 @@
                     "FontSize": 24,
                     "LabelText": "当当当当当当",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1284,8 +1284,8 @@
                     "FontSize": 22,
                     "LabelText": "我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1757,8 +1757,8 @@
                     "FontSize": 24,
                     "LabelText": "上家",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1814,8 +1814,8 @@
                     "FontSize": 24,
                     "LabelText": "当当当当当当",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1872,8 +1872,8 @@
                     "FontSize": 22,
                     "LabelText": "我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -2345,8 +2345,8 @@
                     "FontSize": 24,
                     "LabelText": "上家",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2402,8 +2402,8 @@
                     "FontSize": 24,
                     "LabelText": "当当当当当当",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2460,8 +2460,8 @@
                     "FontSize": 22,
                     "LabelText": "我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -3222,8 +3222,8 @@
                     "FontSize": 24,
                     "LabelText": "100000",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -3411,8 +3411,8 @@
                         "FontSize": 24,
                         "LabelText": "姓名姓名姓名",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -3515,8 +3515,8 @@
                         "FontSize": 20,
                         "LabelText": "我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Center",
@@ -4197,7 +4197,6 @@
       },
       "UsedResources": [
         "Default/ImageFile.png",
-        "fonts/lanting.TTF",
         "game_picture/bac_datingtoushangzhezhao.png",
         "game_picture/dating1_06.png",
         "game_picture/gold/end/btnBack.png",

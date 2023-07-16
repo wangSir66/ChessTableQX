@@ -387,8 +387,8 @@
                     "FontSize": 28,
                     "LabelText": "这里是六个字",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1948,8 +1948,8 @@
                         "FontSize": 28,
                         "LabelText": " 背景 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2658,7 +2658,6 @@
       },
       "UsedResources": [
         "Default/Button_Disable.png",
-        "fonts/lanting.TTF",
         "friendCards/setSkin/btn_preview_n.png",
         "friendCards/setSkin/btn_preview_s.png",
         "friendCards/setSkin/btn_save_n.png",

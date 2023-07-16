@@ -53,7 +53,7 @@
                     <CColor A="255" R="136" G="113" B="77" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -65,7 +65,7 @@
                     <CColor A="255" R="211" G="60" B="0" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -87,7 +87,7 @@
                     <CColor A="255" R="211" G="60" B="0" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -109,7 +109,7 @@
                     <CColor A="255" R="47" G="42" B="42" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -165,7 +165,7 @@
                     <CColor A="255" R="64" G="64" B="64" />
                     <PrePosition X="1.8645" Y="0.4879" />
                     <PreSize X="0.7184" Y="0.3867" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -177,7 +177,7 @@
                     <CColor A="255" R="146" G="72" B="19" />
                     <PrePosition X="1.6775" Y="0.6468" />
                     <PreSize X="1.2411" Y="0.0889" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -219,7 +219,7 @@
                     <CColor A="255" R="211" G="38" B="14" />
                     <PrePosition X="0.4979" Y="0.0475" />
                     <PreSize X="0.9356" Y="0.0511" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="255" B="255" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -241,7 +241,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="xuhao_1" ActionTag="-408931532" Tag="552" IconVisible="False" LeftMargin="197.2482" RightMargin="191.7518" TopMargin="24.2748" BottomMargin="695.7252" LeftEage="10" RightEage="10" TopEage="10" BottomEage="10" Scale9OriginX="10" Scale9OriginY="10" Scale9Width="16" Scale9Height="16" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="xuhao_1" ActionTag="-408931532" Tag="552" IconVisible="False" LeftMargin="197.2482" RightMargin="191.7518" TopMargin="24.2748" BottomMargin="695.7252" LeftEage="10" RightEage="10" TopEage="10" BottomEage="10" Scale9OriginX="10" Scale9OriginY="10" Scale9Width="26" Scale9Height="26" ctype="ImageViewObjectData">
                         <Size X="30.0000" Y="30.0000" />
                         <Children>
                           <AbstractNodeData Name="Text" ActionTag="563739325" Tag="553" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="5.1750" RightMargin="6.8250" TopMargin="1.7030" BottomMargin="-0.7030" FontSize="25" LabelText="8" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -252,7 +252,7 @@
                             <CColor A="255" R="185" G="108" B="54" />
                             <PrePosition X="0.4725" Y="0.4599" />
                             <PreSize X="0.6000" Y="0.9667" />
-                            <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                            <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="146" G="72" B="19" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
@@ -263,7 +263,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5066" Y="0.9476" />
                         <PreSize X="0.0716" Y="0.0400" />
-                        <FileData Type="Normal" Path="friendCards/info/0.png" Plist="" />
+                        <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Button_1" ActionTag="-1668091596" Tag="554" IconVisible="False" LeftMargin="235.4343" RightMargin="23.5657" TopMargin="11.8800" BottomMargin="678.1200" TouchEnable="True" FontSize="20" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="116" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="160.0000" Y="60.0000" />
@@ -276,7 +276,7 @@
                             <CColor A="255" R="125" G="60" B="11" />
                             <PrePosition X="0.5000" Y="0.5000" />
                             <PreSize X="1.1500" Y="0.4833" />
-                            <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                            <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="146" G="72" B="19" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
@@ -287,7 +287,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.7528" Y="0.9442" />
                         <PreSize X="0.3819" Y="0.0800" />
-                        <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                        <FontResource Type="Default" Path="" Plist="" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <PressedFileData Type="Normal" Path="friendCards/info/btn_rule_s.png" Plist="" />
                         <NormalFileData Type="Normal" Path="friendCards/info/btn_rule_n.png" Plist="" />
@@ -391,7 +391,7 @@
                     <CColor A="255" R="96" G="46" B="26" />
                     <PrePosition X="1.1667" Y="0.5251" />
                     <PreSize X="5.4444" Y="0.8333" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                    <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="82" G="54" B="33" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -419,95 +419,6 @@
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="back_selectType" Visible="False" ActionTag="387852927" Tag="407" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="265.0000" RightMargin="265.0000" TopMargin="125.0000" BottomMargin="125.0000" LeftEage="170" RightEage="170" TopEage="127" BottomEage="127" Scale9OriginX="170" Scale9OriginY="127" Scale9Width="638" Scale9Height="367" ctype="ImageViewObjectData">
-            <Size X="750.0000" Y="470.0000" />
-            <Children>
-              <AbstractNodeData Name="btn_type0" ActionTag="-1504798712" Tag="409" IconVisible="False" LeftMargin="105.8845" RightMargin="391.1155" TopMargin="133.3398" BottomMargin="78.6602" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="219" Scale9Height="230" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="253.0000" Y="258.0000" />
-                <Children>
-                  <AbstractNodeData Name="Text_5" ActionTag="-168212203" Tag="102" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="66.9434" RightMargin="68.0566" TopMargin="208.1184" BottomMargin="19.8816" FontSize="26" LabelText=" 圈主建房  " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="118.0000" Y="30.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="125.9434" Y="34.8816" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="242" B="192" />
-                    <PrePosition X="0.4978" Y="0.1352" />
-                    <PreSize X="0.4664" Y="0.1163" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="232.3845" Y="207.6602" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.3098" Y="0.4418" />
-                <PreSize X="0.3373" Y="0.5489" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/info/YBQYQ.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="btn_close" ActionTag="639181082" Tag="410" IconVisible="False" LeftMargin="689.8799" RightMargin="-15.8799" TopMargin="-22.0292" BottomMargin="416.0292" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="46" Scale9Height="54" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="76.0000" Y="76.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="727.8799" Y="454.0292" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9705" Y="0.9660" />
-                <PreSize X="0.1013" Y="0.1617" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="btn_type1" ActionTag="1694323173" Tag="411" IconVisible="False" LeftMargin="411.4126" RightMargin="85.5874" TopMargin="133.3397" BottomMargin="78.6603" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="219" Scale9Height="230" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="253.0000" Y="258.0000" />
-                <Children>
-                  <AbstractNodeData Name="Text_5" ActionTag="-1956771863" Tag="103" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="66.9434" RightMargin="68.0566" TopMargin="208.1184" BottomMargin="19.8816" FontSize="26" LabelText=" 亲友自助  " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="118.0000" Y="30.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="125.9434" Y="34.8816" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="242" B="192" />
-                    <PrePosition X="0.4978" Y="0.1352" />
-                    <PreSize X="0.4664" Y="0.1163" />
-                    <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="110" G="110" B="110" />
-                  </AbstractNodeData>
-                </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="537.9126" Y="207.6603" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.7172" Y="0.4418" />
-                <PreSize X="0.3373" Y="0.5489" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/info/FKQYQ.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="img_title" ActionTag="-1653047600" Tag="412" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="195.0000" RightMargin="195.0000" TopMargin="3.0736" BottomMargin="404.9264" LeftEage="110" RightEage="110" TopEage="19" BottomEage="19" Scale9OriginX="110" Scale9OriginY="19" Scale9Width="140" Scale9Height="24" ctype="ImageViewObjectData">
-                <Size X="360.0000" Y="62.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="375.0000" Y="435.9264" />
-                <Scale ScaleX="0.9000" ScaleY="0.9000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.9275" />
-                <PreSize X="0.4800" Y="0.1319" />
-                <FileData Type="Normal" Path="friendCards/info/biaotou_chuangjianqyq.png" Plist="" />
-              </AbstractNodeData>
-            </Children>
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="640.0000" Y="360.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.5000" Y="0.5000" />
-            <PreSize X="0.5859" Y="0.6528" />
-            <FileData Type="Normal" Path="friendCards/common/img_zhongtanchuang.png" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

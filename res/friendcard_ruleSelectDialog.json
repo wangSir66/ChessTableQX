@@ -478,8 +478,8 @@
                         "FontSize": 26,
                         "LabelText": "跑得快2人，非必管",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -537,8 +537,8 @@
                         "FontSize": 26,
                         "LabelText": "玩法1：",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -597,8 +597,8 @@
                         "FontSize": 20,
                         "LabelText": "跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -763,8 +763,8 @@
                         "FontSize": 26,
                         "LabelText": "跑得快2人，非必管",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -822,8 +822,8 @@
                         "FontSize": 26,
                         "LabelText": "玩法1：",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -882,8 +882,8 @@
                         "FontSize": 20,
                         "LabelText": "跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -974,6 +974,12 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_datanchuang.png",
+        "friendCards/quickStartSelectRule/img_kuang.png",
+        "friendCards/selectGroup/title_select_wanfa.png"
+      ],
       "ctype": "GameFileData"
     }
   },

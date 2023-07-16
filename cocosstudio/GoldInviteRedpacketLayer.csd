@@ -43,7 +43,7 @@
                 <CColor A="255" R="160" G="101" B="65" />
                 <PrePosition X="0.5000" Y="0.7352" />
                 <PreSize X="0.5372" Y="0.1151" />
-                <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                <FontResource Type="Default" Path="" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -96,7 +96,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                        <FontResource Type="Default" Path="" Plist="" />
                         <TextColor A="255" R="194" G="34" B="61" />
                         <NormalFileData Type="Normal" Path="active_gold_yaoQingHongBao/tuoyuan.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -156,7 +156,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                        <FontResource Type="Default" Path="" Plist="" />
                         <TextColor A="255" R="194" G="34" B="61" />
                         <NormalFileData Type="Normal" Path="active_gold_yaoQingHongBao/tuoyuan.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -216,7 +216,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition />
                         <PreSize X="0.0000" Y="0.0000" />
-                        <FontResource Type="Normal" Path="fonts/lanting.TTF" Plist="" />
+                        <FontResource Type="Default" Path="" Plist="" />
                         <TextColor A="255" R="194" G="34" B="61" />
                         <NormalFileData Type="Normal" Path="active_gold_yaoQingHongBao/tuoyuan.png" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />

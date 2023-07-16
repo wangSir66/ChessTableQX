@@ -239,8 +239,8 @@
                     "FontSize": 20,
                     "LabelText": "亲友圈头像",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -300,8 +300,8 @@
                     "FontSize": 20,
                     "LabelText": "亲友圈",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -361,8 +361,8 @@
                     "FontSize": 20,
                     "LabelText": "邀请人头像",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -422,8 +422,8 @@
                     "FontSize": 20,
                     "LabelText": "邀请人",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -483,8 +483,8 @@
                     "FontSize": 20,
                     "LabelText": "邀请时间",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -544,8 +544,8 @@
                     "FontSize": 20,
                     "LabelText": "操作",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -814,8 +814,8 @@
                     "FontSize": 24,
                     "LabelText": "超超级雀神争霸赛",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -876,8 +876,8 @@
                     "FontSize": 24,
                     "LabelText": "123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -984,8 +984,8 @@
                     "FontSize": 24,
                     "LabelText": "邀请人",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1046,8 +1046,8 @@
                     "FontSize": 24,
                     "LabelText": "123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1108,8 +1108,8 @@
                     "FontSize": 24,
                     "LabelText": "2019-12-18\n15:58",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1408,6 +1408,18 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_agree_n.png",
+        "friendCards/common/btn_agree_s.png",
+        "friendCards/common/btn_refuse_n.png",
+        "friendCards/common/btn_refuse_s.png",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/headMask.png",
+        "friendCards/common/img_datanchuang.png",
+        "friendCards/common/img_dikuang.png",
+        "friendCards/common/img_hengxian.png",
+        "friendCards/tongji/title_img.png"
+      ],
       "ctype": "GameFileData"
     }
   },

@@ -351,8 +351,8 @@
                 "FontSize": 26,
                 "LabelText": "足不出户  月入过万  一年买车  三年买房\n1对1客服指导        成就你的梦想！",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -412,8 +412,8 @@
                 "FontSize": 30,
                 "LabelText": "仅代理可创建亲友圈，现成为代理更好有礼相送。\n\n成为代理零门槛，客服小姐姐等你来撩哦~",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -485,6 +485,13 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_gotoKefu_n.png",
+        "friendCards/common/btn_gotoKefu_s.png",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_tongyong.png",
+        "friendCards/main/image_kefu.png"
+      ],
       "ctype": "GameFileData"
     }
   },

@@ -435,8 +435,8 @@
                     "FontSize": 14,
                     "LabelText": "元宝X8888",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -542,8 +542,8 @@
                     "FontSize": 14,
                     "LabelText": "元宝X8888",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -649,8 +649,8 @@
                     "FontSize": 14,
                     "LabelText": "元宝X8888",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -756,8 +756,8 @@
                     "FontSize": 14,
                     "LabelText": "元宝X8888",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -863,8 +863,8 @@
                     "FontSize": 14,
                     "LabelText": "元宝X8888",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -955,7 +955,6 @@
         "EMail/receivetip.png",
         "EMail/redPacket.png",
         "EMail/yuanbao.png",
-        "fonts/lanting.TTF",
         "game_picture/btn_x_normal.png",
         "game_picture/diban.png",
         "joinGame/bac_xiaotanchuan.png"

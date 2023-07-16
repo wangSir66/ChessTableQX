@@ -205,8 +205,8 @@
                 "FontSize": 26,
                 "LabelText": "即将进入第三方商城\n进入第三方商城前请仔细阅读本协议\n如果与商城发生任何纠纷\n本游戏不承担责任",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -461,8 +461,8 @@
                     "FontSize": 22,
                     "LabelText": "本人同意第三方商城 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -651,8 +651,8 @@
                     "FontSize": 22,
                     "LabelText": "不再提示 ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -741,7 +741,6 @@
         "createNewPng/sure_xin_n.png",
         "createNewPng/sure_xin_s.png",
         "createNewPng/tishi_xin.png",
-        "fonts/lanting.TTF",
         "game_picture/bg_xiaotanchuang.png",
         "game_picture/diban.png",
         "share/hold_harmless_agreemen.png"

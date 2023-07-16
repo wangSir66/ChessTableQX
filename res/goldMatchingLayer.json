@@ -64,8 +64,8 @@
             "FontSize": 24,
             "LabelText": "底花2，大撇",
             "FontResource": {
-              "Type": "Normal",
-              "Path": "fonts/lanting.TTF",
+              "Type": "Default",
+              "Path": "",
               "Plist": ""
             },
             "HorizontalAlignmentType": "HT_Center",
@@ -1320,8 +1320,8 @@
                 "FontSize": 22,
                 "LabelText": "高手场 底分200金币",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -1394,7 +1394,6 @@
       "UsedResources": [
         "Default/Button_Disable.png",
         "Default/ImageFile.png",
-        "fonts/lanting.TTF",
         "game_picture/gold/btn_get_gold.png",
         "game_picture/gold/matching/dian.png",
         "game_picture/gold/matching/pai.png",

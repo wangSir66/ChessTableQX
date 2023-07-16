@@ -652,8 +652,8 @@
                             "FontSize": 24,
                             "LabelText": "经典",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -823,8 +823,8 @@
                             "FontSize": 24,
                             "LabelText": "绿色 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -994,8 +994,8 @@
                             "FontSize": 24,
                             "LabelText": "蓝色 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1165,8 +1165,8 @@
                             "FontSize": 24,
                             "LabelText": "夜间 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1382,8 +1382,8 @@
                             "FontSize": 24,
                             "LabelText": "经典",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1554,8 +1554,8 @@
                             "FontSize": 24,
                             "LabelText": "大气",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1726,8 +1726,8 @@
                             "FontSize": 24,
                             "LabelText": "精致",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -1898,8 +1898,8 @@
                             "FontSize": 24,
                             "LabelText": "圆润",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineColor": {
@@ -2221,8 +2221,8 @@
                             "FontSize": 24,
                             "LabelText": "经典  ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "VerticalAlignmentType": "VT_Center",
@@ -2392,8 +2392,8 @@
                             "FontSize": 24,
                             "LabelText": "流行 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "VerticalAlignmentType": "VT_Center",
@@ -2519,8 +2519,8 @@
                             "FontSize": 24,
                             "LabelText": "蓝绿   ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2690,8 +2690,8 @@
                             "FontSize": 24,
                             "LabelText": "淡绿 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -2861,8 +2861,8 @@
                             "FontSize": 24,
                             "LabelText": "湖蓝 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3032,8 +3032,8 @@
                             "FontSize": 24,
                             "LabelText": "靛蓝 ",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "OutlineSize": 2,
@@ -3436,8 +3436,8 @@
                     "FontSize": 26,
                     "LabelText": "音乐: ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -3616,8 +3616,8 @@
                     "FontSize": 26,
                     "LabelText": "音效:  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -3796,8 +3796,8 @@
                     "FontSize": 26,
                     "LabelText": "语音:  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -3899,8 +3899,8 @@
                     "FontSize": 26,
                     "LabelText": "语音: ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -4012,8 +4012,8 @@
                         "FontSize": 26,
                         "LabelText": "本地话",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4134,8 +4134,8 @@
                         "FontSize": 26,
                         "LabelText": "普通话",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4201,8 +4201,8 @@
                     "FontSize": 26,
                     "LabelText": "其他: ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -4314,8 +4314,8 @@
                         "FontSize": 26,
                         "LabelText": "自动准备 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4436,8 +4436,8 @@
                         "FontSize": 26,
                         "LabelText": "震动 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4503,8 +4503,8 @@
                     "FontSize": 26,
                     "LabelText": "特效: ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -4664,8 +4664,8 @@
                         "FontSize": 26,
                         "LabelText": "开",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4834,8 +4834,8 @@
                         "FontSize": 26,
                         "LabelText": "关",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4901,8 +4901,8 @@
                     "FontSize": 26,
                     "LabelText": "手牌:  ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -5015,8 +5015,8 @@
                         "FontSize": 26,
                         "LabelText": "小 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5138,8 +5138,8 @@
                         "FontSize": 26,
                         "LabelText": "大 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5409,8 +5409,8 @@
                         "FontSize": 24,
                         "LabelText": "圆桌",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5580,8 +5580,8 @@
                         "FontSize": 24,
                         "LabelText": "场景",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5751,8 +5751,8 @@
                         "FontSize": 24,
                         "LabelText": "复古",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5922,8 +5922,8 @@
                         "FontSize": 24,
                         "LabelText": "经典",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6138,8 +6138,8 @@
                         "FontSize": 24,
                         "LabelText": "经典",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6310,8 +6310,8 @@
                         "FontSize": 24,
                         "LabelText": "复古",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6814,7 +6814,6 @@
         "createNewPng/daTC1_18.png",
         "createNewPng/daTC1_19.png",
         "createNewPng/daTC1_20.png",
-        "fonts/lanting.TTF",
         "joinGame/xiaotanchuan_50.png",
         "playing/cardPic/beijing.png",
         "playing/cardPic/beijing_4.jpg",

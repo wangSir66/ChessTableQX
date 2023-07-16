@@ -311,8 +311,8 @@
                     "FontSize": 28,
                     "LabelText": "昵称",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -371,8 +371,8 @@
                     "FontSize": 24,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -431,8 +431,8 @@
                     "FontSize": 24,
                     "LabelText": "20190802",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -493,8 +493,8 @@
                     "FontSize": 24,
                     "LabelText": "应扣999  实扣999  均分钻石",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -673,8 +673,8 @@
                     "FontSize": 20,
                     "LabelText": "内容",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -819,6 +819,12 @@
         "Name": "Layer",
         "ctype": "LayerObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/headMask.png",
+        "friendCards/common/img_tongyong.png",
+        "friendCards/tongji/checkMember/img_liushui_bg.png"
+      ],
       "ctype": "GameFileData"
     }
   },

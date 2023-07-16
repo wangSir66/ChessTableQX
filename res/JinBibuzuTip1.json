@@ -205,8 +205,8 @@
                 "FontSize": 30,
                 "LabelText": "您的金币不足，推荐您获取金币后继续游戏",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -396,8 +396,8 @@
                     "FontSize": 32,
                     "LabelText": "66666",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -551,8 +551,8 @@
                     "FontSize": 32,
                     "LabelText": "50000",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -604,8 +604,8 @@
                         "FontSize": 30,
                         "LabelText": "￥",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -669,8 +669,8 @@
                     "FontSize": 22,
                     "LabelText": "666666",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -959,8 +959,8 @@
                     "FontSize": 30,
                     "LabelText": "666666",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -1105,7 +1105,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/gold/g_icon_jinbi.png",
         "game_picture/gold/goldCommon/bg_xiaotanchuang.png",
         "game_picture/gold/goldCommon/bg_youhui.png",

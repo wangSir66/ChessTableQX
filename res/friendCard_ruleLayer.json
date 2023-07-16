@@ -201,8 +201,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 1174.6505,
-                  "Y": 677.9612
+                  "X": 1226.7344,
+                  "Y": 659.8997
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -211,17 +211,17 @@
                 "CColor": {},
                 "IconVisible": false,
                 "PrePosition": {
-                  "X": 0.9177,
-                  "Y": 0.9416
+                  "X": 0.9584,
+                  "Y": 0.9165
                 },
                 "PreSize": {
                   "X": 0.0594,
                   "Y": 0.1056
                 },
-                "LeftMargin": 1136.6505,
-                "RightMargin": 67.3495,
-                "TopMargin": 4.0388,
-                "BottomMargin": 639.9612,
+                "LeftMargin": 1188.7344,
+                "RightMargin": 15.2656,
+                "TopMargin": 22.1003,
+                "BottomMargin": 621.8997,
                 "Tag": 787,
                 "ActionTag": -1915083773,
                 "Size": {
@@ -354,8 +354,8 @@
                     "FontSize": 28,
                     "LabelText": "跑得快2人，非必管",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -393,18 +393,18 @@
                       "Y": 0.7745
                     },
                     "PreSize": {
-                      "X": 0.2085,
-                      "Y": 0.237
+                      "X": 0.2034,
+                      "Y": 0.2074
                     },
                     "LeftMargin": 140.4,
-                    "RightMargin": 785.6,
-                    "TopMargin": 14.4425,
-                    "BottomMargin": 88.5575,
+                    "RightMargin": 791.6,
+                    "TopMargin": 16.4425,
+                    "BottomMargin": 90.5575,
                     "Tag": 583,
                     "ActionTag": 861865254,
                     "Size": {
-                      "X": 244.0,
-                      "Y": 32.0
+                      "X": 238.0,
+                      "Y": 28.0
                     },
                     "Name": "text_ruleName",
                     "ctype": "TextObjectData"
@@ -413,8 +413,8 @@
                     "FontSize": 28,
                     "LabelText": "玩法1：",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -452,18 +452,18 @@
                       "Y": 0.7745
                     },
                     "PreSize": {
-                      "X": 0.0726,
-                      "Y": 0.237
+                      "X": 0.0838,
+                      "Y": 0.2074
                     },
                     "LeftMargin": 46.8,
-                    "RightMargin": 1038.2,
-                    "TopMargin": 14.4425,
-                    "BottomMargin": 88.5575,
+                    "RightMargin": 1025.2,
+                    "TopMargin": 16.4425,
+                    "BottomMargin": 90.5575,
                     "Tag": 584,
                     "ActionTag": -40156888,
                     "Size": {
-                      "X": 85.0,
-                      "Y": 32.0
+                      "X": 98.0,
+                      "Y": 28.0
                     },
                     "Name": "text_wanfaNum",
                     "ctype": "TextObjectData"
@@ -473,8 +473,8 @@
                     "FontSize": 20,
                     "LabelText": "跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，跑得快，18张，清一色，对对碰，清一色，对对碰，",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -698,7 +698,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 991.4579,
+                      "X": 991.458,
                       "Y": 50.2875
                     },
                     "Scale": {
@@ -717,8 +717,8 @@
                       "X": 0.1222,
                       "Y": 0.3852
                     },
-                    "LeftMargin": 848.4579,
-                    "RightMargin": 178.5421,
+                    "LeftMargin": 848.458,
+                    "RightMargin": 178.542,
                     "TopMargin": 58.7125,
                     "BottomMargin": 24.2875,
                     "Tag": 419,
@@ -792,8 +792,8 @@
                         "FontSize": 28,
                         "LabelText": "暂停开房   ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -833,18 +833,18 @@
                           "Y": 0.5251
                         },
                         "PreSize": {
-                          "X": 3.5556,
-                          "Y": 0.9143
+                          "X": 4.2778,
+                          "Y": 0.8
                         },
                         "LeftMargin": 42.9998,
-                        "RightMargin": -134.9998,
-                        "TopMargin": 0.6215,
-                        "BottomMargin": 2.3785,
+                        "RightMargin": -160.9998,
+                        "TopMargin": 2.6215,
+                        "BottomMargin": 4.3785,
                         "Tag": 341,
                         "ActionTag": -2043040122,
                         "Size": {
-                          "X": 128.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "text",
                         "ctype": "TextObjectData"
@@ -920,8 +920,8 @@
                         "FontSize": 28,
                         "LabelText": "接受对局邀请       ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -961,18 +961,18 @@
                           "Y": 0.5251
                         },
                         "PreSize": {
-                          "X": 6.0,
-                          "Y": 0.9143
+                          "X": 7.3889,
+                          "Y": 0.8
                         },
                         "LeftMargin": 42.9998,
-                        "RightMargin": -222.9998,
-                        "TopMargin": 0.6215,
-                        "BottomMargin": 2.3785,
+                        "RightMargin": -272.9998,
+                        "TopMargin": 2.6215,
+                        "BottomMargin": 4.3785,
                         "Tag": 3304,
                         "ActionTag": 1172393735,
                         "Size": {
-                          "X": 216.0,
-                          "Y": 32.0
+                          "X": 266.0,
+                          "Y": 28.0
                         },
                         "Name": "text",
                         "ctype": "TextObjectData"
@@ -1048,8 +1048,8 @@
                         "FontSize": 28,
                         "LabelText": "添加至快速开始列表    ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineSize": 2,
@@ -1089,18 +1089,18 @@
                           "Y": 0.5251
                         },
                         "PreSize": {
-                          "X": 7.6667,
-                          "Y": 0.9143
+                          "X": 8.5556,
+                          "Y": 0.8
                         },
                         "LeftMargin": 42.9998,
-                        "RightMargin": -282.9998,
-                        "TopMargin": 0.6215,
-                        "BottomMargin": 2.3785,
+                        "RightMargin": -314.9998,
+                        "TopMargin": 2.6215,
+                        "BottomMargin": 4.3785,
                         "Tag": 3306,
                         "ActionTag": 1039933414,
                         "Size": {
-                          "X": 276.0,
-                          "Y": 32.0
+                          "X": 308.0,
+                          "Y": 28.0
                         },
                         "Name": "text",
                         "ctype": "TextObjectData"
@@ -1260,8 +1260,8 @@
                     "FontSize": 28,
                     "LabelText": "接受全玩法对局邀请     ",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -1301,18 +1301,18 @@
                       "Y": 0.5251
                     },
                     "PreSize": {
-                      "X": 8.3529,
-                      "Y": 0.8889
+                      "X": 9.4706,
+                      "Y": 0.7778
                     },
                     "LeftMargin": 42.9998,
-                    "RightMargin": -292.9998,
-                    "TopMargin": 1.0964,
-                    "BottomMargin": 2.9036,
+                    "RightMargin": -330.9998,
+                    "TopMargin": 3.0964,
+                    "BottomMargin": 4.9036,
                     "Tag": 3308,
                     "ActionTag": -499641543,
                     "Size": {
-                      "X": 284.0,
-                      "Y": 32.0
+                      "X": 322.0,
+                      "Y": 28.0
                     },
                     "Name": "text",
                     "ctype": "TextObjectData"
@@ -1343,6 +1343,20 @@
         "Name": "Node",
         "ctype": "SingleNodeObjectData"
       },
+      "UsedResources": [
+        "friendCards/common/btn_chebox_fang.png",
+        "friendCards/common/btn_x_normal.png",
+        "friendCards/common/img_datanchuang.png",
+        "friendCards/common/img_dikuang.png",
+        "friendCards/common/img_gou.png",
+        "friendCards/common/img_hengxian.png",
+        "friendCards/mian_rule/btn_black_list_n.png",
+        "friendCards/mian_rule/btn_black_list_s.png",
+        "friendCards/mian_rule/tianjiawanfa_n.png",
+        "friendCards/mian_rule/tianjiawanfa_s.png",
+        "friendCards/mian_rule/xiugaiwanfa_n.png",
+        "friendCards/mian_rule/xiugaiwanfa_s.png"
+      ],
       "ctype": "GameFileData"
     }
   },

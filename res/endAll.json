@@ -773,8 +773,8 @@
                     "FontSize": 18,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -1747,8 +1747,8 @@
                         "FontSize": 28,
                         "LabelText": "自摸次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1804,8 +1804,8 @@
                         "FontSize": 28,
                         "LabelText": "接炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1861,8 +1861,8 @@
                         "FontSize": 28,
                         "LabelText": "点炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1918,8 +1918,8 @@
                         "FontSize": 28,
                         "LabelText": "暗杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1975,8 +1975,8 @@
                         "FontSize": 28,
                         "LabelText": "明杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2032,8 +2032,8 @@
                         "FontSize": 28,
                         "LabelText": "旋风杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2284,8 +2284,8 @@
                     "FontSize": 18,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -3258,8 +3258,8 @@
                         "FontSize": 28,
                         "LabelText": "自摸次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3315,8 +3315,8 @@
                         "FontSize": 28,
                         "LabelText": "接炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3372,8 +3372,8 @@
                         "FontSize": 28,
                         "LabelText": "点炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3429,8 +3429,8 @@
                         "FontSize": 28,
                         "LabelText": "暗杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3486,8 +3486,8 @@
                         "FontSize": 28,
                         "LabelText": "明杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3543,8 +3543,8 @@
                         "FontSize": 28,
                         "LabelText": "旋风杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3795,8 +3795,8 @@
                     "FontSize": 18,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -4769,8 +4769,8 @@
                         "FontSize": 28,
                         "LabelText": "自摸次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4826,8 +4826,8 @@
                         "FontSize": 28,
                         "LabelText": "接炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4883,8 +4883,8 @@
                         "FontSize": 28,
                         "LabelText": "点炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4940,8 +4940,8 @@
                         "FontSize": 28,
                         "LabelText": "暗杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4997,8 +4997,8 @@
                         "FontSize": 28,
                         "LabelText": "明杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5054,8 +5054,8 @@
                         "FontSize": 28,
                         "LabelText": "旋风杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5306,8 +5306,8 @@
                     "FontSize": 18,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -6280,8 +6280,8 @@
                         "FontSize": 28,
                         "LabelText": "自摸次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6337,8 +6337,8 @@
                         "FontSize": 28,
                         "LabelText": "接炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6394,8 +6394,8 @@
                         "FontSize": 28,
                         "LabelText": "点炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6451,8 +6451,8 @@
                         "FontSize": 28,
                         "LabelText": "暗杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6508,8 +6508,8 @@
                         "FontSize": 28,
                         "LabelText": "明杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6565,8 +6565,8 @@
                         "FontSize": 28,
                         "LabelText": "旋风杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -7051,7 +7051,6 @@
       },
       "UsedResources": [
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "friendCards/icon_null.png",
         "friendCards/share_point.png",
         "friendCards/share_shine.png",

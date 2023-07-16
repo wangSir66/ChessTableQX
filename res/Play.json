@@ -742,8 +742,8 @@
                 "FontSize": 22,
                 "LabelText": "88",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -848,8 +848,8 @@
                 "FontSize": 22,
                 "LabelText": "88",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -3789,8 +3789,8 @@
                     "FontSize": 21,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -6145,8 +6145,8 @@
                     "FontSize": 21,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -8505,8 +8505,8 @@
                     "FontSize": 21,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -10817,8 +10817,8 @@
                     "FontSize": 21,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -16239,8 +16239,8 @@
                 "FontSize": 20,
                 "LabelText": "系统将摸打或胡牌，不做其他操作（如吃碰杠等）",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -16530,7 +16530,6 @@
         "Default/Button_Disable.png",
         "Default/ImageFile.png",
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "game_picture/bac_datingtoushangzhezhao2.png",
         "game_picture/dating1_06.png",
         "game_picture/dating-1_73.png",

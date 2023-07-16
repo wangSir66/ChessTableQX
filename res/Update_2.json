@@ -105,8 +105,8 @@
                     "FontSize": 26,
                     "LabelText": "Text Label",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -167,8 +167,8 @@
                     "FontSize": 26,
                     "LabelText": "Text Label",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -428,7 +428,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "loading/icon_left.png",
         "loading/icon_right.png",
         "loading/update_bar.png",

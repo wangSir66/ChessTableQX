@@ -435,8 +435,8 @@
                         "FontSize": 22,
                         "LabelText": " 我的钻石 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -489,8 +489,8 @@
                         "FontSize": 22,
                         "LabelText": "1000000",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -710,8 +710,8 @@
                         "FontSize": 22,
                         "LabelText": "ID:10000000",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -768,8 +768,8 @@
                         "FontSize": 24,
                         "LabelText": "亲友圈名字八个字",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -826,8 +826,8 @@
                         "FontSize": 24,
                         "LabelText": "/8888人 ",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "VerticalAlignmentType": "VT_Center",
@@ -884,8 +884,8 @@
                         "FontSize": 24,
                         "LabelText": "8888",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "HorizontalAlignmentType": "HT_Right",
@@ -1032,8 +1032,8 @@
                             "FontSize": 20,
                             "LabelText": "99999",
                             "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/lanting.TTF",
+                              "Type": "Default",
+                              "Path": "",
                               "Plist": ""
                             },
                             "HorizontalAlignmentType": "HT_Center",
@@ -1277,8 +1277,8 @@
                         "FontSize": 16,
                         "ButtonText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {},
@@ -1545,8 +1545,8 @@
                         "FontSize": 16,
                         "ButtonText": "",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "TextColor": {},
@@ -1621,8 +1621,8 @@
                     "FontSize": 16,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {},
@@ -1764,8 +1764,8 @@
                     "FontSize": 16,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {},
@@ -1907,8 +1907,8 @@
                     "FontSize": 16,
                     "ButtonText": "",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "TextColor": {},
@@ -3008,8 +3008,8 @@
                                         "FontSize": 18,
                                         "LabelText": "昵称",
                                         "FontResource": {
-                                          "Type": "Normal",
-                                          "Path": "fonts/lanting.TTF",
+                                          "Type": "Default",
+                                          "Path": "",
                                           "Plist": ""
                                         },
                                         "HorizontalAlignmentType": "HT_Center",
@@ -3208,8 +3208,8 @@
                                         "FontSize": 18,
                                         "LabelText": "昵称",
                                         "FontResource": {
-                                          "Type": "Normal",
-                                          "Path": "fonts/lanting.TTF",
+                                          "Type": "Default",
+                                          "Path": "",
                                           "Plist": ""
                                         },
                                         "HorizontalAlignmentType": "HT_Center",
@@ -3408,8 +3408,8 @@
                                         "FontSize": 18,
                                         "LabelText": "昵称",
                                         "FontResource": {
-                                          "Type": "Normal",
-                                          "Path": "fonts/lanting.TTF",
+                                          "Type": "Default",
+                                          "Path": "",
                                           "Plist": ""
                                         },
                                         "HorizontalAlignmentType": "HT_Center",
@@ -3608,8 +3608,8 @@
                                         "FontSize": 18,
                                         "LabelText": "昵称",
                                         "FontResource": {
-                                          "Type": "Normal",
-                                          "Path": "fonts/lanting.TTF",
+                                          "Type": "Default",
+                                          "Path": "",
                                           "Plist": ""
                                         },
                                         "HorizontalAlignmentType": "HT_Center",
@@ -5549,8 +5549,8 @@
                     "FontSize": 24,
                     "LabelText": "这里是八八八个字",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -5606,8 +5606,8 @@
                     "FontSize": 20,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -5664,8 +5664,8 @@
                     "FontSize": 20,
                     "LabelText": "/8888",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "VerticalAlignmentType": "VT_Center",
@@ -5722,8 +5722,8 @@
                     "FontSize": 20,
                     "LabelText": "8888",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Right",
@@ -6259,7 +6259,7 @@
                 ],
                 "ActionTag": 925379314,
                 "Size": {
-                  "X": 1069.0,
+                  "X": 1069.952,
                   "Y": 45.0
                 },
                 "Name": "scroll",
@@ -6287,7 +6287,6 @@
         "Default/Button_Press.png",
         "Default/ImageFile.png",
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "friendCards/common/btn_club_n.png",
         "friendCards/common/btn_club_s.png",
         "friendCards/common/head/headMask_clubList.png",

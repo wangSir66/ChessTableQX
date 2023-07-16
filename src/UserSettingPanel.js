@@ -3150,8 +3150,11 @@ var HomeSettingView = cc.Layer.extend({
                     }
                 },
                 _click: function () {
-                    removeUpdataDirectory();
-                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Shezhi_Yijianxiufu", { uid: SelfUid() });
+                    let tm = new Date().getTime() - 120 * 1000;
+                    if (tm > gameStartTime) {
+                        removeUpdataDirectory();
+                        MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Shezhi_Yijianxiufu", { uid: SelfUid() });
+                    }
                 }
             },
             SliderVoice: {

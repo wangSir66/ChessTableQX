@@ -226,8 +226,8 @@
                 "FontSize": 26,
                 "LabelText": "头像",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -284,8 +284,8 @@
                 "FontSize": 26,
                 "LabelText": "昵称",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -342,8 +342,8 @@
                 "FontSize": 26,
                 "LabelText": "ID",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -400,8 +400,8 @@
                 "FontSize": 26,
                 "LabelText": "注册时间",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -458,8 +458,8 @@
                 "FontSize": 26,
                 "LabelText": "生效时间",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -516,8 +516,8 @@
                 "FontSize": 26,
                 "LabelText": "累计邀请人数: 5人",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -663,8 +663,8 @@
                     "FontSize": 26,
                     "LabelText": "你的昵称是什",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -721,8 +721,8 @@
                     "FontSize": 26,
                     "LabelText": "12345678",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -779,8 +779,8 @@
                     "FontSize": 26,
                     "LabelText": "2018/12/12",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -837,8 +837,8 @@
                     "FontSize": 26,
                     "LabelText": "2018/12/12",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -993,7 +993,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/lanting.TTF",
         "game_picture/gold/invite/YQguanbi001.png",
         "game_picture/gold/invite/YQguanbi002.png",
         "game_picture/gold/invite/YQjiludik.png",
