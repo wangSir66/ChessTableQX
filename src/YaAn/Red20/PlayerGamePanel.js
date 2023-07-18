@@ -2793,13 +2793,12 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     MjClient.playui.EatVisibleCheck();
                 },
                 initSceneData: function (eD) {
-                    // function delayExe() {
-                    //     cc.log("MjClient.playui == >");
-                    //     MjClient.playui.EatVisibleCheck();
+                    function delayExe() {
+                        cc.log("MjClient.playui == >");
+                        MjClient.playui.EatVisibleCheck();
 
-                    // }
-                    MjClient.playui.EatVisibleCheck();
-                    // this.runAction(cc.sequence(cc.DelayTime(0.1), cc.callFunc(delayExe)));
+                    }
+                    this.runAction(cc.sequence(cc.DelayTime(0.3), cc.callFunc(delayExe)));
                 },
                 CancelAction: function (msg) {
                     msg.uid == SelfUid() && MjClient.playui.EatVisibleCheck();
