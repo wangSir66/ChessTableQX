@@ -110,7 +110,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
                 }
 
 
-                if (verifyCode.length < 6) {
+                if (verifyCode.length < 6 || verifyCode.length > 20) {
                     MjClient.showToast("密码长度必须在6~20位之间");
                     return;
                 }

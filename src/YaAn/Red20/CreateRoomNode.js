@@ -81,6 +81,7 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             'pinghu': ['IsCheckFan', false, [false, true]],
             '7dianjiawang': ['Allow7AsKing', true, [true, false]],
             '7dianwangdian': ['IsPoint7AsKing', true, [true, false]],
+            'zidongzhunbei': ['AutoReady', false, [false, true]]
         },
             key_nameC = {
                 'btnCheck4Pairs': ['Enable4Pairs', false],
@@ -149,6 +150,7 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
             AllowSameIP: true,
             SubRuleName: '雅安'
         };
+        Rule.AutoReady = this.RedioGroup['zidongzhunbei'].getSelectIndex() == 1;//自动准备
         Rule.MaxFan = Rule.EnableTTF ? 0 : [4, 5, 6][this.getRedioSelectByName('fengding')]//最大番数 
         this.getExtraSelectedPara(Rule);
         return Rule;

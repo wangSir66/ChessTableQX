@@ -2013,7 +2013,87 @@
                     <PreSize X="1.0000" Y="0.0492" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="tuoguan" ActionTag="2075587741" Tag="1510" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="1019.6262" BottomMargin="140.3738" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="zidongzhunbei" ActionTag="2080268266" Tag="1469" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="1019.6300" BottomMargin="140.3700" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
+                    <Size X="893.0000" Y="60.0000" />
+                    <Children>
+                      <AbstractNodeData Name="text_1" ActionTag="721990121" Tag="1470" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="自动准备：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="140.0000" Y="28.0000" />
+                        <AnchorPoint ScaleY="0.5000" />
+                        <Position X="10.0000" Y="30.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="96" G="46" B="26" />
+                        <PrePosition X="0.0112" Y="0.5000" />
+                        <PreSize X="0.1568" Y="0.4667" />
+                        <FontResource Type="Default" Path="" Plist="" />
+                        <OutlineColor A="255" R="82" G="54" B="33" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnRadiozb1" ActionTag="408183920" Tag="1471" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="152.0000" RightMargin="705.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+                        <Size X="36.0000" Y="37.0000" />
+                        <Children>
+                          <AbstractNodeData Name="text" ActionTag="101288933" Tag="1472" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="41.9999" RightMargin="-173.9999" TopMargin="1.8027" BottomMargin="7.1973" FontSize="28" LabelText="结算手动准备" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="168.0000" Y="28.0000" />
+                            <AnchorPoint ScaleY="0.5000" />
+                            <Position X="41.9999" Y="21.1973" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="96" G="46" B="26" />
+                            <PrePosition X="1.1667" Y="0.5729" />
+                            <PreSize X="4.6667" Y="0.7568" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="82" G="54" B="33" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="170.0000" Y="30.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.1904" Y="0.5000" />
+                        <PreSize X="0.0403" Y="0.6167" />
+                        <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
+                        <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                      </AbstractNodeData>
+                      <AbstractNodeData Name="btnRadiozb2" ActionTag="1903646252" Tag="1473" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" ctype="CheckBoxObjectData">
+                        <Size X="36.0000" Y="37.0000" />
+                        <Children>
+                          <AbstractNodeData Name="text" ActionTag="1853759330" Tag="1474" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-174.0000" TopMargin="4.4186" BottomMargin="4.5814" FontSize="28" LabelText="结算自动准备" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="168.0000" Y="28.0000" />
+                            <AnchorPoint ScaleY="0.5000" />
+                            <Position X="42.0000" Y="18.5814" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="96" G="46" B="26" />
+                            <PrePosition X="1.1667" Y="0.5022" />
+                            <PreSize X="4.6667" Y="0.7568" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="82" G="54" B="33" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="435.0000" Y="30.0000" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.4871" Y="0.5000" />
+                        <PreSize X="0.0403" Y="0.6167" />
+                        <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
+                        <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                      </AbstractNodeData>
+                    </Children>
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="445.0000" Y="170.3700" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.4983" Y="0.1396" />
+                    <PreSize X="1.0000" Y="0.0492" />
+                    <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="tuoguan" ActionTag="2075587741" Tag="1510" IconVisible="False" LeftMargin="-1.5000" RightMargin="1.5000" TopMargin="1079.6300" BottomMargin="80.3700" LeftEage="59" RightEage="59" TopEage="20" BottomEage="20" Scale9OriginX="59" Scale9OriginY="20" Scale9Width="116" Scale9Height="9" ctype="ImageViewObjectData">
                     <Size X="893.0000" Y="60.0000" />
                     <Children>
                       <AbstractNodeData Name="text_1" ActionTag="963944762" Tag="1511" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="10.0000" RightMargin="743.0000" TopMargin="16.0000" BottomMargin="16.0000" FontSize="28" LabelText="托    管：" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -2142,10 +2222,10 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="445.0000" Y="170.3738" />
+                    <Position X="445.0000" Y="110.3700" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4983" Y="0.1397" />
+                    <PrePosition X="0.4983" Y="0.0905" />
                     <PreSize X="1.0000" Y="0.0492" />
                     <FileData Type="Normal" Path="createNewPng/bg_nothing.png" Plist="" />
                   </AbstractNodeData>

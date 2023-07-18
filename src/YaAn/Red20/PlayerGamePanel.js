@@ -650,32 +650,33 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 [0, 0]
             ],
             goldBg: {
+                _visible: false,
                 _run: function () {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
-                    if (tData && tData.areaSelectMode) {
-                        this.visible = !!tData.areaSelectMode.clubId && MjClient.rePlayVideo == -1;
-                    } else this.visible = false;
+                    // var sData = MjClient.data.sData;
+                    // var tData = sData.tData;
+                    // if (tData && tData.areaSelectMode) {
+                    //     this.visible = !!tData.areaSelectMode.clubId && MjClient.rePlayVideo == -1;
+                    // } else this.visible = false;
                 },
                 tableid: {
                     _visible: false,
                     _event: {
-                        initSceneData: function () {
-                            if (MjClient.rePlayVideo != -1) return;
-                            let pl = getUIPlayer(0);
-                            if (pl && pl.info.honorVal) {
-                                this.visible = true;
-                                this.setString(pl.info.honorVal.honorVal + '');
-                            }
-                        },
-                        roundEnd: function () {
-                            if (MjClient.rePlayVideo != -1) return;
-                            let pl = getUIPlayer(0);
-                            if (pl && pl.info.honorVal) {
-                                this.visible = true;
-                                this.setString(pl.info.honorVal.honorVal + '');
-                            }
-                        },
+                        // initSceneData: function () {
+                        //     if (MjClient.rePlayVideo != -1) return;
+                        //     let pl = getUIPlayer(0);
+                        //     if (pl && pl.info.honorVal) {
+                        //         this.visible = true;
+                        //         this.setString(pl.info.honorVal.honorVal + '');
+                        //     }
+                        // },
+                        // roundEnd: function () {
+                        //     if (MjClient.rePlayVideo != -1) return;
+                        //     let pl = getUIPlayer(0);
+                        //     if (pl && pl.info.honorVal) {
+                        //         this.visible = true;
+                        //         this.setString(pl.info.honorVal.honorVal + '');
+                        //     }
+                        // },
                     }
                 }
             },

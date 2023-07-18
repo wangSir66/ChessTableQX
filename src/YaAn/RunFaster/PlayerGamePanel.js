@@ -441,21 +441,22 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 [0, 0]
             ],
             goldBg: {
+                _visible:false,
                 _run: function () {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
-                    if (tData && tData.areaSelectMode) {
-                        this.visible = !!tData.areaSelectMode.clubId;
-                    } else this.visible = false;
+                    // var sData = MjClient.data.sData;
+                    // var tData = sData.tData;
+                    // if (tData && tData.areaSelectMode) {
+                    //     this.visible = !!tData.areaSelectMode.clubId;
+                    // } else this.visible = false;
                 },
                 tableid: {
                     _event: {
-                        initSceneData: function () {
-                            let pl = getUIPlayer(0);
-                            if (pl) {
-                                this.setString(pl.info.honorVal + '');
-                            }
-                        }
+                        // initSceneData: function () {
+                        //     let pl = getUIPlayer(0);
+                        //     if (pl) {
+                        //         this.setString(pl.info.honorVal + '');
+                        //     }
+                        // }
                     }
                 }
             },

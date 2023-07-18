@@ -12824,6 +12824,8 @@ MJ_setSelectDirBtn = function () {
     var _waitNode = _parentNode.getChildByName("wait");
     var _getRoomNumBtn = _waitNode.getChildByName("getRoomNum");
     var _wxinviteBtn = _waitNode.getChildByName("wxinvite");
+    //屏蔽微信邀请
+    _wxinviteBtn.visible = false;
     var _delroomBtn = _waitNode.getChildByName("delroom");
     var _backHomeBtn = _waitNode.getChildByName("backHomebtn");
     var _btnDirArray = [];
@@ -12919,7 +12921,7 @@ MJ_setSelectDirBtn = function () {
             _rotateBying = true;
             if (Object.keys(sData.players).length < MjClient.MaxPlayerNum) {
                 _getRoomNumBtn.setVisible(true);
-                if (_wxinviteBtn) _wxinviteBtn.setVisible(true);
+                if (_wxinviteBtn) _wxinviteBtn.setVisible(false);
             }
             _rotationNode.isRotated = true;
 
@@ -13301,7 +13303,6 @@ function addClubYaoqingBtn(pos) {
     var clubYaoqingBtn = waitNode.getChildByName("clubYaoqingBtn");
     if (clubYaoqingBtn || !wxinviteBtn)
         return clubYaoqingBtn;
-
     clubYaoqingBtn = new ccui.Button();
     clubYaoqingBtn.loadTextureNormal("friendCards/yaoqing/btn_yaoqing_n.png");
     clubYaoqingBtn.loadTexturePressed("friendCards/yaoqing/btn_yaoqing_s.png");
@@ -13324,12 +13325,12 @@ function addClubYaoqingBtn(pos) {
                 break;
         }
     }, this);
+    var getRoomNumBtn = waitNode.getChildByName("getRoomNum");
 
     clubYaoqingBtn.runAction(cc.repeatForever(cc.callFunc(function () {
-        clubYaoqingBtn.setVisible(wxinviteBtn && wxinviteBtn.isVisible());
+        clubYaoqingBtn.setVisible(getRoomNumBtn && getRoomNumBtn.isVisible());
     })));
 
-    var getRoomNumBtn = waitNode.getChildByName("getRoomNum");
 
     if (!pos) pos = 1;
 
@@ -13365,7 +13366,7 @@ function addClubYaoqingBtn(pos) {
         clubYaoqingBtn.loadTexturePressed("friendCards/yaoqing/sy_btn_yaoqing_s.png");
         setWgtLayout(clubYaoqingBtn, [219 / 1280, 0], [0.5, 0.12], [0, 0]);
         setWgtLayout(wxinviteBtn, [219 / 1280, 0], [0.697, 0.12], [0, 0]);
-        var backHomebtn = waitNode.getChildByName("backHomebtn");
+        // var backHomebtn = waitNode.getChildByName("backHomebtn");
         // setWgtLayout(backHomebtn, [219 / 1280, 0], [0.30, 0.12], [0, 0]);
     }
 
@@ -13374,8 +13375,8 @@ function addClubYaoqingBtn(pos) {
         MjClient.getAppType() === MjClient.APP_TYPE.QXHAMJ) {
         setWgtLayout(clubYaoqingBtn, [0.18, 0.18], [0.5, 0.12], [0, 0]);
     }
-
-
+    //屏蔽微信邀请
+    wxinviteBtn.visible = false;
     return clubYaoqingBtn;
 }
 
@@ -13547,7 +13548,7 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
     }, this);
 
     var _wxinviteBtn = _waitNode.getChildByName("wxinvite");
-    _wxinviteBtn.visible = !MjClient.remoteCfg.guestLogin;
+    _wxinviteBtn.visible = false; //!MjClient.remoteCfg.guestLogin;
     _wxinviteBtn.setContentSize(tempSize.w, tempSize.h);
     setWgtLayout(_wxinviteBtn, [0.18, 0.18], [0.85, 0.33], [0, 0]);
     if (isIPad()) setWgtLayout(_wxinviteBtn, [0.18, 0.18], [0.85, 0.2], [0, 0]);
@@ -13659,7 +13660,9 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
             _getRoomNumBtn.visible = false;
         else
             _getRoomNumBtn.visible = IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
-        _wxinviteBtn.visible = IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
+        // _wxinviteBtn.visible = IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
+        //屏蔽微信邀请
+        _wxinviteBtn.visible = false;
         _delroomBtn.visible = IsInviteVisible() || isWaitReady;
         // 山西南通海安非创建房间的人不显示解散房间按钮
         if ((isJinZhongAPPType()

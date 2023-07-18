@@ -168,9 +168,9 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
                 }
 
                 var verifyCode = self._hintNum0.getString();
-                if(verifyCode.length != 6 || parseInt(verifyCode) == 0)
+                if(verifyCode.length < 6 || verifyCode.length > 20)
                 {
-                    MjClient.showToast("请输入正确的密码");
+                    MjClient.showToast("请输入正确的密码(6-20位)");
                     return;
                 }
 

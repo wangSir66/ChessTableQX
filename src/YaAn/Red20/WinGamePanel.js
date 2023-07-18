@@ -228,7 +228,7 @@ var EndOneView_Red20 = cc.Layer.extend({
                             MjClient.goldfieldEnter(tData.fieldId, tData.gameType);
                             return;
                         } else {
-                            MjClient.MJPass2NetForLianYunGang();
+                            MjClient.MJPass2NetForRed20();
                         }
                     }
                 },

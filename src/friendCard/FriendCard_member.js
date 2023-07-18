@@ -4073,7 +4073,7 @@ var FriendCard_member = cc.Layer.extend({
         finishBtn.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 var remarkStr = textInput.getString();
-                var reg = /(^[0-9]*\.([0-9]{1}\d*)$)|(^[0-9]*$)/;
+                var reg = /(^-?[0-9]*\.([0-9]{1}\d*)$)|(^-?[0-9]*$)/;
                 cc.log('/^d+.d+$/.test(remarkStr)', reg.test(remarkStr))
                 if (!remarkStr || remarkStr.length <= 0 || !(reg.test(remarkStr)))
                     MjClient.showToast("请输入有效数字！");
@@ -4083,7 +4083,7 @@ var FriendCard_member = cc.Layer.extend({
                         clubId: that.clubInfo.clubId,
                         userId: itemData.userId,
                         type: 10,
-                        value: parseInt(remarkStr)
+                        value: Number(remarkStr)
                     }
                     MjClient.gamenet.request("pkplayer.handler.clubPlayerUpdate", sendInfo, function (rtn) {
                         MjClient.unblock();

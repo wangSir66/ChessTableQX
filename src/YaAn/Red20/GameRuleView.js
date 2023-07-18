@@ -32,6 +32,7 @@ var GameRule_YARed20 = GameRuleView.extend({
         this.RedioGroup['pinghu'].selectItem(rule.IsCheckFan ? 1 : 0);
         this.RedioGroup['7dianjiawang'].selectItem(rule.Allow7AsKing ? 0 : 1);
         this.RedioGroup['7dianwangdian'].selectItem(rule.IsPoint7AsKing ? 0 : 1);
+        this.RedioGroup['zidongzhunbei'].selectItem(rule.AutoReady ? 1 : 0);
     },
      /**龙四对相关 */
      initLongSiDui: function () {
