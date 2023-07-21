@@ -216,9 +216,9 @@ MjClient.PlayChatAniTime = 0;
                 ipStr = "                               ";
             }
             _IP.setString(ipStr);
-            if(isYongZhouProject()){
-                _IP.setString(hideIP_paohuzi(_setIp()));
-            }
+            // if(isYongZhouProject()){
+            //     _IP.setString(hideIP_paohuzi(_setIp()));
+            // }
 
             //初始化底部道具
             this.initPropUi();

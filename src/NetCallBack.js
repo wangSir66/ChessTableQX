@@ -5137,6 +5137,7 @@ MjClient.netCallBack = {
     }]
     , MJGang: [0, function (d) {
         //cc.log("收到杠的消息", JSON.stringify(d));
+        if (d.ShowAnGang) return;
         if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_FU_LU_SHOU ||
             MjClient.gameType == MjClient.GAME_TYPE.FU_LU_SHOU_ER_SHI_ZHANG) {
             //福禄寿协议内容严重不一样
@@ -5334,13 +5335,13 @@ MjClient.netCallBack = {
         }
 
 
-        sData.players[d.cpginfo.id + ""].pengchigang = d.cpginfo.pengchigang;
+        d.cpginfo && (sData.players[d.cpginfo.id + ""].pengchigang = d.cpginfo.pengchigang);
         var tData = sData.tData;
         var uids = tData.uids;
 
         var cd = d.card;
         var pl = sData.players[d.uid];
-        pl.putType = d.cpginfo.putType;
+        d.cpginfo && (pl.putType = d.cpginfo.putType);
         pl.onLine = true;
         pl.eatFlag = 0;
         //pl.openDoorState = d.cpginfo.openDoorState;
@@ -5577,14 +5578,13 @@ MjClient.netCallBack = {
             pl.touzi = d.touzi;
             pl.mjState = TableState.waitEat;
         }
-
         //一痞二癞的倍数
-        if ("allGangMul" in d.cpginfo) {
+        if (d.cpginfo && "allGangMul" in d.cpginfo) {
             pl.allGangMul = d.cpginfo.allGangMul;
         }
 
         //蕲春红中杠番数
-        if ("curFanCount" in d.cpginfo) {
+        if (d.cpginfo && "curFanCount" in d.cpginfo) {
             pl.curFanCount = d.cpginfo.curFanCount;
         }
         //cc.log("=====doomsky say:pl.openDoorState======", pl.openDoorState);
@@ -5649,7 +5649,7 @@ MjClient.netCallBack = {
         }
 
 
-        if (d.plState && d.cpginfo.id == SelfUid()) {
+        if (d.plState &&d.cpginfo&& d.cpginfo.id == SelfUid()) {
             sData.players[SelfUid() + ""].mjState = d.plState;
         }
 
@@ -5658,11 +5658,11 @@ MjClient.netCallBack = {
             pl.isTianting = false;
         }
 
-        if (d.cpginfo.cardFourCount) {
+        if (d.cpginfo&&d.cpginfo.cardFourCount) {
             pl.cardFourCount = d.cpginfo.cardFourCount;
         }
 
-        if (d.cpginfo.mjhandFour) {
+        if (d.cpginfo&&d.cpginfo.mjhandFour) {
             pl.mjhandFour = d.cpginfo.mjhandFour;
         }
 
@@ -5679,7 +5679,7 @@ MjClient.netCallBack = {
             tData.touingUid = null;
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG && d.cpginfo.canKaHuPlayer != null) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG &&d.cpginfo&& d.cpginfo.canKaHuPlayer != null) {
             var kaHuPlayerUid = d.cpginfo.canKaHuPlayer;
             var kaHuPlayer = sData.players[kaHuPlayerUid];
             kaHuPlayer.eatFlag = 8;

@@ -3229,41 +3229,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 }
             }
         },
-        hua_btn: {
-            _layout: [
-                [0.08, 0.08],
-                [0.97, 0.55],
-                [0, 0]
-            ],
-            _run: function () {
-                this.visible = false;
-                this.opacity = 255;
-                cc.log("===============================run------------- ");
-                // var tData = MjClient.data.sData.tData;
-                // if(tData.areaSelectMode.flowerType == WithFlowerType.noFlower)
-                // {
-                //     if (IsArrowVisible()) this.visible = true;
-                // }
-                // else
-                // {
-                //     this.visible = false;
-                // }
-
-            },
-            _touch: function (btn, eT) {
-                if (eT == 2) {
-                    //显示花
-                    var layer = new showFlowerLayer();
-                    MjClient.Scene.addChild(layer);
-
-
-                    //var showCards = [12,13,25];
-                    //MjClient.Scene.addChild(new HAHZ_showCardLayer(showCards,function(){
-                    //    cc.log("finished call back show cards");
-                    //}));
-                }
-            }
-        },
         block_tuoguan: {
             _layout: [
                 [1, 1],
@@ -3305,92 +3270,64 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 }
             }
         },
-        gps_btn: {
+        duty_btn: {
             _layout: [
-                [0.08, 0.08],
-                [0.97, 0.84],
-                [0, 0]
+                [0.09, 0.09],
+                [0.95, 0.4],
+                [0, 3.7]
             ],
             _run: function () {
-                if (MjClient.data.sData.tData.maxPlayer == 2) {
-                    this.visible = false;
-                }
+                this.setVisible(MjClient.data.sData.tData.fieldId ? true : false);
+                ShowDayTaskTips(this, "left")
             },
             _click: function () {
-                if (MjClient.data.sData.tData.maxPlayer == 3) {
-                    MjClient.Scene.addChild(new showDistance3PlayerLayer());
-                } else if (MjClient.data.sData.tData.maxPlayer == 4) {
-                    MjClient.Scene.addChild(new showDistanceLayer());
+                MjClient.Scene.addChild(new GoldTaskLayer());
+            },
+            Image_hongdian: {
+                _run: function () {
+                    this.visible = MjClient._GoldFuli;
+                },
+                _event: {
+                    refresh_mission: function () {
+                        this.visible = MjClient._GoldFuli;
+                    }
                 }
-                MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Dingwei", { uid: SelfUid(), gameType: MjClient.gameType });
             }
         },
-        BtnMai: {
+        tuoguan_btn: {
+            _layout: [
+                [0.09, 0.09],
+                [0.95, 0.3],
+                [0, 3.7]
+            ],
             _run: function () {
-                this.visible = false;
-                setWgtLayout(this, [0.14, 0.14], [0.6, 0.4], [0, 0]);
+                this.setVisible(MjClient.data.sData.tData.fieldId ? true : false);
+
             },
-            _click: function (btn, type) {
-                cc.log("买");
-                btn.visible = false;
-                btn.getParent().getChildByName("BtnBumai").visible = false;
-                MjClient.gamenet.request("pkroom.handler.tableMsg", {
-                    cmd: "MJJiazhu",
-                    jiazhuNum: 1,
-                });
+            _click: function () {
+                MjClient.gamenet.request("pkroom.handler.tableMsg", { cmd: "beTrust" });
             },
             _event: {
-                mjhand: function () {
-                    this.visible = false;
-                },
-                initSceneData: function () {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
-                    var pl = getUIPlayer_changpai(0);
-                    if (tData.tState == TableState.waitJiazhu && SelfUid() == pl.info.uid) {
-                        if (pl.mjState == TableState.waitJiazhu) {
-                            this.visible = true;
-                        }
+                beTrust: function (msg) {
+                    if (msg.uid == SelfUid()) {
+                        this.enabled = false;
                     }
                 },
-                waitJiazhu: function (eD) {
-                    this.visible = true;
+                cancelTrust: function (msg) {
+                    if (msg.uid == SelfUid()) {
+                        this.enabled = true;
+                    }
                 },
-            }
+                initSceneData: function (msg) {
+                    var pl = getUIPlayer(0);
+                    if (pl.trust) {
+                        this.enabled = false;
+                    } else {
+                        this.enabled = true;
+                    }
+                },
+            },
         },
-        BtnBumai: {
-            _run: function () {
-                this.visible = false;
-                setWgtLayout(this, [0.14, 0.14], [0.4, 0.4], [0, 0]);
-            },
-            _click: function (btn, type) {
-                cc.log("不买");
-                btn.visible = false;
-                btn.getParent().getChildByName("BtnMai").visible = false;
-                MjClient.gamenet.request("pkroom.handler.tableMsg", {
-                    cmd: "MJJiazhu",
-                    jiazhuNum: 0,
-                });
-            },
-            _event: {
-                mjhand: function () {
-                    this.visible = false;
-                },
-                initSceneData: function () {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
-                    var pl = getUIPlayer_changpai(0);
-                    if (tData.tState == TableState.waitJiazhu && SelfUid() == pl.info.uid) {
-                        if (pl.mjState == TableState.waitJiazhu) {
-                            this.visible = true;
-                        }
-                    }
-                },
-                waitJiazhu: function (eD) {
-                    this.visible = true;
-                },
-            }
-        },//排序
         block_load: {
             _visible: false
         }

@@ -972,6 +972,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
                                 var self = this;
+                                self.unscheduleAllCallbacks();
                                 this.schedule(function () {
                                     self.setString(tipCountDown);
                                     if (tipCountDown > 0) {
@@ -1025,6 +1026,9 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     },
                     _event: {
                         waitPut: function () {
+                            showUserZhuangLogo(this, 0);
+                        },
+                        mjhand: function () {
                             showUserZhuangLogo(this, 0);
                         },
                         initSceneData: function () {
@@ -1188,7 +1192,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                             MjClient.playui.showUserHeadAction(this, 0, sD, 'peng');
                         },
                         MJGang: function (sD) {
-                            MjClient.playui.showUserHeadAction(this, 0, sD, 'gang');
+                            sD.ShowAnGang || MjClient.playui.showUserHeadAction(this, 0, sD, 'gang');
                         },
                         MJHu: function (sD) {
                             MjClient.playui.showUserHeadAction(this, 0, sD, 'hu');
@@ -1348,7 +1352,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     setUserOffline(this, 0);
                 },
                 MJGang: function (eD) {
-                    DealMJGang(this, eD, 0);
+                   eD.ShowAnGang || DealMJGang(this, eD, 0);
                     hideTingBtn();
                     setUserOffline(this, 0);
                 },
@@ -1418,7 +1422,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                             MjClient.playui.showUserHeadAction(this, 1, sD, 'peng');
                         },
                         MJGang: function (sD) {
-                            MjClient.playui.showUserHeadAction(this, 1, sD, 'gang');
+                            sD.ShowAnGang || MjClient.playui.showUserHeadAction(this, 1, sD, 'gang');
                         },
                         MJHu: function (sD) {
                             MjClient.playui.showUserHeadAction(this, 1, sD, 'hu');
@@ -1437,6 +1441,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
                                 var self = this;
+                                self.unscheduleAllCallbacks();
                                 this.schedule(function () {
                                     self.setString(tipCountDown);
                                     if (tipCountDown > 0) {
@@ -1491,6 +1496,9 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     _event: {
                         waitPut: function () {
                             showUserZhuangLogo(this, 1);
+                        },
+                        mjhand: function () {
+                           showUserZhuangLogo(this, 1);
                         },
                         initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 1);
@@ -1747,7 +1755,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                             MjClient.playui.showUserHeadAction(this, 2, sD, 'peng');
                         },
                         MJGang: function (sD) {
-                            MjClient.playui.showUserHeadAction(this, 2, sD, 'gang');
+                            sD.ShowAnGang || MjClient.playui.showUserHeadAction(this, 2, sD, 'gang');
                         },
                         MJHu: function (sD) {
                             MjClient.playui.showUserHeadAction(this, 2, sD, 'hu');
@@ -1766,6 +1774,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
                                 var self = this;
+                                self.unscheduleAllCallbacks();
                                 this.schedule(function () {
                                     self.setString(tipCountDown);
                                     if (tipCountDown > 0) {
@@ -1820,6 +1829,9 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     _event: {
                         waitPut: function () {
                             showUserZhuangLogo(this, 2);
+                        },
+                        mjhand: function () {
+                             showUserZhuangLogo(this, 2);
                         },
                         initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 2);
@@ -2081,7 +2093,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                             MjClient.playui.showUserHeadAction(this, 3, sD, 'peng');
                         },
                         MJGang: function (sD) {
-                            MjClient.playui.showUserHeadAction(this, 3, sD, 'gang');
+                            sD.ShowAnGang || MjClient.playui.showUserHeadAction(this, 3, sD, 'gang');
                         },
                         MJHu: function (sD) {
                             MjClient.playui.showUserHeadAction(this, 3, sD, 'hu');
@@ -2100,6 +2112,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
                                 var self = this;
+                                self.unscheduleAllCallbacks();
                                 this.schedule(function () {
                                     self.setString(tipCountDown);
                                     if (tipCountDown > 0) {
@@ -2154,6 +2167,9 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     _event: {
                         waitPut: function () {
                             showUserZhuangLogo(this, 3);
+                        },
+                        mjhand: function () {
+                             showUserZhuangLogo(this, 3);
                         },
                         initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 3);
@@ -4386,7 +4402,7 @@ PlayerGamePanel_Red20.prototype.DealMJGang = function (node, msg, off) {
             let anPengNode = node.children.filter(child => child.name === 'gang1' && child.IsShowBack == true);
             cc.log('偷牌阶段暗杠转杠', anPengNode.length);
             if (anPengNode.length) {
-                anPengNode = node.children.filter(n => n.name === 'anpeng');
+                // anPengNode = node.children.filter(n => n.name === 'anpeng');
                 let sn = cc.p(0, 0);
                 for (let _i = 0; _i < msg.cards.length; _i++) {
                     let p = null;
