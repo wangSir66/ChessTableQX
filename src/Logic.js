@@ -707,7 +707,7 @@ MjClient.CARD_FLOWER_TYPE = {
 
 var GameDownloadCfgUrl = {};//http://121.199.14.235:9993/update/jiangshu/configuration.json
 GameDownloadCfgUrl[MjClient.APP_TYPE.QXJSMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/jiangshu/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/yaan/";
+GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/yaan-dev/";
 GameDownloadCfgUrl[MjClient.APP_TYPE.JSMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/nanjing/";
 GameDownloadCfgUrl[MjClient.APP_TYPE.QXHAMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/huaian/";
 GameDownloadCfgUrl[MjClient.APP_TYPE.QXXZMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/xuzhou/";

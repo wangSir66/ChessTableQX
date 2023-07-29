@@ -3237,11 +3237,11 @@ PlayerGamePanel_Red20.prototype.getNewCard = function (node, copy, name, tag, of
 PlayerGamePanel_Red20.prototype.SetTouchCardHandler = function (standUI, cardui) {
     cardui.addTouchEventListener(function (btn, tp) {
         // var tData = MjClient.data.sData.tData;
-        var pl = getUIPlayer(0),
-            flg = MjClient.playui.isCanTouch ? MjClient.playui.isCanTouch(cardui, btn, tp) : COMMON_UI.isCanTouch(cardui, btn, tp);
-        cc.log('--------SetTouchCardHandler-----', flg)
-        //返回false 表示不能出牌,增强可读性  by sking 2018.12.6
-        if (!flg) return;
+        // var pl = getUIPlayer(0),
+        //     flg = MjClient.playui.isCanTouch ? MjClient.playui.isCanTouch(cardui, btn, tp) : COMMON_UI.isCanTouch(cardui, btn, tp);
+        // cc.log('--------SetTouchCardHandler-----', flg)
+        // //返回false 表示不能出牌,增强可读性  by sking 2018.12.6
+        // if (!flg) return;
         var bounds = MjClient.playui.jsBind.bounds._node;
         if (tp == ccui.Widget.TOUCH_BEGAN) {
             playEffect("cardClick");
