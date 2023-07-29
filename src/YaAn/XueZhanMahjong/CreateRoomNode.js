@@ -14,12 +14,12 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
 
     callSelectBack: function (indx, item, list) {
         this._super(indx, item, list);
-        const isNum = parseInt(indx);
-        if (isNum >= 0 && item) {
-            indx = Number(indx);
-            let p = item.getParent();
-            if (p.name == 'fangshu') this.initFangShu();
-        }
+        // const isNum = parseInt(indx);
+        // if (isNum >= 0 && item) {
+        //     indx = Number(indx);
+        //     let p = item.getParent();
+        //     if (p.name == 'fangshu') ;
+        // }
     },
 
     setExtraPlayNodeCurrentSelect: function (isClub) {
@@ -29,7 +29,7 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
     },
 
     initFangShu: function () {
-        const Indx = this.RedioGroup['fangshu'].getSelectIndex(),
+        const Indx = this.getFangShu(),
             pz = this.RedioGroup['paizhang'],
             bdt = this.getBtnByName('btnCheck_badaotang'),
             dq = this.getBtnByName('btnCheck_DesignatingUnwantedEnabled'),
@@ -60,7 +60,20 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
     },
 
     getSelectPlayNum: function () {
-        const maxP = [4, 3, 3, 2, 2][this.RedioGroup['fangshu'].getSelectIndex()];
+        let maxP = 4;
+        switch (this._data.gameType) {
+            case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                maxP = 4;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+                maxP = 3;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
+                maxP = 2;
+                break;
+        }
         return maxP;
     },
 
@@ -68,7 +81,6 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
     setPlayNodeCurrentSelect: function (isClub) {
         this._super();
         const key_nameR = {
-            'fangshu': ['subRule', 0, [0, 1, 2, 3, 4]],
             'fengding': ['PointsLimit', 3, [3, 4, 5]],
             'dianganghua': ['DianGangHua', 1, [1, 0]],
             'paizhang': ['Forming', 10, [10, 13, 7]],
@@ -91,13 +103,33 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
 
         this.InitCurrentSelect(key_nameR, key_nameC);
     },
-
+    getFangShu: function () {
+        let maxP = 0;
+        switch (this._data.gameType) {
+            case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                maxP = 0;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+                maxP = 2;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+                maxP = 1;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+                maxP = 3;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
+                maxP = 4;
+                break;
+        }
+        return maxP;
+    },
     getSelectedPara: function () {
         const gameType = this._data.gameType,
             Rule = {
                 gameType: gameType,//gameid
                 maxPlayer: this.getSelectPlayNum(),//人数
-                subRule: this.RedioGroup['fangshu'].getSelectIndex(),//房数
+                subRule: this.getFangShu(),//房数
                 PointsLimit: [3, 4, 5][this.RedioGroup['fengding'].getSelectIndex()],//番数限制
                 DianGangHua: [1, 0][this.RedioGroup['dianganghua'].getSelectIndex()],//点杠花规则
                 Forming: [10, 13, 7][this.RedioGroup['paizhang'].getSelectIndex()],//发牌张数规则
@@ -111,7 +143,7 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
                 WinningLastEnabled: this.getCheckboxSelectedByName('btnCheck_WinningLastEnabled'),//是否开启海底捞
                 YaoJiuJiangDuiEnabled: this.getCheckboxSelectedByName('btnCheck_YaoJiuJiangDuiEnabled'),//是否开启幺九将对
                 KaxingwuEnabled: this.getCheckboxSelectedByName('btnCheck_KaXingWu'),//卡星五
-                DgwMultipleEnabled:false,//是否点杠收多家
+                DgwMultipleEnabled: false,//是否点杠收多家
             };
         Rule.LackofEnabled = Rule.subRule == 2 || Rule.subRule == 3;//是否两房
         Rule.JustoneEnabled = Rule.subRule == 4 ? 2 : -1;//二人一房

@@ -62,6 +62,10 @@ CreateViewYaAn = cc.Layer.extend({
                 node = new CreateRoomNode_red20(this, data);
                 break;
             case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
                 node = new CreateRoomNode_ynxuezhan(this, data);
                 break;
             case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN: //跑得快

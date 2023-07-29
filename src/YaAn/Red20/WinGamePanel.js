@@ -231,6 +231,9 @@ var EndOneView_Red20 = cc.Layer.extend({
                             MjClient.MJPass2NetForRed20();
                         }
                     }
+                    if (tData.roundNum <= 0) {
+                        postEvent("showEndRoom");
+                    }
                 },
                 _visible: function () {
                     var tData = MjClient.data.sData.tData;

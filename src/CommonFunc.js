@@ -147,8 +147,12 @@ function isCanChangePlayerNum() {
         MjClient.gameType == MjClient.GAME_TYPE.FEN_XI_YING_KOU ||
         MjClient.gameType == MjClient.GAME_TYPE.HUAI_AN ||
         MjClient.gameType == MjClient.GAME_TYPE.HA_HONGZHONG ||
-        MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI||
-        MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG
+        MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI ||
+        MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG ||
+        MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN_3to2 ||
+        MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN_2to2 ||
+        MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN_3to3 ||
+        MjClient.gameType == MjClient.GAME_TYPE.XUE_ZHAN_2to1
     ) {
         return true;
     } else {
@@ -1893,8 +1897,8 @@ function showFangzhuTagIcon(node, off) {
 
 
 //设置牌的渲染
-function setCardSprite(node, cd, off) {
-    if (MjClient.playui.setCardSprite) return MjClient.playui.setCardSprite(node, cd, off);
+function setCardSprite(node, cd, off, isOut = false) {
+    if (MjClient.playui.setCardSprite) return MjClient.playui.setCardSprite(node, cd, off, isOut);
     //东南西北中发白
     var imgNames = ["Bamboo_", "Character_", "Dot_", "Wind_east", "Wind_south", "Wind_west", "Wind_north", "Red", "Green", "White"];
     var offSets = [];
@@ -4722,7 +4726,7 @@ function PutOutCard(cdui, cd) {
             }
         }
 
-        setCardSprite(out, cd, 0); //加这句是为了根dealwithPut 的scale 大小保持一致
+        setCardSprite(out, cd, 0, true); //加这句是为了根dealwithPut 的scale 大小保持一致
         var oSize = out.getSize();
         var oSc = out.getScale() * 1.3;
 
@@ -4844,16 +4848,16 @@ function PutOutCard(cdui, cd) {
             //if(MjClient.getAppType() == MjClient.APP_TYPE.TXJINZHONGMJ)
             {
                 //为了保证，putOutCard 提前打出去的牌跟 dealMjput创建的牌一致，作此处理 by sking 2018.10.30
-                var _copycdui = cdui.clone();
-                cdui.getParent().addChild(_copycdui);
-                setCardSprite(_copycdui, cd, 0);
-                _copycdui.zIndex = out.zIndex;
-                _copycdui.setPosition(endPoint);
-                _copycdui.visible = true;
-                addCurrentPutTag(_copycdui, 0);
-                _copycdui.setScale(oSc);
+                // var _copycdui = cdui.clone();
+                // cdui.getParent().addChild(_copycdui);
+                // setCardSprite(_copycdui, cd, 0, true);
+                // _copycdui.zIndex = out.zIndex;
+                // _copycdui.setPosition(endPoint);
+                // _copycdui.visible = false;
+                // addCurrentPutTag(_copycdui, 0);
+                // _copycdui.setScale(oSc);
                 cdui.visible = false;
-                _copycdui.name = "copycdui";
+                // _copycdui.name = "copycdui";
             }
 
 
@@ -6072,7 +6076,7 @@ function addCurrentPutTag(cardNode, off) {
         _image.runAction(seq.repeatForever());
         _image.setPosition(0, 0);
         _showSprite.addChild(_image);
-        _showSprite.setScale(_scale * 1.5);
+        _showSprite.setScale(_scale * 1);
         _showSprite.setName("cardShow");
         MjClient.playui.jsBind.eat._node.addChild(_showSprite, 20);
     }
@@ -13561,14 +13565,15 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
             MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Yaoqingweixinhaoyou", { uid: SelfUid(), gameType: MjClient.gameType });
         } //邀请
     }, this);
-
+    var screen = MjClient.size;
     var _delroomBtn = _waitNode.getChildByName("delroom");
     var tempSize = getImageRealSize("playing/gameTable/yaoqing_13.png");   //获取小按钮的真实尺寸
     _delroomBtn.zIndex = 500;
     _delroomBtn.setTouchEnabled(true);
+
     if (!needAdjust) {
         _delroomBtn.setContentSize(tempSize.w, tempSize.h);
-        setWgtLayout(_delroomBtn, [0.11, 0.11], [0.05, 0.45], [0, 0]);
+        setWgtLayout(_delroomBtn, [0.08, 0.08], [0.04, 0.45], [0, 0]);
     }
     // 山西南通海安非创建房间的人不显示解散房间按钮
     if ((isJinZhongAPPType()
@@ -13611,7 +13616,7 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
     _backHomeBtn.setTouchEnabled(true);
     if (!needAdjust) {
         _backHomeBtn.setContentSize(tempSize.w, tempSize.h);
-        setWgtLayout(_backHomeBtn, [0.11, 0.11], [0.05, 0.6], [0, 0]);
+        setWgtLayout(_backHomeBtn, [0.08, 0.08], [0.04, 0.55], [0, 0]);
     }
     _backHomeBtn.addTouchEventListener(function (sender, type) {
         if (type === 2) {
@@ -16532,9 +16537,8 @@ var cosPlayTableInfo = function (node) {
 
 
 //处理出牌,放一张牌，打牌动作
-function DealMJPut_haian(node, msg, off, outNum)
-{
-    if(COMMON_UI3D.is3DUI()) return COMMON_UI3D.DealMJPut_3D(node, msg, off, outNum);
+function DealMJPut_haian(node, msg, off, outNum) {
+    if (COMMON_UI3D.is3DUI()) return COMMON_UI3D.DealMJPut_3D(node, msg, off, outNum);
     cc.log("======DealMJPut_haian======= " + off);
     //cardPutted = false;
     var sData = MjClient.data.sData;
@@ -16542,17 +16546,15 @@ function DealMJPut_haian(node, msg, off, outNum)
 
     var uids = tData.uids;
     var selfIndex = getPlayerIndex(off);
-    if(uids[selfIndex] == msg.uid)
-    {
+    if (uids[selfIndex] == msg.uid) {
         var pl = sData.players[msg.uid];
         var putnum = outNum >= 0 ? outNum : (pl.mjput.length - 1);
         var tingIndex = pl.tingIndex;//沭阳麻将需要
 
-        cc.log( off + "------------- pl.tingIndex =" + pl.tingIndex);
+        cc.log(off + "------------- pl.tingIndex =" + pl.tingIndex);
         cc.log("------------- pl.isTing =" + pl.isTing);
 
-        if(cc.isUndefined(tingIndex) || !pl.isTing)
-        {
+        if (cc.isUndefined(tingIndex) || !pl.isTing) {
             tingIndex = -1;//为了不报错;
         }
 
@@ -16576,18 +16578,15 @@ function DealMJPut_haian(node, msg, off, outNum)
         var out;
         var out_self;
 
-        if (putnum >= maxNum*2 && out2)
-        {
+        if (putnum >= maxNum * 2 && out2) {
             out = out2.clone();
             out_self = out2_self.clone();
         }
-        else if(putnum >= maxNum)
-        {
+        else if (putnum >= maxNum) {
             out = out1.clone();
             out_self = out1_self.clone();
         }
-        else
-        {
+        else {
             out = out0.clone();
             out_self = out0_self.clone();
         }
@@ -16601,60 +16600,50 @@ function DealMJPut_haian(node, msg, off, outNum)
         //}
 
 
-        out.setScale(out.getScale()*1.3);
-        out_self.setScale(out_self.getScale()*1.3);
+        out.setScale(out.getScale() * 1.3);
+        out_self.setScale(out_self.getScale() * 1.3);
         var oSize = out.getSize();
         var oSc = out.scale;
 
-        if (off == 0 && putnum >= maxNum * 2 && out2)
-        {
-            node.addChild(out,putnum + 30);
+        if (off == 0 && putnum >= maxNum * 2 && out2) {
+            node.addChild(out, putnum + 30);
         }
-        else if (off == 0 && putnum >= maxNum)
-        {
-            node.addChild(out,putnum + 20);
+        else if (off == 0 && putnum >= maxNum) {
+            node.addChild(out, putnum + 20);
         }
-        else if(off == 0)
-        {
-            node.addChild(out,putnum + 10);
+        else if (off == 0) {
+            node.addChild(out, putnum + 10);
         }
-        else if(off == 1 )
-        {
+        else if (off == 1) {
             node.addChild(out, putnum);
         }
-        else if(off == 2 || off == 3)
-        {
+        else if (off == 2 || off == 3) {
             node.addChild(out, 20 - putnum);
         }
-        else
-        {
+        else {
             node.addChild(out);
         }
 
-        for(var i = 0; i < node.children.length; i++)
-        {
-            if(node.children[i].name == "newout")
-            {
+        for (var i = 0; i < node.children.length; i++) {
+            if (node.children[i].name == "newout") {
                 node.children[i].name = "out";
             }
         }
 
         out.visible = true;
         out.name = "out";
-        setCardSprite(out, msg.card, off);
+        setCardSprite(out, msg.card, off, off === 0 ? true : false);
 
         var endPoint = cc.p(0, 0);
         var Midpoint = cc.p(0, 0);
         var ws = cc.director.getWinSize();
-        if (putnum > maxNum*2 - 1 && out2)
-        {
+        if (putnum > maxNum * 2 - 1 && out2) {
             out.x = out2.x;
             out.y = out2.y;
-            putnum -= maxNum*2;
-            tingIndex -= maxNum*2;
+            putnum -= maxNum * 2;
+            tingIndex -= maxNum * 2;
         }
-        else if (putnum > maxNum - 1)
-        {
+        else if (putnum > maxNum - 1) {
             out.x = out1.x;
             out.y = out1.y;
             putnum -= maxNum;
@@ -16663,37 +16652,30 @@ function DealMJPut_haian(node, msg, off, outNum)
 
 
         //是否需要变宽
-        var addWide =  0;
-        if (tingIndex <= putnum && tingIndex >= 0 && MjClient.gameType != MjClient.GAME_TYPE.GUAN_NAN && MjClient.gameType != MjClient.GAME_TYPE.HUAI_AN_ERZ){
-            if(off == 0 || off == 2)
-            {
-                addWide =  oSize.width * oSc *0.91;
+        var addWide = 0;
+        if (tingIndex <= putnum && tingIndex >= 0 && MjClient.gameType != MjClient.GAME_TYPE.GUAN_NAN && MjClient.gameType != MjClient.GAME_TYPE.HUAI_AN_ERZ) {
+            if (off == 0 || off == 2) {
+                addWide = oSize.width * oSc * 0.91;
             }
-            else if (off  == 1 || off == 3)
-            {
-                addWide =  oSize.height * oSc *0.73;
+            else if (off == 1 || off == 3) {
+                addWide = oSize.height * oSc * 0.73;
             }
         }
 
 
-        if(off == 0)
-        {
+        if (off == 0) {
             endPoint.y = out.y;
-            endPoint.x = out.x + oSize.width * oSc * putnum*0.95 + addWide;
+            endPoint.x = out.x + oSize.width * oSc * putnum * 0.95 + addWide;
             Midpoint.x = ws.width / 2;
-            Midpoint.y = ws.height*0.3;
-            if(!(outNum >= 0))
-            {
-                if(RemoveNodeBack(node, "putOutCard", 1, msg.card) == 0)
-                {
+            Midpoint.y = ws.height * 0.3;
+            if (!(outNum >= 0)) {
+                if (RemoveNodeBack(node, "putOutCard", 1, msg.card) == 0) {
                     RemoveNodeBack(node, "mjhand", 1, msg.card);
                 }
             }
         }
-        else if (off == 1)
-        {
-            if(!(outNum >= 0))
-            {
+        else if (off == 1) {
+            if (!(outNum >= 0)) {
                 if (MjClient.rePlayVideo == -1)
                     RemoveFrontNode(node, "standPri", 1);
                 else//回放
@@ -16702,29 +16684,25 @@ function DealMJPut_haian(node, msg, off, outNum)
             cc.log("DealMJPut_haian remove card  = " + msg.card);
             endPoint.y = out.y + oSize.height * oSc * putnum * 0.7 + addWide;
             endPoint.x = out.x;
-            Midpoint.x = ws.width *0.78;
-            Midpoint.y = ws.height*0.57;
+            Midpoint.x = ws.width * 0.78;
+            Midpoint.y = ws.height * 0.57;
             out.zIndex = 100 - putnum;
         }
-        else if(off == 2)
-        {
-            if(!(outNum >= 0))
-            {
+        else if (off == 2) {
+            if (!(outNum >= 0)) {
                 if (MjClient.rePlayVideo == -1)
                     RemoveFrontNode(node, "standPri", 1);
                 else//回放
                     RemoveFrontNode(node, "mjhand_replay", 1, msg.card);
             }
 
-            endPoint.x = out.x - oSize.width * oSc * putnum*0.95 - addWide;
+            endPoint.x = out.x - oSize.width * oSc * putnum * 0.95 - addWide;
             endPoint.y = out.y;
             Midpoint.x = ws.width / 2;
             Midpoint.y = ws.height / 4 * 3;
         }
-        else if (off == 3)
-        {
-            if(!(outNum >= 0))
-            {
+        else if (off == 3) {
+            if (!(outNum >= 0)) {
                 if (MjClient.rePlayVideo == -1)
                     RemoveNodeBack(node, "standPri", 1);
                 else
@@ -16733,7 +16711,7 @@ function DealMJPut_haian(node, msg, off, outNum)
 
             endPoint.y = out.y - oSize.height * oSc * putnum * 0.7 - addWide;
             endPoint.x = out.x;
-            Midpoint.x = ws.width*(1- 0.78);
+            Midpoint.x = ws.width * (1 - 0.78);
             Midpoint.y = ws.height * 0.57;
             out.zIndex = putnum;
         }
@@ -16742,24 +16720,21 @@ function DealMJPut_haian(node, msg, off, outNum)
 
 
 
-        if(outNum >= 0) //重连
+        if (outNum >= 0) //重连
         {
             // cc.log("==================tData = "+ JSON.stringify(tData));
             //断线重连的时候
-            if (tData.lastPutCard == msg.card && tData.lastPutPlayer == tData.uids.indexOf(msg.uid))
-            {
+            if (tData.lastPutCard == msg.card && tData.lastPutPlayer == tData.uids.indexOf(msg.uid)) {
                 out.x = endPoint.x;
                 out.y = endPoint.y;
                 clearCurrentPutTag();
                 addCurrentPutTag(out, off);
             }
 
-            if((outNum == pl.mjput.length - 1) && tData.curPlayer == selfIndex && tData.tState == TableState.waitEat)
-            {
+            if ((outNum == pl.mjput.length - 1) && tData.curPlayer == selfIndex && tData.tState == TableState.waitEat) {
 
             }
-            else
-            {
+            else {
                 out.x = endPoint.x;
                 out.y = endPoint.y;
                 return;
@@ -16800,13 +16775,11 @@ function DealMJPut_haian(node, msg, off, outNum)
         //}
 
         var outAction = null;
-        if (off != 0)
-        {
+        if (off != 0) {
             outAction = out_self.clone();
             setCardSprite(outAction, msg.card, 0);
         }
-        else
-        {
+        else {
             outAction = out.clone();
             setCardSprite(outAction, msg.card, off);
         }
@@ -16818,32 +16791,27 @@ function DealMJPut_haian(node, msg, off, outNum)
 
 
 
-        var RemovePutCard = function (onlySelf, huNoAction)
-        {
+        var RemovePutCard = function (onlySelf, huNoAction) {
             if (!huNoAction) {
                 MjClient.lastCardposNode = null;//抢杠胡没有牌 可以劈
             }
 
-            if (!cc.sys.isObjectValid(outAction))
-            {
+            if (!cc.sys.isObjectValid(outAction)) {
                 return;
             }
 
-            if (!onlySelf)
-            {
+            if (!onlySelf) {
                 var _delayTime = 1;
-                if(off == 0) _delayTime = 0.5;
+                if (off == 0) _delayTime = 0.5;
 
                 var delayNum = _delayTime - (Date.now() - putTime) / 1000;
-                if (delayNum < 0)
-                {
+                if (delayNum < 0) {
                     delayNum = 0;
                 }
                 //outAction.setScale(outAction.getScale()*1.2);
                 if (huNoAction) {
                     outAction.removeFromParent();
-                    if(cc.sys.isObjectValid(out))
-                    {
+                    if (cc.sys.isObjectValid(out)) {
                         out.visible = true;
                         out.zIndex = zoder;
                         out.setPosition(endPoint);
@@ -16854,14 +16822,12 @@ function DealMJPut_haian(node, msg, off, outNum)
                 else {
                     outAction.runAction(cc.sequence(
                         cc.delayTime(delayNum),
-                        cc.callFunc(function()
-                        {
-                            if(cc.sys.isObjectValid(out))
-                            {
+                        cc.callFunc(function () {
+                            if (cc.sys.isObjectValid(out)) {
                                 out.visible = true;
                                 out.runAction(cc.sequence(
                                     cc.spawn(cc.moveTo(0.1, endPoint), cc.scaleTo(0.1, oSc)),
-                                    cc.callFunc(function(){
+                                    cc.callFunc(function () {
                                         out.zIndex = zoder;
                                         addCurrentPutTag(out, off);
                                     })
@@ -16874,8 +16840,7 @@ function DealMJPut_haian(node, msg, off, outNum)
                     ));
                 }
             }
-            else
-            {
+            else {
                 //CommonPool.putInPool(outAction);
                 outAction.removeFromParent();
             }
@@ -16887,34 +16852,27 @@ function DealMJPut_haian(node, msg, off, outNum)
         {
             _event:
             {
-                MJPass: function()
-                {
+                MJPass: function () {
                     RemovePutCard(false);
                 },
-                waitPut: function()
-                {
+                waitPut: function () {
                     RemovePutCard(false);
                 },
-                MJChi: function()
-                {
+                MJChi: function () {
                     RemovePutCard(true);
                 },
-                MJPeng: function()
-                {
+                MJPeng: function () {
                     RemovePutCard(true);
                 },
-                MJGang: function(eD)
-                {
+                MJGang: function (eD) {
                     RemovePutCard(true);
                 },
-                roundEnd: function()
-                {
+                roundEnd: function () {
                     RemovePutCard(true);
                 },
-                MJHu:function()
-                {
+                MJHu: function () {
                     if (MjClient.gameType == MjClient.GAME_TYPE.XUE_LIU) { // 血流胡牌去除动画效果
-                        RemovePutCard_2(false,true);
+                        RemovePutCard_2(false, true);
                     }
                     else {
                         RemovePutCard(false, true);
@@ -16928,17 +16886,13 @@ function DealMJPut_haian(node, msg, off, outNum)
 
 
 
-        var RemovePutCard_2 = function (onlySelf,type)
-        {
-            if (!type) 
-            {
+        var RemovePutCard_2 = function (onlySelf, type) {
+            if (!type) {
                 MjClient.lastCardposNode = null;//抢杠胡没有牌 可以劈
             }
 
-            if (!onlySelf)
-            {
-                if (cc.sys.isObjectValid(outAction))
-                {
+            if (!onlySelf) {
+                if (cc.sys.isObjectValid(outAction)) {
                     outAction.runAction(cc.sequence(
                         cc.delayTime(1),
                         //cc.callFunc(function(){
@@ -16949,12 +16903,9 @@ function DealMJPut_haian(node, msg, off, outNum)
                     ));
                 }
             }
-            else
-            {
-                if (cc.sys.isObjectValid(outAction))
-                {
-                    if (type) 
-                    {                      
+            else {
+                if (cc.sys.isObjectValid(outAction)) {
+                    if (type) {
                         outAction.runAction(cc.sequence(
                             cc.delayTime(1),
                             //cc.callFunc(function(){
@@ -16965,27 +16916,23 @@ function DealMJPut_haian(node, msg, off, outNum)
                             cc.removeSelf()
                         ));
                     }
-                    else
-                    {                    
+                    else {
                         outAction.stopAllActions();
                         //CommonPool.putInPool(outAction);
                         outAction.removeFromParent();
                     }
                 }
-                if (cc.sys.isObjectValid(out))
-                {
-                    if (type) 
-                    {                    
+                if (cc.sys.isObjectValid(out)) {
+                    if (type) {
                         out.runAction(cc.sequence(
                             cc.delayTime(1),
-                            cc.callFunc(function(){
+                            cc.callFunc(function () {
                                 out.visible = false;
                                 clearCurrentPutTag();
                             })
                         ));
                     }
-                    else
-                    {                    
+                    else {
                         out.visible = false;
                         clearCurrentPutTag();
                     }
@@ -16997,30 +16944,24 @@ function DealMJPut_haian(node, msg, off, outNum)
         {
             _event:
             {
-                waitPut: function()
-                {
+                waitPut: function () {
                     RemovePutCard_2(false);
                 },
-                MJChi: function()
-                {
+                MJChi: function () {
                     RemovePutCard_2(true);
                 },
-                MJPeng: function()
-                {
+                MJPeng: function () {
                     RemovePutCard_2(true);
                 },
-                MJGang: function(eD)
-                {
+                MJGang: function (eD) {
                     RemovePutCard_2(true);
                 },
-                roundEnd: function()
-                {
+                roundEnd: function () {
                     RemovePutCard_2(true);
                 },
-                MJHu:function()
-                {
+                MJHu: function () {
                     if (MjClient.gameType == MjClient.GAME_TYPE.XUE_LIU) { // 血流胡牌去除动画效果
-                        RemovePutCard_2(false,true);
+                        RemovePutCard_2(false, true);
                     }
                 }
             }
@@ -17028,22 +16969,19 @@ function DealMJPut_haian(node, msg, off, outNum)
 
 
         var putTime = Date.now();
-        if (off == 0 && MjClient.rePlayVideo == -1)
-        {
+        if (off == 0 && MjClient.rePlayVideo == -1) {
             outAction.x = Midpoint.x;
             outAction.y = Midpoint.y;
-            outAction.scale = 2*oSc;
+            outAction.scale = 2 * oSc;
             //RemovePutCard(false);
             outAction.runAction(cc.sequence(
                 cc.delayTime(0.5),
-                cc.callFunc(function()
-                {
-                    if(cc.sys.isObjectValid(out))
-                    {
+                cc.callFunc(function () {
+                    if (cc.sys.isObjectValid(out)) {
                         out.visible = true;
                         out.runAction(cc.sequence(
                             cc.spawn(cc.moveTo(0.1, endPoint), cc.scaleTo(0.1, oSc)),
-                            cc.callFunc(function(){
+                            cc.callFunc(function () {
                                 out.zIndex = zoder;
                                 addCurrentPutTag(out, off);
                             })
@@ -17054,26 +16992,23 @@ function DealMJPut_haian(node, msg, off, outNum)
             ));
             BindUiAndLogic(outAction, outActionBind_2);
         }
-        else
-        {
+        else {
             outAction.x = node.getChildByName("stand").x;
             outAction.y = node.getChildByName("stand").y;
             outAction.scale = oSc;
             outAction.runAction(cc.spawn(cc.moveTo(0.1, Midpoint), cc.scaleTo(0.1, 2 * oSc)));
-            var pl = sData.players[SelfUid()+""];
+            var pl = sData.players[SelfUid() + ""];
             if (tData.tState != TableState.waitEat || (pl && pl.eatFlag == 0))//自己没有吃碰杠等操作
             {
                 //RemovePutCard(false);
                 outAction.runAction(cc.sequence(
                     cc.delayTime(0.5),
-                    cc.callFunc(function()
-                    {
-                        if(cc.sys.isObjectValid(out))
-                        {
+                    cc.callFunc(function () {
+                        if (cc.sys.isObjectValid(out)) {
                             out.visible = true;
                             out.runAction(cc.sequence(
                                 cc.spawn(cc.moveTo(0.1, endPoint), cc.scaleTo(0.1, oSc)),
-                                cc.callFunc(function(){
+                                cc.callFunc(function () {
                                     out.zIndex = zoder;
                                     addCurrentPutTag(out, off);
                                 })
@@ -17084,29 +17019,25 @@ function DealMJPut_haian(node, msg, off, outNum)
                 ));
                 BindUiAndLogic(outAction, outActionBind_2);
             }
-            else
-            {
+            else {
                 BindUiAndLogic(outAction, outActionBind);
             }
         }
 
 
 
-        if (!(outNum >= 0))
-        {
+        if (!(outNum >= 0)) {
             MjClient.playui.CardLayoutRestore(node, off);
         }
 
         //add by sking
-        if(off == 0 && getUIPlayer(0).mjhand)
-        {
+        if (off == 0 && getUIPlayer(0).mjhand) {
             cc.log("----------------重新排列--------00000---------");
             MjClient.playui.CardLayoutRestore(node, off);
         }
 
 
-        if (off != 0)
-        {
+        if (off != 0) {
             showMJOutBig(node, msg.card);
         }
     }

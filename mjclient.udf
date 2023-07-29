@@ -28,14 +28,5 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="Play_XueZhanMahjong.csd" />
-          <FilePathData Path="Play_Red20.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="Play_Red20.csd" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

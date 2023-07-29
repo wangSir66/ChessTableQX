@@ -5,7 +5,6 @@ var GameRule_YAXueZhan = GameRuleView.extend({
     reductionRule: function () {
         this._super();
         const rule = MjClient.data.sData.tData.areaSelectMode;
-        this.RedioGroup['fangshu'].selectItem(rule.subRule);
         this.initFangShu();
         this.RedioGroup['fengding'].selectItem([3, 4, 5].indexOf(rule.PointsLimit));
         this.RedioGroup['dianganghua'].selectItem([1, 0].indexOf(rule.DianGangHua));
@@ -25,8 +24,30 @@ var GameRule_YAXueZhan = GameRuleView.extend({
         this.getBtnByName('btnCheck_badaotang').setSelected(rule.DgwMultipleEnabled);
     },
     
+    getFangShu: function () {
+        let maxP = 0;
+        switch (MjClient.gameType) {
+            case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                maxP = 0;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+                maxP = 2;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+                maxP = 1;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+                maxP = 3;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
+                maxP = 4;
+                break;
+        }
+        return maxP;
+    },
+    
     initFangShu: function () {
-        const Indx = this.RedioGroup['fangshu'].getSelectIndex(),
+        const Indx = this.getFangShu(),
             pz = this.RedioGroup['paizhang'],
             bdt = this.getBtnByName('btnCheck_badaotang'),
             dq = this.getBtnByName('btnCheck_DesignatingUnwantedEnabled'),

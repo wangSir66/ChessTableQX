@@ -288,6 +288,10 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
                         MjClient.MJPass2NetForxuezhanMJ();
                     }
 				}
+				
+				if (tData.roundNum <= 0) {
+					postEvent("showEndRoom");
+				}
 			},
 			_visible :function()
 			{

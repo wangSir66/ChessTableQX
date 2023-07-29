@@ -545,6 +545,10 @@ MjClient.netCallBack = {
                     MjClient.majiang.initAreaSelectMode(d.tData.areaSelectMode);
                     break;
                 case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+                case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+                case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+                case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
                     MjClient.majiang = MjClient.majiang_ynxuezhan;
                     MjClient.majiang.initAreaSelectMode(d.tData.areaSelectMode);
                     break;
@@ -1468,6 +1472,10 @@ MjClient.netCallBack = {
                         MjClient.Scene.addChild(new PlayLayer_RunFasterYA());
                         break;
                     case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                    case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+                    case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+                    case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+                    case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
                         MjClient.Scene.addChild(new PlayLayer_YNXueZhan());
                         break;
                     case MjClient.GAME_TYPE.RED_20_POKER://红20
@@ -5649,7 +5657,7 @@ MjClient.netCallBack = {
         }
 
 
-        if (d.plState &&d.cpginfo&& d.cpginfo.id == SelfUid()) {
+        if (d.plState && d.cpginfo && d.cpginfo.id == SelfUid()) {
             sData.players[SelfUid() + ""].mjState = d.plState;
         }
 
@@ -5658,11 +5666,11 @@ MjClient.netCallBack = {
             pl.isTianting = false;
         }
 
-        if (d.cpginfo&&d.cpginfo.cardFourCount) {
+        if (d.cpginfo && d.cpginfo.cardFourCount) {
             pl.cardFourCount = d.cpginfo.cardFourCount;
         }
 
-        if (d.cpginfo&&d.cpginfo.mjhandFour) {
+        if (d.cpginfo && d.cpginfo.mjhandFour) {
             pl.mjhandFour = d.cpginfo.mjhandFour;
         }
 
@@ -5679,7 +5687,7 @@ MjClient.netCallBack = {
             tData.touingUid = null;
         }
 
-        if (MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG &&d.cpginfo&& d.cpginfo.canKaHuPlayer != null) {
+        if (MjClient.gameType == MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG && d.cpginfo && d.cpginfo.canKaHuPlayer != null) {
             var kaHuPlayerUid = d.cpginfo.canKaHuPlayer;
             var kaHuPlayer = sData.players[kaHuPlayerUid];
             kaHuPlayer.eatFlag = 8;

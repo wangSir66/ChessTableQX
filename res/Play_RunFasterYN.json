@@ -1335,18 +1335,18 @@
                   "Y": 0.4815
                 },
                 "PreSize": {
-                  "X": 0.0609,
-                  "Y": 0.3846
+                  "X": 0.0602,
+                  "Y": 0.3385
                 },
-                "LeftMargin": 229.1765,
+                "LeftMargin": 230.1765,
                 "RightMargin": 972.8235,
-                "TopMargin": 21.2035,
-                "BottomMargin": 18.7965,
+                "TopMargin": 22.7035,
+                "BottomMargin": 20.2965,
                 "Tag": 524,
                 "ActionTag": 246490305,
                 "Size": {
-                  "X": 78.0,
-                  "Y": 25.0
+                  "X": 77.0,
+                  "Y": 22.0
                 },
                 "Name": "roundnumAtlas",
                 "ctype": "TextObjectData"
@@ -1391,87 +1391,21 @@
                   "Y": 0.475
                 },
                 "PreSize": {
-                  "X": 0.132,
-                  "Y": 0.3846
+                  "X": 0.1203,
+                  "Y": 0.3385
                 },
                 "LeftMargin": 18.2615,
-                "RightMargin": 1092.7385,
-                "TopMargin": 21.6235,
-                "BottomMargin": 18.3765,
+                "RightMargin": 1107.7385,
+                "TopMargin": 23.1235,
+                "BottomMargin": 19.8765,
                 "Tag": 1305,
                 "ActionTag": 717353012,
                 "Size": {
-                  "X": 169.0,
-                  "Y": 25.0
+                  "X": 154.0,
+                  "Y": 22.0
                 },
                 "Name": "tableid",
                 "ctype": "TextObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-1_06.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 35,
-                "Scale9Height": 45,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 1222.4,
-                  "Y": 33.935
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentXEnabled": true,
-                "PrePosition": {
-                  "X": 0.955,
-                  "Y": 0.5221
-                },
-                "PreSize": {
-                  "X": 0.0508,
-                  "Y": 1.0308
-                },
-                "LeftMargin": 1189.9,
-                "RightMargin": 25.1,
-                "TopMargin": -2.435,
-                "BottomMargin": 0.435,
-                "Tag": 1303,
-                "ActionTag": 549565556,
-                "Size": {
-                  "X": 65.0,
-                  "Y": 67.0
-                },
-                "Name": "setting",
-                "ctype": "ButtonObjectData"
               },
               {
                 "FileData": {
@@ -1487,8 +1421,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": -279.8337,
-                  "Y": -17.1557
+                  "X": -259.072,
+                  "Y": -18.6434
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1498,19 +1432,64 @@
                 "IconVisible": false,
                 "PositionPercentXEnabled": true,
                 "PrePosition": {
-                  "X": -0.2186,
-                  "Y": -0.2639
+                  "X": -0.2024,
+                  "Y": -0.2868
                 },
                 "PreSize": {
                   "X": 0.3125,
                   "Y": 0.7692
                 },
-                "LeftMargin": -279.8337,
-                "RightMargin": 1159.8337,
-                "TopMargin": 57.1557,
-                "BottomMargin": -42.1557,
+                "LeftMargin": -259.072,
+                "RightMargin": 1139.072,
+                "TopMargin": 58.6434,
+                "BottomMargin": -43.6434,
                 "Tag": 614,
                 "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "Red20/Common/icon_jifen.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 72,
+                    "Scale9OriginY": 72,
+                    "Scale9Width": 76,
+                    "Scale9Height": 76,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 283.7601,
+                      "Y": 22.403
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.7094,
+                      "Y": 0.4481
+                    },
+                    "PreSize": {
+                      "X": 0.1,
+                      "Y": 0.8
+                    },
+                    "LeftMargin": 263.7601,
+                    "RightMargin": 96.2399,
+                    "TopMargin": 7.597,
+                    "BottomMargin": 2.403,
+                    "Tag": 1966,
+                    "ActionTag": -1832865535,
+                    "Size": {
+                      "X": 40.0,
+                      "Y": 40.0
+                    },
+                    "Name": "Image_45",
+                    "ctype": "ImageViewObjectData"
+                  },
                   {
                     "IsCustomSize": true,
                     "FontSize": 22,
@@ -1538,8 +1517,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 332.9326,
-                      "Y": 22.714
+                      "X": 341.76,
+                      "Y": 22.715
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1553,17 +1532,17 @@
                     "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.8323,
+                      "X": 0.8544,
                       "Y": 0.4543
                     },
                     "PreSize": {
                       "X": 0.25,
                       "Y": 0.5
                     },
-                    "LeftMargin": 282.9326,
-                    "RightMargin": 17.0674,
-                    "TopMargin": 14.786,
-                    "BottomMargin": 10.214,
+                    "LeftMargin": 291.76,
+                    "RightMargin": 8.24,
+                    "TopMargin": 14.785,
+                    "BottomMargin": 10.215,
                     "Tag": 615,
                     "ActionTag": 240534507,
                     "Size": {
@@ -1581,82 +1560,6 @@
                 },
                 "Name": "goldBg",
                 "ctype": "ImageViewObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "DisabledFileData": {
-                  "Type": "Normal",
-                  "Path": "Red20/DeskTexture/BtnRule.png",
-                  "Plist": ""
-                },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "Red20/DeskTexture/BtnRule.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "Red20/DeskTexture/BtnRule.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 35,
-                "Scale9Height": 45,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.4988,
-                  "ScaleY": 0.4746
-                },
-                "Position": {
-                  "X": 1132.928,
-                  "Y": 29.475
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentXEnabled": true,
-                "PrePosition": {
-                  "X": 0.8851,
-                  "Y": 0.4535
-                },
-                "PreSize": {
-                  "X": 0.0508,
-                  "Y": 1.0308
-                },
-                "LeftMargin": 1100.506,
-                "RightMargin": 114.494,
-                "TopMargin": 0.3232,
-                "BottomMargin": -2.3232,
-                "Tag": 556,
-                "ActionTag": -1281697366,
-                "Size": {
-                  "X": 65.0,
-                  "Y": 67.0
-                },
-                "Name": "rule_btn",
-                "ctype": "ButtonObjectData"
               }
             ],
             "ActionTag": -1516919974,
@@ -2608,18 +2511,18 @@
                       "Y": 0.041
                     },
                     "PreSize": {
-                      "X": 0.9683,
-                      "Y": 0.184
+                      "X": 0.9524,
+                      "Y": 0.16
                     },
-                    "LeftMargin": -1.3423,
-                    "RightMargin": 5.3423,
-                    "TopMargin": 108.375,
-                    "BottomMargin": -6.375,
+                    "LeftMargin": -0.3423,
+                    "RightMargin": 6.3423,
+                    "TopMargin": 109.875,
+                    "BottomMargin": -4.875,
                     "Tag": 3677,
                     "ActionTag": -941683190,
                     "Size": {
-                      "X": 122.0,
-                      "Y": 23.0
+                      "X": 120.0,
+                      "Y": 20.0
                     },
                     "Name": "name",
                     "ctype": "TextObjectData"
@@ -5664,18 +5567,18 @@
                       "Y": 0.0259
                     },
                     "PreSize": {
-                      "X": 0.9683,
-                      "Y": 0.184
+                      "X": 0.9524,
+                      "Y": 0.16
                     },
-                    "LeftMargin": 0.9298,
-                    "RightMargin": 3.0702,
-                    "TopMargin": 110.2632,
-                    "BottomMargin": -8.2632,
+                    "LeftMargin": 1.9298,
+                    "RightMargin": 4.0702,
+                    "TopMargin": 111.7632,
+                    "BottomMargin": -6.7632,
                     "Tag": 183,
                     "ActionTag": -2003284651,
                     "Size": {
-                      "X": 122.0,
-                      "Y": 23.0
+                      "X": 120.0,
+                      "Y": 20.0
                     },
                     "Name": "name",
                     "ctype": "TextObjectData"
@@ -6930,18 +6833,18 @@
                       "Y": 0.041
                     },
                     "PreSize": {
-                      "X": 0.9683,
-                      "Y": 0.184
+                      "X": 0.9524,
+                      "Y": 0.16
                     },
-                    "LeftMargin": 0.1067,
-                    "RightMargin": 3.8933,
-                    "TopMargin": 108.3744,
-                    "BottomMargin": -6.3744,
+                    "LeftMargin": 1.1067,
+                    "RightMargin": 4.8933,
+                    "TopMargin": 109.8744,
+                    "BottomMargin": -4.8744,
                     "Tag": 3729,
                     "ActionTag": -1379052205,
                     "Size": {
-                      "X": 122.0,
-                      "Y": 23.0
+                      "X": 120.0,
+                      "Y": 20.0
                     },
                     "Name": "name",
                     "ctype": "TextObjectData"
@@ -7704,7 +7607,7 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 992.0313,
+                "LeftMargin": 992.0312,
                 "RightMargin": -1125.0312,
                 "TopMargin": -379.5733,
                 "BottomMargin": 327.5733,
@@ -8277,6 +8180,148 @@
               "Y": 67.0
             },
             "Name": "voice_btn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "playing/gameTable/youxizhong-1_06.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 35,
+            "Scale9Height": 45,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1222.4,
+              "Y": 33.935
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PrePosition": {
+              "X": 0.955,
+              "Y": 0.0471
+            },
+            "PreSize": {
+              "X": 0.0508,
+              "Y": 0.0931
+            },
+            "LeftMargin": 1189.9,
+            "RightMargin": 25.1,
+            "TopMargin": 652.565,
+            "BottomMargin": 0.435,
+            "Tag": 1303,
+            "ActionTag": 549565556,
+            "Size": {
+              "X": 65.0,
+              "Y": 67.0
+            },
+            "Name": "setting",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Normal",
+              "Path": "Red20/DeskTexture/BtnRule.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Normal",
+              "Path": "Red20/DeskTexture/BtnRule.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "Red20/DeskTexture/BtnRule.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 35,
+            "Scale9Height": 45,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.4988,
+              "ScaleY": 0.4746
+            },
+            "Position": {
+              "X": 1132.928,
+              "Y": 29.475
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PrePosition": {
+              "X": 0.8851,
+              "Y": 0.0409
+            },
+            "PreSize": {
+              "X": 0.0508,
+              "Y": 0.0931
+            },
+            "LeftMargin": 1100.506,
+            "RightMargin": 114.494,
+            "TopMargin": 655.3232,
+            "BottomMargin": -2.3232,
+            "Tag": 556,
+            "ActionTag": -1281697366,
+            "Size": {
+              "X": 65.0,
+              "Y": 67.0
+            },
+            "Name": "rule_btn",
             "ctype": "ButtonObjectData"
           },
           {
@@ -8994,18 +9039,18 @@
                   "Y": 0.1069
                 },
                 "PreSize": {
-                  "X": 0.2211,
-                  "Y": 0.0319
+                  "X": 0.2188,
+                  "Y": 0.0278
                 },
-                "LeftMargin": 494.02,
-                "RightMargin": 502.98,
-                "TopMargin": 631.5031,
-                "BottomMargin": 65.4969,
+                "LeftMargin": 495.52,
+                "RightMargin": 504.48,
+                "TopMargin": 633.0031,
+                "BottomMargin": 66.9969,
                 "Tag": 714,
                 "ActionTag": -1890034963,
                 "Size": {
-                  "X": 283.0,
-                  "Y": 23.0
+                  "X": 280.0,
+                  "Y": 20.0
                 },
                 "Name": "Text_1",
                 "ctype": "TextObjectData"
@@ -9089,6 +9134,7 @@
         "playing/paodekuaiTable_new/WIFI_3.png",
         "png/Z_zhunbeizhuangt.png",
         "Red20/Card/0-1.png",
+        "Red20/Common/icon_jifen.png",
         "Red20/Common/RoomInfoBG_RunFaster.png",
         "Red20/DeskTexture/BtnRule.png",
         "RunFasterYA/Game/boomlose.png",

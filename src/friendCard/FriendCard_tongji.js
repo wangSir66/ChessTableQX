@@ -3498,11 +3498,7 @@ var FriendCard_tongji = cc.Layer.extend({
                             this.clubData.openPlayerInfo.fensuData.text = "不限分数";
                         }
 
-                        if (MjClient.APP_TYPE.QXSYDTZ && (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ)) {
-                            this.getParent().addChild(new FriendCard_roomRecord_daTongZi(this.clubData, "1"));
-                        } else {
-                            this.getParent().addChild(new FriendCard_roomRecord(this.clubData, "1"));
-                        }
+                        this.getParent().addChild(new FriendCard_roomRecord(this.clubData, "1"));
                     }
                     else {
                         MjClient.showToast("输入日期不合法");

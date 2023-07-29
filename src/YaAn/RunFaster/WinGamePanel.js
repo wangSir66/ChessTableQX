@@ -383,8 +383,9 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                     if (MjClient.arrowbkNode && cc.sys.isObjectValid(MjClient.arrowbkNode)) {
                         MjClient.arrowbkNode.setVisible(false);
                     }
-
-                    //reInitarrCardVisible();
+                    if (tData.roundNum <= 0) {
+                        postEvent("showEndRoom");
+                    }
                 }
             },
             delText:

@@ -245,11 +245,12 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 cc.audioEngine.stopAllEffects();
                 playMusic("bgMain");
             },
-            endRoom: function (msg) {
-                mylog(JSON.stringify(msg));
-                if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
-                else
-                    MjClient.Scene.addChild(new StopRoomView());
+            showEndRoom: function (msg) {
+                // mylog(JSON.stringify(msg));
+                // if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
+                // else
+                //     MjClient.Scene.addChild(new StopRoomView());
+                this.addChild(new GameOverLayer(), 500);
             },
             roundEnd: function () {
                 MjClient.selectTipCardsArray = null;
@@ -441,22 +442,32 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 [0, 0]
             ],
             goldBg: {
-                _visible:false,
+                _visible: false,
                 _run: function () {
-                    // var sData = MjClient.data.sData;
-                    // var tData = sData.tData;
-                    // if (tData && tData.areaSelectMode) {
-                    //     this.visible = !!tData.areaSelectMode.clubId;
-                    // } else this.visible = false;
+                    var sData = MjClient.data.sData;
+                    var tData = sData.tData;
+                    if (tData && tData.areaSelectMode) {
+                        this.visible = !!tData.clubId && MjClient.rePlayVideo == -1;
+                    } else this.visible = false;
                 },
                 tableid: {
                     _event: {
-                        // initSceneData: function () {
-                        //     let pl = getUIPlayer(0);
-                        //     if (pl) {
-                        //         this.setString(pl.info.honorVal + '');
-                        //     }
-                        // }
+                        initSceneData: function () {
+                            if (MjClient.rePlayVideo != -1) return;
+                            let pl = getUIPlayer(0);
+                            if (pl && pl.info.honorVal) {
+                                this.visible = true;
+                                this.setString(pl.info.honorVal.honorVal + '');
+                            }
+                        },
+                        roundEnd: function () {
+                            if (MjClient.rePlayVideo != -1) return;
+                            let pl = getUIPlayer(0);
+                            if (pl && pl.info.honorVal) {
+                                this.visible = true;
+                                this.setString(pl.info.honorVal.honorVal + '');
+                            }
+                        },
                     }
                 }
             },
@@ -528,29 +539,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     }
                 }
             },
-            setting: {
-                _click: function () {
-                    var settringLayer = new RoomSettingView();
-                    MjClient.Scene.addChild(settringLayer);
-                    MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
-                },
-            },
-            rule_btn: {
-                _visible: true,
-                _click: function () {
-                    MjClient.showRuleView = new GameRule_YARunFaster();
-                    MjClient.Scene.addChild(MjClient.showRuleView);
-                },
-                _run: function () {
-                    var banner = this.parent;
-                    var waitNode = MjClient.playui.getChildByName("playUINode").getChildByName("wait");
-                    var delroom = waitNode.getChildByName("delroom");
-                    var backHomebtn = waitNode.getChildByName("backHomebtn");
-                    var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
-                    delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
-                    backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))))
-                }
-            },
             gps_btn: {
                 _visible: false,
                 // _run: function () {
@@ -600,6 +588,43 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     MjClient.openWeb({ url: MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN, help: true });
                 }
             },
+        },
+        setting: {
+            _layout: [
+                [0.08, 0.08],
+                [0.97, 0.94],
+                [0, 0]
+            ],
+            _click: function () {
+                var settringLayer = new RoomSettingView();
+                MjClient.Scene.addChild(settringLayer);
+                MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
+            },
+        },
+        rule_btn: {
+            _layout: [
+                [0.08, 0.08],
+                [0.9, 0.94],
+                [0, 0]
+            ],
+            _visible: true,
+            _click: function () {
+                MjClient.showRuleView = new GameRule_YARunFaster();
+                MjClient.Scene.addChild(MjClient.showRuleView);
+            },
+            _run: function () {
+                setTimeout(() => {
+                    var banner = this.parent,sc = this.getScale();
+                    var waitNode = MjClient.playui.getChildByName("playUINode").getChildByName("wait");
+                    var delroom = waitNode.getChildByName("delroom");
+                    var backHomebtn = waitNode.getChildByName("backHomebtn");
+                    var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
+                    delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))));
+                    backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))));
+                    delroom.setScale(sc);
+                    backHomebtn.setScale(sc);
+                }, 500);
+            }
         },
         BtnHimt: { //add by  sking for put card button
             _run: function () {
@@ -2405,14 +2430,14 @@ PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
         deskCardPosOffset.x = 0 - deskCardPosOffset.x;
     }
     if (curPlayerNode != null) {
-        var deskCardPos = curPlayerNode.getChildByName("deskCard").getPosition();
+        var deskCardPos = curPlayerNode.getChildByName("head").getPosition();
 
-        if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId) {
-            deskCardPos.x += 41 * Math.min(MjClient.size.width / 1280, MjClient.size.height / 720) * (curPlayerIndex == 1 ? 2 : -2);
-        } else {
-            deskCardPos.y += deskCardPosOffset.y;
-            deskCardPos.x += deskCardPosOffset.x;
-        }
+        // if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId) {
+        //     deskCardPos.x += 41 * Math.min(MjClient.size.width / 1280, MjClient.size.height / 720) * (curPlayerIndex == 1 ? 2 : -2);
+        // } else {
+        //     deskCardPos.y += deskCardPosOffset.y;
+        //     deskCardPos.x += deskCardPosOffset.x;
+        // }
 
         arrowNode.setPosition(deskCardPos);
     }

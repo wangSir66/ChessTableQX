@@ -287,53 +287,50 @@
                 <PreSize X="0.0211" Y="0.3077" />
                 <FileData Type="Normal" Path="playing/paodekuaiTable_new/WIFI_3.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="roundnumAtlas" ActionTag="246490305" Tag="524" IconVisible="False" LeftMargin="229.1765" RightMargin="972.8235" TopMargin="21.2035" BottomMargin="18.7965" FontSize="22" LabelText="第1/4局" HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="78.0000" Y="25.0000" />
+              <AbstractNodeData Name="roundnumAtlas" ActionTag="246490305" Tag="524" IconVisible="False" LeftMargin="230.1765" RightMargin="972.8235" TopMargin="22.7035" BottomMargin="20.2965" FontSize="22" LabelText="第1/4局" HorizontalAlignmentType="HT_Right" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="77.0000" Y="22.0000" />
                 <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
                 <Position X="307.1765" Y="31.2965" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="249" B="200" />
                 <PrePosition X="0.2400" Y="0.4815" />
-                <PreSize X="0.0609" Y="0.3846" />
+                <PreSize X="0.0602" Y="0.3385" />
                 <FontResource Type="Default" Path="" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="tableid" ActionTag="717353012" Tag="1305" IconVisible="False" LeftMargin="18.2615" RightMargin="1092.7385" TopMargin="21.6235" BottomMargin="18.3765" FontSize="22" LabelText="房间号：230620" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="169.0000" Y="25.0000" />
+              <AbstractNodeData Name="tableid" ActionTag="717353012" Tag="1305" IconVisible="False" LeftMargin="18.2615" RightMargin="1107.7385" TopMargin="23.1235" BottomMargin="19.8765" FontSize="22" LabelText="房间号：230620" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="154.0000" Y="22.0000" />
                 <AnchorPoint ScaleY="0.5000" />
                 <Position X="18.2615" Y="30.8765" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="249" B="200" />
                 <PrePosition X="0.0143" Y="0.4750" />
-                <PreSize X="0.1320" Y="0.3846" />
+                <PreSize X="0.1203" Y="0.3385" />
                 <FontResource Type="Default" Path="" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="setting" ActionTag="549565556" Tag="1303" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1189.9000" RightMargin="25.1000" TopMargin="-2.4350" BottomMargin="0.4350" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="65.0000" Y="67.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="1222.4000" Y="33.9350" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.9550" Y="0.5221" />
-                <PreSize X="0.0508" Y="1.0308" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="playing/gameTable/youxizhong-1_06.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="goldBg" ActionTag="-514185941" Tag="614" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-279.8337" RightMargin="1159.8337" TopMargin="57.1557" BottomMargin="-42.1557" LeftEage="61" RightEage="61" TopEage="11" BottomEage="11" Scale9OriginX="61" Scale9OriginY="11" Scale9Width="364" Scale9Height="43" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="goldBg" ActionTag="-514185941" Tag="614" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-259.0720" RightMargin="1139.0720" TopMargin="58.6434" BottomMargin="-43.6434" LeftEage="61" RightEage="61" TopEage="11" BottomEage="11" Scale9OriginX="61" Scale9OriginY="11" Scale9Width="364" Scale9Height="43" ctype="ImageViewObjectData">
                 <Size X="400.0000" Y="50.0000" />
                 <Children>
-                  <AbstractNodeData Name="tableid" ActionTag="240534507" Tag="615" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="282.9326" RightMargin="17.0674" TopMargin="14.7860" BottomMargin="10.2140" IsCustomSize="True" FontSize="22" LabelText="125468" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="Image_45" ActionTag="-1832865535" Tag="1966" IconVisible="False" LeftMargin="263.7601" RightMargin="96.2399" TopMargin="7.5970" BottomMargin="2.4030" LeftEage="72" RightEage="72" TopEage="72" BottomEage="72" Scale9OriginX="72" Scale9OriginY="72" Scale9Width="76" Scale9Height="76" ctype="ImageViewObjectData">
+                    <Size X="40.0000" Y="40.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="283.7601" Y="22.4030" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition X="0.7094" Y="0.4481" />
+                    <PreSize X="0.1000" Y="0.8000" />
+                    <FileData Type="Normal" Path="Red20/Common/icon_jifen.png" Plist="" />
+                  </AbstractNodeData>
+                  <AbstractNodeData Name="tableid" ActionTag="240534507" Tag="615" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="291.7600" RightMargin="8.2400" TopMargin="14.7850" BottomMargin="10.2150" IsCustomSize="True" FontSize="22" LabelText="125468" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="100.0000" Y="25.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="332.9326" Y="22.7140" />
+                    <Position X="341.7600" Y="22.7150" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="249" B="200" />
-                    <PrePosition X="0.8323" Y="0.4543" />
+                    <PrePosition X="0.8544" Y="0.4543" />
                     <PreSize X="0.2500" Y="0.5000" />
                     <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
@@ -341,27 +338,12 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleY="0.5000" />
-                <Position X="-279.8337" Y="-17.1557" />
+                <Position X="-259.0720" Y="-18.6434" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="-0.2186" Y="-0.2639" />
+                <PrePosition X="-0.2024" Y="-0.2868" />
                 <PreSize X="0.3125" Y="0.7692" />
                 <FileData Type="Normal" Path="Red20/Common/RoomInfoBG_RunFaster.png" Plist="" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="rule_btn" ActionTag="-1281697366" Tag="556" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1100.5060" RightMargin="114.4940" TopMargin="0.3232" BottomMargin="-2.3232" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
-                <Size X="65.0000" Y="67.0000" />
-                <AnchorPoint ScaleX="0.4988" ScaleY="0.4746" />
-                <Position X="1132.9280" Y="29.4750" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.8851" Y="0.4535" />
-                <PreSize X="0.0508" Y="1.0308" />
-                <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
-                <OutlineColor A="255" R="255" G="0" B="0" />
-                <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleY="0.5000" />
@@ -562,14 +544,14 @@
                     <PreSize X="0.9524" Y="0.2080" />
                     <FileData Type="Normal" Path="game_picture/dating-1_73.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="name" ActionTag="-941683190" Tag="3677" IconVisible="False" LeftMargin="-1.3423" RightMargin="5.3423" TopMargin="108.3750" BottomMargin="-6.3750" FontSize="20" LabelText="你的名字你的" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="122.0000" Y="23.0000" />
+                  <AbstractNodeData Name="name" ActionTag="-941683190" Tag="3677" IconVisible="False" LeftMargin="-0.3423" RightMargin="6.3423" TopMargin="109.8750" BottomMargin="-4.8750" FontSize="20" LabelText="你的名字你的" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="120.0000" Y="20.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="59.6577" Y="5.1250" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4735" Y="0.0410" />
-                    <PreSize X="0.9683" Y="0.1840" />
+                    <PreSize X="0.9524" Y="0.1600" />
                     <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -1283,14 +1265,14 @@
                     <PreSize X="0.9524" Y="0.2080" />
                     <FileData Type="Normal" Path="game_picture/dating-1_73.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="name" ActionTag="-2003284651" Tag="183" IconVisible="False" LeftMargin="0.9298" RightMargin="3.0702" TopMargin="110.2632" BottomMargin="-8.2632" FontSize="20" LabelText="你的名字你的" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ShadowEnabled="True" ctype="TextObjectData">
-                    <Size X="122.0000" Y="23.0000" />
+                  <AbstractNodeData Name="name" ActionTag="-2003284651" Tag="183" IconVisible="False" LeftMargin="1.9298" RightMargin="4.0702" TopMargin="111.7632" BottomMargin="-6.7632" FontSize="20" LabelText="你的名字你的" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ShadowEnabled="True" ctype="TextObjectData">
+                    <Size X="120.0000" Y="20.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="61.9298" Y="3.2368" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4915" Y="0.0259" />
-                    <PreSize X="0.9683" Y="0.1840" />
+                    <PreSize X="0.9524" Y="0.1600" />
                     <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -1580,14 +1562,14 @@
                     <PreSize X="0.9524" Y="0.2080" />
                     <FileData Type="Normal" Path="game_picture/dating-1_73.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="name" ActionTag="-1379052205" Tag="3729" IconVisible="False" LeftMargin="0.1067" RightMargin="3.8933" TopMargin="108.3744" BottomMargin="-6.3744" FontSize="20" LabelText="你的名字你的" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="122.0000" Y="23.0000" />
+                  <AbstractNodeData Name="name" ActionTag="-1379052205" Tag="3729" IconVisible="False" LeftMargin="1.1067" RightMargin="4.8933" TopMargin="109.8744" BottomMargin="-4.8744" FontSize="20" LabelText="你的名字你的" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="120.0000" Y="20.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="61.1067" Y="5.1256" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4850" Y="0.0410" />
-                    <PreSize X="0.9683" Y="0.1840" />
+                    <PreSize X="0.9524" Y="0.1600" />
                     <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
@@ -1909,6 +1891,34 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
+          <AbstractNodeData Name="setting" ActionTag="549565556" Tag="1303" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1189.9000" RightMargin="25.1000" TopMargin="652.5650" BottomMargin="0.4350" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="65.0000" Y="67.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="1222.4000" Y="33.9350" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.9550" Y="0.0471" />
+            <PreSize X="0.0508" Y="0.0931" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <NormalFileData Type="Normal" Path="playing/gameTable/youxizhong-1_06.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="rule_btn" ActionTag="-1281697366" Tag="556" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="1100.5060" RightMargin="114.4940" TopMargin="655.3232" BottomMargin="-2.3232" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="65.0000" Y="67.0000" />
+            <AnchorPoint ScaleX="0.4988" ScaleY="0.4746" />
+            <Position X="1132.9280" Y="29.4750" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.8851" Y="0.0409" />
+            <PreSize X="0.0508" Y="0.0931" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
+            <PressedFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
+            <NormalFileData Type="Normal" Path="Red20/DeskTexture/BtnRule.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
           <AbstractNodeData Name="chat_btn" ActionTag="1600943711" Tag="133" IconVisible="False" LeftMargin="1333.9692" RightMargin="-118.9692" TopMargin="484.3801" BottomMargin="168.6199" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="35" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="65.0000" Y="67.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -2053,14 +2063,14 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Text_1" ActionTag="-1890034963" Tag="714" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="494.0200" RightMargin="502.9800" TopMargin="631.5031" BottomMargin="65.4969" FontSize="20" LabelText="笨笨的机器人正在为您托管出牌" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                <Size X="283.0000" Y="23.0000" />
+              <AbstractNodeData Name="Text_1" ActionTag="-1890034963" Tag="714" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="495.5200" RightMargin="504.4800" TopMargin="633.0031" BottomMargin="66.9969" FontSize="20" LabelText="笨笨的机器人正在为您托管出牌" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="280.0000" Y="20.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="635.5200" Y="76.9969" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4965" Y="0.1069" />
-                <PreSize X="0.2211" Y="0.0319" />
+                <PreSize X="0.2188" Y="0.0278" />
                 <FontResource Type="Default" Path="" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />

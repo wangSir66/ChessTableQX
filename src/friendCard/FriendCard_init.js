@@ -1977,21 +1977,21 @@ FriendCard_Common.deskRoundNumText = function (that, roundNumText, room) {
     //var that = MjClient.FriendCard_main_ui;
     roundNumText.ignoreContentAdaptWithSize(true);
     roundNumText.visible = true;
-    if (room.roundNum) {
-        if (room.gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI ||
-            room.gameType == MjClient.GAME_TYPE.LOU_DI_FANG_PAO_FA ||
-            room.gameType == MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA ||
-            room.gameType == MjClient.GAME_TYPE.HENG_YANG_FANG_PAO_FA) {
-            roundNumText.setString((room.maxScore || 0) + "胡");
-        } else if (room.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG ||
-            room.gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN ||
-            room.gameType == MjClient.GAME_TYPE.YONG_ZHOU_LAO_CHUO ||
-            room.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
-            roundNumText.setString((room.maxScore || 0) + "分");
-        } else {
-            roundNumText.setString("第 " + room.roundNum + " 局");
-        }
-    } else {
+    // if (room.roundNum) {
+    //     if (room.gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI ||
+    //         room.gameType == MjClient.GAME_TYPE.LOU_DI_FANG_PAO_FA ||
+    //         room.gameType == MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA ||
+    //         room.gameType == MjClient.GAME_TYPE.HENG_YANG_FANG_PAO_FA) {
+    //         roundNumText.setString((room.maxScore || 0) + "胡");
+    //     } else if (room.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG ||
+    //         room.gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN ||
+    //         room.gameType == MjClient.GAME_TYPE.YONG_ZHOU_LAO_CHUO ||
+    //         room.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
+    //         roundNumText.setString((room.maxScore || 0) + "分");
+    //     } else {
+    //         roundNumText.setString("第 " + room.roundNum + " 局");
+    //     }
+    // } else {
         if (isJinZhongAPPType() && that.customInfo) {
             roundNumText.setString("加入");
         } else {
@@ -2006,7 +2006,7 @@ FriendCard_Common.deskRoundNumText = function (that, roundNumText, room) {
             }
             roundNumText.setString(ruleName);
         }
-    }
+    // }
 }
 
 
@@ -2905,12 +2905,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Jilu", {
                     uid: SelfUid()
                 });
-                if (MjClient.APP_TYPE.QXSYDTZ && MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
-                    MjClient.APP_TYPE.HUNANWANGWANG && MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG) {
-                    that.addChild(new FriendCard_roomRecord_daTongZi(that.data));
-                } else {
-                    that.addChild(new FriendCard_roomRecord(that.data));
-                }
+                that.addChild(new FriendCard_roomRecord(that.data));
             }
         }, that);
     }
@@ -2928,13 +2923,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
                 // 查看战绩前先离开未离开的房间
                 FriendCard_Common.leaveGame();
                 that.closeClubList();
-
-                if (MjClient.APP_TYPE.QXSYDTZ && MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
-                    MjClient.APP_TYPE.HUNANWANGWANG && MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG) {
-                    that.addChild(new FriendCard_roomRecord_daTongZi(that.data));
-                } else {
-                    that.addChild(new FriendCard_roomRecord(that.data));
-                }
+                that.addChild(new FriendCard_roomRecord(that.data));
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Zhanji", {
                     uid: SelfUid()
                 });
@@ -4674,11 +4663,11 @@ FriendCard_UI.setListAutoLoadMore = function (listView, callBackFunc, checkFunc)
 }
 //type == 1正在加载...，，type == 2上拉加载更多，type == 3没有更多了
 FriendCard_UI.getCurClubHonorVal = function (clubId = 0, list) {
-    if (!clubId) return '';
+    if (!clubId) return '0';
     !list && (list = [])
     for (let _i = 0; _i < list.length; _i++) {
         const item = list[_i];
         if (item.clubId === clubId) return item.honorVal || '0'
     }
-    return '';
+    return '0';
 }

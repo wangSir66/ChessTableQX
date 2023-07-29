@@ -4919,11 +4919,7 @@ var FriendCard_tongji_member = cc.Layer.extend({
                     this._data.clubData.openPlayerInfo.fensuData = {};
                     this._data.clubData.openPlayerInfo.fensuData.text = "不限分数";
 
-                    if (MjClient.APP_TYPE.QXSYDTZ && (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ)) {
-                        MjClient.FriendCard_main_ui.addChild(new FriendCard_roomRecord_daTongZi(this._data.clubData, "1"));
-                    } else {
-                        MjClient.FriendCard_main_ui.addChild(new FriendCard_roomRecord(this._data.clubData, "1"));
-                    }
+                    MjClient.FriendCard_main_ui.addChild(new FriendCard_roomRecord(this._data.clubData, "1"));
                 }
             }, this);
             this._listView.pushBackCustomItem(cell);

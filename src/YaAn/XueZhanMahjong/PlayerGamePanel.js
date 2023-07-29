@@ -530,11 +530,12 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 cc.audioEngine.stopAllEffects();
                 playMusic("bgMain");
             },
-            endRoom: function (msg) {
-                mylog(JSON.stringify(msg));
-                if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
-                else
-                    MjClient.Scene.addChild(new StopRoomView());
+            showEndRoom: function (msg) {
+                // mylog(JSON.stringify(msg));
+                // if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
+                // else
+                //     MjClient.Scene.addChild(new StopRoomView());
+                this.addChild(new GameOverLayer(), 500);
             },
             roundEnd: function () {
                 var self = this;
@@ -673,12 +674,12 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         back: {
             back: {
                 _run: function () {
-                    changeGameBg(this);
+                    // changeGameBg(this);
                 },
                 _event: {
-                    changeGameBgEvent: function () {
-                        changeGameBg(this);
-                    }
+                    // changeGameBgEvent: function () {
+                    //     changeGameBg(this);
+                    // }
                 },
                 _layout: [
                     [1, 1],
@@ -777,10 +778,42 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         },
         banner: {
             _layout: [
-                [0.5, 0.5],
+                [1, 1],
                 [0.5, 1],
                 [0, 0]
             ],
+            goldBg: {
+                _visible: false,
+                _run: function () {
+                    var sData = MjClient.data.sData;
+                    var tData = sData.tData;
+                    if (tData && tData.clubId) {
+                        this.visible = !!tData.clubId && MjClient.rePlayVideo == -1;
+                    } else this.visible = false;
+                    cc.log('------goldBg-------', tData.clubId, MjClient.rePlayVideo)
+                },
+                tableid: {
+                    _visible: false,
+                    _event: {
+                        initSceneData: function () {
+                            if (MjClient.rePlayVideo != -1) return;
+                            let pl = getUIPlayer(0);
+                            if (pl && pl.info.honorVal) {
+                                this.visible = true;
+                                this.setString(pl.info.honorVal.honorVal + '');
+                            }
+                        },
+                        roundEnd: function () {
+                            if (MjClient.rePlayVideo != -1) return;
+                            let pl = getUIPlayer(0);
+                            if (pl && pl.info.honorVal) {
+                                this.visible = true;
+                                this.setString(pl.info.honorVal.honorVal + '');
+                            }
+                        },
+                    }
+                }
+            },
             bg_time: {
                 _run: function () {
                     var text = new ccui.Text();
@@ -828,23 +861,33 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
             },
             Button_1: {
                 _visible: false,
-                _click: function () {
-                    MjClient.openWeb({ url: MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG, help: true });
-                }
+                // _click: function () {
+                //     MjClient.openWeb({ url: MjClient.gameType, help: true });
+                // }
             },
-            setting: {
-                _click: function () {
-                    var settringLayer = new RoomSettingView();
-                    MjClient.Scene.addChild(settringLayer);
-                    MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
-                }
-            },
-            rule_btn: {
-                _visible: true,
-                _click: function () {
-                    MjClient.showRuleView = new GameRule_YAXueZhan();
-                    MjClient.Scene.addChild(MjClient.showRuleView);
-                },
+        },
+        setting: {
+            _layout: [
+                [0.08, 0.08],
+                [0.96, 0.94],
+                [0, 0]
+            ],
+            _click: function () {
+                var settringLayer = new RoomSettingView();
+                MjClient.Scene.addChild(settringLayer);
+                MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
+            }
+        },
+        rule_btn: {
+            _layout: [
+                [0.08, 0.08],
+                [0.9, 0.94],
+                [0, 0]
+            ],
+            _visible: true,
+            _click: function () {
+                MjClient.showRuleView = new GameRule_YAXueZhan();
+                MjClient.Scene.addChild(MjClient.showRuleView);
             },
         },
         BtnPutCard: { //add by  sking for put card button
@@ -3159,7 +3202,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         chat_btn: {
             _layout: [
                 [0.08, 0.08],
-                [0.97, 0.37],
+                [0.96, 0.37],
                 [0, 0]
             ],
             _click: function () {
@@ -3171,7 +3214,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         voice_btn: {
             _layout: [
                 [0.08, 0.08],
-                [0.97, 0.46],
+                [0.96, 0.46],
                 [0, 0]
             ],
             _run: function () {
@@ -3363,7 +3406,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
             if (MjClient.game_on_show) MjClient.tickGame(0);
         }), cc.delayTime(7))));
 
-        changeMJBg(this, getCurrentMJBgType());
         //初始化其他功能
         initSceneFunc();
 
@@ -3698,7 +3740,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         var children = downNode.children;
         for (var i = 0; i < children.length; i++) {
             var cardNode = children[i], _indx = card.indexOf(cardNode.tag);
-            if (cardNode.name === 'mjhand' &&  _indx > -1 && this._huanPaiUpNum < this.HuanPaiCount()) {
+            if (cardNode.name === 'mjhand' && _indx > -1 && this._huanPaiUpNum < this.HuanPaiCount()) {
                 cardNode.y = handModelCard.y + 20;
                 MjClient.selectedCard = cardNode;
                 this._huanPaiUpNum++;
@@ -3888,6 +3930,20 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 }
             }
         }
+    },
+    //设置牌的渲染
+    setCardSprite: function (node, cd, off, isOut = false) {
+        node.removeAllChildren();
+        var path = "XueZhanDaoDi/Card/",
+            imgNames = [12, 13, 11];
+        if (off != 4 && off == 0) path += '0';
+        path += (off === 4 ? '0' : off) + '_' + imgNames[Math.floor(cd / 10)] + cd % 10
+        if (cc.sys.isObjectValid(node) && cd != null && typeof (cd) != "undefined") {
+            node.tag = cd;
+        }
+        cc.log('0000------0000', off);
+        //加载小图
+        node.loadTexture(path + ".png");
     }
 });
 
@@ -4106,7 +4162,7 @@ PlayLayer_YNXueZhan.prototype.CardLayoutRestore = function (node, off) {
                     else {
                         if (ci.name == "mjhand") {
                             if (off == 0) {
-                                ci.x = orders[i - 1].x + upSize.width * upS * 1.2//1.08;
+                                ci.x = orders[i - 1].x + upSize.width * upS * 1.26//1.08;
                             }
                             else//这个地方不是对家的手牌，下面的代码好像没用
                             {

@@ -225,43 +225,31 @@ var FriendCard_main = cc.Layer.extend({
 					}
 				}
 			});
-			if (MjClient.getAppType() != MjClient.APP_TYPE.YAAN) {
-				this.fangkaBG.setTouchEnabled(true)
-				this.fangkaBG.addTouchEventListener(function (sender, type) {
-					if (type == 2) {
-						if (that.data && that.data.info) {
-							if (that.data.info.type == 1) {
-								var layer = enter_store(1);
-								MjClient.Scene.addChild(layer);
-							} else {
-								if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP) {
-									var layer = new StoreTipDialog();
-									MjClient.Scene.addChild(layer);
-								} else {
-									var layer = enter_store(0);
-									MjClient.Scene.addChild(layer);
-								}
-							}
-						}
-					}
-				});
-			} else this.fangkaBG.setTouchEnabled(false);
+			this.fangkaBG.setTouchEnabled(false);
 
 			this.text_fangka_type = this.fangkaBG.getChildByName("Text_1");
 			this.text_fangka_type.ignoreContentAdaptWithSize(true);
-
-			var text_fangka = this.fangkaBG.getChildByName("text_fangka")
-			this.text_fangka = text_fangka;
-			text_fangka.ignoreContentAdaptWithSize(true);
-			text_fangka.setString("" + MjClient.data.pinfo.fangka);
-			UIEventBind(null, text_fangka, "updateInfo", function () {
-				if (that.data && that.data.info) {
-					if (that.data.info.type == 1) {
-						text_fangka.setString(MjClient.data.pinfo.fangka + "");
-					} else {
-						text_fangka.setString(MjClient.data.pinfo.money + "");
+			var text_fangka = this.fangkaBG.getChildByName("text_fangka"),
+				updateTxtFun = function () {
+					if (that.data && that.data.info) {
+						const isLead = FriendCard_Common.isLeader();
+						if (!isLead) {
+							let val = FriendCard_UI.getCurClubHonorVal(that.data.info.clubId, that.clubList);
+							text_fangka.setString(val + "");
+						} else {
+							if (that.data.info.type == 1) {
+								text_fangka.setString(MjClient.data.pinfo.fangka + "");
+							} else {
+								text_fangka.setString(MjClient.data.pinfo.money + "");
+							}
+						}
 					}
 				}
+			this.text_fangka = text_fangka;
+			text_fangka.ignoreContentAdaptWithSize(true);
+			updateTxtFun();
+			UIEventBind(null, text_fangka, "updateInfo", function () {
+				updateTxtFun();
 			});
 		}
 
@@ -1001,8 +989,8 @@ var FriendCard_main = cc.Layer.extend({
 		text_clubId.ignoreContentAdaptWithSize(true);
 		let str = "ID:" + this.data.info.clubId;
 		// if (cc.sys.OS_WINDOWS == cc.sys.os) {
-		let val = FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList);
-		val && (str += '-' + val)
+		// let val = FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList);
+		// val && (str += '-' + val)
 		// }
 		text_clubId.setString(str);
 		//黄金
@@ -1013,16 +1001,21 @@ var FriendCard_main = cc.Layer.extend({
 
 		//房卡
 		if (this.fangkaBG) {
-			//this.fangkaBG.visible = this.data.info.type == 1 ? true : false;
 			this.fangkaBG.visible = true;
-			if (this.data.info.type == 1) {
-				this.text_fangka_type.setString("我的房卡");
-				this.text_fangka.setString(MjClient.data.pinfo.fangka + "");
-				this.fangkaBG.loadTexture("friendCards/main/fangka_kuang.png");
+			if (FriendCard_Common.isLeader()) {
+				if (this.data.info.type == 1) {
+					this.text_fangka_type.setString("我的房卡");
+					this.text_fangka.setString(MjClient.data.pinfo.fangka + "");
+					this.fangkaBG.loadTexture("friendCards/main/fangka_kuang.png");
+				} else {
+					this.text_fangka_type.setString("我的元宝");
+					this.text_fangka.setString(MjClient.data.pinfo.money + "");
+					this.fangkaBG.loadTexture("friendCards/main/yuanbao_kuang.png");
+				}
 			} else {
-				this.text_fangka_type.setString("我的元宝");
-				this.text_fangka.setString(MjClient.data.pinfo.money + "");
-				this.fangkaBG.loadTexture("friendCards/main/yuanbao_kuang.png");
+				this.text_fangka_type.setString("我的积分");
+				this.text_fangka.setString(FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList) + "");
+				this.fangkaBG.loadTexture("friendCards/main/jifen_kuang.png");
 			}
 		}
 

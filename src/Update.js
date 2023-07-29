@@ -113,9 +113,9 @@ var isTipDownloadAdsApp = function () {
         if (installAppTimestamp == curTimestamp) {//首次安装app
             util.localStorageEncrypt.setNumberItem("InstallAppTimestamp", curTimestamp);
         }
-        else if (curTimestamp - installAppTimestamp >= 15 * 86400) {//安装超过了15天
-            result = true;
-        }
+        // else if (curTimestamp - installAppTimestamp >= 15 * 86400) {//安装超过了15天
+        //     result = true;
+        // }
     }
     return result;
 };

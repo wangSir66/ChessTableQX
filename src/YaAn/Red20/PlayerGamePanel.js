@@ -293,11 +293,12 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 cc.audioEngine.stopAllEffects();
                 playMusic("bgFight_xinsiyang");
             },
-            endRoom: function (msg) {
-                mylog(JSON.stringify(msg));
-                if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
-                else
-                    MjClient.Scene.addChild(new StopRoomView());
+            showEndRoom: function (msg) {
+                // mylog(JSON.stringify(msg));
+                // if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
+                // else
+                //     MjClient.Scene.addChild(new StopRoomView());
+                this.addChild(new GameOverLayer(), 500);
             },
             MJPut: function () {
                 var sData = MjClient.data.sData;
@@ -340,15 +341,15 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         //     MjClient.playui.setHongBaoPos(MjClient.ActiveGoldPlayingLayer.btn_hongbao)
                         // }
                     } else {
-                        if (sData.tData.roundNum <= 0 && !MjClient.isInGoldFieldNormal()) {
-                            if (!tData.matchId) {
-                                self.addChild(new GameOverLayer(), 500);
-                            } else {
-                                self.runAction(cc.sequence(cc.delayTime(3), cc.callFunc(function () {
-                                    self.addChild(new GameOverLayer(), 500);
-                                })))
-                            }
-                        }
+                        // if (sData.tData.roundNum <= 0 && !MjClient.isInGoldFieldNormal()) {
+                        //     if (!tData.matchId) {
+                        //         self.addChild(new GameOverLayer(), 500);
+                        //     } else {
+                        //         self.runAction(cc.sequence(cc.delayTime(3), cc.callFunc(function () {
+                        //             self.addChild(new GameOverLayer(), 500);
+                        //         })))
+                        //     }
+                        // }
                         self.addChild(new EndOneView_Red20(), 500);
                     }
                 }
@@ -652,31 +653,31 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             goldBg: {
                 _visible: false,
                 _run: function () {
-                    // var sData = MjClient.data.sData;
-                    // var tData = sData.tData;
-                    // if (tData && tData.areaSelectMode) {
-                    //     this.visible = !!tData.areaSelectMode.clubId && MjClient.rePlayVideo == -1;
-                    // } else this.visible = false;
+                    var sData = MjClient.data.sData;
+                    var tData = sData.tData;
+                    if (tData && tData.areaSelectMode) {
+                        this.visible = !!tData.clubId && MjClient.rePlayVideo == -1;
+                    } else this.visible = false;
                 },
                 tableid: {
                     _visible: false,
                     _event: {
-                        // initSceneData: function () {
-                        //     if (MjClient.rePlayVideo != -1) return;
-                        //     let pl = getUIPlayer(0);
-                        //     if (pl && pl.info.honorVal) {
-                        //         this.visible = true;
-                        //         this.setString(pl.info.honorVal.honorVal + '');
-                        //     }
-                        // },
-                        // roundEnd: function () {
-                        //     if (MjClient.rePlayVideo != -1) return;
-                        //     let pl = getUIPlayer(0);
-                        //     if (pl && pl.info.honorVal) {
-                        //         this.visible = true;
-                        //         this.setString(pl.info.honorVal.honorVal + '');
-                        //     }
-                        // },
+                        initSceneData: function () {
+                            if (MjClient.rePlayVideo != -1) return;
+                            let pl = getUIPlayer(0);
+                            if (pl && pl.info.honorVal) {
+                                this.visible = true;
+                                this.setString(pl.info.honorVal.honorVal + '');
+                            }
+                        },
+                        roundEnd: function () {
+                            if (MjClient.rePlayVideo != -1) return;
+                            let pl = getUIPlayer(0);
+                            if (pl && pl.info.honorVal) {
+                                this.visible = true;
+                                this.setString(pl.info.honorVal.honorVal + '');
+                            }
+                        },
                     }
                 }
             },
@@ -762,61 +763,11 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     }
                 }
             },
-            rule_btn: {
-                _run: function () {
-                    cc.eventManager.addListener(getTouchListener(), this);
-                    var banner = this.parent;
-                    var waitNode = banner.parent.getChildByName("wait");
-                    var delroom = waitNode.getChildByName("delroom");
-                    var backHomebtn = waitNode.getChildByName("backHomebtn");
-                    var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
-                    delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))))
-                    backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))))
-                },
-                _touch: function (btn, eT) {
-                    if (eT == 2) {
-                        MjClient.showRuleView = new GameRule_YARed20();
-                        MjClient.Scene.addChild(MjClient.showRuleView)
-                    }
-                },
-            },
-            setting: {
-                _click: function () {
-                    var settringLayer = new RoomSettingView();
-                    MjClient.Scene.addChild(settringLayer);
-                    MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
-                }
-            },
-            // roundnumImg: {
-            //     _event: {
-            //         initSceneData: function (eD) {
-            //             this.visible = IsArrowVisible();
-            //         },
-            //         mjhand: function (eD) {
-            //             this.visible = IsArrowVisible();
-            //         },
-            //         onlinePlayer: function (eD) {
-            //             this.visible = IsArrowVisible();
-            //         }
-            //     },
-            //     _run: function () {
-            //         //roundnumImgObj = this;
-            //         MjClient.roundnumImgNode = this;
-            //         setWgtLayout(this, [0.085, 0], [0.19, 0.8], [-1.76, 1.0]);
-            //         var sData = MjClient.data.sData;
-            //         var tData = sData.tData;
-            //         if (tData) {
-            //             if (tData.fieldId) {//金币场显示场次名称
-            //                 this.removeFromParent(true);
-            //             }
-            //         }
-            //     },
-            // },
             Button_1: {
                 _visible: true,
-                _click: function () {
-                    MjClient.openWeb({ url: MjClient.GAME_TYPE.RED_20_POKER, help: true });
-                }
+                // _click: function () {
+                //     MjClient.openWeb({ url: MjClient.GAME_TYPE.RED_20_POKER, help: true });
+                // }
             },
             hunPai: {
                 baidaBg: {
@@ -843,6 +794,45 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 },
 
             },
+        },
+        rule_btn: {
+            _layout: [
+                [0.08, 0.08],
+                [0.9, 0.94],
+                [0, 0]
+            ],
+            _run: function () {
+                cc.eventManager.addListener(getTouchListener(), this);
+                setTimeout(() => {
+                    var banner = this.parent,sc = this.getScale();
+                    var waitNode = banner.getChildByName("wait");
+                    var delroom = waitNode.getChildByName("delroom");
+                    var backHomebtn = waitNode.getChildByName("backHomebtn");
+                    var distanceX = banner.getChildByName("setting").getPositionX() - banner.getChildByName("rule_btn").getPositionX();
+                    delroom.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - distanceX, this.getPositionY()))));
+                    backHomebtn.setPosition(waitNode.convertToNodeSpace(banner.convertToWorldSpace(cc.p(this.getPositionX() - 2 * distanceX, this.getPositionY()))));
+                    delroom.setScale(sc);
+                    backHomebtn.setScale(sc);
+                }, 500);
+            },
+            _touch: function (btn, eT) {
+                if (eT == 2) {
+                    MjClient.showRuleView = new GameRule_YARed20();
+                    MjClient.Scene.addChild(MjClient.showRuleView)
+                }
+            },
+        },
+        setting: {
+            _layout: [
+                [0.08, 0.08],
+                [0.97, 0.94],
+                [0, 0]
+            ],
+            _click: function () {
+                var settringLayer = new RoomSettingView();
+                MjClient.Scene.addChild(settringLayer);
+                MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Shezhi", { uid: SelfUid(), gameType: MjClient.gameType });
+            }
         },
         BtnPutCard: { //add by  sking for put card button
             _run: function () {
@@ -1056,34 +1046,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 },
                 _click: function (btn) {
                     showPlayerInfo(0, btn);
-
-                    //cc.log("点击出牌");
-                    /////*
-                    ////    for sking 出牌 测试
-                    ////    todo..还需要判断出牌按钮的状态
-                    ////*/tData.tState
-                    //
-                    //var sData = MjClient.data.sData;
-                    //cc.log("sData.tState == " + sData.tState);
-                    ////if(!IsTurnToMe() || sData.tState != TableState.waitPut)
-                    ////{
-                    ////    mylog("not my turn");
-                    ////    return;
-                    ////}
-                    //var downNode = MjClient.playui._downNode;
-                    //var standUI = downNode.getChildByName("stand");
-                    //var children = downNode.children;
-                    //for(var i = 0; i < children.length; i++)
-                    //{
-                    //    if(children[i].name == "mjhand")
-                    //    {
-                    //        if(children[i].y > standUI.y + 10)
-                    //        {
-                    //            PutOutCard(children[i], children[i].tag); //可以出牌
-                    //            break;
-                    //        }
-                    //    }
-                    //}
                 },
                 _event: {
                     loadWxHead: function (d) {
@@ -1352,7 +1314,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     setUserOffline(this, 0);
                 },
                 MJGang: function (eD) {
-                   eD.ShowAnGang || DealMJGang(this, eD, 0);
+                    eD.ShowAnGang || DealMJGang(this, eD, 0);
                     hideTingBtn();
                     setUserOffline(this, 0);
                 },
@@ -1498,7 +1460,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                             showUserZhuangLogo(this, 1);
                         },
                         mjhand: function () {
-                           showUserZhuangLogo(this, 1);
+                            showUserZhuangLogo(this, 1);
                         },
                         initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 1);
@@ -1831,7 +1793,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                             showUserZhuangLogo(this, 2);
                         },
                         mjhand: function () {
-                             showUserZhuangLogo(this, 2);
+                            showUserZhuangLogo(this, 2);
                         },
                         initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 2);
@@ -2169,7 +2131,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                             showUserZhuangLogo(this, 3);
                         },
                         mjhand: function () {
-                             showUserZhuangLogo(this, 3);
+                            showUserZhuangLogo(this, 3);
                         },
                         initSceneData: function () {
                             if (IsArrowVisible()) showUserZhuangLogo(this, 3);
@@ -3274,7 +3236,7 @@ PlayerGamePanel_Red20.prototype.getNewCard = function (node, copy, name, tag, of
 //设置回调，并处理回调
 PlayerGamePanel_Red20.prototype.SetTouchCardHandler = function (standUI, cardui) {
     cardui.addTouchEventListener(function (btn, tp) {
-        var tData = MjClient.data.sData.tData;
+        // var tData = MjClient.data.sData.tData;
         var pl = getUIPlayer(0),
             flg = MjClient.playui.isCanTouch ? MjClient.playui.isCanTouch(cardui, btn, tp) : COMMON_UI.isCanTouch(cardui, btn, tp);
         cc.log('--------SetTouchCardHandler-----', flg)
@@ -4197,17 +4159,14 @@ PlayerGamePanel_Red20.prototype.DealMJPut = function (node, msg, off, outNum) {
 }
 //出牌
 PlayerGamePanel_Red20.prototype.PutOutCard = function (cdui, cd) {
-    if (MjClient.rePlayVideo != -1) {
-        return;
+    if (MjClient.rePlayVideo != -1 || !IsTurnToMe() || MjClient.data.sData.tData.roomStatus == 101) {
+        return false;
     }
     if (cdui.isNew) {
         MjClient.newCard = null; //打出去的是新摸的这张牌
         cdui.isNew = false;
     }
 
-    if (COMMON_UI3D.is3DUI()) {
-        return COMMON_UI3D.PutOutCard3D(cdui, cd);
-    }
     MjClient.playui.jsBind.BtnPutCard._node.stopAllActions(); //修复抓花后自摸时自动打出bug
 
     /*
@@ -4237,6 +4196,7 @@ PlayerGamePanel_Red20.prototype.PutOutCard = function (cdui, cd) {
         //标记着这张打出去的牌，在服务器回调 DealMjput (海安，通用，山西，徐州) 会删除这张标记的牌 by sking  2018.9.13
         cdui.name = "putOutCard";
         cdui.removeFromParent(true);
+        return true;
     }
 
     //出牌的时候，听，按钮消失

@@ -92,6 +92,8 @@ var HomeView_yaan = cc.Layer.extend({
                             nC[i].y = blac.getSize().height / 2 + 10;
                         }else if (cn === 'txtSpeak' || cn === 'SliderSpeak' || cn === 'CheckBoxSpeak') {
                             nC[i].y = blac.getSize().height / 2 - 50;
+                        } else if (cn === 'packageName') {
+                            nC[i].setString(MjClient.native.GetPackageName());
                         }
                     }
                     //默认震动
@@ -947,7 +949,7 @@ var HomeView_yaan = cc.Layer.extend({
 
         // 亲友圈相关
         this._clubRoom = gamePanel.getChildByName("clubRoom");
-        this._clubRoom.setZoomScale(0.05);
+        this._clubRoom.setZoomScale(0.05);MjClient.native.GetPackageName()
         this._clubRoom.setVisible(MjClient.systemConfig.clubEnable === "true");
 
         var clubActMajiang = this._clubRoom.getChildByName("majiang");

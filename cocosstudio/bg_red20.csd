@@ -30,13 +30,13 @@
                       <AbstractNodeData Name="btnRadio0" ActionTag="-433301053" Tag="504" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="152.0000" RightMargin="705.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
                         <Children>
-                          <AbstractNodeData Name="text" ActionTag="599622204" Tag="505" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-48.0000" TopMargin="3.1347" BottomMargin="5.8653" FontSize="28" LabelText="8局" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text" ActionTag="599622204" Tag="505" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-48.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="8局" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="42.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="42.0000" Y="19.8653" />
+                            <Position X="42.0000" Y="18.5000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
-                            <PrePosition X="1.1667" Y="0.5369" />
+                            <PrePosition X="1.1667" Y="0.5000" />
                             <PreSize X="1.1667" Y="0.7568" />
                             <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="82" G="54" B="33" />
@@ -70,13 +70,13 @@
                       <AbstractNodeData Name="btnRadio1" ActionTag="232512209" Tag="506" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
                         <Children>
-                          <AbstractNodeData Name="text" ActionTag="-624683715" Tag="507" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-62.0000" TopMargin="4.4186" BottomMargin="4.5814" FontSize="28" LabelText="12局" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text" ActionTag="-624683715" Tag="507" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-62.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="12局" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="56.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="42.0000" Y="18.5814" />
+                            <Position X="42.0000" Y="18.5000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
-                            <PrePosition X="1.1667" Y="0.5022" />
+                            <PrePosition X="1.1667" Y="0.5000" />
                             <PreSize X="1.5556" Y="0.7568" />
                             <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="82" G="54" B="33" />
@@ -110,19 +110,19 @@
                       <AbstractNodeData Name="btnRadio2" ActionTag="-2121936569" Tag="508" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="682.0000" RightMargin="175.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
                         <Children>
-                          <AbstractNodeData Name="text" ActionTag="-675008593" Tag="509" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-62.0000" TopMargin="3.1347" BottomMargin="5.8653" FontSize="28" LabelText="16局" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text" ActionTag="-675008593" Tag="509" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-62.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="16局" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="56.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="42.0000" Y="19.8653" />
+                            <Position X="42.0000" Y="18.5000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
-                            <PrePosition X="1.1667" Y="0.5369" />
+                            <PrePosition X="1.1667" Y="0.5000" />
                             <PreSize X="1.5556" Y="0.7568" />
                             <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="82" G="54" B="33" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
-                          <AbstractNodeData Name="text_0" ActionTag="-1260772158" Tag="680" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="105.0000" RightMargin="-167.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="(4元宝)" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text_0" ActionTag="-1260772158" Tag="680" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="105.0000" RightMargin="-167.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="(7元宝)" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="98.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
                             <Position X="105.0000" Y="18.5000" />
@@ -174,13 +174,13 @@
                       <AbstractNodeData Name="btnRadio29" ActionTag="-95408073" Tag="254" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="152.0000" RightMargin="705.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
                         <Children>
-                          <AbstractNodeData Name="text" ActionTag="573342933" Tag="255" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-118.0000" TopMargin="3.1347" BottomMargin="5.8653" FontSize="28" LabelText="房主支付" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text" ActionTag="573342933" Tag="255" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-118.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="房主支付" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="112.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="42.0000" Y="19.8653" />
+                            <Position X="42.0000" Y="18.5000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
-                            <PrePosition X="1.1667" Y="0.5369" />
+                            <PrePosition X="1.1667" Y="0.5000" />
                             <PreSize X="3.1111" Y="0.7568" />
                             <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="82" G="54" B="33" />
@@ -230,13 +230,13 @@
                       <AbstractNodeData Name="btnRadio30" ActionTag="-526135084" Tag="257" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="682.0000" RightMargin="175.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
                         <Children>
-                          <AbstractNodeData Name="text" ActionTag="-1871697127" Tag="258" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="41.9999" RightMargin="-117.9999" TopMargin="3.1125" BottomMargin="5.8875" FontSize="28" LabelText="赢家支付" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text" ActionTag="-1871697127" Tag="258" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-118.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="赢家支付" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="112.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="41.9999" Y="19.8875" />
+                            <Position X="42.0000" Y="18.5000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
-                            <PrePosition X="1.1667" Y="0.5375" />
+                            <PrePosition X="1.1667" Y="0.5000" />
                             <PreSize X="3.1111" Y="0.7568" />
                             <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="82" G="54" B="33" />
@@ -282,13 +282,13 @@
                       <AbstractNodeData Name="btnRadiogf" ActionTag="1696990547" Tag="636" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="152.0000" RightMargin="705.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
                         <Children>
-                          <AbstractNodeData Name="text" ActionTag="22202489" Tag="637" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-90.0000" TopMargin="3.1347" BottomMargin="5.8653" FontSize="28" LabelText="大赢家" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text" ActionTag="22202489" Tag="637" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-90.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="大赢家" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="84.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="42.0000" Y="19.8653" />
+                            <Position X="42.0000" Y="18.5000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
-                            <PrePosition X="1.1667" Y="0.5369" />
+                            <PrePosition X="1.1667" Y="0.5000" />
                             <PreSize X="2.3333" Y="0.7568" />
                             <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="82" G="54" B="33" />
@@ -338,13 +338,13 @@
                       <AbstractNodeData Name="btnRadiotf1" ActionTag="541195146" Tag="2100" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="152.0000" RightMargin="705.0000" TopMargin="71.5000" BottomMargin="-48.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
                         <Children>
-                          <AbstractNodeData Name="text" ActionTag="-608603459" Tag="2101" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-146.0000" TopMargin="3.1347" BottomMargin="5.8653" FontSize="28" LabelText="同分一人出" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text" ActionTag="-608603459" Tag="2101" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-146.0000" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="同分一人出" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="140.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="42.0000" Y="19.8653" />
+                            <Position X="42.0000" Y="18.5000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
-                            <PrePosition X="1.1667" Y="0.5369" />
+                            <PrePosition X="1.1667" Y="0.5000" />
                             <PreSize X="3.8889" Y="0.7568" />
                             <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="82" G="54" B="33" />
@@ -394,13 +394,13 @@
                       <AbstractNodeData Name="btnCheckdfjs" ActionTag="-1326408363" Tag="2110" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="151.0000" RightMargin="704.0000" TopMargin="130.0000" BottomMargin="-110.0000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="38.0000" Y="40.0000" />
                         <Children>
-                          <AbstractNodeData Name="text" ActionTag="-253042974" Tag="2111" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-116.0000" TopMargin="6.6960" BottomMargin="5.3040" FontSize="28" LabelText="低分解散" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text" ActionTag="-253042974" Tag="2111" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="42.0000" RightMargin="-116.0000" TopMargin="6.0000" BottomMargin="6.0000" FontSize="28" LabelText="低分解散" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="112.0000" Y="28.0000" />
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="42.0000" Y="19.3040" />
+                            <Position X="42.0000" Y="20.0000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
-                            <PrePosition X="1.1053" Y="0.4826" />
+                            <PrePosition X="1.1053" Y="0.5000" />
                             <PreSize X="2.9474" Y="0.7000" />
                             <FontResource Type="Default" Path="" Plist="" />
                             <OutlineColor A="255" R="82" G="54" B="33" />
