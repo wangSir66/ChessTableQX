@@ -13565,7 +13565,6 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
             MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Yaoqingweixinhaoyou", { uid: SelfUid(), gameType: MjClient.gameType });
         } //邀请
     }, this);
-    var screen = MjClient.size;
     var _delroomBtn = _waitNode.getChildByName("delroom");
     var tempSize = getImageRealSize("playing/gameTable/yaoqing_13.png");   //获取小按钮的真实尺寸
     _delroomBtn.zIndex = 500;
@@ -13583,6 +13582,7 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
         _delroomBtn.visible = false;
     }
     _delroomBtn.addTouchEventListener(function (sender, type) {
+        cc.log('----1111', type)
         if (type === 2) {
             if (IsRoomCreator()) {
                 MjClient.delRoom(true); //解散房间

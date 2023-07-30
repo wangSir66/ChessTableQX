@@ -531,11 +531,11 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 playMusic("bgMain");
             },
             showEndRoom: function (msg) {
-                // mylog(JSON.stringify(msg));
-                // if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
-                // else
-                //     MjClient.Scene.addChild(new StopRoomView());
                 this.addChild(new GameOverLayer(), 500);
+            },
+            endRoom: function (msg) {
+                mylog(JSON.stringify(msg));
+                if (!msg.showEnd) MjClient.Scene.addChild(new StopRoomView());
             },
             roundEnd: function () {
                 var self = this;
