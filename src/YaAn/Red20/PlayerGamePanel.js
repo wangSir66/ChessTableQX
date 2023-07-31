@@ -294,11 +294,10 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 playMusic("bgFight_xinsiyang");
             },
             showEndRoom: function (msg) {
-                // mylog(JSON.stringify(msg));
-                // if (msg.showEnd) this.addChild(new GameOverLayer(), 500);
-                // else
-                //     MjClient.Scene.addChild(new StopRoomView());
                 this.addChild(new GameOverLayer(), 500);
+            },
+            endRoom: function (msg) {
+                if (!msg.showEnd) MjClient.Scene.addChild(new StopRoomView());
             },
             MJPut: function () {
                 var sData = MjClient.data.sData;
