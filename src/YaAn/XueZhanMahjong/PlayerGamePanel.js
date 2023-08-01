@@ -485,7 +485,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         _event: {
             mjhand: function () {
                 if (MjClient.endoneui != null) {
-                    cc.log("=======mjhand====endoneui====" + typeof (MjClient.endoneui));
+                    MjClient.endoneui.unscheduleAllCallbacks();
                     MjClient.endoneui.removeFromParent(true);
                     MjClient.endoneui = null;
                 }
@@ -536,6 +536,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
             endRoom: function (msg) {
                 mylog(JSON.stringify(msg));
                 if (!msg.showEnd) MjClient.Scene.addChild(new StopRoomView());
+                else postEvent("showEndRoom");
             },
             roundEnd: function () {
                 var self = this;

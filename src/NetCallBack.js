@@ -10345,4 +10345,9 @@ MjClient.netCallBack = {
             sData.players[uid].mjState = TableState.waitSelect;
         }
     }],
+    changeRoomStatus:[0, function (d) {
+        var sData = MjClient.data.sData;
+        var tData = sData.tData;
+        tData.roomStatus = d.roomStatus;
+    }],
 };

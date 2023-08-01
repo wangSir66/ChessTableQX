@@ -499,13 +499,13 @@ var FriendCard_main = cc.Layer.extend({
 		var path = "friendCards/setSkin/";
 		var table = desk.getChildByName("table");
 		table.loadTexture(path + "zhuozi_" + skinType + ".png");
-		var text_roundNum = table.getChildByName("text_roundNum");
-		if ((skinType == 0) || (skinType == 3)) { text_roundNum.setTextColor(cc.color("003024")) }
-		else if ((skinType == 1) || (skinType == 4)) { text_roundNum.setTextColor(cc.color("013533")) }
-		else if ((skinType == 2) || (skinType == 5)) { text_roundNum.setTextColor(cc.color("400e17")) }
-		else if ((skinType == 6) || (skinType == 9)) { text_roundNum.setTextColor(cc.color("232e0f")) }
-		else if ((skinType == 7) || (skinType == 10)) { text_roundNum.setTextColor(cc.color("1b293e")) }
-		else if ((skinType == 8) || (skinType == 11)) { text_roundNum.setTextColor(cc.color("32213d")) }
+		// var text_roundNum = table.getChildByName("text_roundNum");
+		// if ((skinType == 0) || (skinType == 3)) { text_roundNum.setTextColor(cc.color("003024")) }
+		// else if ((skinType == 1) || (skinType == 4)) { text_roundNum.setTextColor(cc.color("013533")) }
+		// else if ((skinType == 2) || (skinType == 5)) { text_roundNum.setTextColor(cc.color("400e17")) }
+		// else if ((skinType == 6) || (skinType == 9)) { text_roundNum.setTextColor(cc.color("232e0f")) }
+		// else if ((skinType == 7) || (skinType == 10)) { text_roundNum.setTextColor(cc.color("1b293e")) }
+		// else if ((skinType == 8) || (skinType == 11)) { text_roundNum.setTextColor(cc.color("32213d")) }
 
 
 		this.setChairImg(desk, skinType);

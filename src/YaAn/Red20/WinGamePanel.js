@@ -182,21 +182,6 @@ var EndOneView_Red20 = cc.Layer.extend({
         back: {
             _layout: [[0.9, 0.9], [0.5, 0.5], [0, 0.08]],
             ready: {
-                countDown: {
-                    _visible: function () {
-                        // var tData = MjClient.data.sData.tData;
-                        // return tData.matchId;
-                        return true
-                    },
-                    _run: function () {
-                        var i = MjClient.rePlayVideo == -1 ? 5 : 0;
-                        if (i > 0)
-                            this.schedule(() => {
-                                this._text = '(' + i + 's' + ')'
-                                i--;
-                            }, 1, 3, 1);
-                    }
-                },
                 _run: function () {
                     if (MjClient.remoteCfg.guestLogin) {
                         setWgtLayout(this, [0.15, 0.15], [0.5, 0.085], [0, 0], false, true);
@@ -210,30 +195,7 @@ var EndOneView_Red20 = cc.Layer.extend({
                     }
                 },
                 _click: function (btn, eT) {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
-                    if (!tData.fieldId) {
-                        postEvent("clearCardUI");
-                        MjClient.endoneui.removeFromParent(true);
-                        MjClient.endoneui = null;
-                    }
-                    reInitarrCardVisible();
-                    if (MjClient.rePlayVideo != -1 && MjClient.replayui) {
-                        MjClient.replayui.replayEnd();
-                    }
-                    else {
-                        if (tData.fieldId) {
-                            leaveGameClearUI();
-                            MjClient.Scene.addChild(new goldMatchingLayer({ matching: false, gameType: tData.gameType }));
-                            MjClient.goldfieldEnter(tData.fieldId, tData.gameType);
-                            return;
-                        } else {
-                            MjClient.MJPass2NetForRed20();
-                        }
-                    }
-                    if (tData.roundNum <= 0) {
-                        postEvent("showEndRoom");
-                    }
+                    MjClient.endoneui.nextStartGame();
                 },
                 _visible: function () {
                     var tData = MjClient.data.sData.tData;
@@ -292,7 +254,29 @@ var EndOneView_Red20 = cc.Layer.extend({
             fanghao: {
                 _visible: true,
                 _run: function () { }
-            }
+            },
+            countDown: {
+                _visible: false,
+                _run: function () {
+                    var show = MjClient.data.sData.tData.areaSelectMode.AutoReady;
+                    this.setVisible(!!show);
+                    cc.log('-----countDown---------', show)
+                    if (!show) return;
+                    var i = MjClient.rePlayVideo == -1 ? 10 : 0;
+                    if (i > 0) {
+                        this.setString('(' + i + 's' + ')');
+                        this.schedule(() => {
+                            i--;
+                            if (i < 0) {
+                                this.unscheduleAllCallbacks();
+                                MjClient.endoneui.nextStartGame();
+                                return;
+                            }
+                            this.setString('(' + i + 's' + ')');
+                        }, 1);
+                    }
+                }
+            },
         }
     },
     ctor: function () {
@@ -362,6 +346,32 @@ var EndOneView_Red20 = cc.Layer.extend({
                     })
                 }
             }
+        }
+    },
+    nextStartGame: function () {
+        cc.log('--------下一局消息事件-----')
+        var sData = MjClient.data.sData;
+        var tData = sData.tData;
+        if (!tData.fieldId) {
+            postEvent("clearCardUI");
+            MjClient.endoneui.removeFromParent(true);
+            MjClient.endoneui = null;
+        }
+        reInitarrCardVisible();
+        if (MjClient.rePlayVideo != -1 && MjClient.replayui) {
+            MjClient.replayui.replayEnd();
+        } else {
+            if (tData.fieldId) {
+                leaveGameClearUI();
+                MjClient.Scene.addChild(new goldMatchingLayer({ matching: false, gameType: tData.gameType }));
+                MjClient.goldfieldEnter(tData.fieldId, tData.gameType);
+                return;
+            } else {
+                tData.roundNum <= 0 || MjClient.MJPass2NetForRed20();
+            }
+        }
+        if (tData.roundNum <= 0) {
+            postEvent("showEndRoom");
         }
     }
 });

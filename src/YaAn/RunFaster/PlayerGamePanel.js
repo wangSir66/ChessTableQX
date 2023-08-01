@@ -140,7 +140,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
         _event: {
             mjhand: function () {
                 if (MjClient.endoneui != null) {
-                    cc.log("=======mjhand====endoneui====" + typeof (MjClient.endoneui));
+                    MjClient.endoneui.unscheduleAllCallbacks();
                     MjClient.endoneui.removeFromParent(true);
                     MjClient.endoneui = null;
                 }
@@ -246,12 +246,17 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 playMusic("bgMain");
             },
             showEndRoom: function (msg) {
-                // mylog(JSON.stringify(msg));
                 this.addChild(new GameOverLayer(), 500);
+                if (MjClient.endoneui != null) {
+                    MjClient.endoneui.unscheduleAllCallbacks();
+                    MjClient.endoneui.removeFromParent(true);
+                    MjClient.endoneui = null;
+                }
             },
             endRoom: function (msg) {
                 mylog(JSON.stringify(msg));
                 if (!msg.showEnd) MjClient.Scene.addChild(new StopRoomView());
+                else postEvent("showEndRoom");
             },
             roundEnd: function () {
                 MjClient.selectTipCardsArray = null;
@@ -2050,11 +2055,13 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     this.ignoreContentAdaptWithSize(true);
                 },
                 _event: {
-                    initSceneData: function () {
+                    initSceneData: function (msg) {
                         if (MjClient.data.sData.tData.tState == TableState.waitPut) {
-                            MjClient.clockNode.visible = true;
-                            this.setString("0");
-                            MjClient.playui.updateClockPosition(MjClient.clockNode);
+                            MjClient.playui.clockNumberUpdate(this);
+                            setTimeout(() => {
+                                MjClient.playui.updateClockPosition(MjClient.clockNode);
+                                MjClient.clockNode.visible = true;
+                            }, 200);
                         }
                     },
                     waitPut: function () {
@@ -2084,7 +2091,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                         playTimeUpEff = null;
                     },
                     onlinePlayer: function () {
-                        MjClient.clockNode.visible = false;
+                        // MjClient.clockNode.visible = false;
                     },
                     LeaveGame: function () {
                         this.stopAllActions();
@@ -2407,9 +2414,8 @@ PlayLayer_RunFasterYA.prototype.clockNumberUpdate = function (node, endFunc) {
 
 PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
     var tData = MjClient.data.sData.tData;
-    var uids = tData.uids;
     var curPlayerIndex = (tData.curPlayer + MjClient.MaxPlayerNum - tData.uids.indexOf(SelfUid())) % MjClient.MaxPlayerNum;
-
+    cc.log('-------------------curPlayerIndex--------------',curPlayerIndex)
     var curPlayerNode = null;
     var deskCardPosOffset = {
         x: 44,

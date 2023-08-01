@@ -1974,39 +1974,28 @@ FriendCard_Common.roomArrOpe = function (roomArr, params) {
 
 //俱乐部桌子上文本处理
 FriendCard_Common.deskRoundNumText = function (that, roundNumText, room) {
-    //var that = MjClient.FriendCard_main_ui;
     roundNumText.ignoreContentAdaptWithSize(true);
     roundNumText.visible = true;
-    // if (room.roundNum) {
-    //     if (room.gameType == MjClient.GAME_TYPE.SHAO_YANG_BO_PI ||
-    //         room.gameType == MjClient.GAME_TYPE.LOU_DI_FANG_PAO_FA ||
-    //         room.gameType == MjClient.GAME_TYPE.SHAO_YANG_FANG_PAO_FA ||
-    //         room.gameType == MjClient.GAME_TYPE.HENG_YANG_FANG_PAO_FA) {
-    //         roundNumText.setString((room.maxScore || 0) + "胡");
-    //     } else if (room.gameType == MjClient.GAME_TYPE.DA_TONG_ZI_SHAO_YANG ||
-    //         room.gameType == MjClient.GAME_TYPE.LONG_HUI_BA_ZHA_DAN ||
-    //         room.gameType == MjClient.GAME_TYPE.YONG_ZHOU_LAO_CHUO ||
-    //         room.gameType == MjClient.GAME_TYPE.DIAN_TUO) {
-    //         roundNumText.setString((room.maxScore || 0) + "分");
-    //     } else {
-    //         roundNumText.setString("第 " + room.roundNum + " 局");
-    //     }
-    // } else {
-        if (isJinZhongAPPType() && that.customInfo) {
-            roundNumText.setString("加入");
-        } else {
-            var splitRuleName = FriendCard_Common.splitClubRuleName(unescape(that.data.info["rule" + room.ruleIndex].ruleName));
+    var rule = that.data.info["rule" + room.ruleIndex],
+        splitRuleName = FriendCard_Common.splitClubRuleName(unescape(rule.ruleName));
 
-            var ruleName = splitRuleName[1];
-            if (!splitRuleName[0]) {
-                ruleName = GameCnName[that.data.info["rule" + room.ruleIndex].gameType] + "";
-            }
-            if (ruleName.length > 6) {
-                roundNumText.setFontSize(20);
-            }
-            roundNumText.setString(ruleName);
-        }
-    // }
+    var ruleName = splitRuleName[1];
+    if (!splitRuleName[0]) {
+        ruleName = GameCnName[rule.gameType] + "";
+    }
+    if (ruleName.length > 6) {
+        roundNumText.setFontSize(20);
+    }
+    roundNumText.setString(ruleName);
+    let par = roundNumText.getParent(), round = par.getChildByName('text_roundNum1'), roundBg = par.getChildByName('Text_nameBg_0');
+    if (room.roundNum) {
+        round.setString(room.roundNum + '/' + rule.round);
+        roundBg.visible = true;
+        round.visible = true;
+    } else {
+        roundBg.visible = false;
+        round.visible = false;
+    }
 }
 
 

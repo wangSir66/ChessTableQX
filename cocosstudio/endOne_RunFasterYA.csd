@@ -106,13 +106,13 @@
                 <PreSize X="0.8207" Y="0.3558" />
                 <FileData Type="Normal" Path="RunFasterYA/RoundEnd/LittleResultLose.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="ready" ActionTag="294184368" Tag="1597" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="597.6600" RightMargin="606.3400" TopMargin="526.4236" BottomMargin="-88.4236" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="ready" ActionTag="294184368" Tag="1597" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="599.2636" RightMargin="604.7364" TopMargin="519.7242" BottomMargin="-81.7242" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="196.0000" Y="82.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="695.6600" Y="-47.4236" />
+                <Position X="697.2636" Y="-40.7242" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.4969" Y="-0.0912" />
+                <PrePosition X="0.4980" Y="-0.0783" />
                 <PreSize X="0.1400" Y="0.1577" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
@@ -975,6 +975,17 @@
                 <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="countDown" ActionTag="260009730" Tag="360" IconVisible="False" LeftMargin="792.4806" RightMargin="527.5194" TopMargin="541.9134" BottomMargin="-54.9134" FontSize="32" LabelText="(13s)" ShadowOffsetX="1.0000" ShadowOffsetY="1.0000" ShadowEnabled="True" ctype="TextObjectData">
+                <Size X="80.0000" Y="33.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="832.4806" Y="-38.4134" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="127" G="253" B="253" />
+                <PrePosition X="0.5946" Y="-0.0739" />
+                <PreSize X="0.0571" Y="0.0635" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="139" G="77" B="16" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
