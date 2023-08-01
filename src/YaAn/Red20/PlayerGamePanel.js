@@ -305,9 +305,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 if (!msg.showEnd) MjClient.Scene.addChild(new StopRoomView());
                 else postEvent("showEndRoom");
             },
-            endRoom: function (msg) {
-                if (!msg.showEnd) MjClient.Scene.addChild(new StopRoomView());
-            },
             MJPut: function () {
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
@@ -3269,6 +3266,7 @@ PlayerGamePanel_Red20.prototype.SetTouchCardHandler = function (standUI, cardui)
         if (MjClient.rePlayVideo != -1) return;
         var bounds = MjClient.playui.jsBind.bounds._node;
         if (tp == ccui.Widget.TOUCH_BEGAN) {
+            if (MjClient.movingCard) return;
             playEffect("cardClick");
             let t = new Date().getTime();
             if (t - MjClient.playui.clickTime.time > 200) {
