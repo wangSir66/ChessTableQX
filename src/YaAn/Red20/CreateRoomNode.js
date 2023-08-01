@@ -152,6 +152,7 @@ var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
         };
         Rule.AutoReady = this.RedioGroup['zidongzhunbei'].getSelectIndex() == 1;//自动准备
         Rule.MaxFan = Rule.EnableTTF ? 0 : [4, 5, 6][this.getRedioSelectByName('fengding')]//最大番数 
+        Rule.tipCountdown = 15;//提示时间
         this.getExtraSelectedPara(Rule);
         return Rule;
     }

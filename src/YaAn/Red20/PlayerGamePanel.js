@@ -250,7 +250,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         _event: {
             mjhand: function () {
                 if (MjClient.endoneui != null) {
-                    cc.log("=======mjhand====endoneui====" + typeof (MjClient.endoneui));
+                    MjClient.endoneui.unscheduleAllCallbacks();
                     MjClient.endoneui.removeFromParent(true);
                     MjClient.endoneui = null;
                 }
@@ -295,9 +295,15 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             },
             showEndRoom: function (msg) {
                 this.addChild(new GameOverLayer(), 500);
+                if (MjClient.endoneui != null) {
+                    MjClient.endoneui.unscheduleAllCallbacks();
+                    MjClient.endoneui.removeFromParent(true);
+                    MjClient.endoneui = null;
+                }
             },
             endRoom: function (msg) {
                 if (!msg.showEnd) MjClient.Scene.addChild(new StopRoomView());
+                else postEvent("showEndRoom");
             },
             MJPut: function () {
                 var sData = MjClient.data.sData;
@@ -3381,7 +3387,7 @@ PlayerGamePanel_Red20.prototype.findTouchEndNode = function (pos, cardNum) {
             //已经是对子/三张/4张/14
             else {
                 //对子
-                if (curCard === MjClient.majiang.getCardNum(indexInfo[1].tag)) {
+                if (curCard === MjClient.majiang.getCardNum(cardNode[indexInfo[1]].tag)) {
                     //可以组成碰杠
                     if (curCard === acCard) {
                         return { node: 6, index: endParentNode.sortIndex.split('_')[0] + '_' + indexInfo.length }
@@ -3721,7 +3727,7 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
             vnode.push(eat.peng._node);
         }
         pl.eatFlag & 8 && vnode.push(eat.hu._node);
-        vnode.length > 0 && haveGuo && vnode.push(eat.guo._node);
+        vnode.length > 0 && tData.roomStatus != 101 && vnode.push(eat.guo._node);
     }
 
     //吃碰杠胡过处理
@@ -4346,8 +4352,12 @@ PlayerGamePanel_Red20.prototype.DealMJPut = function (node, msg, off, outNum) {
 }
 //出牌
 PlayerGamePanel_Red20.prototype.PutOutCard = function (cdui, cd) {
-    cc.log(MjClient.rePlayVideo != -1 , !IsTurnToMe() , MjClient.data.sData.tData.roomStatus == 101)
-    if (MjClient.rePlayVideo != -1 || !IsTurnToMe() || MjClient.data.sData.tData.roomStatus == 101) {
+    var tData = MjClient.data.sData.tData;
+    var pl = getUIPlayer(0);
+    if (tData.tState != TableState.waitPut || pl.mjState != TableState.waitPut) {
+        return false;
+    }
+    if (MjClient.rePlayVideo != -1 || !IsTurnToMe() || MjClient.data.sData.tData.roomStatus == 101 || pl.eatFlag > 0) {
         return false;
     }
     if (cdui.isNew) {
@@ -4370,7 +4380,6 @@ PlayerGamePanel_Red20.prototype.PutOutCard = function (cdui, cd) {
             mjhandNum++;
         }
     }
-    var pl = getUIPlayer(0);
     cc.log('mjhandNum == pl.mjhand.length', mjhandNum, cd, JSON.stringify(pl.mjhand))
     if (mjhandNum == pl.mjhand.length) {
         var mjputMsg = {
@@ -4384,6 +4393,7 @@ PlayerGamePanel_Red20.prototype.PutOutCard = function (cdui, cd) {
         //标记着这张打出去的牌，在服务器回调 DealMjput (海安，通用，山西，徐州) 会删除这张标记的牌 by sking  2018.9.13
         cdui.name = "putOutCard";
         cdui.removeFromParent(true);
+        pl.mjState = TableState.waitCard;
         return true;
     }
 

@@ -13755,7 +13755,7 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
             _getRoomNumBtn.visible = false;
         else
             _getRoomNumBtn.visible = IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
-        _wxinviteBtn.visible = IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
+        _wxinviteBtn.visible = false;//IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
         _delroomBtn.visible = IsInviteVisible() || isWaitReady;
         // 山西非创建房间的人不显示解散房间按钮
         if (isJinZhongAPPType() && !IsRoomCreator()) {
@@ -13773,7 +13773,7 @@ MJ_setWaitBtn = function (needAdjust, posAndSizeArr, posAndSizeArrX) {
             _getRoomNumBtn.visible = false;
         else
             _getRoomNumBtn.visible = IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
-        _wxinviteBtn.visible = IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
+        _wxinviteBtn.visible = false;//IsInviteVisible() && !MjClient.remoteCfg.guestLogin;
         _delroomBtn.visible = IsInviteVisible() || isWaitReady;
         // 山西非创建房间的人不显示解散房间按钮
         if (isJinZhongAPPType() && !IsRoomCreator()) {

@@ -22,31 +22,17 @@
           <AbstractNodeData Name="back" ActionTag="755369775" Tag="1595" IconVisible="False" HorizontalEdge="BothEdge" VerticalEdge="TopEdge" TopMargin="-1.4999" BottomMargin="91.4999" TouchEnable="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="156" ctype="ImageViewObjectData">
             <Size X="1280.0000" Y="630.0000" />
             <Children>
-              <AbstractNodeData Name="ready" ActionTag="294184368" Tag="1597" IconVisible="False" LeftMargin="557.0753" RightMargin="526.9247" TopMargin="631.9266" BottomMargin="-83.9266" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="ready" ActionTag="294184368" Tag="1597" IconVisible="False" LeftMargin="557.0754" RightMargin="526.9246" TopMargin="628.3723" BottomMargin="-80.3723" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="196.0000" Y="82.0000" />
-                <Children>
-                  <AbstractNodeData Name="countDown" ActionTag="-949488951" Tag="2035" IconVisible="False" LeftMargin="117.3767" RightMargin="14.6233" TopMargin="22.6424" BottomMargin="26.3576" FontSize="32" LabelText="(3s)" ShadowOffsetX="1.0000" ShadowOffsetY="1.0000" ShadowEnabled="True" ctype="TextObjectData">
-                    <Size X="64.0000" Y="33.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="149.3767" Y="42.8576" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="233" G="218" B="218" />
-                    <PrePosition X="0.7621" Y="0.5227" />
-                    <PreSize X="0.3265" Y="0.4024" />
-                    <OutlineColor A="255" R="255" G="0" B="0" />
-                    <ShadowColor A="255" R="139" G="77" B="16" />
-                  </AbstractNodeData>
-                </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="655.0753" Y="-42.9266" />
+                <Position X="655.0754" Y="-39.3723" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5118" Y="-0.0681" />
+                <PrePosition X="0.5118" Y="-0.0625" />
                 <PreSize X="0.1531" Y="0.1302" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="Normal" Path="Red20/DeskTexture/btn_nextGame_btn.png" Plist="" />
-                <PressedFileData Type="Normal" Path="Red20/DeskTexture/btn_nextGame_btn.png" Plist="" />
-                <NormalFileData Type="Normal" Path="Red20/DeskTexture/btn_nextGame_btn.png" Plist="" />
+                <PressedFileData Type="Normal" Path="RunFasterYA/RoundEnd/BtnNextGround.png" Plist="" />
+                <NormalFileData Type="Normal" Path="RunFasterYA/RoundEnd/BtnNextGround.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -900,6 +886,17 @@
                 <FontResource Type="Default" Path="" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="countDown" ActionTag="-949488951" Tag="2035" IconVisible="False" LeftMargin="757.3867" RightMargin="442.6133" TopMargin="652.6680" BottomMargin="-55.6680" FontSize="32" LabelText="(13s)" ShadowOffsetX="1.0000" ShadowOffsetY="1.0000" ShadowEnabled="True" ctype="TextObjectData">
+                <Size X="80.0000" Y="33.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="797.3867" Y="-39.1680" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="127" G="253" B="253" />
+                <PrePosition X="0.6230" Y="-0.0622" />
+                <PreSize X="0.0625" Y="0.0524" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="139" G="77" B="16" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
