@@ -15320,6 +15320,7 @@ var getClubInfoInTable = function () {
     clubInfo.noAttackProp = tData.noAttackProp;//禁用攻击表情
     clubInfo.isForbVoice = tData.isForbVoice;//禁用语音0：不禁用，1：禁用
     clubInfo.isForbChat = tData.isForbChat;//禁用聊天0：不禁用，1：禁用
+    clubInfo.againGame = tData.againGame;//禁用再来一局0：不禁用，1：禁用
     return clubInfo;
 }
 
@@ -15332,7 +15333,6 @@ var correctAccuracy = function (float, digit) {
 var clubReplay = function (clubId, ruleId, gameType) {
     var tData = MjClient.data.sData.tData;
     var para = tData.areaSelectMode;
-    var inviteVipTable = MjClient.data.inviteVipTable;
     para.maxPlayer = tData.maxPlayer;
     para.gameType = tData.gameType;
     var tClubId = tData.clubId;
@@ -15355,8 +15355,6 @@ var clubReplay = function (clubId, ruleId, gameType) {
                 cc.log("再来一局成功")
             }
         });
-
-        //"nantongReplay" 再来一局的弹窗类型
     }, function () { }, "1", "nantongReplay");
 };
 var AddGuiZuHeadFrame_old = function (node) {

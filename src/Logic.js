@@ -8381,7 +8381,6 @@ MjClient.loadWxHead = function (uid, url) {
     var bShowHead = false;
 
     if (uid && url) {
-        //url = "https://thirdwx.qlogo.cn/mmopen/vi_32/Q3auHgzwzM5LEicR0lzaCicY2DDtHmy3N1fCMB6nOoaOs6bYlPtADbRtMicj4rlDgCqVibtReJJrw03JytM4Rtwq1A/132";
         cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
 
             cc.log(uid + " = uid==============error = texture = " + texture);

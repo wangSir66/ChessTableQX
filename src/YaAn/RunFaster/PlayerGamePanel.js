@@ -474,6 +474,14 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                                 this.setString(pl.info.honorVal.honorVal + '');
                             }
                         },
+                        changeHonorVal: function () {
+                            if (MjClient.rePlayVideo != -1) return;
+                            let pl = getUIPlayer(0);
+                            if (pl && pl.info.honorVal) {
+                                this.visible = true;
+                                this.setString(pl.info.honorVal.honorVal + '');
+                            }
+                        }
                     }
                 }
             },
@@ -620,7 +628,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
             },
             _run: function () {
                 setTimeout(() => {
-                    var banner = this.parent,sc = this.getScale();
+                    var banner = this.parent, sc = this.getScale();
                     var waitNode = MjClient.playui.getChildByName("playUINode").getChildByName("wait");
                     var delroom = waitNode.getChildByName("delroom");
                     var backHomebtn = waitNode.getChildByName("backHomebtn");
@@ -2415,7 +2423,7 @@ PlayLayer_RunFasterYA.prototype.clockNumberUpdate = function (node, endFunc) {
 PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
     var tData = MjClient.data.sData.tData;
     var curPlayerIndex = (tData.curPlayer + MjClient.MaxPlayerNum - tData.uids.indexOf(SelfUid())) % MjClient.MaxPlayerNum;
-    cc.log('-------------------curPlayerIndex--------------',curPlayerIndex)
+    cc.log('-------------------curPlayerIndex--------------', curPlayerIndex)
     var curPlayerNode = null;
     var deskCardPosOffset = {
         x: 44,
@@ -3189,6 +3197,10 @@ PlayLayer_RunFasterYA.prototype.updateBoomScore = function (node, d, isAdd, off)
         ox = node.x;
     node.x -= 100;
     node.setString(booms + '');
+    if (off == 0) {
+        pl.info.honorVal.honorVal += (isAdd ? 1 : -1) * booms;
+        postEvent('changeHonorVal');
+    }
     node.zIndex = 999;
     node.visible = true;
     node.runAction(cc.sequence(cc.moveTo(0.5, cc.p(ox, node.y)), cc.delayTime(1), cc.callFunc(() => {

@@ -28,10 +28,10 @@
               <AbstractNodeData Name="Panel_girl" ActionTag="-850165779" Tag="246" IconVisible="False" LeftMargin="162.6251" RightMargin="578.3749" TopMargin="116.5056" BottomMargin="-8.5056" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="539.0000" Y="612.0000" />
                 <Children>
-                  <AbstractNodeData Name="girl" ActionTag="985637107" Tag="135" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-51.4839" RightMargin="51.4839" TopMargin="-12.0916" BottomMargin="12.0916" LeftEage="177" RightEage="177" TopEage="201" BottomEage="201" Scale9OriginX="177" Scale9OriginY="201" Scale9Width="185" Scale9Height="210" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="girl" ActionTag="985637107" Tag="135" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-51.4745" RightMargin="51.4745" TopMargin="-12.1176" BottomMargin="12.1176" LeftEage="177" RightEage="177" TopEage="201" BottomEage="201" Scale9OriginX="177" Scale9OriginY="201" Scale9Width="185" Scale9Height="210" ctype="ImageViewObjectData">
                     <Size X="539.0000" Y="612.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="218.0161" Y="318.0916" />
+                    <Position X="218.0255" Y="318.1176" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4045" Y="0.5198" />
@@ -255,7 +255,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_left" ActionTag="-546451159" Tag="49" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="502.0028" RightMargin="137.9972" TopMargin="108.9105" BottomMargin="111.0895" ClipAble="False" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_left" ActionTag="-546451159" Tag="49" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="502.0028" RightMargin="137.9972" TopMargin="108.9200" BottomMargin="111.0800" ClipAble="False" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="640.0000" Y="500.0000" />
                 <Children>
                   <AbstractNodeData Name="playGroundRoom" ActionTag="-1500356345" Tag="115" IconVisible="False" LeftMargin="108.4336" RightMargin="15.5664" TopMargin="44.9119" BottomMargin="310.0881" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="486" Scale9Height="123" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -469,7 +469,7 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleY="0.5000" />
-                <Position X="502.0028" Y="361.0895" />
+                <Position X="502.0028" Y="361.0800" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.3922" Y="0.5015" />
@@ -709,14 +709,14 @@
               <AbstractNodeData Name="scroll" ActionTag="976010434" Tag="43" IconVisible="False" PositionPercentYEnabled="True" RightMargin="13.0000" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="245" RightEage="294" TopEage="14" BottomEage="14" Scale9OriginX="-294" Scale9OriginY="-14" Scale9Width="539" Scale9Height="28" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
                 <Size X="695.0000" Y="43.0000" />
                 <Children>
-                  <AbstractNodeData Name="msg" ActionTag="-1832792330" Tag="44" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-59.7012" RightMargin="-77.2988" TopMargin="10.1480" BottomMargin="23.8520" FontSize="23" LabelText="文明娱乐，严禁赌博，七星游戏没有任何外挂，请大家放心游戏。不要轻信下载恶意软件，防止上当受骗泄露个人身份信息。" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="1255.0000" Y="26.0000" />
+                  <AbstractNodeData Name="msg" ActionTag="-1832792330" Tag="44" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-59.7012" RightMargin="-87.2988" TopMargin="11.6480" BottomMargin="25.3520" FontSize="23" LabelText="文明娱乐，严禁赌博，七星游戏没有任何外挂，请大家放心游戏。不要轻信下载恶意软件，防止上当受骗泄露个人身份信息。" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="1265.0000" Y="23.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="-59.7012" Y="36.8520" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="-0.0534" Y="0.6142" />
-                    <PreSize X="1.1225" Y="0.4333" />
+                    <PreSize X="1.1315" Y="0.3833" />
                     <FontResource Type="Default" Path="" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
