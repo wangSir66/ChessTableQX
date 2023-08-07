@@ -4778,7 +4778,8 @@ MjClient.netCallBack = {
             var pl = sData.players[d.uid];
             pl.eatFlag = 0;
             pl.mjState = TableState.waitPut;
-            pl.mjpeng.push(d.cards);
+            if (d.type == 1) pl.mjanpeng.push(d.cards);
+            else pl.mjpeng.push(d.cards);
             sData.tData.tState = TableState.waitPut;
             playEffectInPlay("peng");
             return;
@@ -10317,7 +10318,7 @@ MjClient.netCallBack = {
             sData.players[uid].mjState = TableState.waitSelect;
         }
     }],
-    changeRoomStatus:[0, function (d) {
+    changeRoomStatus: [0, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
         tData.roomStatus = d.roomStatus;

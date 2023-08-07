@@ -4650,7 +4650,6 @@ function PutOutCard(cdui, cd) {
 
     //cardPutted = true;
     var pl = getUIPlayer(0);
-    var tData = MjClient.data.sData.tData;
     if (mjhandNum == pl.mjhand.length) {
         var mjputMsg = {
             cmd: "MJPut",

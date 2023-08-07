@@ -962,7 +962,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     },
                     _event: {
                         trustTip: function (msg) {
-                            if (getUIPlayer(0) && getUIPlayer(0).info.uid == msg.uid) {
+                            let pl = getUIPlayer(0)
+                            if ( pl && pl.info.uid == msg.uid) {
                                 this.visible = true;
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
@@ -993,12 +994,14 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     },
                     _event: {
                         beTrust: function (msg) {
-                            if (getUIPlayer(0) && getUIPlayer(0) && getUIPlayer(0).info.uid == msg.uid) {
+                            var pl = getUIPlayer(0);
+                            if (pl && pl.info.uid == msg.uid) {
                                 this.visible = true;
                             }
                         },
                         cancelTrust: function (msg) {
-                            if (getUIPlayer(0) && getUIPlayer(0) && getUIPlayer(0).info.uid == msg.uid) {
+                            var pl = getUIPlayer(0);
+                            if (pl && pl.info.uid == msg.uid) {
                                 this.visible = false;
                             }
                         },
@@ -1011,6 +1014,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.visible = true;
                             } else {
                                 this.visible = false;
+                                MjClient.playui.doTrustTimeEnter(pl);
                             }
                         }
                     }
@@ -1308,11 +1312,27 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 MJPut: function (eD) {
                     if (eD.uid === SelfUid()) {
                         showMJOutBig(this, { Card: eD.card, uid: eD.uid }, 0);
-                        MjClient.playui.CardLayoutRestore(this, 0);
                         MjClient.playui.jsBind.eat.ting._node.visible = false;//托管清除听牌按钮
                         MjClient.playui.removeHandCard(this, eD.card, 0);
+                        let pl = getUIPlayer(0);
+                        if (pl && pl.trust && MjClient.rePlayVideo == -1) {
+                            let allc = this.children.filter(c => c.name == 'mjhand');
+                            for (let _i = 0; _i < allc.length; _i++) {
+                                var c = allc[_i];
+                                if (c.tag == eD.card && cc.sys.isObjectValid(c)) {
+                                    cc.log('--MJPut--removeHandCard--', c.tag);
+                                    c.removeFromParent(true);
+                                    break;
+                                }
+                            }
+                            if (pl && pl.majiang) {
+                                let _indx = pl.majiang.indexOf(eD.card);
+                                _indx > -1 && pl.majiang.splice(_indx, 1);
+                            }
+                        }
                     }
                     setUserOffline(this, 0);
+                    MjClient.playui.CardLayoutRestore(this, 0);
                 },
                 MJChi: function (eD) {
                     DealMJChi(this, eD, 0);
@@ -1403,7 +1423,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     },
                     _event: {
                         trustTip: function (msg) {
-                            if (getUIPlayer(1) && getUIPlayer(1).info.uid == msg.uid) {
+                            let pl = getUIPlayer(1)
+                            if ( pl && pl.info.uid == msg.uid) {
                                 this.visible = true;
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
@@ -1452,6 +1473,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.visible = true;
                             } else {
                                 this.visible = false;
+                                MjClient.playui.doTrustTimeEnter(pl);
                             }
                         }
                     }
@@ -1736,7 +1758,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     },
                     _event: {
                         trustTip: function (msg) {
-                            if (getUIPlayer(2) && getUIPlayer(2).info.uid == msg.uid) {
+                            let pl = getUIPlayer(2)
+                            if ( pl && pl.info.uid == msg.uid) {
                                 this.visible = true;
                                 this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
@@ -1785,6 +1808,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.visible = true;
                             } else {
                                 this.visible = false;
+                                MjClient.playui.doTrustTimeEnter(pl);
                             }
                         }
                     }
@@ -2074,10 +2098,11 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     },
                     _event: {
                         trustTip: function (msg) {
-                            if (getUIPlayer(3) && getUIPlayer(3).info.uid == msg.uid) {
+                            let pl = getUIPlayer(3)
+                            if ( pl && pl.info.uid == msg.uid) {
                                 this.visible = true;
-                                this.setString(msg.tipCountDown);
                                 var tipCountDown = msg.tipCountDown;
+                                this.setString(tipCountDown);
                                 var self = this;
                                 self.unscheduleAllCallbacks();
                                 this.schedule(function () {
@@ -2123,6 +2148,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.visible = true;
                             } else {
                                 this.visible = false;
+                                MjClient.playui.doTrustTimeEnter(pl);
                             }
                         }
                     }
@@ -2464,6 +2490,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 },
                 _touch: function (btn, eT) {
                     if (eT == 2) {
+                        var pl = getUIPlayer(0);
+                        if (pl && pl.trust) return;
                         MJTingToServer()
                     }
                 }
@@ -2591,6 +2619,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 ],
                 _touch: function (btn, eT) {
                     if (eT == 2) {
+                        var pl = getUIPlayer(0);
+                        if (pl && pl.trust) return;
                         MjClient.MJPass2NetForRed20();
                     }
                 },
@@ -2626,7 +2656,11 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
 
                 },
                 _touch: function (btn, eT) {
-                    if (eT == 2) MJHuToServer();
+                    if (eT == 2) {
+                        var pl = getUIPlayer(0);
+                        if (pl && pl.trust) return;
+                        MJHuToServer();
+                    }
                 },
                 bgimg: {
                     _run: function () {
@@ -2643,6 +2677,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 ],
                 _touch: function (btn, eT) {
                     if (eT == 2) {
+                        var pl = getUIPlayer(0);
+                        if (pl && pl.trust) return;
                         MJTouToServer();
                         this.visible = false;
                     }
@@ -2657,6 +2693,8 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 ],
                 _touch: function (btn, eT) {
                     if (eT == 2) {
+                        var pl = getUIPlayer(0);
+                        if (pl && pl.trust) return;
                         btn.visible = false;
                         MjClient.clickTing = false;
                         hideCurrentTingNum();
@@ -3197,6 +3235,17 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
             }
         }
         return node.visible;
+    },
+    doTrustTimeEnter: function (pl) {
+        if (!pl) return;
+        let rule = MjClient.data.sData.tData.areaSelectMode;
+        if (pl.trustAllTime > rule.trustTime) {
+            cc.log('进入托管前的倒计时')
+        } else if (pl.trustAllTime > 0) {
+            setTimeout(() => {
+                pl.trustAllTime - 2 > 1 && postEvent('trustTip', { uid: pl.info.uid, tipCountDown: pl.trustAllTime - 2 });
+            }, 2000);
+        }
     }
 });
 
@@ -3463,6 +3512,7 @@ PlayerGamePanel_Red20.prototype.setCardSprite = function (node, cd, off) {
  * @param {0,1,2,3} off 物理座位号位置
  */
 PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off, first = false) {
+    cc.log('------------CardLayoutRestore-----------1-', off, first)
     var uipeng = [];
     var uigang0 = [];
     var uigang1 = [];
@@ -3575,20 +3625,24 @@ PlayerGamePanel_Red20.prototype.CardLayoutRestore = function (node, off, first =
                         for (let k = 0; k < uistand.length; k++) {
                             if (uistand[k].sortIndex) {
                                 let idxNum = MjClient.majiang.getCardNum(uistand[k].tag), indxSort = uistand[k].sortIndex.split('_');
-                                if (idxNum + nIdxNum == 14 && numObj[indxSort[0]] == 1) {
-                                    ntIndx.sortIndex = indxSort[0] + '_' + numObj[indxSort[0]];
-                                    break;
-                                } else if (idxNum == nIdxNum) {
+                                if (idxNum == nIdxNum) {
                                     let indx = 0;
-                                    if (numObj[indxSort[0]] == 1) indx = (Number(indxSort[1]) + 1);
-                                    else {
+                                    if (numObj[indxSort[0]] == 1) {
+                                        indx = (Number(indxSort[1]) + 1);
+                                        numObj[indxSort[0]] += 1;
+                                    } else {
                                         let fIndex = uistand.find(u => u.sortIndex == indxSort[0] + '_' + (Number(indxSort[1]) + 1));
                                         if (!fIndex) fIndex = uistand.find(u => u.sortIndex == indxSort[0] + '_' + (Number(indxSort[1]) - 1));
                                         if (fIndex && MjClient.majiang.getCardNum(fIndex.tag) == nIdxNum) {
                                             ntIndx.sortIndex = indxSort[0] + '_' + numObj[indxSort[0]];
+                                            numObj[indxSort[0]] += 1;
                                             break;
                                         }
                                     }
+                                } else if (idxNum + nIdxNum == 14 && numObj[indxSort[0]] == 1) {
+                                    ntIndx.sortIndex = indxSort[0] + '_' + numObj[indxSort[0]];
+                                    numObj[indxSort[0]] += 1;
+                                    break;
                                 }
                             }
                         }
@@ -3651,7 +3705,6 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
     //sk 为啥要隐藏掉？   //因为一开始是不可见的，隐藏根节点 by sking
     MjClient.playui.jsBind.eat.changeui.changeuibg._node.visible = false;
     var sData = MjClient.data.sData;
-    var tData = sData.tData;
 
     eat.chi0._node.visible = false;
     eat.chi1._node.visible = false;
@@ -3727,7 +3780,7 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
             vnode.push(eat.peng._node);
         }
         pl.eatFlag & 8 && vnode.push(eat.hu._node);
-        vnode.length > 0 && tData.roomStatus != 101 && vnode.push(eat.guo._node);
+        vnode.length > 0 && haveGuo && vnode.push(eat.guo._node);
     }
 
     //吃碰杠胡过处理
@@ -3763,7 +3816,6 @@ PlayerGamePanel_Red20.prototype.EatVisibleCheck = function () {
                 vnode[i].loadTextureNormal(btnImgs[btnName][0]);
                 // vnode[i].loadTexturePressed(btnImgs[btnName][1]);
             }
-
             setWgtLayout(vnode[i], [0, 0.2], [0.5, 0], [(1 - vnode.length) / 1.8 + i * 1.2, 1.8], false, false);
         }
     }
@@ -3837,7 +3889,7 @@ PlayerGamePanel_Red20.prototype.onUserNewCard = function (node, off, cards, call
         call && call();
         return;
     }
-    let n = MjClient.playui.jsBind.cardNumImg._node, endPos = cc.p(n.x, n.y);
+    let n = MjClient.playui.jsBind.cardNumImg._node, endPos = cc.p(n.x, n.y), showNum = 0;
     for (let _i = 0; _i < endCard.length; _i++) {
         let end = endCard[_i];
         let cd = getNewCard(node, 'stand', 'movecard');
@@ -3856,14 +3908,16 @@ PlayerGamePanel_Red20.prototype.onUserNewCard = function (node, off, cards, call
                     cd.setOpacity(0);
                     cd.removeFromParent(true);
                     end.runAction(cc.sequence(cc.scaleTo(0.05, sc, sc), cc.callFunc(() => {
-                        call && call();
+                        showNum++;
+                        showNum == endCard.length && call && call();
                     })))
                 })));
             } else {
                 end.setOpacity(255);
                 cd.setOpacity(0);
                 cd.removeFromParent(true);
-                call && call();
+                showNum++;
+                showNum == endCard.length && call && call();
             }
         })))
     }
@@ -4354,7 +4408,7 @@ PlayerGamePanel_Red20.prototype.DealMJPut = function (node, msg, off, outNum) {
 PlayerGamePanel_Red20.prototype.PutOutCard = function (cdui, cd) {
     var tData = MjClient.data.sData.tData;
     var pl = getUIPlayer(0);
-    if (tData.tState != TableState.waitPut || pl.mjState != TableState.waitPut) {
+    if (tData.tState != TableState.waitPut || pl.mjState != TableState.waitPut || !pl || pl.trust) {
         return false;
     }
     if (MjClient.rePlayVideo != -1 || !IsTurnToMe() || MjClient.data.sData.tData.roomStatus == 101 || pl.eatFlag > 0) {
@@ -4759,6 +4813,8 @@ PlayerGamePanel_Red20.prototype.onUserAddGang = function (node, card, type, isSh
 }
 /**吃 碰 杠 操作事件 */
 PlayerGamePanel_Red20.prototype.OnSendOption = function (type) {
+    var pl = getUIPlayer(0);
+    if (pl && pl.trust) return;
     if (!(type >= 0 && type <= 2)) return;
     var eat = MjClient.playui.jsBind.eat;
     var changeuibg = eat.changeui.changeuibg;
@@ -4830,13 +4886,15 @@ PlayerGamePanel_Red20.prototype.playEffectInPlay = function () {
 }
 //回放去除掉打出去的牌
 PlayerGamePanel_Red20.prototype.removeHandCard = function (node, Card, off) {
+    // if (!(off === 0 && pl && pl.trust || MjClient.rePlayVideo != -1) || (off != 0 && MjClient.rePlayVideo == -1)) return;
     if (MjClient.rePlayVideo == -1) return;
-    for (let _i = 0; _i < node.children.length; _i++) {
-        var c = node.children[_i];
+    let allc = node.children.filter(c => off == 0 ? c.name == 'mjhand' : c.name == 'standPri');
+    for (let _i = 0; _i < allc.length; _i++) {
+        var c = allc[_i];
         if (c.tag == Card && cc.sys.isObjectValid(c)) {
-            cc.log('----removeHandCard--', c.tag);
+            cc.log('----removeHandCard-- 2--', c.tag);
             c.removeFromParent(true);
-            // break;
+            break;
         }
     }
     let pl = getUIPlayer(off);

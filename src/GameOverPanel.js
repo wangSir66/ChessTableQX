@@ -1150,6 +1150,7 @@ var GameOverLayer = cc.Layer.extend({
             var clubName = clubNode.getChildByName("Text_name");
             clubName.ignoreContentAdaptWithSize(true);
             clubName.setString("" + unescape(clubInfoTable.clubTitle));
+            clubName.setColor(cc.color("#FADFA7"));
 
             var _nameStr = unescape(clubInfoTable.ruleName);
             var _ruleName = clubName.clone();
