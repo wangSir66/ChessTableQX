@@ -695,111 +695,6 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "playing/paodekuaiTable_new/naozhong.png",
-              "Plist": ""
-            },
-            "Scale9OriginX": 36,
-            "Scale9OriginY": 36,
-            "Scale9Width": 12,
-            "Scale9Height": 29,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 641.38,
-              "Y": 367.5
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {},
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.5011,
-              "Y": 0.5104
-            },
-            "PreSize": {
-              "X": 0.0656,
-              "Y": 0.1403
-            },
-            "LeftMargin": 599.38,
-            "RightMargin": 596.62,
-            "TopMargin": 302.0,
-            "BottomMargin": 317.0,
-            "Tag": 122,
-            "Children": [
-              {
-                "FontSize": 36,
-                "LabelText": "6",
-                "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/fzcy.ttf",
-                  "Plist": ""
-                },
-                "HorizontalAlignmentType": "HT_Center",
-                "VerticalAlignmentType": "VT_Center",
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 26,
-                  "G": 26,
-                  "B": 26
-                },
-                "ShadowOffsetX": 0.0,
-                "ShadowOffsetY": -2.0,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 41.5212,
-                  "Y": 55.55
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentXEnabled": true,
-                "PositionPercentYEnabled": true,
-                "PrePosition": {
-                  "X": 0.4943,
-                  "Y": 0.55
-                },
-                "PreSize": {
-                  "X": 0.2738,
-                  "Y": 0.4257
-                },
-                "LeftMargin": 30.0212,
-                "RightMargin": 30.9788,
-                "TopMargin": 23.95,
-                "BottomMargin": 34.05,
-                "Tag": 164,
-                "ActionTag": -1781766653,
-                "Size": {
-                  "X": 23.0,
-                  "Y": 43.0
-                },
-                "Name": "number",
-                "ctype": "TextObjectData"
-              }
-            ],
-            "ActionTag": -974953050,
-            "Size": {
-              "X": 84.0,
-              "Y": 101.0
-            },
-            "Name": "clock",
-            "ctype": "ImageViewObjectData"
-          },
-          {
-            "FileData": {
-              "Type": "Normal",
               "Path": "playing/gameTable/GAME_04.png",
               "Plist": ""
             },
@@ -2670,103 +2565,6 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "playing/paodekuaiTable/head_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 28,
-                    "Scale9OriginY": 36,
-                    "Scale9Width": 30,
-                    "Scale9Height": 38,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 63.0,
-                      "Y": 78.75
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.63
-                    },
-                    "PreSize": {
-                      "X": 0.7857,
-                      "Y": 0.792
-                    },
-                    "LeftMargin": 13.5,
-                    "RightMargin": 13.5,
-                    "TopMargin": -3.25,
-                    "BottomMargin": 29.25,
-                    "Tag": 918,
-                    "Children": [
-                      {
-                        "CharWidth": 36,
-                        "CharHeight": 48,
-                        "LabelText": "30",
-                        "StartChar": ".",
-                        "LabelAtlasFileImage_CNB": {
-                          "Type": "Normal",
-                          "Path": "playground/TG_countDown.png",
-                          "Plist": ""
-                        },
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 49.5,
-                          "Y": 49.5
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.7273,
-                          "Y": 0.4848
-                        },
-                        "LeftMargin": 13.5,
-                        "RightMargin": 13.5,
-                        "TopMargin": 25.5,
-                        "BottomMargin": 25.5,
-                        "Tag": 919,
-                        "ActionTag": 699697114,
-                        "Size": {
-                          "X": 72.0,
-                          "Y": 48.0
-                        },
-                        "Name": "TG_CountDown",
-                        "ctype": "TextAtlasObjectData"
-                      }
-                    ],
-                    "ActionTag": -1130864223,
-                    "Size": {
-                      "X": 99.0,
-                      "Y": 99.0
-                    },
-                    "Name": "countDownBg",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
                       "Path": "game_picture/dating-1_73.png",
                       "Plist": ""
                     },
@@ -4215,105 +4013,6 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "playing/paodekuaiTable/head_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 28,
-                    "Scale9OriginY": 36,
-                    "Scale9Width": 30,
-                    "Scale9Height": 38,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 63.0,
-                      "Y": 78.75
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "RotationSkewX": 0.6089,
-                    "RotationSkewY": 0.6089,
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.63
-                    },
-                    "PreSize": {
-                      "X": 0.7857,
-                      "Y": 0.792
-                    },
-                    "LeftMargin": 13.5,
-                    "RightMargin": 13.5,
-                    "TopMargin": -3.25,
-                    "BottomMargin": 29.25,
-                    "Tag": 918,
-                    "Children": [
-                      {
-                        "CharWidth": 36,
-                        "CharHeight": 48,
-                        "LabelText": "30",
-                        "StartChar": ".",
-                        "LabelAtlasFileImage_CNB": {
-                          "Type": "Normal",
-                          "Path": "playground/TG_countDown.png",
-                          "Plist": ""
-                        },
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 49.5,
-                          "Y": 49.5
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.7273,
-                          "Y": 0.4848
-                        },
-                        "LeftMargin": 13.5,
-                        "RightMargin": 13.5,
-                        "TopMargin": 25.5,
-                        "BottomMargin": 25.5,
-                        "Tag": 919,
-                        "ActionTag": 699697114,
-                        "Size": {
-                          "X": 72.0,
-                          "Y": 48.0
-                        },
-                        "Name": "TG_CountDown",
-                        "ctype": "TextAtlasObjectData"
-                      }
-                    ],
-                    "ActionTag": -1130864223,
-                    "Size": {
-                      "X": 99.0,
-                      "Y": 99.0
-                    },
-                    "Name": "countDownBg",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
                       "Path": "game_picture/dating-1_73.png",
                       "Plist": ""
                     },
@@ -5726,103 +5425,6 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "playing/paodekuaiTable/head_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 28,
-                    "Scale9OriginY": 36,
-                    "Scale9Width": 30,
-                    "Scale9Height": 38,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 63.0,
-                      "Y": 78.75
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.63
-                    },
-                    "PreSize": {
-                      "X": 0.7857,
-                      "Y": 0.792
-                    },
-                    "LeftMargin": 13.5,
-                    "RightMargin": 13.5,
-                    "TopMargin": -3.25,
-                    "BottomMargin": 29.25,
-                    "Tag": 918,
-                    "Children": [
-                      {
-                        "CharWidth": 36,
-                        "CharHeight": 48,
-                        "LabelText": "30",
-                        "StartChar": ".",
-                        "LabelAtlasFileImage_CNB": {
-                          "Type": "Normal",
-                          "Path": "playground/TG_countDown.png",
-                          "Plist": ""
-                        },
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 49.5,
-                          "Y": 49.5
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.7273,
-                          "Y": 0.4848
-                        },
-                        "LeftMargin": 13.5,
-                        "RightMargin": 13.5,
-                        "TopMargin": 25.5,
-                        "BottomMargin": 25.5,
-                        "Tag": 919,
-                        "ActionTag": 699697114,
-                        "Size": {
-                          "X": 72.0,
-                          "Y": 48.0
-                        },
-                        "Name": "TG_CountDown",
-                        "ctype": "TextAtlasObjectData"
-                      }
-                    ],
-                    "ActionTag": -1130864223,
-                    "Size": {
-                      "X": 99.0,
-                      "Y": 99.0
-                    },
-                    "Name": "countDownBg",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
                       "Path": "game_picture/dating-1_73.png",
                       "Plist": ""
                     },
@@ -6992,103 +6594,6 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "playing/paodekuaiTable/head_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 28,
-                    "Scale9OriginY": 36,
-                    "Scale9Width": 30,
-                    "Scale9Height": 38,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 63.0,
-                      "Y": 78.75
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.63
-                    },
-                    "PreSize": {
-                      "X": 0.7857,
-                      "Y": 0.792
-                    },
-                    "LeftMargin": 13.5,
-                    "RightMargin": 13.5,
-                    "TopMargin": -3.25,
-                    "BottomMargin": 29.25,
-                    "Tag": 918,
-                    "Children": [
-                      {
-                        "CharWidth": 36,
-                        "CharHeight": 48,
-                        "LabelText": "30",
-                        "StartChar": ".",
-                        "LabelAtlasFileImage_CNB": {
-                          "Type": "Normal",
-                          "Path": "playground/TG_countDown.png",
-                          "Plist": ""
-                        },
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 49.5,
-                          "Y": 49.5
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.7273,
-                          "Y": 0.4848
-                        },
-                        "LeftMargin": 13.5,
-                        "RightMargin": 13.5,
-                        "TopMargin": 25.5,
-                        "BottomMargin": 25.5,
-                        "Tag": 919,
-                        "ActionTag": 699697114,
-                        "Size": {
-                          "X": 72.0,
-                          "Y": 48.0
-                        },
-                        "Name": "TG_CountDown",
-                        "ctype": "TextAtlasObjectData"
-                      }
-                    ],
-                    "ActionTag": -1130864223,
-                    "Size": {
-                      "X": 99.0,
-                      "Y": 99.0
-                    },
-                    "Name": "countDownBg",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
                       "Path": "game_picture/dating-1_73.png",
                       "Plist": ""
                     },
@@ -7607,7 +7112,7 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 992.0313,
+                "LeftMargin": 992.0312,
                 "RightMargin": -1125.0312,
                 "TopMargin": -379.5733,
                 "BottomMargin": 327.5733,
@@ -7808,6 +7313,111 @@
             },
             "Name": "right",
             "ctype": "SingleNodeObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "playing/paodekuaiTable_new/naozhong.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 36,
+            "Scale9OriginY": 36,
+            "Scale9Width": 12,
+            "Scale9Height": 29,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 641.38,
+              "Y": 367.5
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5011,
+              "Y": 0.5104
+            },
+            "PreSize": {
+              "X": 0.0656,
+              "Y": 0.1403
+            },
+            "LeftMargin": 599.38,
+            "RightMargin": 596.62,
+            "TopMargin": 302.0,
+            "BottomMargin": 317.0,
+            "Tag": 122,
+            "Children": [
+              {
+                "FontSize": 36,
+                "LabelText": "6",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/fzcy.ttf",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "VerticalAlignmentType": "VT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 26,
+                  "G": 26,
+                  "B": 26
+                },
+                "ShadowOffsetX": 0.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 41.5212,
+                  "Y": 55.55
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.4943,
+                  "Y": 0.55
+                },
+                "PreSize": {
+                  "X": 0.2738,
+                  "Y": 0.4257
+                },
+                "LeftMargin": 30.0212,
+                "RightMargin": 30.9788,
+                "TopMargin": 23.95,
+                "BottomMargin": 34.05,
+                "Tag": 164,
+                "ActionTag": -1781766653,
+                "Size": {
+                  "X": 23.0,
+                  "Y": 43.0
+                },
+                "Name": "number",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -974953050,
+            "Size": {
+              "X": 84.0,
+              "Y": 101.0
+            },
+            "Name": "clock",
+            "ctype": "ImageViewObjectData"
           },
           {
             "FileData": {
@@ -9064,6 +8674,170 @@
             "VisibleForFrame": false,
             "Name": "block_tuoguan",
             "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Red20/DeskTexture/tipBg.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 301,
+            "Scale9OriginY": 14,
+            "Scale9Width": 311,
+            "Scale9Height": 15,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 562.2233,
+              "Y": -71.1123
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4392,
+              "Y": -0.0988
+            },
+            "PreSize": {
+              "X": 0.7133,
+              "Y": 0.0597
+            },
+            "LeftMargin": 105.7233,
+            "RightMargin": 261.2767,
+            "TopMargin": 769.6122,
+            "BottomMargin": -92.6123,
+            "Tag": 512,
+            "Children": [
+              {
+                "FontSize": 26,
+                "LabelText": "有玩家正在思考中，  秒后该玩家将进入托管状态！",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 456.0,
+                  "Y": 21.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 235,
+                  "B": 139
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4995,
+                  "Y": 0.4884
+                },
+                "PreSize": {
+                  "X": 0.655,
+                  "Y": 0.6047
+                },
+                "LeftMargin": 157.0,
+                "RightMargin": 158.0,
+                "TopMargin": 9.0,
+                "BottomMargin": 8.0,
+                "Tag": 513,
+                "ActionTag": -370302204,
+                "Size": {
+                  "X": 598.0,
+                  "Y": 26.0
+                },
+                "Name": "lb",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 26,
+                "LabelText": "30",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 398.0,
+                  "Y": 23.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 165,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4359,
+                  "Y": 0.5349
+                },
+                "PreSize": {
+                  "X": 0.0438,
+                  "Y": 0.6047
+                },
+                "LeftMargin": 378.0,
+                "RightMargin": 495.0,
+                "TopMargin": 7.0,
+                "BottomMargin": 10.0,
+                "Tag": 514,
+                "ActionTag": 1327165835,
+                "Size": {
+                  "X": 40.0,
+                  "Y": 26.0
+                },
+                "Name": "time",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -821231980,
+            "Size": {
+              "X": 913.0,
+              "Y": 43.0
+            },
+            "Name": "TG_CountDown",
+            "ctype": "ImageViewObjectData"
           }
         ],
         "Size": {
@@ -9081,7 +8855,6 @@
         "game_picture/bac_datingtoushangzhezhao.png",
         "game_picture/dating1_07.png",
         "game_picture/dating-1_73.png",
-        "playground/TG_countDown.png",
         "playground/tuoguan.png",
         "playground/tuoguan_1.png",
         "playing/cardPic/baidi_puke.png",
@@ -9114,7 +8887,6 @@
         "playing/paodekuaiTable/baodan_alarm.png",
         "playing/paodekuaiTable/baodan_new.png",
         "playing/paodekuaiTable/baodan_shining.png",
-        "playing/paodekuaiTable/head_bottom.png",
         "playing/paodekuaiTable/no_one.png",
         "playing/paodekuaiTable/wenhao.png",
         "playing/paodekuaiTable/yaobuqi.png",
@@ -9137,6 +8909,7 @@
         "Red20/Common/icon_jifen.png",
         "Red20/Common/RoomInfoBG_RunFaster.png",
         "Red20/DeskTexture/BtnRule.png",
+        "Red20/DeskTexture/tipBg.png",
         "RunFasterYA/Game/boomlose.png",
         "RunFasterYA/Game/boomwin.png",
         "RunFasterYA/Game/GameBG.jpg",

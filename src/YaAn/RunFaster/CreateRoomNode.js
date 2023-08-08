@@ -131,7 +131,7 @@ var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
         para.XiScore = mt ? [20, 10][this.RedioGroup['mingtangfen'].getSelectIndex()] : 0;//名堂分
         para.BombScore = para.isZhaDanJiaFen ? [20, 10][this.RedioGroup['xifen'].getSelectIndex()] : 0;//炸弹分
         para.AutoReady = this.RedioGroup['zidongzhunbei'].getSelectIndex() == 1;//自动准备
-        para.tipCountdown = 15;//提示时间
+        para.tipCountdown = 20;//提示时间
 
         this.getExtraSelectedPara(para);
 

@@ -349,18 +349,6 @@
             <PreSize X="1.0000" Y="0.0903" />
             <FileData Type="Normal" Path="playing/gameTable/GAME_03.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="waitChangePos" ActionTag="-1368446960" Tag="627" IconVisible="False" LeftMargin="342.6071" RightMargin="360.3929" TopMargin="182.6361" BottomMargin="450.3639" FontSize="72" LabelText="系统随机调整座位" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="577.0000" Y="87.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="631.1071" Y="493.8639" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="255" G="255" B="0" />
-            <PrePosition X="0.4931" Y="0.6859" />
-            <PreSize X="0.4508" Y="0.1208" />
-            <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="110" G="110" B="110" />
-          </AbstractNodeData>
           <AbstractNodeData Name="top" ActionTag="413303269" Tag="91" IconVisible="True" RightMargin="1280.0000" TopMargin="720.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
@@ -447,16 +435,6 @@
                     <PrePosition X="0.5000" Y="0.6240" />
                     <PreSize X="0.8968" Y="0.9440" />
                     <FileData Type="Normal" Path="game_picture/dating1_06.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="TG_CountDown" ActionTag="930904033" Tag="2433" IconVisible="False" LeftMargin="7.6478" RightMargin="10.3522" TopMargin="24.7846" BottomMargin="52.2154" CharWidth="36" CharHeight="48" LabelText="300" StartChar="." ctype="TextAtlasObjectData">
-                    <Size X="108.0000" Y="48.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="61.6478" Y="76.2154" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4893" Y="0.6097" />
-                    <PreSize X="0.8571" Y="0.3840" />
-                    <LabelAtlasFileImage_CNB Type="Normal" Path="playing/gameTable/TG_countDown.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="chatbg" ActionTag="-1717638493" VisibleForFrame="False" Tag="166" IconVisible="False" LeftMargin="89.9660" RightMargin="-83.9660" TopMargin="-25.4187" BottomMargin="84.4187" Scale9Enable="True" LeftEage="39" RightEage="39" TopEage="21" BottomEage="21" Scale9OriginX="39" Scale9OriginY="21" Scale9Width="42" Scale9Height="24" ctype="ImageViewObjectData">
                     <Size X="120.0000" Y="66.0000" />
@@ -1003,16 +981,6 @@
                     <PreSize X="0.8968" Y="0.9440" />
                     <FileData Type="Normal" Path="game_picture/dating1_06.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="TG_CountDown" ActionTag="-2092483979" Tag="2432" IconVisible="False" LeftMargin="11.0748" RightMargin="6.9252" TopMargin="19.4526" BottomMargin="57.5474" CharWidth="36" CharHeight="48" LabelText="300" StartChar="." ctype="TextAtlasObjectData">
-                    <Size X="108.0000" Y="48.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="65.0748" Y="81.5474" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5165" Y="0.6524" />
-                    <PreSize X="0.8571" Y="0.3840" />
-                    <LabelAtlasFileImage_CNB Type="Normal" Path="playing/gameTable/TG_countDown.png" Plist="" />
-                  </AbstractNodeData>
                   <AbstractNodeData Name="chatbg" ActionTag="1436237988" VisibleForFrame="False" Tag="179" IconVisible="False" LeftMargin="89.9660" RightMargin="-83.9660" TopMargin="-25.4187" BottomMargin="84.4187" Scale9Enable="True" LeftEage="39" RightEage="39" TopEage="21" BottomEage="21" Scale9OriginX="39" Scale9OriginY="21" Scale9Width="42" Scale9Height="24" ctype="ImageViewObjectData">
                     <Size X="120.0000" Y="66.0000" />
                     <Children>
@@ -1558,16 +1526,6 @@
                     <PreSize X="0.8968" Y="0.9440" />
                     <FileData Type="Normal" Path="game_picture/dating1_06.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="TG_CountDown" ActionTag="-1117882104" Tag="2434" IconVisible="False" LeftMargin="10.2185" RightMargin="7.7815" TopMargin="28.3229" BottomMargin="48.6771" CharWidth="36" CharHeight="48" LabelText="300" StartChar="." ctype="TextAtlasObjectData">
-                    <Size X="108.0000" Y="48.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="64.2185" Y="72.6771" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5097" Y="0.5814" />
-                    <PreSize X="0.8571" Y="0.3840" />
-                    <LabelAtlasFileImage_CNB Type="Normal" Path="playing/gameTable/TG_countDown.png" Plist="" />
-                  </AbstractNodeData>
                   <AbstractNodeData Name="chatbg" ActionTag="-1520673601" VisibleForFrame="False" Tag="188" IconVisible="False" LeftMargin="-169.0653" RightMargin="139.0653" TopMargin="-17.5930" BottomMargin="76.5930" Scale9Enable="True" LeftEage="39" RightEage="39" TopEage="21" BottomEage="21" Scale9OriginX="39" Scale9OriginY="21" Scale9Width="78" Scale9Height="24" ctype="ImageViewObjectData">
                     <Size X="156.0000" Y="66.0000" />
                     <Children>
@@ -2102,16 +2060,6 @@
                     <PrePosition X="0.5000" Y="0.6240" />
                     <PreSize X="0.8968" Y="0.9440" />
                     <FileData Type="Normal" Path="game_picture/dating1_06.png" Plist="" />
-                  </AbstractNodeData>
-                  <AbstractNodeData Name="TG_CountDown" ActionTag="-1907992787" Tag="2431" IconVisible="False" LeftMargin="10.6605" RightMargin="7.3395" TopMargin="24.3014" BottomMargin="52.6986" CharWidth="36" CharHeight="48" LabelText="300" StartChar="." ctype="TextAtlasObjectData">
-                    <Size X="108.0000" Y="48.0000" />
-                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="64.6605" Y="76.6986" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.5132" Y="0.6136" />
-                    <PreSize X="0.8571" Y="0.3840" />
-                    <LabelAtlasFileImage_CNB Type="Normal" Path="playing/gameTable/TG_countDown.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="chatbg" ActionTag="-1656258420" VisibleForFrame="False" Tag="177" IconVisible="False" LeftMargin="89.9660" RightMargin="-83.9660" TopMargin="-25.4187" BottomMargin="84.4187" Scale9Enable="True" LeftEage="39" RightEage="39" TopEage="21" BottomEage="21" Scale9OriginX="39" Scale9OriginY="21" Scale9Width="42" Scale9Height="24" ctype="ImageViewObjectData">
                     <Size X="120.0000" Y="66.0000" />
@@ -3578,6 +3526,42 @@
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="TG_CountDown" ActionTag="-1131900127" Tag="327" IconVisible="False" LeftMargin="105.7233" RightMargin="261.2767" TopMargin="769.6122" BottomMargin="-92.6123" LeftEage="301" RightEage="301" TopEage="14" BottomEage="14" Scale9OriginX="301" Scale9OriginY="14" Scale9Width="311" Scale9Height="15" ctype="ImageViewObjectData">
+            <Size X="913.0000" Y="43.0000" />
+            <Children>
+              <AbstractNodeData Name="lb" ActionTag="1218892843" Tag="323" IconVisible="False" LeftMargin="157.0000" RightMargin="158.0000" TopMargin="9.0000" BottomMargin="8.0000" FontSize="26" LabelText="有玩家正在思考中，  秒后该玩家将进入托管状态！" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="598.0000" Y="26.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="456.0000" Y="21.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="235" B="139" />
+                <PrePosition X="0.4995" Y="0.4884" />
+                <PreSize X="0.6550" Y="0.6047" />
+                <FontResource Type="Default" Path="" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+              <AbstractNodeData Name="time" ActionTag="-1741070723" Tag="324" IconVisible="False" LeftMargin="378.0000" RightMargin="495.0000" TopMargin="7.0000" BottomMargin="10.0000" IsCustomSize="True" FontSize="26" LabelText="30" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="40.0000" Y="26.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="398.0000" Y="23.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="165" B="0" />
+                <PrePosition X="0.4359" Y="0.5349" />
+                <PreSize X="0.0438" Y="0.6047" />
+                <FontResource Type="Default" Path="" Plist="" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="110" G="110" B="110" />
+              </AbstractNodeData>
+            </Children>
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="562.2233" Y="-71.1123" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.4392" Y="-0.0988" />
+            <PreSize X="0.7133" Y="0.0597" />
+            <FileData Type="Normal" Path="Red20/DeskTexture/tipBg.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="bounds" ActionTag="-406998149" Tag="322" IconVisible="False" HorizontalEdge="BothEdge" TopMargin="483.0283" BottomMargin="230.9717" Scale9Enable="True" LeftEage="11" RightEage="11" TopEage="1" BottomEage="1" Scale9OriginX="11" Scale9OriginY="1" Scale9Width="1258" Scale9Height="4" ctype="ImageViewObjectData">
             <Size X="1280.0000" Y="6.0000" />

@@ -9659,11 +9659,11 @@ function arrowbkNumberUpdate(node, endFunc, tikNum) {
     if (MjClient.data.sData && MjClient.data.sData.tData.fieldCountdown) {
         node.setString("" + MjClient.data.sData.tData.fieldCountdown);
     }
-    else if (tikNum) {
+    else if (tikNum >= 0) {
         node.setString("" + tikNum);
     }
     else {
-        node.setString("10");
+        node.setString("0");
     }
     var number = function () {
         if (node.getString() == 0) {
@@ -9709,6 +9709,7 @@ function arrowbkNumberUpdate(node, endFunc, tikNum) {
                             playTimeUpEff = playEffect("loop_alarm", true);
                         }
                         MjClient.native.NativeVibrato();
+                        node.stopAllActions();
                     }
                 } else {
                     if (number == 0) {
