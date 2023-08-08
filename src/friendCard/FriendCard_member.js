@@ -895,10 +895,9 @@ var FriendCard_member = cc.Layer.extend({
                 if (itemData.type == 0) {//赠送
                     str = itemData.Unick + "赠给" + itemData.Tnick + '，' + itemData.amount + '贡献值' + (flag ? " (当前贡献:" + (itemData.tAfterAmount + itemData.amount).toFixed(1) + ")" : '');
                 } else if (itemData.type == 1) {
-                    cc.log('0000000000000', parseInt(itemData.tAfterAmount))
                     str = "在" + GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')房间，' + (itemData.amount >= 0 ? '赢得' : '输掉') + Math.abs(Number(itemData.amount)) + '贡献值' + (flag ? " (当前贡献:" + (itemData.uAfterAmount + itemData.amount).toFixed(1) + ")" : '');
                 } else if (itemData.type == 2) {
-                    str = "服务费：" + GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')收取' + itemData.amount + '贡献值' + (flag ? " (当前贡献:" + (itemData.uAfterAmount + itemData.amount).toFixed(1) + ")" : '');
+                    str = "服务费：" + GameCnName[parseInt(itemData.tAfterAmount)] + '(' + itemData.targetId + ')' + (itemData.amount > 0 ? '收取' : '被收取') + Math.abs(itemData.amount) + '贡献值' + (flag ? " (当前贡献:" + (itemData.uAfterAmount + itemData.amount).toFixed(1) + ")" : '');
                 }
                 text_content.setString(str);
                 return item;

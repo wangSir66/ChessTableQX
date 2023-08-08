@@ -158,6 +158,7 @@
                 //碰转杠的牌
                 else {
                     let gangData = [];
+                    cc.log('-----------------pl.mjanpeng-----', JSON.stringify(pl.mjanpeng), JSON.stringify(pl.mjpeng))
                     pl.mjanpeng && pl.mjanpeng.forEach(gang => {
                         let num = this.getCardNum(gang[0]);
                         cards.forEach(card => {

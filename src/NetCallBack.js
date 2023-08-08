@@ -4778,7 +4778,8 @@ MjClient.netCallBack = {
             var pl = sData.players[d.uid];
             pl.eatFlag = 0;
             pl.mjState = TableState.waitPut;
-            pl.mjpeng.push(d.cards);
+            if (d.type == 1) pl.mjanpeng.push(d.cards);
+            else pl.mjpeng.push(d.cards);
             sData.tData.tState = TableState.waitPut;
             playEffectInPlay("peng");
             return;
@@ -6402,38 +6403,6 @@ MjClient.netCallBack = {
 
     roundEnd: [0, function (d)//数据
     {
-        //cc.log("结束数据", JSON.stringify(d));
-        if (MjClient.gameType == MjClient.GAME_TYPE.TUAN_TUAN_ZHUAN
-            || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_NT
-            || MjClient.gameType == MjClient.GAME_TYPE.HUAI_AN_DOU_DI_ZHU
-            || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HA
-            || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_TY
-            || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_HBTY
-            || MjClient.gameType == MjClient.GAME_TYPE.DOU_DI_ZHU_QC
-        ) {
-            playMusic("guandan/bgFight_guandan");
-        }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_TUI_DAO_HU) {
-            playMusic("bgFightXYTDH");
-        }
-        else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI || MjClient.gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY ||
-            MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_GE_BAN) {
-            playMusic("bgFight_paodekuai");
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.ML_HONG_ZI ||
-            MjClient.gameType == MjClient.GAME_TYPE.XIANG_YIN_ZHUO_HONG_ZI ||
-            MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI ||
-            MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI ||
-            MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI || MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI) {
-            playMusic("bgHongZi");
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_SI_YANG) {
-            playMusic("bgFight_xinsiyang");
-        } else if (MjClient.gameType != MjClient.GAME_TYPE.NIU_NIU &&
-            MjClient.getAppType() != MjClient.APP_TYPE.QXTHMJ &&
-            MjClient.getAppType() != MjClient.APP_TYPE.HUNANWANGWANG &&
-            MjClient.getAppType() != MjClient.APP_TYPE.QXSYDTZ) {
-            playMusic("bgFight");
-        }
-
         var sData = MjClient.data.sData;
         if (!sData) return;
         sData.tData = d.tData;
@@ -6603,6 +6572,10 @@ MjClient.netCallBack = {
         CommonPool.drainAllPools();
 
         MjClient.endRoomMsg = d;
+
+        if (d._gameOverData) {
+            MjClient.data.sData.tData._gameOverData = d._gameOverData;
+        }
 
         //cc.log("endRoom--------------------------" + JSON.stringify(d));
         if (d.playInfo && MjClient.data.playLog) {
@@ -10345,7 +10318,7 @@ MjClient.netCallBack = {
             sData.players[uid].mjState = TableState.waitSelect;
         }
     }],
-    changeRoomStatus:[0, function (d) {
+    changeRoomStatus: [0, function (d) {
         var sData = MjClient.data.sData;
         var tData = sData.tData;
         tData.roomStatus = d.roomStatus;

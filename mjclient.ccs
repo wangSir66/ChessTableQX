@@ -6005,7 +6005,6 @@
             <Image Name="btnReady.png" />
             <Image Name="btnReady2.png" />
             <Image Name="BtnRule.png" />
-            <Image Name="BtnRuleBtnRule.png" />
             <Image Name="btnShare.png" />
             <Image Name="cancelBg.png" />
             <Image Name="cancelTuoGuan.png" />
@@ -6068,6 +6067,7 @@
         </Folder>
         <Folder Name="RunFasterYA">
           <Folder Name="Game">
+            <Image Name="BigResultTitle1.png" />
             <Image Name="boomlose.png" />
             <Image Name="boomwin.png" />
             <Image Name="GameBG.jpg" />
@@ -6080,8 +6080,6 @@
           </Folder>
           <Folder Name="RoundEnd">
             <Image Name="BigResultBG.png" />
-            <Image Name="BigResultBG1.png" />
-            <Image Name="BigResultBG2.png" />
             <Image Name="BigResultTitle.png" />
             <Image Name="BtnNextGround.png" />
             <Image Name="LittleResultbg1.png" />
@@ -7040,8 +7038,6 @@
         <Project Name="eMailLayer.csd" Type="Layer" />
         <Project Name="eMailLayerReceive.csd" Type="Layer" />
         <Project Name="endAll.csd" Type="Layer" />
-        <Project Name="endAll2p.csd" Type="Layer" />
-        <Project Name="endAll3p.csd" Type="Layer" />
         <Project Name="endOne.csd" Type="Layer" />
         <Project Name="endOne_Red20.csd" Type="Layer" />
         <Project Name="endOne_RunFasterYA.csd" Type="Layer" />
@@ -7183,6 +7179,8 @@
         <Project Name="UserInfo_playing.csd" Type="Layer" />
         <Project Name="WebView.csd" Type="Node" />
         <Project Name="YouJianLayer.csd" Type="Layer" />
+        <Project Name="endAll_Red20.csd" Type="Layer" />
+        <Project Name="endAll_Runfaster.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>
