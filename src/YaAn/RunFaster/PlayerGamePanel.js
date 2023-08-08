@@ -1272,8 +1272,11 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 name_bg: { _visible: false },
                 tingCard: {
                     _run: function () {
-                        if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId)
-                            this.setPositionX(-24);
+                        if (MjClient.MaxPlayerNum == 2) {
+                            this.setPositionX(151);
+                        } else {
+                            this.setPositionX(-40);
+                        }
                     },
                     _visible: false,
                     _event: {
@@ -1542,8 +1545,11 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 name_bg: { _visible: false },
                 tingCard: {
                     _run: function () {
-                        if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId)
+                        if (MjClient.MaxPlayerNum == 3) {
                             this.setPositionX(151);
+                        } else {
+                            this.setPositionX(-40);
+                        }
                     },
                     _visible: false,
                     _event: {
@@ -1814,8 +1820,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 name_bg: { _visible: false },
                 tingCard: {
                     _run: function () {
-                        if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId)
-                            this.setPositionX(151);
+                        this.setPositionX(151);
                     },
                     _visible: false,
                     _event: {
@@ -2409,29 +2414,30 @@ PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
         x: 0,
         y: 0
     };
+    const scN = arrowNode.getScale();
     if (curPlayerIndex == 1) {
         curPlayerNode = this._rightNode;
         if (MjClient.MaxPlayerNum == 2) {
-            deskCardPosOffset.x -= arrowNode.width * 1.1;
-            deskCardPosOffset.y -= arrowNode.height / 2;
+            deskCardPosOffset.x -= arrowNode.width * 1.1 * scN;
+            deskCardPosOffset.y -= arrowNode.height / 2 * scN;
         } else {
-            deskCardPosOffset.x -= arrowNode.width * 2;
-            deskCardPosOffset.y = arrowNode.height / 2;
+            deskCardPosOffset.x -= arrowNode.width * 2 * scN;
+            deskCardPosOffset.y = arrowNode.height / 2 * scN;
         }
     }
     else if (curPlayerIndex == 2) {
         curPlayerNode = this._topNode;
         if (MjClient.MaxPlayerNum == 4) {
-            deskCardPosOffset.x -= arrowNode.width * 1.1;
-            deskCardPosOffset.y -= arrowNode.height / 2;
+            deskCardPosOffset.x -= arrowNode.width * 1.1 * scN;
+            deskCardPosOffset.y -= arrowNode.height / 2 * scN;
         } else {
-            deskCardPosOffset.x += arrowNode.width * 2;
-            deskCardPosOffset.y = arrowNode.height / 2;
+            deskCardPosOffset.x += arrowNode.width * 2 * scN;
+            deskCardPosOffset.y = arrowNode.height / 2 * scN;
         }
     } else if (curPlayerIndex == 3) {
         curPlayerNode = this._leftNode;
-        deskCardPosOffset.x += arrowNode.width * 2;
-        deskCardPosOffset.y = arrowNode.height / 2;
+        deskCardPosOffset.x += arrowNode.width * 2 * scN;
+        deskCardPosOffset.y = arrowNode.height / 2 * scN;
     }
     if (curPlayerNode != null) {
         var deskCardPos = curPlayerNode.getChildByName("head").getPosition();
