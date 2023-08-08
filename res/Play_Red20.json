@@ -1547,62 +1547,6 @@
             "ctype": "ImageViewObjectData"
           },
           {
-            "FontSize": 72,
-            "LabelText": "系统随机调整座位",
-            "FontResource": {
-              "Type": "Normal",
-              "Path": "fonts/fzcy.ttf",
-              "Plist": ""
-            },
-            "OutlineColor": {
-              "G": 0,
-              "B": 0
-            },
-            "ShadowColor": {
-              "R": 110,
-              "G": 110,
-              "B": 110
-            },
-            "ShadowOffsetX": 2.0,
-            "ShadowOffsetY": -2.0,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 631.1071,
-              "Y": 493.8639
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {
-              "B": 0
-            },
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.4931,
-              "Y": 0.6859
-            },
-            "PreSize": {
-              "X": 0.4508,
-              "Y": 0.1208
-            },
-            "LeftMargin": 342.6071,
-            "RightMargin": 360.3929,
-            "TopMargin": 182.6361,
-            "BottomMargin": 450.3639,
-            "Tag": 627,
-            "ActionTag": -1368446960,
-            "Size": {
-              "X": 577.0,
-              "Y": 87.0
-            },
-            "Name": "waitChangePos",
-            "ctype": "TextObjectData"
-          },
-          {
             "AnchorPoint": {},
             "Position": {
               "X": 0.0,
@@ -2032,51 +1976,6 @@
                     },
                     "Name": "nobody",
                     "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "CharWidth": 36,
-                    "CharHeight": 48,
-                    "LabelText": "300",
-                    "StartChar": ".",
-                    "LabelAtlasFileImage_CNB": {
-                      "Type": "Normal",
-                      "Path": "playing/gameTable/TG_countDown.png",
-                      "Plist": ""
-                    },
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 61.6478,
-                      "Y": 76.2154
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.4893,
-                      "Y": 0.6097
-                    },
-                    "PreSize": {
-                      "X": 0.8571,
-                      "Y": 0.384
-                    },
-                    "LeftMargin": 7.6478,
-                    "RightMargin": 10.3522,
-                    "TopMargin": 24.7846,
-                    "BottomMargin": 52.2154,
-                    "Tag": 2433,
-                    "ActionTag": 930904033,
-                    "Size": {
-                      "X": 108.0,
-                      "Y": 48.0
-                    },
-                    "Name": "TG_CountDown",
-                    "ctype": "TextAtlasObjectData"
                   },
                   {
                     "FileData": {
@@ -4389,51 +4288,6 @@
                     },
                     "Name": "nobody",
                     "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "CharWidth": 36,
-                    "CharHeight": 48,
-                    "LabelText": "300",
-                    "StartChar": ".",
-                    "LabelAtlasFileImage_CNB": {
-                      "Type": "Normal",
-                      "Path": "playing/gameTable/TG_countDown.png",
-                      "Plist": ""
-                    },
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 65.0748,
-                      "Y": 81.5474
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.5165,
-                      "Y": 0.6524
-                    },
-                    "PreSize": {
-                      "X": 0.8571,
-                      "Y": 0.384
-                    },
-                    "LeftMargin": 11.0748,
-                    "RightMargin": 6.9252,
-                    "TopMargin": 19.4526,
-                    "BottomMargin": 57.5474,
-                    "Tag": 2432,
-                    "ActionTag": -2092483979,
-                    "Size": {
-                      "X": 108.0,
-                      "Y": 48.0
-                    },
-                    "Name": "TG_CountDown",
-                    "ctype": "TextAtlasObjectData"
                   },
                   {
                     "FileData": {
@@ -6751,51 +6605,6 @@
                     "ctype": "ImageViewObjectData"
                   },
                   {
-                    "CharWidth": 36,
-                    "CharHeight": 48,
-                    "LabelText": "300",
-                    "StartChar": ".",
-                    "LabelAtlasFileImage_CNB": {
-                      "Type": "Normal",
-                      "Path": "playing/gameTable/TG_countDown.png",
-                      "Plist": ""
-                    },
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 64.2185,
-                      "Y": 72.6771
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.5097,
-                      "Y": 0.5814
-                    },
-                    "PreSize": {
-                      "X": 0.8571,
-                      "Y": 0.384
-                    },
-                    "LeftMargin": 10.2185,
-                    "RightMargin": 7.7815,
-                    "TopMargin": 28.3229,
-                    "BottomMargin": 48.6771,
-                    "Tag": 2434,
-                    "ActionTag": -1117882104,
-                    "Size": {
-                      "X": 108.0,
-                      "Y": 48.0
-                    },
-                    "Name": "TG_CountDown",
-                    "ctype": "TextAtlasObjectData"
-                  },
-                  {
                     "FileData": {
                       "Type": "Normal",
                       "Path": "playing/other/chatbg_rd.png",
@@ -9063,51 +8872,6 @@
                     },
                     "Name": "nobody",
                     "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "CharWidth": 36,
-                    "CharHeight": 48,
-                    "LabelText": "300",
-                    "StartChar": ".",
-                    "LabelAtlasFileImage_CNB": {
-                      "Type": "Normal",
-                      "Path": "playing/gameTable/TG_countDown.png",
-                      "Plist": ""
-                    },
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 64.6605,
-                      "Y": 76.6986
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.5132,
-                      "Y": 0.6136
-                    },
-                    "PreSize": {
-                      "X": 0.8571,
-                      "Y": 0.384
-                    },
-                    "LeftMargin": 10.6605,
-                    "RightMargin": 7.3395,
-                    "TopMargin": 24.3014,
-                    "BottomMargin": 52.6986,
-                    "Tag": 2431,
-                    "ActionTag": -1907992787,
-                    "Size": {
-                      "X": 108.0,
-                      "Y": 48.0
-                    },
-                    "Name": "TG_CountDown",
-                    "ctype": "TextAtlasObjectData"
                   },
                   {
                     "FileData": {
@@ -15521,6 +15285,170 @@
           {
             "FileData": {
               "Type": "Normal",
+              "Path": "Red20/DeskTexture/tipBg.png",
+              "Plist": ""
+            },
+            "Scale9OriginX": 301,
+            "Scale9OriginY": 14,
+            "Scale9Width": 311,
+            "Scale9Height": 15,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 562.2233,
+              "Y": -71.1123
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4392,
+              "Y": -0.0988
+            },
+            "PreSize": {
+              "X": 0.7133,
+              "Y": 0.0597
+            },
+            "LeftMargin": 105.7233,
+            "RightMargin": 261.2767,
+            "TopMargin": 769.6122,
+            "BottomMargin": -92.6123,
+            "Tag": 327,
+            "Children": [
+              {
+                "FontSize": 26,
+                "LabelText": "有玩家正在思考中，  秒后该玩家将进入托管状态！",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 456.0,
+                  "Y": 21.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 235,
+                  "B": 139
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4995,
+                  "Y": 0.4884
+                },
+                "PreSize": {
+                  "X": 0.655,
+                  "Y": 0.6047
+                },
+                "LeftMargin": 157.0,
+                "RightMargin": 158.0,
+                "TopMargin": 9.0,
+                "BottomMargin": 8.0,
+                "Tag": 323,
+                "ActionTag": 1218892843,
+                "Size": {
+                  "X": 598.0,
+                  "Y": 26.0
+                },
+                "Name": "lb",
+                "ctype": "TextObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 26,
+                "LabelText": "30",
+                "FontResource": {
+                  "Type": "Default",
+                  "Path": "",
+                  "Plist": ""
+                },
+                "HorizontalAlignmentType": "HT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 398.0,
+                  "Y": 23.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "G": 165,
+                  "B": 0
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4359,
+                  "Y": 0.5349
+                },
+                "PreSize": {
+                  "X": 0.0438,
+                  "Y": 0.6047
+                },
+                "LeftMargin": 378.0,
+                "RightMargin": 495.0,
+                "TopMargin": 7.0,
+                "BottomMargin": 10.0,
+                "Tag": 324,
+                "ActionTag": -1741070723,
+                "Size": {
+                  "X": 40.0,
+                  "Y": 26.0
+                },
+                "Name": "time",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": -1131900127,
+            "Size": {
+              "X": 913.0,
+              "Y": 43.0
+            },
+            "Name": "TG_CountDown",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
               "Path": "Red20/DeskTexture/tiao.png",
               "Plist": ""
             },
@@ -15829,7 +15757,6 @@
         "playing/gameTable/icon_skipPeng.png",
         "playing/gameTable/icon_ting.png",
         "playing/gameTable/shuzi/shuzi_0.png",
-        "playing/gameTable/TG_countDown.png",
         "playing/gameTable/uHeadScore.png",
         "playing/gameTable/yaoqing_06.png",
         "playing/gameTable/yaoqing_09.png",
@@ -15873,6 +15800,7 @@
         "Red20/DeskTexture/dss_cardnum.png",
         "Red20/DeskTexture/phz_icon_007.png",
         "Red20/DeskTexture/tiao.png",
+        "Red20/DeskTexture/tipBg.png",
         "Red20/Game/bg_back.jpg",
         "Red20/Game/bottom.png",
         "Red20/Game/left.png",

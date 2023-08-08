@@ -913,24 +913,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
         },
         down: {
             head: {
-                countDownBg: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.getChildByName("TG_CountDown").ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            //头像不显示倒计时
-                            // setTuoGuanCountDown(msg, this, 0);
-                        },
-                        PKPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -1206,24 +1188,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
         },
         right: {
             head: {
-                countDownBg: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.getChildByName("TG_CountDown").ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            //头像不显示倒计时
-                            // setTuoGuanCountDown(msg, this, 1);
-                        },
-                        PKPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -1494,24 +1458,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 this.visible = MjClient.MaxPlayerNum >= 3;
             },
             head: {
-                countDownBg: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.getChildByName("TG_CountDown").ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            //头像不显示倒计时
-                            // setTuoGuanCountDown(msg, this, 2);
-                        },
-                        PKPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -1784,24 +1730,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 this.visible = MjClient.MaxPlayerNum >= 4;
             },
             head: {
-                countDownBg: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.getChildByName("TG_CountDown").ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            //头像不显示倒计时
-                            // setTuoGuanCountDown(msg, this, 3);
-                        },
-                        PKPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -2055,7 +1983,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
 
                 MjClient.clockNode = this;
                 this.visible = false;
-                this.zIndex = 100;
                 this.srcPosition = this.getPosition();
             },
             number: {
@@ -2065,11 +1992,11 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                 _event: {
                     initSceneData: function (msg) {
                         if (MjClient.data.sData.tData.tState == TableState.waitPut) {
-                            MjClient.playui.clockNumberUpdate(this);
+                            MjClient.playui.clockNumberUpdate(this, null, true);
                             setTimeout(() => {
                                 MjClient.playui.updateClockPosition(MjClient.clockNode);
                                 MjClient.clockNode.visible = true;
-                            }, 200);
+                            }, 0);
                         }
                     },
                     waitPut: function () {
@@ -2081,7 +2008,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                         var isClockVisible = (isNewOut || haveTip) ? true : false;
                         MjClient.clockNode.visible = isClockVisible;
                         stopEffect(playTimeUpEff);
-                        MjClient.playui.clockNumberUpdate(this);
+                        MjClient.playui.clockNumberUpdate(this, null, false);
                         MjClient.playui.updateClockPosition(MjClient.clockNode);
                     },
                     PKPut: function (msg) {
@@ -2089,7 +2016,6 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                             this.stopAllActions();
                             stopEffect(playTimeUpEff);
                             playTimeUpEff = null;
-                            //MjClient.playui.clockNumberUpdate(this);
                             this.setString("0");
                         }
                     },
@@ -2252,7 +2178,55 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
                     }
                 },
             }
-        }
+        },
+        TG_CountDown: {//托管倒计时
+            _visible: false,
+            _layout: [[0.6, 0.6], [0.5, 0.5], [0, 0]],
+            time: {
+                _visible: true,
+                _event: {
+                    trustTip: function (msg) {
+                        this.setString(msg.tipCountDown);
+                        var tipCountDown = msg.tipCountDown;
+                        var self = this;
+                        self.unscheduleAllCallbacks();
+                        this.schedule(function () {
+                            tipCountDown--;
+                            if (tipCountDown <= 0) {
+                                self.getParent().setVisible(false);
+                                self.unscheduleAllCallbacks();
+                                return;
+                            }
+                            self.setString(tipCountDown);
+                        }, 1, cc.REPEAT_FOREVER, 0);
+                    },
+                    PKPut: function (msg) {
+                        this.unscheduleAllCallbacks();
+                    },
+                }
+            },
+            _event: {
+                trustTip: function (msg) {
+                    this.visible = true;
+                },
+                PKPut: function (msg) {
+                    this.visible = false;
+                },
+                roundEnd: function () {
+                    this.visible = false;
+                },
+                initSceneData: function (msg) {
+                    let tData = MjClient.data.sData.tData, rule = tData.areaSelectMode;
+                    if (tData.trustAllTime > rule.trustTime) {
+                        cc.log('进入托管倒计时前的倒计时')
+                    } else if (tData.trustAllTime > 0) {
+                        setTimeout(() => {
+                            tData.trustAllTime - 1 > 1 && postEvent('trustTip', { tipCountDown: tData.trustAllTime - 1 });
+                        }, 1000);
+                    }
+                }
+            }
+        },
     },
     _downNode: null,
     _rightNode: null,
@@ -2415,8 +2389,14 @@ PlayLayer_RunFasterYA.prototype.recoverCannotOutCard = function () {
     }
 }
 
-PlayLayer_RunFasterYA.prototype.clockNumberUpdate = function (node, endFunc) {
-    const rt = MjClient.data.sData.tData.areaSelectMode['trustTime'], t = rt > 0 ? rt : 30;
+PlayLayer_RunFasterYA.prototype.clockNumberUpdate = function (node, endFunc, isInstan = false) {
+    let tData = MjClient.data.sData.tData,
+        rule = tData.areaSelectMode,
+        t = rule.tipCountdown || 30;
+    if (isInstan && rule.trustTime > 0 && tData.trustAllTime) {
+        t = tData.trustAllTime - rule.trustTime - 1;
+    }
+    if (t <= 0) t = 0;
     return arrowbkNumberUpdate(node, endFunc, t);
 }
 
@@ -2426,34 +2406,37 @@ PlayLayer_RunFasterYA.prototype.updateClockPosition = function (arrowNode) {
     cc.log('-------------------curPlayerIndex--------------', curPlayerIndex)
     var curPlayerNode = null;
     var deskCardPosOffset = {
-        x: 44,
-        y: 26
+        x: 0,
+        y: 0
     };
     if (curPlayerIndex == 1) {
         curPlayerNode = this._rightNode;
         if (MjClient.MaxPlayerNum == 2) {
-            deskCardPosOffset.x = 0;
+            deskCardPosOffset.x -= arrowNode.width * 1.1;
+            deskCardPosOffset.y -= arrowNode.height / 2;
+        } else {
+            deskCardPosOffset.x -= arrowNode.width * 2;
+            deskCardPosOffset.y = arrowNode.height / 2;
         }
     }
     else if (curPlayerIndex == 2) {
         curPlayerNode = this._topNode;
         if (MjClient.MaxPlayerNum == 4) {
-            deskCardPosOffset.x = 0;
-        } else deskCardPosOffset.x = 0 - deskCardPosOffset.x;
+            deskCardPosOffset.x -= arrowNode.width * 1.1;
+            deskCardPosOffset.y -= arrowNode.height / 2;
+        } else {
+            deskCardPosOffset.x += arrowNode.width * 2;
+            deskCardPosOffset.y = arrowNode.height / 2;
+        }
     } else if (curPlayerIndex == 3) {
         curPlayerNode = this._leftNode;
-        deskCardPosOffset.x = 0 - deskCardPosOffset.x;
+        deskCardPosOffset.x += arrowNode.width * 2;
+        deskCardPosOffset.y = arrowNode.height / 2;
     }
     if (curPlayerNode != null) {
         var deskCardPos = curPlayerNode.getChildByName("head").getPosition();
-
-        // if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId) {
-        //     deskCardPos.x += 41 * Math.min(MjClient.size.width / 1280, MjClient.size.height / 720) * (curPlayerIndex == 1 ? 2 : -2);
-        // } else {
-        //     deskCardPos.y += deskCardPosOffset.y;
-        //     deskCardPos.x += deskCardPosOffset.x;
-        // }
-
+        deskCardPos.x += deskCardPosOffset.x;
+        deskCardPos.y += deskCardPosOffset.y;
         arrowNode.setPosition(deskCardPos);
     }
     else if (isIPhoneX() && MjClient.rePlayVideo != -1 && !MjClient.data.sData.tData.fieldId) {

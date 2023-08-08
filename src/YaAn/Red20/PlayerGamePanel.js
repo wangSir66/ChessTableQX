@@ -476,14 +476,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                 }
             },
         },
-        waitChangePos: {
-            _visible: false,
-            _layout: [
-                [0.4, 0.4],
-                [0.5, 0.5],
-                [0, 0]
-            ],
-        },
         cardNumImg: {
             _run: function () {
                 MjClient.cardNumImgNode = this;
@@ -949,44 +941,57 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                     }
                 }
             }
-        },//end of add by sking
+        },
+        TG_CountDown: {//托管倒计时
+            _visible: false,
+            _layout: [[0.6, 0.6], [0.5, 0.4], [0, 0]],
+            time: {
+                _visible: true,
+                _event: {
+                    trustTip: function (msg) {
+                        this.setString(msg.tipCountDown);
+                        var tipCountDown = msg.tipCountDown;
+                        var self = this;
+                        self.unscheduleAllCallbacks();
+                        this.schedule(function () {
+                            if (tipCountDown > 0) {
+                                tipCountDown--;
+                            } else {
+                                self.getParent().setVisible(false);
+                                self.unscheduleAllCallbacks();
+                                return;
+                            }
+                            self.setString(tipCountDown);
+                        }, 1, cc.REPEAT_FOREVER, 0);
+                    },
+                }
+            },
+            _event: {
+                trustTip: function (msg) {
+                    this.visible = true;
+                },
+                MJPut: function (msg) {
+                    this.visible = false;
+                },
+                roundEnd: function () {
+                    this.visible = false;
+                },
+                initSceneData: function (msg) {
+                    let tData = MjClient.data.sData.tData, rule = tData.areaSelectMode;
+                    if (tData.trustAllTime > rule.trustTime) {
+                        cc.log('进入托管倒计时前的倒计时')
+                    } else if (tData.trustAllTime > 0) {
+                        setTimeout(() => {
+                            tData.trustAllTime - 1 > 1 && postEvent('trustTip', { tipCountDown: tData.trustAllTime - 1 });
+                        }, 1000);
+                    }
+                }
+            }
+        },
         down: {
             head: {
                 redPoint: {
                     _visible: false
-                },
-                TG_CountDown: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            let pl = getUIPlayer(0)
-                            if ( pl && pl.info.uid == msg.uid) {
-                                this.visible = true;
-                                this.setString(msg.tipCountDown);
-                                var tipCountDown = msg.tipCountDown;
-                                var self = this;
-                                self.unscheduleAllCallbacks();
-                                this.schedule(function () {
-                                    self.setString(tipCountDown);
-                                    if (tipCountDown > 0) {
-                                        tipCountDown--;
-                                    } else {
-                                        self.setVisible(false);
-                                        self.unscheduleAllCallbacks();
-                                    }
-                                }, 1, cc.REPEAT_FOREVER, 0);
-                            }
-                        },
-                        MJPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
                 },
                 tuoguan: {
                     _run: function () {
@@ -1014,7 +1019,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.visible = true;
                             } else {
                                 this.visible = false;
-                                MjClient.playui.doTrustTimeEnter(pl);
                             }
                         }
                     }
@@ -1416,39 +1420,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         },
                     }
                 },
-                TG_CountDown: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            let pl = getUIPlayer(1)
-                            if ( pl && pl.info.uid == msg.uid) {
-                                this.visible = true;
-                                this.setString(msg.tipCountDown);
-                                var tipCountDown = msg.tipCountDown;
-                                var self = this;
-                                self.unscheduleAllCallbacks();
-                                this.schedule(function () {
-                                    self.setString(tipCountDown);
-                                    if (tipCountDown > 0) {
-                                        tipCountDown--;
-                                    } else {
-                                        self.setVisible(false);
-                                        self.unscheduleAllCallbacks();
-                                    }
-                                }, 1, cc.REPEAT_FOREVER, 0);
-                            }
-                        },
-                        MJPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -1473,7 +1444,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.visible = true;
                             } else {
                                 this.visible = false;
-                                MjClient.playui.doTrustTimeEnter(pl);
                             }
                         }
                     }
@@ -1751,39 +1721,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         },
                     }
                 },
-                TG_CountDown: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            let pl = getUIPlayer(2)
-                            if ( pl && pl.info.uid == msg.uid) {
-                                this.visible = true;
-                                this.setString(msg.tipCountDown);
-                                var tipCountDown = msg.tipCountDown;
-                                var self = this;
-                                self.unscheduleAllCallbacks();
-                                this.schedule(function () {
-                                    self.setString(tipCountDown);
-                                    if (tipCountDown > 0) {
-                                        tipCountDown--;
-                                    } else {
-                                        self.setVisible(false);
-                                        self.unscheduleAllCallbacks();
-                                    }
-                                }, 1, cc.REPEAT_FOREVER, 0);
-                            }
-                        },
-                        MJPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -1808,7 +1745,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.visible = true;
                             } else {
                                 this.visible = false;
-                                MjClient.playui.doTrustTimeEnter(pl);
                             }
                         }
                     }
@@ -2091,39 +2027,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                         },
                     }
                 },
-                TG_CountDown: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            let pl = getUIPlayer(3)
-                            if ( pl && pl.info.uid == msg.uid) {
-                                this.visible = true;
-                                var tipCountDown = msg.tipCountDown;
-                                this.setString(tipCountDown);
-                                var self = this;
-                                self.unscheduleAllCallbacks();
-                                this.schedule(function () {
-                                    self.setString(tipCountDown);
-                                    if (tipCountDown > 0) {
-                                        tipCountDown--;
-                                    } else {
-                                        self.setVisible(false);
-                                        self.unscheduleAllCallbacks();
-                                    }
-                                }, 1, cc.REPEAT_FOREVER, 0);
-                            }
-                        },
-                        MJPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -2148,7 +2051,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
                                 this.visible = true;
                             } else {
                                 this.visible = false;
-                                MjClient.playui.doTrustTimeEnter(pl);
                             }
                         }
                     }
@@ -3236,17 +3138,6 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         }
         return node.visible;
     },
-    doTrustTimeEnter: function (pl) {
-        if (!pl) return;
-        let rule = MjClient.data.sData.tData.areaSelectMode;
-        if (pl.trustAllTime > rule.trustTime) {
-            cc.log('进入托管前的倒计时')
-        } else if (pl.trustAllTime > 0) {
-            setTimeout(() => {
-                pl.trustAllTime - 2 > 1 && postEvent('trustTip', { uid: pl.info.uid, tipCountDown: pl.trustAllTime - 2 });
-            }, 2000);
-        }
-    }
 });
 
 PlayerGamePanel_Red20.prototype.getNewCard = function (node, copy, name, tag, off, specialTAG) {
