@@ -998,37 +998,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         },//end of add by sking
         down: {
             head: {
-                TG_CountDown: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            if (getUIPlayer(0) && getUIPlayer(0).info.uid == msg.uid) {
-                                this.visible = true;
-                                this.setString(msg.tipCountDown);
-                                var tipCountDown = msg.tipCountDown;
-                                var self = this;
-                                this.schedule(function () {
-                                    self.setString(tipCountDown);
-                                    if (tipCountDown > 0) {
-                                        tipCountDown--;
-                                    } else {
-                                        self.setVisible(false);
-                                        self.unscheduleAllCallbacks();
-                                    }
-                                }, 1, cc.REPEAT_FOREVER, 0);
-                            }
-                        },
-                        MJPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -1580,37 +1549,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 this.visible = MjClient.MaxPlayerNum != 2;
             },
             head: {
-                TG_CountDown: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            if (getUIPlayer(1) && getUIPlayer(1).info.uid == msg.uid) {
-                                this.visible = true;
-                                this.setString(msg.tipCountDown);
-                                var tipCountDown = msg.tipCountDown;
-                                var self = this;
-                                this.schedule(function () {
-                                    self.setString(tipCountDown);
-                                    if (tipCountDown > 0) {
-                                        tipCountDown--;
-                                    } else {
-                                        self.setVisible(false);
-                                        self.unscheduleAllCallbacks();
-                                    }
-                                }, 1, cc.REPEAT_FOREVER, 0);
-                            }
-                        },
-                        MJPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -1983,37 +1921,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 this.visible = MjClient.MaxPlayerNum != 3;
             },
             head: {
-                TG_CountDown: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            if (getUIPlayer(2) && getUIPlayer(2).info.uid == msg.uid) {
-                                this.visible = true;
-                                this.setString(msg.tipCountDown);
-                                var tipCountDown = msg.tipCountDown;
-                                var self = this;
-                                this.schedule(function () {
-                                    self.setString(tipCountDown);
-                                    if (tipCountDown > 0) {
-                                        tipCountDown--;
-                                    } else {
-                                        self.setVisible(false);
-                                        self.unscheduleAllCallbacks();
-                                    }
-                                }, 1, cc.REPEAT_FOREVER, 0);
-                            }
-                        },
-                        MJPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 dingque: {
                     _visible: false,
                     _run: function () {
@@ -2398,37 +2305,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 this.visible = MjClient.MaxPlayerNum != 2;
             },
             head: {
-                TG_CountDown: {//托管倒计时
-                    _run: function () {
-                        this.visible = false;
-                        this.ignoreContentAdaptWithSize(true);
-                    },
-                    _event: {
-                        trustTip: function (msg) {
-                            if (getUIPlayer(3) && getUIPlayer(3).info.uid == msg.uid) {
-                                this.visible = true;
-                                this.setString(msg.tipCountDown);
-                                var tipCountDown = msg.tipCountDown;
-                                var self = this;
-                                this.schedule(function () {
-                                    self.setString(tipCountDown);
-                                    if (tipCountDown > 0) {
-                                        tipCountDown--;
-                                    } else {
-                                        self.setVisible(false);
-                                        self.unscheduleAllCallbacks();
-                                    }
-                                }, 1, cc.REPEAT_FOREVER, 0);
-                            }
-                        },
-                        MJPut: function (msg) {
-                            this.visible = false;
-                        },
-                        roundEnd: function () {
-                            this.visible = false;
-                        }
-                    }
-                },
                 tuoguan: {
                     _run: function () {
                         this.visible = false;
@@ -3374,7 +3250,54 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         },
         block_load: {
             _visible: false
-        }
+        },        
+        TG_CountDown: {//托管倒计时
+            _visible: false,
+            _layout: [[0.6, 0.6], [0.5, 0.4], [0, 0]],
+            time: {
+                _visible: true,
+                _event: {
+                    trustTip: function (msg) {
+                        this.setString(msg.tipCountDown);
+                        var tipCountDown = msg.tipCountDown;
+                        var self = this;
+                        self.unscheduleAllCallbacks();
+                        this.schedule(function () {
+                            self.setString(tipCountDown);
+                            if (tipCountDown > 0) {
+                                tipCountDown--;
+                            } else {
+                                self.getParent().setVisible(false);
+                                self.unscheduleAllCallbacks();
+                                return;
+                            }
+                            self.setString(tipCountDown);
+                        }, 1, cc.REPEAT_FOREVER, 0);
+                    },
+                }
+            },
+            _event: {
+                trustTip: function (msg) {
+                    this.visible = true;
+                },
+                MJPut: function (msg) {
+                    this.visible = false;
+                },
+                roundEnd: function () {
+                    this.visible = false;
+                },
+                initSceneData: function (msg) {
+                    let tData = MjClient.data.sData.tData, rule = tData.areaSelectMode;
+                    if (tData.trustAllTime > rule.trustTime) {
+                        cc.log('进入托管倒计时前的倒计时')
+                    } else if (tData.trustAllTime > 0) {
+                        setTimeout(() => {
+                            tData.trustAllTime - 1 > 1 && postEvent('trustTip', { tipCountDown: tData.trustAllTime - 1 });
+                        }, 1000);
+                    }
+                }
+            }
+        },
     },
     _downNode: null,
     _rightNode: null,
