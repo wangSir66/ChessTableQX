@@ -1228,7 +1228,7 @@ function UpdataCurrentPutCard(isTouch) {
     var isCanPut;
     if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
 
-        var pl2 = getUIPlayer(1);
+        var pl2 = null//getUIPlayer(1);
         var isNextPlayerOneCard = false;
 
         if (pl2) {
@@ -1241,13 +1241,6 @@ function UpdataCurrentPutCard(isTouch) {
             var tData = MjClient.data.sData.tData;
             var selectData = {}
             for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
-            var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-            if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
-                selectData.firstHeiTao3 = true;  // 必须出黑桃3
-            } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
-                selectData.firstHeiTao3 = false; // 可以不出黑桃3
-            }
-
             var isFirstRound = tData.roundAll == tData.roundNum;
             isCanPut = majiang.checkPut(pl.mjhand, currentSelectCards, lastPutCards, selectData, isNextPlayerOneCard, isFirstRound);
         } else {
@@ -1716,11 +1709,11 @@ function AutoPutLastCard_card() {
     var pl = getUIPlayer(0);
     // 如果两家不要， 又到我出牌
     var isTurnToMeAgain = (MjClient.data.sData.tData.lastPutPlayer == -1 || MjClient.data.sData.tData.lastPutPlayer == MjClient.data.sData.tData.curPlayer)
-    var isCanPut = MjClient.majiang.checkPut(pl.mjhand, pl.mjhand)
+    // var isCanPut = MjClient.majiang.checkPut(pl.mjhand, pl.mjhand)
     var tData = MjClient.data.sData.tData;
 
-    var pl2 = getUIPlayer(1);
-    var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
+    // var pl2 = getUIPlayer(1);
+    var isNextPlayerOneCard = false //pl2 ? pl2.handCount == 1 : false;
     var mustPutHongTaoSan = MjClient.data.sData.tData.areaSelectMode.mustPutHongTaoSan;
 
     var tipCardsArray;
@@ -1729,13 +1722,6 @@ function AutoPutLastCard_card() {
         var tData = MjClient.data.sData.tData;
         var selectData = {}
         for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
-        var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-        if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
-            selectData.firstHeiTao3 = true;  // 必须出黑桃3
-        } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
-            selectData.firstHeiTao3 = false; // 可以不出黑桃3
-        }
-
         var isFirstRound = tData.roundAll == tData.roundNum;
         tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData, isNextPlayerOneCard, isFirstRound);
     } else {
@@ -1781,8 +1767,8 @@ function AutoPutLastCard_card_ty() {
     var isTurnToMeAgain = (MjClient.data.sData.tData.lastPutPlayer == -1 || MjClient.data.sData.tData.lastPutPlayer == MjClient.data.sData.tData.curPlayer)
     var isCanPut = MjClient.majiang.checkPut(pl.mjhand, pl.mjhand)
     var tData = MjClient.data.sData.tData;
-    var pl2 = getUIPlayer(1);
-    var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
+    // var pl2 = getUIPlayer(1);
+    var isNextPlayerOneCard = false //pl2 ? pl2.handCount == 1 : false;
     var mustPutHongTaoSan = MjClient.data.sData.tData.areaSelectMode.mustPutHongTaoSan;
 
     var tipCardsArray;
@@ -1792,13 +1778,6 @@ function AutoPutLastCard_card_ty() {
     if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI) {
         var selectData = {}
         for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
-        var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-        if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
-            selectData.firstHeiTao3 = true;  // 必须出黑桃3
-        } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
-            selectData.firstHeiTao3 = false; // 可以不出黑桃3
-        }
-
         var isFirstRound = tData.roundAll == tData.roundNum;
         tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData, isNextPlayerOneCard, isFirstRound);
     } else {
@@ -3542,92 +3521,31 @@ function InitPutOutCardTips(off) {
         if (tData.lastPutPlayer != tData.curPlayer) {
             var pl = getUIPlayer(off);
             if (!pl) return;
-
             if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
 
-                var pl2 = getUIPlayer(off + 1);
-                var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
+                // var pl2 = getUIPlayer(off + 1);
+                var isNextPlayerOneCard = false //pl2 ? pl2.handCount == 1 : false;
                 var majiang = MjClient.majiang;
                 var tData = MjClient.data.sData.tData;
-
-                if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI) {
-                    var selectData = {}
-                    for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
-                    var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-                    if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
-                        selectData.firstHeiTao3 = true;  // 必须出黑桃3
-                    } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
-                        selectData.firstHeiTao3 = false; // 可以不出黑桃3
-                    }
-
-                    var isFirstRound = tData.roundAll == tData.roundNum;
-                    var isSmartTip = true;
-                    MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData,
-                        isNextPlayerOneCard, isFirstRound, isSmartTip);
-                    var ret = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData, isNextPlayerOneCard, isFirstRound);
-                    cc.log('------------InitPutOutCardTips----------------', JSON.stringify(ret))
-                    if (majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
-                        majiang.useNewTip = true;
-                        MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData,
-                            isNextPlayerOneCard, isFirstRound, majiang.allTipsNoOrder);
-                        majiang.useNewTip = false;
-                    }
-
-                } else {
-                    var mustPutHongTaoSan = tData.areaSelectMode.mustPutHongTaoSan;
-                    MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, mustPutHongTaoSan, isNextPlayerOneCard, true);
-
-                    if (majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
-                        majiang.useNewTip = true;
-                        MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, mustPutHongTaoSan,
-                            isNextPlayerOneCard, majiang.allTipsNoOrder);
-                        majiang.useNewTip = false;
-                    }
+                var selectData = {}
+                for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
+                var isFirstRound = tData.roundAll == tData.roundNum;
+                var isSmartTip = true;
+                MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, tData.lastPutCard, selectData,
+                    isNextPlayerOneCard, isFirstRound, isSmartTip);
+                if (majiang.allTipsNoOrder && !MjClient.selectTipCardsArray && MjClient.tipCardsArray.length > 0) {
+                    majiang.useNewTip = true;
+                    MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, tData.lastPutCard, selectData,
+                        isNextPlayerOneCard, isFirstRound, majiang.allTipsNoOrder);
+                    majiang.useNewTip = false;
                 }
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA ||
-                MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW || MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO ||
-                MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI) {
-                var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,
-                    tData.areaSelectMode.chou6, tData.areaSelectMode.daWuZhu27NotTuoLaJi, tData.areaSelectMode.allowTuoLaJiXiaoDui);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
-                var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {
-                var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
-                var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"]);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
-                MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI ||
-                MjClient.gameType == MjClient.GAME_TYPE.SHAN_XI_GAN_DENG_YAN ||
-                MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
-                MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
-                MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
-                MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
-                MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-                MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, tData.areaSelectMode);
-            } else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
-                MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
-                var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                var bteshutuolaji = tData.areaSelectMode.teshutuolaji;
-                var bchou6 = tData.areaSelectMode.chou6;
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, bteshutuolaji, bchou6);
-            }
-            else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA) {
-                var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-                MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"], tData);
             } else {
-                cc.log("tipCardsArray = ....... lastPutCard = " + JSON.stringify(MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard)));
+                cc.log("tipCardsArray....... lastPutCard = " + JSON.stringify(MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard)));
                 MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard);
             }
 
             MjClient.tipsIdx = 0;//提示第几组牌
-            cc.log("tipCardsArray = " + JSON.stringify(MjClient.tipCardsArray));
-            cc.log("tipCardsArray = " + MjClient.tipCardsArray.length);
+            cc.log("tipCardsArray  " + JSON.stringify(MjClient.tipCardsArray));
             if (MjClient.tipCardsArray.length <= 0) {
                 //开局是自己出牌时候
                 if (tData.lastPutPlayer == tData.curPlayer || tData.lastPutPlayer == -1) {
@@ -3728,119 +3646,32 @@ function InitPutOutCardTips(off) {
                 // 跑得快必管模式没牌可压不置灰
                 var isPaodekuai = GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI
                 var isMustPut = tData.areaSelectMode.mustPut != false
-                var isShouldMakeCardGrey = !(isPaodekuai && isMustPut && MjClient.tipCardsArray.length <= 0)
+                var isShouldMakeCardGrey = true//!(isPaodekuai && isMustPut && MjClient.tipCardsArray.length <= 0)
                 if (isShouldMakeCardGrey) {
                     MjClient.playui.cannotOutCardGrey();
                 }
             }
-
-            // 下面的注释掉了  连云港的等发牌完了以后再提牌 added by Joey
-            // if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG) {
-            //     var tData = MjClient.data.sData.tData;
-            //     var selectData = tData.areaSelectMode;
-            //     var isFirstRound = tData.roundAll == tData.roundNum;
-            //     if (MjClient.majiang.isMustPutCard3 && MjClient.majiang.isMustPutCard3(pl.mjhand, selectData, isFirstRound)) {
-            //         // 自动提起牌
-            //         //putOutCardTips();
-            //     }
-            // }
         }
         else if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI) {
             var pl = getUIPlayer(off);
             if (!pl) return;
-            var pl2 = getUIPlayer(off + 1);
-            var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
+            // var pl2 = getUIPlayer(off + 1);
+            var isNextPlayerOneCard = false //pl2 ? pl2.handCount == 1 : false;
             var majiang = MjClient.majiang;
             var tData = MjClient.data.sData.tData;
+            var selectData = {}
+            for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
+            var isFirstRound = tData.roundAll == tData.roundNum;
+            var isSmartTip = true;
+            MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, [], selectData,
+                isNextPlayerOneCard, isFirstRound, isSmartTip);
 
-            if (MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI) {
-
-                var selectData = {}
-                for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
-                var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-                if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
-                    selectData.firstHeiTao3 = true;  // 必须出黑桃3
-                } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
-                    selectData.firstHeiTao3 = false; // 可以不出黑桃3
-                }
-
-                var isFirstRound = tData.roundAll == tData.roundNum;
-                var isSmartTip = true;
-                MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, [], selectData,
-                    isNextPlayerOneCard, isFirstRound, isSmartTip);
-
-                if (majiang.allTipsNoOrder && MjClient.tipCardsArray.length > 0 && !MjClient.selectTipCardsArray) {
-                    majiang.useNewTip = true;
-                    MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, [], selectData,
-                        isNextPlayerOneCard, isFirstRound, majiang.allTipsNoOrder);
-                    majiang.useNewTip = false;
-                }
-
-            } else {
-                var mustPutHongTaoSan = tData.areaSelectMode.mustPutHongTaoSan;
-                MjClient.tipCardsArray = majiang.tipCards(pl.mjhand, [], mustPutHongTaoSan, isNextPlayerOneCard, true);
-
-                if (majiang.allTipsNoOrder && MjClient.tipCardsArray.length > 0 && !MjClient.selectTipCardsArray) {
-                    majiang.useNewTip = true;
-                    MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, [], mustPutHongTaoSan,
-                        isNextPlayerOneCard, majiang.allTipsNoOrder);
-                    majiang.useNewTip = false;
-                }
+            if (majiang.allTipsNoOrder && MjClient.tipCardsArray.length > 0 && !MjClient.selectTipCardsArray) {
+                majiang.useNewTip = true;
+                MjClient.selectTipCardsArray = majiang.findPutTipCards(pl.mjhand, [], selectData,
+                    isNextPlayerOneCard, isFirstRound, majiang.allTipsNoOrder);
+                majiang.useNewTip = false;
             }
-            MjClient.tipsIdx = 0;//提示第几组牌
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.XIANG_TAN_SAN_DA_HA ||
-            MjClient.gameType == MjClient.GAME_TYPE.SAN_DA_HA_NEW || MjClient.gameType == MjClient.GAME_TYPE.YONG_ZHOU_BAO_PAI ||
-            MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_HUA_QUAN_JIAO) {
-            var pl = getUIPlayer(off);
-            if (!pl || !pl.mjhand) return;
-            var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType,
-                tData.areaSelectMode.chou6, tData.areaSelectMode.daWuZhu27NotTuoLaJi, tData.areaSelectMode.allowTuoLaJiXiaoDui);
-            MjClient.tipsIdx = 0;//提示第几组牌
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.XIN_ZHOU_SAN_DA_ER) {
-            var pl = getUIPlayer(off);
-            if (!pl || !pl.mjhand) return;
-            var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData);
-            MjClient.tipsIdx = 0;//提示第几组牌
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.LV_LIANG_DA_QI) {
-            var pl = getUIPlayer(off);
-            if (!pl || !pl.mjhand) return;
-            var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
-            MjClient.tipsIdx = 0;//提示第几组牌
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_SAN_DA_HA) {
-            var pl = getUIPlayer(off);
-            if (!pl || !pl.mjhand) return;
-            var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
-            MjClient.tipsIdx = 0;//提示第几组牌
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE) {
-            var pl = getUIPlayer(off);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, tData.areaSelectMode);
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI) {
-            var pl = getUIPlayer(off);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, tData.areaSelectMode);
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN) {
-            var pl = getUIPlayer(off);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard);
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-            MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
-            var pl = getUIPlayer(off);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, tData.lastPutCard, tData.areaSelectMode);
-        } else if (MjClient.gameType == MjClient.GAME_TYPE.HENG_YANG_SAN_DA_HA || MjClient.gameType == MjClient.GAME_TYPE.SHAO_YANG_SAN_DA_HA ||
-            MjClient.gameType == MjClient.GAME_TYPE.YONG_LI_SAN_DA_HA) {
-            var pl = getUIPlayer(off);
-            if (!pl || !pl.mjhand) return;
-            var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType);
-            MjClient.tipsIdx = 0;//提示第几组牌
-        }
-        else if (MjClient.gameType == MjClient.GAME_TYPE.XIANG_XIANG_SAN_DA_HA) {
-            var pl = getUIPlayer(off);
-            if (!pl || !pl.mjhand) return;
-            var roundFirstCard = MjClient.majiang.getRoundFirstCards(tData.putCardsRecord, tData.firstPutCardUid, tData.maxPlayer);
-            MjClient.tipCardsArray = MjClient.majiang.tipCards(pl.mjhand, roundFirstCard, tData.zhuPaiType, tData.areaSelectMode["SAN_DA_HA_allowTuoLaJiXiaoDui"], tData);
             MjClient.tipsIdx = 0;//提示第几组牌
         }
     }
@@ -5925,26 +5756,6 @@ function playCardAni_txtsprite(cards, UIoff) {
             return;
         }
     }
-    // xunhangdaodan: 20,
-    //     sangeAdaiyi: 19,
-    // sidaiyi: 18,
-    // sange3daiyi: 17,
-    // szdaipai: 16,
-    // sztonghua: 15,
-    // sizha: 14,
-    // sidaisan: 13,
-    // sandaier: 12,
-    // feiji: 11,
-    // sanshun: 10,
-    // sidaier: 9,
-    // sangeA: 8,
-    // sange3: 7,
-    // sandaiyi: 6,
-    // liandui: 5,
-    // shunzi: 4,
-    // sanzhang: 3, // 只能最后一次出牌有效
-    // duizi: 2,
-    // danpai: 1,
     var strSpritePath = "";
     switch (cardType) {
         case CARDTPYE.xunhangdaodan:
@@ -8899,19 +8710,13 @@ function getSelectCardsTips() {
     }
 
     var pl = getUIPlayer(0);
-    var pl2 = getUIPlayer(1);
-    var isNextPlayerOneCard = pl2 ? pl2.handCount == 1 : false;
+    //下家报单 上家不用必须出最大
+    // var pl2 = getUIPlayer(1);
+    var isNextPlayerOneCard = false //pl2 ? pl2.handCount == 1 : false;
     var majiang = MjClient.majiang;
     var tData = MjClient.data.sData.tData;
     var selectData = {}
     for (var i in tData.areaSelectMode) selectData[i] = tData.areaSelectMode[i];
-    var firstPutRuleNum = tData.areaSelectMode.firstPutRule;
-    if (1 == firstPutRuleNum || 3 == firstPutRuleNum) {
-        selectData.firstHeiTao3 = true;  // 必须出黑桃3
-    } else if (2 == firstPutRuleNum || 4 == firstPutRuleNum) {
-        selectData.firstHeiTao3 = false; // 可以不出黑桃3
-    }
-
     var isFirstRound = tData.roundAll == tData.roundNum;
 
     var selectCard = [];
@@ -8948,7 +8753,6 @@ function getSelectCardsTips() {
     if (!MjClient.selectTipCardsArray) return selectCard;
 
     // 原有提示上筛选合适的提示
-    var tipCardsArray = [];
     var allTipCards = MjClient.selectTipCardsArray.slice();
     allTipCards.sort(function (a, b) {
         return b.length - a.length
@@ -8961,18 +8765,6 @@ function getSelectCardsTips() {
 
     for (var i in allTipCards) {
         var tipcards = allTipCards[i];
-
-        // cc.log("----------------------------------------------");
-
-        // for(var j in tipcards) {
-        //     cc.log("The tip value = " + majiang.calPoint(tipcards[j]));
-        // }
-
-        // if(tipcards.length == 2) 
-        // {
-        //     lastDuiziIndex = i;
-        // }
-
         if (tipcards.length <= selectCard.length) {
             var sameNum = 0;
 
@@ -8980,23 +8772,6 @@ function getSelectCardsTips() {
             for (var j in tipcards) {
                 if (selectCard.indexOf(tipcards[j]) >= 0)
                     sameNum++;
-                else if ((!majiang.CARDTPYE.szdaipai || majiang.CARDTPYE.szdaipai < 0) &&
-                    (!majiang.CARDTPYE.sztonghua || majiang.CARDTPYE.sztonghua < 0) &&
-                    !selectData.tongHuaShun && (!isFirstRound || !selectData.firstHeiTao3)) {
-                    // 修正提示点数匹配，但是牌值不能匹配的情况
-                    var bContain = false;
-                    for (var k = selectCard.length - 1; k >= 0; k--) {
-                        if (majiang.calPoint(selectCard[k]) == majiang.calPoint(tipcards[j]) && tipcards.indexOf(selectCard[k]) < 0) {
-                            bContain = true;
-                            sameNum++;
-                            tipcards[j] = selectCard[k];
-                            break;
-                        }
-                    }
-
-                    if (!bContain)
-                        break;
-                }
                 else
                     break;
             }
