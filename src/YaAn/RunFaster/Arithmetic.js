@@ -151,8 +151,8 @@
     GameLogic_RunFaster.prototype.allTipsNoOrder = [
         [PDK_CARDTPYE.danpai, []],
         [PDK_CARDTPYE.duizi, []],
-        [PDK_CARDTPYE.sandaier, []],
-        [PDK_CARDTPYE.sandaiyi, []],
+        [PDK_CARDTPYE.sanzhang, []],
+        [PDK_CARDTPYE.sizhang, []],
         [PDK_CARDTPYE.liandui, []],
         [PDK_CARDTPYE.shunzi, []],
         [PDK_CARDTPYE.feiji, []],
@@ -406,59 +406,6 @@
         [PDK_CARDTPYE.danpai, [pdk_allZhaDan, PDK_CARDTPYE.sanzhang]],
         [PDK_CARDTPYE.danpai, [pdk_allZhaDan]],
     ];
-
-    // 1 - 52  方块A:1 梅花A:2 红心A:3 黑桃A:4 -- 黑桃王:52
-    // 1.16张玩法为现有的没有大小王、只有一个2、三个A的玩法 一共48张
-    // 2.15张玩法：在16张的基础上，再去掉两个A（剩红桃A）、一个K（去掉黑桃K），一共45张
-    GameLogic_RunFaster.prototype.randomCards = function (areaSelectMode, tData) {
-        var cards = [];
-        var handCardNum = this.handCount = areaSelectMode['cardNumIndex'] || 10;
-        var allHandCardNum = handCardNum * tData.maxPlayer;
-        //根据规则确定炸弹
-        this.pdk_allZhaDan = [];
-        if (areaSelectMode.isZhaDanJiaFen) {
-            areaSelectMode.can3geZha && this.pdk_allZhaDan.push(this.CARDTPYE.sanzhang);
-            areaSelectMode.can4geZha && this.pdk_allZhaDan.push(this.CARDTPYE.sizhang);
-        } else this.pdk_allZhaDan = [];
-        // 没有大小王的 52 张牌
-        for (var i = 1; i <= 52; i++) cards.push(i);
-
-        // 去掉 方块2 梅花2 红心2 去掉黑桃A
-        let qc = [
-            this.cardCfg.fk[2], this.cardCfg.mh[2], this.cardCfg.hx[2], this.cardCfg.ht[1],
-            this.cardCfg.fk[3], this.cardCfg.mh[3], this.cardCfg.hx[3], this.cardCfg.ht[3],
-            this.cardCfg.fk[4], this.cardCfg.mh[4], this.cardCfg.hx[4], this.cardCfg.ht[4]
-        ];
-        //去掉所有梅花
-        if (areaSelectMode.HandCutRule == 0) {
-            let len = Object.keys(this.cardCfg.mh);
-            for (let _i = 0; _i < len.length; _i++) {
-                const key = len[_i];
-                qc.push(this.cardCfg.mh[key])
-            }
-        }
-        for (let _i = 0; _i < qc.length; _i++) {
-            const c = qc[_i];
-            cards.splice(cards.indexOf(c), 1);
-        }
-
-        // 黑桃5先去掉, 确定人数后再放进牌堆， 保证黑桃5发到玩家手上, 拿黑桃5的先出
-        cards.splice(cards.indexOf(this.cardCfg.ht[5]), 1);
-
-        // 洗牌
-        shuffleArray(cards);
-
-        // 取得对应人数的牌数 - 1
-        cards = cards.slice(0, allHandCardNum - 1);
-
-        // 黑桃3放进洗牌堆
-        cards.push(this.cardCfg.ht[5]);
-
-        // 洗牌
-        shuffleArray(cards);
-
-        return cards;
-    };
 
     /**
      * 计算牌点数
@@ -1907,50 +1854,6 @@
             return false;
         }
 
-        // for (var index = 0; index < daiPaiOrder.length; index ++) {
-        //     var cards = this.findPutTipCards(oCards, [], {}, false, false, [daiPaiOrder[index]], buChaiTypes);
-
-        //     var temp = [];
-        //     for (var i = 0; i < cards.length; i++) {
-        //         // 6.   选择二张，散牌等于1，有对子比散牌小且非组成顺子的必要条件，提示该对子，不拆三张、顺子/炸弹
-        //         // 7.   选择二张，散牌等于1，有对子比散牌大且非组成顺子的必要条件，提示散牌加对子中的一张，不拆三张、顺子/炸弹       *67的意思是留下一张大的单牌
-        //         if (cards[i].length == findNum && !(ret.length == 0 && temp.length != 0 && this.calPoint(cards[i][0]) > this.calPoint(temp[temp.length - 1]))) {
-        //             if (!isHaveCards(ret, cards[i]))
-        //                 ret.push(cards[i]);
-        //         } else {
-        //             temp = temp.concat(cards[i]);
-        //             var subTemp = [];
-        //             while (temp.length >= findNum) {
-        //                 subTemp = temp.slice(0, findNum);
-        //                 if (!isHaveCards(ret, subTemp))
-        //                     ret.push(subTemp);
-        //                 temp.shift();
-        //                 break;
-        //             }
-        //         }
-        //     }
-
-        //     if (temp.length > 0 && !isHaveCards(ret, temp)) {
-        //         var allCards = cards.slice();
-        //         allCards.push(oCards);
-        //         for (var i = 0; i < allCards.length; i++) {
-        //             for (var j = 0; j < allCards[i].length; j++) {
-        //                 if (temp.indexOf(allCards[i][j]) >= 0)
-        //                     continue;
-
-        //                 temp.push(allCards[i][j]);
-        //                 if (temp.length >= findNum) {
-        //                     ret.push(temp.slice(0, findNum));
-        //                     temp.length = 0;
-        //                     break;
-        //                 }
-        //             }
-        //             if (temp.length == 0)
-        //                 break;
-        //         }
-        //     }
-        // }
-
         var cards = this.findPutTipCards(oCards, [], {}, false, false, daiPaiOrder, buChaiTypes);
 
         var temp = [];
@@ -2119,21 +2022,7 @@
      * @return {array} 提示的牌
      */
     GameLogic_RunFaster.prototype.findPutTipCards = function (hands, lastCards, areaSelectMode, isNextPlayerOneCard, isFirstRound, putOrder, allBuChaiTypes) {
-
-        var getTypesName = function (types) {
-            var ret = "null";
-            for (var i = 0; i < types.length; i++) {
-                for (var key in PDK_CARDTPYE) {
-                    if (PDK_CARDTPYE[key] == types[i])
-                        ret = ret == "null" ? key : ret + "|" + key;
-                }
-            }
-            return ret;
-        }
-
         cc.log("hands=" + JSON.stringify(hands) + " lastCards=" + JSON.stringify(lastCards));
-
-        var startTime = new Date().getTime();
         hands = hands.slice();
         hands.sort(this.cardValueCmp.bind(this));
 
@@ -2158,25 +2047,6 @@
         putOrder = putOrder.slice();
 
         var info = this.initCanPutTypes(hands, includeCard, areaSelectMode);
-
-        // info.mValueToCards = info.mValueToNum = key:牌值  value:[具体的牌...]
-        // info.mNumToValue = key:数量  value:[牌值...]
-        // info.mValueToCanTypes = key:牌值 value:[牌型1: 占用数量], ...]
-        // info.thxCards = [所有同花顺具体的牌...]
-
-        // cc.log("每一牌值可组成的牌型：" + function() {
-        //     var ret = "";
-        //     for (var value in info.mValueToCanTypes) {
-        //         var canTypes = info.mValueToCanTypes[value];
-        //         ret += value + ":[";
-        //         for (var type in canTypes) {
-        //             ret += getTypesName([type]) + ":" + canTypes[type] + ",";
-        //         }
-        //         ret += "], ";
-        //     }
-        //     return ret;
-        // }());
-
         var getBuChaiTypes = function (buChaiTypes, allBuChaiTypes) {
             buChaiTypes = buChaiTypes.slice();
             // 不拆牌型中可能还包函数组（为了好配置）
@@ -2322,8 +2192,6 @@
                 var buChaiTypes = getBuChaiTypes(putOrder[order][1], allBuChaiTypes);
                 var canPutValueNums = getCanPutValueNums(type, buChaiTypes); // 排除不满足不拆牌型后剩下的牌值-数量对
 
-                //cc.log("第" + order + "优先级出:" + getTypesName([type]) + " canPutValueNums=" + JSON.stringify(canPutValueNums) + " buChaiTypes=" + getTypesName(buChaiTypes));
-
                 var cards;
                 if (pdk_allZhaDan.indexOf(type) >= 0 && lastType != type)
                     cards = this.findCardByType_fast(hands, 0, type);
@@ -2383,11 +2251,6 @@
             }
         }
 
-        if (!allBuChaiTypes) {
-            //cc.log("智能提示用时：" + (new Date().getTime() - startTime) + "ms");
-            //cc.log("rets=" + JSON.stringify(rets));
-        }
-
         if (!allBuChaiTypes)
             this.findCardByTypeCache = [];
 
@@ -2406,7 +2269,7 @@
         needFindSpade3 = false;
         if (bankerRule === this.GameBankerRule.EveryRoundPlaySpade3) {
             needFindSpade3 = true;
-        }else if (bankerRule === this.GameBankerRule.FirstRoundPlaySpade3 && isFirstRound) {
+        } else if (bankerRule === this.GameBankerRule.FirstRoundPlaySpade3 && isFirstRound) {
             needFindSpade3 = true;
         }
         return needFindSpade3 && oHands.indexOf(this.cardCfg.firstOutCard) >= 0;
@@ -2423,7 +2286,8 @@
      * @return {array} 提示的牌
      */
     GameLogic_RunFaster.prototype.tipCards = function (oHands, oLastCards, areaSelectMode, isNextPlayerOneCard, isFirstRound, isSmartTip) {
-        var rets = [];
+        var rets = [],
+            mstputOne = this.isMustPutCard3(oHands, areaSelectMode, isFirstRound);
         if (isSmartTip) {
             this.canPutTypesCache = [];
             this.useNewTip = true;
@@ -2433,7 +2297,9 @@
                 // 不是压三带二的时候， 最后提示炸弹
                 for (var i = 0; i < booms.length; i++) {
                     if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
-                        rets.push(booms[i]);
+                        if (mstputOne) {
+                            booms[i].indexOf(this.cardCfg.firstOutCard) >= 0 && rets.push(booms[i])
+                        } else rets.push(booms[i]);
                     }
                 }
             }
@@ -2443,17 +2309,19 @@
                 // 不是压三带二的时候， 最后提示炸弹
                 for (var i = 0; i < booms.length; i++) {
                     if (this.canPut(booms[i], oLastCards, oHands.length, areaSelectMode)) {
-                        rets.push(booms[i]);
+                        if (mstputOne) {
+                            booms[i].indexOf(this.cardCfg.firstOutCard) >= 0 && rets.push(booms[i])
+                        } else rets.push(booms[i]);
                     }
                 }
             }
             this.useNewTip = false;
-            if (ret.length > 0) rets.push(...ret);
+            if (ret.length > 0) return [...ret].concat(rets);
             if (rets.length > 0) return rets;
         }
 
         //  第一个局 当勾“先出黑桃三”选项时，提示出黑桃三
-        if (this.isMustPutCard3(oHands, areaSelectMode, isFirstRound)) {
+        if (mstputOne) {
             return [[this.cardCfg.firstOutCard]]
         }
 
@@ -2542,7 +2410,7 @@
                 }
             }
         }
-        
+
         if (areaSelectMode.can4geZha) {
             var booms = this.findCardByType(hands, 0, PDK_CARDTPYE.sizha);
             // 不是压三带二的时候， 最后提示炸弹

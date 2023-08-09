@@ -2344,12 +2344,10 @@ PlayLayer_RunFasterYA.prototype.InitC_Data = function () {
 PlayLayer_RunFasterYA.prototype.cannotOutCardGrey = function () {
     if (MjClient.data.sData.tData.lastPutPlayer == -1 || MjClient.data.sData.tData.lastPutPlayer == MjClient.data.sData.tData.curPlayer)
         return;
-
     // 三带一、四带二、飞机 不变灰
     var lastPutCard = MjClient.data.sData.tData.lastPutCard
     if (lastPutCard && lastPutCard != -1) {
         var lastCards = [];
-        var lastLaizi = MjClient.majiang.transformAndGetLaizi(lastPutCard, lastCards);
         var lastCardsType = MjClient.majiang.calType(lastCards, MjClient.data.sData.tData.areaSelectMode);
         if (lastCardsType == MjClient.majiang.CARDTPYE.sandaiyi || lastCardsType == MjClient.majiang.CARDTPYE.sidaier || lastCardsType == MjClient.majiang.CARDTPYE.feiji) {
             if (MjClient.tipCardsArray.length > 0)
@@ -2357,7 +2355,7 @@ PlayLayer_RunFasterYA.prototype.cannotOutCardGrey = function () {
         }
     }
 
-    var children = this._downNode.children;
+    var children = this._downNode.children.filter(n=>n.name == 'mjhand');
     for (var i = 0; i < children.length; i++) {
         if (children[i].name != "mjhand")
             continue;
