@@ -1,0 +1,1228 @@
+{
+  "ID": "25a2d289-df9d-4335-9273-36b91a545a6b",
+  "Version": "2.3.4",
+  "Name": "A_registerPhoneNumLayer",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 127,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 639.1484,
+              "Y": 361.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 191,
+              "G": 191,
+              "B": 191
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4993,
+              "Y": 0.5014
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": -0.8516,
+            "RightMargin": 0.8516,
+            "TopMargin": -1.0,
+            "BottomMargin": 1.0,
+            "Tag": 100,
+            "ActionTag": 1834813992,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Alpha": 127,
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Common/pop_bg_small.png",
+              "Plist": "A_Common/Common.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 169,
+            "Scale9OriginY": 153,
+            "Scale9Width": 376,
+            "Scale9Height": 164,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.5703,
+              "Y": 0.6389
+            },
+            "LeftMargin": 275.0,
+            "RightMargin": 275.0,
+            "TopMargin": 130.0,
+            "BottomMargin": 130.0,
+            "Tag": 101,
+            "Children": [
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 370.256,
+                  "Y": 427.9792
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5072,
+                  "Y": 0.9304
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 370.256,
+                "RightMargin": 359.744,
+                "TopMargin": 32.0208,
+                "BottomMargin": 427.9792,
+                "Tag": 102,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/zhang_t.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9OriginX": 12,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 19,
+                    "Scale9Height": 18,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -74.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -95.5,
+                    "RightMargin": 52.5,
+                    "TopMargin": -22.0,
+                    "BottomMargin": -22.0,
+                    "Tag": 103,
+                    "ActionTag": 617135618,
+                    "Size": {
+                      "X": 43.0,
+                      "Y": 44.0
+                    },
+                    "Name": "title",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/hao_t.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9OriginX": 12,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 19,
+                    "Scale9Height": 18,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -25.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -46.5,
+                    "RightMargin": 3.5,
+                    "TopMargin": -22.0,
+                    "BottomMargin": -22.0,
+                    "Tag": 104,
+                    "ActionTag": -1220097450,
+                    "Size": {
+                      "X": 43.0,
+                      "Y": 44.0
+                    },
+                    "Name": "title_0",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/zhu_t.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9OriginX": 12,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 16,
+                    "Scale9Height": 17,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 25.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 5.0,
+                    "RightMargin": -45.0,
+                    "TopMargin": -21.5,
+                    "BottomMargin": -21.5,
+                    "Tag": 105,
+                    "ActionTag": -1780563081,
+                    "Size": {
+                      "X": 40.0,
+                      "Y": 43.0
+                    },
+                    "Name": "title_1",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/zuce_t.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9OriginX": 12,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 17,
+                    "Scale9Height": 15,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 74.0,
+                      "Y": 0.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 53.5,
+                    "RightMargin": -94.5,
+                    "TopMargin": -20.5,
+                    "BottomMargin": -20.5,
+                    "Tag": 106,
+                    "ActionTag": -466025139,
+                    "Size": {
+                      "X": 41.0,
+                      "Y": 41.0
+                    },
+                    "Name": "title_2",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 781250553,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "title",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/btnclose.png",
+                  "Plist": "A_Common/Common.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 29,
+                "Scale9Height": 37,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 695.164,
+                  "Y": 425.8114
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.9523,
+                  "Y": 0.9257
+                },
+                "PreSize": {
+                  "X": 0.0808,
+                  "Y": 0.1283
+                },
+                "LeftMargin": 665.664,
+                "RightMargin": 5.336,
+                "TopMargin": 4.6886,
+                "BottomMargin": 396.3114,
+                "Tag": 107,
+                "ActionTag": -860391862,
+                "Size": {
+                  "X": 59.0,
+                  "Y": 59.0
+                },
+                "Name": "close",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/universalBottom.png",
+                  "Plist": "A_Common/Common.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 20,
+                "Scale9OriginY": 18,
+                "Scale9Width": 108,
+                "Scale9Height": 56,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 365.0,
+                  "Y": 249.78
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.543
+                },
+                "PreSize": {
+                  "X": 0.9164,
+                  "Y": 0.5674
+                },
+                "LeftMargin": 30.5,
+                "RightMargin": 30.5,
+                "TopMargin": 79.72,
+                "BottomMargin": 119.28,
+                "Tag": 108,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/CM_inputbox.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 30,
+                    "Scale9OriginY": 16,
+                    "Scale9Width": 31,
+                    "Scale9Height": 18,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 382.0,
+                      "Y": 210.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.571,
+                      "Y": 0.8046
+                    },
+                    "PreSize": {
+                      "X": 0.5546,
+                      "Y": 0.1916
+                    },
+                    "LeftMargin": 196.5,
+                    "RightMargin": 101.5,
+                    "TopMargin": 26.0,
+                    "BottomMargin": 185.0,
+                    "Tag": 124,
+                    "Children": [
+                      {
+                        "FontSize": 28,
+                        "LabelText": "账号：",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -4.68,
+                          "Y": 25.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 147,
+                          "G": 92,
+                          "B": 35
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": -0.0126,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.2264,
+                          "Y": 0.56
+                        },
+                        "LeftMargin": -88.68,
+                        "RightMargin": 375.68,
+                        "TopMargin": 11.0,
+                        "BottomMargin": 11.0,
+                        "Tag": 125,
+                        "ActionTag": 86249483,
+                        "Size": {
+                          "X": 84.0,
+                          "Y": 28.0
+                        },
+                        "Name": "Text_3",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": -228513289,
+                    "Size": {
+                      "X": 371.0,
+                      "Y": 50.0
+                    },
+                    "Name": "Image_phoneNum",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/CM_inputbox.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 30,
+                    "Scale9OriginY": 16,
+                    "Scale9Width": 31,
+                    "Scale9Height": 18,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 382.0,
+                      "Y": 150.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.571,
+                      "Y": 0.5747
+                    },
+                    "PreSize": {
+                      "X": 0.5546,
+                      "Y": 0.1916
+                    },
+                    "LeftMargin": 196.5,
+                    "RightMargin": 101.5,
+                    "TopMargin": 86.0,
+                    "BottomMargin": 125.0,
+                    "Tag": 126,
+                    "Children": [
+                      {
+                        "FontSize": 28,
+                        "LabelText": "密码：",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -4.6771,
+                          "Y": 25.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 147,
+                          "G": 92,
+                          "B": 35
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": -0.0126,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.2264,
+                          "Y": 0.56
+                        },
+                        "LeftMargin": -88.6771,
+                        "RightMargin": 375.6771,
+                        "TopMargin": 11.0,
+                        "BottomMargin": 11.0,
+                        "Tag": 127,
+                        "ActionTag": -197195822,
+                        "Size": {
+                          "X": 84.0,
+                          "Y": 28.0
+                        },
+                        "Name": "Text_3",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": -980450244,
+                    "Size": {
+                      "X": 371.0,
+                      "Y": 50.0
+                    },
+                    "Name": "Image_securityCode",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/CM_inputbox.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 30,
+                    "Scale9OriginY": 16,
+                    "Scale9Width": 31,
+                    "Scale9Height": 18,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 382.0,
+                      "Y": 90.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.571,
+                      "Y": 0.3448
+                    },
+                    "PreSize": {
+                      "X": 0.5546,
+                      "Y": 0.1916
+                    },
+                    "LeftMargin": 196.5,
+                    "RightMargin": 101.5,
+                    "TopMargin": 146.0,
+                    "BottomMargin": 65.0,
+                    "Tag": 149,
+                    "Children": [
+                      {
+                        "FontSize": 28,
+                        "LabelText": "昵称：",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": -4.6771,
+                          "Y": 25.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 147,
+                          "G": 92,
+                          "B": 35
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": -0.0126,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 0.2264,
+                          "Y": 0.56
+                        },
+                        "LeftMargin": -88.6771,
+                        "RightMargin": 375.6771,
+                        "TopMargin": 11.0,
+                        "BottomMargin": 11.0,
+                        "Tag": 150,
+                        "ActionTag": 1879332908,
+                        "Size": {
+                          "X": 84.0,
+                          "Y": 28.0
+                        },
+                        "Name": "Text_3",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": -1495219463,
+                    "Size": {
+                      "X": 371.0,
+                      "Y": 50.0
+                    },
+                    "Name": "Image_nickname",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 28,
+                    "LabelText": "性别：",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 191.3235,
+                      "Y": 35.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 147,
+                      "G": 92,
+                      "B": 35
+                    },
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.286,
+                      "Y": 0.1341
+                    },
+                    "PreSize": {
+                      "X": 0.1256,
+                      "Y": 0.1073
+                    },
+                    "LeftMargin": 107.3235,
+                    "RightMargin": 477.6765,
+                    "TopMargin": 212.0,
+                    "BottomMargin": 21.0,
+                    "Tag": 154,
+                    "ActionTag": -1584719254,
+                    "Size": {
+                      "X": 84.0,
+                      "Y": 28.0
+                    },
+                    "Name": "Text_3",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "NormalBackFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_1.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "PressedBackFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_1.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "DisableBackFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_1.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "NodeNormalFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_2.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "NodeDisableFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_2.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 219.4431,
+                      "Y": 35.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.328,
+                      "Y": 0.1341
+                    },
+                    "PreSize": {
+                      "X": 0.0344,
+                      "Y": 0.0881
+                    },
+                    "LeftMargin": 207.9431,
+                    "RightMargin": 438.0569,
+                    "TopMargin": 214.5,
+                    "BottomMargin": 23.5,
+                    "Tag": 151,
+                    "Children": [
+                      {
+                        "FontSize": 28,
+                        "LabelText": "男",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 58.0,
+                          "Y": 12.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 147,
+                          "G": 92,
+                          "B": 35
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 2.5217,
+                          "Y": 0.5217
+                        },
+                        "PreSize": {
+                          "X": 1.2174,
+                          "Y": 1.2174
+                        },
+                        "LeftMargin": 30.0,
+                        "RightMargin": -35.0,
+                        "TopMargin": -3.0,
+                        "BottomMargin": -2.0,
+                        "Tag": 155,
+                        "ActionTag": -393083711,
+                        "Size": {
+                          "X": 28.0,
+                          "Y": 28.0
+                        },
+                        "Name": "txt",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": -163199031,
+                    "Size": {
+                      "X": 23.0,
+                      "Y": 23.0
+                    },
+                    "Name": "CheckBox_nan",
+                    "ctype": "CheckBoxObjectData"
+                  },
+                  {
+                    "NormalBackFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_1.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "PressedBackFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_1.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "DisableBackFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_1.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "NodeNormalFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_2.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "NodeDisableFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/circle_2.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 350.3526,
+                      "Y": 38.0145
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5237,
+                      "Y": 0.1456
+                    },
+                    "PreSize": {
+                      "X": 0.0344,
+                      "Y": 0.0881
+                    },
+                    "LeftMargin": 338.8526,
+                    "RightMargin": 307.1474,
+                    "TopMargin": 211.4855,
+                    "BottomMargin": 26.5145,
+                    "Tag": 156,
+                    "Children": [
+                      {
+                        "FontSize": 28,
+                        "LabelText": "女",
+                        "OutlineColor": {
+                          "G": 0,
+                          "B": 0
+                        },
+                        "ShadowColor": {
+                          "R": 110,
+                          "G": 110,
+                          "B": 110
+                        },
+                        "ShadowOffsetX": 2.0,
+                        "ShadowOffsetY": -2.0,
+                        "AnchorPoint": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 58.0,
+                          "Y": 12.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {
+                          "R": 147,
+                          "G": 92,
+                          "B": 35
+                        },
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 2.5217,
+                          "Y": 0.5217
+                        },
+                        "PreSize": {
+                          "X": 1.2174,
+                          "Y": 1.2174
+                        },
+                        "LeftMargin": 30.0,
+                        "RightMargin": -35.0,
+                        "TopMargin": -3.0,
+                        "BottomMargin": -2.0,
+                        "Tag": 157,
+                        "ActionTag": -1058612627,
+                        "Size": {
+                          "X": 28.0,
+                          "Y": 28.0
+                        },
+                        "Name": "txt",
+                        "ctype": "TextObjectData"
+                      }
+                    ],
+                    "ActionTag": -1276404501,
+                    "Size": {
+                      "X": 23.0,
+                      "Y": 23.0
+                    },
+                    "Name": "CheckBox_nv",
+                    "ctype": "CheckBoxObjectData"
+                  },
+                  {
+                    "FontSize": 14,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 65,
+                      "G": 65,
+                      "B": 70
+                    },
+                    "PressedFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/yellow-button.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/yellow-button.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 157,
+                    "Scale9Height": 45,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 334.5,
+                      "Y": -52.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": -0.1992
+                    },
+                    "PreSize": {
+                      "X": 0.2795,
+                      "Y": 0.2567
+                    },
+                    "LeftMargin": 241.0,
+                    "RightMargin": 241.0,
+                    "TopMargin": 279.5,
+                    "BottomMargin": -85.5,
+                    "Tag": 121,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Login/que_l.png",
+                          "Plist": "A_Login/Login.plist"
+                        },
+                        "Scale9OriginX": 12,
+                        "Scale9OriginY": 13,
+                        "Scale9Width": 4,
+                        "Scale9Height": 6,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 60.0,
+                          "Y": 32.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.3209,
+                          "Y": 0.4776
+                        },
+                        "PreSize": {
+                          "X": 0.1497,
+                          "Y": 0.4776
+                        },
+                        "LeftMargin": 46.0,
+                        "RightMargin": 113.0,
+                        "TopMargin": 19.0,
+                        "BottomMargin": 16.0,
+                        "Tag": 122,
+                        "ActionTag": 45889191,
+                        "Size": {
+                          "X": 28.0,
+                          "Y": 32.0
+                        },
+                        "Name": "title",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Login/ren_l.png",
+                          "Plist": "A_Login/Login.plist"
+                        },
+                        "Scale9OriginX": 12,
+                        "Scale9OriginY": 13,
+                        "Scale9Width": 5,
+                        "Scale9Height": 5,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 127.0,
+                          "Y": 32.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.6791,
+                          "Y": 0.4776
+                        },
+                        "PreSize": {
+                          "X": 0.1551,
+                          "Y": 0.4627
+                        },
+                        "LeftMargin": 112.5,
+                        "RightMargin": 45.5,
+                        "TopMargin": 19.5,
+                        "BottomMargin": 16.5,
+                        "Tag": 123,
+                        "ActionTag": 733871277,
+                        "Size": {
+                          "X": 29.0,
+                          "Y": 31.0
+                        },
+                        "Name": "title_0",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": -1740680700,
+                    "Size": {
+                      "X": 187.0,
+                      "Y": 67.0
+                    },
+                    "Name": "btn_register",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": -1058595429,
+                "Size": {
+                  "X": 669.0,
+                  "Y": 261.0
+                },
+                "Name": "Node_phoneLogin",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": 1733704897,
+            "Size": {
+              "X": 730.0,
+              "Y": 460.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
+        "A_Login/Login.plist",
+        "A_Login/Login.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

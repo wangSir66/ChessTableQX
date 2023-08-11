@@ -1,0 +1,11 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="Common" Type="Plist" ID="025e935c-9c79-4899-b706-859c16c2901f" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_Common/btnclose.png" />
+      <FilePathData Path="A_Common/pop_bg_small.png" />
+      <FilePathData Path="A_Common/universalBottom.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

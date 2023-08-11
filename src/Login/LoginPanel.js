@@ -34,7 +34,7 @@
     function doLogin(loginData, isLocalGuest) {
         MjClient.gamenet.request("pkcon.handler.doLogin", loginData,
             function (rtn) {
-                cc.log("login  ------------sking " + rtn.result);
+                cc.log("login  ------------sking " + JSON.stringify(rtn.pinfo));
                 var unblock = true;
                 if (cc.isUndefined(rtn.result)) {
                     if (isLocalGuest) {
@@ -50,7 +50,13 @@
                     try {
                         if (rtn.pinfo.uid) loginData.mail = rtn.pinfo.uid;
                         if (rtn.pinfo.loginCode) loginData.code = rtn.pinfo.loginCode;
+                        if (rtn.pinfo.openid) {
+                            let ar = rtn.pinfo.openid.split('_')
+                            loginData.mobileNum = ar[0];
+                            loginData.verifyCode = ar[1];
+                        }
                         util.localStorageEncrypt.setStringItem("loginData", JSON.stringify(loginData));
+                        util.localStorageEncrypt.setBoolItem("loginData_auto", true);
                     }
                     catch (e) { }
                     MjClient.getSystemConfig(function () {
@@ -72,86 +78,7 @@
                     MjClient.Scene.addChild(new mobilePhoneRegisterLayer(rtn.data));
                 } else if (rtn.result == 1003) {
                     MjClient.showToast(rtn.message);
-                    MjClient.Scene.addChild(new mobilePhone_selectRole(rtn.data, LoginByPhoneChildren));
-                }
-
-                if (unblock) MjClient.unblock();
-
-            }
-        );
-    }
-    function startMobileLogin(mail, id, isLocalGuest) {
-        MjClient.block();
-
-        cc.log(" loginData id = " + id);
-        cc.log(" loginData mail = " + mail);
-        var loginData = mail;
-        if (!loginData)//新用户
-        {
-            loginData = {};
-        }
-
-        loginData.id = id;
-        loginData.appVersion = MjClient.native.GetVersionName();
-        loginData.resVersion = MjClient.resVersion;
-        loginData.app = { appid: AppEnv[MjClient.getAppType()], os: cc.sys.os };
-        loginData.remoteIP = MjClient.remoteIP;
-        loginData.area = { longitude: MjClient.native.GetLongitudePos(), latitude: MjClient.native.GetLatitudePos() };
-        loginData.umid = MjClient.native.umengGetUMID();
-        loginData.deviceModel = MjClient.native.getDeviceModel();
-        cc.log("==== lms ----loginData ", JSON.stringify(loginData));
-
-        if (isLocalGuest === false) {
-            mobileLogin(loginData, isLocalGuest);
-        }
-        else {
-            MjClient.ConnectServer(loginData.openid || loginData.mail, function () {
-                mobileLogin(loginData, isLocalGuest);
-            });
-        }
-    }
-    function mobileLogin(loginData, isLocalGuest) {
-        MjClient.gamenet.request("pkcon.handler.mobileLogin", loginData,
-            function (rtn) {
-                cc.log(" ===mobileLogin -----  " + rtn.result);
-                var unblock = true;
-                if (cc.isUndefined(rtn.result)) {
-                    if (isLocalGuest) {
-                        unblock = false;
-                        getGuestData();
-                    }
-                    else {
-                        MjClient.showMsg("登录失败");
-                        postEvent("autoLoginFailed");
-                    }
-                }
-                else if (rtn.result == 0) {
-                    try {
-                        if (rtn.pinfo.uid) loginData.mail = rtn.pinfo.uid;
-                        if (rtn.pinfo.loginCode) loginData.code = rtn.pinfo.loginCode;
-                        util.localStorageEncrypt.setStringItem("loginData", JSON.stringify(loginData));
-                    }
-                    catch (e) { }
-                    MjClient.getSystemConfig(function () {
-                        postEvent("loginOK", rtn);
-                    }, function () {
-                        postEvent("autoLoginFailed");
-                    });
-                }
-                else if (rtn.result == 1001) {
-                    if (rtn.message) {
-                        MjClient.showMsg(rtn.message);
-                    }
-                    else {
-                        MjClient.showMsg("账号被封，请联系客服");
-                    }
-                    postEvent("autoLoginFailed");
-                }
-                else if (rtn.result == 1002) {
-                    MjClient.Scene.addChild(new mobilePhoneRegisterLayer(rtn.data));
-                } else if (rtn.result == 1003) {
-                    MjClient.showToast(rtn.message);
-                    MjClient.Scene.addChild(new mobilePhone_selectRole(rtn.data, LoginByPhoneChildren));
+                    // MjClient.Scene.addChild(new mobilePhone_selectRole(rtn.data, LoginByPhoneChildren));
                 }
 
                 if (unblock) MjClient.unblock();
@@ -196,15 +123,9 @@
         loginInfo.verifyCode = info.verifyCode;
         loginInfo.nickname = info.nickname;
         loginInfo.sex = info.sex;
-        loginInfo.headimgurl = '';
+        loginInfo.headimgurl = info.headimgurl;
         loginInfo.isRegister = info.isRegister;
         startLogin(loginInfo);
-    }
-
-
-    function LoginByPhoneChildren(mobileNum, verifyCode, id) {
-        var phoneCodeInfo = { mobileNum: mobileNum, verifyCode: verifyCode };
-        startMobileLogin(phoneCodeInfo, id);
     }
 
     function LoginByXianLiaoAccount(xlInfo) {
@@ -272,8 +193,13 @@
             LoginByMoWangAccount(MW_USER_LOGIN);
         }
         else if (loginData.length > 0) {
+            var auto = util.localStorageEncrypt.getBoolItem("loginData_auto");
             loginData = JSON.parse(loginData);
-            startLogin(loginData.mail, loginData.code);
+            if (auto) startLogin(loginData.mail, loginData.code);
+            else
+                setTimeout(function () {
+                    postEvent("autoLoginFailed");
+                });
         }
         else {
             setTimeout(function () {
@@ -290,26 +216,17 @@
         if (currentTime == lastWXUserLoginTime && !MjClient.remoteCfg.guestLogin && cc.sys.OS_WINDOWS != cc.sys.os) {
             util.localStorageEncrypt.setNumberItem("WX_USER_LOGIN_TIME", currentTime);
         }
-        return;//屏蔽清楚登录缓存信息。
-        var time = parseInt((currentTime - lastWXUserLoginTime) / 1000);
-        if (time > 30 * 86400 /*&& !util.localStorageEncrypt.getBoolItem("isAgent", false)*/)//大于30天
-        {
-            util.localStorageEncrypt.removeItem("WX_USER_LOGIN");
-            util.localStorageEncrypt.removeItem("XL_USER_LOGIN");
-            util.localStorageEncrypt.removeItem("DL_USER_LOGIN");
-            util.localStorageEncrypt.removeItem("MW_USER_LOGIN");
-            util.localStorageEncrypt.removeItem("loginData");
-        }
     }
 
 
     LoginView = cc.Layer.extend({
+        PList: 'A_Login/Login.plist',
+        Png: 'A_Login/Login.png',
         ctor: function () {
             this._super();
-            if (MjClient.isUseUIv3 && MjClient.isUseUIv3())
-                var loginui = ccs.load("Login_3.0.json");
-            else
-                var loginui = ccs.load(res.Login_json);
+            var that = this;
+            cc.spriteFrameCache.addSpriteFrames(this.PList, this.Png);
+            var loginui = ccs.load('A_Login.json');
             this.addChild(loginui.node);
             MjClient.loginui = this;
 
@@ -318,13 +235,6 @@
              */
             var _back = loginui.node.getChildByName("back");
             setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0], true);
-
-            // 烟花粒子特效
-            var yanHuaNode = _back.getChildByName("node_yanhua");
-            var particle = new cc.ParticleSystem("Particle/yanhuaya.plist");
-            particle.setPosition(yanHuaNode.getContentSize().width / 2, yanHuaNode.getContentSize().height / 2);
-            particle.setTotalParticles(2);
-            yanHuaNode.addChild(particle);
 
             //竹叶飘
             var starParticle1 = new cc.ParticleSystem("Particle/particle_texture.plist");
@@ -339,49 +249,24 @@
             acceptNode = _agree;
             acceptNode.setVisible(false);
             _agree.setSelected(util.localStorageEncrypt.getBoolItem("_agree_user_protocol", false))
-            setWgtLayout(_agree, [0.05, 0.05], [0, _h], [0, 0], true, true);
+            setWgtLayout(_agree, [0.05, 0.05], [0, _h], [0, 0], false, true);
 
             var _legal = _agree.getChildByName("legal");
-            var _privacy = _agree.getChildByName("privacy");
             this._legal = _legal;
-            this._privacy = _privacy;
 
-            var _logo = _back.getChildByName("load");
-            _logo.visible = false;
-
-            if (_privacy)
-                _agree.x = (_back.width - _agree.scaleX * (_privacy.x + _privacy.scaleX * _privacy.width * (1 - _privacy.getAnchorPoint().x) - _agree.width)) / 2;
-            else if (_legal)
+            if (_legal) {
                 _agree.x = (_back.width - _agree.scaleX * (_legal.x + _legal.scaleX * _legal.width * (1 - _legal.getAnchorPoint().x) - _agree.width)) / 2;
-
-            _legal.addTouchEventListener(function (sender, Type) {
-                switch (Type) {
-                    case ccui.Widget.TOUCH_ENDED:
-                        var url = "www.baidu.com";
-                        if (MjClient.updateCfg) {
-                            url = MjClient.updateCfg.userProtocol;
-                        }
-                        MjClient.openWeb({ url: url, help: false });
-                        break;
-                    default:
-                        break;
-                }
-            }, this);
-
-            if (_privacy) {
-                _privacy.addTouchEventListener(function (sender, Type) {
-                    if (Type == ccui.Widget.TOUCH_ENDED) {
-                        var url = "www.baidu.com";
-                        if (MjClient.updateCfg) {
-                            url = MjClient.updateCfg.privacyProtocol;
-                        }
-                        MjClient.openWeb({
-                            url: url,
-                            help: false
-                        });
+                _legal.addTouchEventListener(function (sender, Type) {
+                    switch (Type) {
+                        case ccui.Widget.TOUCH_ENDED:
+                            this.addChild(new DlgagreementViewLayer());
+                            break;
+                        default:
+                            break;
                     }
                 }, this);
             }
+
 
             var _warnText = loginui.node.getChildByName("warn_text");
             setWgtLayout(_warnText, [_warnText.width / 1280, 0], [0.5, 0.002], [0, 0.5], true);
@@ -389,12 +274,8 @@
             var bg_mask = _back.getChildByName("bg_mask");
             if (bg_mask) {
                 bg_mask.y = 0;
-                bg_mask.setScaleY((_agree.y + _agree.height * 0.75) / bg_mask.height);
+                bg_mask.setScaleY((_agree.y + _agree.height) / bg_mask.height);
             }
-            var _warnText_0 = _warnText.getChildByName("warn_text_0");
-            if (_warnText_0) _warnText_0.ignoreContentAdaptWithSize(true);
-            var _warnText_1 = _warnText.getChildByName("warn_text_1");
-            if (_warnText_1) _warnText_1.ignoreContentAdaptWithSize(true);
 
 
             var loginBtns = [];
@@ -414,15 +295,6 @@
             if (_btnWeChat) {
                 _btnWeChat.setVisible(false);
                 // loginBtns.push(_btnWeChat);
-            }
-
-
-            var _guestLogin = loginui.node.getChildByName("guestLogin");
-            this._guestLogin = _guestLogin;
-            if (_guestLogin) {
-                _guestLogin.visible = false;
-                if (MjClient.remoteCfg.guestLogin)
-                    loginBtns.push(_guestLogin);
             }
 
             var y = 0.35;
@@ -466,11 +338,6 @@
                         func();
                     } else {
                         MjClient.showToast("请先阅读并同意用户协议");
-                        if (_privacy) {
-                            MjClient.Scene.addChild(new LoginLegalDialog(function () {
-                                func()
-                            }));
-                        }
                     }
                 }, this);
             }
@@ -488,11 +355,6 @@
                 }
             }
 
-            if (_guestLogin) {
-                _guestLogin.onTouchBack = function () {
-                    LoginByGuestAccount();
-                }
-            }
 
             if (_btnPhone) {
                 _btnPhone.onTouchBack = function () {
@@ -508,12 +370,7 @@
             var _fixBtn = loginui.node.getChildByName("xiufuBtn");
             this._fixBtn = _fixBtn
             if (_fixBtn) {
-                if (MjClient.isUseUIv3 && MjClient.isUseUIv3()) {
-                    setWgtLayout(_fixBtn, [_fixBtn.width / 1280, _fixBtn.height / 720], [0.054, 0.911], [0, 0]);
-                }
-                else {
-                    setWgtLayout(_fixBtn, [0.13, 0.13], [0.9, 0.89], [0, 0]);
-                }
+                setWgtLayout(_fixBtn, [0.13, 0.13], [0.9, 0.89], [0, 0]);
                 _fixBtn.addTouchEventListener(function (sender, Type) {
                     switch (Type) {
                         case ccui.Widget.TOUCH_ENDED:
@@ -553,72 +410,6 @@
 
             });
 
-
-            //register event xianliao login call back  注册函数 ，闲聊登录成功回调
-            UIEventBind(this.jsBind, loginui.node, "XL_USER_LOGIN", function (para) {
-                if (cc.isString(para)) {
-                    para = JSON.parse(para);
-                }
-
-                if (para.openId) {
-                    cc.loader.loadTxt(jsb.fileUtils.getWritablePath() + "nicknameXL.txt",
-                        function (er, txt) {
-                            if (txt) {
-                                para.nickName = escape(txt);
-                            }
-                            util.localStorageEncrypt.setStringItem("XL_USER_LOGIN", JSON.stringify(para));
-                            LoginByXianLiaoAccount(para);
-                        });
-                }
-                else {
-                    MjClient.showToastDelay("闲聊登录失败，请重试");
-                }
-
-            });
-
-            //register event duoliao login call back  注册函数 ，多聊登录成功回调
-            UIEventBind(this.jsBind, loginui.node, "DL_USER_LOGIN", function (para) {
-                if (cc.isString(para)) {
-                    para = JSON.parse(para);
-                }
-
-                if (para.openId) {
-                    cc.loader.loadTxt(jsb.fileUtils.getWritablePath() + "nicknameDL.txt",
-                        function (er, txt) {
-                            if (txt) {
-                                para.nickName = escape(txt);
-                            }
-                            util.localStorageEncrypt.setStringItem("DL_USER_LOGIN", JSON.stringify(para));
-                            LoginByDuoLiaoAccount(para);
-                        });
-                }
-                else {
-                    MjClient.showToastDelay("多聊登录失败，请重试");
-                }
-
-            });
-
-            //register event mowang login call back  注册函数 ，默往登录成功回调
-            UIEventBind(this.jsBind, loginui.node, "MOWANG_USER_LOGIN", function (para) {
-                if (cc.isString(para)) {
-                    para = JSON.parse(para);
-                }
-
-                if (para.open_id) {
-                    cc.loader.loadTxt(jsb.fileUtils.getWritablePath() + "nicknameMW.txt",
-                        function (er, txt) {
-                            if (txt) {
-                                para.nick_name = escape(txt);
-                            }
-                            util.localStorageEncrypt.setStringItem("MW_USER_LOGIN", JSON.stringify(para));
-                            LoginByMoWangAccount(para);
-                        });
-                }
-                else {
-                    MjClient.showToastDelay("默往登录失败，请重试");
-                }
-            });
-
             //register event     guest login call back  ，注册函数，游客登录成功回调
             UIEventBind(this.jsBind, loginui.node, "loginOK", function () {
                 if (MjClient.webViewLayer != null) {
@@ -627,6 +418,7 @@
 
                 cc.log("loginOK delete login layer ! --- by sking");
                 if (MjClient.loginui) {
+                    cc.spriteFrameCache.removeSpriteFramesFromFile(MjClient.loginui.PList);
                     MjClient.loginui.removeFromParent(true);
                     delete MjClient.loginui;
                 }
@@ -639,9 +431,6 @@
                 }
                 if (_btnWeChat) {
                     _btnWeChat.visible = false //!MjClient.remoteCfg.guestLogin;
-                }
-                if (_guestLogin) {
-                    _guestLogin.visible = MjClient.remoteCfg.guestLogin;
                 }
                 if (_btnPhone) {
                     _btnPhone.setVisible(!!MjClient.remoteCfg.phoneLogin);
@@ -658,49 +447,6 @@
             _version.setString(ver);
             _version.ignoreContentAdaptWithSize(true);
             _version.setTouchEnabled(true);
-            var playTimeInDex = 0;
-            var that = this;
-            _version.addTouchEventListener(function (sender, type) {
-                return;
-                if (type == 2) {
-                    playTimeInDex++;
-                    if (playTimeInDex >= 10) {
-                        cc.log("============== playTimeInDex ");
-                        playTimeInDex = 0;
-                        var _textFeildName = new cc.EditBox(cc.size(556, 45), new cc.Scale9Sprite("game_picture/xiaotanchuan_51.png"));
-                        _textFeildName.setFontColor(cc.color(255, 255, 255));
-                        _textFeildName.setMaxLength(100);
-                        _textFeildName.setInputMode(cc.EDITBOX_INPUT_MODE_ANY);
-                        _textFeildName.setPlaceHolder("点击输入ID");
-                        //_textFeildName.setPosition(cc.winSize.width * 0.45, cc.winSize.height * 0.65);
-
-                        setWgtLayout(_textFeildName, [0.3, 0.3], [0.45, 0.65], [0, 0]);
-                        _back.getParent().addChild(_textFeildName);
-
-                        var _textFeildCode = new cc.EditBox(cc.size(556, 45), new cc.Scale9Sprite("game_picture/xiaotanchuan_51.png"));
-                        _textFeildCode.setFontColor(cc.color(255, 255, 255));
-                        _textFeildCode.setMaxLength(100);
-                        _textFeildCode.setInputMode(cc.EDITBOX_INPUT_MODE_ANY);
-                        _textFeildCode.setPlaceHolder("点击输入code");
-                        //_textFeildCode.setPosition(cc.winSize.width * 0.45, cc.winSize.height * 0.5);
-                        setWgtLayout(_textFeildCode, [0.3, 0.3], [0.45, 0.5], [0, 0]);
-                        _back.getParent().addChild(_textFeildCode);
-
-                        var btn = new ccui.Button("game_picture/xiaotanchuan_48.png");
-                        //btn.setPosition(cc.winSize.width * 0.85, cc.winSize.height * 0.575);
-                        setWgtLayout(btn, [0.15, 0.15], [0.85, 0.575], [0, 0]);
-
-                        btn.addTouchEventListener(function (sender, type) {
-                            if (type == 2) {
-                                var mail = _textFeildName.getString();
-                                var code = _textFeildCode.getString();
-                                startLogin(mail, code);
-                            }
-                        });
-                        _back.getParent().addChild(btn);
-                    }
-                }
-            }, this);
 
             clearLoginDataCache();
             MjClient.autoLogin();

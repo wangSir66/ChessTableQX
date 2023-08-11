@@ -1,0 +1,36 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="Login" Type="Plist" ID="3b4a8303-5d28-4578-af99-92a335a606c5" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_Login/barpoint.png" />
+      <FilePathData Path="A_Login/btn_login_wx.png" />
+      <FilePathData Path="A_Login/circle_1.png" />
+      <FilePathData Path="A_Login/circle_2.png" />
+      <FilePathData Path="A_Login/CM_inputbox.png" />
+      <FilePathData Path="A_Login/countman-btn.png" />
+      <FilePathData Path="A_Login/deng_l.png" />
+      <FilePathData Path="A_Login/deng_t.png" />
+      <FilePathData Path="A_Login/hao_t.png" />
+      <FilePathData Path="A_Login/hu_t.png" />
+      <FilePathData Path="A_Login/light.png" />
+      <FilePathData Path="A_Login/lu_l.png" />
+      <FilePathData Path="A_Login/lu_t.png" />
+      <FilePathData Path="A_Login/process.png" />
+      <FilePathData Path="A_Login/que_l.png" />
+      <FilePathData Path="A_Login/ren_l.png" />
+      <FilePathData Path="A_Login/xie_t.png" />
+      <FilePathData Path="A_Login/yellow-button.png" />
+      <FilePathData Path="A_Login/yi_t.png" />
+      <FilePathData Path="A_Login/yong_t.png" />
+      <FilePathData Path="A_Login/zhang_t.png" />
+      <FilePathData Path="A_Login/zhu_t.png" />
+      <FilePathData Path="A_Login/zuce_t.png" />
+      <FilePathData Path="A_Login/yijianxiufu.png" />
+      <FilePathData Path="A_Login/yijianxiufu_p.png" />
+      <FilePathData Path="A_Login/z_tongyi.png" />
+      <FilePathData Path="A_Login/z_ysbhzy.png" />
+      <FilePathData Path="A_Login/agree.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="256" />
+  </Content>
+</PlistInfoProjectFile>
