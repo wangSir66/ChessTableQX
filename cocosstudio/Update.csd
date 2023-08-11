@@ -18,15 +18,15 @@
                 <PrePosition X="0.5000" Y="0.9000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="bg_person" ActionTag="-781411938" Tag="149" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="1716" Scale9Height="966" ctype="ImageViewObjectData">
-                <Size X="1280.0000" Y="720.0000" />
+              <AbstractNodeData Name="bg_person" ActionTag="-781411938" VisibleForFrame="False" Tag="149" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="617.0000" RightMargin="617.0000" TopMargin="337.0000" BottomMargin="337.0000" LeftEage="15" RightEage="15" TopEage="15" BottomEage="15" Scale9OriginX="15" Scale9OriginY="15" Scale9Width="16" Scale9Height="16" ctype="ImageViewObjectData">
+                <Size X="46.0000" Y="46.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="640.0000" Y="360.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="1.0000" Y="1.0000" />
-                <FileData Type="Normal" Path="login/person.png" Plist="" />
+                <PreSize X="0.0359" Y="0.0639" />
+                <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="bg_mask" ActionTag="-10011008" Tag="32" IconVisible="False" PositionPercentXEnabled="True" TopMargin="610.0000" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="1250" Scale9Height="82" ctype="ImageViewObjectData">
                 <Size X="1280.0000" Y="110.0000" />
@@ -92,7 +92,7 @@
                 <PreSize X="1.0000" Y="0.0097" />
                 <FileData Type="Normal" Path="login/loading_bar_bg.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="warn_text" ActionTag="483611256" Tag="30" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="216.4520" RightMargin="220.5480" TopMargin="659.9525" BottomMargin="6.0475" FontSize="15" LabelText="抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。&#xA;天涯游备字[2023]G-TYG 1010号;批准文号:文艺出审[2023]2540号;游戏出版物号(NSB1):584-2-8751-3654-1;&#xA;出版服务单位:云影库音像出版社;运营单位:白嫖小分队网络科技有限公司" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="warn_text" ActionTag="483611256" Tag="30" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="216.4520" RightMargin="220.5480" TopMargin="659.9525" BottomMargin="6.0475" FontSize="15" LabelText="出版服务单位:云影库音像出版社;运营单位:白嫖小分队网络科技有限公司&#xA;天涯游备字[2023]G-TYG 1010号;批准文号:文艺出审[2023]2540号;游戏出版物号(NSB1):584-2-8751-3654-1;&#xA;抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="843.0000" Y="54.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="637.9520" Y="33.0475" />
@@ -111,7 +111,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.4991" Y="0.4970" />
             <PreSize X="1.0000" Y="1.0000" />
-            <FileData Type="Normal" Path="login/bg.jpg" Plist="" />
+            <FileData Type="Normal" Path="A_Login/bg.jpg" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

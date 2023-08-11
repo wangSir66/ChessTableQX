@@ -412,6 +412,7 @@ var HomeView_yaan = cc.Layer.extend({
         
         _btntuijian.visible = false;
         var selfHead = SelfHeadInfo();
+        cc.log('--------------------',selfHead.url)
         MjClient.loadWxHead(selfHead.uid, selfHead.url);
 
         var _head = _headbg.getChildByName("head");

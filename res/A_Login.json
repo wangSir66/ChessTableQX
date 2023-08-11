@@ -1,7 +1,7 @@
 {
   "ID": "13c5b26b-c8e9-4ac8-b4ea-0350d6f0d0cd",
   "Version": "2.3.4",
-  "Name": "Login",
+  "Name": "A_Login",
   "Content": {
     "Content": {
       "Animation": {
@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "A_Login/BigImg/bg.jpg",
+              "Path": "A_Login/bg.jpg",
               "Plist": ""
             },
             "Scale9OriginX": 422,
@@ -51,7 +51,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "A_Login/BigImg/bg_mask.png",
+                  "Path": "A_Login/bg_mask.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 15,
@@ -94,28 +94,28 @@
                 "CheckedState": true,
                 "NormalBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/Image/circle_1.png",
-                  "Plist": "A_Login/Image/Login.plist"
+                  "Path": "A_Login/circle_1.png",
+                  "Plist": "A_Login/Login.plist"
                 },
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/Image/circle_1.png",
-                  "Plist": "A_Login/Image/Login.plist"
+                  "Path": "A_Login/circle_1.png",
+                  "Plist": "A_Login/Login.plist"
                 },
                 "DisableBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/Image/circle_1.png",
-                  "Plist": "A_Login/Image/Login.plist"
+                  "Path": "A_Login/circle_1.png",
+                  "Plist": "A_Login/Login.plist"
                 },
                 "NodeNormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/Image/circle_2.png",
-                  "Plist": "A_Login/Image/Login.plist"
+                  "Path": "A_Login/circle_2.png",
+                  "Plist": "A_Login/Login.plist"
                 },
                 "NodeDisableFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/Image/circle_2.png",
-                  "Plist": "A_Login/Image/Login.plist"
+                  "Path": "A_Login/circle_2.png",
+                  "Plist": "A_Login/Login.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -152,18 +152,18 @@
                     "TextColor": {},
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/Image/agree.png",
-                      "Plist": "A_Login/Image/Login.plist"
+                      "Path": "A_Login/agree.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/Image/agree.png",
-                      "Plist": "A_Login/Image/Login.plist"
+                      "Path": "A_Login/agree.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/Image/agree.png",
-                      "Plist": "A_Login/Image/Login.plist"
+                      "Path": "A_Login/agree.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -246,18 +246,18 @@
             },
             "DisabledFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/btn_login_wx.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/btn_login_wx.png",
+              "Plist": "A_Login/Login.plist"
             },
             "PressedFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/btn_login_wx.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/btn_login_wx.png",
+              "Plist": "A_Login/Login.plist"
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/btn_login_wx.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/btn_login_wx.png",
+              "Plist": "A_Login/Login.plist"
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
@@ -321,18 +321,18 @@
             },
             "DisabledFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/countman-btn.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/countman-btn.png",
+              "Plist": "A_Login/Login.plist"
             },
             "PressedFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/countman-btn.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/countman-btn.png",
+              "Plist": "A_Login/Login.plist"
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/countman-btn.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/countman-btn.png",
+              "Plist": "A_Login/Login.plist"
             },
             "Scale9OriginX": 15,
             "Scale9OriginY": 11,
@@ -395,18 +395,18 @@
             },
             "DisabledFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/yijianxiufu.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/yijianxiufu.png",
+              "Plist": "A_Login/Login.plist"
             },
             "PressedFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/yijianxiufu_p.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/yijianxiufu_p.png",
+              "Plist": "A_Login/Login.plist"
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/Image/yijianxiufu.png",
-              "Plist": "A_Login/Image/Login.plist"
+              "Path": "A_Login/yijianxiufu.png",
+              "Plist": "A_Login/Login.plist"
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
@@ -482,11 +482,11 @@
             "ShadowOffsetX": 2.0,
             "ShadowOffsetY": -2.0,
             "AnchorPoint": {
-              "ScaleX": 1.0,
+              "ScaleX": 0.5,
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 1262.16,
+              "X": 1181.16,
               "Y": 675.0
             },
             "Scale": {
@@ -500,7 +500,7 @@
             },
             "IconVisible": false,
             "PrePosition": {
-              "X": 0.9861,
+              "X": 0.9228,
               "Y": 0.9375
             },
             "PreSize": {
@@ -592,11 +592,11 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "../fonts/fzcy.ttf",
-        "BigImg/bg.jpg",
-        "BigImg/bg_mask.png",
-        "Image/Login.plist",
-        "Image/Login.png"
+        "A_Login/bg.jpg",
+        "A_Login/bg_mask.png",
+        "A_Login/Login.plist",
+        "A_Login/Login.png",
+        "fonts/fzcy.ttf"
       ],
       "ctype": "GameFileData"
     }

@@ -2,7 +2,7 @@
     "project_type": "javascript",
 
     "debugMode": 1,
-    "showFPS": false,
+    "showFPS": true,
     "frameRate": 60,
     "noCache": false,
     "id": "gameCanvas",
@@ -45,10 +45,13 @@
         "src/CommonFunc_UI3D.js",
         "src/CommonFunc_card.js",
         "src/CommonFunc_Layer.js",
-        "src/LoginPanel.js",
-        "src/LoginLegalDialog.js",
-        "src/MobilePhoneLoginLayer.js",
-        "src/MobilePhoneRegisterLayer.js",
+        
+        "src/Common/UIManager.js",
+        "src/Login/LoginPanel.js",
+        "src/Login/Dlgagreement.js",
+        "src/Login/MobilePhoneLoginLayer.js",
+        "src/Login/MobilePhoneRegisterLayer.js",
+
         "src/FreeNumberVoteDialog.js",
         "src/ShiMingRenZhengLayer.js",
         "src/SelectPanel.js",

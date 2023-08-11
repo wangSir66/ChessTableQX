@@ -33,30 +33,12 @@ cc.game.onStart = function () {
     if (initResourceDir)
         initResourceDir();
 
-    // Adjust viewport meta
-    // Setup the resolution policy and design resolution size
-    // Instead of set design resolution, you can also set the real pixel resolution size
-    // Uncomment the following line and delete the previous line.
-    // cc.view.setRealPixelResolution(960, 640, cc.ResolutionPolicy.SHOW_ALL);
-    // The game will be resized when browser size change
-    //load resources
     cc.log("******:" + JSON.stringify(json_res[MjClient.getAppType()]))
     var game_res = json_res[MjClient.getAppType()].concat(sound_res[MjClient.getAppType()]);
 
     cc.LoaderScene.preload(game_res, function () {
         MjClient.Scene = new JSScene();
-        // if (cc.sys.OS_WINDOWS == cc.sys.os) {
-        //     if( cc.sys.isNative && jsb.fileUtils.isFileExist("TestManager.js")) {
-        //         require("TestManager.js")
-        //     }
-        // }
         cc.director.runScene(MjClient.Scene);
-
-        // if (cc.sys.OS_WINDOWS == cc.sys.os) {
-        //     if(cc.sys.isNative && jsb.fileUtils.isFileExist("TestManager.js")) {
-        //         MjClient.Scene._afterRunScene();
-        //     }
-        // }
 
         // 按钮添加点击声音
         ccui.Button.prototype.addTouchEventListenerOrigin = ccui.Button.prototype.addTouchEventListener
