@@ -57,7 +57,7 @@ var putCardsLayer = cc.Layer.extend({
             //var sData = MjClient.data.sData;
             //显示头像
             var url = pl.info.headimgurl;
-            if(!url) url="png/default_headpic.png";
+            if(!url) url="A_Common/default_headpic.png";
             cc.loader.loadImg(url, {isCrossOrigin : true}, function(err, texture)
             {
                 if(!err&&texture&&cc.sys.isObjectValid(_handNode))

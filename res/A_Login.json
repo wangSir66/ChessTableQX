@@ -1,0 +1,605 @@
+{
+  "ID": "13c5b26b-c8e9-4ac8-b4ea-0350d6f0d0cd",
+  "Version": "2.3.4",
+  "Name": "A_Login",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 4,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "A_Login/bg.jpg",
+              "Plist": ""
+            },
+            "Scale9OriginX": 422,
+            "Scale9OriginY": 237,
+            "Scale9Width": 436,
+            "Scale9Height": 246,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 6,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "A_Login/bg_mask.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 14,
+                "Scale9Width": 1250,
+                "Scale9Height": 82,
+                "AnchorPoint": {
+                  "ScaleX": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.1528
+                },
+                "TopMargin": 610.0,
+                "Tag": 23,
+                "ActionTag": 1815173316,
+                "Size": {
+                  "X": 1280.0,
+                  "Y": 110.0
+                },
+                "Name": "bg_mask",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "CheckedState": true,
+                "NormalBackFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Login/circle_1.png",
+                  "Plist": "A_Login/Login.plist"
+                },
+                "PressedBackFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Login/circle_1.png",
+                  "Plist": "A_Login/Login.plist"
+                },
+                "DisableBackFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Login/circle_1.png",
+                  "Plist": "A_Login/Login.plist"
+                },
+                "NodeNormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Login/circle_2.png",
+                  "Plist": "A_Login/Login.plist"
+                },
+                "NodeDisableFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Login/circle_2.png",
+                  "Plist": "A_Login/Login.plist"
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 459.1396,
+                  "Y": 90.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3587,
+                  "Y": 0.125
+                },
+                "PreSize": {
+                  "X": 0.018,
+                  "Y": 0.0319
+                },
+                "LeftMargin": 447.6396,
+                "RightMargin": 809.3604,
+                "TopMargin": 618.5,
+                "BottomMargin": 78.5,
+                "Tag": 68,
+                "Children": [
+                  {
+                    "FontSize": 26,
+                    "ButtonText": "",
+                    "TextColor": {},
+                    "DisabledFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/agree.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "PressedFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/agree.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/agree.png",
+                      "Plist": "A_Login/Login.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 6,
+                    "Scale9Width": 386,
+                    "Scale9Height": 9,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5262,
+                      "ScaleY": 0.4545
+                    },
+                    "Position": {
+                      "X": 256.4716,
+                      "Y": 10.1471
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 11.1509,
+                      "Y": 0.4412
+                    },
+                    "PreSize": {
+                      "X": 18.087,
+                      "Y": 0.913
+                    },
+                    "LeftMargin": 37.5724,
+                    "RightMargin": -430.5724,
+                    "TopMargin": 1.3974,
+                    "BottomMargin": 0.6026,
+                    "Tag": 37,
+                    "ActionTag": -1482008010,
+                    "Size": {
+                      "X": 416.0,
+                      "Y": 21.0
+                    },
+                    "Name": "legal",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": -1347122435,
+                "Size": {
+                  "X": 23.0,
+                  "Y": 23.0
+                },
+                "Name": "agree",
+                "ctype": "CheckBoxObjectData"
+              }
+            ],
+            "ActionTag": -1453471211,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/btn_login_wx.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "PressedFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/btn_login_wx.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "NormalFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/btn_login_wx.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 214,
+            "Scale9Height": 73,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 426.0,
+              "Y": 232.92
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.3328,
+              "Y": 0.3235
+            },
+            "PreSize": {
+              "X": 0.1906,
+              "Y": 0.1319
+            },
+            "LeftMargin": 304.0,
+            "RightMargin": 732.0,
+            "TopMargin": 439.58,
+            "BottomMargin": 185.42,
+            "Tag": 7,
+            "ActionTag": -36530676,
+            "Size": {
+              "X": 244.0,
+              "Y": 95.0
+            },
+            "Name": "wechatLogin",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/countman-btn.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "PressedFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/countman-btn.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "NormalFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/countman-btn.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 218,
+            "Scale9Height": 72,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 861.879,
+              "Y": 235.4376
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.6733,
+              "Y": 0.327
+            },
+            "PreSize": {
+              "X": 0.1937,
+              "Y": 0.1306
+            },
+            "LeftMargin": 737.879,
+            "RightMargin": 294.121,
+            "TopMargin": 437.5624,
+            "BottomMargin": 188.4376,
+            "Tag": 159,
+            "ActionTag": -237853521,
+            "Size": {
+              "X": 248.0,
+              "Y": 94.0
+            },
+            "Name": "phoneLogin",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 14,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/yijianxiufu.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "PressedFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/yijianxiufu_p.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "NormalFileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Login/yijianxiufu.png",
+              "Plist": "A_Login/Login.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 168,
+            "Scale9Height": 33,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1175.6801,
+              "Y": 627.12
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.9185,
+              "Y": 0.871
+            },
+            "PreSize": {
+              "X": 0.1547,
+              "Y": 0.0764
+            },
+            "LeftMargin": 1076.6801,
+            "RightMargin": 5.3199,
+            "TopMargin": 65.38,
+            "BottomMargin": 599.62,
+            "Tag": 103,
+            "ActionTag": -1631501552,
+            "Size": {
+              "X": 198.0,
+              "Y": 55.0
+            },
+            "Name": "xiufuBtn",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "ver:000.00000000",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/fzcy.ttf",
+              "Plist": ""
+            },
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 1181.16,
+              "Y": 675.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 204,
+              "G": 204,
+              "B": 204
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.9228,
+              "Y": 0.9375
+            },
+            "PreSize": {
+              "X": 0.1266,
+              "Y": 0.0333
+            },
+            "LeftMargin": 1100.16,
+            "RightMargin": 17.84,
+            "TopMargin": 33.0,
+            "BottomMargin": 663.0,
+            "Tag": 12,
+            "ActionTag": -123771324,
+            "Size": {
+              "X": 162.0,
+              "Y": 24.0
+            },
+            "Name": "version",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 15,
+            "LabelText": "出版服务单位:云影库音像出版社;运营单位:白嫖小分队网络科技有限公司\n天涯游备字[2023]G-TYG 1010号;批准文号:文艺出审[2023]2540号;游戏出版物号(NSB1):584-2-8751-3654-1;\n抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。",
+            "FontResource": {
+              "Type": "Normal",
+              "Path": "fonts/fzcy.ttf",
+              "Plist": ""
+            },
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineSize": 2,
+            "OutlineColor": {
+              "R": 30,
+              "G": 24,
+              "B": 15
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 43.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 218,
+              "G": 218,
+              "B": 218
+            },
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.0597
+            },
+            "PreSize": {
+              "X": 0.6586,
+              "Y": 0.075
+            },
+            "LeftMargin": 218.5,
+            "RightMargin": 218.5,
+            "TopMargin": 650.0,
+            "BottomMargin": 16.0,
+            "Tag": 288,
+            "ActionTag": 298465890,
+            "Size": {
+              "X": 843.0,
+              "Y": 54.0
+            },
+            "Name": "warn_text",
+            "ctype": "TextObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "A_Login/bg.jpg",
+        "A_Login/bg_mask.png",
+        "A_Login/Login.plist",
+        "A_Login/Login.png",
+        "fonts/fzcy.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

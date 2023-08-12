@@ -425,7 +425,7 @@ function DelRoomPlayerInfo(node, off, delPlayer) {
     if (head) {
         // 显示玩家头像
         var url = pl.info.headimgurl;
-        if (!url) url = "png/default_headpic.png";
+        if (!url) url = "A_Common/default_headpic.png";
         cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
             if (!err && texture && cc.sys.isObjectValid(head)) {
                 var clippingNode = new cc.ClippingNode();
@@ -569,7 +569,7 @@ function reInitarrCardVisible() {
 
 function addWxHeadToEndUI(node, off) {
     var pl = MjClient.getPlayerByIndex(off);
-    var img = "png/default_headpic.png";
+    var img = "A_Common/default_headpic.png";
     //if(pl && pl.wxHeadImg)
     //{
     //	img = pl.wxHeadImg;

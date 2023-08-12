@@ -17,7 +17,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "login/bg.jpg",
+              "Path": "A_Login/bg.jpg",
               "Plist": ""
             },
             "Scale9OriginX": 15,
@@ -127,6 +127,7 @@
                   "X": 1280.0,
                   "Y": 720.0
                 },
+                "VisibleForFrame": false,
                 "Name": "bg_person",
                 "ctype": "ImageViewObjectData"
               },
@@ -414,7 +415,7 @@
               },
               {
                 "FontSize": 15,
-                "LabelText": "抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。\n天涯游备字[2023]G-TYG 1010号;批准文号:文艺出审[2023]2540号;游戏出版物号(NSB1):584-2-8751-3654-1;\n出版服务单位:云影库音像出版社;运营单位:白嫖小分队网络科技有限公司",
+                "LabelText": "出版服务单位:云影库音像出版社;运营单位:白嫖小分队网络科技有限公司\n天涯游备字[2023]G-TYG 1010号;批准文号:文艺出审[2023]2540号;游戏出版物号(NSB1):584-2-8751-3654-1;\n抵制不良游戏，拒绝盗版游戏。 适度游戏益脑，沉迷游戏伤身。注意自我保护，谨防上当受骗。 合理安排时间，享受健康生活。",
                 "FontResource": {
                   "Type": "Normal",
                   "Path": "fonts/fzcy.ttf",
@@ -493,8 +494,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Login/bg.jpg",
         "fonts/fzcy.ttf",
-        "login/bg.jpg",
         "login/bg_mask.png",
         "login/loading_bar.png",
         "login/loading_bar_bg.png",

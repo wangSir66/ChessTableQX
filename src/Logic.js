@@ -704,34 +704,9 @@ MjClient.CARD_FLOWER_TYPE = {
     MEI_HUA: 2,
     HONG_TAO: 3,
 }
-
-var GameDownloadCfgUrl = {};//http://8.139.4.112:9993/update/jiangshu/configuration.json
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXJSMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/jiangshu/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/yaan/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.JSMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/nanjing/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXHAMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/huaian/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXXZMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/xuzhou/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXYZQP] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/yongzhou/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXNTQP] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/nantong/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXYCQP] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/yancheng/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXTHMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/tonghua/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXYYQP] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/yueyang/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXHAIANMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/haian/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.TXJINZHONGMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/jinzhong/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.TXLVLIANGMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/lvliang/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.TXLINFENMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/linfen/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.YLHUNANMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/ylhunan/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXLYQP] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/leiyang/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.BDHYZP] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/hengyang/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.BDYZPHZ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/beidouyongzhou/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXSYDTZ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/shaoyang/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXXXGHZ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/xiangxiang/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.QXHHZP] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/huaihua/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.AYGUIZHOUMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/guizhou/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.LYSICHUANMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/sichuan/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.HUNANWANGWANG] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/wangwang/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.DQSHANXIMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/shanxi/";
-GameDownloadCfgUrl[MjClient.APP_TYPE.HUBEIMJ] = "https://test-project-0.oss-cn-hangzhou.aliyuncs.com/update/hubei/";
+var ossUrl = 'http://test-project-0.oss-cn-hangzhou.aliyuncs.com'
+var GameDownloadCfgUrl = {};//http://121.199.14.235:9990/update/jiangshu/configuration.json
+GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/yaan/";
 
 
 
@@ -1639,7 +1614,7 @@ GameBg[MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG] = "playing/gameTable/game_shishouai
 GameBg[MjClient.GAME_TYPE.WU_XUE_MJ] = "playing/gameTable/game_wuXueMJ.png";
 GameBg[MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG] = "playing/gameTable/game_qiChunHongZhongGang.png";
 
-const HelpUrls = 'http://8.139.4.112:9993/protocol/tips/'
+const HelpUrls = 'http://121.199.14.235:9993/protocol/tips/'
 var GameHelpUrl = {};
 GameHelpUrl[MjClient.GAME_TYPE.RED_20_POKER] = HelpUrls + "helpRed20/helpRed20.html";
 GameHelpUrl[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = HelpUrls + "helpRunFasterYa/helpRunFasterYa.html";
@@ -8377,20 +8352,20 @@ MjClient.dateInRectDate = function (myTime, startTime, endTime) {
 
 
 MjClient.loadWxHead = function (uid, url) {
-    if (!url) url = "png/default_headpic.png";
+    if (!url) url = "A_Common/default_headpic.png";
     var bShowHead = false;
 
     if (uid && url) {
-        cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
+        cc.loader.loadImg(url, { isCrossOrigin: false }, function (err, texture) {
 
-            cc.log(uid + " = uid==============error = texture = " + texture);
+            cc.log(uid + " = uid==============error = texture = " + texture, err);
             if (!err && texture) {
                 //使用新的事件循环机制
                 bShowHead = true;
                 MjClient.Scene.pushQueueNetMsg(["loadWxHead", { uid: uid, img: texture }]);
             }
             else {
-                url = "png/default_headpic.png";
+                url = "A_Common/default_headpic.png";
                 cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
                     if (!err && texture) {
                         MjClient.Scene.pushQueueNetMsg(["loadWxHead", { uid: uid, img: texture }]);
@@ -8706,11 +8681,9 @@ MjClient.logoutCallbackFunc = function () {
     util.localStorageEncrypt.removeItem("XL_USER_LOGIN");
     util.localStorageEncrypt.removeItem("DL_USER_LOGIN");
     util.localStorageEncrypt.removeItem("MW_USER_LOGIN");
-    util.localStorageEncrypt.removeItem("loginData");
+    util.localStorageEncrypt.setBoolItem("loginData_auto", false);
     if (MjClient.gamenet) MjClient.gamenet.disconnect(); //新加，为了支持登录时重新连接服务器
-
     postEvent("logout");
-
 }
 
 
@@ -9668,7 +9641,7 @@ MjClient.ConnectServer = function (openID, callback) {
         var tryCount = 0;
         if (MjClient.remoteCfg.guestLogin) {
             //苹果审核服
-            servers = ["8.139.4.112"];
+            servers = ["121.199.14.235"];
             if (MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
                 MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
@@ -9676,7 +9649,7 @@ MjClient.ConnectServer = function (openID, callback) {
                 MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
                 MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ) {
-                servers = ["8.139.4.112"];
+                servers = ["121.199.14.235"];
             }
             ports = [16010, 16011];
         }
@@ -10452,7 +10425,8 @@ var JSScene = cc.Scene.extend({
                 if (MjClient.playui || (MjClient.data && MjClient.data.sData)) MjClient.tickGame(0);
             },
             disconnect: function (code) {
-                if (!MjClient.remoteCfg || code != 6 /*||MjClient.game_on_show*/) {
+                cc.log('----------disconnect---------', code)
+                if (!MjClient.remoteCfg || code < 6 /*||MjClient.game_on_show*/) {
                     MjClient.unblock();
                     if (MjClient.reconnectFailedCount >= 3) {
                         MjClient.showMsgTop("网络连接断开(" + g_ErrorCode[code] + ")，请检查网络设置，重新连接", function () { MjClient.restartGame(); })
@@ -10461,7 +10435,7 @@ var JSScene = cc.Scene.extend({
                         util.localStorageEncrypt.setNumberItem("reconnectFailedCount", MjClient.reconnectFailedCount);
                         MjClient.restartGame();
                     }
-                } else {
+                } else if (MjClient.remoteCfg && code == 6) {
                     MjClient.block();
                     MjClient.Scene.runAction(cc.sequence(cc.delayTime(0.5), cc.callFunc(function () {
                         MjClient.game_on_show = true;
@@ -10472,6 +10446,15 @@ var JSScene = cc.Scene.extend({
                             MjClient.gamenet = new MJNet();
                         MjClient.autoLogin();
                     })));
+                } else if (code == 7) {
+                    let msg = {
+                        content: '你的账号已在其他设备登录，请确认是否为本人操作。若非本人操作请尽快修改账号信息，请勿将账号告知他人。',
+                        showCanel: true,
+                        yesCall: () => {
+                            MjClient.logoutCallbackFunc();
+                        }
+                    }
+                    MjClient.Scene.addChild(new CommonTipsLayer(msg));
                 }
             },
             loginOK: function (rtn) {
@@ -10510,11 +10493,11 @@ var JSScene = cc.Scene.extend({
                 }
                 MjClient.gamenet.SetCallBack("disconnect", function () { postEvent("disconnect", 6); });
 
-                var uiIndex = 1;
-                if (MjClient.isUseUIv3 && MjClient.isUseUIv3()) {
-                    uiIndex = 2;
-                }
-                uploadCurrentUIFunc(uiIndex);
+                // var uiIndex = 1;
+                // if (MjClient.isUseUIv3 && MjClient.isUseUIv3()) {
+                //     uiIndex = 2;
+                // }
+                // uploadCurrentUIFunc(uiIndex);
 
                 if (!MjClient.homeui && !MjClient.playui && !haveThirdPartyWebView()) {
                     MjClient.native.setAliasAndTags4Jpush(MjClient.data.pinfo.uid, [MjClient.native.GetVersionName(), "" + MjClient.resVersion]);

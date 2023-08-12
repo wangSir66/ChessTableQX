@@ -67,7 +67,7 @@ var rankLayer = cc.Layer.extend({
         copyNode.visible = true;
         var headicon = copyNode.getChildByName("nobody");
         var url = oneData.headimgurl;
-        if(!url) url="png/default_headpic.png";
+        if(!url) url="A_Common/default_headpic.png";
         cc.loader.loadImg(url, {isCrossOrigin : true}, function(err, texture)
         {
             if(!err&&texture&&cc.sys.isObjectValid(headicon))
@@ -175,7 +175,7 @@ var rankLayer = cc.Layer.extend({
 
         var _myHead = zijiNode.getChildByName("nobody");
         var url = SelfHeadInfo().url;
-        if(!url) url="png/default_headpic.png";
+        if(!url) url="A_Common/default_headpic.png";
         cc.loader.loadImg(url, {isCrossOrigin : true}, function(err, texture)
         {
             if(!err&&texture&&cc.sys.isObjectValid(_myHead))

@@ -6,9 +6,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
     _type: 0,
     ctor: function (callback) {
         this._super();
-        var UI = ccs.load("registerPhoneNumLayer.json");
-        this._rootUI = UI.node;
-        this.addChild(this._rootUI);
+        var UI = ccs.load("A_registerPhoneNumLayer.json");
         var self = this;
 
         var _block = UI.node.getChildByName("block");
@@ -21,7 +19,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
         var _close = _back.getChildByName("close");
         _close.addTouchEventListener(function (sender, type) {
             if (type == ccui.Widget.TOUCH_ENDED) {
-                self.removeFromParent();
+                self.removeFromParent(true);
                 if (this._closeCallback) {
                     this._closeCallback();
                 }
@@ -30,13 +28,13 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
 
         this._phoneLoginPanel = _back.getChildByName("Node_phoneLogin");
 
-        var self = this;
+        let self = this;
 
         //手机号码输入框
         var imagePhoneNum = this._phoneLoginPanel.getChildByName("Image_phoneNum");
         this._bindPhoneNum = new cc.EditBox(cc.size(imagePhoneNum.width, imagePhoneNum.height), new cc.Scale9Sprite("store/into_number.png"));
 
-        this._bindPhoneNum.setFontColor(cc.color("#ffe28c"));
+        this._bindPhoneNum.setFontColor(cc.color("#000000"));
         this._bindPhoneNum.setPlaceholderFontSize(28);
         this._bindPhoneNum.setPlaceholderFontColor(cc.color("#e4ecf0"));
         this._bindPhoneNum.setMaxLength(11);
@@ -49,7 +47,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
         var imageSecurityCode = this._phoneLoginPanel.getChildByName("Image_securityCode");
         this._hintNum = new cc.EditBox(cc.size(imageSecurityCode.width, imageSecurityCode.height), new cc.Scale9Sprite("store/into_number.png"));
 
-        this._hintNum.setFontColor(cc.color("#ffe28c"));
+        this._hintNum.setFontColor(cc.color("#000000"));
         this._hintNum.setPlaceholderFontSize(28);
         this._hintNum.setPlaceholderFontColor(cc.color("#e4ecf0"));
         this._hintNum.setMaxLength(20);
@@ -63,7 +61,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
         var imageNickname = this._phoneLoginPanel.getChildByName("Image_nickname");
         this._nickname = new cc.EditBox(cc.size(imageNickname.width, imageNickname.height), new cc.Scale9Sprite("store/into_number.png"));
 
-        this._nickname.setFontColor(cc.color("#ffe28c"));
+        this._nickname.setFontColor(cc.color("#000000"));
         this._nickname.setPlaceholderFontSize(28);
         this._nickname.setPlaceholderFontColor(cc.color("#e4ecf0"));
         this._nickname.setMaxLength(20);
@@ -76,12 +74,14 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
         this.checkBox_nan = this._phoneLoginPanel.getChildByName("CheckBox_nan");
         this.checkBox_nv = this._phoneLoginPanel.getChildByName("CheckBox_nv");
         this.sex = 1;
+        this.checkBox_nan.setSelected(true);
         this.checkBox_nan.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 self.sex = 1;
                 self.checkBox_nv.setSelected(false);
             }
         }, this);
+        
         this.checkBox_nv.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 self.sex = 2;
@@ -128,6 +128,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
                     verifyCode: verifyCode,
                     nickname: nickname,
                     sex: self.sex,
+                    headimgurl: ossUrl + '/headImgs/head_' + util.getRandom(100, 400) + '.jpg',
                     isRegister: 1,
                 }
 
@@ -135,6 +136,8 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
             }
         }, this);
 
+        UIManager.popupAnm(_back);
+        this.addChild(UI.node);
         return true;
     },
 });

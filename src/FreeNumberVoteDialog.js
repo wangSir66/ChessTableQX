@@ -360,7 +360,7 @@ var FreeNumberVoteDialog = cc.Layer.extend({
     },
     refreshHead: function(head, url) {
         var that = this;
-        cc.loader.loadImg(url ? url : "png/default_headpic.png", {
+        cc.loader.loadImg(url ? url : "A_Common/default_headpic.png", {
             isCrossOrigin: true
         }, function(err, texture) {
             if (err || !texture || !sys.isObjectValid(head))

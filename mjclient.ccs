@@ -3,6 +3,46 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Folder Name="A_Common">
+          <Image Name="btnclose.png" />
+          <PlistInfo Name="Common.csi" Type="Plist" />
+          <Image Name="pop_bg_small.png" />
+          <Image Name="universalBottom.png" />
+          <Image Name="default_headpic.png" />
+        </Folder>
+        <Folder Name="A_Login">
+          <Image Name="agree.png" />
+          <Image Name="barpoint.png" />
+          <Image Name="bg.jpg" />
+          <Image Name="bg_mask.png" />
+          <Image Name="btn_login_wx.png" />
+          <Image Name="circle_1.png" />
+          <Image Name="circle_2.png" />
+          <Image Name="CM_inputbox.png" />
+          <Image Name="countman-btn.png" />
+          <Image Name="deng_l.png" />
+          <Image Name="deng_t.png" />
+          <Image Name="hao_t.png" />
+          <Image Name="hu_t.png" />
+          <Image Name="light.png" />
+          <PlistInfo Name="Login.csi" Type="Plist" />
+          <Image Name="lu_l.png" />
+          <Image Name="lu_t.png" />
+          <Image Name="process.png" />
+          <Image Name="que_l.png" />
+          <Image Name="ren_l.png" />
+          <Image Name="xie_t.png" />
+          <Image Name="yellow-button.png" />
+          <Image Name="yi_t.png" />
+          <Image Name="yijianxiufu.png" />
+          <Image Name="yijianxiufu_p.png" />
+          <Image Name="yong_t.png" />
+          <Image Name="z_tongyi.png" />
+          <Image Name="z_ysbhzy.png" />
+          <Image Name="zhang_t.png" />
+          <Image Name="zhu_t.png" />
+          <Image Name="zuce_t.png" />
+        </Folder>
         <Folder Name="Act_yuanbaoDuizuanshi">
           <Image Name="bg_11.jpg" />
         </Folder>
@@ -5634,7 +5674,6 @@
           <Image Name="arrow.png" />
           <Image Name="center_frame.png" />
           <Image Name="count_down_num.png" />
-          <Image Name="default_headpic.png" />
           <Image Name="dingbuuibantoumingdi.png" />
           <Image Name="fangkaxiaobeijing.png" />
           <Image Name="fangzhu.png" />
@@ -7019,6 +7058,10 @@
           <Image Name="zhua_guang.png" />
           <Image Name="zhua_guang2.png" />
         </Folder>
+        <Project Name="A_Dlgagreement.csd" Type="Layer" />
+        <Project Name="A_Login.csd" Type="Layer" />
+        <Project Name="A_mobilePhoneLogin.csd" Type="Layer" />
+        <Project Name="A_registerPhoneNumLayer.csd" Type="Layer" />
         <Project Name="ActivityLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreTipLayer.csd" Type="Layer" />
@@ -7038,6 +7081,8 @@
         <Project Name="eMailLayer.csd" Type="Layer" />
         <Project Name="eMailLayerReceive.csd" Type="Layer" />
         <Project Name="endAll.csd" Type="Layer" />
+        <Project Name="endAll_Red20.csd" Type="Layer" />
+        <Project Name="endAll_Runfaster.csd" Type="Layer" />
         <Project Name="endOne.csd" Type="Layer" />
         <Project Name="endOne_Red20.csd" Type="Layer" />
         <Project Name="endOne_RunFasterYA.csd" Type="Layer" />
@@ -7124,8 +7169,6 @@
         <Project Name="Home.csd" Type="Layer" />
         <Project Name="JinBibuzuTip1.csd" Type="Layer" />
         <Project Name="JinBibuzuTip2.csd" Type="Layer" />
-        <Project Name="Login.csd" Type="Layer" />
-        <Project Name="LoginLegalDialog.csd" Type="Layer" />
         <Project Name="PayWayLayer.csd" Type="Layer" />
         <Project Name="PersonalMallLayer.csd" Type="Layer" />
         <Project Name="Play.csd" Type="Layer" />
@@ -7179,8 +7222,6 @@
         <Project Name="UserInfo_playing.csd" Type="Layer" />
         <Project Name="WebView.csd" Type="Node" />
         <Project Name="YouJianLayer.csd" Type="Layer" />
-        <Project Name="endAll_Red20.csd" Type="Layer" />
-        <Project Name="endAll_Runfaster.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

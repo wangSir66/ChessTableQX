@@ -215,11 +215,11 @@ var replayUILayer = cc.Layer.extend({
 
                 //加载头像
                 var imageUrl = replay_players[userId].info.headimgurl;
-                var sprite_bg = new cc.Sprite("png/default_headpic.png");
+                var sprite_bg = new cc.Sprite("A_Common/default_headpic.png");
                 sprite_bg.setPosition(sp_bg.getPosition());
                 sprite_bg.setContentSize(sp_bg.getContentSize());
                 copyNode.addChild(sprite_bg);
-                cc.loader.loadImg(imageUrl ? imageUrl : "png/default_headpic.png", {
+                cc.loader.loadImg(imageUrl ? imageUrl : "A_Common/default_headpic.png", {
                     isCrossOrigin: true
                 }, function(err, img) {
                     if (err) {

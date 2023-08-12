@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>A_Common/btnclose.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{872,2},{59,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{59,59}</string>
+			</dict>
+			<key>A_Common/pop_bg_small.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{714,470}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{714,470}</string>
+			</dict>
+			<key>A_Common/universalBottom.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{720,2},{148,92}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{148,92}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Common.png</string>
+			<key>realTextureFileName</key>
+			<string>Common.png</string>
+			<key>size</key>
+			<string>{933,474}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>933</integer>
+			<key>height</key>
+			<integer>474</integer>
+		</dict>
+	</dict>
+</plist>

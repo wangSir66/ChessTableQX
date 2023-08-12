@@ -2,7 +2,7 @@
 function CircularCuttingHeadImg(node, pl) {
     var head = node;
     var url = pl.info.headimgurl;
-    if (!url) url = "png/default_headpic.png";
+    if (!url) url = "A_Common/default_headpic.png";
     cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
         if (!err && texture && cc.sys.isObjectValid(head)) {
             var clippingNode = new cc.ClippingNode();
@@ -1159,7 +1159,7 @@ var GameOverLayer = cc.Layer.extend({
             _ruleName.y = clubName.y + clubName.height / 2 + _ruleName.height / 2;
             _ruleName.x = clubName.x;
             clubNode.addChild(_ruleName);
-            cc.loader.loadImg(clubInfoTable.clubAvatar ? clubInfoTable.clubAvatar : "png/default_headpic.png", {
+            cc.loader.loadImg(clubInfoTable.clubAvatar ? clubInfoTable.clubAvatar : "A_Common/default_headpic.png", {
                 isCrossOrigin: true
             }, function (err, texture) {
                 if (err || !texture || !sys.isObjectValid(clubNode))
