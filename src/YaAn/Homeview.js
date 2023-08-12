@@ -1214,7 +1214,7 @@ var HomeView_yaan = cc.Layer.extend({
         //     });
         //     var headicon = copyNode.getChildByName("nobody");
         //     var url = oneData.headimgurl;
-        //     if (!url) url = "png/default_headpic.png";
+        //     if (!url) url = "A_Common/default_headpic.png";
         //     cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
         //         if (!err && texture&&cc.sys.isObjectValid(headicon)) {
         //             var headSprite = new cc.Sprite(texture);
@@ -1307,7 +1307,7 @@ var HomeView_yaan = cc.Layer.extend({
         //     });
         //     var headicon = copyNode.getChildByName("nobody");
         //     var url = oneData.headimgurl;
-        //     if (!url) url = "png/default_headpic.png";
+        //     if (!url) url = "A_Common/default_headpic.png";
         //     cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
         //         if (!err && texture&&cc.sys.isObjectValid(headicon)) {
         //             var headSprite = new cc.Sprite(texture);
@@ -1408,7 +1408,7 @@ var HomeView_yaan = cc.Layer.extend({
         //     });
         //     var headicon = copyNode.getChildByName("nobody");
         //     var url = oneData.headimgurl;
-        //     if (!url) url = "png/default_headpic.png";
+        //     if (!url) url = "A_Common/default_headpic.png";
         //     cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
         //         if (!err && texture&&cc.sys.isObjectValid(headicon)) {
         //             var headSprite = new cc.Sprite(texture);
@@ -1522,7 +1522,7 @@ var HomeView_yaan = cc.Layer.extend({
         //     });
         //     var headicon = copyNode.getChildByName("nobody");
         //     var url = oneData.headimgurl;
-        //     if (!url) url = "png/default_headpic.png";
+        //     if (!url) url = "A_Common/default_headpic.png";
         //     cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
         //         if (!err && texture&&cc.sys.isObjectValid(headicon)) {
         //             var headSprite = new cc.Sprite(texture);
@@ -1606,7 +1606,7 @@ var HomeView_yaan = cc.Layer.extend({
         // var zijiNode = this.myNode
         // var _myHead = zijiNode.getChildByName("nobody");
         // var url = SelfHeadInfo().url;
-        // if (!url) url = "png/default_headpic.png";
+        // if (!url) url = "A_Common/default_headpic.png";
         // cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
         //     if (!err && texture&&cc.sys.isObjectValid(_myHead)) {
         //         var headSprite = new cc.Sprite(texture);

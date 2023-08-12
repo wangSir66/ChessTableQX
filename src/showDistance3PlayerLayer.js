@@ -82,7 +82,7 @@ var showDistance3PlayerLayer = cc.Layer.extend({
             //var sData = MjClient.data.sData;
             //显示头像
             var url = pl.info.headimgurl;
-            if(!url) url="png/default_headpic.png";
+            if(!url) url="A_Common/default_headpic.png";
             function loadHead(i, _headFrame) {
                 cc.loader.loadImg(url, {isCrossOrigin : true}, function(err, texture)
                 {

@@ -237,7 +237,7 @@
             setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0], true);
 
             //竹叶飘
-            var starParticle1 = new cc.ParticleSystem("Particle/particle_texture.plist");
+            var starParticle1 = new cc.ParticleSystem("A_Login/particle_texture.plist");
             starParticle1.setPosition(_back.getContentSize().width / 2, _back.getContentSize().height + 20);
             starParticle1.setScale(2);
             starParticle1.setTotalParticles(8);

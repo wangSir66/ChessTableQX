@@ -102,11 +102,11 @@
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
                 </Children>
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="493.0000" Y="259.6293" />
+                <AnchorPoint />
+                <Position X="31.5000" Y="43.6293" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.4579" />
+                <PrePosition X="0.0319" Y="0.0769" />
                 <PreSize X="0.9361" Y="0.7619" />
                 <FileData Type="MarkedSubImage" Path="A_Common/universalBottom.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>

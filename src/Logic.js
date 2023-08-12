@@ -8352,7 +8352,7 @@ MjClient.dateInRectDate = function (myTime, startTime, endTime) {
 
 
 MjClient.loadWxHead = function (uid, url) {
-    if (!url) url = "png/default_headpic.png";
+    if (!url) url = "A_Common/default_headpic.png";
     var bShowHead = false;
 
     if (uid && url) {
@@ -8365,7 +8365,7 @@ MjClient.loadWxHead = function (uid, url) {
                 MjClient.Scene.pushQueueNetMsg(["loadWxHead", { uid: uid, img: texture }]);
             }
             else {
-                url = "png/default_headpic.png";
+                url = "A_Common/default_headpic.png";
                 cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
                     if (!err && texture) {
                         MjClient.Scene.pushQueueNetMsg(["loadWxHead", { uid: uid, img: texture }]);

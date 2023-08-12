@@ -7,22 +7,23 @@ var DlgagreementViewLayer = cc.Layer.extend({
         var bkNode = web.node.getChildByName("back");
         setWgtLayout(block, [1, 1], [0.5, 0.5], [0, 0], 2);
         setWgtLayout(bkNode, [0.7, 0.7], [0.5, 0.5], [0, 0]);
+        let csNode = bkNode.getChildByName('content');
         if (ccui.WebView) {
             this.webView = new ccui.WebView();
             this.webView.name = "webView";
             this.webView.setScalesPageToFit(true);
             this.webView.setEventListener(ccui.WebView.EventType.LOADED, function () {
                 this.webView.visible = true;
-                bkNode.getChildByName('content').getChildByName('loading').visible = false;
+                csNode.getChildByName('loading').visible = false;
             }.bind(this));
             this.webView.visible = false;
         }
-        
+
         if (this.webView) {
-            var cSize = bkNode.getChildByName('content');
-            this.webView.setContentSize(cSize.width * 0.77 * bkNode.scaleX, cSize.height * 0.85 * bkNode.scaleY);
-            this.webView.setPosition(bkNode.x * 1.136, bkNode.y * 0.97);
-            this.addChild(this.webView);
+            var cSize = csNode;
+            this.webView.setContentSize(cSize.width * 0.95 * csNode.scaleX, cSize.height * 0.95 * csNode.scaleY);
+            this.webView.setPosition(cSize.x, cSize.y);
+            bkNode.addChild(this.webView);
             this.webView.loadURL(MjClient.updateCfg.userProtocol);
         }
         //关闭按钮

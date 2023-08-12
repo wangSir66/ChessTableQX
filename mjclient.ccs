@@ -8,6 +8,7 @@
           <PlistInfo Name="Common.csi" Type="Plist" />
           <Image Name="pop_bg_small.png" />
           <Image Name="universalBottom.png" />
+          <Image Name="default_headpic.png" />
         </Folder>
         <Folder Name="A_Login">
           <Image Name="agree.png" />
@@ -5673,7 +5674,6 @@
           <Image Name="arrow.png" />
           <Image Name="center_frame.png" />
           <Image Name="count_down_num.png" />
-          <Image Name="default_headpic.png" />
           <Image Name="dingbuuibantoumingdi.png" />
           <Image Name="fangkaxiaobeijing.png" />
           <Image Name="fangzhu.png" />

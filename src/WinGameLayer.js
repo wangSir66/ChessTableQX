@@ -69,7 +69,7 @@ var winGameLayer = cc.Layer.extend({
         textTitle.setString(this._data.awardInfo.title);
 
         var _head = this._back.getChildByName("head");
-        cc.loader.loadImg(this._data.awardInfo.headimgurl ? this._data.awardInfo.headimgurl : "png/default_headpic.png", {isCrossOrigin : true}, function(err, texture)
+        cc.loader.loadImg(this._data.awardInfo.headimgurl ? this._data.awardInfo.headimgurl : "A_Common/default_headpic.png", {isCrossOrigin : true}, function(err, texture)
         {
             if(!err&&texture)
             {

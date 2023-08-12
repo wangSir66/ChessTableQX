@@ -693,7 +693,7 @@ var FriendCard_tongji = cc.Layer.extend({
             var text_name = Panel_bottom.getChildByName("text_playe_name");
             var text_playe_id = Panel_bottom.getChildByName("text_playe_id");
             var url = oneData.headimgurl;
-            if (!url) url = "png/default_headpic.png";
+            if (!url) url = "A_Common/default_headpic.png";
             headicon.isMask = true;
             COMMON_UI.refreshHead(this, url, headicon);
 
@@ -728,7 +728,7 @@ var FriendCard_tongji = cc.Layer.extend({
             text_name.setString(getPlayerName(unescape(oneData.nickname + ""), 7));
             text_playe_id.setString(oneData.userId + "");
             var url = oneData.headimgurl;
-            if (!url) url = "png/default_headpic.png";
+            if (!url) url = "A_Common/default_headpic.png";
             headicon._url = url;
             if (this.clubData.info.rankOpenType.indexOf((changeRankType + 1) + "") > -1 && !that._rankIsManager) {
                 headicon.visible = false;
@@ -736,7 +736,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 text_playe_id.visible = false;
             } else {
                 var url = oneData.headimgurl;
-                if (!url) url = "png/default_headpic.png";
+                if (!url) url = "A_Common/default_headpic.png";
                 headicon.isMask = true;
                 COMMON_UI.refreshHead(this, url, headicon);
                 headicon.visible = true;
@@ -3371,7 +3371,7 @@ var FriendCard_tongji = cc.Layer.extend({
         //head
         var headicon = copyNode.getChildByName("head");
         var url = oneData.headimgurl;
-        if (!url) url = "png/default_headpic.png";
+        if (!url) url = "A_Common/default_headpic.png";
         cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
             if (!err && texture && cc.sys.isObjectValid(headicon)) {
                 var headSprite = new cc.Sprite(texture);

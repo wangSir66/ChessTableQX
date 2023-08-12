@@ -377,7 +377,7 @@ function loadzhezhao(headSprite, nobody) {
     /*   var head = node;
      var url = d.img;
      cc.log(url);
-     if(!url) url = "png/default_headpic.png";
+     if(!url) url = "A_Common/default_headpic.png";
 
      var clippingNode = new cc.ClippingNode();
      var mask = new cc.Sprite("home/zhezhao1.png");
@@ -405,7 +405,7 @@ function loadzhezhao(headSprite, nobody) {
      */
     /* var head = node;
      var url = d.img;
-     if(!url) url = "png/default_headpic.png";
+     if(!url) url = "A_Common/default_headpic.png";
      cc.loader.loadImg(url, {isCrossOrigin : true}, function(err, texture)
      {
      if(!err && texture && cc.sys.isObjectValid(head))
@@ -12872,7 +12872,7 @@ MJ_setSelectDirBtn = function () {
 
         var pl = getUIPlayer(off);
         var url = pl.info.headimgurl;
-        if (!url) url = "png/default_headpic.png";
+        if (!url) url = "A_Common/default_headpic.png";
         cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
             if (!err && texture && cc.sys.isObjectValid(_copyHead)) {
                 var headSprite = new cc.Sprite(texture);

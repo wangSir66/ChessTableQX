@@ -1258,13 +1258,13 @@ var RePlaySelectRole = function(node, num, playLogIfoArry) {
         }
         else
         {
-            var sprite_bg = new cc.Sprite("png/default_headpic.png");
+            var sprite_bg = new cc.Sprite("A_Common/default_headpic.png");
             sprite_bg.setPosition(sp_bg.getPosition());
             copyNode.addChild(sprite_bg);
             sprite_bg.setScale(sp_bg.width * sp_bg.scaleX / sprite_bg.width * 0.94);
             cc.log(" === userId", userId, players[userId]); 
 
-            cc.loader.loadImg(imageUrl ? imageUrl : "png/default_headpic.png", {
+            cc.loader.loadImg(imageUrl ? imageUrl : "A_Common/default_headpic.png", {
                 isCrossOrigin: true
             }, function(err, img) {
                 if (err) {

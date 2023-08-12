@@ -3754,7 +3754,7 @@ COMMON_UI.loadHeadImg = function(that,url, head) {
     function downloadImg(url, head) {
         //cc.log("图片开始下载url",url);
         that._loadingImgList.push({url:url})
-        cc.loader.loadImg(url ? url : "png/default_headpic.png", {isCrossOrigin: true},
+        cc.loader.loadImg(url ? url : "A_Common/default_headpic.png", {isCrossOrigin: true},
             function(err, texture) {
             removeLoadingImgUrl(url);
             //cc.log("图片下载回调",(err?("失败"+err):"成功"),"url",url);

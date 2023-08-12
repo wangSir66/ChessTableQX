@@ -145,7 +145,7 @@ var clubLayer = cc.Layer.extend({
 
         var headicon = _copyNode.getChildByName("head").getChildByName("nobody");
         var url = data.headimgurl;
-        if(!url) url="png/default_headpic.png";
+        if(!url) url="A_Common/default_headpic.png";
         cc.loader.loadImg(url, {isCrossOrigin : true}, function(err, texture)
         {
             if(!err&&texture&&cc.sys.isObjectValid(headicon))
