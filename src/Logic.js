@@ -12125,6 +12125,10 @@ var JSScene = cc.Scene.extend({
     ctor: function () {
         this._super();
         this.isNewCreate = true;
+        if (!util.localStorageEncrypt.getNumberItem("loginFirst")) {
+            util.localStorageEncrypt.setNumberItem("loginFirst", 1)
+            util.localStorageEncrypt.setBoolItem("loginData_auto", true);
+        }
         cc.log("scene init");
     },
     onEnter: function () {
