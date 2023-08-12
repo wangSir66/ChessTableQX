@@ -10449,7 +10449,7 @@ var JSScene = cc.Scene.extend({
                 } else if (code == 7) {
                     let msg = {
                         content: '你的账号已在其他设备登录，请确认是否为本人操作。若非本人操作请尽快修改账号信息，请勿将账号告知他人。',
-                        showCanel: true,
+                        showCanel: false,
                         yesCall: () => {
                             MjClient.logoutCallbackFunc();
                         }
