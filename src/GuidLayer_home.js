@@ -187,7 +187,7 @@ var guidLayer_home= cc.Layer.extend({
         var item_bg = item.getChildByName("headbg");
         //显示头像
         var url = img;
-        if(!url) url="png/default_headpic.png";
+        if(!url) url="A_Common/default_headpic.png";
         that.CircularCuttingHeadImg(item_bg,url);
         return item;
     },

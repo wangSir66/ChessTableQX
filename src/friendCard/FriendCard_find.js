@@ -204,7 +204,7 @@ var FriendCard_FindAgain_Layer = cc.Layer.extend({
         var _headImg = _back.getChildByName("head");
         var _headImgContentSize = _headImg.getContentSize();
         var url = data.avatar;
-        if(!url) url="png/default_headpic.png";
+        if(!url) url="A_Common/default_headpic.png";
         cc.loader.loadImg(url, {isCrossOrigin : true}, function(err, texture)
         {
             if(!err&&texture&&sys.isObjectValid(_headImg))

@@ -381,7 +381,7 @@ var showQiShouHuLayer = cc.Layer.extend({
         var tData = sData.tData;
         var uids = tData.uids;
         var url = pl.info.headimgurl;
-        if (!url) url = "png/default_headpic.png";
+        if (!url) url = "A_Common/default_headpic.png";
         cc.loader.loadImg(url, {
             isCrossOrigin: true
         }, function(err, texture) {

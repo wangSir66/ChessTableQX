@@ -3726,7 +3726,7 @@ var storeLayer5 = cc.Layer.extend({
             head1.visible = false;
             var headicon = node_info.getChildByName("headbg");
             headicon.isMask = true;
-            var url = playerData.headimgurl ? playerData.headimgurl : "png/default_headpic.png"
+            var url = playerData.headimgurl ? playerData.headimgurl : "A_Common/default_headpic.png"
             cc.loader.loadImg(url, {
                 isCrossOrigin: true
             }, function (err, texture) {
@@ -3870,7 +3870,7 @@ var storeLayer5 = cc.Layer.extend({
                 Text_id.setString(unescape(data.userId))
                 _head.visible = true;
                 _headBg.visible = true;
-                var url = data.headimgurl ? data.headimgurl : "png/default_headpic.png"
+                var url = data.headimgurl ? data.headimgurl : "A_Common/default_headpic.png"
                 cc.loader.loadImg(url, {
                     isCrossOrigin: true
                 }, function (err, texture) {
@@ -4081,7 +4081,7 @@ var storeLayer5 = cc.Layer.extend({
         this._createFriendShopShenheItem = function (item, index, itemData) {
             var head = item.getChildByName("Image_head");
             head.isMask = true;
-            COMMON_UI.refreshHead(this, itemData.headimgurl ? itemData.headimgurl : "png/default_headpic.png", head);
+            COMMON_UI.refreshHead(this, itemData.headimgurl ? itemData.headimgurl : "A_Common/default_headpic.png", head);
             // 名称
             var name = item.getChildByName("Text_name");
             name.ignoreContentAdaptWithSize(true);
@@ -5592,7 +5592,7 @@ var storeLayer_30 = cc.Layer.extend({
             head1.visible = false;
             var headicon = node_info.getChildByName("headbg");
             headicon.isMask = true;
-            var url = playerData.headimgurl ? playerData.headimgurl : "png/default_headpic.png"
+            var url = playerData.headimgurl ? playerData.headimgurl : "A_Common/default_headpic.png"
             cc.loader.loadImg(url, {
                 isCrossOrigin: true
             }, function (err, texture) {
@@ -5717,7 +5717,7 @@ var storeLayer_30 = cc.Layer.extend({
                 if (Image_icon) {
                     Image_icon.visible = true;
                 }
-                var url = data.headimgurl ? data.headimgurl : "png/default_headpic.png"
+                var url = data.headimgurl ? data.headimgurl : "A_Common/default_headpic.png"
                 cc.loader.loadImg(url, {
                     isCrossOrigin: true
                 }, function (err, texture) {
@@ -5917,7 +5917,7 @@ var storeLayer_30 = cc.Layer.extend({
         this._createFriendShopShenheItem = function (item, index, itemData) {
             var head = item.getChildByName("Image_head");
             head.isMask = true;
-            COMMON_UI.refreshHead(this, itemData.headimgurl ? itemData.headimgurl : "png/default_headpic.png", head);
+            COMMON_UI.refreshHead(this, itemData.headimgurl ? itemData.headimgurl : "A_Common/default_headpic.png", head);
             // 名称
             var name = item.getChildByName("Text_name");
             name.ignoreContentAdaptWithSize(true);
@@ -7954,7 +7954,7 @@ var bindingCodeLayer_tips = cc.Layer.extend({
 
         //显示头像
         var url = data.avatar;
-        if (!url) url = "png/default_headpic.png";
+        if (!url) url = "A_Common/default_headpic.png";
         cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
             if (!err && texture && cc.sys.isObjectValid(_headImg)) {
                 if (isJinZhongAPPType() ||
@@ -8149,7 +8149,7 @@ var autoBindingCodeLayer_tips = cc.Layer.extend({
 
                 //显示头像
                 var url = data.avatar;
-                if (!url) url = "png/default_headpic.png";
+                if (!url) url = "A_Common/default_headpic.png";
                 cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
                     if (!err && texture && cc.sys.isObjectValid(that._headImg)) {
                         var headSprite = new cc.Sprite(texture);

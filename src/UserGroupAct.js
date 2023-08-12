@@ -1448,7 +1448,7 @@ var UserGrowth_actDuoBao = cc.Layer.extend({
     },
 
     addHead: function(url, head) {
-        cc.loader.loadImg(url ? url : "png/default_headpic.png", {
+        cc.loader.loadImg(url ? url : "A_Common/default_headpic.png", {
             isCrossOrigin: true
         }, function(err, texture) {
             if (err || !texture || !sys.isObjectValid(head))

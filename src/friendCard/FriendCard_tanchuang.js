@@ -1603,7 +1603,7 @@ var Friendcard_bindingCodeLayer = cc.Layer.extend({
 
         //显示头像
         var url = data.avatar;
-        if (!url) url = "png/default_headpic.png";
+        if (!url) url = "A_Common/default_headpic.png";
         cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
             if (!err && texture && cc.sys.isObjectValid(_headImg)) {
                 if (FriendCard_Common.getSkinType() == 3 || FriendCard_Common.getSkinType() == 4) {
@@ -1755,7 +1755,7 @@ var Friendcard_roomInfoDialog = cc.Layer.extend({
                 }
                 var imgHead = item.getChildByName("Image_head");
                 imgHead.isMask = true;
-                that.refreshHead(playerData.headimgurl ? playerData.headimgurl : "png/default_headpic.png", imgHead);
+                that.refreshHead(playerData.headimgurl ? playerData.headimgurl : "A_Common/default_headpic.png", imgHead);
 
                 var textName = item.getChildByName("Text_nickname");
                 textName.setString(getPlayerName(unescape(playerData.nickname)));
@@ -1869,7 +1869,7 @@ var Friendcard_roomInfoDialog = cc.Layer.extend({
                 }
                 var imgHead = item.getChildByName("Image_head");
                 imgHead.isMask = true;
-                that.refreshHead(playerData.headimgurl ? playerData.headimgurl : "png/default_headpic.png", imgHead);
+                that.refreshHead(playerData.headimgurl ? playerData.headimgurl : "A_Common/default_headpic.png", imgHead);
 
                 var textName = item.getChildByName("Text_nickname");
                 textName.setString(getPlayerName(unescape(playerData.nickname)));
@@ -2592,7 +2592,7 @@ var FriendCard_yaoqing = cc.Layer.extend({
         text_ID.setString("" + clubData.info.clubId);
 
         // 亲友圈图标
-        cc.loader.loadImg(clubData.info.avatar ? clubData.info.avatar : "png/default_headpic.png", { isCrossOrigin: true }, function (err, texture) {
+        cc.loader.loadImg(clubData.info.avatar ? clubData.info.avatar : "A_Common/default_headpic.png", { isCrossOrigin: true }, function (err, texture) {
             if (err || !texture || !sys.isObjectValid(Image_bg))
                 return;
 
@@ -2710,7 +2710,7 @@ var Friendcard_popMsgShenhe = cc.Layer.extend({
         player_ID.x = player_head.x - player_ID.width - player_head.width / 2 - 5;
         player_name.x = player_ID.x - player_name.width - 5;
 
-        cc.loader.loadImg(data.headimgurl ? data.headimgurl : "png/default_headpic.png", {
+        cc.loader.loadImg(data.headimgurl ? data.headimgurl : "A_Common/default_headpic.png", {
             isCrossOrigin: true
         }, function (err, texture) {
             if (err || !texture || !sys.isObjectValid(player_head))
@@ -2725,7 +2725,7 @@ var Friendcard_popMsgShenhe = cc.Layer.extend({
             player_head.addChild(sp);
         });
 
-        cc.loader.loadImg(data.clubAvatar ? data.clubAvatar : "png/default_headpic.png", {
+        cc.loader.loadImg(data.clubAvatar ? data.clubAvatar : "A_Common/default_headpic.png", {
             isCrossOrigin: true
         }, function (err, texture) {
             if (err || !texture || !sys.isObjectValid(club_head))
@@ -2900,7 +2900,7 @@ var Friendcard_popMsgInvited = cc.Layer.extend({
 
 
         //player_head.isMask = true;
-        COMMON_UI.refreshHead(this, data.headimgurl ? data.headimgurl : "png/default_headpic.png", player_head);
+        COMMON_UI.refreshHead(this, data.headimgurl ? data.headimgurl : "A_Common/default_headpic.png", player_head);
 
         _back.getChildByName("btn_close").addTouchEventListener(function (sender, type) {
             if (type == 2) {
@@ -4871,7 +4871,7 @@ var FriendCard_tongji_member = cc.Layer.extend({
             cell.visible = true;
             var image_head = cell.getChildByName("Image_head");
             image_head.isMask = true;
-            COMMON_UI.refreshHead(this, itemData.headimgurl ? itemData.headimgurl : "png/default_headpic.png", image_head);
+            COMMON_UI.refreshHead(this, itemData.headimgurl ? itemData.headimgurl : "A_Common/default_headpic.png", image_head);
             var text_name = cell.getChildByName("Text_name");
             text_name.setString("" + getNewName(unescape(itemData.nickname), 5));
             var text_ID = cell.getChildByName("Text_ID");
@@ -5055,7 +5055,7 @@ var FriendCard_tongji_liushui = cc.Layer.extend({
         var text_ID = panel_Top.getChildByName("Text_ID");
 
         image_head.isMask = true;
-        COMMON_UI.refreshHead(this, this._data.userInfo.headimgurl ? this._data.userInfo.headimgurl : "png/default_headpic.png", image_head);
+        COMMON_UI.refreshHead(this, this._data.userInfo.headimgurl ? this._data.userInfo.headimgurl : "A_Common/default_headpic.png", image_head);
         text_name.setString("" + getNewName(unescape(this._data.userInfo.nickname), 8));
         text_ID.setString("" + this._data.userInfo.userId);
 
@@ -5248,7 +5248,7 @@ var Friendcard_shop_shenhePopMsg = cc.Layer.extend({
         player_ID.x = player_head.x - player_ID.width - player_head.width / 2 - 5;
         player_name.x = player_ID.x - player_name.width - 5;
 
-        cc.loader.loadImg(data.headimgurl ? data.headimgurl : "png/default_headpic.png", {
+        cc.loader.loadImg(data.headimgurl ? data.headimgurl : "A_Common/default_headpic.png", {
             isCrossOrigin: true
         }, function (err, texture) {
             if (err || !texture || !sys.isObjectValid(player_head))
@@ -5503,7 +5503,7 @@ var Friendcard_shop_confirm_sheet = cc.Layer.extend({
 
         var head = _back.getChildByName("Image_head");
         head.isMask = true;
-        COMMON_UI.refreshHead(this, this._data.headimgurl ? this._data.headimgurl : "png/default_headpic.png", head);
+        COMMON_UI.refreshHead(this, this._data.headimgurl ? this._data.headimgurl : "A_Common/default_headpic.png", head);
         // 名称
         var name = _back.getChildByName("Text_name");
         name.ignoreContentAdaptWithSize(true);
@@ -7082,13 +7082,13 @@ var Friendcard_Invite_Shenhe = cc.Layer.extend({
             //亲友圈头像
             var img_clubHead = item.getChildByName("img_clubHead");
             img_clubHead.isMask = true;
-            COMMON_UI.refreshHead(this, data.sAvatar ? data.sAvatar : "png/default_headpic.png", img_clubHead);
+            COMMON_UI.refreshHead(this, data.sAvatar ? data.sAvatar : "A_Common/default_headpic.png", img_clubHead);
             item.getChildByName("txt_clubName").setString(unescape(data.sTitle));
             item.getChildByName("text_clubId").setString(data.sId);
 
             var img_inviteHead = item.getChildByName("img_inviteHead");
             img_inviteHead.isMask = true;
-            COMMON_UI.refreshHead(this, data.headimgurl ? data.headimgurl : "png/default_headpic.png", img_inviteHead);
+            COMMON_UI.refreshHead(this, data.headimgurl ? data.headimgurl : "A_Common/default_headpic.png", img_inviteHead);
             var txt_inviteName = item.getChildByName("txt_inviteName");
             txt_inviteName.ignoreContentAdaptWithSize(true)
             txt_inviteName.setString(getNewName(unescape(data.nickname), 6));
@@ -7448,7 +7448,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
     refreshHead: function (url, head) {
         head.needScale = 8;
         head.isMask = true;
-        COMMON_UI.refreshHead(this, url ? url : "png/default_headpic.png", head);
+        COMMON_UI.refreshHead(this, url ? url : "A_Common/default_headpic.png", head);
     },
     refreshWarnScoreList: function (datas) {
         var that = this;

@@ -161,7 +161,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
         var img_head = back.getChildByName("img_head");
         if (img_head && this.openType && this.openType === "1") {
             img_head.isMask = true;
-            COMMON_UI.refreshHead(this, this.openPlayerInfo.headimgurl ? this.openPlayerInfo.headimgurl : "png/default_headpic.png", img_head);
+            COMMON_UI.refreshHead(this, this.openPlayerInfo.headimgurl ? this.openPlayerInfo.headimgurl : "A_Common/default_headpic.png", img_head);
 
             var name = img_head.getChildByName("text_name");
             name.ignoreContentAdaptWithSize(true);

@@ -412,7 +412,7 @@ var FriendCard_member = cc.Layer.extend({
 
                 var head = item.getChildByName("Image_head");
                 head.isMask = true;
-                that.refreshHead(itemData.avatar ? itemData.avatar : "png/default_headpic.png", head);
+                that.refreshHead(itemData.avatar ? itemData.avatar : "A_Common/default_headpic.png", head);
 
                 item.setTag(i)
                 item.addTouchEventListener(function (sender, type) {
@@ -2120,7 +2120,7 @@ var FriendCard_member = cc.Layer.extend({
 
                     var head = item.getChildByName("Image_head");
                     head.isMask = true;
-                    that.refreshHead(_panel._data.list[i].headimgurl ? _panel._data.list[i].headimgurl : "png/default_headpic.png", head);
+                    that.refreshHead(_panel._data.list[i].headimgurl ? _panel._data.list[i].headimgurl : "A_Common/default_headpic.png", head);
 
                     // 名称
                     var name = item.getChildByName("Text_name");
@@ -2269,7 +2269,7 @@ var FriendCard_member = cc.Layer.extend({
 
                     var head = item.getChildByName("Image_head");
                     head.isMask = true;
-                    that.refreshHead(itemData.avatar ? itemData.avatar : "png/default_headpic.png", head);
+                    that.refreshHead(itemData.avatar ? itemData.avatar : "A_Common/default_headpic.png", head);
 
 
                     var Button_daoru = item.getChildByName("Button_daoru");
@@ -2493,7 +2493,7 @@ var FriendCard_member = cc.Layer.extend({
 
                 var head = item_find.getChildByName("Image_head");
                 head.isMask = true;
-                that.refreshHead(playerData.headimgurl ? playerData.headimgurl : "png/default_headpic.png", head);
+                that.refreshHead(playerData.headimgurl ? playerData.headimgurl : "A_Common/default_headpic.png", head);
 
                 item_find.visible = true;
                 this.AddMemberRsetPostion();
@@ -2552,7 +2552,7 @@ var FriendCard_member = cc.Layer.extend({
                     _panel._listView.pushBackCustomItem(item);
                     var head = item.getChildByName("Image_head");
                     head.isMask = true;
-                    that.refreshHead(_panel._data.list[i].headimgurl ? _panel._data.list[i].headimgurl : "png/default_headpic.png", head);
+                    that.refreshHead(_panel._data.list[i].headimgurl ? _panel._data.list[i].headimgurl : "A_Common/default_headpic.png", head);
 
 
                     // 名称
@@ -2710,7 +2710,7 @@ var FriendCard_member = cc.Layer.extend({
                     }
                     var head = item.getChildByName("Image_head");
                     head.isMask = true;
-                    that.refreshHead(itemData.avatar ? itemData.avatar : "png/default_headpic.png", head);
+                    that.refreshHead(itemData.avatar ? itemData.avatar : "A_Common/default_headpic.png", head);
 
                     var isAdd = item.getChildByName("CheckBox");
                     isAdd.ignoreContentAdaptWithSize(true);
