@@ -705,7 +705,7 @@ MjClient.CARD_FLOWER_TYPE = {
     HONG_TAO: 3,
 }
 var ossUrl = 'http://test-project-0.oss-cn-hangzhou.aliyuncs.com'
-var GameDownloadCfgUrl = {};//http://121.199.14.235:9990/update/jiangshu/configuration.json
+var GameDownloadCfgUrl = {};//http://8.139.4.112:9990/update/jiangshu/configuration.json
 GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/yaan/";
 
 
@@ -1614,7 +1614,7 @@ GameBg[MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG] = "playing/gameTable/game_shishouai
 GameBg[MjClient.GAME_TYPE.WU_XUE_MJ] = "playing/gameTable/game_wuXueMJ.png";
 GameBg[MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG] = "playing/gameTable/game_qiChunHongZhongGang.png";
 
-const HelpUrls = 'http://121.199.14.235:9993/protocol/tips/'
+const HelpUrls = 'http://8.139.4.112:9993/protocol/tips/'
 var GameHelpUrl = {};
 GameHelpUrl[MjClient.GAME_TYPE.RED_20_POKER] = HelpUrls + "helpRed20/helpRed20.html";
 GameHelpUrl[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = HelpUrls + "helpRunFasterYa/helpRunFasterYa.html";
@@ -9641,7 +9641,7 @@ MjClient.ConnectServer = function (openID, callback) {
         var tryCount = 0;
         if (MjClient.remoteCfg.guestLogin) {
             //苹果审核服
-            servers = ["121.199.14.235"];
+            servers = ["8.139.4.112"];
             if (MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
                 MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
@@ -9649,7 +9649,7 @@ MjClient.ConnectServer = function (openID, callback) {
                 MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
                 MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ) {
-                servers = ["121.199.14.235"];
+                servers = ["8.139.4.112"];
             }
             ports = [16010, 16011];
         }
