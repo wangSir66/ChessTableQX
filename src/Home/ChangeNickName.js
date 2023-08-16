@@ -13,7 +13,7 @@ var ChangeNickName = cc.Layer.extend({
         setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
 
         var _back = userInfoLayerUi.node.getChildByName("back");
-        setWgtLayout(_back, [0.5, 0.5], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.6, 0.6], [0.5, 0.5], [0, 0]);
 
         COMMON_UI.popDialogAni(_back);
 
