@@ -3943,7 +3943,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "game_picture/dating-1_81.png",
+              "Path": "A_Home/dating-1_81.png",
               "Plist": ""
             },
             "Scale9OriginX": 214,
@@ -7096,8 +7096,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Home/dating-1_81.png",
         "Default/Button_Disable.png",
-        "game_picture/dating-1_81.png",
         "game_picture/dt_06.png",
         "game_picture/gold/bac_datingtoushangzhezhao.png",
         "game_picture/gold/baopi1.png",

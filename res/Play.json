@@ -2698,7 +2698,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "game_picture/dating-1_81.png",
+                  "Path": "A_Home/dating-1_81.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 351,
@@ -16523,6 +16523,7 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Home/dating-1_81.png",
         "animate/voice/0.png",
         "chat/happy.png",
         "createNewPng/baida_03.png",
@@ -16533,7 +16534,6 @@
         "game_picture/bac_datingtoushangzhezhao2.png",
         "game_picture/dating1_06.png",
         "game_picture/dating-1_73.png",
-        "game_picture/dating-1_81.png",
         "game_picture/gold/btn_get_gold.png",
         "game_picture/homelaba.png",
         "playground/tuoguan.png",

@@ -4,7 +4,7 @@
     "debugMode": 1,
     "showFPS": true,
     "frameRate": 60,
-    "noCache": false,
+    "noCache": true,
     "id": "gameCanvas",
     "renderMode": 0,
     "engineDir": "frameworks/cocos2d-html5",
@@ -47,10 +47,20 @@
         "src/CommonFunc_Layer.js",
         
         "src/Common/UIManager.js",
+        "src/Login/Update.js",
         "src/Login/LoginPanel.js",
         "src/Login/Dlgagreement.js",
         "src/Login/MobilePhoneLoginLayer.js",
         "src/Login/MobilePhoneRegisterLayer.js",
+
+        
+        "src/Home/Homeview.js",
+        "src/Home/CreateRoomPanel.js",
+        "src/Home/CreateRoomNode.js",
+        "src/Home/UserInfoPanel.js",
+        "src/Home/ChangeHeadView.js",
+        "src/Home/ChangeNickName.js",
+        "src/Home/ChangePWD.js",
 
         "src/FreeNumberVoteDialog.js",
         "src/ShiMingRenZhengLayer.js",
@@ -71,7 +81,6 @@
         "src/GongGaoLayer.js",
         "src/GetRewardLayer.js",
         "src/WeChatPayPanel.js",
-        "src/UserInfoPanel.js",
         "src/ChatCheckWords.js",
         "src/TipsPanel.js",
         "src/WebViewLayer.js",
@@ -88,14 +97,12 @@
         "src/StoreLayer.js",
 
         "src/RecommendLayer_active.js",
-        "src/UserInfoPanelPlaying.js",
         "src/GuidLayer.js",
         "src/GuidLayer_home.js",
         "src/PayWayLayer.js",
         "src/JiaZhuLayer.js",
         "src/LazhuangLayer.js",
         "src/JiaZhu_NN.js",
-        "src/Update.js",
         "src/PlayLogView.js",
         "src/PlayLogInfoLayer.js",
         "src/ReadyLayer_niuniu.js",
@@ -128,12 +135,10 @@
         "src/friendCard/FriendCard_yaoqingMember.js",
         "src/friendCard/FriendCard_init.js",
 
-        "src/YaAn/Homeview.js",
-        "src/YaAn/CreateRoomPanel.js",
-        "src/YaAn/CreateRoomNode.js",
 
         "src/YaAn/Common/GameRuleView.js",
         "src/YaAn/Common/RoomSettingView.js",
+        "src/YaAn/Common/UserInfoPanelPlaying.js",
 
         "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
 

@@ -44,11 +44,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.3587" Y="0.1250" />
                 <PreSize X="0.0180" Y="0.0319" />
-                <NormalBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                <PressedBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                <DisableBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                <NodeNormalFileData Type="MarkedSubImage" Path="A_Login/circle_2.png" Plist="A_Login/Login.plist" />
-                <NodeDisableFileData Type="MarkedSubImage" Path="A_Login/circle_2.png" Plist="A_Login/Login.plist" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/circle_2.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/circle_2.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

@@ -190,11 +190,11 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3280" Y="0.1341" />
                     <PreSize X="0.0344" Y="0.0881" />
-                    <NormalBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                    <PressedBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                    <DisableBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Login/circle_2.png" Plist="A_Login/Login.plist" />
-                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Login/circle_2.png" Plist="A_Login/Login.plist" />
+                    <NormalBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                    <PressedBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                    <DisableBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/circle_2.png" Plist="A_Common/Common.plist" />
+                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/circle_2.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="CheckBox_nv" ActionTag="-1276404501" Tag="156" IconVisible="False" LeftMargin="338.8526" RightMargin="307.1474" TopMargin="211.4855" BottomMargin="26.5145" TouchEnable="True" ctype="CheckBoxObjectData">
                     <Size X="23.0000" Y="23.0000" />
@@ -217,11 +217,11 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5237" Y="0.1456" />
                     <PreSize X="0.0344" Y="0.0881" />
-                    <NormalBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                    <PressedBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                    <DisableBackFileData Type="MarkedSubImage" Path="A_Login/circle_1.png" Plist="A_Login/Login.plist" />
-                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Login/circle_2.png" Plist="A_Login/Login.plist" />
-                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Login/circle_2.png" Plist="A_Login/Login.plist" />
+                    <NormalBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                    <PressedBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                    <DisableBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
+                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/circle_2.png" Plist="A_Common/Common.plist" />
+                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/circle_2.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="btn_register" ActionTag="-1740680700" Tag="121" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="241.0000" RightMargin="241.0000" TopMargin="279.5000" BottomMargin="-85.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="157" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="187.0000" Y="67.0000" />
@@ -234,7 +234,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.3209" Y="0.4776" />
                         <PreSize X="0.1497" Y="0.4776" />
-                        <FileData Type="MarkedSubImage" Path="A_Login/que_l.png" Plist="A_Login/Login.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Common/que_l.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="title_0" ActionTag="733871277" Tag="123" IconVisible="False" LeftMargin="112.5000" RightMargin="45.5000" TopMargin="19.5000" BottomMargin="16.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="5" Scale9Height="5" ctype="ImageViewObjectData">
                         <Size X="29.0000" Y="31.0000" />
@@ -244,7 +244,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.6791" Y="0.4776" />
                         <PreSize X="0.1551" Y="0.4627" />
-                        <FileData Type="MarkedSubImage" Path="A_Login/ren_l.png" Plist="A_Login/Login.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Common/ren_l.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -254,8 +254,8 @@
                     <PrePosition X="0.5000" Y="-0.1992" />
                     <PreSize X="0.2795" Y="0.2567" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Login/yellow-button.png" Plist="A_Login/Login.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Login/yellow-button.png" Plist="A_Login/Login.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Common/yellow-button.png" Plist="A_Common/Common.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Common/yellow-button.png" Plist="A_Common/Common.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>

@@ -53,88 +53,9 @@
             "Tag": 7,
             "Children": [
               {
-                "AnchorPoint": {},
-                "Position": {
-                  "X": 640.0,
-                  "Y": 648.0
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": true,
-                "PositionPercentXEnabled": true,
-                "PositionPercentYEnabled": true,
-                "PrePosition": {
-                  "X": 0.5,
-                  "Y": 0.9
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 640.0,
-                "RightMargin": 640.0,
-                "TopMargin": 72.0,
-                "BottomMargin": 648.0,
-                "Tag": 165,
-                "ActionTag": 1037887412,
-                "Size": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "Name": "node_yanhua",
-                "ctype": "SingleNodeObjectData"
-              },
-              {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "login/person.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 422,
-                "Scale9OriginY": 237,
-                "Scale9Width": 1716,
-                "Scale9Height": 966,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 640.0,
-                  "Y": 360.0
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentXEnabled": true,
-                "PositionPercentYEnabled": true,
-                "PrePosition": {
-                  "X": 0.5,
-                  "Y": 0.5
-                },
-                "PreSize": {
-                  "X": 1.0,
-                  "Y": 1.0
-                },
-                "Tag": 149,
-                "ActionTag": -781411938,
-                "Size": {
-                  "X": 1280.0,
-                  "Y": 720.0
-                },
-                "VisibleForFrame": false,
-                "Name": "bg_person",
-                "ctype": "ImageViewObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "login/bg_mask.png",
+                  "Path": "A_Login/bg_mask.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 15,
@@ -231,55 +152,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "login/logo.png",
-                  "Plist": ""
-                },
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 14,
-                "Scale9Width": 224,
-                "Scale9Height": 89,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 167.68,
-                  "Y": 646.416
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentXEnabled": true,
-                "PositionPercentYEnabled": true,
-                "PrePosition": {
-                  "X": 0.131,
-                  "Y": 0.8978
-                },
-                "PreSize": {
-                  "X": 0.1984,
-                  "Y": 0.1625
-                },
-                "LeftMargin": 40.68,
-                "RightMargin": 985.32,
-                "TopMargin": 15.084,
-                "BottomMargin": 587.916,
-                "Tag": 28,
-                "ActionTag": 1661784405,
-                "Size": {
-                  "X": 254.0,
-                  "Y": 117.0
-                },
-                "VisibleForFrame": false,
-                "Name": "load_logo",
-                "ctype": "ImageViewObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "login/loading_bar_bg.png",
+                  "Path": "A_Login/loading_bar_bg.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 63,
@@ -317,7 +190,7 @@
                     "ProgressInfo": 100,
                     "ImageFileData": {
                       "Type": "Normal",
-                      "Path": "login/loading_bar.png",
+                      "Path": "A_Login/loading_bar.png",
                       "Plist": ""
                     },
                     "AnchorPoint": {
@@ -359,9 +232,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "login/loading_bar_head.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/loading_bar_head.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 92,
                     "Scale9OriginY": 7,
@@ -495,13 +368,12 @@
       },
       "UsedResources": [
         "A_Login/bg.jpg",
-        "fonts/fzcy.ttf",
-        "login/bg_mask.png",
-        "login/loading_bar.png",
-        "login/loading_bar_bg.png",
-        "login/loading_bar_head.png",
-        "login/logo.png",
-        "login/person.png"
+        "A_Login/bg_mask.png",
+        "A_Login/loading_bar.png",
+        "A_Login/loading_bar_bg.png",
+        "A_Login/Login.plist",
+        "A_Login/Login.png",
+        "fonts/fzcy.ttf"
       ],
       "ctype": "GameFileData"
     }

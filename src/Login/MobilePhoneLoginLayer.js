@@ -6,14 +6,14 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
     ctor: function (callback) {
         this._super();
 
-        var UI = ccs.load("A_mobilePhoneLogin.json");
+        var UI = ccs.load(res.MobilePhoneLogin_json);
         var self = this;
 
         var _block = UI.node.getChildByName("block");
         setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
 
         var _back = UI.node.getChildByName("back");
-        setWgtLayout(_back, [0.6, 0.75], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.6, 0.6], [0.5, 0.5], [0, 0]);
 
         //关闭按钮
         var _close = _back.getChildByName("close");
@@ -107,7 +107,7 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
             }
         }, this);
 
-        UIManager.popupAnm(_back);
+        COMMON_UI.popDialogAni(_back);
         this.addChild(UI.node);
         return true;
     },

@@ -7,7 +7,7 @@
 			<key>A_Common/btnclose.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{872,2},{59,59}}</string>
+				<string>{{720,98},{59,59}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -37,6 +37,94 @@
 				<key>sourceSize</key>
 				<string>{148,92}</string>
 			</dict>
+			<key>A_Common/circle_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{979,106},{36,37}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{36,37}</string>
+			</dict>
+			<key>A_Common/circle_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{979,146},{36,37}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{36,37}</string>
+			</dict>
+			<key>A_Common/icon_add.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{979,59},{43,43}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{43,43}</string>
+			</dict>
+			<key>A_Common/icon_yuanbao.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{979,2},{53,39}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{53,39}</string>
+			</dict>
+			<key>A_Common/bg_kuang2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{943,2},{152,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{152,32}</string>
+			</dict>
+			<key>A_Common/que_l.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{978,186},{28,32}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{28,32}</string>
+			</dict>
+			<key>A_Common/ren_l.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{943,158},{29,31}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{29,31}</string>
+			</dict>
+			<key>A_Common/yellow-button.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{872,2},{187,67}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{187,67}</string>
+			</dict>
 		</dict>
 		<key>metadata</key>
 		<dict>
@@ -47,12 +135,12 @@
 			<key>realTextureFileName</key>
 			<string>Common.png</string>
 			<key>size</key>
-			<string>{933,474}</string>
+			<string>{1024,474}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>933</integer>
+			<integer>1024</integer>
 			<key>height</key>
 			<integer>474</integer>
 		</dict>
