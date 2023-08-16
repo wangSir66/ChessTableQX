@@ -7,8 +7,8 @@ function screenChange(isW) {
     } else {
         w = 640;
         h = 360;
-        // w = 1480;
-        // h = 720;
+        w = 1280;
+        h = 720;
     }
     MjClient.size = { width: w, height: h };
     cc.view.setFrameSize(w, h);
@@ -36,6 +36,7 @@ cc.game.onStart = function () {
     cc.log("******:" + JSON.stringify(json_res[MjClient.getAppType()]))
     var game_res = json_res[MjClient.getAppType()].concat(sound_res[MjClient.getAppType()]);
 
+    cc.spriteFrameCache.addSpriteFrames("A_Common/HeadImgs.plist", "A_Common/HeadImgs.png");
     cc.LoaderScene.preload(game_res, function () {
         MjClient.Scene = new JSScene();
         cc.director.runScene(MjClient.Scene);
@@ -92,6 +93,6 @@ cc.warn = function (...pra) {
 cc.error = function (...pra) {
     cLogs && cLogs('ERROR:---game cc debug:', ...pra);
 }
-cc.assert= function (...pra) {
+cc.assert = function (...pra) {
     cLogs && cLogs('ASSERT:---game cc debug:', ...pra);
 }
