@@ -19,7 +19,7 @@
             "BackColorAlpha": 153,
             "FileData": {
               "Type": "Normal",
-              "Path": "game_picture/homeBG.jpg",
+              "Path": "A_Home/homeBG.jpg",
               "Plist": ""
             },
             "SingleColor": {
@@ -377,8 +377,8 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "game_picture/ico_zuanshi.png",
+                      "Type": "Default",
+                      "Path": "Default/Sprite.png",
                       "Plist": ""
                     },
                     "BlendFunc": {
@@ -1166,9 +1166,9 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Home/homeBG.jpg",
+        "Default/Sprite.png",
         "fonts/fzcy.ttf",
-        "game_picture/homeBG.jpg",
-        "game_picture/ico_zuanshi.png",
         "gameRecord/BG.png",
         "gameRecord/biaoti.png",
         "gameRecord/lingqu.png",

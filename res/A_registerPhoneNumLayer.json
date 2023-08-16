@@ -795,28 +795,28 @@
                   {
                     "NormalBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_1.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_1.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_1.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_1.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_1.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_1.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_2.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_2.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_2.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_2.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -912,28 +912,28 @@
                   {
                     "NormalBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_1.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_1.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_1.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_1.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_1.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_1.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_2.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_2.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/circle_2.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/circle_2.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -1036,13 +1036,13 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/yellow-button.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/yellow-button.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/yellow-button.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Path": "A_Common/yellow-button.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -1093,8 +1093,8 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Login/que_l.png",
-                          "Plist": "A_Login/Login.plist"
+                          "Path": "A_Common/que_l.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 12,
                         "Scale9OriginY": 13,
@@ -1138,8 +1138,8 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Login/ren_l.png",
-                          "Plist": "A_Login/Login.plist"
+                          "Path": "A_Common/ren_l.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 12,
                         "Scale9OriginY": 13,

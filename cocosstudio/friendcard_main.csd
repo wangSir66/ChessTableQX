@@ -222,7 +222,7 @@
                             <CColor A="255" R="255" G="255" B="255" />
                             <PrePosition X="0.0927" Y="0.3883" />
                             <PreSize X="0.3083" Y="1.0400" />
-                            <FileData Type="Normal" Path="game_picture/ico_zuanshi.png" Plist="" />
+                            <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                           </AbstractNodeData>
                           <AbstractNodeData Name="btn_add" ActionTag="-3246299" Tag="466" IconVisible="False" LeftMargin="99.5472" RightMargin="-21.5472" TopMargin="-5.2365" BottomMargin="-12.7635" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="12" Scale9Height="21" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                             <Size X="42.0000" Y="43.0000" />
@@ -1090,7 +1090,7 @@
                 <Position X="-0.0002" Y="-1.1258" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0000" Y="-0.0016" />
+                <PrePosition Y="-0.0016" />
                 <PreSize X="1.0000" Y="0.1111" />
                 <FileData Type="Normal" Path="friendCards/main/image_bottomBG.png" Plist="" />
                 <SingleColor A="255" R="150" G="200" B="255" />
@@ -1407,7 +1407,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.7350" />
             <PreSize X="0.8359" Y="0.0625" />
-            <FileData Type="Normal" Path="game_picture/dating-1_81.png" Plist="" />
+            <FileData Type="Normal" Path="A_Home/dating-1_81.png" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

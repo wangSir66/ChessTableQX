@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>A_Home/UserInfo/homeHeadCusPic_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,499},{197,195}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{197,195}</string>
+			</dict>
+			<key>A_Home/UserInfo/PI_ChangeHead.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{201,499},{89,113}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{89,113}</string>
+			</dict>
+			<key>A_Home/UserInfo/PI_ChangeName.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{294,499},{88,113}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{88,113}</string>
+			</dict>
+			<key>A_Home/UserInfo/PI_colorbg_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,700},{409,41}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{409,41}</string>
+			</dict>
+			<key>A_Home/UserInfo/PI_decration_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{201,616},{47,15}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{47,15}</string>
+			</dict>
+			<key>A_Home/UserInfo/PI_decration_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{457,493}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{457,493}</string>
+			</dict>
+			<key>A_Home/UserInfo/pl_setpwd.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{386,499},{91,91}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{91,91}</string>
+			</dict>
+			<key>A_Home/UserInfo/PI_Account_Set.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{386,594},{91,91}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{91,91}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Userinfo.png</string>
+			<key>realTextureFileName</key>
+			<string>Userinfo.png</string>
+			<key>size</key>
+			<string>{479,743}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>479</integer>
+			<key>height</key>
+			<integer>743</integer>
+		</dict>
+	</dict>
+</plist>

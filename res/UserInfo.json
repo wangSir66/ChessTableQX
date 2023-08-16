@@ -384,9 +384,9 @@
               },
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "home/homeHeadCusPic_2.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Home/UserInfo/homeHeadCusPic_2.png",
+                  "Plist": "A_Home/UserInfo/Userinfo.plist"
                 },
                 "Scale9OriginX": 35,
                 "Scale9OriginY": 35,
@@ -1080,8 +1080,8 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "game_picture/ico_zuanshi.png",
+                          "Type": "Default",
+                          "Path": "Default/ImageFile.png",
                           "Plist": ""
                         },
                         "Scale9OriginX": 16,
@@ -1648,16 +1648,17 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Home/UserInfo/Userinfo.plist",
+        "A_Home/UserInfo/Userinfo.png",
         "bindPhoneNum/bindXianliao/bg_bind.png",
         "bindPhoneNum/btn_bindPhong.png",
         "bindPhoneNum/btn_modifyBind_1.png",
+        "Default/ImageFile.png",
         "fonts/fzcy.ttf",
         "game_picture/bac_xiaotanchuan.png",
         "game_picture/btn_x_normal.png",
         "game_picture/diban.png",
-        "game_picture/ico_zuanshi.png",
         "home/gold_bg.png",
-        "home/homeHeadCusPic_2.png",
         "joinGame/xiaotanchuan_28.png",
         "store/into_number.png"
       ],

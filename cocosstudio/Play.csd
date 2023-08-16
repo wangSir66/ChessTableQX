@@ -616,7 +616,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0027" Y="1.2033" />
                 <PreSize X="1.8619" Y="0.6615" />
-                <FileData Type="Normal" Path="game_picture/dating-1_81.png" Plist="" />
+                <FileData Type="Normal" Path="A_Home/dating-1_81.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="scroll" ActionTag="1425767849" VisibleForFrame="False" Tag="5901" IconVisible="False" LeftMargin="-520.8049" RightMargin="59.8049" TopMargin="-36.1845" BottomMargin="58.1845" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="245" RightEage="294" TopEage="14" BottomEage="14" Scale9OriginX="-294" Scale9OriginY="-14" Scale9Width="539" Scale9Height="28" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
                 <Size X="1033.0000" Y="43.0000" />

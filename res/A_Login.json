@@ -94,28 +94,28 @@
                 "CheckedState": true,
                 "NormalBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/circle_1.png",
-                  "Plist": "A_Login/Login.plist"
+                  "Path": "A_Common/circle_1.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/circle_1.png",
-                  "Plist": "A_Login/Login.plist"
+                  "Path": "A_Common/circle_1.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/circle_1.png",
-                  "Plist": "A_Login/Login.plist"
+                  "Path": "A_Common/circle_1.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/circle_2.png",
-                  "Plist": "A_Login/Login.plist"
+                  "Path": "A_Common/circle_2.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Login/circle_2.png",
-                  "Plist": "A_Login/Login.plist"
+                  "Path": "A_Common/circle_2.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -592,6 +592,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
         "A_Login/bg.jpg",
         "A_Login/bg_mask.png",
         "A_Login/Login.plist",
