@@ -8352,28 +8352,8 @@ MjClient.dateInRectDate = function (myTime, startTime, endTime) {
 
 
 MjClient.loadWxHead = function (uid, url) {
-    if (!url) url = "A_Common/default_headpic.png";
-    var bShowHead = false;
-
-    if (uid && url) {
-        cc.loader.loadImg(url, { isCrossOrigin: false }, function (err, texture) {
-
-            cc.log(uid + " = uid==============error = texture = " + texture, err);
-            if (!err && texture) {
-                //使用新的事件循环机制
-                bShowHead = true;
-                MjClient.Scene.pushQueueNetMsg(["loadWxHead", { uid: uid, img: texture }]);
-            }
-            else {
-                url = "A_Common/default_headpic.png";
-                cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
-                    if (!err && texture) {
-                        MjClient.Scene.pushQueueNetMsg(["loadWxHead", { uid: uid, img: texture }]);
-                    }
-                });
-            }
-        });
-    }
+    let frame = cc.spriteFrameCache.getSpriteFrame(url ? url : 'A_Common/head_228.png');
+    frame && MjClient.Scene.pushQueueNetMsg(["loadWxHead", { uid: uid, img: frame }]);
 };
 
 

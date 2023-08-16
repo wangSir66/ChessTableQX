@@ -1,7 +1,7 @@
 var DlgagreementViewLayer = cc.Layer.extend({
     ctor: function () {
         this._super();
-        var web = ccs.load("A_Dlgagreement.json");
+        var web = ccs.load(res.Dlgagreement_json);
         this.addChild(web.node);
         var block = web.node.getChildByName("block");
         var bkNode = web.node.getChildByName("back");
@@ -33,7 +33,7 @@ var DlgagreementViewLayer = cc.Layer.extend({
                 this.removeFromParent(true);
             }
         }, this);
-        UIManager.popupAnm(bkNode);
+        COMMON_UI.popDialogAni(bkNode);
         return true;
     },
 });

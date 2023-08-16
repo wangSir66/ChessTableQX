@@ -220,13 +220,10 @@
 
 
     LoginView = cc.Layer.extend({
-        PList: 'A_Login/Login.plist',
-        Png: 'A_Login/Login.png',
         ctor: function () {
             this._super();
             var that = this;
-            cc.spriteFrameCache.addSpriteFrames(this.PList, this.Png);
-            var loginui = ccs.load('A_Login.json');
+            var loginui = ccs.load(res.Login_json);
             this.addChild(loginui.node);
             MjClient.loginui = this;
 
@@ -416,11 +413,11 @@
                     MjClient.webViewLayer.close();
                 }
 
-                cc.log("loginOK delete login layer ! --- by sking");
                 if (MjClient.loginui) {
-                    cc.spriteFrameCache.removeSpriteFramesFromFile(MjClient.loginui.PList);
                     MjClient.loginui.removeFromParent(true);
                     delete MjClient.loginui;
+                    cc.loader.releaseAll()
+                    cc.log("loginOK delete login layer ! --- by sking");
                 }
             });
 

@@ -938,7 +938,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.9216" />
             <PreSize X="0.5531" Y="0.0597" />
-            <FileData Type="Normal" Path="game_picture/dating-1_81.png" Plist="" />
+            <FileData Type="Normal" Path="A_Home/dating-1_81.png" Plist="" />
           </AbstractNodeData>
           <AbstractNodeData Name="youjian" ActionTag="-865463609" Tag="206" IconVisible="False" LeftMargin="1008.3600" RightMargin="203.6400" TopMargin="15.4000" BottomMargin="634.6000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="38" Scale9Height="48" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="68.0000" Y="70.0000" />

@@ -5,6 +5,14 @@
       <FilePathData Path="A_Common/btnclose.png" />
       <FilePathData Path="A_Common/pop_bg_small.png" />
       <FilePathData Path="A_Common/universalBottom.png" />
+      <FilePathData Path="A_Common/circle_1.png" />
+      <FilePathData Path="A_Common/circle_2.png" />
+      <FilePathData Path="A_Common/icon_add.png" />
+      <FilePathData Path="A_Common/icon_yuanbao.png" />
+      <FilePathData Path="A_Common/bg_kuang2.png" />
+      <FilePathData Path="A_Common/que_l.png" />
+      <FilePathData Path="A_Common/ren_l.png" />
+      <FilePathData Path="A_Common/yellow-button.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="1024" />
   </Content>

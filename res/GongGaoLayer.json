@@ -463,9 +463,9 @@
                   "B": 70
                 },
                 "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "game_picture/gonggao_copy.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Home/gonggao_copy.png",
+                  "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
@@ -528,9 +528,9 @@
                   "B": 70
                 },
                 "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "game_picture/gonggao_copy.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Home/gonggao_copy.png",
+                  "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
@@ -602,11 +602,12 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Home/Home.plist",
+        "A_Home/Home.png",
         "fonts/fzcy.ttf",
         "game_picture/bac_xiaotanchuan.png",
         "game_picture/btn_x_normal.png",
-        "game_picture/diban.png",
-        "game_picture/gonggao_copy.png"
+        "game_picture/diban.png"
       ],
       "ctype": "GameFileData"
     }

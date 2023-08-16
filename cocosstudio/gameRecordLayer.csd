@@ -14,7 +14,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="1.0000" Y="1.0000" />
-            <FileData Type="Normal" Path="game_picture/homeBG.jpg" Plist="" />
+            <FileData Type="Normal" Path="A_Home/homeBG.jpg" Plist="" />
             <SingleColor A="255" R="0" G="0" B="0" />
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
@@ -83,7 +83,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1648" Y="0.5000" />
                     <PreSize X="0.2692" Y="1.1250" />
-                    <FileData Type="Normal" Path="game_picture/ico_zuanshi.png" Plist="" />
+                    <FileData Type="Default" Path="Default/Sprite.png" Plist="" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Text_yuanbao" ActionTag="-1510681330" Tag="619" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="55.0000" RightMargin="17.0000" TopMargin="1.5000" BottomMargin="1.5000" IsCustomSize="True" FontSize="24" LabelText="9999999" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">

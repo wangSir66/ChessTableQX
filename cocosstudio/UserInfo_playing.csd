@@ -79,7 +79,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.1861" Y="0.6788" />
                 <PreSize X="0.1988" Y="0.2998" />
-                <FileData Type="Normal" Path="home/homeHeadCusPic_2.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/homeHeadCusPic_2.png" Plist="A_Home/UserInfo/Userinfo.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="ID" ActionTag="1331507143" Tag="127" IconVisible="False" LeftMargin="300.0000" RightMargin="434.0000" TopMargin="140.0245" BottomMargin="392.9755" FontSize="28" LabelText="ID:888888" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="131.0000" Y="34.0000" />
@@ -227,7 +227,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0400" Y="0.6500" />
                         <PreSize X="0.3267" Y="1.3333" />
-                        <FileData Type="Normal" Path="game_picture/ico_zuanshi.png" Plist="" />
+                        <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

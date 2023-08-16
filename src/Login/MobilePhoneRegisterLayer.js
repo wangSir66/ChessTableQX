@@ -6,14 +6,14 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
     _type: 0,
     ctor: function (callback) {
         this._super();
-        var UI = ccs.load("A_registerPhoneNumLayer.json");
+        var UI = ccs.load(res.RegisterPhoneNumLayer_json);
         var self = this;
 
         var _block = UI.node.getChildByName("block");
         setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
 
         var _back = UI.node.getChildByName("back");
-        setWgtLayout(_back, [0.7, 0.85], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.6, 0.6], [0.5, 0.5], [0, 0]);
 
         //关闭按钮
         var _close = _back.getChildByName("close");
@@ -32,7 +32,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
 
         //手机号码输入框
         var imagePhoneNum = this._phoneLoginPanel.getChildByName("Image_phoneNum");
-        this._bindPhoneNum = new cc.EditBox(cc.size(imagePhoneNum.width, imagePhoneNum.height), new cc.Scale9Sprite("store/into_number.png"));
+        this._bindPhoneNum = new cc.EditBox(cc.size(imagePhoneNum.width, imagePhoneNum.height), new cc.Scale9Sprite());
 
         this._bindPhoneNum.setFontColor(cc.color("#000000"));
         this._bindPhoneNum.setPlaceholderFontSize(28);
@@ -45,7 +45,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
 
         //密码
         var imageSecurityCode = this._phoneLoginPanel.getChildByName("Image_securityCode");
-        this._hintNum = new cc.EditBox(cc.size(imageSecurityCode.width, imageSecurityCode.height), new cc.Scale9Sprite("store/into_number.png"));
+        this._hintNum = new cc.EditBox(cc.size(imageSecurityCode.width, imageSecurityCode.height), new cc.Scale9Sprite());
 
         this._hintNum.setFontColor(cc.color("#000000"));
         this._hintNum.setPlaceholderFontSize(28);
@@ -59,7 +59,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
 
         //昵称
         var imageNickname = this._phoneLoginPanel.getChildByName("Image_nickname");
-        this._nickname = new cc.EditBox(cc.size(imageNickname.width, imageNickname.height), new cc.Scale9Sprite("store/into_number.png"));
+        this._nickname = new cc.EditBox(cc.size(imageNickname.width, imageNickname.height), new cc.Scale9Sprite());
 
         this._nickname.setFontColor(cc.color("#000000"));
         this._nickname.setPlaceholderFontSize(28);
@@ -136,7 +136,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
             }
         }, this);
 
-        UIManager.popupAnm(_back);
+        COMMON_UI.popDialogAni(_back);
         this.addChild(UI.node);
         return true;
     },
