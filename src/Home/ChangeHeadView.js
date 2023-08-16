@@ -53,6 +53,7 @@ var ChangeHeadView = cc.Layer.extend({
                         if (rtn.code == 0) {
                             MjClient.changeHeadView.removeFromParent(true);
                             delete MjClient.changeHeadView;
+                            MjClient.data.pinfo.headimgurl = rtn.headimgurl;
                             MjClient.loadWxHead(SelfUid(), rtn.headimgurl);
                         }
                     });
