@@ -110,6 +110,7 @@ var PlayerInfoBindView1 = cc.Layer.extend({
             _sigStr = (pinfo.signature ? unescape(pinfo.signature) : '主人很懒，还没有签名！');
         let jsjf = _node_info.getChildByName('textFeildName');
         if (jsjf) jsjf.removeFromParent(true);
+        canEditSignature = false;
         if (pinfo.uid == SelfUid() && canEditSignature) {
             _signature.visible = false;
             this._textFeildName = new cc.EditBox(cc.size(_signature.width, _signature.height), new cc.Scale9Sprite());

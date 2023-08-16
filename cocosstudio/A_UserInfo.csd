@@ -19,7 +19,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="back" ActionTag="1615908008" Tag="57" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="-1.0928" BottomMargin="1.0928" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="back" ActionTag="1615908008" Tag="57" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="-1.0928" BottomMargin="1.0927" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <Children>
               <AbstractNodeData Name="img_bg" CanEdit="False" ActionTag="1692587304" Tag="116" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="159.0000" RightMargin="159.0000" TopMargin="62.5000" BottomMargin="62.5000" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="169" Scale9OriginY="141" Scale9Width="376" Scale9Height="188" ctype="ImageViewObjectData">
@@ -223,10 +223,10 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="123" G="78" B="63" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="signature_0" ActionTag="-2136035703" Tag="351" IconVisible="False" LeftMargin="18.0840" RightMargin="-130.0840" TopMargin="-168.0087" BottomMargin="138.0087" IsCustomSize="True" FontSize="25" LabelText="个性签名：" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="signature_0" ActionTag="-2136035703" Tag="351" IconVisible="False" LeftMargin="3.5153" RightMargin="-115.5153" TopMargin="-168.0087" BottomMargin="138.0087" IsCustomSize="True" FontSize="22" LabelText="个性签名：" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
                     <Size X="112.0000" Y="30.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="74.0840" Y="153.0087" />
+                    <Position X="59.5153" Y="153.0087" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="147" G="92" B="35" />
                     <PrePosition />
@@ -441,7 +441,7 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="640.0000" Y="361.0928" />
+            <Position X="640.0000" Y="361.0927" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5015" />

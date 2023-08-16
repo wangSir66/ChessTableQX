@@ -96,7 +96,7 @@
             },
             "Position": {
               "X": 640.0,
-              "Y": 361.0928
+              "Y": 361.0927
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -115,7 +115,7 @@
               "Y": 1.0
             },
             "TopMargin": -1.0928,
-            "BottomMargin": 1.0928,
+            "BottomMargin": 1.0927,
             "Tag": 57,
             "Children": [
               {
@@ -1088,7 +1088,7 @@
                   },
                   {
                     "IsCustomSize": true,
-                    "FontSize": 25,
+                    "FontSize": 22,
                     "LabelText": "个性签名：",
                     "FontResource": {
                       "Type": "Normal",
@@ -1113,7 +1113,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 74.084,
+                      "X": 59.5153,
                       "Y": 153.0087
                     },
                     "Scale": {
@@ -1134,8 +1134,8 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": 18.084,
-                    "RightMargin": -130.084,
+                    "LeftMargin": 3.5153,
+                    "RightMargin": -115.5153,
                     "TopMargin": -168.0087,
                     "BottomMargin": 138.0087,
                     "Tag": 351,
