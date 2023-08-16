@@ -36,6 +36,7 @@ cc.game.onStart = function () {
     cc.log("******:" + JSON.stringify(json_res[MjClient.getAppType()]))
     var game_res = json_res[MjClient.getAppType()].concat(sound_res[MjClient.getAppType()]);
 
+    cc.spriteFrameCache.addSpriteFrames("A_Common/HeadImgs.plist", "A_Common/HeadImgs.png");
     cc.LoaderScene.preload(game_res, function () {
         MjClient.Scene = new JSScene();
         cc.director.runScene(MjClient.Scene);
