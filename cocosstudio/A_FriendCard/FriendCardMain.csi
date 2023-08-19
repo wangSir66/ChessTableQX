@@ -1,0 +1,68 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="FriendCardMain" Type="Plist" ID="1411a151-09a6-4653-87b5-4797a4245598" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_FriendCard/btn_bangding_n.png" />
+      <FilePathData Path="A_FriendCard/btn_club_n.png" />
+      <FilePathData Path="A_FriendCard/btn_club_s.png" />
+      <FilePathData Path="A_FriendCard/btn_createQYQ.png" />
+      <FilePathData Path="A_FriendCard/btn_detail_n.png" />
+      <FilePathData Path="A_FriendCard/btn_fanhui.png" />
+      <FilePathData Path="A_FriendCard/btn_join_n.png" />
+      <FilePathData Path="A_FriendCard/btn_join_s.png" />
+      <FilePathData Path="A_FriendCard/btn_joinQYQ.png" />
+      <FilePathData Path="A_FriendCard/btn_memberlist_n.png" />
+      <FilePathData Path="A_FriendCard/btn_record_n.png" />
+      <FilePathData Path="A_FriendCard/btn_record2_n.png" />
+      <FilePathData Path="A_FriendCard/btn_rule_n.png" />
+      <FilePathData Path="A_FriendCard/btn_search.png" />
+      <FilePathData Path="A_FriendCard/btn_showClubList.png" />
+      <FilePathData Path="A_FriendCard/btn_skin.png" />
+      <FilePathData Path="A_FriendCard/btn_tongji_n.png" />
+      <FilePathData Path="A_FriendCard/btn_webZhanji.png" />
+      <FilePathData Path="A_FriendCard/btn_xuanzhong.png" />
+      <FilePathData Path="A_FriendCard/btn_yaoqing.png" />
+      <FilePathData Path="A_FriendCard/club_point.png" />
+      <FilePathData Path="A_FriendCard/dikuang.png" />
+      <FilePathData Path="A_FriendCard/fangka_kuang.png" />
+      <FilePathData Path="A_FriendCard/fangkashuliang_di.png" />
+      <FilePathData Path="A_FriendCard/FenGeXian.png" />
+      <FilePathData Path="A_FriendCard/icon_stop_tishi.png" />
+      <FilePathData Path="A_FriendCard/icon_tipPoint.png" />
+      <FilePathData Path="A_FriendCard/img_fangka.png" />
+      <FilePathData Path="A_FriendCard/img_fanhui.png" />
+      <FilePathData Path="A_FriendCard/img_feixuanzhongMem.png" />
+      <FilePathData Path="A_FriendCard/img_guanjia.png" />
+      <FilePathData Path="A_FriendCard/img_head_kuang.png" />
+      <FilePathData Path="A_FriendCard/img_qian.png" />
+      <FilePathData Path="A_FriendCard/img_searchBg.png" />
+      <FilePathData Path="A_FriendCard/img_ZTKF.png" />
+      <FilePathData Path="A_FriendCard/info_bg.png" />
+      <FilePathData Path="A_FriendCard/jifen_kuang.png" />
+      <FilePathData Path="A_FriendCard/XuanZhong1.png" />
+      <FilePathData Path="A_FriendCard/XuanZhong2.png" />
+      <FilePathData Path="A_FriendCard/yizi_1_0.png" />
+      <FilePathData Path="A_FriendCard/yizi_1_1.png" />
+      <FilePathData Path="A_FriendCard/yizi_2.png" />
+      <FilePathData Path="A_FriendCard/yuanbao_kuang.png" />
+      <FilePathData Path="A_FriendCard/Z_offline.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_0.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_1.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_10.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_11.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_2.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_3.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_4.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_5.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_6.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_7.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_8.png" />
+      <FilePathData Path="A_FriendCard/zhuozi_9.png" />
+      <FilePathData Path="A_FriendCard/btn_kaifang_n.png" />
+      <FilePathData Path="A_FriendCard/JianTou.png" />
+      <FilePathData Path="A_FriendCard/NameBg.png" />
+      <FilePathData Path="A_FriendCard/img_isShowZhuozi.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="2048" />
+  </Content>
+</PlistInfoProjectFile>

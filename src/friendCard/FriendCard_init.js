@@ -3093,8 +3093,6 @@ FriendCard_Common.initBottom = function (allBtns, par) {
         }
     }
 
-
-
     if (allBtns.indexOf("_btn_match") >= 0) {
         that._btn_match = _btnList.getChildByName("btn_match");
         if (that._btn_match) {
@@ -3124,6 +3122,18 @@ FriendCard_Common.initBottom = function (allBtns, par) {
             that._btn_personal_shop.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     that.addChild(new authorizationStoreTipLayer());
+                }
+            });
+        }
+    }
+
+    if (allBtns.indexOf("_btn_shaixuan") >= 0) {
+        //个人商城点击
+        that._btn_shaixuan = _btnList.getChildByName("btn_shaixuan");
+        if (that._btn_shaixuan) {
+            that._btn_shaixuan.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    that.addChild(new FriendCardSelectWay(that));
                 }
             });
         }
@@ -3424,13 +3434,9 @@ return  true 显示桌子
 */
 FriendCard_Common.isShowTable = function (that) {
     if ((that.data.info.useClose == 1 && FriendCard_Common.isInDaYangTime()) && that.data.info.isShowTable == 0 && that.data.info.createSwitch != 0 && !that.isManager()) {
+        cc.log(1212121)
         that._img_stop.setVisible(false);
-        that.listView_table.removeAllItems();
-        var textNode = that._node_desk.getChildByName("text_isShowZhuozi");
-        if (textNode) {
-            textNode.visible = true;
-            textNode.ignoreContentAdaptWithSize(true);
-        }
+        that.listView_table.removeAllChildren();
         return false;
     }
 
@@ -3479,7 +3485,6 @@ FriendCard_Common.removeClub = function (that, clubId) {
 */
 FriendCard_Common.tipCheck = function (that) {
     that._imgPoint.visible = false;
-    that._imgtext.visible = false;
 
     if (that.data.info.createSwitch == 0)
         return;

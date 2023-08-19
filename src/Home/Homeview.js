@@ -417,13 +417,20 @@ var HomeView_yaan = cc.Layer.extend({
         var _head = _headbg.getChildByName("head");
         UIEventBind(this.jsBind, _head, "loadWxHead", function (d) {
             if (d.uid === MjClient.data.pinfo.uid) {
-                var stencil = new cc.Sprite("hallSkin/top/avatar_mask.png");
-                var clip = new cc.ClippingNode(stencil);
-                clip.setAlphaThreshold(0);
-                var avatar = new cc.Sprite(d.img);
-                clip.addChild(avatar);
-                clip.setPosition(_head.width / 2, _head.height / 2);
-                _head.addChild(clip);
+                var avatar = _head.getChildByName('homeheadsp');
+                if (avatar) {
+                    avatar.initWithSpriteFrame(d.img);
+                }
+                else {
+                    avatar = new cc.Sprite(d.img);
+                    var stencil = new cc.Sprite("hallSkin/top/avatar_mask.png");
+                    var clip = new cc.ClippingNode(stencil);
+                    clip.setAlphaThreshold(0);
+                    clip.addChild(avatar);
+                    clip.setPosition(_head.width / 2, _head.height / 2);
+                    _head.addChild(clip);
+                    clip.name = 'homeheadsp'
+                }
             }
         });
 

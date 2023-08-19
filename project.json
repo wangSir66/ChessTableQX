@@ -134,6 +134,7 @@
         "src/friendCard/FriendCard_find.js",
         "src/friendCard/FriendCard_yaoqingMember.js",
         "src/friendCard/FriendCard_init.js",
+        "src/friendCard/FriendCard_SelectWay.js",
 
 
         "src/YaAn/Common/GameRuleView.js",

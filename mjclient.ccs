@@ -414,10 +414,82 @@
           <Image Name="icon_add.png" />
           <Image Name="icon_yuanbao.png" />
           <Image Name="pop_bg_small.png" />
-          <Image Name="universalBottom.png" />
-          <Image Name="yellow-button.png" />
           <Image Name="que_l.png" />
           <Image Name="ren_l.png" />
+          <Image Name="universalBottom.png" />
+          <Image Name="yellow-button.png" />
+        </Folder>
+        <Folder Name="A_Fonts">
+          <Image Name="num.png" />
+        </Folder>
+        <Folder Name="A_FriendCard">
+          <Image Name="bg_clubList.png" />
+          <Image Name="bg1_0.jpg" />
+          <Image Name="bg2_0.png" />
+          <Image Name="bg2_1.png" />
+          <Image Name="bg2_2.png" />
+          <Image Name="btn_bangding_n.png" />
+          <Image Name="btn_club_n.png" />
+          <Image Name="btn_club_s.png" />
+          <Image Name="btn_createQYQ.png" />
+          <Image Name="btn_detail_n.png" />
+          <Image Name="btn_fanhui.png" />
+          <Image Name="btn_join_n.png" />
+          <Image Name="btn_join_s.png" />
+          <Image Name="btn_joinQYQ.png" />
+          <Image Name="btn_kaifang_n.png" />
+          <Image Name="btn_memberlist_n.png" />
+          <Image Name="btn_record_n.png" />
+          <Image Name="btn_record2_n.png" />
+          <Image Name="btn_rule_n.png" />
+          <Image Name="btn_search.png" />
+          <Image Name="btn_showClubList.png" />
+          <Image Name="btn_skin.png" />
+          <Image Name="btn_tongji_n.png" />
+          <Image Name="btn_webZhanji.png" />
+          <Image Name="btn_xuanzhong.png" />
+          <Image Name="btn_yaoqing.png" />
+          <Image Name="club_point.png" />
+          <Image Name="dikuang.png" />
+          <Image Name="fangka_kuang.png" />
+          <Image Name="fangkashuliang_di.png" />
+          <Image Name="FenGeXian.png" />
+          <PlistInfo Name="FriendCardMain.csi" Type="Plist" />
+          <Image Name="icon_stop_tishi.png" />
+          <Image Name="icon_tipPoint.png" />
+          <Image Name="image_bottomBG.png" />
+          <Image Name="img_fangka.png" />
+          <Image Name="img_fanhui.png" />
+          <Image Name="img_feixuanzhongMem.png" />
+          <Image Name="img_guanjia.png" />
+          <Image Name="img_head_kuang.png" />
+          <Image Name="img_isShowZhuozi.png" />
+          <Image Name="img_qian.png" />
+          <Image Name="img_searchBg.png" />
+          <Image Name="img_ZTKF.png" />
+          <Image Name="info_bg.png" />
+          <Image Name="JianTou.png" />
+          <Image Name="jifen_kuang.png" />
+          <Image Name="NameBg.png" />
+          <Image Name="XuanZhong1.png" />
+          <Image Name="XuanZhong2.png" />
+          <Image Name="yizi_1_0.png" />
+          <Image Name="yizi_1_1.png" />
+          <Image Name="yizi_2.png" />
+          <Image Name="yuanbao_kuang.png" />
+          <Image Name="Z_offline.png" />
+          <Image Name="zhuozi_0.png" />
+          <Image Name="zhuozi_1.png" />
+          <Image Name="zhuozi_10.png" />
+          <Image Name="zhuozi_11.png" />
+          <Image Name="zhuozi_2.png" />
+          <Image Name="zhuozi_3.png" />
+          <Image Name="zhuozi_4.png" />
+          <Image Name="zhuozi_5.png" />
+          <Image Name="zhuozi_6.png" />
+          <Image Name="zhuozi_7.png" />
+          <Image Name="zhuozi_8.png" />
+          <Image Name="zhuozi_9.png" />
         </Folder>
         <Folder Name="A_Home">
           <Folder Name="UserInfo">
@@ -1718,8 +1790,6 @@
             <Image Name="btn_close1_s.png" />
             <Image Name="btn_close2_n.png" />
             <Image Name="btn_close2_s.png" />
-            <Image Name="btn_club_n.png" />
-            <Image Name="btn_club_s.png" />
             <Image Name="btn_common_n.png" />
             <Image Name="btn_common_s.png" />
             <Image Name="btn_finish_n.png" />
@@ -1779,7 +1849,6 @@
             <Image Name="title_search.png" />
             <Image Name="title_WFMC.png" />
             <Image Name="tongyongXiao_btnS.png" />
-            <Image Name="Z_offline.png" />
             <Image Name="Z_offline1.png" />
           </Folder>
           <Folder Name="gaojiSet">
@@ -1869,58 +1938,30 @@
             <Image Name="number_empty.png" />
           </Folder>
           <Folder Name="main">
-            <Image Name="bg_clubList.png" />
             <Image Name="btn_add.png" />
-            <Image Name="btn_bangding_n.png" />
-            <Image Name="btn_createQYQ.png" />
-            <Image Name="btn_detail_n.png" />
-            <Image Name="btn_fanhui.png" />
             <Image Name="btn_gonggao_n.png" />
-            <Image Name="btn_join_n.png" />
-            <Image Name="btn_join_s.png" />
-            <Image Name="btn_joinQYQ.png" />
             <Image Name="btn_kaifang_n.png" />
             <Image Name="btn_kaifang_s.png" />
-            <Image Name="btn_memberlist_n.png" />
             <Image Name="btn_ok_n.png" />
             <Image Name="btn_ok_s.png" />
             <Image Name="btn_personal_shop_n.png" />
             <Image Name="btn_play_add.png" />
             <Image Name="btn_play_n.png" />
             <Image Name="btn_play_s.png" />
-            <Image Name="btn_record_n.png" />
-            <Image Name="btn_record2_n.png" />
             <Image Name="btn_refind_n.png" />
             <Image Name="btn_refind_s.png" />
-            <Image Name="btn_rule_n.png" />
-            <Image Name="btn_search.png" />
             <Image Name="btn_search_n.png" />
             <Image Name="btn_setting_n.png" />
             <Image Name="btn_shenqing_n.png" />
             <Image Name="btn_shenqing_s.png" />
-            <Image Name="btn_showClubList.png" />
-            <Image Name="btn_skin.png" />
-            <Image Name="btn_tongji_n.png" />
-            <Image Name="btn_webZhanji.png" />
-            <Image Name="btn_xuanzhong.png" />
-            <Image Name="btn_yaoqing.png" />
             <Image Name="btn_yaoqing_n.png" />
-            <Image Name="check_kaifang.png" />
-            <Image Name="club_point.png" />
-            <Image Name="fangka_kuang.png" />
-            <Image Name="fangkashuliang_di.png" />
             <Image Name="icon_null.png" />
-            <Image Name="icon_stop_tishi.png" />
-            <Image Name="icon_table.png" />
             <Image Name="icon_table_new.png" />
             <Image Name="icon_table3.png" />
             <Image Name="icon_table5.png" />
-            <Image Name="icon_tipPoint.png" />
             <Image Name="icon_tipText.png" />
             <Image Name="icon_yizi.png" />
-            <Image Name="icon_yizi1.png" />
             <Image Name="icon_yizi2.png" />
-            <Image Name="image_bottomBG.png" />
             <Image Name="image_kefu.png" />
             <Image Name="img_2D.jpg" />
             <Image Name="img_baitian1.jpg" />
@@ -1935,38 +1976,28 @@
             <Image Name="img_deng2.png" />
             <Image Name="img_dengpao.png" />
             <Image Name="img_dengxu.png" />
-            <Image Name="img_fangka.png" />
-            <Image Name="img_fanhui.png" />
-            <Image Name="img_feixuanzhongMem.png" />
             <Image Name="img_fengemian.png" />
             <Image Name="img_fengexian.png" />
-            <Image Name="img_guanjia.png" />
             <Image Name="img_guide_di.png" />
             <Image Name="img_guizeBG.png" />
             <Image Name="img_head.png" />
-            <Image Name="img_head_kuang.png" />
             <Image Name="img_head_kuang_n.png" />
             <Image Name="img_head_kuang_s.png" />
             <Image Name="img_head_kuang1.png" />
             <Image Name="img_hua.png" />
             <Image Name="img_infobg.png" />
-            <Image Name="img_isShowZhuozi.png" />
             <Image Name="img_jiantou1.png" />
             <Image Name="img_jiantou2.png" />
             <Image Name="img_kuang.png" />
             <Image Name="img_member.png" />
             <Image Name="img_name_di.png" />
-            <Image Name="img_qian.png" />
-            <Image Name="img_searchBg.png" />
             <Image Name="img_table_di.png" />
             <Image Name="img_tablebg.png" />
             <Image Name="img_wanshang1.png" />
             <Image Name="img_wanshang2.png" />
             <Image Name="img_xiangqing.png" />
             <Image Name="img_xuanzhongMem.png" />
-            <Image Name="img_ZTKF.png" />
             <Image Name="img11.jpg" />
-            <Image Name="info_bg.png" />
             <Image Name="int_playwords.png" />
             <Image Name="main_bg.jpg" />
             <Image Name="paomadeng_di.png" />
@@ -2241,16 +2272,6 @@
             <Image Name="touming.png" />
           </Folder>
           <Folder Name="setSkin">
-            <Image Name="bg1_0.jpg" />
-            <Image Name="bg1_0.png" />
-            <Image Name="bg1_1.jpg" />
-            <Image Name="bg1_1.png" />
-            <Image Name="bg1_2.jpg" />
-            <Image Name="bg1_2.png" />
-            <Image Name="bg2_0.png" />
-            <Image Name="bg2_01.png" />
-            <Image Name="bg2_1.png" />
-            <Image Name="bg2_2.png" />
             <Image Name="btn_preview_n.png" />
             <Image Name="btn_preview_s.png" />
             <Image Name="btn_save_n.png" />
@@ -7461,12 +7482,18 @@
           <Image Name="zhua_guang.png" />
           <Image Name="zhua_guang2.png" />
         </Folder>
+        <Project Name="A_ChangeHead.csd" Type="Layer" />
+        <Project Name="A_ChangeNickName.csd" Type="Layer" />
+        <Project Name="A_ChangePWD.csd" Type="Layer" />
         <Project Name="A_Dlgagreement.csd" Type="Layer" />
+        <Project Name="A_Friendcard_main.csd" Type="Layer" />
         <Project Name="A_Home.csd" Type="Layer" />
         <Project Name="A_Login.csd" Type="Layer" />
         <Project Name="A_mobilePhoneLogin.csd" Type="Layer" />
         <Project Name="A_registerPhoneNumLayer.csd" Type="Layer" />
+        <Project Name="A_SelectRulePanel.csd" Type="Layer" />
         <Project Name="A_Update.csd" Type="Layer" />
+        <Project Name="A_UserInfo.csd" Type="Layer" />
         <Project Name="ActivityLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreTipLayer.csd" Type="Layer" />
@@ -7505,7 +7532,6 @@
         <Project Name="friendcard_info.csd" Type="Layer" />
         <Project Name="friendcard_inputRuleNameDialog.csd" Type="Layer" />
         <Project Name="friendcard_invite_shenhe.csd" Type="Layer" />
-        <Project Name="friendcard_main.csd" Type="Layer" />
         <Project Name="friendcard_manageRecord.csd" Type="Node" />
         <Project Name="friendcard_member.csd" Type="Layer" />
         <Project Name="friendcard_member_daoru_result.csd" Type="Layer" />
@@ -7621,16 +7647,9 @@
         <Project Name="Update_2.csd" Type="Layer" />
         <Project Name="Update_3.csd" Type="Layer" />
         <Project Name="UserInfo.csd" Type="Layer" />
-        <Project Name="A_UserInfo.csd" Type="Layer" />
         <Project Name="UserInfo_playing.csd" Type="Layer" />
         <Project Name="WebView.csd" Type="Node" />
         <Project Name="YouJianLayer.csd" Type="Layer" />
-        <Folder Name="A_Fonts">
-          <Image Name="num.png" />
-        </Folder>
-        <Project Name="A_ChangeHead.csd" Type="Layer" />
-        <Project Name="A_ChangeNickName.csd" Type="Layer" />
-        <Project Name="A_ChangePWD.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

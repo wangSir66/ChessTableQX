@@ -32,12 +32,10 @@ var FriendCard_main = cc.Layer.extend({
 		this.ruleIndex = 1;
 		this.customInfo = false; //当前规则是否是可创建房间
 
-		this.ruleBtnNum = FriendCard_Common.getRuleNumber();
-
 		if (MjClient.FriendCard_main_ui && cc.sys.isObjectValid(MjClient.FriendCard_main_ui))
 			MjClient.FriendCard_main_ui.removeFromParent(true);
 
-		var UI = ccs.load("friendcard_main.json");
+		var UI = ccs.load(res.Friendcard_main_json);
 		MjClient.FriendCard_main_ui = this;
 		this.addChild(UI.node);
 		var that = this;
@@ -50,11 +48,6 @@ var FriendCard_main = cc.Layer.extend({
 		this.back = back;
 
 		this.btn_showClubList = UI.node.getChildByName("btn_showClubList");
-		// if (isIPhoneX()) {
-		// 	setWgtLayout(this.btn_showClubList, [0.1078, 0.3398], [0, 0.5], [0, 0]);
-		// } else {
-		// 	setWgtLayout(this.btn_showClubList, [0.1078, 0.3398], [0, 0.5], [-0.5, 0]);
-		// }
 		setWgtLayout(this.btn_showClubList, [0.1078, 0.3398], [0, 0.5], [-0.5, 0]);
 		//亲友圈列表按钮
 		this.btn_showClubList.addTouchEventListener(function (sender, type) {
@@ -66,16 +59,6 @@ var FriendCard_main = cc.Layer.extend({
 		//亲友圈列表
 		this._node_clubList = UI.node.getChildByName("node_clubList");
 		setWgtLayout(this._node_clubList, [0.4617, 1], [0, 0], [-0.5, 0]);
-		// if (isIPhoneX()) {
-		// 	this._node_clubList.scale = MjClient.size.height / this._node_clubList.height;
-		// 	this._node_clubList.y = 0;
-		// 	this._node_clubList.x = -that._node_clubList.width * this._node_clubList.scale;
-		// }
-		// // else {
-		// 	this._node_clubList.scale = MjClient.size.height / this._node_clubList.height;
-		// 	this._node_clubList.y = 0;
-		// 	this._node_clubList.x = -that._node_clubList.width * this._node_clubList.scale * 0.65;
-		// }
 		this._node_clubList.visible = false;
 		this._node_clubList.enabled = false;
 
@@ -115,14 +98,6 @@ var FriendCard_main = cc.Layer.extend({
 		this.listView_table = this._node_desk.getChildByName("deskLayout");
 		this.initDeskData();
 
-		//右上角玩法
-		this._listView_rule = this._image_top.getChildByName("ListView_rule");
-		this._listView_rule._standWidth = this._listView_rule.width;
-		this._listView_rule.setScrollBarEnabled(false);
-		this._btn_all_rule = this._image_top.getChildByName("btn_all_rule");
-		this._btn_outline_rule = this._image_top.getChildByName("btn_outline_rule");
-		COMMON_UI.setNodeTextAdapterSize(this._btn_all_rule);
-		COMMON_UI.setNodeTextAdapterSize(this._btn_outline_rule);
 		// 亲友圈列表
 		this._node_clubListbg = back.getChildByName("node_clubListbg");
 		this._node_clubListbg.visible = false;
@@ -150,22 +125,8 @@ var FriendCard_main = cc.Layer.extend({
 		}
 		this._img_dayang_tip.visible = false;
 
-		//隐藏俱乐部
-		this._img_hide_club_tip = back.getChildByName("img_hide_club_tip")
-		if (!this._img_hide_club_tip) {
-			this._img_hide_club_tip = ccui.ImageView("friendCards/main/img_hide_club_tip.png");
-			this._img_hide_club_tip.setPosition(this._img_stop.x, this._img_stop.y - this._img_hide_club_tip.height);
-			back.addChild(this._img_hide_club_tip);
-		}
-		this._img_hide_club_tip.visible = false;
-
-		// 群主请检查元宝是否足够开房
-		this._img_check = back.getChildByName("img_check");
-		this._img_check.setVisible(false);
-
 		// 点击加入房间
 		this._imgPoint = this._node_desk.getChildByName("Img_tip");// 空桌子箭头
-		this._imgtext = this._node_desk.getChildByName("Image_tipText");
 
 		// 关闭俱乐部列表
 		this._btn_close = this._node_clubList.getChildByName("btn_close");
@@ -193,11 +154,7 @@ var FriendCard_main = cc.Layer.extend({
 					data.clubId = this.clubId;
 					data.ruleIndex = this.ruleIndex;
 					data.isCreator = this.isCreator();
-					if (FriendCard_Common.getClubisLM()) {
-						this.addChild(new Friendcard_LM_nvguanjia(data));
-					} else {
-						this.addChild(new Friendcard_nvguanjia(data));
-					}
+					this.addChild(new Friendcard_nvguanjia(data));
 				}
 			}
 		}, this);
@@ -205,26 +162,6 @@ var FriendCard_main = cc.Layer.extend({
 		//房卡
 		this.fangkaBG = this._image_top.getChildByName("fangkaBG");
 		if (this.fangkaBG) {
-			var btn_addFK = this.fangkaBG.getChildByName("btn_addFK")
-			btn_addFK.loadTextures("friendCards/main/jiahao_n.png", "friendCards/main/jiahao_s.png", "friendCards/main/jiahao_s.png");
-			btn_addFK.addTouchEventListener(function (sender, type) {
-				if (type == 2) {
-					if (that.data && that.data.info) {
-						if (that.data.info.type == 1) {
-							var layer = enter_store(1);
-							MjClient.Scene.addChild(layer);
-						} else {
-							if (MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP) {
-								var layer = new StoreTipDialog();
-								MjClient.Scene.addChild(layer);
-							} else {
-								var layer = enter_store(0);
-								MjClient.Scene.addChild(layer);
-							}
-						}
-					}
-				}
-			});
 			this.fangkaBG.setTouchEnabled(false);
 
 			this.text_fangka_type = this.fangkaBG.getChildByName("Text_1");
@@ -258,7 +195,6 @@ var FriendCard_main = cc.Layer.extend({
 		if (isIPhoneX()) {
 			this._clubInfo.setPosition(cc.p(5, 98))
 			this._img_stop.x = this.back.width * 0.6;
-			this._img_hide_club_tip.x = this.back.width * 0.6;
 			this._img_dayang_tip.x = this.back.width * 0.6;
 		}
 
@@ -291,7 +227,8 @@ var FriendCard_main = cc.Layer.extend({
 		this.searchNode = this._image_top.getChildByName("searchBg");
 		if (this.searchNode) {
 			var size = this.searchNode.getContentSize();
-			size.width -= 20;
+			size.width -= 10;
+			size.height -= 5;
 			var inputEditBox = new cc.EditBox(size, new cc.Scale9Sprite());
 			inputEditBox.setFontColor(cc.color("#ffffff"));
 			inputEditBox.setMaxLength(10);
@@ -300,7 +237,7 @@ var FriendCard_main = cc.Layer.extend({
 			inputEditBox.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
 			inputEditBox.setFontName("fonts/lanting.TTF");
 			inputEditBox.setPlaceholderFontSize(20);
-			inputEditBox.setPlaceHolder("  搜索房间内玩家");
+			inputEditBox.setPlaceHolder("  请输入(玩家ID、房间ID)");
 			inputEditBox.setPosition(this.searchNode.width / 2, this.searchNode.height / 2);
 			this.searchNode.addChild(inputEditBox);
 			this.searchNode.inputEditBox = inputEditBox;
@@ -430,10 +367,11 @@ var FriendCard_main = cc.Layer.extend({
 	setMainBGImg: function (skinType) {
 		if (!this.back)
 			return;
+		cc.log('-skinType-----------', skinType)
 		var img_bg1 = this.back.getChildByName("img_bg1");
 		var img_bg2 = this.back.getChildByName("img_bg2");
 
-		var path = "friendCards/setSkin/";
+		var path = "A_FriendCard/";
 		img_bg1.loadTexture(path + "bg1_0.jpg");
 		this.buildCopyImgBg(img_bg1);
 
@@ -599,17 +537,6 @@ var FriendCard_main = cc.Layer.extend({
 		if (!this.listView_table.initX) {
 			this.listView_table.initX = this.listView_table.x;
 		}
-
-		for (var i = this.ruleBtnNum; i > 0; i--) {
-			var btn_rule = this._image_top.getChildByName("btn_rule" + i);
-			if (!btn_rule) break;
-			btn_rule.x = this._image_top.width - ((6 - i) * btn_rule.width * 1.5) - (back.width * a - back.width) / 2 - btn_rule.width * 1.5;
-		}
-
-		if (isIPhoneX()) {
-			this._listView_rule.x = this._image_top.width - (back.width * a - back.width) / 2
-		}
-
 	},
 	removeClub: function (clubId) {
 		FriendCard_Common.removeClub(this, clubId);
@@ -685,9 +612,9 @@ var FriendCard_main = cc.Layer.extend({
 			"_btn_yaoqing",//邀请
 			"_btn_setSkin",//换肤
 			"_btn_webZhanji",//网页战绩
-			"_btn_personal_shop",//个人商城
 			"_agentBtn",//代理
 			"_btn_match",//代理
+			"_btn_shaixuan",//玩法筛选
 		];
 
 		FriendCard_Common.initBottom(that.bottomAllBtns);
@@ -931,11 +858,7 @@ var FriendCard_main = cc.Layer.extend({
 			if (img_fangka) {
 				img_fangka.visible = list[i].type == 1 ? true : false;
 			}
-			//联盟标记
-			var img_LM = cell.getChildByName("img_LM");
-			if (img_LM) {
-				img_LM.visible = list[i].leagueId ? true : false;
-			}
+
 			//暂停开房标签
 			var img_stop = cell.getChildByName("img_stop");
 			img_stop.visible = list[i].createSwitch == 0;
@@ -993,11 +916,6 @@ var FriendCard_main = cc.Layer.extend({
 		// val && (str += '-' + val)
 		// }
 		text_clubId.setString(str);
-		//黄金
-		var moneyback = this._clubInfo.getChildByName("moneyback");
-		if (moneyback) {
-			moneyback.visible = false;
-		}
 
 		//房卡
 		if (this.fangkaBG) {
@@ -1073,13 +991,6 @@ var FriendCard_main = cc.Layer.extend({
 		this._btn_record2.setVisible(!this._btn_record.visible);
 		this._btn_webZhanji.setVisible(MjClient.systemConfig.openUserInfoShare + "" == "true");
 
-		if (this._btn_personal_shop) {
-			//【风控】【亲友圈&联盟】去掉主界面的个人商城按钮
-			this._btn_personal_shop.visible = false;
-		}
-
-		var posIndex = 0;
-
 		// 绑定邀请码：排除南通房卡模式
 		if (!MjClient.APP_TYPE.QXNTQP || MjClient.getAppType() != MjClient.APP_TYPE.QXNTQP) {
 			var haveMemberId = MjClient.data && MjClient.data.pinfo && MjClient.data.pinfo.memberId && parseInt(MjClient.data.pinfo.memberId) > 0;
@@ -1101,7 +1012,7 @@ var FriendCard_main = cc.Layer.extend({
 		//搜索按钮
 		if (this.searchNode) {
 			//联盟中的盟主、会长、超级管理员、管理员可见
-			if (FriendCard_Common.isLMClub() && (FriendCard_Common.isManager() || FriendCard_Common.isLeader() || FriendCard_Common.isLMChair())) {
+			if (FriendCard_Common.isManager() || FriendCard_Common.isLeader() || FriendCard_Common.isLMChair()) {
 				this.searchNode.visible = true;
 			} else {
 				this.searchNode.visible = false;
@@ -1110,8 +1021,27 @@ var FriendCard_main = cc.Layer.extend({
 
 		FriendCard_Common.bottomBtnSort(this, this.bottomAllBtns)
 		this.updateMemberRedPoint();
-		this.refreshRuleList();
+		this.initData();
+	},
+	initData: function () {
+		var indexs = [];
+		this._ruleSort = {};
 
+		var _indx = 0,
+			keys = Object.keys(this.data.info).filter(k => k.indexOf('rule') > -1 && !!this.data.info[k] && k != 'ruleSwitch'),
+			rule = this.data.info[keys[_indx]];
+		this.gameTypes = [];
+		cc.log('----------keys---------', JSON.stringify(keys))
+		while (rule) {
+			if (rule != "delete") {
+				indexs.push(_indx);
+				let rIndx = Number(keys[_indx].replace('rule', ''));
+				this._ruleSort[rIndx] = indexs.length;
+				rule.ruleIndex = rIndx;
+				this.gameTypes.push(rule);
+			}
+			rule = this.data.info[keys[++_indx]];
+		}
 	},
 	refreshPeopleCount: function () {
 
@@ -1222,227 +1152,6 @@ var FriendCard_main = cc.Layer.extend({
 			}),
 			cc.moveTo(0.3, cc.p(that.listView_table.initX, that.listView_table.y))))
 	},
-	refreshRuleList: function () {
-
-		var that = this;
-		if (!cc.sys.isObjectValid(MjClient.FriendCard_infoUI)) {
-			FriendCard_Common.reSetRuleParm();
-		}
-		//同屏/非同屏切换重置玩法配置
-		if (FriendCard_Common.getClubRulesSelectOSD(that.clubId) != FriendCard_Common.getOSDClub()) {
-			FriendCard_Common.reSetClubRulesSelect(that.clubId, -1);
-		}
-		FriendCard_Common.setClubRulesSelectOSD(that.clubId, FriendCard_Common.getOSDClub());
-
-		var btn_all_rule = this._btn_all_rule;
-		btn_all_rule.visible = false;
-		btn_all_rule.addTouchEventListener(function (sender, type) {
-			if (type == 2) {
-				//非同屏才会显示全部玩法按钮
-				FriendCard_Common.reSetClubRulesSelect(that.clubId, -1);
-				that.refreshRuleList();
-				that.refreshDeskList();
-			}
-		});
-
-		var btn_outline_rule = this._btn_outline_rule;
-		btn_outline_rule.visible = FriendCard_Common.isManager();
-		btn_outline_rule.addTouchEventListener(function (sender, type) {
-			if (type == 2) {
-				FriendCard_Common.setOnlyShowOutLineDesk(FriendCard_Common.isOnlyShowOutLineDesk() ? 0 : 1);
-				that.refreshRuleList();
-				that.refreshDeskList();
-			}
-		});
-
-		var btn_rule_cell = this._listView_rule.getChildByName("btn_rule_cell");
-		btn_rule_cell.visible = false;
-		var btn_addRule = this._listView_rule.getChildByName("btn_addRule");
-		btn_addRule.visible = false;
-
-		btn_addRule.addTouchEventListener(function (sender, type) {
-			if (type == 2) {
-				that.closeClubList();
-				MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Tianjiawanfa", { uid: SelfUid() });
-				var index = sender.getTag();
-				if (FriendCard_Common.getClubisLM()) {
-					that.addChild(new FriendCard_LM_info(that.data, MjClient.FriendCard_main_ui, index));
-				} else {
-					that.addChild(new FriendCard_info(that.data, MjClient.FriendCard_main_ui, index));
-				}
-			}
-		});
-		function setAllRuleBtnsUI(btn, isBright) {
-			if (!isBright) {
-				btn.getChildByName("text").setTextColor(cc.color("#66010B"));
-				btn.getChildByName("text").enableOutline(cc.color(124, 20, 11, 0), 2);
-				btn.setPositionY(that._listView_rule.y - (that._listView_rule.height - btn_addRule.y));
-			} else {
-				btn.getChildByName("text").setTextColor(cc.color("#f7eec7"));
-				btn.getChildByName("text").enableOutline(cc.color("#700E0D"), 2);
-				btn.setPositionY(that._listView_rule.y - (that._listView_rule.height - btn_rule_cell.y));
-			}
-			btn.setBright(!isBright);
-		}
-		function setRuleBtnsUI(btn, isBright) {
-			if (!isBright) {
-				btn.getChildByName("text_rule_no").setTextColor(cc.color("#66010B"));
-				btn.getChildByName("text_rule_no").enableOutline(cc.color(124, 20, 11, 0), 2);
-				btn.getChildByName("text").setTextColor(cc.color("#66010B"));
-				btn.getChildByName("text").enableOutline(cc.color(124, 20, 11, 0), 2);
-				btn.getChildByName("text_xuhao").setTextColor(cc.color("66010B"));
-				btn.getChildByName("text_xuhao").enableOutline(cc.color(124, 20, 11, 0), 2);
-
-				btn.setPositionY(btn_addRule.y);
-			} else {
-				btn.getChildByName("text_rule_no").setTextColor(cc.color("#f7eec7"));
-				btn.getChildByName("text_rule_no").enableOutline(cc.color("#700E0D"), 2);
-				btn.getChildByName("text").setTextColor(cc.color("#f7eec7"));
-				btn.getChildByName("text").enableOutline(cc.color("#700E0D"), 2);
-				btn.getChildByName("text_xuhao").setTextColor(cc.color("f7eec7"));
-				btn.getChildByName("text_xuhao").enableOutline(cc.color("#700E0D"), 2);
-				btn.setPositionY(btn_rule_cell.y);
-			}
-			btn.setBright(!isBright);
-		}
-		var indexs = [];
-		this.ruleBtnNum = FriendCard_Common.getRuleNumber();
-		this._ruleSort = {};
-		for (var i = 1; i <= this.ruleBtnNum; i++) {
-			var btn_rule = this._listView_rule.getChildByName("btn_rule_" + i);
-			if (btn_rule) {
-				btn_rule.visible = false;
-			}
-			var rule = this.data.info["rule" + i];
-			if (rule && rule != "delete") {
-				indexs.push(i);
-				this._ruleSort[i] = indexs.length;
-			}
-		}
-		var ruleBtns = [];
-		var clubRulesSelect = FriendCard_Common.getClubRulesSelect(that.clubId);
-		for (var i = 0; i <= indexs.length - 1; i++) {
-			var btn_rule = this._listView_rule.getChildByName("btn_rule_" + i);
-			if (!btn_rule) {
-				btn_rule = btn_rule_cell.clone();
-				btn_rule.setName("btn_rule_" + i);
-				this._listView_rule.addChild(btn_rule);
-			}
-			btn_rule.visible = true;
-			btn_rule.setTag(indexs[i]);
-			var text = btn_rule.getChildByName("text");
-			text.ignoreContentAdaptWithSize(true);
-
-			var textRuleNo = btn_rule.getChildByName("text_rule_no");
-			textRuleNo.ignoreContentAdaptWithSize(true);
-			textRuleNo.setString("");
-
-			var rule = this.data.info["rule" + indexs[i]];
-			if (rule.ruleName) {
-				var splitRuleName = FriendCard_Common.splitClubRuleName(unescape(rule.ruleName));
-				// textRuleNo.setString(splitRuleName[0] + "");
-				var ruleName = splitRuleName[1];
-				if (!splitRuleName[0]) {
-					ruleName = GameCnName[rule.gameType] + "";
-				}
-				var textName = "";
-				for (var j = 0; j < ruleName.length; j++) {
-					if (j == ruleName.length - 1) {
-						textName = textName + ruleName.charAt(j);
-					} else {
-						textName = textName + ruleName.charAt(j) + "\n";
-					}
-				}
-				if (ruleName.length == 5) {
-					text.setFontSize(18);
-					text.getVirtualRenderer().setLineSpacing(-5);
-				} else if (ruleName.length == 6) {
-					text.setFontSize(18);
-					text.getVirtualRenderer().setLineSpacing(-8);
-				} else if (ruleName.length > 6) {
-					text.setFontSize(16);
-					text.getVirtualRenderer().setLineSpacing(-8);
-				} else {
-					text.setFontSize(20);
-					text.getVirtualRenderer().setLineSpacing(0);
-				}
-				text.setString(textName);
-			}
-			btn_rule.setEnabled(true);
-			setRuleBtnsUI(btn_rule, clubRulesSelect.indexOf(btn_rule.getTag()) > -1 ? true : false);
-			//序号
-			var text_xuhao = btn_rule.getChildByName("text_xuhao");
-			if (text_xuhao) {
-				text_xuhao.setString(i + 1);
-				text_xuhao.ignoreContentAdaptWithSize(true);
-				text_xuhao.setVisible(true);
-			}
-			btn_rule.addTouchEventListener(function (sender, type) {
-				if (type == 2) {
-					this.closeClubList();
-					var index = sender.getTag();
-					that.ruleIndex = index;
-
-					FriendCard_Common.reSetClubRulesSelect(that.clubId, index, sender.isBright(), FriendCard_Common.getOSDClub(that));
-					that.refreshRuleList();
-					that.refreshDeskList();
-
-				}
-			}, this);
-			ruleBtns.push(btn_rule);
-		}
-
-		if (FriendCard_Common.getClubisLM()) {
-			if (indexs.length < this.ruleBtnNum && this.isCreator()) {
-				btn_addRule.visible = true;
-			}
-		} else {
-			if (indexs.length < this.ruleBtnNum && this.isManager()) {
-				btn_addRule.visible = true;
-			}
-		}
-		var baseItemCount = 4;
-		var itemSpace = (this._listView_rule.width - btn_rule_cell.width * baseItemCount) / (baseItemCount - 1);
-		var itemCount = ((indexs.length) + (btn_addRule.visible ? 1 : 0))
-		var innerWidth = itemCount * btn_rule_cell.width + (itemCount - 1) * itemSpace;
-		if (innerWidth < this._listView_rule.width) {
-			innerWidth = this._listView_rule.width;
-		}
-		this._listView_rule._scrollx = -this._listView_rule.getInnerContainerPosition().x;
-		if (this._listView_rule._scrollx < 0) {
-			this._listView_rule._scrollx = 0;
-		} else if (this._listView_rule._scrollx > innerWidth) {
-			this._listView_rule._scrollx = innerWidth;
-		}
-
-		this._listView_rule.setInnerContainerSize(cc.size(innerWidth, this._listView_rule.height));
-		this._listView_rule.setInnerContainerPosition(cc.p(-this._listView_rule._scrollx, this._listView_rule.getInnerContainerPosition().y))
-
-		var startX = (itemCount < baseItemCount) ? ((baseItemCount - itemCount) * (btn_rule_cell.width + itemSpace)) : 0;
-		var allSortBtn = [];
-		allSortBtn = allSortBtn.concat(ruleBtns);
-		allSortBtn.push(btn_addRule);
-		for (var i = 0; i < allSortBtn.length; i++) {
-			var dx = i * (btn_rule_cell.width + itemSpace)
-			allSortBtn[i].setPositionX(startX + dx);
-		}
-
-		if (btn_outline_rule.visible) {
-			btn_outline_rule.setPositionX(this._listView_rule.x - (this._listView_rule.width - startX) - itemSpace - btn_all_rule.width);
-			btn_all_rule.setPositionX(this._listView_rule.x - (this._listView_rule.width - startX) - 2 * (itemSpace + btn_all_rule.width));
-		} else {
-			btn_all_rule.setPositionX(this._listView_rule.x - (this._listView_rule.width - startX) - itemSpace - btn_all_rule.width);
-		}
-
-		setAllRuleBtnsUI(btn_all_rule, clubRulesSelect.indexOf(-1) > -1 ? true : false);
-		setAllRuleBtnsUI(btn_outline_rule, FriendCard_Common.isOnlyShowOutLineDesk() ? true : false);
-
-		if (FriendCard_Common.getOSDClub(that)) {
-			btn_all_rule.visible = true;
-		} else {
-			btn_all_rule.visible = false;
-		}
-	},
 
 	initDeskData: function () {
 		if (this._hasInitDeskData) {
@@ -1493,7 +1202,6 @@ var FriendCard_main = cc.Layer.extend({
 		if (!FriendCard_Common.isShowTable(this)) {
 			return;
 		}
-		this._node_desk.getChildByName("text_isShowZhuozi").visible = false;
 		if (!this.data.room["roomList" + this.ruleIndex]) {
 			this.data.room["roomList" + this.ruleIndex] = [];
 		}
@@ -1518,12 +1226,9 @@ var FriendCard_main = cc.Layer.extend({
 				}
 			}
 		}
-		this._img_hide_club_tip.visible = this.data.info.clubHideStatus == 1;
 		if (!this._img_stop.visible) {
 			this._img_stop.visible = this.data.info.clubHideStatus == 1;
 		}
-
-		this._img_check.setVisible(false);
 
 		this.initDeskData();
 		//俱乐部桌子排序
@@ -1553,6 +1258,7 @@ var FriendCard_main = cc.Layer.extend({
 		this.refreshDeskItem();
 		FriendCard_UI.setClubDeskTouchEvent(this.listView_table);
 		this.updateBG();
+        this.listView_table.scrollToTop(0.1, true);
 	},
 	getDeskStartIndexByScrollX: function () {
 		var index = 0;
@@ -1614,6 +1320,7 @@ var FriendCard_main = cc.Layer.extend({
 		cc.log("refreshDeskItemPosition round", round)
 		for (var p = 0; p < this._deskLayoutSize; p++) {
 			var deskLayout = this.listView_table.getChildByName("deskLayout_" + (p + 1));
+			if (!deskLayout) continue;
 			var posX = (parseInt(round / 2) * 2 + p) * this.listView_table.layoutWidth;
 			if (p == 0) {
 				posX += (round % 2) * 2 * this.listView_table.layoutWidth;

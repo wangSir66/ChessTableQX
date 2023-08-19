@@ -128,7 +128,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
                     verifyCode: verifyCode,
                     nickname: nickname,
                     sex: self.sex,
-                    headimgurl: ossUrl + '/headImgs/head_' + util.getRandom(100, 400) + '.jpg',
+                    headimgurl: 'A_Common/head_' + util.getRandom(100, 400) + '.jpg',
                     isRegister: 1,
                 }
 

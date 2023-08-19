@@ -95,7 +95,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.9481" Y="1.0779" />
                         <PreSize X="0.1225" Y="0.3472" />
-                        <FileData Type="Normal" Path="friendCards/main/club_point.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/club_point.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Image_num_bg" ActionTag="1177323799" VisibleForFrame="False" Tag="127" IconVisible="False" LeftMargin="126.7133" RightMargin="52.2867" TopMargin="0.9500" BottomMargin="46.0500" LeftEage="12" RightEage="12" TopEage="12" BottomEage="12" Scale9OriginX="12" Scale9OriginY="12" Scale9Width="7" Scale9Height="7" ctype="ImageViewObjectData">
                         <Size X="25.0000" Y="25.0000" />
@@ -119,7 +119,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.6824" Y="0.8132" />
                         <PreSize X="0.1225" Y="0.3472" />
-                        <FileData Type="Normal" Path="friendCards/main/club_point.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/club_point.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

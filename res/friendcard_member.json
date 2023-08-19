@@ -510,9 +510,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/main/club_point.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/club_point.png",
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 6,
                         "Scale9OriginY": 6,
@@ -558,9 +558,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/main/club_point.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/club_point.png",
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 12,
                         "Scale9OriginY": 12,
@@ -22522,6 +22522,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
         "createNewPng/daTC1_20.png",
         "Default/ImageFile.png",
         "friendCards/common/btn_chebox_fang.png",
@@ -22532,7 +22534,6 @@
         "friendCards/common/img_dikuang.png",
         "friendCards/common/img_gou.png",
         "friendCards/common/img_xiaotanchuang.png",
-        "friendCards/main/club_point.png",
         "friendCards/memberManage/bg_bianhao.png",
         "friendCards/memberManage/bg_search.png",
         "friendCards/memberManage/bg_sort.png",

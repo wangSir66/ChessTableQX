@@ -9,6 +9,8 @@ var res = {
 	ChangeHead_json: "A_ChangeHead.json",
 	ChangeNickName_json: "A_ChangeNickName.json",
 	ChangePWD_json: "A_ChangePWD.json",
+	Friendcard_main_json: "A_Friendcard_main.json",
+	SelectRulePanel_json: "A_SelectRulePanel.json",
 
 	Create_json: "createHomeTotal.json",
 	Enter_json: "enter.json",

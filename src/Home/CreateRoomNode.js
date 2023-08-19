@@ -118,7 +118,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         } else {
             text.setTextColor(this._unSelectColor);
         }
-
     },
     radioBoxSelectCB: function (index, sender, list) {
         if (sender) {
