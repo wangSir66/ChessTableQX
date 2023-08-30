@@ -118,9 +118,9 @@
             "Children": [
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 19,
@@ -821,9 +821,10 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_dikuang.png",
         "friendCards/common/img_lianhua.png",
         "friendCards/common/img_tongyong.png",
         "friendCards/yaoqing/btn_all_yaoqing_n.png",

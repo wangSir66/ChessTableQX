@@ -43,7 +43,7 @@ function MJNet() {
 					}
 				}
 				if (lastTableCmd == evt) { lastTableCmd = null; ComputePingPong(); }
-				if (cc.sys.OS_WINDOWS == cc.sys.os && evt != 'MJTick') cc.log(evt + "@" + JSON.stringify(data));
+				// if (cc.sys.OS_WINDOWS == cc.sys.os && evt != 'MJTick') cc.log(evt + "@" + JSON.stringify(data));
 				if (evt == 'onKick') MjClient.gamenet.SetCallBack("disconnect", function () { postEvent("disconnect", 7); });
 				cb(data);
 			});

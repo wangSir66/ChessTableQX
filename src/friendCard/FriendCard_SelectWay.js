@@ -153,11 +153,12 @@ var FriendCardSelectWay = cc.Layer.extend({
             text.ignoreContentAdaptWithSize(true);
         }
         //修正scrollView的滑动区域
-        let oldS = this.wayList.getInnerContainerSize()
-        this.wayList.height = (hIndx + 1) * this.wayItem.height + 5 * hIndx + 4;
-        this.wayList.setInnerContainerSize(cc.size(oldS.width, (hIndx + 1) * this.wayItem.height + 5 * hIndx));
+        let oldS = this.wayList.getInnerContainerSize(), totalH = this.list.getParent().height, nowH = (hIndx + 1) * this.wayItem.height + 5 * hIndx;
+        if (nowH + 14 > totalH) nowH = totalH - 120;
+        this.wayList.height = nowH  + 4;
+        this.wayList.setInnerContainerSize(cc.size(oldS.width, (hIndx + 1) * this.wayItem.height + 5 * hIndx + 4));
         this.wayList.scrollToTop(0.1, true);
-        this.wayPanel.getChildByName('bg').height = this.wayItem.height * (hIndx + 1) + 5 * hIndx + 14;
+        this.wayPanel.getChildByName('bg').height = nowH + 14;
         let sNode = this.gameBtnRadio.getSelectItem();
         this.wayPanel.setPositionX(sNode.x);
         this.checkBtnSelected();

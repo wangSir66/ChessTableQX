@@ -36,7 +36,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4045" Y="0.5198" />
                     <PreSize X="1.0000" Y="1.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/girl.png" Plist="A_Home/Home.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/Main/girl.png" Plist="A_Home/Home.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -72,9 +72,9 @@
                     <PrePosition X="0.9266" Y="0.2182" />
                     <PreSize X="0.1289" Y="0.6545" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/shop_s.png" Plist="A_Home/Home.plist" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Home/shop_s.png" Plist="A_Home/Home.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/shop.png" Plist="A_Home/Home.plist" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/shop_s.png" Plist="A_Home/Home.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/shop_s.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/shop.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -87,9 +87,9 @@
                     <PrePosition X="0.3994" Y="0.1818" />
                     <PreSize X="0.0852" Y="0.7909" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/act_s.png" Plist="A_Home/Home.plist" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Home/act_s.png" Plist="A_Home/Home.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/act.png" Plist="A_Home/Home.plist" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/act_s.png" Plist="A_Home/Home.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/act_s.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/act.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -102,9 +102,9 @@
                     <PrePosition X="0.7363" Y="0.1818" />
                     <PreSize X="0.0852" Y="0.7909" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/tuijian_s.png" Plist="A_Home/Home.plist" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Home/tuijian_s.png" Plist="A_Home/Home.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/tuijian.png" Plist="A_Home/Home.plist" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/tuijian_s.png" Plist="A_Home/Home.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/tuijian_s.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/tuijian.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -117,9 +117,9 @@
                     <PrePosition X="0.2309" Y="0.1818" />
                     <PreSize X="0.0852" Y="0.7909" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/zhanji_s.png" Plist="A_Home/Home.plist" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Home/zhanji_s.png" Plist="A_Home/Home.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/zhanji.png" Plist="A_Home/Home.plist" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/zhanji_s.png" Plist="A_Home/Home.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/zhanji_s.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/zhanji.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -148,7 +148,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="-0.6845" Y="0.6102" />
                         <PreSize X="0.9450" Y="0.5402" />
-                        <FileData Type="MarkedSubImage" Path="A_Home/fenxiang_tip.png" Plist="A_Home/Home.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Home/Main/fenxiang_tip.png" Plist="A_Home/Home.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="hongDian" ActionTag="-1505257266" Tag="713" IconVisible="False" LeftMargin="47.8980" RightMargin="-2.8980" TopMargin="-25.3037" BottomMargin="48.3037" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="22" Scale9Height="22" ctype="ImageViewObjectData">
                         <Size X="64.0000" Y="64.0000" />
@@ -172,7 +172,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.7330" Y="0.9230" />
                         <PreSize X="0.5872" Y="0.7356" />
-                        <FileData Type="MarkedSubImage" Path="A_Home/hongdian-home.png" Plist="A_Home/Home.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Home/Main/hongdian-home.png" Plist="A_Home/Home.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint />
@@ -182,9 +182,9 @@
                     <PrePosition X="0.5252" Y="0.1818" />
                     <PreSize X="0.0852" Y="0.7909" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/share_s.png" Plist="A_Home/Home.plist" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Home/share_s.png" Plist="A_Home/Home.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/share.png" Plist="A_Home/Home.plist" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/share_s.png" Plist="A_Home/Home.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/share_s.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/share.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -213,7 +213,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.8257" Y="0.8621" />
                         <PreSize X="0.5872" Y="0.7356" />
-                        <FileData Type="MarkedSubImage" Path="A_Home/hongdian-home.png" Plist="A_Home/Home.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Home/Main/hongdian-home.png" Plist="A_Home/Home.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" />
@@ -223,9 +223,9 @@
                     <PrePosition X="0.0625" Y="0.1818" />
                     <PreSize X="0.0852" Y="0.7909" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/kefu_s.png" Plist="A_Home/Home.plist" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Home/kefu_s.png" Plist="A_Home/Home.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/kefu.png" Plist="A_Home/Home.plist" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/kefu_s.png" Plist="A_Home/Home.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/kefu_s.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/kefu.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -238,8 +238,8 @@
                     <PrePosition X="0.0625" Y="0.1818" />
                     <PreSize X="0.0852" Y="0.7909" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Home/zixun_s.png" Plist="A_Home/Home.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/zixun.png" Plist="A_Home/Home.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/zixun_s.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/zixun.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -269,7 +269,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.1948" Y="0.5695" />
                         <PreSize X="0.2674" Y="0.7655" />
-                        <FileData Type="MarkedSubImage" Path="A_Home/shz.png" Plist="A_Home/Home.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Home/Main/shz.png" Plist="A_Home/Home.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="majiang" ActionTag="-153660606" Tag="89" IconVisible="False" LeftMargin="1.3100" RightMargin="415.6900" TopMargin="54.1315" BottomMargin="9.8685" ctype="SpriteObjectData">
@@ -280,7 +280,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0985" Y="0.3474" />
                         <PreSize X="0.1919" Y="0.5586" />
-                        <FileData Type="MarkedSubImage" Path="A_Home/mj2.png" Plist="A_Home/Home.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Home/Main/mj2.png" Plist="A_Home/Home.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="ylcTitle" ActionTag="1216230639" Tag="205" IconVisible="False" LeftMargin="220.0000" RightMargin="70.0000" TopMargin="29.0000" BottomMargin="34.0000" LeftEage="74" RightEage="74" TopEage="27" BottomEage="27" Scale9OriginX="74" Scale9OriginY="27" Scale9Width="78" Scale9Height="28" ctype="ImageViewObjectData">
@@ -291,7 +291,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.6453" Y="0.5172" />
                         <PreSize X="0.4380" Y="0.5655" />
-                        <FileData Type="MarkedSubImage" Path="A_Home/ylchtitle.png" Plist="A_Home/Home.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Home/Main/ylchtitle.png" Plist="A_Home/Home.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -301,7 +301,7 @@
                     <PrePosition X="0.5726" Y="0.7652" />
                     <PreSize X="0.8062" Y="0.2900" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/ylch.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/ylch.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -316,7 +316,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5138" Y="0.7364" />
                         <PreSize X="0.3605" Y="0.2063" />
-                        <FileData Type="MarkedSubImage" Path="A_Home/mj.png" Plist="A_Home/Home.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Home/Main/mj.png" Plist="A_Home/Home.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -326,7 +326,7 @@
                     <PrePosition X="0.7310" Y="0.3411" />
                     <PreSize X="0.4984" Y="0.5720" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/qyq.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/qyq.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -339,7 +339,7 @@
                     <PrePosition X="0.3320" Y="0.4737" />
                     <PreSize X="0.2969" Y="0.2820" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/chjfj.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/chjfj.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -352,7 +352,7 @@
                     <PrePosition X="0.3352" Y="0.1900" />
                     <PreSize X="0.2969" Y="0.2820" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/jrfj.png" Plist="A_Home/Home.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/jrfj.png" Plist="A_Home/Home.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -385,7 +385,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.0820" Y="0.8288" />
             <PreSize X="0.1297" Y="0.0292" />
-            <FileData Type="MarkedSubImage" Path="A_Home/lvse_text.png" Plist="A_Home/Home.plist" />
+            <FileData Type="MarkedSubImage" Path="A_Home/Main/lvse_text.png" Plist="A_Home/Home.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="tilebg" ActionTag="735828053" Tag="53" IconVisible="False" LeftMargin="-0.2534" RightMargin="0.2534" TopMargin="0.1266" BottomMargin="603.8734" Scale9Enable="True" LeftEage="176" RightEage="176" TopEage="36" BottomEage="36" Scale9OriginX="176" Scale9OriginY="36" Scale9Width="928" Scale9Height="44" ctype="ImageViewObjectData">
             <Size X="1280.0000" Y="116.0000" />
@@ -399,9 +399,9 @@
                 <PrePosition X="0.9648" Y="0.5603" />
                 <PreSize X="0.0562" Y="0.7759" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="MarkedSubImage" Path="A_Home/setting_s.png" Plist="A_Home/Home.plist" />
-                <PressedFileData Type="MarkedSubImage" Path="A_Home/setting_s.png" Plist="A_Home/Home.plist" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Home/setting.png" Plist="A_Home/Home.plist" />
+                <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/setting_s.png" Plist="A_Home/Home.plist" />
+                <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/setting_s.png" Plist="A_Home/Home.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/setting.png" Plist="A_Home/Home.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -414,9 +414,9 @@
                 <PrePosition X="0.8906" Y="0.5603" />
                 <PreSize X="0.0562" Y="0.7759" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="MarkedSubImage" Path="A_Home/help_s.png" Plist="A_Home/Home.plist" />
-                <PressedFileData Type="MarkedSubImage" Path="A_Home/help_s.png" Plist="A_Home/Home.plist" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Home/help.png" Plist="A_Home/Home.plist" />
+                <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/help_s.png" Plist="A_Home/Home.plist" />
+                <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/help_s.png" Plist="A_Home/Home.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/help.png" Plist="A_Home/Home.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -445,7 +445,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1270" Y="0.8003" />
                     <PreSize X="0.8889" Y="0.7111" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/hongdian-home.png" Plist="A_Home/Home.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/Main/hongdian-home.png" Plist="A_Home/Home.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -455,9 +455,9 @@
                 <PrePosition X="0.8164" Y="0.5603" />
                 <PreSize X="0.0562" Y="0.7759" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="MarkedSubImage" Path="A_Home/email_s.png" Plist="A_Home/Home.plist" />
-                <PressedFileData Type="MarkedSubImage" Path="A_Home/email_s.png" Plist="A_Home/Home.plist" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Home/email.png" Plist="A_Home/Home.plist" />
+                <DisabledFileData Type="MarkedSubImage" Path="A_Home/Main/email_s.png" Plist="A_Home/Home.plist" />
+                <PressedFileData Type="MarkedSubImage" Path="A_Home/Main/email_s.png" Plist="A_Home/Home.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/email.png" Plist="A_Home/Home.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -518,7 +518,7 @@
                 <PrePosition X="0.6738" Y="1.1352" />
                 <PreSize X="0.3155" Y="0.1192" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Home/gonggao_copy.png" Plist="A_Home/Home.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/gonggao_copy.png" Plist="A_Home/Home.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -531,7 +531,7 @@
                 <PrePosition X="0.7502" Y="0.6333" />
                 <PreSize X="0.3155" Y="0.1192" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Home/gonggao_copy.png" Plist="A_Home/Home.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/gonggao_copy.png" Plist="A_Home/Home.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -544,7 +544,7 @@
                 <PrePosition X="0.7502" Y="0.3221" />
                 <PreSize X="0.3155" Y="0.1192" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Home/gonggao_copy.png" Plist="A_Home/Home.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/gonggao_copy.png" Plist="A_Home/Home.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -555,7 +555,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="-0.2427" Y="0.4904" />
             <PreSize X="0.2477" Y="0.5361" />
-            <FileData Type="MarkedSubImage" Path="A_Home/gonggao_img.png" Plist="A_Home/Home.plist" />
+            <FileData Type="MarkedSubImage" Path="A_Home/Main/gonggao_img.png" Plist="A_Home/Home.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="guangbo" ActionTag="-215884997" Tag="155" IconVisible="False" LeftMargin="259.2015" RightMargin="312.7985" TopMargin="81.4977" BottomMargin="595.5023" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="708.0000" Y="43.0000" />
@@ -661,7 +661,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.1038" Y="0.5295" />
                         <PreSize X="0.2524" Y="0.9750" />
-                        <FileData Type="MarkedSubImage" Path="A_Common/icon_yuanbao.png" Plist="A_Common/Common.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Common/Main/icon_yuanbao.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btn_add" ActionTag="1707761967" Tag="370" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="168.5000" RightMargin="-1.5000" TopMargin="-1.5000" BottomMargin="-1.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="13" Scale9Height="21" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="43.0000" Y="43.0000" />
@@ -672,7 +672,7 @@
                         <PrePosition X="0.9048" Y="0.5000" />
                         <PreSize X="0.2048" Y="1.0750" />
                         <TextColor A="255" R="65" G="65" B="70" />
-                        <NormalFileData Type="MarkedSubImage" Path="A_Common/icon_add.png" Plist="A_Common/Common.plist" />
+                        <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/icon_add.png" Plist="A_Common/Common.plist" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -683,7 +683,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="3.0584" Y="0.6347" />
                     <PreSize X="2.2826" Y="0.4348" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/bg_yuanbao.png" Plist="A_Home/Home.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/Main/bg_yuanbao.png" Plist="A_Home/Home.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -692,7 +692,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.9200" Y="0.9200" />
-                <FileData Type="MarkedSubImage" Path="A_Home/avatar_mask.png" Plist="A_Home/Home.plist" />
+                <FileData Type="MarkedSubImage" Path="A_Home/Main/avatar_mask.png" Plist="A_Home/Home.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="headBg" ActionTag="-1703282302" Alpha="127" Tag="133" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="4.0000" RightMargin="4.0000" TopMargin="4.0000" BottomMargin="4.0000" LeftEage="30" RightEage="30" TopEage="30" BottomEage="30" Scale9OriginX="30" Scale9OriginY="30" Scale9Width="32" Scale9Height="32" ctype="ImageViewObjectData">
                 <Size X="92.0000" Y="92.0000" />
@@ -702,7 +702,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.9200" Y="0.9200" />
-                <FileData Type="MarkedSubImage" Path="A_Home/avatar.png" Plist="A_Home/Home.plist" />
+                <FileData Type="MarkedSubImage" Path="A_Home/Main/avatar.png" Plist="A_Home/Home.plist" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint />

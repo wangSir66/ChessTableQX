@@ -33,7 +33,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/yong_t.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/yong_t.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_0" ActionTag="-103868477" Tag="95" IconVisible="False" LeftMargin="-43.5000" RightMargin="6.5000" TopMargin="-21.5000" BottomMargin="-21.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="13" Scale9Height="17" ctype="ImageViewObjectData">
                     <Size X="37.0000" Y="43.0000" />
@@ -43,7 +43,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/hu_t.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/hu_t.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_1" ActionTag="-716965306" Tag="96" IconVisible="False" LeftMargin="4.5000" RightMargin="-45.5000" TopMargin="-21.5000" BottomMargin="-21.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="17" Scale9Height="17" ctype="ImageViewObjectData">
                     <Size X="41.0000" Y="43.0000" />
@@ -53,7 +53,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/xie_t.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/xie_t.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_2" ActionTag="1722347652" Tag="97" IconVisible="False" LeftMargin="53.5000" RightMargin="-94.5000" TopMargin="-20.5000" BottomMargin="-20.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="17" Scale9Height="15" ctype="ImageViewObjectData">
                     <Size X="41.0000" Y="41.0000" />
@@ -63,7 +63,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/yi_t.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/yi_t.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
@@ -82,7 +82,7 @@
                 <PrePosition X="0.9654" Y="0.9388" />
                 <PreSize X="0.0598" Y="0.1041" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Common/btnclose.png" Plist="A_Common/Common.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/btnclose.png" Plist="A_Common/Common.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -108,7 +108,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0319" Y="0.0769" />
                 <PreSize X="0.9361" Y="0.7619" />
-                <FileData Type="MarkedSubImage" Path="A_Common/universalBottom.png" Plist="A_Common/Common.plist" />
+                <FileData Type="MarkedSubImage" Path="A_Common/Main/universalBottom.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -117,7 +117,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.7703" Y="0.7875" />
-            <FileData Type="MarkedSubImage" Path="A_Common/pop_bg_small.png" Plist="A_Common/Common.plist" />
+            <FileData Type="MarkedSubImage" Path="A_Common/Main/pop_bg_small.png" Plist="A_Common/Common.plist" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

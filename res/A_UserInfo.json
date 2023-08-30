@@ -121,7 +121,7 @@
               {
                 "FileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/pop_bg_small.png",
+                  "Path": "A_Common/Main/pop_bg_small.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9OriginX": 169,
@@ -162,7 +162,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_decration_2.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": 169,
                     "Scale9OriginY": 141,
@@ -209,7 +209,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_decration_2.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": 169,
                     "Scale9OriginY": 141,
@@ -256,7 +256,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_decration_1.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": 15,
                     "Scale9OriginY": 4,
@@ -303,7 +303,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_decration_1.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": -122,
                     "Scale9OriginY": -126,
@@ -350,7 +350,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_decration_1.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": -122,
                     "Scale9OriginY": -126,
@@ -397,7 +397,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_decration_1.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": -122,
                     "Scale9OriginY": -126,
@@ -444,7 +444,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_colorbg_1.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": 15,
                     "Scale9OriginY": 4,
@@ -491,7 +491,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_colorbg_1.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": 15,
                     "Scale9OriginY": 4,
@@ -758,7 +758,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/homeHeadCusPic_2.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9OriginX": 35,
                     "Scale9OriginY": 35,
@@ -1157,7 +1157,7 @@
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/bg_kuang2.png",
+                      "Path": "A_Common/Main/bg_kuang2.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "Scale9Enable": true,
@@ -1208,7 +1208,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Common/icon_yuanbao.png",
+                          "Path": "A_Common/Main/icon_yuanbao.png",
                           "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 16,
@@ -1316,7 +1316,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Common/icon_add.png",
+                          "Path": "A_Common/Main/icon_add.png",
                           "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 8,
@@ -1501,7 +1501,7 @@
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/pl_setpwd.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -1626,7 +1626,7 @@
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_ChangeName.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -1751,7 +1751,7 @@
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_ChangeHead.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -1876,7 +1876,7 @@
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_Home/UserInfo/PI_Account_Set.png",
-                      "Plist": "A_Home/UserInfo/Userinfo.plist"
+                      "Plist": "A_Home/Userinfo.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -2009,7 +2009,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/btnclose.png",
+                  "Path": "A_Common/Main/btnclose.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,
@@ -2084,8 +2084,8 @@
       "UsedResources": [
         "A_Common/Common.plist",
         "A_Common/Common.png",
-        "A_Home/UserInfo/Userinfo.plist",
-        "A_Home/UserInfo/Userinfo.png",
+        "A_Home/Userinfo.plist",
+        "A_Home/Userinfo.png",
         "fonts/fzcy.ttf",
         "usernfo/icon_gou.png",
         "usernfo/icon_quan.png"

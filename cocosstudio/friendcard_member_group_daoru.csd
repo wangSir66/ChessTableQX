@@ -98,7 +98,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4900" Y="0.5000" />
                 <PreSize X="0.3359" Y="0.4514" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
@@ -148,7 +148,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5100" Y="0.5000" />
                 <PreSize X="0.3359" Y="0.4514" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />

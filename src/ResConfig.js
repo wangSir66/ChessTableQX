@@ -11,6 +11,9 @@ var res = {
 	ChangePWD_json: "A_ChangePWD.json",
 	Friendcard_main_json: "A_Friendcard_main.json",
 	SelectRulePanel_json: "A_SelectRulePanel.json",
+	Friendcard_nvguanjia_json: "A_Friendcard_nvguanjia.json",
+	Friendcard_gaojiSet_json: "A_Friendcard_gaojiSet.json",
+	Friendcard_info_json: "A_Friendcard_info.json",
 
 	Create_json: "createHomeTotal.json",
 	Enter_json: "enter.json",

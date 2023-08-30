@@ -236,7 +236,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/img_guanjia.png",
+                          "Path": "A_FriendCard/Main/img_guanjia.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 10,
@@ -291,7 +291,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/fangka_kuang.png",
+                      "Path": "A_FriendCard/Main/Main_fangka_kuang.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 68,
@@ -329,7 +329,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/fangkashuliang_di.png",
+                          "Path": "A_FriendCard/Main/Main_fangkashuliang_di.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 34,
@@ -544,7 +544,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/info_bg.png",
+                          "Path": "A_FriendCard/Main/info_bg.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 96,
@@ -594,7 +594,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_fanhui.png",
+                          "Path": "A_FriendCard/Main/Main_btn_fanhui.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -894,7 +894,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/dikuang.png",
+                      "Path": "A_FriendCard/Main/Main_dikuang.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 34,
@@ -939,7 +939,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_search.png",
+                          "Path": "A_FriendCard/Main/Main_btn_search.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -1247,7 +1247,7 @@
                                     "FlipX": true,
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_FriendCard/yizi_2.png",
+                                      "Path": "A_FriendCard/Main/yizi_2.png",
                                       "Plist": "A_FriendCard/FriendCardMain.plist"
                                     },
                                     "Scale9OriginX": 22,
@@ -1294,7 +1294,7 @@
                                   {
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_FriendCard/yizi_2.png",
+                                      "Path": "A_FriendCard/Main/yizi_2.png",
                                       "Plist": "A_FriendCard/FriendCardMain.plist"
                                     },
                                     "Scale9OriginX": 22,
@@ -1341,7 +1341,7 @@
                                   {
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_FriendCard/zhuozi_0.png",
+                                      "Path": "A_FriendCard/Main/zhuozi_0.png",
                                       "Plist": "A_FriendCard/FriendCardMain.plist"
                                     },
                                     "Scale9OriginX": 34,
@@ -1381,7 +1381,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/fangkashuliang_di.png",
+                                          "Path": "A_FriendCard/Main/Main_fangkashuliang_di.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 24,
@@ -1612,7 +1612,7 @@
                                         },
                                         "NormalFileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/btn_detail_n.png",
+                                          "Path": "A_FriendCard/Main/Main_btn_detail_n.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9Enable": true,
@@ -1681,7 +1681,7 @@
                                   {
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_FriendCard/img_qian.png",
+                                      "Path": "A_FriendCard/Main/img_qian.png",
                                       "Plist": "A_FriendCard/FriendCardMain.plist"
                                     },
                                     "Scale9OriginX": 16,
@@ -1793,7 +1793,7 @@
                                     "FlipX": true,
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_FriendCard/yizi_2.png",
+                                      "Path": "A_FriendCard/Main/yizi_2.png",
                                       "Plist": "A_FriendCard/FriendCardMain.plist"
                                     },
                                     "Scale9OriginX": 22,
@@ -1842,7 +1842,7 @@
                                   {
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_FriendCard/yizi_2.png",
+                                      "Path": "A_FriendCard/Main/yizi_2.png",
                                       "Plist": "A_FriendCard/FriendCardMain.plist"
                                     },
                                     "Scale9OriginX": 22,
@@ -1889,7 +1889,7 @@
                                   {
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_Home/avatar_mask.png",
+                                      "Path": "A_Home/Main/avatar_mask.png",
                                       "Plist": "A_Home/Home.plist"
                                     },
                                     "Scale9OriginX": 21,
@@ -1929,7 +1929,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/fangkashuliang_di.png",
+                                          "Path": "A_FriendCard/Main/Main_fangkashuliang_di.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9Enable": true,
@@ -1977,7 +1977,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/Z_offline.png",
+                                          "Path": "A_FriendCard/Main/Z_offline.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 26,
@@ -2092,7 +2092,7 @@
                                   {
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_Home/avatar_mask.png",
+                                      "Path": "A_Home/Main/avatar_mask.png",
                                       "Plist": "A_Home/Home.plist"
                                     },
                                     "Scale9OriginX": 21,
@@ -2132,7 +2132,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/fangkashuliang_di.png",
+                                          "Path": "A_FriendCard/Main/Main_fangkashuliang_di.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9Enable": true,
@@ -2180,7 +2180,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/Z_offline.png",
+                                          "Path": "A_FriendCard/Main/Z_offline.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 26,
@@ -2295,7 +2295,7 @@
                                   {
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_Home/avatar_mask.png",
+                                      "Path": "A_Home/Main/avatar_mask.png",
                                       "Plist": "A_Home/Home.plist"
                                     },
                                     "Scale9OriginX": 21,
@@ -2335,7 +2335,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/fangkashuliang_di.png",
+                                          "Path": "A_FriendCard/Main/Main_fangkashuliang_di.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9Enable": true,
@@ -2383,7 +2383,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/Z_offline.png",
+                                          "Path": "A_FriendCard/Main/Z_offline.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 26,
@@ -2498,7 +2498,7 @@
                                   {
                                     "FileData": {
                                       "Type": "MarkedSubImage",
-                                      "Path": "A_Home/avatar_mask.png",
+                                      "Path": "A_Home/Main/avatar_mask.png",
                                       "Plist": "A_Home/Home.plist"
                                     },
                                     "Scale9OriginX": 21,
@@ -2538,7 +2538,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/fangkashuliang_di.png",
+                                          "Path": "A_FriendCard/Main/Main_fangkashuliang_di.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9Enable": true,
@@ -2586,7 +2586,7 @@
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
-                                          "Path": "A_FriendCard/Z_offline.png",
+                                          "Path": "A_FriendCard/Main/Z_offline.png",
                                           "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 26,
@@ -2737,7 +2737,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/icon_tipPoint.png",
+                      "Path": "A_FriendCard/Main/Main_icon_tipPoint.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 20,
@@ -2781,9 +2781,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/img_isShowZhuozi.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 139,
                     "Scale9OriginY": 16,
@@ -2839,9 +2839,9 @@
                 "ClipAble": false,
                 "BackColorAlpha": 0,
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "A_FriendCard/image_bottomBG.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/Main_image_bottomBG.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "ComboBoxIndex": 1,
                 "SingleColor": {
@@ -2937,7 +2937,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_record_n.png",
+                          "Path": "A_FriendCard/Main/Main_btn_record_n.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3003,7 +3003,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_record2_n.png",
+                          "Path": "A_FriendCard/Main/Main_btn_record2_n.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3069,7 +3069,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_tongji_n.png",
+                          "Path": "A_FriendCard/Main/Main_btn_tongji_n.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3135,7 +3135,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_rule_n.png",
+                          "Path": "A_FriendCard/Main/Main_btn_rule_n.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3187,7 +3187,7 @@
                           {
                             "FileData": {
                               "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/club_point.png",
+                              "Path": "A_FriendCard/Main/Main_club_point.png",
                               "Plist": "A_FriendCard/FriendCardMain.plist"
                             },
                             "Scale9OriginX": 6,
@@ -3251,7 +3251,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_bangding_n.png",
+                          "Path": "A_FriendCard/Main/Main_btn_bangding_n.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3317,7 +3317,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_memberlist_n.png",
+                          "Path": "A_FriendCard/Main/Main_btn_memberlist_n.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3370,7 +3370,7 @@
                           {
                             "FileData": {
                               "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/club_point.png",
+                              "Path": "A_FriendCard/Main/Main_club_point.png",
                               "Plist": "A_FriendCard/FriendCardMain.plist"
                             },
                             "Scale9OriginX": 6,
@@ -3434,12 +3434,12 @@
                         },
                         "PressedFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_join_s.png",
+                          "Path": "A_FriendCard/Main/Main_btn_join_s.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_join_n.png",
+                          "Path": "A_FriendCard/Main/Main_btn_join_n.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3506,7 +3506,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_skin.png",
+                          "Path": "A_FriendCard/Main/Main_btn_skin.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3572,7 +3572,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_yaoqing.png",
+                          "Path": "A_FriendCard/Main/Main_btn_yaoqing.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3638,7 +3638,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_webZhanji.png",
+                          "Path": "A_FriendCard/Main/Main_btn_webZhanji.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3704,7 +3704,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/btn_kaifang_n.png",
+                          "Path": "A_FriendCard/Main/Main_btn_kaifang_n.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
@@ -3781,7 +3781,7 @@
               {
                 "FileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/icon_stop_tishi.png",
+                  "Path": "A_FriendCard/Main/Main_icon_stop_tishi.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9OriginX": 139,
@@ -3889,7 +3889,7 @@
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_FriendCard/btn_showClubList.png",
+              "Path": "A_FriendCard/Main/Main_btn_showClubList.png",
               "Plist": "A_FriendCard/FriendCardMain.plist"
             },
             "Scale9Enable": true,
@@ -3951,9 +3951,9 @@
           },
           {
             "FileData": {
-              "Type": "Normal",
-              "Path": "A_FriendCard/bg_clubList.png",
-              "Plist": ""
+              "Type": "MarkedSubImage",
+              "Path": "A_FriendCard/Main/Main_bg_clubList.png",
+              "Plist": "A_FriendCard/FriendCardMain.plist"
             },
             "Scale9Enable": true,
             "Scale9OriginX": 185,
@@ -3999,7 +3999,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/img_fanhui.png",
+                  "Path": "A_FriendCard/Main/img_fanhui.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
@@ -4164,17 +4164,17 @@
                     },
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/btn_club_s.png",
+                      "Path": "A_FriendCard/Main/Main_btn_club_s.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/btn_club_s.png",
+                      "Path": "A_FriendCard/Main/Main_btn_club_s.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/btn_club_n.png",
+                      "Path": "A_FriendCard/Main/Main_btn_club_n.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
@@ -4234,7 +4234,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/avatar_mask.png",
+                      "Path": "A_Home/Main/avatar_mask.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9OriginX": 32,
@@ -4281,7 +4281,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/img_feixuanzhongMem.png",
+                      "Path": "A_FriendCard/Main/img_feixuanzhongMem.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 10,
@@ -4603,7 +4603,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/img_fangka.png",
+                      "Path": "A_FriendCard/Main/img_fangka.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 19,
@@ -4648,7 +4648,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/img_ZTKF.png",
+                      "Path": "A_FriendCard/Main/img_ZTKF.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 19,
@@ -4709,7 +4709,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/btn_createQYQ.png",
+                  "Path": "A_FriendCard/Main/Main_btn_createQYQ.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
@@ -4774,7 +4774,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/btn_joinQYQ.png",
+                  "Path": "A_FriendCard/Main/Main_btn_joinQYQ.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
@@ -4993,7 +4993,7 @@
                 ],
                 "ActionTag": 925379314,
                 "Size": {
-                  "X": 1069.952,
+                  "X": 1069.0,
                   "Y": 45.0
                 },
                 "Name": "scroll",
@@ -5017,15 +5017,14 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "A_FriendCard/bg_clubList.png",
         "A_FriendCard/bg1_0.jpg",
         "A_FriendCard/bg2_0.png",
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/image_bottomBG.png",
         "A_Home/dating-1_81.png",
         "A_Home/Home.plist",
         "A_Home/Home.png",
+        "Default/ImageFile.png",
         "fonts/fzcy.ttf",
         "friendCards/common/img_xian.png"
       ],

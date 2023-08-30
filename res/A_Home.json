@@ -147,7 +147,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/girl.png",
+                      "Path": "A_Home/Main/girl.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9OriginX": 177,
@@ -294,17 +294,17 @@
                     },
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/shop_s.png",
+                      "Path": "A_Home/Main/shop_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/shop_s.png",
+                      "Path": "A_Home/Main/shop_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/shop.png",
+                      "Path": "A_Home/Main/shop.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -368,17 +368,17 @@
                     },
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/act_s.png",
+                      "Path": "A_Home/Main/act_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/act_s.png",
+                      "Path": "A_Home/Main/act_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/act.png",
+                      "Path": "A_Home/Main/act.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -442,17 +442,17 @@
                     },
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/tuijian_s.png",
+                      "Path": "A_Home/Main/tuijian_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/tuijian_s.png",
+                      "Path": "A_Home/Main/tuijian_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/tuijian.png",
+                      "Path": "A_Home/Main/tuijian.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -516,17 +516,17 @@
                     },
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/zhanji_s.png",
+                      "Path": "A_Home/Main/zhanji_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/zhanji_s.png",
+                      "Path": "A_Home/Main/zhanji_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/zhanji.png",
+                      "Path": "A_Home/Main/zhanji.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -590,17 +590,17 @@
                     },
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/share_s.png",
+                      "Path": "A_Home/Main/share_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/share_s.png",
+                      "Path": "A_Home/Main/share_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/share.png",
+                      "Path": "A_Home/Main/share.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -648,7 +648,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Home/fenxiang_tip.png",
+                          "Path": "A_Home/Main/fenxiang_tip.png",
                           "Plist": "A_Home/Home.plist"
                         },
                         "Scale9OriginX": 33,
@@ -750,7 +750,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Home/hongdian-home.png",
+                          "Path": "A_Home/Main/hongdian-home.png",
                           "Plist": "A_Home/Home.plist"
                         },
                         "Scale9OriginX": 21,
@@ -868,17 +868,17 @@
                     },
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/kefu_s.png",
+                      "Path": "A_Home/Main/kefu_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/kefu_s.png",
+                      "Path": "A_Home/Main/kefu_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/kefu.png",
+                      "Path": "A_Home/Main/kefu.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -928,7 +928,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Home/hongdian-home.png",
+                          "Path": "A_Home/Main/hongdian-home.png",
                           "Plist": "A_Home/Home.plist"
                         },
                         "Scale9OriginX": 21,
@@ -1045,12 +1045,12 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/zixun_s.png",
+                      "Path": "A_Home/Main/zixun_s.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/zixun.png",
+                      "Path": "A_Home/Main/zixun.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -1169,7 +1169,7 @@
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/ylch.png",
+                      "Path": "A_Home/Main/ylch.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -1220,7 +1220,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Home/shz.png",
+                          "Path": "A_Home/Main/shz.png",
                           "Plist": "A_Home/Home.plist"
                         },
                         "BlendFunc": {
@@ -1265,7 +1265,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Home/mj2.png",
+                          "Path": "A_Home/Main/mj2.png",
                           "Plist": "A_Home/Home.plist"
                         },
                         "BlendFunc": {
@@ -1310,7 +1310,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Home/ylchtitle.png",
+                          "Path": "A_Home/Main/ylchtitle.png",
                           "Plist": "A_Home/Home.plist"
                         },
                         "Scale9OriginX": 74,
@@ -1371,7 +1371,7 @@
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/qyq.png",
+                      "Path": "A_Home/Main/qyq.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -1424,7 +1424,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Home/mj.png",
+                          "Path": "A_Home/Main/mj.png",
                           "Plist": "A_Home/Home.plist"
                         },
                         "Scale9OriginX": 25,
@@ -1485,7 +1485,7 @@
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/chjfj.png",
+                      "Path": "A_Home/Main/chjfj.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9OriginX": 15,
@@ -1549,7 +1549,7 @@
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/jrfj.png",
+                      "Path": "A_Home/Main/jrfj.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9OriginX": 15,
@@ -1624,7 +1624,7 @@
           {
             "FileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Home/lvse_text.png",
+              "Path": "A_Home/Main/lvse_text.png",
               "Plist": "A_Home/Home.plist"
             },
             "Scale9OriginX": 54,
@@ -1715,17 +1715,17 @@
                 },
                 "DisabledFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/setting_s.png",
+                  "Path": "A_Home/Main/setting_s.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "PressedFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/setting_s.png",
+                  "Path": "A_Home/Main/setting_s.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/setting.png",
+                  "Path": "A_Home/Main/setting.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
@@ -1790,17 +1790,17 @@
                 },
                 "DisabledFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/help_s.png",
+                  "Path": "A_Home/Main/help_s.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "PressedFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/help_s.png",
+                  "Path": "A_Home/Main/help_s.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/help.png",
+                  "Path": "A_Home/Main/help.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
@@ -1865,17 +1865,17 @@
                 },
                 "DisabledFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/email_s.png",
+                  "Path": "A_Home/Main/email_s.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "PressedFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/email_s.png",
+                  "Path": "A_Home/Main/email_s.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/email.png",
+                  "Path": "A_Home/Main/email.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
@@ -1926,7 +1926,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/hongdian-home.png",
+                      "Path": "A_Home/Main/hongdian-home.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9OriginX": 21,
@@ -2045,7 +2045,7 @@
           {
             "FileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Home/gonggao_img.png",
+              "Path": "A_Home/Main/gonggao_img.png",
               "Plist": "A_Home/Home.plist"
             },
             "Scale9OriginX": 97,
@@ -2254,7 +2254,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/gonggao_copy.png",
+                  "Path": "A_Home/Main/gonggao_copy.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
@@ -2320,7 +2320,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/gonggao_copy.png",
+                  "Path": "A_Home/Main/gonggao_copy.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
@@ -2385,7 +2385,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/gonggao_copy.png",
+                  "Path": "A_Home/Main/gonggao_copy.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
@@ -2708,7 +2708,7 @@
               {
                 "FileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/avatar_mask.png",
+                  "Path": "A_Home/Main/avatar_mask.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9OriginX": 27,
@@ -2857,7 +2857,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Home/bg_yuanbao.png",
+                      "Path": "A_Home/Main/bg_yuanbao.png",
                       "Plist": "A_Home/Home.plist"
                     },
                     "Scale9Enable": true,
@@ -2941,7 +2941,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Common/icon_yuanbao.png",
+                          "Path": "A_Common/Main/icon_yuanbao.png",
                           "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 19,
@@ -2994,7 +2994,7 @@
                         },
                         "NormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Common/icon_add.png",
+                          "Path": "A_Common/Main/icon_add.png",
                           "Plist": "A_Common/Common.plist"
                         },
                         "Scale9Enable": true,
@@ -3071,7 +3071,7 @@
               {
                 "FileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/avatar.png",
+                  "Path": "A_Home/Main/avatar.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9OriginX": 30,

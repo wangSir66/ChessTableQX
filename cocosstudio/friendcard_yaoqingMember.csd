@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0488" Y="0.8310" />
                 <PreSize X="0.9065" Y="0.6201" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="Text_title" ActionTag="501899479" Tag="378" IconVisible="False" LeftMargin="290.7037" RightMargin="274.3523" TopMargin="39.0286" BottomMargin="384.9634" FontSize="30" LabelText="俱乐部名字" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="152.0000" Y="34.0000" />

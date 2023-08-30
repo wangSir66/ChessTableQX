@@ -434,9 +434,9 @@ var FriendCard_main = cc.Layer.extend({
 		if (!skinType)
 			skinType = 0;
 
-		var path = "friendCards/setSkin/";
+		var path = "A_FriendCard/Main/";
 		var table = desk.getChildByName("table");
-		table.loadTexture(path + "zhuozi_" + skinType + ".png");
+		table.loadTexture(path + "zhuozi_" + skinType + ".png", 1);
 		// var text_roundNum = table.getChildByName("text_roundNum");
 		// if ((skinType == 0) || (skinType == 3)) { text_roundNum.setTextColor(cc.color("003024")) }
 		// else if ((skinType == 1) || (skinType == 4)) { text_roundNum.setTextColor(cc.color("013533")) }
@@ -450,7 +450,7 @@ var FriendCard_main = cc.Layer.extend({
 	},
 	setChairImg: function (desk, skinType) {
 		var room = desk.room
-		var path = "friendCards/setSkin/";
+		var path = "A_FriendCard/Main/";
 		for (var k = 1; k < 5; k++) {
 			var yizi = desk.getChildByName("yizi_" + k)
 			var head = desk.getChildByName("head_" + k)
@@ -485,13 +485,13 @@ var FriendCard_main = cc.Layer.extend({
 						yiziPath = "yizi_1_0.png";
 					}
 				}
-				yizi.loadTexture(path + yiziPath);
+				yizi.loadTexture(path + yiziPath, 1);
 
 				//当3人玩的时候 左上角的桌子位置换到右下角
 				if (room.maxPlayer == 3 && k == 3) {
 					yizi.zIndex = 20;
 					if (!(Number(skinType) > 2)) {
-						yizi.loadTexture("friendCards/setSkin/yizi_1_1.png");
+						yizi.loadTexture(path + "yizi_1_1.png", 1);
 					}
 					yizi.setFlippedX(false)
 				}
@@ -849,10 +849,6 @@ var FriendCard_main = cc.Layer.extend({
 			onlineCount.x = image_7.x + image_7.width + onlineCount.width
 			allNum.x = onlineCount.x
 
-			//头像框
-			var head_kuang = cell.getChildByName("head_kuang");
-			//head_kuang.loadTexture(list[i].clubId == this.clubId ? "friendCards/main/img_head_kuang_n.png" : "friendCards/main/img_head_kuang_s.png");
-
 			//房卡标签
 			var img_fangka = cell.getChildByName("img_fangka");
 			if (img_fangka) {
@@ -924,16 +920,16 @@ var FriendCard_main = cc.Layer.extend({
 				if (this.data.info.type == 1) {
 					this.text_fangka_type.setString("我的房卡");
 					this.text_fangka.setString(MjClient.data.pinfo.fangka + "");
-					this.fangkaBG.loadTexture("friendCards/main/fangka_kuang.png");
+					this.fangkaBG.loadTexture("A_FriendCard/Main/fangka_kuang.png", 1);
 				} else {
 					this.text_fangka_type.setString("我的元宝");
 					this.text_fangka.setString(MjClient.data.pinfo.money + "");
-					this.fangkaBG.loadTexture("friendCards/main/yuanbao_kuang.png");
+					this.fangkaBG.loadTexture("A_FriendCard/Main/yuanbao_kuang.png", 1);
 				}
 			} else {
 				this.text_fangka_type.setString("我的积分");
 				this.text_fangka.setString(FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList) + "");
-				this.fangkaBG.loadTexture("friendCards/main/jifen_kuang.png");
+				this.fangkaBG.loadTexture("A_FriendCard/Main/jifen_kuang.png", 1);
 			}
 		}
 
@@ -1031,7 +1027,6 @@ var FriendCard_main = cc.Layer.extend({
 			keys = Object.keys(this.data.info).filter(k => k.indexOf('rule') > -1 && !!this.data.info[k] && k != 'ruleSwitch'),
 			rule = this.data.info[keys[_indx]];
 		this.gameTypes = [];
-		cc.log('----------keys---------', JSON.stringify(keys))
 		while (rule) {
 			if (rule != "delete") {
 				indexs.push(_indx);
@@ -1258,7 +1253,7 @@ var FriendCard_main = cc.Layer.extend({
 		this.refreshDeskItem();
 		FriendCard_UI.setClubDeskTouchEvent(this.listView_table);
 		this.updateBG();
-        this.listView_table.scrollToTop(0.1, true);
+		this.listView_table.scrollToTop(0.1, true);
 	},
 	getDeskStartIndexByScrollX: function () {
 		var index = 0;
@@ -1286,7 +1281,7 @@ var FriendCard_main = cc.Layer.extend({
 		}
 	},
 	refreshDeskItemPosition: function () {
-		var childrens = this.listView_table.getChildren();
+		// var childrens = this.listView_table.getChildren();
 
 		if (this._deskScrollx < 0) {
 			this._deskScrollx = 0;

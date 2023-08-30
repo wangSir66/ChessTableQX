@@ -233,7 +233,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/loading_bar_head.png",
+                      "Path": "A_Login/Main/loading_bar_head.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 92,

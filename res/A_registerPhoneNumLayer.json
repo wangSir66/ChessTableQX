@@ -76,7 +76,7 @@
           {
             "FileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Common/pop_bg_small.png",
+              "Path": "A_Common/Main/pop_bg_small.png",
               "Plist": "A_Common/Common.plist"
             },
             "Scale9Enable": true,
@@ -144,7 +144,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/zhang_t.png",
+                      "Path": "A_Login/Main/zhang_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -189,7 +189,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/hao_t.png",
+                      "Path": "A_Login/Main/hao_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -234,7 +234,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/zhu_t.png",
+                      "Path": "A_Login/Main/zhu_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -279,7 +279,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/zuce_t.png",
+                      "Path": "A_Login/Main/zuce_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -340,7 +340,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/btnclose.png",
+                  "Path": "A_Common/Main/btnclose.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,
@@ -398,7 +398,7 @@
               {
                 "FileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/universalBottom.png",
+                  "Path": "A_Common/Main/universalBottom.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,
@@ -439,7 +439,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/CM_inputbox.png",
+                      "Path": "A_Login/Main/CM_inputbox.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
@@ -540,7 +540,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/CM_inputbox.png",
+                      "Path": "A_Login/Main/CM_inputbox.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
@@ -641,7 +641,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/CM_inputbox.png",
+                      "Path": "A_Login/Main/CM_inputbox.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
@@ -795,27 +795,27 @@
                   {
                     "NormalBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_1.png",
+                      "Path": "A_Common/Main/circle_1.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_1.png",
+                      "Path": "A_Common/Main/circle_1.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_1.png",
+                      "Path": "A_Common/Main/circle_1.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_2.png",
+                      "Path": "A_Common/Main/circle_2.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_2.png",
+                      "Path": "A_Common/Main/circle_2.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
@@ -912,27 +912,27 @@
                   {
                     "NormalBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_1.png",
+                      "Path": "A_Common/Main/circle_1.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_1.png",
+                      "Path": "A_Common/Main/circle_1.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_1.png",
+                      "Path": "A_Common/Main/circle_1.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_2.png",
+                      "Path": "A_Common/Main/circle_2.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/circle_2.png",
+                      "Path": "A_Common/Main/circle_2.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
@@ -1036,12 +1036,12 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/yellow-button.png",
+                      "Path": "A_Common/Main/yellow-button.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/yellow-button.png",
+                      "Path": "A_Common/Main/yellow-button.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "Scale9Enable": true,
@@ -1093,7 +1093,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Common/que_l.png",
+                          "Path": "A_Common/Main/que_l.png",
                           "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 12,
@@ -1138,7 +1138,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Common/ren_l.png",
+                          "Path": "A_Common/Main/ren_l.png",
                           "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 12,

@@ -53,7 +53,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.8167" />
                 <PreSize X="0.9141" Y="0.6250" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <SingleColor A="255" R="150" G="150" B="255" />
                 <FirstColor A="255" R="150" G="150" B="255" />
                 <EndColor A="255" R="255" G="255" B="255" />
@@ -106,7 +106,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0300" />
                     <PreSize X="0.8300" Y="0.0148" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="btn_setRule" ActionTag="1827527611" Tag="587" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1004.6000" RightMargin="23.4000" TopMargin="59.2125" BottomMargin="24.7875" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="112" Scale9Height="29" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="142.0000" Y="51.0000" />
@@ -160,11 +160,11 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3694" Y="0.7745" />
                     <PreSize X="0.0308" Y="0.2593" />
-                    <NormalBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <PressedBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <DisableBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
-                    <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
+                    <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/img_gou.png" Plist="A_Common/Common.plist" />
+                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="cb_isAcceptInvite" ActionTag="-1387682418" Tag="3303" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="603.1530" RightMargin="530.8470" TopMargin="12.9425" BottomMargin="87.0575" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                     <Size X="36.0000" Y="35.0000" />
@@ -188,11 +188,11 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5309" Y="0.7745" />
                     <PreSize X="0.0308" Y="0.2593" />
-                    <NormalBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <PressedBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <DisableBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
-                    <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
+                    <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/img_gou.png" Plist="A_Common/Common.plist" />
+                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="cb_isAddQuickStartList" ActionTag="740663970" Tag="3305" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="841.9500" RightMargin="292.0500" TopMargin="12.9425" BottomMargin="87.0575" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                     <Size X="36.0000" Y="35.0000" />
@@ -216,11 +216,11 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.7350" Y="0.7745" />
                     <PreSize X="0.0308" Y="0.2593" />
-                    <NormalBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <PressedBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <DisableBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                    <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
-                    <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
+                    <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/img_gou.png" Plist="A_Common/Common.plist" />
+                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
@@ -271,11 +271,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6668" Y="0.1250" />
                 <PreSize X="0.0266" Y="0.0500" />
-                <NormalBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="friendCards/common/img_gou.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_fang.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/img_gou.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

@@ -94,27 +94,27 @@
                 "CheckedState": true,
                 "NormalBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/circle_1.png",
+                  "Path": "A_Common/Main/circle_1.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/circle_1.png",
+                  "Path": "A_Common/Main/circle_1.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/circle_1.png",
+                  "Path": "A_Common/Main/circle_1.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/circle_2.png",
+                  "Path": "A_Common/Main/circle_2.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/circle_2.png",
+                  "Path": "A_Common/Main/circle_2.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
@@ -152,17 +152,17 @@
                     "TextColor": {},
                     "DisabledFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/agree.png",
+                      "Path": "A_Login/Main/agree.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/agree.png",
+                      "Path": "A_Login/Main/agree.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/agree.png",
+                      "Path": "A_Login/Main/agree.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
@@ -246,17 +246,17 @@
             },
             "DisabledFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/btn_login_wx.png",
+              "Path": "A_Login/Main/btn_login_wx.png",
               "Plist": "A_Login/Login.plist"
             },
             "PressedFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/btn_login_wx.png",
+              "Path": "A_Login/Main/btn_login_wx.png",
               "Plist": "A_Login/Login.plist"
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/btn_login_wx.png",
+              "Path": "A_Login/Main/btn_login_wx.png",
               "Plist": "A_Login/Login.plist"
             },
             "Scale9Enable": true,
@@ -321,17 +321,17 @@
             },
             "DisabledFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/countman-btn.png",
+              "Path": "A_Login/Main/countman-btn.png",
               "Plist": "A_Login/Login.plist"
             },
             "PressedFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/countman-btn.png",
+              "Path": "A_Login/Main/countman-btn.png",
               "Plist": "A_Login/Login.plist"
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/countman-btn.png",
+              "Path": "A_Login/Main/countman-btn.png",
               "Plist": "A_Login/Login.plist"
             },
             "Scale9OriginX": 15,
@@ -395,17 +395,17 @@
             },
             "DisabledFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/yijianxiufu.png",
+              "Path": "A_Login/Main/yijianxiufu.png",
               "Plist": "A_Login/Login.plist"
             },
             "PressedFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/yijianxiufu_p.png",
+              "Path": "A_Login/Main/yijianxiufu_p.png",
               "Plist": "A_Login/Login.plist"
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Login/yijianxiufu.png",
+              "Path": "A_Login/Main/yijianxiufu.png",
               "Plist": "A_Login/Login.plist"
             },
             "Scale9Enable": true,

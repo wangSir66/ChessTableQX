@@ -7,7 +7,7 @@ var Friendcard_gaojiSet = cc.Layer.extend({
         this._super();
         this.clubId = clubId;
         this.data = data || null;
-        var node = ccs.load("friendcard_gaojiSet.json").node;
+        var node = ccs.load(res.Friendcard_gaojiSet_json).node;
         this.addChild(node);
         this.node = node;
         this.panel = node.getChildByName("Panel");

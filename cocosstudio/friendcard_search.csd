@@ -66,7 +66,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.3310" Y="0.5034" />
                 <PreSize X="0.3391" Y="0.0764" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="img_title" ActionTag="-784527885" Tag="251" IconVisible="False" LeftMargin="472.5405" RightMargin="470.4595" TopMargin="121.0347" BottomMargin="539.9653" LeftEage="111" RightEage="111" TopEage="19" BottomEage="19" Scale9OriginX="111" Scale9OriginY="19" Scale9Width="115" Scale9Height="21" ctype="ImageViewObjectData">
                 <Size X="337.0000" Y="59.0000" />

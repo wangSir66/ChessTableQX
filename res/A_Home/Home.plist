@@ -4,7 +4,7 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>A_Home/act.png</key>
+			<key>A_Home/Main/act.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{714,483},{109,87}}</string>
@@ -15,7 +15,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/act_s.png</key>
+			<key>A_Home/Main/act_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{827,483},{109,87}}</string>
@@ -26,7 +26,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/avatar.png</key>
+			<key>A_Home/Main/avatar.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{438,618},{92,92}}</string>
@@ -37,7 +37,7 @@
 				<key>sourceSize</key>
 				<string>{92,92}</string>
 			</dict>
-			<key>A_Home/avatar_mask.png</key>
+			<key>A_Home/Main/avatar_mask.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{438,714},{92,92}}</string>
@@ -48,7 +48,7 @@
 				<key>sourceSize</key>
 				<string>{92,92}</string>
 			</dict>
-			<key>A_Home/bg_yuanbao.png</key>
+			<key>A_Home/Main/bg_yuanbao.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{610,850},{210,40}}</string>
@@ -59,7 +59,7 @@
 				<key>sourceSize</key>
 				<string>{210,40}</string>
 			</dict>
-			<key>A_Home/chjfj.png</key>
+			<key>A_Home/Main/chjfj.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{829,2},{190,141}}</string>
@@ -70,7 +70,7 @@
 				<key>sourceSize</key>
 				<string>{190,141}</string>
 			</dict>
-			<key>A_Home/daili.png</key>
+			<key>A_Home/Main/daili.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{944,407},{72,90}}</string>
@@ -81,7 +81,7 @@
 				<key>sourceSize</key>
 				<string>{72,90}</string>
 			</dict>
-			<key>A_Home/daili_s.png</key>
+			<key>A_Home/Main/daili_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{940,501},{72,90}}</string>
@@ -92,7 +92,7 @@
 				<key>sourceSize</key>
 				<string>{72,90}</string>
 			</dict>
-			<key>A_Home/email.png</key>
+			<key>A_Home/Main/email.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{863,749},{72,90}}</string>
@@ -103,7 +103,7 @@
 				<key>sourceSize</key>
 				<string>{72,90}</string>
 			</dict>
-			<key>A_Home/email_s.png</key>
+			<key>A_Home/Main/email_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{939,749},{72,90}}</string>
@@ -114,7 +114,7 @@
 				<key>sourceSize</key>
 				<string>{72,90}</string>
 			</dict>
-			<key>A_Home/fenxiang_tip.png</key>
+			<key>A_Home/Main/fenxiang_tip.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{325,891},{103,47}}</string>
@@ -125,7 +125,7 @@
 				<key>sourceSize</key>
 				<string>{103,47}</string>
 			</dict>
-			<key>A_Home/girl.png</key>
+			<key>A_Home/Main/girl.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,2},{539,612}}</string>
@@ -136,7 +136,7 @@
 				<key>sourceSize</key>
 				<string>{539,612}</string>
 			</dict>
-			<key>A_Home/gonggao_copy.png</key>
+			<key>A_Home/Main/gonggao_copy.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{836,843},{99,44}}</string>
@@ -147,7 +147,7 @@
 				<key>sourceSize</key>
 				<string>{99,44}</string>
 			</dict>
-			<key>A_Home/gonggao_img.png</key>
+			<key>A_Home/Main/gonggao_img.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{545,2},{280,367}}</string>
@@ -158,7 +158,7 @@
 				<key>sourceSize</key>
 				<string>{280,367}</string>
 			</dict>
-			<key>A_Home/help.png</key>
+			<key>A_Home/Main/help.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{760,750},{72,90}}</string>
@@ -169,7 +169,7 @@
 				<key>sourceSize</key>
 				<string>{72,90}</string>
 			</dict>
-			<key>A_Home/help_s.png</key>
+			<key>A_Home/Main/help_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{647,756},{72,90}}</string>
@@ -180,7 +180,7 @@
 				<key>sourceSize</key>
 				<string>{72,90}</string>
 			</dict>
-			<key>A_Home/hongdian-home.png</key>
+			<key>A_Home/Main/hongdian-home.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{939,843},{64,64}}</string>
@@ -191,7 +191,7 @@
 				<key>sourceSize</key>
 				<string>{64,64}</string>
 			</dict>
-			<key>A_Home/jrfj.png</key>
+			<key>A_Home/Main/jrfj.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{829,147},{190,141}}</string>
@@ -202,7 +202,7 @@
 				<key>sourceSize</key>
 				<string>{190,141}</string>
 			</dict>
-			<key>A_Home/kefu.png</key>
+			<key>A_Home/Main/kefu.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{545,535},{109,87}}</string>
@@ -213,7 +213,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/kefu_s.png</key>
+			<key>A_Home/Main/kefu_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{658,574},{109,87}}</string>
@@ -224,7 +224,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/lvse_text.png</key>
+			<key>A_Home/Main/lvse_text.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,908},{166,21}}</string>
@@ -235,7 +235,7 @@
 				<key>sourceSize</key>
 				<string>{166,21}</string>
 			</dict>
-			<key>A_Home/mj.png</key>
+			<key>A_Home/Main/mj.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{863,686},{115,59}}</string>
@@ -246,7 +246,7 @@
 				<key>sourceSize</key>
 				<string>{115,59}</string>
 			</dict>
-			<key>A_Home/mj2.png</key>
+			<key>A_Home/Main/mj2.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{760,665},{99,81}}</string>
@@ -257,7 +257,7 @@
 				<key>sourceSize</key>
 				<string>{99,81}</string>
 			</dict>
-			<key>A_Home/qyq.png</key>
+			<key>A_Home/Main/qyq.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,618},{319,286}}</string>
@@ -268,7 +268,7 @@
 				<key>sourceSize</key>
 				<string>{319,286}</string>
 			</dict>
-			<key>A_Home/setting.png</key>
+			<key>A_Home/Main/setting.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{534,808},{72,90}}</string>
@@ -279,7 +279,7 @@
 				<key>sourceSize</key>
 				<string>{72,90}</string>
 			</dict>
-			<key>A_Home/setting_s.png</key>
+			<key>A_Home/Main/setting_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{438,810},{72,90}}</string>
@@ -290,7 +290,7 @@
 				<key>sourceSize</key>
 				<string>{72,90}</string>
 			</dict>
-			<key>A_Home/share.png</key>
+			<key>A_Home/Main/share.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{771,574},{109,87}}</string>
@@ -301,7 +301,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/share_s.png</key>
+			<key>A_Home/Main/share_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{884,595},{109,87}}</string>
@@ -312,7 +312,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/shop.png</key>
+			<key>A_Home/Main/shop.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{775,407},{165,72}}</string>
@@ -323,7 +323,7 @@
 				<key>sourceSize</key>
 				<string>{165,72}</string>
 			</dict>
-			<key>A_Home/shop_s.png</key>
+			<key>A_Home/Main/shop_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{545,459},{165,72}}</string>
@@ -334,7 +334,7 @@
 				<key>sourceSize</key>
 				<string>{165,72}</string>
 			</dict>
-			<key>A_Home/shz.png</key>
+			<key>A_Home/Main/shz.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{829,292},{138,111}}</string>
@@ -345,7 +345,7 @@
 				<key>sourceSize</key>
 				<string>{138,111}</string>
 			</dict>
-			<key>A_Home/tuijian.png</key>
+			<key>A_Home/Main/tuijian.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{325,618},{109,87}}</string>
@@ -356,7 +356,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/tuijian_s.png</key>
+			<key>A_Home/Main/tuijian_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{325,709},{109,87}}</string>
@@ -367,7 +367,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/ylch.png</key>
+			<key>A_Home/Main/ylch.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{432,911},{516,145}}</string>
@@ -378,7 +378,7 @@
 				<key>sourceSize</key>
 				<string>{516,145}</string>
 			</dict>
-			<key>A_Home/ylchtitle.png</key>
+			<key>A_Home/Main/ylchtitle.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{545,373},{226,82}}</string>
@@ -389,7 +389,7 @@
 				<key>sourceSize</key>
 				<string>{226,82}</string>
 			</dict>
-			<key>A_Home/zhanji.png</key>
+			<key>A_Home/Main/zhanji.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{534,626},{109,87}}</string>
@@ -400,7 +400,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/zhanji_s.png</key>
+			<key>A_Home/Main/zhanji_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{325,800},{109,87}}</string>
@@ -411,7 +411,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/zixun.png</key>
+			<key>A_Home/Main/zixun.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{647,665},{109,87}}</string>
@@ -422,7 +422,7 @@
 				<key>sourceSize</key>
 				<string>{109,87}</string>
 			</dict>
-			<key>A_Home/zixun_s.png</key>
+			<key>A_Home/Main/zixun_s.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{534,717},{109,87}}</string>

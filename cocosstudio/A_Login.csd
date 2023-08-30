@@ -31,9 +31,9 @@
                     <PrePosition X="11.1509" Y="0.4412" />
                     <PreSize X="18.0870" Y="0.9130" />
                     <TextColor A="255" R="255" G="255" B="255" />
-                    <DisabledFileData Type="MarkedSubImage" Path="A_Login/agree.png" Plist="A_Login/Login.plist" />
-                    <PressedFileData Type="MarkedSubImage" Path="A_Login/agree.png" Plist="A_Login/Login.plist" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Login/agree.png" Plist="A_Login/Login.plist" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Login/Main/agree.png" Plist="A_Login/Login.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Login/Main/agree.png" Plist="A_Login/Login.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Login/Main/agree.png" Plist="A_Login/Login.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -44,11 +44,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.3587" Y="0.1250" />
                 <PreSize X="0.0180" Y="0.0319" />
-                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
-                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
-                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/circle_1.png" Plist="A_Common/Common.plist" />
-                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/circle_2.png" Plist="A_Common/Common.plist" />
-                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/circle_2.png" Plist="A_Common/Common.plist" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/circle_1.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/circle_1.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/circle_1.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/circle_2.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/circle_2.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -68,9 +68,9 @@
             <PrePosition X="0.3328" Y="0.3235" />
             <PreSize X="0.1906" Y="0.1319" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="MarkedSubImage" Path="A_Login/btn_login_wx.png" Plist="A_Login/Login.plist" />
-            <PressedFileData Type="MarkedSubImage" Path="A_Login/btn_login_wx.png" Plist="A_Login/Login.plist" />
-            <NormalFileData Type="MarkedSubImage" Path="A_Login/btn_login_wx.png" Plist="A_Login/Login.plist" />
+            <DisabledFileData Type="MarkedSubImage" Path="A_Login/Main/btn_login_wx.png" Plist="A_Login/Login.plist" />
+            <PressedFileData Type="MarkedSubImage" Path="A_Login/Main/btn_login_wx.png" Plist="A_Login/Login.plist" />
+            <NormalFileData Type="MarkedSubImage" Path="A_Login/Main/btn_login_wx.png" Plist="A_Login/Login.plist" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -83,9 +83,9 @@
             <PrePosition X="0.6733" Y="0.3270" />
             <PreSize X="0.1937" Y="0.1306" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="MarkedSubImage" Path="A_Login/countman-btn.png" Plist="A_Login/Login.plist" />
-            <PressedFileData Type="MarkedSubImage" Path="A_Login/countman-btn.png" Plist="A_Login/Login.plist" />
-            <NormalFileData Type="MarkedSubImage" Path="A_Login/countman-btn.png" Plist="A_Login/Login.plist" />
+            <DisabledFileData Type="MarkedSubImage" Path="A_Login/Main/countman-btn.png" Plist="A_Login/Login.plist" />
+            <PressedFileData Type="MarkedSubImage" Path="A_Login/Main/countman-btn.png" Plist="A_Login/Login.plist" />
+            <NormalFileData Type="MarkedSubImage" Path="A_Login/Main/countman-btn.png" Plist="A_Login/Login.plist" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
@@ -98,9 +98,9 @@
             <PrePosition X="0.9185" Y="0.8710" />
             <PreSize X="0.1547" Y="0.0764" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="MarkedSubImage" Path="A_Login/yijianxiufu.png" Plist="A_Login/Login.plist" />
-            <PressedFileData Type="MarkedSubImage" Path="A_Login/yijianxiufu_p.png" Plist="A_Login/Login.plist" />
-            <NormalFileData Type="MarkedSubImage" Path="A_Login/yijianxiufu.png" Plist="A_Login/Login.plist" />
+            <DisabledFileData Type="MarkedSubImage" Path="A_Login/Main/yijianxiufu.png" Plist="A_Login/Login.plist" />
+            <PressedFileData Type="MarkedSubImage" Path="A_Login/Main/yijianxiufu_p.png" Plist="A_Login/Login.plist" />
+            <NormalFileData Type="MarkedSubImage" Path="A_Login/Main/yijianxiufu.png" Plist="A_Login/Login.plist" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

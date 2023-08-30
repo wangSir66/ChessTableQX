@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="Update" Type="Layer" ID="250640a5-e928-4b92-8392-8b0aa9aec5c3" Version="3.10.0.0" />
+  <PropertyGroup Name="A_Update" Type="Layer" ID="250640a5-e928-4b92-8392-8b0aa9aec5c3" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -52,7 +52,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="1.0000" Y="0.5000" />
                     <PreSize X="0.2188" Y="3.4286" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/loading_bar_head.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/loading_bar_head.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

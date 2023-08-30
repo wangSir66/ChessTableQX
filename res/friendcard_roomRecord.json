@@ -750,9 +750,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -3439,10 +3439,11 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "A_FriendCard/GaojiSet.plist",
+        "A_FriendCard/GaojiSet.png",
         "fonts/fzcy.ttf",
         "friendCards/common/headMask.png",
         "friendCards/common/img_datanchuang.png",
-        "friendCards/common/img_hengxian.png",
         "friendCards/common/img_shuxian.png",
         "friendCards/roomInfo/reflash_di.png",
         "friendCards/roomInfo/reflash_jian.png",

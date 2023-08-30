@@ -149,7 +149,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" Y="0.6448" />
                         <PreSize X="0.9600" Y="0.0118" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="tableid" ActionTag="-234343932" Tag="122" IconVisible="False" LeftMargin="249.7575" RightMargin="588.2425" TopMargin="19.5000" BottomMargin="125.5000" FontSize="22" LabelText="房间ID:123456" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="155.0000" Y="25.0000" />

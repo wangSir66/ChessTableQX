@@ -4,7 +4,7 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>A_Login/btn_login_wx.png</key>
+			<key>A_Login/Main/btn_login_wx.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{254,2},{244,95}}</string>
@@ -15,7 +15,7 @@
 				<key>sourceSize</key>
 				<string>{244,95}</string>
 			</dict>
-			<key>A_Login/CM_inputbox.png</key>
+			<key>A_Login/Main/CM_inputbox.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{204,384},{91,50}}</string>
@@ -26,7 +26,7 @@
 				<key>sourceSize</key>
 				<string>{91,50}</string>
 			</dict>
-			<key>A_Login/countman-btn.png</key>
+			<key>A_Login/Main/countman-btn.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,2},{248,94}}</string>
@@ -37,7 +37,7 @@
 				<key>sourceSize</key>
 				<string>{248,94}</string>
 			</dict>
-			<key>A_Login/deng_l.png</key>
+			<key>A_Login/Main/deng_l.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{363,468},{29,31}}</string>
@@ -48,7 +48,7 @@
 				<key>sourceSize</key>
 				<string>{29,31}</string>
 			</dict>
-			<key>A_Login/deng_t.png</key>
+			<key>A_Login/Main/deng_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{96,468},{41,41}}</string>
@@ -59,7 +59,7 @@
 				<key>sourceSize</key>
 				<string>{41,41}</string>
 			</dict>
-			<key>A_Login/hao_t.png</key>
+			<key>A_Login/Main/hao_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{422,101},{43,44}}</string>
@@ -70,7 +70,7 @@
 				<key>sourceSize</key>
 				<string>{43,44}</string>
 			</dict>
-			<key>A_Login/hu_t.png</key>
+			<key>A_Login/Main/hu_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{275,468},{37,43}}</string>
@@ -81,7 +81,7 @@
 				<key>sourceSize</key>
 				<string>{37,43}</string>
 			</dict>
-			<key>A_Login/lu_l.png</key>
+			<key>A_Login/Main/lu_l.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{396,468},{27,30}}</string>
@@ -92,7 +92,7 @@
 				<key>sourceSize</key>
 				<string>{27,30}</string>
 			</dict>
-			<key>A_Login/lu_t.png</key>
+			<key>A_Login/Main/lu_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{231,468},{40,41}}</string>
@@ -103,7 +103,7 @@
 				<key>sourceSize</key>
 				<string>{40,41}</string>
 			</dict>
-			<key>A_Login/xie_t.png</key>
+			<key>A_Login/Main/xie_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,468},{41,43}}</string>
@@ -114,7 +114,7 @@
 				<key>sourceSize</key>
 				<string>{41,43}</string>
 			</dict>
-			<key>A_Login/yi_t.png</key>
+			<key>A_Login/Main/yi_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{141,468},{41,41}}</string>
@@ -125,7 +125,7 @@
 				<key>sourceSize</key>
 				<string>{41,41}</string>
 			</dict>
-			<key>A_Login/yong_t.png</key>
+			<key>A_Login/Main/yong_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{322,468},{37,41}}</string>
@@ -136,7 +136,7 @@
 				<key>sourceSize</key>
 				<string>{37,41}</string>
 			</dict>
-			<key>A_Login/zhang_t.png</key>
+			<key>A_Login/Main/zhang_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{422,148},{43,44}}</string>
@@ -147,7 +147,7 @@
 				<key>sourceSize</key>
 				<string>{43,44}</string>
 			</dict>
-			<key>A_Login/zhu_t.png</key>
+			<key>A_Login/Main/zhu_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{49,468},{40,43}}</string>
@@ -158,7 +158,7 @@
 				<key>sourceSize</key>
 				<string>{40,43}</string>
 			</dict>
-			<key>A_Login/zuce_t.png</key>
+			<key>A_Login/Main/zuce_t.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{186,468},{41,41}}</string>
@@ -169,7 +169,7 @@
 				<key>sourceSize</key>
 				<string>{41,41}</string>
 			</dict>
-			<key>A_Login/yijianxiufu.png</key>
+			<key>A_Login/Main/yijianxiufu.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,100},{198,55}}</string>
@@ -180,7 +180,7 @@
 				<key>sourceSize</key>
 				<string>{198,55}</string>
 			</dict>
-			<key>A_Login/yijianxiufu_p.png</key>
+			<key>A_Login/Main/yijianxiufu_p.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,384},{198,55}}</string>
@@ -191,7 +191,7 @@
 				<key>sourceSize</key>
 				<string>{198,55}</string>
 			</dict>
-			<key>A_Login/agree.png</key>
+			<key>A_Login/Main/agree.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,443},{416,21}}</string>
@@ -202,7 +202,7 @@
 				<key>sourceSize</key>
 				<string>{416,21}</string>
 			</dict>
-			<key>A_Login/loading_bar_head.png</key>
+			<key>A_Login/Main/loading_bar_head.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{204,100},{280,24}}</string>

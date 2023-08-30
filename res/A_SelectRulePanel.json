@@ -74,7 +74,7 @@
             "ClipAble": false,
             "FileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_FriendCard/dikuang.png",
+              "Path": "A_FriendCard/Main/Main_dikuang.png",
               "Plist": "A_FriendCard/FriendCardMain.plist"
             },
             "SingleColor": {
@@ -128,17 +128,17 @@
                 "CheckedState": true,
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/XuanZhong1.png",
+                  "Path": "A_FriendCard/Main/XuanZhong1.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "NodeNormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/XuanZhong1.png",
+                  "Path": "A_FriendCard/Main/XuanZhong1.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "NodeDisableFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/XuanZhong1.png",
+                  "Path": "A_FriendCard/Main/XuanZhong1.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "TouchEnable": true,
@@ -245,17 +245,17 @@
                 "CheckedState": true,
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/XuanZhong1.png",
+                  "Path": "A_FriendCard/Main/XuanZhong1.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "NodeNormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/XuanZhong1.png",
+                  "Path": "A_FriendCard/Main/XuanZhong1.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "NodeDisableFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/XuanZhong1.png",
+                  "Path": "A_FriendCard/Main/XuanZhong1.png",
                   "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "TouchEnable": true,
@@ -454,12 +454,12 @@
                         "CheckedState": true,
                         "NodeNormalFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/XuanZhong1.png",
+                          "Path": "A_FriendCard/Main/XuanZhong1.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/XuanZhong1.png",
+                          "Path": "A_FriendCard/Main/XuanZhong1.png",
                           "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "TouchEnable": true,
@@ -494,7 +494,7 @@
                           {
                             "FileData": {
                               "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/FenGeXian.png",
+                              "Path": "A_FriendCard/Main/Main_FenGeXian.png",
                               "Plist": "A_FriendCard/FriendCardMain.plist"
                             },
                             "Scale9OriginX": 2,
@@ -600,7 +600,7 @@
                           {
                             "FileData": {
                               "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/FenGeXian.png",
+                              "Path": "A_FriendCard/Main/Main_FenGeXian.png",
                               "Plist": "A_FriendCard/FriendCardMain.plist"
                             },
                             "Scale9OriginX": 2,
@@ -696,7 +696,7 @@
                           {
                             "FileData": {
                               "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/JianTou.png",
+                              "Path": "A_FriendCard/Main/JianTou.png",
                               "Plist": "A_FriendCard/FriendCardMain.plist"
                             },
                             "Scale9OriginX": 17,
@@ -742,7 +742,7 @@
                           {
                             "FileData": {
                               "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/dikuang.png",
+                              "Path": "A_FriendCard/Main/Main_dikuang.png",
                               "Plist": "A_FriendCard/FriendCardMain.plist"
                             },
                             "Scale9Enable": true,
@@ -841,12 +841,12 @@
                               {
                                 "NodeNormalFileData": {
                                   "Type": "MarkedSubImage",
-                                  "Path": "A_FriendCard/NameBg.png",
+                                  "Path": "A_FriendCard/Main/NameBg.png",
                                   "Plist": "A_FriendCard/FriendCardMain.plist"
                                 },
                                 "NodeDisableFileData": {
                                   "Type": "MarkedSubImage",
-                                  "Path": "A_FriendCard/NameBg.png",
+                                  "Path": "A_FriendCard/Main/NameBg.png",
                                   "Plist": "A_FriendCard/FriendCardMain.plist"
                                 },
                                 "TouchEnable": true,

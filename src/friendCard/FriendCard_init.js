@@ -38,14 +38,38 @@ FriendCard_Common.resetRuleNameLen = function (ruleName) {
 
 //重置玩法规则，修复进入玩法设置的bug
 FriendCard_Common.reSetRuleParm = function () {
-    var infoData = FriendCard_Common.getClubInfo();
-    for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {
-        if (infoData["rule" + i] && infoData["rule" + i].ruleName) {
-            MjClient.RuleParam["rule" + i] = infoData["rule" + i];
-        } else {
-            MjClient.RuleParam["rule" + i] = null;
+    var infoData = FriendCard_Common.getClubInfo(),
+        keys = Object.keys(infoData).filter(k => k.indexOf('rule') > -1 && !!infoData[k] && k != 'ruleSwitch'),
+        _indx = 0,
+        key = keys[_indx],
+        rule = infoData[key];
+    while (rule) {
+        if (rule != "delete") {
+            let rIndx = Number(key.replace('rule', ''));
+            rule.ruleIndex = rIndx;
+            MjClient.RuleParam[key] = rule;
         }
+        key = keys[++_indx];
+        rule = infoData[key];
     }
+}
+//重置玩法规则，修复进入玩法设置的bug
+FriendCard_Common.getRuleParm = function (infoData) {
+    var keys = Object.keys(infoData).filter(k => k.indexOf('rule') > -1 && !!infoData[k] && k != 'ruleSwitch'),
+        _indx = 0,
+        key = keys[_indx],
+        rule = infoData[key],
+        rules = [];
+    while (rule) {
+        if (rule != "delete") {
+            let rIndx = Number(key.replace('rule', ''));
+            rule.ruleIndex = rIndx;
+            rules.push(rule);
+        }
+        key = keys[++_indx];
+        rule = infoData[key];
+    }
+    return rules;
 }
 
 /*
@@ -1078,7 +1102,7 @@ FriendCard_Common.getGameCalssType = function (gameType) {
 
 //得到当前app俱乐部是几个玩法
 FriendCard_Common.getRuleNumber = function () {
-    return 30;
+    return 100;
 };
 
 //俱乐部弹窗

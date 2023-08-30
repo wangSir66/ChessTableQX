@@ -40,7 +40,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4982" Y="0.8250" />
                 <PreSize X="0.7805" Y="0.6431" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="Image_hua_0" ActionTag="-2135030568" VisibleForFrame="False" Tag="959" IconVisible="False" LeftMargin="-93.5000" RightMargin="1146.5000" TopMargin="-18.5000" BottomMargin="611.5000" LeftEage="74" RightEage="74" TopEage="41" BottomEage="41" Scale9OriginX="74" Scale9OriginY="41" Scale9Width="79" Scale9Height="45" ctype="ImageViewObjectData">
                 <Size X="227.0000" Y="127.0000" />
@@ -177,7 +177,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5956" Y="0.5130" />
                     <PreSize X="0.4604" Y="0.7826" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="player1_hand" ActionTag="1981221784" Tag="408" IconVisible="False" LeftMargin="367.9307" RightMargin="559.1093" TopMargin="21.4342" BottomMargin="21.5658" LeftEage="32" RightEage="32" TopEage="32" BottomEage="32" Scale9OriginX="32" Scale9OriginY="32" Scale9Width="8" Scale9Height="8" ctype="ImageViewObjectData">
                     <Size X="72.0000" Y="72.0000" />
@@ -297,7 +297,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0492" />
                     <PreSize X="0.9700" Y="0.0174" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5800" />

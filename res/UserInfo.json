@@ -386,7 +386,7 @@
                 "FileData": {
                   "Type": "MarkedSubImage",
                   "Path": "A_Home/UserInfo/homeHeadCusPic_2.png",
-                  "Plist": "A_Home/UserInfo/Userinfo.plist"
+                  "Plist": "A_Home/Userinfo.plist"
                 },
                 "Scale9OriginX": 35,
                 "Scale9OriginY": 35,
@@ -1648,8 +1648,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "A_Home/UserInfo/Userinfo.plist",
-        "A_Home/UserInfo/Userinfo.png",
+        "A_Home/Userinfo.plist",
+        "A_Home/Userinfo.png",
         "bindPhoneNum/bindXianliao/bg_bind.png",
         "bindPhoneNum/btn_bindPhong.png",
         "bindPhoneNum/btn_modifyBind_1.png",

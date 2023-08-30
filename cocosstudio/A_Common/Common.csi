@@ -2,17 +2,25 @@
   <PropertyGroup Name="Common" Type="Plist" ID="025e935c-9c79-4899-b706-859c16c2901f" Version="3.10.0.0" />
   <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
-      <FilePathData Path="A_Common/btnclose.png" />
-      <FilePathData Path="A_Common/pop_bg_small.png" />
-      <FilePathData Path="A_Common/universalBottom.png" />
-      <FilePathData Path="A_Common/circle_1.png" />
-      <FilePathData Path="A_Common/circle_2.png" />
-      <FilePathData Path="A_Common/icon_add.png" />
-      <FilePathData Path="A_Common/icon_yuanbao.png" />
-      <FilePathData Path="A_Common/bg_kuang2.png" />
-      <FilePathData Path="A_Common/que_l.png" />
-      <FilePathData Path="A_Common/ren_l.png" />
-      <FilePathData Path="A_Common/yellow-button.png" />
+      <FilePathData Path="A_Common/Main/btnclose.png" />
+      <FilePathData Path="A_Common/Main/pop_bg_small.png" />
+      <FilePathData Path="A_Common/Main/universalBottom.png" />
+      <FilePathData Path="A_Common/Main/circle_1.png" />
+      <FilePathData Path="A_Common/Main/circle_2.png" />
+      <FilePathData Path="A_Common/Main/icon_add.png" />
+      <FilePathData Path="A_Common/Main/icon_yuanbao.png" />
+      <FilePathData Path="A_Common/Main/bg_kuang2.png" />
+      <FilePathData Path="A_Common/Main/que_l.png" />
+      <FilePathData Path="A_Common/Main/ren_l.png" />
+      <FilePathData Path="A_Common/Main/yellow-button.png" />
+      <FilePathData Path="A_Common/Main/btn_chebox_fang.png" />
+      <FilePathData Path="A_Common/Main/btn_chebox_yuan.png" />
+      <FilePathData Path="A_Common/Main/CheckBoxForbidden.png" />
+      <FilePathData Path="A_Common/Main/img_gou.png" />
+      <FilePathData Path="A_Common/Main/minus-1.png" />
+      <FilePathData Path="A_Common/Main/plus-1.png" />
+      <FilePathData Path="A_Common/Main/RadioForbidden.png" />
+      <FilePathData Path="A_Common/Main/tip.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="1024" />
   </Content>

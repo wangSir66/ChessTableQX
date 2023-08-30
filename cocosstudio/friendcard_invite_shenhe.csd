@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4982" Y="0.4509" />
                 <PreSize X="0.9297" Y="0.7834" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="Panle_title" ActionTag="1492316717" Tag="1276" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="37.9609" RightMargin="42.0071" TopMargin="108.8569" BottomMargin="530.1111" TouchEnable="True" ClipAble="False" ColorAngle="90.0000" Scale9Enable="True" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                 <Size X="1044.0000" Y="50.0000" />
@@ -154,7 +154,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" />
                     <PreSize X="1.0000" Y="0.0222" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="txt_clubName" ActionTag="-1502277831" Tag="1291" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="139.1907" RightMargin="689.8093" TopMargin="12.0000" BottomMargin="48.0000" IsCustomSize="True" FontSize="24" LabelText="超超级雀神争霸赛" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="211.0000" Y="30.0000" />

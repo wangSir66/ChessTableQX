@@ -75,7 +75,7 @@
           {
             "FileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Common/pop_bg_small.png",
+              "Path": "A_Common/Main/pop_bg_small.png",
               "Plist": "A_Common/Common.plist"
             },
             "Scale9Enable": true,
@@ -143,7 +143,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/yong_t.png",
+                      "Path": "A_Login/Main/yong_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -188,7 +188,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/hu_t.png",
+                      "Path": "A_Login/Main/hu_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -233,7 +233,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/xie_t.png",
+                      "Path": "A_Login/Main/xie_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -278,7 +278,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/yi_t.png",
+                      "Path": "A_Login/Main/yi_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -339,7 +339,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/btnclose.png",
+                  "Path": "A_Common/Main/btnclose.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,
@@ -397,7 +397,7 @@
               {
                 "FileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/universalBottom.png",
+                  "Path": "A_Common/Main/universalBottom.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,

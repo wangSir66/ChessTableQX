@@ -433,7 +433,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.4800" />
                     <PreSize X="1.0000" Y="0.6873" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="152454683" Tag="721" IconVisible="False" PositionPercentXEnabled="True" TopMargin="97.3658" BottomMargin="402.6342" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Enable="True" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="50.0000" />
@@ -641,7 +641,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.8216" Y="0.0400" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -755,7 +755,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0250" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="text_fullChangciNum" ActionTag="466928341" Tag="747" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="629.9084" RightMargin="233.0916" TopMargin="26.5063" BottomMargin="23.4937" FontSize="26" LabelText="完整场次" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="107.0000" Y="30.0000" />
@@ -836,7 +836,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.2430" Y="0.6986" />
                         <PreSize X="0.1485" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="image_date1_bg" ActionTag="-150341948" Tag="752" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="382.9991" RightMargin="443.0009" TopMargin="-3.4300" BottomMargin="16.4300" TouchEnable="True" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="11" BottomEage="11" Scale9OriginX="22" Scale9OriginY="11" Scale9Width="98" Scale9Height="15" ctype="ImageViewObjectData">
                         <Size X="144.0000" Y="37.0000" />
@@ -860,7 +860,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.4691" Y="0.6986" />
                         <PreSize X="0.1485" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zhi" ActionTag="1861684893" Tag="754" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="530.3318" RightMargin="412.6682" TopMargin="1.5700" BottomMargin="21.4300" FontSize="24" LabelText="至" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="27.0000" Y="27.0000" />
@@ -896,7 +896,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.6522" Y="0.6986" />
                         <PreSize X="0.1485" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btn_check" ActionTag="-1236964205" Tag="757" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="709.1794" RightMargin="132.8206" TopMargin="-10.4900" BottomMargin="7.4900" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="31" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="128.0000" Y="53.0000" />
@@ -1006,7 +1006,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0450" />
                     <PreSize X="1.0000" Y="0.8500" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="1110781552" Tag="764" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="60.7400" BottomMargin="419.2600" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ColorAngle="90.0000" Scale9Enable="True" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="70.0000" />
@@ -1103,7 +1103,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" Y="0.0571" />
                         <PreSize X="0.9900" Y="0.0286" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="line0" ActionTag="2089294229" Tag="773" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="209.0000" RightMargin="759.0000" TopMargin="11.5000" BottomMargin="11.5000" TopEage="13" BottomEage="13" Scale9OriginY="13" Scale9Width="1" Scale9Height="82" ctype="ImageViewObjectData">
                         <Size X="2.0000" Y="47.0000" />
@@ -1286,7 +1286,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0235" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -1323,7 +1323,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="0.9800" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="-229292862" Tag="791" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="6.9200" BottomMargin="493.0800" TouchEnable="True" ClipAble="True" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="50.0000" />
@@ -1396,7 +1396,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.8216" Y="0.0400" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_fullChangci" ActionTag="796916843" Tag="798" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="732.2700" RightMargin="130.7300" TopMargin="10.0000" BottomMargin="10.0000" FontSize="26" LabelText="完整场次 " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="107.0000" Y="30.0000" />
@@ -1522,7 +1522,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0235" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="text_fullChangciNum" ActionTag="-658757702" Tag="808" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="733.0101" RightMargin="129.9899" TopMargin="27.5000" BottomMargin="27.5000" FontSize="26" LabelText="完整场次" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="107.0000" Y="30.0000" />
@@ -1621,7 +1621,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.1709" Y="0.8029" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zhi" ActionTag="-301970649" Tag="815" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="236.9976" RightMargin="596.0024" TopMargin="-3.0400" BottomMargin="26.0400" FontSize="24" LabelText="至" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="27.0000" Y="27.0000" />
@@ -1657,7 +1657,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.4206" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="checkWeekBtn" ActionTag="1258675935" Tag="818" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="740.5663" RightMargin="-8.5663" TopMargin="-18.5400" BottomMargin="15.5400" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="31" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="128.0000" Y="53.0000" />
@@ -1709,7 +1709,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="0.9800" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="-418705564" Tag="821" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="6.9200" BottomMargin="493.0800" TouchEnable="True" ClipAble="True" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="50.0000" />
@@ -1746,7 +1746,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.8216" Y="0.0400" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zongfen" ActionTag="-622553553" Tag="825" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="263.4220" RightMargin="647.5780" TopMargin="7.6814" BottomMargin="10.3186" FontSize="28" LabelText="总分" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="59.0000" Y="32.0000" />
@@ -2017,7 +2017,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5047" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zhi" ActionTag="194771782" Tag="848" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="524.0173" RightMargin="308.9827" TopMargin="-3.0400" BottomMargin="26.0400" FontSize="24" LabelText="至" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="27.0000" Y="27.0000" />
@@ -2053,7 +2053,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.7543" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btn_check" ActionTag="2039700761" Tag="851" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="740.5663" RightMargin="-8.5663" TopMargin="-18.5400" BottomMargin="15.5400" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="31" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="128.0000" Y="53.0000" />
@@ -2177,7 +2177,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0235" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="text_ratioCount" ActionTag="165440145" Tag="861" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="522.7600" RightMargin="394.2400" TopMargin="9.4970" BottomMargin="45.5030" FontSize="26" LabelText="比例" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="53.0000" Y="30.0000" />
@@ -2277,7 +2277,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="0.9800" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="-1418919622" Tag="868" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="6.9200" BottomMargin="493.0800" TouchEnable="True" ClipAble="True" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="50.0000" />
@@ -2314,7 +2314,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.8216" Y="0.0400" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_renshu" ActionTag="747365015" Tag="872" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="292.1690" RightMargin="618.8311" TopMargin="9.0000" BottomMargin="9.0000" FontSize="28" LabelText="人数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="59.0000" Y="32.0000" />
@@ -2481,7 +2481,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5047" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zhi" ActionTag="-1651137737" Tag="885" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="524.0173" RightMargin="308.9827" TopMargin="-3.0400" BottomMargin="26.0400" FontSize="24" LabelText="至" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="27.0000" Y="27.0000" />
@@ -2517,7 +2517,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.7543" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btn_check" ActionTag="-1691270926" Tag="888" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="740.5663" RightMargin="-8.5663" TopMargin="-18.5400" BottomMargin="15.5400" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="31" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="128.0000" Y="53.0000" />
@@ -2617,7 +2617,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0235" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="text_DYJNum" ActionTag="-1894316435" Tag="896" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="634.5862" RightMargin="228.4138" TopMargin="27.5000" BottomMargin="27.5000" FontSize="26" LabelText="大赢家数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="107.0000" Y="30.0000" />
@@ -2678,7 +2678,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="0.9800" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="-1082032611" Tag="899" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="6.9200" BottomMargin="493.0800" TouchEnable="True" ClipAble="True" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="50.0000" />
@@ -2715,7 +2715,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.8216" Y="0.0400" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_total_score" ActionTag="704186489" Tag="903" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="235.5000" RightMargin="679.5000" TopMargin="10.0000" BottomMargin="10.0000" FontSize="26" LabelText="总数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="55.0000" Y="30.0000" />
@@ -3020,7 +3020,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5047" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zhi" ActionTag="583392002" Tag="929" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="524.0173" RightMargin="308.9827" TopMargin="-3.0400" BottomMargin="26.0400" FontSize="24" LabelText="至" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="27.0000" Y="27.0000" />
@@ -3056,7 +3056,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.7543" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btn_check" ActionTag="297343190" Tag="932" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="740.5663" RightMargin="-8.5663" TopMargin="-18.5400" BottomMargin="15.5400" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="31" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="128.0000" Y="53.0000" />
@@ -3168,7 +3168,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0235" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="text_ratioCount" ActionTag="-1037622262" Tag="941" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="550.7600" RightMargin="370.2400" TopMargin="10.9970" BottomMargin="47.0030" FontSize="24" LabelText="比例" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="49.0000" Y="27.0000" />
@@ -3277,7 +3277,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="0.9800" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="931786393" Tag="949" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="6.9200" BottomMargin="493.0800" TouchEnable="True" ClipAble="True" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="50.0000" />
@@ -3314,7 +3314,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.8216" Y="0.0400" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_renshu" ActionTag="1521621571" Tag="953" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="297.4991" RightMargin="613.5009" TopMargin="10.0500" BottomMargin="7.9500" FontSize="28" LabelText="人数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="59.0000" Y="32.0000" />
@@ -3469,7 +3469,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5047" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zhi" ActionTag="-1730825301" Tag="966" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="524.0173" RightMargin="308.9827" TopMargin="-3.0400" BottomMargin="26.0400" FontSize="24" LabelText="至" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="27.0000" Y="27.0000" />
@@ -3505,7 +3505,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.7543" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btn_check" ActionTag="284968809" Tag="969" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="740.5663" RightMargin="-8.5663" TopMargin="-18.5400" BottomMargin="15.5400" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="31" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="128.0000" Y="53.0000" />
@@ -3605,7 +3605,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0235" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="text_DYJNum" ActionTag="-1511522565" Tag="977" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="718.0107" RightMargin="144.9893" TopMargin="27.5000" BottomMargin="27.5000" FontSize="26" LabelText="大赢家数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="107.0000" Y="30.0000" />
@@ -3654,7 +3654,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="0.9800" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="-1464096132" Tag="980" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="6.9200" BottomMargin="493.0800" TouchEnable="True" ClipAble="True" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="50.0000" />
@@ -3691,7 +3691,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.8216" Y="0.0400" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_renshu" ActionTag="423233673" Tag="984" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="263.4233" RightMargin="647.5767" TopMargin="7.6800" BottomMargin="10.3200" FontSize="28" LabelText="人数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="59.0000" Y="32.0000" />
@@ -3950,7 +3950,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5047" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zhi" ActionTag="-1928042962" Tag="1006" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="524.0173" RightMargin="308.9827" TopMargin="-3.0400" BottomMargin="26.0400" FontSize="24" LabelText="至" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="27.0000" Y="27.0000" />
@@ -3986,7 +3986,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.7543" Y="0.8408" />
                         <PreSize X="0.1651" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btn_check" ActionTag="-1242412666" Tag="1009" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="740.5663" RightMargin="-8.5663" TopMargin="-18.5400" BottomMargin="15.5400" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="31" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="128.0000" Y="53.0000" />
@@ -4098,7 +4098,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0235" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="text_ratioCount" ActionTag="35688623" Tag="1018" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="522.7600" RightMargin="394.2400" TopMargin="9.4970" BottomMargin="45.5030" FontSize="26" LabelText="比例" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="53.0000" Y="30.0000" />
@@ -4255,7 +4255,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4964" Y="0.9903" />
                     <PreSize X="0.9897" Y="0.8491" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="-855149" Tag="1029" IconVisible="False" LeftMargin="3.0918" RightMargin="6.9082" TopMargin="6.3530" BottomMargin="493.6470" TouchEnable="True" ClipAble="False" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                     <Size X="960.0000" Y="50.0000" />
@@ -4266,7 +4266,7 @@
                         <Position X="478.4640" Y="0.0001" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.4984" Y="0.0000" />
+                        <PrePosition X="0.4984" />
                         <PreSize X="0.9959" Y="0.9600" />
                         <FileData Type="Normal" Path="friendCards/tongji/rank/bg_xian.png" Plist="" />
                       </AbstractNodeData>
@@ -4326,7 +4326,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.8303" Y="0.0200" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -4444,7 +4444,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="0.9500" Y="0.0111" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -4654,7 +4654,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5600" />
                     <PreSize X="1.0000" Y="0.8600" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Panle_title" ActionTag="545031505" Tag="1467" IconVisible="False" PositionPercentXEnabled="True" TopMargin="6.9200" BottomMargin="493.0800" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Enable="True" LeftEage="318" RightEage="318" TopEage="23" BottomEage="23" Scale9OriginX="318" Scale9OriginY="23" Scale9Width="330" Scale9Height="25" ctype="PanelObjectData">
                     <Size X="970.0000" Y="50.0000" />
@@ -4766,7 +4766,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" />
                         <PreSize X="1.0000" Y="0.0250" />
-                        <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -4833,7 +4833,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.4691" Y="0.6986" />
                         <PreSize X="0.1485" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_zhi" ActionTag="757980194" Tag="1500" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="530.3318" RightMargin="412.6682" TopMargin="1.5700" BottomMargin="21.4300" FontSize="24" LabelText="至" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="27.0000" Y="27.0000" />
@@ -4869,7 +4869,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.6522" Y="0.6986" />
                         <PreSize X="0.1485" Y="0.7400" />
-                        <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btn_check" ActionTag="-1736287504" Tag="1503" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="709.1794" RightMargin="132.8206" TopMargin="-10.4900" BottomMargin="7.4900" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="98" Scale9Height="31" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="128.0000" Y="53.0000" />
@@ -5014,11 +5014,11 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3482" Y="0.6374" />
                     <PreSize X="0.0281" Y="0.0500" />
-                    <NormalBackFileData Type="Normal" Path="friendCards/common/btn_chebox_yuan.png" Plist="" />
-                    <PressedBackFileData Type="Normal" Path="friendCards/common/btn_chebox_yuan.png" Plist="" />
-                    <DisableBackFileData Type="Normal" Path="friendCards/common/btn_chebox_yuan.png" Plist="" />
+                    <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_yuan.png" Plist="A_Common/Common.plist" />
+                    <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_yuan.png" Plist="A_Common/Common.plist" />
+                    <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_yuan.png" Plist="A_Common/Common.plist" />
                     <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                    <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_yuan.png" Plist="" />
+                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_yuan.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="check_winners" ActionTag="2135127804" Tag="683" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="445.6358" RightMargin="798.3642" TopMargin="312.5520" BottomMargin="371.4480" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                     <Size X="36.0000" Y="36.0000" />
@@ -5042,11 +5042,11 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3482" Y="0.5409" />
                     <PreSize X="0.0281" Y="0.0500" />
-                    <NormalBackFileData Type="Normal" Path="friendCards/common/btn_chebox_yuan.png" Plist="" />
-                    <PressedBackFileData Type="Normal" Path="friendCards/common/btn_chebox_yuan.png" Plist="" />
-                    <DisableBackFileData Type="Normal" Path="friendCards/common/btn_chebox_yuan.png" Plist="" />
+                    <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_yuan.png" Plist="A_Common/Common.plist" />
+                    <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_yuan.png" Plist="A_Common/Common.plist" />
+                    <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_yuan.png" Plist="A_Common/Common.plist" />
                     <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                    <NodeDisableFileData Type="Normal" Path="friendCards/common/btn_chebox_yuan.png" Plist="" />
+                    <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_yuan.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image_winnerStart" ActionTag="1082035189" Tag="685" IconVisible="False" LeftMargin="445.6358" RightMargin="692.3642" TopMargin="384.2766" BottomMargin="298.7234" Scale9Enable="True" LeftEage="47" RightEage="47" TopEage="12" BottomEage="12" Scale9OriginX="47" Scale9OriginY="12" Scale9Width="48" Scale9Height="13" ctype="ImageViewObjectData">
                     <Size X="142.0000" Y="37.0000" />
@@ -5056,7 +5056,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3482" Y="0.4406" />
                     <PreSize X="0.1109" Y="0.0514" />
-                    <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Text_fen" ActionTag="1903222783" Tag="686" IconVisible="False" LeftMargin="813.8022" RightMargin="431.1978" TopMargin="383.4595" BottomMargin="299.5405" FontSize="32" LabelText="分 " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="35.0000" Y="37.0000" />
@@ -5090,7 +5090,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4872" Y="0.4406" />
                     <PreSize X="0.0234" Y="0.0014" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image_winnerEnd" ActionTag="-690936739" Tag="689" IconVisible="False" LeftMargin="657.8572" RightMargin="480.1428" TopMargin="384.2795" BottomMargin="298.7205" Scale9Enable="True" LeftEage="47" RightEage="47" TopEage="12" BottomEage="12" Scale9OriginX="47" Scale9OriginY="12" Scale9Width="48" Scale9Height="13" ctype="ImageViewObjectData">
                     <Size X="142.0000" Y="37.0000" />
@@ -5100,7 +5100,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5694" Y="0.4406" />
                     <PreSize X="0.1109" Y="0.0514" />
-                    <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Button_OK" ActionTag="1504367036" Tag="690" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="521.0000" RightMargin="521.0000" TopMargin="466.5900" BottomMargin="165.4100" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="208" Scale9Height="66" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="238.0000" Y="88.0000" />

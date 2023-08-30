@@ -680,9 +680,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 263,
@@ -1264,9 +1264,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 263,
@@ -2263,9 +2263,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/tongji/inputbg.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -2474,10 +2474,11 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_FriendCard/GaojiSet.plist",
+        "A_FriendCard/GaojiSet.png",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/headMask.png",
         "friendCards/common/img_datanchuang.png",
-        "friendCards/common/img_hengxian.png",
         "friendCards/tongji/btn_n.png",
         "friendCards/tongji/btn_s.png",
         "friendCards/tongji/checkMember/btn_arrow_left_n.png",
@@ -2488,8 +2489,7 @@
         "friendCards/tongji/checkMember/btn_liushui_s.png",
         "friendCards/tongji/checkMember/btn_zhanji_n.png",
         "friendCards/tongji/checkMember/btn_zhanji_s.png",
-        "friendCards/tongji/checkMember/img_dikuang.png",
-        "friendCards/tongji/inputbg.png"
+        "friendCards/tongji/checkMember/img_dikuang.png"
       ],
       "ctype": "GameFileData"
     }

@@ -76,7 +76,7 @@
           {
             "FileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Common/pop_bg_small.png",
+              "Path": "A_Common/Main/pop_bg_small.png",
               "Plist": "A_Common/Common.plist"
             },
             "Scale9Enable": true,
@@ -144,7 +144,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/zhang_t.png",
+                      "Path": "A_Login/Main/zhang_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -189,7 +189,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/hao_t.png",
+                      "Path": "A_Login/Main/hao_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -234,7 +234,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/deng_t.png",
+                      "Path": "A_Login/Main/deng_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -279,7 +279,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/lu_t.png",
+                      "Path": "A_Login/Main/lu_t.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
@@ -340,7 +340,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/btnclose.png",
+                  "Path": "A_Common/Main/btnclose.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,
@@ -398,7 +398,7 @@
               {
                 "FileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/universalBottom.png",
+                  "Path": "A_Common/Main/universalBottom.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,
@@ -439,7 +439,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/CM_inputbox.png",
+                      "Path": "A_Login/Main/CM_inputbox.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
@@ -540,7 +540,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Login/CM_inputbox.png",
+                      "Path": "A_Login/Main/CM_inputbox.png",
                       "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
@@ -648,12 +648,12 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/yellow-button.png",
+                      "Path": "A_Common/Main/yellow-button.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_Common/yellow-button.png",
+                      "Path": "A_Common/Main/yellow-button.png",
                       "Plist": "A_Common/Common.plist"
                     },
                     "Scale9Enable": true,
@@ -705,7 +705,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Login/deng_l.png",
+                          "Path": "A_Login/Main/deng_l.png",
                           "Plist": "A_Login/Login.plist"
                         },
                         "Scale9OriginX": 12,
@@ -750,7 +750,7 @@
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "A_Login/lu_l.png",
+                          "Path": "A_Login/Main/lu_l.png",
                           "Plist": "A_Login/Login.plist"
                         },
                         "Scale9OriginX": 12,
