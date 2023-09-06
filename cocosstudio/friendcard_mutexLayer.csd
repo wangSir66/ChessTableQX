@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.8781" Y="0.9569" />
-                <FileData Type="Normal" Path="friendCards/common/img_datanchuang.png" Plist="" />
+                <FileData Type="Normal" Path="friendCards/img_datanchuang.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="Image_di" ActionTag="371140926" Tag="821" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="138.1960" RightMargin="142.8040" TopMargin="126.0000" BottomMargin="131.0000" TouchEnable="True" Scale9Enable="True" LeftEage="16" RightEage="16" TopEage="16" BottomEage="16" Scale9OriginX="16" Scale9OriginY="16" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
                 <Size X="999.0000" Y="463.0000" />
@@ -94,7 +94,7 @@
                 <PrePosition X="0.9177" Y="0.9416" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>A_FriendCard/Guanjia/btn_changeToFangkaClub_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{748,2},{188,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{188,66}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/btn_gaojiset_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{940,2},{188,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{188,66}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/btn_guanlijilv_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{748,72},{188,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{188,66}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/btn_huci_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{748,142},{188,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{188,66}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/btn_set_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{940,194},{188,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{188,66}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/btn_yaoqing_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{748,212},{188,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{188,66}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/checkBox_close.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{748,282},{109,56}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{109,56}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/checkBox_open.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{861,282},{109,56}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{109,56}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/img_dianxiaoer.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,702},{382,625}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{382,625}</string>
+			</dict>
+			<key>A_FriendCard/Main/img_xian.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1010,2},{427,1}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{427,1}</string>
+			</dict>
+			<key>A_FriendCard/Guanjia/img_di.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{742,696}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{742,696}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Guanjia.png</string>
+			<key>realTextureFileName</key>
+			<string>Guanjia.png</string>
+			<key>size</key>
+			<string>{1013,1086}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1013</integer>
+			<key>height</key>
+			<integer>1086</integer>
+		</dict>
+	</dict>
+</plist>

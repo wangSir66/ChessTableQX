@@ -457,6 +457,8 @@
             <Image Name="img_dianxiaoer.png" />
           </Folder>
           <Folder Name="Main">
+            <Image Name="btn_black_list_n.png" />
+            <Image Name="btn_black_list_s.png" />
             <Image Name="img_dikuang.png" />
             <Image Name="img_fangka.png" />
             <Image Name="img_fanhui.png" />
@@ -503,6 +505,10 @@
             <Image Name="Main_icon_tipPoint.png" />
             <Image Name="Main_image_bottomBG.png" />
             <Image Name="NameBg.png" />
+            <Image Name="tianjiawanfa_n.png" />
+            <Image Name="tianjiawanfa_s.png" />
+            <Image Name="xiugaiwanfa_n.png" />
+            <Image Name="xiugaiwanfa_s.png" />
             <Image Name="XuanZhong1.png" />
             <Image Name="XuanZhong2.png" />
             <Image Name="yizi_1_0.png" />
@@ -522,6 +528,70 @@
             <Image Name="zhuozi_7.png" />
             <Image Name="zhuozi_8.png" />
             <Image Name="zhuozi_9.png" />
+          </Folder>
+          <Folder Name="Member">
+            <Image Name="btn_add_again_n.png" />
+            <Image Name="btn_add_n.png" />
+            <Image Name="btn_add_s.png" />
+            <Image Name="btn_AddOtherClub_n.png" />
+            <Image Name="btn_AddOtherClub_s.png" />
+            <Image Name="btn_admit_n.png" />
+            <Image Name="btn_admit_s.png" />
+            <Image Name="btn_Button_remarks_n.png" />
+            <Image Name="btn_Button_remarks_s.png" />
+            <Image Name="btn_caozuo_n.png" />
+            <Image Name="btn_caozuo_s.png" />
+            <Image Name="btn_chakanCY_n.png" />
+            <Image Name="btn_chakanCY_s.png" />
+            <Image Name="btn_frozen_n.png" />
+            <Image Name="btn_frozen_s.png" />
+            <Image Name="btn_group_n.png" />
+            <Image Name="btn_group_s.png" />
+            <Image Name="btn_mamager_n.png" />
+            <Image Name="btn_mamager_s.png" />
+            <Image Name="btn_notAdmit_n.png" />
+            <Image Name="btn_notAdmit_s.png" />
+            <Image Name="btn_notAdmit2_n.png" />
+            <Image Name="btn_notAdmit2_s.png" />
+            <Image Name="btn_rule_n.png" />
+            <Image Name="btn_rule_s.png" />
+            <Image Name="btn_setgongxian1.png" />
+            <Image Name="btn_setgongxian2.png" />
+            <Image Name="btn_tichu_n.png" />
+            <Image Name="btn_tichu_s.png" />
+            <Image Name="btn_tick_all_n.png" />
+            <Image Name="btn_tick_all_s.png" />
+            <Image Name="btn_unfrozen_n.png" />
+            <Image Name="btn_unfrozen_s.png" />
+            <Image Name="btn_unMamager_n.png" />
+            <Image Name="btn_unMamager_s.png" />
+            <Image Name="btn_unZhuli_n.png" />
+            <Image Name="btn_unZhuli_s.png" />
+            <Image Name="btn_zhuli_n.png" />
+            <Image Name="btn_zhuli_s.png" />
+            <Image Name="btna_group_n.png" />
+            <Image Name="btna_unGroup_n.png" />
+            <Image Name="cy_add_gongxian.png" />
+            <Image Name="cy_add_gongxian1.png" />
+            <Image Name="cy_add_n.png" />
+            <Image Name="cy_add_s.png" />
+            <Image Name="cy_daoru_n.png" />
+            <Image Name="cy_daoru_s.png" />
+            <Image Name="cy_jujue_n.png" />
+            <Image Name="cy_jujue_s.png" />
+            <Image Name="cy_member_n.png" />
+            <Image Name="cy_member_record_n.png" />
+            <Image Name="cy_member_record_s.png" />
+            <Image Name="cy_member_s.png" />
+            <Image Name="cy_shenhe_n.png" />
+            <Image Name="cy_shenhe_s.png" />
+            <Image Name="cy_tongguo_n.png" />
+            <Image Name="cy_tongguo_s.png" />
+            <Image Name="cy_zhuli_n.png" />
+            <Image Name="cy_zhuli_s.png" />
+            <Image Name="cy_zuzhang_n.png" />
+            <Image Name="cy_zuzhang_s.png" />
+            <Image Name="userStop.png" />
           </Folder>
           <Folder Name="Setting">
             <Image Name="btn_addRule_n.png" />
@@ -545,6 +615,7 @@
           <PlistInfo Name="FriendCardMain.csi" Type="Plist" />
           <PlistInfo Name="GaojiSet.csi" Type="Plist" />
           <PlistInfo Name="Guanjia.csi" Type="Plist" />
+          <PlistInfo Name="Member.csi" Type="Plist" />
           <PlistInfo Name="Setting.csi" Type="Plist" />
         </Folder>
         <Folder Name="A_Home">
@@ -1862,7 +1933,6 @@
             <Image Name="btn_search.png" />
             <Image Name="btn_sure_green_n.png" />
             <Image Name="btn_sure_green_s.png" />
-            <Image Name="btn_x_normal.png" />
             <Image Name="daTC3_17.png" />
             <Image Name="head_kuang.png" />
             <Image Name="head_kuang_da.png" />
@@ -1871,7 +1941,6 @@
             <Image Name="headMask_da.png" />
             <Image Name="headMask1.png" />
             <Image Name="huifang.png" />
-            <Image Name="img_datanchuang.png" />
             <Image Name="img_datanchuang_di.png" />
             <Image Name="img_datanchuang_JZ.png" />
             <Image Name="img_datanchuang_left.png" />
@@ -1886,7 +1955,6 @@
             <Image Name="img_tongyong.png" />
             <Image Name="img_wenhao.png" />
             <Image Name="img_xian.png" />
-            <Image Name="img_xiaotanchuang.png" />
             <Image Name="img_zhongtanchuang.png" />
             <Image Name="img_zhongtanchuang1.png" />
             <Image Name="img_zhongtanchuang2.png" />
@@ -2062,85 +2130,28 @@
             <Image Name="img_bg.png" />
             <Image Name="img_input.png" />
           </Folder>
-          <Folder Name="memberManage">
+          <Folder Name="Member">
             <Image Name="bg_bianhao.png" />
             <Image Name="bg_search.png" />
             <Image Name="bg_sort.png" />
             <Image Name="bg_sort_n.png" />
             <Image Name="bg_sort_selected1.png" />
-            <Image Name="btn_add_again_n.png" />
-            <Image Name="btn_add_n.png" />
-            <Image Name="btn_add_s.png" />
-            <Image Name="btn_AddOtherClub_n.png" />
-            <Image Name="btn_AddOtherClub_s.png" />
-            <Image Name="btn_admit_n.png" />
-            <Image Name="btn_admit_s.png" />
             <Image Name="btn_baocun_n.png" />
             <Image Name="btn_baocun_s.png" />
-            <Image Name="btn_Button_remarks_n.png" />
-            <Image Name="btn_Button_remarks_s.png" />
             <Image Name="btn_canle.png" />
             <Image Name="btn_canle_s.png" />
-            <Image Name="btn_caozuo_n.png" />
-            <Image Name="btn_caozuo_s.png" />
-            <Image Name="btn_chakanCY_n.png" />
-            <Image Name="btn_chakanCY_s.png" />
             <Image Name="btn_daoru_n.png" />
             <Image Name="btn_daoru_s.png" />
-            <Image Name="btn_frozen_n.png" />
-            <Image Name="btn_frozen_s.png" />
             <Image Name="btn_gaojiSet_n.png" />
             <Image Name="btn_gaojiSet_s.png" />
             <Image Name="btn_group.png" />
-            <Image Name="btn_group_n.png" />
-            <Image Name="btn_group_s.png" />
-            <Image Name="btn_mamager_n.png" />
-            <Image Name="btn_mamager_s.png" />
-            <Image Name="btn_notAdmit_n.png" />
-            <Image Name="btn_notAdmit_s.png" />
-            <Image Name="btn_rule_n.png" />
-            <Image Name="btn_rule_s.png" />
-            <Image Name="btn_setgongxian1.png" />
-            <Image Name="btn_setgongxian2.png" />
-            <Image Name="btn_tichu_n.png" />
-            <Image Name="btn_tichu_s.png" />
             <Image Name="btn_tichuRoom.png" />
             <Image Name="btn_tongbu_n.png" />
-            <Image Name="btn_unfrozen_n.png" />
-            <Image Name="btn_unfrozen_s.png" />
-            <Image Name="btn_unMamager_n.png" />
-            <Image Name="btn_unMamager_s.png" />
-            <Image Name="btn_unZhuli_n.png" />
-            <Image Name="btn_unZhuli_s.png" />
-            <Image Name="btn_zhuli_n.png" />
-            <Image Name="btn_zhuli_s.png" />
-            <Image Name="btna_group_n.png" />
-            <Image Name="btna_unGroup_n.png" />
             <Image Name="checkbg.png" />
             <Image Name="checked.png" />
-            <Image Name="cy_add_gongxian.png" />
-            <Image Name="cy_add_gongxian1.png" />
-            <Image Name="cy_add_n.png" />
-            <Image Name="cy_add_s.png" />
             <Image Name="cy_all_member_n.png" />
             <Image Name="cy_all_member_s.png" />
-            <Image Name="cy_daoru_n.png" />
-            <Image Name="cy_daoru_s.png" />
-            <Image Name="cy_jujue_n.png" />
-            <Image Name="cy_jujue_s.png" />
-            <Image Name="cy_member_n.png" />
-            <Image Name="cy_member_record_n.png" />
-            <Image Name="cy_member_record_s.png" />
-            <Image Name="cy_member_s.png" />
-            <Image Name="cy_shenhe_n.png" />
-            <Image Name="cy_shenhe_s.png" />
-            <Image Name="cy_tongguo_n.png" />
-            <Image Name="cy_tongguo_s.png" />
             <Image Name="cy_tuichu_n.png" />
-            <Image Name="cy_zhuli_n.png" />
-            <Image Name="cy_zhuli_s.png" />
-            <Image Name="cy_zuzhang_n.png" />
-            <Image Name="cy_zuzhang_s.png" />
             <Image Name="daochu_di.png" />
             <Image Name="diliver1.png" />
             <Image Name="diliver2.png" />
@@ -2161,7 +2172,6 @@
             <Image Name="title_beizhu.png" />
             <Image Name="title_caozuo.png" />
             <Image Name="title_member.png" />
-            <Image Name="userStop.png" />
             <Image Name="wenhao.png" />
             <Image Name="xuanzhong.png" />
             <Image Name="yuan_img.png" />
@@ -2180,12 +2190,6 @@
               <Image Name="btn_delete_s.png" />
               <Image Name="image_bg.png" />
             </Folder>
-            <Image Name="btn_black_list_n.png" />
-            <Image Name="btn_black_list_s.png" />
-            <Image Name="tianjiawanfa_n.png" />
-            <Image Name="tianjiawanfa_s.png" />
-            <Image Name="xiugaiwanfa_n.png" />
-            <Image Name="xiugaiwanfa_s.png" />
           </Folder>
           <Folder Name="mutexLayer">
             <Image Name="btn_achieve.png" />
@@ -2507,9 +2511,12 @@
           <Image Name="btn_ruleretain_s.png" />
           <Image Name="btn_sure_n.png" />
           <Image Name="btn_sure_s.png" />
+          <Image Name="btn_x_normal.png" />
           <Image Name="btnbackroom2_n.png" />
           <Image Name="btnbackroom2_s.png" />
           <Image Name="icon_null.png" />
+          <Image Name="img_datanchuang.png" />
+          <Image Name="img_xiaotanchuang.png" />
           <Image Name="int_playwords.png" />
           <Image Name="returnHallBtn_n.png" />
           <Image Name="returnHallBtn_s.png" />
@@ -7502,7 +7509,10 @@
         <Project Name="A_Friendcard_gaojiSet.csd" Type="Layer" />
         <Project Name="A_Friendcard_info.csd" Type="Layer" />
         <Project Name="A_Friendcard_main.csd" Type="Layer" />
+        <Project Name="A_Friendcard_member.csd" Type="Layer" />
+        <Project Name="A_Friendcard_member_manage.csd" Type="Layer" />
         <Project Name="A_Friendcard_nvguanjia.csd" Type="Layer" />
+        <Project Name="A_FriendCard_ruleLayer.csd" Type="Node" />
         <Project Name="A_Home.csd" Type="Layer" />
         <Project Name="A_Login.csd" Type="Layer" />
         <Project Name="A_mobilePhoneLogin.csd" Type="Layer" />
@@ -7547,7 +7557,6 @@
         <Project Name="friendcard_inputRuleNameDialog.csd" Type="Layer" />
         <Project Name="friendcard_invite_shenhe.csd" Type="Layer" />
         <Project Name="friendcard_manageRecord.csd" Type="Node" />
-        <Project Name="friendcard_member.csd" Type="Layer" />
         <Project Name="friendcard_member_daoru_result.csd" Type="Layer" />
         <Project Name="friendcard_member_group_daoru.csd" Type="Layer" />
         <Project Name="friendcard_mutexLayer.csd" Type="Layer" />
@@ -7561,7 +7570,6 @@
         <Project Name="friendcard_rule_detail.csd" Type="Layer" />
         <Project Name="friendcard_ruleBlackList.csd" Type="Layer" />
         <Project Name="friendcard_ruleBlackListAdd.csd" Type="Layer" />
-        <Project Name="friendCard_ruleLayer.csd" Type="Node" />
         <Project Name="friendcard_ruleSelectDialog.csd" Type="Node" />
         <Project Name="friendcard_search.csd" Type="Node" />
         <Project Name="friendcard_selectGroup.csd" Type="Node" />

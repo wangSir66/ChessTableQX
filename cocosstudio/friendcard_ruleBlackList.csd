@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.7344" Y="0.6958" />
-                <FileData Type="Normal" Path="friendCards/common/img_xiaotanchuang.png" Plist="" />
+                <FileData Type="Normal" Path="friendCards/img_xiaotanchuang.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="Text_desc" ActionTag="-430992257" Tag="1250" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="611.0000" RightMargin="611.0000" TopMargin="187.3400" BottomMargin="500.6600" FontSize="28" LabelText="玩法" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="58.0000" Y="32.0000" />
@@ -188,7 +188,7 @@
                 <PrePosition X="0.8459" Y="0.8183" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

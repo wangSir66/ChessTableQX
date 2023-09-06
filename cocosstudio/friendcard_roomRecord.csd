@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.4989" />
                 <PreSize X="0.8781" Y="0.9569" />
-                <FileData Type="Normal" Path="friendCards/common/img_datanchuang.png" Plist="" />
+                <FileData Type="Normal" Path="friendCards/img_datanchuang.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="nullTip_text" ActionTag="1536124147" Tag="386" IconVisible="False" LeftMargin="549.8887" RightMargin="546.1113" TopMargin="323.3028" BottomMargin="364.6972" FontSize="28" LabelText="暂无房间记录   " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="184.0000" Y="32.0000" />

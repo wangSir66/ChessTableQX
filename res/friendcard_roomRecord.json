@@ -123,7 +123,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_datanchuang.png",
+                  "Path": "friendCards/img_datanchuang.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 422,
@@ -3443,8 +3443,8 @@
         "A_FriendCard/GaojiSet.png",
         "fonts/fzcy.ttf",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_datanchuang.png",
         "friendCards/common/img_shuxian.png",
+        "friendCards/img_datanchuang.png",
         "friendCards/roomInfo/reflash_di.png",
         "friendCards/roomInfo/reflash_jian.png",
         "friendCards/roomRecord/bg_item.png",

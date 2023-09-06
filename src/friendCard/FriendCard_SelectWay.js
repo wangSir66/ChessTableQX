@@ -18,7 +18,7 @@ var FriendCardSelectWay = cc.Layer.extend({
         }.bind(this));
 
         var _back = userInfoLayerUi.node.getChildByName("back");
-        _back.setScale(MjClient.size.width / 1280, MjClient.size.height / 720);
+        setWgtLayout(_back, [0.9, 1], [0.5, 0.15], [0, 0]);
         this.btn_all_rule = _back.getChildByName('btn_all_rule'), btn_outline_rule = _back.getChildByName('btn_outline_rule');
         btn_outline_rule.visible = false;
         let p8 = _back.getChildByName('Panel_8');

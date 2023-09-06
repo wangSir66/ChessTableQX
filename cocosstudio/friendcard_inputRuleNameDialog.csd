@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5086" Y="0.4672" />
                 <PreSize X="0.6141" Y="0.6958" />
-                <FileData Type="Normal" Path="friendCards/common/img_xiaotanchuang.png" Plist="" />
+                <FileData Type="Normal" Path="friendCards/img_xiaotanchuang.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="close" ActionTag="-897077773" VisibleForFrame="False" Tag="572" IconVisible="False" LeftMargin="866.4290" RightMargin="248.5710" TopMargin="131.7947" BottomMargin="426.2053" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="135" Scale9Height="140" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="165.0000" Y="162.0000" />

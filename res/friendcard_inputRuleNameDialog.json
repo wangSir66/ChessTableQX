@@ -124,7 +124,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_xiaotanchuang.png",
+                  "Path": "friendCards/img_xiaotanchuang.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -550,8 +550,8 @@
         "A_FriendCard/FriendCardMain.png",
         "friendCards/common/btn_close_n.png",
         "friendCards/common/btn_close_s.png",
-        "friendCards/common/img_xiaotanchuang.png",
         "friendCards/common/title_WFMC.png",
+        "friendCards/img_xiaotanchuang.png",
         "friendCards/main/btn_ok_n.png"
       ],
       "ctype": "GameFileData"

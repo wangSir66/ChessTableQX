@@ -277,7 +277,7 @@
                 <PrePosition X="0.9691" Y="0.9523" />
                 <PreSize X="0.0676" Y="0.1103" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -288,7 +288,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.8781" Y="0.9569" />
-            <FileData Type="Normal" Path="friendCards/common/img_datanchuang.png" Plist="" />
+            <FileData Type="Normal" Path="friendCards/img_datanchuang.png" Plist="" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />

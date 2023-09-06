@@ -377,10 +377,7 @@ var FriendCard_info = cc.Layer.extend({
             }
         }, this);
         this.initLeftNode();
-        setTimeout(() => {
-
-            this.initRightNode();
-        }, 0);
+        this.initRightNode();
     },
     //设置界面右侧
     initRightNode: function () {
@@ -456,178 +453,186 @@ var FriendCard_info = cc.Layer.extend({
         var totalHeight = this.STotalHeight = hang * this._wanfaItemHeight + (hang - 1) * this._diliverHieght + 50;
         this._btnScrollView.setInnerContainerSize(cc.size(this._btnScrollView.width, totalHeight));
 
-        for (var i = 0; i < rLen; i++) {
-            let item = this.createItemHander(rules[i], i + 1, totalHeight, true);
-            MjClient.RuleParam["rule" + rules[i].ruleIndex] = rules[i];
-            wanfaBtns.push(item);
-        }
-        //最有一个
-        this.wanfaBtns[rLen - 1].tempP = this["btn_pos_" + rLen];
-        this.checkAddBtn();
-        //移动玩法
-        var touchNode = that._btnScrollView.getChildByName("touchNode");
-        touchNode.setZOrder(999);
-        function intoDeleteMoveRuleMode() {
-            if (that.isDeleteMoveRuleMode) return;
-            that.isDeleteMoveRuleMode = true;
-            that.canMoveWanfaItem = true;
-            that.touchListener = cc.EventListener.create(getTouchListener());
-            cc.eventManager.addListener(that.touchListener, touchNode);
-        }
-        var listViewPos = that._btnScrollView.getPosition(), apoint = that._btnScrollView.getAnchorPoint(), hg = that._btnScrollView.height;
-        listViewPos.x = listViewPos.x - (apoint.x - 0.5) * that._btnScrollView.width;
-        listViewPos.y = listViewPos.y - (apoint.y - 0.5) * hg;
-        hg += 50;
-        var listBottomP = that._btnScrollView.getParent().convertToWorldSpace(cc.p(listViewPos.x, listViewPos.y - hg));
-        var listTopP = that._btnScrollView.getParent().convertToWorldSpace(cc.p(listViewPos.x, listViewPos.y + hg));
-        function getTouchListener() {
-            var curIndex = -1;
-            var curCloneItem = null;
-            var ret = {
-                event: cc.EventListener.TOUCH_ONE_BY_ONE,
-                swallowTouches: false,
-                onTouchBegan: function (touch, event) {
-                    //防止多点触摸异常
-                    if (curIndex != -1 && curCloneItem) {
-                        that.wanfaBtns[curIndex].visible = true;
-                        that.wanfaBtns[curIndex].setPosition(that.wanfaBtns[curIndex].tempP);
-                        curCloneItem.removeFromParent(true);
-                        delete curCloneItem;
-                        curCloneItem = null;
-                    }
-                    if (!that.canMoveWanfaItem) {
-                        return false;
-                    }
-                    curIndex = -1;
-                    that.touchBeginTime = new Date().getTime();
-                    var p = touchNode.getParent().convertToNodeSpace(touch.getLocation());
-                    for (var i = 0; i < that.wanfaBtns.length; i++) {
-                        if (that.wanfaBtns[i].visible && cc.rectContainsPoint(that.wanfaBtns[i].getBoundingBox(), p)) {
-                            curIndex = i;
-                            if (that.wanfaBtns[curIndex].isAddButton) {
-                                //wanfaBtns[curIndex].onTouchListerer(wanfaBtns[curIndex],2);
-                                return -1;
-                            }
-                            break;
+        let endFun = () => {
+            //最有一个
+            this.wanfaBtns[rLen - 1].tempP = this["btn_pos_" + rLen];
+            this.checkAddBtn();
+            //移动玩法
+            var touchNode = that._btnScrollView.getChildByName("touchNode");
+            touchNode.setZOrder(999);
+            function intoDeleteMoveRuleMode() {
+                if (that.isDeleteMoveRuleMode) return;
+                that.isDeleteMoveRuleMode = true;
+                that.canMoveWanfaItem = true;
+                that.touchListener = cc.EventListener.create(getTouchListener());
+                cc.eventManager.addListener(that.touchListener, touchNode);
+            }
+            var listViewPos = that._btnScrollView.getPosition(), apoint = that._btnScrollView.getAnchorPoint(), hg = that._btnScrollView.height;
+            listViewPos.x = listViewPos.x - (apoint.x - 0.5) * that._btnScrollView.width;
+            listViewPos.y = listViewPos.y - (apoint.y - 0.5) * hg;
+            hg += 50;
+            var listBottomP = that._btnScrollView.getParent().convertToWorldSpace(cc.p(listViewPos.x, listViewPos.y - hg));
+            var listTopP = that._btnScrollView.getParent().convertToWorldSpace(cc.p(listViewPos.x, listViewPos.y + hg));
+            function getTouchListener() {
+                var curIndex = -1;
+                var curCloneItem = null;
+                var ret = {
+                    event: cc.EventListener.TOUCH_ONE_BY_ONE,
+                    swallowTouches: false,
+                    onTouchBegan: function (touch, event) {
+                        //防止多点触摸异常
+                        if (curIndex != -1 && curCloneItem) {
+                            that.wanfaBtns[curIndex].visible = true;
+                            that.wanfaBtns[curIndex].setPosition(that.wanfaBtns[curIndex].tempP);
+                            curCloneItem.removeFromParent(true);
+                            delete curCloneItem;
+                            curCloneItem = null;
                         }
-                    }
-
-                    return curIndex != -1;
-                },
-                onTouchMoved: function (touch, event) {
-                    cc.log("onTouchMoved friend info");
-                    if (curIndex == -1) {
-                        return;
-                    }
-                    if (!curCloneItem) {
-                        var nowTime = new Date().getTime();
-                        if (nowTime - that.touchBeginTime > 500) {
-                            curCloneItem = that.wanfaBtns[curIndex].clone();
-                            that.wanfaBtns[curIndex].visible = false;
-                            that._btnScrollView.addChild(curCloneItem);
-                            curCloneItem.zIndex = 500;
-                        } else {
-                            return;
-                        }
-                    }
-                    that._btnScrollView.setTouchEnabled(false);
-                    var p = touchNode.getParent().convertToNodeSpace(touch.getLocation());
-                    curCloneItem.setPosition(p);
-
-                    //判断是否可以玩法区域，偏差30
-                    if (p.y > that.STotalHeight || p.y < 0 || p.x < 0 || p.x > that._btnScrollView.width) {
-                        //cc.log("onTouchMoved friend info can not move");
-                        return;
-                    }
-                    //找到最近的目标
-                    var distance = -1;
-                    var moveToIndex = -1;
-                    for (var i = 0; i < that.wanfaBtns.length; i++) {
-                        if (i != curIndex && that.wanfaBtns[i].visible && !that.wanfaBtns[i].isAddButton) {
-                            var tempDistance = Math.sqrt(Math.pow(curCloneItem.x - that.wanfaBtns[i].x, 2) + Math.pow(curCloneItem.y - that.wanfaBtns[i].y, 2));
-                            if (distance == -1 || tempDistance < distance) {
-                                distance = tempDistance;
-                                moveToIndex = i;
-                            }
-                        }
-                    }
-                    //最近的目标中心点偏移25内可移动
-                    if (moveToIndex > -1 && distance < 25) {
-                        //cc.log("onTouchMoved friend info can moveToIndex =  " + moveToIndex);
                         if (!that.canMoveWanfaItem) {
+                            return false;
+                        }
+                        curIndex = -1;
+                        that.touchBeginTime = new Date().getTime();
+                        var p = touchNode.getParent().convertToNodeSpace(touch.getLocation());
+                        for (var i = 0; i < that.wanfaBtns.length; i++) {
+                            if (that.wanfaBtns[i].visible && cc.rectContainsPoint(that.wanfaBtns[i].getBoundingBox(), p)) {
+                                curIndex = i;
+                                if (that.wanfaBtns[curIndex].isAddButton) {
+                                    //wanfaBtns[curIndex].onTouchListerer(wanfaBtns[curIndex],2);
+                                    return -1;
+                                }
+                                break;
+                            }
+                        }
+
+                        return curIndex != -1;
+                    },
+                    onTouchMoved: function (touch, event) {
+                        cc.log("onTouchMoved friend info");
+                        if (curIndex == -1) {
                             return;
                         }
-                        that.canMoveWanfaItem = false;
-
-                        //交换数据
-                        var tempP = that.wanfaBtns[curIndex].tempP;
-                        var moveAction = cc.moveTo(0.3, that.wanfaBtns[curIndex].tempP);
-                        that.wanfaBtns[curIndex].tempP = that.wanfaBtns[moveToIndex].tempP;
-                        that.wanfaBtns[curIndex].setPosition(that.wanfaBtns[curIndex].tempP);
-                        that.wanfaBtns[moveToIndex].tempP = tempP;
-                        that.wanfaBtns[curIndex].changeIndx = that.wanfaBtns[moveToIndex].wanFaIndex;
-                        that.wanfaBtns[moveToIndex].changeIndx = that.wanfaBtns[curIndex].wanFaIndex;
-
-                        that.wanfaBtns[moveToIndex].runAction(cc.sequence(moveAction, cc.callFunc(function () {
-                            that.canMoveWanfaItem = true;
-                        })));
-                        //这里用用tempP，因为有0.3秒的动画
-                        that.wanfaBtns.sort(function (a, b) {
-                            if (a.tempP.y > b.tempP.y) {
-                                return -1;
-                            } else if (a.tempP.y == b.tempP.y) {
-                                return a.tempP.x < b.tempP.x ? -1 : 1;
+                        if (!curCloneItem) {
+                            var nowTime = new Date().getTime();
+                            if (nowTime - that.touchBeginTime > 500) {
+                                curCloneItem = that.wanfaBtns[curIndex].clone();
+                                that.wanfaBtns[curIndex].visible = false;
+                                that._btnScrollView.addChild(curCloneItem);
+                                curCloneItem.zIndex = 500;
                             } else {
-                                return 1;
+                                return;
                             }
-                        })
-                        curIndex = moveToIndex;
-                    }
+                        }
+                        that._btnScrollView.setTouchEnabled(false);
+                        var p = touchNode.getParent().convertToNodeSpace(touch.getLocation());
+                        curCloneItem.setPosition(p);
 
-                    if (moveToIndex > -1) {
-                        var oneItemtime = 0.3;//画过1个item要0.5秒
-                        var nowP = touch.getLocation();
-                        var row = parseInt(that.wanfaBtns.length / 2) + that.wanfaBtns.length % 2;
-                        var curRow = parseInt(moveToIndex / 2) + moveToIndex % 2;
-                        if (nowP.y - listBottomP.y < 20) {//滑到列表低（不是指最后一个）
-                            that._btnScrollView.scrollToBottom(oneItemtime * (row - curRow), false);
-                        } else if (listTopP.y - nowP.y < 20) {//滑到列表顶（不是指第一个）
-                            that._btnScrollView.scrollToTop(oneItemtime * (curRow + 1), false);
+                        //判断是否可以玩法区域，偏差30
+                        if (p.y > that.STotalHeight || p.y < 0 || p.x < 0 || p.x > that._btnScrollView.width) {
+                            //cc.log("onTouchMoved friend info can not move");
+                            return;
+                        }
+                        //找到最近的目标
+                        var distance = -1;
+                        var moveToIndex = -1;
+                        for (var i = 0; i < that.wanfaBtns.length; i++) {
+                            if (i != curIndex && that.wanfaBtns[i].visible && !that.wanfaBtns[i].isAddButton) {
+                                var tempDistance = Math.sqrt(Math.pow(curCloneItem.x - that.wanfaBtns[i].x, 2) + Math.pow(curCloneItem.y - that.wanfaBtns[i].y, 2));
+                                if (distance == -1 || tempDistance < distance) {
+                                    distance = tempDistance;
+                                    moveToIndex = i;
+                                }
+                            }
+                        }
+                        //最近的目标中心点偏移25内可移动
+                        if (moveToIndex > -1 && distance < 25) {
+                            //cc.log("onTouchMoved friend info can moveToIndex =  " + moveToIndex);
+                            if (!that.canMoveWanfaItem) {
+                                return;
+                            }
+                            that.canMoveWanfaItem = false;
+
+                            //交换数据
+                            var tempP = that.wanfaBtns[curIndex].tempP;
+                            var moveAction = cc.moveTo(0.3, that.wanfaBtns[curIndex].tempP);
+                            that.wanfaBtns[curIndex].tempP = that.wanfaBtns[moveToIndex].tempP;
+                            that.wanfaBtns[curIndex].setPosition(that.wanfaBtns[curIndex].tempP);
+                            that.wanfaBtns[moveToIndex].tempP = tempP;
+                            that.wanfaBtns[curIndex].changeIndx = that.wanfaBtns[moveToIndex].wanFaIndex;
+                            that.wanfaBtns[moveToIndex].changeIndx = that.wanfaBtns[curIndex].wanFaIndex;
+
+                            that.wanfaBtns[moveToIndex].runAction(cc.sequence(moveAction, cc.callFunc(function () {
+                                that.canMoveWanfaItem = true;
+                            })));
+                            //这里用用tempP，因为有0.3秒的动画
+                            that.wanfaBtns.sort(function (a, b) {
+                                if (a.tempP.y > b.tempP.y) {
+                                    return -1;
+                                } else if (a.tempP.y == b.tempP.y) {
+                                    return a.tempP.x < b.tempP.x ? -1 : 1;
+                                } else {
+                                    return 1;
+                                }
+                            })
+                            curIndex = moveToIndex;
+                        }
+
+                        if (moveToIndex > -1) {
+                            var oneItemtime = 0.3;//画过1个item要0.5秒
+                            var nowP = touch.getLocation();
+                            var row = parseInt(that.wanfaBtns.length / 2) + that.wanfaBtns.length % 2;
+                            var curRow = parseInt(moveToIndex / 2) + moveToIndex % 2;
+                            if (nowP.y - listBottomP.y < 20) {//滑到列表低（不是指最后一个）
+                                that._btnScrollView.scrollToBottom(oneItemtime * (row - curRow), false);
+                            } else if (listTopP.y - nowP.y < 20) {//滑到列表顶（不是指第一个）
+                                that._btnScrollView.scrollToTop(oneItemtime * (curRow + 1), false);
+                            } else {
+                                that._btnScrollView.stopAutoScroll();
+                            }
                         } else {
                             that._btnScrollView.stopAutoScroll();
                         }
-                    } else {
+
+                    },
+                    onTouchEnded: function (touch, event) {
+                        if (curCloneItem && curIndex > -1) {
+                            that.wanfaBtns[curIndex].setPosition(curCloneItem.getPosition());
+                            that.wanfaBtns[curIndex].visible = true;
+                            curCloneItem.visible = false;
+                            curCloneItem.removeFromParent(true);
+                            delete curCloneItem;
+                            curCloneItem = null;
+                            that.canMoveWanfaItem = false;
+                            var moveAction = cc.moveTo(0.3, that.wanfaBtns[curIndex].tempP);
+                            that.wanfaBtns[curIndex].runAction(cc.sequence(moveAction, cc.callFunc(function () {
+                                that.canMoveWanfaItem = true;
+                            })));
+                        }
+                        curIndex = -1;
+                        that._btnScrollView.setTouchEnabled(true);
+                        that._btnScrollView.stopAutoScroll();
+                    },
+                    onTouchCancelled: function (touch, event) {
+                        ret.onTouchEnded(touch, event);
+                        that._btnScrollView.setTouchEnabled(true);
                         that._btnScrollView.stopAutoScroll();
                     }
-
-                },
-                onTouchEnded: function (touch, event) {
-                    if (curCloneItem && curIndex > -1) {
-                        that.wanfaBtns[curIndex].setPosition(curCloneItem.getPosition());
-                        that.wanfaBtns[curIndex].visible = true;
-                        curCloneItem.visible = false;
-                        curCloneItem.removeFromParent(true);
-                        delete curCloneItem;
-                        curCloneItem = null;
-                        that.canMoveWanfaItem = false;
-                        var moveAction = cc.moveTo(0.3, that.wanfaBtns[curIndex].tempP);
-                        that.wanfaBtns[curIndex].runAction(cc.sequence(moveAction, cc.callFunc(function () {
-                            that.canMoveWanfaItem = true;
-                        })));
-                    }
-                    curIndex = -1;
-                    that._btnScrollView.setTouchEnabled(true);
-                    that._btnScrollView.stopAutoScroll();
-                },
-                onTouchCancelled: function (touch, event) {
-                    ret.onTouchEnded(touch, event);
-                    that._btnScrollView.setTouchEnabled(true);
-                    that._btnScrollView.stopAutoScroll();
-                }
-            };
-            return ret;
+                };
+                return ret;
+            }
+            intoDeleteMoveRuleMode();
         }
-        intoDeleteMoveRuleMode()
+
+        for (let i = 0; i < rLen; i++) {
+            let _inx = i;
+            setTimeout(() => {
+                let item = this.createItemHander(rules[_inx], _inx + 1, totalHeight, true);
+                MjClient.RuleParam["rule" + rules[_inx].ruleIndex] = rules[_inx];
+                wanfaBtns.push(item);
+                if(_inx == rLen - 1)endFun();
+            }, 100 * i);
+        }
+
     },
     onTouchListerer: function (sender, type) {
         if (type == 0) {

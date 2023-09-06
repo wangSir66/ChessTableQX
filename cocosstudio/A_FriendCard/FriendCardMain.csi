@@ -64,6 +64,12 @@
       <FilePathData Path="A_FriendCard/Main/Main_image_bottomBG.png" />
       <FilePathData Path="A_FriendCard/Main/Main_bg_clubList.png" />
       <FilePathData Path="A_FriendCard/Main/img_dikuang.png" />
+      <FilePathData Path="A_FriendCard/Main/btn_black_list_n.png" />
+      <FilePathData Path="A_FriendCard/Main/btn_black_list_s.png" />
+      <FilePathData Path="A_FriendCard/Main/tianjiawanfa_n.png" />
+      <FilePathData Path="A_FriendCard/Main/tianjiawanfa_s.png" />
+      <FilePathData Path="A_FriendCard/Main/xiugaiwanfa_n.png" />
+      <FilePathData Path="A_FriendCard/Main/xiugaiwanfa_s.png" />
     </ImageFiles>
     <MaxSize Width="2048" Height="2048" />
   </Content>

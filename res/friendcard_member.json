@@ -122,7 +122,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_datanchuang.png",
+                  "Path": "A_FriendCard/img_datanchuang.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -22526,12 +22526,12 @@
         "A_Common/Common.png",
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/img_datanchuang.png",
         "createNewPng/daTC1_20.png",
         "Default/ImageFile.png",
         "friendCards/common/btn_finish_n.png",
         "friendCards/common/btn_finish_s.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_datanchuang.png",
         "friendCards/common/img_xiaotanchuang.png",
         "friendCards/memberManage/bg_bianhao.png",
         "friendCards/memberManage/bg_search.png",

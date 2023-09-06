@@ -70,7 +70,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "friendCards/common/img_xiaotanchuang.png",
+              "Path": "friendCards/img_xiaotanchuang.png",
               "Plist": ""
             },
             "Scale9Enable": true,
@@ -625,7 +625,7 @@
         "friendCards/common/btn_sure_green_n.png",
         "friendCards/common/btn_sure_green_s.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/img_xiaotanchuang.png",
         "friendCards/roomRecord/title_huifang_shijiao.png",
         "game_picture/btn_x_normal.png"
       ],

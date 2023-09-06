@@ -14,6 +14,9 @@ var res = {
 	Friendcard_nvguanjia_json: "A_Friendcard_nvguanjia.json",
 	Friendcard_gaojiSet_json: "A_Friendcard_gaojiSet.json",
 	Friendcard_info_json: "A_Friendcard_info.json",
+	FriendCard_ruleLayer_json: "A_FriendCard_ruleLayer.json",
+	Friendcard_member_json: "A_Friendcard_member.json",
+	Friendcard_member_manage_json: "A_Friendcard_member_manage.json",
 
 	Create_json: "createHomeTotal.json",
 	Enter_json: "enter.json",

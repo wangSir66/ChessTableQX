@@ -4198,7 +4198,7 @@ FriendCard_Common.createCommonBtn = function (params) {
     var button = new ccui.Button(
         params.resArr[0] ? params.resArr[0] : "friendCards/common/btn_common_n.png",
         params.resArr[1] ? params.resArr[1] : null,
-        params.resArr[2] ? params.resArr[2] : null);
+        params.resArr[2] ? params.resArr[2] : null, params.type || 0);
     button.setTitleText(params.text);
     button.setTitleColor(cc.color(params.color))
     button.setTitleFontSize(params.fontSize);

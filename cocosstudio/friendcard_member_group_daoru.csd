@@ -65,7 +65,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="1.0000" />
-                    <FileData Type="Normal" Path="friendCards/memberManage/xuanzhong.png" Plist="" />
+                    <FileData Type="Normal" Path="friendCards/Member/xuanzhong.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Text_desc_title" ActionTag="242196880" Tag="539" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="128.0000" RightMargin="128.0000" TopMargin="29.7050" BottomMargin="261.2950" FontSize="30" LabelText="  不保留分组  " ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="174.0000" Y="34.0000" />
@@ -115,7 +115,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="1.0000" />
-                    <FileData Type="Normal" Path="friendCards/memberManage/xuanzhong.png" Plist="" />
+                    <FileData Type="Normal" Path="friendCards/Member/xuanzhong.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Text_desc_title" ActionTag="-525282195" Tag="540" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="153.5000" RightMargin="153.5000" TopMargin="29.7050" BottomMargin="261.2950" FontSize="30" LabelText="保留分组" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="123.0000" Y="34.0000" />
@@ -177,7 +177,7 @@
                 <PrePosition X="0.8682" Y="0.8874" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

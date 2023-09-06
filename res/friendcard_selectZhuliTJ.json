@@ -119,7 +119,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_xiaotanchuang.png",
+                  "Path": "friendCards/img_xiaotanchuang.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 341,
@@ -888,7 +888,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -962,10 +962,10 @@
       },
       "UsedResources": [
         "Default/Button_Disable.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/btn_sure_green_n.png",
         "friendCards/common/btn_sure_green_s.png",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/img_xiaotanchuang.png",
         "friendCards/selectGroup/title_select_zhuli.png"
       ],
       "ctype": "GameFileData"

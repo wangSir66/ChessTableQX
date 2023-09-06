@@ -3566,7 +3566,7 @@ var FriendCard_ruleLayer = cc.Layer.extend({
     ctor: function (clubData) {
         this._super();
         this.clubData = clubData;
-        var node = ccs.load("friendCard_ruleLayer.json").node;
+        var node = ccs.load(res.FriendCard_ruleLayer_json).node;
         this.addChild(node);
         this.node = node;
         var back = node.getChildByName("back")
@@ -3694,20 +3694,23 @@ var FriendCard_ruleLayer = cc.Layer.extend({
         }
         this._acceptInviteSwitch = []
         var allAcceptInvite = true;
-        for (var i = 0; i < this._ruleListData.length; i++) {
-            var isOpenInvite = this.isOpenInvite(this._ruleListData[i]._index) ? 1 : 0;
-            this._acceptInviteSwitch[this._ruleListData[i]._index.toString()] = isOpenInvite;
-            if (!isOpenInvite) {
-                allAcceptInvite = false;
-            }
-            var itemData = this._ruleListData[i];
-            itemData._localIndex = i;
-            if (listView.getItems()[i]) {
-                this.createItem(listView.getItems()[i], itemData, i)
-            } else {
-                var item = _item.clone();
-                listView.pushBackCustomItem(this.createItem(item, itemData, i))
-            }
+        for (var indx = 0; indx < this._ruleListData.length; indx++) {
+            let i = indx;
+            setTimeout(() => {
+                var isOpenInvite = this.isOpenInvite(this._ruleListData[i]._index) ? 1 : 0;
+                this._acceptInviteSwitch[this._ruleListData[i]._index.toString()] = isOpenInvite;
+                if (!isOpenInvite) {
+                    allAcceptInvite = false;
+                }
+                var itemData = this._ruleListData[i];
+                itemData._localIndex = i;
+                if (listView.getItems()[i]) {
+                    this.createItem(listView.getItems()[i], itemData, i)
+                } else {
+                    var item = _item.clone();
+                    listView.pushBackCustomItem(this.createItem(item, itemData, i))
+                }
+            }, 100 * indx);
         }
         this._cb_isAcceptAllInvite.visible = true;
         this._cb_isAcceptAllInvite.setSelected(allAcceptInvite)
@@ -3893,8 +3896,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
             }
         }, this);
         closeBtnAddLight(_close);
-
-
         var ruleList = [];
         var ruleNum = -1;
         for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {
@@ -3942,6 +3943,7 @@ var FriendCard_ruleLayer = cc.Layer.extend({
         }, this);
 
         this._listView = panel.getChildByName("listView")
+        this._listView.setScrollBarEnabled(false);
         this._item = panel.getChildByName("item")
         this._item.visible = false;
         this._ruleListData = ruleList;

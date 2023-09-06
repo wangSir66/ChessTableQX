@@ -129,6 +129,7 @@
         "src/friendCard/FriendCard_roomRecord.js",
         "src/friendCard/FriendCard_tongji.js",
         "src/friendCard/FriendCard_member.js",
+        "src/friendCard/FriendCard_memberManage.js",
         "src/friendCard/FriendCard_mutexLayer.js",
         "src/friendCard/FriendCard_info.js",
         "src/friendCard/FriendCard_find.js",

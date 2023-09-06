@@ -43,11 +43,7 @@ var FriendCard_member = cc.Layer.extend({
 
         this._checkGroupType = "全部";
         this.curUserGrp = null; //自己的是什么分组
-        var resJson = "friendcard_member.json";
-        if (isIPhoneX() && FriendCard_Common.getSkinType() != 3 && FriendCard_Common.getSkinType() != 4) {
-            resJson = "friendcard_memberX.json";
-        }
-        var node = ccs.load(resJson).node;
+        var node = ccs.load(res.Friendcard_member_json).node;
         this.node = node;
         this.addChild(node);
         var that = this;
@@ -3227,7 +3223,7 @@ var FriendCard_member = cc.Layer.extend({
             if (FriendCard_Common.getSkinType() == 4) {
                 button_tickAll = FriendCard_Common.createCommonBtn({ text: "踢出全部人" })
             } else {
-                button_tickAll = FriendCard_Common.createCommonBtn({ resArr: ["friendCards/memberManage/btn_tick_all_n.png", "friendCards/memberManage/btn_tick_all_s.png", "friendCards/memberManage/btn_tick_all_s.png"] })
+                button_tickAll = FriendCard_Common.createCommonBtn({ resArr: ["A_FriendCard/Member/btn_tick_all_n.png", "A_FriendCard/Member/btn_tick_all_s.png", "A_FriendCard/Member/btn_tick_all_s.png"], type: 1 })
             }
             button_tickAll.setName("Button_tickAll");
             this.memberManage.addChild(button_tickAll);
@@ -3500,15 +3496,15 @@ var FriendCard_member = cc.Layer.extend({
             if (FriendCard_Common.getSkinType() == 4) {
                 Button_unAdmit.setTitleText("全员禁玩");
             } else {
-                Button_unAdmit.loadTextureNormal("friendCards/memberManage/btn_notAdmit2_n.png");
-                Button_unAdmit.loadTexturePressed("friendCards/memberManage/btn_notAdmit2_s.png");
+                Button_unAdmit.loadTextureNormal("A_FriendCard/Member/btn_notAdmit2_n.png", 1);
+                Button_unAdmit.loadTexturePressed("A_FriendCard/Member/btn_notAdmit2_s.png", 1);
             }
         } else {
             if (FriendCard_Common.getSkinType() == 4) {
                 Button_unAdmit.setTitleText("禁止进房");
             } else {
-                Button_unAdmit.loadTextureNormal("friendCards/memberManage/btn_notAdmit_n.png");
-                Button_unAdmit.loadTexturePressed("friendCards/memberManage/btn_notAdmit_s.png");
+                Button_unAdmit.loadTextureNormal("A_FriendCard/Member/btn_notAdmit_n.png", 1);
+                Button_unAdmit.loadTexturePressed("A_FriendCard/Member/btn_notAdmit_s.png", 1);
             }
 
         }

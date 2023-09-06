@@ -138,7 +138,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5115" Y="0.4847" />
             <PreSize X="0.6141" Y="0.6958" />
-            <FileData Type="Normal" Path="friendCards/common/img_xiaotanchuang.png" Plist="" />
+            <FileData Type="Normal" Path="friendCards/img_xiaotanchuang.png" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>
