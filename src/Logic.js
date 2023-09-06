@@ -135,7 +135,7 @@ AppCnName[MjClient.APP_TYPE.HUBEIMJ] = "湖北麻将";
 
 var AppEnv = {};
 AppEnv[MjClient.APP_TYPE.QXJSMJ] = "yueyang-test";
-AppEnv[MjClient.APP_TYPE.YAAN] = "yaan";
+AppEnv[MjClient.APP_TYPE.YAAN] = "chengdu-dev";
 AppEnv[MjClient.APP_TYPE.JSMJ] = "nanjing";
 AppEnv[MjClient.APP_TYPE.QXHAMJ] = "huaian";
 AppEnv[MjClient.APP_TYPE.QXXZMJ] = "xuzhou";
@@ -704,9 +704,9 @@ MjClient.CARD_FLOWER_TYPE = {
     MEI_HUA: 2,
     HONG_TAO: 3,
 }
-var ossUrl = 'http://test-project-0.oss-cn-hangzhou.aliyuncs.com'
-var GameDownloadCfgUrl = {};//http://8.139.4.112:9990/update/jiangshu/configuration.json
-GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/yaan/";
+var ossUrl = 'http://project-update-oss.oss-cn-hangzhou.aliyuncs.com'
+var GameDownloadCfgUrl = {};//http://8.139.5.7:9990/update/jiangshu/configuration.json
+GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/chengdu-dev/";
 
 
 
@@ -1614,7 +1614,7 @@ GameBg[MjClient.GAME_TYPE.SHI_SHOU_AI_HUANG] = "playing/gameTable/game_shishouai
 GameBg[MjClient.GAME_TYPE.WU_XUE_MJ] = "playing/gameTable/game_wuXueMJ.png";
 GameBg[MjClient.GAME_TYPE.QI_CHUN_HONG_ZHONG_GANG] = "playing/gameTable/game_qiChunHongZhongGang.png";
 
-const HelpUrls = 'http://8.139.4.112:9993/protocol/tips/'
+const HelpUrls = 'http://8.139.5.7:9993/protocol/tips/'
 var GameHelpUrl = {};
 GameHelpUrl[MjClient.GAME_TYPE.RED_20_POKER] = HelpUrls + "helpRed20/helpRed20.html";
 GameHelpUrl[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = HelpUrls + "helpRunFasterYa/helpRunFasterYa.html";
@@ -9621,7 +9621,7 @@ MjClient.ConnectServer = function (openID, callback) {
         var tryCount = 0;
         if (MjClient.remoteCfg.guestLogin) {
             //苹果审核服
-            servers = ["8.139.4.112"];
+            servers = ["8.139.5.7"];
             if (MjClient.getAppType() == MjClient.APP_TYPE.QXYZQP ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXLYQP ||
                 MjClient.getAppType() == MjClient.APP_TYPE.BDHYZP ||
@@ -9629,7 +9629,7 @@ MjClient.ConnectServer = function (openID, callback) {
                 MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
                 MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG ||
                 MjClient.getAppType() == MjClient.APP_TYPE.QXXXGHZ) {
-                servers = ["8.139.4.112"];
+                servers = ["8.139.5.7"];
             }
             ports = [16010, 16011];
         }

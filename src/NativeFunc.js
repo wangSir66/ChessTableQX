@@ -575,7 +575,7 @@ MjClient.native =
 
     GetPackageName: function () {
         if (!MjClient.native.appPackageName) {
-            var packageName = "com.tianyayule.yaan";
+            var packageName = "com.tianyayule.chengdu-dev";
             try {
                 if (cc.sys.OS_ANDROID == cc.sys.os && isCurrentNativeVersionBiggerThan("2.4.2")) {
                     packageName = jsb.reflection.callStaticMethod("org.cocos2dx.javascript.AppActivity", "getPackageNameString", "()Ljava/lang/String;");

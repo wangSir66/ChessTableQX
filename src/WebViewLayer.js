@@ -75,7 +75,7 @@ WebViewLayer = cc.Layer.extend({
             "sichuan": MjClient.APP_TYPE.LYSICHUANMJ,
             "shanxi": MjClient.APP_TYPE.DQSHANXIMJ,
             "hubei": MjClient.APP_TYPE.HUBEIMJ,
-            "yaan": MjClient.APP_TYPE.YAAN,
+            "chengdu-dev": MjClient.APP_TYPE.YAAN,
         };
 
         for (var key in appTypeObj) {
@@ -319,7 +319,7 @@ WebViewLayer = cc.Layer.extend({
 
                     if (that.webView) {
                         if (curType === "shanxi" || curType === "jinzhong" || curType === "yueyang" ||
-                            curType === "guizhou" || curType === "nantong" || curType === "jiangsu" || curType === "hubei" ||
+                            curType === "guizhou" || curType === "nantong" || curType === "jiangsu" || curType === "hubei"|| curType == 'chengdu-dev' ||
                             curType === "ylhunan" || curType === "xuzhou" || curType === "huaian" || curType === "haian" || curType == 'yaan') {
                             gamePanel && gamePanel.setVisible(true);
                             that.webView.setAnchorPoint(cc.p(0, 0));
@@ -363,7 +363,7 @@ WebViewLayer = cc.Layer.extend({
                     }
 
                     if (that.webView) {
-                        if (curType === "jinzhong" || curType === "yueyang" || curType === "nantong" || curType === "ylhunan" ||
+                        if (curType === "jinzhong" || curType === "yueyang" || curType === "nantong" || curType === "ylhunan" ||curType == 'chengdu-dev' ||
                             curType === "jiangsu" || curType === "xuzhou" || curType === "huaian" || curType === "haian" ||
                             curType === "guizhou" || curType === "shanxi" || curType === "hubei" || curType === "yaan") {
                             pactPanel && pactPanel.setVisible(true);
