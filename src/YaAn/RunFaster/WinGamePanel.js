@@ -318,11 +318,15 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                         return pl.winone == 0;
                     }
                     return false;
-                }, _run: function () {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
+                },
+                _run: function () {
                     if (MjClient.isDismiss) {
                         this.loadTexture("gameOver/jiesan.png");
+                    }
+                },
+                lb: {
+                    _run: function () {
+                        this.visible = !MjClient.isDismiss;
                     }
                 }
             },
@@ -361,26 +365,7 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                     }
                 },
                 _click: function (btn, eT) {
-                    var sData = MjClient.data.sData;
-                    var tData = sData.tData;
-                    if (sData.tData.roundNum <= 0)
-                        MjClient.endoneui.getParent().addChild(new GameOverLayer(), 500);
-
-                    postEvent("clearCardUI");
-                    MjClient.endoneui.removeFromParent(true);
-                    MjClient.endoneui = null;
-
-                    if (MjClient.rePlayVideo >= 0 && MjClient.replayui) {
-                        MjClient.replayui.replayEnd();
-                    }
-                    else {
-                        PKPassConfirmToServer_card();
-                    }
-                    if (MjClient.arrowbkNode && cc.sys.isObjectValid(MjClient.arrowbkNode)) {
-                        MjClient.arrowbkNode.setVisible(false);
-                    }
-
-                    //reInitarrCardVisible();
+                    MjClient.endoneui.nextStartGame();
                 }
             },
             delText:
@@ -411,30 +396,30 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                 _visible: true,
                 _run: function () {
                     // if (!MjClient.endoneui.isNewUi)
-                        // this.ignoreContentAdaptWithSize(true);
+                    // this.ignoreContentAdaptWithSize(true);
                 },
                 _text: function () {
                     var sData = MjClient.data.sData;
                     var tData = sData.tData;
                     var str = [],
-                    rule = tData.areaSelectMode;
+                        rule = tData.areaSelectMode;
 
                     if (MjClient.endoneui.isNewUi)
                         str.push(GameCnName[MjClient.gameType] + " " + tData.maxPlayer + " 人   房号：" + tData.tableid);
 
-                        str.push(['每局黑桃五先出', '每局赢家先出'][rule.mustPutHongTaoSan]);
-                        rule.Sisters &&str.push("姊妹对");
-                        rule.AllBlack &&str.push("全黑");
-                        rule.AllRed &&str.push("全红");
-                        rule.AllBig &&str.push("全大");
-                        rule.AllSmall &&str.push("全小");
-                        rule.AllSingly &&str.push("全单");
-                        rule.AllDouble &&str.push("全双");
-                        rule.Four5OrA &&str.push("5555，AAAA");
-                        rule.FourOther &&str.push("4个6-4个K");
-                        rule.can3geZha &&str.push("3张算炸");
-                        rule.can4geZha &&str.push("4张算炸");
-                        rule.isZhaDanJiaFen && str.push('带炸弹');
+                    str.push(['每局黑桃五先出', '每局赢家先出'][rule.mustPutHongTaoSan]);
+                    rule.Sisters && str.push("姊妹对");
+                    rule.AllBlack && str.push("全黑");
+                    rule.AllRed && str.push("全红");
+                    rule.AllBig && str.push("全大");
+                    rule.AllSmall && str.push("全小");
+                    rule.AllSingly && str.push("全单");
+                    rule.AllDouble && str.push("全双");
+                    rule.Four5OrA && str.push("5555，AAAA");
+                    rule.FourOther && str.push("4个6-4个K");
+                    rule.can3geZha && str.push("3张算炸");
+                    rule.can4geZha && str.push("4张算炸");
+                    rule.isZhaDanJiaFen && str.push('带炸弹');
 
                     if (typeof (rule.fengDing) == "number") {
                         switch (rule.fengDing) {
@@ -489,7 +474,50 @@ var EndOneView_RunFasterYA = cc.Layer.extend({
                     // _layout:[[0.08,0.08],[1,0.5],[-2.5,-0.75]]
                 },
                 _run: function () { SetEndOneUserUI_RunFasterYA(this, 3); }
-            }
+            },
+            countDown: {
+                _visible: false,
+                _run: function () {
+                    var show = MjClient.data.sData.tData.areaSelectMode.AutoReady;
+                    this.setVisible(!!show);
+                    cc.log('-----countDown---------', show)
+                    if (!show) return;
+                    var i = MjClient.rePlayVideo == -1 ? 10 : 0;
+                    if (i > 0) {
+                        this.setString('(' + i + 's' + ')');
+                        this.schedule(() => {
+                            i--;
+                            if (i < 0) {
+                                this.unscheduleAllCallbacks();
+                                MjClient.endoneui.nextStartGame();
+                                return;
+                            }
+                            this.setString('(' + i + 's' + ')');
+                        }, 1);
+                    }
+                }
+            },
+        }
+    },
+    nextStartGame: function () {
+        cc.log('--------下一局消息事件-----');
+        var sData = MjClient.data.sData;
+        var tData = sData.tData;
+        postEvent("clearCardUI");
+        MjClient.endoneui.removeFromParent(true);
+        MjClient.endoneui = null;
+
+        if (MjClient.rePlayVideo >= 0 && MjClient.replayui) {
+            MjClient.replayui.replayEnd();
+        }
+        else {
+            tData.roundNum <= 0 || PKPassConfirmToServer_card();
+        }
+        if (MjClient.arrowbkNode && cc.sys.isObjectValid(MjClient.arrowbkNode)) {
+            MjClient.arrowbkNode.setVisible(false);
+        }
+        if (tData.roundNum <= 0) {
+            postEvent("showEndRoom");
         }
     },
     ctor: function () {

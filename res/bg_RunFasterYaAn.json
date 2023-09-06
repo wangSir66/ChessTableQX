@@ -289,7 +289,7 @@
                             },
                             "Position": {
                               "X": 42.0,
-                              "Y": 19.8653
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -304,7 +304,7 @@
                             "PositionPercentYEnabled": true,
                             "PrePosition": {
                               "X": 1.1667,
-                              "Y": 0.5369
+                              "Y": 0.5
                             },
                             "PreSize": {
                               "X": 1.1667,
@@ -312,8 +312,8 @@
                             },
                             "LeftMargin": 42.0,
                             "RightMargin": -48.0,
-                            "TopMargin": 3.1347,
-                            "BottomMargin": 5.8653,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 505,
                             "ActionTag": 599622204,
                             "Size": {
@@ -349,7 +349,7 @@
                             },
                             "Position": {
                               "X": 105.0,
-                              "Y": 20.1909
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -364,7 +364,7 @@
                             "PositionPercentYEnabled": true,
                             "PrePosition": {
                               "X": 2.9167,
-                              "Y": 0.5457
+                              "Y": 0.5
                             },
                             "PreSize": {
                               "X": 2.7222,
@@ -372,8 +372,8 @@
                             },
                             "LeftMargin": 105.0,
                             "RightMargin": -167.0,
-                            "TopMargin": 2.8091,
-                            "BottomMargin": 6.1909,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 678,
                             "ActionTag": -44289351,
                             "Size": {
@@ -474,7 +474,7 @@
                             },
                             "Position": {
                               "X": 42.0,
-                              "Y": 18.5814
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -489,7 +489,7 @@
                             "PositionPercentYEnabled": true,
                             "PrePosition": {
                               "X": 1.1667,
-                              "Y": 0.5022
+                              "Y": 0.5
                             },
                             "PreSize": {
                               "X": 1.5556,
@@ -497,8 +497,8 @@
                             },
                             "LeftMargin": 42.0,
                             "RightMargin": -62.0,
-                            "TopMargin": 4.4186,
-                            "BottomMargin": 4.5814,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 507,
                             "ActionTag": -624683715,
                             "Size": {
@@ -660,7 +660,7 @@
                             },
                             "Position": {
                               "X": 42.0,
-                              "Y": 19.8653
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -675,7 +675,7 @@
                             "PositionPercentYEnabled": true,
                             "PrePosition": {
                               "X": 1.1667,
-                              "Y": 0.5369
+                              "Y": 0.5
                             },
                             "PreSize": {
                               "X": 1.5556,
@@ -683,8 +683,8 @@
                             },
                             "LeftMargin": 42.0,
                             "RightMargin": -62.0,
-                            "TopMargin": 3.1347,
-                            "BottomMargin": 5.8653,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 509,
                             "ActionTag": -675008593,
                             "Size": {
@@ -953,7 +953,7 @@
                             },
                             "Position": {
                               "X": 42.0,
-                              "Y": 19.8653
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -968,7 +968,7 @@
                             "PositionPercentYEnabled": true,
                             "PrePosition": {
                               "X": 1.1667,
-                              "Y": 0.5369
+                              "Y": 0.5
                             },
                             "PreSize": {
                               "X": 3.1111,
@@ -976,8 +976,8 @@
                             },
                             "LeftMargin": 42.0,
                             "RightMargin": -118.0,
-                            "TopMargin": 3.1347,
-                            "BottomMargin": 5.8653,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 255,
                             "ActionTag": 573342933,
                             "Size": {
@@ -1202,8 +1202,8 @@
                               "ScaleY": 0.5
                             },
                             "Position": {
-                              "X": 41.9999,
-                              "Y": 19.8875
+                              "X": 42.0,
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -1218,16 +1218,16 @@
                             "PositionPercentYEnabled": true,
                             "PrePosition": {
                               "X": 1.1667,
-                              "Y": 0.5375
+                              "Y": 0.5
                             },
                             "PreSize": {
                               "X": 3.1111,
                               "Y": 0.7568
                             },
-                            "LeftMargin": 41.9999,
-                            "RightMargin": -117.9999,
-                            "TopMargin": 3.1125,
-                            "BottomMargin": 5.8875,
+                            "LeftMargin": 42.0,
+                            "RightMargin": -118.0,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 258,
                             "ActionTag": -1871697127,
                             "Size": {
@@ -1617,9 +1617,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -1627,9 +1627,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -1742,9 +1742,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -1752,9 +1752,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -1877,9 +1877,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/CheckBoxForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/CheckBoxForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -2045,14 +2045,14 @@
                           "B": 70
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/minus-1.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/minus-1.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/minus-1.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/minus-1.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 15,
                         "Scale9OriginY": 11,
@@ -2115,14 +2115,14 @@
                           "B": 70
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/plus-1.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/plus-1.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/plus-1.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/plus-1.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 15,
                         "Scale9OriginY": 11,
@@ -2344,14 +2344,14 @@
                               "Plist": ""
                             },
                             "PressedFileData": {
-                              "Type": "Normal",
-                              "Path": "Red20/Common/minus-1.png",
-                              "Plist": ""
+                              "Type": "MarkedSubImage",
+                              "Path": "A_Common/Main/minus-1.png",
+                              "Plist": "A_Common/Common.plist"
                             },
                             "NormalFileData": {
-                              "Type": "Normal",
-                              "Path": "Red20/Common/minus-1.png",
-                              "Plist": ""
+                              "Type": "MarkedSubImage",
+                              "Path": "A_Common/Main/minus-1.png",
+                              "Plist": "A_Common/Common.plist"
                             },
                             "Scale9OriginX": 15,
                             "Scale9OriginY": 11,
@@ -2419,14 +2419,14 @@
                               "Plist": ""
                             },
                             "PressedFileData": {
-                              "Type": "Normal",
-                              "Path": "Red20/Common/plus-1.png",
-                              "Plist": ""
+                              "Type": "MarkedSubImage",
+                              "Path": "A_Common/Main/plus-1.png",
+                              "Plist": "A_Common/Common.plist"
                             },
                             "NormalFileData": {
-                              "Type": "Normal",
-                              "Path": "Red20/Common/plus-1.png",
-                              "Plist": ""
+                              "Type": "MarkedSubImage",
+                              "Path": "A_Common/Main/plus-1.png",
+                              "Plist": "A_Common/Common.plist"
                             },
                             "Scale9OriginX": 15,
                             "Scale9OriginY": 11,
@@ -2602,14 +2602,14 @@
                               "Plist": ""
                             },
                             "PressedFileData": {
-                              "Type": "Normal",
-                              "Path": "Red20/Common/plus-1.png",
-                              "Plist": ""
+                              "Type": "MarkedSubImage",
+                              "Path": "A_Common/Main/plus-1.png",
+                              "Plist": "A_Common/Common.plist"
                             },
                             "NormalFileData": {
-                              "Type": "Normal",
-                              "Path": "Red20/Common/plus-1.png",
-                              "Plist": ""
+                              "Type": "MarkedSubImage",
+                              "Path": "A_Common/Main/plus-1.png",
+                              "Plist": "A_Common/Common.plist"
                             },
                             "Scale9OriginX": 15,
                             "Scale9OriginY": 11,
@@ -3009,14 +3009,14 @@
                                   "Plist": ""
                                 },
                                 "PressedFileData": {
-                                  "Type": "Normal",
-                                  "Path": "Red20/Common/plus-1.png",
-                                  "Plist": ""
+                                  "Type": "MarkedSubImage",
+                                  "Path": "A_Common/Main/plus-1.png",
+                                  "Plist": "A_Common/Common.plist"
                                 },
                                 "NormalFileData": {
-                                  "Type": "Normal",
-                                  "Path": "Red20/Common/plus-1.png",
-                                  "Plist": ""
+                                  "Type": "MarkedSubImage",
+                                  "Path": "A_Common/Main/plus-1.png",
+                                  "Plist": "A_Common/Common.plist"
                                 },
                                 "Scale9OriginX": 15,
                                 "Scale9OriginY": 11,
@@ -3084,14 +3084,14 @@
                                   "Plist": ""
                                 },
                                 "PressedFileData": {
-                                  "Type": "Normal",
-                                  "Path": "Red20/Common/minus-1.png",
-                                  "Plist": ""
+                                  "Type": "MarkedSubImage",
+                                  "Path": "A_Common/Main/minus-1.png",
+                                  "Plist": "A_Common/Common.plist"
                                 },
                                 "NormalFileData": {
-                                  "Type": "Normal",
-                                  "Path": "Red20/Common/minus-1.png",
-                                  "Plist": ""
+                                  "Type": "MarkedSubImage",
+                                  "Path": "A_Common/Main/minus-1.png",
+                                  "Plist": "A_Common/Common.plist"
                                 },
                                 "Scale9OriginX": 15,
                                 "Scale9OriginY": 11,
@@ -3159,14 +3159,14 @@
                                   "Plist": ""
                                 },
                                 "PressedFileData": {
-                                  "Type": "Normal",
-                                  "Path": "Red20/Common/minus-1.png",
-                                  "Plist": ""
+                                  "Type": "MarkedSubImage",
+                                  "Path": "A_Common/Main/minus-1.png",
+                                  "Plist": "A_Common/Common.plist"
                                 },
                                 "NormalFileData": {
-                                  "Type": "Normal",
-                                  "Path": "Red20/Common/minus-1.png",
-                                  "Plist": ""
+                                  "Type": "MarkedSubImage",
+                                  "Path": "A_Common/Main/minus-1.png",
+                                  "Plist": "A_Common/Common.plist"
                                 },
                                 "Scale9OriginX": 15,
                                 "Scale9OriginY": 11,
@@ -3427,8 +3427,8 @@
                               "ScaleY": 0.5
                             },
                             "Position": {
-                              "X": 41.9999,
-                              "Y": 21.1973
+                              "X": 42.0,
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -3443,16 +3443,16 @@
                             "PositionPercentYEnabled": true,
                             "PrePosition": {
                               "X": 1.1667,
-                              "Y": 0.5729
+                              "Y": 0.5
                             },
                             "PreSize": {
                               "X": 1.1667,
                               "Y": 0.7568
                             },
-                            "LeftMargin": 41.9999,
-                            "RightMargin": -47.9999,
-                            "TopMargin": 1.8027,
-                            "BottomMargin": 7.1973,
+                            "LeftMargin": 42.0,
+                            "RightMargin": -48.0,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 328,
                             "ActionTag": 319663973,
                             "Size": {
@@ -3553,7 +3553,7 @@
                             },
                             "Position": {
                               "X": 42.0,
-                              "Y": 18.5814
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -3568,7 +3568,7 @@
                             "PositionPercentYEnabled": true,
                             "PrePosition": {
                               "X": 1.1667,
-                              "Y": 0.5022
+                              "Y": 0.5
                             },
                             "PreSize": {
                               "X": 1.1667,
@@ -3576,8 +3576,8 @@
                             },
                             "LeftMargin": 42.0,
                             "RightMargin": -48.0,
-                            "TopMargin": 4.4186,
-                            "BottomMargin": 4.5814,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 330,
                             "ActionTag": 1595662257,
                             "Size": {
@@ -3898,14 +3898,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/minus-1.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/minus-1.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/minus-1.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/minus-1.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 15,
                         "Scale9OriginY": 11,
@@ -4026,14 +4026,14 @@
                           "Plist": ""
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/plus-1.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/plus-1.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/plus-1.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/plus-1.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "Scale9OriginX": 15,
                         "Scale9OriginY": 11,
@@ -4217,9 +4217,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -4276,7 +4276,7 @@
                               "ScaleY": 0.5
                             },
                             "Position": {
-                              "X": 41.9998,
+                              "X": 42.0,
                               "Y": 18.5
                             },
                             "Scale": {
@@ -4298,8 +4298,8 @@
                               "X": 5.4444,
                               "Y": 0.7568
                             },
-                            "LeftMargin": 41.9998,
-                            "RightMargin": -201.9998,
+                            "LeftMargin": 42.0,
+                            "RightMargin": -202.0,
                             "TopMargin": 4.5,
                             "BottomMargin": 4.5,
                             "Tag": 591,
@@ -4332,9 +4332,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -4342,9 +4342,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -4565,9 +4565,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -4575,9 +4575,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -4690,9 +4690,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -4700,9 +4700,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -6852,9 +6852,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -6862,9 +6862,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -7210,9 +7210,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/CheckBoxForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/CheckBoxForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -7220,9 +7220,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/CheckBoxForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/CheckBoxForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -7335,9 +7335,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/CheckBoxForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/CheckBoxForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -7345,9 +7345,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/CheckBoxForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/CheckBoxForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -7926,9 +7926,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -7936,9 +7936,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -8051,9 +8051,9 @@
                           "Plist": ""
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -8061,9 +8061,9 @@
                           "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "Normal",
-                          "Path": "Red20/Common/RadioForbidden.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/RadioForbidden.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -9603,6 +9603,8 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
         "createNewPng/bg_nothing.png",
         "createNewPng/btn_create_n.png",
         "createNewPng/btn_create_n_diamond.png",
@@ -9616,11 +9618,7 @@
         "friendCards/btn_ruledelete_s.png",
         "friendCards/btn_ruleretain_n.png",
         "friendCards/btn_ruleretain_s.png",
-        "friendCards/int_playwords.png",
-        "Red20/Common/CheckBoxForbidden.png",
-        "Red20/Common/minus-1.png",
-        "Red20/Common/plus-1.png",
-        "Red20/Common/RadioForbidden.png"
+        "friendCards/int_playwords.png"
       ],
       "ctype": "GameFileData"
     }

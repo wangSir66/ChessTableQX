@@ -14,12 +14,12 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
 
     callSelectBack: function (indx, item, list) {
         this._super(indx, item, list);
-        const isNum = parseInt(indx);
-        if (isNum >= 0 && item) {
-            indx = Number(indx);
-            let p = item.getParent();
-            if (p.name == 'fangshu') this.initFangShu();
-        }
+        // const isNum = parseInt(indx);
+        // if (isNum >= 0 && item) {
+        //     indx = Number(indx);
+        //     let p = item.getParent();
+        //     if (p.name == 'fangshu') ;
+        // }
     },
 
     setExtraPlayNodeCurrentSelect: function (isClub) {
@@ -29,7 +29,7 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
     },
 
     initFangShu: function () {
-        const Indx = this.RedioGroup['fangshu'].getSelectIndex(),
+        const Indx = this.getFangShu(),
             pz = this.RedioGroup['paizhang'],
             bdt = this.getBtnByName('btnCheck_badaotang'),
             dq = this.getBtnByName('btnCheck_DesignatingUnwantedEnabled'),
@@ -60,7 +60,20 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
     },
 
     getSelectPlayNum: function () {
-        const maxP = [4, 3, 3, 2, 2][this.RedioGroup['fangshu'].getSelectIndex()];
+        let maxP = 4;
+        switch (this._data.gameType) {
+            case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                maxP = 4;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+                maxP = 3;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
+                maxP = 2;
+                break;
+        }
         return maxP;
     },
 
@@ -68,7 +81,6 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
     setPlayNodeCurrentSelect: function (isClub) {
         this._super();
         const key_nameR = {
-            'fangshu': ['subRule', 0, [0, 1, 2, 3, 4]],
             'fengding': ['PointsLimit', 3, [3, 4, 5]],
             'dianganghua': ['DianGangHua', 1, [1, 0]],
             'paizhang': ['Forming', 10, [10, 13, 7]],
@@ -78,7 +90,7 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
             key_nameC = {
                 'btnCheck_DesignatingUnwantedEnabled': ['DesignatingUnwantedEnabled', false],
                 'btnCheck_Pinghudianpao': ['PingHuCanWinningByOther', false],
-                'btnCheck_badaotang': ['BaDaoTang', false],
+                'btnCheck_badaotang': ['DgwMultipleEnabled', false],
                 'btnCheck_CallForwardingEnabled': ['CallForwardingEnabled', false],
                 'btnCheck_duiduihu': ['DuiDuiHuPoints', false],
                 'btnCheck_MenQingEnabled': ['MenQingEnabled', false],
@@ -91,36 +103,59 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
 
         this.InitCurrentSelect(key_nameR, key_nameC);
     },
-
+    getFangShu: function () {
+        let maxP = 0;
+        switch (this._data.gameType) {
+            case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+                maxP = 0;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+                maxP = 2;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+                maxP = 1;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+                maxP = 3;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
+                maxP = 4;
+                break;
+        }
+        return maxP;
+    },
     getSelectedPara: function () {
-        const gameType = this._data.gameType;
-        const Rule = {
-            gameType: gameType,
-            maxPlayer: this.getSelectPlayNum(),
-            subRule: this.RedioGroup['fangshu'].getSelectIndex(),
-            PointsLimit: [3, 4, 5][this.RedioGroup['fengding'].getSelectIndex()],
-            DianGangHua: [1, 0][this.RedioGroup['dianganghua'].getSelectIndex()],
-            Forming: [10, 13, 7][this.RedioGroup['paizhang'].getSelectIndex()],
-            SwappingType: this.RedioGroup['huansanzhang'].getSelectIndex(),
-            PointOfWinning: [2, 1, 0][this.RedioGroup['zimojia'].getSelectIndex()],
-            CallForwardingEnabled: this.getCheckboxSelectedByName('btnCheck_CallForwardingEnabled'),
-            DuiDuiHuPoints: this.getCheckboxSelectedByName('btnCheck_duiduihu'),
-            MenQingEnabled: this.getCheckboxSelectedByName('btnCheck_MenQingEnabled'),
-            ZhongZhangEnabled: this.getCheckboxSelectedByName('btnCheck_ZhongZhangEnabled'),
-            WinningFanEnabled: this.getCheckboxSelectedByName('btnCheck_WinningFanEnabled'),
-            WinningLastEnabled: this.getCheckboxSelectedByName('btnCheck_WinningLastEnabled'),
-            YaoJiuJiangDuiEnabled: this.getCheckboxSelectedByName('btnCheck_YaoJiuJiangDuiEnabled'),
-            KaxingwuEnabled: this.getCheckboxSelectedByName('btnCheck_KaXingWu'),
-        };
-        
+        const gameType = this._data.gameType,
+            Rule = {
+                gameType: gameType,//gameid
+                maxPlayer: this.getSelectPlayNum(),//人数
+                subRule: this.getFangShu(),//房数
+                PointsLimit: [3, 4, 5][this.RedioGroup['fengding'].getSelectIndex()],//番数限制
+                DianGangHua: [1, 0][this.RedioGroup['dianganghua'].getSelectIndex()],//点杠花规则
+                Forming: [10, 13, 7][this.RedioGroup['paizhang'].getSelectIndex()],//发牌张数规则
+                SwappingType: this.RedioGroup['huansanzhang'].getSelectIndex(),//换三张
+                PointOfWinning: [2, 1, 0][this.RedioGroup['zimojia'].getSelectIndex()],//自摸加分规则
+                CallForwardingEnabled: this.getCheckboxSelectedByName('btnCheck_CallForwardingEnabled'),//是否开启呼叫转移
+                DuiDuiHuPoints: this.getCheckboxSelectedByName('btnCheck_duiduihu') ? 2 : 1,//对对胡 1 2 番
+                MenQingEnabled: this.getCheckboxSelectedByName('btnCheck_MenQingEnabled'),//是否开启门清
+                ZhongZhangEnabled: this.getCheckboxSelectedByName('btnCheck_ZhongZhangEnabled'),//是否开启中张
+                WinningFanEnabled: this.getCheckboxSelectedByName('btnCheck_WinningFanEnabled'),//是否开启天地胡
+                WinningLastEnabled: this.getCheckboxSelectedByName('btnCheck_WinningLastEnabled'),//是否开启海底捞
+                YaoJiuJiangDuiEnabled: this.getCheckboxSelectedByName('btnCheck_YaoJiuJiangDuiEnabled'),//是否开启幺九将对
+                KaxingwuEnabled: this.getCheckboxSelectedByName('btnCheck_KaXingWu'),//卡星五
+                DgwMultipleEnabled: false,//是否点杠收多家
+            };
+        Rule.LackofEnabled = Rule.subRule == 2 || Rule.subRule == 3;//是否两房
+        Rule.JustoneEnabled = Rule.subRule == 4 ? 2 : -1;//二人一房
+        Rule.SwappingTiles = Rule.SwappingType == 2 ? 0 : 3;//换牌张数
         for (let _i = 0; _i < this._btnItems.length; _i++) {
             const item = this._btnItems[_i];
-            if (item.name == 'btnCheck_DesignatingUnwantedEnabled') {
+            if (item.name == 'btnCheck_DesignatingUnwantedEnabled') {//是否开启定缺
                 Rule.DesignatingUnwantedEnabled = item.visible ? item.isSelected() : false;
-            }else if (item.name == 'btnCheck_Pinghudianpao') {
+            } else if (item.name == 'btnCheck_Pinghudianpao') {//平胡点炮可胡
                 Rule.PingHuCanWinningByOther = item.visible ? item.isSelected() : false;
-            }else if (item.name == 'btnCheck_badaotang') {
-                Rule.BaDaoTang = item.visible ? item.isSelected() : false;
+            } else if (item.name == 'btnCheck_badaotang') {//巴倒烫、点杠收多家
+                Rule.DgwMultipleEnabled = item.visible ? item.isSelected() : false;
             }
         }
         this.getExtraSelectedPara(Rule);

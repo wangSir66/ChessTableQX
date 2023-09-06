@@ -125,8 +125,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 541.5236,
-                  "Y": 313.8318
+                  "X": 541.5235,
+                  "Y": 313.8395
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -144,10 +144,10 @@
                   "X": 0.9429,
                   "Y": 0.8186
                 },
-                "LeftMargin": 30.0236,
-                "RightMargin": 31.9764,
-                "TopMargin": 93.1682,
-                "BottomMargin": 31.8318,
+                "LeftMargin": 30.0235,
+                "RightMargin": 31.9766,
+                "TopMargin": 93.1605,
+                "BottomMargin": 31.8395,
                 "Tag": 8405,
                 "ActionTag": -1522982919,
                 "Size": {
@@ -287,7 +287,7 @@
                 },
                 "Position": {
                   "X": 74.3978,
-                  "Y": 72.7484
+                  "Y": 70.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -297,7 +297,7 @@
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.0686,
-                  "Y": 0.1056
+                  "Y": 0.1016
                 },
                 "PreSize": {
                   "X": 0.0553,
@@ -305,8 +305,8 @@
                 },
                 "LeftMargin": 44.3978,
                 "RightMargin": 980.6022,
-                "TopMargin": 586.2516,
-                "BottomMargin": 42.7484,
+                "TopMargin": 589.0,
+                "BottomMargin": 40.0,
                 "Tag": 391,
                 "Children": [
                   {
@@ -773,8 +773,8 @@
                     "FontSize": 18,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -814,14 +814,14 @@
                       "Y": 0.0
                     },
                     "LeftMargin": -20.0,
-                    "RightMargin": -73.0,
-                    "TopMargin": -145.5,
-                    "BottomMargin": 124.5,
+                    "RightMargin": -61.0,
+                    "TopMargin": -144.0,
+                    "BottomMargin": 126.0,
                     "Tag": 420,
                     "ActionTag": -1650429037,
                     "Size": {
-                      "X": 93.0,
-                      "Y": 21.0
+                      "X": 81.0,
+                      "Y": 18.0
                     },
                     "Name": "id",
                     "ctype": "TextObjectData"
@@ -1747,8 +1747,8 @@
                         "FontSize": 28,
                         "LabelText": "自摸次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1788,14 +1788,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": -90.9999,
-                        "BottomMargin": 58.9999,
+                        "RightMargin": -51.4,
+                        "TopMargin": -88.9999,
+                        "BottomMargin": 60.9999,
                         "Tag": 379,
                         "ActionTag": 1561162898,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item0",
                         "ctype": "TextObjectData"
@@ -1804,8 +1804,8 @@
                         "FontSize": 28,
                         "LabelText": "接炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1845,14 +1845,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.5966,
-                        "RightMargin": -56.4034,
-                        "TopMargin": -45.9999,
-                        "BottomMargin": 13.9999,
+                        "RightMargin": -51.4034,
+                        "TopMargin": -43.9999,
+                        "BottomMargin": 15.9999,
                         "Tag": 380,
                         "ActionTag": -617715256,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item1",
                         "ctype": "TextObjectData"
@@ -1861,8 +1861,8 @@
                         "FontSize": 28,
                         "LabelText": "点炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1902,14 +1902,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": -1.0,
-                        "BottomMargin": -31.0,
+                        "RightMargin": -51.4,
+                        "TopMargin": 1.0,
+                        "BottomMargin": -29.0,
                         "Tag": 381,
                         "ActionTag": 2043592216,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item2",
                         "ctype": "TextObjectData"
@@ -1918,8 +1918,8 @@
                         "FontSize": 28,
                         "LabelText": "暗杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -1959,14 +1959,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.5966,
-                        "RightMargin": -56.4034,
-                        "TopMargin": 44.0,
-                        "BottomMargin": -76.0,
+                        "RightMargin": -51.4034,
+                        "TopMargin": 46.0,
+                        "BottomMargin": -74.0,
                         "Tag": 382,
                         "ActionTag": -1990536109,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item3",
                         "ctype": "TextObjectData"
@@ -1975,8 +1975,8 @@
                         "FontSize": 28,
                         "LabelText": "明杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2016,14 +2016,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": 89.0,
-                        "BottomMargin": -121.0,
+                        "RightMargin": -51.4,
+                        "TopMargin": 91.0,
+                        "BottomMargin": -119.0,
                         "Tag": 383,
                         "ActionTag": -1936865275,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item4",
                         "ctype": "TextObjectData"
@@ -2032,8 +2032,8 @@
                         "FontSize": 28,
                         "LabelText": "旋风杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -2073,14 +2073,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.7863,
-                        "RightMargin": -84.2137,
-                        "TopMargin": 141.6207,
-                        "BottomMargin": -173.6207,
+                        "RightMargin": -79.2137,
+                        "TopMargin": 143.6207,
+                        "BottomMargin": -171.6207,
                         "Tag": 384,
                         "ActionTag": 1986834809,
                         "Size": {
-                          "X": 187.0,
-                          "Y": 32.0
+                          "X": 182.0,
+                          "Y": 28.0
                         },
                         "VisibleForFrame": false,
                         "Name": "item5",
@@ -2284,8 +2284,8 @@
                     "FontSize": 18,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -2325,14 +2325,14 @@
                       "Y": 0.0
                     },
                     "LeftMargin": -20.0,
-                    "RightMargin": -73.0,
-                    "TopMargin": -145.5,
-                    "BottomMargin": 124.5,
+                    "RightMargin": -61.0,
+                    "TopMargin": -144.0,
+                    "BottomMargin": 126.0,
                     "Tag": 347,
                     "ActionTag": -1694931069,
                     "Size": {
-                      "X": 93.0,
-                      "Y": 21.0
+                      "X": 81.0,
+                      "Y": 18.0
                     },
                     "Name": "id",
                     "ctype": "TextObjectData"
@@ -3258,8 +3258,8 @@
                         "FontSize": 28,
                         "LabelText": "自摸次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3299,14 +3299,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": -90.9999,
-                        "BottomMargin": 58.9999,
+                        "RightMargin": -51.4,
+                        "TopMargin": -88.9999,
+                        "BottomMargin": 60.9999,
                         "Tag": 368,
                         "ActionTag": -316153740,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item0",
                         "ctype": "TextObjectData"
@@ -3315,8 +3315,8 @@
                         "FontSize": 28,
                         "LabelText": "接炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3356,14 +3356,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.5966,
-                        "RightMargin": -56.4034,
-                        "TopMargin": -45.9999,
-                        "BottomMargin": 13.9999,
+                        "RightMargin": -51.4034,
+                        "TopMargin": -43.9999,
+                        "BottomMargin": 15.9999,
                         "Tag": 369,
                         "ActionTag": -663302655,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item1",
                         "ctype": "TextObjectData"
@@ -3372,8 +3372,8 @@
                         "FontSize": 28,
                         "LabelText": "点炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3413,14 +3413,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": -1.0,
-                        "BottomMargin": -31.0,
+                        "RightMargin": -51.4,
+                        "TopMargin": 1.0,
+                        "BottomMargin": -29.0,
                         "Tag": 370,
                         "ActionTag": 891568372,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item2",
                         "ctype": "TextObjectData"
@@ -3429,8 +3429,8 @@
                         "FontSize": 28,
                         "LabelText": "暗杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3470,14 +3470,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.5966,
-                        "RightMargin": -56.4034,
-                        "TopMargin": 44.0,
-                        "BottomMargin": -76.0,
+                        "RightMargin": -51.4034,
+                        "TopMargin": 46.0,
+                        "BottomMargin": -74.0,
                         "Tag": 371,
                         "ActionTag": 654760380,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item3",
                         "ctype": "TextObjectData"
@@ -3486,8 +3486,8 @@
                         "FontSize": 28,
                         "LabelText": "明杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3527,14 +3527,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": 89.0,
-                        "BottomMargin": -121.0,
+                        "RightMargin": -51.4,
+                        "TopMargin": 91.0,
+                        "BottomMargin": -119.0,
                         "Tag": 372,
                         "ActionTag": 1876593571,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item4",
                         "ctype": "TextObjectData"
@@ -3543,8 +3543,8 @@
                         "FontSize": 28,
                         "LabelText": "旋风杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -3584,14 +3584,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.7863,
-                        "RightMargin": -84.2137,
-                        "TopMargin": 141.6207,
-                        "BottomMargin": -173.6207,
+                        "RightMargin": -79.2137,
+                        "TopMargin": 143.6207,
+                        "BottomMargin": -171.6207,
                         "Tag": 373,
                         "ActionTag": -1460747577,
                         "Size": {
-                          "X": 187.0,
-                          "Y": 32.0
+                          "X": 182.0,
+                          "Y": 28.0
                         },
                         "VisibleForFrame": false,
                         "Name": "item5",
@@ -3795,8 +3795,8 @@
                     "FontSize": 18,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -3836,14 +3836,14 @@
                       "Y": 0.0
                     },
                     "LeftMargin": -20.0,
-                    "RightMargin": -73.0,
-                    "TopMargin": -145.5,
-                    "BottomMargin": 124.5,
+                    "RightMargin": -61.0,
+                    "TopMargin": -144.0,
+                    "BottomMargin": 126.0,
                     "Tag": 378,
                     "ActionTag": -312627941,
                     "Size": {
-                      "X": 93.0,
-                      "Y": 21.0
+                      "X": 81.0,
+                      "Y": 18.0
                     },
                     "Name": "id",
                     "ctype": "TextObjectData"
@@ -4769,8 +4769,8 @@
                         "FontSize": 28,
                         "LabelText": "自摸次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4810,14 +4810,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": -90.9999,
-                        "BottomMargin": 58.9999,
+                        "RightMargin": -51.4,
+                        "TopMargin": -88.9999,
+                        "BottomMargin": 60.9999,
                         "Tag": 399,
                         "ActionTag": 1000229872,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item0",
                         "ctype": "TextObjectData"
@@ -4826,8 +4826,8 @@
                         "FontSize": 28,
                         "LabelText": "接炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4867,14 +4867,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.5966,
-                        "RightMargin": -56.4034,
-                        "TopMargin": -45.9999,
-                        "BottomMargin": 13.9999,
+                        "RightMargin": -51.4034,
+                        "TopMargin": -43.9999,
+                        "BottomMargin": 15.9999,
                         "Tag": 400,
                         "ActionTag": 581613410,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item1",
                         "ctype": "TextObjectData"
@@ -4883,8 +4883,8 @@
                         "FontSize": 28,
                         "LabelText": "点炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4924,14 +4924,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": -1.0,
-                        "BottomMargin": -31.0,
+                        "RightMargin": -51.4,
+                        "TopMargin": 1.0,
+                        "BottomMargin": -29.0,
                         "Tag": 401,
                         "ActionTag": -1699218275,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item2",
                         "ctype": "TextObjectData"
@@ -4940,8 +4940,8 @@
                         "FontSize": 28,
                         "LabelText": "暗杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -4981,14 +4981,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.5966,
-                        "RightMargin": -56.4034,
-                        "TopMargin": 44.0,
-                        "BottomMargin": -76.0,
+                        "RightMargin": -51.4034,
+                        "TopMargin": 46.0,
+                        "BottomMargin": -74.0,
                         "Tag": 402,
                         "ActionTag": 315576459,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item3",
                         "ctype": "TextObjectData"
@@ -4997,8 +4997,8 @@
                         "FontSize": 28,
                         "LabelText": "明杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5038,14 +5038,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": 89.0,
-                        "BottomMargin": -121.0,
+                        "RightMargin": -51.4,
+                        "TopMargin": 91.0,
+                        "BottomMargin": -119.0,
                         "Tag": 403,
                         "ActionTag": -1053863546,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item4",
                         "ctype": "TextObjectData"
@@ -5054,8 +5054,8 @@
                         "FontSize": 28,
                         "LabelText": "旋风杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -5095,14 +5095,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.7863,
-                        "RightMargin": -84.2137,
-                        "TopMargin": 141.6207,
-                        "BottomMargin": -173.6207,
+                        "RightMargin": -79.2137,
+                        "TopMargin": 143.6207,
+                        "BottomMargin": -171.6207,
                         "Tag": 404,
                         "ActionTag": -737427086,
                         "Size": {
-                          "X": 187.0,
-                          "Y": 32.0
+                          "X": 182.0,
+                          "Y": 28.0
                         },
                         "VisibleForFrame": false,
                         "Name": "item5",
@@ -5306,8 +5306,8 @@
                     "FontSize": 18,
                     "LabelText": "ID:123456",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "OutlineColor": {
@@ -5347,14 +5347,14 @@
                       "Y": 0.0
                     },
                     "LeftMargin": -20.0,
-                    "RightMargin": -73.0,
-                    "TopMargin": -145.5,
-                    "BottomMargin": 124.5,
+                    "RightMargin": -61.0,
+                    "TopMargin": -144.0,
+                    "BottomMargin": 126.0,
                     "Tag": 409,
                     "ActionTag": 2066843331,
                     "Size": {
-                      "X": 93.0,
-                      "Y": 21.0
+                      "X": 81.0,
+                      "Y": 18.0
                     },
                     "Name": "id",
                     "ctype": "TextObjectData"
@@ -6280,8 +6280,8 @@
                         "FontSize": 28,
                         "LabelText": "自摸次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6321,14 +6321,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": -90.9999,
-                        "BottomMargin": 58.9999,
+                        "RightMargin": -51.4,
+                        "TopMargin": -88.9999,
+                        "BottomMargin": 60.9999,
                         "Tag": 430,
                         "ActionTag": 1857655759,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item0",
                         "ctype": "TextObjectData"
@@ -6337,8 +6337,8 @@
                         "FontSize": 28,
                         "LabelText": "接炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6378,14 +6378,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.5966,
-                        "RightMargin": -56.4034,
-                        "TopMargin": -45.9999,
-                        "BottomMargin": 13.9999,
+                        "RightMargin": -51.4034,
+                        "TopMargin": -43.9999,
+                        "BottomMargin": 15.9999,
                         "Tag": 431,
                         "ActionTag": 1336020716,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item1",
                         "ctype": "TextObjectData"
@@ -6394,8 +6394,8 @@
                         "FontSize": 28,
                         "LabelText": "点炮次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6435,14 +6435,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": -1.0,
-                        "BottomMargin": -31.0,
+                        "RightMargin": -51.4,
+                        "TopMargin": 1.0,
+                        "BottomMargin": -29.0,
                         "Tag": 432,
                         "ActionTag": 932664519,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item2",
                         "ctype": "TextObjectData"
@@ -6451,8 +6451,8 @@
                         "FontSize": 28,
                         "LabelText": "暗杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6492,14 +6492,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.5966,
-                        "RightMargin": -56.4034,
-                        "TopMargin": 44.0,
-                        "BottomMargin": -76.0,
+                        "RightMargin": -51.4034,
+                        "TopMargin": 46.0,
+                        "BottomMargin": -74.0,
                         "Tag": 433,
                         "ActionTag": -1631162822,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item3",
                         "ctype": "TextObjectData"
@@ -6508,8 +6508,8 @@
                         "FontSize": 28,
                         "LabelText": "明杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6549,14 +6549,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.6,
-                        "RightMargin": -56.4,
-                        "TopMargin": 89.0,
-                        "BottomMargin": -121.0,
+                        "RightMargin": -51.4,
+                        "TopMargin": 91.0,
+                        "BottomMargin": -119.0,
                         "Tag": 434,
                         "ActionTag": -228248284,
                         "Size": {
-                          "X": 159.0,
-                          "Y": 32.0
+                          "X": 154.0,
+                          "Y": 28.0
                         },
                         "Name": "item4",
                         "ctype": "TextObjectData"
@@ -6565,8 +6565,8 @@
                         "FontSize": 28,
                         "LabelText": "旋风杠次数：0",
                         "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/lanting.TTF",
+                          "Type": "Default",
+                          "Path": "",
                           "Plist": ""
                         },
                         "OutlineColor": {
@@ -6606,14 +6606,14 @@
                           "Y": 0.0
                         },
                         "LeftMargin": -102.7863,
-                        "RightMargin": -84.2137,
-                        "TopMargin": 141.6207,
-                        "BottomMargin": -173.6207,
+                        "RightMargin": -79.2137,
+                        "TopMargin": 143.6207,
+                        "BottomMargin": -171.6207,
                         "Tag": 435,
                         "ActionTag": -422928659,
                         "Size": {
-                          "X": 187.0,
-                          "Y": 32.0
+                          "X": 182.0,
+                          "Y": 28.0
                         },
                         "VisibleForFrame": false,
                         "Name": "item5",
@@ -6727,7 +6727,7 @@
                 },
                 "Position": {
                   "X": 359.75,
-                  "Y": 67.3126
+                  "Y": 70.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -6737,7 +6737,7 @@
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.3316,
-                  "Y": 0.0977
+                  "Y": 0.1016
                 },
                 "PreSize": {
                   "X": 0.1926,
@@ -6745,8 +6745,8 @@
                 },
                 "LeftMargin": 250.9446,
                 "RightMargin": 625.0554,
-                "TopMargin": 582.7408,
-                "BottomMargin": 29.2592,
+                "TopMargin": 580.0534,
+                "BottomMargin": 31.9466,
                 "Tag": 149,
                 "ActionTag": 1955922202,
                 "Size": {
@@ -6797,7 +6797,7 @@
                 },
                 "Position": {
                   "X": 915.5963,
-                  "Y": 67.7793
+                  "Y": 70.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -6807,7 +6807,7 @@
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.8439,
-                  "Y": 0.0984
+                  "Y": 0.1016
                 },
                 "PreSize": {
                   "X": 0.1926,
@@ -6815,8 +6815,8 @@
                 },
                 "LeftMargin": 806.7909,
                 "RightMargin": 69.2091,
-                "TopMargin": 581.7682,
-                "BottomMargin": 29.2317,
+                "TopMargin": 579.5476,
+                "BottomMargin": 31.4524,
                 "Tag": 913,
                 "ActionTag": -1953946573,
                 "Size": {
@@ -6867,7 +6867,7 @@
                 },
                 "Position": {
                   "X": 640.0326,
-                  "Y": 64.7674
+                  "Y": 70.0
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -6877,7 +6877,7 @@
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.5899,
-                  "Y": 0.094
+                  "Y": 0.1016
                 },
                 "PreSize": {
                   "X": 0.1926,
@@ -6885,8 +6885,8 @@
                 },
                 "LeftMargin": 535.5326,
                 "RightMargin": 340.4674,
-                "TopMargin": 585.7327,
-                "BottomMargin": 26.2674,
+                "TopMargin": 580.5,
+                "BottomMargin": 31.5,
                 "Tag": 72,
                 "Children": [
                   {
@@ -7051,7 +7051,6 @@
       },
       "UsedResources": [
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "friendCards/icon_null.png",
         "friendCards/share_point.png",
         "friendCards/share_shine.png",

@@ -285,8 +285,12 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
                         MjClient.goldfieldEnter(tData.fieldId,tData.gameType);
                         return;
                     }else{
-                        MjClient.MJPass2NetForLianYunGang();
+                        MjClient.MJPass2NetForxuezhanMJ();
                     }
+				}
+				
+				if (tData.roundNum <= 0) {
+					postEvent("showEndRoom");
 				}
 			},
 			_visible :function()
@@ -462,7 +466,7 @@ function DelRoomPlayerInfo(node, off, delPlayer)
     if(head) {
         // 显示玩家头像
         var url = pl.info.headimgurl;
-        if (!url) url = "png/default_headpic.png";
+        if (!url) url = "A_Common/default_headpic.png";
         cc.loader.loadImg(url, {isCrossOrigin: true}, function (err, texture) {
             if (!err && texture && cc.sys.isObjectValid(head)) {
                 var clippingNode = new cc.ClippingNode();
@@ -997,7 +1001,7 @@ function reInitarrCardVisible()
 function addWxHeadToEndUI(node,off)
 {
 	var pl = MjClient.getPlayerByIndex(off);
-	var img = "png/default_headpic.png";
+	var img = "A_Common/default_headpic.png";
 	//if(pl && pl.wxHeadImg)
 	//{
 	//	img = pl.wxHeadImg;
@@ -1237,7 +1241,7 @@ function CardLayoutRestoreForEndOne(node, endonepl, isHu)
 
             if(i == orders.length - 1)
             {
-                console.log("--------newC--------"+newC);
+                cc.log("--------newC--------"+newC);
                 if(newC && endonepl)
                 {
                     ci.x = ci.x + slotwith + 10;

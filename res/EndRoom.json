@@ -225,7 +225,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 432.5,
+                  "X": 430.9507,
                   "Y": 325.4737
                 },
                 "Scale": {
@@ -240,15 +240,15 @@
                 "IconVisible": false,
                 "PositionPercentXEnabled": true,
                 "PrePosition": {
-                  "X": 0.5,
+                  "X": 0.4982,
                   "Y": 0.574
                 },
                 "PreSize": {
                   "X": 0.7884,
                   "Y": 0.2328
                 },
-                "LeftMargin": 91.5,
-                "RightMargin": 91.5,
+                "LeftMargin": 89.9507,
+                "RightMargin": 93.0493,
                 "TopMargin": 175.5263,
                 "BottomMargin": 259.4737,
                 "Tag": 42,

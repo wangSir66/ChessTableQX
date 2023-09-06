@@ -521,8 +521,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 695.66,
-                  "Y": -47.4236
+                  "X": 697.2636,
+                  "Y": -40.7242
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -532,17 +532,17 @@
                 "IconVisible": false,
                 "PositionPercentXEnabled": true,
                 "PrePosition": {
-                  "X": 0.4969,
-                  "Y": -0.0912
+                  "X": 0.498,
+                  "Y": -0.0783
                 },
                 "PreSize": {
                   "X": 0.14,
                   "Y": 0.1577
                 },
-                "LeftMargin": 597.66,
-                "RightMargin": 606.34,
-                "TopMargin": 526.4236,
-                "BottomMargin": -88.4236,
+                "LeftMargin": 599.2636,
+                "RightMargin": 604.7364,
+                "TopMargin": 519.7242,
+                "BottomMargin": -81.7242,
                 "Tag": 1597,
                 "ActionTag": 294184368,
                 "Size": {
@@ -4548,6 +4548,60 @@
                   "Y": 80.0
                 },
                 "Name": "dir_0",
+                "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 32,
+                "LabelText": "(13s)",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 139,
+                  "G": 77,
+                  "B": 16
+                },
+                "ShadowOffsetX": 1.0,
+                "ShadowOffsetY": 1.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 832.4806,
+                  "Y": -38.4134
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 127,
+                  "G": 253,
+                  "B": 253
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5946,
+                  "Y": -0.0739
+                },
+                "PreSize": {
+                  "X": 0.0571,
+                  "Y": 0.0635
+                },
+                "LeftMargin": 792.4806,
+                "RightMargin": 527.5194,
+                "TopMargin": 541.9134,
+                "BottomMargin": -54.9134,
+                "Tag": 360,
+                "ActionTag": 260009730,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 33.0
+                },
+                "Name": "countDown",
                 "ctype": "TextObjectData"
               }
             ],

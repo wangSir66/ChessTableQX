@@ -40,7 +40,7 @@ var mobilePhoneRegisterLayer = cc.Layer.extend({
         this._bindPhoneNum.setPlaceholderFontSize(28);
         this._bindPhoneNum.setPlaceholderFontColor(cc.color("#e4ecf0"));
         this._bindPhoneNum.setMaxLength(11);
-        this._bindPhoneNum.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+        // this._bindPhoneNum.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
         this._bindPhoneNum.setPlaceHolder("请输入手机号码");
         this._bindPhoneNum.setPosition(imagePhoneNum.getContentSize().width/2, imagePhoneNum.getContentSize().height/2);
         imagePhoneNum.addChild(this._bindPhoneNum);

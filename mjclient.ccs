@@ -4889,6 +4889,8 @@
         <Project Name="Active_friendsPK.csd" Type="Layer" />
         <Project Name="Active_friendsPKrule.csd" Type="Layer" />
         <Project Name="Active_friendsPKtip.csd" Type="Layer" />
+        <Project Name="Active_goldNewYearRedPacket.csd" Type="Layer" />
+        <Project Name="Active_goldNewYearRedPacket_tip.csd" Type="Layer" />
         <Project Name="ActiveLayer.csd" Type="Layer" />
         <Project Name="ActiveLCBX_des.csd" Type="Layer" />
         <Project Name="ActiveLCBX_Investment.csd" Type="Layer" />
@@ -4920,6 +4922,7 @@
         <Project Name="bg_paodekuaiXS.csd" Type="Node" />
         <Project Name="bg_red20.csd" Type="Node" />
         <Project Name="bg_RunFasterYaAn.csd" Type="Node" />
+        <Project Name="bg_RunFasterYaAn_old.csd" Type="Node" />
         <Project Name="bg_shuyang.csd" Type="Node" />
         <Project Name="bg_siyang.csd" Type="Node" />
         <Project Name="bg_siyang_new.csd" Type="Node" />
@@ -4948,6 +4951,7 @@
         <Project Name="createHomeTotal.csd" Type="Layer" />
         <Project Name="createRoomRecord.csd" Type="Node" />
         <Project Name="DelRoom.csd" Type="Node" />
+        <Project Name="DingQueLayer.csd" Type="Node" />
         <Project Name="disclaimerMainLayer.csd" Type="Layer" />
         <Project Name="disclaimerReminderLayer.csd" Type="Layer" />
         <Project Name="Doudizhu_CardNode.csd" Type="Node" />
@@ -5002,27 +5006,48 @@
         <Project Name="friendcard_guideLayer.csd" Type="Layer" />
         <Project Name="friendcard_info.csd" Type="Layer" />
         <Project Name="friendcard_inputRuleNameDialog.csd" Type="Layer" />
+        <Project Name="friendcard_invite_shenhe.csd" Type="Layer" />
         <Project Name="friendcard_main.csd" Type="Layer" />
         <Project Name="friendcard_manageRecord.csd" Type="Node" />
         <Project Name="friendcard_member.csd" Type="Layer" />
+        <Project Name="friendcard_member_daoru_result.csd" Type="Layer" />
+        <Project Name="friendcard_member_group_daoru.csd" Type="Layer" />
         <Project Name="friendcard_mutexLayer.csd" Type="Layer" />
         <Project Name="friendcard_nvguanjia.csd" Type="Layer" />
+        <Project Name="friendcard_popMsgInvited.csd" Type="Layer" />
         <Project Name="friendcard_popMsgShenhe.csd" Type="Layer" />
         <Project Name="friendcard_popUpMsg.csd" Type="Node" />
         <Project Name="friendcard_posUpMsg_daoshu.csd" Type="Layer" />
+        <Project Name="friendcard_posUpMsg_daoshu2.csd" Type="Layer" />
         <Project Name="friendcard_roomInfoDialog.csd" Type="Node" />
         <Project Name="friendcard_roomRecord.csd" Type="Node" />
+        <Project Name="friendcard_rule_detail.csd" Type="Layer" />
+        <Project Name="friendcard_ruleBlackList.csd" Type="Layer" />
+        <Project Name="friendcard_ruleBlackListAdd.csd" Type="Layer" />
+        <Project Name="friendCard_ruleLayer.csd" Type="Node" />
         <Project Name="friendcard_ruleSelectDialog.csd" Type="Node" />
+        <Project Name="friendcard_search.csd" Type="Node" />
         <Project Name="friendcard_selectGroup.csd" Type="Node" />
+        <Project Name="friendcard_selectGroupTJ.csd" Type="Node" />
         <Project Name="friendcard_selectTime.csd" Type="Layer" />
+        <Project Name="friendcard_selectTime2.csd" Type="Layer" />
         <Project Name="friendcard_selectTJDay.csd" Type="Layer" />
         <Project Name="friendcard_selectWanfa.csd" Type="Node" />
+        <Project Name="friendcard_selectYejiMode.csd" Type="Layer" />
+        <Project Name="friendcard_selectZhuliTJ.csd" Type="Node" />
         <Project Name="friendcard_setMainSkin.csd" Type="Layer" />
         <Project Name="friendCard_setRatio.csd" Type="Node" />
+        <Project Name="friendcard_tip_club_guide.csd" Type="Layer" />
+        <Project Name="friendcard_tip_create_club_guide.csd" Type="Layer" />
         <Project Name="friendcard_tongji.csd" Type="Node" />
+        <Project Name="friendcard_tongji_liushui.csd" Type="Layer" />
+        <Project Name="friendcard_tongji_member.csd" Type="Layer" />
         <Project Name="friendcard_tongji_rankRemarkSet.csd" Type="Layer" />
         <Project Name="friendcard_tongji_rankSet.csd" Type="Layer" />
+        <Project Name="friendcard_tongji_reset.csd" Type="Layer" />
+        <Project Name="friendcard_tongji_selectOpt.csd" Type="Node" />
         <Project Name="friendCard_tongjiDetails.csd" Type="Node" />
+        <Project Name="friendcard_warningScore.csd" Type="Layer" />
         <Project Name="friendcard_yaoqing.csd" Type="Layer" />
         <Project Name="friendcard_yaoqingMember.csd" Type="Layer" />
         <Project Name="friendcard_yaoyingIntoGameDialog.csd" Type="Layer" />
@@ -5033,14 +5058,23 @@
         <Project Name="gameWaiteLayer.csd" Type="Layer" />
         <Project Name="gameWaitingLayer.csd" Type="Layer" />
         <Project Name="getRewardLayer.csd" Type="Layer" />
+        <Project Name="GoldActiveIcon.csd" Type="Layer" />
+        <Project Name="GoldEndOneLayer_DDZ.csd" Type="Layer" />
         <Project Name="GoldEndOneLayer_MJ.csd" Type="Layer" />
+        <Project Name="GoldEndOneLayer_PDK.csd" Type="Layer" />
         <Project Name="GoldHall.csd" Type="Layer" />
         <Project Name="GoldInviteLayer.csd" Type="Layer" />
         <Project Name="GoldInviteListLayer.csd" Type="Layer" />
+        <Project Name="GoldInviteRedpacketLayer.csd" Type="Layer" />
+        <Project Name="GoldInviteRedpacketRewardLayer.csd" Type="Layer" />
         <Project Name="GoldInviteRewardLayer.csd" Type="Layer" />
         <Project Name="GoldInviteTipLayer.csd" Type="Layer" />
+        <Project Name="GoldMatchHall.csd" Type="Layer" />
         <Project Name="goldMatchingLayer.csd" Type="Layer" />
+        <Project Name="GoldMatchOverLayer.csd" Type="Layer" />
         <Project Name="GoldMianFeiLayer.csd" Type="Layer" />
+        <Project Name="GoldRankRewardLayer.csd" Type="Layer" />
+        <Project Name="GoldRankRewardResultLayer.csd" Type="Layer" />
         <Project Name="GoldStoreLayer.csd" Type="Layer" />
         <Project Name="GoldStoreNewLayer.csd" Type="Layer" />
         <Project Name="GoldTaskLayer.csd" Type="Layer" />
@@ -5110,6 +5144,7 @@
         <Project Name="Play_tuantuanzhuan.csd" Type="Layer" />
         <Project Name="Play_TYHZ.csd" Type="Layer" />
         <Project Name="Play_xiangshui.csd" Type="Layer" />
+        <Project Name="Play_XueZhanMahjong.csd" Type="Layer" />
         <Project Name="Play_xuzhou.csd" Type="Layer" />
         <Project Name="Play_yanchenghh.csd" Type="Layer" />
         <Project Name="PlayaroundInfo.csd" Type="Layer" />

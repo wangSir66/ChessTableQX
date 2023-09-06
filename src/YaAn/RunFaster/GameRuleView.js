@@ -1,6 +1,6 @@
 var GameRule_YARunFaster = GameRuleView.extend({
-    ctor: function (url) {
-        this._super(url);
+    ctor: function () {
+        this._super('bg_RunFasterYaAn');
     },
     reductionRule: function () {
         this._super();

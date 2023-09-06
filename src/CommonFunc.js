@@ -2794,7 +2794,7 @@ function InitUserCoinAndName(node, off) {
                     //sk,todo,这里有问题，服务器的pl.winall没有赋值，这里加了有个毛用？
                     var coin = tData.initCoin;
                     //this.setString("" + coin);
-                    cc.log('----------------这里有问题，服务器的pl---------',coin , pl.winall)
+                    cc.log('----------------这里有问题，服务器的pl---------', coin, pl.winall)
                     changeAtalsForLabel(this, Math.floor(coin + pl.winall));
                 }
             }
@@ -3808,7 +3808,12 @@ function resetCardSize() {
             }
             var scale = _cpnode.getScale() * 1.30;
             children[i].setScale(scale);
-            if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ) {
+            if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ &&
+                (MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG != MjClient.gameType &&
+                    MjClient.GAME_TYPE.XUE_ZHAN_3to2 != MjClient.gameType &&
+                    MjClient.GAME_TYPE.XUE_ZHAN_2to1 != MjClient.gameType &&
+                    MjClient.GAME_TYPE.XUE_ZHAN_2to2 != MjClient.gameType &&
+                    MjClient.GAME_TYPE.XUE_ZHAN_3to3 != MjClient.gameType)) {
                 if (_currentMJType == 2 || _currentMJType == 3) {
                     children[i].getChildByName("imgNode").setScale(1.15);
                 }
@@ -6626,6 +6631,9 @@ function clearCardUI(node) {
             && ni.getName() != "tingCardNumNode"
             && ni.getName() != "fangTag"
             && ni.name != "ouIcon"
+            && ni.name != "SwappingTip"
+            && ni.name != "swappType"
+            && ni.name != "huanpaizhong"
         ) {
             //CommonPool.putInPool(ni);
             ni.removeFromParent(true);

@@ -112,19 +112,14 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "Normal",
-                  "Path": "Red20/DeskTexture/btn_nextGame_btn.png",
-                  "Plist": ""
-                },
                 "PressedFileData": {
                   "Type": "Normal",
-                  "Path": "Red20/DeskTexture/btn_nextGame_btn.png",
+                  "Path": "RunFasterYA/RoundEnd/BtnNextGround.png",
                   "Plist": ""
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "Red20/DeskTexture/btn_nextGame_btn.png",
+                  "Path": "RunFasterYA/RoundEnd/BtnNextGround.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -149,8 +144,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 655.0753,
-                  "Y": -42.9266
+                  "X": 655.0754,
+                  "Y": -39.3723
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -160,73 +155,17 @@
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.5118,
-                  "Y": -0.0681
+                  "Y": -0.0625
                 },
                 "PreSize": {
                   "X": 0.1531,
                   "Y": 0.1302
                 },
-                "LeftMargin": 557.0753,
-                "RightMargin": 526.9247,
-                "TopMargin": 631.9266,
-                "BottomMargin": -83.9266,
+                "LeftMargin": 557.0754,
+                "RightMargin": 526.9246,
+                "TopMargin": 628.3723,
+                "BottomMargin": -80.3723,
                 "Tag": 1597,
-                "Children": [
-                  {
-                    "FontSize": 32,
-                    "LabelText": "(3s)",
-                    "OutlineColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "ShadowColor": {
-                      "R": 139,
-                      "G": 77,
-                      "B": 16
-                    },
-                    "ShadowOffsetX": 1.0,
-                    "ShadowOffsetY": 1.0,
-                    "ShadowEnabled": true,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 149.3767,
-                      "Y": 42.8576
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {
-                      "R": 233,
-                      "G": 218,
-                      "B": 218
-                    },
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.7621,
-                      "Y": 0.5227
-                    },
-                    "PreSize": {
-                      "X": 0.3265,
-                      "Y": 0.4024
-                    },
-                    "LeftMargin": 117.3767,
-                    "RightMargin": 14.6233,
-                    "TopMargin": 22.6424,
-                    "BottomMargin": 26.3576,
-                    "Tag": 2035,
-                    "ActionTag": -949488951,
-                    "Size": {
-                      "X": 64.0,
-                      "Y": 33.0
-                    },
-                    "Name": "countDown",
-                    "ctype": "TextObjectData"
-                  }
-                ],
                 "ActionTag": 294184368,
                 "Size": {
                   "X": 196.0,
@@ -3901,6 +3840,60 @@
                 },
                 "Name": "fanghao",
                 "ctype": "TextObjectData"
+              },
+              {
+                "FontSize": 32,
+                "LabelText": "(13s)",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 139,
+                  "G": 77,
+                  "B": 16
+                },
+                "ShadowOffsetX": 1.0,
+                "ShadowOffsetY": 1.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 797.3867,
+                  "Y": -39.168
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 127,
+                  "G": 253,
+                  "B": 253
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.623,
+                  "Y": -0.0622
+                },
+                "PreSize": {
+                  "X": 0.0625,
+                  "Y": 0.0524
+                },
+                "LeftMargin": 757.3867,
+                "RightMargin": 442.6133,
+                "TopMargin": 652.668,
+                "BottomMargin": -55.668,
+                "Tag": 2035,
+                "ActionTag": -949488951,
+                "Size": {
+                  "X": 80.0,
+                  "Y": 33.0
+                },
+                "Name": "countDown",
+                "ctype": "TextObjectData"
               }
             ],
             "ActionTag": 755369775,
@@ -3922,11 +3915,11 @@
       "UsedResources": [
         "game_picture/dating1_06.png",
         "Red20/Card/0-10.png",
-        "Red20/DeskTexture/btn_nextGame_btn.png",
         "Red20/DeskTexture/other_hutip.png",
         "Red20/DeskTexture/overBg.png",
         "Red20/DeskTexture/zhuang.png",
-        "Red20/Game/default_head.jpg"
+        "Red20/Game/default_head.jpg",
+        "RunFasterYA/RoundEnd/BtnNextGround.png"
       ],
       "ctype": "GameFileData"
     }

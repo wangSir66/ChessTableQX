@@ -59,7 +59,7 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
             this._bindPhoneNum0.setPlaceholderFontColor(cc.color("#e4ecf0"));
         }
         this._bindPhoneNum0.setMaxLength(11);
-        this._bindPhoneNum0.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+        // this._bindPhoneNum0.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
         this._bindPhoneNum0.setPlaceHolder("请输入手机号码");
         this._bindPhoneNum0.setPosition(imagePhoneNum.getContentSize().width/2, imagePhoneNum.getContentSize().height/2);
         imagePhoneNum.addChild(this._bindPhoneNum0);
@@ -125,11 +125,11 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
         this._btnSend.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 var _str = self._bindPhoneNum0.getString();
-                if(_str.length != 11 || parseInt(_str) == 0)
-                {
-                    MjClient.showToast("请输入正确的手机号码");
-                    return;
-                }
+                // if(_str.length != 11 || parseInt(_str) == 0)
+                // {
+                //     MjClient.showToast("请输入正确的手机号码");
+                //     return;
+                // }
 
 
                 MjClient.block();
@@ -157,11 +157,11 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
         btnSureBind.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 var mobileNum = self._bindPhoneNum0.getString();
-                if(mobileNum.length != 11 || parseInt(mobileNum) == 0)
-                {
-                    MjClient.showToast("请输入正确的手机号码");
-                    return;
-                }
+                // if(mobileNum.length != 11 || parseInt(mobileNum) == 0)
+                // {
+                //     MjClient.showToast("请输入正确的手机号码");
+                //     return;
+                // }
 
                 var verifyCode = self._hintNum0.getString();
                 if(verifyCode.length != 6 || parseInt(verifyCode) == 0)

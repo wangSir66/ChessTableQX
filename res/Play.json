@@ -742,8 +742,8 @@
                 "FontSize": 22,
                 "LabelText": "88",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -848,8 +848,8 @@
                 "FontSize": 22,
                 "LabelText": "88",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "HorizontalAlignmentType": "HT_Center",
@@ -2698,7 +2698,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "game_picture/dating-1_81.png",
+                  "Path": "A_Home/dating-1_81.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 351,
@@ -3789,8 +3789,8 @@
                     "FontSize": 21,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -6145,8 +6145,8 @@
                     "FontSize": 21,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -8505,8 +8505,8 @@
                     "FontSize": 21,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -10817,8 +10817,8 @@
                     "FontSize": 21,
                     "LabelText": "你的名字你的",
                     "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/lanting.TTF",
+                      "Type": "Default",
+                      "Path": "",
                       "Plist": ""
                     },
                     "HorizontalAlignmentType": "HT_Center",
@@ -16239,8 +16239,8 @@
                 "FontSize": 20,
                 "LabelText": "系统将摸打或胡牌，不做其他操作（如吃碰杠等）",
                 "FontResource": {
-                  "Type": "Normal",
-                  "Path": "fonts/lanting.TTF",
+                  "Type": "Default",
+                  "Path": "",
                   "Plist": ""
                 },
                 "OutlineColor": {
@@ -16523,6 +16523,7 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Home/dating-1_81.png",
         "animate/voice/0.png",
         "chat/happy.png",
         "createNewPng/baida_03.png",
@@ -16530,11 +16531,9 @@
         "Default/Button_Disable.png",
         "Default/ImageFile.png",
         "fonts/fzcy.ttf",
-        "fonts/lanting.TTF",
         "game_picture/bac_datingtoushangzhezhao2.png",
         "game_picture/dating1_06.png",
         "game_picture/dating-1_73.png",
-        "game_picture/dating-1_81.png",
         "game_picture/gold/btn_get_gold.png",
         "game_picture/homelaba.png",
         "playground/tuoguan.png",

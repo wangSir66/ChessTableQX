@@ -576,6 +576,10 @@ MjClient.GAME_TYPE = {
     RED_20_POKER: 2019273, //红20
     XUE_ZHAN_MAHJONG: 2019274, //血战
     PAO_DE_KUAI_YAAN: 2019275, //雅安跑得快
+    XUE_ZHAN_3to2: 2019276, //血战
+    XUE_ZHAN_2to2: 2019277, //血战
+    XUE_ZHAN_2to1: 2019278, //血战
+    XUE_ZHAN_3to3: 2019279, //血战
 };
 
 //玩法
@@ -1074,6 +1078,11 @@ GameCnName[MjClient.GAME_TYPE.WU_XUE_510K] = "武穴510K";
 GameCnName[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = "跑得快";
 GameCnName[MjClient.GAME_TYPE.RED_20_POKER] = "红20";
 GameCnName[MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG] = "血战到底";
+GameCnName[MjClient.GAME_TYPE.XUE_ZHAN_3to3] = "三人三房";
+GameCnName[MjClient.GAME_TYPE.XUE_ZHAN_3to2] = "三人两房";
+GameCnName[MjClient.GAME_TYPE.XUE_ZHAN_2to2] = "二人两房";
+GameCnName[MjClient.GAME_TYPE.XUE_ZHAN_2to1] = "二人一房";
+GameCnName[MjClient.GAME_TYPE.YA_AN_MAHJONG] = "雅安麻将";
 
 var GameClass = {};
 GameClass[MjClient.GAME_TYPE.LIAN_YUN_GANG] = MjClient.GAME_CLASS.MA_JIANG;
@@ -1884,6 +1893,11 @@ GameHelpUrl[MjClient.GAME_TYPE.WU_XUE_510K] = HelpUrls + "helpWuXue510k/helpWuXu
 
 GameHelpUrl[MjClient.GAME_TYPE.RED_20_POKER] = HelpUrls + "helpRed20/helpRed20.html";
 GameHelpUrl[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = HelpUrls + "helpRunFasterYa/helpRunFasterYa.html";
+GameHelpUrl[MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG] = HelpUrls + "helpXueZhanDaodi/helpXueZhanDaodi.html";
+GameHelpUrl[MjClient.GAME_TYPE.XUE_ZHAN_3to3] = HelpUrls + "helpXueZhanDaodi/helpXueZhanDaodi33.html";
+GameHelpUrl[MjClient.GAME_TYPE.XUE_ZHAN_3to2] = HelpUrls + "helpXueZhanDaodi/helpXueZhanDaodi32.html";
+GameHelpUrl[MjClient.GAME_TYPE.XUE_ZHAN_2to2] = HelpUrls + "helpXueZhanDaodi/helpXueZhanDaodi22.html";
+GameHelpUrl[MjClient.GAME_TYPE.XUE_ZHAN_2to1] = HelpUrls + "helpXueZhanDaodi/helpXueZhanDaodi21.html";
 
 var GameButton = {};
 
