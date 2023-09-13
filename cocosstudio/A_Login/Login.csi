@@ -2,26 +2,25 @@
   <PropertyGroup Name="Login" Type="Plist" ID="3b4a8303-5d28-4578-af99-92a335a606c5" Version="3.10.0.0" />
   <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
-      <FilePathData Path="A_Login/btn_login_wx.png" />
-      <FilePathData Path="A_Login/CM_inputbox.png" />
-      <FilePathData Path="A_Login/countman-btn.png" />
-      <FilePathData Path="A_Login/deng_l.png" />
-      <FilePathData Path="A_Login/deng_t.png" />
-      <FilePathData Path="A_Login/hao_t.png" />
-      <FilePathData Path="A_Login/hu_t.png" />
-      <FilePathData Path="A_Login/lu_l.png" />
-      <FilePathData Path="A_Login/lu_t.png" />
-      <FilePathData Path="A_Login/xie_t.png" />
-      <FilePathData Path="A_Login/yi_t.png" />
-      <FilePathData Path="A_Login/yong_t.png" />
-      <FilePathData Path="A_Login/zhang_t.png" />
-      <FilePathData Path="A_Login/zhu_t.png" />
-      <FilePathData Path="A_Login/zuce_t.png" />
-      <FilePathData Path="A_Login/yijianxiufu.png" />
-      <FilePathData Path="A_Login/yijianxiufu_p.png" />
-      <FilePathData Path="A_Login/agree.png" />
-      <FilePathData Path="A_Login/loading_bar_head.png" />
+      <FilePathData Path="A_Login/Main/agree.png" />
+      <FilePathData Path="A_Login/Main/btn_close.png" />
+      <FilePathData Path="A_Login/Main/btn_dengl.png" />
+      <FilePathData Path="A_Login/Main/btn_login_wx.png" />
+      <FilePathData Path="A_Login/Main/btn_zhuc.png" />
+      <FilePathData Path="A_Login/Main/check_bg.png" />
+      <FilePathData Path="A_Login/Main/checked_bg.png" />
+      <FilePathData Path="A_Login/Main/countman-btn.png" />
+      <FilePathData Path="A_Login/Main/dikuang.png" />
+      <FilePathData Path="A_Login/Main/input_bg.png" />
+      <FilePathData Path="A_Login/Main/loading_bar_head.png" />
+      <FilePathData Path="A_Login/Main/log_check.png" />
+      <FilePathData Path="A_Login/Main/log_checkbg.png" />
+      <FilePathData Path="A_Login/Main/logo.png" />
+      <FilePathData Path="A_Login/Main/saog3.png" />
+      <FilePathData Path="A_Login/Main/title_1.png" />
+      <FilePathData Path="A_Login/Main/title_2.png" />
+      <FilePathData Path="A_Login/Main/yijianxiufu.png" />
     </ImageFiles>
-    <MaxSize Width="512" Height="512" />
+    <MaxSize Width="1024" Height="720" />
   </Content>
 </PlistInfoProjectFile>

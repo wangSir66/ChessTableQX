@@ -3182,28 +3182,8 @@ function resetJiaZhuNum(node) {
 
 
 //设置中间轮盘转动
-function SetArrowRotation(arrowbkNode, nextPlayer) {
-    var tData = MjClient.data.sData.tData;
-    var off = getOffByIndex(tData.curPlayer);
-    if (nextPlayer != null && !cc.isUndefined(nextPlayer))
-        off = getOffByIndex(nextPlayer);
-
-    setArrowFengDir(arrowbkNode);
-
-
-    // --------------------山西 海安 牛逼的动态牌桌指示器------------------------------
-    if (!COMMON_UI3D.is3DUI()) {
-        if (isJinZhongAPPType() ||
-            MjClient.getAppType() === MjClient.APP_TYPE.QXHAIANMJ ||
-            MjClient.getAppType() === MjClient.APP_TYPE.QXYYQP ||
-            MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
-            return tableIndicator(arrowbkNode, off);
-        }
-    }
-
-    // -------------------------------------------------------------------------------
-
+function SetArrowRotation(arrowbkNode, nextPlayer, init = false) {
+    arrowbkNode = arrowbkNode.getChildByName('arrow');
     var arrow = arrowbkNode.getChildByName("arrow");
     var arrow_2 = arrowbkNode.getChildByName("arrow_2");
     var arrow_3 = arrowbkNode.getChildByName("arrow_3");
@@ -3212,6 +3192,14 @@ function SetArrowRotation(arrowbkNode, nextPlayer) {
     arrow_2.setVisible(false);
     arrow_3.setVisible(false);
     arrow_4.setVisible(false);
+    // if(init){
+
+    // }
+    var tData = MjClient.data.sData.tData;
+    var off = getOffByIndex(tData.curPlayer);
+    if (nextPlayer != null && !cc.isUndefined(nextPlayer))
+        off = getOffByIndex(nextPlayer);
+
 
 
     arrow.runAction(cc.sequence(cc.fadeIn(0.75), cc.fadeOut(0.75)).repeatForever());
@@ -3244,63 +3232,6 @@ function SetArrowRotation(arrowbkNode, nextPlayer) {
             arrow_3.stopAllActions();
             arrow_4.stopAllActions();
             break;
-    }
-
-    var winRight = arrowbkNode.getChildByName("dir_right");
-    var winDown = arrowbkNode.getChildByName("dir_down");
-    var winLeft = arrowbkNode.getChildByName("dir_left");
-    var winUp = arrowbkNode.getChildByName("dir_up");
-    var textArr = [winDown, winRight, winUp, winLeft];
-
-
-
-    //刷新东南西北的字，晋中选座
-    if (isJinZhongAPPType() && MjClient.MaxPlayerNum != 2) {
-        var path0 = "playing/gameTable/dir/dir_normal_";
-        // var tData = MjClient.data.sData.tData;
-        for (var key = 0; key < textArr.length; key++) {
-            var pl = getUIPlayer(key);
-            if (pl) {
-                textArr[key].visible = true;
-                var dir = tData.uids.indexOf(getUIPlayer(key).info.uid);
-                if (pl.dir && pl.dir >= 0) dir = pl.dir;
-                textArr[key].loadTexture(path0 + dir + ".png");
-            }
-        }
-    }
-
-    //刷新东南西北的方向 dir_curr: 为了标记3D的方位旋转角度和颜色指示
-    if (COMMON_UI3D.is3DUI() && MjClient.getAppType() !== MjClient.APP_TYPE.QXHAIANMJ) {
-        winDown.dir_curr = "0";
-        winRight.dir_curr = "1";
-        winUp.dir_curr = "2";
-        winLeft.dir_curr = "3";
-
-        for (var key = 0; key < textArr.length; key++) {
-            var angle = Number(textArr[key].dir_curr) * (-90);
-            textArr[key].setRotation(angle);
-
-            var pl = getUIPlayer(key);
-            if (pl && off === Number(textArr[key].dir_curr)) // 当前出牌的人，替换带颜色的图标字体
-            {
-                var dir = tData.uids.indexOf(getUIPlayer(off).info.uid);
-                if ((pl.dir || pl.dir == 0) && pl.dir != -1) dir = pl.dir;
-                var path_curr = "playing/gameTable/dir/dir_" + textArr[key].dir_curr + "_" + dir + ".png";
-                if (MjClient.MaxPlayerNum == 2 && dir == 1) {
-                    dir = 2;
-                    path_curr = "playing/gameTable/dir/dir_" + textArr[key].dir_curr + "_" + dir + ".png";
-                }
-                textArr[key].loadTexture(path_curr);
-            }
-        }
-    }
-
-
-    //晋中的3D 二人情况下隐藏方位, by sking 2019.2.21
-    if (isJinZhongAPPType() && MjClient.MaxPlayerNum == 2 && !MjClient.isInGoldField()) {
-        for (var key = 0; key < textArr.length; key++) {
-            textArr[key].visible = false;
-        }
     }
 }
 
@@ -9702,12 +9633,7 @@ function arrowbkNumberUpdate(node, endFunc, tikNum) {
 
                 if (uids[tData.curPlayer] == SelfUid()) {
                     if (number == 0) {
-                        //记录音效的handle
-                        if (MjClient.getAppType() == MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) {
-                            playTimeUpEff = playEffect("loop_alarm", false);
-                        } else {
-                            playTimeUpEff = playEffect("loop_alarm", true);
-                        }
+                        if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) playTimeUpEff = playEffect("loop_alarm", true);
                         MjClient.native.NativeVibrato();
                         node.stopAllActions();
                     }
@@ -10325,11 +10251,7 @@ function resetPlayerHead_mj() {
     reConectHeadLayout(node.parent);
 
     //重新刷新中间的四个位置，东南西北
-    if (COMMON_UI3D.is3DUI())
-        setArrowFengDir(node.parent.getChildByName("arrowbk3D"));
-    else
-        setArrowFengDir(node.parent.getChildByName("arrowbk"));
-
+    setArrowFengDir(node.parent.getChildByName("arrowbk"));
 }
 //回放的时候换了位置重新刷新手牌
 function refreshHandCardForReplay_LYG(UIOff) {
@@ -13084,10 +13006,7 @@ MJ_setSelectDirBtn = function () {
         resetPlayerHead_mj();
 
         //重新刷新中间的四个位置，东南西北
-        if (COMMON_UI3D.is3DUI())
-            setArrowFengDir(_parentNode.getChildByName("arrowbk3D"));
-        else
-            setArrowFengDir(_parentNode.getChildByName("arrowbk"));
+        setArrowFengDir(_parentNode.getChildByName("arrowbk"));
 
         var _gps_btn = MjClient.playui._downNode.getParent().getChildByName("gps_btn");
         _gps_btn.visible = true;

@@ -1,0 +1,17 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="GaojiSet" Type="Plist" ID="7ef410eb-4c67-4276-a541-50e5c54eaa62" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_FriendCard/Main/img_hengxian.png" />
+      <FilePathData Path="A_FriendCard/GaojiSet/Setting_di_btn_baocun_n.png" />
+      <FilePathData Path="A_FriendCard/GaojiSet/Setting_di_btn_baocun_s.png" />
+      <FilePathData Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" />
+      <FilePathData Path="A_FriendCard/GaojiSet/Setting_di_kuang_01.png" />
+      <FilePathData Path="A_FriendCard/Main/img_sanjiao1.png" />
+      <FilePathData Path="A_FriendCard/GaojiSet/Setting_di_img_juxingBg3.png" />
+      <FilePathData Path="A_FriendCard/GaojiSet/Setting_di_img1.png" />
+      <FilePathData Path="A_FriendCard/GaojiSet/Setting_di_img3.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

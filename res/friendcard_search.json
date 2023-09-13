@@ -124,7 +124,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_xiaotanchuang.png",
+                  "Path": "friendCards/img_xiaotanchuang.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 207,
@@ -179,7 +179,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -303,9 +303,9 @@
               },
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 22,
@@ -410,11 +410,12 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/btn_search.png",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_xiaotanchuang.png",
-        "friendCards/common/title_search.png"
+        "friendCards/common/title_search.png",
+        "friendCards/img_xiaotanchuang.png"
       ],
       "ctype": "GameFileData"
     }

@@ -118,27 +118,10 @@ COMMON_UI3D.is3DUI = function () {
 COMMON_UI3D.InitSetArrowbk = function () {
     //3D 2D 指示器只显示一个
     var arrowbk2D = getNode(0).getParent().getChildByName("arrowbk");
-    var arrowbk3D = getNode(0).getParent().getChildByName("arrowbk3D");
-
-    if (arrowbk3D) arrowbk3D.is3D = true;
     arrowbk2D.visible = false;
-    if (arrowbk3D) arrowbk3D.visible = false;
 
     MjClient.arrowbkNode = arrowbk2D;
-    MjClient.arrowbk3DNode = arrowbk3D;
     setWgtLayout(arrowbk2D, [0.17, 0.17], [0.5, 0.5], [0, 0.25]);
-    if (MjClient.getAppType() === MjClient.APP_TYPE.QXYYQP || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() === MjClient.APP_TYPE.YLHUNANMJ)
-        setWgtLayout(arrowbk2D, [0.129, 0.229], [0.5, 0.5], [0, 0.25]);
-
-    setWgtLayout(arrowbk3D, [0.17, 0.17], [0.5, 0.525], [0, 0.25]);
-
-    if (MjClient.getAppType() === MjClient.APP_TYPE.QXYZQP ||
-        MjClient.getAppType() === MjClient.APP_TYPE.QXXXGHZ ||
-        MjClient.getAppType() === MjClient.APP_TYPE.BDHYZP ||
-        MjClient.getAppType() === MjClient.APP_TYPE.QXLYQP) {
-        setWgtLayout(arrowbk2D, [0.11, 0], [0.5, 0.5], [0, 0.25]);
-        setWgtLayout(arrowbk3D, [0.13, 0], [0.5, 0.5], [0, 0.30]);
-    }
 
     function InitArrowbk(arrowbkNode) {
 
@@ -146,12 +129,11 @@ COMMON_UI3D.InitSetArrowbk = function () {
         _number.setString("00");
         _number.ignoreContentAdaptWithSize(true);
 
-        setDirVisible(arrowbkNode, true);
-        setArrowFengDir(arrowbkNode);
+        // setDirVisible(arrowbkNode, true);
+        // setArrowFengDir(arrowbkNode);
 
         //var that = arrowbkNode;
         UIEventBind(null, arrowbkNode, "initSceneData", function (eD) {
-
             if (COMMON_UI3D.is3DUI()) {
                 if (!this.is3D) return;
             }
@@ -159,11 +141,10 @@ COMMON_UI3D.InitSetArrowbk = function () {
                 if (this.is3D) return;
             }
             this.visible = IsArrowVisible();
-            SetArrowRotation(this);
+            SetArrowRotation(this, null, true);
         });
 
         UIEventBind(null, arrowbkNode, "mjhand", function (eD) {
-
             if (COMMON_UI3D.is3DUI()) {
                 if (!this.is3D) return;
             }
@@ -171,7 +152,7 @@ COMMON_UI3D.InitSetArrowbk = function () {
                 if (this.is3D) return;
             }
             this.visible = IsArrowVisible();
-            SetArrowRotation(this);
+            SetArrowRotation(this, null, true);
         });
 
         UIEventBind(null, arrowbkNode, "waitPut", function (eD) {
@@ -182,7 +163,6 @@ COMMON_UI3D.InitSetArrowbk = function () {
                 if (this.is3D) return;
             }
             SetArrowRotation(this);
-
             _number.stopAllActions();
             stopEffect(playTimeUpEff);
             playTimeUpEff = null;
@@ -199,7 +179,6 @@ COMMON_UI3D.InitSetArrowbk = function () {
                 endFunc = MjClient.playui.jsBind.BtnPutCard._click;
             }
             arrowbkNumberUpdate(_number, endFunc);
-
         });
 
         UIEventBind(null, arrowbkNode, "MJPeng", function (eD) {
@@ -297,19 +276,10 @@ COMMON_UI3D.InitSetArrowbk = function () {
         });
     }
 
-    if (COMMON_UI3D.isCanChangTo3D()) InitArrowbk(arrowbk3D);
     InitArrowbk(arrowbk2D);
 
-    if (COMMON_UI3D.is3DUI()) {
-        arrowbk2D.visible = false;
-        if (arrowbk3D) arrowbk3D.visible = true;
-        SetArrowRotation(arrowbk3D);
-    }
-    else {
-        if (arrowbk3D) arrowbk3D.visible = false;
-        arrowbk2D.visible = true;
-        SetArrowRotation(arrowbk2D);
-    }
+    arrowbk2D.visible = true;
+    SetArrowRotation(arrowbk2D);
 }
 
 /*
@@ -317,24 +287,13 @@ COMMON_UI3D.InitSetArrowbk = function () {
  */
 COMMON_UI3D.resSetArrowbk = function () {
     var arrowbk2D = getNode(0).getParent().getChildByName("arrowbk");
-    var arrowbk3D = getNode(0).getParent().getChildByName("arrowbk3D");
-    arrowbk3D.is3D = true;
 
-    if (COMMON_UI3D.is3DUI()) {
-        arrowbk2D.visible = false;
-        if (arrowbk3D) arrowbk3D.visible = true;
-        SetArrowRotation(arrowbk3D);
-    }
-    else {
-        if (arrowbk3D) arrowbk3D.visible = false;
-        arrowbk2D.visible = true;
-        SetArrowRotation(arrowbk2D);
-    }
+    arrowbk2D.visible = true;
+    SetArrowRotation(arrowbk2D);
     var tData = MjClient.data.sData.tData;
 
     if (tData.tState == TableState.waitJoin || tData.tState == TableState.waitReady) {
         arrowbk2D.visible = false;
-        if (arrowbk3D) arrowbk3D.visible = false;
     }
 }
 

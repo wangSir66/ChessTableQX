@@ -76,7 +76,7 @@
             "BackColorAlpha": 102,
             "FileData": {
               "Type": "Normal",
-              "Path": "friendCards/common/img_datanchuang.png",
+              "Path": "friendCards/img_datanchuang.png",
               "Plist": ""
             },
             "SingleColor": {
@@ -132,9 +132,9 @@
             "Children": [
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 22,
@@ -766,9 +766,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9OriginX": 266,
                     "Scale9Width": 279,
@@ -1336,7 +1336,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -1409,15 +1409,17 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/GaojiSet.plist",
+        "A_FriendCard/GaojiSet.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/btn_agree_n.png",
         "friendCards/common/btn_agree_s.png",
         "friendCards/common/btn_refuse_n.png",
         "friendCards/common/btn_refuse_s.png",
-        "friendCards/common/btn_x_normal.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_datanchuang.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_hengxian.png",
+        "friendCards/img_datanchuang.png",
         "friendCards/tongji/title_img.png"
       ],
       "ctype": "GameFileData"

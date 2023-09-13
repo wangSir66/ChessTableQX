@@ -1,0 +1,1610 @@
+{
+  "ID": "a6ea1e1f-bec1-42e7-b137-0e286231d139",
+  "Version": "2.3.4",
+  "Name": "A_Friendcard_member_manage",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 520,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 153,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 641.6639,
+              "Y": 361.656
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5013,
+              "Y": 0.5023
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": 1.6639,
+            "RightMargin": -1.6639,
+            "TopMargin": -1.656,
+            "BottomMargin": 1.656,
+            "Tag": 522,
+            "ActionTag": 1020716783,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Alpha": 127,
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_Common/Main/pop_bg_small.png",
+              "Plist": "A_Common/Common.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 30,
+            "Scale9OriginY": 30,
+            "Scale9Width": 654,
+            "Scale9Height": 410,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.6141,
+              "Y": 0.6958
+            },
+            "LeftMargin": 246.975,
+            "RightMargin": 246.975,
+            "TopMargin": 109.51,
+            "BottomMargin": 109.51,
+            "Tag": 523,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btnclose.png",
+                  "Plist": "A_Common/Common.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 29,
+                "Scale9Height": 37,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 753.8275,
+                  "Y": 468.3952
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.959,
+                  "Y": 0.935
+                },
+                "PreSize": {
+                  "X": 0.0751,
+                  "Y": 0.1178
+                },
+                "LeftMargin": 724.3275,
+                "RightMargin": 2.7225,
+                "TopMargin": 3.0848,
+                "BottomMargin": 438.8952,
+                "Tag": 525,
+                "ActionTag": 692474691,
+                "Size": {
+                  "X": 59.0,
+                  "Y": 59.0
+                },
+                "Name": "close",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btna_group_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 157.21,
+                  "Y": 375.735
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.2,
+                  "Y": 0.75
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 55.21,
+                "RightMargin": 526.84,
+                "TopMargin": 88.745,
+                "BottomMargin": 339.235,
+                "Tag": 526,
+                "ActionTag": 195629741,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_groupMag",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_mamager_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_mamager_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_mamager_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 393.025,
+                  "Y": 375.735
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.75
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 291.025,
+                "RightMargin": 291.025,
+                "TopMargin": 88.745,
+                "BottomMargin": 339.235,
+                "Tag": 527,
+                "ActionTag": -1894694707,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_mamager",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btna_unGroup_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 628.8401,
+                  "Y": 375.735
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.8,
+                  "Y": 0.75
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 526.8401,
+                "RightMargin": 55.2099,
+                "TopMargin": 88.745,
+                "BottomMargin": 339.235,
+                "Tag": 528,
+                "ActionTag": -591431052,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_unGroupMag",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_group_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_group_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_group_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 157.21,
+                  "Y": 250.49
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.2,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 55.21,
+                "RightMargin": 526.84,
+                "TopMargin": 213.99,
+                "BottomMargin": 213.99,
+                "Tag": 529,
+                "ActionTag": -1657142555,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_group",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_Button_remarks_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_Button_remarks_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_Button_remarks_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 393.025,
+                  "Y": 250.49
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 291.025,
+                "RightMargin": 291.025,
+                "TopMargin": 213.99,
+                "BottomMargin": 213.99,
+                "Tag": 530,
+                "ActionTag": -10899145,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_remarks",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unMamager_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unMamager_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unMamager_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 628.8401,
+                  "Y": 250.49
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.8,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 526.8401,
+                "RightMargin": 55.2099,
+                "TopMargin": 213.99,
+                "BottomMargin": 213.99,
+                "Tag": 531,
+                "ActionTag": 706477452,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_unMamager",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_notAdmit_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_notAdmit_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_notAdmit_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 157.21,
+                  "Y": 125.245
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.2,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 55.21,
+                "RightMargin": 526.84,
+                "TopMargin": 339.235,
+                "BottomMargin": 88.745,
+                "Tag": 532,
+                "ActionTag": -1097866275,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_unAdmit",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_admit_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_admit_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_admit_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 393.025,
+                  "Y": 125.245
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 291.025,
+                "RightMargin": 291.025,
+                "TopMargin": 339.235,
+                "BottomMargin": 88.745,
+                "Tag": 533,
+                "ActionTag": -569741044,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_admit",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_AddOtherClub_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_AddOtherClub_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_AddOtherClub_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5203,
+                  "ScaleY": 0.5294
+                },
+                "Position": {
+                  "X": 628.8401,
+                  "Y": 125.245
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.8,
+                  "Y": 0.25
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 522.6989,
+                "RightMargin": 59.3511,
+                "TopMargin": 341.3812,
+                "BottomMargin": 86.5988,
+                "Tag": 534,
+                "ActionTag": 1383077624,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_AddOtherClub",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_tichu_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_tichu_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_tichu_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1405.8594,
+                  "Y": 421.6319
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 1.7885,
+                  "Y": 0.8416
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 1303.8594,
+                "RightMargin": -721.8094,
+                "TopMargin": 42.8481,
+                "BottomMargin": 385.1319,
+                "Tag": 535,
+                "ActionTag": -1740338428,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_tichu",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_zhuli_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_zhuli_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_zhuli_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1478.5696,
+                  "Y": 240.5118
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 1.881,
+                  "Y": 0.4801
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 1376.5696,
+                "RightMargin": -794.5196,
+                "TopMargin": 223.9682,
+                "BottomMargin": 204.0118,
+                "Tag": 536,
+                "ActionTag": -1739295614,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_zhuli",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unZhuli_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unZhuli_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unZhuli_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1520.5134,
+                  "Y": 59.3923
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 1.9344,
+                  "Y": 0.1186
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 1418.5134,
+                "RightMargin": -836.4634,
+                "TopMargin": 405.0877,
+                "BottomMargin": 22.8923,
+                "Tag": 537,
+                "ActionTag": -337005298,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_unZhuli",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_frozen_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_frozen_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_frozen_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1211.8677,
+                  "Y": 224.1592
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 1.5417,
+                  "Y": 0.4474
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 1109.8677,
+                "RightMargin": -527.8177,
+                "TopMargin": 240.3208,
+                "BottomMargin": 187.6592,
+                "Tag": 538,
+                "ActionTag": 696250353,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_frozen",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unfrozen_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unfrozen_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_unfrozen_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1217.6107,
+                  "Y": 124.7552
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 1.549,
+                  "Y": 0.249
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 1115.6107,
+                "RightMargin": -533.5607,
+                "TopMargin": 339.7248,
+                "BottomMargin": 88.2552,
+                "Tag": 539,
+                "ActionTag": 2109759565,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_unfrozen",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_chakanCY_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_chakanCY_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_chakanCY_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1219.5375,
+                  "Y": 347.8793
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 1.5515,
+                  "Y": 0.6944
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 1117.5375,
+                "RightMargin": -535.4875,
+                "TopMargin": 116.6007,
+                "BottomMargin": 311.3793,
+                "Tag": 540,
+                "ActionTag": 2119145035,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_checkCY",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 30,
+                "ButtonText": "",
+                "TextColor": {},
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_setgongxian2.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_setgongxian2.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_setgongxian1.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 174,
+                "Scale9Height": 51,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5203,
+                  "ScaleY": 0.5294
+                },
+                "Position": {
+                  "X": 1218.299,
+                  "Y": 32.0627
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 1.5499,
+                  "Y": 0.064
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 1112.1577,
+                "RightMargin": -530.1077,
+                "TopMargin": 434.5635,
+                "BottomMargin": -6.5835,
+                "Tag": 541,
+                "ActionTag": -1266665024,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_Xinyu",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 30,
+                "ButtonText": "",
+                "TextColor": {},
+                "DisabledFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_rule_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "PressedFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_rule_s.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Member/btn_rule_n.png",
+                  "Plist": "A_FriendCard/Member.plist"
+                },
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 116,
+                "Scale9Height": 30,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5203,
+                  "ScaleY": 0.5294
+                },
+                "Position": {
+                  "X": 1223.0154,
+                  "Y": -63.8249
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 1.5559,
+                  "Y": -0.1274
+                },
+                "PreSize": {
+                  "X": 0.2595,
+                  "Y": 0.1457
+                },
+                "LeftMargin": 1116.8741,
+                "RightMargin": -534.8242,
+                "TopMargin": 530.451,
+                "BottomMargin": -102.4711,
+                "Tag": 542,
+                "Children": [
+                  {
+                    "FontSize": 32,
+                    "LabelText": "抽成比例",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/lanting.TTF",
+                      "Plist": ""
+                    },
+                    "HorizontalAlignmentType": "HT_Right",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 187,
+                      "G": 104,
+                      "B": 57
+                    },
+                    "OutlineEnabled": true,
+                    "ShadowColor": {
+                      "R": 187,
+                      "G": 104,
+                      "B": 57
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 102.0,
+                      "Y": 38.0111
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 253,
+                      "G": 244,
+                      "B": 233
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.5207
+                    },
+                    "PreSize": {
+                      "X": 0.6471,
+                      "Y": 0.5616
+                    },
+                    "LeftMargin": 36.0,
+                    "RightMargin": 36.0,
+                    "TopMargin": 14.4889,
+                    "BottomMargin": 17.5111,
+                    "Tag": 543,
+                    "ActionTag": 1592200546,
+                    "Size": {
+                      "X": 132.0,
+                      "Y": 41.0
+                    },
+                    "Name": "Text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1229925906,
+                "Size": {
+                  "X": 204.0,
+                  "Y": 73.0
+                },
+                "Name": "Button_chouchengbili",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "IsCustomSize": true,
+                "FontSize": 36,
+                "LabelText": "操 作",
+                "FontResource": {
+                  "Type": "Normal",
+                  "Path": "fonts/fzcy.ttf",
+                  "Plist": ""
+                },
+                "OutlineSize": 2,
+                "OutlineColor": {
+                  "R": 197,
+                  "G": 121,
+                  "B": 43
+                },
+                "OutlineEnabled": true,
+                "ShadowColor": {
+                  "R": 197,
+                  "G": 121,
+                  "B": 43
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "ShadowEnabled": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 393.0251,
+                  "Y": 470.8884
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.9399
+                },
+                "PreSize": {
+                  "X": 0.1094,
+                  "Y": 0.0938
+                },
+                "LeftMargin": 350.0251,
+                "RightMargin": 350.0248,
+                "TopMargin": 6.5916,
+                "BottomMargin": 447.3884,
+                "Tag": 617,
+                "ActionTag": 1567398184,
+                "Size": {
+                  "X": 86.0,
+                  "Y": 47.0
+                },
+                "Name": "title",
+                "ctype": "TextObjectData"
+              }
+            ],
+            "ActionTag": 126185899,
+            "Size": {
+              "X": 786.05,
+              "Y": 500.98
+            },
+            "Name": "Image_bg",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
+        "A_FriendCard/Member.plist",
+        "A_FriendCard/Member.png",
+        "fonts/fzcy.ttf",
+        "fonts/lanting.TTF"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

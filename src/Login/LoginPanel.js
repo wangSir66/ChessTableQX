@@ -240,13 +240,48 @@
             starParticle1.setTotalParticles(8);
             _back.addChild(starParticle1);
 
-            var _h = isIPhoneX() ? 0.14 : 0.13;
             var _agree = _back.getChildByName("agree");
             this._agree = _agree;
             acceptNode = _agree;
             acceptNode.setVisible(false);
             _agree.setSelected(util.localStorageEncrypt.getBoolItem("_agree_user_protocol", false))
-            setWgtLayout(_agree, [0.05, 0.05], [0, _h], [0, 0], false, true);
+            // setWgtLayout(_agree, [1, 1], [0, 0.08], [0, 0], false, true);
+
+            var logo = _back.getChildByName("load");
+            setWgtLayout(logo, [0.2, 0.2], [0, 1], [0, 0], false, true);
+            //扫光
+            if (logo) {
+                var clipper = new cc.ClippingNode();
+                var spCache = cc.spriteFrameCache;
+                var sten = cc.Sprite(spCache.getSpriteFrame('A_Login/Main/logo.png'));
+                var clipper = new cc.ClippingNode();
+                var stenSize = sten.getContentSize();
+                sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+                clipper.setContentSize(stenSize);
+                clipper.setStencil(sten);
+                clipper.setAlphaThreshold(0.5);
+                logo.addChild(clipper);
+                var sprite1 = new cc.Sprite(spCache.getSpriteFrame('A_Login/Main/saog3.png'));
+                sprite1.setBlendFunc(cc.ONE,cc.ONE);
+                sprite1.setOpacity(255);
+                sprite1.setScale(1.5);
+                clipper.addChild(sprite1, 1);
+                var repeatAction = cc.repeatForever(cc.sequence(
+                    cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
+                    cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+                    cc.delayTime(0.5)));
+                sprite1.runAction(repeatAction); //进行向右移动的重复动作
+                var sprite2 = new cc.Sprite(spCache.getSpriteFrame('A_Login/Main/saog3.png'));
+                sprite2.setBlendFunc(cc.ONE,cc.ONE);
+                sprite2.setOpacity(255);
+                sprite2.setScale(1.5);
+                clipper.addChild(sprite2, 1);
+                var repeatAction2 = cc.repeatForever(cc.sequence(
+                    cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
+                    cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+                    cc.delayTime(0.5)));
+                sprite2.runAction(repeatAction2); //进行向右移动的重复动作
+            }
 
             var _legal = _agree.getChildByName("legal");
             this._legal = _legal;
@@ -264,14 +299,9 @@
                 }, this);
             }
 
-
-            var _warnText = loginui.node.getChildByName("warn_text");
-            setWgtLayout(_warnText, [_warnText.width / 1280, 0], [0.5, 0.002], [0, 0.5], true);
-            _warnText.ignoreContentAdaptWithSize(true);
             var bg_mask = _back.getChildByName("bg_mask");
             if (bg_mask) {
                 bg_mask.y = 0;
-                bg_mask.setScaleY((_agree.y + _agree.height) / bg_mask.height);
             }
 
 
@@ -294,12 +324,12 @@
                 // loginBtns.push(_btnWeChat);
             }
 
-            var y = 0.35;
+            var y = 0.22;
 
             var sumWidth = 0;
             for (var i = 0; i < loginBtns.length; i++) {
                 var btn = loginBtns[i];
-                setWgtLayout(btn, [btn.width / 1280, btn.height / 720], [0.5, y], [0, 0]);
+                setWgtLayout(btn, [0.18, 0.18], [0.5, y], [0, 0]);
                 sumWidth += btn.width * btn.getScaleX();
             }
 
@@ -367,7 +397,7 @@
             var _fixBtn = loginui.node.getChildByName("xiufuBtn");
             this._fixBtn = _fixBtn
             if (_fixBtn) {
-                setWgtLayout(_fixBtn, [0.13, 0.13], [0.9, 0.89], [0, 0]);
+                setWgtLayout(_fixBtn, [0.1, 0.1], [0.95, 0.92], [0, 0]);
                 _fixBtn.addTouchEventListener(function (sender, Type) {
                     switch (Type) {
                         case ccui.Widget.TOUCH_ENDED:
@@ -439,7 +469,7 @@
             if (MjClient.isShenhe == true) {
                 _version.setVisible(false);
             }
-            setWgtLayout(_version, [0.14, 0.14], [0.9, 0.95], [0, 0]);
+            setWgtLayout(_version, [0.14, 0.14], [0.98, 0.08], [0, 0]);
             var ver = "Ver:" + MjClient.native.GetVersionName() + "(" + MjClient.resVersion + ")";
             _version.setString(ver);
             _version.ignoreContentAdaptWithSize(true);

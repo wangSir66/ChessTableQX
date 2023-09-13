@@ -273,9 +273,9 @@
                 "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "SingleColor": {
                   "R": 150,
@@ -328,7 +328,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/memberManage/xuanzhong.png",
+                      "Path": "friendCards/Member/xuanzhong.png",
                       "Plist": ""
                     },
                     "Scale9Enable": true,
@@ -503,9 +503,9 @@
                 "ClipAble": false,
                 "BackColorAlpha": 102,
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "SingleColor": {
                   "R": 150,
@@ -557,7 +557,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/memberManage/xuanzhong.png",
+                      "Path": "friendCards/Member/xuanzhong.png",
                       "Plist": ""
                     },
                     "Scale9Enable": true,
@@ -809,7 +809,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -882,13 +882,14 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/btn_ok_n.png",
         "friendCards/common/btn_ok_s.png",
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_dikuang.png",
         "friendCards/common/img_title.png",
         "friendCards/common/img_zhongtanchuang.png",
-        "friendCards/memberManage/xuanzhong.png"
+        "friendCards/Member/xuanzhong.png"
       ],
       "ctype": "GameFileData"
     }

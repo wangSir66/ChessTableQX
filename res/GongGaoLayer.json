@@ -464,7 +464,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/gonggao_copy.png",
+                  "Path": "A_Home/Main/gonggao_copy.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,
@@ -529,7 +529,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Home/gonggao_copy.png",
+                  "Path": "A_Home/Main/gonggao_copy.png",
                   "Plist": "A_Home/Home.plist"
                 },
                 "Scale9Enable": true,

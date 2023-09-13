@@ -64,10 +64,7 @@ var FriendCard_tongji = cc.Layer.extend({
         this.initAll(data);
     },
     initAll: function (data) {
-        var resJson = "friendcard_tongji.json";
-        if (isIPhoneX() && FriendCard_Common.getSkinType() != 3 && FriendCard_Common.getSkinType() != 4) {
-            resJson = "friendcard_tongjiX.json";
-        }
+        var resJson = res.Friendcard_tongji_json;
         var UI = ccs.load(resJson);
         this.addChild(UI.node);
         var that = this;
@@ -103,8 +100,6 @@ var FriendCard_tongji = cc.Layer.extend({
         var _back = UI.node.getChildByName("back");
         this._back = _back;
         COMMON_UI.setNodeTextAdapterSize(_back);
-
-        this.initNewPlayerTongji();
 
         var node_title = this._back.getChildByName("node_title");
 
@@ -157,7 +152,7 @@ var FriendCard_tongji = cc.Layer.extend({
             }
         } else if (FriendCard_Common.getSkinType() == 3) {
             var _close = _back.getChildByName("close");
-            setWgtLayout(_back, [1, 0.9653], [0.5, 0.5], [0, 0], false);
+            setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0], false);
         } else {
             var _close = _back.getChildByName("close");
             setWgtLayout(_back, [0.9750, 0.9333], [0.5, 0.5], [0, 0]);
@@ -258,7 +253,6 @@ var FriendCard_tongji = cc.Layer.extend({
 
         var text_clubName = this._back.getChildByName("text_clubName");
         text_clubName.ignoreContentAdaptWithSize(true);
-        var text_clubID = this._back.getChildByName("text_clubID");
 
 
         if (this.clubData.groupLeader) {//组长屏蔽每日统计入口
@@ -331,21 +325,6 @@ var FriendCard_tongji = cc.Layer.extend({
         } else {
             this.showPanle(this.btn_func_name.btn_normal_player);
         }
-
-
-    },
-    initNewPlayerTongji: function () {
-        var that = this;
-        this.panel_new_tongji_statement = this.uinode.getChildByName("Panel_new_tongji_statement")
-        this.panel_new_tongji_statement.visible = false;
-        this.panel_new_tongji_statement.getChildByName("back").getChildByName("Text").ignoreContentAdaptWithSize(false);
-        setWgtLayout(this.panel_new_tongji_statement, [1, 1], [0.5, 0.5], [0, 0]);
-        this.panel_new_tongji_statement.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                that.panel_new_tongji_statement.visible = false;
-            }
-        })
-
     },
     showPanle: function (panleKey) {
 
@@ -355,11 +334,7 @@ var FriendCard_tongji = cc.Layer.extend({
             this._PanleList[i].visible = false;
             if (this._PanleList[i]._enabledBtn && cc.sys.isObjectValid(this._PanleList[i]._enabledBtn)) {
                 this._PanleList[i]._enabledBtn.enabled = true;
-                if (FriendCard_Common.getSkinType() == 4) {
-                    var textLabel = this._PanleList[i]._enabledBtn.getChildByName("Text");
-                    textLabel.disableEffect();
-                    textLabel.setColor(cc.color("#B0684B"));
-                }
+                this._PanleList[i]._enabledBtn.setTitleColor(cc.color("#C9EEFF"));
             } else {
                 this._PanleList[i]._enabledBtn = null;
             }
@@ -382,11 +357,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 this.Panel_playertongji_manager.visible = true;
                 if (this.Panel_playertongji_manager._enabledBtn) {
                     this.Panel_playertongji_manager._enabledBtn.enabled = false;
-                    if (FriendCard_Common.getSkinType() == 4) {
-                        var textLabel = this.Panel_playertongji_manager._enabledBtn.getChildByName("Text");
-                        textLabel.setColor(cc.color("#FFF5D9"));
-                        textLabel.enableShadow(cc.color("#AC633B"), textLabel.getShadowOffset(), textLabel.getShadowBlurRadius());
-                    }
+                    this.Panel_playertongji_manager._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 }
                 this.initManagerPlayerTongjiView();
                 break;
@@ -394,11 +365,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 this.Panel_daytongji_manager.visible = true;
                 if (this.Panel_daytongji_manager._enabledBtn) {
                     this.Panel_daytongji_manager._enabledBtn.enabled = false;
-                    if (FriendCard_Common.getSkinType() == 4) {
-                        var textLabel = this.Panel_daytongji_manager._enabledBtn.getChildByName("Text");
-                        textLabel.setColor(cc.color("#FFF5D9"));
-                        textLabel.enableShadow(cc.color("#AC633B"), textLabel.getShadowOffset(), textLabel.getShadowBlurRadius());
-                    }
+                    this.Panel_daytongji_manager._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 }
                 this.initDayTongjiView()
                 break;
@@ -406,11 +373,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 this.Panel_tongji.visible = true;
                 if (this.Panel_tongji._enabledBtn) {
                     this.Panel_tongji._enabledBtn.enabled = false;
-                    if (FriendCard_Common.getSkinType() == 4) {
-                        var textLabel = this.Panel_tongji._enabledBtn.getChildByName("Text");
-                        textLabel.setColor(cc.color("#FFF5D9"));
-                        textLabel.enableShadow(cc.color("#AC633B"), textLabel.getShadowOffset(), textLabel.getShadowBlurRadius());
-                    }
+                    this.Panel_tongji._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 }
                 this.initNormalPlayerTongjiView();
                 break;
@@ -418,11 +381,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 this.Panel_winnerCfg.visible = true;
                 if (this.Panel_winnerCfg._enabledBtn) {
                     this.Panel_winnerCfg._enabledBtn.enabled = false;
-                    /*if(FriendCard_Common.getSkinType() == 4){
-                        var textLabel = this.Panel_winnerCfg._enabledBtn.getChildByName("Text");
-                        textLabel.setColor(cc.color("#FFF5D9"));
-                        textLabel.enableShadow(cc.color("#AC633B"),textLabel.getShadowOffset(),textLabel.getShadowBlurRadius());
-                    }*/
+                    this.Panel_winnerCfg._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 }
                 this.initWinnerCfgView();
                 break;
@@ -430,11 +389,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 this.Panel_rank.visible = true;
                 if (this.Panel_rank._enabledBtn) {
                     this.Panel_rank._enabledBtn.enabled = false;
-                    if (FriendCard_Common.getSkinType() == 4) {
-                        var textLabel = this.Panel_rank._enabledBtn.getChildByName("Text");
-                        textLabel.setColor(cc.color("#FFF5D9"));
-                        textLabel.enableShadow(cc.color("#AC633B"), textLabel.getShadowOffset(), textLabel.getShadowBlurRadius());
-                    }
+                    this.Panel_rank._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 }
                 this.initRankView();
                 break;
@@ -443,31 +398,24 @@ var FriendCard_tongji = cc.Layer.extend({
                 this.Panel_groupYB.visible = this.clubData.info.type != 1;
                 if (this.clubData.info.type == 1) {
                     this.initGroupFKTJ();
+                    this.Panel_groupFK._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 } else {
                     this.initGroupYBTJ();
                 }
                 this.Panel_groupYB._enabledBtn.enabled = false;
-                if (FriendCard_Common.getSkinType() == 4) {
-                    var textLabel = this.Panel_groupYB._enabledBtn.getChildByName("Text");
-                    textLabel.setColor(cc.color("#FFF5D9"));
-                    textLabel.enableShadow(cc.color("#AC633B"), textLabel.getShadowOffset(), textLabel.getShadowBlurRadius());
-                }
+                this.Panel_groupYB._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 break;
             case this.btn_func_name.btn_zhuli:
                 this.Panel_zhuliFK.visible = this.clubData.info.type == 1;
                 this.Panel_zhuliYB.visible = this.clubData.info.type != 1;
                 if (this.clubData.info.type == 1) {
                     this.initZhuliFKTJ();
+                    this.Panel_zhuliFK._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 } else {
                     this.initZhuliYBTJ();
                 }
                 this.Panel_zhuliYB._enabledBtn.enabled = false;
-
-                if (FriendCard_Common.getSkinType() == 4) {
-                    var textLabel = this.Panel_zhuliYB._enabledBtn.getChildByName("Text");
-                    textLabel.setColor(cc.color("#FFF5D9"));
-                    textLabel.enableShadow(cc.color("#AC633B"), textLabel.getShadowOffset(), textLabel.getShadowBlurRadius());
-                }
+                this.Panel_zhuliYB._enabledBtn.setTitleColor(cc.color("#AD2500"));
                 break;
         }
     },
@@ -1071,9 +1019,6 @@ var FriendCard_tongji = cc.Layer.extend({
         this.Panel_playertongji_manager.reflashFuncName = "initManagerPlayerTongjiView";
 
         var that = this;
-
-        this.btn_new_tongji = this.Panel_playertongji_manager.getChildByName("btn_new_tongji");
-        this.btn_new_tongji.visible = false;
 
         //Panel_playertongji_manager
         //修改年月日的EditBox配置
@@ -3022,6 +2967,7 @@ var FriendCard_tongji = cc.Layer.extend({
         var text_clubName = this._back.getChildByName("text_clubName");
         text_clubName.ignoreContentAdaptWithSize(true);
         var text_clubID = this._back.getChildByName("text_clubID");
+        var text_id = this._back.getChildByName("text_id");
         text_clubName.ignoreContentAdaptWithSize(true);
         if (FriendCard_Common.getSkinType() == 4) {
             var titleStr = unescape(this.clubData.info.title).replace(/[\r\n]/g, "");
@@ -3029,17 +2975,17 @@ var FriendCard_tongji = cc.Layer.extend({
         } else {
             text_clubName.setString(unescape(this.clubData.info.title).replace(/[\r\n]/g, ""));
         }
-        text_clubID.setString("亲友圈ID:" + this.clubData.info.clubId);
+        text_clubID.setString("ID:" + this.clubData.info.clubId);
 
         if (!text_clubID.initY)
             text_clubID.initY = text_clubID.y;
         if (this._isManager || this.isAssistants) {
-            text_clubID.x = text_clubName.x;
+            text_clubID.x = text_id.x + text_id.width + 10;
             text_clubID.y = text_clubID.initY;
         }
         else {
-            text_clubID.y = text_clubName.y;
-            text_clubID.x = text_clubName.x + text_clubName.width + 10;
+            text_clubID.y = text_id.y = text_clubName.y;
+            text_clubID.x = text_id.x = text_clubName.x + text_clubName.width + 10;
         }
     },
     _setShowTime: function (node, txt_1, txt_2, txt_3, txt_4, txt_5) {

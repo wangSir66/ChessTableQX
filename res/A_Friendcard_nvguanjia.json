@@ -1,0 +1,1288 @@
+{
+  "ID": "6f62dfe7-c818-4876-8192-04713c6cdb8a",
+  "Version": "2.3.4",
+  "Name": "A_Friendcard_nvguanjia",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 134,
+        "Children": [
+          {
+            "ClipAble": false,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 460,
+            "ActionTag": 1393860366,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Alpha": 127,
+            "Name": "Image_di",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 0,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "A_FriendCard/tc_bg.png",
+              "Plist": ""
+            },
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 370,
+            "Scale9OriginY": 227,
+            "Scale9Width": 540,
+            "Scale9Height": 266,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 1589,
+            "Children": [
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "A_FriendCard/tc_bg_nei0.png",
+                  "Plist": ""
+                },
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9OriginX": 354,
+                "Scale9OriginY": 212,
+                "Scale9Width": 365,
+                "Scale9Height": 219,
+                "TouchEnable": true,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 196.736,
+                  "Y": 14.4
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.1537,
+                  "Y": 0.02
+                },
+                "PreSize": {
+                  "X": 0.8383,
+                  "Y": 0.8931
+                },
+                "LeftMargin": 196.736,
+                "RightMargin": 10.264,
+                "TopMargin": 62.6,
+                "BottomMargin": 14.4,
+                "Tag": 1583,
+                "ActionTag": 898416847,
+                "Size": {
+                  "X": 1073.0,
+                  "Y": 643.0
+                },
+                "Name": "Panel_right",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "ItemMargin": -12,
+                "DirectionType": "Vertical",
+                "IsBounceEnabled": true,
+                "ScrollDirectionType": 0,
+                "ClipAble": true,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 0.0,
+                  "Y": 626.3252
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.8699
+                },
+                "PreSize": {
+                  "X": 0.1375,
+                  "Y": 0.8333
+                },
+                "RightMargin": 1104.0,
+                "TopMargin": 93.6748,
+                "BottomMargin": 26.3252,
+                "Tag": 1584,
+                "Children": [
+                  {
+                    "FontSize": 30,
+                    "ButtonText": "管  家",
+                    "FontResource": {
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
+                      "Plist": ""
+                    },
+                    "TextColor": {
+                      "R": 173,
+                      "G": 37,
+                      "B": 0
+                    },
+                    "DisabledFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                    },
+                    "PressedFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                    },
+                    "NormalFileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                    },
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 150,
+                    "Scale9Height": 65,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 90.0,
+                      "Y": 556.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5114,
+                      "Y": 0.9275
+                    },
+                    "PreSize": {
+                      "X": 1.0227,
+                      "Y": 0.145
+                    },
+                    "RightMargin": -4.0,
+                    "BottomMargin": 513.0,
+                    "Tag": 1585,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/btn_xian.png",
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
+                        },
+                        "BlendFunc": {
+                          "Src": 1,
+                          "Dst": 771
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 90.0,
+                          "Y": 83.9993
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.9655
+                        },
+                        "PreSize": {
+                          "X": 0.9722,
+                          "Y": 0.023
+                        },
+                        "LeftMargin": 2.5,
+                        "RightMargin": 2.5,
+                        "TopMargin": 2.0007,
+                        "BottomMargin": 82.9993,
+                        "Tag": 1586,
+                        "ActionTag": 1381579186,
+                        "Size": {
+                          "X": 175.0,
+                          "Y": 2.0
+                        },
+                        "Name": "xian_0",
+                        "ctype": "SpriteObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/btn_xian.png",
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
+                        },
+                        "BlendFunc": {
+                          "Src": 1,
+                          "Dst": 771
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 90.0,
+                          "Y": 8.78
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.1009
+                        },
+                        "PreSize": {
+                          "X": 0.9722,
+                          "Y": 0.023
+                        },
+                        "LeftMargin": 2.5,
+                        "RightMargin": 2.5,
+                        "TopMargin": 77.22,
+                        "BottomMargin": 7.78,
+                        "Tag": 1587,
+                        "ActionTag": 2023021910,
+                        "Size": {
+                          "X": 175.0,
+                          "Y": 2.0
+                        },
+                        "Name": "xian",
+                        "ctype": "SpriteObjectData"
+                      }
+                    ],
+                    "ActionTag": -1523286327,
+                    "Size": {
+                      "X": 180.0,
+                      "Y": 87.0
+                    },
+                    "Name": "Button_guanli",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": -1920106748,
+                "Size": {
+                  "X": 176.0,
+                  "Y": 600.0
+                },
+                "Name": "ListView_left",
+                "ctype": "ListViewObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "A_FriendCard/Record/top_title.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 129,
+                "Scale9OriginY": 22,
+                "Scale9Width": 57,
+                "Scale9Height": 12,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 717.7411,
+                  "Y": 692.5491
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5607,
+                  "Y": 0.9619
+                },
+                "PreSize": {
+                  "X": 0.2461,
+                  "Y": 0.0778
+                },
+                "LeftMargin": 560.2411,
+                "RightMargin": 404.7589,
+                "TopMargin": -0.5491,
+                "BottomMargin": 664.5491,
+                "Tag": 1588,
+                "ActionTag": -205593734,
+                "Size": {
+                  "X": 315.0,
+                  "Y": 56.0
+                },
+                "Name": "Image_title",
+                "ctype": "ImageViewObjectData"
+              }
+            ],
+            "ActionTag": -803733225,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "back",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 0,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 642.9584,
+              "Y": 360.0004
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PrePosition": {
+              "X": 0.5023,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "LeftMargin": 2.9584,
+            "RightMargin": -2.9585,
+            "TopMargin": -0.0004,
+            "BottomMargin": 0.0004,
+            "Tag": 337,
+            "Children": [
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/btn_back.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 20,
+                "Scale9Height": 18,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 83.6583,
+                  "Y": 673.4598
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0654,
+                  "Y": 0.9354
+                },
+                "PreSize": {
+                  "X": 0.0391,
+                  "Y": 0.0556
+                },
+                "LeftMargin": 58.6583,
+                "RightMargin": 1171.3417,
+                "TopMargin": 26.5402,
+                "BottomMargin": 653.4598,
+                "Tag": 1582,
+                "ActionTag": -1606257539,
+                "Size": {
+                  "X": 50.0,
+                  "Y": 40.0
+                },
+                "Name": "btn_close",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "CheckedState": true,
+                "NormalBackFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/checkBox_close.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "NodeNormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/checkBox_open.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 482.7085,
+                  "Y": 570.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3771,
+                  "Y": 0.7917
+                },
+                "PreSize": {
+                  "X": 0.1211,
+                  "Y": 0.0903
+                },
+                "LeftMargin": 405.2085,
+                "RightMargin": 719.7915,
+                "TopMargin": 117.5,
+                "BottomMargin": 537.5,
+                "Tag": 4170,
+                "Children": [
+                  {
+                    "FontSize": 30,
+                    "LabelText": "暂停开房  ",
+                    "FontResource": {
+                      "Type": "Default",
+                      "Path": "",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 82,
+                      "G": 54,
+                      "B": 33
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 265.3954,
+                      "Y": 33.1999
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 182,
+                      "G": 87,
+                      "B": 38
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.7122,
+                      "Y": 0.5108
+                    },
+                    "PreSize": {
+                      "X": 0.9677,
+                      "Y": 0.4615
+                    },
+                    "LeftMargin": 190.3954,
+                    "RightMargin": -185.3954,
+                    "TopMargin": 16.8001,
+                    "BottomMargin": 18.1999,
+                    "Tag": 423,
+                    "ActionTag": -363349793,
+                    "Size": {
+                      "X": 150.0,
+                      "Y": 30.0
+                    },
+                    "Name": "text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -533963143,
+                "Size": {
+                  "X": 155.0,
+                  "Y": 65.0
+                },
+                "Name": "btn_isStopKaiFang",
+                "ctype": "CheckBoxObjectData"
+              },
+              {
+                "CheckedState": true,
+                "NormalBackFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/checkBox_close.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "NodeNormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/checkBox_open.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.443,
+                  "ScaleY": 0.5674
+                },
+                "Position": {
+                  "X": 900.8848,
+                  "Y": 570.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.7038,
+                  "Y": 0.7917
+                },
+                "PreSize": {
+                  "X": 0.1211,
+                  "Y": 0.0903
+                },
+                "LeftMargin": 832.217,
+                "RightMargin": 292.783,
+                "TopMargin": 121.882,
+                "BottomMargin": 533.118,
+                "Tag": 4174,
+                "Children": [
+                  {
+                    "FontSize": 30,
+                    "LabelText": "审核推送  ",
+                    "FontResource": {
+                      "Type": "Default",
+                      "Path": "",
+                      "Plist": ""
+                    },
+                    "OutlineSize": 2,
+                    "OutlineColor": {
+                      "R": 82,
+                      "G": 54,
+                      "B": 33
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 267.9631,
+                      "Y": 32.5
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {
+                      "R": 182,
+                      "G": 87,
+                      "B": 38
+                    },
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.7288,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.9677,
+                      "Y": 0.4615
+                    },
+                    "LeftMargin": 192.9631,
+                    "RightMargin": -187.9631,
+                    "TopMargin": 17.5,
+                    "BottomMargin": 17.5,
+                    "Tag": 4175,
+                    "ActionTag": -1219458070,
+                    "Size": {
+                      "X": 150.0,
+                      "Y": 30.0
+                    },
+                    "Name": "text",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1424219484,
+                "Size": {
+                  "X": 155.0,
+                  "Y": 65.0
+                },
+                "Name": "btn_isShowShenhe",
+                "ctype": "CheckBoxObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/btn_set_n.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 158,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 343.9998,
+                  "Y": 380.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2687,
+                  "Y": 0.5278
+                },
+                "PreSize": {
+                  "X": 0.1469,
+                  "Y": 0.0917
+                },
+                "LeftMargin": 249.9998,
+                "RightMargin": 842.0002,
+                "TopMargin": 307.0,
+                "BottomMargin": 347.0,
+                "Tag": 426,
+                "ActionTag": 508420308,
+                "Size": {
+                  "X": 188.0,
+                  "Y": 66.0
+                },
+                "Name": "btn_set",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/btn_gaojiset_n.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 158,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 610.28,
+                  "Y": 380.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4768,
+                  "Y": 0.5278
+                },
+                "PreSize": {
+                  "X": 0.1469,
+                  "Y": 0.0917
+                },
+                "LeftMargin": 516.28,
+                "RightMargin": 575.72,
+                "TopMargin": 307.0,
+                "BottomMargin": 347.0,
+                "Tag": 427,
+                "ActionTag": 1696344652,
+                "Size": {
+                  "X": 188.0,
+                  "Y": 66.0
+                },
+                "Name": "btn_gaojiSet",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/btn_yaoqing_n.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 158,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 349.9998,
+                  "Y": 220.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2734,
+                  "Y": 0.3056
+                },
+                "PreSize": {
+                  "X": 0.1469,
+                  "Y": 0.0917
+                },
+                "LeftMargin": 255.9998,
+                "RightMargin": 836.0002,
+                "TopMargin": 467.0,
+                "BottomMargin": 187.0,
+                "Tag": 428,
+                "ActionTag": -1945372514,
+                "Size": {
+                  "X": 188.0,
+                  "Y": 66.0
+                },
+                "Name": "btn_yaoqing",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/btn_guanlijilv_n.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 158,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.4657,
+                  "ScaleY": 0.4773
+                },
+                "Position": {
+                  "X": 870.6829,
+                  "Y": 378.5024
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6802,
+                  "Y": 0.5257
+                },
+                "PreSize": {
+                  "X": 0.1469,
+                  "Y": 0.0917
+                },
+                "LeftMargin": 783.1226,
+                "RightMargin": 308.8774,
+                "TopMargin": 307.0,
+                "BottomMargin": 347.0,
+                "Tag": 429,
+                "ActionTag": -1296307005,
+                "Size": {
+                  "X": 188.0,
+                  "Y": 66.0
+                },
+                "Name": "btn_guanli",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/btn_huci_n.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 158,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 1132.4637,
+                  "Y": 380.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8847,
+                  "Y": 0.5278
+                },
+                "PreSize": {
+                  "X": 0.1469,
+                  "Y": 0.0917
+                },
+                "LeftMargin": 1038.4637,
+                "RightMargin": 53.5363,
+                "TopMargin": 307.0,
+                "BottomMargin": 347.0,
+                "Tag": 430,
+                "ActionTag": -1404775616,
+                "Size": {
+                  "X": 188.0,
+                  "Y": 66.0
+                },
+                "Name": "btn_huci",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 797.61,
+                  "Y": 228.81
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6231,
+                  "Y": 0.3178
+                },
+                "PreSize": {
+                  "X": 0.1469,
+                  "Y": 0.0917
+                },
+                "LeftMargin": 703.61,
+                "RightMargin": 388.39,
+                "TopMargin": 458.19,
+                "BottomMargin": 195.81,
+                "Tag": 4176,
+                "ActionTag": -1204851125,
+                "Size": {
+                  "X": 188.0,
+                  "Y": 66.0
+                },
+                "Name": "btn_yaoqingLM",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Guanjia/btn_changeToFangkaClub_n.png",
+                  "Plist": "A_FriendCard/Guanjia.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 158,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 616.6107,
+                  "Y": 220.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4817,
+                  "Y": 0.3056
+                },
+                "PreSize": {
+                  "X": 0.1469,
+                  "Y": 0.0917
+                },
+                "LeftMargin": 522.6107,
+                "RightMargin": 569.3893,
+                "TopMargin": 467.0,
+                "BottomMargin": 187.0,
+                "Tag": 304,
+                "ActionTag": -1807576079,
+                "Size": {
+                  "X": 188.0,
+                  "Y": 66.0
+                },
+                "Name": "btn_changeToFangkaClub",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": -1044375428,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "Panel",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/Guanjia.plist",
+        "A_FriendCard/Guanjia.png",
+        "A_FriendCard/Record/top_title.png",
+        "A_FriendCard/tc_bg.png",
+        "A_FriendCard/tc_bg_nei0.png",
+        "fonts/fzcy.ttf"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

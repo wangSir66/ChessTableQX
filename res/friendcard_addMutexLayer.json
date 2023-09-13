@@ -163,7 +163,7 @@
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/common/img_xiaotanchuang.png",
+                      "Path": "friendCards/img_xiaotanchuang.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 207,
@@ -261,7 +261,7 @@
                     },
                     "NormalFileData": {
                       "Type": "Normal",
-                      "Path": "friendCards/common/btn_x_normal.png",
+                      "Path": "friendCards/btn_x_normal.png",
                       "Plist": ""
                     },
                     "Scale9Enable": true,
@@ -389,9 +389,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -503,9 +503,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -952,9 +952,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -1249,12 +1249,13 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
         "Default/Button_Disable.png",
-        "friendCards/common/btn_x_normal.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_dikuang.png",
         "friendCards/common/img_lianhua.png",
-        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/img_xiaotanchuang.png",
         "friendCards/mutexLayer/btn_queren_n.png",
         "friendCards/mutexLayer/btn_queren_s.png",
         "friendCards/mutexLayer/img_addTitle.png",

@@ -7,13 +7,12 @@
  */
 
 var FriendCard_info = cc.Layer.extend({
-    onExit:function()
-    {
+    onExit: function () {
         this._super();
         FriendCard_Common.reSetRuleParm();
         MjClient.FriendCard_infoUI = null;
     },
-    ctor: function(data,layer,ruleIndex,sourceName) {
+    ctor: function (data, layer, ruleIndex, sourceName) {
         this._super();
         this._parent = layer;
         this._data = data;
@@ -22,26 +21,25 @@ var FriendCard_info = cc.Layer.extend({
         this._ruleBtnNum = FriendCard_Common.getRuleNumber();
         this._sourceName = sourceName;
         this._isMatch = this._data ? (this._data.info.matchIsOpen & 2) : false;
-        this._clubType = this._data ?  this._data.info.type : 0; //房卡俱乐部 普通俱乐部
+        this._clubType = this._data ? this._data.info.type : 0; //房卡俱乐部 普通俱乐部
         // this._clubType = 1; //房卡俱乐部 普通俱乐部
         for (var i = 1; i <= this._ruleBtnNum; i++) {
             MjClient.RuleParam["rule" + i] = null;
         }
 
-        var UI = ccs.load("friendcard_info.json");
+        var UI = ccs.load(res.Friendcard_info_json);
         this.addChild(UI.node);
         MjClient.FriendCard_infoUI = this;
-        
+
 
         var _block = UI.node.getChildByName("block");
         setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
         this.back = UI.node.getChildByName("back");
-        this.initLayer(UI.node,data,layer,ruleIndex,sourceName);
+        this.initLayer(UI.node, data, layer, ruleIndex, sourceName);
         this.initSelectLayer(UI.node);
         //创建俱乐部时
-        if (FriendCard_Common.IsOpenRoomCardPay()) 
-        {
-            if(!this._data && MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ)//永利不需要选择俱乐部类型界面
+        if (FriendCard_Common.IsOpenRoomCardPay()) {
+            if (!this._data && MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ)//永利不需要选择俱乐部类型界面
             {
                 this.switchLayer(2);
                 this._clubType = 1; //直接默认房卡类型;
@@ -52,11 +50,11 @@ var FriendCard_info = cc.Layer.extend({
                 this.switchLayer(2)
             }
         }
-        else{
+        else {
             this.switchLayer(2);
         }
     },
-    updateWanfa:function () {
+    updateWanfa: function () {
         var sumNum = 0;
         var number_1 = 0;
         var pos_num = 0;
@@ -65,18 +63,17 @@ var FriendCard_info = cc.Layer.extend({
         for (var i = 1; i <= this._ruleBtnNum; i++) {
             if (MjClient.RuleParam["rule" + i] && MjClient.RuleParam["rule" + i].ruleName) {
                 var ruleName = unescape(MjClient.RuleParam["rule" + i].ruleName);
-                if(FriendCard_Common.getSkinType() == 3)
-                {
+                if (FriendCard_Common.getSkinType() == 3) {
                     if (ruleName.length > 6) {
                         this["_play_text_" + i].setFontSize(17);
                     }
-                }else if (FriendCard_Common.getSkinType() == 4) {
+                } else if (FriendCard_Common.getSkinType() == 4) {
                     var textName = "";
-                    var middleIndex = parseInt(ruleName.length/2)-1;
+                    var middleIndex = parseInt(ruleName.length / 2) - 1;
                     for (var j = 0; j < ruleName.length; j++) {
-                        if (j == middleIndex){
+                        if (j == middleIndex) {
                             textName = textName + ruleName.charAt(j) + "\n";
-                        }else{
+                        } else {
                             textName = textName + ruleName.charAt(j);
                         }
                     }
@@ -84,23 +81,19 @@ var FriendCard_info = cc.Layer.extend({
                 }
                 else if (ruleName.length > 6) {
                     this["_play_text_" + i].setFontSize(18);
-                }else if(ruleName.length > 5){
+                } else if (ruleName.length > 5) {
                     this["_play_text_" + i].setFontSize(25);
                 }
                 this["_play_text_" + i].setString(ruleName);
                 this["btton_" + i].visible = true;
-                if(FriendCard_Common.getSkinType() == 4){
-                    this["btton_" + i].loadTextureNormal("friendCards/info/btn_rule_n.png");
-                }else{
-                    this["btton_" + i].loadTextures("friendCards/info/btn_rule_n.png","friendCards/info/btn_rule_s.png");
-                }
+                this["btton_" + i].loadTextures("A_FriendCard/Setting/btn_rule_n.png", "A_FriendCard/Setting/btn_rule_s.png", "A_FriendCard/Setting/btn_rule_s.png", 1);
                 this["_play_text_" + i].visible = true;
                 this["btton_" + i].pos = ++pos_num;
                 this.Play_table.push(i);
                 sumNum++;
             }
-            if (MjClient.RuleParam["rule" + i] == "delete" ) {
-                this["_play_text_" + i].setString("玩法" +i);
+            if (MjClient.RuleParam["rule" + i] == "delete") {
+                this["_play_text_" + i].setString("玩法" + i);
                 this["btton_" + i].visible = false;
             }
         }
@@ -114,7 +107,7 @@ var FriendCard_info = cc.Layer.extend({
                 //var number = this["btton_" + j].pos;
                 //this["btton_" + j].setPosition(this["btn_pos_" + number]);
                 this["btton_" + j].setPosition(this["btton_" + j].tempP);
-            }else{
+            } else {
                 this.noPlay_table_2.push(j);
                 this["btton_" + j].visible = false;
                 this["btton_" + j].setPosition(this["btn_pos_" + (++sumNum)]);
@@ -131,61 +124,53 @@ var FriendCard_info = cc.Layer.extend({
             this["_play_text_" + number_2].visible = false;
             this["btton_" + number_2].setPosition(this["btn_pos_" + pos_num]);
             this["btton_" + number_2].tempP = this["btn_pos_" + pos_num]
-            if(FriendCard_Common.getSkinType() == 4){
-                this["btton_" + number_2].loadTextureNormal("friendCards/info/btn_addRule_n.png");
-            }else{
-                this["btton_" + number_2].loadTextures("friendCards/info/btn_addRule_n.png","friendCards/info/btn_addRule_s.png");
-            }
-        }else{
-            if(!this._data){
+            this["btton_" + number_2].loadTextures("A_FriendCard/Setting/btn_addRule_n.png", "A_FriendCard/Setting/btn_addRule_s.png", "A_FriendCard/Setting/btn_addRule_s.png", 1);
+        } else {
+            if (!this._data) {
                 this["btton_" + 1].isAddButton = true;
                 this["btton_" + 1].visible = true;
                 buttonAdd = this["btton_" + 1];
                 this["_play_text_" + 1].visible = false;
                 this["btton_" + 1].setPosition(this["btn_pos_" + 1]);
                 this["btton_" + 1].tempP = this["btn_pos_" + 1]
-                if(FriendCard_Common.getSkinType() == 4){
-                    this["btton_" + 1].loadTextureNormal("friendCards/info/btn_addRule_n.png");
-                }else{
-                    this["btton_" + 1].loadTextures("friendCards/info/btn_addRule_n.png","friendCards/info/btn_addRule_s.png");
-                }
+                this["btton_" + 1].loadTextures("A_FriendCard/Setting/btn_addRule_n.png", "A_FriendCard/Setting/btn_addRule_s.png", "A_FriendCard/Setting/btn_addRule_s.png", 1);
                 this._btn_setPlay.visible = false;// 为了更精准的定位到第一个添加按钮位置， 不再使用这个按钮 下个版本优化将直接丢弃
             }
         }
         //先隐藏，排序
 
-        this.wanfaBtns.sort(function(a, b) {
+        this.wanfaBtns.sort(function (a, b) {
             if (!b.visible) return -1;
             if (!a.visible) return 1;
             if (b.isAddButton) return -1;
             if (a.isAddButton) return 1;
-            if(a.y > b.y){
+            if (a.y > b.y) {
                 return -1;
-            }else if (a.y == b.y){
-                return a.x < b.x ? -1:1;
-            }else{
+            } else if (a.y == b.y) {
+                return a.x < b.x ? -1 : 1;
+            } else {
                 return 1;
             }
         })
         var visibleWanfaSize = this.Play_table.length
         for (var j = 0; j < visibleWanfaSize; j++) {
-            this.wanfaBtns[j].setPosition(this["btn_pos_"+(j+1)]);
-            this.wanfaBtns[j].tempP = this["btn_pos_"+(j+1)];
+            this.wanfaBtns[j].setPosition(this["btn_pos_" + (j + 1)]);
+            this.wanfaBtns[j].tempP = this["btn_pos_" + (j + 1)];
         }
-        if(buttonAdd){
-            this.wanfaBtns[visibleWanfaSize].setPosition(this["btn_pos_"+(visibleWanfaSize+1)]);
-            this.wanfaBtns[visibleWanfaSize].tempP = this["btn_pos_"+(visibleWanfaSize+1)];
+        if (buttonAdd) {
+            this.wanfaBtns[visibleWanfaSize].setPosition(this["btn_pos_" + (visibleWanfaSize + 1)]);
+            this.wanfaBtns[visibleWanfaSize].tempP = this["btn_pos_" + (visibleWanfaSize + 1)];
         }
-        for (var j = visibleWanfaSize+1; j < this._ruleBtnNum; j++) {
-            this.wanfaBtns[j].setPosition(this["btn_pos_"+(j+1)]);
-            this.wanfaBtns[j].tempP = this["btn_pos_"+(j+1)];
+        for (var j = visibleWanfaSize + 1; j < this._ruleBtnNum; j++) {
+            this.wanfaBtns[j].setPosition(this["btn_pos_" + (j + 1)]);
+            this.wanfaBtns[j].tempP = this["btn_pos_" + (j + 1)];
         }
-        this.wanfaBtns.sort(function(a, b) {
-            if(a.y > b.y){
+        this.wanfaBtns.sort(function (a, b) {
+            if (a.y > b.y) {
                 return -1;
-            }else if (a.y == b.y){
-                return a.x < b.x ? -1:1;
-            }else{
+            } else if (a.y == b.y) {
+                return a.x < b.x ? -1 : 1;
+            } else {
                 return 1;
             }
         })
@@ -194,22 +179,22 @@ var FriendCard_info = cc.Layer.extend({
             this.xuhaoImgs[j].visible = true;
         }
         for (var j = visibleWanfaSize; j < this._ruleBtnNum; j++) {
-            if(!this.xuhaoImgs[j]) break;
+            if (!this.xuhaoImgs[j]) break;
             this.xuhaoImgs[j].visible = false;
         }
     },
-    reqStop: function(createSwitch,clubId) {
+    reqStop: function (createSwitch, clubId) {
         var that = this;
         MjClient.block();
         MjClient.gamenet.request("pkplayer.handler.clubUpdate", {
-                createSwitch:createSwitch,
-                clubId:clubId
-            },
-            function(rtn) {
+            createSwitch: createSwitch,
+            clubId: clubId
+        },
+            function (rtn) {
                 MjClient.unblock();
                 if (rtn.message) {
                     MjClient.showToast(rtn.message);
-                    if (cc.sys.isObjectValid(that)){
+                    if (cc.sys.isObjectValid(that)) {
                         that.removeFromParent();
                     }
                 } else {
@@ -218,11 +203,11 @@ var FriendCard_info = cc.Layer.extend({
             }
         );
     },
-    reqJiesan: function(clubId) {
+    reqJiesan: function (clubId) {
         var that = this;
         MjClient.block();
-        MjClient.gamenet.request("pkplayer.handler.clubDestroy", {clubId:clubId},
-            function(rtn) {
+        MjClient.gamenet.request("pkplayer.handler.clubDestroy", { clubId: clubId },
+            function (rtn) {
                 MjClient.unblock();
                 if (rtn.code == 0) {
                     if (cc.sys.isObjectValid(that)) {
@@ -240,29 +225,29 @@ var FriendCard_info = cc.Layer.extend({
             }
         );
     },
-    reqCreate: function(param, ruleParam) {
+    reqCreate: function (param, ruleParam) {
         var that = this;
-        var param_2 = this.compareChange(param,ruleParam,true);
+        var param_2 = this.compareChange(param, ruleParam, true);
 
         var sendInfo = this.getSendInfo(param_2.new_param);
         sendInfo["type"] = this._clubType ? 1 : 0;
 
-        if(FriendCard_Common.isOpenChangeYejiMode() && this._clubType){
+        if (FriendCard_Common.isOpenChangeYejiMode() && this._clubType) {
             sendInfo["kpiMode"] = 1
         }
         MjClient.block();
         MjClient.gamenet.request("pkplayer.handler.clubCreate", sendInfo,
-            function(rtn) {
+            function (rtn) {
                 MjClient.unblock();
                 if (rtn.code == 0) {
                     if (MjClient.FriendCard_main_ui)
-                        postEvent("friendCard_clubListUpdate", {clubId: rtn.data ? rtn.data.clubId : null});
+                        postEvent("friendCard_clubListUpdate", { clubId: rtn.data ? rtn.data.clubId : null });
                     else
                         MjClient.Scene.addChild(new FriendCard_main(rtn.data.clubId));
                     if (cc.sys.isObjectValid(that))
                         that.removeFromParent();
 
-                    MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Qinyouquan_cetan_Chuangjianqinyouquan_Chuangjian_Chenggong", {uid:SelfUid()});
+                    MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Qinyouquan_cetan_Chuangjianqinyouquan_Chuangjian_Chenggong", { uid: SelfUid() });
                 } else {
                     if (rtn.message) {
                         MjClient.showToast(rtn.message);
@@ -276,9 +261,8 @@ var FriendCard_info = cc.Layer.extend({
         );
     },
     //如果设置自主开房,将不传其他参数
-    getSendInfo:function(param)
-    {
-        var noDelInfo = ["gameType", "maxPlayer", "round", "payWay", "customInfo", "isFangzuobi", "convertible", "ruleName","fangkaSource","fangkaCount","fangkaFree","fangkaExtra"];
+    getSendInfo: function (param) {
+        var noDelInfo = ["gameType", "maxPlayer", "round", "payWay", "customInfo", "isFangzuobi", "convertible", "ruleName", "fangkaSource", "fangkaCount", "fangkaFree", "fangkaExtra"];
         for (var i = 1; i <= this._ruleBtnNum; i++) {
             if (param["rule" + i] && param["rule" + i].customInfo == true) {
                 for (var info in param["rule" + i]) {
@@ -290,9 +274,9 @@ var FriendCard_info = cc.Layer.extend({
         }
         return param;
     },
-    reqChange: function(clubId,param, ruleParam) {
+    reqChange: function (clubId, param, ruleParam) {
         var that = this;
-        var param_2 = this.compareChange(param,ruleParam);
+        var param_2 = this.compareChange(param, ruleParam);
 
         if (!param_2.isChange) {
             if (!param.isRemain)
@@ -307,7 +291,7 @@ var FriendCard_info = cc.Layer.extend({
 
         MjClient.block();
         MjClient.gamenet.request("pkplayer.handler.clubUpdate", sendInfo,
-            function(rtn) {
+            function (rtn) {
                 MjClient.unblock();
                 if (rtn.message) {
                     MjClient.showToast(rtn.message);
@@ -323,15 +307,15 @@ var FriendCard_info = cc.Layer.extend({
         );
     },
     //对比改变
-    compareChange:function(param, ruleParam,isCreate){
+    compareChange: function (param, ruleParam, isCreate) {
         cc.log(" ===== 对比改变 +++++");
         var new_param = {};
         var isChange = false;
         param.title = escape(FriendCard_Common.strReplace(param.title));
         param.notice = escape(FriendCard_Common.strReplace(param.notice));
-        
-        if(this.play_isArrearage && this.play_isArrearage.visible){
-            param.isArrearage = this.play_isArrearage.isSelected() ? 1 :0;
+
+        if (this.play_isArrearage && this.play_isArrearage.visible) {
+            param.isArrearage = this.play_isArrearage.isSelected() ? 1 : 0;
             param.isArrearage = 0;
         }
 
@@ -341,7 +325,7 @@ var FriendCard_info = cc.Layer.extend({
                 new_param["rule" + i] = ruleParam["rule" + i];
                 isChange = true;
             }
-        }else{
+        } else {
             if (!param.isRemain) {
                 for (var key in param) {
                     if (param[key] != this._data.info[key] && (this._data.info[key] == 0 || this._data.info[key])) {
@@ -349,8 +333,8 @@ var FriendCard_info = cc.Layer.extend({
                         isChange = true;
                     }
                 }
-                for(var i = 1; i <= this._ruleBtnNum; i++){
-                    if(JSON.stringify(ruleParam["rule" + i] || "") != JSON.stringify(this._data.info["rule" + i] || "")){
+                for (var i = 1; i <= this._ruleBtnNum; i++) {
+                    if (JSON.stringify(ruleParam["rule" + i] || "") != JSON.stringify(this._data.info["rule" + i] || "")) {
                         new_param["rule" + i] = ruleParam["rule" + i];
                         isChange = true;
                     }
@@ -364,7 +348,7 @@ var FriendCard_info = cc.Layer.extend({
                         isChange = true;
                     } else if (!this._data.info["rule" + number] && ruleParam["rule" + number] == "delete") {
                         // 添加新的玩法的时候，并没有保存而是删除本来就没有的玩法
-                        return {new_param:new_param,isChange:isChange};
+                        return { new_param: new_param, isChange: isChange };
                     } else {
                         if (JSON.stringify(ruleParam["rule" + number]) != JSON.stringify(this._data.info["rule" + number])) {
                             new_param["rule" + number] = ruleParam["rule" + number];
@@ -373,7 +357,7 @@ var FriendCard_info = cc.Layer.extend({
                     }
                 } else {
                     for (var i = 1; i <= this._ruleBtnNum; i++) {
-                        if(JSON.stringify(ruleParam["rule" + i] || "") != JSON.stringify(this._data.info["rule" + i] || "")){
+                        if (JSON.stringify(ruleParam["rule" + i] || "") != JSON.stringify(this._data.info["rule" + i] || "")) {
                             new_param["rule" + i] = ruleParam["rule" + i];
                             isChange = true;
                         }
@@ -381,26 +365,26 @@ var FriendCard_info = cc.Layer.extend({
                 }
             }
         }
-        
-        return {new_param:new_param,isChange:isChange};
+
+        return { new_param: new_param, isChange: isChange };
     },
-    initSelectLayer: function(node) {
+    initSelectLayer: function (node) {
         var back_selectType = node.getChildByName("back_selectType")
         if (!back_selectType) return;
         this._back_selectType = back_selectType;
-        setWgtLayout(back_selectType,[0.5055,0.5472],[0.5,0.5],[0,0]);
+        setWgtLayout(back_selectType, [0.5055, 0.5472], [0.5, 0.5], [0, 0]);
         for (var i = 0; i < 2; i++) {
             var btn = back_selectType.getChildByName("btn_type" + i)
             btn.selType = i;
-            btn.addTouchEventListener(function(sender, type) {
+            btn.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
                     this._clubType = sender.selType;
                     this.switchLayer(2)
-                }  
+                }
             }, this);
         }
-        var btn_close =  back_selectType.getChildByName("btn_close")
-        btn_close.addTouchEventListener(function(sender, type) {
+        var btn_close = back_selectType.getChildByName("btn_close")
+        btn_close.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 this.removeFromParent();
             }
@@ -408,7 +392,7 @@ var FriendCard_info = cc.Layer.extend({
     },
     //index = 1 创建俱乐部 打开选择俱乐部类型
     //index = 2 打开俱乐部设置
-    switchLayer: function(index) {
+    switchLayer: function (index) {
         if (index == 1) {
             this._back.visible = false;
             this._back_selectType.visible = true;
@@ -422,24 +406,23 @@ var FriendCard_info = cc.Layer.extend({
         }
         this.playIsArrearage();
     },
-    playIsArrearage: function() {
+    playIsArrearage: function () {
         //允许欠一次房卡  
-        if(this.play_isArrearage)
-        {
-             this.play_isArrearage.visible = this._clubType == 1;
-             this.play_isArrearage.setSelected(this._data && this._data.info.isArrearage);
-             return
+        if (this.play_isArrearage) {
+            this.play_isArrearage.visible = this._clubType == 1;
+            this.play_isArrearage.setSelected(this._data && this._data.info.isArrearage);
+            return
         }
         this.play_isArrearage = this.back.getChildByName("play_isArrearage");
-        
+
         if (this.play_isArrearage) {
             this.play_isArrearage.getChildByName("text").ignoreContentAdaptWithSize(true);
             this.play_isArrearage.getChildByName("text").setString("允许0钻石试玩一次");
-            if(FriendCard_Common.getSkinType() == 3){
+            if (FriendCard_Common.getSkinType() == 3) {
                 this.play_isArrearage.x -= 50;
             }
             this.play_isArrearage.setSelected(this._data && this._data.info.isArrearage);
-            this.play_isArrearage.getChildByName("text").addTouchEventListener(function(sender, type) {
+            this.play_isArrearage.getChildByName("text").addTouchEventListener(function (sender, type) {
                 if (type == 2)
                     this.play_isArrearage.setSelected(!this.play_isArrearage.isSelected());
             }, this);
@@ -447,7 +430,8 @@ var FriendCard_info = cc.Layer.extend({
             this.play_isArrearage.visible = false;
         }
     },
-    initLayer: function(node, data, layer, ruleIndex, sourceName) {
+    initLayer: function (node, data, layer, ruleIndex, sourceName) {
+        MjClient.block();
         var that = this;
         var _back = node.getChildByName("back");
         this._back = _back;
@@ -456,7 +440,7 @@ var FriendCard_info = cc.Layer.extend({
 
         this._node_1 = _back.getChildByName("Node_1");
         var _close = _back.getChildByName("close");
-        _close.addTouchEventListener(function(sender, type) {
+        _close.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Qinyouquan_cetan_Chuangjianqinyouquan_Guanbi", {
                     uid: SelfUid()
@@ -467,23 +451,23 @@ var FriendCard_info = cc.Layer.extend({
         closeBtnAddLight(_close);
 
         var _btn_jiesan = this._node_1.getChildByName("btn_jiesan");
-        if (data && data.info.creator && MjClient.data.pinfo.uid == data.info.creator) 
-         _btn_jiesan.setVisible(true);
+        if (data && data.info.creator && MjClient.data.pinfo.uid == data.info.creator)
+            _btn_jiesan.setVisible(true);
         else
-         _btn_jiesan.setVisible(false);
+            _btn_jiesan.setVisible(false);
 
         _btn_jiesan.visible = false; //产品需求 先将解散俱乐部屏蔽
-        
-        _btn_jiesan.addTouchEventListener(function(sender, type) {
+
+        _btn_jiesan.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 var uiPara = {}
                 uiPara.msg = "解散亲友圈后，数据不可恢复，\n请慎重操作！";
-                uiPara.yes = function() {
-                    that.reqJiesan(data.info.clubId);  
+                uiPara.yes = function () {
+                    that.reqJiesan(data.info.clubId);
                 }
-                uiPara.no = function() {
+                uiPara.no = function () {
                 }
-                uiPara.close = function() {
+                uiPara.close = function () {
                 }
                 MjClient.FriendCard_main_ui.addChild(new Friendcard_popUpMeg(uiPara))
             }
@@ -518,13 +502,13 @@ var FriendCard_info = cc.Layer.extend({
 
         this._textNotice.setString("请遵守法律法规，健康游戏，禁止赌博！");
         this._textNotice.setTouchEnabled(false);
-        this.editBoxEditingDidBegin = function(editBox) {
+        this.editBoxEditingDidBegin = function (editBox) {
 
         }.bind(this);
-        this.editBoxEditingDidEnd = function(editBox) {
+        this.editBoxEditingDidEnd = function (editBox) {
 
         }.bind(this);
-        this.editBoxTextChanged = function(editBox, text) {
+        this.editBoxTextChanged = function (editBox, text) {
             var result = stringLengthForMysql(editBox.getString(), FriendCard_Common.FRIEND_NOTICE_MAX_LENGTH * 3);
             if (result.len > FriendCard_Common.FRIEND_NOTICE_MAX_LENGTH * 3) {
                 editBox.setString(result.txt);
@@ -532,7 +516,7 @@ var FriendCard_info = cc.Layer.extend({
             }
         }.bind(this);
 
-        this.editBoxReturn = function(editBox) {
+        this.editBoxReturn = function (editBox) {
 
         }.bind(this);
         this._textNotice.setDelegate(this);
@@ -550,13 +534,11 @@ var FriendCard_info = cc.Layer.extend({
         this._node_2 = _back.getChildByName("Node_2");
         //描述
         var text_desc = this._node_2.getChildByName("Text_0");
-        text_desc.setString("最多配置"+this._ruleBtnNum+"种玩法，拖动玩法按钮可以修改排序");
-        this._textRule = this._node_2.getChildByName("Text_rule");
-        this._textRule.setString("");
+        text_desc.setString("最多配置" + this._ruleBtnNum + "种玩法，拖动玩法按钮可以修改排序");
         this._btnScrollView = this._node_2.getChildByName("ScrollView_1");
         this._btn_setPlay = this._btnScrollView.getChildByName("Button_setPlay");
         this._btn_setPlay.visible = false;// 联盟里面 可以完全不用 这个 按钮了
-        this._btn_setPlay.addTouchEventListener(function(sender, type) {
+        this._btn_setPlay.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 if (that._sourceName != "addRule") {
                     MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Shezhi_Tianjiawanfa", {
@@ -576,16 +558,14 @@ var FriendCard_info = cc.Layer.extend({
                     ruleNumer: number,
                     ruleName: ruleName,
                     clubType: that._clubType,
-                    isMatch:that._isMatch,
+                    isMatch: that._isMatch,
                 });
             }
         });
-
-
         var wanfaBtns = [];
         this.wanfaBtns = wanfaBtns;
         this.xuhaoImgs = [];
-        var onTouchListerer = function(sender, type) {
+        var onTouchListerer = function (sender, type) {
             if (type == 0) {
                 sender.beginTime = new Date().getTime();
             } else if (type == 2 || type == 3) {
@@ -615,7 +595,7 @@ var FriendCard_info = cc.Layer.extend({
                     ruleName: ruleName,
                     clubType: that._clubType,
                     isShowLibertyCreRoom: isShowLibertyCreRoom,
-                    isMatch:that._isMatch,
+                    isMatch: that._isMatch,
                 });
             }
         };
@@ -624,113 +604,120 @@ var FriendCard_info = cc.Layer.extend({
         var _xuhao = this._btnScrollView.getChildByName("xuhao_1");
         _xuhao.visible = false;
 
-        var hang = Math.ceil(this._ruleBtnNum/2);
-        this._diliverHieght = _wanfaBtn.height/ 5 ;
+        var hang = Math.ceil(this._ruleBtnNum / 2);
+        this._diliverHieght = _wanfaBtn.height / 5;
         this._wanfaItemHeight = _wanfaBtn.height;
-        var totalHeight = hang * this._wanfaItemHeight + (hang-1) * this._diliverHieght + 50;
+        var totalHeight = hang * this._wanfaItemHeight + (hang - 1) * this._diliverHieght + 50;
         this._btnScrollView.setInnerContainerSize(cc.size(this._btnScrollView.width, totalHeight));
-
-        for (var i = 1; i <= this._ruleBtnNum; i++) {
-            var wanfaBtn = _wanfaBtn.clone();
-            var xuhao = _xuhao.clone();
-            wanfaBtn.visible = true;
-            xuhao.visible = true;
-            xuhao.getChildByName("Text").setString(i);
-            var _posXw = i % 2 == 1 ? 126 : 326;
-            var _posXx = i % 2 == 1 ? 30 : 230;
-            var _posY = totalHeight - this._wanfaItemHeight * Math.ceil(i / 2) - (Math.ceil(i / 2)-1) * this._diliverHieght;
-
-            wanfaBtn.setPosition(cc.p(_posXw, _posY));
-            xuhao.setPosition(cc.p(_posXx, _posY));
-            
-            this._btnScrollView.addChild(wanfaBtn);
-            this._btnScrollView.addChild(xuhao);
-            this.xuhaoImgs.push(xuhao);
-
-            this["btton_" + i] = wanfaBtn;
-            wanfaBtns.push(wanfaBtn);
-            this["btton_" + i].visible = false;
-            this["_play_text_" + i] = this["btton_" + i].getChildByName("Text");
-            this["btton_" + i].wanFaIndex = i;
-
-            
-            this["btton_" + i].addTouchEventListener(onTouchListerer);
-            if (typeof(ruleIndex) != "undefined" && ruleIndex == i) {
-                this.setVisible(false);
-                this.runAction(cc.sequence(cc.delayTime(0.02), cc.callFunc(function() {
-                    that.setVisible(true);
-                    postEvent("createRoom", {
-                        IsFriendCard: true,
-                        ruleNumer: ruleIndex,
-                        ruleName: data && data.info["rule" + ruleIndex] ? data.info["rule" + ruleIndex].ruleName : "",
-                        clubType: that._clubType,
-                        isMatch:that._isMatch,
-                    });
-                })));
+        let endFun = () => {
+            //初始化玩法的位置，保证横排y相等，竖排x相等。这个位置会影响wanfaBtns的排序
+            for (var i = 1; i <= this._ruleBtnNum; i++) {
+                this["btn_pos_" + i] = wanfaBtns[(i - 1)].getPosition();
             }
-            if (data) {
-                if (data.info["rule" + i] && data.info["rule" + i].ruleName) {
-                    var ruleName = unescape(data.info["rule" + i].ruleName);
-
-                    if (FriendCard_Common.getSkinType() == 3) {
-                        if (ruleName.length > 6) {
-                            this["_play_text_" + i].setFontSize(17);
-                        }
-                    }else if (FriendCard_Common.getSkinType() == 4) {
-                        var textName = "";
-                        var middleIndex = parseInt(ruleName.length/2)-1;
-                        for (var j = 0; j < ruleName.length; j++) {
-                            if (j == middleIndex){
-                                textName = textName + ruleName.charAt(j) + "\n";
-                            }else{
-                                textName = textName + ruleName.charAt(j);
-                            }
-                        }
-                        ruleName = textName;
-                    } else if (ruleName.length > 6) {
-                        this["_play_text_" + i].setFontSize(18);
-                    }else if(ruleName.length > 5){
-                        this["_play_text_" + i].setFontSize(25);
+            for (var i = 1; i <= this._ruleBtnNum; i++) {
+                if (i % 2 == 0) {
+                    this["btn_pos_" + i].y = this["btn_pos_" + (i - 1)].y;
+                    if (this["btn_pos_" + (i - 2)]) {
+                        this["btn_pos_" + i].x = this["btn_pos_" + (i - 2)].x;
                     }
-                    this["_play_text_" + i].setString(ruleName);
-                    MjClient.RuleParam["rule" + i] = data.info["rule" + i];
+                } else {
+                    if (this["btn_pos_" + (i - 2)]) {
+                        this["btn_pos_" + i].x = this["btn_pos_" + (i - 2)].x;
+                    }
                 }
-            } else {
-                MjClient.RuleParam["rule" + i] = null;
+                this.wanfaBtns[i - 1].setPosition(this["btn_pos_" + i]);
+                this.wanfaBtns[i - 1].tempP = this["btn_pos_" + i];
+            }
+            this.updateWanfa();
+            MjClient.unblock();
+        }
+        for (var _inx = 1; _inx <= this._ruleBtnNum; _inx++) {
+            let i = _inx;
+            setTimeout(() => {
+                var wanfaBtn = _wanfaBtn.clone();
+                var xuhao = _xuhao.clone();
+                wanfaBtn.visible = false;
+                xuhao.visible = false;
+                xuhao.getChildByName("Text").setString(i);
+                var _posXw = i % 2 == 1 ? 126 : 326;
+                var _posXx = i % 2 == 1 ? 30 : 230;
+                var _posY = totalHeight - this._wanfaItemHeight * Math.ceil(i / 2) - (Math.ceil(i / 2) - 1) * this._diliverHieght;
+
+                wanfaBtn.setPosition(cc.p(_posXw, _posY));
+                xuhao.setPosition(cc.p(_posXx, _posY));
+
+                this._btnScrollView.addChild(wanfaBtn);
+                this._btnScrollView.addChild(xuhao);
+                this.xuhaoImgs.push(xuhao);
+
+                this["btton_" + i] = wanfaBtn;
+                wanfaBtns.push(wanfaBtn);
                 this["btton_" + i].visible = false;
-            }
-        }
-        //初始化玩法的位置，保证横排y相等，竖排x相等。这个位置会影响wanfaBtns的排序
-        for (var i = 1; i <= this._ruleBtnNum; i++) {
-            this["btn_pos_" + i] = wanfaBtns[(i - 1)].getPosition();
-        }
-        for (var i = 1; i <= this._ruleBtnNum; i++) {
-            if (i % 2 == 0) {
-                this["btn_pos_" + i].y = this["btn_pos_" + (i - 1)].y;
-                if (this["btn_pos_" + (i - 2)]) {
-                    this["btn_pos_" + i].x = this["btn_pos_" + (i - 2)].x;
+                this["_play_text_" + i] = this["btton_" + i].getChildByName("Text");
+                this["btton_" + i].wanFaIndex = i;
+
+
+                this["btton_" + i].addTouchEventListener(onTouchListerer);
+                if (typeof (ruleIndex) != "undefined" && ruleIndex == i) {
+                    this.setVisible(false);
+                    this.runAction(cc.sequence(cc.delayTime(0.02), cc.callFunc(function () {
+                        that.setVisible(true);
+                        postEvent("createRoom", {
+                            IsFriendCard: true,
+                            ruleNumer: ruleIndex,
+                            ruleName: data && data.info["rule" + ruleIndex] ? data.info["rule" + ruleIndex].ruleName : "",
+                            clubType: that._clubType,
+                            isMatch: that._isMatch,
+                        });
+                    })));
                 }
-            } else {
-                if (this["btn_pos_" + (i - 2)]) {
-                    this["btn_pos_" + i].x = this["btn_pos_" + (i - 2)].x;
+                if (data) {
+                    if (data.info["rule" + i] && data.info["rule" + i].ruleName) {
+                        var ruleName = unescape(data.info["rule" + i].ruleName);
+
+                        if (FriendCard_Common.getSkinType() == 3) {
+                            if (ruleName.length > 6) {
+                                this["_play_text_" + i].setFontSize(17);
+                            }
+                        } else if (FriendCard_Common.getSkinType() == 4) {
+                            var textName = "";
+                            var middleIndex = parseInt(ruleName.length / 2) - 1;
+                            for (var j = 0; j < ruleName.length; j++) {
+                                if (j == middleIndex) {
+                                    textName = textName + ruleName.charAt(j) + "\n";
+                                } else {
+                                    textName = textName + ruleName.charAt(j);
+                                }
+                            }
+                            ruleName = textName;
+                        } else if (ruleName.length > 6) {
+                            this["_play_text_" + i].setFontSize(18);
+                        } else if (ruleName.length > 5) {
+                            this["_play_text_" + i].setFontSize(25);
+                        }
+                        this["_play_text_" + i].setString(ruleName);
+                        MjClient.RuleParam["rule" + i] = data.info["rule" + i];
+                    }
+                } else {
+                    MjClient.RuleParam["rule" + i] = null;
+                    this["btton_" + i].visible = false;
                 }
-            }
-            this.wanfaBtns[i - 1].setPosition(this["btn_pos_" + i]);
-            this.wanfaBtns[i - 1].tempP = this["btn_pos_" + i];
+                if (i === this._ruleBtnNum) endFun();
+            }, 100 * i);
         }
-        this.updateWanfa();
-        UIEventBind(null, this, "friend_room_info_change", function(clubId) {
+
+        UIEventBind(null, this, "friend_room_info_change", function (clubId) {
             that.updateWanfa();
         });
 
-        UIEventBind(null, this, "retainRule", function(clubId) {
-            if (typeof(ruleIndex) != "undefined") {
+        UIEventBind(null, this, "retainRule", function (clubId) {
+            if (typeof (ruleIndex) != "undefined") {
                 cc.log("---立即更新玩法---")
                 this.onAchieve();
             }
         });
-        UIEventBind(null, this, "createRoomPanel_Close", function(clubId) {
-            if (typeof(ruleIndex) != "undefined") {
+        UIEventBind(null, this, "createRoomPanel_Close", function (clubId) {
+            if (typeof (ruleIndex) != "undefined") {
                 cc.log("---更新玩法 close---")
                 this.removeFromParent();
             }
@@ -738,21 +725,13 @@ var FriendCard_info = cc.Layer.extend({
 
         var _btn_achieve = this._node_2.getChildByName("btn_achieve");
         if (data && data.info.creator) {
-            if(FriendCard_Common.getSkinType() == 4){
-                _btn_achieve.loadTextureNormal("friendCards/info/btn_save_n.png");
-            }else{
-                _btn_achieve.loadTextures("friendCards/info/btn_save_n.png", "friendCards/info/btn_save_s.png", "friendCards/info/btn_save_s.png");
-            }
+            _btn_achieve.loadTextures("A_FriendCard/Setting/btn_save_n.png", "A_FriendCard/Setting/btn_save_s.png", "A_FriendCard/Setting/btn_save_s.png", 1);
         } else {
-            if(FriendCard_Common.getSkinType() == 4){
-                _btn_achieve.loadTextureNormal("friendCards/info/btn_chuangjian_n.png");
-            }else{
-                _btn_achieve.loadTextures("friendCards/info/btn_chuangjian_n.png", "friendCards/info/btn_chuangjian_s.png", "friendCards/info/btn_chuangjian_s.png");
-            }
+            _btn_achieve.loadTextures("A_FriendCard/Setting/btn_chuangjian_n.png", "A_FriendCard/Setting/btn_chuangjian_s.png", "A_FriendCard/Setting/btn_chuangjian_s.png", 1);
         }
         var param = {};
 
-        var onAchieve = function(type) {
+        var onAchieve = function (type) {
             that.updateWanfa();
             var _txt = that._textName.getString();
             _txt = _txt.replace(/\n/g, "");
@@ -768,7 +747,7 @@ var FriendCard_info = cc.Layer.extend({
                 if (data) {
                     if (MjClient.RuleParam["rule" + i] != "delete") {
                         if ((MjClient.RuleParam["rule" + i] &&
-                                MjClient.RuleParam["rule" + i] != "") || (data.info["rule" + i] &&
+                            MjClient.RuleParam["rule" + i] != "") || (data.info["rule" + i] &&
                                 data.info["rule" + i] != "" && data.info["rule" + i] != "delete")) {
                             is_noPlay = true;
                         }
@@ -807,7 +786,7 @@ var FriendCard_info = cc.Layer.extend({
             }
         }
         this.onAchieve = onAchieve;
-        _btn_achieve.addTouchEventListener(function(sender, type) {
+        _btn_achieve.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 if (that._sourceName == "addRule")
                     MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Tianjiawanfa_Baocun", {
@@ -828,7 +807,7 @@ var FriendCard_info = cc.Layer.extend({
             if (that.isDeleteMoveRuleMode) {
                 return;
             }
-            wanfaBtns.sort(function(a, b) {
+            wanfaBtns.sort(function (a, b) {
                 if (a.y > b.y) {
                     return -1;
                 } else if (a.y == b.y) {
@@ -845,15 +824,15 @@ var FriendCard_info = cc.Layer.extend({
         var listViewPos = that._btnScrollView.getPosition();
         listViewPos.x = listViewPos.x - (that._btnScrollView.getAnchorPoint().x - 0.5) * that._btnScrollView.width;
         listViewPos.y = listViewPos.y - (that._btnScrollView.getAnchorPoint().y - 0.5) * that._btnScrollView.height;
-        var listBottomP = that._btnScrollView.getParent().convertToWorldSpace(cc.p(listViewPos.x,listViewPos.y - that._btnScrollView.height/2));
-        var listTopP = that._btnScrollView.getParent().convertToWorldSpace(cc.p(listViewPos.x,listViewPos.y + that._btnScrollView.height/2));
+        var listBottomP = that._btnScrollView.getParent().convertToWorldSpace(cc.p(listViewPos.x, listViewPos.y - that._btnScrollView.height / 2));
+        var listTopP = that._btnScrollView.getParent().convertToWorldSpace(cc.p(listViewPos.x, listViewPos.y + that._btnScrollView.height / 2));
         function getTouchListener() {
             var curIndex = -1;
             var curCloneItem = null;
             var ret = {
                 event: cc.EventListener.TOUCH_ONE_BY_ONE,
                 swallowTouches: false,
-                onTouchBegan: function(touch, event) {
+                onTouchBegan: function (touch, event) {
                     //防止多点触摸异常
 
                     if (curIndex != -1 && curCloneItem) {
@@ -882,7 +861,7 @@ var FriendCard_info = cc.Layer.extend({
 
                     return curIndex != -1;
                 },
-                onTouchMoved: function(touch, event) {
+                onTouchMoved: function (touch, event) {
                     cc.log("onTouchMoved friend info");
                     if (curIndex == -1) {
                         return;
@@ -905,7 +884,7 @@ var FriendCard_info = cc.Layer.extend({
                         p.x < wanfaBtns[0].tempP.x - wanfaBtns[0].width / 2 - 30 || p.x > wanfaBtns[that._ruleBtnNum - 1].tempP.x + wanfaBtns[that._ruleBtnNum - 1].height / 2 + 30) {
                         //cc.log("onTouchMoved friend info can not move");
                         return;
-                    } 
+                    }
                     //找到最近的目标
                     var distance = -1;
                     var moveToIndex = -1;
@@ -933,11 +912,11 @@ var FriendCard_info = cc.Layer.extend({
                         wanfaBtns[curIndex].setPosition(wanfaBtns[curIndex].tempP);
                         wanfaBtns[moveToIndex].tempP = tempP;
 
-                        wanfaBtns[moveToIndex].runAction(cc.sequence(moveAction, cc.callFunc(function() {
+                        wanfaBtns[moveToIndex].runAction(cc.sequence(moveAction, cc.callFunc(function () {
                             that.canMoveWanfaItem = true;
                         })));
                         //这里用用tempP，因为有0.3秒的动画
-                        wanfaBtns.sort(function(a, b) {
+                        wanfaBtns.sort(function (a, b) {
                             if (a.tempP.y > b.tempP.y) {
                                 return -1;
                             } else if (a.tempP.y == b.tempP.y) {
@@ -949,24 +928,24 @@ var FriendCard_info = cc.Layer.extend({
                         curIndex = moveToIndex;
                     }
 
-                    if(moveToIndex > -1){
+                    if (moveToIndex > -1) {
                         var oneItemtime = 0.3;//画过1个item要0.5秒
                         var nowP = touch.getLocation();
-                        var row = parseInt(wanfaBtns.length/2) + wanfaBtns.length%2;
-                        var curRow = parseInt(moveToIndex/2) + moveToIndex%2;
-                        if(nowP.y - listBottomP.y < 20){//滑到列表低（不是指最后一个）
-                            that._btnScrollView.scrollToBottom(oneItemtime * (row - curRow),false);
-                        }else if(listTopP.y - nowP.y < 20){//滑到列表顶（不是指第一个）
-                            that._btnScrollView.scrollToTop(oneItemtime * (curRow + 1),false);
-                        }else{
+                        var row = parseInt(wanfaBtns.length / 2) + wanfaBtns.length % 2;
+                        var curRow = parseInt(moveToIndex / 2) + moveToIndex % 2;
+                        if (nowP.y - listBottomP.y < 20) {//滑到列表低（不是指最后一个）
+                            that._btnScrollView.scrollToBottom(oneItemtime * (row - curRow), false);
+                        } else if (listTopP.y - nowP.y < 20) {//滑到列表顶（不是指第一个）
+                            that._btnScrollView.scrollToTop(oneItemtime * (curRow + 1), false);
+                        } else {
                             that._btnScrollView.stopAutoScroll();
                         }
-                    }else{
+                    } else {
                         that._btnScrollView.stopAutoScroll();
                     }
 
                 },
-                onTouchEnded: function(touch, event) {
+                onTouchEnded: function (touch, event) {
                     if (curCloneItem && curIndex > -1) {
                         wanfaBtns[curIndex].setPosition(curCloneItem.getPosition());
                         wanfaBtns[curIndex].visible = true;
@@ -976,7 +955,7 @@ var FriendCard_info = cc.Layer.extend({
                         curCloneItem = null;
                         that.canMoveWanfaItem = false;
                         var moveAction = cc.moveTo(0.3, wanfaBtns[curIndex].tempP);
-                        wanfaBtns[curIndex].runAction(cc.sequence(moveAction, cc.callFunc(function() {
+                        wanfaBtns[curIndex].runAction(cc.sequence(moveAction, cc.callFunc(function () {
                             that.canMoveWanfaItem = true;
                         })));
                     }
@@ -984,7 +963,7 @@ var FriendCard_info = cc.Layer.extend({
                     that._btnScrollView.setTouchEnabled(true);
                     that._btnScrollView.stopAutoScroll();
                 },
-                onTouchCancelled: function(touch, event) {
+                onTouchCancelled: function (touch, event) {
                     ret.onTouchEnded(touch, event);
                     that._btnScrollView.setTouchEnabled(true);
                     that._btnScrollView.stopAutoScroll();

@@ -392,9 +392,9 @@
               },
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 22,
@@ -1132,9 +1132,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 96,
@@ -1397,29 +1397,29 @@
                   },
                   {
                     "NormalBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_gou.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/img_gou.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -1478,7 +1478,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -1622,14 +1622,16 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "friendCards/common/btn_chebox_fang.png",
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/GaojiSet.plist",
+        "A_FriendCard/GaojiSet.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/btn_ok_n.png",
         "friendCards/common/btn_ok_s.png",
-        "friendCards/common/btn_x_normal.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_gou.png",
-        "friendCards/common/img_hengxian.png",
         "friendCards/mian_rule/blackList/btn_add_club_n.png",
         "friendCards/mian_rule/blackList/btn_add_club_s.png",
         "friendCards/mian_rule/blackList/btn_add_group_n.png",

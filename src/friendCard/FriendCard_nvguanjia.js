@@ -10,17 +10,16 @@ var Friendcard_nvguanjia = cc.Layer.extend({
         this.ruleIndex = data.ruleIndex || 0
         this.data = data.data || null;
         this.isCreator = data.isCreator;
-        var node = ccs.load("friendcard_nvguanjia.json").node;
+        var node = ccs.load(res.Friendcard_nvguanjia_json).node;
         this.addChild(node);
         this.node = node;
+        MjClient.FriendCard_GuanjiaUI = this;
 
         this.panel = node.getChildByName("Panel");
         setWgtLayout(node.getChildByName("Image_di"), [1, 1], [0.5, 0.5], [0, 0], true);
         setWgtLayout(node.getChildByName("Panel"), [1, 1], [0.5, 0.5], [0, 0]);
 
         this.initNvguanjiaLayer();
-        popupAnm(this.panel)
-
     },
     initNvguanjiaLayer:function(){
         var that = this;
@@ -31,13 +30,6 @@ var Friendcard_nvguanjia = cc.Layer.extend({
         var btn_huci = this.panel.getChildByName("btn_huci");
         var btn_yaoqingLM = this.panel.getChildByName("btn_yaoqingLM");
         var btn_changeToFangkaClub = this.panel.getChildByName("btn_changeToFangkaClub");
-
-        if(FriendCard_Common.getSkinType() == 3){
-            var img_heye = this.panel.getChildByName("img_heye");
-            var starParticle2 =  new cc.ParticleSystem("Particle/qipao.plist");
-            starParticle2.setPosition(img_heye.getContentSize().width/2, img_heye.getContentSize().height/2 - 20);
-            img_heye.addChild(starParticle2);
-        }
         
         var btn_isStopKaiFang = this.panel.getChildByName("btn_isStopKaiFang");
         var btn_isShowShenhe = this.panel.getChildByName("btn_isShowShenhe");
@@ -105,36 +97,6 @@ var Friendcard_nvguanjia = cc.Layer.extend({
             }
         }, this); 
         
-        var btn_isHideClub = this.panel.getChildByName("btn_isHideClub");
-        if(btn_isHideClub){
-            btn_isHideClub.setSelected(false)
-            btn_isHideClub.setTouchEnabled(false);
-            if (this.data && this.data.info.clubHideStatus == 1) {
-                btn_isHideClub.setSelected(true);
-                btn_isHideClub.setTouchEnabled(true);
-            }
-            else if (this.data && this.data.info.clubHideStatus == 0) {
-                btn_isHideClub.setTouchEnabled(true);
-            }else if (this.data && this.data.info.clubHideStatus == 2) {
-                btn_isHideClub.visible = false;
-                btn_isStopKaiFang.x += 60;
-                btn_isShowShenhe.x -= 60;
-            }
-            if(!this.isCreator && btn_isHideClub.visible){
-                btn_isHideClub.visible = false;
-                btn_isStopKaiFang.x += 60;
-                btn_isShowShenhe.x -= 60;
-            }
-            btn_isHideClub.addTouchEventListener(function(sender, type){
-                if (type == 2)
-                {
-                    btn_isHideClub.runAction(cc.sequence(cc.delayTime(0.1), cc.callFunc(function(){
-                        var clubHideStatus = btn_isHideClub.isSelected() ? 1 : 0 ;
-                        that.reqHideClub(clubHideStatus,that.clubId);
-                    })));
-                }
-            }, this); 
-        }
         this.panel.getChildByName("btn_close").addTouchEventListener(function(sender, type){
             if (type == 2)
             {

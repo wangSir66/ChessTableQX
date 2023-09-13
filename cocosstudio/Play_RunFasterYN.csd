@@ -1999,7 +1999,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="TG_CountDown" ActionTag="-821231980" Tag="512" IconVisible="False" LeftMargin="105.7233" RightMargin="261.2767" TopMargin="769.6122" BottomMargin="-92.6123" LeftEage="301" RightEage="301" TopEage="14" BottomEage="14" Scale9OriginX="301" Scale9OriginY="14" Scale9Width="311" Scale9Height="15" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="TG_CountDown" ActionTag="-821231980" Tag="512" IconVisible="False" LeftMargin="105.7233" RightMargin="261.2767" TopMargin="769.6123" BottomMargin="-92.6123" LeftEage="301" RightEage="301" TopEage="14" BottomEage="14" Scale9OriginX="301" Scale9OriginY="14" Scale9Width="311" Scale9Height="15" ctype="ImageViewObjectData">
             <Size X="913.0000" Y="43.0000" />
             <Children>
               <AbstractNodeData Name="lb" ActionTag="-370302204" Tag="513" IconVisible="False" LeftMargin="157.0000" RightMargin="158.0000" TopMargin="9.0000" BottomMargin="8.0000" FontSize="26" LabelText="有玩家正在思考中，  秒后该玩家将进入托管状态！" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">

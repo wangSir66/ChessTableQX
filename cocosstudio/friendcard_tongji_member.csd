@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.8781" Y="0.9569" />
-                <FileData Type="Normal" Path="friendCards/common/img_datanchuang.png" Plist="" />
+                <FileData Type="Normal" Path="friendCards/img_datanchuang.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="Image_di" ActionTag="-1695796142" Tag="2834" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="54.0000" RightMargin="54.0000" TopMargin="171.6000" BottomMargin="128.4000" TouchEnable="True" Scale9Enable="True" LeftEage="16" RightEage="16" TopEage="16" BottomEage="16" Scale9OriginX="16" Scale9OriginY="16" Scale9Width="1140" Scale9Height="445" ctype="ImageViewObjectData">
                 <Size X="1172.0000" Y="420.0000" />
@@ -140,7 +140,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0444" />
                     <PreSize X="0.9600" Y="0.0444" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Text_name" ActionTag="-1760876301" Tag="1795" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="85.0000" RightMargin="1036.0000" TopMargin="9.0000" BottomMargin="9.0000" FontSize="24" LabelText="玩家" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="51.0000" Y="27.0000" />
@@ -262,7 +262,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0256" />
                     <PreSize X="0.9600" Y="0.0256" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image_head" ActionTag="1241060634" Tag="1786" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="24.0000" RightMargin="1076.0000" TopMargin="3.0000" BottomMargin="3.0000" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="44" Scale9Height="44" ctype="ImageViewObjectData">
                     <Size X="72.0000" Y="72.0000" />
@@ -409,7 +409,7 @@
                 <PrePosition X="0.9180" Y="0.9399" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -483,7 +483,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.8959" Y="0.5000" />
                     <PreSize X="0.1229" Y="0.4205" />
-                    <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Button_next_date" ActionTag="1199869406" Tag="2421" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1133.0000" RightMargin="5.0000" TopMargin="27.0000" BottomMargin="27.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="4" Scale9Height="12" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="34.0000" Y="34.0000" />
