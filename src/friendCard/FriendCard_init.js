@@ -38,14 +38,39 @@ FriendCard_Common.resetRuleNameLen = function (ruleName) {
 
 //重置玩法规则，修复进入玩法设置的bug
 FriendCard_Common.reSetRuleParm = function () {
-    var infoData = FriendCard_Common.getClubInfo();
-    for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {
-        if (infoData["rule" + i] && infoData["rule" + i].ruleName) {
-            MjClient.RuleParam["rule" + i] = infoData["rule" + i];
-        } else {
-            MjClient.RuleParam["rule" + i] = null;
+    var infoData = FriendCard_Common.getClubInfo(),
+        keys = Object.keys(infoData).filter(k => k.indexOf('rule') > -1 && !!infoData[k] && k != 'ruleSwitch'),
+        _indx = 0,
+        key = keys[_indx],
+        rule = infoData[key];
+    while (rule) {
+        if (rule != "delete") {
+            let rIndx = Number(key.replace('rule', ''));
+            rule.ruleIndex = rIndx;
+            MjClient.RuleParam[key] = rule;
         }
+        key = keys[++_indx];
+        rule = infoData[key];
     }
+}
+//重置玩法规则，修复进入玩法设置的bug
+FriendCard_Common.getRuleParm = function (infoData) {
+    var keys = Object.keys(infoData).filter(k => k.indexOf('rule') > -1 && !!infoData[k] && k != 'ruleSwitch'),
+        _indx = 0,
+        key = keys[_indx],
+        rule = infoData[key],
+        rules = [];
+    while (rule) {
+        if (rule != "delete") {
+            let rIndx = Number(key.replace('rule', ''));
+            rule.ruleIndex = rIndx;
+            rule._index = rIndx;
+            rules.push(rule);
+        }
+        key = keys[++_indx];
+        rule = infoData[key];
+    }
+    return rules;
 }
 
 /*
@@ -1078,7 +1103,7 @@ FriendCard_Common.getGameCalssType = function (gameType) {
 
 //得到当前app俱乐部是几个玩法
 FriendCard_Common.getRuleNumber = function () {
-    return 30;
+    return 50;
 };
 
 //俱乐部弹窗
@@ -2775,36 +2800,12 @@ FriendCard_Common.bottomBtnSort = function (that, arr) {
 FriendCard_Common.initBottom = function (allBtns, par) {
     var that = MjClient.FriendCard_main_ui;
     var _btnList = par ? par : that._image_bottom.getChildByName("btnList");
-    var skinType = FriendCard_Common.getSkinType()
-    var btnAddLight = function (btn) {
-        if (skinType != 3) return;
-        if (btn.getChildByName("light")) return;
-
-        var light = new cc.Sprite("friendCards/main/btn_xuanzhong.png");
-        light.setPosition(btn.getContentSize().width / 2, btn.getContentSize().height / 2);
-        light.setName("light")
-        btn.addChild(light, -1);
-    }
-    var btnDelLight = function (btn) {
-        if (skinType != 3) return;
-
-        if (btn.getChildByName("light")) {
-            btn.getChildByName("light").removeFromParent(true);
-        }
-    }
-
-
-
 
     // 邀请加入按钮
     if (allBtns.indexOf("_btn_yaoqing") >= 0) {
         that._btn_yaoqing = _btnList.getChildByName("btn_yaoqing");
         that._btn_yaoqing.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
 
                 that.addChild(new FriendCard_yaoqing(that.data, that.ruleIndex));
@@ -2875,17 +2876,11 @@ FriendCard_Common.initBottom = function (allBtns, par) {
         }, that);
     }
 
-
-
     // 房间记录按钮
     if (allBtns.indexOf("_btn_record") >= 0) {
         that._btn_record = _btnList.getChildByName("btn_record");
         that._btn_record.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 // 俱乐部返回大厅功能：by_jcw
                 // 查看房间记录前先离开未离开的房间
                 FriendCard_Common.leaveGame();
@@ -2903,11 +2898,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_record2") >= 0) {
         that._btn_record2 = _btnList.getChildByName("btn_record2");
         that._btn_record2.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 // 俱乐部返回大厅功能：by_jcw
                 // 查看战绩前先离开未离开的房间
                 FriendCard_Common.leaveGame();
@@ -2924,11 +2915,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_member") >= 0) {
         that._btn_member = _btnList.getChildByName("btn_member");
         that._btn_member.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Chengyuan", {
                     uid: SelfUid()
@@ -2946,11 +2933,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_setting") >= 0) {
         that._btn_setting = _btnList.getChildByName("btn_setting");
         that._btn_setting.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Shezhi", {
                     uid: SelfUid()
                 });
@@ -2968,11 +2951,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_tongji") >= 0) {
         that._btn_tongji = _btnList.getChildByName("btn_tongji");
         that._btn_tongji.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
 
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Tongji", {
@@ -2993,11 +2972,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_rule") >= 0) {
         that._btn_rule = _btnList.getChildByName("btn_rule");
         that._btn_rule.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
 
                 if (that.data.info.matchIsOpen & 2) {
@@ -3015,11 +2990,6 @@ FriendCard_Common.initBottom = function (allBtns, par) {
         that.btn_gonggao = _btnList.getChildByName("btn_gonggao");
         that.gonggao_image_point = that.btn_gonggao.getChildByName("Image_point");
         that.btn_gonggao.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            }
             if (type == 2) {
                 that.closeClubList();
 
@@ -3042,12 +3012,6 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_agentBtn") >= 0) {
         that._agentBtn = _btnList.getChildByName("btn_daili");
         that._agentBtn.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            }
-
             if (type != 2)
                 return;
             that.closeClubList();
@@ -3063,11 +3027,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_setSkin") >= 0) {
         that._btn_setSkin = _btnList.getChildByName("btn_setSkin");
         that._btn_setSkin.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
 
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_setSkin", {
@@ -3092,8 +3052,6 @@ FriendCard_Common.initBottom = function (allBtns, par) {
             });
         }
     }
-
-
 
     if (allBtns.indexOf("_btn_match") >= 0) {
         that._btn_match = _btnList.getChildByName("btn_match");
@@ -3129,6 +3087,35 @@ FriendCard_Common.initBottom = function (allBtns, par) {
         }
     }
 
+    if (allBtns.indexOf("_btn_shaixuan") >= 0) {
+        //个人商城点击
+        that._btn_shaixuan = _btnList.getChildByName("btn_shaixuan");
+        if (that._btn_shaixuan) {
+            that._btn_shaixuan.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    that.addChild(new FriendCardSelectWay(that));
+                }
+            });
+        }
+    }
+    if (allBtns.indexOf('_btn_guanli') > -1) {//女管家
+        var isShow=  that.isManager();
+        that.img_nvguanjia = _btnList.getChildByName("btn_guanli");
+        that.img_nvguanjia.visible = isShow;
+        that.img_nvguanjia.addTouchEventListener(function (sender, type) {
+            if (type == 2) {
+                that.closeClubList();
+                if (that.isManager()) {
+                    var data = {};
+                    data.data = that.data;
+                    data.clubId = that.clubId;
+                    data.ruleIndex = that.ruleIndex;
+                    data.isCreator = that.isCreator();
+                    that.addChild(new Friendcard_nvguanjia(data));
+                }
+            }
+        }, that);
+    }
 
     //按钮位置
     if (!that.bottomBtnsPos) {
@@ -3424,13 +3411,9 @@ return  true 显示桌子
 */
 FriendCard_Common.isShowTable = function (that) {
     if ((that.data.info.useClose == 1 && FriendCard_Common.isInDaYangTime()) && that.data.info.isShowTable == 0 && that.data.info.createSwitch != 0 && !that.isManager()) {
+        cc.log(1212121)
         that._img_stop.setVisible(false);
-        that.listView_table.removeAllItems();
-        var textNode = that._node_desk.getChildByName("text_isShowZhuozi");
-        if (textNode) {
-            textNode.visible = true;
-            textNode.ignoreContentAdaptWithSize(true);
-        }
+        that.listView_table.removeAllChildren();
         return false;
     }
 
@@ -3479,7 +3462,6 @@ FriendCard_Common.removeClub = function (that, clubId) {
 */
 FriendCard_Common.tipCheck = function (that) {
     that._imgPoint.visible = false;
-    that._imgtext.visible = false;
 
     if (that.data.info.createSwitch == 0)
         return;
@@ -4169,7 +4151,7 @@ FriendCard_Common.createCommonBtn = function (params) {
     var button = new ccui.Button(
         params.resArr[0] ? params.resArr[0] : "friendCards/common/btn_common_n.png",
         params.resArr[1] ? params.resArr[1] : null,
-        params.resArr[2] ? params.resArr[2] : null);
+        params.resArr[2] ? params.resArr[2] : null, params.type || 0);
     button.setTitleText(params.text);
     button.setTitleColor(cc.color(params.color))
     button.setTitleFontSize(params.fontSize);

@@ -1,0 +1,21 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="Setting" Type="Plist" ID="affe1d87-708c-4dd8-b3a4-a654fe919e1c" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_FriendCard/Setting/btn_addRule_n.png" />
+      <FilePathData Path="A_FriendCard/Setting/btn_addRule_s.png" />
+      <FilePathData Path="A_FriendCard/Setting/btn_chuangjian_n.png" />
+      <FilePathData Path="A_FriendCard/Setting/btn_chuangjian_s.png" />
+      <FilePathData Path="A_FriendCard/Setting/btn_rule_n.png" />
+      <FilePathData Path="A_FriendCard/Setting/btn_rule_s.png" />
+      <FilePathData Path="A_FriendCard/Setting/btn_save_n.png" />
+      <FilePathData Path="A_FriendCard/Setting/btn_save_s.png" />
+      <FilePathData Path="A_FriendCard/Setting/img_bg.png" />
+      <FilePathData Path="A_FriendCard/Setting/img_di.png" />
+      <FilePathData Path="A_FriendCard/Setting/img_di1.png" />
+      <FilePathData Path="A_FriendCard/Setting/img_jieshan.png" />
+      <FilePathData Path="A_FriendCard/Setting/img_wanfaguize.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

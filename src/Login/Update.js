@@ -489,27 +489,20 @@ UpdateView = cc.Layer.extend({
 
 
         var _back = updateui.node.getChildByName("back");
-        var _warnText = updateui.node.getChildByName("warn_text");
-        if (_warnText) _warnText.ignoreContentAdaptWithSize(true);
         setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0], true);
         var textLoad = _back.getChildByName("load_percent");
-        var textWarn = _back.getChildByName("warn_text");
         var barbk = _back.getChildByName("barbk");
         var bgMask = _back.getChildByName("bg_mask");
-        if (textWarn) textWarn.ignoreContentAdaptWithSize(true);
-        setWgtLayout(barbk, [1, 1], [0.5, 0.17], [0, 0], false, true);
         setWgtLayout(bgMask, [1, 1], [0.5, 0], [0, 0], false, true);
-        setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.14], [0, 0], false, true);
-        setWgtLayout(textWarn, [0.9, 0.9], [0.5, 0.05], [0, 0], false, true);
+        setWgtLayout(barbk, [1, 1], [0.5, 0.1], [0, 0], false, true);
+        setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.07], [0, 0], false, true);
         if (isIPhoneX()) {
-            setWgtLayout(barbk, [1, 1], [0.5, 0.19], [0, 0], false, true);
-            setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.15], [0, 0], false, true);
+            setWgtLayout(barbk, [1, 1], [0.5, 0.12], [0, 0], false, true);
+            setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.9], [0, 0], false, true);
         }
-
-        var _load_percent = _back.getChildByName("load_percent");
-        _load_percent.ignoreContentAdaptWithSize(true);
+        textLoad.ignoreContentAdaptWithSize(true);
         var jindu = 0;
-        _load_percent.runAction(cc.repeatForever(cc.sequence(cc.callFunc(function () {
+        textLoad.runAction(cc.repeatForever(cc.sequence(cc.callFunc(function () {
             jindu++;
             var dot = "";
             switch (jindu) {
@@ -526,12 +519,12 @@ UpdateView = cc.Layer.extend({
                     dot = ""
                     break;
             }
-            _load_percent.setString("网络连接中请稍后" + dot);
+            textLoad.setString("网络连接中请稍后" + dot);
             if (jindu > 3) {
                 jindu = 0;
             }
         }), cc.delayTime(40 / 100))));
-        this.load_percentNode = _load_percent;
+        this.load_percentNode = textLoad;
 
         var barbk = updateui.node.getChildByName("back").getChildByName("barbk");
         this.lightNode = barbk.getChildByName("light");

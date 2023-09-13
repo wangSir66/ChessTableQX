@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5407" />
                 <PreSize X="0.8524" Y="0.4402" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="Button_save" ActionTag="508080479" Tag="185" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="211.5367" RightMargin="207.4633" TopMargin="306.0000" BottomMargin="24.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="208" Scale9Height="66" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="238.0000" Y="88.0000" />
@@ -56,7 +56,7 @@
                 <PrePosition X="0.9853" Y="0.9793" />
                 <PreSize X="0.1157" Y="0.1818" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

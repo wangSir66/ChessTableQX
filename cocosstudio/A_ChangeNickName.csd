@@ -58,7 +58,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5558" Y="0.5375" />
                     <PreSize X="0.5416" Y="0.1786" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/CM_inputbox.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -67,7 +67,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5010" Y="0.5341" />
                 <PreSize X="0.9384" Y="0.6222" />
-                <FileData Type="MarkedSubImage" Path="A_Common/universalBottom.png" Plist="A_Common/Common.plist" />
+                <FileData Type="MarkedSubImage" Path="A_Common/Main/universalBottom.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="btn_sure" ActionTag="-1518066754" Tag="493" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="271.5000" RightMargin="271.5000" TopMargin="358.5000" BottomMargin="24.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="157" Scale9Height="45" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="187.0000" Y="67.0000" />
@@ -80,7 +80,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3209" Y="0.4776" />
                     <PreSize X="0.1497" Y="0.4776" />
-                    <FileData Type="MarkedSubImage" Path="A_Common/que_l.png" Plist="A_Common/Common.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Common/Main/que_l.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_0" ActionTag="-1331864740" Tag="495" IconVisible="False" LeftMargin="112.5000" RightMargin="45.5000" TopMargin="19.5000" BottomMargin="16.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="5" Scale9Height="5" ctype="ImageViewObjectData">
                     <Size X="29.0000" Y="31.0000" />
@@ -90,7 +90,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.6791" Y="0.4776" />
                     <PreSize X="0.1551" Y="0.4627" />
-                    <FileData Type="MarkedSubImage" Path="A_Common/ren_l.png" Plist="A_Common/Common.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Common/Main/ren_l.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -100,8 +100,8 @@
                 <PrePosition X="0.5000" Y="0.1289" />
                 <PreSize X="0.2562" Y="0.1489" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="MarkedSubImage" Path="A_Common/yellow-button.png" Plist="A_Common/Common.plist" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Common/yellow-button.png" Plist="A_Common/Common.plist" />
+                <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/yellow-button.png" Plist="A_Common/Common.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/yellow-button.png" Plist="A_Common/Common.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -114,7 +114,7 @@
                 <PrePosition X="0.9546" Y="0.9293" />
                 <PreSize X="0.0671" Y="0.1089" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Common/btnclose.png" Plist="A_Common/Common.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/btnclose.png" Plist="A_Common/Common.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -125,7 +125,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.5703" Y="0.6250" />
-            <FileData Type="MarkedSubImage" Path="A_Common/pop_bg_small.png" Plist="A_Common/Common.plist" />
+            <FileData Type="MarkedSubImage" Path="A_Common/Main/pop_bg_small.png" Plist="A_Common/Common.plist" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

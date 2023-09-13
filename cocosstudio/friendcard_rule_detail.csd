@@ -62,7 +62,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.6200" />
                 <PreSize X="0.6336" Y="0.0014" />
-                <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="Text_rule_name" ActionTag="791875877" Tag="719" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="503.5000" RightMargin="503.5000" TopMargin="199.0000" BottomMargin="487.0000" FontSize="30" LabelText="玩法1:(2020)跑得快" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="273.0000" Y="34.0000" />
@@ -111,7 +111,7 @@
                 <PrePosition X="0.8682" Y="0.8874" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

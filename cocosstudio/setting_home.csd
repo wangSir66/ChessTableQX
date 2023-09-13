@@ -248,11 +248,11 @@
               </AbstractNodeData>
               <AbstractNodeData Name="SwitchAccount" ActionTag="-1396506490" Tag="226" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="434.1200" RightMargin="166.8800" TopMargin="457.0000" BottomMargin="28.0000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="155" Scale9Height="42" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="185.0000" Y="64.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="526.6200" Y="60.0000" />
+                <AnchorPoint ScaleX="0.4571" ScaleY="0.5175" />
+                <Position X="518.6897" Y="61.1214" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.6700" Y="0.1093" />
+                <PrePosition X="0.6599" Y="0.1113" />
                 <PreSize X="0.2354" Y="0.1166" />
                 <TextColor A="255" R="65" G="65" B="70" />
                 <NormalFileData Type="Normal" Path="setting/setting_home/btn_switch.png" Plist="" />

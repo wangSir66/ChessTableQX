@@ -75,7 +75,7 @@
           {
             "FileData": {
               "Type": "MarkedSubImage",
-              "Path": "A_Common/pop_bg_small.png",
+              "Path": "A_Common/Main/pop_bg_small.png",
               "Plist": "A_Common/Common.plist"
             },
             "Scale9Enable": true,
@@ -142,9 +142,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/yong_t.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -187,9 +187,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/hu_t.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -232,9 +232,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/xie_t.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -277,9 +277,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/yi_t.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -339,7 +339,7 @@
                 },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/btnclose.png",
+                  "Path": "A_Common/Main/btnclose.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,
@@ -397,7 +397,7 @@
               {
                 "FileData": {
                   "Type": "MarkedSubImage",
-                  "Path": "A_Common/universalBottom.png",
+                  "Path": "A_Common/Main/universalBottom.png",
                   "Plist": "A_Common/Common.plist"
                 },
                 "Scale9Enable": true,
@@ -520,8 +520,7 @@
       "UsedResources": [
         "A_Common/Common.plist",
         "A_Common/Common.png",
-        "A_Login/Login.plist",
-        "A_Login/Login.png"
+        "Default/ImageFile.png"
       ],
       "ctype": "GameFileData"
     }

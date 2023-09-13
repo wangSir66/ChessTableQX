@@ -75,7 +75,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "friendCards/common/img_xiaotanchuang.png",
+              "Path": "friendCards/img_xiaotanchuang.png",
               "Plist": ""
             },
             "Scale9OriginX": 207,
@@ -466,7 +466,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -539,8 +539,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/btn_x_normal.png",
+        "friendCards/img_xiaotanchuang.png",
         "friendCards/tongji/img_title.png",
         "friendCards/tongji/rank/btn_confirm_set2_n.png",
         "friendCards/tongji/rank/btn_confirm_set2_s.png",

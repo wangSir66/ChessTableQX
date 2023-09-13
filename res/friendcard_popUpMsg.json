@@ -249,7 +249,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -438,11 +438,11 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
+        "friendCards/btn_x_normal.png",
         "friendCards/common/btn_no_n.png",
         "friendCards/common/btn_no_s.png",
         "friendCards/common/btn_ok_n.png",
         "friendCards/common/btn_ok_s.png",
-        "friendCards/common/btn_x_normal.png",
         "friendCards/common/img_title.png",
         "friendCards/common/img_zhongtanchuang.png"
       ],

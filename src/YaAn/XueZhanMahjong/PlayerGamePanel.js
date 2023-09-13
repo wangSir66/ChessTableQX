@@ -600,7 +600,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
             _run: function () {
                 //roundnumImgObj = this;
                 MjClient.roundnumImgNode = this;
-                setWgtLayout(this, [0.1, 0.1], [0.5, 0.5], [-1.2, 0.8]);
+                setWgtLayout(this, [0.1, 0.1], [0.5, 0.5], [0.95, 0.55]);
             },
             _event: {
                 initSceneData: function (eD) {
@@ -640,7 +640,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         cardNumImg: {
             _run: function () {
                 MjClient.cardNumImgNode = this;
-                setWgtLayout(this, [0.1, 0.1], [0.5, 0.5], [1.2, 0.8]);
+                setWgtLayout(this, [0.1, 0.1], [0.5, 0.5], [-0.95, 0.55]);
             },
             _event: {
                 initSceneData: function (eD) {
@@ -746,7 +746,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         gameName: {
             _visible: false,
             _layout: [
-                [0.20, 0.20],
+                [0.12, 0.12],
                 [0.5, 0.62],
                 [0, 1.0]
             ],
@@ -3151,8 +3151,8 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         },
         block_tuoguan: {
             _layout: [
-                [1, 1],
-                [0.5, 0.5],
+                [1, 0],
+                [0.5, 0],
                 [0, 0],
                 true
             ],
@@ -3181,12 +3181,15 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                     }
                 },
                 initSceneData: function (msg) {
-                    // var pl = getUIPlayer(0);
-                    // if(pl.trust){
-                    //     this.visible = true;
-                    // }else {
-                    //     this.visible = false;
-                    // }
+                    var pl = getUIPlayer(0);
+                    if(pl.trust){
+                        this.visible = true;
+                    }else {
+                        this.visible = false;
+                    }
+                },
+                roundEnd: function () {
+                    this.visible = false;
                 }
             }
         },
@@ -3263,7 +3266,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                         var self = this;
                         self.unscheduleAllCallbacks();
                         this.schedule(function () {
-                            self.setString(tipCountDown);
                             if (tipCountDown > 0) {
                                 tipCountDown--;
                             } else {

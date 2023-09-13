@@ -1180,12 +1180,12 @@
                 "ShadowOffsetY": -2.0,
                 "TouchEnable": true,
                 "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
+                  "ScaleX": 0.4571,
+                  "ScaleY": 0.5175
                 },
                 "Position": {
-                  "X": 526.62,
-                  "Y": 60.0
+                  "X": 518.6897,
+                  "Y": 61.1214
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1195,8 +1195,8 @@
                 "IconVisible": false,
                 "PositionPercentXEnabled": true,
                 "PrePosition": {
-                  "X": 0.67,
-                  "Y": 0.1093
+                  "X": 0.6599,
+                  "Y": 0.1113
                 },
                 "PreSize": {
                   "X": 0.2354,

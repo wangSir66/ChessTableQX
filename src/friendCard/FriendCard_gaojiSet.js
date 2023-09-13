@@ -7,7 +7,7 @@ var Friendcard_gaojiSet = cc.Layer.extend({
         this._super();
         this.clubId = clubId;
         this.data = data || null;
-        var node = ccs.load("friendcard_gaojiSet.json").node;
+        var node = ccs.load(res.Friendcard_gaojiSet_json).node;
         this.addChild(node);
         this.node = node;
         this.panel = node.getChildByName("Panel");
@@ -266,10 +266,11 @@ var Friendcard_gaojiSet = cc.Layer.extend({
 
 		//是否显示桌子
 		this.play_isNoShowTable = Image_title.getChildByName("play_isNoShowTable");
-		this.play_isNoShowTable.getChildByName("text").addTouchEventListener(function(sender, type) {
-			if (type == 2)
-				that.play_isNoShowTable.setSelected(!that.play_isNoShowTable.isSelected());
-		}, this);
+		this.play_isNoShowTable.visible = false;
+		// this.play_isNoShowTable.getChildByName("text").addTouchEventListener(function(sender, type) {
+		// 	if (type == 2)
+		// 		that.play_isNoShowTable.setSelected(!that.play_isNoShowTable.isSelected());
+		// }, this);
 
 
 		//牌桌是否禁用攻击表情

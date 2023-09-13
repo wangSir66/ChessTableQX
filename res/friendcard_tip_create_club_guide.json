@@ -170,7 +170,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -486,9 +486,9 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "friendCards/btn_x_normal.png",
         "friendCards/common/btn_gotoKefu_n.png",
         "friendCards/common/btn_gotoKefu_s.png",
-        "friendCards/common/btn_x_normal.png",
         "friendCards/common/img_tongyong.png",
         "friendCards/main/image_kefu.png"
       ],

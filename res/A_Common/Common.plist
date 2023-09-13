@@ -4,10 +4,10 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>A_Common/btnclose.png</key>
+			<key>A_Common/Main/btnclose.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{720,98},{59,59}}</string>
+				<string>{{794,98},{59,59}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -15,7 +15,7 @@
 				<key>sourceSize</key>
 				<string>{59,59}</string>
 			</dict>
-			<key>A_Common/pop_bg_small.png</key>
+			<key>A_Common/Main/pop_bg_small.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{2,2},{714,470}}</string>
@@ -26,7 +26,7 @@
 				<key>sourceSize</key>
 				<string>{714,470}</string>
 			</dict>
-			<key>A_Common/universalBottom.png</key>
+			<key>A_Common/Main/universalBottom.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{720,2},{148,92}}</string>
@@ -37,10 +37,10 @@
 				<key>sourceSize</key>
 				<string>{148,92}</string>
 			</dict>
-			<key>A_Common/circle_1.png</key>
+			<key>A_Common/Main/circle_1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{979,106},{36,37}}</string>
+				<string>{{935,227},{36,37}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -48,10 +48,10 @@
 				<key>sourceSize</key>
 				<string>{36,37}</string>
 			</dict>
-			<key>A_Common/circle_2.png</key>
+			<key>A_Common/Main/circle_2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{979,146},{36,37}}</string>
+				<string>{{976,229},{36,37}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -59,10 +59,10 @@
 				<key>sourceSize</key>
 				<string>{36,37}</string>
 			</dict>
-			<key>A_Common/icon_add.png</key>
+			<key>A_Common/Main/icon_add.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{979,59},{43,43}}</string>
+				<string>{{979,54},{43,43}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -70,18 +70,18 @@
 				<key>sourceSize</key>
 				<string>{43,43}</string>
 			</dict>
-			<key>A_Common/icon_yuanbao.png</key>
+			<key>A_Common/Main/icon_yuanbao.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{979,2},{53,39}}</string>
+				<string>{{979,2},{48,43}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<true />
 				<key>sourceSize</key>
-				<string>{53,39}</string>
+				<string>{48,43}</string>
 			</dict>
-			<key>A_Common/bg_kuang2.png</key>
+			<key>A_Common/Main/bg_kuang2.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{943,2},{152,32}}</string>
@@ -92,18 +92,18 @@
 				<key>sourceSize</key>
 				<string>{152,32}</string>
 			</dict>
-			<key>A_Common/que_l.png</key>
+			<key>A_Common/Main/que_l.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{978,186},{28,32}}</string>
+				<string>{{943,191},{28,32}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{28,32}</string>
 			</dict>
-			<key>A_Common/ren_l.png</key>
+			<key>A_Common/Main/ren_l.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{943,158},{29,31}}</string>
@@ -114,7 +114,7 @@
 				<key>sourceSize</key>
 				<string>{29,31}</string>
 			</dict>
-			<key>A_Common/yellow-button.png</key>
+			<key>A_Common/Main/yellow-button.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{872,2},{187,67}}</string>
@@ -124,6 +124,105 @@
 				<true />
 				<key>sourceSize</key>
 				<string>{187,67}</string>
+			</dict>
+			<key>A_Common/Main/btn_chebox_fang.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{978,188},{37,38}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{37,38}</string>
+			</dict>
+			<key>A_Common/Main/btn_chebox_yuan.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{894,193},{37,37}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{37,37}</string>
+			</dict>
+			<key>A_Common/Main/CheckBoxForbidden.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{979,101},{40,40}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{40,40}</string>
+			</dict>
+			<key>A_Common/Main/img_gou.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{852,193},{37,38}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{37,38}</string>
+			</dict>
+			<key>A_Common/Main/minus-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{794,161},{54,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{54,54}</string>
+			</dict>
+			<key>A_Common/Main/plus-1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{720,172},{54,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{54,54}</string>
+			</dict>
+			<key>A_Common/Main/RadioForbidden.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{778,219},{36,36}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{36,36}</string>
+			</dict>
+			<key>A_Common/Main/tip.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{979,145},{39,39}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{39,39}</string>
+			</dict>
+			<key>A_Common/Main/avatar.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{720,98},{70,70}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{70,70}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>

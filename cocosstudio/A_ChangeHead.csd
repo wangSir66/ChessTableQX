@@ -42,7 +42,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4993" Y="0.5307" />
                 <PreSize X="0.9384" Y="0.6304" />
-                <FileData Type="MarkedSubImage" Path="A_Common/universalBottom.png" Plist="A_Common/Common.plist" />
+                <FileData Type="MarkedSubImage" Path="A_Common/Main/universalBottom.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="getother" ActionTag="-997665775" Tag="449" IconVisible="False" LeftMargin="599.4272" RightMargin="30.5728" TopMargin="403.0326" BottomMargin="26.9674" TouchEnable="True" FontSize="26" ButtonText="换一批" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="4" BottomEage="4" Scale9OriginX="15" Scale9OriginY="4" Scale9Width="12" Scale9Height="6" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="100.0000" Y="30.0000" />
@@ -67,7 +67,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.3209" Y="0.4776" />
                     <PreSize X="0.1497" Y="0.4776" />
-                    <FileData Type="MarkedSubImage" Path="A_Common/que_l.png" Plist="A_Common/Common.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Common/Main/que_l.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_0" ActionTag="-1331864740" Tag="495" IconVisible="False" LeftMargin="112.5000" RightMargin="45.5000" TopMargin="19.5000" BottomMargin="16.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="5" Scale9Height="5" ctype="ImageViewObjectData">
                     <Size X="29.0000" Y="31.0000" />
@@ -77,7 +77,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.6791" Y="0.4776" />
                     <PreSize X="0.1551" Y="0.4627" />
-                    <FileData Type="MarkedSubImage" Path="A_Common/ren_l.png" Plist="A_Common/Common.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Common/Main/ren_l.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -87,8 +87,8 @@
                 <PrePosition X="0.5000" Y="0.1261" />
                 <PreSize X="0.2562" Y="0.1457" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <PressedFileData Type="MarkedSubImage" Path="A_Common/yellow-button.png" Plist="A_Common/Common.plist" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Common/yellow-button.png" Plist="A_Common/Common.plist" />
+                <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/yellow-button.png" Plist="A_Common/Common.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/yellow-button.png" Plist="A_Common/Common.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -101,7 +101,7 @@
                 <PrePosition X="0.9546" Y="0.9283" />
                 <PreSize X="0.0671" Y="0.1065" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Common/btnclose.png" Plist="A_Common/Common.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/btnclose.png" Plist="A_Common/Common.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -112,7 +112,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.5703" Y="0.6389" />
-            <FileData Type="MarkedSubImage" Path="A_Common/pop_bg_small.png" Plist="A_Common/Common.plist" />
+            <FileData Type="MarkedSubImage" Path="A_Common/Main/pop_bg_small.png" Plist="A_Common/Common.plist" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

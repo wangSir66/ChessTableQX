@@ -10,9 +10,15 @@ var PlayerInfoBindView1 = cc.Layer.extend({
                 headImg: {
                     _event: {
                         loadWxHead: function (d) {
-                            this.removeAllChildren();
                             if (d.uid == MjClient.userInfoLayerUi.pinfo.uid) {
-                                var sp = new cc.Sprite(d.img);
+                                var sp = this.getChildByName('headsp');
+                                if (sp) {
+                                    sp.initWithSpriteFrame(d.img);
+                                } else {
+                                    sp = new cc.Sprite(d.img);
+                                    sp.name = "headsp";
+                                    this.addChild(sp);
+                                }
                                 var _pos = {
                                     "x": this.getContentSize().width / 2,
                                     "y": this.getContentSize().height / 2
@@ -20,7 +26,6 @@ var PlayerInfoBindView1 = cc.Layer.extend({
                                 sp.setPosition(_pos);
                                 sp.setScaleX((this.getContentSize().width - 11) / sp.getContentSize().width);
                                 sp.setScaleY((this.getContentSize().height - 13) / sp.getContentSize().height);
-                                this.addChild(sp);
                             }
                         }
                     }
@@ -79,9 +84,9 @@ var PlayerInfoBindView1 = cc.Layer.extend({
         //头像
         MjClient.loadWxHead(pinfo.uid, pinfo.headimgurl);
         //账号
-        var _ID = _node_info.getChildByName("account");
-        _ID.setString("账号:" + pinfo.openid.split('_')[0]);
-        _ID.ignoreContentAdaptWithSize(true);
+        var account = _node_info.getChildByName("account");
+        account.setString("账号:" + pinfo.openid.split('_')[0]);
+        account.ignoreContentAdaptWithSize(true);
         //ID
         var _ID = _node_info.getChildByName("ID");
         _ID.setString("ID:" + pinfo.uid);
@@ -110,6 +115,7 @@ var PlayerInfoBindView1 = cc.Layer.extend({
             _sigStr = (pinfo.signature ? unescape(pinfo.signature) : '主人很懒，还没有签名！');
         let jsjf = _node_info.getChildByName('textFeildName');
         if (jsjf) jsjf.removeFromParent(true);
+        canEditSignature = false;
         if (pinfo.uid == SelfUid() && canEditSignature) {
             _signature.visible = false;
             this._textFeildName = new cc.EditBox(cc.size(_signature.width, _signature.height), new cc.Scale9Sprite());
@@ -236,76 +242,76 @@ var PlayerInfoBindView1 = cc.Layer.extend({
             }, this);
         }
 
-        // var bindWeixin = _node_info.getChildByName("bindWeixin");
-        // if (bindWeixin) {
-        //     var btnBindWeixin = bindWeixin.getChildByName("btn_bindWeixin");
-        //     var imgBindedWeixin = bindWeixin.getChildByName("img_bindedWeixin");
-        //     // var text_Code = bindWeixin.getChildByName("Image_Code").getChildByName("Text_1");
-        //     var pinfo = MjClient.data.pinfo;
-        //     if (pinfo.openid && pinfo.openid.indexOf("openid") == -1) {
-        //         imgBindedWeixin.setVisible(true);
-        //         btnBindWeixin.setVisible(false);
-        //         // text_Code.ignoreContentAdaptWithSize(true);
-        //         // text_Code.setString(getNewName(pinfo.xianliaoid, 11));
-        //         bindWeixin.getChildByName("Image_Code").visible = false;
-        //     } else {
-        //         imgBindedWeixin.setVisible(false);
-        //         btnBindWeixin.setVisible(true);
-        //     }
-        //     btnBindWeixin.addTouchEventListener(function (sender, type) {
-        //         if (type == 2) {
-        //             MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Selfinformation_Touxiang_Bangdingweixin", { uid: SelfUid() });
-        //             MjClient.native.wxLogin("userInfo");
-        //         }
-        //     }, this);
-        //     //register event weChat login call back  注册函数 ，微信登录成功回调
-        //     UIEventBind(null, bindWeixin, "WX_USER_LOGIN", function (para) {
-        //         if (cc.isString(para)) {
-        //             para = JSON.parse(para);
-        //         }
+        var bindWeixin = _node_info.getChildByName("bindWeixin");
+        if (bindWeixin) {
+            var btnBindWeixin = bindWeixin.getChildByName("btn_bindWeixin");
+            var imgBindedWeixin = bindWeixin.getChildByName("img_bindedWeixin");
+            // var text_Code = bindWeixin.getChildByName("Image_Code").getChildByName("Text_1");
+            var pinfo = MjClient.data.pinfo;
+            if (pinfo.openid && pinfo.openid.indexOf("openid") == -1) {
+                imgBindedWeixin.setVisible(true);
+                btnBindWeixin.setVisible(false);
+                // text_Code.ignoreContentAdaptWithSize(true);
+                // text_Code.setString(getNewName(pinfo.xianliaoid, 11));
+                bindWeixin.getChildByName("Image_Code").visible = false;
+            } else {
+                imgBindedWeixin.setVisible(false);
+                btnBindWeixin.setVisible(true);
+            }
+            btnBindWeixin.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Selfinformation_Touxiang_Bangdingweixin", { uid: SelfUid() });
+                    MjClient.native.wxLogin("userInfo");
+                }
+            }, this);
+            //register event weChat login call back  注册函数 ，微信登录成功回调
+            UIEventBind(null, bindWeixin, "WX_USER_LOGIN", function (para) {
+                if (cc.isString(para)) {
+                    para = JSON.parse(para);
+                }
 
-        //         if (para.openid) {
-        //             that.removeFromParent();
-        //             cc.loader.loadTxt(jsb.fileUtils.getWritablePath() + "nickname.txt",
-        //                 function (er, txt) {
-        //                     if (txt) {
-        //                         para.nickname = escape(txt);
-        //                     }
-        //                     LoginByWeChatAccountUser(para);
-        //                 });
-        //         }
-        //         else {
-        //             MjClient.showToastDelay("绑定微信失败，请重试");
+                if (para.openid) {
+                    that.removeFromParent();
+                    cc.loader.loadTxt(jsb.fileUtils.getWritablePath() + "nickname.txt",
+                        function (er, txt) {
+                            if (txt) {
+                                para.nickname = escape(txt);
+                            }
+                            LoginByWeChatAccountUser(para);
+                        });
+                }
+                else {
+                    MjClient.showToastDelay("绑定微信失败，请重试");
 
-        //         }
+                }
 
-        //     });
-        //     // UIEventBind(null, bindWeixin, "WX_USER_LOGIN", function(para) {
-        //     //     if (cc.isString(para))
-        //     //     {
-        //     //         para = JSON.parse(para);
-        //     //     }
-        //     //
-        //     //     if(para.openId)
-        //     //     {
-        //     //         that.removeFromParent();
-        //     //         MjClient.block();
-        //     //         MjClient.gamenet.request("pkplayer.handler.bindWeChat",{xianliaoid:para.openId},function(rtn){
-        //     //             MjClient.unblock();
-        //     //             if(rtn.code==0) {
-        //     //                 MjClient.showToast(rtn.message);
-        //     //             } else {
-        //     //                 if (!cc.isUndefined(rtn.message))
-        //     //                     MjClient.showToast(rtn.message);
-        //     //             }
-        //     //         });
-        //     //     }
-        //     //     else
-        //     //     {
-        //     //         MjClient.showToastDelay("微信绑定失败，请重试");
-        //     //     }
-        //     // });
-        // }
+            });
+            // UIEventBind(null, bindWeixin, "WX_USER_LOGIN", function(para) {
+            //     if (cc.isString(para))
+            //     {
+            //         para = JSON.parse(para);
+            //     }
+            //
+            //     if(para.openId)
+            //     {
+            //         that.removeFromParent();
+            //         MjClient.block();
+            //         MjClient.gamenet.request("pkplayer.handler.bindWeChat",{xianliaoid:para.openId},function(rtn){
+            //             MjClient.unblock();
+            //             if(rtn.code==0) {
+            //                 MjClient.showToast(rtn.message);
+            //             } else {
+            //                 if (!cc.isUndefined(rtn.message))
+            //                     MjClient.showToast(rtn.message);
+            //             }
+            //         });
+            //     }
+            //     else
+            //     {
+            //         MjClient.showToastDelay("微信绑定失败，请重试");
+            //     }
+            // });
+        }
     },
 
     editBoxReturn: function (editBox) {
