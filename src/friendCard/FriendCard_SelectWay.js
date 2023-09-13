@@ -1,6 +1,3 @@
-var CREATEROOM_COLOR_1 = cc.color(237, 101, 1);
-var CREATEROOM_COLOR_2 = cc.color(123, 78, 63);
-
 var FriendCardSelectWay = cc.Layer.extend({
     ctor: function (that) {
         this._super();
@@ -64,7 +61,6 @@ var FriendCardSelectWay = cc.Layer.extend({
         let itemW = this.listItem.width;
         for (var i = 0; i < gameItems.length; i++) {
             var dx = i * itemW, item1 = gameItems[i];
-            item1.getChildByName('1').visible = i === 0
             item1.setPositionX(itemW / 2 + dx);
         }
         //修正scrollView的滑动区域
@@ -158,7 +154,7 @@ var FriendCardSelectWay = cc.Layer.extend({
         this.wayList.height = nowH  + 4;
         this.wayList.setInnerContainerSize(cc.size(oldS.width, (hIndx + 1) * this.wayItem.height + 5 * hIndx + 4));
         this.wayList.scrollToTop(0.1, true);
-        this.wayPanel.getChildByName('bg').height = nowH + 14;
+        // this.wayPanel.getChildByName('bg').height = nowH + 14;
         let sNode = this.gameBtnRadio.getSelectItem();
         this.wayPanel.setPositionX(sNode.x);
         this.checkBtnSelected();
@@ -173,11 +169,13 @@ var FriendCardSelectWay = cc.Layer.extend({
         }
     },
     selectedCB: function (text, isSelected) {
-        if (isSelected) {
-            text.setTextColor(cc.color('#A14B06'));
-        } else {
-            text.setTextColor(cc.color('#9B8C7F'));
-        }
+        // if (isSelected) {
+        //     text.strokeStyle = cc.color('#A14B06')
+        //     // text.setTextColor(cc.color('#A14B06'));
+        // } else {
+        //     text.strokeStyle = cc.color('#9B8C7F')
+        //     // text.setTextColor(cc.color('#9B8C7F'));
+        // }
     },
     //选中情况
     setCheckState: function () {

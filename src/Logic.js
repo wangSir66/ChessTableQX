@@ -8352,7 +8352,7 @@ MjClient.dateInRectDate = function (myTime, startTime, endTime) {
 
 
 MjClient.loadWxHead = function (uid, url) {
-    let frame = cc.spriteFrameCache.getSpriteFrame(url ? url : 'A_Common/HeadImgs/head_228.png');
+    let frame = cc.spriteFrameCache.getSpriteFrame(url ? url : 'A_Common/HeadImgs/head_228.jpg');
     frame && MjClient.Scene.pushQueueNetMsg(["loadWxHead", { uid: uid, img: frame }]);
 };
 

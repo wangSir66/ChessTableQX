@@ -5,7 +5,6 @@
       <FilePathData Path="A_FriendCard/Member/btn_Button_remarks_n.png" />
       <FilePathData Path="A_FriendCard/Member/btn_Button_remarks_s.png" />
       <FilePathData Path="A_FriendCard/Member/btn_caozuo_n.png" />
-      <FilePathData Path="A_FriendCard/Member/btn_caozuo_s.png" />
       <FilePathData Path="A_FriendCard/Member/btn_chakanCY_n.png" />
       <FilePathData Path="A_FriendCard/Member/btn_chakanCY_s.png" />
       <FilePathData Path="A_FriendCard/Member/btn_frozen_n.png" />
@@ -30,20 +29,8 @@
       <FilePathData Path="A_FriendCard/Member/btn_zhuli_s.png" />
       <FilePathData Path="A_FriendCard/Member/btna_group_n.png" />
       <FilePathData Path="A_FriendCard/Member/btna_unGroup_n.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_add_gongxian.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_add_gongxian1.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_add_n.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_add_s.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_daoru_n.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_daoru_s.png" />
       <FilePathData Path="A_FriendCard/Member/cy_jujue_n.png" />
       <FilePathData Path="A_FriendCard/Member/cy_jujue_s.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_member_n.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_member_record_n.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_member_record_s.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_member_s.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_shenhe_n.png" />
-      <FilePathData Path="A_FriendCard/Member/cy_shenhe_s.png" />
       <FilePathData Path="A_FriendCard/Member/cy_tongguo_n.png" />
       <FilePathData Path="A_FriendCard/Member/cy_tongguo_s.png" />
       <FilePathData Path="A_FriendCard/Member/cy_zhuli_n.png" />
@@ -64,7 +51,17 @@
       <FilePathData Path="A_FriendCard/Member/btn_tick_all_s.png" />
       <FilePathData Path="A_FriendCard/Member/btn_notAdmit2_n.png" />
       <FilePathData Path="A_FriendCard/Member/btn_notAdmit2_s.png" />
+      <FilePathData Path="A_FriendCard/Member/all_person.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_add.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_jian.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_zh_paixu.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_tuichu_n.png" />
+      <FilePathData Path="A_FriendCard/Member/list_cell_sort.png" />
+      <FilePathData Path="A_FriendCard/Member/panel_title.png" />
+      <FilePathData Path="A_FriendCard/Member/sousuo_bg.png" />
+      <FilePathData Path="A_FriendCard/Member/what_group.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_set_group.png" />
     </ImageFiles>
-    <MaxSize Width="1024" Height="1024" />
+    <MaxSize Width="2048" Height="2048" />
   </Content>
 </PlistInfoProjectFile>

@@ -142,9 +142,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/Main/yong_t.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -187,9 +187,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/Main/hu_t.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -232,9 +232,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/Main/xie_t.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -277,9 +277,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/Main/yi_t.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -520,8 +520,7 @@
       "UsedResources": [
         "A_Common/Common.plist",
         "A_Common/Common.png",
-        "A_Login/Login.plist",
-        "A_Login/Login.png"
+        "Default/ImageFile.png"
       ],
       "ctype": "GameFileData"
     }

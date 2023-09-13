@@ -64,6 +64,7 @@ FriendCard_Common.getRuleParm = function (infoData) {
         if (rule != "delete") {
             let rIndx = Number(key.replace('rule', ''));
             rule.ruleIndex = rIndx;
+            rule._index = rIndx;
             rules.push(rule);
         }
         key = keys[++_indx];
@@ -1102,7 +1103,7 @@ FriendCard_Common.getGameCalssType = function (gameType) {
 
 //得到当前app俱乐部是几个玩法
 FriendCard_Common.getRuleNumber = function () {
-    return 100;
+    return 50;
 };
 
 //俱乐部弹窗
@@ -2799,36 +2800,12 @@ FriendCard_Common.bottomBtnSort = function (that, arr) {
 FriendCard_Common.initBottom = function (allBtns, par) {
     var that = MjClient.FriendCard_main_ui;
     var _btnList = par ? par : that._image_bottom.getChildByName("btnList");
-    var skinType = FriendCard_Common.getSkinType()
-    var btnAddLight = function (btn) {
-        if (skinType != 3) return;
-        if (btn.getChildByName("light")) return;
-
-        var light = new cc.Sprite("friendCards/main/btn_xuanzhong.png");
-        light.setPosition(btn.getContentSize().width / 2, btn.getContentSize().height / 2);
-        light.setName("light")
-        btn.addChild(light, -1);
-    }
-    var btnDelLight = function (btn) {
-        if (skinType != 3) return;
-
-        if (btn.getChildByName("light")) {
-            btn.getChildByName("light").removeFromParent(true);
-        }
-    }
-
-
-
 
     // 邀请加入按钮
     if (allBtns.indexOf("_btn_yaoqing") >= 0) {
         that._btn_yaoqing = _btnList.getChildByName("btn_yaoqing");
         that._btn_yaoqing.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
 
                 that.addChild(new FriendCard_yaoqing(that.data, that.ruleIndex));
@@ -2899,17 +2876,11 @@ FriendCard_Common.initBottom = function (allBtns, par) {
         }, that);
     }
 
-
-
     // 房间记录按钮
     if (allBtns.indexOf("_btn_record") >= 0) {
         that._btn_record = _btnList.getChildByName("btn_record");
         that._btn_record.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 // 俱乐部返回大厅功能：by_jcw
                 // 查看房间记录前先离开未离开的房间
                 FriendCard_Common.leaveGame();
@@ -2927,11 +2898,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_record2") >= 0) {
         that._btn_record2 = _btnList.getChildByName("btn_record2");
         that._btn_record2.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 // 俱乐部返回大厅功能：by_jcw
                 // 查看战绩前先离开未离开的房间
                 FriendCard_Common.leaveGame();
@@ -2948,11 +2915,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_member") >= 0) {
         that._btn_member = _btnList.getChildByName("btn_member");
         that._btn_member.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Chengyuan", {
                     uid: SelfUid()
@@ -2970,11 +2933,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_setting") >= 0) {
         that._btn_setting = _btnList.getChildByName("btn_setting");
         that._btn_setting.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Shezhi", {
                     uid: SelfUid()
                 });
@@ -2992,11 +2951,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_tongji") >= 0) {
         that._btn_tongji = _btnList.getChildByName("btn_tongji");
         that._btn_tongji.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
 
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Tongji", {
@@ -3017,11 +2972,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_rule") >= 0) {
         that._btn_rule = _btnList.getChildByName("btn_rule");
         that._btn_rule.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
 
                 if (that.data.info.matchIsOpen & 2) {
@@ -3039,11 +2990,6 @@ FriendCard_Common.initBottom = function (allBtns, par) {
         that.btn_gonggao = _btnList.getChildByName("btn_gonggao");
         that.gonggao_image_point = that.btn_gonggao.getChildByName("Image_point");
         that.btn_gonggao.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            }
             if (type == 2) {
                 that.closeClubList();
 
@@ -3066,12 +3012,6 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_agentBtn") >= 0) {
         that._agentBtn = _btnList.getChildByName("btn_daili");
         that._agentBtn.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            }
-
             if (type != 2)
                 return;
             that.closeClubList();
@@ -3087,11 +3027,7 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     if (allBtns.indexOf("_btn_setSkin") >= 0) {
         that._btn_setSkin = _btnList.getChildByName("btn_setSkin");
         that._btn_setSkin.addTouchEventListener(function (sender, type) {
-            if (type == 0) {
-                btnAddLight(sender);
-            } else if (type == 3) {
-                btnDelLight(sender);
-            } else if (type == 2) {
+            if (type == 2) {
                 that.closeClubList();
 
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_setSkin", {
@@ -3162,7 +3098,24 @@ FriendCard_Common.initBottom = function (allBtns, par) {
             });
         }
     }
-
+    if (allBtns.indexOf('_btn_guanli') > -1) {//女管家
+        var isShow=  that.isManager();
+        that.img_nvguanjia = _btnList.getChildByName("btn_guanli");
+        that.img_nvguanjia.visible = isShow;
+        that.img_nvguanjia.addTouchEventListener(function (sender, type) {
+            if (type == 2) {
+                that.closeClubList();
+                if (that.isManager()) {
+                    var data = {};
+                    data.data = that.data;
+                    data.clubId = that.clubId;
+                    data.ruleIndex = that.ruleIndex;
+                    data.isCreator = that.isCreator();
+                    that.addChild(new Friendcard_nvguanjia(data));
+                }
+            }
+        }, that);
+    }
 
     //按钮位置
     if (!that.bottomBtnsPos) {

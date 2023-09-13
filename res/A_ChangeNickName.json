@@ -218,9 +218,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Login/Main/CM_inputbox.png",
-                      "Plist": "A_Login/Login.plist"
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 30,
@@ -573,8 +573,7 @@
       "UsedResources": [
         "A_Common/Common.plist",
         "A_Common/Common.png",
-        "A_Login/Login.plist",
-        "A_Login/Login.png",
+        "Default/ImageFile.png",
         "fonts/fzcy.ttf"
       ],
       "ctype": "GameFileData"

@@ -207,7 +207,7 @@
                   <AbstractNodeData Name="ScrollView_1" ActionTag="-688248029" Tag="550" IconVisible="False" LeftMargin="1.0831" RightMargin="-1.0831" TopMargin="1.1201" BottomMargin="73.8799" TouchEnable="True" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="Vertical" ctype="ScrollViewObjectData">
                     <Size X="419.0000" Y="375.0000" />
                     <Children>
-                      <AbstractNodeData Name="xuhao_1" ActionTag="-408931532" Tag="552" IconVisible="False" LeftMargin="192.2482" RightMargin="186.7518" TopMargin="19.2748" BottomMargin="690.7252" LeftEage="10" RightEage="10" TopEage="10" BottomEage="10" Scale9OriginX="10" Scale9OriginY="10" Scale9Width="40" Scale9Height="40" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="xuhao_1" ActionTag="-408931532" Tag="552" IconVisible="False" LeftMargin="98.4531" RightMargin="280.5469" TopMargin="55.6893" BottomMargin="279.3107" LeftEage="10" RightEage="10" TopEage="10" BottomEage="10" Scale9OriginX="10" Scale9OriginY="10" Scale9Width="40" Scale9Height="40" ctype="ImageViewObjectData">
                         <Size X="40.0000" Y="40.0000" />
                         <Children>
                           <AbstractNodeData Name="Text" ActionTag="563739325" Tag="553" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="13.5000" RightMargin="13.5000" TopMargin="7.5000" BottomMargin="7.5000" FontSize="25" LabelText="8" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -224,14 +224,14 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="212.2482" Y="710.7252" />
+                        <Position X="118.4531" Y="299.3107" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.5066" Y="0.9476" />
+                        <PrePosition X="0.2827" Y="0.7982" />
                         <PreSize X="0.0955" Y="0.0533" />
                         <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Button_1" ActionTag="-1668091596" Tag="554" IconVisible="False" LeftMargin="235.4343" RightMargin="23.5657" TopMargin="11.8800" BottomMargin="678.1200" TouchEnable="True" FontSize="20" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="116" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                      <AbstractNodeData Name="Button_1" ActionTag="-1668091596" Tag="554" IconVisible="False" LeftMargin="186.1382" RightMargin="72.8618" TopMargin="76.4217" BottomMargin="238.5783" TouchEnable="True" FontSize="20" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="116" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="160.0000" Y="60.0000" />
                         <Children>
                           <AbstractNodeData Name="Text" ActionTag="688336547" Tag="555" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-23.5000" RightMargin="-23.5000" TopMargin="21.0000" BottomMargin="21.0000" FontSize="18" LabelText="        玩法1          " HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -248,10 +248,10 @@
                           </AbstractNodeData>
                         </Children>
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="315.4343" Y="708.1200" />
+                        <Position X="266.1382" Y="268.5783" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.7528" Y="0.9442" />
+                        <PrePosition X="0.6352" Y="0.7162" />
                         <PreSize X="0.3819" Y="0.0800" />
                         <FontResource Type="Default" Path="" Plist="" />
                         <TextColor A="255" R="65" G="65" B="70" />
@@ -273,18 +273,47 @@
                         <EndColor A="255" R="255" G="255" B="255" />
                         <ColorVector ScaleY="1.0000" />
                       </AbstractNodeData>
+                      <AbstractNodeData Name="Button_setPlay" ActionTag="2112912165" Tag="532" IconVisible="False" LeftMargin="28.8998" RightMargin="230.1002" TopMargin="23.0913" BottomMargin="291.9087" TouchEnable="True" FontSize="20" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="116" Scale9Height="30" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                        <Size X="160.0000" Y="60.0000" />
+                        <Children>
+                          <AbstractNodeData Name="Text" ActionTag="-766235520" Tag="533" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-23.5000" RightMargin="-23.5000" TopMargin="21.0000" BottomMargin="21.0000" FontSize="18" LabelText="        玩法1          " HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                            <Size X="207.0000" Y="18.0000" />
+                            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                            <Position X="80.0000" Y="30.0000" />
+                            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                            <CColor A="255" R="125" G="60" B="11" />
+                            <PrePosition X="0.5000" Y="0.5000" />
+                            <PreSize X="1.2938" Y="0.3000" />
+                            <FontResource Type="Default" Path="" Plist="" />
+                            <OutlineColor A="255" R="146" G="72" B="19" />
+                            <ShadowColor A="255" R="110" G="110" B="110" />
+                          </AbstractNodeData>
+                        </Children>
+                        <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                        <Position X="108.8998" Y="321.9087" />
+                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <CColor A="255" R="255" G="255" B="255" />
+                        <PrePosition X="0.2599" Y="0.8584" />
+                        <PreSize X="0.3819" Y="0.1600" />
+                        <FontResource Type="Default" Path="" Plist="" />
+                        <TextColor A="255" R="65" G="65" B="70" />
+                        <PressedFileData Type="MarkedSubImage" Path="A_FriendCard/Setting/btn_rule_s.png" Plist="A_FriendCard/Setting.plist" />
+                        <NormalFileData Type="MarkedSubImage" Path="A_FriendCard/Setting/btn_rule_n.png" Plist="A_FriendCard/Setting.plist" />
+                        <OutlineColor A="255" R="255" G="0" B="0" />
+                        <ShadowColor A="255" R="110" G="110" B="110" />
+                      </AbstractNodeData>
                     </Children>
-                    <AnchorPoint />
-                    <Position X="1.0831" Y="73.8799" />
+                    <AnchorPoint ScaleY="1.0000" />
+                    <Position X="1.0831" Y="448.8799" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.0026" Y="0.1642" />
+                    <PrePosition X="0.0026" Y="0.9975" />
                     <PreSize X="1.0000" Y="0.8333" />
                     <SingleColor A="255" R="255" G="150" B="100" />
                     <FirstColor A="255" R="255" G="150" B="100" />
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
-                    <InnerNodeSize Width="419" Height="750" />
+                    <InnerNodeSize Width="419" Height="375" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

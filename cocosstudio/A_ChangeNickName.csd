@@ -58,7 +58,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5558" Y="0.5375" />
                     <PreSize X="0.5416" Y="0.1786" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/Main/CM_inputbox.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

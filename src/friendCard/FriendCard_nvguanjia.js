@@ -20,8 +20,6 @@ var Friendcard_nvguanjia = cc.Layer.extend({
         setWgtLayout(node.getChildByName("Panel"), [1, 1], [0.5, 0.5], [0, 0]);
 
         this.initNvguanjiaLayer();
-        popupAnm(this.panel)
-
     },
     initNvguanjiaLayer:function(){
         var that = this;
@@ -32,13 +30,6 @@ var Friendcard_nvguanjia = cc.Layer.extend({
         var btn_huci = this.panel.getChildByName("btn_huci");
         var btn_yaoqingLM = this.panel.getChildByName("btn_yaoqingLM");
         var btn_changeToFangkaClub = this.panel.getChildByName("btn_changeToFangkaClub");
-
-        if(FriendCard_Common.getSkinType() == 3){
-            var img_heye = this.panel.getChildByName("img_heye");
-            var starParticle2 =  new cc.ParticleSystem("Particle/qipao.plist");
-            starParticle2.setPosition(img_heye.getContentSize().width/2, img_heye.getContentSize().height/2 - 20);
-            img_heye.addChild(starParticle2);
-        }
         
         var btn_isStopKaiFang = this.panel.getChildByName("btn_isStopKaiFang");
         var btn_isShowShenhe = this.panel.getChildByName("btn_isShowShenhe");

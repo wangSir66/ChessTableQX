@@ -10,9 +10,6 @@
       <FilePathData Path="A_FriendCard/Guanjia/btn_yaoqing_n.png" />
       <FilePathData Path="A_FriendCard/Guanjia/checkBox_close.png" />
       <FilePathData Path="A_FriendCard/Guanjia/checkBox_open.png" />
-      <FilePathData Path="A_FriendCard/Guanjia/img_dianxiaoer.png" />
-      <FilePathData Path="A_FriendCard/Main/img_xian.png" />
-      <FilePathData Path="A_FriendCard/Guanjia/img_di.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="2048" />
   </Content>

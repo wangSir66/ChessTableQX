@@ -3588,10 +3588,67 @@ var FriendCard_ruleLayer = cc.Layer.extend({
         } else {
             this._quickStartListLocalSwitch = JSON.parse(this._quickStartListLocalSwitch)
         }
-        this.getInviteSet();
-        this.initRuleLayer(back);
-        popupAnm(back);
+        //关闭
+        var _close = back.getChildByName('Image_di').getChildByName("close")
+        _close.addTouchEventListener(function (sender, type) {
+            if (type == 2 && this._listView.isEnabled()) {
+                util.localStorageEncrypt.setStringItem(this.keyQuickGamesWitch, JSON.stringify(this._quickStartListLocalSwitch));
+                this.saveInviteSet();
+                this.removeFromParent(true)
+            }
+        }, this);
+        //添加玩法
+        this.rightPanel = back.getChildByName("Panel");
+        var btn_addRule = this.rightPanel.getChildByName('btn_addRule');
+        var ruleNum = -1;
+        for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {
+            var otherRule = this.clubData["rule" + i];
+            if (otherRule && otherRule != "delete") {
+                otherRule._index = i;
+            } else if (ruleNum == -1) {
+                ruleNum = i;
+            }
+        }
+        btn_addRule.visible = this.isJurisdiction && ruleNum != -1;
+        btn_addRule.addTouchEventListener(function (sender, type) {
+            if (type == 2) {
+                postEvent("createRoom", {
+                    IsFriendCard: true,
+                    ruleNumer: ruleNum,
+                    clubType: this.clubData.type,
+                    isMatch: (this.clubData.matchIsOpen & 2),
+                });
 
+            }
+        }, this);
+        //全局邀请
+        this._cb_isAcceptAllInvite = this.rightPanel.getChildByName("cb_isAcceptAllInvite");
+        this._cb_isAcceptAllInvite.ignoreContentAdaptWithSize(true);
+        this._cb_isAcceptAllInvite.visible = false;
+        this._cb_isAcceptAllInvite.addTouchEventListener(function (sender, type) {
+            if (type == 2) {
+                this._acceptInvite = sender.isSelected() ? 0 : 1;
+                sender.runAction(cc.sequence(cc.callFunc(function () {
+                    this.reflashUI();
+                }.bind(this))))
+            }
+        }, this);
+        this._cb_isAcceptAllInvite.getChildByName("text").addTouchEventListener(function (sender, type) {
+            if (type == 2) {
+                sender.getParent().setSelected(!sender.getParent().isSelected());
+                this._acceptInvite = sender.getParent().isSelected() ? 1 : 0;
+                this.reflashUI();
+            }
+        }, this);
+        this.showingIndex = 0;
+        this.leftViews = [];
+        var ruleList = FriendCard_Common.getRuleParm(this.clubData);
+        this._listView = back.getChildByName("ListView_left")
+        this._item = back.getChildByName("btn_cell")
+        this._item.visible = false;
+        this._ruleListData = ruleList;
+        this.getInviteSet();
+        popupAnm(back);
     },
     getInviteSet: function () {
         var that = this;
@@ -3688,7 +3745,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
     reflashUI: function (isClear) {
         var listView = this._listView;
         var _item = this._item;
-        _item.visible = false;
         if (isClear) {
             listView.removeAllItems();
         }
@@ -3696,24 +3752,32 @@ var FriendCard_ruleLayer = cc.Layer.extend({
         var allAcceptInvite = true;
         for (var indx = 0; indx < this._ruleListData.length; indx++) {
             let i = indx;
+            if (i == 0) listView.setEnabled(false);
             setTimeout(() => {
                 var isOpenInvite = this.isOpenInvite(this._ruleListData[i]._index) ? 1 : 0;
+                cc.log('-------', this._ruleListData[i]._index)
                 this._acceptInviteSwitch[this._ruleListData[i]._index.toString()] = isOpenInvite;
+                if (i == 0) this.initRightPanel();
                 if (!isOpenInvite) {
                     allAcceptInvite = false;
                 }
-                var itemData = this._ruleListData[i];
+                var itemData = this._ruleListData[i],
+                    itemed = listView.getItems()[i];
                 itemData._localIndex = i;
-                if (listView.getItems()[i]) {
-                    this.createItem(listView.getItems()[i], itemData, i)
+                if (itemed) {
+                    this.createListItem(itemed, itemData, i);
                 } else {
                     var item = _item.clone();
-                    listView.pushBackCustomItem(this.createItem(item, itemData, i))
+                    listView.pushBackCustomItem(this.createListItem(item, itemData, i, true))
+                }
+
+                if (i == this._ruleListData.length - 1) {
+                    listView.setEnabled(true);
+                    this._cb_isAcceptAllInvite.visible = true;
+                    this._cb_isAcceptAllInvite.setSelected(allAcceptInvite)
                 }
             }, 100 * indx);
         }
-        this._cb_isAcceptAllInvite.visible = true;
-        this._cb_isAcceptAllInvite.setSelected(allAcceptInvite)
     },
     reSetSelectAllInvite: function () {
         var allAcceptInvite = true;
@@ -3734,7 +3798,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
         return false;
     },
     updateRuleStopRoom: function (index, isStop) {
-        var that = this;
         if (FriendCard_Common.isLMClub(this.clubData)) {
             var sendInfo = {
                 leagueId: this.clubData.leagueId,
@@ -3761,193 +3824,165 @@ var FriendCard_ruleLayer = cc.Layer.extend({
                     if (rtn.message) {
                         MjClient.showToast(rtn.message);
                     }
-                }
-            });
+                } else this.clubData.ruleSwitch[index] = sendInfo.action;
+            }.bind(this));
         }
     },
-    createItem: function (item, itemData, i) {
-        var text_wanfaNum = item.getChildByName("text_wanfaNum")
-        var text_ruleName = item.getChildByName("text_ruleName")
-        var text_ruleDesc = item.getChildByName("text_ruleDesc")
-        var btn_setRule = item.getChildByName("btn_setRule")
-
-        var guizeStr = stringDBCtoSBC(unescape(itemData.ruleDesc));
-        text_ruleDesc.setString(guizeStr);
-        text_ruleDesc.runAction(cc.sequence(cc.DelayTime(0.01), cc.callFunc(function () {
-            //text_ruleDesc.setString(guizeStr);
-            var i = 0;
-            while (text_ruleDesc.getVirtualRenderer().getStringNumLines() > 3) {
-                i++;
-                text_ruleDesc.setString(guizeStr.substring(0, guizeStr.length - i) + "...");
-            }
-        })));
-        text_wanfaNum.setString("玩法" + (i + 1) + ":")
-        text_ruleName.setString(FriendCard_Common.resetRuleNameLen(itemData.ruleName));
-        btn_setRule.visible = this.isJurisdiction;
-        btn_setRule._wanFaIndex = itemData._index;
-        var isShowLibertyCreRoom = false;
-        if (itemData.customInfo) {
-            isShowLibertyCreRoom = itemData.customInfo;
-        }
-        btn_setRule._isShowLibertyCreRoom = isShowLibertyCreRoom
-
-        btn_setRule.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                cc.log("createRoom ruleNumer", sender._wanFaIndex)
-                postEvent("createRoom", {
-                    IsFriendCard: true,
-                    ruleNumer: sender._wanFaIndex,
-                    ruleName: itemData.ruleName,
-                    clubType: this.clubData.type,
-                    isShowLibertyCreRoom: sender._isShowLibertyCreRoom,
-                    isMatch: (this.clubData.matchIsOpen & 2)
-                });
-            }
-        }, this);
-
-        var btn_black_list = item.getChildByName("btn_black_list");
-        if (FriendCard_Common.isLMClub()) {
-            btn_black_list.visible = FriendCard_Common.isSupperManger() || FriendCard_Common.isLMChair() || FriendCard_Common.isGroupLeader() !== false;
-        } else {
-            btn_black_list.visible = FriendCard_Common.isManager() || FriendCard_Common.isGroupLeader() !== false;
-        }
-        btn_black_list._ruleData = itemData;
-        btn_black_list.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                var data = JSON.parse(JSON.stringify(this.clubData));
-                data.pmruleId = sender._ruleData._index;
-                data.ruleData = sender._ruleData;
-                this.addChild(new Friendcard_ruleBlackList(data));
-            }
-        }, this);
-
-        var cb_isStopRoom = item.getChildByName("cb_isStopRoom");
-        if (FriendCard_Common.isLMClub()) {
-            cb_isStopRoom.visible = FriendCard_Common.isSupperManger();
-        } else {
-            cb_isStopRoom.visible = FriendCard_Common.isManager();
-        }
-        cb_isStopRoom.ignoreContentAdaptWithSize(true);
-        var isStopRoom = ((!((itemData._index + "") in this.clubData.ruleSwitch)) || this.clubData.ruleSwitch[itemData._index + ""]) ? false : true;
-        cb_isStopRoom.setSelected(isStopRoom ? true : false);
-        cb_isStopRoom._data = itemData;
-        cb_isStopRoom.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                this.updateRuleStopRoom(sender._data._index, sender.isSelected() ? false : true);
-            }
-        }, this);
-        cb_isStopRoom.getChildByName("text").addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                sender.getParent().setSelected(!sender.getParent().isSelected());
-                this.updateRuleStopRoom(sender.getParent()._data._index, sender.getParent().isSelected() ? true : false);
-            }
-        }, this);
-
-
-        var cb_isAcceptInvite = item.getChildByName("cb_isAcceptInvite");
-        cb_isAcceptInvite.ignoreContentAdaptWithSize(true);
-        cb_isAcceptInvite.setSelected(this._acceptInviteSwitch[itemData._index.toString()] == 1);
-        cb_isAcceptInvite._data = itemData;
-        cb_isAcceptInvite.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                this._acceptInviteSwitch[sender._data._index.toString()] = sender.isSelected() ? 0 : 1;
-                this.reSetSelectAllInvite();
-            }
-        }, this);
-        cb_isAcceptInvite.getChildByName("text").addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                sender.getParent().setSelected(!sender.getParent().isSelected());
-                this._acceptInviteSwitch[sender.getParent()._data._index.toString()] = sender.getParent().isSelected() ? 1 : 0;
-                this.reSetSelectAllInvite();
-            }
-        }, this);
-
-        var cb_isAddQuickStartList = item.getChildByName("cb_isAddQuickStartList");
-        cb_isAddQuickStartList.ignoreContentAdaptWithSize(true);
-        if (itemData._index.toString() in this._quickStartListLocalSwitch) {
-            cb_isAddQuickStartList.setSelected(this._quickStartListLocalSwitch[itemData._index.toString()] == 1)
-        } else {
-            cb_isAddQuickStartList.setSelected(true)
-        }
-        cb_isAddQuickStartList._data = itemData;
-        cb_isAddQuickStartList.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                this._quickStartListLocalSwitch[sender._data._index.toString()] = sender.isSelected() ? 0 : 1;
-            }
-        }, this);
-        cb_isAddQuickStartList.getChildByName("text").addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                sender.getParent().setSelected(!sender.getParent().isSelected());
-                this._quickStartListLocalSwitch[sender.getParent()._data._index.toString()] = sender.getParent().isSelected() ? 1 : 0;
-            }
-        }, this);
+    createListItem: function (item, itemData, i, isCreat = false) {
+        var text_ruleName = item.getChildByName("txt1"),
+            x0 = item.getChildByName("xian_0"),
+            text_wanfaNum = item.getChildByName("txt2");
+        x0.visible = i == 0;
+        var splitRuleName = FriendCard_Common.splitClubRuleName1(unescape(itemData.ruleName));
+        text_wanfaNum.setString(FriendCard_Common.resetRuleNameLen('(' + splitRuleName[0]) + ')');
+        text_ruleName.setString(splitRuleName[1]);
+        text_ruleName.ignoreContentAdaptWithSize(true);
+        text_wanfaNum.ignoreContentAdaptWithSize(true);
+        item.tag = i;
+        item.setEnabled(true);
+        item.setBright(this.showingIndex == i);
+        item.getChildByName('txt1').setColor(cc.color(this.showingIndex == i ? "#AD2500" : "#C9EEFF"));
         item.visible = true;
-
+        if (isCreat) {
+            item.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    this.showPosition(sender.tag);
+                }
+            }, this);
+            this.leftViews.push(item);
+        }
         return item
     },
-
-    initRuleLayer: function (panel) {
-        var _close = panel.getChildByName("btn_close")
-        _close.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                util.localStorageEncrypt.setStringItem(this.keyQuickGamesWitch, JSON.stringify(this._quickStartListLocalSwitch));
-                this.saveInviteSet();
-                this.removeFromParent(true)
-            }
-        }, this);
-        closeBtnAddLight(_close);
-        var ruleList = [];
-        var ruleNum = -1;
-        for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {
-            var otherRule = this.clubData["rule" + i];
-            if (otherRule && otherRule != "delete") {
-                otherRule._index = i;
-                ruleList.push(otherRule);
-            } else if (ruleNum == -1) {
-                ruleNum = i;
+    showPosition: function (index = 0) {
+        if (this.showingIndex == index) return;
+        this.showingIndex = index;
+        for (var i in this.leftViews) {
+            let item = this.leftViews[i];
+            if (item && cc.sys.isObjectValid(item)) {
+                item.setBright(index == i);
+                cc.log(index == i)
+                item.getChildByName('txt1').setColor(cc.color(index == i ? "#AD2500" : "#C9EEFF"));
+                if (!item.visible) item.visible = true;
             }
         }
-
-        var btn_addRule = panel.getChildByName("btn_addRule");
-        btn_addRule.visible = this.isJurisdiction && ruleNum != -1;
-        btn_addRule.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                postEvent("createRoom", {
-                    IsFriendCard: true,
-                    ruleNumer: ruleNum,
-                    clubType: this.clubData.type,
-                    isMatch: (this.clubData.matchIsOpen & 2),
-                });
-
-            }
-        }, this);
-
-        this._cb_isAcceptAllInvite = panel.getChildByName("cb_isAcceptAllInvite");
-        this._cb_isAcceptAllInvite.ignoreContentAdaptWithSize(true);
-        this._cb_isAcceptAllInvite.visible = false;
-
-        this._cb_isAcceptAllInvite.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                this._acceptInvite = sender.isSelected() ? 0 : 1;
-                sender.runAction(cc.sequence(cc.callFunc(function () {
-                    this.reflashUI();
-                }.bind(this))))
-            }
-        }, this);
-        this._cb_isAcceptAllInvite.getChildByName("text").addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                sender.getParent().setSelected(!sender.getParent().isSelected());
-                this._acceptInvite = sender.getParent().isSelected() ? 1 : 0;
-                this.reflashUI();
-            }
-        }, this);
-
-        this._listView = panel.getChildByName("listView")
-        this._listView.setScrollBarEnabled(false);
-        this._item = panel.getChildByName("item")
-        this._item.visible = false;
-        this._ruleListData = ruleList;
+        this.initRightPanel();
     },
+    //右侧内容
+    initRightPanel: function () {
+        let itemData = this._ruleListData[this.showingIndex];
+        if (itemData) {
+            var text_ruleDesc = this.rightPanel.getChildByName("text_ruleDesc");
+            var guizeStr = stringDBCtoSBC(unescape(itemData.ruleDesc));
+            text_ruleDesc.setString(guizeStr);
+            text_ruleDesc.runAction(cc.sequence(cc.DelayTime(0.01), cc.callFunc(function () {
+                var i = 0;
+                while (text_ruleDesc.getVirtualRenderer().getStringNumLines() > 3) {
+                    i++;
+                    text_ruleDesc.setString(guizeStr.substring(0, guizeStr.length - i) + "...");
+                }
+            })));
+            //暂停开房
+            var cb_isStopRoom = this.rightPanel.getChildByName("cb_isStopRoom");
+            if (FriendCard_Common.isLMClub()) {
+                cb_isStopRoom.visible = FriendCard_Common.isSupperManger();
+            } else {
+                cb_isStopRoom.visible = FriendCard_Common.isManager();
+            }
+            cb_isStopRoom.ignoreContentAdaptWithSize(true);
+            cc.log('---this.clubData.ruleSwitch---', JSON.stringify(this.clubData.ruleSwitch))
+            var isStopRoom = ((!((itemData._index + "") in this.clubData.ruleSwitch)) || this.clubData.ruleSwitch[itemData._index + ""]) ? false : true;
+            cb_isStopRoom.setSelected(isStopRoom ? true : false);
+            cb_isStopRoom._data = itemData;
+            cb_isStopRoom.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    this.updateRuleStopRoom(sender._data._index, sender.isSelected() ? false : true);
+                }
+            }, this);
+            cb_isStopRoom.getChildByName("text").addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    sender.getParent().setSelected(!sender.getParent().isSelected());
+                    this.updateRuleStopRoom(sender.getParent()._data._index, sender.getParent().isSelected() ? true : false);
+                }
+            }, this);
+            //对局邀请
+            var cb_isAcceptInvite = this.rightPanel.getChildByName("cb_isAcceptInvite");
+            cb_isAcceptInvite.ignoreContentAdaptWithSize(true);
+            cb_isAcceptInvite.setSelected(this._acceptInviteSwitch[itemData._index.toString()] == 1);
+            cb_isAcceptInvite._data = itemData;
+            cb_isAcceptInvite.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    this._acceptInviteSwitch[sender._data._index.toString()] = sender.isSelected() ? 0 : 1;
+                    this.reSetSelectAllInvite();
+                }
+            }, this);
+            cb_isAcceptInvite.getChildByName("text").addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    sender.getParent().setSelected(!sender.getParent().isSelected());
+                    this._acceptInviteSwitch[sender.getParent()._data._index.toString()] = sender.getParent().isSelected() ? 1 : 0;
+                    this.reSetSelectAllInvite();
+                }
+            }, this);
+            //快速开始列表
+            var cb_isAddQuickStartList = this.rightPanel.getChildByName("cb_isAddQuickStartList");
+            cb_isAddQuickStartList.ignoreContentAdaptWithSize(true);
+            if (itemData._index.toString() in this._quickStartListLocalSwitch) {
+                cb_isAddQuickStartList.setSelected(this._quickStartListLocalSwitch[itemData._index.toString()] == 1)
+            } else {
+                cb_isAddQuickStartList.setSelected(true)
+            }
+            cb_isAddQuickStartList._data = itemData;
+            cb_isAddQuickStartList.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    this._quickStartListLocalSwitch[sender._data._index.toString()] = sender.isSelected() ? 0 : 1;
+                }
+            }, this);
+            cb_isAddQuickStartList.getChildByName("text").addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    sender.getParent().setSelected(!sender.getParent().isSelected());
+                    this._quickStartListLocalSwitch[sender.getParent()._data._index.toString()] = sender.getParent().isSelected() ? 1 : 0;
+                }
+            }, this);
+            //修改规则
+            var btn_setRule = this.rightPanel.getChildByName("btn_setRule");
+            btn_setRule.visible = this.isJurisdiction;
+            btn_setRule._wanFaIndex = itemData._index;
+            var isShowLibertyCreRoom = false;
+            if (itemData.customInfo) {
+                isShowLibertyCreRoom = itemData.customInfo;
+            }
+            btn_setRule._isShowLibertyCreRoom = isShowLibertyCreRoom
+            btn_setRule.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    cc.log("createRoom ruleNumer", sender._wanFaIndex)
+                    postEvent("createRoom", {
+                        IsFriendCard: true,
+                        ruleNumer: sender._wanFaIndex,
+                        ruleName: itemData.ruleName,
+                        clubType: this.clubData.type,
+                        isShowLibertyCreRoom: sender._isShowLibertyCreRoom,
+                        isMatch: (this.clubData.matchIsOpen & 2)
+                    });
+                }
+            }, this);
+            //屏蔽名单
+            var btn_black_list = this.rightPanel.getChildByName("btn_black_list");
+            if (FriendCard_Common.isLMClub()) {
+                btn_black_list.visible = FriendCard_Common.isSupperManger() || FriendCard_Common.isLMChair() || FriendCard_Common.isGroupLeader() !== false;
+            } else {
+                btn_black_list.visible = FriendCard_Common.isManager() || FriendCard_Common.isGroupLeader() !== false;
+            }
+            btn_black_list._ruleData = itemData;
+            btn_black_list.addTouchEventListener(function (sender, type) {
+                if (type == 2) {
+                    var data = JSON.parse(JSON.stringify(this.clubData));
+                    data.pmruleId = sender._ruleData._index;
+                    data.ruleData = sender._ruleData;
+                    this.addChild(new Friendcard_ruleBlackList(data));
+                }
+            }, this);
+        }
+    },
+
     reqChange: function (selectNumber) {
         if (FriendCard_Common.getClubisLM()) {
             this.reqChangeLM(selectNumber);

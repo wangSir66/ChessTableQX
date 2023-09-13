@@ -7,7 +7,7 @@
 			<key>A_FriendCard/Guanjia/btn_changeToFangkaClub_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{748,2},{188,66}}</string>
+				<string>{{2,2},{188,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -18,18 +18,18 @@
 			<key>A_FriendCard/Guanjia/btn_gaojiset_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{940,2},{188,66}}</string>
+				<string>{{194,2},{188,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{188,66}</string>
 			</dict>
 			<key>A_FriendCard/Guanjia/btn_guanlijilv_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{748,72},{188,66}}</string>
+				<string>{{386,2},{188,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -40,7 +40,7 @@
 			<key>A_FriendCard/Guanjia/btn_huci_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{748,142},{188,66}}</string>
+				<string>{{578,2},{188,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -51,18 +51,18 @@
 			<key>A_FriendCard/Guanjia/btn_set_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{940,194},{188,66}}</string>
+				<string>{{770,2},{188,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{188,66}</string>
 			</dict>
 			<key>A_FriendCard/Guanjia/btn_yaoqing_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{748,212},{188,66}}</string>
+				<string>{{2,72},{188,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -73,57 +73,24 @@
 			<key>A_FriendCard/Guanjia/checkBox_close.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{748,282},{109,56}}</string>
+				<string>{{194,72},{155,65}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{109,56}</string>
+				<string>{155,65}</string>
 			</dict>
 			<key>A_FriendCard/Guanjia/checkBox_open.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{861,282},{109,56}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{109,56}</string>
-			</dict>
-			<key>A_FriendCard/Guanjia/img_dianxiaoer.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,702},{382,625}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{382,625}</string>
-			</dict>
-			<key>A_FriendCard/Main/img_xian.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1010,2},{427,1}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{427,1}</string>
-			</dict>
-			<key>A_FriendCard/Guanjia/img_di.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,2},{742,696}}</string>
+				<string>{{353,72},{155,65}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{742,696}</string>
+				<string>{155,65}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>
@@ -135,14 +102,14 @@
 			<key>realTextureFileName</key>
 			<string>Guanjia.png</string>
 			<key>size</key>
-			<string>{1013,1086}</string>
+			<string>{960,140}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>1013</integer>
+			<integer>960</integer>
 			<key>height</key>
-			<integer>1086</integer>
+			<integer>140</integer>
 		</dict>
 	</dict>
 </plist>

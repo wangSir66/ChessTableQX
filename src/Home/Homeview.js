@@ -33,12 +33,12 @@ var HomeView_yaan = cc.Layer.extend({
         var _girlPanel = _back.getChildByName("Panel_girl");
         this._girlPanel = _girlPanel;
         this._girlPanel.setVisible(true);
-        var _girlSprite = _girlPanel.getChildByName("girl");
-        if (_girlSprite) _girlSprite.visible = false;
-        var _girlBone = createSpine("spine/home/girl/renwunv.json", "spine/home/girl/renwunv.atlas");
-        _girlBone.setAnimation(0, 'animation', true);
-        setWgtLayout(_girlPanel, [0.4, 0.4], [0.4, -0.10], [0, 0], false, true);
-        _girlPanel.addChild(_girlBone, 1);
+        // var _girlSprite = _girlPanel.getChildByName("girl");
+        // if (_girlSprite) _girlSprite.visible = false;
+        // var _girlBone = createSpine("spine/home/girl/renwunv.json", "spine/home/girl/renwunv.atlas");
+        // _girlBone.setAnimation(0, 'animation', true);
+        // _girlPanel.addChild(_girlBone, 1);
+        setWgtLayout(_girlPanel, [0.86, 0.86], [0.22, 0], [0, -0.036], false, true);
 
         //底部按钮的地板
         this._Panel_bottom = _back.getChildByName("Panel_bottom");
@@ -50,24 +50,6 @@ var HomeView_yaan = cc.Layer.extend({
         _tilebg.visible = true;
         this._titlePanel = _tilebg;
         setWgtLayout(_tilebg, [1, 1], [0.5, 1], [0, 0]);
-
-        //活动伸缩按钮
-        var _btnActive = this._Panel_bottom.getChildByName("Btn_Active");
-        function _btnActiveTouchEvent(sender, Type) {
-            switch (Type) {
-                case ccui.Widget.TOUCH_ENDED:
-                    updateUserBehavior("活动");
-                    if (MjClient.systemConfig && MjClient.systemConfig.activity) {
-                        var layer = new activityLayer();
-                        MjClient.Scene.addChild(layer);
-                        MjClient.native.umengEvent4CountWithProperty("HuodongClick", { uid: SelfUid() });
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
-        _btnActive.addTouchEventListener(_btnActiveTouchEvent, this);
 
         //设置
         var _setting = _tilebg.getChildByName("setting");
@@ -109,27 +91,8 @@ var HomeView_yaan = cc.Layer.extend({
             }
         }, this);
 
-
-        //咨询
-        var btnZiXun = this._Panel_bottom.getChildByName("btnZiXun");
-        if (btnZiXun) {
-            btnZiXun.addTouchEventListener(function (sender, Type) {
-                switch (Type) {
-                    case ccui.Widget.TOUCH_ENDED:
-                        var ziXunLayer = new HomeZiXunLayer();
-                        ziXunLayer.setName("HomeZiXunLayer");
-                        MjClient.Scene.addChild(ziXunLayer);
-                        MjClient.native.umengEvent4CountWithProperty("ZiXunClick", { uid: SelfUid() });
-                        break;
-                    default:
-                        break;
-                }
-            }, this);
-
-        }
-
         //右上角的帮助按钮,
-        var _BtnHTP = _tilebg.getChildByName("BtnHTP");
+        var _BtnHTP = this._Panel_bottom.getChildByName("BtnHTP");
         _BtnHTP.visible = true;
         _BtnHTP.addTouchEventListener(function (sender, Type) {
             switch (Type) {
@@ -180,47 +143,22 @@ var HomeView_yaan = cc.Layer.extend({
         this._youjian.getChildByName("hongDian").setVisible(false);
         this.updateYoujianCount();
 
-
         //客服按钮
         var _BtnKeFu = this._Panel_bottom.getChildByName("BtnKeFu");
-        _BtnKeFu.visible = false;
+        _BtnKeFu.getChildByName("hongDian").setVisible(false);
+        _BtnKeFu.visible = true;
 
         //广播
         this._guangbo = homeui.node.getChildByName("guangbo");
-
-        //分享有礼
-        var _btnShareGet = this._Panel_bottom.getChildByName("fenxiang");
-
-        //推荐有礼
-        var _btntuijian = this._Panel_bottom.getChildByName("tuijian");
 
         //头像
         var _headbg = homeui.node.getChildByName("headbg");
         this._headPanel = _headbg;
 
-        //shagn商城
-        var _BtnShop = this._Panel_bottom.getChildByName("Button_store");
-
-        //公告按钮
-        var btn_gonggao = this._Panel_bottom.getChildByName("btn_gonggao");
-        if (btn_gonggao) {
-
-            //btn_gonggao.setAnchorPoint(1,0.5);
-            if (MjClient.remoteCfg.guestLogin == true) {
-                btn_gonggao.setVisible(false);
-            }
-            btn_gonggao.addTouchEventListener(function (sender, type) {
-                if (type == ccui.Widget.TOUCH_ENDED) {
-                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Gonggao", { uid: SelfUid() });
-                    MjClient.Scene.addChild(new gongGaoLayer());
-                }
-            }, this)
-        }
-
         //亲友圈邀请审核
         var btnFriendcardInvite = _tilebg.getChildByName("btnFriendcardInvite");
         if (!btnFriendcardInvite) {
-            btnFriendcardInvite = new ccui.Button("game_picture/activeBtn/shenhe.png");
+            btnFriendcardInvite = new ccui.Button("A_Home/Main/btn_shenhe.png", null, null, 1);
             btnFriendcardInvite.setName("btnFriendcardInvite");
             btnFriendcardInvite.addTouchEventListener(function (sender, type) {
                 if (type === ccui.Widget.TOUCH_ENDED) {
@@ -255,20 +193,12 @@ var HomeView_yaan = cc.Layer.extend({
             });
         }
         btnFriendcardInvite.visible = isAgent();
-        btnFriendcardInvite.setPosition(cc.p(66.6, -65))
+        btnFriendcardInvite.setPosition(cc.p(66.6, -75))
 
-
-        if (MjClient.remoteCfg.guestLogin == true) {
-            setWgtLayout(this._youjian, [0.06, 0.13], [0.06, 0.74], [0, 0]);
-            setWgtLayout(_zhanji, [0.06, 0.13], [0.06, 0.56], [0, 0]);
-            setWgtLayout(_BtnHTP, [0.06, 0.13], [0.06, 0.38], [0, 0]);
-            setWgtLayout(_setting, [0.06, 0.13], [0.06, 0.2], [0, 0]);
-        }
-
-        setWgtLayout(this._guangbo, [0.5, 0.5], [0.45, 0.86], [0, 0]);
+        setWgtLayout(this._guangbo, [0.5, 0.5], [0.5, 0.86], [0, 0]);
         if (isIPhoneX()) setWgtLayout(this._guangbo, [0.4, 0.4], [0.41, 0.8365], [0, 0]);
 
-        setWgtLayout(_headbg, [0.13, 0.13], [0.02, 0.86], [0, 0]);
+        setWgtLayout(_headbg, [0.11, 0.11], [0.02, 0.89], [0, 0]);
 
         var _scroll = this._guangbo.getChildByName("scroll");
         var _msg = _scroll.getChildByName("msg");
@@ -294,123 +224,6 @@ var HomeView_yaan = cc.Layer.extend({
             }, 600);
         });
 
-
-
-        // if (MjClient.remoteCfg.guestLogin == true) {
-        _btnShareGet.visible = false;
-        _btnShareGet.setTouchEnabled(false);
-        // }
-        // _btnShareGet.addTouchEventListener(function (sender, Type) {
-        //     switch (Type) {
-        //         case ccui.Widget.TOUCH_ENDED:
-        //             {
-        //                 var _sprite = _btnShareGet.getChildByName("hongDian");
-        //                 MjClient.Scene.addChild(new shareTodayLayer(_sprite.visible));
-        //                 MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Fenxiang", { uid: SelfUid() });
-        //                 updateUserBehavior("分享");
-        //             }
-        //             break;
-        //         default:
-        //             break;
-        //     }
-        // }, this);
-
-        // var bg_share = _btnShareGet.getChildByName("bg_img");
-        // bg_share.runAction(cc.sequence(cc.scaleTo(1,0.8),cc.scaleTo(1,1.1)).repeatForever());
-        var _shareTip = _btnShareGet.getChildByName("fenxiang_tip");
-        _shareTip.setVisible(false);
-        var _shareTipText = null;
-        if (_shareTip) {
-            _shareTipText = _shareTip.getChildByName("Text_4");
-        }
-        _btnShareGet.schedule(function () {
-            var lastStr = MjClient.data.pinfo.lastShareDay;
-            var currentStr = MjClient.dateFormat(new Date(), "yyyyMMdd");
-            var _sprite = _btnShareGet.getChildByName("hongDian");
-            var start_day = parseInt(currentStr + "00");
-            var zhong_day = parseInt(currentStr + "12");
-
-            // 0:00-12:00
-            if (lastStr < start_day) {
-                // 今天还没分享过
-                _sprite.visible = true;
-                if (0 <= (new Date().getHours()) && (new Date().getHours()) < 12) {
-                    //上午
-                    if (_shareTip) {
-                        _shareTipText.setString("100%得元宝");
-                    }
-                } else {
-                    //下午
-                    if (_shareTip) {
-                        _shareTipText.setString("100%中奖");
-                    }
-                }
-            } else if (lastStr < zhong_day) {
-                // 上午已经分享过
-                if (0 <= (new Date().getHours()) && (new Date().getHours()) < 12) {
-                    //上午
-                    _sprite.visible = false;
-                    // bg_share.stopAllActions();
-                    // bg_share.setScale(1);
-
-                } else {
-                    //下午
-                    _sprite.visible = true;
-                    if (_shareTip) {
-                        _shareTipText.setString("分享抽大奖");
-                    }
-                }
-            } else {
-                _sprite.visible = false;
-                // bg_share.stopAllActions();
-                // bg_share.setScale(1);
-            }
-
-            if (_sprite && _shareTip)
-                _shareTip.visible = _sprite.visible;
-
-            // if(lastStr >= currentStr){
-            //     _sprite.setVisible(false);
-            //     _shareTip.setVisible(false);
-            // }else {
-            //     _sprite.setVisible(true);
-            //     _shareTip.setVisible(true);
-            //     _shareTipText.setString("分享得2元宝");
-            // }
-
-        }, 1);
-
-        if (_shareTip) {
-            if (_btnActive)
-                _btnShareGet.setLocalZOrder(_btnActive.getLocalZOrder() + 1);
-            _shareTip.setOpacity(0);
-            _shareTip.runAction(cc.repeatForever(cc.sequence(
-                cc.fadeIn(1),
-                cc.repeat(cc.sequence(cc.moveBy(0.3, 0, 2), cc.moveBy(0.6, 0, -4), cc.moveBy(0.3, 0, 2)), 5),
-                cc.fadeOut(1),
-                cc.delayTime(0.5))));
-        }
-
-        if (MjClient.remoteCfg.guestLogin == true) {
-            _btntuijian.visible = false;
-            _btntuijian.setTouchEnabled(false);
-        }
-
-        _btntuijian.addTouchEventListener(function (sender, Type) {
-            switch (Type) {
-                case ccui.Widget.TOUCH_ENDED:
-                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Tuijian", { uid: SelfUid() });
-                    updateUserBehavior("邀请下载");
-                    var layer = null;
-                    layer = new recommendLayer_active();
-                    MjClient.Scene.addChild(layer);
-                    break;
-                default:
-                    break;
-            }
-        }, this);
-
-        _btntuijian.visible = false;
         var selfHead = SelfHeadInfo();
         MjClient.loadWxHead(selfHead.uid, selfHead.url);
 
@@ -423,18 +236,17 @@ var HomeView_yaan = cc.Layer.extend({
                 }
                 else {
                     avatar = new cc.Sprite(d.img);
-                    var stencil = new cc.Sprite("hallSkin/top/avatar_mask.png");
+                    var stencil = new cc.Sprite("A_Common/default_headpic.png");
                     var clip = new cc.ClippingNode(stencil);
                     clip.setAlphaThreshold(0);
                     clip.addChild(avatar);
                     clip.setPosition(_head.width / 2, _head.height / 2);
                     _head.addChild(clip);
+                    clip.setScale(0.95)
                     clip.name = 'homeheadsp'
                 }
             }
         });
-
-
 
         _head.addTouchEventListener(function (sender, Type) {
             switch (Type) {
@@ -505,30 +317,30 @@ var HomeView_yaan = cc.Layer.extend({
         /*
          商店 
          */
-        // if (MjClient.remoteCfg.hideMoney == true) {
-        _BtnShop.visible = false;
-        _BtnShop.setTouchEnabled(false);
-        // }
-        //_BtnShop.runAction(cc.sequence(cc.rotateBy(1, 20), cc.rotateBy(1, -20)).repeatForever());
-        // _BtnShop.addTouchEventListener(function (sender, Type) {
-        //     switch (Type) {
-        //         case ccui.Widget.TOUCH_ENDED:
-        //             var layer = enter_store();
-        //             MjClient.Scene.addChild(layer);
-        //             MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Shop", { uid: SelfUid() });
-        //             updateUserBehavior("商城");
-        //             break;
-        //         default:
-        //             break;
-        //     }
-        // }, this);
-
-
+        var _BtnShop = this._Panel_bottom.getChildByName("Button_store");
+        _BtnShop.visible = true;
+        if (MjClient.remoteCfg.hideMoney == true) {
+            _BtnShop.visible = false;
+            _BtnShop.setTouchEnabled(false);
+        }
+        // _BtnShop.runAction(cc.sequence(cc.rotateBy(1, 20), cc.rotateBy(1, -20)).repeatForever());
+        _BtnShop.addTouchEventListener(function (sender, Type) {
+            switch (Type) {
+                case ccui.Widget.TOUCH_ENDED:
+                    var layer = enter_store();
+                    MjClient.Scene.addChild(layer);
+                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Shop", { uid: SelfUid() });
+                    updateUserBehavior("商城");
+                    break;
+                default:
+                    break;
+            }
+        }, this);
 
         //设置游戏Panel和广告Panel
         this._gamePanelLeftNode = _back.getChildByName("Panel_left");
         this.setPanel(this._gamePanelLeftNode);
-        COMMON_UI.addHintText(homeui.node);
+        // COMMON_UI.addHintText(homeui.node);
 
 
         //金币场回来显示金币场界面
@@ -541,23 +353,6 @@ var HomeView_yaan = cc.Layer.extend({
             this.addChild(goldHallLayer);
             this.showJinbiView();
         }
-
-        // var _dataList2 = [
-        //     ["仅需是UI哦牛噢耶"  , "fonts/lanting.TTF", 25, "#ff0000"],
-        //     ["发范德萨范德萨范德萨范德萨范德萨" , MjClient.fzcyfont, 36, "#00ff00"],
-        //     ["范德萨范德萨"]
-        // ];
-        // var _richText = COMMON_UI.RichText(_dataList2);
-        // _richText.setPosition(cc.p(640,200));
-        // _richText.setLocalZOrder(10);
-        // this.addChild(_richText);
-
-
-        //重置UI位置
-        let hd = cc.p(_btnActive.x, _btnActive.y);
-        _btnActive.setPosition(_zhanji.x, _zhanji.y);
-        _zhanji.setPosition(_BtnKeFu.x, _BtnKeFu.y);
-        _btntuijian.setPosition(hd.x, hd.y);
         return true;
     },
     //扩展定义
@@ -712,8 +507,8 @@ var HomeView_yaan = cc.Layer.extend({
         var headbg = this.uiNode.getChildByName("headbg");
         tilebg._dY = tilebg.height;
         headbg._dY = headbg.height;
-        topActionList.push(this.uiNode.getChildByName("tilebg"));
-        topActionList.push(this.uiNode.getChildByName("headbg"));
+        topActionList.push(tilebg);
+        topActionList.push(headbg);
 
         var bottomActionList = [];
         this._Panel_bottom._dY = this._Panel_bottom.height;
@@ -804,16 +599,7 @@ var HomeView_yaan = cc.Layer.extend({
     },
     setPanel: function (leftPanel) {
         var that = this;
-        var headPanel = this._headPanel;
-        var girlPanel = this._girlPanel;
         var gamePanel = leftPanel || this._gamePanelLeftNode;
-        setWgtLayout(gamePanel, [0.7, 0.7], [0.45, 0.5], [0, 0], false, true);
-
-        if (isIPad()) {
-            setWgtLayout(gamePanel, [0.5, 0.5], [-0.02, 0.5], [0, 0], false, true);
-            setWgtLayout(girlPanel, [0.25, 0.25], [0.67, 0.07], [0, 0], false, false);
-            setWgtLayout(headPanel, [0.1, 0.1], [0.01, 0.90], [0, 0], false, false);
-        }
 
         this.saveActionPosition();
 
@@ -858,28 +644,6 @@ var HomeView_yaan = cc.Layer.extend({
         this._playGroundRoom.setVisible(MjClient.systemConfig.matchRoomEnable === "true");
         this._playGroundRoom.setZoomScale(0.05);
 
-        var actMajiang = this._playGroundRoom.getChildByName("majiang");
-        actMajiang.runAction(cc.sequence(
-            cc.delayTime(0.01),
-            cc.moveBy(0.8, cc.p(0, 10)).easing(cc.easeSineInOut()),
-            cc.moveBy(1.0, cc.p(0, -10)).easing(cc.easeSineInOut())
-        ).repeatForever());
-
-        var actFan = this._playGroundRoom.getChildByName("fan");
-        actFan.runAction(cc.sequence(
-            cc.delayTime(0.09),
-            cc.moveBy(1.0, cc.p(0, 6)).easing(cc.easeSineInOut()),
-            cc.moveBy(1.0, cc.p(0, -6)).easing(cc.easeSineInOut())
-        ).repeatForever());
-
-        if (MjClient.systemConfig.fieldRedpacketActivityOpen) {
-            actMajiang.setVisible(false);
-            actFan.setVisible(false);
-        } else {
-            actMajiang.setVisible(true);
-            actFan.setVisible(true);
-        }
-
         UIEventBind(this.jsBind, this._playGroundRoom, "goldfieldchange", function () {
             if (cc.sys.isObjectValid(MjClient.GoldHallLayer)) {
                 return;
@@ -893,10 +657,6 @@ var HomeView_yaan = cc.Layer.extend({
         });
 
         goldField_updateListener(this._playGroundRoom);
-
-        var jiaoBiao = new cc.Sprite("game_picture/mainMenu/jiaobiao2.png");
-        jiaoBiao.setPosition(jiaoBiao.width * 0.52, this._playGroundRoom.height - jiaoBiao.height * 0.4);
-        this._playGroundRoom.addChild(jiaoBiao);
 
         this._playGroundRoom.addTouchEventListener(function (sender, Type) {
             switch (Type) {
@@ -915,12 +675,6 @@ var HomeView_yaan = cc.Layer.extend({
         this._clubRoom = gamePanel.getChildByName("clubRoom");
         this._clubRoom.setZoomScale(0.05); MjClient.native.GetPackageName()
         this._clubRoom.setVisible(MjClient.systemConfig.clubEnable === "true");
-
-        var clubActMajiang = this._clubRoom.getChildByName("majiang");
-        clubActMajiang.runAction(cc.sequence(
-            cc.moveBy(1.5, 0, 5).easing(cc.easeSineInOut()),
-            cc.moveBy(1.5, 0, -5).easing(cc.easeSineInOut())
-        ).repeatForever());
 
         this._clubRoom.addTouchEventListener(function (sender, Type) {
             switch (Type) {

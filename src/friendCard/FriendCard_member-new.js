@@ -179,14 +179,10 @@ var FriendCard_member = cc.Layer.extend({
         var Button_zhuli = ListView_left.getChildByName("Button_zhuli");
         var Button_daoru = ListView_left.getChildByName("Button_daoru");
         var Button_addMember = ListView_left.getChildByName("Button_addMember");
-        var Button_league = ListView_left.getChildByName("Button_league");
         var Button_member_record = ListView_left.getChildByName("Button_member_record");
         var Button_honor_record = ListView_left.getChildByName("Button_honor");
         Button_member_record.addChild(Button_shenhe.getChildByName("Image_point").clone());
 
-        if (Button_league) {
-            Button_league.removeFromParent(true);
-        }
         if (FriendCard_Common.isOrdinaryMember()) {
             Button_member_record.removeFromParent(true);
         } else {

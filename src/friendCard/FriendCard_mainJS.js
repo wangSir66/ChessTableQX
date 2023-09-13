@@ -47,24 +47,28 @@ var FriendCard_main = cc.Layer.extend({
 		var back = UI.node.getChildByName("back");
 		this.back = back;
 
-		this.btn_showClubList = UI.node.getChildByName("btn_showClubList");
-		setWgtLayout(this.btn_showClubList, [0.1078, 0.3398], [0, 0.5], [-0.5, 0]);
+		//亲友圈列表
+		this._node_clubList = UI.node.getChildByName("node_clubList");
+		setWgtLayout(this._node_clubList, [0.4617, 1], [0, 0], [-1, 0]);
+		// this._node_clubList.enabled = false;
+		this.btn_showClubList = this._node_clubList.getChildByName("btn_showClubList");
 		//亲友圈列表按钮
 		this.btn_showClubList.addTouchEventListener(function (sender, type) {
 			if (type != 2)
 				return;
-			this.showClubList();
+			if (this._node_clubList.isShow == true) {
+				if (this.clubList.length == 0) {
+					this.requestLeaveClub(true);
+				}
+				else {
+					this.closeClubList();
+				}
+			} else
+				this.showClubList();
 		}, this);
 
-		//亲友圈列表
-		this._node_clubList = UI.node.getChildByName("node_clubList");
-		setWgtLayout(this._node_clubList, [0.4617, 1], [0, 0], [-0.5, 0]);
-		this._node_clubList.visible = false;
-		this._node_clubList.enabled = false;
-
 		this.gonggao_bg = UI.node.getChildByName("gonggao_bg")
-
-		setWgtLayout(this.gonggao_bg, [0.5781, 0.458], [0.5, 0.735], [0, 0]);
+		setWgtLayout(this.gonggao_bg, [0.5781, 0.458], [0.5, 0.8], [0, 0]);
 		this.gonggao_bg.visible = false;
 
 		//杂七杂八
@@ -128,44 +132,10 @@ var FriendCard_main = cc.Layer.extend({
 		// 点击加入房间
 		this._imgPoint = this._node_desk.getChildByName("Img_tip");// 空桌子箭头
 
-		// 关闭俱乐部列表
-		this._btn_close = this._node_clubList.getChildByName("btn_close");
-		this._btn_close.addTouchEventListener(function (sender, type) {
-			if (type != 2)
-				return;
-
-			if (this.clubList.length == 0) {
-				this.requestLeaveClub(true);
-			}
-			else {
-				this.closeClubList();
-			}
-		}, this);
-
-
-		//女管家
-		this.img_nvguanjia = this._image_top.getChildByName("img_nvguanjia");
-		this.img_nvguanjia.addTouchEventListener(function (sender, type) {
-			if (type == 2) {
-				this.closeClubList();
-				if (this.isManager()) {
-					var data = {};
-					data.data = this.data;
-					data.clubId = this.clubId;
-					data.ruleIndex = this.ruleIndex;
-					data.isCreator = this.isCreator();
-					this.addChild(new Friendcard_nvguanjia(data));
-				}
-			}
-		}, this);
-
-		//房卡
+		//积分
 		this.fangkaBG = this._image_top.getChildByName("fangkaBG");
 		if (this.fangkaBG) {
 			this.fangkaBG.setTouchEnabled(false);
-
-			this.text_fangka_type = this.fangkaBG.getChildByName("Text_1");
-			this.text_fangka_type.ignoreContentAdaptWithSize(true);
 			var text_fangka = this.fangkaBG.getChildByName("text_fangka"),
 				updateTxtFun = function () {
 					if (that.data && that.data.info) {
@@ -187,6 +157,27 @@ var FriendCard_main = cc.Layer.extend({
 			updateTxtFun();
 			UIEventBind(null, text_fangka, "updateInfo", function () {
 				updateTxtFun();
+			});
+		}
+		//元宝 房卡
+		this.yuanbaoBG = this._image_top.getChildByName("yuanbaoBG");
+		if (this.yuanbaoBG) {
+			this.yuanbaoBG.setTouchEnabled(false);
+			var text_yuanbao = this.yuanbaoBG.getChildByName("text_fangka"),
+				updateTxtFun1 = function () {
+					if (that.data && that.data.info) {
+						if (that.data.info.type == 1) {
+							text_yuanbao.setString(MjClient.data.pinfo.fangka + "");
+						} else {
+							text_yuanbao.setString(MjClient.data.pinfo.money + "");
+						}
+					}
+				}
+			this.text_yuanbao = text_yuanbao;
+			text_yuanbao.ignoreContentAdaptWithSize(true);
+			updateTxtFun1();
+			UIEventBind(null, text_yuanbao, "updateInfo", function () {
+				updateTxtFun1();
 			});
 		}
 
@@ -325,25 +316,6 @@ var FriendCard_main = cc.Layer.extend({
 		_armature.setRotation(-30);
 		img_bg1.getParent().addChild(_armature, -1);
 
-		//女管家动画
-		var _nvGuanjiaAni = createSpine("friendCards/nvguanjia/renwu/renwu.json", "friendCards/nvguanjia/renwu/renwu.atlas");
-		_nvGuanjiaAni.setMix('idle', 'xiadun', 0.1);
-		_nvGuanjiaAni.setMix('xiadun', 'idle', 0.1);
-		_nvGuanjiaAni.setAnimation(0, 'idle', true);//xiadun
-		_nvGuanjiaAni.setScale(0.168);
-		this.img_nvguanjia.addChild(_nvGuanjiaAni, -1);
-		_nvGuanjiaAni.setPosition(cc.p(this.img_nvguanjia.width / 2, 0));
-		this._nvGuanjiaAni = _nvGuanjiaAni;
-
-		_nvGuanjiaAni.setCompleteListener(function (trackEntry) {
-			var loopCount = Math.floor(trackEntry.trackTime / trackEntry.animationEnd);
-			if (trackEntry.animation.name == "idle" && (loopCount % 2 == 0))
-				_nvGuanjiaAni.setAnimation(0, 'xiadun', false);
-			else if (trackEntry.animation.name == "xiadun")
-				_nvGuanjiaAni.setAnimation(0, 'idle', true);
-		});
-
-		this.img_nvguanjia.getChildByName("img_biaoshi").visible = this.isManager();
 	},
 	updateBG: function () {
 		var px = this.listView_table.getScrolledPercentHorizontal();
@@ -368,12 +340,12 @@ var FriendCard_main = cc.Layer.extend({
 		if (!this.back)
 			return;
 		cc.log('-skinType-----------', skinType)
-		var img_bg1 = this.back.getChildByName("img_bg1");
+		// var img_bg1 = this.back.getChildByName("img_bg1");
 		var img_bg2 = this.back.getChildByName("img_bg2");
 
 		var path = "A_FriendCard/";
-		img_bg1.loadTexture(path + "bg1_0.jpg");
-		this.buildCopyImgBg(img_bg1);
+		// img_bg1.loadTexture(path + "bg1_0.jpg");
+		// this.buildCopyImgBg(img_bg1);
 
 		img_bg2.loadTexture(path + "bg2_" + skinType + ".png");
 
@@ -429,11 +401,10 @@ var FriendCard_main = cc.Layer.extend({
 	},
 	//设置单个桌子图片
 	setDeskBGImg: function (desk, skinType, skinCfg) {
-		if (skinType == -1)
-			skinType = skinCfg[FriendCard_Common.getGameCalssType(desk.room.gameType) + "BG"] || 0;
-		if (!skinType)
-			skinType = 0;
-
+		// if (skinType == -1)
+		// 	skinType = skinCfg[FriendCard_Common.getGameCalssType(desk.room.gameType) + "BG"] || 0;
+		// if (!skinType)
+			skinType = desk.room.maxPlayer ? desk.room.maxPlayer : 3 ;
 		var path = "A_FriendCard/Main/";
 		var table = desk.getChildByName("table");
 		table.loadTexture(path + "zhuozi_" + skinType + ".png", 1);
@@ -444,8 +415,6 @@ var FriendCard_main = cc.Layer.extend({
 		// else if ((skinType == 6) || (skinType == 9)) { text_roundNum.setTextColor(cc.color("232e0f")) }
 		// else if ((skinType == 7) || (skinType == 10)) { text_roundNum.setTextColor(cc.color("1b293e")) }
 		// else if ((skinType == 8) || (skinType == 11)) { text_roundNum.setTextColor(cc.color("32213d")) }
-
-
 		this.setChairImg(desk, skinType);
 	},
 	setChairImg: function (desk, skinType) {
@@ -475,26 +444,26 @@ var FriendCard_main = cc.Layer.extend({
 					yizi.zIndex = 10;
 				}
 				//设置椅子图片
-				if (Number(skinType) > 2) {
-					yiziPath = "yizi_2.png";
-				} else {
-					if ((k == 1) || (k == 4)) {
-						yiziPath = "yizi_1_1.png";
-					}
-					else {
-						yiziPath = "yizi_1_0.png";
-					}
-				}
-				yizi.loadTexture(path + yiziPath, 1);
+				// if (Number(skinType) > 2) {
+				// 	yiziPath = "yizi_2.png";
+				// } else {
+				// 	if ((k == 1) || (k == 4)) {
+				// 		yiziPath = "yizi_1_1.png";
+				// 	}
+				// 	else {
+				// 		yiziPath = "yizi_1_0.png";
+				// 	}
+				// }
+				// yizi.loadTexture(path + yiziPath, 1);
 
 				//当3人玩的时候 左上角的桌子位置换到右下角
-				if (room.maxPlayer == 3 && k == 3) {
-					yizi.zIndex = 20;
-					if (!(Number(skinType) > 2)) {
-						yizi.loadTexture(path + "yizi_1_1.png", 1);
-					}
-					yizi.setFlippedX(false)
-				}
+				// if (room.maxPlayer == 3 && k == 3) {
+				// 	yizi.zIndex = 20;
+				// 	if (!(Number(skinType) > 2)) {
+				// 		yizi.loadTexture(path + "yizi_1_1.png", 1);
+				// 	}
+				// 	yizi.setFlippedX(false)
+				// }
 			}
 		}
 	},
@@ -609,12 +578,9 @@ var FriendCard_main = cc.Layer.extend({
 			"_btn_record",//战绩
 			"_btn_record2",//战绩
 			"_btn_tongji",//统计
-			"_btn_yaoqing",//邀请
-			"_btn_setSkin",//换肤
-			"_btn_webZhanji",//网页战绩
-			"_agentBtn",//代理
-			"_btn_match",//代理
+			"_btn_guanli",//管理
 			"_btn_shaixuan",//玩法筛选
+			"_btn_setSkin",//皮肤
 		];
 
 		FriendCard_Common.initBottom(that.bottomAllBtns);
@@ -893,7 +859,7 @@ var FriendCard_main = cc.Layer.extend({
 		var isAssistants = FriendCard_Common.isAssistants(that.data.info);
 
 		//女管家标签
-		this.img_nvguanjia.getChildByName("img_biaoshi").visible = isManager;
+		this.img_nvguanjia.visible = isManager;
 
 		//俱乐部名字
 		var text_clubName = this._clubInfo.getChildByName("text_clubName");
@@ -913,23 +879,18 @@ var FriendCard_main = cc.Layer.extend({
 		// }
 		text_clubId.setString(str);
 
-		//房卡
+		//积分
 		if (this.fangkaBG) {
 			this.fangkaBG.visible = true;
-			if (FriendCard_Common.isLeader()) {
-				if (this.data.info.type == 1) {
-					this.text_fangka_type.setString("我的房卡");
-					this.text_fangka.setString(MjClient.data.pinfo.fangka + "");
-					this.fangkaBG.loadTexture("A_FriendCard/Main/fangka_kuang.png", 1);
-				} else {
-					this.text_fangka_type.setString("我的元宝");
-					this.text_fangka.setString(MjClient.data.pinfo.money + "");
-					this.fangkaBG.loadTexture("A_FriendCard/Main/yuanbao_kuang.png", 1);
-				}
+			this.text_fangka.setString(FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList) + "");
+		}
+		//元宝 房卡
+		if (this.yuanbaoBG) {
+			this.yuanbaoBG.visible = true;
+			if (this.data.info.type == 1) {
+				this.text_yuanbao.setString(MjClient.data.pinfo.fangka + "");
 			} else {
-				this.text_fangka_type.setString("我的积分");
-				this.text_fangka.setString(FriendCard_UI.getCurClubHonorVal(this.data.info.clubId, this.clubList) + "");
-				this.fangkaBG.loadTexture("A_FriendCard/Main/jifen_kuang.png", 1);
+				this.text_yuanbao.setString(MjClient.data.pinfo.money + "");
 			}
 		}
 
@@ -977,33 +938,13 @@ var FriendCard_main = cc.Layer.extend({
 
 		//this._btn_setting.setVisible(isManager);
 		this._btn_tongji.setVisible((this.data.info.isShowStats != 0) || isManager || isGroupLeader || isAssistants);
-		this._btn_setSkin.setVisible(FriendCard_Common.isLeader());
-		this._btn_yaoqing.setVisible(false);//isManager
-		if (FriendCard_Common.getClubisLM()) {
-			this._btn_yaoqing.setVisible(false);
+		if(this._btn_setSkin){
+			// this._btn_setSkin.setVisible(FriendCard_Common.isLeader());
+			this._btn_setSkin.setVisible(false);
 		}
 
 		this._btn_record.setVisible(isManager || FriendCard_Common.isGroupLeader(this.data.info));
 		this._btn_record2.setVisible(!this._btn_record.visible);
-		this._btn_webZhanji.setVisible(MjClient.systemConfig.openUserInfoShare + "" == "true");
-
-		// 绑定邀请码：排除南通房卡模式
-		if (!MjClient.APP_TYPE.QXNTQP || MjClient.getAppType() != MjClient.APP_TYPE.QXNTQP) {
-			var haveMemberId = MjClient.data && MjClient.data.pinfo && MjClient.data.pinfo.memberId && parseInt(MjClient.data.pinfo.memberId) > 0;
-			if (this.data.info.memberId && !haveMemberId) {
-				this._agentBtn.visible = true;
-				if (util.localStorageEncrypt.getBoolItem("clubBindingAgentAutoPop_" + this.clubId, true)) {
-					util.localStorageEncrypt.setBoolItem("clubBindingAgentAutoPop_" + this.clubId, false);
-					this.bindingAgent();
-				}
-			}
-			else {
-				this._agentBtn.visible = false;
-			}
-		}
-		else {
-			this._agentBtn.visible = false;
-		}
 
 		//搜索按钮
 		if (this.searchNode) {
@@ -1075,12 +1016,11 @@ var FriendCard_main = cc.Layer.extend({
 	},
 	showClubList: function (time) {
 		var that = this;
-		var px = -(MjClient.size.width * 0.06);
 
 
 		if (this._node_clubList.isShow == true)
 			return;
-
+		this.btn_showClubList.getChildByName('c2').visible = false;
 		this._node_clubList.isShow = true;
 
 		that._node_clubList.stopAllActions();
@@ -1089,15 +1029,14 @@ var FriendCard_main = cc.Layer.extend({
 
 		//俱乐部桌子
 		var listView_tableGoX = this.listView_table.x + that._node_clubList.width * 0.6
+		var px = this._node_clubList.width * this._node_clubList.getScaleX() + this._node_clubList.x;
 
 		this.listView_table.runAction(cc.sequence(cc.callFunc(function () {
 			//that._node_clubList.visible = true;
 		}), cc.moveTo(0.3, cc.p(listView_tableGoX, 67))))
 
 		//俱乐部列表
-		this._node_clubList.runAction(cc.sequence(cc.callFunc(function () {
-			that._node_clubList.visible = true;
-		}), cc.moveTo(0.3, cc.p(px, 0)), cc.delayTime(0.2), cc.callFunc(function () {
+		this._node_clubList.runAction(cc.sequence(cc.moveTo(0.3, cc.p(px, 0)), cc.delayTime(0.2), cc.callFunc(function () {
 			that._node_clubList.enabled = true
 
 			if (!time)
@@ -1120,6 +1059,7 @@ var FriendCard_main = cc.Layer.extend({
 		if (!time)
 			this._node_clubList.isShow = false;
 
+		this.btn_showClubList.getChildByName('c2').visible = true;
 		var that = this;
 		that._node_clubList.stopAllActions();
 		that.listView_table.stopAllActions();
@@ -1134,8 +1074,6 @@ var FriendCard_main = cc.Layer.extend({
 			cc.delayTime(time ? time : 0),
 			cc.moveTo(0.3, cc.p(-that._node_clubList.width * that._node_clubList.scale, 0)),
 			cc.callFunc(function () {
-				that._node_clubList.visible = false;
-				that._node_clubList.enabled = false;
 				that._node_clubList.isShow = false;
 
 			})

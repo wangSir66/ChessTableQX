@@ -72,11 +72,6 @@
           },
           {
             "ClipAble": false,
-            "FileData": {
-              "Type": "MarkedSubImage",
-              "Path": "A_FriendCard/Main/Main_dikuang.png",
-              "Plist": "A_FriendCard/FriendCardMain.plist"
-            },
             "SingleColor": {
               "R": 150,
               "G": 200
@@ -90,10 +85,10 @@
               "ScaleY": 1.0
             },
             "Scale9Enable": true,
-            "Scale9OriginX": 81,
-            "Scale9OriginY": 15,
-            "Scale9Width": 86,
-            "Scale9Height": 18,
+            "Scale9OriginX": -81,
+            "Scale9OriginY": -15,
+            "Scale9Width": 162,
+            "Scale9Height": 30,
             "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5,
@@ -126,6 +121,11 @@
             "Children": [
               {
                 "CheckedState": true,
+                "NormalBackFileData": {
+                  "Type": "Normal",
+                  "Path": "A_FriendCard/Main/XuanZhong0.png",
+                  "Plist": ""
+                },
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
                   "Path": "A_FriendCard/Main/XuanZhong1.png",
@@ -147,7 +147,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 123.0,
+                  "X": 65.0,
                   "Y": 25.0
                 },
                 "Scale": {
@@ -158,32 +158,34 @@
                 "IconVisible": false,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.1025,
+                  "X": 0.0542,
                   "Y": 0.5
                 },
                 "PreSize": {
-                  "X": 0.205,
-                  "Y": 0.96
+                  "X": 0.1125,
+                  "Y": 1.32
                 },
-                "RightMargin": 954.0,
-                "TopMargin": 1.0,
-                "BottomMargin": 1.0,
+                "LeftMargin": -2.5,
+                "RightMargin": 1067.5,
+                "TopMargin": -8.0,
+                "BottomMargin": -8.0,
                 "Tag": 313,
                 "Children": [
                   {
+                    "IsCustomSize": true,
                     "FontSize": 28,
                     "LabelText": "全部",
                     "FontResource": {
-                      "Type": "Default",
-                      "Path": "",
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
                       "Plist": ""
                     },
-                    "OutlineSize": 2,
                     "OutlineColor": {
-                      "R": 82,
-                      "G": 54,
-                      "B": 33
+                      "R": 221,
+                      "G": 115,
+                      "B": 0
                     },
+                    "OutlineEnabled": true,
                     "ShadowColor": {
                       "R": 110,
                       "G": 110,
@@ -196,18 +198,14 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 123.0,
-                      "Y": 24.0
+                      "X": 67.5,
+                      "Y": 33.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "CColor": {
-                      "R": 155,
-                      "G": 140,
-                      "B": 127
-                    },
+                    "CColor": {},
                     "IconVisible": false,
                     "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
@@ -216,18 +214,18 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.2276,
-                      "Y": 0.5833
+                      "X": 0.4444,
+                      "Y": 0.5455
                     },
-                    "LeftMargin": 95.0,
-                    "RightMargin": 95.0,
-                    "TopMargin": 10.0,
-                    "BottomMargin": 10.0,
+                    "LeftMargin": 37.5,
+                    "RightMargin": 37.5,
+                    "TopMargin": 15.0,
+                    "BottomMargin": 15.0,
                     "Tag": 314,
                     "ActionTag": 824818342,
                     "Size": {
-                      "X": 56.0,
-                      "Y": 28.0
+                      "X": 60.0,
+                      "Y": 36.0
                     },
                     "Name": "text",
                     "ctype": "TextObjectData"
@@ -235,14 +233,19 @@
                 ],
                 "ActionTag": -627634070,
                 "Size": {
-                  "X": 246.0,
-                  "Y": 48.0
+                  "X": 135.0,
+                  "Y": 66.0
                 },
                 "Name": "btn_all_rule",
                 "ctype": "CheckBoxObjectData"
               },
               {
                 "CheckedState": true,
+                "NormalBackFileData": {
+                  "Type": "Normal",
+                  "Path": "A_FriendCard/Main/XuanZhong0.png",
+                  "Plist": ""
+                },
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
                   "Path": "A_FriendCard/Main/XuanZhong1.png",
@@ -264,8 +267,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 122.9449,
-                  "Y": -29.404
+                  "X": 65.0,
+                  "Y": -49.3509
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -275,25 +278,25 @@
                 "IconVisible": false,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.1025,
-                  "Y": -0.5881
+                  "X": 0.0542,
+                  "Y": -0.987
                 },
                 "PreSize": {
-                  "X": 0.205,
-                  "Y": 0.96
+                  "X": 0.1125,
+                  "Y": 1.32
                 },
-                "LeftMargin": -0.0551,
-                "RightMargin": 954.0551,
-                "TopMargin": 55.404,
-                "BottomMargin": -53.404,
+                "LeftMargin": -2.5,
+                "RightMargin": 1067.5,
+                "TopMargin": 66.3509,
+                "BottomMargin": -82.3509,
                 "Tag": 315,
                 "Children": [
                   {
                     "FontSize": 28,
                     "LabelText": "只看离线",
                     "FontResource": {
-                      "Type": "Default",
-                      "Path": "",
+                      "Type": "Normal",
+                      "Path": "fonts/fzcy.ttf",
                       "Plist": ""
                     },
                     "OutlineSize": 2,
@@ -314,8 +317,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 123.0,
-                      "Y": 24.0
+                      "X": 67.5,
+                      "Y": 33.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -334,18 +337,18 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.4553,
-                      "Y": 0.5833
+                      "X": 0.8444,
+                      "Y": 0.5152
                     },
-                    "LeftMargin": 67.0,
-                    "RightMargin": 67.0,
-                    "TopMargin": 10.0,
-                    "BottomMargin": 10.0,
+                    "LeftMargin": 10.5,
+                    "RightMargin": 10.5,
+                    "TopMargin": 16.0,
+                    "BottomMargin": 16.0,
                     "Tag": 316,
                     "ActionTag": -383518704,
                     "Size": {
-                      "X": 112.0,
-                      "Y": 28.0
+                      "X": 114.0,
+                      "Y": 34.0
                     },
                     "Name": "text",
                     "ctype": "TextObjectData"
@@ -353,8 +356,8 @@
                 ],
                 "ActionTag": -1871335577,
                 "Size": {
-                  "X": 246.0,
-                  "Y": 48.0
+                  "X": 135.0,
+                  "Y": 66.0
                 },
                 "Name": "btn_outline_rule",
                 "ctype": "CheckBoxObjectData"
@@ -374,10 +377,12 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
-                  "X": 244.08,
+                  "X": 135.0777,
                   "Y": 0.0
                 },
                 "Scale": {
@@ -388,15 +393,15 @@
                 "IconVisible": false,
                 "PositionPercentXEnabled": true,
                 "PrePosition": {
-                  "X": 0.2034,
+                  "X": 0.1126,
                   "Y": 0.0
                 },
                 "PreSize": {
-                  "X": 0.795,
+                  "X": 0.8833,
                   "Y": 10.0
                 },
-                "LeftMargin": 244.08,
-                "RightMargin": 1.92,
+                "LeftMargin": 135.0777,
+                "RightMargin": 4.9224,
                 "TopMargin": -450.0,
                 "CallBackType": "Touch",
                 "Tag": 839,
@@ -404,8 +409,8 @@
                   {
                     "IsBounceEnabled": true,
                     "InnerNodeSize": {
-                      "Width": 954,
-                      "Height": 50
+                      "Width": 1060,
+                      "Height": 66
                     },
                     "ScrollDirectionType": "Horizontal",
                     "ClipAble": false,
@@ -443,15 +448,28 @@
                       "X": 0.0,
                       "Y": 0.05
                     },
+                    "PercentWidthEnable": true,
+                    "PercentWidthEnabled": true,
                     "PreSize": {
                       "X": 1.0,
-                      "Y": 0.1
+                      "Y": 0.132
                     },
-                    "TopMargin": 450.0,
+                    "TopMargin": 442.0,
+                    "BottomMargin": -8.0,
                     "Tag": 132,
                     "Children": [
                       {
                         "CheckedState": true,
+                        "NormalBackFileData": {
+                          "Type": "Normal",
+                          "Path": "A_FriendCard/Main/XuanZhong0.png",
+                          "Plist": ""
+                        },
+                        "PressedBackFileData": {
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/XuanZhong1.png",
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
+                        },
                         "NodeNormalFileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/XuanZhong1.png",
@@ -469,7 +487,7 @@
                         },
                         "Position": {
                           "X": 123.0,
-                          "Y": 25.0
+                          "Y": 33.0
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -479,76 +497,31 @@
                         "IconVisible": false,
                         "PositionPercentYEnabled": true,
                         "PrePosition": {
-                          "X": 0.1289,
+                          "X": 0.116,
                           "Y": 0.5
                         },
                         "PreSize": {
-                          "X": 0.2579,
-                          "Y": 0.96
+                          "X": 0.1274,
+                          "Y": 1.0
                         },
-                        "RightMargin": 708.0,
-                        "TopMargin": 1.0,
-                        "BottomMargin": 1.0,
+                        "LeftMargin": 55.5,
+                        "RightMargin": 869.5,
                         "Tag": 317,
                         "Children": [
-                          {
-                            "FileData": {
-                              "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/Main/Main_FenGeXian.png",
-                              "Plist": "A_FriendCard/FriendCardMain.plist"
-                            },
-                            "Scale9OriginX": 2,
-                            "Scale9OriginY": 15,
-                            "Scale9Width": 4,
-                            "Scale9Height": 18,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 1.0148,
-                              "Y": 24.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PrePosition": {
-                              "X": 0.0041,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.0122,
-                              "Y": 1.0
-                            },
-                            "LeftMargin": -0.4852,
-                            "RightMargin": 243.4852,
-                            "Tag": 656,
-                            "ActionTag": 1776307083,
-                            "Size": {
-                              "X": 3.0,
-                              "Y": 48.0
-                            },
-                            "Name": "1",
-                            "ctype": "ImageViewObjectData"
-                          },
                           {
                             "FontSize": 28,
                             "LabelText": "玩法1",
                             "FontResource": {
-                              "Type": "Default",
-                              "Path": "",
+                              "Type": "Normal",
+                              "Path": "fonts/fzcy.ttf",
                               "Plist": ""
                             },
-                            "OutlineSize": 2,
                             "OutlineColor": {
-                              "R": 82,
-                              "G": 54,
-                              "B": 33
+                              "R": 221,
+                              "G": 115,
+                              "B": 0
                             },
+                            "OutlineEnabled": true,
                             "ShadowColor": {
                               "R": 110,
                               "G": 110,
@@ -561,59 +534,8 @@
                               "ScaleY": 0.5
                             },
                             "Position": {
-                              "X": 123.0,
-                              "Y": 24.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 155,
-                              "G": 140,
-                              "B": 127
-                            },
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.2846,
-                              "Y": 0.5833
-                            },
-                            "LeftMargin": 88.0,
-                            "RightMargin": 88.0,
-                            "TopMargin": 10.0,
-                            "BottomMargin": 10.0,
-                            "Tag": 318,
-                            "ActionTag": -1278651622,
-                            "Size": {
-                              "X": 70.0,
-                              "Y": 28.0
-                            },
-                            "Name": "text",
-                            "ctype": "TextObjectData"
-                          },
-                          {
-                            "FileData": {
-                              "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/Main/Main_FenGeXian.png",
-                              "Plist": "A_FriendCard/FriendCardMain.plist"
-                            },
-                            "Scale9OriginX": 2,
-                            "Scale9OriginY": 15,
-                            "Scale9Width": 4,
-                            "Scale9Height": 18,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 245.4375,
-                              "Y": 24.0
+                              "X": 67.5,
+                              "Y": 33.0
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -622,30 +544,33 @@
                             "CColor": {},
                             "IconVisible": false,
                             "PositionPercentXEnabled": true,
+                            "PositionPercentYEnabled": true,
                             "PrePosition": {
-                              "X": 0.9977,
+                              "X": 0.5,
                               "Y": 0.5
                             },
                             "PreSize": {
-                              "X": 0.0122,
-                              "Y": 1.0
+                              "X": 0.5037,
+                              "Y": 0.5152
                             },
-                            "LeftMargin": 243.9375,
-                            "RightMargin": -0.9375,
-                            "Tag": 657,
-                            "ActionTag": -360769268,
+                            "LeftMargin": 33.5,
+                            "RightMargin": 33.5,
+                            "TopMargin": 16.0,
+                            "BottomMargin": 16.0,
+                            "Tag": 318,
+                            "ActionTag": -1278651622,
                             "Size": {
-                              "X": 3.0,
-                              "Y": 48.0
+                              "X": 69.0,
+                              "Y": 36.0
                             },
-                            "Name": "2",
-                            "ctype": "ImageViewObjectData"
+                            "Name": "text",
+                            "ctype": "TextObjectData"
                           }
                         ],
                         "ActionTag": -1130142474,
                         "Size": {
-                          "X": 246.0,
-                          "Y": 48.0
+                          "X": 135.0,
+                          "Y": 66.0
                         },
                         "Name": "btn_rule_cell",
                         "ctype": "CheckBoxObjectData"
@@ -665,13 +590,15 @@
                         "ColorVector": {
                           "ScaleY": 1.0
                         },
+                        "Scale9Width": 1,
+                        "Scale9Height": 1,
                         "TouchEnable": true,
                         "AnchorPoint": {
                           "ScaleX": 0.5
                         },
                         "Position": {
-                          "X": 125.736,
-                          "Y": 53.2831
+                          "X": 125.7361,
+                          "Y": 53.9893
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -680,111 +607,19 @@
                         "CColor": {},
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 0.1318,
-                          "Y": 1.0657
+                          "X": 0.1186,
+                          "Y": 0.818
                         },
                         "PreSize": {
-                          "X": 0.2516,
-                          "Y": 4.0
+                          "X": 0.2264,
+                          "Y": 3.0303
                         },
-                        "LeftMargin": 5.736,
-                        "RightMargin": 708.264,
-                        "TopMargin": -203.2831,
-                        "BottomMargin": 53.2831,
+                        "LeftMargin": 5.7361,
+                        "RightMargin": 814.2639,
+                        "TopMargin": -187.9893,
+                        "BottomMargin": 53.9893,
                         "Tag": 840,
                         "Children": [
-                          {
-                            "FileData": {
-                              "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/Main/JianTou.png",
-                              "Plist": "A_FriendCard/FriendCardMain.plist"
-                            },
-                            "Scale9OriginX": 17,
-                            "Scale9OriginY": 6,
-                            "Scale9Width": 20,
-                            "Scale9Height": 7,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 120.0,
-                              "Y": 6.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.03
-                            },
-                            "PreSize": {
-                              "X": 0.225,
-                              "Y": 0.095
-                            },
-                            "LeftMargin": 93.0,
-                            "RightMargin": 93.0,
-                            "TopMargin": 184.5,
-                            "BottomMargin": -3.5,
-                            "Tag": 663,
-                            "ActionTag": -922034082,
-                            "Size": {
-                              "X": 54.0,
-                              "Y": 19.0
-                            },
-                            "Name": "jiantou",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FileData": {
-                              "Type": "MarkedSubImage",
-                              "Path": "A_FriendCard/Main/Main_dikuang.png",
-                              "Plist": "A_FriendCard/FriendCardMain.plist"
-                            },
-                            "Scale9Enable": true,
-                            "Scale9OriginX": 17,
-                            "Scale9OriginY": 6,
-                            "Scale9Width": 214,
-                            "Scale9Height": 36,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5
-                            },
-                            "Position": {
-                              "X": 120.0,
-                              "Y": 15.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.075
-                            },
-                            "PreSize": {
-                              "X": 0.9833,
-                              "Y": 0.24
-                            },
-                            "LeftMargin": 2.0,
-                            "RightMargin": 2.0,
-                            "TopMargin": 137.0,
-                            "BottomMargin": 15.0,
-                            "Tag": 841,
-                            "ActionTag": 875019444,
-                            "Size": {
-                              "X": 236.0,
-                              "Y": 48.0
-                            },
-                            "Name": "bg",
-                            "ctype": "ImageViewObjectData"
-                          },
                           {
                             "IsBounceEnabled": true,
                             "InnerNodeSize": {
@@ -839,14 +674,24 @@
                             "Tag": 658,
                             "Children": [
                               {
+                                "NormalBackFileData": {
+                                  "Type": "Normal",
+                                  "Path": "A_FriendCard/Main/XuanZhong0.png",
+                                  "Plist": ""
+                                },
+                                "PressedBackFileData": {
+                                  "Type": "MarkedSubImage",
+                                  "Path": "A_FriendCard/Main/XuanZhong2.png",
+                                  "Plist": "A_FriendCard/FriendCardMain.plist"
+                                },
                                 "NodeNormalFileData": {
                                   "Type": "MarkedSubImage",
-                                  "Path": "A_FriendCard/Main/NameBg.png",
+                                  "Path": "A_FriendCard/Main/XuanZhong2.png",
                                   "Plist": "A_FriendCard/FriendCardMain.plist"
                                 },
                                 "NodeDisableFileData": {
                                   "Type": "MarkedSubImage",
-                                  "Path": "A_FriendCard/Main/NameBg.png",
+                                  "Path": "A_FriendCard/Main/XuanZhong2.png",
                                   "Plist": "A_FriendCard/FriendCardMain.plist"
                                 },
                                 "TouchEnable": true,
@@ -869,29 +714,29 @@
                                   "Y": 0.4909
                                 },
                                 "PreSize": {
-                                  "X": 0.9828,
-                                  "Y": 0.9091
+                                  "X": 0.5819,
+                                  "Y": 1.2
                                 },
-                                "LeftMargin": 2.0,
-                                "RightMargin": 2.0,
-                                "TopMargin": 3.0,
-                                "BottomMargin": 2.0,
+                                "LeftMargin": 48.5,
+                                "RightMargin": 48.5,
+                                "TopMargin": -5.0,
+                                "BottomMargin": -6.0,
                                 "Tag": 659,
                                 "Children": [
                                   {
-                                    "FontSize": 28,
+                                    "FontSize": 20,
                                     "LabelText": "玩法1",
                                     "FontResource": {
-                                      "Type": "Default",
-                                      "Path": "",
+                                      "Type": "Normal",
+                                      "Path": "fonts/fzcy.ttf",
                                       "Plist": ""
                                     },
-                                    "OutlineSize": 2,
                                     "OutlineColor": {
-                                      "R": 82,
-                                      "G": 54,
-                                      "B": 33
+                                      "R": 11,
+                                      "G": 179,
+                                      "B": 36
                                     },
+                                    "OutlineEnabled": true,
                                     "ShadowColor": {
                                       "R": 110,
                                       "G": 110,
@@ -904,18 +749,14 @@
                                       "ScaleY": 0.5
                                     },
                                     "Position": {
-                                      "X": 114.0,
-                                      "Y": 25.0
+                                      "X": 67.5,
+                                      "Y": 33.0
                                     },
                                     "Scale": {
                                       "ScaleX": 1.0,
                                       "ScaleY": 1.0
                                     },
-                                    "CColor": {
-                                      "R": 155,
-                                      "G": 140,
-                                      "B": 127
-                                    },
+                                    "CColor": {},
                                     "IconVisible": false,
                                     "PositionPercentXEnabled": true,
                                     "PositionPercentYEnabled": true,
@@ -924,18 +765,18 @@
                                       "Y": 0.5
                                     },
                                     "PreSize": {
-                                      "X": 0.307,
-                                      "Y": 0.56
+                                      "X": 0.3704,
+                                      "Y": 0.3636
                                     },
-                                    "LeftMargin": 79.0,
-                                    "RightMargin": 79.0,
-                                    "TopMargin": 11.0,
-                                    "BottomMargin": 11.0,
+                                    "LeftMargin": 42.5,
+                                    "RightMargin": 42.5,
+                                    "TopMargin": 21.0,
+                                    "BottomMargin": 21.0,
                                     "Tag": 661,
                                     "ActionTag": 569061232,
                                     "Size": {
-                                      "X": 70.0,
-                                      "Y": 28.0
+                                      "X": 51.0,
+                                      "Y": 26.0
                                     },
                                     "Name": "text",
                                     "ctype": "TextObjectData"
@@ -943,8 +784,8 @@
                                 ],
                                 "ActionTag": 1699557103,
                                 "Size": {
-                                  "X": 228.0,
-                                  "Y": 50.0
+                                  "X": 135.0,
+                                  "Y": 66.0
                                 },
                                 "Name": "itemcopy",
                                 "ctype": "CheckBoxObjectData"
@@ -970,8 +811,8 @@
                     ],
                     "ActionTag": -1405076684,
                     "Size": {
-                      "X": 954.0,
-                      "Y": 50.0
+                      "X": 1060.0,
+                      "Y": 66.0
                     },
                     "Name": "ListView_rule",
                     "ctype": "ScrollViewObjectData"
@@ -979,7 +820,7 @@
                 ],
                 "ActionTag": -545125596,
                 "Size": {
-                  "X": 954.0,
+                  "X": 1060.0,
                   "Y": 500.0
                 },
                 "Name": "Panel_8",
@@ -1004,7 +845,9 @@
       },
       "UsedResources": [
         "A_FriendCard/FriendCardMain.plist",
-        "A_FriendCard/FriendCardMain.png"
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/Main/XuanZhong0.png",
+        "fonts/fzcy.ttf"
       ],
       "ctype": "GameFileData"
     }

@@ -58,7 +58,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5529" Y="0.7500" />
                     <PreSize X="0.5416" Y="0.1786" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/Main/CM_inputbox.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image_pwd_0" ActionTag="-1481738149" Tag="530" IconVisible="False" LeftMargin="194.5000" RightMargin="119.5000" TopMargin="115.0000" BottomMargin="115.0000" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="16" BottomEage="16" Scale9OriginX="30" Scale9OriginY="16" Scale9Width="31" Scale9Height="18" ctype="ImageViewObjectData">
                     <Size X="371.0000" Y="50.0000" />
@@ -81,7 +81,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5547" Y="0.5000" />
                     <PreSize X="0.5416" Y="0.1786" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/Main/CM_inputbox.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image_pwd_1" ActionTag="1944727064" Tag="532" IconVisible="False" LeftMargin="194.5000" RightMargin="119.5000" TopMargin="185.0000" BottomMargin="45.0000" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="16" BottomEage="16" Scale9OriginX="30" Scale9OriginY="16" Scale9Width="31" Scale9Height="18" ctype="ImageViewObjectData">
                     <Size X="371.0000" Y="50.0000" />
@@ -104,7 +104,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5547" Y="0.2500" />
                     <PreSize X="0.5416" Y="0.1786" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/Main/CM_inputbox.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

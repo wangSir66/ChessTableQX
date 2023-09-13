@@ -19,7 +19,7 @@
             "BackColorAlpha": 153,
             "FileData": {
               "Type": "Normal",
-              "Path": "A_Home/homeBG.jpg",
+              "Path": "",
               "Plist": ""
             },
             "SingleColor": {
@@ -1166,7 +1166,6 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "A_Home/homeBG.jpg",
         "Default/Sprite.png",
         "fonts/fzcy.ttf",
         "gameRecord/BG.png",

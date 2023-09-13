@@ -33,7 +33,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/Main/yong_t.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_0" ActionTag="-103868477" Tag="95" IconVisible="False" LeftMargin="-43.5000" RightMargin="6.5000" TopMargin="-21.5000" BottomMargin="-21.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="13" Scale9Height="17" ctype="ImageViewObjectData">
                     <Size X="37.0000" Y="43.0000" />
@@ -43,7 +43,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/Main/hu_t.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_1" ActionTag="-716965306" Tag="96" IconVisible="False" LeftMargin="4.5000" RightMargin="-45.5000" TopMargin="-21.5000" BottomMargin="-21.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="17" Scale9Height="17" ctype="ImageViewObjectData">
                     <Size X="41.0000" Y="43.0000" />
@@ -53,7 +53,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/Main/xie_t.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_2" ActionTag="1722347652" Tag="97" IconVisible="False" LeftMargin="53.5000" RightMargin="-94.5000" TopMargin="-20.5000" BottomMargin="-20.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="17" Scale9Height="15" ctype="ImageViewObjectData">
                     <Size X="41.0000" Y="41.0000" />
@@ -63,7 +63,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Login/Main/yi_t.png" Plist="A_Login/Login.plist" />
+                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
