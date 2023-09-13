@@ -101,7 +101,7 @@ COMMON_UI.addHintText = function(homeUINode)
             MjClient.getAppType() === MjClient.APP_TYPE.QXXZMJ){
             setWgtLayout(_hintText, [0.13, 0.13], [0.09, 0.83], [0, 0]);
         }else {
-            setWgtLayout(_hintText, [0.13, 0.13], [0.08, 0.82], [0, 0]);
+            setWgtLayout(_hintText, [0.13, 0.13], [0.08, 0.86], [0, 0]);
         }
     }
 }

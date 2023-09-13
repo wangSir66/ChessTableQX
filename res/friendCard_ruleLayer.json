@@ -239,9 +239,9 @@
                 "ClipAble": true,
                 "BackColorAlpha": 0,
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "ComboBoxIndex": 1,
                 "SingleColor": {
@@ -530,9 +530,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9OriginX": 263,
                     "Scale9Width": 285,
@@ -733,29 +733,29 @@
                   {
                     "CheckedState": true,
                     "NormalBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_gou.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/img_gou.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -861,29 +861,29 @@
                   {
                     "CheckedState": true,
                     "NormalBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_gou.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/img_gou.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -989,29 +989,29 @@
                   {
                     "CheckedState": true,
                     "NormalBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_gou.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/img_gou.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -1202,29 +1202,29 @@
               {
                 "CheckedState": true,
                 "NormalBackFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_chebox_fang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btn_chebox_fang.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_chebox_fang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btn_chebox_fang.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_chebox_fang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btn_chebox_fang.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_gou.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/img_gou.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_chebox_fang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btn_chebox_fang.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -1344,12 +1344,14 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "friendCards/common/btn_chebox_fang.png",
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/GaojiSet.plist",
+        "A_FriendCard/GaojiSet.png",
         "friendCards/common/btn_x_normal.png",
         "friendCards/common/img_datanchuang.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_gou.png",
-        "friendCards/common/img_hengxian.png",
         "friendCards/mian_rule/btn_black_list_n.png",
         "friendCards/mian_rule/btn_black_list_s.png",
         "friendCards/mian_rule/tianjiawanfa_n.png",

@@ -122,7 +122,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_datanchuang.png",
+                  "Path": "A_FriendCard/img_datanchuang.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -510,9 +510,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/main/club_point.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/Main_club_point.png",
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 6,
                         "Scale9OriginY": 6,
@@ -558,9 +558,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/main/club_point.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/Main_club_point.png",
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 12,
                         "Scale9OriginY": 12,
@@ -1169,9 +1169,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -2072,9 +2072,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -2521,24 +2521,24 @@
                       {
                         "CheckedState": true,
                         "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_gou.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/img_gou.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "AnchorPoint": {
                           "ScaleY": 0.5
@@ -2639,24 +2639,24 @@
                       {
                         "CheckedState": true,
                         "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_gou.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/img_gou.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "AnchorPoint": {
                           "ScaleY": 0.5
@@ -5955,9 +5955,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -6541,9 +6541,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -9674,9 +9674,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -12807,9 +12807,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -13602,9 +13602,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -14283,9 +14283,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -14780,19 +14780,19 @@
                       },
                       {
                         "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -15004,19 +15004,19 @@
                       },
                       {
                         "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -15512,19 +15512,19 @@
                       },
                       {
                         "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -15703,9 +15703,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -16085,19 +16085,19 @@
                       },
                       {
                         "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -16587,19 +16587,19 @@
                       },
                       {
                         "NormalBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/btn_chebox_fang.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/btn_chebox_fang.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
                           "Type": "Normal",
@@ -16708,9 +16708,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -19238,9 +19238,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -22040,9 +22040,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -22330,9 +22330,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -22522,17 +22522,17 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/img_datanchuang.png",
         "createNewPng/daTC1_20.png",
         "Default/ImageFile.png",
-        "friendCards/common/btn_chebox_fang.png",
         "friendCards/common/btn_finish_n.png",
         "friendCards/common/btn_finish_s.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_datanchuang.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_gou.png",
         "friendCards/common/img_xiaotanchuang.png",
-        "friendCards/main/club_point.png",
         "friendCards/memberManage/bg_bianhao.png",
         "friendCards/memberManage/bg_search.png",
         "friendCards/memberManage/bg_sort.png",

@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.8781" Y="0.9569" />
-                <FileData Type="Normal" Path="friendCards/common/img_datanchuang.png" Plist="" />
+                <FileData Type="Normal" Path="friendCards/img_datanchuang.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="Image_di" ActionTag="371140926" Tag="821" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="138.1960" RightMargin="142.8040" TopMargin="126.0000" BottomMargin="131.0000" TouchEnable="True" Scale9Enable="True" LeftEage="16" RightEage="16" TopEage="16" BottomEage="16" Scale9OriginX="16" Scale9OriginY="16" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
                 <Size X="999.0000" Y="463.0000" />
@@ -40,7 +40,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4982" Y="0.8250" />
                 <PreSize X="0.7805" Y="0.6431" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="Image_hua_0" ActionTag="-2135030568" VisibleForFrame="False" Tag="959" IconVisible="False" LeftMargin="-93.5000" RightMargin="1146.5000" TopMargin="-18.5000" BottomMargin="611.5000" LeftEage="74" RightEage="74" TopEage="41" BottomEage="41" Scale9OriginX="74" Scale9OriginY="41" Scale9Width="79" Scale9Height="45" ctype="ImageViewObjectData">
                 <Size X="227.0000" Y="127.0000" />
@@ -94,7 +94,7 @@
                 <PrePosition X="0.9177" Y="0.9416" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -177,7 +177,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5956" Y="0.5130" />
                     <PreSize X="0.4604" Y="0.7826" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="player1_hand" ActionTag="1981221784" Tag="408" IconVisible="False" LeftMargin="367.9307" RightMargin="559.1093" TopMargin="21.4342" BottomMargin="21.5658" LeftEage="32" RightEage="32" TopEage="32" BottomEage="32" Scale9OriginX="32" Scale9OriginY="32" Scale9Width="8" Scale9Height="8" ctype="ImageViewObjectData">
                     <Size X="72.0000" Y="72.0000" />
@@ -297,7 +297,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0492" />
                     <PreSize X="0.9700" Y="0.0174" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5800" />

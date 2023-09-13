@@ -119,7 +119,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_xiaotanchuang.png",
+                  "Path": "friendCards/img_xiaotanchuang.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 121,
@@ -230,9 +230,9 @@
                 "ClipAble": true,
                 "BackColorAlpha": 0,
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "ComboBoxIndex": 1,
                 "SingleColor": {
@@ -342,9 +342,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 96,
@@ -874,7 +874,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -1006,11 +1006,13 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "friendCards/common/btn_x_normal.png",
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/GaojiSet.plist",
+        "A_FriendCard/GaojiSet.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_hengxian.png",
-        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/img_xiaotanchuang.png",
         "friendCards/mian_rule/blackList/btn_add_n.png",
         "friendCards/mian_rule/blackList/btn_delete_n.png"
       ],

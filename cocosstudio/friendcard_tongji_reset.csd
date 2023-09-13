@@ -114,7 +114,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="-0.2143" />
                     <PreSize X="0.9011" Y="0.0071" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -200,7 +200,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="-0.2143" />
                     <PreSize X="0.9011" Y="0.0071" />
-                    <FileData Type="Normal" Path="friendCards/common/img_hengxian.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -261,7 +261,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.7122" Y="0.1675" />
                 <PreSize X="0.1125" Y="0.0514" />
-                <FileData Type="Normal" Path="friendCards/tongji/inputbg.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/GaojiSet/Setting_di_inputbg.png" Plist="A_FriendCard/GaojiSet.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="Button_next_date" ActionTag="1149949556" Tag="778" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="988.6088" RightMargin="245.3911" TopMargin="575.4000" BottomMargin="96.6000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="26" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="46.0000" Y="48.0000" />
@@ -285,7 +285,7 @@
                 <PrePosition X="0.8682" Y="0.8874" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

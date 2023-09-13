@@ -85,14 +85,18 @@ cc.game.run();
 
 var cLogs = cc.log;
 cc.log = function (...pra) {
+    if (cc.sys.OS_WINDOWS != cc.sys.os) return;
     cLogs && cLogs('LOG:---game cc debug:', ...pra);
 }
 cc.warn = function (...pra) {
+    if (cc.sys.OS_WINDOWS != cc.sys.os) return;
     cLogs && cLogs('WARN:---game cc debug:', ...pra);
 }
 cc.error = function (...pra) {
+    if (cc.sys.OS_WINDOWS != cc.sys.os) return;
     cLogs && cLogs('ERROR:---game cc debug:', ...pra);
 }
 cc.assert = function (...pra) {
+    if (cc.sys.OS_WINDOWS != cc.sys.os) return;
     cLogs && cLogs('ASSERT:---game cc debug:', ...pra);
 }

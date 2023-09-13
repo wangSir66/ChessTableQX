@@ -74,7 +74,7 @@
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "friendCards/common/img_xiaotanchuang.png",
+              "Path": "friendCards/img_xiaotanchuang.png",
               "Plist": ""
             },
             "Scale9OriginX": 224,
@@ -573,7 +573,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -647,9 +647,9 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "friendCards/common/btn_x_normal.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/headMask1.png",
-        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/img_xiaotanchuang.png",
         "friendCards/yaoqing/btn_yaoqingHaoyou.png",
         "friendCards/yaoqing/btn_yaoqingHaoyou_s.png",
         "friendCards/yaoqing/img_shuru.png",

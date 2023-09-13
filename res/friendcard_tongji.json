@@ -76,7 +76,7 @@
             "BackColorAlpha": 0,
             "FileData": {
               "Type": "Normal",
-              "Path": "friendCards/common/img_datanchuang.png",
+              "Path": "friendCards/img_datanchuang.png",
               "Plist": ""
             },
             "ComboBoxIndex": 1,
@@ -2103,9 +2103,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -3132,9 +3132,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -3660,9 +3660,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -4031,9 +4031,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -4077,9 +4077,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -4246,9 +4246,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -4763,9 +4763,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -5280,9 +5280,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -6125,9 +6125,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -6233,9 +6233,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -6633,9 +6633,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -7224,9 +7224,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -7621,9 +7621,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -7790,9 +7790,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -8039,9 +8039,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -8262,9 +8262,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -9429,9 +9429,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -9598,9 +9598,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -10255,9 +10255,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -10675,9 +10675,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -10898,9 +10898,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -11578,9 +11578,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -11747,9 +11747,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -12286,9 +12286,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -12512,9 +12512,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -12735,9 +12735,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -14056,9 +14056,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -14225,9 +14225,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -14823,9 +14823,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -15287,9 +15287,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -15510,9 +15510,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -16131,9 +16131,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -16300,9 +16300,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -16839,9 +16839,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -17006,9 +17006,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -17229,9 +17229,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -18336,9 +18336,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -18505,9 +18505,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -19103,9 +19103,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -19787,9 +19787,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -20171,9 +20171,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -20721,9 +20721,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -21655,9 +21655,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_dikuang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_dikuang.png",
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -22202,9 +22202,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/common/img_hengxian.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/Main/img_hengxian.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -22436,9 +22436,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -22605,9 +22605,9 @@
                       },
                       {
                         "FileData": {
-                          "Type": "Normal",
-                          "Path": "friendCards/tongji/inputbg.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                          "Plist": "A_FriendCard/GaojiSet.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -22947,7 +22947,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -23216,19 +23216,19 @@
                   {
                     "CheckedState": true,
                     "NormalBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_yuan.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_yuan.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_yuan.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_yuan.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_yuan.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_yuan.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
                       "Type": "Normal",
@@ -23236,9 +23236,9 @@
                       "Plist": ""
                     },
                     "NodeDisableFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_yuan.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_yuan.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -23342,19 +23342,19 @@
                   {
                     "CheckedState": true,
                     "NormalBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_yuan.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_yuan.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_yuan.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_yuan.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_yuan.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_yuan.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
                       "Type": "Normal",
@@ -23362,9 +23362,9 @@
                       "Plist": ""
                     },
                     "NodeDisableFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_yuan.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_yuan.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -23467,9 +23467,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/tongji/inputbg.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 47,
@@ -23628,9 +23628,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9OriginX": 11,
                     "Scale9Width": 789,
@@ -23672,9 +23672,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/tongji/inputbg.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/GaojiSet/Setting_di_inputbg.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 47,
@@ -23989,19 +23989,22 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/GaojiSet.plist",
+        "A_FriendCard/GaojiSet.png",
         "createNewPng/daTC1_15.png",
         "Default/Button_Disable.png",
         "Default/Button_Normal.png",
         "Default/Button_Press.png",
         "Default/ImageFile.png",
-        "friendCards/common/btn_chebox_yuan.png",
-        "friendCards/common/btn_x_normal.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_datanchuang.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_hengxian.png",
         "friendCards/common/img_shuxian.png",
         "friendCards/common/img_tongyong.png",
+        "friendCards/img_datanchuang.png",
         "friendCards/tongji/btn_after_day_n.png",
         "friendCards/tongji/btn_after_day_s.png",
         "friendCards/tongji/btn_before_day_n.png",
@@ -24025,7 +24028,6 @@
         "friendCards/tongji/btn_zhanji_s.png",
         "friendCards/tongji/btn_zhuli_n.png",
         "friendCards/tongji/btn_zhuli_s.png",
-        "friendCards/tongji/inputbg.png",
         "friendCards/tongji/left_img.png",
         "friendCards/tongji/rank/bg_xian.png",
         "friendCards/tongji/rank/btn_group_n.png",

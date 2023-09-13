@@ -19,21 +19,21 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="back" ActionTag="1615908008" Tag="57" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="-1.0928" BottomMargin="1.0928" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="back" ActionTag="1615908008" Tag="57" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TopMargin="-1.0800" BottomMargin="1.0800" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <Children>
               <AbstractNodeData Name="img_bg" CanEdit="False" ActionTag="1692587304" Tag="116" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="159.0000" RightMargin="159.0000" TopMargin="62.5000" BottomMargin="62.5000" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="169" Scale9OriginY="141" Scale9Width="376" Scale9Height="188" ctype="ImageViewObjectData">
                 <Size X="962.0000" Y="595.0000" />
                 <Children>
-                  <AbstractNodeData Name="img_1" ActionTag="1985472619" Tag="262" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="23.5356" RightMargin="481.4644" TopMargin="83.0869" BottomMargin="18.9131" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="169" Scale9OriginY="141" Scale9Width="119" Scale9Height="211" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="img_1" ActionTag="1985472619" Tag="262" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="23.5440" RightMargin="481.4560" TopMargin="83.0705" BottomMargin="18.9295" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="169" Scale9OriginY="141" Scale9Width="119" Scale9Height="211" ctype="ImageViewObjectData">
                     <Size X="457.0000" Y="493.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="252.0356" Y="265.4131" />
+                    <Position X="252.0440" Y="265.4295" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.2620" Y="0.4461" />
                     <PreSize X="0.4751" Y="0.8286" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_2.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_2.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="img_2" ActionTag="-1921754371" Tag="263" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="483.3800" RightMargin="21.6200" TopMargin="83.0705" BottomMargin="18.9295" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="169" Scale9OriginY="141" Scale9Width="119" Scale9Height="211" ctype="ImageViewObjectData">
                     <Size X="457.0000" Y="493.0000" />
@@ -43,67 +43,67 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.7400" Y="0.4461" />
                     <PreSize X="0.4751" Y="0.8286" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_2.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_2.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="img_3" ActionTag="1403237879" Tag="264" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.5000" RightMargin="457.5000" TopMargin="161.9639" BottomMargin="418.0361" LeftEage="15" RightEage="15" TopEage="4" BottomEage="4" Scale9OriginX="15" Scale9OriginY="4" Scale9Width="17" Scale9Height="7" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="img_3" ActionTag="1403237879" Tag="264" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.5000" RightMargin="457.5000" TopMargin="161.9560" BottomMargin="418.0440" LeftEage="15" RightEage="15" TopEage="4" BottomEage="4" Scale9OriginX="15" Scale9OriginY="4" Scale9Width="17" Scale9Height="7" ctype="ImageViewObjectData">
                     <Size X="47.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="481.0000" Y="425.5361" />
+                    <Position X="481.0000" Y="425.5440" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.7152" />
                     <PreSize X="0.0489" Y="0.0252" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_1.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_1.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="img_4" ActionTag="-222671109" Tag="265" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.5000" RightMargin="457.5000" TopMargin="194.2542" BottomMargin="385.7458" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="-122" Scale9OriginY="-126" Scale9Width="291" Scale9Height="267" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="img_4" ActionTag="-222671109" Tag="265" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.5000" RightMargin="457.5000" TopMargin="194.2645" BottomMargin="385.7355" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="-122" Scale9OriginY="-126" Scale9Width="291" Scale9Height="267" ctype="ImageViewObjectData">
                     <Size X="47.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="481.0000" Y="393.2458" />
+                    <Position X="481.0000" Y="393.2355" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.6609" />
                     <PreSize X="0.0489" Y="0.0252" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_1.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_1.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="img_5" ActionTag="70662919" Tag="266" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.5000" RightMargin="457.5000" TopMargin="446.2207" BottomMargin="133.7793" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="-122" Scale9OriginY="-126" Scale9Width="291" Scale9Height="267" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="img_5" ActionTag="70662919" Tag="266" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.5000" RightMargin="457.5000" TopMargin="446.2470" BottomMargin="133.7530" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="-122" Scale9OriginY="-126" Scale9Width="291" Scale9Height="267" ctype="ImageViewObjectData">
                     <Size X="47.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="481.0000" Y="141.2793" />
+                    <Position X="481.0000" Y="141.2530" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.2374" />
                     <PreSize X="0.0489" Y="0.0252" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_1.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_1.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="img_6" ActionTag="-853640758" Tag="267" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.5000" RightMargin="457.5000" TopMargin="479.7600" BottomMargin="100.2400" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="-122" Scale9OriginY="-126" Scale9Width="291" Scale9Height="267" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="img_6" ActionTag="-853640758" Tag="267" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="457.5000" RightMargin="457.5000" TopMargin="479.7455" BottomMargin="100.2545" LeftEage="169" RightEage="169" TopEage="141" BottomEage="141" Scale9OriginX="-122" Scale9OriginY="-126" Scale9Width="291" Scale9Height="267" ctype="ImageViewObjectData">
                     <Size X="47.0000" Y="15.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="481.0000" Y="107.7400" />
+                    <Position X="481.0000" Y="107.7545" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.1811" />
                     <PreSize X="0.0489" Y="0.0252" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_1.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_decration_1.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="img_3_0" ActionTag="313660225" Tag="268" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="508.4047" RightMargin="44.5953" TopMargin="110.4000" BottomMargin="443.6000" LeftEage="15" RightEage="15" TopEage="4" BottomEage="4" Scale9OriginX="15" Scale9OriginY="4" Scale9Width="379" Scale9Height="33" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="img_3_0" ActionTag="313660225" Tag="268" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="508.4382" RightMargin="44.5618" TopMargin="110.4000" BottomMargin="443.6000" LeftEage="15" RightEage="15" TopEage="4" BottomEage="4" Scale9OriginX="15" Scale9OriginY="4" Scale9Width="379" Scale9Height="33" ctype="ImageViewObjectData">
                     <Size X="409.0000" Y="41.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="712.9047" Y="464.1000" />
+                    <Position X="712.9382" Y="464.1000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.7411" Y="0.7800" />
                     <PreSize X="0.4252" Y="0.0689" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_colorbg_1.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_colorbg_1.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="img_3_0_0" ActionTag="-1188874965" Tag="269" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="40.8100" RightMargin="512.1900" TopMargin="110.4001" BottomMargin="443.5999" LeftEage="15" RightEage="15" TopEage="4" BottomEage="4" Scale9OriginX="15" Scale9OriginY="4" Scale9Width="379" Scale9Height="33" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="img_3_0_0" ActionTag="-1188874965" Tag="269" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="40.8100" RightMargin="512.1900" TopMargin="110.4000" BottomMargin="443.6000" LeftEage="15" RightEage="15" TopEage="4" BottomEage="4" Scale9OriginX="15" Scale9OriginY="4" Scale9Width="379" Scale9Height="33" ctype="ImageViewObjectData">
                     <Size X="409.0000" Y="41.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="245.3100" Y="464.0999" />
+                    <Position X="245.3100" Y="464.1000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.2550" Y="0.7800" />
                     <PreSize X="0.4252" Y="0.0689" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_colorbg_1.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_colorbg_1.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title" ActionTag="-148673869" Tag="261" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="389.5000" RightMargin="389.5000" TopMargin="10.4874" BottomMargin="528.5126" IsCustomSize="True" FontSize="45" LabelText="个人资料" OutlineEnabled="True" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ShadowEnabled="True" ctype="TextObjectData">
                     <Size X="183.0000" Y="56.0000" />
@@ -117,10 +117,10 @@
                     <OutlineColor A="255" R="183" G="115" B="62" />
                     <ShadowColor A="255" R="183" G="115" B="62" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="title_0" ActionTag="-76028838" Tag="270" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="65.5368" RightMargin="797.4631" TopMargin="117.0171" BottomMargin="448.9829" IsCustomSize="True" FontSize="24" LabelText="我的资料" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="title_0" ActionTag="-76028838" Tag="270" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="65.5552" RightMargin="797.4448" TopMargin="117.0171" BottomMargin="448.9829" IsCustomSize="True" FontSize="24" LabelText="我的资料" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
                     <Size X="99.0000" Y="29.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="115.0368" Y="463.4829" />
+                    <Position X="115.0552" Y="463.4829" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="147" G="92" B="35" />
                     <PrePosition X="0.1196" Y="0.7790" />
@@ -129,10 +129,10 @@
                     <OutlineColor A="255" R="183" G="115" B="62" />
                     <ShadowColor A="255" R="147" G="92" B="35" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="title_0_0" ActionTag="2015013103" Tag="271" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="536.5830" RightMargin="326.4170" TopMargin="116.4595" BottomMargin="449.5405" IsCustomSize="True" FontSize="24" LabelText="修改信息" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="title_0_0" ActionTag="2015013103" Tag="271" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="536.5504" RightMargin="326.4496" TopMargin="116.4595" BottomMargin="449.5405" IsCustomSize="True" FontSize="24" LabelText="修改信息" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
                     <Size X="99.0000" Y="29.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="586.0830" Y="464.0405" />
+                    <Position X="586.0504" Y="464.0405" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="147" G="92" B="35" />
                     <PrePosition X="0.6092" Y="0.7799" />
@@ -148,7 +148,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.7516" Y="0.8264" />
-                <FileData Type="MarkedSubImage" Path="A_Common/pop_bg_small.png" Plist="A_Common/Common.plist" />
+                <FileData Type="MarkedSubImage" Path="A_Common/Main/pop_bg_small.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="node_info" ActionTag="-830624074" Tag="947" IconVisible="True" LeftMargin="186.7407" RightMargin="1093.2593" TopMargin="655.8956" BottomMargin="64.1044" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
@@ -161,7 +161,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/homeHeadCusPic_2.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/UserInfo/homeHeadCusPic_2.png" Plist="A_Home/Userinfo.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="name" ActionTag="-435973507" Tag="124" IconVisible="False" LeftMargin="170.0000" RightMargin="-437.0000" TopMargin="-406.0000" BottomMargin="380.0000" FontSize="22" LabelText="程序员程序员程序员程序员" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
                     <Size X="267.0000" Y="26.0000" />
@@ -223,10 +223,10 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="123" G="78" B="63" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="signature_0" ActionTag="-2136035703" Tag="351" IconVisible="False" LeftMargin="18.0840" RightMargin="-130.0840" TopMargin="-168.0087" BottomMargin="138.0087" IsCustomSize="True" FontSize="25" LabelText="个性签名：" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="signature_0" ActionTag="-2136035703" Tag="351" IconVisible="False" LeftMargin="3.5153" RightMargin="-115.5153" TopMargin="-168.0087" BottomMargin="138.0087" IsCustomSize="True" FontSize="22" LabelText="个性签名：" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="1.0000" ShadowOffsetY="-1.0000" ctype="TextObjectData">
                     <Size X="112.0000" Y="30.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="74.0840" Y="153.0087" />
+                    <Position X="59.5153" Y="153.0087" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="147" G="92" B="35" />
                     <PrePosition />
@@ -235,7 +235,7 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="123" G="78" B="63" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="money" ActionTag="-88904174" Tag="820" IconVisible="False" LeftMargin="170.0499" RightMargin="-346.0499" TopMargin="-259.7318" BottomMargin="227.7317" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="money" ActionTag="-88904174" Tag="820" IconVisible="False" LeftMargin="170.0499" RightMargin="-346.0499" TopMargin="-259.7317" BottomMargin="227.7317" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="176.0000" Y="32.0000" />
                     <Children>
                       <AbstractNodeData Name="yuanbao_BG" ActionTag="-966517013" Tag="90" IconVisible="False" HorizontalEdge="RightEdge" LeftMargin="-3.3168" RightMargin="126.3168" TopMargin="-4.0389" BottomMargin="-2.9611" LeftEage="16" RightEage="16" TopEage="14" BottomEage="14" Scale9OriginX="16" Scale9OriginY="14" Scale9Width="21" Scale9Height="11" ctype="ImageViewObjectData">
@@ -246,7 +246,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.1317" Y="0.5168" />
                         <PreSize X="0.3011" Y="1.2188" />
-                        <FileData Type="MarkedSubImage" Path="A_Common/icon_yuanbao.png" Plist="A_Common/Common.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Common/Main/icon_yuanbao.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="num" ActionTag="1015805671" Tag="91" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="51.5616" RightMargin="40.4384" TopMargin="0.9984" BottomMargin="3.0016" FontSize="28" LabelText="123456" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="84.0000" Y="28.0000" />
@@ -260,7 +260,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Image_149" ActionTag="1360185683" Tag="828" IconVisible="False" LeftMargin="138.6129" RightMargin="-5.6129" TopMargin="-5.0242" BottomMargin="-5.9758" LeftEage="8" RightEage="8" TopEage="8" BottomEage="8" Scale9OriginX="8" Scale9OriginY="8" Scale9Width="27" Scale9Height="27" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="Image_149" ActionTag="1360185683" Tag="828" IconVisible="False" LeftMargin="138.6142" RightMargin="-5.6142" TopMargin="-5.0242" BottomMargin="-5.9758" LeftEage="8" RightEage="8" TopEage="8" BottomEage="8" Scale9OriginX="8" Scale9OriginY="8" Scale9Width="27" Scale9Height="27" ctype="ImageViewObjectData">
                         <Size X="43.0000" Y="43.0000" />
                         <AnchorPoint ScaleX="0.5033" ScaleY="0.5000" />
                         <Position X="160.2561" Y="15.5242" />
@@ -268,7 +268,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.9105" Y="0.4851" />
                         <PreSize X="0.2443" Y="1.3438" />
-                        <FileData Type="MarkedSubImage" Path="A_Common/icon_add.png" Plist="A_Common/Common.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_Common/Main/icon_add.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -278,7 +278,8 @@
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Common/bg_kuang2.png" Plist="A_Common/Common.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/bg_kuang2.png" Plist="A_Common/Common.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/bg_kuang2.png" Plist="A_Common/Common.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -333,7 +334,7 @@
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/UserInfo/pl_setpwd.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/UserInfo/pl_setpwd.png" Plist="A_Home/Userinfo.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -360,7 +361,7 @@
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_ChangeName.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_ChangeName.png" Plist="A_Home/Userinfo.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -387,7 +388,7 @@
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_ChangeHead.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_ChangeHead.png" Plist="A_Home/Userinfo.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -414,7 +415,7 @@
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_Account_Set.png" Plist="A_Home/UserInfo/Userinfo.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/UserInfo/PI_Account_Set.png" Plist="A_Home/Userinfo.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -435,13 +436,13 @@
                 <PrePosition X="0.8450" Y="0.8562" />
                 <PreSize X="0.0461" Y="0.0819" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Common/btnclose.png" Plist="A_Common/Common.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/btnclose.png" Plist="A_Common/Common.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="640.0000" Y="361.0928" />
+            <Position X="640.0000" Y="361.0800" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5015" />

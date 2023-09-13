@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.6141" Y="0.6958" />
-                <FileData Type="Normal" Path="friendCards/common/img_xiaotanchuang.png" Plist="" />
+                <FileData Type="Normal" Path="friendCards/img_xiaotanchuang.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="Image_title" ActionTag="5045266" Tag="186" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="473.0000" RightMargin="473.0000" TopMargin="118.8000" BottomMargin="543.2000" LeftEage="110" RightEage="110" TopEage="19" BottomEage="19" Scale9OriginX="110" Scale9OriginY="19" Scale9Width="114" Scale9Height="20" ctype="ImageViewObjectData">
                 <Size X="334.0000" Y="58.0000" />

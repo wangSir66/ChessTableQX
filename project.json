@@ -2,7 +2,7 @@
     "project_type": "javascript",
 
     "debugMode": 1,
-    "showFPS": true,
+    "showFPS": false,
     "frameRate": 60,
     "noCache": true,
     "id": "gameCanvas",
@@ -129,11 +129,13 @@
         "src/friendCard/FriendCard_roomRecord.js",
         "src/friendCard/FriendCard_tongji.js",
         "src/friendCard/FriendCard_member.js",
+        "src/friendCard/FriendCard_memberManage.js",
         "src/friendCard/FriendCard_mutexLayer.js",
         "src/friendCard/FriendCard_info.js",
         "src/friendCard/FriendCard_find.js",
         "src/friendCard/FriendCard_yaoqingMember.js",
         "src/friendCard/FriendCard_init.js",
+        "src/friendCard/FriendCard_SelectWay.js",
 
 
         "src/YaAn/Common/GameRuleView.js",

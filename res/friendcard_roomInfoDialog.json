@@ -275,9 +275,9 @@
               },
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 16,
@@ -1526,7 +1526,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -1962,7 +1962,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -2362,9 +2362,10 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "friendCards/common/btn_x_normal.png",
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_dikuang.png",
         "friendCards/common/img_shuxian.png",
         "friendCards/common/img_title.png",
         "friendCards/common/img_title_bg.png",

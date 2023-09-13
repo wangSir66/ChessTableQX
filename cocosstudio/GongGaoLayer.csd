@@ -102,7 +102,7 @@
                 <PrePosition X="0.6933" Y="0.5745" />
                 <PreSize X="0.1927" Y="0.1352" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Home/gonggao_copy.png" Plist="A_Home/Home.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/gonggao_copy.png" Plist="A_Home/Home.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -115,7 +115,7 @@
                 <PrePosition X="0.6933" Y="0.2215" />
                 <PreSize X="0.1927" Y="0.1352" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="MarkedSubImage" Path="A_Home/gonggao_copy.png" Plist="A_Home/Home.plist" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/gonggao_copy.png" Plist="A_Home/Home.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>

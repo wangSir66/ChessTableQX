@@ -1,0 +1,16 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="Guanjia" Type="Plist" ID="9da44657-2852-4ee5-83d4-91aebe4d6811" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_FriendCard/Guanjia/btn_changeToFangkaClub_n.png" />
+      <FilePathData Path="A_FriendCard/Guanjia/btn_gaojiset_n.png" />
+      <FilePathData Path="A_FriendCard/Guanjia/btn_guanlijilv_n.png" />
+      <FilePathData Path="A_FriendCard/Guanjia/btn_huci_n.png" />
+      <FilePathData Path="A_FriendCard/Guanjia/btn_set_n.png" />
+      <FilePathData Path="A_FriendCard/Guanjia/btn_yaoqing_n.png" />
+      <FilePathData Path="A_FriendCard/Guanjia/checkBox_close.png" />
+      <FilePathData Path="A_FriendCard/Guanjia/checkBox_open.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="2048" />
+  </Content>
+</PlistInfoProjectFile>

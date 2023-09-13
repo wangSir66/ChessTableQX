@@ -144,6 +144,7 @@ var CreateRoomNode_ynxuezhan = CreateRoomNodeYaAn.extend({
                 YaoJiuJiangDuiEnabled: this.getCheckboxSelectedByName('btnCheck_YaoJiuJiangDuiEnabled'),//是否开启幺九将对
                 KaxingwuEnabled: this.getCheckboxSelectedByName('btnCheck_KaXingWu'),//卡星五
                 DgwMultipleEnabled: false,//是否点杠收多家
+                tipCountdown: 30
             };
         Rule.LackofEnabled = Rule.subRule == 2 || Rule.subRule == 3;//是否两房
         Rule.JustoneEnabled = Rule.subRule == 4 ? 2 : -1;//二人一房

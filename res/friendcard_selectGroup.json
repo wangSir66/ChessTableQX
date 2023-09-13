@@ -119,7 +119,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_xiaotanchuang.png",
+                  "Path": "friendCards/img_xiaotanchuang.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 341,
@@ -489,7 +489,7 @@
       },
       "UsedResources": [
         "fonts/fzcy.ttf",
-        "friendCards/common/img_xiaotanchuang.png",
+        "friendCards/img_xiaotanchuang.png",
         "friendCards/selectGroup/btn_n.png",
         "friendCards/selectGroup/btn_s.png",
         "friendCards/selectGroup/title_select_group.png",

@@ -30,7 +30,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
         }
 
 
-        var UI = ccs.load("friendcard_roomRecord.json");
+        var UI = ccs.load(res.Friendcard_roomRecord_json);
         this.addChild(UI.node);
         var that = this;
         this.uinode = UI.node;
@@ -211,7 +211,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
             panel_check.visible = this.isManager || this.isGroupLeader;
 
         var img_IDorName = panel_check.getChildByName("img_IDorName");
-        this.img_IDorName = new cc.EditBox(img_IDorName.getContentSize(), new cc.Scale9Sprite("friendCards/tongji/inputbg.png"));
+        this.img_IDorName = new cc.EditBox(img_IDorName.getContentSize(), new cc.Scale9Sprite());
         setEditBoxConfig(img_IDorName, this.img_IDorName, "请输入ID", 10);
 
         var nowTime = MjClient.getCurrentTime();

@@ -118,7 +118,6 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         } else {
             text.setTextColor(this._unSelectColor);
         }
-
     },
     radioBoxSelectCB: function (index, sender, list) {
         if (sender) {
@@ -1345,8 +1344,8 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         if (MjClient.FriendCard_Match_ruleLayer) {
             MjClient.FriendCard_Match_ruleLayer.reqChange(selectNumber)
         }
-        if (this.parentLayer)
-            this.parentLayer.removeFromParent();
+        if (MjClient.createui)
+            MjClient.createui.removeFromParent();
     },
     getSelectedPara: function () {
 

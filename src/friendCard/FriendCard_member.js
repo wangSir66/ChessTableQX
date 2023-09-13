@@ -43,11 +43,7 @@ var FriendCard_member = cc.Layer.extend({
 
         this._checkGroupType = "全部";
         this.curUserGrp = null; //自己的是什么分组
-        var resJson = "friendcard_member.json";
-        if (isIPhoneX() && FriendCard_Common.getSkinType() != 3 && FriendCard_Common.getSkinType() != 4) {
-            resJson = "friendcard_memberX.json";
-        }
-        var node = ccs.load(resJson).node;
+        var node = ccs.load(res.Friendcard_member_json).node;
         this.node = node;
         this.addChild(node);
         var that = this;
@@ -183,14 +179,10 @@ var FriendCard_member = cc.Layer.extend({
         var Button_zhuli = ListView_left.getChildByName("Button_zhuli");
         var Button_daoru = ListView_left.getChildByName("Button_daoru");
         var Button_addMember = ListView_left.getChildByName("Button_addMember");
-        var Button_league = ListView_left.getChildByName("Button_league");
         var Button_member_record = ListView_left.getChildByName("Button_member_record");
         var Button_honor_record = ListView_left.getChildByName("Button_honor");
         Button_member_record.addChild(Button_shenhe.getChildByName("Image_point").clone());
 
-        if (Button_league) {
-            Button_league.removeFromParent(true);
-        }
         if (FriendCard_Common.isOrdinaryMember()) {
             Button_member_record.removeFromParent(true);
         } else {
@@ -510,21 +502,12 @@ var FriendCard_member = cc.Layer.extend({
         for (var i in this.leftViews) {
             if (this.leftViews[i] && cc.sys.isObjectValid(this.leftViews[i])) {
                 this.leftViews[i].setBright(false);
-                if (FriendCard_Common.getSkinType() == 4) {
-                    var textLabel = this.leftViews[i].getChildByName("Text");
-                    textLabel.disableEffect();
-                    textLabel.setColor(cc.color("#B0684B"));
-                }
-
+                this.leftViews[i].setTitleColor(cc.color("#C9EEFF"));
             }
         }
         if (this.leftViews[index]) {
             this.leftViews[index].setBright(true);
-            if (FriendCard_Common.getSkinType() == 4) {
-                var textLabel = this.leftViews[index].getChildByName("Text");
-                textLabel.setColor(cc.color("#FFF5D9"));
-                textLabel.enableShadow(cc.color("#AC633B"), textLabel.getShadowOffset(), textLabel.getShadowBlurRadius());
-            }
+            this.leftViews[index].setTitleColor(cc.color("#AD2500"));
         }
         if (index == 0) {
             MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Chengyuan_Chengyuanliebiao", { uid: SelfUid() });
@@ -829,52 +812,6 @@ var FriendCard_member = cc.Layer.extend({
             if (cc.sys.OS_WINDOWS != cc.sys.os) {
                 _panel._prePageLength = 50;
             }
-            var btn_all = _panel.getChildByName("Button_all");
-            var btn_join = _panel.getChildByName("Button_join");
-            var btn_quit = _panel.getChildByName("Button_quit");
-            var _selectTypeViews = [btn_all, btn_join, btn_quit];
-            _selectTypeViews[0].setBright(false);
-            _panel._reflashTypeViews = function (view) {
-                for (var i = 0; i < _selectTypeViews.length; i++) {
-                    if (_selectTypeViews[i] != view) {
-                        _selectTypeViews[i].setBright(true);
-                    } else {
-                        _selectTypeViews[i].setBright(false);
-                    }
-                }
-            }
-            btn_all.addTouchEventListener(function (sender, type) {
-                if (type == 2) {
-                    _panel._type = 0;
-                    _panel._reflashTypeViews(sender);
-                    that.rquestHonorRecordList(null);
-                }
-            })
-            btn_join.addTouchEventListener(function (sender, type) {
-                if (type == 2) {
-                    _panel._type = 1;
-                    _panel._reflashTypeViews(sender);
-                    that.rquestHonorRecordList(null);
-                }
-            })
-            btn_quit.addTouchEventListener(function (sender, type) {
-                if (type == 2) {
-                    _panel._type = 2;
-                    _panel._reflashTypeViews(sender);
-                    that.rquestHonorRecordList(null);
-                }
-            })
-
-            var image_search = _panel.getChildByName("Image_search");
-            _panel._edtInput = this.initEditView(_panel, "请输入玩家信息...");
-            var button_find = image_search.getChildByName("Button_find");
-            button_find.zIndex = 1;
-            image_search.visible = button_find.visible = false;
-            button_find.addTouchEventListener(function (sender, type) {
-                if (type == 2) {
-                    that.rquestHonorRecordList(null);
-                }
-            }, this);
 
             this.createHonorRecordItem = function (item, index, data) {
                 var itemData = data;
@@ -950,35 +887,20 @@ var FriendCard_member = cc.Layer.extend({
                     _panel._listView.jumpToPercentVertical(percent)
                 }
             };
-            FriendCard_UI.setListAutoLoadMore(_panel._listView, function () {
-                FriendCard_UI.addListBottomTipUi(_panel._listView, 1)
-                that.rquestHonorRecordList(_panel._listView._curPage + 1);
-            }, function () {
-                if (!_panel._isLoadingData &&
-                    _panel._hasMoreData &&
-                    !_panel._edtInput.lastText &&
-                    (_panel._data.list.length > 0)) {
-                    return true;
-                }
-                return false;
-            })
 
 
             this.rquestHonorRecordList = function (lastId) {
                 if (_panel._isLoadingData) {
                     return;
                 }
-                var lastId = _panel._edtInput.lastText ? 0 : lastId;
-                if (!lastId) {
-                    lastId = 0;
-                }
+                var lastId = 0;
                 var sendInfo = {
                     clubId: this.clubInfo.clubId,
                     pageLen: _panel._prePageLength,
-                    keyword: _panel._edtInput.lastText,
+                    keyword: '',
                     pageIdx: lastId,
                 }
-                if ((!_panel._edtInput.lastText || _panel._edtInput.lastText == "") && _panel._type) {
+                if (_panel._type) {
                     sendInfo.type = _panel._type;
                 }
                 cc.log("rquestHonorRecordList sendInfo ", JSON.stringify(sendInfo));
@@ -1446,11 +1368,11 @@ var FriendCard_member = cc.Layer.extend({
             this.createGroupItem = function (item, index, data) {
                 var itemData = data;
                 // 头像
-                var head = item.getChildByName("Image_head")
-                head.isMask = true;
+                var head = item.getChildByName('head');
+                // head.isMask = true;
                 head.removeAllChildren();
                 this.refreshHead(itemData.headimgurl, head);
-                this.setFrozenImg(item, itemData, head)
+                head.width = head.height = 64;
 
                 // 名称
                 var name = item.getChildByName("Text_name");
@@ -1503,16 +1425,6 @@ var FriendCard_member = cc.Layer.extend({
                 var text_renshu = item.getChildByName("Text_renshu");
                 text_renshu.setString(itemData.groupCount + "人");
 
-
-                //createTime
-                var addTime1 = item.getChildByName("Text_addTime1");
-                var addTime2 = item.getChildByName("Text_addTime2");
-                addTime1.ignoreContentAdaptWithSize(true);
-                addTime2.ignoreContentAdaptWithSize(true);
-                var timeStr = MjClient.dateFormat(new Date(parseInt(itemData.createTime)), 'yyyy-MM-dd hh:mm:ss');
-                timeStr = timeStr.split(" ");
-                addTime1.setString(timeStr[0]);
-                addTime2.setString(timeStr[1]);
                 // 最近一次玩牌时间
                 var lastTime = item.getChildByName("Text_lastTime");
                 lastTime.ignoreContentAdaptWithSize(true);
@@ -1568,18 +1480,6 @@ var FriendCard_member = cc.Layer.extend({
                         item.addChild(imgForbidPlay);
                     }
                     imgForbidPlay.visible = true;
-                }
-
-                //备注 remarks
-                var remarks = item.getChildByName("Text_remarks");
-                remarks.ignoreContentAdaptWithSize(true);
-                remarks.visible = true;
-                if (itemData.remarkGrp && itemData.group.toString() === this.isGroupLeader) {//如果是组长显示组长的备注
-                    remarks.setString("(" + itemData.remarkGrp.replace(/\s/g, "") + ")");
-                } else if (itemData.remark && this.isManager) {
-                    remarks.setString("(" + itemData.remark.replace(/\s/g, "") + ")");
-                } else {
-                    remarks.visible = false;
                 }
 
                 // 操作
@@ -1782,7 +1682,7 @@ var FriendCard_member = cc.Layer.extend({
             }
             if (MjClient.isWarnScoreOpen() && (FriendCard_Common.isLeader() || FriendCard_Common.isLMChair() || FriendCard_Common.isGroupLeader())) {
                 if (!btnSetWarnScore) {
-                    btnSetWarnScore = new ccui.Button("friendCards/warnScore/btn_wanrScoreSet.png");
+                    btnSetWarnScore = new ccui.Button("A_FriendCard/Member/btn_set_group.png", null, null, 1);
                     _panel.addChild(btnSetWarnScore);
                     btnSetWarnScore.setAnchorPoint(cc.p(1, 0));
                     if (FriendCard_Common.getSkinType() == 1) {
@@ -2881,8 +2781,7 @@ var FriendCard_member = cc.Layer.extend({
 
     },
     refreshHead: function (url, head) {
-        head.needScale = 8;
-        COMMON_UI.refreshHead(this, url, head);
+        head.loadTexture(url ? url : 'A_Common/HeadImgs/head_228.jpg', 1);
     },
     setFrozenImg: function (item, itemData, head) {
         if (itemData.isFrozen) {
@@ -2964,10 +2863,11 @@ var FriendCard_member = cc.Layer.extend({
         var itemData = data; //
         cc.log('--createMemberItem-----itemData-----', JSON.stringify(itemData));
         // 头像
-        var head = item.getChildByName("Image_head")
-        head.isMask = true;
+        var head = item.getChildByName('head');
+        // head.isMask = true;
         head.removeAllChildren();
         this.refreshHead(itemData.headimgurl, head);
+        head.width = head.height = 64;
         this.setFrozenImg(item, itemData, head)
 
         // 名称
@@ -3015,16 +2915,6 @@ var FriendCard_member = cc.Layer.extend({
         Image_bianhao.getChildByName("Text").setString(itemData.assistantNo + "");
         Image_bianhao.visible = (this.curUserGrp && itemData.group == this.curUserGrp && itemData.assistantNo && (this._roleId == 2 || this._roleId == 4));
 
-
-        //createTime
-        var addTime1 = item.getChildByName("Text_addTime1");
-        var addTime2 = item.getChildByName("Text_addTime2");
-        addTime1.ignoreContentAdaptWithSize(true);
-        addTime2.ignoreContentAdaptWithSize(true);
-        var timeStr = MjClient.dateFormat(new Date(parseInt(itemData.createTime)), 'yyyy-MM-dd hh:mm:ss');
-        timeStr = timeStr.split(" ");
-        addTime1.setString(timeStr[0]);
-        addTime2.setString(timeStr[1]);
         // 最近一次玩牌时间
         var lastTime = item.getChildByName("Text_lastTime");
         lastTime.ignoreContentAdaptWithSize(true);
@@ -3065,18 +2955,6 @@ var FriendCard_member = cc.Layer.extend({
         userStop.ignoreContentAdaptWithSize(true);
         userStop.visible = !!((itemData.userStatus & 2) || (itemData.userStatus & 32));
 
-        //备注 remarks
-        var remarks = item.getChildByName("Text_remarks");
-        remarks.ignoreContentAdaptWithSize(true);
-        remarks.visible = true;
-        if (itemData.remarkGrp && this.isGroupLeader) {//如果是组长显示组长的备注
-            remarks.setString("(" + itemData.remarkGrp.replace(/\s/g, "") + ")");
-        } else if (itemData.remark && this.isManager) {
-            remarks.setString("(" + itemData.remark.replace(/\s/g, "") + ")");
-        } else {
-            remarks.visible = false;
-        }
-
         //分组
         //只有会长和管理员显示分组
         var group = item.getChildByName("Text_group");
@@ -3088,7 +2966,6 @@ var FriendCard_member = cc.Layer.extend({
                 group.ignoreContentAdaptWithSize(true);
                 group.visible = true;
                 group.setString(itemData.group + "组")
-                group.setFontSize(22);
             }
         }
         //如果是组长看是否是该组组长 如果是也显示 这里要用"===" 
@@ -3096,10 +2973,25 @@ var FriendCard_member = cc.Layer.extend({
             group.ignoreContentAdaptWithSize(true);
             group.visible = true;
             group.setString(itemData.group + "组")
-            group.setFontSize(22);
         } else {
             group.visible = false;
         }
+
+        //人数
+        var remarks = item.getChildByName("Text_num");
+        remarks.ignoreContentAdaptWithSize(true);
+        remarks.visible = true;
+        if (itemData.assisCount) {//如果是组长显示组长的备注
+            remarks.setString(itemData.assisCount + "人");
+        } else {
+            remarks.visible = false;
+        }
+
+        //积分
+        remarks = item.getChildByName("Text_score");
+        remarks.setString(itemData.honorVal || 0); //∞
+        remarks.ignoreContentAdaptWithSize(true);
+        remarks.visible = true;
 
         // 操作
         //是否是管理或者会长
@@ -3113,7 +3005,7 @@ var FriendCard_member = cc.Layer.extend({
         }
 
         var Button_operation = item.getChildByName("Button_operation")
-        Button_operation.visible = operationVisible;
+        Button_operation.setEnabled(operationVisible);
         Button_operation._cell = item;
         Button_operation.data = itemData
         Button_operation.addTouchEventListener(function (sender, type) {
@@ -3227,7 +3119,7 @@ var FriendCard_member = cc.Layer.extend({
             if (FriendCard_Common.getSkinType() == 4) {
                 button_tickAll = FriendCard_Common.createCommonBtn({ text: "踢出全部人" })
             } else {
-                button_tickAll = FriendCard_Common.createCommonBtn({ resArr: ["friendCards/memberManage/btn_tick_all_n.png", "friendCards/memberManage/btn_tick_all_s.png", "friendCards/memberManage/btn_tick_all_s.png"] })
+                button_tickAll = FriendCard_Common.createCommonBtn({ resArr: ["A_FriendCard/Member/btn_tick_all_n.png", "A_FriendCard/Member/btn_tick_all_s.png", "A_FriendCard/Member/btn_tick_all_s.png"], type: 1 })
             }
             button_tickAll.setName("Button_tickAll");
             this.memberManage.addChild(button_tickAll);
@@ -3500,15 +3392,15 @@ var FriendCard_member = cc.Layer.extend({
             if (FriendCard_Common.getSkinType() == 4) {
                 Button_unAdmit.setTitleText("全员禁玩");
             } else {
-                Button_unAdmit.loadTextureNormal("friendCards/memberManage/btn_notAdmit2_n.png");
-                Button_unAdmit.loadTexturePressed("friendCards/memberManage/btn_notAdmit2_s.png");
+                Button_unAdmit.loadTextureNormal("A_FriendCard/Member/btn_notAdmit2_n.png", 1);
+                Button_unAdmit.loadTexturePressed("A_FriendCard/Member/btn_notAdmit2_s.png", 1);
             }
         } else {
             if (FriendCard_Common.getSkinType() == 4) {
                 Button_unAdmit.setTitleText("禁止进房");
             } else {
-                Button_unAdmit.loadTextureNormal("friendCards/memberManage/btn_notAdmit_n.png");
-                Button_unAdmit.loadTexturePressed("friendCards/memberManage/btn_notAdmit_s.png");
+                Button_unAdmit.loadTextureNormal("A_FriendCard/Member/btn_notAdmit_n.png", 1);
+                Button_unAdmit.loadTexturePressed("A_FriendCard/Member/btn_notAdmit_s.png", 1);
             }
 
         }
@@ -4331,7 +4223,6 @@ var FriendCard_member = cc.Layer.extend({
         }
         var sortBg = _panel.getChildByName("sortBg" + nameFix)
         var text_sort = sortBg.getChildByName("Text_sort")
-        var button_jiaotou = sortBg.getChildByName("Button_jiaotou")
         var sortListBg = _panel.getChildByName("sortListBg" + nameFix);
         sortListBg._beginIndex = beginIndex;
         sortListBg._endIndex = endIndex;
@@ -4339,7 +4230,6 @@ var FriendCard_member = cc.Layer.extend({
         sortListBg.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 sortListBg.visible = false;
-                button_jiaotou.setBright(!sortListBg.visible);
             }
         }, this);
         var sortList = sortListBg.getChildByName("sortList");
@@ -4362,7 +4252,6 @@ var FriendCard_member = cc.Layer.extend({
         sortBg.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 sortListBg.visible = !sortListBg.visible;
-                button_jiaotou.setBright(!sortListBg.visible);
             }
         }, this);
         UIEventBind(null, sortListBg, _panel.sortEventName, function (data) {
@@ -4386,7 +4275,6 @@ var FriendCard_member = cc.Layer.extend({
             else if (sortType == 6)
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Chengyuan_Chengyuanliebiao_Paixuxuanze_Zhikanlixian", { uid: SelfUid() });
             sortListBg.visible = false;
-            button_jiaotou.setBright(!sortListBg.visible);
             text_sort.setString(data.txt + "");
             if (text_sort.getString().length > 4) {
                 text_sort.setFontSize(text_sort.initFontSize - 5)
