@@ -28,18 +28,5 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="A_Login.csd" />
-          <FilePathData Path="A_Update.csd" />
-          <FilePathData Path="A_mobilePhoneLogin.csd" />
-          <FilePathData Path="A_registerPhoneNumLayer.csd" />
-          <FilePathData Path="A_Login/Login.csi" />
-          <FilePathData Path="A_Home/Home.csi" />
-        </OpenedDocuments>
-        <ActiveDocument Path="A_Home/Home.csi" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

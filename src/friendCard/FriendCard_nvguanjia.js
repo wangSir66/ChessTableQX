@@ -18,6 +18,7 @@ var Friendcard_nvguanjia = cc.Layer.extend({
         this.panel = node.getChildByName("Panel");
         setWgtLayout(node.getChildByName("Image_di"), [1, 1], [0.5, 0.5], [0, 0], true);
         setWgtLayout(node.getChildByName("Panel"), [1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(node.getChildByName("back"), [1, 1], [0.5, 0.5], [0, 0]);
 
         this.initNvguanjiaLayer();
     },
