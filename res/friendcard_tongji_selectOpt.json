@@ -118,7 +118,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/img_xiaotanchuang.png",
+                  "Path": "friendCards/img_xiaotanchuang.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 341,
@@ -165,7 +165,7 @@
               {
                 "FileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/memberManage/title_caozuo.png",
+                  "Path": "friendCards/Member/title_caozuo.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 110,
@@ -370,7 +370,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -443,9 +443,9 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "friendCards/common/btn_x_normal.png",
-        "friendCards/common/img_xiaotanchuang.png",
-        "friendCards/memberManage/title_caozuo.png",
+        "friendCards/btn_x_normal.png",
+        "friendCards/img_xiaotanchuang.png",
+        "friendCards/Member/title_caozuo.png",
         "friendCards/tongji/opt/btn_checkMember_n.png",
         "friendCards/tongji/opt/btn_checkMember_s.png",
         "friendCards/tongji/opt/btn_gongxiangDetail_n.png",

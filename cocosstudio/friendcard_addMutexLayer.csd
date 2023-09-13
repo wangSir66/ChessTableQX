@@ -33,7 +33,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4960" Y="0.5172" />
                     <PreSize X="0.6141" Y="0.6958" />
-                    <FileData Type="Normal" Path="friendCards/common/img_xiaotanchuang.png" Plist="" />
+                    <FileData Type="Normal" Path="friendCards/img_xiaotanchuang.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="bg1" ActionTag="-268492733" Tag="45" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="466.9840" RightMargin="479.0160" TopMargin="78.5295" BottomMargin="583.4705" LeftEage="122" RightEage="122" TopEage="20" BottomEage="20" Scale9OriginX="122" Scale9OriginY="20" Scale9Width="90" Scale9Height="18" ctype="ImageViewObjectData">
                     <Size X="334.0000" Y="58.0000" />
@@ -54,7 +54,7 @@
                     <PrePosition X="0.8000" Y="0.8769" />
                     <PreSize X="0.0594" Y="0.1056" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                    <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -95,7 +95,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4057" Y="0.6951" />
                     <PreSize X="0.2086" Y="0.0722" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image1" ActionTag="347398926" Tag="365" IconVisible="False" LeftMargin="385.8110" RightMargin="627.1890" TopMargin="284.7237" BottomMargin="383.2763" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="11" BottomEage="11" Scale9OriginX="22" Scale9OriginY="11" Scale9Width="16" Scale9Height="38" ctype="ImageViewObjectData">
                     <Size X="267.0000" Y="52.0000" />
@@ -121,7 +121,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4057" Y="0.5684" />
                     <PreSize X="0.2086" Y="0.0722" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="player1_hand" ActionTag="-2060304540" Tag="367" IconVisible="False" LeftMargin="750.1727" RightMargin="457.8273" TopMargin="181.6263" BottomMargin="466.3737" LeftEage="32" RightEage="32" TopEage="32" BottomEage="32" Scale9OriginX="32" Scale9OriginY="32" Scale9Width="8" Scale9Height="8" ctype="ImageViewObjectData">
                     <Size X="72.0000" Y="72.0000" />
@@ -203,7 +203,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5229" Y="0.3994" />
                     <PreSize X="0.4430" Y="0.1556" />
-                    <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="text_yuanyin" ActionTag="136358153" Tag="374" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="308.9920" RightMargin="912.0080" TopMargin="380.0640" BottomMargin="309.9360" FontSize="26" LabelText="原因  " VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="59.0000" Y="30.0000" />

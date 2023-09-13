@@ -30,7 +30,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5000" Y="0.5007" />
                 <PreSize X="0.6141" Y="0.6958" />
-                <FileData Type="Normal" Path="friendCards/common/img_xiaotanchuang.png" Plist="" />
+                <FileData Type="Normal" Path="friendCards/img_xiaotanchuang.png" Plist="" />
               </AbstractNodeData>
               <AbstractNodeData Name="btn_close" ActionTag="1824900111" Tag="4934" IconVisible="False" LeftMargin="969.8422" RightMargin="234.1578" TopMargin="98.1375" BottomMargin="545.8625" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="46" Scale9Height="54" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="76.0000" Y="76.0000" />
@@ -41,7 +41,7 @@
                 <PrePosition X="0.7874" Y="0.8109" />
                 <PreSize X="0.0594" Y="0.1056" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="friendCards/common/btn_x_normal.png" Plist="" />
+                <NormalFileData Type="Normal" Path="friendCards/btn_x_normal.png" Plist="" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -66,7 +66,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.3310" Y="0.5034" />
                 <PreSize X="0.3391" Y="0.0764" />
-                <FileData Type="Normal" Path="friendCards/common/img_dikuang.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_dikuang.png" Plist="A_FriendCard/FriendCardMain.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="img_title" ActionTag="-784527885" Tag="251" IconVisible="False" LeftMargin="472.5405" RightMargin="470.4595" TopMargin="121.0347" BottomMargin="539.9653" LeftEage="111" RightEage="111" TopEage="19" BottomEage="19" Scale9OriginX="111" Scale9OriginY="19" Scale9Width="115" Scale9Height="21" ctype="ImageViewObjectData">
                 <Size X="337.0000" Y="59.0000" />

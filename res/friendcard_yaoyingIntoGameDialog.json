@@ -238,7 +238,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9OriginX": 15,
@@ -607,7 +607,7 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "friendCards/common/btn_x_normal.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/img_title.png",
         "friendCards/common/img_zhongtanchuang.png",
         "friendCards/yaoqing/btn_cancel_n.png",

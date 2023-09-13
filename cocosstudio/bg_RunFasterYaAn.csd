@@ -359,9 +359,9 @@
                         <PreSize X="0.0403" Y="0.6167" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btnRadiotf2" ActionTag="1801546178" Tag="650" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="71.5000" BottomMargin="-48.5000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
@@ -387,9 +387,9 @@
                         <PreSize X="0.0403" Y="0.6167" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btnCheckdfjs" ActionTag="-1323377188" Tag="652" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="151.0000" RightMargin="704.0000" TopMargin="130.0000" BottomMargin="-110.0000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="38.0000" Y="40.0000" />
@@ -417,7 +417,7 @@
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
                         <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/CheckBoxForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/CheckBoxForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Panel2" ActionTag="893176344" Tag="654" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="433.2376" RightMargin="299.7624" TopMargin="131.0000" BottomMargin="-109.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                         <Size X="160.0000" Y="38.0000" />
@@ -441,8 +441,8 @@
                         <PrePosition X="0.4874" Y="-1.5000" />
                         <PreSize X="0.0605" Y="0.9000" />
                         <TextColor A="255" R="65" G="65" B="70" />
-                        <PressedFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                        <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
+                        <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -455,8 +455,8 @@
                         <PrePosition X="0.6621" Y="-1.5000" />
                         <PreSize X="0.0605" Y="0.9000" />
                         <TextColor A="255" R="65" G="65" B="70" />
-                        <PressedFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                        <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
+                        <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -498,8 +498,8 @@
                             <PreSize X="0.0504" Y="0.7500" />
                             <TextColor A="255" R="65" G="65" B="70" />
                             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                            <PressedFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
-                            <NormalFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                            <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
+                            <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
                             <OutlineColor A="255" R="255" G="0" B="0" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
@@ -513,8 +513,8 @@
                             <PreSize X="0.0504" Y="0.7500" />
                             <TextColor A="255" R="65" G="65" B="70" />
                             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                            <PressedFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
-                            <NormalFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                            <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
+                            <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
                             <OutlineColor A="255" R="255" G="0" B="0" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
@@ -552,8 +552,8 @@
                             <PreSize X="0.0504" Y="0.7500" />
                             <TextColor A="255" R="65" G="65" B="70" />
                             <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                            <PressedFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
-                            <NormalFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                            <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
+                            <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
                             <OutlineColor A="255" R="255" G="0" B="0" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
@@ -633,8 +633,8 @@
                                 <PreSize X="0.2700" Y="0.9000" />
                                 <TextColor A="255" R="65" G="65" B="70" />
                                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                                <PressedFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
-                                <NormalFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                                <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
+                                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
                                 <OutlineColor A="255" R="255" G="0" B="0" />
                                 <ShadowColor A="255" R="110" G="110" B="110" />
                               </AbstractNodeData>
@@ -648,8 +648,8 @@
                                 <PreSize X="0.2700" Y="0.9000" />
                                 <TextColor A="255" R="65" G="65" B="70" />
                                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                                <PressedFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
-                                <NormalFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                                <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
+                                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
                                 <OutlineColor A="255" R="255" G="0" B="0" />
                                 <ShadowColor A="255" R="110" G="110" B="110" />
                               </AbstractNodeData>
@@ -663,8 +663,8 @@
                                 <PreSize X="0.2700" Y="0.9000" />
                                 <TextColor A="255" R="65" G="65" B="70" />
                                 <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                                <PressedFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
-                                <NormalFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                                <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
+                                <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
                                 <OutlineColor A="255" R="255" G="0" B="0" />
                                 <ShadowColor A="255" R="110" G="110" B="110" />
                               </AbstractNodeData>
@@ -841,8 +841,8 @@
                         <PreSize X="0.0504" Y="0.7500" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Red20/Common/minus-1.png" Plist="" />
+                        <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
+                        <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/minus-1.png" Plist="A_Common/Common.plist" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -867,8 +867,8 @@
                         <PreSize X="0.0504" Y="0.7500" />
                         <TextColor A="255" R="65" G="65" B="70" />
                         <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
-                        <PressedFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
-                        <NormalFileData Type="Normal" Path="Red20/Common/plus-1.png" Plist="" />
+                        <PressedFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
+                        <NormalFileData Type="MarkedSubImage" Path="A_Common/Main/plus-1.png" Plist="A_Common/Common.plist" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -922,7 +922,7 @@
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btnRadio7" ActionTag="953199873" Tag="592" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
@@ -948,9 +948,9 @@
                         <PreSize X="0.0403" Y="0.6167" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -1000,9 +1000,9 @@
                         <PreSize X="0.0403" Y="0.6167" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btnRadio9" ActionTag="-1038495545" Tag="600" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
@@ -1028,9 +1028,9 @@
                         <PreSize X="0.0403" Y="0.6167" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -1512,9 +1512,9 @@
                         <PreSize X="0.0403" Y="0.6167" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btnRadio18" ActionTag="-243345350" Tag="622" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
@@ -1592,9 +1592,9 @@
                         <PreSize X="0.0426" Y="0.6667" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/CheckBoxForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/CheckBoxForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/CheckBoxForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/CheckBoxForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btnCheck4zhang" ActionTag="519842739" Tag="164" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="416.0000" RightMargin="439.0000" TopMargin="10.0000" BottomMargin="10.0000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="38.0000" Y="40.0000" />
@@ -1620,9 +1620,9 @@
                         <PreSize X="0.0426" Y="0.6667" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/CheckBoxForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/CheckBoxForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/CheckBoxForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/CheckBoxForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -1752,9 +1752,9 @@
                         <PreSize X="0.0403" Y="0.6167" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="btnRadio22" ActionTag="2031093003" Tag="636" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="417.0000" RightMargin="440.0000" TopMargin="11.5000" BottomMargin="11.5000" TouchEnable="True" ctype="CheckBoxObjectData">
                         <Size X="36.0000" Y="37.0000" />
@@ -1780,9 +1780,9 @@
                         <PreSize X="0.0403" Y="0.6167" />
                         <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
                         <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                         <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                        <NodeDisableFileData Type="Normal" Path="Red20/Common/RadioForbidden.png" Plist="" />
+                        <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/RadioForbidden.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

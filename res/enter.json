@@ -46,7 +46,11 @@
               "ScaleX": 1.0,
               "ScaleY": 1.0
             },
-            "CColor": {},
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
             "IconVisible": false,
             "PositionPercentXEnabled": true,
             "PositionPercentYEnabled": true,
@@ -64,20 +68,21 @@
               "X": 1280.0,
               "Y": 720.0
             },
+            "Alpha": 127,
             "Name": "block",
             "ctype": "PanelObjectData"
           },
           {
             "FileData": {
               "Type": "Normal",
-              "Path": "game_picture/bac_datanchuan.png",
+              "Path": "A_Home/JoinRoom/dikuang.png",
               "Plist": ""
             },
             "Scale9Enable": true,
             "Scale9OriginX": 241,
             "Scale9OriginY": 185,
-            "Scale9Width": 603,
-            "Scale9Height": 383,
+            "Scale9Width": 31,
+            "Scale9Height": 255,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -99,33 +104,40 @@
               "Y": 0.5
             },
             "PreSize": {
-              "X": 0.7656,
-              "Y": 0.875
+              "X": 0.4008,
+              "Y": 0.7792
             },
-            "LeftMargin": 150.0,
-            "RightMargin": 150.0,
-            "TopMargin": 45.0,
-            "BottomMargin": 45.0,
+            "LeftMargin": 383.5,
+            "RightMargin": 383.5,
+            "TopMargin": 79.5,
+            "BottomMargin": 79.5,
             "Tag": 113,
             "Children": [
               {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "game_picture/diban.png",
-                  "Plist": ""
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
                 },
-                "Scale9Enable": true,
-                "Scale9OriginX": 20,
-                "Scale9OriginY": 18,
-                "Scale9Width": 21,
-                "Scale9Height": 21,
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 490.0,
-                  "Y": 283.5
+                  "X": 256.5,
+                  "Y": 437.58
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -137,2954 +149,107 @@
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
                   "X": 0.5,
-                  "Y": 0.45
+                  "Y": 0.78
                 },
+                "PercentWidthEnable": true,
+                "PercentWidthEnabled": true,
                 "PreSize": {
-                  "X": 0.9337,
-                  "Y": 0.8016
+                  "X": 1.0,
+                  "Y": 0.107
                 },
-                "LeftMargin": 32.5,
-                "RightMargin": 32.5,
-                "TopMargin": 94.0,
-                "BottomMargin": 31.0,
-                "Tag": 44,
+                "TopMargin": 93.42,
+                "BottomMargin": 407.58,
+                "Tag": 1335,
                 "Children": [
-                  {
-                    "ClipAble": false,
-                    "BackColorAlpha": 102,
-                    "SingleColor": {
-                      "R": 150,
-                      "G": 200
-                    },
-                    "FirstColor": {
-                      "R": 150,
-                      "G": 200
-                    },
-                    "EndColor": {},
-                    "ColorVector": {
-                      "ScaleY": 1.0
-                    },
-                    "Scale9Width": 1,
-                    "Scale9Height": 1,
-                    "TouchEnable": true,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5
-                    },
-                    "Position": {
-                      "X": 457.5,
-                      "Y": 398.95
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.79
-                    },
-                    "PreSize": {
-                      "X": 0.8557,
-                      "Y": 0.1782
-                    },
-                    "LeftMargin": 66.0,
-                    "RightMargin": 66.0,
-                    "TopMargin": 16.05,
-                    "BottomMargin": 398.95,
-                    "Tag": 1335,
-                    "Children": [
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/num_bg.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 13,
-                        "Scale9OriginY": 13,
-                        "Scale9Width": 14,
-                        "Scale9Height": 14,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 391.5,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 1.0,
-                          "Y": 1.0
-                        },
-                        "Tag": 453,
-                        "ActionTag": -1174259274,
-                        "Size": {
-                          "X": 783.0,
-                          "Y": 90.0
-                        },
-                        "Name": "num_bg",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "AnchorPoint": {},
-                        "Position": {
-                          "X": 65.25,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.0833,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": 65.25,
-                        "RightMargin": 717.75,
-                        "TopMargin": 45.0,
-                        "BottomMargin": 45.0,
-                        "Tag": 454,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/line.png",
-                              "Plist": ""
-                            },
-                            "Scale9Enable": true,
-                            "Scale9OriginY": 2,
-                            "Scale9Width": 1,
-                            "Scale9Height": 4,
-                            "AnchorPoint": {
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": -65.25,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -65.25,
-                            "RightMargin": 63.25,
-                            "TopMargin": -25.0,
-                            "BottomMargin": -25.0,
-                            "Tag": 437,
-                            "ActionTag": 2099303451,
-                            "Size": {
-                              "X": 2.0,
-                              "Y": 50.0
-                            },
-                            "VisibleForFrame": false,
-                            "Name": "Image_bg",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FontSize": 70,
-                            "LabelText": "8",
-                            "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/fzcy.ttf",
-                              "Plist": ""
-                            },
-                            "OutlineSize": 2,
-                            "OutlineColor": {
-                              "R": 105,
-                              "G": 61,
-                              "B": 25
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 54,
-                              "G": 145,
-                              "B": 110
-                            },
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -20.5,
-                            "RightMargin": -20.5,
-                            "TopMargin": -42.0,
-                            "BottomMargin": -42.0,
-                            "Tag": 436,
-                            "ActionTag": 769119758,
-                            "Size": {
-                              "X": 41.0,
-                              "Y": 84.0
-                            },
-                            "Name": "Text",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": 507704019,
-                        "Size": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "Name": "bg0",
-                        "ctype": "SingleNodeObjectData"
-                      },
-                      {
-                        "AnchorPoint": {},
-                        "Position": {
-                          "X": 195.75,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.25,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": 195.75,
-                        "RightMargin": 587.25,
-                        "TopMargin": 45.0,
-                        "BottomMargin": 45.0,
-                        "Tag": 455,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/line.png",
-                              "Plist": ""
-                            },
-                            "Scale9Enable": true,
-                            "Scale9OriginY": 2,
-                            "Scale9Width": 1,
-                            "Scale9Height": 4,
-                            "AnchorPoint": {
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": -65.25,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -65.25,
-                            "RightMargin": 63.25,
-                            "TopMargin": -25.0,
-                            "BottomMargin": -25.0,
-                            "Tag": 456,
-                            "ActionTag": -1246375648,
-                            "Size": {
-                              "X": 2.0,
-                              "Y": 50.0
-                            },
-                            "Name": "Image_bg",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FontSize": 70,
-                            "LabelText": "8",
-                            "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/fzcy.ttf",
-                              "Plist": ""
-                            },
-                            "OutlineSize": 2,
-                            "OutlineColor": {
-                              "R": 105,
-                              "G": 61,
-                              "B": 25
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 54,
-                              "G": 145,
-                              "B": 110
-                            },
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -20.5,
-                            "RightMargin": -20.5,
-                            "TopMargin": -42.0,
-                            "BottomMargin": -42.0,
-                            "Tag": 457,
-                            "ActionTag": -813897897,
-                            "Size": {
-                              "X": 41.0,
-                              "Y": 84.0
-                            },
-                            "Name": "Text",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": -2018781366,
-                        "Size": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "Name": "bg1",
-                        "ctype": "SingleNodeObjectData"
-                      },
-                      {
-                        "AnchorPoint": {},
-                        "Position": {
-                          "X": 326.25,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.4167,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": 326.25,
-                        "RightMargin": 456.75,
-                        "TopMargin": 45.0,
-                        "BottomMargin": 45.0,
-                        "Tag": 458,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/line.png",
-                              "Plist": ""
-                            },
-                            "Scale9Enable": true,
-                            "Scale9OriginY": 2,
-                            "Scale9Width": 1,
-                            "Scale9Height": 4,
-                            "AnchorPoint": {
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": -65.25,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -65.25,
-                            "RightMargin": 63.25,
-                            "TopMargin": -25.0,
-                            "BottomMargin": -25.0,
-                            "Tag": 459,
-                            "ActionTag": -664954720,
-                            "Size": {
-                              "X": 2.0,
-                              "Y": 50.0
-                            },
-                            "Name": "Image_bg",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FontSize": 70,
-                            "LabelText": "8",
-                            "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/fzcy.ttf",
-                              "Plist": ""
-                            },
-                            "OutlineSize": 2,
-                            "OutlineColor": {
-                              "R": 105,
-                              "G": 61,
-                              "B": 25
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 54,
-                              "G": 145,
-                              "B": 110
-                            },
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -20.5,
-                            "RightMargin": -20.5,
-                            "TopMargin": -42.0,
-                            "BottomMargin": -42.0,
-                            "Tag": 460,
-                            "ActionTag": 515751191,
-                            "Size": {
-                              "X": 41.0,
-                              "Y": 84.0
-                            },
-                            "Name": "Text",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": -1967365040,
-                        "Size": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "Name": "bg2",
-                        "ctype": "SingleNodeObjectData"
-                      },
-                      {
-                        "AnchorPoint": {},
-                        "Position": {
-                          "X": 456.75,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.5833,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": 456.75,
-                        "RightMargin": 326.25,
-                        "TopMargin": 45.0,
-                        "BottomMargin": 45.0,
-                        "Tag": 461,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/line.png",
-                              "Plist": ""
-                            },
-                            "Scale9Enable": true,
-                            "Scale9OriginY": 2,
-                            "Scale9Width": 1,
-                            "Scale9Height": 4,
-                            "AnchorPoint": {
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": -65.25,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -65.25,
-                            "RightMargin": 63.25,
-                            "TopMargin": -25.0,
-                            "BottomMargin": -25.0,
-                            "Tag": 462,
-                            "ActionTag": 976930413,
-                            "Size": {
-                              "X": 2.0,
-                              "Y": 50.0
-                            },
-                            "Name": "Image_bg",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FontSize": 70,
-                            "LabelText": "8",
-                            "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/fzcy.ttf",
-                              "Plist": ""
-                            },
-                            "OutlineSize": 2,
-                            "OutlineColor": {
-                              "R": 105,
-                              "G": 61,
-                              "B": 25
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 54,
-                              "G": 145,
-                              "B": 110
-                            },
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -20.5,
-                            "RightMargin": -20.5,
-                            "TopMargin": -42.0,
-                            "BottomMargin": -42.0,
-                            "Tag": 463,
-                            "ActionTag": -1059479555,
-                            "Size": {
-                              "X": 41.0,
-                              "Y": 84.0
-                            },
-                            "Name": "Text",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": -328113908,
-                        "Size": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "Name": "bg3",
-                        "ctype": "SingleNodeObjectData"
-                      },
-                      {
-                        "AnchorPoint": {},
-                        "Position": {
-                          "X": 587.25,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.75,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": 587.25,
-                        "RightMargin": 195.75,
-                        "TopMargin": 45.0,
-                        "BottomMargin": 45.0,
-                        "Tag": 464,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/line.png",
-                              "Plist": ""
-                            },
-                            "Scale9Enable": true,
-                            "Scale9OriginY": 2,
-                            "Scale9Width": 1,
-                            "Scale9Height": 4,
-                            "AnchorPoint": {
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": -65.25,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -65.25,
-                            "RightMargin": 63.25,
-                            "TopMargin": -25.0,
-                            "BottomMargin": -25.0,
-                            "Tag": 465,
-                            "ActionTag": -60797193,
-                            "Size": {
-                              "X": 2.0,
-                              "Y": 50.0
-                            },
-                            "Name": "Image_bg",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FontSize": 70,
-                            "LabelText": "8",
-                            "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/fzcy.ttf",
-                              "Plist": ""
-                            },
-                            "OutlineSize": 2,
-                            "OutlineColor": {
-                              "R": 105,
-                              "G": 61,
-                              "B": 25
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 54,
-                              "G": 145,
-                              "B": 110
-                            },
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -20.5,
-                            "RightMargin": -20.5,
-                            "TopMargin": -42.0,
-                            "BottomMargin": -42.0,
-                            "Tag": 466,
-                            "ActionTag": -1546155668,
-                            "Size": {
-                              "X": 41.0,
-                              "Y": 84.0
-                            },
-                            "Name": "Text",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": -1991092602,
-                        "Size": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "Name": "bg4",
-                        "ctype": "SingleNodeObjectData"
-                      },
-                      {
-                        "AnchorPoint": {},
-                        "Position": {
-                          "X": 717.75,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.9167,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": 717.75,
-                        "RightMargin": 65.25,
-                        "TopMargin": 45.0,
-                        "BottomMargin": 45.0,
-                        "Tag": 467,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/line.png",
-                              "Plist": ""
-                            },
-                            "Scale9Enable": true,
-                            "Scale9OriginY": 2,
-                            "Scale9Width": 1,
-                            "Scale9Height": 4,
-                            "AnchorPoint": {
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": -65.25,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -65.25,
-                            "RightMargin": 63.25,
-                            "TopMargin": -25.0,
-                            "BottomMargin": -25.0,
-                            "Tag": 468,
-                            "ActionTag": -1183254242,
-                            "Size": {
-                              "X": 2.0,
-                              "Y": 50.0
-                            },
-                            "Name": "Image_bg",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FontSize": 70,
-                            "LabelText": "8",
-                            "FontResource": {
-                              "Type": "Normal",
-                              "Path": "fonts/fzcy.ttf",
-                              "Plist": ""
-                            },
-                            "OutlineSize": 2,
-                            "OutlineColor": {
-                              "R": 105,
-                              "G": 61,
-                              "B": 25
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 54,
-                              "G": 145,
-                              "B": 110
-                            },
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "PreSize": {
-                              "X": 0.0,
-                              "Y": 0.0
-                            },
-                            "LeftMargin": -20.5,
-                            "RightMargin": -20.5,
-                            "TopMargin": -42.0,
-                            "BottomMargin": -42.0,
-                            "Tag": 469,
-                            "ActionTag": -394892759,
-                            "Size": {
-                              "X": 41.0,
-                              "Y": 84.0
-                            },
-                            "Name": "Text",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": 1493001168,
-                        "Size": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "Name": "bg5",
-                        "ctype": "SingleNodeObjectData"
-                      }
-                    ],
-                    "ActionTag": 1630681806,
-                    "Size": {
-                      "X": 783.0,
-                      "Y": 90.0
-                    },
-                    "Name": "top",
-                    "ctype": "PanelObjectData"
-                  },
-                  {
-                    "ClipAble": false,
-                    "BackColorAlpha": 102,
-                    "SingleColor": {
-                      "R": 150,
-                      "G": 200
-                    },
-                    "FirstColor": {
-                      "R": 150,
-                      "G": 200
-                    },
-                    "EndColor": {},
-                    "ColorVector": {
-                      "ScaleY": 1.0
-                    },
-                    "Scale9Width": 1,
-                    "Scale9Height": 1,
-                    "TouchEnable": true,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 457.5,
-                      "Y": 166.65
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.33
-                    },
-                    "PercentHeightEnable": true,
-                    "PercentHeightEnabled": true,
-                    "PreSize": {
-                      "X": 1.0929,
-                      "Y": 0.88
-                    },
-                    "LeftMargin": -42.5,
-                    "RightMargin": -42.5,
-                    "TopMargin": 116.15,
-                    "BottomMargin": -55.55,
-                    "Tag": 1346,
-                    "Children": [
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/xiao_bg2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 33,
-                        "Scale9OriginY": 33,
-                        "Scale9Width": 34,
-                        "Scale9Height": 34,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 500.0,
-                          "Y": 253.308
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.57
-                        },
-                        "PreSize": {
-                          "X": 0.862,
-                          "Y": 0.8236
-                        },
-                        "LeftMargin": 69.0,
-                        "RightMargin": 69.0,
-                        "TopMargin": 8.092,
-                        "BottomMargin": 70.308,
-                        "Tag": 11268,
-                        "ActionTag": -443970287,
-                        "Size": {
-                          "X": 862.0,
-                          "Y": 366.0
-                        },
-                        "VisibleForFrame": false,
-                        "Name": "Image_22",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 500.0,
-                          "Y": 110.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.2475
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 372.0,
-                        "RightMargin": 372.0,
-                        "TopMargin": 288.4,
-                        "BottomMargin": 64.0,
-                        "Tag": 1348,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_00.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 9,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1602,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 107.5,
-                            "RightMargin": 107.5,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11092,
-                            "ActionTag": 1144072403,
-                            "Size": {
-                              "X": 41.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": -529739385,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_0",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 235.0,
-                          "Y": 395.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.235,
-                          "Y": 0.8888
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 107.0,
-                        "RightMargin": 637.0,
-                        "TopMargin": 3.4,
-                        "BottomMargin": 349.0,
-                        "Tag": 1349,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_01.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 7,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 8,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.0859,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 117.0,
-                            "RightMargin": 117.0,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11097,
-                            "ActionTag": -1290202749,
-                            "Size": {
-                              "X": 22.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": 2026210216,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_1",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 500.0,
-                          "Y": 395.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.8888
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 372.0,
-                        "RightMargin": 372.0,
-                        "TopMargin": 3.4,
-                        "BottomMargin": 349.0,
-                        "Tag": 1350,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_02.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 5,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1445,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 109.5,
-                            "RightMargin": 109.5,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11098,
-                            "ActionTag": -1741414065,
-                            "Size": {
-                              "X": 37.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": 583449053,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_2",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 765.0,
-                          "Y": 395.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.765,
-                          "Y": 0.8888
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 637.0,
-                        "RightMargin": 107.0,
-                        "TopMargin": 3.4,
-                        "BottomMargin": 349.0,
-                        "Tag": 1351,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_03.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 6,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1484,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 109.0,
-                            "RightMargin": 109.0,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11099,
-                            "ActionTag": -1549962106,
-                            "Size": {
-                              "X": 38.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": 2137734391,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_3",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 235.0,
-                          "Y": 300.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.235,
-                          "Y": 0.6751
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 107.0,
-                        "RightMargin": 637.0,
-                        "TopMargin": 98.4,
-                        "BottomMargin": 254.0,
-                        "Tag": 1352,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_04.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 9,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1602,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 107.5,
-                            "RightMargin": 107.5,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11100,
-                            "ActionTag": -1784550450,
-                            "Size": {
-                              "X": 41.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": -715134,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_4",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 500.0,
-                          "Y": 300.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.6751
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 372.0,
-                        "RightMargin": 372.0,
-                        "TopMargin": 98.4,
-                        "BottomMargin": 254.0,
-                        "Tag": 1353,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_05.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 6,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1484,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 109.0,
-                            "RightMargin": 109.0,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11101,
-                            "ActionTag": 1009632016,
-                            "Size": {
-                              "X": 38.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": 1691768857,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_5",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 765.0,
-                          "Y": 300.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.765,
-                          "Y": 0.6751
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 637.0,
-                        "RightMargin": 107.0,
-                        "TopMargin": 98.4,
-                        "BottomMargin": 254.0,
-                        "Tag": 1354,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_06.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 7,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1523,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 108.5,
-                            "RightMargin": 108.5,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11102,
-                            "ActionTag": -1560710707,
-                            "Size": {
-                              "X": 39.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": -39795137,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_6",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 235.0,
-                          "Y": 205.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.235,
-                          "Y": 0.4613
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 107.0,
-                        "RightMargin": 637.0,
-                        "TopMargin": 193.4,
-                        "BottomMargin": 159.0,
-                        "Tag": 1355,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_07.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 7,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1523,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 108.5,
-                            "RightMargin": 108.5,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11103,
-                            "ActionTag": -1356867573,
-                            "Size": {
-                              "X": 39.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": 1854180849,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_7",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 500.0,
-                          "Y": 205.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.4613
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 372.0,
-                        "RightMargin": 372.0,
-                        "TopMargin": 193.4,
-                        "BottomMargin": 159.0,
-                        "Tag": 1356,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_08.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 7,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1523,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 108.5,
-                            "RightMargin": 108.5,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11104,
-                            "ActionTag": 1313813947,
-                            "Size": {
-                              "X": 39.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": 441221789,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_8",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/bohaobtn2.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 765.0,
-                          "Y": 205.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.765,
-                          "Y": 0.4613
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 637.0,
-                        "RightMargin": 107.0,
-                        "TopMargin": 193.4,
-                        "BottomMargin": 159.0,
-                        "Tag": 1347,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/bohao_09.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 16,
-                            "Scale9OriginY": 21,
-                            "Scale9Width": 7,
-                            "Scale9Height": 14,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 128.0,
-                              "Y": 46.0
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PositionPercentXEnabled": true,
-                            "PositionPercentYEnabled": true,
-                            "PrePosition": {
-                              "X": 0.5,
-                              "Y": 0.5
-                            },
-                            "PreSize": {
-                              "X": 0.1523,
-                              "Y": 0.6087
-                            },
-                            "LeftMargin": 108.5,
-                            "RightMargin": 108.5,
-                            "TopMargin": 18.0,
-                            "BottomMargin": 18.0,
-                            "Tag": 11105,
-                            "ActionTag": 619331211,
-                            "Size": {
-                              "X": 39.0,
-                              "Y": 56.0
-                            },
-                            "Name": "Image_0",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": -721683147,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "Button_9",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/qingkong_11.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/qingkong_11.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 235.0,
-                          "Y": 110.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.235,
-                          "Y": 0.2475
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 107.0,
-                        "RightMargin": 637.0,
-                        "TopMargin": 288.4,
-                        "BottomMargin": 64.0,
-                        "Tag": 1357,
-                        "ActionTag": 907804772,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "clear",
-                        "ctype": "ButtonObjectData"
-                      },
-                      {
-                        "FontSize": 40,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 150,
-                          "G": 83,
-                          "B": 44
-                        },
-                        "DisabledFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/shangchu_11.png",
-                          "Plist": ""
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/shangchu_11.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 226,
-                        "Scale9Height": 70,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 765.0,
-                          "Y": 110.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.765,
-                          "Y": 0.2475
-                        },
-                        "PreSize": {
-                          "X": 0.256,
-                          "Y": 0.207
-                        },
-                        "LeftMargin": 637.0,
-                        "RightMargin": 107.0,
-                        "TopMargin": 288.4,
-                        "BottomMargin": 64.0,
-                        "Tag": 1358,
-                        "ActionTag": 1339784692,
-                        "Size": {
-                          "X": 256.0,
-                          "Y": 92.0
-                        },
-                        "Name": "del",
-                        "ctype": "ButtonObjectData"
-                      }
-                    ],
-                    "ActionTag": 154473676,
-                    "Size": {
-                      "X": 1000.0,
-                      "Y": 444.4
-                    },
-                    "Name": "num",
-                    "ctype": "PanelObjectData"
-                  }
-                ],
-                "ActionTag": -746872431,
-                "Size": {
-                  "X": 915.0,
-                  "Y": 505.0
-                },
-                "Name": "Image_1",
-                "ctype": "ImageViewObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "joinGame/cellTop_bg.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 20,
-                "Scale9OriginY": 66,
-                "Scale9Width": 118,
-                "Scale9Height": 76,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 490.0,
-                  "Y": 283.5
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentXEnabled": true,
-                "PositionPercentYEnabled": true,
-                "PrePosition": {
-                  "X": 0.5,
-                  "Y": 0.45
-                },
-                "PreSize": {
-                  "X": 0.9337,
-                  "Y": 0.8016
-                },
-                "LeftMargin": 32.5,
-                "RightMargin": 32.5,
-                "TopMargin": 94.0,
-                "BottomMargin": 31.0,
-                "Tag": 45,
-                "Children": [
-                  {
-                    "AnchorPoint": {},
-                    "Position": {
-                      "X": 457.5,
-                      "Y": 450.0
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": true,
-                    "PositionPercentXEnabled": true,
-                    "PrePosition": {
-                      "X": 0.5,
-                      "Y": 0.8911
-                    },
-                    "PreSize": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "LeftMargin": 457.5,
-                    "RightMargin": 457.5,
-                    "TopMargin": 55.0,
-                    "BottomMargin": 450.0,
-                    "Tag": 11091,
-                    "Children": [
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/roomid_top.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 33,
-                        "Scale9OriginY": 10,
-                        "Scale9Width": 34,
-                        "Scale9Height": 12,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": -337.5,
-                          "Y": 25.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": -387.5,
-                        "RightMargin": 287.5,
-                        "TopMargin": -41.0,
-                        "BottomMargin": 9.0,
-                        "Tag": 11088,
-                        "ActionTag": 1595788625,
-                        "Size": {
-                          "X": 100.0,
-                          "Y": 32.0
-                        },
-                        "Name": "roomid_top",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/time_top.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 43,
-                        "Scale9OriginY": 10,
-                        "Scale9Width": 47,
-                        "Scale9Height": 12,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": -112.5,
-                          "Y": 25.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": -179.0,
-                        "RightMargin": 46.0,
-                        "TopMargin": -41.0,
-                        "BottomMargin": 9.0,
-                        "Tag": 11089,
-                        "ActionTag": 1134157133,
-                        "Size": {
-                          "X": 133.0,
-                          "Y": 32.0
-                        },
-                        "Name": "time_top",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/num_top.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 44,
-                        "Scale9OriginY": 10,
-                        "Scale9Width": 47,
-                        "Scale9Height": 12,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 112.5,
-                          "Y": 25.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "PreSize": {
-                          "X": 0.0,
-                          "Y": 0.0
-                        },
-                        "LeftMargin": 45.0,
-                        "RightMargin": -180.0,
-                        "TopMargin": -41.0,
-                        "BottomMargin": 9.0,
-                        "Tag": 11090,
-                        "ActionTag": 877052378,
-                        "Size": {
-                          "X": 135.0,
-                          "Y": 32.0
-                        },
-                        "Name": "num_top",
-                        "ctype": "ImageViewObjectData"
-                      }
-                    ],
-                    "ActionTag": -373242216,
-                    "Size": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "Name": "title",
-                    "ctype": "SingleNodeObjectData"
-                  },
-                  {
-                    "FontSize": 14,
-                    "ButtonText": "",
-                    "TextColor": {
-                      "R": 65,
-                      "G": 65,
-                      "B": 70
-                    },
-                    "NormalFileData": {
-                      "Type": "Normal",
-                      "Path": "joinGame/chuangjianfangjian.png",
-                      "Plist": ""
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 15,
-                    "Scale9OriginY": 11,
-                    "Scale9Width": 208,
-                    "Scale9Height": 66,
-                    "OutlineColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
-                    "TouchEnable": true,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 420.0,
-                      "Y": 60.0
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.459,
-                      "Y": 0.1188
-                    },
-                    "PreSize": {
-                      "X": 0.2601,
-                      "Y": 0.1743
-                    },
-                    "LeftMargin": 301.0,
-                    "RightMargin": 376.0,
-                    "TopMargin": 401.0,
-                    "BottomMargin": 16.0,
-                    "Tag": 50,
-                    "ActionTag": -200838411,
-                    "Size": {
-                      "X": 238.0,
-                      "Y": 88.0
-                    },
-                    "Name": "Button_10_0",
-                    "ctype": "ButtonObjectData"
-                  },
-                  {
-                    "FontSize": 14,
-                    "ButtonText": "",
-                    "TextColor": {
-                      "R": 65,
-                      "G": 65,
-                      "B": 70
-                    },
-                    "NormalFileData": {
-                      "Type": "Normal",
-                      "Path": "joinGame/kaifangjilu.png",
-                      "Plist": ""
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 15,
-                    "Scale9OriginY": 11,
-                    "Scale9Width": 214,
-                    "Scale9Height": 66,
-                    "OutlineColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
-                    "TouchEnable": true,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 168.6631,
-                      "Y": 60.0
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.1843,
-                      "Y": 0.1188
-                    },
-                    "PreSize": {
-                      "X": 0.2667,
-                      "Y": 0.1743
-                    },
-                    "LeftMargin": 46.6631,
-                    "RightMargin": 624.3369,
-                    "TopMargin": 401.0,
-                    "BottomMargin": 16.0,
-                    "Tag": 504,
-                    "ActionTag": -2053212854,
-                    "Size": {
-                      "X": 244.0,
-                      "Y": 88.0
-                    },
-                    "Name": "Button_record",
-                    "ctype": "ButtonObjectData"
-                  },
-                  {
-                    "IsCustomSize": true,
-                    "FontSize": 24,
-                    "LabelText": "如果游戏30分钟还没有开始，系统自动解散房间",
-                    "FontResource": {
-                      "Type": "Normal",
-                      "Path": "fonts/fzcy.ttf",
-                      "Plist": ""
-                    },
-                    "OutlineColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 740.0,
-                      "Y": 60.0
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {
-                      "R": 191,
-                      "G": 123,
-                      "B": 76
-                    },
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.8087,
-                      "Y": 0.1188
-                    },
-                    "PreSize": {
-                      "X": 0.3388,
-                      "Y": 0.1188
-                    },
-                    "LeftMargin": 585.0,
-                    "RightMargin": 20.0,
-                    "TopMargin": 415.0,
-                    "BottomMargin": 30.0,
-                    "Tag": 52,
-                    "ActionTag": 1745574812,
-                    "Size": {
-                      "X": 310.0,
-                      "Y": 60.0
-                    },
-                    "Name": "Text_1",
-                    "ctype": "TextObjectData"
-                  },
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "game_picture/dengdai.png",
+                      "Path": "A_Home/JoinRoom/shuru.png",
                       "Plist": ""
                     },
-                    "Scale9OriginX": 87,
-                    "Scale9OriginY": 97,
-                    "Scale9Width": 445,
-                    "Scale9Height": 266,
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 13,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 333,
+                    "Scale9Height": 31,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 347.7,
-                      "Y": 351.0
+                      "X": 207.4475,
+                      "Y": 30.0
                     },
                     "Scale": {
-                      "ScaleX": 0.8,
-                      "ScaleY": 0.8
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
                     },
                     "CColor": {},
                     "IconVisible": false,
-                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.38,
-                      "Y": 0.695
+                      "X": 0.4044,
+                      "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.6765,
-                      "Y": 0.9109
+                      "X": 0.6998,
+                      "Y": 0.95
                     },
-                    "LeftMargin": 38.2,
-                    "RightMargin": 257.8,
-                    "TopMargin": -76.0,
-                    "BottomMargin": 121.0,
-                    "Tag": 406,
-                    "Children": [
-                      {
-                        "FontSize": 24,
-                        "LabelText": "开房去和小伙伴战斗吧！~",
-                        "FontResource": {
-                          "Type": "Normal",
-                          "Path": "fonts/fzcy.ttf",
-                          "Plist": ""
-                        },
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 450.83,
-                          "Y": -12.92
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {
-                          "R": 244,
-                          "G": 151,
-                          "B": 109
-                        },
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.7283,
-                          "Y": -0.0281
-                        },
-                        "PreSize": {
-                          "X": 0.454,
-                          "Y": 0.063
-                        },
-                        "LeftMargin": 310.33,
-                        "RightMargin": 27.67,
-                        "TopMargin": 458.42,
-                        "BottomMargin": -27.42,
-                        "Tag": 240,
-                        "ActionTag": 1998155691,
-                        "Size": {
-                          "X": 281.0,
-                          "Y": 29.0
-                        },
-                        "Name": "Text_3",
-                        "ctype": "TextObjectData"
-                      }
-                    ],
-                    "ActionTag": 67430708,
+                    "LeftMargin": 27.9475,
+                    "RightMargin": 126.0525,
+                    "TopMargin": 1.5,
+                    "BottomMargin": 1.5,
+                    "Tag": 453,
+                    "ActionTag": -1174259274,
                     "Size": {
-                      "X": 619.0,
-                      "Y": 460.0
+                      "X": 359.0,
+                      "Y": 57.0
                     },
-                    "Name": "Image_qixing",
+                    "Name": "num_bg",
                     "ctype": "ImageViewObjectData"
                   },
                   {
-                    "ItemMargin": 10,
-                    "DirectionType": "Vertical",
-                    "IsBounceEnabled": true,
-                    "ScrollDirectionType": 0,
-                    "ClipAble": true,
-                    "BackColorAlpha": 102,
-                    "SingleColor": {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
                       "R": 150,
-                      "G": 150
+                      "G": 83,
+                      "B": 44
                     },
-                    "FirstColor": {
-                      "R": 150,
-                      "G": 150
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/gb.png",
+                      "Plist": ""
                     },
-                    "EndColor": {},
-                    "ColorVector": {
-                      "ScaleY": 1.0
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/gb.png",
+                      "Plist": ""
                     },
-                    "Scale9Width": 1,
-                    "Scale9Height": 1,
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 64,
+                    "Scale9Height": 43,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
                     "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 459.147,
-                      "Y": 272.7
+                      "X": 438.0,
+                      "Y": 30.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -3092,673 +257,62 @@
                     },
                     "CColor": {},
                     "IconVisible": false,
-                    "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.5018,
-                      "Y": 0.54
+                      "X": 0.8538,
+                      "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.9836,
-                      "Y": 0.6337
+                      "X": 0.1832,
+                      "Y": 1.0833
                     },
-                    "LeftMargin": 9.147,
-                    "RightMargin": 5.853,
-                    "TopMargin": 72.3,
-                    "BottomMargin": 112.7,
-                    "Tag": 48,
-                    "ActionTag": 2080731170,
+                    "LeftMargin": 391.0,
+                    "RightMargin": 28.0,
+                    "TopMargin": -2.5,
+                    "BottomMargin": -2.5,
+                    "Tag": 1358,
+                    "ActionTag": 1339784692,
                     "Size": {
-                      "X": 900.0,
-                      "Y": 320.0
+                      "X": 94.0,
+                      "Y": 65.0
                     },
-                    "Name": "ListView_1",
-                    "ctype": "ListViewObjectData"
-                  },
-                  {
-                    "ClipAble": false,
-                    "BackColorAlpha": 25,
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "joinGame/cell_bg1.png",
-                      "Plist": ""
-                    },
-                    "SingleColor": {
-                      "G": 165,
-                      "B": 0
-                    },
-                    "FirstColor": {
-                      "R": 150,
-                      "G": 200
-                    },
-                    "EndColor": {},
-                    "ColorVector": {
-                      "ScaleY": 1.0
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 29,
-                    "Scale9OriginY": 29,
-                    "Scale9Width": 42,
-                    "Scale9Height": 42,
-                    "TouchEnable": true,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5
-                    },
-                    "Position": {
-                      "X": -677.651,
-                      "Y": 389.7093
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": -0.7406,
-                      "Y": 0.7717
-                    },
-                    "PreSize": {
-                      "X": 0.9836,
-                      "Y": 0.1782
-                    },
-                    "LeftMargin": -1127.651,
-                    "RightMargin": 1142.651,
-                    "TopMargin": 25.2907,
-                    "BottomMargin": 389.7093,
-                    "Tag": 53,
-                    "Children": [
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/fenjiexian.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 179,
-                        "Scale9Width": 186,
-                        "Scale9Height": 2,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 285.0,
-                          "Y": 0.452
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.3167,
-                          "Y": 0.005
-                        },
-                        "PreSize": {
-                          "X": 0.6578,
-                          "Y": 0.0222
-                        },
-                        "LeftMargin": -11.0,
-                        "RightMargin": 319.0,
-                        "TopMargin": 88.548,
-                        "BottomMargin": -0.548,
-                        "Tag": 55,
-                        "ActionTag": -1792485053,
-                        "Size": {
-                          "X": 592.0,
-                          "Y": 2.0
-                        },
-                        "VisibleForFrame": false,
-                        "Name": "Image_4",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FontSize": 36,
-                        "LabelText": "100031",
-                        "FontResource": {
-                          "Type": "Default",
-                          "Path": "",
-                          "Plist": ""
-                        },
-                        "OutlineColor": {
-                          "R": 127,
-                          "G": 127,
-                          "B": 127
-                        },
-                        "ShadowColor": {
-                          "B": 0
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 112.5,
-                          "Y": 40.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {
-                          "R": 201,
-                          "G": 125,
-                          "B": 57
-                        },
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PrePosition": {
-                          "X": 0.125,
-                          "Y": 0.4444
-                        },
-                        "PreSize": {
-                          "X": 0.12,
-                          "Y": 0.4
-                        },
-                        "LeftMargin": 58.5,
-                        "RightMargin": 733.5,
-                        "TopMargin": 32.0,
-                        "BottomMargin": 22.0,
-                        "Tag": 56,
-                        "ActionTag": -1453153781,
-                        "Size": {
-                          "X": 108.0,
-                          "Y": 36.0
-                        },
-                        "Name": "roomID",
-                        "ctype": "TextObjectData"
-                      },
-                      {
-                        "FontSize": 30,
-                        "LabelText": "88分钟",
-                        "FontResource": {
-                          "Type": "Default",
-                          "Path": "",
-                          "Plist": ""
-                        },
-                        "OutlineColor": {
-                          "R": 127,
-                          "G": 127,
-                          "B": 127
-                        },
-                        "ShadowColor": {
-                          "B": 0
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 337.5,
-                          "Y": 40.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {
-                          "R": 202,
-                          "G": 145,
-                          "B": 95
-                        },
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PrePosition": {
-                          "X": 0.375,
-                          "Y": 0.4444
-                        },
-                        "PreSize": {
-                          "X": 0.1,
-                          "Y": 0.3333
-                        },
-                        "LeftMargin": 292.5,
-                        "RightMargin": 517.5,
-                        "TopMargin": 35.0,
-                        "BottomMargin": 25.0,
-                        "Tag": 57,
-                        "ActionTag": 1919554762,
-                        "Size": {
-                          "X": 90.0,
-                          "Y": 30.0
-                        },
-                        "Name": "time",
-                        "ctype": "TextObjectData"
-                      },
-                      {
-                        "IsCustomSize": true,
-                        "FontSize": 20,
-                        "LabelText": "",
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 562.5,
-                          "Y": 36.27
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PrePosition": {
-                          "X": 0.625,
-                          "Y": 0.403
-                        },
-                        "PreSize": {
-                          "X": 0.1444,
-                          "Y": 0.3667
-                        },
-                        "LeftMargin": 497.5,
-                        "RightMargin": 272.5,
-                        "TopMargin": 37.23,
-                        "BottomMargin": 19.77,
-                        "Tag": 11269,
-                        "Children": [
-                          {
-                            "ProgressInfo": 100,
-                            "ImageFileData": {
-                              "Type": "Normal",
-                              "Path": "joinGame/jindu.png",
-                              "Plist": ""
-                            },
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 64.8214,
-                              "Y": 16.8365
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.4986,
-                              "Y": 0.5102
-                            },
-                            "PreSize": {
-                              "X": 1.0,
-                              "Y": 1.0
-                            },
-                            "LeftMargin": -0.1786,
-                            "RightMargin": 0.1786,
-                            "TopMargin": -0.3365,
-                            "BottomMargin": 0.3365,
-                            "Tag": 59,
-                            "ActionTag": 1213403336,
-                            "Size": {
-                              "X": 130.0,
-                              "Y": 33.0
-                            },
-                            "VisibleForFrame": false,
-                            "Name": "LoadingBar_1",
-                            "ctype": "LoadingBarObjectData"
-                          },
-                          {
-                            "FontSize": 30,
-                            "LabelText": "3/4",
-                            "FontResource": {
-                              "Type": "Default",
-                              "Path": "",
-                              "Plist": ""
-                            },
-                            "OutlineColor": {
-                              "G": 0,
-                              "B": 0
-                            },
-                            "ShadowColor": {
-                              "R": 110,
-                              "G": 110,
-                              "B": 110
-                            },
-                            "ShadowOffsetX": 2.0,
-                            "ShadowOffsetY": -2.0,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 67.2898,
-                              "Y": 16.7905
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {
-                              "R": 202,
-                              "G": 145,
-                              "B": 95
-                            },
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.5176,
-                              "Y": 0.5088
-                            },
-                            "PreSize": {
-                              "X": 0.3462,
-                              "Y": 0.9091
-                            },
-                            "LeftMargin": 44.7898,
-                            "RightMargin": 40.2102,
-                            "TopMargin": 1.2095,
-                            "BottomMargin": 1.7905,
-                            "Tag": 63,
-                            "ActionTag": -52238111,
-                            "Size": {
-                              "X": 45.0,
-                              "Y": 30.0
-                            },
-                            "Name": "Text_4",
-                            "ctype": "TextObjectData"
-                          }
-                        ],
-                        "ActionTag": -1343280137,
-                        "Size": {
-                          "X": 130.0,
-                          "Y": 33.0
-                        },
-                        "Name": "Image_jindu",
-                        "ctype": "TextObjectData"
-                      },
-                      {
-                        "FontSize": 14,
-                        "ButtonText": "",
-                        "TextColor": {
-                          "R": 65,
-                          "G": 65,
-                          "B": 70
-                        },
-                        "NormalFileData": {
-                          "Type": "Normal",
-                          "Path": "joinGame/yaoqing.png",
-                          "Plist": ""
-                        },
-                        "Scale9Enable": true,
-                        "Scale9OriginX": 15,
-                        "Scale9OriginY": 11,
-                        "Scale9Width": 142,
-                        "Scale9Height": 42,
-                        "OutlineColor": {
-                          "G": 0,
-                          "B": 0
-                        },
-                        "ShadowColor": {
-                          "R": 110,
-                          "G": 110,
-                          "B": 110
-                        },
-                        "ShadowOffsetX": 2.0,
-                        "ShadowOffsetY": -2.0,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 787.5,
-                          "Y": 40.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PrePosition": {
-                          "X": 0.875,
-                          "Y": 0.4444
-                        },
-                        "PreSize": {
-                          "X": 0.1911,
-                          "Y": 0.7111
-                        },
-                        "LeftMargin": 701.5,
-                        "RightMargin": 26.5,
-                        "TopMargin": 18.0,
-                        "BottomMargin": 8.0,
-                        "Tag": 61,
-                        "ActionTag": -1801743986,
-                        "Size": {
-                          "X": 172.0,
-                          "Y": 64.0
-                        },
-                        "Name": "Button_12",
-                        "ctype": "ButtonObjectData"
-                      }
-                    ],
-                    "ActionTag": 1078374548,
-                    "Size": {
-                      "X": 900.0,
-                      "Y": 90.0
-                    },
-                    "Name": "room_cell",
-                    "ctype": "PanelObjectData"
+                    "Name": "del",
+                    "ctype": "ButtonObjectData"
                   }
                 ],
-                "ActionTag": 876661603,
+                "ActionTag": 1630681806,
                 "Size": {
-                  "X": 915.0,
-                  "Y": 505.0
+                  "X": 513.0,
+                  "Y": 60.0
                 },
-                "VisibleForFrame": false,
-                "Name": "Image_2",
-                "ctype": "ImageViewObjectData"
+                "Name": "top",
+                "ctype": "PanelObjectData"
               },
               {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
                 },
-                "DisabledFileData": {
-                  "Type": "Normal",
-                  "Path": "joinGame/wodefangjian_s.png",
-                  "Plist": ""
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
                 },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "joinGame/wodefangjian_s.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "joinGame/wodefangjian_n.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 328,
-                "Scale9Height": 64,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 298.7076,
-                  "Y": 573.9999
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
+                "EndColor": {},
+                "ColorVector": {
                   "ScaleY": 1.0
                 },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.3048,
-                  "Y": 0.9111
-                },
-                "PreSize": {
-                  "X": 0.3898,
-                  "Y": 0.154
-                },
-                "LeftMargin": 107.7076,
-                "RightMargin": 490.2924,
-                "TopMargin": 7.5001,
-                "BottomMargin": 525.4999,
-                "CallBackType": "Touch",
-                "Tag": 11086,
-                "ActionTag": 1080087471,
-                "Size": {
-                  "X": 382.0,
-                  "Y": 97.0
-                },
-                "Name": "myRoom_head",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "DisabledFileData": {
-                  "Type": "Normal",
-                  "Path": "joinGame/jionGame_s.png",
-                  "Plist": ""
-                },
-                "PressedFileData": {
-                  "Type": "Normal",
-                  "Path": "joinGame/jionGame_s.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "joinGame/jionGame_n.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 328,
-                "Scale9Height": 64,
-                "DisplayState": false,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 680.3204,
-                  "Y": 573.9998
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.6942,
-                  "Y": 0.9111
-                },
-                "PreSize": {
-                  "X": 0.3898,
-                  "Y": 0.1508
-                },
-                "LeftMargin": 489.3204,
-                "RightMargin": 108.6796,
-                "TopMargin": 8.5002,
-                "BottomMargin": 526.4998,
-                "CallBackType": "Touch",
-                "Tag": 11087,
-                "ActionTag": -981192715,
-                "Size": {
-                  "X": 382.0,
-                  "Y": 95.0
-                },
-                "Name": "enterRoom_head",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "game_picture/btn_x_normal.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 46,
-                "Scale9Height": 54,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 959.518,
-                  "Y": 598.5
+                  "X": 256.5,
+                  "Y": 226.985
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -3769,22 +323,976 @@
                 "PositionPercentXEnabled": true,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.9791,
-                  "Y": 0.95
+                  "X": 0.5,
+                  "Y": 0.4046
+                },
+                "PercentWidthEnable": true,
+                "PercentWidthEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.713
+                },
+                "TopMargin": 134.015,
+                "BottomMargin": 26.985,
+                "Tag": 1346,
+                "Children": [
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/0.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/0.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 256.5,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.1375
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 181.0,
+                    "RightMargin": 181.0,
+                    "TopMargin": 305.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 1348,
+                    "ActionTag": -529739385,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_0",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/1.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/1.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 101.5001,
+                      "Y": 318.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1979,
+                      "Y": 0.795
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 26.0001,
+                    "RightMargin": 335.9999,
+                    "TopMargin": 42.0,
+                    "BottomMargin": 278.0,
+                    "Tag": 1349,
+                    "ActionTag": 2026210216,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_1",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/2.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/2.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 256.5,
+                      "Y": 318.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.795
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 181.0,
+                    "RightMargin": 181.0,
+                    "TopMargin": 42.0,
+                    "BottomMargin": 278.0,
+                    "Tag": 1350,
+                    "ActionTag": 583449053,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_2",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/3.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/3.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 411.5,
+                      "Y": 318.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8021,
+                      "Y": 0.795
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 336.0,
+                    "RightMargin": 26.0,
+                    "TopMargin": 42.0,
+                    "BottomMargin": 278.0,
+                    "Tag": 1351,
+                    "ActionTag": 2137734391,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_3",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/4.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/4.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 101.5002,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1979,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 26.0002,
+                    "RightMargin": 335.9998,
+                    "TopMargin": 130.0,
+                    "BottomMargin": 190.0,
+                    "Tag": 1352,
+                    "ActionTag": -715134,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_4",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/5.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/5.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 256.5,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 181.0,
+                    "RightMargin": 181.0,
+                    "TopMargin": 130.0,
+                    "BottomMargin": 190.0,
+                    "Tag": 1353,
+                    "ActionTag": 1691768857,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_5",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/6.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/6.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 411.5,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8021,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 336.0,
+                    "RightMargin": 26.0,
+                    "TopMargin": 130.0,
+                    "BottomMargin": 190.0,
+                    "Tag": 1354,
+                    "ActionTag": -39795137,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_6",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/7.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/7.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 101.5002,
+                      "Y": 142.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1979,
+                      "Y": 0.355
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 26.0002,
+                    "RightMargin": 335.9998,
+                    "TopMargin": 218.0,
+                    "BottomMargin": 102.0,
+                    "Tag": 1355,
+                    "ActionTag": 1854180849,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_7",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/8.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/8.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 256.5,
+                      "Y": 142.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.355
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 181.0,
+                    "RightMargin": 181.0,
+                    "TopMargin": 218.0,
+                    "BottomMargin": 102.0,
+                    "Tag": 1356,
+                    "ActionTag": 441221789,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_8",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/9.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/9.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 411.5,
+                      "Y": 142.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8021,
+                      "Y": 0.355
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 336.0,
+                    "RightMargin": 26.0,
+                    "TopMargin": 218.0,
+                    "BottomMargin": 102.0,
+                    "Tag": 1347,
+                    "ActionTag": -721683147,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_9",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/zhong.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/zhong.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 101.5,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1979,
+                      "Y": 0.1375
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 26.0,
+                    "RightMargin": 336.0,
+                    "TopMargin": 305.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 1357,
+                    "ActionTag": 907804772,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "clear",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/qd.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/qd.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 411.5,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8021,
+                      "Y": 0.1375
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 336.0,
+                    "RightMargin": 26.0,
+                    "TopMargin": 305.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 2501,
+                    "ActionTag": 1827455256,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "btnsure",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": 154473676,
+                "Size": {
+                  "X": 513.0,
+                  "Y": 400.0
+                },
+                "Name": "num",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "A_Home/JoinRoom/bt.png",
+                  "Plist": ""
+                },
+                "Scale9OriginX": 63,
+                "Scale9OriginY": 16,
+                "Scale9Width": 67,
+                "Scale9Height": 19,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 261.9348,
+                  "Y": 514.4866
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5106,
+                  "Y": 0.9171
                 },
                 "PreSize": {
-                  "X": 0.0776,
-                  "Y": 0.1206
+                  "X": 0.3762,
+                  "Y": 0.0909
                 },
-                "LeftMargin": 921.518,
-                "RightMargin": -17.518,
-                "TopMargin": -6.5,
-                "BottomMargin": 560.5,
+                "LeftMargin": 165.4348,
+                "RightMargin": 154.5652,
+                "TopMargin": 21.0134,
+                "BottomMargin": 488.9866,
+                "Tag": 2500,
+                "ActionTag": 2132700504,
+                "Size": {
+                  "X": 193.0,
+                  "Y": 51.0
+                },
+                "Name": "title",
+                "ctype": "ImageViewObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "A_Home/JoinRoom/bg.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 36,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 465.3146,
+                  "Y": 515.8287
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.907,
+                  "Y": 0.9195
+                },
+                "PreSize": {
+                  "X": 0.1287,
+                  "Y": 0.1176
+                },
+                "LeftMargin": 432.3146,
+                "RightMargin": 14.6854,
+                "TopMargin": 12.1713,
+                "BottomMargin": 482.8287,
                 "Tag": 1334,
                 "ActionTag": 305568070,
                 "Size": {
-                  "X": 76.0,
-                  "Y": 76.0
+                  "X": 66.0,
+                  "Y": 66.0
                 },
                 "Name": "close",
                 "ctype": "ButtonObjectData"
@@ -3792,8 +1300,8 @@
             ],
             "ActionTag": 1822881403,
             "Size": {
-              "X": 980.0,
-              "Y": 630.0
+              "X": 513.0,
+              "Y": 561.0
             },
             "Name": "back",
             "ctype": "ImageViewObjectData"
@@ -3807,41 +1315,23 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "fonts/fzcy.ttf",
-        "game_picture/bac_datanchuan.png",
-        "game_picture/btn_x_normal.png",
-        "game_picture/dengdai.png",
-        "game_picture/diban.png",
-        "joinGame/bohao_00.png",
-        "joinGame/bohao_01.png",
-        "joinGame/bohao_02.png",
-        "joinGame/bohao_03.png",
-        "joinGame/bohao_04.png",
-        "joinGame/bohao_05.png",
-        "joinGame/bohao_06.png",
-        "joinGame/bohao_07.png",
-        "joinGame/bohao_08.png",
-        "joinGame/bohao_09.png",
-        "joinGame/bohaobtn2.png",
-        "joinGame/cell_bg1.png",
-        "joinGame/cellTop_bg.png",
-        "joinGame/chuangjianfangjian.png",
-        "joinGame/fenjiexian.png",
-        "joinGame/jindu.png",
-        "joinGame/jionGame_n.png",
-        "joinGame/jionGame_s.png",
-        "joinGame/kaifangjilu.png",
-        "joinGame/line.png",
-        "joinGame/num_bg.png",
-        "joinGame/num_top.png",
-        "joinGame/qingkong_11.png",
-        "joinGame/roomid_top.png",
-        "joinGame/shangchu_11.png",
-        "joinGame/time_top.png",
-        "joinGame/wodefangjian_n.png",
-        "joinGame/wodefangjian_s.png",
-        "joinGame/xiao_bg2.png",
-        "joinGame/yaoqing.png"
+        "A_Home/JoinRoom/0.png",
+        "A_Home/JoinRoom/1.png",
+        "A_Home/JoinRoom/2.png",
+        "A_Home/JoinRoom/3.png",
+        "A_Home/JoinRoom/4.png",
+        "A_Home/JoinRoom/5.png",
+        "A_Home/JoinRoom/6.png",
+        "A_Home/JoinRoom/7.png",
+        "A_Home/JoinRoom/8.png",
+        "A_Home/JoinRoom/9.png",
+        "A_Home/JoinRoom/bg.png",
+        "A_Home/JoinRoom/bt.png",
+        "A_Home/JoinRoom/dikuang.png",
+        "A_Home/JoinRoom/gb.png",
+        "A_Home/JoinRoom/qd.png",
+        "A_Home/JoinRoom/shuru.png",
+        "A_Home/JoinRoom/zhong.png"
       ],
       "ctype": "GameFileData"
     }

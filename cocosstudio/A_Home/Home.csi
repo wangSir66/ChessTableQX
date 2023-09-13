@@ -1,47 +1,30 @@
 <PlistInfoProjectFile>
   <PropertyGroup Name="Home" Type="Plist" ID="b610300a-4dc3-40cb-ae24-52f0c30e72ac" Version="3.10.0.0" />
-  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="False" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
     <ImageFiles>
-      <FilePathData Path="A_Home/act.png" />
-      <FilePathData Path="A_Home/act_s.png" />
-      <FilePathData Path="A_Home/avatar.png" />
-      <FilePathData Path="A_Home/avatar_mask.png" />
-      <FilePathData Path="A_Home/bg_yuanbao.png" />
-      <FilePathData Path="A_Home/chjfj.png" />
-      <FilePathData Path="A_Home/daili.png" />
-      <FilePathData Path="A_Home/daili_s.png" />
-      <FilePathData Path="A_Home/email.png" />
-      <FilePathData Path="A_Home/email_s.png" />
-      <FilePathData Path="A_Home/fenxiang_tip.png" />
-      <FilePathData Path="A_Home/girl.png" />
-      <FilePathData Path="A_Home/gonggao_copy.png" />
-      <FilePathData Path="A_Home/gonggao_img.png" />
-      <FilePathData Path="A_Home/help.png" />
-      <FilePathData Path="A_Home/help_s.png" />
-      <FilePathData Path="A_Home/hongdian-home.png" />
-      <FilePathData Path="A_Home/jrfj.png" />
-      <FilePathData Path="A_Home/kefu.png" />
-      <FilePathData Path="A_Home/kefu_s.png" />
-      <FilePathData Path="A_Home/lvse_text.png" />
-      <FilePathData Path="A_Home/mj.png" />
-      <FilePathData Path="A_Home/mj2.png" />
-      <FilePathData Path="A_Home/qyq.png" />
-      <FilePathData Path="A_Home/setting.png" />
-      <FilePathData Path="A_Home/setting_s.png" />
-      <FilePathData Path="A_Home/share.png" />
-      <FilePathData Path="A_Home/share_s.png" />
-      <FilePathData Path="A_Home/shop.png" />
-      <FilePathData Path="A_Home/shop_s.png" />
-      <FilePathData Path="A_Home/shz.png" />
-      <FilePathData Path="A_Home/tuijian.png" />
-      <FilePathData Path="A_Home/tuijian_s.png" />
-      <FilePathData Path="A_Home/ylch.png" />
-      <FilePathData Path="A_Home/ylchtitle.png" />
-      <FilePathData Path="A_Home/zhanji.png" />
-      <FilePathData Path="A_Home/zhanji_s.png" />
-      <FilePathData Path="A_Home/zixun.png" />
-      <FilePathData Path="A_Home/zixun_s.png" />
+      <FilePathData Path="A_Home/Main/bg_yuanbao.png" />
+      <FilePathData Path="A_Home/Main/chjfj.png" />
+      <FilePathData Path="A_Home/Main/daili.png" />
+      <FilePathData Path="A_Home/Main/daili_s.png" />
+      <FilePathData Path="A_Home/Main/email.png" />
+      <FilePathData Path="A_Home/Main/girl.png" />
+      <FilePathData Path="A_Home/Main/gonggao_copy.png" />
+      <FilePathData Path="A_Home/Main/help.png" />
+      <FilePathData Path="A_Home/Main/hongdian-home.png" />
+      <FilePathData Path="A_Home/Main/jrfj.png" />
+      <FilePathData Path="A_Home/Main/kefu.png" />
+      <FilePathData Path="A_Home/Main/lvse_text.png" />
+      <FilePathData Path="A_Home/Main/qyq.png" />
+      <FilePathData Path="A_Home/Main/setting.png" />
+      <FilePathData Path="A_Home/Main/shop.png" />
+      <FilePathData Path="A_Home/Main/ylch.png" />
+      <FilePathData Path="A_Home/Main/zhanji.png" />
+      <FilePathData Path="A_Home/Main/game_gonggao.png" />
+      <FilePathData Path="A_Home/Main/game_shiming.png" />
+      <FilePathData Path="A_Home/Main/head_lb_bg.png" />
+      <FilePathData Path="A_Home/Main/laba_bg.png" />
+      <FilePathData Path="A_Home/Main/btn_shenhe.png" />
     </ImageFiles>
-    <MaxSize Width="1024" Height="2048" />
+    <MaxSize Width="2048" Height="1024" />
   </Content>
 </PlistInfoProjectFile>

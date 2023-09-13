@@ -1,0 +1,67 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="Member" Type="Plist" ID="43b0d654-b67a-461e-8b4d-1453cfdd6cba" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_FriendCard/Member/btn_Button_remarks_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_Button_remarks_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_caozuo_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_chakanCY_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_chakanCY_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_frozen_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_frozen_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_group_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_group_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_mamager_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_mamager_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_notAdmit_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_notAdmit_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_setgongxian1.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_setgongxian2.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_tichu_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_tichu_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_unfrozen_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_unfrozen_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_unMamager_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_unMamager_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_unZhuli_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_unZhuli_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_zhuli_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_zhuli_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btna_group_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btna_unGroup_n.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_jujue_n.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_jujue_s.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_tongguo_n.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_tongguo_s.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_zhuli_n.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_zhuli_s.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_zuzhang_n.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_zuzhang_s.png" />
+      <FilePathData Path="A_FriendCard/Member/userStop.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_add_again_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_add_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_add_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_AddOtherClub_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_AddOtherClub_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_admit_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_admit_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_rule_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_rule_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_tick_all_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_tick_all_s.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_notAdmit2_n.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_notAdmit2_s.png" />
+      <FilePathData Path="A_FriendCard/Member/all_person.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_add.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_jian.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_zh_paixu.png" />
+      <FilePathData Path="A_FriendCard/Member/cy_tuichu_n.png" />
+      <FilePathData Path="A_FriendCard/Member/list_cell_sort.png" />
+      <FilePathData Path="A_FriendCard/Member/panel_title.png" />
+      <FilePathData Path="A_FriendCard/Member/sousuo_bg.png" />
+      <FilePathData Path="A_FriendCard/Member/what_group.png" />
+      <FilePathData Path="A_FriendCard/Member/btn_set_group.png" />
+    </ImageFiles>
+    <MaxSize Width="2048" Height="2048" />
+  </Content>
+</PlistInfoProjectFile>

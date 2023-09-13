@@ -67,7 +67,7 @@
               "X": 1280.0,
               "Y": 720.0
             },
-            "Alpha": 153,
+            "Alpha": 127,
             "Name": "Image_di",
             "ctype": "PanelObjectData"
           },
@@ -311,7 +311,7 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "friendCards/common/btn_x_normal.png",
+                  "Path": "friendCards/btn_x_normal.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -422,9 +422,9 @@
               },
               {
                 "FileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_dikuang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/img_dikuang.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 22,
@@ -663,18 +663,18 @@
                       "Y": 0.658
                     },
                     "PreSize": {
-                      "X": 0.0597,
-                      "Y": 0.375
+                      "X": 0.0565,
+                      "Y": 0.325
                     },
-                    "LeftMargin": 336.6837,
-                    "RightMargin": 529.3163,
-                    "TopMargin": 12.36,
-                    "BottomMargin": 37.64,
+                    "LeftMargin": 338.1837,
+                    "RightMargin": 530.8163,
+                    "TopMargin": 14.36,
+                    "BottomMargin": 39.64,
                     "Tag": 5086,
                     "ActionTag": -1090000831,
                     "Size": {
-                      "X": 55.0,
-                      "Y": 30.0
+                      "X": 52.0,
+                      "Y": 26.0
                     },
                     "Name": "text_name",
                     "ctype": "TextObjectData"
@@ -722,27 +722,27 @@
                       "Y": 0.4252
                     },
                     "PreSize": {
-                      "X": 0.1173,
-                      "Y": 0.3375
+                      "X": 0.1042,
+                      "Y": 0.3
                     },
-                    "LeftMargin": 464.8244,
-                    "RightMargin": 348.1756,
-                    "TopMargin": 32.484,
-                    "BottomMargin": 20.516,
+                    "LeftMargin": 470.8244,
+                    "RightMargin": 354.1756,
+                    "TopMargin": 33.984,
+                    "BottomMargin": 22.016,
                     "Tag": 5087,
                     "ActionTag": -2024808173,
                     "Size": {
-                      "X": 108.0,
-                      "Y": 27.0
+                      "X": 96.0,
+                      "Y": 24.0
                     },
                     "Name": "text_ID",
                     "ctype": "TextObjectData"
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9OriginX": 266,
                     "Scale9Width": 279,
@@ -827,18 +827,18 @@
                       "Y": 0.498
                     },
                     "PreSize": {
-                      "X": 0.0489,
-                      "Y": 0.375
+                      "X": 0.0423,
+                      "Y": 0.325
                     },
-                    "LeftMargin": 199.9783,
-                    "RightMargin": 676.0217,
-                    "TopMargin": 25.16,
-                    "BottomMargin": 24.84,
+                    "LeftMargin": 202.9783,
+                    "RightMargin": 679.0217,
+                    "TopMargin": 27.16,
+                    "BottomMargin": 26.84,
                     "Tag": 5089,
                     "ActionTag": -1319248154,
                     "Size": {
-                      "X": 45.0,
-                      "Y": 30.0
+                      "X": 39.0,
+                      "Y": 26.0
                     },
                     "Name": "text_group",
                     "ctype": "TextObjectData"
@@ -887,18 +887,18 @@
                       "Y": 0.2244
                     },
                     "PreSize": {
-                      "X": 0.0749,
-                      "Y": 0.3125
+                      "X": 0.0717,
+                      "Y": 0.275
                     },
-                    "LeftMargin": 329.6835,
-                    "RightMargin": 522.3165,
-                    "TopMargin": 49.548,
-                    "BottomMargin": 5.452,
+                    "LeftMargin": 331.1835,
+                    "RightMargin": 523.8165,
+                    "TopMargin": 51.048,
+                    "BottomMargin": 6.952,
                     "Tag": 5102,
                     "ActionTag": 2084925598,
                     "Size": {
-                      "X": 69.0,
-                      "Y": 25.0
+                      "X": 66.0,
+                      "Y": 22.0
                     },
                     "Name": "text_role",
                     "ctype": "TextObjectData"
@@ -906,29 +906,29 @@
                   {
                     "CheckedState": true,
                     "NormalBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "PressedBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "DisableBackFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_gou.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/img_gou.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/btn_chebox_fang.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/btn_chebox_fang.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "TouchEnable": true,
                     "AnchorPoint": {
@@ -990,7 +990,7 @@
                     "Scale9OriginX": 15,
                     "Scale9OriginY": 11,
                     "Scale9Width": 12,
-                    "Scale9Height": 22,
+                    "Scale9Height": 19,
                     "OutlineColor": {
                       "G": 0,
                       "B": 0
@@ -1062,7 +1062,7 @@
                     "Scale9OriginX": 15,
                     "Scale9OriginY": 11,
                     "Scale9Width": 12,
-                    "Scale9Height": 22,
+                    "Scale9Height": 19,
                     "OutlineColor": {
                       "G": 0,
                       "B": 0
@@ -1119,8 +1119,8 @@
                     },
                     "Scale9OriginX": 27,
                     "Scale9OriginY": 11,
-                    "Scale9Width": 72,
-                    "Scale9Height": 21,
+                    "Scale9Width": 30,
+                    "Scale9Height": 12,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -1265,18 +1265,18 @@
                       "Y": 0.4865
                     },
                     "PreSize": {
-                      "X": 0.0532,
-                      "Y": 0.6341
+                      "X": 0.0499,
+                      "Y": 0.561
                     },
-                    "LeftMargin": 66.2009,
-                    "RightMargin": 805.7991,
-                    "TopMargin": 8.0535,
-                    "BottomMargin": 6.9465,
+                    "LeftMargin": 67.7009,
+                    "RightMargin": 807.2991,
+                    "TopMargin": 9.5535,
+                    "BottomMargin": 8.4465,
                     "Tag": 5095,
                     "ActionTag": -1310098528,
                     "Size": {
-                      "X": 49.0,
-                      "Y": 26.0
+                      "X": 46.0,
+                      "Y": 23.0
                     },
                     "Name": "text_title_head",
                     "ctype": "TextObjectData"
@@ -1324,18 +1324,18 @@
                       "Y": 0.4822
                     },
                     "PreSize": {
-                      "X": 0.0532,
-                      "Y": 0.6341
+                      "X": 0.0499,
+                      "Y": 0.561
                     },
-                    "LeftMargin": 197.98,
-                    "RightMargin": 674.02,
-                    "TopMargin": 8.0114,
-                    "BottomMargin": 6.9886,
+                    "LeftMargin": 199.3291,
+                    "RightMargin": 675.6709,
+                    "TopMargin": 9.5366,
+                    "BottomMargin": 8.4634,
                     "Tag": 5096,
                     "ActionTag": 2117816280,
                     "Size": {
-                      "X": 49.0,
-                      "Y": 26.0
+                      "X": 46.0,
+                      "Y": 23.0
                     },
                     "Name": "text_title_group",
                     "ctype": "TextObjectData"
@@ -1383,18 +1383,18 @@
                       "Y": 0.4822
                     },
                     "PreSize": {
-                      "X": 0.0304,
-                      "Y": 0.6341
+                      "X": 0.0261,
+                      "Y": 0.561
                     },
-                    "LeftMargin": 504.8269,
-                    "RightMargin": 388.1731,
-                    "TopMargin": 8.0114,
-                    "BottomMargin": 6.9886,
+                    "LeftMargin": 506.6257,
+                    "RightMargin": 390.3743,
+                    "TopMargin": 9.5366,
+                    "BottomMargin": 8.4634,
                     "Tag": 5097,
                     "ActionTag": 1243665860,
                     "Size": {
-                      "X": 28.0,
-                      "Y": 26.0
+                      "X": 24.0,
+                      "Y": 23.0
                     },
                     "Name": "text_title_ID",
                     "ctype": "TextObjectData"
@@ -1442,27 +1442,27 @@
                       "Y": 0.4865
                     },
                     "PreSize": {
-                      "X": 0.1021,
-                      "Y": 0.6341
+                      "X": 0.0999,
+                      "Y": 0.561
                     },
-                    "LeftMargin": 616.6465,
-                    "RightMargin": 210.3535,
-                    "TopMargin": 8.0535,
-                    "BottomMargin": 6.9465,
+                    "LeftMargin": 617.6465,
+                    "RightMargin": 211.3535,
+                    "TopMargin": 9.5535,
+                    "BottomMargin": 8.4465,
                     "Tag": 5098,
                     "ActionTag": 1788109640,
                     "Size": {
-                      "X": 94.0,
-                      "Y": 26.0
+                      "X": 92.0,
+                      "Y": 23.0
                     },
                     "Name": "text_title_onOff",
                     "ctype": "TextObjectData"
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "friendCards/common/img_hengxian.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_FriendCard/Main/img_hengxian.png",
+                      "Plist": "A_FriendCard/GaojiSet.plist"
                     },
                     "Scale9OriginX": 266,
                     "Scale9Width": 279,
@@ -1546,18 +1546,18 @@
                       "Y": 0.466
                     },
                     "PreSize": {
-                      "X": 0.0532,
-                      "Y": 0.6341
+                      "X": 0.0499,
+                      "Y": 0.561
                     },
-                    "LeftMargin": 339.685,
-                    "RightMargin": 532.315,
-                    "TopMargin": 8.6756,
-                    "BottomMargin": 6.3244,
+                    "LeftMargin": 341.0341,
+                    "RightMargin": 533.9659,
+                    "TopMargin": 10.2008,
+                    "BottomMargin": 7.7992,
                     "Tag": 5101,
                     "ActionTag": 211794755,
                     "Size": {
-                      "X": 49.0,
-                      "Y": 26.0
+                      "X": 46.0,
+                      "Y": 23.0
                     },
                     "Name": "text_title_name",
                     "ctype": "TextObjectData"
@@ -1605,18 +1605,18 @@
                       "Y": 0.4865
                     },
                     "PreSize": {
-                      "X": 0.1194,
-                      "Y": 0.6341
+                      "X": 0.152,
+                      "Y": 0.561
                     },
-                    "LeftMargin": 775.5081,
-                    "RightMargin": 35.4919,
-                    "TopMargin": 8.0535,
-                    "BottomMargin": 6.9465,
+                    "LeftMargin": 760.5081,
+                    "RightMargin": 20.4919,
+                    "TopMargin": 9.5535,
+                    "BottomMargin": 8.4465,
                     "Tag": 352,
                     "ActionTag": 94510234,
                     "Size": {
-                      "X": 110.0,
-                      "Y": 26.0
+                      "X": 140.0,
+                      "Y": 23.0
                     },
                     "Name": "text_matchNum",
                     "ctype": "TextObjectData"
@@ -1656,7 +1656,7 @@
                 },
                 "Position": {
                   "X": 185.0304,
-                  "Y": 101.1108
+                  "Y": 101.088
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1679,8 +1679,8 @@
                 },
                 "LeftMargin": 185.0304,
                 "RightMargin": 787.9696,
-                "TopMargin": 597.8892,
-                "BottomMargin": 80.1108,
+                "TopMargin": 597.912,
+                "BottomMargin": 80.088,
                 "Tag": 773,
                 "ActionTag": -836219642,
                 "Size": {
@@ -1871,29 +1871,29 @@
               {
                 "CheckedState": true,
                 "NormalBackFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_chebox_fang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btn_chebox_fang.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_chebox_fang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btn_chebox_fang.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_chebox_fang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btn_chebox_fang.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/img_gou.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/img_gou.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
-                  "Type": "Normal",
-                  "Path": "friendCards/common/btn_chebox_fang.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/btn_chebox_fang.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -1902,7 +1902,7 @@
                 },
                 "Position": {
                   "X": 779.8009,
-                  "Y": 563.3062
+                  "Y": 563.328
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1921,8 +1921,8 @@
                 },
                 "LeftMargin": 761.8009,
                 "RightMargin": 482.1991,
-                "TopMargin": 138.6938,
-                "BottomMargin": 545.3062,
+                "TopMargin": 138.672,
+                "BottomMargin": 545.328,
                 "Tag": 77,
                 "ActionTag": 1373491203,
                 "Size": {
@@ -1940,15 +1940,15 @@
                 },
                 "Scale9OriginX": 27,
                 "Scale9OriginY": 11,
-                "Scale9Width": 72,
-                "Scale9Height": 21,
+                "Scale9Width": 30,
+                "Scale9Height": 12,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
                   "X": 594.3565,
-                  "Y": 99.1082
+                  "Y": 99.144
                 },
                 "Scale": {
                   "ScaleX": 0.8,
@@ -1967,8 +1967,8 @@
                 },
                 "LeftMargin": 532.3565,
                 "RightMargin": 623.6435,
-                "TopMargin": 603.3918,
-                "BottomMargin": 81.6082,
+                "TopMargin": 603.356,
+                "BottomMargin": 81.644,
                 "Tag": 80,
                 "ActionTag": 150037009,
                 "Size": {
@@ -2001,7 +2001,7 @@
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
                 "Scale9Width": 12,
-                "Scale9Height": 22,
+                "Scale9Height": 19,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -2020,7 +2020,7 @@
                 },
                 "Position": {
                   "X": 528.6161,
-                  "Y": 99.1082
+                  "Y": 99.144
                 },
                 "Scale": {
                   "ScaleX": 0.8,
@@ -2039,8 +2039,8 @@
                 },
                 "LeftMargin": 510.6161,
                 "RightMargin": 733.3839,
-                "TopMargin": 602.3918,
-                "BottomMargin": 80.6082,
+                "TopMargin": 602.356,
+                "BottomMargin": 80.644,
                 "Tag": 79,
                 "ActionTag": -1797218001,
                 "Size": {
@@ -2073,7 +2073,7 @@
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
                 "Scale9Width": 12,
-                "Scale9Height": 22,
+                "Scale9Height": 19,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -2092,7 +2092,7 @@
                 },
                 "Position": {
                   "X": 660.0873,
-                  "Y": 99.1082
+                  "Y": 99.144
                 },
                 "Scale": {
                   "ScaleX": 0.8,
@@ -2111,8 +2111,8 @@
                 },
                 "LeftMargin": 642.0873,
                 "RightMargin": 601.9127,
-                "TopMargin": 602.3918,
-                "BottomMargin": 80.6082,
+                "TopMargin": 602.356,
+                "BottomMargin": 80.644,
                 "Tag": 78,
                 "ActionTag": 1244300652,
                 "Size": {
@@ -2205,6 +2205,12 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/GaojiSet.plist",
+        "A_FriendCard/GaojiSet.png",
         "createNewPng/bg_difen.png",
         "createNewPng/btn_add_n.png",
         "createNewPng/btn_add_s.png",
@@ -2212,12 +2218,8 @@
         "createNewPng/btn_sub_s.png",
         "Default/Button_Disable.png",
         "Default/ImageFile.png",
-        "friendCards/common/btn_chebox_fang.png",
-        "friendCards/common/btn_x_normal.png",
+        "friendCards/btn_x_normal.png",
         "friendCards/common/headMask.png",
-        "friendCards/common/img_dikuang.png",
-        "friendCards/common/img_gou.png",
-        "friendCards/common/img_hengxian.png",
         "friendCards/common/img_zhongtanchuang.png",
         "friendCards/common/tanchuang_hua.png",
         "friendCards/tongji/title_img.png",
