@@ -6,7 +6,6 @@
 
 var FriendCard_roomRecord = cc.Layer.extend({
     ctor: function (data, openType, isByFCM) {
-        cc.log(" ======== FriendCard_roomRecord  data : ", JSON.stringify(data));
         this._super();
         this._numberRecord = 0;
         this._clubData = data;
@@ -30,29 +29,22 @@ var FriendCard_roomRecord = cc.Layer.extend({
         }
 
 
-        var UI = ccs.load(res.Friendcard_roomRecord_json);
-        this.addChild(UI.node);
+        var node = ccs.load(res.Friendcard_roomRecord_json).node;
+        this.addChild(node);
         var that = this;
-        this.uinode = UI.node;
-        var _block = UI.node.getChildByName("block");
+        this.uinode = node;
+        var _block = node.getChildByName("block");
         setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
+        var _back = node.getChildByName("back");
+        setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0]);
 
+        let leftImgDi = node.getChildByName("Image_di");
+        var Image_title = node.getChildByName("Image_title");
+        setWgtLayout(leftImgDi, [1, 1], [0, 0.5], [0, 0], false);
+        setWgtLayout(Image_title, [0.2, 1], [0.6, 1], [0, 0], false);
 
-        var _back = UI.node.getChildByName("back");
-        if (FriendCard_Common.getSkinType() == 3 || FriendCard_Common.getSkinType() == 4) {
-            setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0]);
-        } else {
-            setWgtLayout(_back, [0.99, 0.944], [0.5, 0.5], [0, 0]);
-        }
-        this._node_1 = _back.getChildByName("Node_1");
-
-
-        //玩法头像
-        this.initPlayerInfo(_back);
-        this.initPanelCheckView(_back)
-
-        var _close = _back.getChildByName("close");
-        _close.addTouchEventListener(function (sender, type) {
+        var close = leftImgDi.getChildByName("close");
+        close.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 if (FriendCard_Common.club_roleId) {
                     FriendCard_Common.club_roleId = null;
@@ -60,10 +52,13 @@ var FriendCard_roomRecord = cc.Layer.extend({
                 that.removeFromParent();
             }
         }, this);
-        closeBtnAddLight(_close);
+
+
+        //玩法头像
+        this.initPlayerInfo(_back);
+        this.initPanelCheckView(_back);
 
         this.Button_showReflash = _back.getChildByName("roomRecordPanel").getChildByName("Button_showReflash");
-        COMMON_UI.setNodeTextAdapterSize(this.Button_showReflash);
         this.Button_showReflash.visible = false;
         this.Button_showReflash.addTouchEventListener(function (sender, type) {
             if (type == 2) {
@@ -140,7 +135,7 @@ var FriendCard_roomRecord = cc.Layer.extend({
             }, this);
         }
 
-        popupAnm(_back);
+        // popupAnm(_back);
         this.reqRecord(data.info.clubId, this._lastId, this._gameType);
         that.doAutoReflash();
         return true;
@@ -429,7 +424,6 @@ var FriendCard_roomRecord = cc.Layer.extend({
             api = this.isLMClub ? "pkplayer.handler.leagueGameRecord" : "pkplayer.handler.clubGameRecord";
         }
 
-        cc.log(api + ":" + JSON.stringify(requestInfo));
         MjClient.gamenet.request(api, requestInfo,
             function (rtn) {
                 MjClient.unblock();
@@ -626,7 +620,6 @@ var FriendCard_roomRecord = cc.Layer.extend({
 
         function nameText(idx) {
             if (!oneData.players[idx]) {
-                cc.log("Error:data.players is null");
                 return "";
             }
             var _name = copyNode.getChildByName("player" + idx);
@@ -838,7 +831,6 @@ var FriendCard_roomRecord = cc.Layer.extend({
         MjClient.Scene.addChild(dialog);
         var xhr = cc.loader.getXMLHttpRequest();
         //var playUrl = GamePlaybackUrlPrefix[MjClient.getAppType()] + _timeStr.substr(0, 10) + "/" + this._clubData.info.creator + "_" + oneData.roomNum + ".json";
-        cc.log(" ==== playUrl : ", playUrl);
         xhr.open("GET", playUrl);
         xhr.onreadystatechange = function () {
             if (cc.sys.isObjectValid(dialog)) dialog.removeFromParent();
@@ -851,7 +843,6 @@ var FriendCard_roomRecord = cc.Layer.extend({
                     MjClient.showToast("网络不好，请稍后再试.");
                 }
                 if (rep) {
-                    cc.log('----------rep--------------', JSON.stringify(rep))
                     // var keys = Object.keys(rep[0].data.players);
                     // if (keys.indexOf(SelfUid() + "") == -1)
                     // {
@@ -918,8 +909,6 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
         setWgtLayout(_back, [0.99, 0.944], [0.5, 0.5], [0, 0]);
 
         popupAnm(_back);
-
-        this._node_1 = _back.getChildByName("Node_1");
 
         this.initBtns(_back)
         //操作记录 and 操作记录按钮和房间记录按钮
@@ -1053,7 +1042,6 @@ var FriendCard_managerRecordJZ = cc.Layer.extend({
                     return;
 
                 if (rtn.code == 0) {
-                    cc.log(" =====pkplayer.handler.clubActionRecord  === " + JSON.stringify(rtn.data));
                     that._opeLastId = lastId;
                     that.addOpeItems(rtn.data);
                 }

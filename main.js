@@ -7,8 +7,8 @@ function screenChange(isW) {
     } else {
         w = 640;
         h = 360;
-        w = 1280;
-        h = 720;
+        // w = 2436;
+        // h = 1000;
     }
     MjClient.size = { width: w, height: h };
     cc.view.setFrameSize(w, h);

@@ -576,110 +576,6 @@
                     "ctype": "PanelObjectData"
                   },
                   {
-                    "ClipAble": false,
-                    "BackColorAlpha": 0,
-                    "ComboBoxIndex": 1,
-                    "SingleColor": {
-                      "R": 150,
-                      "G": 200
-                    },
-                    "FirstColor": {
-                      "R": 150,
-                      "G": 200
-                    },
-                    "EndColor": {},
-                    "ColorVector": {
-                      "ScaleY": 1.0
-                    },
-                    "Scale9Width": 1,
-                    "Scale9Height": 1,
-                    "TouchEnable": true,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 1.0
-                    },
-                    "Position": {
-                      "X": 418.944,
-                      "Y": 102.0
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.3273,
-                      "Y": 1.0
-                    },
-                    "PreSize": {
-                      "X": 0.1172,
-                      "Y": 2.451
-                    },
-                    "LeftMargin": 343.944,
-                    "RightMargin": 786.056,
-                    "BottomMargin": -148.0,
-                    "Tag": 668,
-                    "Children": [
-                      {
-                        "FileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/Main/img_guanjia.png",
-                          "Plist": "A_FriendCard/FriendCardMain.plist"
-                        },
-                        "Scale9OriginX": 10,
-                        "Scale9OriginY": 24,
-                        "Scale9Width": 12,
-                        "Scale9Height": 27,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 1.0
-                        },
-                        "Position": {
-                          "X": 33.0,
-                          "Y": 250.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.22,
-                          "Y": 1.0
-                        },
-                        "PreSize": {
-                          "X": 0.2133,
-                          "Y": 0.3
-                        },
-                        "LeftMargin": 17.0,
-                        "RightMargin": 101.0,
-                        "BottomMargin": 175.0,
-                        "Tag": 207,
-                        "ActionTag": 782082541,
-                        "Size": {
-                          "X": 32.0,
-                          "Y": 75.0
-                        },
-                        "Name": "img_biaoshi",
-                        "ctype": "ImageViewObjectData"
-                      }
-                    ],
-                    "ActionTag": 989921511,
-                    "Size": {
-                      "X": 150.0,
-                      "Y": 250.0
-                    },
-                    "VisibleForFrame": false,
-                    "Name": "img_nvguanjia",
-                    "ctype": "PanelObjectData"
-                  },
-                  {
                     "FileData": {
                       "Type": "Normal",
                       "Path": "A_FriendCard/Main/yb_txt_bg.png",
@@ -3781,7 +3677,6 @@
                           "X": 150.0,
                           "Y": 51.0
                         },
-                        "VisibleForFrame": false,
                         "Name": "btn_setSkin",
                         "ctype": "ButtonObjectData"
                       },

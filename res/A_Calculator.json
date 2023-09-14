@@ -1,0 +1,1293 @@
+{
+  "ID": "706045f0-9d38-4471-bfbf-aa27117ef64e",
+  "Version": "2.3.4",
+  "Name": "A_Calculator",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 52,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 206,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 3433,
+            "ActionTag": -423466053,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Alpha": 127,
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "A_Home/JoinRoom/dikuang.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 241,
+            "Scale9OriginY": 185,
+            "Scale9Width": 31,
+            "Scale9Height": 255,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PreSize": {
+              "X": 0.4008,
+              "Y": 0.7792
+            },
+            "LeftMargin": 383.5,
+            "RightMargin": 383.5,
+            "TopMargin": 79.5,
+            "BottomMargin": 79.5,
+            "Tag": 113,
+            "Children": [
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 256.5,
+                  "Y": 437.58
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.78
+                },
+                "PercentWidthEnable": true,
+                "PercentWidthEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.107
+                },
+                "TopMargin": 93.42,
+                "BottomMargin": 407.58,
+                "Tag": 1335,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/shuru.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 13,
+                    "Scale9OriginY": 13,
+                    "Scale9Width": 333,
+                    "Scale9Height": 31,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 207.4475,
+                      "Y": 30.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.4044,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.6998,
+                      "Y": 0.95
+                    },
+                    "LeftMargin": 27.9475,
+                    "RightMargin": 126.0525,
+                    "TopMargin": 1.5,
+                    "BottomMargin": 1.5,
+                    "Tag": 453,
+                    "ActionTag": -1174259274,
+                    "Size": {
+                      "X": 359.0,
+                      "Y": 57.0
+                    },
+                    "Name": "num_bg",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/gb.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/gb.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 64,
+                    "Scale9Height": 43,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 438.0,
+                      "Y": 30.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.8538,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.1832,
+                      "Y": 1.0833
+                    },
+                    "LeftMargin": 391.0,
+                    "RightMargin": 28.0,
+                    "TopMargin": -2.5,
+                    "BottomMargin": -2.5,
+                    "Tag": 1358,
+                    "ActionTag": 1339784692,
+                    "Size": {
+                      "X": 94.0,
+                      "Y": 65.0
+                    },
+                    "Name": "del",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": 1630681806,
+                "Size": {
+                  "X": 513.0,
+                  "Y": 60.0
+                },
+                "Name": "top",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "ClipAble": false,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 256.5,
+                  "Y": 226.9806
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.4046
+                },
+                "PercentWidthEnable": true,
+                "PercentWidthEnabled": true,
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 0.713
+                },
+                "TopMargin": 134.0194,
+                "BottomMargin": 26.9806,
+                "Tag": 1346,
+                "Children": [
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/0.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/0.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 256.5,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.1375
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 181.0,
+                    "RightMargin": 181.0,
+                    "TopMargin": 305.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 1348,
+                    "ActionTag": -529739385,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_0",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/1.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/1.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 101.5001,
+                      "Y": 318.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1979,
+                      "Y": 0.795
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 26.0001,
+                    "RightMargin": 335.9999,
+                    "TopMargin": 42.0,
+                    "BottomMargin": 278.0,
+                    "Tag": 1349,
+                    "ActionTag": 2026210216,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_1",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/2.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/2.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 256.5,
+                      "Y": 318.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.795
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 181.0,
+                    "RightMargin": 181.0,
+                    "TopMargin": 42.0,
+                    "BottomMargin": 278.0,
+                    "Tag": 1350,
+                    "ActionTag": 583449053,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_2",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/3.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/3.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 411.5,
+                      "Y": 318.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8021,
+                      "Y": 0.795
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 336.0,
+                    "RightMargin": 26.0,
+                    "TopMargin": 42.0,
+                    "BottomMargin": 278.0,
+                    "Tag": 1351,
+                    "ActionTag": 2137734391,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_3",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/4.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/4.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 101.5002,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1979,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 26.0002,
+                    "RightMargin": 335.9998,
+                    "TopMargin": 130.0,
+                    "BottomMargin": 190.0,
+                    "Tag": 1352,
+                    "ActionTag": -715134,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_4",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/5.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/5.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 256.5,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 181.0,
+                    "RightMargin": 181.0,
+                    "TopMargin": 130.0,
+                    "BottomMargin": 190.0,
+                    "Tag": 1353,
+                    "ActionTag": 1691768857,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_5",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/6.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/6.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 411.5,
+                      "Y": 230.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8021,
+                      "Y": 0.575
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 336.0,
+                    "RightMargin": 26.0,
+                    "TopMargin": 130.0,
+                    "BottomMargin": 190.0,
+                    "Tag": 1354,
+                    "ActionTag": -39795137,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_6",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/7.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/7.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 101.5002,
+                      "Y": 142.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1979,
+                      "Y": 0.355
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 26.0002,
+                    "RightMargin": 335.9998,
+                    "TopMargin": 218.0,
+                    "BottomMargin": 102.0,
+                    "Tag": 1355,
+                    "ActionTag": 1854180849,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_7",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/8.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/8.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 256.5,
+                      "Y": 142.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.5,
+                      "Y": 0.355
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 181.0,
+                    "RightMargin": 181.0,
+                    "TopMargin": 218.0,
+                    "BottomMargin": 102.0,
+                    "Tag": 1356,
+                    "ActionTag": 441221789,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_8",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/9.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/9.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 411.5,
+                      "Y": 142.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8021,
+                      "Y": 0.355
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 336.0,
+                    "RightMargin": 26.0,
+                    "TopMargin": 218.0,
+                    "BottomMargin": 102.0,
+                    "Tag": 1347,
+                    "ActionTag": -721683147,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "Button_9",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/shuzi_dian.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/shuzi_dian.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 101.5,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.1979,
+                      "Y": 0.1375
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 26.0,
+                    "RightMargin": 336.0,
+                    "TopMargin": 305.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 1357,
+                    "ActionTag": 907804772,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "clear",
+                    "ctype": "ButtonObjectData"
+                  },
+                  {
+                    "FontSize": 40,
+                    "ButtonText": "",
+                    "TextColor": {
+                      "R": 150,
+                      "G": 83,
+                      "B": 44
+                    },
+                    "DisabledFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/qd.png",
+                      "Plist": ""
+                    },
+                    "NormalFileData": {
+                      "Type": "Normal",
+                      "Path": "A_Home/JoinRoom/qd.png",
+                      "Plist": ""
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 11,
+                    "Scale9Width": 121,
+                    "Scale9Height": 58,
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 411.5,
+                      "Y": 55.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.8021,
+                      "Y": 0.1375
+                    },
+                    "PreSize": {
+                      "X": 0.2943,
+                      "Y": 0.2
+                    },
+                    "LeftMargin": 336.0,
+                    "RightMargin": 26.0,
+                    "TopMargin": 305.0,
+                    "BottomMargin": 15.0,
+                    "Tag": 2501,
+                    "ActionTag": 1827455256,
+                    "Size": {
+                      "X": 151.0,
+                      "Y": 80.0
+                    },
+                    "Name": "btnsure",
+                    "ctype": "ButtonObjectData"
+                  }
+                ],
+                "ActionTag": 154473676,
+                "Size": {
+                  "X": 513.0,
+                  "Y": 400.0
+                },
+                "Name": "num",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "NormalFileData": {
+                  "Type": "Normal",
+                  "Path": "A_Home/JoinRoom/bg.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 36,
+                "Scale9Height": 44,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 465.291,
+                  "Y": 515.8395
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.907,
+                  "Y": 0.9195
+                },
+                "PreSize": {
+                  "X": 0.1287,
+                  "Y": 0.1176
+                },
+                "LeftMargin": 432.291,
+                "RightMargin": 14.709,
+                "TopMargin": 12.1605,
+                "BottomMargin": 482.8395,
+                "Tag": 1334,
+                "ActionTag": 305568070,
+                "Size": {
+                  "X": 66.0,
+                  "Y": 66.0
+                },
+                "Name": "close",
+                "ctype": "ButtonObjectData"
+              }
+            ],
+            "ActionTag": 1822881403,
+            "Size": {
+              "X": 513.0,
+              "Y": 561.0
+            },
+            "Name": "back",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 1280.0,
+          "Y": 720.0
+        },
+        "Name": "Layer",
+        "ctype": "LayerObjectData"
+      },
+      "UsedResources": [
+        "A_Home/JoinRoom/0.png",
+        "A_Home/JoinRoom/1.png",
+        "A_Home/JoinRoom/2.png",
+        "A_Home/JoinRoom/3.png",
+        "A_Home/JoinRoom/4.png",
+        "A_Home/JoinRoom/5.png",
+        "A_Home/JoinRoom/6.png",
+        "A_Home/JoinRoom/7.png",
+        "A_Home/JoinRoom/8.png",
+        "A_Home/JoinRoom/9.png",
+        "A_Home/JoinRoom/bg.png",
+        "A_Home/JoinRoom/dikuang.png",
+        "A_Home/JoinRoom/gb.png",
+        "A_Home/JoinRoom/qd.png",
+        "A_Home/JoinRoom/shuru.png",
+        "A_Home/JoinRoom/shuzi_dian.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Layer"
+}

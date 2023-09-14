@@ -40,24 +40,24 @@
 			<key>A_Common/Main/circle_1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{935,227},{36,37}}</string>
+				<string>{{975,229},{36,34}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
-				<string>{36,37}</string>
+				<string>{36,34}</string>
 			</dict>
 			<key>A_Common/Main/circle_2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{976,229},{36,37}}</string>
+				<string>{{778,219},{36,34}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
-				<string>{36,37}</string>
+				<string>{36,34}</string>
 			</dict>
 			<key>A_Common/Main/icon_add.png</key>
 			<dict>
@@ -194,7 +194,7 @@
 			<key>A_Common/Main/RadioForbidden.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{778,219},{36,36}}</string>
+				<string>{{935,227},{36,36}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
