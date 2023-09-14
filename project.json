@@ -47,6 +47,8 @@
         "src/CommonFunc_Layer.js",
         
         "src/Common/UIManager.js",
+        "src/Common/CalculatorView.js",
+
         "src/Login/Update.js",
         "src/Login/LoginPanel.js",
         "src/Login/Dlgagreement.js",

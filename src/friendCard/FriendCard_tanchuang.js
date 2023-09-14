@@ -3574,6 +3574,21 @@ var FriendCard_ruleLayer = cc.Layer.extend({
         setWgtLayout(node.getChildByName("back"), [1, 1], [0.5, 0.5], [0, 0]);
         MjClient.FriendCard_ruleLayer = this;
 
+        let leftImgDi = node.getChildByName("Image_di");
+        var Image_title = node.getChildByName("Image_title");
+        setWgtLayout(leftImgDi, [1, 1], [0, 0.5], [0, 0], false);
+        setWgtLayout(Image_title, [0.2, 1], [0.6, 1], [0, 0], false);
+
+        //关闭
+        var _close = leftImgDi.getChildByName("close")
+        _close.addTouchEventListener(function (sender, type) {
+            if (type == 2 && this._listView.isEnabled()) {
+                util.localStorageEncrypt.setStringItem(this.keyQuickGamesWitch, JSON.stringify(this._quickStartListLocalSwitch));
+                this.saveInviteSet();
+                this.removeFromParent(true)
+            }
+        }, this);
+
         this.isJurisdiction = false;
         if (FriendCard_Common.getClubisLM()) {
             this.isJurisdiction = FriendCard_Common.isSupperManger();
@@ -3588,15 +3603,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
         } else {
             this._quickStartListLocalSwitch = JSON.parse(this._quickStartListLocalSwitch)
         }
-        //关闭
-        var _close = back.getChildByName('Image_di').getChildByName("close")
-        _close.addTouchEventListener(function (sender, type) {
-            if (type == 2 && this._listView.isEnabled()) {
-                util.localStorageEncrypt.setStringItem(this.keyQuickGamesWitch, JSON.stringify(this._quickStartListLocalSwitch));
-                this.saveInviteSet();
-                this.removeFromParent(true)
-            }
-        }, this);
         //添加玩法
         this.rightPanel = back.getChildByName("Panel");
         var btn_addRule = this.rightPanel.getChildByName('btn_addRule');
@@ -3643,12 +3649,12 @@ var FriendCard_ruleLayer = cc.Layer.extend({
         this.showingIndex = 0;
         this.leftViews = [];
         var ruleList = FriendCard_Common.getRuleParm(this.clubData);
-        this._listView = back.getChildByName("ListView_left")
-        this._item = back.getChildByName("btn_cell")
+        this._listView = leftImgDi.getChildByName("ListView_left")
+        this._item = leftImgDi.getChildByName("btn_cell")
         this._item.visible = false;
         this._ruleListData = ruleList;
         this.getInviteSet();
-        popupAnm(back);
+        // popupAnm(back);
     },
     getInviteSet: function () {
         var that = this;
@@ -7206,7 +7212,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
         that.clubId = clubData.clubId;
         that.isLM = FriendCard_Common.getClubisLM(clubData);
 
-        var node = ccs.load("friendcard_warningScore.json").node;
+        var node = ccs.load(res.Friendcard_warningScore_json).node;
         that.addChild(node);
         that.uinode = node;
         that.panel = node.getChildByName("Panel");
@@ -7216,7 +7222,6 @@ var FriendCard_WarnScore = cc.Layer.extend({
         popupAnm(that.panel);
 
         var _close = that.panel.getChildByName("close");
-        closeBtnAddLight(_close);
         _close.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 var contentList = that.panel.getChildByName("content_list");
@@ -7225,7 +7230,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
                     var item = items[i];
                     if (item.req) {
                         var data = item.data;
-                        that.requestSetScore(data.userId, data.matchGrantHisScore);
+                        that.requestSetScore(data.userId, data.newLimitScore);
                     }
                 }
                 that.removeFromParent();
@@ -7432,7 +7437,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
         if (userId) {
             sendInfo.userId = userId;
         }
-        sendInfo.matchGrantHisScore = score;
+        sendInfo.newLimitScore = score;
 
         MjClient.gamenet.request(api, sendInfo, function (rtn) {
             MjClient.unblock();
@@ -7462,7 +7467,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
         if (userId) {
             sendInfo.userId = userId;
         }
-        sendInfo.isOpenTeamWarn = state;  // 1:开启  0：不开启
+        sendInfo.isOpenLimitScore = state;  // 1:开启  0：不开启
 
         MjClient.gamenet.request(api, sendInfo, function (rtn) {
             MjClient.unblock();
@@ -7508,7 +7513,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
 
 
             var checkBox_onOff = item.getChildByName("checkBox_onOff");
-            checkBox_onOff.setSelected(data.isOpenTeamWarn == 1)//0:无权限 1：有权限
+            checkBox_onOff.setSelected(data.isOpenLimitScore == 1)//0:无权限 1：有权限
             checkBox_onOff.addEventListener(function (sender, type) {
                 var data = sender.getParent().data;
                 switch (type) {
@@ -7520,7 +7525,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
                         break;
                 }
             });
-            if (data.isOpenTeamWarn == 0) {
+            if (data.isOpenLimitScore == 0) {
                 hasUnOpen = true;
             }
 
@@ -7551,7 +7556,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
             numEditBox.setFontName("fonts/lanting.TTF");
             numEditBox.setPlaceholderFontSize(30);
             numEditBox.setPosition(img_scoreBg.getPosition());
-            numEditBox.setString(data.matchGrantHisScore);
+            numEditBox.setString(data.newLimitScore);
             numEditBox.isEditBox = true;
             item.addChild(numEditBox);
             item.numEditBox = numEditBox;
@@ -7561,7 +7566,7 @@ var FriendCard_WarnScore = cc.Layer.extend({
                 var parent = editBox.getParent();
                 var data = parent.data;
                 if (inputNum.length == 0) {
-                    editBox.setString("" + data.matchGrantHisScore);
+                    editBox.setString("" + data.newLimitScore);
                 }
                 else {
                     parent.stopAllActions();
@@ -7573,9 +7578,9 @@ var FriendCard_WarnScore = cc.Layer.extend({
                     inputNum = parseInt(inputNum / 10);//向下取整十
                     inputNum *= 10;
                     editBox.setString(inputNum);
-                    if (data.matchGrantHisScore != inputNum) {
-                        data.matchGrantHisScore = inputNum;
-                        that.requestSetScore(data.userId, data.matchGrantHisScore);
+                    if (data.newLimitScore != inputNum) {
+                        data.newLimitScore = inputNum;
+                        that.requestSetScore(data.userId, data.newLimitScore);
                     }
                 }
             };
@@ -7585,23 +7590,23 @@ var FriendCard_WarnScore = cc.Layer.extend({
                 var parent = sender.getParent();
                 var data = parent.data;
                 if (bAdd) {
-                    data.matchGrantHisScore += 100;
-                    if (data.matchGrantHisScore > that.maxScore) {
-                        data.matchGrantHisScore = 0;
+                    data.newLimitScore += 100;
+                    if (data.newLimitScore > that.maxScore) {
+                        data.newLimitScore = 0;
                     }
                 } else {
-                    data.matchGrantHisScore -= 100;
-                    if (data.matchGrantHisScore < 0) {
-                        data.matchGrantHisScore = that.maxScore;
+                    data.newLimitScore -= 100;
+                    if (data.newLimitScore < 0) {
+                        data.newLimitScore = that.maxScore;
                     }
                 }
                 parent.req = true;
-                parent.numEditBox.setString(data.matchGrantHisScore);
+                parent.numEditBox.setString(data.newLimitScore);
                 parent.stopAllActions();
                 parent.runAction(cc.sequence(cc.delayTime(1.25), cc.callFunc(function () {
                     if (parent.req) {
                         parent.req = false;
-                        that.requestSetScore(data.userId, data.matchGrantHisScore);
+                        that.requestSetScore(data.userId, data.newLimitScore);
                     }
                 })));
             }

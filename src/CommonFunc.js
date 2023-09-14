@@ -13317,7 +13317,7 @@ getAllGameListArray = function () {
         all._btnPicArray = ["all", "majiang", "poker"];
         all._btnNameArray = ["通用", "麻将", "扑克"];
         all._allGameListArray = [MjClient.gameListConfig.majiangList,
-        MjClient.gameListConfig.pokerList,];
+        MjClient.gameListConfig.pokerList];
     }
     else if (isJinZhongAPPType()) {
         all._btnPosArray = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6]];

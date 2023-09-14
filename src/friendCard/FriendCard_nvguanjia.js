@@ -16,8 +16,23 @@ var Friendcard_nvguanjia = cc.Layer.extend({
         MjClient.FriendCard_GuanjiaUI = this;
 
         this.panel = node.getChildByName("Panel");
-        setWgtLayout(node.getChildByName("Image_di"), [1, 1], [0.5, 0.5], [0, 0], true);
-        setWgtLayout(node.getChildByName("Panel"), [1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(node.getChildByName("block"), [1, 1], [0.5, 0.5], [0, 0], true);
+        setWgtLayout(this.panel, [1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(node.getChildByName("back"), [1, 1], [0.5, 0.5], [0, 0]);
+
+        let leftImgDi = node.getChildByName("Image_di");
+        var Image_title = node.getChildByName("Image_title");
+        setWgtLayout(leftImgDi, [1, 1], [0, 0.5], [0, 0], false);
+        setWgtLayout(Image_title, [0.2, 1], [0.6, 1], [0, 0], false);
+
+        var close = leftImgDi.getChildByName("close");
+        close.addTouchEventListener(function(sender, type){
+            if (type == 2)
+            {
+                MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Renwu_Close", {uid:SelfUid()});
+                this.removeFromParent(true)
+            }
+        }, this);
 
         this.initNvguanjiaLayer();
     },
@@ -94,14 +109,6 @@ var Friendcard_nvguanjia = cc.Layer.extend({
                         that.reqStop(createSwitch,that.clubId);
                     }
                 })));
-            }
-        }, this); 
-        
-        this.panel.getChildByName("btn_close").addTouchEventListener(function(sender, type){
-            if (type == 2)
-            {
-                MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Renwu_Close", {uid:SelfUid()});
-                this.removeFromParent(true)
             }
         }, this);
 

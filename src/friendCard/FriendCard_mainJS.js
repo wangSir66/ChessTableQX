@@ -859,7 +859,7 @@ var FriendCard_main = cc.Layer.extend({
 		var isAssistants = FriendCard_Common.isAssistants(that.data.info);
 
 		//女管家标签
-		this.img_nvguanjia.visible = isManager;
+		this._btn_guanli.visible = isManager;
 
 		//俱乐部名字
 		var text_clubName = this._clubInfo.getChildByName("text_clubName");

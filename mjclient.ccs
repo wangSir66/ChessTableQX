@@ -512,6 +512,7 @@
             <Image Name="Main_icon_tipPoint.png" />
             <Image Name="Main_image_bottomBG.png" />
             <Image Name="NameBg.png" />
+            <Image Name="tc_bg_left.png" />
             <Image Name="tc_bg_nei.png" />
             <Image Name="tianjiawanfa_n.png" />
             <Image Name="tianjiawanfa_s.png" />
@@ -663,6 +664,7 @@
             <Image Name="gb.png" />
             <Image Name="qd.png" />
             <Image Name="shuru.png" />
+            <Image Name="shuzi_dian.png" />
             <Image Name="zhong.png" />
           </Folder>
           <Folder Name="Main">
@@ -7558,6 +7560,7 @@
           <Image Name="zhua_guang.png" />
           <Image Name="zhua_guang2.png" />
         </Folder>
+        <Project Name="A_Calculator.csd" Type="Layer" />
         <Project Name="A_ChangeHead.csd" Type="Layer" />
         <Project Name="A_ChangeNickName.csd" Type="Layer" />
         <Project Name="A_ChangePWD.csd" Type="Layer" />
@@ -7569,9 +7572,7 @@
         <Project Name="A_Friendcard_member.csd" Type="Layer" />
         <Project Name="A_Friendcard_member_manage.csd" Type="Layer" />
         <Project Name="A_Friendcard_nvguanjia.csd" Type="Layer" />
-        <Project Name="A_Friendcard_roomRecord.csd" Type="Node" />
-        <Project Name="A_FriendCard_ruleLayer.csd" Type="Node" />
-        <Project Name="A_Friendcard_tongji.csd" Type="Node" />
+        <Project Name="A_Friendcard_warningScore.csd" Type="Layer" />
         <Project Name="A_Home.csd" Type="Layer" />
         <Project Name="A_Login.csd" Type="Layer" />
         <Project Name="A_mobilePhoneLogin.csd" Type="Layer" />
@@ -7589,7 +7590,7 @@
         <Project Name="bindingCodeLayer_tipss.csd" Type="Layer" />
         <Project Name="bindShoujiRewardLayer.csd" Type="Layer" />
         <Project Name="block.csd" Type="Layer" />
-        <Project Name="createHomeTotal.csd" Type="Layer" />
+        <Project Name="A_CreateHomeTotal.csd" Type="Layer" />
         <Project Name="createRoomRecord.csd" Type="Node" />
         <Project Name="DelRoom.csd" Type="Node" />
         <Project Name="DingQueLayer.csd" Type="Node" />
@@ -7648,7 +7649,6 @@
         <Project Name="friendcard_tongji_reset.csd" Type="Layer" />
         <Project Name="friendcard_tongji_selectOpt.csd" Type="Node" />
         <Project Name="friendCard_tongjiDetails.csd" Type="Node" />
-        <Project Name="friendcard_warningScore.csd" Type="Layer" />
         <Project Name="friendcard_yaoqing.csd" Type="Layer" />
         <Project Name="friendcard_yaoqingMember.csd" Type="Layer" />
         <Project Name="friendcard_yaoyingIntoGameDialog.csd" Type="Layer" />
@@ -7727,6 +7727,9 @@
         <Project Name="UserInfo_playing.csd" Type="Layer" />
         <Project Name="WebView.csd" Type="Node" />
         <Project Name="YouJianLayer.csd" Type="Layer" />
+        <Project Name="A_Friendcard_roomRecord.csd" Type="Layer" />
+        <Project Name="A_FriendCard_ruleLayer.csd" Type="Layer" />
+        <Project Name="A_Friendcard_tongji.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

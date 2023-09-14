@@ -1,20 +1,18 @@
 //雅安
 CreateViewYaAn = cc.Layer.extend({
     _isFriendCard: false,
-    _gameTypeList: [[], []],
-    _lastGameType: [-1, -1],
-    _curTabIndex: 0,
+    _gameTypeList: [],
+    _lastGameType: null,
     _gameBtnList: null,
     _back: null,
     _data: null,
     clickButton: function (target) {
-        cc.log("clickButton:", target);
-
-        var oldType = this._lastGameType[this._curTabIndex];
+        var oldType = this._lastGameType;
         var _oldBtn = this._gameBtnList.getChildByTag(oldType);
         if (_oldBtn) {
             _oldBtn.touchEnabled = true;
             _oldBtn.bright = true;
+            _oldBtn.setTitleColor(cc.color("#C9EEFF"));
         }
         var oldRoomNode = this._back.getChildByTag(oldType);
         if (oldRoomNode) {
@@ -25,16 +23,15 @@ CreateViewYaAn = cc.Layer.extend({
         var newBtn = this._gameBtnList.getChildByTag(newType);
         newBtn.touchEnabled = false;
         newBtn.bright = false;
+        newBtn.setTitleColor(cc.color("#AD2500"));
 
 
         var newRoomNode = this._back.getChildByTag(newType);
-        cc.log(" ==== newRoomNode  11111 ", newRoomNode)
         if (newRoomNode) {
             newRoomNode.visible = true;
         }
         else {
             newRoomNode = this.initCreateRoomNode(newType, this._data);
-            cc.log("==== newRoomNode 22222ssss ", newRoomNode);
             if (newRoomNode) {
                 newRoomNode.setTag(newType);
                 newRoomNode.setName("room");
@@ -46,8 +43,7 @@ CreateViewYaAn = cc.Layer.extend({
                 cc.log("error CreateView.clickButton: initCreateRoomNode fail, gameType=", newType)
             }
         }
-
-        this._lastGameType[this._curTabIndex] = newType;
+        this._lastGameType = newType;
     },
     initCreateRoomNode: function (gameType, datas) {
         var node = null;
@@ -74,28 +70,7 @@ CreateViewYaAn = cc.Layer.extend({
         }
         return node;
     },
-    loadItemTexture: function (item, index) {
-        var textureNormal, texturePress;
-        var preStr = 'Red20/Common/';
-        textureNormal = preStr + "yellow_bg.png";
-        texturePress = preStr + "orange_bg.png";
-        var text = new ccui.Text();
-        // text.setFontName("fonts/lanting.TTF");
-        text.setFontSize(24);
-        text.setTextColor(cc.color("#602E1A"));
-        text.setAnchorPoint(0.5, 0.5);
-        text.setString(GameCnName[index] || '未  知');
-        text.setPosition(item.getContentSize().width / 2, item.getContentSize().height / 2);
-        item.addChild(text);
-        text.setName('gameName');
-        item.loadTextures(textureNormal, texturePress, texturePress);
-    },
     refreshGameListUI: function () {
-        cc.log("refreshGameListUI: curTabIndex=" + this._curTabIndex + " lastGameType=" + this._lastGameType[this._curTabIndex]);
-
-        if (this._gameTypeList[this._curTabIndex].indexOf(this._lastGameType[this._curTabIndex]) == -1)
-            this._lastGameType[this._curTabIndex] = this._gameTypeList[this._curTabIndex][0];
-
         // 清理item
         this._gameBtnList.removeAllChildren();
 
@@ -109,17 +84,17 @@ CreateViewYaAn = cc.Layer.extend({
         }
 
         // 创建左侧list
-        var gameItem = this._gameBtnList.getParent().getChildByName("item");
+        var gameItem = this._gameBtnList.getParent().getChildByName("btn_cell");
         gameItem.visible = false;
-        var gameList = this._gameTypeList[this._curTabIndex];
-        var lastGameType = this._lastGameType[this._curTabIndex];
-        cc.log("加载玩法按钮   ~~~  gameList ", JSON.stringify(gameList));
+        var gameList = this._gameTypeList;
+        var lastGameType = this._lastGameType;
         for (var i = 0; i < gameList.length; i++) {
-
             var gameType = gameList[i];
             var newBtn = gameItem.clone();
+            newBtn.getChildByName('xian_0').visible = i == 0;
             newBtn.visible = true;
-            this.loadItemTexture(newBtn, gameType);
+            newBtn.setTitleColor(cc.color(gameType == this.lastGameType ? "#AD2500" : "#C9EEFF"));
+            newBtn.setTitleText(GameCnName[gameType] || '未  知');
             newBtn.setTag(gameType);//根据类型设置item tag
             var that = this;
             newBtn.addClickEventListener(function (target) { that.clickButton(target); });
@@ -133,10 +108,8 @@ CreateViewYaAn = cc.Layer.extend({
             this._gameBtnList.jumpToBottom();
         }
         this.clickButton(this._gameBtnList.getChildByTag(lastGameType));
-        this._gameBtnList.setScrollBarEnabled(false);
     },
     ctor: function (data) {
-        //isFriendCard,data.isShowTitleCreate,data.typeList
         this._super();
         this._data = data;
         this._isFriendCard = data.IsFriendCard;
@@ -144,42 +117,25 @@ CreateViewYaAn = cc.Layer.extend({
 
         if (isFriendCard && MjClient.RuleParam && MjClient.RuleParam["rule" + this._data.ruleNumer] && MjClient.RuleParam["rule" + this._data.ruleNumer] != "delete")
             this._data.clubRule = MjClient.RuleParam["rule" + this._data.ruleNumer];
-
-        //细分游戏类型时要显示标题
-        var isShowTitleCreate = data.isShowTitleCreate;
         //细分游戏类型
-        var typeList = data.typeList;
         MjClient.createui = this;
 
         // 获得游戏列表：
-        this._gameTypeList = getAllGameListArray()._gameTypeList;
+        var allG = getAllGameListArray()._gameTypeList;
+        this._gameTypeList = [];
+        allG.map(a => {
+            this._gameTypeList.push(...a);
+        })
 
         var lastGameType = util.localStorageEncrypt.getNumberItem("KEY_GAME_TYPE", -1);
         if (this._data && this._data.clubRule)
             lastGameType = this._data.clubRule.gameType;
-
-        if (this._gameTypeList[1].indexOf(lastGameType) != -1) {
-            this._curTabIndex = 1;
-            this._lastGameType[1] = lastGameType;
-            this._lastGameType[0] = -1;
-        }
-        else {
-            if (this._gameTypeList[0].length == 0) {
-                this._curTabIndex = 1;
-                this._lastGameType[this._curTabIndex] = this._gameTypeList[this._curTabIndex][0];
-                this._lastGameType[0] = -1;
-            } else {
-                this._curTabIndex = 0;
-                this._lastGameType[1] = -1;
-                if (this._gameTypeList[0].indexOf(lastGameType) != -1)
-                    this._lastGameType[0] = lastGameType;
-                else
-                    this._lastGameType[0] = this._gameTypeList[0][0];
-            }
+        let lIndex = this._gameTypeList.indexOf(lastGameType);
+        if (lIndex != -1) {
+            this._lastGameType = lastGameType;
         }
 
-        var jsonui = ccs.load(res.Create_json);
-        //BindUiAndLogic(jsonui.node, this.jsBind);
+        var jsonui = ccs.load(res.CreateHomeTotal_json);
         this.addChild(jsonui.node);
 
         if (MjClient.createRoomLayer) {
@@ -187,121 +143,18 @@ CreateViewYaAn = cc.Layer.extend({
         }
 
         var _block = jsonui.node.getChildByName("block");
-        setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], 2);
+        setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
 
         this._back = jsonui.node.getChildByName("back");
-        setWgtLayout(this._back, [0.95, 0.95], [0.54, 0.5], [-0.035, 0]);
-        if (isJinZhongAPPType() ||
-            MjClient.APP_TYPE.QXYYQP == MjClient.getAppType() ||
-            MjClient.APP_TYPE.QXNTQP == MjClient.getAppType() ||
-            MjClient.getAppType() === MjClient.APP_TYPE.HUBEIMJ ||
-            MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ)
-            setWgtLayout(this._back, [1, 1], [0.5, 0.5], [0, 0]);
+        setWgtLayout(this._back, [1, 1], [0.5, 0.5], [0, 0]);
 
-        var _item = this._back.getChildByName("item");
-        if (_item) _item.visible = false;
-
-
-        var titleImg = this._back.getChildByName("titleCreate");
-        var titleImg_2 = this._back.getChildByName("titleCreate_2");
-
-        var switchTab = null;
-        var node_friendCard = this._back.getChildByName("node_friendCard");
-        if (this._gameTypeList[0].length == 0 || this._gameTypeList[1].length == 0 || !node_friendCard) {
-            if (node_friendCard)
-                node_friendCard.visible = false;
-
-            if (titleImg)
-                titleImg.visible = !isFriendCard;
-
-            if (titleImg_2)
-                titleImg_2.visible = isFriendCard;
-        }
-        else if (node_friendCard) {
-            node_friendCard.visible = true;
-            if (titleImg)
-                titleImg.visible = false;
-            if (titleImg_2)
-                titleImg_2.visible = false;
-
-            var btn_mj = node_friendCard.getChildByName("btn_mj");
-            var btn_poke = node_friendCard.getChildByName("btn_poke");
-            var title_1 = btn_mj.getTitleRenderer();
-            var title_2 = btn_poke.getTitleRenderer();
-            var posY = title_1.getPositionY() + 3;
-            title_1.setPositionY(posY);
-            title_2.setPositionY(posY);
-            var that = this;
-            var switchTab = function (tabIndex) {
-                cc.log("switchTab: tabIndex=" + tabIndex);
-                btn_mj.enabled = tabIndex != 0;
-                btn_poke.enabled = tabIndex != 1;
-                btn_mj.setTitleColor(tabIndex != 0 ? cc.color(116, 60, 19) : cc.color(255, 255, 255));
-                btn_poke.setTitleColor(tabIndex != 1 ? cc.color(116, 60, 19) : cc.color(255, 255, 255));
-
-                that._curTabIndex = tabIndex;
-                if (isShowTitleCreate) {
-                    //特殊判断，在细分的创建界面
-                    that._curTabIndex = 0;
-
-                }
-
-                that.refreshGameListUI();
-            };
-
-            btn_mj.addTouchEventListener(function (sender, Type) {
-                switch (Type) {
-                    case ccui.Widget.TOUCH_ENDED:
-                        switchTab(0)
-                        break;
-                    default:
-                        break;
-                }
-            }, this);
-
-            btn_poke.addTouchEventListener(function (sender, Type) {
-                switch (Type) {
-                    case ccui.Widget.TOUCH_ENDED:
-                        switchTab(1);
-                        break;
-                    default:
-                        break;
-                }
-            }, this);
-        }
-
-
-        //细分的创建房间界面
-        if (isShowTitleCreate) {
-            if (titleImg) {
-                titleImg.visible = true;
-            }
-            if (titleImg_2) {
-                titleImg_2.visible = false;
-            }
-            if (node_friendCard) {
-                node_friendCard.visible = false;
-            }
-            if (typeList) {
-                // compare to server config ,if only have config, show
-                var t = []
-                if (MjClient.gameListConfig.majiangList.length > 0) {
-                    for (var i = 0; i < typeList.length; i++) {
-                        var index = MjClient.gameListConfig.majiangList.indexOf(typeList[i])
-                        if (index > -1) {
-                            t.push(typeList[i])
-                        }
-                    }
-                }
-                this._gameTypeList[0] = t;
-                // this._gameTypeList[0] = typeList;
-                this._gameTypeList[1] = [];
-            }
-
-        }
+        let leftImgDi = jsonui.node.getChildByName("Image_di");
+        var Image_title = jsonui.node.getChildByName("Image_title");
+        setWgtLayout(leftImgDi, [1, 1], [0, 0.5], [0, 0], false);
+        setWgtLayout(Image_title, [0.2, 1], [0.6, 1], [0, 0], false);
 
         //关闭按钮
-        var btnGoHome = this._back.getChildByName("goHome");
+        var btnGoHome = leftImgDi.getChildByName("close");
         btnGoHome.addTouchEventListener(function (sender, Type) {
             switch (Type) {
                 case ccui.Widget.TOUCH_ENDED:
@@ -322,19 +175,11 @@ CreateViewYaAn = cc.Layer.extend({
             }
         }, this);
         //游戏列表
-        this._gameBtnList = this._back.getChildByName("gameList");
+        this._gameBtnList = leftImgDi.getChildByName("ListView_left");
         //江苏麻将去掉列表滚动条
-        if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ
-            || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ
-            || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ
-            || MjClient.getAppType() == MjClient.APP_TYPE.QXNTQP
-        ) this._gameBtnList.setScrollBarEnabled(false);
+        this._gameBtnList.setScrollBarEnabled(false);
 
-
-        if (switchTab)
-            switchTab(this._curTabIndex);
-        else
-            this.refreshGameListUI();
+        this.refreshGameListUI();
 
         return true;
     },
