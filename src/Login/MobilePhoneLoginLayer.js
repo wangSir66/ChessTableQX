@@ -52,7 +52,7 @@ var mobilePhoneLoginLayer = cc.Layer.extend({
         this._hintNum0.setPlaceholderFontColor(cc.color("#e4ecf0"));
         this._hintNum0.setMaxLength(20);
         this._hintNum0.setInputFlag(cc.EDITBOX_INPUT_FLAG_PASSWORD);
-        this._hintNum0.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
+        // this._hintNum0.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
         this._hintNum0.setPlaceHolder("请输入密码");
         this._hintNum0.setPosition(imageSecurityCode.getContentSize().width / 2, imageSecurityCode.getContentSize().height / 2);
         imageSecurityCode.addChild(this._hintNum0);
