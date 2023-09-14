@@ -45,13 +45,11 @@ var MemberManage = cc.Layer.extend({
                 if ((optIsLeader || (optIsGroupLeader && itemData.group == curUserGrp)) && itemData.userId != MjClient.data.pinfo.uid)
                     this.Button_tichu.visible = true;
             }
-            this.Button_Xinyu.visible = showingIndex == 0 ? (optIsLeader || optIsGroupLeader) : (optIsLeader && !!isGroupLeader);
         } else if (openType == "member_group") {
             isUnAdmit = itemData.userStatus & 8;
             this.button_checkCY.visible = true;
             if (optIsLeader) {
                 this.button_tickAll.visible = true;
-                this.Button_Xinyu.visible = !!isGroupLeader;
                 this.Button_chouchengbili.visible = !!isGroupLeader;
             } else {
                 this.Button_tichu.visible = true;
@@ -98,7 +96,7 @@ var MemberManage = cc.Layer.extend({
             this.Button_unMamager, this.button_group, this.Button_remarks,
             this.Button_admit, this.Button_unAdmit, this.Button_AddOtherClub,
             this.Button_zhuli, this.Button_unZhuli, this.Button_tichu,
-            this.button_frozen, this.button_unfrozen, this.button_tickAll, this.Button_Xinyu,
+            this.button_frozen, this.button_unfrozen, this.button_tickAll,
             this.Button_chouchengbili
         ];
         //查看成员
@@ -153,7 +151,6 @@ var MemberManage = cc.Layer.extend({
     //隐藏所有按钮
     closeBtns: function () {
         this.button_tickAll.visible = false;
-        this.Button_Xinyu.visible = false;
         this.Button_chouchengbili.visible = false;
     },
     //初始化按钮
@@ -172,7 +169,6 @@ var MemberManage = cc.Layer.extend({
         this.button_frozen = this.memberManage.getChildByName("Button_frozen");
         this.button_unfrozen = this.memberManage.getChildByName("Button_unfrozen");
         this.button_checkCY = this.memberManage.getChildByName("Button_checkCY");//查看成员
-        this.Button_Xinyu = this.memberManage.getChildByName("Button_Xinyu");//信誉
         this.Button_chouchengbili = this.memberManage.getChildByName("Button_chouchengbili");//抽成比例
         this.button_group = this.memberManage.getChildByName("Button_group");//增加玩家分组
 

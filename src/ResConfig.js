@@ -19,9 +19,11 @@ var res = {
 	Friendcard_member_manage_json: "A_Friendcard_member_manage.json",
 	Friendcard_roomRecord_json: "A_Friendcard_roomRecord.json",
 	Friendcard_tongji_json: "A_Friendcard_tongji.json",
+	Friendcard_warningScore_json: "A_Friendcard_warningScore.json",
 	Enter_json: "A_Enter.json",
+	Calculator_json: "A_Calculator.json",
+	CreateHomeTotal_json: "A_CreateHomeTotal.json",
 
-	Create_json: "createHomeTotal.json",
 	Play_json: "Play.json",
 	Block_json: "block.json",
 	FangQiang_json: "fangQiang.json",
