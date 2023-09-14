@@ -118,31 +118,6 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="img_nvguanjia" Visible="False" ActionTag="989921511" VisibleForFrame="False" Tag="668" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="343.9440" RightMargin="786.0560" BottomMargin="-148.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-                    <Size X="150.0000" Y="250.0000" />
-                    <Children>
-                      <AbstractNodeData Name="img_biaoshi" ActionTag="782082541" Tag="207" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="17.0000" RightMargin="101.0000" BottomMargin="175.0000" LeftEage="10" RightEage="10" TopEage="24" BottomEage="24" Scale9OriginX="10" Scale9OriginY="24" Scale9Width="12" Scale9Height="27" ctype="ImageViewObjectData">
-                        <Size X="32.0000" Y="75.0000" />
-                        <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
-                        <Position X="33.0000" Y="250.0000" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                        <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="0.2200" Y="1.0000" />
-                        <PreSize X="0.2133" Y="0.3000" />
-                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_guanjia.png" Plist="A_FriendCard/FriendCardMain.plist" />
-                      </AbstractNodeData>
-                    </Children>
-                    <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
-                    <Position X="418.9440" Y="102.0000" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.3273" Y="1.0000" />
-                    <PreSize X="0.1172" Y="2.4510" />
-                    <SingleColor A="255" R="150" G="200" B="255" />
-                    <FirstColor A="255" R="150" G="200" B="255" />
-                    <EndColor A="255" R="255" G="255" B="255" />
-                    <ColorVector ScaleY="1.0000" />
-                  </AbstractNodeData>
                   <AbstractNodeData Name="fangkaBG" ActionTag="1301260503" Tag="498" IconVisible="False" LeftMargin="343.3091" RightMargin="750.6909" TopMargin="10.0000" BottomMargin="58.0000" LeftEage="34" RightEage="34" TopEage="8" BottomEage="8" Scale9OriginX="34" Scale9OriginY="8" Scale9Width="118" Scale9Height="18" ctype="ImageViewObjectData">
                     <Size X="186.0000" Y="34.0000" />
                     <Children>
@@ -807,7 +782,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="btn_setSkin" Visible="False" ActionTag="-2023233999" VisibleForFrame="False" Tag="206" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="876.5898" RightMargin="253.4102" TopMargin="7.0242" BottomMargin="-1.0242" TouchEnable="True" FontSize="50" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="120" Scale9Height="29" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                      <AbstractNodeData Name="btn_setSkin" ActionTag="-2023233999" Tag="206" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="876.5898" RightMargin="253.4102" TopMargin="7.0242" BottomMargin="-1.0242" TouchEnable="True" FontSize="50" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="120" Scale9Height="29" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="150.0000" Y="51.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="951.5898" Y="24.4758" />

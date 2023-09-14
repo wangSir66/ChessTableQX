@@ -48,64 +48,14 @@ var FriendCard_member = cc.Layer.extend({
         this.addChild(node);
         var that = this;
         var block = node.getChildByName("block");
-        var Image_di = node.getChildByName("Image_di");
-
-
-        this._Image_bg = node.getChildByName("Image_bg");
-
-        var Image_hua = node.getChildByName("Image_hua");
-
-        var Image_left = node.getChildByName("Image_left");
-
-
-        COMMON_UI.setNodeTextAdapterSize(node);
-
         setWgtLayout(block, [1, 1], [0.5, 0.5], [0, 0], true);
-        if (FriendCard_Common.getSkinType() == 1) {
-            var close = node.getChildByName("close");
-
-            setWgtLayout(close, [0.15, 0.1097], [0.997, 1], [0, 0], false);
-            Image_di.width = MjClient.size.width;
-            Image_di.height = MjClient.size.height * 0.9653;
-            Image_di.setPosition(MjClient.size.width / 2, MjClient.size.height / 2);
-            setWgtLayout(this._Image_bg, [1, 0.9653], [0.5, 0.5], [0, 0], false);
-
-            if (isIPhoneX()) {
-                setWgtLayout(Image_left, [0.2976, 1.0402], [0, 0], [0, 0], false);
-                setWgtLayout(Image_hua, [0.1830, 0.2220], [0.0156, 0.9792], [0, 0], false);
-            } else {
-                setWgtLayout(Image_hua, [0.1773, 0.1764], [0.0156, 0.9792], [0, 0], false);
-                setWgtLayout(Image_left, [0.2883, 0.8264], [0, 0], [0, 0], false);
-            }
-        }
-        else if (FriendCard_Common.getSkinType() == 2) {
-            Image_di.width = MjClient.size.width;
-            Image_di.height = MjClient.size.height //*0.9306;
-            Image_di.setPosition(MjClient.size.width / 2, MjClient.size.height * 0.5);
-
-            var close = node.getChildByName("close");
-            var suizi = node.getChildByName("suizi");
-            var listView_leftBG = this.node.getChildByName("ListView_leftBG")
-            if (isIPhoneX()) {
-                setWgtLayout(close, [0.1226, 0.2916], [0.9662, 0.8910], [0, 0], false);
-                setWgtLayout(suizi, [0.0148, 0.3431], [0.9690, 0.8657], [0, 0], false);
-                setWgtLayout(this._Image_bg, [1, 0.9653], [0.5, 0.4842], [0, 0], false);
-                listView_leftBG.width = MjClient.size.width * 0.218;
-                listView_leftBG.height = MjClient.size.height * 0.95;
-                listView_leftBG.setPosition(0, MjClient.size.height * 0.5);
-            } else {
-                setWgtLayout(close, [0.1188, 0.2236], [0.9740, 0.9062], [0, 0], false);
-                setWgtLayout(suizi, [0.0148, 0.3431], [0.9764, 0.9147], [0, 0], false);
-                setWgtLayout(this._Image_bg, [1, 1], [0.5, 0.5], [0, 0], false);
-                listView_leftBG.width = MjClient.size.width * 0.1992;
-                listView_leftBG.height = MjClient.size.height * 0.95;
-                listView_leftBG.setPosition(0, MjClient.size.height * 0.5);
-            }
-            closeBtnAddLight(close)
-        } else if (FriendCard_Common.getSkinType() == 3 || FriendCard_Common.getSkinType() == 4) {
-            var close = this._Image_bg.getChildByName("close");
-            setWgtLayout(this._Image_bg, [1, 1], [0.5, 0.5], [0, 0], false);
-        }
+        this._Image_bg = node.getChildByName("Image_bg");
+        this.leftImgDi = node.getChildByName("Image_di");
+        var close = this.leftImgDi.getChildByName("close");
+        var Image_title = node.getChildByName("Image_title");
+        setWgtLayout(this._Image_bg, [1, 1], [0.5, 0.5], [0, 0], false);
+        setWgtLayout(this.leftImgDi, [1, 1], [0, 0.5], [0, 0], false);
+        setWgtLayout(Image_title, [0.2, 1], [0.6, 1], [0, 0], false);
         close.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 MjClient.native.umengEvent4CountWithProperty("Qinyouquan_Chengyuan_Close", { uid: SelfUid() });
@@ -156,22 +106,7 @@ var FriendCard_member = cc.Layer.extend({
 
     },
     initView: function () {
-        var that = this, ListView_left;
-        if (FriendCard_Common.getSkinType() == 2) {
-            var panel_left = this.node.getChildByName("panel_left");
-            if (isIPhoneX()) {
-                setWgtLayout(panel_left, [0.2177, 1], [0, 0], [0, 0], false);
-            }
-            else {
-                setWgtLayout(panel_left, [0.1977, 1], [0, 0], [0, 0], false);
-            }
-            ListView_left = panel_left.getChildByName("ListView_left")
-        }
-        else {
-            ListView_left = this._Image_bg.getChildByName("ListView_left");
-        }
-        // ListView_left.setClippingEnabled(true)
-        // ListView_left.height = 10000
+        var that = this, ListView_left = ListView_left = this.leftImgDi.getChildByName("ListView_left");
         ListView_left.setScrollBarEnabled(false);
         var Button_member = ListView_left.getChildByName("Button_member");
         var Button_shenhe = ListView_left.getChildByName("Button_shenhe");
@@ -1425,6 +1360,12 @@ var FriendCard_member = cc.Layer.extend({
                 var text_renshu = item.getChildByName("Text_renshu");
                 text_renshu.setString(itemData.groupCount + "人");
 
+                //积分
+                var remarks = item.getChildByName("Text_score");
+                remarks.setString(itemData.honorVal || 0); //∞
+                remarks.ignoreContentAdaptWithSize(true);
+                remarks.visible = true;
+
                 // 最近一次玩牌时间
                 var lastTime = item.getChildByName("Text_lastTime");
                 lastTime.ignoreContentAdaptWithSize(true);
@@ -1491,7 +1432,7 @@ var FriendCard_member = cc.Layer.extend({
 
 
                 var Button_operation = item.getChildByName("Button_operation");
-                Button_operation.visible = operationVisible;
+                Button_operation.setEnabled(operationVisible);
 
                 Button_operation._cell = item;
                 Button_operation.data = itemData;
@@ -1512,6 +1453,21 @@ var FriendCard_member = cc.Layer.extend({
                         }
                     }
                 }
+                var Button_add = item.getChildByName("Button_add"),
+                    Button_jian = item.getChildByName("Button_jian");
+                Button_add.setEnabled(operationVisible);
+                Button_jian.setEnabled(operationVisible);
+                if (!operationVisible) return;
+                Button_add.data = itemData;
+                Button_add.addTouchEventListener(function (sender, type) {
+                    if (type == 2)
+                        MjClient.Scene.addChild(new Common_CalculatorView(1, '增加积分', sender.data, this.sendUpdateHonorHandle.bind(this)));
+                }, this);
+                Button_jian.data = itemData;
+                Button_jian.addTouchEventListener(function (sender, type) {
+                    if (type == 2)
+                        MjClient.Scene.addChild(new Common_CalculatorView(2, '减少积分', sender.data, this.sendUpdateHonorHandle.bind(this)));
+                }, this);
 
                 return item;
             };
@@ -2861,7 +2817,6 @@ var FriendCard_member = cc.Layer.extend({
     },
     createMemberItem: function (item, index, data) {
         var itemData = data; //
-        cc.log('--createMemberItem-----itemData-----', JSON.stringify(itemData));
         // 头像
         var head = item.getChildByName('head');
         // head.isMask = true;
@@ -3014,8 +2969,54 @@ var FriendCard_member = cc.Layer.extend({
                 this.showMemberManage(sender.data, sender._cell, sender._cell.dataIndex, "member_member")
             }
         }, this);
+        var isGroupLeader = this.showingIndex == 4 ? FriendCard_Common.isGroupLeader(this.clubInfo, itemData.userId) : true;
+        var Button_add = item.getChildByName("Button_add"),
+            Button_jian = item.getChildByName("Button_jian");
+        Button_add.setEnabled(!(!operationVisible || !isGroupLeader));
+        Button_jian.setEnabled(!(!operationVisible || !isGroupLeader));
+        if (!operationVisible || !isGroupLeader) return;
+        Button_add.data = itemData;
+        Button_add.addTouchEventListener(function (sender, type) {
+            if (type == 2)
+                MjClient.Scene.addChild(new Common_CalculatorView(1, '增加积分', sender.data, this.sendUpdateHonorHandle.bind(this)));
+        }, this);
+        Button_jian.data = itemData;
+        Button_jian.addTouchEventListener(function (sender, type) {
+            if (type == 2)
+                MjClient.Scene.addChild(new Common_CalculatorView(2, '减少积分', sender.data, this.sendUpdateHonorHandle.bind(this)));
+        }, this);
 
         return item;
+    },
+    sendUpdateHonorHandle: function (remarkStr, itemData) {
+        var reg = /(^-?[0-9]*\.([0-9]{1}\d*)$)|(^-?[0-9]*$)/;
+        if (!remarkStr || remarkStr.length <= 0 || !(reg.test(remarkStr)))
+            MjClient.showToast("请输入有效数字！");
+        else {
+            MjClient.block();
+            remarkStr = remarkStr.substr(0, remarkStr.indexOf('.') + 2);
+            var sendInfo = {
+                clubId: this.clubInfo.clubId,
+                userId: itemData.userId,
+                type: 10,
+                value: Number(remarkStr)
+            }
+            MjClient.gamenet.request("pkplayer.handler.clubPlayerUpdate", sendInfo, function (rtn) {
+                MjClient.unblock();
+                if (rtn.code == 0) {
+                    MjClient.showToast(rtn.message);
+                    if (cc.sys.isObjectValid(this)) {
+                        itemData.honorVal = rtn.data.tAcount;
+                        const opt = this.clubInfo.groupMap[rtn.data.uId + ""];
+                        if (opt) opt.honorVal = rtn.data.uAcount;
+                        this.reLoadCurPanleListUI();
+                    }
+                }
+                else {
+                    FriendCard_Common.serverFailToast(rtn);
+                }
+            }.bind(this));
+        }
     },
     setStateStr: function (stateLabel, status, lastLoginTime) {
         if (status == 2) {
@@ -3110,7 +3111,6 @@ var FriendCard_member = cc.Layer.extend({
         var button_frozen = this.memberManage.getChildByName("Button_frozen");
         var button_unfrozen = this.memberManage.getChildByName("Button_unfrozen");
         var button_checkCY = this.memberManage.getChildByName("Button_checkCY");//查看成员
-        var Button_Xinyu = this.memberManage.getChildByName("Button_Xinyu");//信誉
         var Button_chouchengbili = this.memberManage.getChildByName("Button_chouchengbili");//抽成比例
 
         //下面是动态添加的按钮
@@ -3140,7 +3140,6 @@ var FriendCard_member = cc.Layer.extend({
 
 
         button_tickAll.visible = false;
-        Button_Xinyu.visible = false;
         Button_chouchengbili.visible = false;
         var isUnAdmit = 0;
         if (openType == "member_member") {
@@ -3157,13 +3156,11 @@ var FriendCard_member = cc.Layer.extend({
                     Button_tichu.visible = true;
                 }
             }
-            Button_Xinyu.visible = this.showingIndex == 0 ? (this.isLeader || this.isGroupLeader) : (this.isLeader && !!isGroupLeader);
         } else if (openType == "member_group") {
             isUnAdmit = itemData.userStatus & 8;
             if (this.isLeader) {
                 button_tickAll.visible = true;
                 Button_tichu.visible = false;
-                Button_Xinyu.visible = !!isGroupLeader;
                 Button_chouchengbili.visible = !!isGroupLeader;
             } else {
                 button_tickAll.visible = false;
@@ -3242,7 +3239,7 @@ var FriendCard_member = cc.Layer.extend({
             Button_unMamager, button_group, Button_remarks,
             Button_admit, Button_unAdmit, Button_AddOtherClub,
             Button_zhuli, Button_unZhuli, Button_tichu,
-            button_frozen, button_unfrozen, button_tickAll, Button_Xinyu,
+            button_frozen, button_unfrozen, button_tickAll,
             Button_chouchengbili
         ];
         //查看成员
@@ -3919,13 +3916,6 @@ var FriendCard_member = cc.Layer.extend({
                 MjClient.FriendCard_main_ui.addChild(new Friendcard_popUpMeg(uiPara))
             }
         });
-        if (Button_Xinyu.visible) {
-            Button_Xinyu.addTouchEventListener(function (sender, type) {
-                if (type == 2) {
-                    this.showOption1Panel(itemData);
-                }
-            }, this);
-        }
         if (Button_chouchengbili.visible) {
             let c = Button_chouchengbili.getChildByName('Text').getColor()
             Button_chouchengbili.addTouchEventListener(function (sender, type) {
@@ -3937,72 +3927,11 @@ var FriendCard_member = cc.Layer.extend({
             }.bind(this), this);
         }
     },
-    /**设置固定值 */
-    showOption1Panel: function (itemData) {
-        cc.log('----------itemData------------', JSON.stringify(itemData))
-        var that = this;
-        this.Panle_ExitXY.visible = true;
-        var image_bg = this.Panle_ExitXY.getChildByName("Image_bg");
-        var image = image_bg.getChildByName("Image");
-        var txt = image_bg.getChildByName("Image1").getChildByName('Text');
-        txt.setString(itemData.honorVal.toFixed(1));
-        image.removeChildByName("textInput");
-        var s = image.getContentSize(), off = cc.size(s.width - 10, s.height - 10)
-        var textInput = new cc.EditBox(off, new cc.Scale9Sprite("friendCards/main/int_playwords.png"));
-        textInput.setName("textInput");
-        textInput.setFontColor(txt.getTextColor());
-        textInput.setFontSize(txt.getFontSize());
-        // textInput.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
-        textInput.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
-        textInput.setPlaceHolder("");
-        textInput.setPosition(image.getContentSize().width / 2, image.getContentSize().height / 2);
-        image.addChild(textInput);
-        image_bg.getChildByName("close").addTouchEventListener(function (sender, type) {
-            if (type == 2) this.Panle_ExitXY.visible = false;
-        }, this);
-        var finishBtn = image_bg.getChildByName("Button_finish");
-        finishBtn.addTouchEventListener(function (sender, type) {
-            if (type == 2) {
-                var remarkStr = textInput.getString();
-                var reg = /(^-?[0-9]*\.([0-9]{1}\d*)$)|(^-?[0-9]*$)/;
-                cc.log('/^d+.d+$/.test(remarkStr)', reg.test(remarkStr))
-                if (!remarkStr || remarkStr.length <= 0 || !(reg.test(remarkStr)))
-                    MjClient.showToast("请输入有效数字！");
-                else {
-                    MjClient.block();
-                    var sendInfo = {
-                        clubId: that.clubInfo.clubId,
-                        userId: itemData.userId,
-                        type: 10,
-                        value: Number(remarkStr)
-                    }
-                    MjClient.gamenet.request("pkplayer.handler.clubPlayerUpdate", sendInfo, function (rtn) {
-                        MjClient.unblock();
-                        if (rtn.code == 0) {
-                            MjClient.showToast(rtn.message);
-                            if (cc.sys.isObjectValid(that)) {
-                                itemData.honorVal = rtn.data.tAcount;
-                                const opt = that.clubInfo.groupMap[rtn.data.uId + ""];
-                                if (opt) opt.honorVal = rtn.data.uAcount;
-                                that.reLoadCurPanleListUI();
-                                that.Panle_ExitXY.visible = false;
-                            }
-                        }
-                        else {
-                            FriendCard_Common.serverFailToast(rtn);
-                        }
-                    });
-                }
-
-            }
-        }, this);
-    },
     //设置玩家备注界面
     showInputRemarksNameDialog: function (itemData) {
         var that = this;
         this.Panle_addRemark.visible = true;
         var image_remarks = this.Panle_addRemark.getChildByName("Image_bg");
-
         var image = image_remarks.getChildByName("Image");
         image.removeChildByName("textInput")
         var textInput = new cc.EditBox(image.getContentSize(), new cc.Scale9Sprite("friendCards/main/int_playwords.png"));
