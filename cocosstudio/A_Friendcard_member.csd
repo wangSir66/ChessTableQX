@@ -345,7 +345,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition Y="0.5000" />
             <PreSize X="0.1508" Y="1.0000" />
-            <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_left.png" Plist="" />
+            <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_left.png" Plist="A_FriendCard/FriendCardMain.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="Image_bg" ActionTag="-241276862" Tag="888" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
@@ -630,7 +630,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.8208" />
                     <PreSize X="0.9600" Y="0.7309" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="ListView" ActionTag="1699758951" Tag="689" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="21.4600" RightMargin="21.4600" TopMargin="123.2512" BottomMargin="63.7488" TouchEnable="True" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="0" DirectionType="Vertical" ctype="ListViewObjectData">
                     <Size X="1030.0800" Y="456.0000" />
@@ -749,7 +749,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.8178" />
                     <PreSize X="0.9553" Y="0.0591" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/list_top_bg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                     <SingleColor A="255" R="255" G="255" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -766,7 +766,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" Y="0.5000" />
                         <PreSize X="0.9824" Y="1.0000" />
-                        <FileData Type="Normal" Path="A_FriendCard/Main/list_cell_bg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_cell_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="head" ActionTag="304842209" Tag="692" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="6.5000" RightMargin="951.5000" TopMargin="1.9196" BottomMargin="4.0804" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="42" Scale9Height="42" ctype="ImageViewObjectData">
                         <Size X="67.0000" Y="67.0000" />
@@ -952,7 +952,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.7041" />
                     <PreSize X="0.9553" Y="0.1135" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/list_cell_bg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_cell_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                     <SingleColor A="255" R="0" G="0" B="0" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -1404,10 +1404,10 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0100" Y="0.5000" />
                         <PreSize X="0.1233" Y="1.5833" />
-                        <NormalBackFileData Type="Normal" Path="A_FriendCard/Member/check_bg.png" Plist="" />
-                        <PressedBackFileData Type="Normal" Path="A_FriendCard/Member/check_bg.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="A_FriendCard/Member/check_bg.png" Plist="" />
-                        <NodeNormalFileData Type="Normal" Path="A_FriendCard/Member/checked_bg.png" Plist="" />
+                        <NormalBackFileData Type="MarkedSubImage" Path="A_FriendCard/Member/check_bg.png" Plist="A_FriendCard/Member.plist" />
+                        <PressedBackFileData Type="MarkedSubImage" Path="A_FriendCard/Member/check_bg.png" Plist="A_FriendCard/Member.plist" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_FriendCard/Member/check_bg.png" Plist="A_FriendCard/Member.plist" />
+                        <NodeNormalFileData Type="MarkedSubImage" Path="A_FriendCard/Member/checked_bg.png" Plist="A_FriendCard/Member.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -1431,10 +1431,10 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.0125" Y="0.5000" />
                         <PreSize X="0.1542" Y="1.5833" />
-                        <NormalBackFileData Type="Normal" Path="A_FriendCard/Member/check_bg.png" Plist="" />
-                        <PressedBackFileData Type="Normal" Path="A_FriendCard/Member/check_bg.png" Plist="" />
-                        <DisableBackFileData Type="Normal" Path="A_FriendCard/Member/check_bg.png" Plist="" />
-                        <NodeNormalFileData Type="Normal" Path="A_FriendCard/Member/checked_bg.png" Plist="" />
+                        <NormalBackFileData Type="MarkedSubImage" Path="A_FriendCard/Member/check_bg.png" Plist="A_FriendCard/Member.plist" />
+                        <PressedBackFileData Type="MarkedSubImage" Path="A_FriendCard/Member/check_bg.png" Plist="A_FriendCard/Member.plist" />
+                        <DisableBackFileData Type="MarkedSubImage" Path="A_FriendCard/Member/check_bg.png" Plist="A_FriendCard/Member.plist" />
+                        <NodeNormalFileData Type="MarkedSubImage" Path="A_FriendCard/Member/checked_bg.png" Plist="A_FriendCard/Member.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -1482,7 +1482,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.9694" />
                     <PreSize X="0.9600" Y="0.9400" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="ListView" ActionTag="600293387" Tag="107" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentHeightEnable="True" PercentHeightEnabled="True" LeftMargin="33.0000" RightMargin="33.0000" TopMargin="32.1500" BottomMargin="32.1500" TouchEnable="True" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="0" DirectionType="Vertical" ctype="ListViewObjectData">
                     <Size X="1007.0000" Y="578.7000" />
@@ -1581,7 +1581,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.6429" />
                     <PreSize X="0.9385" Y="0.1135" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/list_cell_bg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_cell_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                     <SingleColor A="255" R="0" G="0" B="0" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -1610,7 +1610,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.8208" />
                     <PreSize X="0.9600" Y="0.6998" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="sortBg" ActionTag="-1551141240" Tag="1048" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="20.7089" RightMargin="866.2911" TopMargin="13.0007" BottomMargin="563.9993" TouchEnable="True" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="12" BottomEage="12" Scale9OriginX="22" Scale9OriginY="12" Scale9Width="142" Scale9Height="42" ctype="ImageViewObjectData">
                     <Size X="186.0000" Y="66.0000" />
@@ -1791,7 +1791,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4991" Y="0.8163" />
                     <PreSize X="0.9553" Y="0.0591" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/list_top_bg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                     <SingleColor A="255" R="255" G="255" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -1808,7 +1808,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" Y="0.5000" />
                         <PreSize X="0.9824" Y="1.0000" />
-                        <FileData Type="Normal" Path="A_FriendCard/Main/list_cell_bg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_cell_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="head" ActionTag="750682123" Tag="1062" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="6.5000" RightMargin="951.5000" TopMargin="1.9196" BottomMargin="4.0804" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="42" Scale9Height="42" ctype="ImageViewObjectData">
                         <Size X="67.0000" Y="67.0000" />
@@ -1970,7 +1970,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.6197" />
                     <PreSize X="0.9553" Y="0.1135" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/list_cell_bg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_cell_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                     <SingleColor A="255" R="0" G="0" B="0" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -2424,7 +2424,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.8208" />
                     <PreSize X="0.9600" Y="0.7309" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="sortBg" ActionTag="-1943036465" Tag="492" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="20.7089" RightMargin="866.2911" TopMargin="13.0000" BottomMargin="564.0000" TouchEnable="True" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="12" BottomEage="12" Scale9OriginX="22" Scale9OriginY="12" Scale9Width="142" Scale9Height="42" ctype="ImageViewObjectData">
                     <Size X="186.0000" Y="66.0000" />
@@ -2585,7 +2585,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.8178" />
                     <PreSize X="0.9553" Y="0.0591" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/list_top_bg.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                     <SingleColor A="255" R="255" G="255" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -3026,7 +3026,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" Y="0.5000" />
                         <PreSize X="0.9824" Y="1.0000" />
-                        <FileData Type="Normal" Path="A_FriendCard/Main/list_cell_bg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_cell_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="head" ActionTag="-1872758498" Tag="506" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="21.2717" RightMargin="936.7283" TopMargin="0.8100" BottomMargin="5.1900" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="42" Scale9Height="42" ctype="ImageViewObjectData">
                         <Size X="67.0000" Y="67.0000" />
@@ -3240,7 +3240,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.8587" />
                     <PreSize X="0.9600" Y="0.8400" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Button_all" ActionTag="112208167" Tag="1235" IconVisible="False" LeftMargin="99.8335" RightMargin="832.1665" TopMargin="26.5000" BottomMargin="563.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="-15" Scale9OriginY="-11" Scale9Width="30" Scale9Height="22" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="141.0000" Y="53.0000" />
@@ -3327,7 +3327,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" Y="0.5000" />
                         <PreSize X="0.9824" Y="1.0000" />
-                        <FileData Type="Normal" Path="A_FriendCard/Main/list_cell_bg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_cell_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Image_line" ActionTag="2076913355" Tag="1220" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="25.6250" RightMargin="25.6250" TopMargin="72.5000" BottomMargin="-0.5000" Scale9Enable="True" LeftEage="266" RightEage="266" Scale9OriginX="266" Scale9Width="279" Scale9Height="1" ctype="ImageViewObjectData">
                         <Size X="973.7500" Y="1.0000" />
@@ -3434,7 +3434,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0358" />
                     <PreSize X="0.9600" Y="0.8700" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="ListView" ActionTag="121371455" Tag="168" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="21.4600" RightMargin="21.4600" TopMargin="77.3692" BottomMargin="38.3708" TouchEnable="True" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="90" RightEage="90" TopEage="45" BottomEage="45" Scale9OriginX="-90" Scale9OriginY="-45" Scale9Width="180" Scale9Height="90" IsBounceEnabled="True" ScrollDirectionType="0" DirectionType="Vertical" ctype="ListViewObjectData">
                     <Size X="1030.0800" Y="527.2600" />
@@ -3460,7 +3460,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" Y="0.5000" />
                         <PreSize X="0.9824" Y="1.0000" />
-                        <FileData Type="Normal" Path="A_FriendCard/Main/list_cell_bg.png" Plist="" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_cell_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Image_head" ActionTag="-1154037808" Tag="171" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="42.7475" RightMargin="916.2525" TopMargin="1.4998" BottomMargin="5.5002" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="44" Scale9Height="44" ctype="ImageViewObjectData">
                         <Size X="66.0000" Y="66.0000" />
@@ -3670,7 +3670,7 @@
                         <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
-                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
+                        <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" />
@@ -3722,7 +3722,7 @@
                         <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
-                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
+                        <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="Text_directPlayerNum" ActionTag="-640394057" Tag="204" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="843.2859" RightMargin="154.2141" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="1人" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="42.0000" Y="28.0000" />
@@ -3828,7 +3828,7 @@
                         <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
-                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
+                        <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -3943,7 +3943,7 @@
                         <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
-                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
+                        <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleY="1.0000" />
@@ -4049,7 +4049,7 @@
                         <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                         <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
-                        <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
+                        <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" />

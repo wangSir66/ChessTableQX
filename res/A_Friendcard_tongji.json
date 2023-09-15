@@ -77,9 +77,9 @@
           },
           {
             "FileData": {
-              "Type": "Normal",
+              "Type": "MarkedSubImage",
               "Path": "A_FriendCard/Record/top_title.png",
-              "Plist": ""
+              "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
             },
             "Scale9OriginX": 129,
             "Scale9OriginY": 22,
@@ -123,9 +123,9 @@
           },
           {
             "FileData": {
-              "Type": "Normal",
+              "Type": "MarkedSubImage",
               "Path": "A_FriendCard/Main/tc_bg_left.png",
-              "Plist": ""
+              "Plist": "A_FriendCard/FriendCardMain.plist"
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
@@ -1748,9 +1748,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -2835,9 +2835,9 @@
                   {
                     "ClipAble": false,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "ComboBoxIndex": 1,
                     "SingleColor": {
@@ -3863,9 +3863,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 102,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 150,
@@ -5204,9 +5204,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -5253,9 +5253,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 150,
@@ -5764,9 +5764,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "ComboBoxIndex": 1,
                     "SingleColor": {
@@ -6291,9 +6291,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -6342,9 +6342,9 @@
                   {
                     "ClipAble": true,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 210,
@@ -7216,7 +7216,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -8029,9 +8029,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -8080,9 +8080,9 @@
                   {
                     "ClipAble": true,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 210,
@@ -9707,9 +9707,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 102,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 150,
@@ -10549,9 +10549,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -10600,9 +10600,9 @@
                   {
                     "ClipAble": true,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 210,
@@ -11748,9 +11748,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 102,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 150,
@@ -12099,7 +12099,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -12323,9 +12323,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -12374,9 +12374,9 @@
                   {
                     "ClipAble": true,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 210,
@@ -14155,9 +14155,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 102,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 150,
@@ -15207,7 +15207,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -16536,7 +16536,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -16926,7 +16926,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -18800,7 +18800,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -19203,9 +19203,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -19306,19 +19306,19 @@
                           "B": 70
                         },
                         "DisabledFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_join_rank_s.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_join_rank_s.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_join_rank_n.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -19379,19 +19379,19 @@
                           "B": 70
                         },
                         "DisabledFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_score_rank_s.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_score_rank_s.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_score_rank_n.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -19454,19 +19454,19 @@
                           "B": 70
                         },
                         "DisabledFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_winner_rank_s.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "PressedFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_winner_rank_s.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "NormalFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Tongji/btn_winner_rank_n.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -19577,9 +19577,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_top_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -19916,9 +19916,9 @@
                   {
                     "ClipAble": false,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 210,
@@ -20362,7 +20362,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -21805,7 +21805,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 266,
                         "Scale9Width": 279,
@@ -22767,9 +22767,9 @@
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "Normal",
-                      "Path": "createNewPng/daTC1_15.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/daTC1_15.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
@@ -22893,9 +22893,9 @@
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "Normal",
-                      "Path": "createNewPng/daTC1_15.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/daTC1_15.png",
+                      "Plist": "A_Common/Common.plist"
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
@@ -23166,7 +23166,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/img_hengxian.png",
-                      "Plist": "A_FriendCard/GaojiSet.plist"
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 11,
                     "Scale9Width": 789,
@@ -23351,20 +23351,10 @@
         "A_FriendCard/FriendCardMain.png",
         "A_FriendCard/GaojiSet.plist",
         "A_FriendCard/GaojiSet.png",
-        "A_FriendCard/Main/list_cell_bg.png",
-        "A_FriendCard/Main/list_top_bg.png",
-        "A_FriendCard/Main/tc_bg_left.png",
-        "A_FriendCard/Main/tc_bg_nei.png",
-        "A_FriendCard/Record/top_title.png",
+        "A_FriendCard/PlayWay_Record_Tongji.plist",
+        "A_FriendCard/PlayWay_Record_Tongji.png",
         "A_FriendCard/tc_bg.png",
         "A_FriendCard/tc_bg_nei0.png",
-        "A_FriendCard/Tongji/btn_join_rank_n.png",
-        "A_FriendCard/Tongji/btn_join_rank_s.png",
-        "A_FriendCard/Tongji/btn_score_rank_n.png",
-        "A_FriendCard/Tongji/btn_score_rank_s.png",
-        "A_FriendCard/Tongji/btn_winner_rank_n.png",
-        "A_FriendCard/Tongji/btn_winner_rank_s.png",
-        "createNewPng/daTC1_15.png",
         "Default/Button_Disable.png",
         "Default/Button_Normal.png",
         "Default/Button_Press.png",

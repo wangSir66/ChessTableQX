@@ -47,7 +47,7 @@ var PlayerInfoBindView1 = cc.Layer.extend({
         setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
 
         var _back = userInfoLayerUi.node.getChildByName("back");
-        setWgtLayout(_back, [0.8, 0.8], [0.5, 0.5], [0, 0]);
+        setWgtLayout(_back, [0.9, 0.9], [0.5, 0.5], [0, 0]);
 
         COMMON_UI.popDialogAni(_back);
 

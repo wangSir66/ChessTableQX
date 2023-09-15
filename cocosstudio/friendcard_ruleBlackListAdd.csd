@@ -236,7 +236,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0250" />
                     <PreSize X="1.0000" Y="0.0125" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image_head" ActionTag="666788350" Tag="1196" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="68.0000" RightMargin="560.0000" TopMargin="4.0000" BottomMargin="4.0000" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="44" Scale9Height="44" ctype="ImageViewObjectData">
                     <Size X="72.0000" Y="72.0000" />
@@ -295,7 +295,7 @@
                     <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                     <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                     <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
-                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/img_gou.png" Plist="A_Common/Common.plist" />
+                    <NodeNormalFileData Type="Default" Path="Default/CheckBoxNode_Normal.png" Plist="" />
                     <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                 </Children>

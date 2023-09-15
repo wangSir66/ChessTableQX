@@ -9056,12 +9056,6 @@ MjClient.showToast = function (msg) {
     }
     var yPercent = 0.35;
     var jsFile = "ToastNode.json";
-    var bUserUIv3 = MjClient.isUseUIv3 && MjClient.isUseUIv3() && MjClient.isFriendCardUseUIv3();
-    bUserUIv3 = MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ ? true : bUserUIv3;
-    if (bUserUIv3) {
-        jsFile = "ToastNode_3.0.json";
-        yPercent = 0.5;
-    }
     var toastUI = ccs.load(jsFile).node;
     var text = toastUI.getChildByName("back").getChildByName("text");
     var bg_text = toastUI.getChildByName("back").getChildByName("bg_text");
@@ -9079,17 +9073,8 @@ MjClient.showToast = function (msg) {
         text.setString(JSON.stringify(msg));
     text.ignoreContentAdaptWithSize(true);
 
-    if (bUserUIv3) {
-        setWgtLayout(toastUI.getChildByName("back"), [1, 1], [0.5, -0.1], [0, 0], true);
-        var width = text.getVirtualRendererSize().width + 140;
-        if (width < bg_text.getContentSize().width) {
-            width = bg_text.getContentSize().width;
-        }
-        bg_text.setContentSize(width, bg_text.getContentSize().height);
-    } else {
-        bg_text.setContentSize(text.getVirtualRendererSize().width + 140, bg_text.getContentSize().height);
-        setWgtLayout(toastUI.getChildByName("back"), [0.35, 0.5], [0.5, -0.1], [0, 0]);
-    }
+    bg_text.setContentSize(text.getVirtualRendererSize().width + 140, bg_text.getContentSize().height);
+    setWgtLayout(toastUI.getChildByName("back"), [0.35, 0.5], [0.5, -0.1], [0, 0]);
 
     toastUI.runAction(cc.sequence(
         cc.moveBy(0.5, 0, cc.director.getVisibleSize().height * yPercent),

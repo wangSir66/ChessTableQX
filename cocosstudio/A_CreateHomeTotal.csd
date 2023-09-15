@@ -6,7 +6,7 @@
       <ObjectData Name="Layer" Tag="26" ctype="GameLayerObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="block" ActionTag="1035215115" Alpha="216" Tag="226" IconVisible="False" TouchEnable="True" ClipAble="False" BackColorAlpha="206" ColorAngle="90.0000" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="PanelObjectData">
+          <AbstractNodeData Name="block" ActionTag="1035215115" Tag="226" IconVisible="False" TouchEnable="True" ClipAble="False" BackColorAlpha="206" ColorAngle="90.0000" LeftEage="422" RightEage="422" TopEage="237" BottomEage="237" Scale9OriginX="422" Scale9OriginY="237" Scale9Width="436" Scale9Height="246" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="640.0000" Y="360.0000" />
@@ -28,7 +28,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5700" Y="1.0000" />
             <PreSize X="0.2461" Y="0.0778" />
-            <FileData Type="Normal" Path="A_FriendCard/PlayWay/top_title.png" Plist="" />
+            <FileData Type="MarkedSubImage" Path="A_FriendCard/PlayWay/top_title.png" Plist="A_FriendCard/PlayWay_Record_Tongji.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="Image_di" ActionTag="-150931958" Tag="2880" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentHeightEnable="True" PercentHeightEnabled="True" RightMargin="1087.0000" TouchEnable="True" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="15" BottomEage="15" Scale9OriginX="15" Scale9OriginY="15" Scale9Width="163" Scale9Height="690" ctype="ImageViewObjectData">
             <Size X="193.0000" Y="720.0000" />
@@ -104,7 +104,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition Y="0.5000" />
             <PreSize X="0.1508" Y="1.0000" />
-            <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_left.png" Plist="" />
+            <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_left.png" Plist="A_FriendCard/FriendCardMain.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="back" ActionTag="115865882" Tag="2905" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
@@ -120,7 +120,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.8861" />
                     <PreSize X="0.9600" Y="0.8554" />
-                    <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_nei.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image_title" ActionTag="-1943278885" Tag="2908" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="24.0352" RightMargin="866.9840" TopMargin="16.5795" BottomMargin="567.4205" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="19" BottomEage="19" Scale9OriginX="22" Scale9OriginY="19" Scale9Width="138" Scale9Height="21" ctype="ImageViewObjectData">
                     <Size X="181.9808" Y="59.0000" />
@@ -130,7 +130,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1072" Y="0.9742" />
                     <PreSize X="0.1696" Y="0.0918" />
-                    <FileData Type="Normal" Path="A_FriendCard/PlayWay/inner_titile.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/PlayWay/inner_titile.png" Plist="A_FriendCard/PlayWay_Record_Tongji.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />

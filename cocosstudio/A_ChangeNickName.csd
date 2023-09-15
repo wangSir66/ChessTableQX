@@ -37,17 +37,17 @@
               <AbstractNodeData Name="content" ActionTag="1710276033" Tag="448" IconVisible="False" LeftMargin="23.2316" RightMargin="21.7684" TopMargin="69.6642" BottomMargin="100.3358" Scale9Enable="True" LeftEage="48" RightEage="48" TopEage="30" BottomEage="30" Scale9OriginX="48" Scale9OriginY="30" Scale9Width="52" Scale9Height="32" ctype="ImageViewObjectData">
                 <Size X="685.0000" Y="280.0000" />
                 <Children>
-                  <AbstractNodeData Name="Image_nickname" ActionTag="763891471" Tag="506" IconVisible="False" LeftMargin="195.2398" RightMargin="118.7603" TopMargin="104.4961" BottomMargin="125.5039" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="16" BottomEage="16" Scale9OriginX="30" Scale9OriginY="16" Scale9Width="31" Scale9Height="18" ctype="ImageViewObjectData">
-                    <Size X="371.0000" Y="50.0000" />
+                  <AbstractNodeData Name="Image_nickname" ActionTag="763891471" Tag="506" IconVisible="False" LeftMargin="152.7398" RightMargin="76.2602" TopMargin="100.9961" BottomMargin="122.0039" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="16" BottomEage="16" Scale9OriginX="30" Scale9OriginY="16" Scale9Width="396" Scale9Height="25" ctype="ImageViewObjectData">
+                    <Size X="456.0000" Y="57.0000" />
                     <Children>
-                      <AbstractNodeData Name="Text_3" ActionTag="1036309688" Tag="507" IconVisible="False" LeftMargin="-88.6771" RightMargin="375.6771" TopMargin="11.0000" BottomMargin="11.0000" FontSize="28" LabelText="昵称：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_3" ActionTag="1036309688" Tag="507" IconVisible="False" LeftMargin="-88.6771" RightMargin="460.6771" TopMargin="18.0000" BottomMargin="11.0000" FontSize="28" LabelText="昵称：" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="84.0000" Y="28.0000" />
                         <AnchorPoint ScaleX="1.0000" ScaleY="0.5000" />
                         <Position X="-4.6771" Y="25.0000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="147" G="92" B="35" />
-                        <PrePosition X="-0.0126" Y="0.5000" />
-                        <PreSize X="0.2264" Y="0.5600" />
+                        <PrePosition X="-0.0103" Y="0.4386" />
+                        <PreSize X="0.1842" Y="0.4912" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -57,8 +57,8 @@
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5558" Y="0.5375" />
-                    <PreSize X="0.5416" Y="0.1786" />
-                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+                    <PreSize X="0.6657" Y="0.2036" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/input_bg.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />

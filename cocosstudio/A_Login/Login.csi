@@ -20,6 +20,10 @@
       <FilePathData Path="A_Login/Main/title_1.png" />
       <FilePathData Path="A_Login/Main/title_2.png" />
       <FilePathData Path="A_Login/Main/yijianxiufu.png" />
+      <FilePathData Path="A_Login/Main/hu_t.png" />
+      <FilePathData Path="A_Login/Main/xie_t.png" />
+      <FilePathData Path="A_Login/Main/yi_t.png" />
+      <FilePathData Path="A_Login/Main/yong_t.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="720" />
   </Content>

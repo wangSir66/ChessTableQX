@@ -7,7 +7,7 @@
 			<key>A_FriendCard/Setting/btn_addRule_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{791,420},{147,54}}</string>
+				<string>{{650,244},{147,54}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -18,29 +18,29 @@
 			<key>A_FriendCard/Setting/btn_addRule_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{849,420},{147,54}}</string>
+				<string>{{650,94},{147,54}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{147,54}</string>
 			</dict>
 			<key>A_FriendCard/Setting/btn_chuangjian_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{922,2},{238,88}}</string>
+				<string>{{420,420},{238,88}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{238,88}</string>
 			</dict>
 			<key>A_FriendCard/Setting/btn_chuangjian_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{922,244},{238,88}}</string>
+				<string>{{282,2},{238,88}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -51,18 +51,18 @@
 			<key>A_FriendCard/Setting/btn_rule_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{907,486},{146,52}}</string>
+				<string>{{650,152},{146,52}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{146,52}</string>
 			</dict>
 			<key>A_FriendCard/Setting/btn_rule_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{963,486},{146,52}}</string>
+				<string>{{800,152},{146,52}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -73,7 +73,7 @@
 			<key>A_FriendCard/Setting/btn_save_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{424,232},{238,88}}</string>
+				<string>{{650,2},{238,88}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -84,7 +84,7 @@
 			<key>A_FriendCard/Setting/btn_save_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{666,232},{238,88}}</string>
+				<string>{{892,2},{238,88}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -95,22 +95,22 @@
 			<key>A_FriendCard/Setting/img_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{424,2},{414,226}}</string>
+				<string>{{420,2},{414,226}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{414,226}</string>
 			</dict>
 			<key>A_FriendCard/Setting/img_di.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{842,2},{414,76}}</string>
+				<string>{{2,424},{414,76}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{414,76}</string>
 			</dict>
@@ -121,25 +121,25 @@
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{418,276}</string>
 			</dict>
 			<key>A_FriendCard/Setting/img_jieshan.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{791,232},{94,22}}</string>
+				<string>{{282,355},{94,22}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{94,22}</string>
 			</dict>
 			<key>A_FriendCard/Setting/img_wanfaguize.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{758,232},{349,29}}</string>
+				<string>{{374,2},{349,29}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -157,14 +157,14 @@
 			<key>realTextureFileName</key>
 			<string>Setting.png</string>
 			<key>size</key>
-			<string>{1017,634}</string>
+			<string>{982,510}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>1017</integer>
+			<integer>982</integer>
 			<key>height</key>
-			<integer>634</integer>
+			<integer>510</integer>
 		</dict>
 	</dict>
 </plist>

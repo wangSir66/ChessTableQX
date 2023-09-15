@@ -4,21 +4,10 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>A_FriendCard/Main/img_hengxian.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{967,2},{811,1}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{811,1}</string>
-			</dict>
 			<key>A_FriendCard/GaojiSet/Setting_di_btn_baocun_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{315,2},{238,89}}</string>
+				<string>{{2,142},{238,89}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -29,46 +18,13 @@
 			<key>A_FriendCard/GaojiSet/Setting_di_btn_baocun_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{557,2},{238,89}}</string>
+				<string>{{244,142},{238,89}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
 				<string>{238,89}</string>
-			</dict>
-			<key>A_FriendCard/GaojiSet/Setting_di_inputbg.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{926,2},{142,37}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{142,37}</string>
-			</dict>
-			<key>A_FriendCard/GaojiSet/Setting_di_kuang_01.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{886,2},{247,36}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{247,36}</string>
-			</dict>
-			<key>A_FriendCard/Main/img_sanjiao1.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{926,148},{24,15}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{24,15}</string>
 			</dict>
 			<key>A_FriendCard/GaojiSet/Setting_di_img_juxingBg3.png</key>
 			<dict>
@@ -84,24 +40,46 @@
 			<key>A_FriendCard/GaojiSet/Setting_di_img1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{799,2},{256,40}}</string>
+				<string>{{315,2},{256,40}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{256,40}</string>
 			</dict>
 			<key>A_FriendCard/GaojiSet/Setting_di_img3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{843,2},{256,39}}</string>
+				<string>{{315,46},{256,39}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{256,39}</string>
+			</dict>
+			<key>A_FriendCard/GaojiSet/Setting_di_inputbg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{486,129},{142,37}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{142,37}</string>
+			</dict>
+			<key>A_FriendCard/GaojiSet/Setting_di_kuang_01.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{315,89},{247,36}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{247,36}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>
@@ -113,14 +91,14 @@
 			<key>realTextureFileName</key>
 			<string>GaojiSet.png</string>
 			<key>size</key>
-			<string>{970,815}</string>
+			<string>{630,233}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>970</integer>
+			<integer>630</integer>
 			<key>height</key>
-			<integer>815</integer>
+			<integer>233</integer>
 		</dict>
 	</dict>
 </plist>

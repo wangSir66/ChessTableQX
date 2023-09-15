@@ -13,7 +13,7 @@
             "Property": "Position",
             "Frames": [
               {
-                "X": 1125.5236,
+                "X": 1159.53,
                 "Y": 9.2198,
                 "FrameIndex": 0,
                 "EasingData": {
@@ -29,8 +29,8 @@
             "Property": "Scale",
             "Frames": [
               {
-                "X": 1.0,
-                "Y": 1.0,
+                "X": 0.6,
+                "Y": 0.6,
                 "FrameIndex": 0,
                 "EasingData": {
                   "Type": 0
@@ -145,14 +145,14 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Home/Main/girl.png",
-                      "Plist": "A_Home/Home.plist"
+                      "Type": "Normal",
+                      "Path": "A_Home/Main/girl_1.png",
+                      "Plist": ""
                     },
-                    "Scale9OriginX": 109,
+                    "Scale9OriginX": 177,
                     "Scale9OriginY": 201,
                     "Scale9Width": 68,
-                    "Scale9Height": 165,
+                    "Scale9Height": 256,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -174,18 +174,18 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.5306,
-                      "Y": 0.9281
+                      "X": 0.7829,
+                      "Y": 1.0752
                     },
-                    "LeftMargin": 126.5,
-                    "RightMargin": 126.5,
-                    "TopMargin": 22.0,
-                    "BottomMargin": 22.0,
+                    "LeftMargin": 58.5,
+                    "RightMargin": 58.5,
+                    "TopMargin": -23.0,
+                    "BottomMargin": -23.0,
                     "Tag": 135,
                     "ActionTag": 985637107,
                     "Size": {
-                      "X": 286.0,
-                      "Y": 568.0
+                      "X": 422.0,
+                      "Y": 658.0
                     },
                     "Name": "girl",
                     "ctype": "ImageViewObjectData"
@@ -320,25 +320,25 @@
                       "ScaleX": 0.5
                     },
                     "Position": {
-                      "X": 1125.5236,
+                      "X": 1159.53,
                       "Y": 9.2198
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
                     },
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.8793,
+                      "X": 0.9059,
                       "Y": 0.0838
                     },
                     "PreSize": {
                       "X": 0.1906,
                       "Y": 1.0182
                     },
-                    "LeftMargin": 1003.5236,
-                    "RightMargin": 32.4764,
+                    "LeftMargin": 1037.53,
+                    "RightMargin": -1.53,
                     "TopMargin": -11.2198,
                     "BottomMargin": 9.2198,
                     "Tag": 73,
@@ -1462,7 +1462,7 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 618.1431,
+              "X": 640.0,
               "Y": 600.9382
             },
             "Scale": {
@@ -1471,16 +1471,17 @@
             },
             "CColor": {},
             "IconVisible": false,
+            "PositionPercentXEnabled": true,
             "PrePosition": {
-              "X": 0.4829,
+              "X": 0.5,
               "Y": 0.8346
             },
             "PreSize": {
               "X": 0.6336,
               "Y": 0.0556
             },
-            "LeftMargin": 212.6431,
-            "RightMargin": 256.3569,
+            "LeftMargin": 234.5,
+            "RightMargin": 234.5,
             "TopMargin": 99.0618,
             "BottomMargin": 580.9382,
             "Tag": 155,
@@ -1499,7 +1500,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 73.5474,
+                  "X": 59.5473,
                   "Y": 20.0
                 },
                 "Scale": {
@@ -1510,15 +1511,15 @@
                 "IconVisible": false,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.0907,
+                  "X": 0.0734,
                   "Y": 0.5
                 },
                 "PreSize": {
                   "X": 0.0481,
                   "Y": 0.85
                 },
-                "LeftMargin": 73.5474,
-                "RightMargin": 698.4526,
+                "LeftMargin": 59.5473,
+                "RightMargin": 712.4528,
                 "TopMargin": 3.0,
                 "BottomMargin": 3.0,
                 "Tag": 340,
@@ -1559,8 +1560,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 121.5109,
-                  "Y": 20.0
+                  "X": 107.5108,
+                  "Y": 20.0001
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1570,17 +1571,17 @@
                 "IconVisible": false,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.1498,
+                  "X": 0.1326,
                   "Y": 0.5
                 },
                 "PreSize": {
                   "X": 0.8015,
                   "Y": 1.075
                 },
-                "LeftMargin": 121.5109,
-                "RightMargin": 39.4891,
-                "TopMargin": -1.5,
-                "BottomMargin": -1.5,
+                "LeftMargin": 107.5108,
+                "RightMargin": 53.4891,
+                "TopMargin": -1.5001,
+                "BottomMargin": -1.4999,
                 "Tag": 43,
                 "Children": [
                   {
@@ -2189,6 +2190,7 @@
         "A_Home/Home.plist",
         "A_Home/Home.png",
         "A_Home/homeBG.png",
+        "A_Home/Main/girl_1.png",
         "A_Home/xiadi.png",
         "fonts/fzcy.ttf"
       ],

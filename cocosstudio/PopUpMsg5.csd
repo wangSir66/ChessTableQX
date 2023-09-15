@@ -115,10 +115,10 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4156" Y="0.3502" />
                 <PreSize X="0.0416" Y="0.0617" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
                 <NodeDisableFileData Type="Default" Path="Default/CheckBoxNode_Disable.png" Plist="" />
               </AbstractNodeData>
             </Children>

@@ -245,7 +245,7 @@
             acceptNode = _agree;
             acceptNode.setVisible(false);
             _agree.setSelected(util.localStorageEncrypt.getBoolItem("_agree_user_protocol", false))
-            // setWgtLayout(_agree, [1, 1], [0, 0.08], [0, 0], false, true);
+            setWgtLayout(_agree, [0.08, 0.08], [0.4, 0.11], [0, 0], false, true);
 
             var logo = _back.getChildByName("load");
             setWgtLayout(logo, [0.2, 0.2], [0, 1], [0, 0], false, true);
@@ -255,8 +255,10 @@
                 var spCache = cc.spriteFrameCache;
                 var sten = cc.Sprite(spCache.getSpriteFrame('A_Login/Main/logo.png'));
                 var clipper = new cc.ClippingNode();
-                var stenSize = sten.getContentSize();
-                sten.setPosition(stenSize.width / 2, stenSize.height / 2);
+                var stenSize = logo.getContentSize();
+                sten.width = logo.width;
+                sten.height = logo.height;
+                sten.setPosition(logo.width / 2, logo.height / 2);
                 clipper.setContentSize(stenSize);
                 clipper.setStencil(sten);
                 clipper.setAlphaThreshold(0.5);
@@ -267,8 +269,8 @@
                 sprite1.setScale(1.5);
                 clipper.addChild(sprite1, 1);
                 var repeatAction = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(-sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(sten.width + sten.width, sten.height / 2)),
+                    cc.moveTo(0.0, cc.p(-logo.width / 2, logo.height / 2)),
+                    cc.moveTo(3, cc.p(logo.width + logo.width, logo.height / 2)),
                     cc.delayTime(0.5)));
                 sprite1.runAction(repeatAction); //进行向右移动的重复动作
                 var sprite2 = new cc.Sprite(spCache.getSpriteFrame('A_Login/Main/saog3.png'));
@@ -277,8 +279,8 @@
                 sprite2.setScale(1.5);
                 clipper.addChild(sprite2, 1);
                 var repeatAction2 = cc.repeatForever(cc.sequence(
-                    cc.moveTo(0.0, cc.p(sten.width + sten.width / 2, sten.height / 2)),
-                    cc.moveTo(3, cc.p(-sten.width, sten.height / 2)),
+                    cc.moveTo(0.0, cc.p(logo.width + logo.width / 2, logo.height / 2)),
+                    cc.moveTo(3, cc.p(-logo.width, logo.height / 2)),
                     cc.delayTime(0.5)));
                 sprite2.runAction(repeatAction2); //进行向右移动的重复动作
             }
@@ -300,9 +302,7 @@
             }
 
             var bg_mask = _back.getChildByName("bg_mask");
-            if (bg_mask) {
-                bg_mask.y = 0;
-            }
+            setWgtLayout(bg_mask, [1, 1], [0.5, 0], [0, 0], false, true);
 
 
             var loginBtns = [];

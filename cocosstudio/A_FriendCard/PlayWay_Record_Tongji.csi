@@ -1,0 +1,25 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="PlayWay_Record_Tongji" Type="Plist" ID="f70d6f13-2598-4a9f-b4e1-f7ba74a0cf0c" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_FriendCard/Tongji/btn_join_rank_n.png" />
+      <FilePathData Path="A_FriendCard/Tongji/btn_join_rank_s.png" />
+      <FilePathData Path="A_FriendCard/Tongji/btn_score_rank_n.png" />
+      <FilePathData Path="A_FriendCard/Tongji/btn_score_rank_s.png" />
+      <FilePathData Path="A_FriendCard/Tongji/btn_winner_rank_n.png" />
+      <FilePathData Path="A_FriendCard/Tongji/btn_winner_rank_s.png" />
+      <FilePathData Path="A_FriendCard/Record/btn_chaxun.png" />
+      <FilePathData Path="A_FriendCard/Record/btn_playway.png" />
+      <FilePathData Path="A_FriendCard/Record/btn_quanbufenzu.png" />
+      <FilePathData Path="A_FriendCard/Record/btn_today.png" />
+      <FilePathData Path="A_FriendCard/Record/date_kuang.png" />
+      <FilePathData Path="A_FriendCard/Record/top_title.png" />
+      <FilePathData Path="A_FriendCard/Record/wenzi_bg.png" />
+      <FilePathData Path="A_FriendCard/Record/wushu_bg.png" />
+      <FilePathData Path="A_FriendCard/PlayWay/fengexian.png" />
+      <FilePathData Path="A_FriendCard/PlayWay/inner_titile.png" />
+      <FilePathData Path="A_FriendCard/PlayWay/top_title.png" />
+    </ImageFiles>
+    <MaxSize Width="2048" Height="256" />
+  </Content>
+</PlistInfoProjectFile>
