@@ -1218,8 +1218,8 @@
                         },
                         "Scale9OriginX": 16,
                         "Scale9OriginY": 14,
-                        "Scale9Width": 21,
-                        "Scale9Height": 11,
+                        "Scale9Width": 16,
+                        "Scale9Height": 15,
                         "AnchorPoint": {
                           "ScaleX": 0.5,
                           "ScaleY": 0.5
@@ -1360,6 +1360,7 @@
                           "X": 43.0,
                           "Y": 43.0
                         },
+                        "VisibleForFrame": false,
                         "Name": "Image_149",
                         "ctype": "ImageViewObjectData"
                       }

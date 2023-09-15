@@ -74,9 +74,9 @@
           },
           {
             "FileData": {
-              "Type": "Normal",
+              "Type": "MarkedSubImage",
               "Path": "A_Home/JoinRoom/dikuang.png",
-              "Plist": ""
+              "Plist": "A_Home/JoinRoom.plist"
             },
             "Scale9Enable": true,
             "Scale9OriginX": 241,
@@ -163,9 +163,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/shuru.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 13,
@@ -217,14 +217,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/gb.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/gb.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -344,14 +344,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/0.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/0.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -414,14 +414,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/1.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/1.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -484,14 +484,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/2.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/2.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -554,14 +554,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/3.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/3.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -624,14 +624,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/4.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/4.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -694,14 +694,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/5.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/5.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -764,14 +764,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/6.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/6.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -834,14 +834,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/7.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/7.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -904,14 +904,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/8.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/8.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -974,14 +974,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/9.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/9.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -1044,14 +1044,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/shuzi_dian.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/shuzi_dian.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -1114,14 +1114,14 @@
                       "B": 44
                     },
                     "DisabledFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/qd.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "NormalFileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/JoinRoom/qd.png",
-                      "Plist": ""
+                      "Plist": "A_Home/JoinRoom.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 15,
@@ -1193,9 +1193,9 @@
                   "B": 70
                 },
                 "NormalFileData": {
-                  "Type": "Normal",
+                  "Type": "MarkedSubImage",
                   "Path": "A_Home/JoinRoom/bg.png",
-                  "Plist": ""
+                  "Plist": "A_Home/JoinRoom.plist"
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
@@ -1269,22 +1269,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "A_Home/JoinRoom/0.png",
-        "A_Home/JoinRoom/1.png",
-        "A_Home/JoinRoom/2.png",
-        "A_Home/JoinRoom/3.png",
-        "A_Home/JoinRoom/4.png",
-        "A_Home/JoinRoom/5.png",
-        "A_Home/JoinRoom/6.png",
-        "A_Home/JoinRoom/7.png",
-        "A_Home/JoinRoom/8.png",
-        "A_Home/JoinRoom/9.png",
-        "A_Home/JoinRoom/bg.png",
-        "A_Home/JoinRoom/dikuang.png",
-        "A_Home/JoinRoom/gb.png",
-        "A_Home/JoinRoom/qd.png",
-        "A_Home/JoinRoom/shuru.png",
-        "A_Home/JoinRoom/shuzi_dian.png"
+        "A_Home/JoinRoom.plist",
+        "A_Home/JoinRoom.png"
       ],
       "ctype": "GameFileData"
     }
