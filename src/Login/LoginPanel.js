@@ -321,7 +321,7 @@
             this._btnWeChat = _btnWeChat;
             if (_btnWeChat) {
                 _btnWeChat.setVisible(false);
-                // loginBtns.push(_btnWeChat);
+                loginBtns.push(_btnWeChat);
             }
 
             var y = 0.22;
@@ -457,7 +457,7 @@
                     acceptNode.setVisible(true);
                 }
                 if (_btnWeChat) {
-                    _btnWeChat.visible = false //!MjClient.remoteCfg.guestLogin;
+                    _btnWeChat.visible = !MjClient.remoteCfg.guestLogin;
                 }
                 if (_btnPhone) {
                     _btnPhone.setVisible(!!MjClient.remoteCfg.phoneLogin);

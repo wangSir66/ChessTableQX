@@ -235,9 +235,10 @@ var PlayerInfoBindView1 = cc.Layer.extend({
             var _num = _money.getChildByName("num");
             _num.setString(pinfo.money);
             _num.ignoreContentAdaptWithSize(true);
+            _num.setEnabled(false);
             _money.addTouchEventListener(function (sender, Type) {
                 if (Type == ccui.Widget.TOUCH_ENDED) {
-                    MjClient.Scene.addChild(enter_store(0));
+                    // MjClient.Scene.addChild(enter_store(0));
                 }
             }, this);
         }

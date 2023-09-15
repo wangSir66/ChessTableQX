@@ -238,7 +238,7 @@
                   <AbstractNodeData Name="money" ActionTag="-88904174" Tag="820" IconVisible="False" LeftMargin="170.0499" RightMargin="-346.0499" TopMargin="-259.7317" BottomMargin="227.7317" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="122" Scale9Height="10" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="176.0000" Y="32.0000" />
                     <Children>
-                      <AbstractNodeData Name="yuanbao_BG" ActionTag="-966517013" Tag="90" IconVisible="False" HorizontalEdge="RightEdge" LeftMargin="-3.3168" RightMargin="126.3168" TopMargin="-4.0389" BottomMargin="-2.9611" LeftEage="16" RightEage="16" TopEage="14" BottomEage="14" Scale9OriginX="16" Scale9OriginY="14" Scale9Width="21" Scale9Height="11" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="yuanbao_BG" ActionTag="-966517013" Tag="90" IconVisible="False" HorizontalEdge="RightEdge" LeftMargin="-3.3168" RightMargin="126.3168" TopMargin="-4.0389" BottomMargin="-2.9611" LeftEage="16" RightEage="16" TopEage="14" BottomEage="14" Scale9OriginX="16" Scale9OriginY="14" Scale9Width="16" Scale9Height="15" ctype="ImageViewObjectData">
                         <Size X="53.0000" Y="39.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="23.1832" Y="16.5389" />
@@ -260,7 +260,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Image_149" ActionTag="1360185683" Tag="828" IconVisible="False" LeftMargin="138.6142" RightMargin="-5.6142" TopMargin="-5.0242" BottomMargin="-5.9758" LeftEage="8" RightEage="8" TopEage="8" BottomEage="8" Scale9OriginX="8" Scale9OriginY="8" Scale9Width="27" Scale9Height="27" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="Image_149" ActionTag="1360185683" VisibleForFrame="False" Tag="828" IconVisible="False" LeftMargin="138.6142" RightMargin="-5.6142" TopMargin="-5.0242" BottomMargin="-5.9758" LeftEage="8" RightEage="8" TopEage="8" BottomEage="8" Scale9OriginX="8" Scale9OriginY="8" Scale9Width="27" Scale9Height="27" ctype="ImageViewObjectData">
                         <Size X="43.0000" Y="43.0000" />
                         <AnchorPoint ScaleX="0.5033" ScaleY="0.5000" />
                         <Position X="160.2561" Y="15.5242" />
