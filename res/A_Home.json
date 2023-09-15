@@ -145,9 +145,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_Home/Main/girl_1.png",
-                      "Plist": ""
+                      "Plist": "A_Home/Home.plist"
                     },
                     "Scale9OriginX": 177,
                     "Scale9OriginY": 201,
@@ -2190,7 +2190,6 @@
         "A_Home/Home.plist",
         "A_Home/Home.png",
         "A_Home/homeBG.png",
-        "A_Home/Main/girl_1.png",
         "A_Home/xiadi.png",
         "fonts/fzcy.ttf"
       ],

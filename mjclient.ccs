@@ -478,7 +478,6 @@
             <Image Name="left_chooseed_bg.png" />
             <Image Name="left_notchooseed_bg.png" />
             <Image Name="list_cell_bg.png" />
-            <Image Name="list_top_bg.png" />
             <Image Name="Main_bg_clubList.png" />
             <Image Name="Main_bg_clubList_tit.png" />
             <Image Name="Main_btn_createQYQ.png" />
@@ -637,6 +636,7 @@
           <Image Name="tc_bg_nei0.png" />
           <Image Name="Main_image_bottomBG.png" />
           <PlistInfo Name="PlayWay_Record_Tongji.csi" Type="Plist" />
+          <Image Name="list_top_bg.png" />
         </Folder>
         <Folder Name="A_Home">
           <Folder Name="JoinRoom">

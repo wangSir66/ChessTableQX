@@ -2835,11 +2835,10 @@
                   {
                     "ClipAble": false,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
-                    "ComboBoxIndex": 1,
                     "SingleColor": {
                       "R": 210,
                       "G": 210,
@@ -5253,9 +5252,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
                     "SingleColor": {
                       "R": 150,
@@ -6342,9 +6341,9 @@
                   {
                     "ClipAble": true,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
                     "SingleColor": {
                       "R": 210,
@@ -8080,9 +8079,9 @@
                   {
                     "ClipAble": true,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
                     "SingleColor": {
                       "R": 210,
@@ -10600,9 +10599,9 @@
                   {
                     "ClipAble": true,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
                     "SingleColor": {
                       "R": 210,
@@ -12374,9 +12373,9 @@
                   {
                     "ClipAble": true,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
                     "SingleColor": {
                       "R": 210,
@@ -19577,9 +19576,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_FriendCard/Main/list_top_bg.png",
-                          "Plist": "A_FriendCard/FriendCardMain.plist"
+                          "Type": "Normal",
+                          "Path": "A_FriendCard/list_top_bg.png",
+                          "Plist": ""
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 15,
@@ -23351,6 +23350,7 @@
         "A_FriendCard/FriendCardMain.png",
         "A_FriendCard/GaojiSet.plist",
         "A_FriendCard/GaojiSet.png",
+        "A_FriendCard/list_top_bg.png",
         "A_FriendCard/PlayWay_Record_Tongji.plist",
         "A_FriendCard/PlayWay_Record_Tongji.png",
         "A_FriendCard/tc_bg.png",

@@ -18,7 +18,7 @@
 			<key>A_Login/Main/btn_close.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{952,617},{66,66}}</string>
+				<string>{{580,289},{66,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -62,7 +62,7 @@
 			<key>A_Login/Main/check_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{865,681},{37,38}}</string>
+				<string>{{650,289},{37,38}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -73,7 +73,7 @@
 			<key>A_Login/Main/checked_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{907,681},{37,38}}</string>
+				<string>{{692,289},{37,38}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -202,6 +202,50 @@
 				<key>sourceSize</key>
 				<string>{77,77}</string>
 			</dict>
+			<key>A_Login/Main/hu_t.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{865,681},{37,43}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{37,43}</string>
+			</dict>
+			<key>A_Login/Main/xie_t.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{952,617},{41,43}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{41,43}</string>
+			</dict>
+			<key>A_Login/Main/yi_t.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{957,664},{41,41}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{41,41}</string>
+			</dict>
+			<key>A_Login/Main/yong_t.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{912,681},{37,41}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{37,41}</string>
+			</dict>
 		</dict>
 		<key>metadata</key>
 		<dict>
@@ -212,12 +256,12 @@
 			<key>realTextureFileName</key>
 			<string>Login.png</string>
 			<key>size</key>
-			<string>{1020,720}</string>
+			<string>{1009,720}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>1020</integer>
+			<integer>1009</integer>
 			<key>height</key>
 			<integer>720</integer>
 		</dict>

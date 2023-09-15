@@ -614,7 +614,7 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Panle_title" ActionTag="-2050046951" Tag="2054" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="5.1350" RightMargin="5.1350" TopMargin="75.4206" BottomMargin="510.5794" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Enable="True" LeftEage="318" RightEage="318" TopEage="12" BottomEage="12" Scale9OriginX="318" Scale9OriginY="12" Scale9Width="389" Scale9Height="14" ctype="PanelObjectData">
+                  <AbstractNodeData Name="Panle_title" ActionTag="-2050046951" Tag="2054" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" LeftMargin="5.1350" RightMargin="5.1350" TopMargin="75.4206" BottomMargin="510.5794" TouchEnable="True" ClipAble="False" ColorAngle="90.0000" Scale9Enable="True" LeftEage="318" RightEage="318" TopEage="12" BottomEage="12" Scale9OriginX="318" Scale9OriginY="12" Scale9Width="389" Scale9Height="14" ctype="PanelObjectData">
                     <Size X="1016.7300" Y="42.0000" />
                     <Children>
                       <AbstractNodeData Name="text_title_6" ActionTag="1171787586" Tag="2055" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="18.0000" RightMargin="950.7300" TopMargin="9.0000" BottomMargin="9.0000" FontSize="24" LabelText="分组" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -819,7 +819,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.8465" />
                     <PreSize X="0.9900" Y="0.0669" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                    <FileData Type="Normal" Path="A_FriendCard/list_top_bg.png" Plist="" />
                     <SingleColor A="255" R="210" G="210" B="210" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -1231,7 +1231,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5006" Y="0.9083" />
                     <PreSize X="1.0000" Y="0.1091" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                    <FileData Type="Normal" Path="A_FriendCard/list_top_bg.png" Plist="" />
                     <SingleColor A="255" R="150" G="200" B="255" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -1457,7 +1457,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5005" Y="0.9555" />
                     <PreSize X="1.0000" Y="0.0909" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                    <FileData Type="Normal" Path="A_FriendCard/list_top_bg.png" Plist="" />
                     <SingleColor A="255" R="210" G="210" B="210" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -1967,7 +1967,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.9602" />
                     <PreSize X="1.0000" Y="0.0909" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                    <FileData Type="Normal" Path="A_FriendCard/list_top_bg.png" Plist="" />
                     <SingleColor A="255" R="210" G="210" B="210" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -2448,7 +2448,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.9591" />
                     <PreSize X="1.0000" Y="0.0909" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                    <FileData Type="Normal" Path="A_FriendCard/list_top_bg.png" Plist="" />
                     <SingleColor A="255" R="210" G="210" B="210" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -2942,7 +2942,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4995" Y="0.9554" />
                     <PreSize X="1.0000" Y="0.0909" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                    <FileData Type="Normal" Path="A_FriendCard/list_top_bg.png" Plist="" />
                     <SingleColor A="255" R="210" G="210" B="210" />
                     <FirstColor A="255" R="150" G="200" B="255" />
                     <EndColor A="255" R="255" G="255" B="255" />
@@ -4261,7 +4261,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5425" />
                         <PreSize X="1.0677" Y="0.9500" />
-                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/list_top_bg.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                        <FileData Type="Normal" Path="A_FriendCard/list_top_bg.png" Plist="" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="text_title_rank" ActionTag="-1644317810" Tag="2350" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="73.2000" RightMargin="802.8000" TopMargin="7.1320" BottomMargin="4.8680" FontSize="28" LabelText="日排名" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="84.0000" Y="28.0000" />

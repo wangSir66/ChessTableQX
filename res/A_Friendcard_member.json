@@ -194,7 +194,7 @@
                 },
                 "Position": {
                   "X": 92.257,
-                  "Y": 674.1439
+                  "Y": 674.136
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -213,8 +213,8 @@
                 },
                 "LeftMargin": 67.257,
                 "RightMargin": 75.743,
-                "TopMargin": 25.8561,
-                "BottomMargin": 654.1439,
+                "TopMargin": 25.864,
+                "BottomMargin": 654.136,
                 "Tag": 315,
                 "ActionTag": 570404447,
                 "Size": {
@@ -2948,9 +2948,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
                     "ComboBoxIndex": 1,
                     "SingleColor": {},
@@ -6475,7 +6475,6 @@
                   "X": 1073.0,
                   "Y": 643.0
                 },
-                "VisibleForFrame": false,
                 "Name": "Panel_member",
                 "ctype": "PanelObjectData"
               },
@@ -7520,9 +7519,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
                     "ComboBoxIndex": 1,
                     "SingleColor": {},
@@ -11077,9 +11076,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
-                      "Plist": "A_FriendCard/FriendCardMain.plist"
+                      "Type": "Normal",
+                      "Path": "A_FriendCard/list_top_bg.png",
+                      "Plist": ""
                     },
                     "ComboBoxIndex": 1,
                     "SingleColor": {},
@@ -23570,6 +23569,7 @@
         "A_Common/default_headpic.png",
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
+        "A_FriendCard/list_top_bg.png",
         "A_FriendCard/Member.plist",
         "A_FriendCard/Member.png",
         "A_FriendCard/tc_bg.png",

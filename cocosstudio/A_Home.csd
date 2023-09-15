@@ -36,7 +36,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="0.7829" Y="1.0752" />
-                    <FileData Type="Normal" Path="A_Home/Main/girl_1.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/Main/girl_1.png" Plist="A_Home/Home.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" />
