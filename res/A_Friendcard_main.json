@@ -577,9 +577,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/yb_txt_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 34,
                     "Scale9OriginY": 8,
@@ -730,9 +730,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/yb_txt_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 34,
                     "Scale9OriginY": 8,
@@ -896,8 +896,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 1063.1487,
-                      "Y": 12.6953
+                      "X": 1110.2966,
+                      "Y": 72.6575
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -906,17 +906,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.8306,
-                      "Y": 0.1245
+                      "X": 0.8674,
+                      "Y": 0.7123
                     },
                     "PreSize": {
-                      "X": 0.1937,
+                      "X": 0.1781,
                       "Y": 0.4706
                     },
-                    "LeftMargin": 939.1487,
-                    "RightMargin": 92.8513,
-                    "TopMargin": 65.3047,
-                    "BottomMargin": -11.3047,
+                    "LeftMargin": 996.2966,
+                    "RightMargin": 55.7034,
+                    "TopMargin": 5.3425,
+                    "BottomMargin": 48.6575,
                     "Tag": 190,
                     "Children": [
                       {
@@ -954,8 +954,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 273.6083,
-                          "Y": 21.5031
+                          "X": 256.5116,
+                          "Y": 23.6411
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -964,17 +964,17 @@
                         "CColor": {},
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": 1.1033,
-                          "Y": 0.448
+                          "X": 1.1251,
+                          "Y": 0.4925
                         },
                         "PreSize": {
-                          "X": 0.1613,
+                          "X": 0.1754,
                           "Y": 0.8333
                         },
-                        "LeftMargin": 253.6083,
-                        "RightMargin": -45.6083,
-                        "TopMargin": 6.4969,
-                        "BottomMargin": 1.5031,
+                        "LeftMargin": 236.5116,
+                        "RightMargin": -48.5116,
+                        "TopMargin": 4.3589,
+                        "BottomMargin": 3.6411,
                         "Tag": 189,
                         "ActionTag": 252404958,
                         "Size": {
@@ -987,7 +987,7 @@
                     ],
                     "ActionTag": -505160437,
                     "Size": {
-                      "X": 248.0,
+                      "X": 228.0,
                       "Y": 48.0
                     },
                     "Name": "searchBg",
@@ -1051,7 +1051,7 @@
                     "IsBounceEnabled": true,
                     "InnerNodeSize": {
                       "Width": 1086,
-                      "Height": 500
+                      "Height": 530
                     },
                     "ScrollDirectionType": "Horizontal",
                     "ClipAble": false,
@@ -1090,11 +1090,11 @@
                     },
                     "PreSize": {
                       "X": 0.8484,
-                      "Y": 0.6944
+                      "Y": 0.7361
                     },
                     "LeftMargin": 105.216,
                     "RightMargin": 88.7841,
-                    "TopMargin": 133.6,
+                    "TopMargin": 103.6,
                     "BottomMargin": 86.4,
                     "Tag": 491,
                     "Children": [
@@ -1162,7 +1162,7 @@
                             },
                             "Position": {
                               "X": 0.0,
-                              "Y": 250.0
+                              "Y": 265.0
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -1209,11 +1209,11 @@
                                 },
                                 "Position": {
                                   "X": 181.0,
-                                  "Y": 360.0
+                                  "Y": 408.1
                                 },
                                 "Scale": {
-                                  "ScaleX": 0.8,
-                                  "ScaleY": 0.8
+                                  "ScaleX": 1.0,
+                                  "ScaleY": 1.0
                                 },
                                 "CColor": {},
                                 "IconVisible": false,
@@ -1221,16 +1221,16 @@
                                 "PositionPercentYEnabled": true,
                                 "PrePosition": {
                                   "X": 0.5,
-                                  "Y": 0.72
+                                  "Y": 0.77
                                 },
                                 "PreSize": {
                                   "X": 0.7182,
-                                  "Y": 0.5
+                                  "Y": 0.4717
                                 },
                                 "LeftMargin": 51.0,
                                 "RightMargin": 51.0,
-                                "TopMargin": 15.0,
-                                "BottomMargin": 235.0,
+                                "TopMargin": -3.1,
+                                "BottomMargin": 283.1,
                                 "Tag": 670,
                                 "Children": [
                                   {
@@ -1627,8 +1627,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 125.5458,
-                                          "Y": -5.551
+                                          "X": 125.5452,
+                                          "Y": 20.4476
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -1640,16 +1640,16 @@
                                         "PositionPercentYEnabled": true,
                                         "PrePosition": {
                                           "X": 0.5042,
-                                          "Y": -0.0305
+                                          "Y": 0.1123
                                         },
                                         "PreSize": {
                                           "X": 0.2129,
                                           "Y": 0.2912
                                         },
-                                        "LeftMargin": 99.0458,
-                                        "RightMargin": 96.9542,
-                                        "TopMargin": 161.051,
-                                        "BottomMargin": -32.051,
+                                        "LeftMargin": 99.0452,
+                                        "RightMargin": 96.9548,
+                                        "TopMargin": 135.0524,
+                                        "BottomMargin": -6.0524,
                                         "Tag": 671,
                                         "ActionTag": 1528315954,
                                         "Size": {
@@ -2010,9 +2010,9 @@
                                       },
                                       {
                                         "FileData": {
-                                          "Type": "Normal",
+                                          "Type": "MarkedSubImage",
                                           "Path": "A_FriendCard/Main/yb_txt_bg.png",
-                                          "Plist": ""
+                                          "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 24,
                                         "Scale9OriginY": 10,
@@ -2259,9 +2259,9 @@
                                       },
                                       {
                                         "FileData": {
-                                          "Type": "Normal",
+                                          "Type": "MarkedSubImage",
                                           "Path": "A_FriendCard/Main/yb_txt_bg.png",
-                                          "Plist": ""
+                                          "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 24,
                                         "Scale9OriginY": 10,
@@ -2508,9 +2508,9 @@
                                       },
                                       {
                                         "FileData": {
-                                          "Type": "Normal",
+                                          "Type": "MarkedSubImage",
                                           "Path": "A_FriendCard/Main/yb_txt_bg.png",
-                                          "Plist": ""
+                                          "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 24,
                                         "Scale9OriginY": 10,
@@ -2757,9 +2757,9 @@
                                       },
                                       {
                                         "FileData": {
-                                          "Type": "Normal",
+                                          "Type": "MarkedSubImage",
                                           "Path": "A_FriendCard/Main/yb_txt_bg.png",
-                                          "Plist": ""
+                                          "Plist": "A_FriendCard/FriendCardMain.plist"
                                         },
                                         "Scale9OriginX": 24,
                                         "Scale9OriginY": 10,
@@ -2883,7 +2883,7 @@
                             "ActionTag": 1295048523,
                             "Size": {
                               "X": 362.0,
-                              "Y": 500.0
+                              "Y": 530.0
                             },
                             "Name": "item_1",
                             "ctype": "PanelObjectData"
@@ -2892,7 +2892,7 @@
                         "ActionTag": -1789298927,
                         "Size": {
                           "X": 1448.0,
-                          "Y": 500.0
+                          "Y": 530.0
                         },
                         "Name": "deskLayout_1",
                         "ctype": "PanelObjectData"
@@ -2901,7 +2901,7 @@
                     "ActionTag": 881470840,
                     "Size": {
                       "X": 1086.0,
-                      "Y": 500.0
+                      "Y": 530.0
                     },
                     "Name": "deskLayout",
                     "ctype": "ScrollViewObjectData"
@@ -2921,8 +2921,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 1205.7476,
-                      "Y": 170.8848
+                      "X": 1204.1604,
+                      "Y": 140.1476
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -2931,17 +2931,17 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.942,
-                      "Y": 0.2373
+                      "X": 0.9408,
+                      "Y": 0.1946
                     },
                     "PreSize": {
                       "X": 0.1164,
                       "Y": 0.15
                     },
-                    "LeftMargin": 1131.2476,
-                    "RightMargin": -0.2476,
-                    "TopMargin": 495.1152,
-                    "BottomMargin": 116.8848,
+                    "LeftMargin": 1129.6604,
+                    "RightMargin": 1.3396,
+                    "TopMargin": 525.8524,
+                    "BottomMargin": 86.1476,
                     "Tag": 122,
                     "ActionTag": 1784278870,
                     "Size": {
@@ -2964,9 +2964,9 @@
                 "ClipAble": false,
                 "BackColorAlpha": 0,
                 "FileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/Main/Main_image_bottomBG.png",
-                  "Plist": "A_FriendCard/FriendCardMain.plist"
+                  "Type": "Normal",
+                  "Path": "A_FriendCard/Main_image_bottomBG.png",
+                  "Plist": ""
                 },
                 "ComboBoxIndex": 1,
                 "SingleColor": {
@@ -3971,9 +3971,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/Main_btn_showClubList_l.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 9,
                     "Scale9OriginY": 9,
@@ -4016,9 +4016,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/Main_btn_showClubList_r.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 9,
                     "Scale9OriginY": 9,
@@ -5141,9 +5141,7 @@
         "A_FriendCard/bg2_0.png",
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/Main/Main_btn_showClubList_l.png",
-        "A_FriendCard/Main/Main_btn_showClubList_r.png",
-        "A_FriendCard/Main/yb_txt_bg.png",
+        "A_FriendCard/Main_image_bottomBG.png",
         "A_Home/dating-1_81.png",
         "A_Home/Home.plist",
         "A_Home/Home.png",

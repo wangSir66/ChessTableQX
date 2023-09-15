@@ -1,0 +1,26 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="JoinRoom" Type="Plist" ID="e98dcc37-5597-464b-858a-5ae32dd3bab8" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="A_Home/JoinRoom/0.png" />
+      <FilePathData Path="A_Home/JoinRoom/1.png" />
+      <FilePathData Path="A_Home/JoinRoom/2.png" />
+      <FilePathData Path="A_Home/JoinRoom/3.png" />
+      <FilePathData Path="A_Home/JoinRoom/4.png" />
+      <FilePathData Path="A_Home/JoinRoom/5.png" />
+      <FilePathData Path="A_Home/JoinRoom/6.png" />
+      <FilePathData Path="A_Home/JoinRoom/7.png" />
+      <FilePathData Path="A_Home/JoinRoom/8.png" />
+      <FilePathData Path="A_Home/JoinRoom/9.png" />
+      <FilePathData Path="A_Home/JoinRoom/bg.png" />
+      <FilePathData Path="A_Home/JoinRoom/bt.png" />
+      <FilePathData Path="A_Home/JoinRoom/dikuang.png" />
+      <FilePathData Path="A_Home/JoinRoom/gb.png" />
+      <FilePathData Path="A_Home/JoinRoom/qd.png" />
+      <FilePathData Path="A_Home/JoinRoom/shuru.png" />
+      <FilePathData Path="A_Home/JoinRoom/shuzi_dian.png" />
+      <FilePathData Path="A_Home/JoinRoom/zhong.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>A_Home/JoinRoom/0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,930},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{63,567},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{63,722},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{147,567},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{147,722},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{157,877},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{231,567},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{231,722},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/8.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{312,877},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/9.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{315,567},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{483,567},{66,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{66,66}</string>
+			</dict>
+			<key>A_Home/JoinRoom/bt.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{157,961},{193,51}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{193,51}</string>
+			</dict>
+			<key>A_Home/JoinRoom/dikuang.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{513,561}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{513,561}</string>
+			</dict>
+			<key>A_Home/JoinRoom/gb.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{467,877},{94,65}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{94,65}</string>
+			</dict>
+			<key>A_Home/JoinRoom/qd.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{315,722},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/shuru.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,567},{359,57}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{359,57}</string>
+			</dict>
+			<key>A_Home/JoinRoom/shuzi_dian.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{399,567},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+			<key>A_Home/JoinRoom/zhong.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{399,722},{151,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{151,80}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>JoinRoom.png</string>
+			<key>realTextureFileName</key>
+			<string>JoinRoom.png</string>
+			<key>size</key>
+			<string>{551,1014}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>551</integer>
+			<key>height</key>
+			<integer>1014</integer>
+		</dict>
+	</dict>
+</plist>

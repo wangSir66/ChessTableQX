@@ -4,406 +4,32 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>A_FriendCard/Member/btn_Button_remarks_n.png</key>
+			<key>A_FriendCard/Member/all_person.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{687,2},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_Button_remarks_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{321,52},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_caozuo_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{782,310},{107,53}}</string>
+				<string>{{676,457},{135,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<true />
 				<key>sourceSize</key>
-				<string>{107,53}</string>
+				<string>{135,66}</string>
 			</dict>
-			<key>A_FriendCard/Member/btn_chakanCY_n.png</key>
+			<key>A_FriendCard/Member/btn_add.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{529,52},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_chakanCY_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{606,52},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_frozen_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,62},{204,73}}</string>
+				<string>{{60,972},{39,39}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_frozen_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{210,62},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_group_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,139},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_group_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,216},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_mamager_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{310,129},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_mamager_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{287,206},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_notAdmit_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{210,270},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_notAdmit_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,293},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_setgongxian1.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,370},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_setgongxian2.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,447},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_tichu_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{895,2},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_tichu_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1103,2},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_unfrozen_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1311,2},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_unfrozen_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1519,2},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_unMamager_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1727,2},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_unMamager_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1935,2},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_unZhuli_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{683,79},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_unZhuli_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{891,79},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_zhuli_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1099,79},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_zhuli_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1307,79},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btna_group_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1515,79},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/btna_unGroup_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1723,79},{204,73}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,73}</string>
-			</dict>
-			<key>A_FriendCard/Member/cy_jujue_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1330,233},{132,54}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{132,54}</string>
-			</dict>
-			<key>A_FriendCard/Member/cy_jujue_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1030,289},{132,54}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{132,54}</string>
-			</dict>
-			<key>A_FriendCard/Member/cy_tongguo_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{891,303},{132,54}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{132,54}</string>
-			</dict>
-			<key>A_FriendCard/Member/cy_tongguo_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1166,289},{132,54}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{132,54}</string>
-			</dict>
-			<key>A_FriendCard/Member/cy_zhuli_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{495,260},{204,72}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{204,72}</string>
-			</dict>
-			<key>A_FriendCard/Member/cy_zhuli_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{571,260},{204,72}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{204,72}</string>
-			</dict>
-			<key>A_FriendCard/Member/cy_zuzhang_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{287,283},{204,72}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,72}</string>
-			</dict>
-			<key>A_FriendCard/Member/cy_zuzhang_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{287,359},{204,72}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{204,72}</string>
-			</dict>
-			<key>A_FriendCard/Member/userStop.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2008,210},{36,54}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{36,54}</string>
+				<string>{39,39}</string>
 			</dict>
 			<key>A_FriendCard/Member/btn_add_again_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{647,310},{131,54}}</string>
+				<string>{{693,732},{131,54}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -414,7 +40,7 @@
 			<key>A_FriendCard/Member/btn_add_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{60,524},{166,61}}</string>
+				<string>{{654,287},{166,61}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -425,29 +51,29 @@
 			<key>A_FriendCard/Member/btn_add_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{125,524},{166,61}}</string>
+				<string>{{686,210},{166,61}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{166,61}</string>
 			</dict>
 			<key>A_FriendCard/Member/btn_AddOtherClub_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{683,156},{204,73}}</string>
+				<string>{{2,687},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{204,73}</string>
 			</dict>
 			<key>A_FriendCard/Member/btn_AddOtherClub_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{891,156},{204,73}}</string>
+				<string>{{2,895},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -458,18 +84,18 @@
 			<key>A_FriendCard/Member/btn_admit_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1099,156},{204,73}}</string>
+				<string>{{52,321},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{204,73}</string>
 			</dict>
 			<key>A_FriendCard/Member/btn_admit_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1307,156},{204,73}}</string>
+				<string>{{52,529},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -477,32 +103,10 @@
 				<key>sourceSize</key>
 				<string>{204,73}</string>
 			</dict>
-			<key>A_FriendCard/Member/btn_rule_n.png</key>
+			<key>A_FriendCard/Member/btn_Button_remarks_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1030,233},{146,52}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{146,52}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_rule_s.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1180,233},{146,52}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{146,52}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_tick_all_n.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{1515,156},{204,73}}</string>
+				<string>{{52,606},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -510,10 +114,142 @@
 				<key>sourceSize</key>
 				<string>{204,73}</string>
 			</dict>
-			<key>A_FriendCard/Member/btn_tick_all_s.png</key>
+			<key>A_FriendCard/Member/btn_Button_remarks_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1723,156},{204,73}}</string>
+				<string>{{79,683},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_caozuo_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{693,790},{107,53}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{107,53}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_chakanCY_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{156,683},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_chakanCY_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{210,891},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_frozen_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{233,683},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_frozen_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{62,2},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_group_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{62,210},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_group_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{139,2},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_jian.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{103,972},{39,39}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{39,39}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_mamager_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{216,2},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_mamager_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{129,310},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_notAdmit_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{206,287},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_notAdmit_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{270,210},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -524,18 +260,18 @@
 			<key>A_FriendCard/Member/btn_notAdmit2_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{1931,210},{204,73}}</string>
+				<string>{{260,495},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{204,73}</string>
 			</dict>
 			<key>A_FriendCard/Member/btn_notAdmit2_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{683,233},{204,73}}</string>
+				<string>{{260,572},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -543,43 +279,32 @@
 				<key>sourceSize</key>
 				<string>{204,73}</string>
 			</dict>
-			<key>A_FriendCard/Member/all_person.png</key>
+			<key>A_FriendCard/Member/btn_rule_n.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{891,233},{135,66}}</string>
+				<string>{{719,275},{146,52}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
-				<string>{135,66}</string>
+				<string>{146,52}</string>
 			</dict>
-			<key>A_FriendCard/Member/btn_add.png</key>
+			<key>A_FriendCard/Member/btn_rule_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{839,310},{39,39}}</string>
+				<string>{{755,2},{146,52}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
-				<string>{39,39}</string>
+				<string>{146,52}</string>
 			</dict>
-			<key>A_FriendCard/Member/btn_jian.png</key>
+			<key>A_FriendCard/Member/btn_set_group.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{839,353},{39,39}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{39,39}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_zh_paixu.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{287,435},{186,66}}</string>
+				<string>{{657,932},{186,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -587,25 +312,333 @@
 				<key>sourceSize</key>
 				<string>{186,66}</string>
 			</dict>
-			<key>A_FriendCard/Member/cy_tuichu_n.png</key>
+			<key>A_FriendCard/Member/btn_setgongxian1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{287,62},{33,27}}</string>
+				<string>{{293,2},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<true />
 				<key>sourceSize</key>
-				<string>{33,27}</string>
+				<string>{204,73}</string>
 			</dict>
-			<key>A_FriendCard/Member/list_cell_sort.png</key>
+			<key>A_FriendCard/Member/btn_setgongxian2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{287,99},{31,19}}</string>
+				<string>{{370,2},{204,73}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_tichu_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{447,2},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_tichu_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{283,287},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_tick_all_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{360,287},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_tick_all_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{437,287},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_unfrozen_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{478,210},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_unfrozen_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{524,2},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_unMamager_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{601,2},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_unMamager_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{678,2},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_unZhuli_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{310,649},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_unZhuli_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{387,649},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_zh_paixu.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{514,287},{186,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{186,66}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_zh_paixu1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{584,287},{186,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{186,66}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_zhuli_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{418,857},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btn_zhuli_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{449,934},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btna_group_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{464,649},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/btna_unGroup_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{468,495},{204,73}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{204,73}</string>
+			</dict>
+			<key>A_FriendCard/Member/check_bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{146,972},{37,38}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{37,38}</string>
+			</dict>
+			<key>A_FriendCard/Member/checked_bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{187,972},{37,38}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{37,38}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_jujue_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{755,152},{132,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{132,54}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_jujue_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{811,2},{132,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{132,54}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_tongguo_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{869,2},{132,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{132,54}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_tongguo_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{693,596},{132,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{132,54}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_tuichu_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{62,287},{33,27}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{33,27}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_zhuli_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{468,572},{204,72}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{204,72}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_zhuli_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{541,648},{204,72}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,72}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_zuzhang_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{617,648},{204,72}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{204,72}</string>
+			</dict>
+			<key>A_FriendCard/Member/cy_zuzhang_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{626,856},{204,72}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{204,72}</string>
+			</dict>
+			<key>A_FriendCard/Member/list_cell_sort.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{99,287},{31,19}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
 				<key>sourceSize</key>
 				<string>{31,19}</string>
 			</dict>
@@ -616,42 +649,42 @@
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{315,56}</string>
 			</dict>
 			<key>A_FriendCard/Member/sousuo_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{321,2},{362,46}}</string>
+				<string>{{2,321},{362,46}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{362,46}</string>
+			</dict>
+			<key>A_FriendCard/Member/userStop.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,972},{36,54}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{36,54}</string>
+			</dict>
+			<key>A_FriendCard/Member/what_group.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{228,968},{217,54}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{362,46}</string>
-			</dict>
-			<key>A_FriendCard/Member/what_group.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{2,524},{217,54}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
 				<string>{217,54}</string>
-			</dict>
-			<key>A_FriendCard/Member/btn_set_group.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{210,478},{186,66}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{186,66}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>
@@ -663,14 +696,14 @@
 			<key>realTextureFileName</key>
 			<string>Member.png</string>
 			<key>size</key>
-			<string>{2046,743}</string>
+			<string>{925,1024}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>2046</integer>
+			<integer>925</integer>
 			<key>height</key>
-			<integer>743</integer>
+			<integer>1024</integer>
 		</dict>
 	</dict>
 </plist>

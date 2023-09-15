@@ -496,10 +496,10 @@ UpdateView = cc.Layer.extend({
         setWgtLayout(bgMask, [1, 1], [0.5, 0], [0, 0], false, true);
         setWgtLayout(barbk, [1, 1], [0.5, 0.1], [0, 0], false, true);
         setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.07], [0, 0], false, true);
-        if (isIPhoneX()) {
-            setWgtLayout(barbk, [1, 1], [0.5, 0.12], [0, 0], false, true);
-            setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.9], [0, 0], false, true);
-        }
+        // if (isIPhoneX()) {
+        //     setWgtLayout(barbk, [1, 1], [0.5, 0.12], [0, 0], false, true);
+        //     setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.9], [0, 0], false, true);
+        // }
         textLoad.ignoreContentAdaptWithSize(true);
         var jindu = 0;
         textLoad.runAction(cc.repeatForever(cc.sequence(cc.callFunc(function () {

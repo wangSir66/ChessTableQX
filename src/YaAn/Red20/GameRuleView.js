@@ -1,6 +1,6 @@
 var GameRule_YARed20 = GameRuleView.extend({
     ctor: function () {
-        this._super('bg_red20');
+        this._super('A_bg_red20');
     },
     reductionRule: function () {
         this._super();

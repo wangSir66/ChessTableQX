@@ -768,7 +768,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/img_hengxian.png",
-                      "Plist": "A_FriendCard/GaojiSet.plist"
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 266,
                     "Scale9Width": 279,
@@ -1411,8 +1411,6 @@
       "UsedResources": [
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/GaojiSet.plist",
-        "A_FriendCard/GaojiSet.png",
         "friendCards/btn_x_normal.png",
         "friendCards/common/btn_agree_n.png",
         "friendCards/common/btn_agree_s.png",
