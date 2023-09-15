@@ -68,15 +68,14 @@
               "X": 1280.0,
               "Y": 720.0
             },
-            "Alpha": 216,
             "Name": "block",
             "ctype": "PanelObjectData"
           },
           {
             "FileData": {
-              "Type": "Normal",
+              "Type": "MarkedSubImage",
               "Path": "A_FriendCard/PlayWay/top_title.png",
-              "Plist": ""
+              "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
             },
             "Scale9OriginX": 129,
             "Scale9OriginY": 22,
@@ -120,9 +119,9 @@
           },
           {
             "FileData": {
-              "Type": "Normal",
+              "Type": "MarkedSubImage",
               "Path": "A_FriendCard/Main/tc_bg_left.png",
-              "Plist": ""
+              "Plist": "A_FriendCard/FriendCardMain.plist"
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
@@ -554,9 +553,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -603,9 +602,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/PlayWay/inner_titile.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -679,10 +678,8 @@
       "UsedResources": [
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/Main/tc_bg_left.png",
-        "A_FriendCard/Main/tc_bg_nei.png",
-        "A_FriendCard/PlayWay/inner_titile.png",
-        "A_FriendCard/PlayWay/top_title.png",
+        "A_FriendCard/PlayWay_Record_Tongji.plist",
+        "A_FriendCard/PlayWay_Record_Tongji.png",
         "A_FriendCard/tc_bg.png",
         "A_FriendCard/tc_bg_nei0.png",
         "fonts/fzcy.ttf"

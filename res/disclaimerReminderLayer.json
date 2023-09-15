@@ -404,29 +404,29 @@
               },
               {
                 "NormalBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_20.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_20.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -594,29 +594,29 @@
               {
                 "CheckedState": true,
                 "NormalBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_20.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_20.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -734,10 +734,10 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
         "createNewPng/cancle_xin_n.png",
         "createNewPng/cancle_xin_s.png",
-        "createNewPng/daTC1_19.png",
-        "createNewPng/daTC1_20.png",
         "createNewPng/sure_xin_n.png",
         "createNewPng/sure_xin_s.png",
         "createNewPng/tishi_xin.png",

@@ -1,7 +1,7 @@
 //选项选中时的颜色处理  统一处理
-const BTNCOLOR1 = cc.color('#D96334');//选中
+const BTNCOLOR1 = cc.color('#3271F6');//选中
 const BTNCOLOR2 = cc.color('#8E8178');//禁用
-const BTNCOLOR3 = cc.color("#602E1A");//未选中
+const BTNCOLOR3 = cc.color("#3271F6");//未选中
 const KEYCURRGAMERULE = 'KEY_CURR_GAME_RULE';//缓存游戏规则
 
 var CreateRoomNodeYaAn = cc.Node.extend({
@@ -225,6 +225,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                             this.payWayNodeArray.push(col);
                         } else if (col.name == 'btnRadio0' || col.name == 'btnRadio1' || col.name == 'btnRadio2') {
                             col.getChildByName('text_0').setString('');
+                            col.getChildByName('text_0').setTextColor(cc.color("#F95824"))
                             this.roundNodeArray.push(col)
                         }
                     }
@@ -232,6 +233,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                         col.addEventListener(this.callSelectBack.bind(this), col);
                         this.addListenerText(col, null, this.callSelectBack.bind(this));
                     }
+                    col.getChildByName('text').setColor(cc.color(this._unSelectColor));
                 }
             }
             if (btns.length > 0) {
@@ -676,7 +678,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         //add by sking for create room need GPS
         var _selectCol = CREATEROOM_COLOR_1;
         var _UnSelectCol = CREATEROOM_COLOR_3;
-        this._nodeGPS = new ccui.CheckBox("createNewPng/daTC1_19.png", "createNewPng/daTC1_20.png");
+        this._nodeGPS = new ccui.CheckBox("A_Common/Main/daTC1_19.png", "A_Common/Main/daTC1_20.png", 1);
         this._nodeGPS.setPosition(cc.p(50, 20));
         this.bg_node.addChild(this._nodeGPS, 100);
         if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ) {
@@ -1058,7 +1060,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                     }
                     else {
                         text.setString(roundNumObj[i] + "局");
-                        text_0.setString("(" + str_pay[i] + this._costName + ")");
+                        text_0.setString(" x" + str_pay[i]);
                     }
                     if (roundNumObj[i].indexOf("quan") >= 0) {
                         text.setString(roundNumObj[i]);

@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="friendcard_warningScore" Type="Layer" ID="6f62dfe7-c818-4876-8192-04713c6cdb8a" Version="3.10.0.0" />
+  <PropertyGroup Name="A_Friendcard_warningScore" Type="Layer" ID="6f62dfe7-c818-4876-8192-04713c6cdb8a" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -156,7 +156,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" />
                     <PreSize X="1.0000" Y="0.0250" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="text_group" ActionTag="-1319248154" Tag="5089" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="202.9783" RightMargin="679.0217" TopMargin="27.1600" BottomMargin="26.8400" FontSize="26" LabelText="1组" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="39.0000" Y="26.0000" />
@@ -193,7 +193,7 @@
                     <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                     <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                     <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
-                    <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/img_gou.png" Plist="A_Common/Common.plist" />
+                    <NodeNormalFileData Type="Default" Path="Default/CheckBoxNode_Normal.png" Plist="" />
                     <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="btn_add" ActionTag="268915406" Tag="318" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="875.0201" RightMargin="9.9799" TopMargin="21.5000" BottomMargin="21.5000" TouchEnable="True" FontSize="36" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="12" Scale9Height="19" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -307,7 +307,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" />
                     <PreSize X="0.8654" Y="0.0488" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="text_title_name" ActionTag="211794755" Tag="5101" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="341.0341" RightMargin="533.9659" TopMargin="10.2008" BottomMargin="7.7992" FontSize="23" LabelText="昵称" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="46.0000" Y="23.0000" />
@@ -407,7 +407,7 @@
                 <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                 <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
                 <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
-                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/img_gou.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="Default" Path="Default/CheckBoxNode_Normal.png" Plist="" />
                 <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/btn_chebox_fang.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="img_scoreBg" ActionTag="150037009" Tag="80" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="532.3565" RightMargin="623.6435" TopMargin="603.3560" BottomMargin="81.6440" LeftEage="27" RightEage="27" TopEage="11" BottomEage="11" Scale9OriginX="27" Scale9OriginY="11" Scale9Width="30" Scale9Height="12" ctype="ImageViewObjectData">

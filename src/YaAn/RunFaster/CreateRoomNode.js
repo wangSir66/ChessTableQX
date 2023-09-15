@@ -1,6 +1,6 @@
 var CreateRoomNode_PaoDeKuaiYA = CreateRoomNodeYaAn.extend({
     initAll: function () {
-        const bg_node = ccs.load("bg_RunFasterYaAn.json").node;
+        const bg_node = ccs.load("A_bg_RunFasterYaAn.json").node;
         this.addChild(bg_node);
         bg_node.setScale(0.9, 0.9)
         bg_node.setPosition(-200, 10);

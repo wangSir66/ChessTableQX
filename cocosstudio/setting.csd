@@ -345,11 +345,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.1249" Y="0.4200" />
                 <PreSize X="0.0360" Y="0.0556" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_15.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="gameBg2" ActionTag="-957465733" Tag="396" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="251.8632" RightMargin="713.1368" TopMargin="368.5237" BottomMargin="260.4763" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="36.0000" Y="37.0000" />
@@ -383,11 +383,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.2697" Y="0.4200" />
                 <PreSize X="0.0360" Y="0.0556" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_15.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="gameBg3" ActionTag="1942902903" Tag="460" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="106.8632" RightMargin="858.1368" TopMargin="488.4037" BottomMargin="140.5963" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="36.0000" Y="37.0000" />
@@ -421,11 +421,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.1249" Y="0.2400" />
                 <PreSize X="0.0360" Y="0.0556" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_15.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="gameBg4" ActionTag="-110252906" Tag="70" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="251.8632" RightMargin="713.1368" TopMargin="488.4037" BottomMargin="140.5963" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="36.0000" Y="37.0000" />
@@ -459,11 +459,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.2697" Y="0.2400" />
                 <PreSize X="0.0360" Y="0.0556" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_15.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="MJBg" ActionTag="-128460747" Tag="233" IconVisible="False" LeftMargin="407.0000" RightMargin="276.0000" TopMargin="243.0000" BottomMargin="127.0000" Scale9Enable="True" LeftEage="31" RightEage="31" TopEage="31" BottomEage="31" Scale9OriginX="31" Scale9OriginY="31" Scale9Width="34" Scale9Height="34" ctype="ImageViewObjectData">
                 <Size X="318.0000" Y="296.0000" />
@@ -553,11 +553,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4695" Y="0.4200" />
                 <PreSize X="0.0360" Y="0.0556" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_15.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="MJBg2" ActionTag="41214748" Tag="463" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="601.8632" RightMargin="363.1368" TopMargin="367.7800" BottomMargin="261.2200" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="36.0000" Y="37.0000" />
@@ -603,11 +603,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6194" Y="0.4200" />
                 <PreSize X="0.0360" Y="0.0556" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_15.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="MJBg3" ActionTag="418047026" Tag="469" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="451.9280" RightMargin="513.0720" TopMargin="492.7882" BottomMargin="136.2118" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="36.0000" Y="37.0000" />
@@ -653,11 +653,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4695" Y="0.2323" />
                 <PreSize X="0.0360" Y="0.0556" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_15.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="MJBg4" ActionTag="-1462191101" Tag="73" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="602.0000" RightMargin="363.0000" TopMargin="494.3200" BottomMargin="134.6800" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="36.0000" Y="37.0000" />
@@ -703,11 +703,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.6194" Y="0.2300" />
                 <PreSize X="0.0360" Y="0.0556" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_15.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_18.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_15.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_18.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="voiceBg" ActionTag="1220304910" Tag="237" IconVisible="False" LeftMargin="750.0000" RightMargin="73.0000" TopMargin="243.0000" BottomMargin="127.0000" Scale9Enable="True" LeftEage="31" RightEage="31" TopEage="31" BottomEage="31" Scale9OriginX="31" Scale9OriginY="31" Scale9Width="34" Scale9Height="34" ctype="ImageViewObjectData">
                 <Size X="178.0000" Y="296.0000" />
@@ -775,11 +775,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.7892" Y="0.5200" />
                 <PreSize X="0.0380" Y="0.0601" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="voice_2" ActionTag="-1522213368" Tag="140" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="770.9999" RightMargin="192.0001" TopMargin="353.0932" BottomMargin="272.9068" TouchEnable="True" ctype="CheckBoxObjectData">
                 <Size X="38.0000" Y="40.0000" />
@@ -803,11 +803,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.7892" Y="0.4398" />
                 <PreSize X="0.0380" Y="0.0601" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="autoReady" ActionTag="-118196466" Tag="252" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="770.9999" RightMargin="192.0001" TopMargin="406.5064" BottomMargin="219.4936" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                 <Size X="38.0000" Y="40.0000" />
@@ -831,11 +831,11 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.7892" Y="0.3596" />
                 <PreSize X="0.0380" Y="0.0601" />
-                <NormalBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <PressedBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <DisableBackFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
-                <NodeNormalFileData Type="Normal" Path="createNewPng/daTC1_20.png" Plist="" />
-                <NodeDisableFileData Type="Normal" Path="createNewPng/daTC1_19.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <PressedBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <DisableBackFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
+                <NodeNormalFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_20.png" Plist="A_Common/Common.plist" />
+                <NodeDisableFileData Type="MarkedSubImage" Path="A_Common/Main/daTC1_19.png" Plist="A_Common/Common.plist" />
               </AbstractNodeData>
               <AbstractNodeData Name="btn_openPosition" ActionTag="1048055503" Tag="1109" IconVisible="False" LeftMargin="68.0001" RightMargin="820.9999" TopMargin="571.1093" BottomMargin="48.8907" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="82" Scale9Height="24" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="112.0000" Y="46.0000" />

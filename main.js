@@ -7,8 +7,8 @@ function screenChange(isW) {
     } else {
         w = 640;
         h = 360;
-        // w = 2436;
-        // h = 1000;
+        // w = 1800;
+        // h = 640;
     }
     MjClient.size = { width: w, height: h };
     cc.view.setFrameSize(w, h);
@@ -33,7 +33,6 @@ cc.game.onStart = function () {
     if (initResourceDir)
         initResourceDir();
 
-    cc.log("******:" + JSON.stringify(json_res[MjClient.getAppType()]))
     var game_res = json_res[MjClient.getAppType()].concat(sound_res[MjClient.getAppType()]);
 
     cc.spriteFrameCache.addSpriteFrames("A_Common/HeadImgs.plist", "A_Common/HeadImgs.png");

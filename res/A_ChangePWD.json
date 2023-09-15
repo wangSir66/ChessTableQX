@@ -218,15 +218,15 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Default",
-                      "Path": "Default/ImageFile.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/Main/input_bg.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 30,
                     "Scale9OriginY": 16,
-                    "Scale9Width": 31,
-                    "Scale9Height": 18,
+                    "Scale9Width": 396,
+                    "Scale9Height": 25,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -246,13 +246,13 @@
                       "Y": 0.75
                     },
                     "PreSize": {
-                      "X": 0.5416,
-                      "Y": 0.1786
+                      "X": 0.6657,
+                      "Y": 0.2036
                     },
-                    "LeftMargin": 193.2397,
-                    "RightMargin": 120.7603,
-                    "TopMargin": 45.0,
-                    "BottomMargin": 185.0,
+                    "LeftMargin": 150.7397,
+                    "RightMargin": 78.2603,
+                    "TopMargin": 41.5,
+                    "BottomMargin": 181.5,
                     "Tag": 506,
                     "Children": [
                       {
@@ -288,16 +288,16 @@
                         },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": -0.0126,
-                          "Y": 0.5
+                          "X": -0.0103,
+                          "Y": 0.4386
                         },
                         "PreSize": {
-                          "X": 0.3019,
-                          "Y": 0.56
+                          "X": 0.2456,
+                          "Y": 0.4912
                         },
                         "LeftMargin": -116.6771,
-                        "RightMargin": 375.6771,
-                        "TopMargin": 11.0,
+                        "RightMargin": 460.6771,
+                        "TopMargin": 18.0,
                         "BottomMargin": 11.0,
                         "Tag": 507,
                         "ActionTag": 1036309688,
@@ -311,23 +311,23 @@
                     ],
                     "ActionTag": 763891471,
                     "Size": {
-                      "X": 371.0,
-                      "Y": 50.0
+                      "X": 456.0,
+                      "Y": 57.0
                     },
                     "Name": "Image_pwd",
                     "ctype": "ImageViewObjectData"
                   },
                   {
                     "FileData": {
-                      "Type": "Default",
-                      "Path": "Default/ImageFile.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/Main/input_bg.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 30,
                     "Scale9OriginY": 16,
-                    "Scale9Width": 31,
-                    "Scale9Height": 18,
+                    "Scale9Width": 396,
+                    "Scale9Height": 25,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -347,13 +347,13 @@
                       "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.5416,
-                      "Y": 0.1786
+                      "X": 0.6657,
+                      "Y": 0.2036
                     },
-                    "LeftMargin": 194.5,
-                    "RightMargin": 119.5,
-                    "TopMargin": 115.0,
-                    "BottomMargin": 115.0,
+                    "LeftMargin": 152.0,
+                    "RightMargin": 77.0,
+                    "TopMargin": 111.5,
+                    "BottomMargin": 111.5,
                     "Tag": 530,
                     "Children": [
                       {
@@ -389,16 +389,16 @@
                         },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": -0.0126,
-                          "Y": 0.5
+                          "X": -0.0103,
+                          "Y": 0.4386
                         },
                         "PreSize": {
-                          "X": 0.3019,
-                          "Y": 0.56
+                          "X": 0.2456,
+                          "Y": 0.4912
                         },
                         "LeftMargin": -116.6771,
-                        "RightMargin": 375.6771,
-                        "TopMargin": 11.0,
+                        "RightMargin": 460.6771,
+                        "TopMargin": 18.0,
                         "BottomMargin": 11.0,
                         "Tag": 531,
                         "ActionTag": 1742174373,
@@ -412,23 +412,23 @@
                     ],
                     "ActionTag": -1481738149,
                     "Size": {
-                      "X": 371.0,
-                      "Y": 50.0
+                      "X": 456.0,
+                      "Y": 57.0
                     },
                     "Name": "Image_pwd_0",
                     "ctype": "ImageViewObjectData"
                   },
                   {
                     "FileData": {
-                      "Type": "Default",
-                      "Path": "Default/ImageFile.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/Main/input_bg.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 30,
                     "Scale9OriginY": 16,
-                    "Scale9Width": 31,
-                    "Scale9Height": 18,
+                    "Scale9Width": 396,
+                    "Scale9Height": 25,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -448,13 +448,13 @@
                       "Y": 0.25
                     },
                     "PreSize": {
-                      "X": 0.5416,
-                      "Y": 0.1786
+                      "X": 0.6657,
+                      "Y": 0.2036
                     },
-                    "LeftMargin": 194.5,
-                    "RightMargin": 119.5,
-                    "TopMargin": 185.0,
-                    "BottomMargin": 45.0,
+                    "LeftMargin": 152.0,
+                    "RightMargin": 77.0,
+                    "TopMargin": 181.5,
+                    "BottomMargin": 41.5,
                     "Tag": 532,
                     "Children": [
                       {
@@ -490,16 +490,16 @@
                         },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": -0.0126,
-                          "Y": 0.5
+                          "X": -0.0103,
+                          "Y": 0.4386
                         },
                         "PreSize": {
-                          "X": 0.3774,
-                          "Y": 0.56
+                          "X": 0.307,
+                          "Y": 0.4912
                         },
                         "LeftMargin": -144.6771,
-                        "RightMargin": 375.6771,
-                        "TopMargin": 11.0,
+                        "RightMargin": 460.6771,
+                        "TopMargin": 18.0,
                         "BottomMargin": 11.0,
                         "Tag": 533,
                         "ActionTag": 483680507,
@@ -513,8 +513,8 @@
                     ],
                     "ActionTag": 1944727064,
                     "Size": {
-                      "X": 371.0,
-                      "Y": 50.0
+                      "X": 456.0,
+                      "Y": 57.0
                     },
                     "Name": "Image_pwd_1",
                     "ctype": "ImageViewObjectData"
@@ -775,7 +775,8 @@
       "UsedResources": [
         "A_Common/Common.plist",
         "A_Common/Common.png",
-        "Default/ImageFile.png",
+        "A_Login/Login.plist",
+        "A_Login/Login.png",
         "fonts/fzcy.ttf"
       ],
       "ctype": "GameFileData"

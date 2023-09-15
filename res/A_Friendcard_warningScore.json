@@ -742,7 +742,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/img_hengxian.png",
-                      "Plist": "A_FriendCard/GaojiSet.plist"
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 266,
                     "Scale9Width": 279,
@@ -921,9 +921,9 @@
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Common/Main/img_gou.png",
-                      "Plist": "A_Common/Common.plist"
+                      "Type": "Default",
+                      "Path": "Default/CheckBoxNode_Normal.png",
+                      "Plist": ""
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
@@ -1462,7 +1462,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/img_hengxian.png",
-                      "Plist": "A_FriendCard/GaojiSet.plist"
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 266,
                     "Scale9Width": 279,
@@ -1886,9 +1886,9 @@
                   "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "A_Common/Main/img_gou.png",
-                  "Plist": "A_Common/Common.plist"
+                  "Type": "Default",
+                  "Path": "Default/CheckBoxNode_Normal.png",
+                  "Plist": ""
                 },
                 "NodeDisableFileData": {
                   "Type": "MarkedSubImage",
@@ -2209,14 +2209,13 @@
         "A_Common/Common.png",
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/GaojiSet.plist",
-        "A_FriendCard/GaojiSet.png",
         "createNewPng/bg_difen.png",
         "createNewPng/btn_add_n.png",
         "createNewPng/btn_add_s.png",
         "createNewPng/btn_sub_n.png",
         "createNewPng/btn_sub_s.png",
         "Default/Button_Disable.png",
+        "Default/CheckBoxNode_Normal.png",
         "Default/ImageFile.png",
         "friendCards/btn_x_normal.png",
         "friendCards/common/headMask.png",

@@ -24,6 +24,7 @@
       <FilePathData Path="A_Home/Main/head_lb_bg.png" />
       <FilePathData Path="A_Home/Main/laba_bg.png" />
       <FilePathData Path="A_Home/Main/btn_shenhe.png" />
+      <FilePathData Path="A_Home/Main/girl_1.png" />
     </ImageFiles>
     <MaxSize Width="2048" Height="1024" />
   </Content>

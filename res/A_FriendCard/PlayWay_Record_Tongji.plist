@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>A_FriendCard/Tongji/btn_join_rank_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{147,177},{182,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{182,59}</string>
+			</dict>
+			<key>A_FriendCard/Tongji/btn_join_rank_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{321,57},{182,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{182,59}</string>
+			</dict>
+			<key>A_FriendCard/Tongji/btn_score_rank_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{333,120},{182,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{182,59}</string>
+			</dict>
+			<key>A_FriendCard/Tongji/btn_score_rank_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{507,57},{182,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{182,59}</string>
+			</dict>
+			<key>A_FriendCard/Tongji/btn_winner_rank_n.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{333,183},{182,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{182,59}</string>
+			</dict>
+			<key>A_FriendCard/Tongji/btn_winner_rank_s.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{693,57},{182,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{182,59}</string>
+			</dict>
+			<key>A_FriendCard/Record/btn_chaxun.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{519,120},{135,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{135,66}</string>
+			</dict>
+			<key>A_FriendCard/Record/btn_playway.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{819,57},{135,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{135,66}</string>
+			</dict>
+			<key>A_FriendCard/Record/btn_quanbufenzu.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1099,2},{135,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{135,66}</string>
+			</dict>
+			<key>A_FriendCard/Record/btn_today.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1099,141},{135,66}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{135,66}</string>
+			</dict>
+			<key>A_FriendCard/Record/date_kuang.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,203},{141,39}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{141,39}</string>
+			</dict>
+			<key>A_FriendCard/Record/top_title.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,57},{315,56}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{315,56}</string>
+			</dict>
+			<key>A_FriendCard/Record/wenzi_bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{908,51}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{908,51}</string>
+			</dict>
+			<key>A_FriendCard/Record/wushu_bg.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{914,2},{181,197}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{181,197}</string>
+			</dict>
+			<key>A_FriendCard/PlayWay/fengexian.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,246},{976,2}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{976,2}</string>
+			</dict>
+			<key>A_FriendCard/PlayWay/inner_titile.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{756,57},{182,59}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{182,59}</string>
+			</dict>
+			<key>A_FriendCard/PlayWay/top_title.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,117},{315,56}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{315,56}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>PlayWay_Record_Tongji.png</string>
+			<key>realTextureFileName</key>
+			<string>PlayWay_Record_Tongji.png</string>
+			<key>size</key>
+			<string>{1236,250}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1236</integer>
+			<key>height</key>
+			<integer>250</integer>
+		</dict>
+	</dict>
+</plist>

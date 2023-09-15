@@ -28,7 +28,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5700" Y="1.0008" />
             <PreSize X="0.2461" Y="0.0778" />
-            <FileData Type="Normal" Path="A_FriendCard/Record/top_title.png" Plist="" />
+            <FileData Type="MarkedSubImage" Path="A_FriendCard/Record/top_title.png" Plist="A_FriendCard/PlayWay_Record_Tongji.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="Image_di" ActionTag="1991488773" Tag="1263" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentHeightEnable="True" PercentHeightEnabled="True" RightMargin="1087.0000" TouchEnable="True" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="15" BottomEage="15" Scale9OriginX="15" Scale9OriginY="15" Scale9Width="163" Scale9Height="690" ctype="ImageViewObjectData">
             <Size X="193.0000" Y="720.0000" />
@@ -108,7 +108,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition Y="0.5000" />
             <PreSize X="0.1508" Y="1.0000" />
-            <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_left.png" Plist="" />
+            <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_left.png" Plist="A_FriendCard/FriendCardMain.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="back" ActionTag="-803733225" Tag="1589" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ColorAngle="90.0000" Scale9Enable="True" LeftEage="370" RightEage="370" TopEage="227" BottomEage="227" Scale9OriginX="-370" Scale9OriginY="-227" Scale9Width="740" Scale9Height="454" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
@@ -135,7 +135,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5547" Y="0.4652" />
                 <PreSize X="0.1414" Y="0.2736" />
-                <FileData Type="Normal" Path="A_FriendCard/Record/wushu_bg.png" Plist="" />
+                <FileData Type="MarkedSubImage" Path="A_FriendCard/Record/wushu_bg.png" Plist="A_FriendCard/PlayWay_Record_Tongji.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="roomRecordPanel" ActionTag="1190914030" Tag="1388" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="220.6160" RightMargin="29.3840" TopMargin="69.3723" BottomMargin="30.6277" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
@@ -197,7 +197,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.5000" Y="0.6448" />
                         <PreSize X="0.9600" Y="0.0118" />
-                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
+                        <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/FriendCardMain.plist" />
                       </AbstractNodeData>
                       <AbstractNodeData Name="tableid" ActionTag="324873056" Tag="1395" IconVisible="False" LeftMargin="249.7575" RightMargin="637.2425" TopMargin="21.0000" BottomMargin="127.0000" FontSize="22" LabelText="房间ID:123456" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="143.0000" Y="22.0000" />

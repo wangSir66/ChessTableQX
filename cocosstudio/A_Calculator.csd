@@ -33,7 +33,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4044" Y="0.5000" />
                     <PreSize X="0.6998" Y="0.9500" />
-                    <FileData Type="Normal" Path="A_Home/JoinRoom/shuru.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/JoinRoom/shuru.png" Plist="A_Home/JoinRoom.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="del" ActionTag="1339784692" Tag="1358" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="391.0000" RightMargin="28.0000" TopMargin="-2.5000" BottomMargin="-2.5000" TouchEnable="True" FontSize="40" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="64" Scale9Height="43" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="94.0000" Y="65.0000" />
@@ -44,8 +44,8 @@
                     <PrePosition X="0.8538" Y="0.5000" />
                     <PreSize X="0.1832" Y="1.0833" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/gb.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/gb.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/gb.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/gb.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -73,8 +73,8 @@
                     <PrePosition X="0.5000" Y="0.1375" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/0.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/0.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/0.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/0.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -87,8 +87,8 @@
                     <PrePosition X="0.1979" Y="0.7950" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/1.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/1.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/1.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/1.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -101,8 +101,8 @@
                     <PrePosition X="0.5000" Y="0.7950" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/2.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/2.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/2.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/2.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -115,8 +115,8 @@
                     <PrePosition X="0.8021" Y="0.7950" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/3.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/3.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/3.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/3.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -129,8 +129,8 @@
                     <PrePosition X="0.1979" Y="0.5750" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/4.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/4.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/4.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/4.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -143,8 +143,8 @@
                     <PrePosition X="0.5000" Y="0.5750" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/5.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/5.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/5.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/5.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -157,8 +157,8 @@
                     <PrePosition X="0.8021" Y="0.5750" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/6.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/6.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/6.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/6.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -171,8 +171,8 @@
                     <PrePosition X="0.1979" Y="0.3550" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/7.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/7.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/7.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/7.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -185,8 +185,8 @@
                     <PrePosition X="0.5000" Y="0.3550" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/8.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/8.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/8.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/8.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -199,8 +199,8 @@
                     <PrePosition X="0.8021" Y="0.3550" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/9.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/9.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/9.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/9.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -213,8 +213,8 @@
                     <PrePosition X="0.1979" Y="0.1375" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/shuzi_dian.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/shuzi_dian.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/shuzi_dian.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/shuzi_dian.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -227,8 +227,8 @@
                     <PrePosition X="0.8021" Y="0.1375" />
                     <PreSize X="0.2943" Y="0.2000" />
                     <TextColor A="255" R="150" G="83" B="44" />
-                    <DisabledFileData Type="Normal" Path="A_Home/JoinRoom/qd.png" Plist="" />
-                    <NormalFileData Type="Normal" Path="A_Home/JoinRoom/qd.png" Plist="" />
+                    <DisabledFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/qd.png" Plist="A_Home/JoinRoom.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/qd.png" Plist="A_Home/JoinRoom.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
@@ -253,7 +253,7 @@
                 <PrePosition X="0.9070" Y="0.9195" />
                 <PreSize X="0.1287" Y="0.1176" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <NormalFileData Type="Normal" Path="A_Home/JoinRoom/bg.png" Plist="" />
+                <NormalFileData Type="MarkedSubImage" Path="A_Home/JoinRoom/bg.png" Plist="A_Home/JoinRoom.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
@@ -264,7 +264,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5000" Y="0.5000" />
             <PreSize X="0.4008" Y="0.7792" />
-            <FileData Type="Normal" Path="A_Home/JoinRoom/dikuang.png" Plist="" />
+            <FileData Type="MarkedSubImage" Path="A_Home/JoinRoom/dikuang.png" Plist="A_Home/JoinRoom.plist" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

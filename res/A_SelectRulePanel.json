@@ -122,9 +122,9 @@
               {
                 "CheckedState": true,
                 "NormalBackFileData": {
-                  "Type": "Normal",
+                  "Type": "MarkedSubImage",
                   "Path": "A_FriendCard/Main/XuanZhong0.png",
-                  "Plist": ""
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
@@ -242,9 +242,9 @@
               {
                 "CheckedState": true,
                 "NormalBackFileData": {
-                  "Type": "Normal",
+                  "Type": "MarkedSubImage",
                   "Path": "A_FriendCard/Main/XuanZhong0.png",
-                  "Plist": ""
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
                 },
                 "PressedBackFileData": {
                   "Type": "MarkedSubImage",
@@ -461,9 +461,9 @@
                       {
                         "CheckedState": true,
                         "NormalBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/XuanZhong0.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "PressedBackFileData": {
                           "Type": "MarkedSubImage",
@@ -675,9 +675,9 @@
                             "Children": [
                               {
                                 "NormalBackFileData": {
-                                  "Type": "Normal",
+                                  "Type": "MarkedSubImage",
                                   "Path": "A_FriendCard/Main/XuanZhong0.png",
-                                  "Plist": ""
+                                  "Plist": "A_FriendCard/FriendCardMain.plist"
                                 },
                                 "PressedBackFileData": {
                                   "Type": "MarkedSubImage",
@@ -846,7 +846,6 @@
       "UsedResources": [
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/Main/XuanZhong0.png",
         "fonts/fzcy.ttf"
       ],
       "ctype": "GameFileData"

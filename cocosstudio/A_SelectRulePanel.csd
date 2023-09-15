@@ -44,7 +44,7 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0542" Y="0.5000" />
                 <PreSize X="0.1125" Y="1.3200" />
-                <NormalBackFileData Type="Normal" Path="A_FriendCard/Main/XuanZhong0.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong0.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <PressedBackFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <NodeNormalFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <NodeDisableFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
@@ -71,12 +71,12 @@
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0542" Y="-0.9870" />
                 <PreSize X="0.1125" Y="1.3200" />
-                <NormalBackFileData Type="Normal" Path="A_FriendCard/Main/XuanZhong0.png" Plist="" />
+                <NormalBackFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong0.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <PressedBackFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <NodeNormalFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
                 <NodeDisableFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_8" ActionTag="-545125596" CallBackType="Touch" Tag="839" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="135.0777" RightMargin="4.9224" TopMargin="-450.0000" BottomMargin="0.0000" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_8" ActionTag="-545125596" CallBackType="Touch" Tag="839" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="135.0777" RightMargin="4.9224" TopMargin="-450.0000" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="1060.0000" Y="500.0000" />
                 <Children>
                   <AbstractNodeData Name="ListView_rule" ActionTag="-1405076684" Tag="132" IconVisible="False" PositionPercentXEnabled="True" PercentWidthEnable="True" PercentWidthEnabled="True" TopMargin="442.0000" BottomMargin="-8.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" IsBounceEnabled="True" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
@@ -104,7 +104,7 @@
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.1160" Y="0.5000" />
                         <PreSize X="0.1274" Y="1.0000" />
-                        <NormalBackFileData Type="Normal" Path="A_FriendCard/Main/XuanZhong0.png" Plist="" />
+                        <NormalBackFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong0.png" Plist="A_FriendCard/FriendCardMain.plist" />
                         <PressedBackFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
                         <NodeNormalFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
                         <NodeDisableFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong1.png" Plist="A_FriendCard/FriendCardMain.plist" />
@@ -137,7 +137,7 @@
                                 <CColor A="255" R="255" G="255" B="255" />
                                 <PrePosition X="0.5000" Y="0.4909" />
                                 <PreSize X="0.5819" Y="1.2000" />
-                                <NormalBackFileData Type="Normal" Path="A_FriendCard/Main/XuanZhong0.png" Plist="" />
+                                <NormalBackFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong0.png" Plist="A_FriendCard/FriendCardMain.plist" />
                                 <PressedBackFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong2.png" Plist="A_FriendCard/FriendCardMain.plist" />
                                 <NodeNormalFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong2.png" Plist="A_FriendCard/FriendCardMain.plist" />
                                 <NodeDisableFileData Type="MarkedSubImage" Path="A_FriendCard/Main/XuanZhong2.png" Plist="A_FriendCard/FriendCardMain.plist" />
@@ -182,10 +182,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="135.0777" Y="0.0000" />
+                <Position X="135.0777" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1126" Y="0.0000" />
+                <PrePosition X="0.1126" />
                 <PreSize X="0.8833" Y="10.0000" />
                 <SingleColor A="255" R="150" G="200" B="255" />
                 <FirstColor A="255" R="150" G="200" B="255" />

@@ -718,29 +718,29 @@
               {
                 "CheckedState": true,
                 "NormalBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_18.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_18.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_18.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_18.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_18.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_18.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_15.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_15.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_18.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_18.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -840,29 +840,29 @@
               },
               {
                 "NormalBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_18.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_18.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_18.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_18.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_18.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_18.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_15.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_15.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_18.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_18.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -1275,29 +1275,29 @@
               },
               {
                 "NormalBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_20.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_20.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -1401,29 +1401,29 @@
               {
                 "CheckedState": true,
                 "NormalBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "PressedBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "DisableBackFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeNormalFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_20.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_20.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "NodeDisableFileData": {
-                  "Type": "Normal",
-                  "Path": "createNewPng/daTC1_19.png",
-                  "Plist": ""
+                  "Type": "MarkedSubImage",
+                  "Path": "A_Common/Main/daTC1_19.png",
+                  "Plist": "A_Common/Common.plist"
                 },
                 "TouchEnable": true,
                 "AnchorPoint": {
@@ -1790,10 +1790,8 @@
         "ctype": "LayerObjectData"
       },
       "UsedResources": [
-        "createNewPng/daTC1_15.png",
-        "createNewPng/daTC1_18.png",
-        "createNewPng/daTC1_19.png",
-        "createNewPng/daTC1_20.png",
+        "A_Common/Common.plist",
+        "A_Common/Common.png",
         "game_picture/btn_x_normal.png",
         "reportPlayer/btn_report.png",
         "setting/setting_home/bar.png",

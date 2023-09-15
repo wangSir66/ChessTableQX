@@ -11,6 +11,6 @@
       <FilePathData Path="A_FriendCard/Guanjia/checkBox_close.png" />
       <FilePathData Path="A_FriendCard/Guanjia/checkBox_open.png" />
     </ImageFiles>
-    <MaxSize Width="1024" Height="2048" />
+    <MaxSize Width="1024" Height="256" />
   </Content>
 </PlistInfoProjectFile>

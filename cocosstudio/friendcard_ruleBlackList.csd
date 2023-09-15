@@ -69,7 +69,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.0222" />
                     <PreSize X="1.0000" Y="0.0111" />
-                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/GaojiSet.plist" />
+                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_hengxian.png" Plist="A_FriendCard/FriendCardMain.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="Image_head" ActionTag="-785108158" Tag="1144" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="24.0000" RightMargin="744.0000" TopMargin="9.0000" BottomMargin="9.0000" LeftEage="14" RightEage="14" TopEage="14" BottomEage="14" Scale9OriginX="14" Scale9OriginY="14" Scale9Width="44" Scale9Height="44" ctype="ImageViewObjectData">
                     <Size X="72.0000" Y="72.0000" />

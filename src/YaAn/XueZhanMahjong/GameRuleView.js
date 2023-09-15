@@ -1,6 +1,6 @@
 var GameRule_YAXueZhan = GameRuleView.extend({
     ctor: function () {
-        this._super('bg_xuezhan');
+        this._super('A_bg_xuezhan');
     },
     reductionRule: function () {
         this._super();

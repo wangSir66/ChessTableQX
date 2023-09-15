@@ -28,7 +28,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5700" Y="1.0008" />
             <PreSize X="0.2461" Y="0.0778" />
-            <FileData Type="Normal" Path="A_FriendCard/Record/top_title.png" Plist="" />
+            <FileData Type="MarkedSubImage" Path="A_FriendCard/Record/top_title.png" Plist="A_FriendCard/PlayWay_Record_Tongji.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="Image_di" ActionTag="1991488773" Tag="1263" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentHeightEnable="True" PercentHeightEnabled="True" RightMargin="1087.0000" TouchEnable="True" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="15" BottomEage="15" Scale9OriginX="15" Scale9OriginY="15" Scale9Width="163" Scale9Height="690" ctype="ImageViewObjectData">
             <Size X="193.0000" Y="720.0000" />
@@ -108,7 +108,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition Y="0.5000" />
             <PreSize X="0.1508" Y="1.0000" />
-            <FileData Type="Normal" Path="A_FriendCard/Main/tc_bg_left.png" Plist="" />
+            <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/tc_bg_left.png" Plist="A_FriendCard/FriendCardMain.plist" />
           </AbstractNodeData>
           <AbstractNodeData Name="back" ActionTag="-803733225" Tag="1589" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" ClipAble="False" BackColorAlpha="0" ColorAngle="90.0000" Scale9Enable="True" LeftEage="370" RightEage="370" TopEage="227" BottomEage="227" Scale9OriginX="-370" Scale9OriginY="-227" Scale9Width="740" Scale9Height="454" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
