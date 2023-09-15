@@ -120,9 +120,9 @@
           },
           {
             "FileData": {
-              "Type": "Normal",
+              "Type": "MarkedSubImage",
               "Path": "A_FriendCard/Main/tc_bg_left.png",
-              "Plist": ""
+              "Plist": "A_FriendCard/FriendCardMain.plist"
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
@@ -194,7 +194,7 @@
                 },
                 "Position": {
                   "X": 92.257,
-                  "Y": 674.1439
+                  "Y": 674.136
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -213,8 +213,8 @@
                 },
                 "LeftMargin": 67.257,
                 "RightMargin": 75.743,
-                "TopMargin": 25.8561,
-                "BottomMargin": 654.1439,
+                "TopMargin": 25.864,
+                "BottomMargin": 654.136,
                 "Tag": 315,
                 "ActionTag": 570404447,
                 "Size": {
@@ -2837,9 +2837,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -2949,7 +2949,7 @@
                     "BackColorAlpha": 0,
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
+                      "Path": "A_FriendCard/list_top_bg.png",
                       "Plist": ""
                     },
                     "ComboBoxIndex": 1,
@@ -3433,9 +3433,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 0,
@@ -3485,9 +3485,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -6231,24 +6231,24 @@
                       {
                         "CheckedState": true,
                         "NormalBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/checked_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "AnchorPoint": {
                           "ScaleY": 0.5
@@ -6349,24 +6349,24 @@
                       {
                         "CheckedState": true,
                         "NormalBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/checked_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "AnchorPoint": {
                           "ScaleY": 0.5
@@ -6475,7 +6475,6 @@
                   "X": 1073.0,
                   "Y": 643.0
                 },
-                "VisibleForFrame": false,
                 "Name": "Panel_member",
                 "ctype": "PanelObjectData"
               },
@@ -6528,9 +6527,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -6642,9 +6641,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "ComboBoxIndex": 1,
                     "SingleColor": {
@@ -7124,9 +7123,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -7521,7 +7520,7 @@
                     "BackColorAlpha": 0,
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
+                      "Path": "A_FriendCard/list_top_bg.png",
                       "Plist": ""
                     },
                     "ComboBoxIndex": 1,
@@ -8005,9 +8004,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 0,
@@ -8057,9 +8056,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -10665,9 +10664,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -11078,7 +11077,7 @@
                     "BackColorAlpha": 0,
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
+                      "Path": "A_FriendCard/list_top_bg.png",
                       "Plist": ""
                     },
                     "ComboBoxIndex": 1,
@@ -13260,9 +13259,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -14219,9 +14218,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -14670,9 +14669,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -15126,9 +15125,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -15288,9 +15287,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -16266,9 +16265,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -16490,9 +16489,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -16998,9 +16997,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -17504,9 +17503,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -18006,9 +18005,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -23570,17 +23569,11 @@
         "A_Common/default_headpic.png",
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/Main/list_cell_bg.png",
-        "A_FriendCard/Main/list_top_bg.png",
-        "A_FriendCard/Main/tc_bg_left.png",
-        "A_FriendCard/Main/tc_bg_nei.png",
+        "A_FriendCard/list_top_bg.png",
         "A_FriendCard/Member.plist",
         "A_FriendCard/Member.png",
-        "A_FriendCard/Member/check_bg.png",
-        "A_FriendCard/Member/checked_bg.png",
         "A_FriendCard/tc_bg.png",
         "A_FriendCard/tc_bg_nei0.png",
-        "createNewPng/daTC1_20.png",
         "Default/Button_Press.png",
         "Default/ImageFile.png",
         "fonts/fzcy.ttf",

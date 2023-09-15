@@ -1134,7 +1134,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/img_hengxian.png",
-                      "Plist": "A_FriendCard/GaojiSet.plist"
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 96,
@@ -1412,9 +1412,9 @@
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Common/Main/img_gou.png",
-                      "Plist": "A_Common/Common.plist"
+                      "Type": "Default",
+                      "Path": "Default/CheckBoxNode_Normal.png",
+                      "Plist": ""
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
@@ -1626,8 +1626,7 @@
         "A_Common/Common.png",
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/GaojiSet.plist",
-        "A_FriendCard/GaojiSet.png",
+        "Default/CheckBoxNode_Normal.png",
         "friendCards/btn_x_normal.png",
         "friendCards/common/btn_ok_n.png",
         "friendCards/common/btn_ok_s.png",

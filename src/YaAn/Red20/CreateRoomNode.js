@@ -1,7 +1,7 @@
 var CreateRoomNode_red20 = CreateRoomNodeYaAn.extend({
     //创建ui 以及变量保存
     initAll: function (IsFriendCard) {
-        let bg_node = ccs.load("bg_red20.json").node;
+        let bg_node = ccs.load("A_bg_red20.json").node;
         this.addChild(bg_node);
         bg_node.setScale(0.9, 0.9)
         bg_node.setPosition(-200, 10);

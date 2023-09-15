@@ -411,13 +411,16 @@
             <Image Name="bg_kuang2.png" />
             <Image Name="btn_chebox_fang.png" />
             <Image Name="btn_chebox_yuan.png" />
+            <Image Name="btn_create_n.png" />
             <Image Name="btnclose.png" />
             <Image Name="CheckBoxForbidden.png" />
-            <Image Name="circle_1.png" />
             <Image Name="circle_2.png" />
+            <Image Name="daTC1_15.png" />
+            <Image Name="daTC1_18.png" />
+            <Image Name="daTC1_19.png" />
+            <Image Name="daTC1_20.png" />
             <Image Name="icon_add.png" />
             <Image Name="icon_yuanbao.png" />
-            <Image Name="img_gou.png" />
             <Image Name="minus-1.png" />
             <Image Name="plus-1.png" />
             <Image Name="pop_bg_small.png" />
@@ -464,27 +467,19 @@
             <Image Name="btn_xian.png" />
             <Image Name="img_dikuang.png" />
             <Image Name="img_fangka.png" />
-            <Image Name="img_fanhui.png" />
             <Image Name="img_feixuanzhongMem.png" />
-            <Image Name="img_guanjia.png" />
-            <Image Name="img_head_kuang.png" />
             <Image Name="img_hengxian.png" />
             <Image Name="img_qian.png" />
             <Image Name="img_sanjiao1.png" />
-            <Image Name="img_searchBg.png" />
             <Image Name="img_xian.png" />
             <Image Name="img_ZTKF.png" />
             <Image Name="info_bg.png" />
             <Image Name="JianTou.png" />
-            <Image Name="jifen_kuang.png" />
             <Image Name="left_chooseed_bg.png" />
             <Image Name="left_notchooseed_bg.png" />
             <Image Name="list_cell_bg.png" />
-            <Image Name="list_top_bg.png" />
             <Image Name="Main_bg_clubList.png" />
             <Image Name="Main_bg_clubList_tit.png" />
-            <Image Name="Main_btn_club_n.png" />
-            <Image Name="Main_btn_club_s.png" />
             <Image Name="Main_btn_createQYQ.png" />
             <Image Name="Main_btn_detail_n.png" />
             <Image Name="Main_btn_fanhui.png" />
@@ -502,16 +497,12 @@
             <Image Name="Main_btn_showClubList_r.png" />
             <Image Name="Main_btn_skin.png" />
             <Image Name="Main_btn_tongji_n.png" />
-            <Image Name="Main_btn_xuanzhong.png" />
             <Image Name="Main_club_point.png" />
             <Image Name="Main_dikuang.png" />
             <Image Name="Main_fangka_kuang.png" />
             <Image Name="Main_fangkashuliang_di.png" />
-            <Image Name="Main_FenGeXian.png" />
             <Image Name="Main_icon_stop_tishi.png" />
             <Image Name="Main_icon_tipPoint.png" />
-            <Image Name="Main_image_bottomBG.png" />
-            <Image Name="NameBg.png" />
             <Image Name="tc_bg_left.png" />
             <Image Name="tc_bg_nei.png" />
             <Image Name="tianjiawanfa_n.png" />
@@ -526,7 +517,6 @@
             <Image Name="yizi_1_0.png" />
             <Image Name="yizi_1_1.png" />
             <Image Name="yizi_2.png" />
-            <Image Name="yuanbao_kuang.png" />
             <Image Name="Z_offline.png" />
             <Image Name="zhuozi_2.png" />
             <Image Name="zhuozi_3.png" />
@@ -597,7 +587,6 @@
             <Image Name="what_group.png" />
           </Folder>
           <Folder Name="PlayWay">
-            <Image Name="btn_create_room.png" />
             <Image Name="fengexian.png" />
             <Image Name="inner_titile.png" />
             <Image Name="top_title.png" />
@@ -645,6 +634,9 @@
           <PlistInfo Name="Setting.csi" Type="Plist" />
           <Image Name="tc_bg.png" />
           <Image Name="tc_bg_nei0.png" />
+          <Image Name="Main_image_bottomBG.png" />
+          <PlistInfo Name="PlayWay_Record_Tongji.csi" Type="Plist" />
+          <Image Name="list_top_bg.png" />
         </Folder>
         <Folder Name="A_Home">
           <Folder Name="JoinRoom">
@@ -677,6 +669,7 @@
             <Image Name="game_gonggao.png" />
             <Image Name="game_shiming.png" />
             <Image Name="girl.png" />
+            <Image Name="girl_1.png" />
             <Image Name="gonggao_copy.png" />
             <Image Name="head_lb_bg.png" />
             <Image Name="help.png" />
@@ -707,6 +700,7 @@
           <Image Name="homeBG.png" />
           <PlistInfo Name="Userinfo.csi" Type="Plist" />
           <Image Name="xiadi.png" />
+          <PlistInfo Name="JoinRoom.csi" Type="Plist" />
         </Folder>
         <Folder Name="A_Login">
           <Folder Name="Main">
@@ -719,6 +713,7 @@
             <Image Name="checked_bg.png" />
             <Image Name="countman-btn.png" />
             <Image Name="dikuang.png" />
+            <Image Name="hu_t.png" />
             <Image Name="input_bg.png" />
             <Image Name="loading_bar_head.png" />
             <Image Name="log_check.png" />
@@ -727,7 +722,10 @@
             <Image Name="saog3.png" />
             <Image Name="title_1.png" />
             <Image Name="title_2.png" />
+            <Image Name="xie_t.png" />
+            <Image Name="yi_t.png" />
             <Image Name="yijianxiufu.png" />
+            <Image Name="yong_t.png" />
           </Folder>
           <Image Name="bg.jpg" />
           <Image Name="loading_bar.png" />
@@ -1667,7 +1665,6 @@
           <Image Name="btn_add_n.png" />
           <Image Name="btn_add_s.png" />
           <Image Name="btn_copy_Y.png" />
-          <Image Name="btn_create_n.png" />
           <Image Name="btn_create_n_diamond.png" />
           <Image Name="btn_create_n_diamond_free.png" />
           <Image Name="btn_create_s.png" />
@@ -1687,10 +1684,6 @@
           <Image Name="daTC_04.png" />
           <Image Name="daTC_05.png" />
           <Image Name="daTC1_09.png" />
-          <Image Name="daTC1_15.png" />
-          <Image Name="daTC1_18.png" />
-          <Image Name="daTC1_19.png" />
-          <Image Name="daTC1_20.png" />
           <Image Name="donghai_n.png" />
           <Image Name="donghai_s.png" />
           <Image Name="GAME_16.png" />
@@ -7560,10 +7553,12 @@
           <Image Name="zhua_guang.png" />
           <Image Name="zhua_guang2.png" />
         </Folder>
+        <Project Name="A_bg_red20.csd" Type="Node" />
         <Project Name="A_Calculator.csd" Type="Layer" />
         <Project Name="A_ChangeHead.csd" Type="Layer" />
         <Project Name="A_ChangeNickName.csd" Type="Layer" />
         <Project Name="A_ChangePWD.csd" Type="Layer" />
+        <Project Name="A_CreateHomeTotal.csd" Type="Layer" />
         <Project Name="A_Dlgagreement.csd" Type="Layer" />
         <Project Name="A_Enter.csd" Type="Layer" />
         <Project Name="A_Friendcard_gaojiSet.csd" Type="Layer" />
@@ -7572,6 +7567,9 @@
         <Project Name="A_Friendcard_member.csd" Type="Layer" />
         <Project Name="A_Friendcard_member_manage.csd" Type="Layer" />
         <Project Name="A_Friendcard_nvguanjia.csd" Type="Layer" />
+        <Project Name="A_Friendcard_roomRecord.csd" Type="Layer" />
+        <Project Name="A_FriendCard_ruleLayer.csd" Type="Layer" />
+        <Project Name="A_Friendcard_tongji.csd" Type="Layer" />
         <Project Name="A_Friendcard_warningScore.csd" Type="Layer" />
         <Project Name="A_Home.csd" Type="Layer" />
         <Project Name="A_Login.csd" Type="Layer" />
@@ -7583,14 +7581,12 @@
         <Project Name="ActivityLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreLayer.csd" Type="Layer" />
         <Project Name="AuthorizationStoreTipLayer.csd" Type="Layer" />
-        <Project Name="bg_red20.csd" Type="Node" />
-        <Project Name="bg_RunFasterYaAn.csd" Type="Node" />
-        <Project Name="bg_xuezhan.csd" Type="Node" />
+        <Project Name="A_bg_RunFasterYaAn.csd" Type="Node" />
+        <Project Name="A_bg_xuezhan.csd" Type="Node" />
         <Project Name="BindingCodeLayer.csd" Type="Layer" />
         <Project Name="bindingCodeLayer_tipss.csd" Type="Layer" />
         <Project Name="bindShoujiRewardLayer.csd" Type="Layer" />
         <Project Name="block.csd" Type="Layer" />
-        <Project Name="A_CreateHomeTotal.csd" Type="Layer" />
         <Project Name="createRoomRecord.csd" Type="Node" />
         <Project Name="DelRoom.csd" Type="Node" />
         <Project Name="DingQueLayer.csd" Type="Node" />
@@ -7727,9 +7723,6 @@
         <Project Name="UserInfo_playing.csd" Type="Layer" />
         <Project Name="WebView.csd" Type="Node" />
         <Project Name="YouJianLayer.csd" Type="Layer" />
-        <Project Name="A_Friendcard_roomRecord.csd" Type="Layer" />
-        <Project Name="A_FriendCard_ruleLayer.csd" Type="Layer" />
-        <Project Name="A_Friendcard_tongji.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>

@@ -133,7 +133,7 @@ CreateViewYaAn = cc.Layer.extend({
         let lIndex = this._gameTypeList.indexOf(lastGameType);
         if (lIndex != -1) {
             this._lastGameType = lastGameType;
-        }
+        }else this._lastGameType = this._gameTypeList[0];
 
         var jsonui = ccs.load(res.CreateHomeTotal_json);
         this.addChild(jsonui.node);

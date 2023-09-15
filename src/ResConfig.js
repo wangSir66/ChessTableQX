@@ -36,11 +36,6 @@ var res = {
 
 function initResourceDir() {
 	var searthPaths = jsb.fileUtils.getSearchPaths();
-	cc.log("-------------initResourceDir start all searchPath:");
-	for (var i = 0; i < searthPaths.length; i++) {
-		cc.log(searthPaths[i]);
-	}
-
 	var writablePath = jsb.fileUtils.getWritablePath();
 	var appPath = "";
 	if (cc.sys.OS_WINDOWS == cc.sys.os) {
@@ -62,7 +57,6 @@ function initResourceDir() {
 				break;
 			}
 		}
-		cc.log("appPath=" + appPath + " appType=" + appType);
 	}
 
 	MjClient.Window_AppPath = appPath;
@@ -82,16 +76,7 @@ function initResourceDir() {
 		}
 		jsb.fileUtils.addSearchPath(writablePath + "res", false);
 	}
-
-	// for (var i = 1; i < MjClient.RESOURCE_DIR.length; i++) {
-	//     if (MjClient.RESOURCE_DIR[i])
-	//         jsb.fileUtils.addSearchPath(writablePath + MjClient.RESOURCE_DIR[i], false);
-	// }
-
 	var searthPaths = jsb.fileUtils.getSearchPaths();
-	for (var i = 0; i < searthPaths.length; i++) {
-		cc.log(searthPaths[i]);
-	}
 
 	cc.spriteFrameCache.addSpriteFrames("chat/emoji_action_texture.plist");
 	cc.spriteFrameCache.addSpriteFrames("chat/emoji.plist");

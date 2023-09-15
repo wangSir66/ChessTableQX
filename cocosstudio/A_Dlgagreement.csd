@@ -33,7 +33,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/yong_t.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_0" ActionTag="-103868477" Tag="95" IconVisible="False" LeftMargin="-43.5000" RightMargin="6.5000" TopMargin="-21.5000" BottomMargin="-21.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="13" Scale9Height="17" ctype="ImageViewObjectData">
                     <Size X="37.0000" Y="43.0000" />
@@ -43,7 +43,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/hu_t.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_1" ActionTag="-716965306" Tag="96" IconVisible="False" LeftMargin="4.5000" RightMargin="-45.5000" TopMargin="-21.5000" BottomMargin="-21.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="17" Scale9Height="17" ctype="ImageViewObjectData">
                     <Size X="41.0000" Y="43.0000" />
@@ -53,7 +53,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/xie_t.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="title_2" ActionTag="1722347652" Tag="97" IconVisible="False" LeftMargin="53.5000" RightMargin="-94.5000" TopMargin="-20.5000" BottomMargin="-20.5000" LeftEage="12" RightEage="12" TopEage="13" BottomEage="13" Scale9OriginX="12" Scale9OriginY="13" Scale9Width="17" Scale9Height="15" ctype="ImageViewObjectData">
                     <Size X="41.0000" Y="41.0000" />
@@ -63,7 +63,7 @@
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
-                    <FileData Type="Default" Path="Default/ImageFile.png" Plist="" />
+                    <FileData Type="MarkedSubImage" Path="A_Login/Main/yi_t.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
@@ -86,7 +86,7 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="content" ActionTag="-1171607311" Tag="51" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="31.5000" RightMargin="31.5000" TopMargin="91.3707" BottomMargin="43.6293" Scale9Enable="True" LeftEage="20" RightEage="20" TopEage="18" BottomEage="18" Scale9OriginX="20" Scale9OriginY="18" Scale9Width="108" Scale9Height="56" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="content" ActionTag="-1171607311" Tag="51" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="31.4534" RightMargin="31.5466" TopMargin="91.3977" BottomMargin="43.6023" Scale9Enable="True" LeftEage="20" RightEage="20" TopEage="18" BottomEage="18" Scale9OriginX="20" Scale9OriginY="18" Scale9Width="108" Scale9Height="56" ctype="ImageViewObjectData">
                 <Size X="923.0000" Y="432.0000" />
                 <Children>
                   <AbstractNodeData Name="loading" ActionTag="-1355677500" Tag="277" IconVisible="False" LeftMargin="394.8163" RightMargin="396.1837" TopMargin="38.2733" BottomMargin="371.7267" IsCustomSize="True" FontSize="22" LabelText="加载中。。。" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -103,7 +103,7 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="31.5000" Y="43.6293" />
+                <Position X="31.4534" Y="43.6023" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.0319" Y="0.0769" />

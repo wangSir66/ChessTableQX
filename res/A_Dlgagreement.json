@@ -142,9 +142,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Default",
-                      "Path": "Default/ImageFile.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/Main/yong_t.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -187,9 +187,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Default",
-                      "Path": "Default/ImageFile.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/Main/hu_t.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -232,9 +232,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Default",
-                      "Path": "Default/ImageFile.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/Main/xie_t.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -277,9 +277,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Default",
-                      "Path": "Default/ImageFile.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/Main/yi_t.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9OriginX": 12,
                     "Scale9OriginY": 13,
@@ -407,8 +407,8 @@
                 "Scale9Height": 56,
                 "AnchorPoint": {},
                 "Position": {
-                  "X": 31.5,
-                  "Y": 43.6293
+                  "X": 31.4534,
+                  "Y": 43.6023
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -426,10 +426,10 @@
                   "X": 0.9361,
                   "Y": 0.7619
                 },
-                "LeftMargin": 31.5,
-                "RightMargin": 31.5,
-                "TopMargin": 91.3707,
-                "BottomMargin": 43.6293,
+                "LeftMargin": 31.4534,
+                "RightMargin": 31.5466,
+                "TopMargin": 91.3977,
+                "BottomMargin": 43.6023,
                 "Tag": 51,
                 "Children": [
                   {
@@ -520,7 +520,8 @@
       "UsedResources": [
         "A_Common/Common.plist",
         "A_Common/Common.png",
-        "Default/ImageFile.png"
+        "A_Login/Login.plist",
+        "A_Login/Login.png"
       ],
       "ctype": "GameFileData"
     }

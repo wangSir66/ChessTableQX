@@ -77,9 +77,9 @@
           },
           {
             "FileData": {
-              "Type": "Normal",
+              "Type": "MarkedSubImage",
               "Path": "A_FriendCard/Record/top_title.png",
-              "Plist": ""
+              "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
             },
             "Scale9OriginX": 129,
             "Scale9OriginY": 22,
@@ -124,9 +124,9 @@
           },
           {
             "FileData": {
-              "Type": "Normal",
+              "Type": "MarkedSubImage",
               "Path": "A_FriendCard/Main/tc_bg_left.png",
-              "Plist": ""
+              "Plist": "A_FriendCard/FriendCardMain.plist"
             },
             "Scale9Enable": true,
             "Scale9OriginX": 15,
@@ -572,9 +572,9 @@
               },
               {
                 "FileData": {
-                  "Type": "Normal",
+                  "Type": "MarkedSubImage",
                   "Path": "A_FriendCard/Record/wushu_bg.png",
-                  "Plist": ""
+                  "Plist": "A_FriendCard/PlayWay_Record_Tongji.plist"
                 },
                 "BlendFunc": {
                   "Src": 1,
@@ -938,7 +938,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 22,
@@ -3726,11 +3726,8 @@
       "UsedResources": [
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/GaojiSet.plist",
-        "A_FriendCard/GaojiSet.png",
-        "A_FriendCard/Main/tc_bg_left.png",
-        "A_FriendCard/Record/top_title.png",
-        "A_FriendCard/Record/wushu_bg.png",
+        "A_FriendCard/PlayWay_Record_Tongji.plist",
+        "A_FriendCard/PlayWay_Record_Tongji.png",
         "A_FriendCard/tc_bg.png",
         "A_FriendCard/tc_bg_nei0.png",
         "fonts/fzcy.ttf",

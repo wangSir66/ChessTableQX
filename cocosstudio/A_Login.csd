@@ -19,7 +19,7 @@
                 <PreSize X="1.0000" Y="0.0458" />
                 <FileData Type="Normal" Path="A_Login/log_tishi.png" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="load" ActionTag="-1171650901" Tag="79" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" RightMargin="926.0000" BottomMargin="542.0000" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="324" Scale9Height="150" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="load" ActionTag="-1171650901" Tag="79" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" RightMargin="926.0000" BottomMargin="542.0000" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="255" Scale9Height="151" ctype="ImageViewObjectData">
                 <Size X="354.0000" Y="178.0000" />
                 <AnchorPoint ScaleY="1.0000" />
                 <Position Y="720.0000" />
@@ -29,7 +29,7 @@
                 <PreSize X="0.2766" Y="0.2472" />
                 <FileData Type="MarkedSubImage" Path="A_Login/Main/logo.png" Plist="A_Login/Login.plist" />
               </AbstractNodeData>
-              <AbstractNodeData Name="agree" ActionTag="-1347122435" Tag="68" IconVisible="False" LeftMargin="493.4609" RightMargin="737.5391" TopMargin="633.3524" BottomMargin="39.6476" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
+              <AbstractNodeData Name="agree" ActionTag="-1347122435" Tag="68" IconVisible="False" LeftMargin="493.4600" RightMargin="737.5400" TopMargin="633.3524" BottomMargin="39.6476" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
                 <Size X="49.0000" Y="47.0000" />
                 <Children>
                   <AbstractNodeData Name="legal" ActionTag="-1482008010" Tag="37" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="57.4511" RightMargin="-257.4511" TopMargin="6.5895" BottomMargin="9.4105" TouchEnable="True" FontSize="26" LeftEage="15" RightEage="15" TopEage="6" BottomEage="6" Scale9OriginX="15" Scale9OriginY="6" Scale9Width="219" Scale9Height="19" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
@@ -49,7 +49,7 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="517.9609" Y="63.1476" />
+                <Position X="517.9600" Y="63.1476" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4047" Y="0.0877" />
@@ -97,10 +97,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="xiufuBtn" ActionTag="-1631501552" Tag="103" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1170.2722" RightMargin="32.7278" TopMargin="12.1591" BottomMargin="630.8409" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="47" Scale9Height="55" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="xiufuBtn" ActionTag="-1631501552" Tag="103" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1170.3320" RightMargin="32.6680" TopMargin="12.1880" BottomMargin="630.8120" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="47" Scale9Height="55" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="77.0000" Y="77.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="1208.7722" Y="669.3409" />
+            <Position X="1208.8320" Y="669.3120" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.9444" Y="0.9296" />
