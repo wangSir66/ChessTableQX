@@ -676,9 +676,9 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     //gps
     initPlayNode: function () {
         //add by sking for create room need GPS
-        var _selectCol = CREATEROOM_COLOR_1;
-        var _UnSelectCol = CREATEROOM_COLOR_3;
-        this._nodeGPS = new ccui.CheckBox("A_Common/Main/daTC1_19.png", "A_Common/Main/daTC1_20.png", 1);
+        var _selectCol = BTNCOLOR1;
+        var _UnSelectCol = BTNCOLOR3;
+        this._nodeGPS = new ccui.CheckBox("A_Common/Main/daTC1_19.png","A_Common/Main/daTC1_20.png","A_Common/Main/daTC1_20.png","A_Common/Main/daTC1_19.png","A_Common/Main/daTC1_20.png",1);
         this._nodeGPS.setPosition(cc.p(50, 20));
         this.bg_node.addChild(this._nodeGPS, 100);
         if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ) {
@@ -721,7 +721,8 @@ var CreateRoomNodeYaAn = cc.Node.extend({
 
                 util.localStorageEncrypt.setBoolItem(that.localStorageKey.KEY_GPS, that._nodeGPS.isSelected());
             }
-        });
+        });        
+        this._nodeGPS.setSelected(false);
         this._nodeGPS.addEventListener(function (sender, type) {
             switch (type) {
                 case ccui.CheckBox.EVENT_SELECTED:

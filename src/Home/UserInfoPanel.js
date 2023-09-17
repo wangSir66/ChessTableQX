@@ -235,6 +235,8 @@ var PlayerInfoBindView1 = cc.Layer.extend({
             var _num = _money.getChildByName("num");
             _num.setString(pinfo.money);
             _num.ignoreContentAdaptWithSize(true);
+            _money.getChildByName('Image_149').visible = false;
+            _money.setTouchEnabled(false);
             _money.addTouchEventListener(function (sender, Type) {
                 if (Type == ccui.Widget.TOUCH_ENDED) {
                     MjClient.Scene.addChild(enter_store(0));

@@ -7,7 +7,7 @@
 			<key>A_Login/Main/agree.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{499,681},{249,31}}</string>
+				<string>{{499,685},{249,31}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -18,7 +18,7 @@
 			<key>A_Login/Main/btn_close.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{580,289},{66,66}}</string>
+				<string>{{856,371},{66,66}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -29,7 +29,7 @@
 			<key>A_Login/Main/btn_dengl.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{780,509},{208,81}}</string>
+				<string>{{856,462},{208,81}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -40,40 +40,40 @@
 			<key>A_Login/Main/btn_login_wx.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{499,185},{284,100}}</string>
+				<string>{{857,2},{284,100}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{284,100}</string>
 			</dict>
 			<key>A_Login/Main/btn_zhuc.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{499,573},{208,81}}</string>
+				<string>{{941,462},{208,81}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{208,81}</string>
 			</dict>
 			<key>A_Login/Main/check_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{650,289},{37,38}}</string>
+				<string>{{977,674},{37,38}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{37,38}</string>
 			</dict>
 			<key>A_Login/Main/checked_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{692,289},{37,38}}</string>
+				<string>{{552,184},{37,38}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -84,7 +84,7 @@
 			<key>A_Login/Main/countman-btn.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{787,221},{284,100}}</string>
+				<string>{{752,184},{284,100}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -106,7 +106,7 @@
 			<key>A_Login/Main/input_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{891,221},{456,57}}</string>
+				<string>{{961,2},{456,57}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -117,7 +117,7 @@
 			<key>A_Login/Main/loading_bar_head.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{752,289},{280,24}}</string>
+				<string>{{718,184},{280,24}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -128,7 +128,7 @@
 			<key>A_Login/Main/log_check.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{711,573},{49,47}}</string>
+				<string>{{797,670},{49,47}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -139,40 +139,40 @@
 			<key>A_Login/Main/log_checkbg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{711,624},{49,47}}</string>
+				<string>{{499,184},{49,47}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{49,47}</string>
 			</dict>
 			<key>A_Login/Main/logo.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{499,2},{285,179}}</string>
+				<string>{{499,2},{354,178}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false />
 				<key>sourceSize</key>
-				<string>{285,179}</string>
+				<string>{354,178}</string>
 			</dict>
 			<key>A_Login/Main/saog3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{788,2},{215,219}}</string>
+				<string>{{499,462},{215,219}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{215,219}</string>
 			</dict>
 			<key>A_Login/Main/title_1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{952,221},{194,51}}</string>
+				<string>{{797,472},{194,51}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -183,7 +183,7 @@
 			<key>A_Login/Main/title_2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{952,419},{194,51}}</string>
+				<string>{{718,472},{194,51}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -194,7 +194,7 @@
 			<key>A_Login/Main/yijianxiufu.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{499,289},{77,77}}</string>
+				<string>{{856,290},{77,77}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -205,18 +205,18 @@
 			<key>A_Login/Main/hu_t.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{865,681},{37,43}}</string>
+				<string>{{895,674},{37,43}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{37,43}</string>
 			</dict>
 			<key>A_Login/Main/xie_t.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{952,617},{41,43}}</string>
+				<string>{{752,674},{41,43}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -227,7 +227,7 @@
 			<key>A_Login/Main/yi_t.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{957,664},{41,41}}</string>
+				<string>{{850,674},{41,41}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -238,11 +238,11 @@
 			<key>A_Login/Main/yong_t.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{912,681},{37,41}}</string>
+				<string>{{936,674},{37,41}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{37,41}</string>
 			</dict>
@@ -256,14 +256,14 @@
 			<key>realTextureFileName</key>
 			<string>Login.png</string>
 			<key>size</key>
-			<string>{1009,720}</string>
+			<string>{1024,719}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>1009</integer>
+			<integer>1024</integer>
 			<key>height</key>
-			<integer>720</integer>
+			<integer>719</integer>
 		</dict>
 	</dict>
 </plist>
