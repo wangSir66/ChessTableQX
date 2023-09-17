@@ -595,6 +595,7 @@ var FriendCard_tongji = cc.Layer.extend({
             COMMON_UI.refreshHead(this, url, headicon);
 
             text_name.setString(getPlayerName(unescape(oneData.nickname + ""), 7));
+            text_name.ignoreContentAdaptWithSize(true);
             text_playe_id.setString(oneData.userId + "");
         }
         this.createRankItem = function (remarks, oneData, rankType) {
@@ -1626,6 +1627,7 @@ var FriendCard_tongji = cc.Layer.extend({
 
                 text_group.setString(itemDta.no + "")
                 text_name.setString(getPlayerName(unescape(itemDta.refereeName)));
+                text_name.ignoreContentAdaptWithSize(true);
                 text_ID.setString(itemDta.refereeId);
                 text_renshu.setString(itemDta.playUser ? itemDta.playUser + "" : "0")
                 text_partInCount.setString(itemDta.playGame ? itemDta.playGame + "" : "0")
@@ -1869,6 +1871,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 btn_details.data = itemDta;
                 text_group.setString(itemDta.no + "")
                 text_name.setString(getPlayerName(unescape(itemDta.refereeName)));
+                text_name.ignoreContentAdaptWithSize(true);
                 text_ID.setString(itemDta.refereeId);
                 text_renshu.setString(itemDta.playUser ? itemDta.playUser + "" : "0");
                 text_partInCount.setString(itemDta.effectPlayUser ? itemDta.effectPlayUser + "" : "0");
@@ -2122,6 +2125,7 @@ var FriendCard_tongji = cc.Layer.extend({
                     text_group.setString(itemDta.group + "组")
                 }
                 text_name.setString(getPlayerName(unescape(itemDta.nickname)));
+                text_name.ignoreContentAdaptWithSize(true);
                 text_ID.setString(itemDta.userId);
                 text_renshu.setString(itemDta.playUser ? itemDta.playUser + "" : "0")
                 text_partInCount.setString(itemDta.playGame ? itemDta.playGame + "" : "0")
@@ -2370,6 +2374,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 var _item = this.item_FKTJ.clone();
                 var text_group = _item.getChildByName("text_group");
                 var text_name = _item.getChildByName("text_name");
+                text_name.ignoreContentAdaptWithSize(true);
                 var text_ID = _item.getChildByName("text_ID");
                 var text_renshu = _item.getChildByName("text_renshu");
                 var text_partInCount = _item.getChildByName("text_partInCount");
@@ -2401,6 +2406,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 text_ID.setString(itemDta.userId);
                 text_total_count.setString(itemDta.effectScore ? itemDta.effectScore + "" : "0");
                 text_renshu.setString(itemDta.playUser ? itemDta.playUser + "" : "0");
+                text_name.ignoreContentAdaptWithSize(true);
                 text_partInCount.setString(itemDta.effectPlayUser ? itemDta.effectPlayUser + "" : "0");
                 text_effectPlayGame.setString(itemDta.effectPlayGame ? itemDta.effectPlayGame + "" : "0");
                 text_ratioCount.setString(itemDta.rebate ? (itemDta.rebate * 100).toFixed(0) + "%" : "0%");
