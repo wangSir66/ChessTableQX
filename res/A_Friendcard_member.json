@@ -3043,6 +3043,7 @@
                         "ctype": "ImageViewObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "昵称/身份",
                         "FontResource": {
@@ -3097,6 +3098,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "分组/人数",
                         "FontResource": {
@@ -3151,6 +3153,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "ID",
                         "FontResource": {
@@ -3205,6 +3208,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "当前积分",
                         "FontResource": {
@@ -3259,6 +3263,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "在线",
                         "FontResource": {
@@ -3313,6 +3318,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "加减",
                         "FontResource": {
@@ -3367,6 +3373,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "操作",
                         "FontResource": {
@@ -7614,6 +7621,7 @@
                         "ctype": "ImageViewObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "昵称/身份",
                         "FontResource": {
@@ -7668,6 +7676,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "分组/人数",
                         "FontResource": {
@@ -7722,6 +7731,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "ID",
                         "FontResource": {
@@ -7776,6 +7786,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "当前积分",
                         "FontResource": {
@@ -7830,6 +7841,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "在线",
                         "FontResource": {
@@ -7884,6 +7896,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "加减",
                         "FontResource": {
@@ -7938,6 +7951,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "操作",
                         "FontResource": {
@@ -7965,7 +7979,7 @@
                           "Y": 20.0
                         },
                         "Scale": {
-                          "ScaleX": 1.0,
+                          "ScaleX": 0.921,
                           "ScaleY": 1.0
                         },
                         "CColor": {},

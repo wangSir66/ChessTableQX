@@ -658,7 +658,7 @@
                         <PreSize X="0.0302" Y="0.5000" />
                         <FileData Type="MarkedSubImage" Path="A_FriendCard/Member/list_cell_sort.png" Plist="A_FriendCard/Member.plist" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_1" ActionTag="146624969" Tag="1045" IconVisible="False" LeftMargin="62.2019" RightMargin="862.7981" TopMargin="5.0000" BottomMargin="7.0000" FontSize="22" LabelText="昵称/身份" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_1" ActionTag="146624969" Tag="1045" IconVisible="False" LeftMargin="62.2019" RightMargin="862.7981" TopMargin="5.0000" BottomMargin="7.0000" IsCustomSize="True" FontSize="22" LabelText="昵称/身份" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="100.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="112.2019" Y="20.0000" />
@@ -670,7 +670,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_2" ActionTag="1415900913" Tag="1057" IconVisible="False" LeftMargin="250.8027" RightMargin="674.1973" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="分组/人数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_2" ActionTag="1415900913" Tag="1057" IconVisible="False" LeftMargin="250.8027" RightMargin="674.1973" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="分组/人数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="100.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="300.8027" Y="20.0002" />
@@ -682,7 +682,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_3" ActionTag="1768285817" Tag="1058" IconVisible="False" LeftMargin="417.3693" RightMargin="584.6307" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="ID" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_3" ActionTag="1768285817" Tag="1058" IconVisible="False" LeftMargin="417.3693" RightMargin="584.6307" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="ID" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="23.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="428.8693" Y="20.0002" />
@@ -694,7 +694,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_4" ActionTag="-699521510" Tag="1059" IconVisible="False" LeftMargin="506.9352" RightMargin="427.0648" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="当前积分" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_4" ActionTag="-699521510" Tag="1059" IconVisible="False" LeftMargin="506.9352" RightMargin="427.0648" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="当前积分" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="91.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="552.4352" Y="20.0002" />
@@ -706,7 +706,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_5" ActionTag="511003047" Tag="1060" IconVisible="False" LeftMargin="655.5406" RightMargin="323.4594" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="在线" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_5" ActionTag="511003047" Tag="1060" IconVisible="False" LeftMargin="655.5406" RightMargin="323.4594" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="在线" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="46.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="678.5406" Y="20.0002" />
@@ -718,7 +718,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_6" ActionTag="-1272871011" Tag="1062" IconVisible="False" LeftMargin="796.2886" RightMargin="181.7114" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="加减" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_6" ActionTag="-1272871011" Tag="1062" IconVisible="False" LeftMargin="796.2886" RightMargin="181.7114" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="加减" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="47.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="819.7886" Y="20.0002" />
@@ -730,7 +730,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_7" ActionTag="-1674143111" Tag="1063" IconVisible="False" LeftMargin="933.4656" RightMargin="45.5344" TopMargin="5.0000" BottomMargin="7.0000" FontSize="22" LabelText="操作" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_7" ActionTag="-1674143111" Tag="1063" IconVisible="False" LeftMargin="933.4656" RightMargin="45.5344" TopMargin="5.0000" BottomMargin="7.0000" IsCustomSize="True" FontSize="22" LabelText="操作" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="46.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="956.4656" Y="20.0000" />
@@ -1700,7 +1700,7 @@
                         <PreSize X="0.0302" Y="0.5000" />
                         <FileData Type="MarkedSubImage" Path="A_FriendCard/Member/list_cell_sort.png" Plist="A_FriendCard/Member.plist" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_1" ActionTag="1201837411" Tag="1053" IconVisible="False" LeftMargin="62.2019" RightMargin="862.7981" TopMargin="5.0000" BottomMargin="7.0000" FontSize="22" LabelText="昵称/身份" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_1" ActionTag="1201837411" Tag="1053" IconVisible="False" LeftMargin="62.2019" RightMargin="862.7981" TopMargin="5.0000" BottomMargin="7.0000" IsCustomSize="True" FontSize="22" LabelText="昵称/身份" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="100.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="112.2019" Y="20.0000" />
@@ -1712,7 +1712,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_2" ActionTag="-1990182381" Tag="1054" IconVisible="False" LeftMargin="250.8027" RightMargin="674.1973" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="分组/人数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_2" ActionTag="-1990182381" Tag="1054" IconVisible="False" LeftMargin="250.8027" RightMargin="674.1973" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="分组/人数" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="100.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="300.8027" Y="20.0002" />
@@ -1724,7 +1724,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_3" ActionTag="1121769667" Tag="1055" IconVisible="False" LeftMargin="417.3693" RightMargin="584.6307" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="ID" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_3" ActionTag="1121769667" Tag="1055" IconVisible="False" LeftMargin="417.3693" RightMargin="584.6307" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="ID" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="23.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="428.8693" Y="20.0002" />
@@ -1736,7 +1736,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_4" ActionTag="282438230" Tag="1056" IconVisible="False" LeftMargin="506.9352" RightMargin="427.0648" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="当前积分" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_4" ActionTag="282438230" Tag="1056" IconVisible="False" LeftMargin="506.9352" RightMargin="427.0648" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="当前积分" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="91.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="552.4352" Y="20.0002" />
@@ -1748,7 +1748,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_5" ActionTag="18530043" Tag="1057" IconVisible="False" LeftMargin="655.5406" RightMargin="323.4594" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="在线" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_5" ActionTag="18530043" Tag="1057" IconVisible="False" LeftMargin="655.5406" RightMargin="323.4594" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="在线" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="46.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="678.5406" Y="20.0002" />
@@ -1760,7 +1760,7 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_6" ActionTag="617903391" Tag="1058" IconVisible="False" LeftMargin="796.2886" RightMargin="181.7114" TopMargin="4.9998" BottomMargin="7.0002" FontSize="22" LabelText="加减" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_6" ActionTag="617903391" Tag="1058" IconVisible="False" LeftMargin="796.2886" RightMargin="181.7114" TopMargin="4.9998" BottomMargin="7.0002" IsCustomSize="True" FontSize="22" LabelText="加减" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="47.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="819.7886" Y="20.0002" />
@@ -1772,11 +1772,11 @@
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="Text_7" ActionTag="-392492214" Tag="1059" IconVisible="False" LeftMargin="933.4656" RightMargin="45.5344" TopMargin="5.0000" BottomMargin="7.0000" FontSize="22" LabelText="操作" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="Text_7" ActionTag="-392492214" Tag="1059" IconVisible="False" LeftMargin="933.4656" RightMargin="45.5344" TopMargin="5.0000" BottomMargin="7.0000" IsCustomSize="True" FontSize="22" LabelText="操作" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="46.0000" Y="26.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="956.4656" Y="20.0000" />
-                        <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                        <Scale ScaleX="0.9210" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="0.9331" Y="0.5263" />
                         <PreSize X="0.0449" Y="0.6842" />
