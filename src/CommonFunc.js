@@ -11594,7 +11594,7 @@ function setGameOverPanelPlayerState(stateNode, pl, checkCount, bGoldField) {
             if (bGoldField == true) {
                 fileName = "game_picture/gold/end/mj/endGoldMJ_zimo.png";
             } else {
-                fileName = "XueZhanDaoDi/n_playLabel_" + (pl.huIndex + 1 || 1) + "zimo.png";
+                fileName = "XueZhanDaoDi/n_playLabel_" + ((pl.huIndex + 1) || 1) + "zimo.png";
             }
         }
     }
@@ -11603,7 +11603,7 @@ function setGameOverPanelPlayerState(stateNode, pl, checkCount, bGoldField) {
             if (bGoldField == true) {
                 fileName = "game_picture/gold/end/mj/endGoldMJ_hu.png";
             } else {
-                fileName = "XueZhanDaoDi/n_playLabel_" + (pl.huIndex + 1 || 1) + "hu.png";
+                fileName = "XueZhanDaoDi/n_playLabel_" + ((pl.huIndex + 1) || 1) + "hu.png";
             }
         }
     }

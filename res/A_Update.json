@@ -157,15 +157,15 @@
                 },
                 "Scale9OriginX": 63,
                 "Scale9OriginY": 2,
-                "Scale9Width": 1154,
-                "Scale9Height": 3,
+                "Scale9Width": 703,
+                "Scale9Height": 25,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 640.0,
-                  "Y": 75.0003
+                  "X": 639.9998,
+                  "Y": 84.7503
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -176,18 +176,20 @@
                 "PositionPercentXEnabled": true,
                 "PrePosition": {
                   "X": 0.5,
-                  "Y": 0.1042
+                  "Y": 0.1177
                 },
                 "PreSize": {
-                  "X": 1.0,
-                  "Y": 0.0097
+                  "X": 0.6477,
+                  "Y": 0.0403
                 },
-                "TopMargin": 641.4997,
-                "BottomMargin": 71.5003,
+                "LeftMargin": 225.4998,
+                "RightMargin": 225.5002,
+                "TopMargin": 620.7498,
+                "BottomMargin": 70.2503,
                 "Tag": 36,
                 "Children": [
                   {
-                    "ProgressInfo": 100,
+                    "ProgressInfo": 0,
                     "ImageFileData": {
                       "Type": "Normal",
                       "Path": "A_Login/loading_bar.png",
@@ -198,8 +200,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 640.0,
-                      "Y": 3.5
+                      "X": 414.5,
+                      "Y": 14.5
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -224,8 +226,8 @@
                     "Tag": 76,
                     "ActionTag": -1526766623,
                     "Size": {
-                      "X": 1280.0,
-                      "Y": 7.0
+                      "X": 829.0,
+                      "Y": 29.0
                     },
                     "Name": "bar",
                     "ctype": "LoadingBarObjectData"
@@ -236,17 +238,18 @@
                       "Path": "A_Login/Main/loading_bar_head.png",
                       "Plist": "A_Login/Login.plist"
                     },
+                    "Scale9Enable": true,
                     "Scale9OriginX": 92,
-                    "Scale9OriginY": 7,
+                    "Scale9OriginY": 12,
                     "Scale9Width": 96,
-                    "Scale9Height": 10,
+                    "Scale9Height": 1,
                     "AnchorPoint": {
                       "ScaleX": 0.95,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 1280.0,
-                      "Y": 3.5
+                      "X": 817.3349,
+                      "Y": 15.3454
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -257,22 +260,22 @@
                     "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 1.0,
-                      "Y": 0.5
+                      "X": 0.9859,
+                      "Y": 0.5292
                     },
                     "PreSize": {
-                      "X": 0.2188,
-                      "Y": 3.4286
+                      "X": 0.3378,
+                      "Y": 1.8966
                     },
-                    "LeftMargin": 1014.0,
-                    "RightMargin": -14.0,
-                    "TopMargin": -8.5,
-                    "BottomMargin": -8.5,
+                    "LeftMargin": 551.3349,
+                    "RightMargin": -2.3349,
+                    "TopMargin": -13.8454,
+                    "BottomMargin": -12.1546,
                     "Tag": 29,
                     "ActionTag": -1845529335,
                     "Size": {
                       "X": 280.0,
-                      "Y": 24.0
+                      "Y": 55.0
                     },
                     "Name": "light",
                     "ctype": "ImageViewObjectData"
@@ -280,8 +283,8 @@
                 ],
                 "ActionTag": 1076741238,
                 "Size": {
-                  "X": 1280.0,
-                  "Y": 7.0
+                  "X": 829.0,
+                  "Y": 29.0
                 },
                 "Name": "barbk",
                 "ctype": "ImageViewObjectData"

@@ -29,6 +29,10 @@ var res = {
 	EndAll_XueZhan_json: "A_EndAll_XueZhan.json",
 	Setting_yaan_json: "A_Setting_yaan.json",
 	Setting_home_json: "A_Setting_home.json",
+	Play_XueZhanMahjong_json: "A_Play_XueZhanMahjong.json",
+	Play_Red20_json: "A_Play_Red20.json",
+	Play_RunFasterYN_json: "A_Play_RunFasterYN.json",
+	EndOne_Red20_json: "A_EndOne_Red20.json",
 
 	Play_json: "Play.json",
 	Block_json: "block.json",

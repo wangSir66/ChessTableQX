@@ -282,7 +282,7 @@ var EndOneView_Red20 = cc.Layer.extend({
     ctor: function () {
         this._super();
         MjClient.endoneui = this;
-        var endoneui = ccs.load('endOne_Red20.json');
+        var endoneui = ccs.load(res.EndOne_Red20_json);
         BindUiAndLogic(endoneui.node, this.jsBind);
         this.addChild(endoneui.node);
 
