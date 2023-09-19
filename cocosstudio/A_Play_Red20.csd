@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="Play_Red20" Type="Layer" ID="d90d242f-98bd-49fe-b333-b79b67e6a462" Version="3.10.0.0" />
+  <PropertyGroup Name="A_Play_Red20" Type="Layer" ID="d90d242f-98bd-49fe-b333-b79b67e6a462" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -2434,28 +2434,28 @@
                     <PreSize X="1.0397" Y="0.9840" />
                     <FileData Type="Normal" Path="Red20/Controller/tip_tou.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="redPoint" ActionTag="-1949357050" Tag="323" IconVisible="False" LeftMargin="20.4345" RightMargin="21.5655" TopMargin="-51.5100" BottomMargin="142.5100" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="12" BottomEage="12" Scale9OriginX="22" Scale9OriginY="12" Scale9Width="40" Scale9Height="10" ctype="ImageViewObjectData">
-                    <Size X="84.0000" Y="34.0000" />
+                  <AbstractNodeData Name="redPoint" ActionTag="-1949357050" Tag="323" IconVisible="False" LeftMargin="14.9345" RightMargin="16.0655" TopMargin="-63.2435" BottomMargin="142.2435" LeftEage="22" RightEage="22" TopEage="12" BottomEage="12" Scale9OriginX="22" Scale9OriginY="12" Scale9Width="869" Scale9Height="19" ctype="ImageViewObjectData">
+                    <Size X="95.0000" Y="46.0000" />
                     <Children>
-                      <AbstractNodeData Name="Text" ActionTag="1479232746" Tag="326" IconVisible="False" LeftMargin="0.6485" RightMargin="3.3515" TopMargin="6.2318" BottomMargin="7.7682" IsCustomSize="True" FontSize="18" LabelText="红点:20" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="80.0000" Y="20.0000" />
+                      <AbstractNodeData Name="Text" ActionTag="1479232746" Tag="326" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="11.5000" RightMargin="11.5000" TopMargin="5.0000" BottomMargin="5.0000" IsCustomSize="True" FontSize="18" LabelText="红点: 50&#xA;红点: 50" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="72.0000" Y="36.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="40.6485" Y="17.7682" />
+                        <Position X="47.5000" Y="23.0000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="244" G="247" B="154" />
-                        <PrePosition X="0.4839" Y="0.5226" />
-                        <PreSize X="0.9524" Y="0.5882" />
+                        <PrePosition X="0.5000" Y="0.5000" />
+                        <PreSize X="0.7579" Y="0.7826" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="62.4345" Y="159.5100" />
+                    <Position X="62.4345" Y="165.2435" />
                     <Scale ScaleX="1.2000" ScaleY="1.2000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.4955" Y="1.2761" />
-                    <PreSize X="0.6667" Y="0.2720" />
-                    <FileData Type="Normal" Path="Red20/DeskTexture/dss_cardnum.png" Plist="" />
+                    <PrePosition X="0.4955" Y="1.3219" />
+                    <PreSize X="0.7540" Y="0.3680" />
+                    <FileData Type="Normal" Path="Red20/DeskTexture/tipBg.png" Plist="" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -3527,7 +3527,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="TG_CountDown" ActionTag="-1131900127" Tag="327" IconVisible="False" LeftMargin="105.7233" RightMargin="261.2767" TopMargin="769.6122" BottomMargin="-92.6123" LeftEage="301" RightEage="301" TopEage="14" BottomEage="14" Scale9OriginX="301" Scale9OriginY="14" Scale9Width="311" Scale9Height="15" ctype="ImageViewObjectData">
+          <AbstractNodeData Name="TG_CountDown" ActionTag="-1131900127" Tag="327" IconVisible="False" LeftMargin="105.7233" RightMargin="261.2767" TopMargin="769.6123" BottomMargin="-92.6123" LeftEage="301" RightEage="301" TopEage="14" BottomEage="14" Scale9OriginX="301" Scale9OriginY="14" Scale9Width="311" Scale9Height="15" ctype="ImageViewObjectData">
             <Size X="913.0000" Y="43.0000" />
             <Children>
               <AbstractNodeData Name="lb" ActionTag="1218892843" Tag="323" IconVisible="False" LeftMargin="157.0000" RightMargin="158.0000" TopMargin="9.0000" BottomMargin="8.0000" FontSize="26" LabelText="有玩家正在思考中，  秒后该玩家将进入托管状态！" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">

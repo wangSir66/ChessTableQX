@@ -7624,7 +7624,7 @@
         <Project Name="eMailLayerReceive.csd" Type="Layer" />
         <Project Name="endAll.csd" Type="Layer" />
         <Project Name="endOne.csd" Type="Layer" />
-        <Project Name="endOne_Red20.csd" Type="Layer" />
+        <Project Name="A_EndOne_Red20.csd" Type="Layer" />
         <Project Name="endOne_RunFasterYA.csd" Type="Layer" />
         <Project Name="EndRoom.csd" Type="Node" />
         <Project Name="fangQiang.csd" Type="Layer" />
@@ -7701,9 +7701,9 @@
         <Project Name="PayWayLayer.csd" Type="Layer" />
         <Project Name="PersonalMallLayer.csd" Type="Layer" />
         <Project Name="Play.csd" Type="Layer" />
-        <Project Name="Play_Red20.csd" Type="Layer" />
-        <Project Name="Play_RunFasterYN.csd" Type="Layer" />
-        <Project Name="Play_XueZhanMahjong.csd" Type="Layer" />
+        <Project Name="A_Play_Red20.csd" Type="Layer" />
+        <Project Name="A_Play_RunFasterYN.csd" Type="Layer" />
+        <Project Name="A_Play_XueZhanMahjong.csd" Type="Layer" />
         <Project Name="playBackLayer.csd" Type="Layer" />
         <Project Name="PlayerChat.csd" Type="Layer" />
         <Project Name="PlayLog.csd" Type="Node" />

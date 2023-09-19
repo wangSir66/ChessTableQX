@@ -1,5 +1,5 @@
 <GameFile>
-  <PropertyGroup Name="endOne_Red20" Type="Layer" ID="6e736d07-315d-4421-b3aa-d57d71d4e7fc" Version="3.10.0.0" />
+  <PropertyGroup Name="A_EndOne_Red20" Type="Layer" ID="6e736d07-315d-4421-b3aa-d57d71d4e7fc" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
       <Animation Duration="0" Speed="1.0000" />
@@ -270,10 +270,10 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="fan" ActionTag="-2033130490" Tag="2338" IconVisible="False" LeftMargin="1038.9552" RightMargin="-1138.9552" TopMargin="-33.9910" BottomMargin="3.9910" IsCustomSize="True" FontSize="30" LabelText="X3" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="fan" ActionTag="-2033130490" Tag="2338" IconVisible="False" LeftMargin="1038.9600" RightMargin="-1138.9600" TopMargin="-33.9900" BottomMargin="3.9900" IsCustomSize="True" FontSize="30" LabelText="X3" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="100.0000" Y="30.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="1088.9552" Y="18.9910" />
+                    <Position X="1088.9600" Y="18.9900" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="244" G="219" B="168" />
                     <PrePosition />
@@ -453,10 +453,10 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="fan" ActionTag="1253756254" Tag="2079" IconVisible="False" LeftMargin="1038.9552" RightMargin="-1138.9552" TopMargin="-33.9910" BottomMargin="3.9910" IsCustomSize="True" FontSize="30" LabelText="10王" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="fan" ActionTag="1253756254" Tag="2079" IconVisible="False" LeftMargin="1038.9600" RightMargin="-1138.9600" TopMargin="-33.9910" BottomMargin="3.9910" IsCustomSize="True" FontSize="30" LabelText="10王" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="100.0000" Y="30.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="1088.9552" Y="18.9910" />
+                    <Position X="1088.9600" Y="18.9910" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="244" G="219" B="168" />
                     <PrePosition />
@@ -636,10 +636,10 @@
                     <EndColor A="255" R="255" G="255" B="255" />
                     <ColorVector ScaleY="1.0000" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="fan" ActionTag="-1144646001" Tag="2095" IconVisible="False" LeftMargin="1038.9552" RightMargin="-1138.9552" TopMargin="-33.9910" BottomMargin="3.9910" IsCustomSize="True" FontSize="30" LabelText="X3" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="fan" ActionTag="-1144646001" Tag="2095" IconVisible="False" LeftMargin="1038.9552" RightMargin="-1138.9552" TopMargin="-33.9900" BottomMargin="3.9900" IsCustomSize="True" FontSize="30" LabelText="X3" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="100.0000" Y="30.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="1088.9552" Y="18.9910" />
+                    <Position X="1088.9552" Y="18.9900" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="244" G="219" B="168" />
                     <PrePosition />

@@ -3022,7 +3022,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         this._super();
         this.TableOutData.pos = -1;
         this.TableOutData.Card = 0;
-        var playui = ccs.load('Play_Red20.json');
+        var playui = ccs.load(res.Play_Red20_json);
         this.srcMaxPlayerNum = MjClient.MaxPlayerNum;
         MjClient.MaxPlayerNum = parseInt(MjClient.data.sData.tData.maxPlayer);
         cc.log("MjClient.MaxPlayerNum LYG = " + MjClient.MaxPlayerNum);
@@ -3816,54 +3816,44 @@ PlayerGamePanel_Red20.prototype.onUserNewCard = function (node, off, cards, call
 }
 //更新玩家红点
 PlayerGamePanel_Red20.prototype.updateRedPointCount = function () {
-    let num = 0, pl = getUIPlayer(0), node = getNode(0);
+    let rNum = 0, hNum = 0, pl = getUIPlayer(0), node = getNode(0);
     if (!pl || !node || !pl.mjhand) return;
-    let Rule = MjClient.data.sData.tData.Rule;
+    let Rule = MjClient.data.sData.tData.Rule, getPintFun = (card) => {
+        let cardNum = MjClient.majiang.getCardNum(card);
+        //7当王算点
+        if (cardNum === 7) {
+            if ((Rule.Allow7AsKing && Rule.IsPoint7AsKing) || !Rule.Allow7AsKing) return cardNum;
+        } else {
+            return cardNum > 10 ? 1 : cardNum;
+        }
+    };
     //手牌
     pl.mjhand.forEach(card => {
+        let cdColor = MjClient.majiang.getCardColor(card);
         //wang
-        if (MjClient.majiang.getCardColor(card) === 4) return;
+        if (cdColor === 4) return;
         //红点
-        if (MjClient.majiang.getCardColor(card) % 2 === 0) {
-            let cardNum = MjClient.majiang.getCardNum(card);
-            //7当王算点
-            if (cardNum === 7) {
-                if (Rule.Allow7AsKing && Rule.IsPoint7AsKing) {
-                    num += cardNum > 10 ? 1 : cardNum;
-                } else if (!Rule.Allow7AsKing) {
-                    num += cardNum > 10 ? 1 : cardNum;
-                }
-            } else {
-                num += cardNum > 10 ? 1 : cardNum;
-            }
-        }
+        if (cdColor % 2 === 0) rNum += getPintFun(card);
+        else hNum += getPintFun(card);
     })
     //碰杠牌
     const nameAr = ['gang0', 'gang1', 'chi', 'peng', 'anpeng', 'wang', '7ToWang'];
     const BottomUserChiCards = node.children.filter(n => nameAr.indexOf(n.name) > -1)
     BottomUserChiCards.forEach(card => {
         if (!card.visible || card.getOpacity() !== 255) return;
+        let cdColor = MjClient.majiang.getCardColor(card.tag);
         //wang
-        if (MjClient.majiang.getCardColor(card.tag) === 4) return;
+        if (cdColor === 4) return;
         //红点
-        if (MjClient.majiang.getCardColor(card.tag) % 2 === 0) {
-            let cardNum = MjClient.majiang.getCardNum(card.tag);
-            //7当王算点
-            if (cardNum === 7) {
-                if (Rule.Allow7AsKing && Rule.IsPoint7AsKing) {
-                    num += cardNum > 10 ? 1 : cardNum;
-                } else if (!Rule.Allow7AsKing) {
-                    num += cardNum > 10 ? 1 : cardNum;
-                }
-            } else {
-                num += cardNum > 10 ? 1 : cardNum;
-            }
-        }
+        if (cdColor % 2 === 0) rNum += getPintFun(card.tag);
+        else hNum += getPintFun(card.tag);
     })
     const redPoint = node.getChildByName("head").getChildByName("redPoint");
     if (redPoint) {
         redPoint.visible = true;
-        redPoint.getChildByName('Text').setString('红点: ' + num);
+        let txt = redPoint.getChildByName('Text');
+        txt.setString('红点: ' + rNum + '\n' + '黑点: ' + hNum);
+        txt.ignoreContentAdaptWithSize(true);
     }
 }
 //设置玩家手牌

@@ -2240,7 +2240,7 @@ var PlayLayer_RunFasterYA = cc.Layer.extend({
     _btn_rank: null,
     ctor: function () {
         this._super();
-        var playui = ccs.load("Play_RunFasterYN.json");
+        var playui = ccs.load(res.Play_RunFasterYN_json);
 
         this.srcMaxPlayerNum = MjClient.MaxPlayerNum;
         MjClient.MaxPlayerNum = parseInt(MjClient.data.sData.tData.maxPlayer);

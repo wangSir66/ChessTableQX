@@ -1226,10 +1226,16 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
             up: {
                 _layout: [
                     [0.05, 0],
-                    [0, 0],
+                    [0.5, 0],
                     [0.8, 0.7]
                 ],
-                _visible: false
+                _visible: false,
+                _run: function () {
+                    var tData = MjClient.data.sData.tData,
+                        num = 0.8;
+                    if (tData && tData.areaSelectMode && tData.areaSelectMode.Forming) num = -1 * (tData.areaSelectMode.Forming + 4) / 2;
+                    setWgtLayout(this, [0.05, 0], [0.5, 0], [num, 0.7]);
+                }
             },
             down: {
                 _layout: [
@@ -3182,9 +3188,9 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 },
                 initSceneData: function (msg) {
                     var pl = getUIPlayer(0);
-                    if(pl.trust){
+                    if (pl.trust) {
                         this.visible = true;
-                    }else {
+                    } else {
                         this.visible = false;
                     }
                 },
@@ -3253,7 +3259,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         },
         block_load: {
             _visible: false
-        },        
+        },
         TG_CountDown: {//托管倒计时
             _visible: false,
             _layout: [[0.6, 0.6], [0.5, 0.4], [0, 0]],
@@ -3310,7 +3316,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         this._super();
         this.srcMaxPlayerNum = MjClient.MaxPlayerNum;
         MjClient.MaxPlayerNum = Number(MjClient.data.sData.tData.maxPlayer);
-        var playui = ccs.load("Play_XueZhanMahjong.json");
+        var playui = ccs.load(res.Play_XueZhanMahjong_json);
         playMusic("bgFight");
         this._downNode = playui.node.getChildByName("down");
         this._rightNode = playui.node.getChildByName("right");
@@ -3876,7 +3882,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
 
 PlayLayer_YNXueZhan.prototype.CardLayoutRestore = function (node, off) {
     // node 是克隆新建的一个麻将节点 by sking
-
     var newC = null; //先创建麻将的UI节点
     var newVal = 0; //新牌的值，是几万，几筒，几条....为数字
     var pl = getUIPlayer(off);//获取玩家信息.off 为0 ，就是自己得信息，能看到自己摸牌 by sking
@@ -4561,8 +4566,6 @@ PlayLayer_YNXueZhan.prototype.resetCardAfterHu = function (node, off) {
     }
 
     var cpnode = cnode.getChildByName("down");
-    var cpnode_hu = cnode.getChildByName("up");
-    var tmp = cnode.getChildByName("stand");
 
     var huCardsarry = [];
 
