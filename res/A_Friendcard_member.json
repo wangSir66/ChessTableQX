@@ -6079,7 +6079,7 @@
                   },
                   {
                     "FontSize": 24,
-                    "LabelText": "   退出亲友圈  ",
+                    "LabelText": "    退出亲友圈  ",
                     "FontResource": {
                       "Type": "Default",
                       "Path": "",
@@ -6102,7 +6102,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 486.7723,
+                      "X": 495.0,
                       "Y": 31.9691
                     },
                     "Scale": {
@@ -6116,15 +6116,15 @@
                     },
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4537,
+                      "X": 0.4613,
                       "Y": 0.0497
                     },
                     "PreSize": {
-                      "X": 0.1678,
+                      "X": 0.1789,
                       "Y": 0.0373
                     },
-                    "LeftMargin": 396.7723,
-                    "RightMargin": 496.2277,
+                    "LeftMargin": 399.0,
+                    "RightMargin": 482.0,
                     "TopMargin": 599.0309,
                     "BottomMargin": 19.9691,
                     "Tag": 310,
@@ -6158,10 +6158,10 @@
                           "Y": 0.5
                         },
                         "PreSize": {
-                          "X": 0.1833,
+                          "X": 0.1719,
                           "Y": 1.125
                         },
-                        "RightMargin": 147.0,
+                        "RightMargin": 159.0,
                         "TopMargin": -1.5,
                         "BottomMargin": -1.5,
                         "Tag": 311,
@@ -6176,7 +6176,7 @@
                     ],
                     "ActionTag": -2017754373,
                     "Size": {
-                      "X": 180.0,
+                      "X": 192.0,
                       "Y": 24.0
                     },
                     "Name": "Text_exit_club",
@@ -6185,7 +6185,7 @@
                   {
                     "IsCustomSize": true,
                     "FontSize": 24,
-                    "LabelText": "     禁玩30天未上线玩家  ",
+                    "LabelText": "      禁玩30天未上线玩家  ",
                     "FontResource": {
                       "Type": "Default",
                       "Path": "",
@@ -6303,7 +6303,7 @@
                   },
                   {
                     "FontSize": 24,
-                    "LabelText": "     全员禁止玩牌   ",
+                    "LabelText": "      全员禁止玩牌   ",
                     "FontResource": {
                       "Type": "Default",
                       "Path": "",
@@ -6344,11 +6344,11 @@
                       "Y": 0.0494
                     },
                     "PreSize": {
-                      "X": 0.2237,
+                      "X": 0.2349,
                       "Y": 0.0373
                     },
-                    "LeftMargin": 569.8808,
-                    "RightMargin": 263.1192,
+                    "LeftMargin": 563.8808,
+                    "RightMargin": 257.1192,
                     "TopMargin": 599.2456,
                     "BottomMargin": 19.7544,
                     "Tag": 312,
@@ -6390,15 +6390,15 @@
                         "IconVisible": false,
                         "PositionPercentYEnabled": true,
                         "PrePosition": {
-                          "X": 0.0125,
+                          "X": 0.0119,
                           "Y": 0.5
                         },
                         "PreSize": {
-                          "X": 0.1542,
+                          "X": 0.1468,
                           "Y": 1.5833
                         },
                         "LeftMargin": 3.0,
-                        "RightMargin": 200.0,
+                        "RightMargin": 212.0,
                         "TopMargin": -7.0,
                         "BottomMargin": -7.0,
                         "Tag": 313,
@@ -6413,7 +6413,7 @@
                     ],
                     "ActionTag": 506454426,
                     "Size": {
-                      "X": 240.0,
+                      "X": 252.0,
                       "Y": 24.0
                     },
                     "Name": "all_member_stop",
@@ -10628,6 +10628,7 @@
                   "X": 1073.0,
                   "Y": 643.0
                 },
+                "VisibleForFrame": false,
                 "Name": "Panel_group",
                 "ctype": "PanelObjectData"
               },
@@ -11138,6 +11139,7 @@
                     "Tag": 497,
                     "Children": [
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "编号/人数",
                         "FontResource": {
@@ -11192,6 +11194,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "昵称",
                         "FontResource": {
@@ -11246,6 +11249,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "ID/备注",
                         "FontResource": {
@@ -11300,6 +11304,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "创建时间",
                         "FontResource": {
@@ -11354,6 +11359,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "在线",
                         "FontResource": {
@@ -11408,6 +11414,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "操作",
                         "FontResource": {

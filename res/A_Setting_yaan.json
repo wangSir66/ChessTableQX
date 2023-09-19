@@ -1,7 +1,7 @@
 {
   "ID": "d755b8dc-ffa4-4df5-a7f3-3e227fe7fe8a",
   "Version": "2.3.4",
-  "Name": "setting_yaan",
+  "Name": "A_Setting_yaan",
   "Content": {
     "Content": {
       "Animation": {
@@ -968,7 +968,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 163.385,
+                  "X": 163.3632,
                   "Y": 467.0587
                 },
                 "Scale": {
@@ -990,8 +990,8 @@
                   "X": 0.0899,
                   "Y": 0.045
                 },
-                "LeftMargin": 118.385,
-                "RightMargin": 792.615,
+                "LeftMargin": 118.3632,
+                "RightMargin": 792.6368,
                 "TopMargin": 183.9413,
                 "BottomMargin": 452.0587,
                 "Tag": 225,
@@ -1027,7 +1027,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 157.8409,
+                  "X": 157.8577,
                   "Y": 316.9968
                 },
                 "Scale": {
@@ -1049,8 +1049,8 @@
                   "X": 0.0899,
                   "Y": 0.045
                 },
-                "LeftMargin": 112.8409,
-                "RightMargin": 798.1591,
+                "LeftMargin": 112.8577,
+                "RightMargin": 798.1423,
                 "TopMargin": 334.0032,
                 "BottomMargin": 301.9968,
                 "Tag": 226,
@@ -1094,7 +1094,7 @@
                 },
                 "Position": {
                   "X": 500.5,
-                  "Y": 160.3082
+                  "Y": 160.3062
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1114,8 +1114,8 @@
                 },
                 "LeftMargin": 349.5,
                 "RightMargin": 349.5,
-                "TopMargin": 457.6918,
-                "BottomMargin": 112.3082,
+                "TopMargin": 457.6938,
+                "BottomMargin": 112.3062,
                 "Tag": 1152,
                 "ActionTag": -2136444830,
                 "Size": {
@@ -1149,8 +1149,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 930.0,
-                  "Y": 65.9656
+                  "X": 930.0002,
+                  "Y": 105.9659
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1164,16 +1164,16 @@
                 "IconVisible": false,
                 "PrePosition": {
                   "X": 0.9291,
-                  "Y": 0.099
+                  "Y": 0.1591
                 },
                 "PreSize": {
                   "X": 0.1329,
                   "Y": 0.039
                 },
-                "LeftMargin": 797.0,
-                "RightMargin": 71.0,
-                "TopMargin": 587.0344,
-                "BottomMargin": 52.9656,
+                "LeftMargin": 797.0002,
+                "RightMargin": 70.9998,
+                "TopMargin": 547.0341,
+                "BottomMargin": 92.9659,
                 "Tag": 187,
                 "ActionTag": 838887327,
                 "Size": {

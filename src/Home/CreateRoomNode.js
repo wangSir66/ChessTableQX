@@ -723,6 +723,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             }
         });        
         this._nodeGPS.setSelected(false);
+        this._nodeGPS.setSelected(false);
         this._nodeGPS.addEventListener(function (sender, type) {
             switch (type) {
                 case ccui.CheckBox.EVENT_SELECTED:
