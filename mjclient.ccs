@@ -7584,6 +7584,9 @@
         <Project Name="A_ChangePWD.csd" Type="Layer" />
         <Project Name="A_CreateHomeTotal.csd" Type="Layer" />
         <Project Name="A_Dlgagreement.csd" Type="Layer" />
+        <Project Name="A_EndAll_Red20.csd" Type="Layer" />
+        <Project Name="A_EndAll_Runfaster.csd" Type="Layer" />
+        <Project Name="A_EndAll_XueZhan.csd" Type="Layer" />
         <Project Name="A_EndOne_XueZhan.csd" Type="Layer" />
         <Project Name="A_Enter.csd" Type="Layer" />
         <Project Name="A_Friendcard_gaojiSet.csd" Type="Layer" />
@@ -7601,6 +7604,8 @@
         <Project Name="A_mobilePhoneLogin.csd" Type="Layer" />
         <Project Name="A_registerPhoneNumLayer.csd" Type="Layer" />
         <Project Name="A_SelectRulePanel.csd" Type="Layer" />
+        <Project Name="A_Setting_home.csd" Type="Layer" />
+        <Project Name="A_Setting_yaan.csd" Type="Layer" />
         <Project Name="A_Update.csd" Type="Layer" />
         <Project Name="A_UserInfo.csd" Type="Layer" />
         <Project Name="ActivityLayer.csd" Type="Layer" />
@@ -7618,8 +7623,6 @@
         <Project Name="eMailLayer.csd" Type="Layer" />
         <Project Name="eMailLayerReceive.csd" Type="Layer" />
         <Project Name="endAll.csd" Type="Layer" />
-        <Project Name="A_EndAll_Red20.csd" Type="Layer" />
-        <Project Name="A_EndAll_Runfaster.csd" Type="Layer" />
         <Project Name="endOne.csd" Type="Layer" />
         <Project Name="endOne_Red20.csd" Type="Layer" />
         <Project Name="endOne_RunFasterYA.csd" Type="Layer" />
@@ -7723,11 +7726,9 @@
         <Project Name="SameIP.csd" Type="Node" />
         <Project Name="ScanCheatLayer.csd" Type="Layer" />
         <Project Name="setting.csd" Type="Layer" />
-        <Project Name="A_Setting_home.csd" Type="Layer" />
         <Project Name="setting_new.csd" Type="Layer" />
         <Project Name="setting_poker.csd" Type="Layer" />
         <Project Name="setting_table.csd" Type="Layer" />
-        <Project Name="A_Setting_yaan.csd" Type="Layer" />
         <Project Name="shareCaishenLayer.csd" Type="Layer" />
         <Project Name="ShareLayer.csd" Type="Layer" />
         <Project Name="ShareNewLayer.csd" Type="Layer" />
@@ -7746,7 +7747,6 @@
         <Project Name="UserInfo_playing.csd" Type="Layer" />
         <Project Name="WebView.csd" Type="Node" />
         <Project Name="YouJianLayer.csd" Type="Layer" />
-        <Project Name="A_EndAll_XueZhan.csd" Type="Layer" />
       </RootFolder>
     </Group>
   </SolutionFolder>
