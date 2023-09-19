@@ -383,7 +383,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -430,7 +430,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -477,7 +477,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -524,7 +524,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -571,7 +571,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -618,7 +618,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -665,7 +665,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -712,7 +712,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -759,7 +759,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -806,7 +806,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -853,7 +853,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -900,7 +900,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -947,7 +947,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -994,7 +994,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -1041,7 +1041,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -1088,7 +1088,7 @@
                         "FileData": {
                           "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/img_hengxian.png",
-                          "Plist": "A_FriendCard/GaojiSet.plist"
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9Enable": true,
                         "Scale9OriginX": 266,
@@ -1149,9 +1149,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -1619,9 +1619,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -1747,9 +1747,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -1875,9 +1875,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -2002,9 +2002,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -2129,9 +2129,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -2257,9 +2257,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -2385,9 +2385,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -2513,9 +2513,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -3281,9 +3281,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -3791,9 +3791,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -3919,9 +3919,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -4491,14 +4491,14 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Disable.png",
+                          "Plist": ""
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -5252,9 +5252,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -5504,9 +5504,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -5694,9 +5694,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -5884,9 +5884,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -6315,9 +6315,9 @@
                               "Plist": "A_Common/Common.plist"
                             },
                             "NodeNormalFileData": {
-                              "Type": "MarkedSubImage",
-                              "Path": "A_Common/Main/img_gou.png",
-                              "Plist": "A_Common/Common.plist"
+                              "Type": "Default",
+                              "Path": "Default/CheckBoxNode_Normal.png",
+                              "Plist": ""
                             },
                             "NodeDisableFileData": {
                               "Type": "MarkedSubImage",
@@ -6442,9 +6442,9 @@
                               "Plist": "A_Common/Common.plist"
                             },
                             "NodeNormalFileData": {
-                              "Type": "MarkedSubImage",
-                              "Path": "A_Common/Main/img_gou.png",
-                              "Plist": "A_Common/Common.plist"
+                              "Type": "Default",
+                              "Path": "Default/CheckBoxNode_Normal.png",
+                              "Plist": ""
                             },
                             "NodeDisableFileData": {
                               "Type": "MarkedSubImage",
@@ -6569,9 +6569,9 @@
                               "Plist": "A_Common/Common.plist"
                             },
                             "NodeNormalFileData": {
-                              "Type": "MarkedSubImage",
-                              "Path": "A_Common/Main/img_gou.png",
-                              "Plist": "A_Common/Common.plist"
+                              "Type": "Default",
+                              "Path": "Default/CheckBoxNode_Normal.png",
+                              "Plist": ""
                             },
                             "NodeDisableFileData": {
                               "Type": "MarkedSubImage",
@@ -6696,9 +6696,9 @@
                               "Plist": "A_Common/Common.plist"
                             },
                             "NodeNormalFileData": {
-                              "Type": "MarkedSubImage",
-                              "Path": "A_Common/Main/img_gou.png",
-                              "Plist": "A_Common/Common.plist"
+                              "Type": "Default",
+                              "Path": "Default/CheckBoxNode_Normal.png",
+                              "Plist": ""
                             },
                             "NodeDisableFileData": {
                               "Type": "MarkedSubImage",
@@ -7620,7 +7620,7 @@
                             "NormalFileData": {
                               "Type": "MarkedSubImage",
                               "Path": "A_FriendCard/Main/img_sanjiao1.png",
-                              "Plist": "A_FriendCard/GaojiSet.plist"
+                              "Plist": "A_FriendCard/FriendCardMain.plist"
                             },
                             "Scale9Enable": true,
                             "Scale9OriginX": 7,
@@ -8960,7 +8960,7 @@
                             "NormalFileData": {
                               "Type": "MarkedSubImage",
                               "Path": "A_FriendCard/Main/img_sanjiao1.png",
-                              "Plist": "A_FriendCard/GaojiSet.plist"
+                              "Plist": "A_FriendCard/FriendCardMain.plist"
                             },
                             "Scale9Enable": true,
                             "Scale9OriginX": 7,
@@ -9040,9 +9040,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/img_gou.png",
-                          "Plist": "A_Common/Common.plist"
+                          "Type": "Default",
+                          "Path": "Default/CheckBoxNode_Normal.png",
+                          "Plist": ""
                         },
                         "NodeDisableFileData": {
                           "Type": "MarkedSubImage",
@@ -9497,6 +9497,8 @@
         "A_FriendCard/GaojiSet.plist",
         "A_FriendCard/GaojiSet.png",
         "Default/Button_Disable.png",
+        "Default/CheckBoxNode_Disable.png",
+        "Default/CheckBoxNode_Normal.png",
         "fonts/fzcy.ttf",
         "friendCards/gaojiSet/img_juxingItem.png",
         "friendCards/gaojiSet/img_juxingItem1.png",

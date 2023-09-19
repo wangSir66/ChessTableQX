@@ -404,7 +404,7 @@ var FriendCard_main = cc.Layer.extend({
 		// if (skinType == -1)
 		// 	skinType = skinCfg[FriendCard_Common.getGameCalssType(desk.room.gameType) + "BG"] || 0;
 		// if (!skinType)
-			skinType = desk.room.maxPlayer ? desk.room.maxPlayer : 3 ;
+		skinType = desk.room.maxPlayer ? desk.room.maxPlayer : 3;
 		var path = "A_FriendCard/Main/";
 		var table = desk.getChildByName("table");
 		table.loadTexture(path + "zhuozi_" + skinType + ".png", 1);
@@ -779,15 +779,11 @@ var FriendCard_main = cc.Layer.extend({
 			titleStr = titleStr.replace(/\n/g, "");
 			titleStr = titleStr.replace(/\r/g, "");
 			title.setString(titleStr);
-			var isSelected = list[i].clubId == this.clubId;
-			//var _color = isSelected ? "#FFFFFF" : "#A9E0FF";
-			//title.setTextColor(cc.color(_color));
 			title.ignoreContentAdaptWithSize(true);
 
 			var onlineCount = cell.getChildByName("onlineCount");
 			onlineCount.setString(list[i].onlineCount + "");
 			onlineCount.ignoreContentAdaptWithSize(true)
-			//onlineCount.setTextColor(cc.color(isSelected ? "#FFFFFF" : "#58E6CD"))
 
 
 			var allNum = cell.getChildByName("allNum");
@@ -808,12 +804,11 @@ var FriendCard_main = cc.Layer.extend({
 			var clubID = cell.getChildByName("clubID");
 			clubID.setString("ID:" + list[i].clubId);
 			clubID.ignoreContentAdaptWithSize(true);
-			//allNum.setTextColor(cc.color(isSelected ? "#FFFFFF" : "#A9E0FF"))
 
-			//成员图片
-			var image_7 = cell.getChildByName("Image_7");
-			onlineCount.x = image_7.x + image_7.width + onlineCount.width
-			allNum.x = onlineCount.x
+			var isSelected = list[i].clubId == this.clubId;
+			var _color = isSelected ? "#DF600B" : "#0D40B6";
+			title.setTextColor(cc.color(_color));
+			clubID.setTextColor(cc.color(_color));
 
 			//房卡标签
 			var img_fangka = cell.getChildByName("img_fangka");
@@ -859,7 +854,7 @@ var FriendCard_main = cc.Layer.extend({
 		var isAssistants = FriendCard_Common.isAssistants(that.data.info);
 
 		//女管家标签
-		this.img_nvguanjia.visible = isManager;
+		this._btn_guanli.visible = isManager;
 
 		//俱乐部名字
 		var text_clubName = this._clubInfo.getChildByName("text_clubName");
@@ -938,7 +933,7 @@ var FriendCard_main = cc.Layer.extend({
 
 		//this._btn_setting.setVisible(isManager);
 		this._btn_tongji.setVisible((this.data.info.isShowStats != 0) || isManager || isGroupLeader || isAssistants);
-		if(this._btn_setSkin){
+		if (this._btn_setSkin) {
 			// this._btn_setSkin.setVisible(FriendCard_Common.isLeader());
 			this._btn_setSkin.setVisible(false);
 		}
@@ -1379,10 +1374,11 @@ var FriendCard_main = cc.Layer.extend({
 				}
 			})
 		}
-
-		var img_xuhao = cell.getChildByName("Image_19").getChildByName("img_xuhao");
-		img_xuhao.setString(this._ruleSort[room.ruleIndex]);
-		img_xuhao.ignoreContentAdaptWithSize(true);
+		var xh = cell.getChildByName("Image_19");
+		xh.visible = false;
+		// var img_xuhao = xh.getChildByName("img_xuhao");
+		// img_xuhao.setString(this._ruleSort[room.ruleIndex]);
+		// img_xuhao.ignoreContentAdaptWithSize(true);
 		for (var j = 0; j < 4 || j < room.maxPlayer; j++) {
 
 			var head = cell.getChildByName("head_" + (j + 1));

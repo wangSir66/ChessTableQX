@@ -46,7 +46,7 @@ function SetEndOneUserUI(node, off) {
 					this.ignoreContentAdaptWithSize(true);
 				},
 				_text: function () {
-					return pl.baseWin > 0 ? ("X" + pl.baseWin) : "0";
+					return pl.huFan > 0 ?  pl.huFan + '番' : "";
 				},
 			},
 			up: {
@@ -116,24 +116,29 @@ function SetEndOneUserUI(node, off) {
 			},
 			stand: {
 				_visible: false
-			}, cardType: {
+			},
+			cardType: {
 				_run: function () {
 					this.ignoreContentAdaptWithSize(true);
 				},
 				_text: function () {
+					cc.log('----', JSON.stringify(pl))
 					return pl.mjdesc + ""
 				},
 			},
-			_event: {
-				loadWxHead: function (d) {
-					if (pl.info.uid != d.uid) return;
-					var sp = new cc.Sprite(d.img);
-					node.addChild(sp);
-					var frame = node.getChildByName("frame");
-					if (frame) {
-						frame.zIndex = sp.zIndex + 1;
-					}
-					setWgtLayout(sp, [0.88, 0.88], [0.5, 0.5], [0, 0], false, true);
+			_run: function () {
+				this.loadTexture(pl.info.headimgurl || 'A_Common/HeadImgs/head_228.jpg', 1);
+			},
+			weixiajiao: {
+				_visible: false,
+				_run: function () {
+					this.visible = pl.huDesc.indexOf('未下叫') > -1;
+				}
+			},
+			chahuazhu: {
+				_visible: false,
+				_run: function () {
+					this.visible = false;
 				}
 			}
 		},
@@ -145,24 +150,18 @@ function SetEndOneUserUI(node, off) {
 			},
 			_run: function () {
 				if (pl.winone < 0) { // 分数小于零，改变字体颜色
-					this.setTextColor(cc.color(124, 198, 236));
-					this.enableOutline(cc.color(92, 100, 199), 2);
+					this.setTextColor(cc.color(232, 235, 252));
+					this.enableOutline(cc.color(51, 64, 89), 2);
 				}
-			}
-			, hu: {
-				_run: function () {
-					setGameOverPanelPlayerState(this, pl, true);
-				}
-			}
-			, fenshu: {
-				_run: function () {
-					this.ignoreContentAdaptWithSize(true);
-				},
+			},
+		},
+		hu: {
+			_run: function () {
+				setGameOverPanelPlayerState(this, pl, true);
 			}
 		}
 	}
 	BindUiAndLogic(node.parent, uibind);
-	MjClient.loadWxHead(pl.info.uid, pl.info.headimgurl);
 	//uibind.winNum._node.y=uibind.head._node.y;
 }
 
@@ -173,9 +172,8 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 			_layout: [[1, 1], [0.5, 0.5], [0, 0], true]
 		},
 		back: {
-			_layout: [[1, 1], [0.5, 0.5], [0, 0]]
-			, wintitle:
-			{
+			_layout: [[1, 1], [0.5, 0.5], [0, 0]],
+			wintitle: {
 				_visible: function () {
 					var pl = getUIPlayer(0);
 					if (pl) {
@@ -184,8 +182,8 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 					}
 					return false;
 				}
-			}, losetitle:
-			{
+			},
+			losetitle: {
 				_visible: function () {
 					var pl = getUIPlayer(0);
 					if (pl) {
@@ -194,18 +192,17 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 					}
 					return false;
 				}
-			}, pingju:
-			{
+			},
+			pingju: {
 				_visible: function () {
-
 					var pl = getUIPlayer(0);
-
 					if (pl) {
 						//playEffect("lose");
 						return pl.winone == 0;
 					}
 					return false;
-				}, _run: function () {
+				},
+				_run: function () {
 					var sData = MjClient.data.sData;
 					var tData = sData.tData;
 					if (MjClient.isDismiss) {
@@ -214,36 +211,6 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 					else if (MjClient.CheckPlayerCount(function (p) { if (p.winone == 0) { return true; } return false; }) == tData.maxPlayer) {
 						if (isRealHuangZhuang()) this.loadTexture("gameOver/huangzhuan_35.png");
 					}
-				}
-			}
-			,
-			share: {
-				_click: function (btn, eT) {
-					MjClient.native.umengEvent4CountWithProperty("Fangjiannei_Xiaojiesuanjiemian_Fenxiang", { uid: SelfUid() });
-
-					MjClient.shareMultiPlatform(MjClient.systemConfig.sharePlatforms, function () {
-						postEvent("capture_screen");
-						MjClient.endoneui.capture_screen = true;
-						btn.setTouchEnabled(false);
-					});
-				}
-				, _event: {
-					captureScreen_OK: function () {
-						if (MjClient.endoneui.capture_screen != true)
-							return;
-						MjClient.endoneui.capture_screen = false;
-						var writePath = jsb.fileUtils.getWritablePath();
-						var textrueName = "wxcapture_screen.png";
-						var savepath = writePath + textrueName;
-						MjClient.shareImageToSelectedPlatform(savepath);
-						this.runAction(cc.sequence(cc.delayTime(1), cc.callFunc(function () {
-							this.setTouchEnabled(true);
-						}.bind(this))));
-					}
-				}
-				, _visible: function () {
-					var tData = MjClient.data.sData.tData;
-					return (!MjClient.remoteCfg.guestLogin && !tData.matchId);
 				}
 			},
 			ready: {
@@ -291,21 +258,16 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 					return !tData.matchId;
 				}
 			},
-			close: {
-				_visible: function () {
-					var sData = MjClient.data.sData;
-					var tData = sData.tData;
-					if (tData.fieldId) {
-						return true;
-					}
-					return false;
+			roomid: {
+				_visible: true,
+				_run: function () {
+					this.ignoreContentAdaptWithSize(true);
 				},
-				_click: function (btn, eT) {
-					leaveGameClearUI();
+				_text: function () {
+					return MjClient.data.sData.tData.tableid;
 				}
 			},
-			dir:
-			{
+			roomNum: {
 				_visible: true,
 				_run: function () {
 					this.ignoreContentAdaptWithSize(true);
@@ -313,18 +275,16 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 				_text: function () {
 					var sData = MjClient.data.sData;
 					var tData = sData.tData;
-					if (tData.fieldId) {
-						var payWay = tData.areaSelectMode.payWay;
-						delete tData.areaSelectMode.payWay;
-						var result = GameCnName[MjClient.gameType] + "," + getPlayingRoomInfo(0);
-					} else {
-						var result = getPlayingRoomInfo(3);
-					}
-					if (payWay) {
-						tData.areaSelectMode.payWay = payWay;
-					}
-					return result;
-
+					if (tData) return "局数：" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll;
+					return '';
+				}
+			},
+			rule: {
+				_visible: true,
+				_text: function () {
+					var sData = MjClient.data.sData;
+					var tData = sData.tData;
+					if (tData) return getPlaySelectPara(MjClient.gameType, tData.areaSelectMode);
 				}
 			},
 			head0: {
@@ -378,7 +338,7 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 	},
 	ctor: function () {
 		this._super();
-		var endoneui = ccs.load(res.EndOne_json);
+		var endoneui = ccs.load(res.EndOne_XueZhan_json);
 		BindUiAndLogic(endoneui.node, this.jsBind);
 		this.addChild(endoneui.node);
 
@@ -389,12 +349,6 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 		var _back = endoneui.node.getChildByName("back");
 		var _time = _back.getChildByName("time");
 		_time.visible = true;
-		//function _setTime()
-		//{
-		//    var time = MjClient.getCurrentTime();
-		//    var str = " " + time[0] + "-" + time[1] + "-" + time[2] + " " + time[3] + ":" + time[4] + ":" + time[5];
-		//    return str;
-		//}
 		_time.setString(MjClient.roundEndTime);
 
 		MjClient.endoneui = this;

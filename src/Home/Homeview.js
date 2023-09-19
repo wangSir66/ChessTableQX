@@ -75,7 +75,8 @@ var HomeView_yaan = cc.Layer.extend({
                         } else if (cn === 'txtSpeak' || cn === 'SliderSpeak' || cn === 'CheckBoxSpeak') {
                             nC[i].y = blac.getSize().height / 2 - 50;
                         } else if (cn === 'packageName') {
-                            nC[i].setString(MjClient.native.GetPackageName());
+                            nC[i].setString(getPackageMsgs());
+                            nC[i].ignoreContentAdaptWithSize(true);
                         }
                     }
                     //默认震动
@@ -147,6 +148,27 @@ var HomeView_yaan = cc.Layer.extend({
         var _BtnKeFu = this._Panel_bottom.getChildByName("BtnKeFu");
         _BtnKeFu.getChildByName("hongDian").setVisible(false);
         _BtnKeFu.visible = true;
+        _BtnKeFu.addTouchEventListener(function (sender, Type) {
+            switch (Type) {
+                case ccui.Widget.TOUCH_ENDED:
+                    MjClient.showToast('敬请期待!');
+                    break;
+                default:
+                    break;
+            }
+        }, this);
+
+        //实名认证
+        var sm = _tilebg.getChildByName("shiming");
+        sm.addTouchEventListener(function (sender, Type) {
+            switch (Type) {
+                case ccui.Widget.TOUCH_ENDED:
+                    MjClient.Scene.addChild(new shiMingRenZhengLayer());
+                    break;
+                default:
+                    break;
+            }
+        }, this);
 
         //广播
         this._guangbo = homeui.node.getChildByName("guangbo");
@@ -194,9 +216,7 @@ var HomeView_yaan = cc.Layer.extend({
         }
         btnFriendcardInvite.visible = isAgent();
         btnFriendcardInvite.setPosition(cc.p(66.6, -75))
-
-        setWgtLayout(this._guangbo, [0.5, 0.5], [0.5, 0.86], [0, 0]);
-        if (isIPhoneX()) setWgtLayout(this._guangbo, [0.4, 0.4], [0.41, 0.8365], [0, 0]);
+        setWgtLayout(this._guangbo, [0.5, 0.5], [0.5, 0.84], [0, 0]);
 
         setWgtLayout(_headbg, [0.11, 0.11], [0.02, 0.89], [0, 0]);
 
@@ -258,7 +278,7 @@ var HomeView_yaan = cc.Layer.extend({
                     break;
             }
         }, this);
-        //
+
         //昵称
         var _name = _head.getChildByName("name");
         function _getName() {
@@ -288,12 +308,13 @@ var HomeView_yaan = cc.Layer.extend({
         _money.ignoreContentAdaptWithSize(true);
 
         var btn_addYB = _moneyBack.getChildByName("btn_add");
-        btn_addYB.addTouchEventListener(function (sender, type) {
-            if (type === 2) {
-                MjClient.native.umengEvent4CountWithProperty("Yuanbaozengjia", { uid: SelfUid() });
-                MjClient.Scene.addChild(enter_store());
-            }
-        }, this);
+        btn_addYB.visible = false;
+        // btn_addYB.addTouchEventListener(function (sender, type) {
+        //     if (type === 2) {
+        //         MjClient.native.umengEvent4CountWithProperty("Yuanbaozengjia", { uid: SelfUid() });
+        //         MjClient.Scene.addChild(enter_store());
+        //     }
+        // }, this);
 
         changeAtalsForLabel(_money, MjClient.data.pinfo.money);
         UIEventBind(this.jsBind, _money, "updateInfo", function () {
@@ -314,6 +335,24 @@ var HomeView_yaan = cc.Layer.extend({
             changeAtalsForLabel(_money, MjClient.data.pinfo.money);
         });
 
+        //活动伸缩按钮
+        var _btnActive = _tilebg.getChildByName("gonggao");
+        function _btnActiveTouchEvent(sender, Type) {
+            switch (Type) {
+                case ccui.Widget.TOUCH_ENDED:
+                    updateUserBehavior("活动");
+                    if (MjClient.systemConfig && MjClient.systemConfig.activity) {
+                        var layer = new activityLayer();
+                        MjClient.Scene.addChild(layer);
+                        MjClient.native.umengEvent4CountWithProperty("HuodongClick", { uid: SelfUid() });
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        _btnActive.addTouchEventListener(_btnActiveTouchEvent, this);
+
         /*
          商店 
          */
@@ -327,10 +366,11 @@ var HomeView_yaan = cc.Layer.extend({
         _BtnShop.addTouchEventListener(function (sender, Type) {
             switch (Type) {
                 case ccui.Widget.TOUCH_ENDED:
-                    var layer = enter_store();
-                    MjClient.Scene.addChild(layer);
-                    MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Shop", { uid: SelfUid() });
-                    updateUserBehavior("商城");
+                    MjClient.showToast('敬请期待!');
+                    // var layer = enter_store();
+                    // MjClient.Scene.addChild(layer);
+                    // MjClient.native.umengEvent4CountWithProperty("Zhujiemian_Shop", { uid: SelfUid() });
+                    // updateUserBehavior("商城");
                     break;
                 default:
                     break;

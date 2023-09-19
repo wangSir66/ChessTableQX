@@ -3100,9 +3100,9 @@ FriendCard_Common.initBottom = function (allBtns, par) {
     }
     if (allBtns.indexOf('_btn_guanli') > -1) {//女管家
         var isShow=  that.isManager();
-        that.img_nvguanjia = _btnList.getChildByName("btn_guanli");
-        that.img_nvguanjia.visible = isShow;
-        that.img_nvguanjia.addTouchEventListener(function (sender, type) {
+        that._btn_guanli = _btnList.getChildByName("btn_guanli");
+        that._btn_guanli.visible = isShow;
+        that._btn_guanli.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 that.closeClubList();
                 if (that.isManager()) {
@@ -3433,7 +3433,8 @@ FriendCard_Common.guideLayer = function (that) {
         that.runAction(cc.sequence(cc.delayTime(0.1), cc.callFunc(function () {
             that.closeClubList();
         })))
-        that.data.btnsPos = [that._btn_member.getPosition(), that._btn_yaoqing.getPosition()]
+        that.data.btnsPos = [that._btn_member.getPosition()];
+        if(that._btn_yaoqing)that.data.btnsPos.push(that._btn_yaoqing.getPosition())
         that.data.isManager = that.isManager();
         MjClient.FriendCard_main_ui.addChild(new Friendcard_guideLayer(99, that.data, that.ruleIndex));
     }

@@ -33,7 +33,6 @@ cc.game.onStart = function () {
     if (initResourceDir)
         initResourceDir();
 
-    cc.log("******:" + JSON.stringify(json_res[MjClient.getAppType()]))
     var game_res = json_res[MjClient.getAppType()].concat(sound_res[MjClient.getAppType()]);
 
     cc.spriteFrameCache.addSpriteFrames("A_Common/HeadImgs.plist", "A_Common/HeadImgs.png");

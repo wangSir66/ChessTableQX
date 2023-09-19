@@ -31,36 +31,36 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="barbk" ActionTag="1076741238" Tag="36" IconVisible="False" PositionPercentXEnabled="True" TopMargin="641.4997" BottomMargin="71.5003" LeftEage="63" RightEage="63" TopEage="2" BottomEage="2" Scale9OriginX="63" Scale9OriginY="2" Scale9Width="1154" Scale9Height="3" ctype="ImageViewObjectData">
-                <Size X="1280.0000" Y="7.0000" />
+              <AbstractNodeData Name="barbk" ActionTag="1076741238" Tag="36" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="225.4998" RightMargin="225.5002" TopMargin="620.7498" BottomMargin="70.2503" LeftEage="63" RightEage="63" TopEage="2" BottomEage="2" Scale9OriginX="63" Scale9OriginY="2" Scale9Width="703" Scale9Height="25" ctype="ImageViewObjectData">
+                <Size X="829.0000" Y="29.0000" />
                 <Children>
-                  <AbstractNodeData Name="bar" ActionTag="-1526766623" Tag="76" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" ProgressInfo="100" ctype="LoadingBarObjectData">
-                    <Size X="1280.0000" Y="7.0000" />
+                  <AbstractNodeData Name="bar" ActionTag="-1526766623" Tag="76" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" ProgressInfo="0" ctype="LoadingBarObjectData">
+                    <Size X="829.0000" Y="29.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="640.0000" Y="3.5000" />
+                    <Position X="414.5000" Y="14.5000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
                     <PreSize X="1.0000" Y="1.0000" />
                     <ImageFileData Type="Normal" Path="A_Login/loading_bar.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="light" ActionTag="-1845529335" Tag="29" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1014.0000" RightMargin="-14.0000" TopMargin="-8.5000" BottomMargin="-8.5000" LeftEage="92" RightEage="92" TopEage="7" BottomEage="7" Scale9OriginX="92" Scale9OriginY="7" Scale9Width="96" Scale9Height="10" ctype="ImageViewObjectData">
-                    <Size X="280.0000" Y="24.0000" />
+                  <AbstractNodeData Name="light" Visible="False" ActionTag="-1845529335" Tag="29" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="551.3349" RightMargin="-2.3349" TopMargin="-13.8454" BottomMargin="-12.1546" Scale9Enable="True" LeftEage="92" RightEage="92" TopEage="12" BottomEage="12" Scale9OriginX="92" Scale9OriginY="12" Scale9Width="96" Scale9Height="1" ctype="ImageViewObjectData">
+                    <Size X="280.0000" Y="55.0000" />
                     <AnchorPoint ScaleX="0.9500" ScaleY="0.5000" />
-                    <Position X="1280.0000" Y="3.5000" />
+                    <Position X="817.3349" Y="15.3454" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="1.0000" Y="0.5000" />
-                    <PreSize X="0.2188" Y="3.4286" />
+                    <PrePosition X="0.9859" Y="0.5292" />
+                    <PreSize X="0.3378" Y="1.8966" />
                     <FileData Type="MarkedSubImage" Path="A_Login/Main/loading_bar_head.png" Plist="A_Login/Login.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="640.0000" Y="75.0003" />
+                <Position X="639.9998" Y="84.7503" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.1042" />
-                <PreSize X="1.0000" Y="0.0097" />
+                <PrePosition X="0.5000" Y="0.1177" />
+                <PreSize X="0.6477" Y="0.0403" />
                 <FileData Type="Normal" Path="A_Login/loading_bar_bg.png" Plist="" />
               </AbstractNodeData>
             </Children>

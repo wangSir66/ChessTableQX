@@ -392,9 +392,9 @@
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Common/Main/img_gou.png",
-                      "Plist": "A_Common/Common.plist"
+                      "Type": "Default",
+                      "Path": "Default/CheckBoxNode_Normal.png",
+                      "Plist": ""
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
@@ -520,9 +520,9 @@
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Common/Main/img_gou.png",
-                      "Plist": "A_Common/Common.plist"
+                      "Type": "Default",
+                      "Path": "Default/CheckBoxNode_Normal.png",
+                      "Plist": ""
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
@@ -648,9 +648,9 @@
                       "Plist": "A_Common/Common.plist"
                     },
                     "NodeNormalFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_Common/Main/img_gou.png",
-                      "Plist": "A_Common/Common.plist"
+                      "Type": "Default",
+                      "Path": "Default/CheckBoxNode_Normal.png",
+                      "Plist": ""
                     },
                     "NodeDisableFileData": {
                       "Type": "MarkedSubImage",
@@ -916,7 +916,7 @@
                     "FileData": {
                       "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/img_hengxian.png",
-                      "Plist": "A_FriendCard/GaojiSet.plist"
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9OriginX": 266,
                     "Scale9Width": 279,
@@ -1576,8 +1576,9 @@
       "UsedResources": [
         "A_Common/Common.plist",
         "A_Common/Common.png",
-        "A_FriendCard/GaojiSet.plist",
-        "A_FriendCard/GaojiSet.png",
+        "A_FriendCard/FriendCardMain.plist",
+        "A_FriendCard/FriendCardMain.png",
+        "Default/CheckBoxNode_Normal.png",
         "friendCards/btn_x_normal.png",
         "friendCards/img_datanchuang.png",
         "friendCards/info/img_title.png",

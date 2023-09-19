@@ -19,9 +19,21 @@ var res = {
 	Friendcard_member_manage_json: "A_Friendcard_member_manage.json",
 	Friendcard_roomRecord_json: "A_Friendcard_roomRecord.json",
 	Friendcard_tongji_json: "A_Friendcard_tongji.json",
+	Friendcard_warningScore_json: "A_Friendcard_warningScore.json",
 	Enter_json: "A_Enter.json",
+	Calculator_json: "A_Calculator.json",
+	CreateHomeTotal_json: "A_CreateHomeTotal.json",
+	EndOne_XueZhan_json: "A_EndOne_XueZhan.json",
+	EndAll_Red20_json: "A_EndAll_Red20.json",
+	EndAll_Runfaster_json: "A_EndAll_Runfaster.json",
+	EndAll_XueZhan_json: "A_EndAll_XueZhan.json",
+	Setting_yaan_json: "A_Setting_yaan.json",
+	Setting_home_json: "A_Setting_home.json",
+	Play_XueZhanMahjong_json: "A_Play_XueZhanMahjong.json",
+	Play_Red20_json: "A_Play_Red20.json",
+	Play_RunFasterYN_json: "A_Play_RunFasterYN.json",
+	EndOne_Red20_json: "A_EndOne_Red20.json",
 
-	Create_json: "createHomeTotal.json",
 	Play_json: "Play.json",
 	Block_json: "block.json",
 	FangQiang_json: "fangQiang.json",
@@ -34,11 +46,6 @@ var res = {
 
 function initResourceDir() {
 	var searthPaths = jsb.fileUtils.getSearchPaths();
-	cc.log("-------------initResourceDir start all searchPath:");
-	for (var i = 0; i < searthPaths.length; i++) {
-		cc.log(searthPaths[i]);
-	}
-
 	var writablePath = jsb.fileUtils.getWritablePath();
 	var appPath = "";
 	if (cc.sys.OS_WINDOWS == cc.sys.os) {
@@ -60,7 +67,6 @@ function initResourceDir() {
 				break;
 			}
 		}
-		cc.log("appPath=" + appPath + " appType=" + appType);
 	}
 
 	MjClient.Window_AppPath = appPath;
@@ -80,16 +86,7 @@ function initResourceDir() {
 		}
 		jsb.fileUtils.addSearchPath(writablePath + "res", false);
 	}
-
-	// for (var i = 1; i < MjClient.RESOURCE_DIR.length; i++) {
-	//     if (MjClient.RESOURCE_DIR[i])
-	//         jsb.fileUtils.addSearchPath(writablePath + MjClient.RESOURCE_DIR[i], false);
-	// }
-
 	var searthPaths = jsb.fileUtils.getSearchPaths();
-	for (var i = 0; i < searthPaths.length; i++) {
-		cc.log(searthPaths[i]);
-	}
 
 	cc.spriteFrameCache.addSpriteFrames("chat/emoji_action_texture.plist");
 	cc.spriteFrameCache.addSpriteFrames("chat/emoji.plist");

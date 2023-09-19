@@ -494,12 +494,8 @@ UpdateView = cc.Layer.extend({
         var barbk = _back.getChildByName("barbk");
         var bgMask = _back.getChildByName("bg_mask");
         setWgtLayout(bgMask, [1, 1], [0.5, 0], [0, 0], false, true);
-        setWgtLayout(barbk, [1, 1], [0.5, 0.1], [0, 0], false, true);
+        setWgtLayout(barbk, [0.5, 0.5], [0.5, 0.13], [0, 0], false, true);
         setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.07], [0, 0], false, true);
-        if (isIPhoneX()) {
-            setWgtLayout(barbk, [1, 1], [0.5, 0.12], [0, 0], false, true);
-            setWgtLayout(textLoad, [0.25, 0.25], [0.5, 0.9], [0, 0], false, true);
-        }
         textLoad.ignoreContentAdaptWithSize(true);
         var jindu = 0;
         textLoad.runAction(cc.repeatForever(cc.sequence(cc.callFunc(function () {
@@ -528,6 +524,7 @@ UpdateView = cc.Layer.extend({
 
         var barbk = updateui.node.getChildByName("back").getChildByName("barbk");
         this.lightNode = barbk.getChildByName("light");
+        this.lightNode.visible = false;
         this.barNode = barbk.getChildByName("bar");
         if (this.barNode) {
             this.barSize = this.barNode.getContentSize();
@@ -564,7 +561,7 @@ UpdateView = cc.Layer.extend({
         text.setAnchorPoint(0.5, 0.5);
         text.setFontSize(24);
         text.setFontName("fonts/lanting.ttf");
-        text.setColor(cc.color("#ffeb8c"));
+        text.setColor(cc.color("#F5FD02"));
         text.setPosition(cc.p(bgWidth / 2, bgHeight / 2));
         text.setString(arrTips[index] + "");
         text.ignoreContentAdaptWithSize(true);
@@ -572,7 +569,7 @@ UpdateView = cc.Layer.extend({
         toastUI.setContentSize(bgWidth, bgHeight);
         toastUI.addChild(bg);
         toastUI.addChild(text);
-        setWgtLayout(toastUI, [0.5, 0.5], [0.5, 0.3], [0, 0]);
+        setWgtLayout(toastUI, [0.5, 0.5], [0.5, 0.25], [0, 0]);
 
         function wheelplanting(node, msg) {
             // 当前显示 tips

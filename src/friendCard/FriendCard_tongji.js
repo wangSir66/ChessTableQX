@@ -65,10 +65,10 @@ var FriendCard_tongji = cc.Layer.extend({
     },
     initAll: function (data) {
         var resJson = res.Friendcard_tongji_json;
-        var UI = ccs.load(resJson);
-        this.addChild(UI.node);
+        var node = ccs.load(resJson).node;
+        this.addChild(node);
         var that = this;
-        this.uinode = UI.node;
+        this.uinode = node;
         this._isCreater = (this.clubData.info.creator && SelfUid() == this.clubData.info.creator);
         var isManager = this._isCreater || data.groupLeader ||
             (this.clubData.info.admins && this.clubData.info.admins.indexOf(MjClient.data.pinfo.uid) >= 0);
@@ -94,77 +94,26 @@ var FriendCard_tongji = cc.Layer.extend({
         } else {
             this._costName = "黄金";
         }
-        var _block = UI.node.getChildByName("block");
+        var _block = node.getChildByName("block");
         setWgtLayout(_block, [1, 1], [0.5, 0.5], [0, 0], true);
 
-        var _back = UI.node.getChildByName("back");
+        var _back = node.getChildByName("back");
         this._back = _back;
-        COMMON_UI.setNodeTextAdapterSize(_back);
+        setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0], false);
 
-        var node_title = this._back.getChildByName("node_title");
+        let leftImgDi = node.getChildByName("Image_di");
+        var Image_title = node.getChildByName("Image_title");
+        setWgtLayout(leftImgDi, [1, 1], [0, 0.5], [0, 0], false);
+        setWgtLayout(Image_title, [0.2, 1], [0.6, 1], [0, 0], false);
 
-        if (FriendCard_Common.getSkinType() == 2) {
-            var Image_di = this.uinode.getChildByName("Image_di");
-            var _close = this.uinode.getChildByName("close");
-            var suizi = this.uinode.getChildByName("suizi")
-            var listView_leftBG = this.uinode.getChildByName("ListView_leftBG");
-
-            Image_di.width = MjClient.size.width;
-            Image_di.height = MjClient.size.height * 0.9306;
-            Image_di.setPosition(MjClient.size.width / 2, MjClient.size.height / 2);
-
-            if (isIPhoneX()) {
-                setWgtLayout(_close, [0.1226, 0.2815], [0.9741, 0.8407], [0, 0], false);
-                setWgtLayout(suizi, [0.0148, 0.3853], [0.9764, 0.8733], [0, 0], false);
-                setWgtLayout(_back, [1, 0.9653], [0.5, 0.5], [0, 0], false);
-                listView_leftBG.width = MjClient.size.width * 0.2170;
-                listView_leftBG.height = MjClient.size.height * 0.8885;
-                listView_leftBG.setPosition(0, MjClient.size.height * 0.4991);
-            } else {
-                setWgtLayout(_close, [0.1188, 0.2236], [0.9713, 0.8657], [0, 0], false);
-                setWgtLayout(suizi, [0.0148, 0.3853], [0.9764, 0.8733], [0, 0], false);
-                setWgtLayout(_back, [1, 0.9306], [0.5, 0.5], [0, 0], false);
-                listView_leftBG.width = MjClient.size.width * 0.2069;
-                listView_leftBG.height = MjClient.size.height * 0.8897;
-                listView_leftBG.setPosition(0, MjClient.size.height * 0.4999);
-            }
-            var pos1 = listView_leftBG.getPosition();
-            pos1.x = pos1.x + listView_leftBG.width / 2;
-            pos1 = this._back.convertToNodeSpace(pos1);
-            node_title.x = pos1.x;
-        } else if (FriendCard_Common.getSkinType() == 1) {
-            var _close = this.uinode.getChildByName("close");
-            var Image_hua = this.uinode.getChildByName("Image_hua");
-            var Image_di = this.uinode.getChildByName("Image_di");
-            var Image_left = this.uinode.getChildByName("Image_left");
-            setWgtLayout(_close, [0.15, 0.1097], [0.997, 1], [0, 0], false);
-            Image_di.width = MjClient.size.width;
-            Image_di.height = MjClient.size.height * 0.9653;
-            Image_di.setPosition(MjClient.size.width / 2, MjClient.size.height / 2);
-            setWgtLayout(_back, [1, 0.9653], [0.5, 0.5], [0, 0], false);
-
-            if (isIPhoneX()) {
-                setWgtLayout(Image_left, [0.2976, 1.0402], [0, 0], [0, 0], false);
-                setWgtLayout(Image_hua, [0.1830, 0.2220], [0.0156, 0.9792], [0, 0], false);
-            } else {
-                setWgtLayout(Image_hua, [0.1773, 0.1764], [0.0156, 0.9792], [0, 0], false);
-                setWgtLayout(Image_left, [0.2883, 0.8264], [0, 0], [0, 0], false);
-            }
-        } else if (FriendCard_Common.getSkinType() == 3) {
-            var _close = _back.getChildByName("close");
-            setWgtLayout(_back, [1, 1], [0.5, 0.5], [0, 0], false);
-        } else {
-            var _close = _back.getChildByName("close");
-            setWgtLayout(_back, [0.9750, 0.9333], [0.5, 0.5], [0, 0]);
-        }
-
+        var _close = leftImgDi.getChildByName("close");
         _close.addTouchEventListener(function (sender, type) {
             if (type == 2) {
                 that.removeFromParent();
             }
         }, this);
 
-
+        var node_title = leftImgDi.getChildByName("node_title");
         var btn_player = node_title.getChildByName("btn_player");
         var btn_day = node_title.getChildByName("btn_day");
         var btn_normal_player = node_title.getChildByName("btn_normal_player");
@@ -646,6 +595,7 @@ var FriendCard_tongji = cc.Layer.extend({
             COMMON_UI.refreshHead(this, url, headicon);
 
             text_name.setString(getPlayerName(unescape(oneData.nickname + ""), 7));
+            text_name.ignoreContentAdaptWithSize(true);
             text_playe_id.setString(oneData.userId + "");
         }
         this.createRankItem = function (remarks, oneData, rankType) {
@@ -1677,6 +1627,7 @@ var FriendCard_tongji = cc.Layer.extend({
 
                 text_group.setString(itemDta.no + "")
                 text_name.setString(getPlayerName(unescape(itemDta.refereeName)));
+                text_name.ignoreContentAdaptWithSize(true);
                 text_ID.setString(itemDta.refereeId);
                 text_renshu.setString(itemDta.playUser ? itemDta.playUser + "" : "0")
                 text_partInCount.setString(itemDta.playGame ? itemDta.playGame + "" : "0")
@@ -1920,6 +1871,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 btn_details.data = itemDta;
                 text_group.setString(itemDta.no + "")
                 text_name.setString(getPlayerName(unescape(itemDta.refereeName)));
+                text_name.ignoreContentAdaptWithSize(true);
                 text_ID.setString(itemDta.refereeId);
                 text_renshu.setString(itemDta.playUser ? itemDta.playUser + "" : "0");
                 text_partInCount.setString(itemDta.effectPlayUser ? itemDta.effectPlayUser + "" : "0");
@@ -2173,6 +2125,7 @@ var FriendCard_tongji = cc.Layer.extend({
                     text_group.setString(itemDta.group + "组")
                 }
                 text_name.setString(getPlayerName(unescape(itemDta.nickname)));
+                text_name.ignoreContentAdaptWithSize(true);
                 text_ID.setString(itemDta.userId);
                 text_renshu.setString(itemDta.playUser ? itemDta.playUser + "" : "0")
                 text_partInCount.setString(itemDta.playGame ? itemDta.playGame + "" : "0")
@@ -2421,6 +2374,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 var _item = this.item_FKTJ.clone();
                 var text_group = _item.getChildByName("text_group");
                 var text_name = _item.getChildByName("text_name");
+                text_name.ignoreContentAdaptWithSize(true);
                 var text_ID = _item.getChildByName("text_ID");
                 var text_renshu = _item.getChildByName("text_renshu");
                 var text_partInCount = _item.getChildByName("text_partInCount");
@@ -2452,6 +2406,7 @@ var FriendCard_tongji = cc.Layer.extend({
                 text_ID.setString(itemDta.userId);
                 text_total_count.setString(itemDta.effectScore ? itemDta.effectScore + "" : "0");
                 text_renshu.setString(itemDta.playUser ? itemDta.playUser + "" : "0");
+                text_name.ignoreContentAdaptWithSize(true);
                 text_partInCount.setString(itemDta.effectPlayUser ? itemDta.effectPlayUser + "" : "0");
                 text_effectPlayGame.setString(itemDta.effectPlayGame ? itemDta.effectPlayGame + "" : "0");
                 text_ratioCount.setString(itemDta.rebate ? (itemDta.rebate * 100).toFixed(0) + "%" : "0%");
@@ -2982,10 +2937,12 @@ var FriendCard_tongji = cc.Layer.extend({
         if (this._isManager || this.isAssistants) {
             text_clubID.x = text_id.x + text_id.width + 10;
             text_clubID.y = text_clubID.initY;
+            text_id.visible = true;
         }
         else {
-            text_clubID.y = text_id.y = text_clubName.y;
-            text_clubID.x = text_id.x = text_clubName.x + text_clubName.width + 10;
+            text_id.visible = false;
+            text_clubID.y = text_clubName.y;
+            text_clubID.x = text_clubName.x + text_clubName.width + 10;
         }
     },
     _setShowTime: function (node, txt_1, txt_2, txt_3, txt_4, txt_5) {

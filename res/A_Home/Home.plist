@@ -7,7 +7,7 @@
 			<key>A_Home/Main/bg_yuanbao.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{2,972},{210,40}}</string>
+				<string>{{204,954},{210,40}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -18,18 +18,18 @@
 			<key>A_Home/Main/chjfj.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{292,2},{350,133}}</string>
+				<string>{{428,401},{350,133}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{350,133}</string>
 			</dict>
 			<key>A_Home/Main/daili.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{363,661},{72,90}}</string>
+				<string>{{789,2},{72,90}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -40,7 +40,7 @@
 			<key>A_Home/Main/daili_s.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{363,755},{72,90}}</string>
+				<string>{{724,211},{72,90}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -51,7 +51,7 @@
 			<key>A_Home/Main/email.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{566,250},{117,61}}</string>
+				<string>{{418,954},{117,61}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -62,18 +62,18 @@
 			<key>A_Home/Main/girl.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{2,2},{286,567}}</string>
+				<string>{{2,664},{286,567}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{286,567}</string>
 			</dict>
 			<key>A_Home/Main/gonggao_copy.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{216,972},{99,44}}</string>
+				<string>{{676,603},{99,44}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -84,18 +84,18 @@
 			<key>A_Home/Main/help.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{682,2},{117,61}}</string>
+				<string>{{539,954},{117,61}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{117,61}</string>
 			</dict>
 			<key>A_Home/Main/hongdian-home.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{363,849},{64,64}}</string>
+				<string>{{724,305},{64,64}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -106,7 +106,7 @@
 			<key>A_Home/Main/jrfj.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{292,356},{350,133}}</string>
+				<string>{{573,654},{350,133}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -117,18 +117,18 @@
 			<key>A_Home/Main/kefu.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{682,123},{117,61}}</string>
+				<string>{{676,538},{117,61}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{117,61}</string>
 			</dict>
 			<key>A_Home/Main/lvse_text.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{292,548},{166,21}}</string>
+				<string>{{204,998},{166,21}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -139,7 +139,7 @@
 			<key>A_Home/Main/qyq.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{2,573},{292,395}}</string>
+				<string>{{428,2},{292,395}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -150,62 +150,7 @@
 			<key>A_Home/Main/setting.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{298,573},{117,61}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{117,61}</string>
-			</dict>
-			<key>A_Home/Main/shop.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{566,2},{244,112}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{244,112}</string>
-			</dict>
-			<key>A_Home/Main/ylch.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{429,2},{350,133}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{350,133}</string>
-			</dict>
-			<key>A_Home/Main/zhanji.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{298,694},{117,61}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{117,61}</string>
-			</dict>
-			<key>A_Home/Main/game_gonggao.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{298,815},{117,61}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<true />
-				<key>sourceSize</key>
-				<string>{117,61}</string>
-			</dict>
-			<key>A_Home/Main/game_shiming.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{319,936},{117,61}}</string>
+				<string>{{660,928},{117,61}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -213,10 +158,65 @@
 				<key>sourceSize</key>
 				<string>{117,61}</string>
 			</dict>
+			<key>A_Home/Main/shop.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{428,538},{244,112}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{244,112}</string>
+			</dict>
+			<key>A_Home/Main/ylch.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{573,791},{350,133}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{350,133}</string>
+			</dict>
+			<key>A_Home/Main/zhanji.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{781,928},{117,61}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{117,61}</string>
+			</dict>
+			<key>A_Home/Main/game_gonggao.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{902,928},{117,61}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{117,61}</string>
+			</dict>
+			<key>A_Home/Main/game_shiming.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{724,2},{117,61}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{117,61}</string>
+			</dict>
 			<key>A_Home/Main/head_lb_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{292,493},{198,51}}</string>
+				<string>{{2,954},{198,51}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -227,24 +227,35 @@
 			<key>A_Home/Main/laba_bg.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{566,315},{39,34}}</string>
+				<string>{{779,603},{39,34}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{39,34}</string>
 			</dict>
 			<key>A_Home/Main/btn_shenhe.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{363,573},{84,83}}</string>
+				<string>{{724,123},{84,83}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<true />
 				<key>sourceSize</key>
 				<string>{84,83}</string>
+			</dict>
+			<key>A_Home/Main/girl_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{422,658}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{422,658}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>
@@ -256,14 +267,14 @@
 			<key>realTextureFileName</key>
 			<string>Home.png</string>
 			<key>size</key>
-			<string>{745,1018}</string>
+			<string>{1021,1021}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
-			<integer>745</integer>
+			<integer>1021</integer>
 			<key>height</key>
-			<integer>1018</integer>
+			<integer>1021</integer>
 		</dict>
 	</dict>
 </plist>

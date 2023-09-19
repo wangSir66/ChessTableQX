@@ -31,14 +31,13 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="A_Login.csd" />
+          <FilePathData Path="A_Setting_home.csd" />
+          <FilePathData Path="A_Play_XueZhanMahjong.csd" />
           <FilePathData Path="A_Update.csd" />
-          <FilePathData Path="A_mobilePhoneLogin.csd" />
-          <FilePathData Path="A_registerPhoneNumLayer.csd" />
-          <FilePathData Path="A_Login/Login.csi" />
-          <FilePathData Path="A_Home/Home.csi" />
+          <FilePathData Path="A_Play_Red20.csd" />
+          <FilePathData Path="A_EndOne_Red20.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="A_Home/Home.csi" />
+        <ActiveDocument Path="A_EndOne_Red20.csd" />
       </Value>
     </Item>
   </Properties>

@@ -16,7 +16,11 @@
         "Children": [
           {
             "ClipAble": false,
-            "ComboBoxIndex": 1,
+            "FileData": {
+              "Type": "Normal",
+              "Path": "A_FriendCard/tc_bg.png",
+              "Plist": ""
+            },
             "SingleColor": {
               "R": 0,
               "G": 0,
@@ -30,64 +34,10 @@
             "ColorVector": {
               "ScaleY": 1.0
             },
-            "Scale9Width": 1,
-            "Scale9Height": 1,
-            "TouchEnable": true,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 640.0,
-              "Y": 360.0
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {
-              "R": 0,
-              "G": 0,
-              "B": 0
-            },
-            "IconVisible": false,
-            "PositionPercentXEnabled": true,
-            "PositionPercentYEnabled": true,
-            "PrePosition": {
-              "X": 0.5,
-              "Y": 0.5
-            },
-            "PreSize": {
-              "X": 1.0,
-              "Y": 1.0
-            },
-            "Tag": 268,
-            "ActionTag": 2071076421,
-            "Size": {
-              "X": 1280.0,
-              "Y": 720.0
-            },
-            "Alpha": 153,
-            "Name": "block",
-            "ctype": "PanelObjectData"
-          },
-          {
-            "ClipAble": false,
-            "BackColorAlpha": 102,
-            "SingleColor": {
-              "R": 150,
-              "G": 200
-            },
-            "FirstColor": {
-              "R": 150,
-              "G": 200
-            },
-            "EndColor": {},
-            "ColorVector": {
-              "ScaleY": 1.0
-            },
-            "Scale9Width": 1,
-            "Scale9Height": 1,
+            "Scale9OriginX": 422,
+            "Scale9OriginY": 237,
+            "Scale9Width": 436,
+            "Scale9Height": 246,
             "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5,
@@ -109,34 +59,142 @@
               "X": 0.5,
               "Y": 0.5
             },
-            "PercentWidthEnable": true,
-            "PercentHeightEnable": true,
-            "PercentWidthEnabled": true,
-            "PercentHeightEnabled": true,
             "PreSize": {
               "X": 1.0,
               "Y": 1.0
             },
-            "Tag": 888,
+            "Tag": 268,
+            "ActionTag": 2071076421,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "block",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_FriendCard/Member/panel_title.png",
+              "Plist": "A_FriendCard/Member.plist"
+            },
+            "Scale9OriginX": 129,
+            "Scale9OriginY": 22,
+            "Scale9Width": 57,
+            "Scale9Height": 12,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 1.0
+            },
+            "Position": {
+              "X": 716.8,
+              "Y": 720.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.56,
+              "Y": 1.0
+            },
+            "PreSize": {
+              "X": 0.2461,
+              "Y": 0.0778
+            },
+            "LeftMargin": 559.3,
+            "RightMargin": 405.7,
+            "BottomMargin": 664.0,
+            "Tag": 737,
+            "ActionTag": 906946291,
+            "Size": {
+              "X": 315.0,
+              "Y": 56.0
+            },
+            "Name": "Image_title",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "A_FriendCard/Main/tc_bg_left.png",
+              "Plist": "A_FriendCard/FriendCardMain.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 15,
+            "Scale9Width": 163,
+            "Scale9Height": 690,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.5
+            },
+            "PercentHeightEnable": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 0.1508,
+              "Y": 1.0
+            },
+            "RightMargin": 1087.0,
+            "Tag": 686,
             "Children": [
               {
-                "FileData": {
-                  "Type": "Normal",
-                  "Path": "A_FriendCard/tc_bg.png",
-                  "Plist": ""
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
                 },
-                "Scale9OriginX": 419,
-                "Scale9OriginY": 223,
-                "Scale9Width": 442,
-                "Scale9Height": 274,
+                "NormalFileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "A_FriendCard/Main/btn_back.png",
+                  "Plist": "A_FriendCard/FriendCardMain.plist"
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 20,
+                "Scale9Height": 18,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 640.0,
-                  "Y": 360.0
+                  "X": 92.257,
+                  "Y": 674.136
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -144,77 +202,27 @@
                 },
                 "CColor": {},
                 "IconVisible": false,
-                "PositionPercentXEnabled": true,
                 "PositionPercentYEnabled": true,
                 "PrePosition": {
-                  "X": 0.5,
-                  "Y": 0.5
+                  "X": 0.478,
+                  "Y": 0.9363
                 },
-                "PercentWidthEnable": true,
-                "PercentHeightEnable": true,
-                "PercentWidthEnabled": true,
-                "PercentHeightEnabled": true,
                 "PreSize": {
-                  "X": 1.0,
-                  "Y": 1.0
+                  "X": 0.2591,
+                  "Y": 0.0556
                 },
-                "Tag": 686,
-                "Children": [
-                  {
-                    "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Member/panel_title.png",
-                      "Plist": "A_FriendCard/Member.plist"
-                    },
-                    "Scale9OriginX": 129,
-                    "Scale9OriginY": 22,
-                    "Scale9Width": 57,
-                    "Scale9Height": 12,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 725.7599,
-                      "Y": 691.992
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.567,
-                      "Y": 0.9611
-                    },
-                    "PreSize": {
-                      "X": 0.2461,
-                      "Y": 0.0778
-                    },
-                    "LeftMargin": 568.2599,
-                    "RightMargin": 396.7401,
-                    "TopMargin": 0.008,
-                    "BottomMargin": 663.992,
-                    "Tag": 737,
-                    "ActionTag": 906946291,
-                    "Size": {
-                      "X": 315.0,
-                      "Y": 56.0
-                    },
-                    "Name": "Image_title",
-                    "ctype": "ImageViewObjectData"
-                  }
-                ],
-                "ActionTag": 51400598,
+                "LeftMargin": 67.257,
+                "RightMargin": 75.743,
+                "TopMargin": 25.864,
+                "BottomMargin": 654.136,
+                "Tag": 315,
+                "ActionTag": 570404447,
                 "Size": {
-                  "X": 1280.0,
-                  "Y": 720.0
+                  "X": 50.0,
+                  "Y": 40.0
                 },
-                "Name": "Image_di",
-                "ctype": "ImageViewObjectData"
+                "Name": "close",
+                "ctype": "ButtonObjectData"
               },
               {
                 "ItemMargin": -12,
@@ -256,10 +264,10 @@
                   "Y": 0.8699
                 },
                 "PreSize": {
-                  "X": 0.1375,
+                  "X": 0.9119,
                   "Y": 0.8333
                 },
-                "RightMargin": 1104.0,
+                "RightMargin": 17.0,
                 "TopMargin": 93.6748,
                 "BottomMargin": 26.3252,
                 "Tag": 86,
@@ -283,7 +291,7 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
@@ -453,7 +461,7 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
@@ -732,7 +740,7 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
@@ -858,7 +866,7 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
@@ -984,7 +992,7 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
@@ -1110,7 +1118,7 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
@@ -1236,7 +1244,7 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
@@ -1362,7 +1370,7 @@
                     },
                     "PressedFileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Main/touming_bg.png",
+                      "Path": "A_FriendCard/Main/btn_bg.png",
                       "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "NormalFileData": {
@@ -1476,7 +1484,63 @@
                 },
                 "Name": "ListView_left",
                 "ctype": "ListViewObjectData"
-              },
+              }
+            ],
+            "ActionTag": 51400598,
+            "Size": {
+              "X": 193.0,
+              "Y": 720.0
+            },
+            "Name": "Image_di",
+            "ctype": "ImageViewObjectData"
+          },
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 102,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "Scale9Width": 1,
+            "Scale9Height": 1,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 640.0,
+              "Y": 360.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PositionPercentXEnabled": true,
+            "PositionPercentYEnabled": true,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5
+            },
+            "PercentWidthEnable": true,
+            "PercentHeightEnable": true,
+            "PercentWidthEnabled": true,
+            "PercentHeightEnabled": true,
+            "PreSize": {
+              "X": 1.0,
+              "Y": 1.0
+            },
+            "Tag": 888,
+            "Children": [
               {
                 "ClipAble": false,
                 "BackColorAlpha": 102,
@@ -2773,9 +2837,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -2847,7 +2911,7 @@
                       "ScaleY": 1.0
                     },
                     "Position": {
-                      "X": 536.5001,
+                      "X": 536.5,
                       "Y": 519.7488
                     },
                     "Scale": {
@@ -2867,7 +2931,7 @@
                       "X": 0.96,
                       "Y": 0.7092
                     },
-                    "LeftMargin": 21.4601,
+                    "LeftMargin": 21.46,
                     "RightMargin": 21.46,
                     "TopMargin": 123.2512,
                     "BottomMargin": 63.7488,
@@ -2885,7 +2949,7 @@
                     "BackColorAlpha": 0,
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
+                      "Path": "A_FriendCard/list_top_bg.png",
                       "Plist": ""
                     },
                     "ComboBoxIndex": 1,
@@ -2979,6 +3043,7 @@
                         "ctype": "ImageViewObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "昵称/身份",
                         "FontResource": {
@@ -3033,6 +3098,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "分组/人数",
                         "FontResource": {
@@ -3087,6 +3153,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "ID",
                         "FontResource": {
@@ -3141,6 +3208,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "当前积分",
                         "FontResource": {
@@ -3195,6 +3263,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "在线",
                         "FontResource": {
@@ -3249,6 +3318,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "加减",
                         "FontResource": {
@@ -3303,6 +3373,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "操作",
                         "FontResource": {
@@ -3369,9 +3440,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 0,
@@ -3421,9 +3492,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -6008,7 +6079,7 @@
                   },
                   {
                     "FontSize": 24,
-                    "LabelText": "   退出亲友圈  ",
+                    "LabelText": "    退出亲友圈  ",
                     "FontResource": {
                       "Type": "Default",
                       "Path": "",
@@ -6031,7 +6102,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 486.7723,
+                      "X": 495.0,
                       "Y": 31.9691
                     },
                     "Scale": {
@@ -6045,15 +6116,15 @@
                     },
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": 0.4537,
+                      "X": 0.4613,
                       "Y": 0.0497
                     },
                     "PreSize": {
-                      "X": 0.1678,
+                      "X": 0.1789,
                       "Y": 0.0373
                     },
-                    "LeftMargin": 396.7723,
-                    "RightMargin": 496.2277,
+                    "LeftMargin": 399.0,
+                    "RightMargin": 482.0,
                     "TopMargin": 599.0309,
                     "BottomMargin": 19.9691,
                     "Tag": 310,
@@ -6087,10 +6158,10 @@
                           "Y": 0.5
                         },
                         "PreSize": {
-                          "X": 0.1833,
+                          "X": 0.1719,
                           "Y": 1.125
                         },
-                        "RightMargin": 147.0,
+                        "RightMargin": 159.0,
                         "TopMargin": -1.5,
                         "BottomMargin": -1.5,
                         "Tag": 311,
@@ -6105,15 +6176,16 @@
                     ],
                     "ActionTag": -2017754373,
                     "Size": {
-                      "X": 180.0,
+                      "X": 192.0,
                       "Y": 24.0
                     },
                     "Name": "Text_exit_club",
                     "ctype": "TextObjectData"
                   },
                   {
+                    "IsCustomSize": true,
                     "FontSize": 24,
-                    "LabelText": "     禁玩30天未上线玩家  ",
+                    "LabelText": "      禁玩30天未上线玩家  ",
                     "FontResource": {
                       "Type": "Default",
                       "Path": "",
@@ -6166,24 +6238,24 @@
                       {
                         "CheckedState": true,
                         "NormalBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/checked_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "AnchorPoint": {
                           "ScaleY": 0.5
@@ -6231,7 +6303,7 @@
                   },
                   {
                     "FontSize": 24,
-                    "LabelText": "     全员禁止玩牌   ",
+                    "LabelText": "      全员禁止玩牌   ",
                     "FontResource": {
                       "Type": "Default",
                       "Path": "",
@@ -6272,11 +6344,11 @@
                       "Y": 0.0494
                     },
                     "PreSize": {
-                      "X": 0.2237,
+                      "X": 0.2349,
                       "Y": 0.0373
                     },
-                    "LeftMargin": 569.8808,
-                    "RightMargin": 263.1192,
+                    "LeftMargin": 563.8808,
+                    "RightMargin": 257.1192,
                     "TopMargin": 599.2456,
                     "BottomMargin": 19.7544,
                     "Tag": 312,
@@ -6284,24 +6356,24 @@
                       {
                         "CheckedState": true,
                         "NormalBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "PressedBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "DisableBackFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/check_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Member/checked_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/Member.plist"
                         },
                         "AnchorPoint": {
                           "ScaleY": 0.5
@@ -6318,15 +6390,15 @@
                         "IconVisible": false,
                         "PositionPercentYEnabled": true,
                         "PrePosition": {
-                          "X": 0.0125,
+                          "X": 0.0119,
                           "Y": 0.5
                         },
                         "PreSize": {
-                          "X": 0.1542,
+                          "X": 0.1468,
                           "Y": 1.5833
                         },
                         "LeftMargin": 3.0,
-                        "RightMargin": 200.0,
+                        "RightMargin": 212.0,
                         "TopMargin": -7.0,
                         "BottomMargin": -7.0,
                         "Tag": 313,
@@ -6341,7 +6413,7 @@
                     ],
                     "ActionTag": 506454426,
                     "Size": {
-                      "X": 240.0,
+                      "X": 252.0,
                       "Y": 24.0
                     },
                     "Name": "all_member_stop",
@@ -6410,7 +6482,6 @@
                   "X": 1073.0,
                   "Y": 643.0
                 },
-                "VisibleForFrame": false,
                 "Name": "Panel_member",
                 "ctype": "PanelObjectData"
               },
@@ -6463,9 +6534,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -6577,9 +6648,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "ComboBoxIndex": 1,
                     "SingleColor": {
@@ -7059,9 +7130,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -7418,7 +7489,7 @@
                       "ScaleY": 1.0
                     },
                     "Position": {
-                      "X": 537.7401,
+                      "X": 537.7876,
                       "Y": 519.7501
                     },
                     "Scale": {
@@ -7438,8 +7509,8 @@
                       "X": 0.96,
                       "Y": 0.6781
                     },
-                    "LeftMargin": 22.7001,
-                    "RightMargin": 20.22,
+                    "LeftMargin": 22.7476,
+                    "RightMargin": 20.1724,
                     "TopMargin": 123.2499,
                     "BottomMargin": 83.7501,
                     "Tag": 176,
@@ -7456,7 +7527,7 @@
                     "BackColorAlpha": 0,
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
+                      "Path": "A_FriendCard/list_top_bg.png",
                       "Plist": ""
                     },
                     "ComboBoxIndex": 1,
@@ -7550,6 +7621,7 @@
                         "ctype": "ImageViewObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "昵称/身份",
                         "FontResource": {
@@ -7604,6 +7676,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "分组/人数",
                         "FontResource": {
@@ -7658,6 +7731,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "ID",
                         "FontResource": {
@@ -7712,6 +7786,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "当前积分",
                         "FontResource": {
@@ -7766,6 +7841,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "在线",
                         "FontResource": {
@@ -7820,6 +7896,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "加减",
                         "FontResource": {
@@ -7874,6 +7951,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "操作",
                         "FontResource": {
@@ -7940,9 +8018,9 @@
                     "ClipAble": false,
                     "BackColorAlpha": 0,
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/list_cell_bg.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "SingleColor": {
                       "R": 0,
@@ -7992,9 +8070,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -8820,7 +8898,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 128.0307,
+                      "X": 128.0089,
                       "Y": 37.5617
                     },
                     "Scale": {
@@ -8838,8 +8916,8 @@
                       "X": 0.2022,
                       "Y": 0.084
                     },
-                    "LeftMargin": 19.5307,
-                    "RightMargin": 836.4692,
+                    "LeftMargin": 19.5089,
+                    "RightMargin": 836.4911,
                     "TopMargin": 578.4383,
                     "BottomMargin": 10.5617,
                     "Tag": 226,
@@ -10550,6 +10628,7 @@
                   "X": 1073.0,
                   "Y": 643.0
                 },
+                "VisibleForFrame": false,
                 "Name": "Panel_group",
                 "ctype": "PanelObjectData"
               },
@@ -10600,9 +10679,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -11013,7 +11092,7 @@
                     "BackColorAlpha": 0,
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "A_FriendCard/Main/list_top_bg.png",
+                      "Path": "A_FriendCard/list_top_bg.png",
                       "Plist": ""
                     },
                     "ComboBoxIndex": 1,
@@ -11035,7 +11114,7 @@
                       "ScaleX": 0.5
                     },
                     "Position": {
-                      "X": 536.5349,
+                      "X": 536.5,
                       "Y": 525.8726
                     },
                     "Scale": {
@@ -11053,13 +11132,14 @@
                       "X": 0.9553,
                       "Y": 0.0591
                     },
-                    "LeftMargin": 24.0349,
-                    "RightMargin": 23.9651,
+                    "LeftMargin": 24.0,
+                    "RightMargin": 24.0,
                     "TopMargin": 79.1274,
                     "BottomMargin": 525.8726,
                     "Tag": 497,
                     "Children": [
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "编号/人数",
                         "FontResource": {
@@ -11114,6 +11194,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "昵称",
                         "FontResource": {
@@ -11168,6 +11249,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "ID/备注",
                         "FontResource": {
@@ -11222,6 +11304,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "创建时间",
                         "FontResource": {
@@ -11276,6 +11359,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "在线",
                         "FontResource": {
@@ -11330,6 +11414,7 @@
                         "ctype": "TextObjectData"
                       },
                       {
+                        "IsCustomSize": true,
                         "FontSize": 22,
                         "LabelText": "操作",
                         "FontResource": {
@@ -13195,9 +13280,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -13254,7 +13339,7 @@
                         },
                         "Position": {
                           "X": 54.7717,
-                          "Y": 38.6902
+                          "Y": 38.69
                         },
                         "Scale": {
                           "ScaleX": 0.8,
@@ -13273,8 +13358,8 @@
                         },
                         "LeftMargin": 21.2717,
                         "RightMargin": 936.7283,
-                        "TopMargin": 0.8098,
-                        "BottomMargin": 5.1902,
+                        "TopMargin": 0.81,
+                        "BottomMargin": 5.19,
                         "Tag": 506,
                         "ActionTag": -1872758498,
                         "Size": {
@@ -13300,7 +13385,7 @@
                         },
                         "Position": {
                           "X": 54.7723,
-                          "Y": 39.0694
+                          "Y": 39.0696
                         },
                         "Scale": {
                           "ScaleX": 0.8,
@@ -13319,8 +13404,8 @@
                         },
                         "LeftMargin": 19.7723,
                         "RightMargin": 935.2277,
-                        "TopMargin": -1.0694,
-                        "BottomMargin": 4.0694,
+                        "TopMargin": -1.0696,
+                        "BottomMargin": 4.0696,
                         "Tag": 507,
                         "ActionTag": -1268849144,
                         "Size": {
@@ -13650,7 +13735,7 @@
                         },
                         "Position": {
                           "X": 792.0438,
-                          "Y": 36.4999
+                          "Y": 36.5
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -13673,8 +13758,8 @@
                         },
                         "LeftMargin": 762.0438,
                         "RightMargin": 202.9562,
-                        "TopMargin": 24.5001,
-                        "BottomMargin": 24.4999,
+                        "TopMargin": 24.5,
+                        "BottomMargin": 24.5,
                         "Tag": 276,
                         "ActionTag": -328885068,
                         "Size": {
@@ -13725,7 +13810,7 @@
                         },
                         "Position": {
                           "X": 957.5981,
-                          "Y": 38.7445
+                          "Y": 38.7411
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -13744,8 +13829,8 @@
                         },
                         "LeftMargin": 904.1088,
                         "RightMargin": 13.8912,
-                        "TopMargin": 8.365,
-                        "BottomMargin": 11.635,
+                        "TopMargin": 8.3684,
+                        "BottomMargin": 11.6316,
                         "Tag": 277,
                         "ActionTag": -112031030,
                         "Size": {
@@ -14154,9 +14239,9 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -14169,7 +14254,7 @@
                     },
                     "Position": {
                       "X": 536.5,
-                      "Y": 552.1449
+                      "Y": 552.1441
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -14193,8 +14278,8 @@
                     },
                     "LeftMargin": 21.46,
                     "RightMargin": 21.46,
-                    "TopMargin": 90.8551,
-                    "BottomMargin": 12.0249,
+                    "TopMargin": 90.8559,
+                    "BottomMargin": 12.0241,
                     "Tag": 1178,
                     "ActionTag": 1031104662,
                     "Size": {
@@ -14396,7 +14481,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 594.829,
+                      "X": 594.8712,
                       "Y": 590.0
                     },
                     "Scale": {
@@ -14414,8 +14499,8 @@
                       "X": 0.3374,
                       "Y": 0.0715
                     },
-                    "LeftMargin": 594.829,
-                    "RightMargin": 116.171,
+                    "LeftMargin": 594.8712,
+                    "RightMargin": 116.1288,
                     "TopMargin": 30.0,
                     "BottomMargin": 567.0,
                     "Tag": 509,
@@ -14522,7 +14607,7 @@
                       "ScaleY": 1.0
                     },
                     "Position": {
-                      "X": 535.8563,
+                      "X": 535.8562,
                       "Y": 542.455
                     },
                     "Scale": {
@@ -14542,7 +14627,7 @@
                       "X": 0.96,
                       "Y": 0.8087
                     },
-                    "LeftMargin": 20.8163,
+                    "LeftMargin": 20.8162,
                     "RightMargin": 22.1038,
                     "TopMargin": 100.545,
                     "BottomMargin": 22.455,
@@ -14605,9 +14690,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -14663,7 +14748,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 512.4999,
+                          "X": 512.5,
                           "Y": 0.0
                         },
                         "Scale": {
@@ -14683,8 +14768,8 @@
                           "X": 0.95,
                           "Y": 0.0137
                         },
-                        "LeftMargin": 25.6249,
-                        "RightMargin": 25.6251,
+                        "LeftMargin": 25.625,
+                        "RightMargin": 25.625,
                         "TopMargin": 72.5,
                         "BottomMargin": -0.5,
                         "Tag": 1220,
@@ -14723,7 +14808,7 @@
                         },
                         "Position": {
                           "X": 80.9523,
-                          "Y": 55.0699
+                          "Y": 55.0712
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -14746,8 +14831,8 @@
                         },
                         "LeftMargin": 20.9523,
                         "RightMargin": 884.0477,
-                        "TopMargin": 5.9301,
-                        "BottomMargin": 43.0699,
+                        "TopMargin": 5.9288,
+                        "BottomMargin": 43.0712,
                         "Tag": 1225,
                         "ActionTag": -668972472,
                         "Size": {
@@ -14784,7 +14869,7 @@
                         },
                         "Position": {
                           "X": 80.9542,
-                          "Y": 25.8699
+                          "Y": 25.8712
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -14807,8 +14892,8 @@
                         },
                         "LeftMargin": 40.9542,
                         "RightMargin": 904.0458,
-                        "TopMargin": 37.1301,
-                        "BottomMargin": 15.8699,
+                        "TopMargin": 37.1288,
+                        "BottomMargin": 15.8712,
                         "Tag": 1226,
                         "ActionTag": -70134388,
                         "Size": {
@@ -14865,7 +14950,7 @@
                           "Y": 0.6575
                         },
                         "LeftMargin": 238.0954,
-                        "RightMargin": 738.9047,
+                        "RightMargin": 738.9046,
                         "TopMargin": 12.5,
                         "BottomMargin": 12.5,
                         "Tag": 1227,
@@ -14964,8 +15049,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 26.7458,
-                      "Y": 612.889
+                      "X": 26.7177,
+                      "Y": 612.9076
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -14987,10 +15072,10 @@
                       "X": 0.1678,
                       "Y": 0.0311
                     },
-                    "LeftMargin": 26.7458,
-                    "RightMargin": 866.2542,
-                    "TopMargin": 20.111,
-                    "BottomMargin": 602.889,
+                    "LeftMargin": 26.7177,
+                    "RightMargin": 866.2823,
+                    "TopMargin": 20.0924,
+                    "BottomMargin": 602.9076,
                     "Tag": 367,
                     "ActionTag": -1887899612,
                     "Size": {
@@ -15024,8 +15109,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 238.886,
-                      "Y": 610.8865
+                      "X": 238.8498,
+                      "Y": 610.9143
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -15046,10 +15131,10 @@
                       "X": 0.2861,
                       "Y": 0.0358
                     },
-                    "LeftMargin": 238.886,
-                    "RightMargin": 527.114,
-                    "TopMargin": 20.6135,
-                    "BottomMargin": 599.3865,
+                    "LeftMargin": 238.8498,
+                    "RightMargin": 527.1502,
+                    "TopMargin": 20.5857,
+                    "BottomMargin": 599.4143,
                     "Tag": 446,
                     "ActionTag": -1268587166,
                     "Size": {
@@ -15061,9 +15146,9 @@
                   },
                   {
                     "FileData": {
-                      "Type": "Normal",
+                      "Type": "MarkedSubImage",
                       "Path": "A_FriendCard/Main/tc_bg_nei.png",
-                      "Plist": ""
+                      "Plist": "A_FriendCard/FriendCardMain.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 22,
@@ -15074,7 +15159,7 @@
                       "ScaleX": 0.5
                     },
                     "Position": {
-                      "X": 536.5453,
+                      "X": 536.5,
                       "Y": 23.004
                     },
                     "Scale": {
@@ -15096,8 +15181,8 @@
                       "X": 0.96,
                       "Y": 0.87
                     },
-                    "LeftMargin": 21.5053,
-                    "RightMargin": 21.4148,
+                    "LeftMargin": 21.46,
+                    "RightMargin": 21.46,
                     "TopMargin": 60.586,
                     "BottomMargin": 23.004,
                     "Tag": 167,
@@ -15138,7 +15223,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 536.5009,
+                      "X": 536.5,
                       "Y": 302.0008
                     },
                     "Scale": {
@@ -15160,9 +15245,9 @@
                       "X": 0.96,
                       "Y": 0.82
                     },
-                    "LeftMargin": 21.4609,
-                    "RightMargin": 21.4592,
-                    "TopMargin": 77.3693,
+                    "LeftMargin": 21.46,
+                    "RightMargin": 21.46,
+                    "TopMargin": 77.3692,
                     "BottomMargin": 38.3708,
                     "Tag": 168,
                     "ActionTag": 121371455,
@@ -15223,9 +15308,9 @@
                     "Children": [
                       {
                         "FileData": {
-                          "Type": "Normal",
+                          "Type": "MarkedSubImage",
                           "Path": "A_FriendCard/Main/list_cell_bg.png",
-                          "Plist": ""
+                          "Plist": "A_FriendCard/FriendCardMain.plist"
                         },
                         "Scale9OriginX": 14,
                         "Scale9OriginY": 14,
@@ -15281,8 +15366,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 75.7042,
-                          "Y": 38.5
+                          "X": 75.7475,
+                          "Y": 38.5002
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -15300,10 +15385,10 @@
                           "X": 0.0644,
                           "Y": 0.9041
                         },
-                        "LeftMargin": 42.7042,
-                        "RightMargin": 916.2958,
-                        "TopMargin": 1.5,
-                        "BottomMargin": 5.5,
+                        "LeftMargin": 42.7475,
+                        "RightMargin": 916.2525,
+                        "TopMargin": 1.4998,
+                        "BottomMargin": 5.5002,
                         "Tag": 171,
                         "ActionTag": -1154037808,
                         "Size": {
@@ -15453,7 +15538,7 @@
                         },
                         "Position": {
                           "X": 534.9998,
-                          "Y": 36.4997
+                          "Y": 36.5
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -15476,8 +15561,8 @@
                         },
                         "LeftMargin": 534.9998,
                         "RightMargin": 364.0002,
-                        "TopMargin": 22.5003,
-                        "BottomMargin": 22.4997,
+                        "TopMargin": 22.5,
+                        "BottomMargin": 22.5,
                         "Tag": 174,
                         "ActionTag": -1906531607,
                         "Size": {
@@ -15511,7 +15596,7 @@
                         },
                         "Position": {
                           "X": 725.999,
-                          "Y": 36.4996
+                          "Y": 36.5
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -15534,8 +15619,8 @@
                         },
                         "LeftMargin": 725.999,
                         "RightMargin": 257.001,
-                        "TopMargin": 22.5004,
-                        "BottomMargin": 22.4996,
+                        "TopMargin": 22.5,
+                        "BottomMargin": 22.5,
                         "Tag": 177,
                         "ActionTag": 1569635261,
                         "Size": {
@@ -15591,7 +15676,7 @@
                         },
                         "Position": {
                           "X": 911.0002,
-                          "Y": 36.4999
+                          "Y": 36.5
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -15610,8 +15695,8 @@
                         },
                         "LeftMargin": 842.0002,
                         "RightMargin": 44.9998,
-                        "TopMargin": 9.5001,
-                        "BottomMargin": 9.4999,
+                        "TopMargin": 9.5,
+                        "BottomMargin": 9.5,
                         "Tag": 176,
                         "ActionTag": 87650736,
                         "Size": {
@@ -15660,8 +15745,8 @@
                 "TouchEnable": true,
                 "AnchorPoint": {},
                 "Position": {
-                  "X": 214.7488,
-                  "Y": 31.4128
+                  "X": 214.784,
+                  "Y": 31.392
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -15679,10 +15764,10 @@
                   "X": 0.8203,
                   "Y": 0.8611
                 },
-                "LeftMargin": 214.7488,
-                "RightMargin": 15.2512,
-                "TopMargin": 68.5872,
-                "BottomMargin": 31.4128,
+                "LeftMargin": 214.784,
+                "RightMargin": 15.2161,
+                "TopMargin": 68.608,
+                "BottomMargin": 31.392,
                 "Tag": 178,
                 "Children": [
                   {
@@ -15698,8 +15783,8 @@
                     "Scale9Height": 16,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": 194.4442,
-                      "Y": -191.5784
+                      "X": 194.46,
+                      "Y": -191.58
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -15721,15 +15806,15 @@
                       "X": 0.0438,
                       "Y": 0.0742
                     },
-                    "LeftMargin": 194.4442,
-                    "RightMargin": 809.5558,
-                    "TopMargin": 765.5784,
-                    "BottomMargin": -191.5784,
+                    "LeftMargin": 194.46,
+                    "RightMargin": 809.55,
+                    "TopMargin": 765.576,
+                    "BottomMargin": -191.58,
                     "Tag": 179,
                     "ActionTag": 392120962,
                     "Size": {
-                      "X": 46.0,
-                      "Y": 46.0
+                      "X": 45.99,
+                      "Y": 46.004
                     },
                     "Name": "Image_bg",
                     "ctype": "ImageViewObjectData"
@@ -16201,9 +16286,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -16425,9 +16510,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -16657,7 +16742,7 @@
                           "ScaleX": 0.5
                         },
                         "Position": {
-                          "X": 519.7499,
+                          "X": 519.75,
                           "Y": 2.0
                         },
                         "Scale": {
@@ -16678,13 +16763,13 @@
                           "Y": 0.0091
                         },
                         "LeftMargin": 10.395,
-                        "RightMargin": 10.3951,
+                        "RightMargin": 10.395,
                         "TopMargin": 107.0,
                         "BottomMargin": 2.0,
                         "Tag": 182,
                         "ActionTag": -99329260,
                         "Size": {
-                          "X": 1018.7099,
+                          "X": 1018.71,
                           "Y": 1.0
                         },
                         "Name": "Image_line",
@@ -16933,9 +17018,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -17014,7 +17099,7 @@
                 "AnchorPoint": {},
                 "Position": {
                   "X": 214.784,
-                  "Y": 23.5566
+                  "Y": 23.544
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -17033,9 +17118,9 @@
                   "Y": 0.8611
                 },
                 "LeftMargin": 214.784,
-                "RightMargin": 15.2159,
-                "TopMargin": 76.4434,
-                "BottomMargin": 23.5566,
+                "RightMargin": 15.2161,
+                "TopMargin": 76.456,
+                "BottomMargin": 23.544,
                 "Tag": 663,
                 "Children": [
                   {
@@ -17051,8 +17136,8 @@
                     "Scale9Height": 16,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": 2.8779,
-                      "Y": -185.8616
+                      "X": 2.835,
+                      "Y": -185.876
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -17074,15 +17159,15 @@
                       "X": 0.0438,
                       "Y": 0.0742
                     },
-                    "LeftMargin": 2.8779,
-                    "RightMargin": 1001.1221,
-                    "TopMargin": 759.8616,
-                    "BottomMargin": -185.8616,
+                    "LeftMargin": 2.835,
+                    "RightMargin": 1001.175,
+                    "TopMargin": 759.872,
+                    "BottomMargin": -185.876,
                     "Tag": 664,
                     "ActionTag": -1002426996,
                     "Size": {
-                      "X": 46.0,
-                      "Y": 46.0
+                      "X": 45.99,
+                      "Y": 46.004
                     },
                     "Name": "Image_bg",
                     "ctype": "ImageViewObjectData"
@@ -17439,9 +17524,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -17612,7 +17697,7 @@
                           "ScaleX": 0.5
                         },
                         "Position": {
-                          "X": 519.7499,
+                          "X": 519.75,
                           "Y": 2.0
                         },
                         "Scale": {
@@ -17633,13 +17718,13 @@
                           "Y": 0.0091
                         },
                         "LeftMargin": 10.395,
-                        "RightMargin": 10.3951,
+                        "RightMargin": 10.395,
                         "TopMargin": 107.0,
                         "BottomMargin": 2.0,
                         "Tag": 643,
                         "ActionTag": -1161433944,
                         "Size": {
-                          "X": 1018.7099,
+                          "X": 1018.71,
                           "Y": 1.0
                         },
                         "Name": "Image_line",
@@ -17941,9 +18026,9 @@
                           "Plist": "A_Common/Common.plist"
                         },
                         "NodeNormalFileData": {
-                          "Type": "Normal",
-                          "Path": "createNewPng/daTC1_20.png",
-                          "Plist": ""
+                          "Type": "MarkedSubImage",
+                          "Path": "A_Common/Main/daTC1_20.png",
+                          "Plist": "A_Common/Common.plist"
                         },
                         "TouchEnable": true,
                         "AnchorPoint": {
@@ -18059,8 +18144,8 @@
                     "Scale9Height": 16,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": -30.3811,
-                      "Y": -236.5922
+                      "X": -30.3659,
+                      "Y": -236.624
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -18080,14 +18165,14 @@
                       "X": 0.0465,
                       "Y": 0.0715
                     },
-                    "LeftMargin": -30.3811,
-                    "RightMargin": 1053.5245,
-                    "TopMargin": 833.5922,
-                    "BottomMargin": -236.5922,
+                    "LeftMargin": -30.3659,
+                    "RightMargin": 1053.4714,
+                    "TopMargin": 833.624,
+                    "BottomMargin": -236.624,
                     "Tag": 1212,
                     "ActionTag": 1662849669,
                     "Size": {
-                      "X": 49.8566,
+                      "X": 49.8945,
                       "Y": 46.0
                     },
                     "Name": "Image_bg",
@@ -18120,7 +18205,7 @@
                       "ScaleY": 1.0
                     },
                     "Position": {
-                      "X": 536.5009,
+                      "X": 536.5,
                       "Y": 622.0083
                     },
                     "Scale": {
@@ -18140,8 +18225,8 @@
                       "X": 0.96,
                       "Y": 0.9331
                     },
-                    "LeftMargin": 21.4609,
-                    "RightMargin": 21.4592,
+                    "LeftMargin": 21.46,
+                    "RightMargin": 21.46,
                     "TopMargin": 20.9917,
                     "BottomMargin": 22.0083,
                     "Tag": 1218,
@@ -18177,7 +18262,7 @@
                       "ScaleX": 0.5
                     },
                     "Position": {
-                      "X": 539.8546,
+                      "X": 539.8263,
                       "Y": 475.8587
                     },
                     "Scale": {
@@ -18195,9 +18280,9 @@
                       "X": 0.9786,
                       "Y": 0.1555
                     },
-                    "LeftMargin": 14.8546,
-                    "RightMargin": 8.1454,
-                    "TopMargin": 67.1412,
+                    "LeftMargin": 14.8263,
+                    "RightMargin": 8.1737,
+                    "TopMargin": 67.1413,
                     "BottomMargin": 475.8587,
                     "Tag": 1219,
                     "Children": [
@@ -18216,7 +18301,7 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 524.9999,
+                          "X": 525.0,
                           "Y": 0.0
                         },
                         "Scale": {
@@ -18237,13 +18322,13 @@
                           "Y": 0.01
                         },
                         "LeftMargin": 26.25,
-                        "RightMargin": 26.2501,
+                        "RightMargin": 26.25,
                         "TopMargin": 99.5,
                         "BottomMargin": -0.5,
                         "Tag": 1220,
                         "ActionTag": -50730920,
                         "Size": {
-                          "X": 997.4999,
+                          "X": 997.5,
                           "Y": 1.0
                         },
                         "Name": "Image_line",
@@ -18448,72 +18533,6 @@
                 "VisibleForFrame": false,
                 "Name": "Panel_honor_record",
                 "ctype": "PanelObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "NormalFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "A_FriendCard/Main/btn_back.png",
-                  "Plist": "A_FriendCard/FriendCardMain.plist"
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 20,
-                "Scale9Height": 18,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 92.257,
-                  "Y": 688.896
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PositionPercentYEnabled": true,
-                "PrePosition": {
-                  "X": 0.0721,
-                  "Y": 0.9568
-                },
-                "PreSize": {
-                  "X": 0.0391,
-                  "Y": 0.0556
-                },
-                "LeftMargin": 67.257,
-                "RightMargin": 1162.743,
-                "TopMargin": 11.104,
-                "BottomMargin": 668.896,
-                "Tag": 315,
-                "ActionTag": 570404447,
-                "Size": {
-                  "X": 50.0,
-                  "Y": 40.0
-                },
-                "Name": "close",
-                "ctype": "ButtonObjectData"
               }
             ],
             "ActionTag": -241276862,
@@ -19914,79 +19933,6 @@
                       "Y": 73.0
                     },
                     "Name": "Button_checkCY",
-                    "ctype": "ButtonObjectData"
-                  },
-                  {
-                    "FontSize": 30,
-                    "ButtonText": "",
-                    "TextColor": {},
-                    "DisabledFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Member/btn_setgongxian2.png",
-                      "Plist": "A_FriendCard/Member.plist"
-                    },
-                    "PressedFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Member/btn_setgongxian2.png",
-                      "Plist": "A_FriendCard/Member.plist"
-                    },
-                    "NormalFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "A_FriendCard/Member/btn_setgongxian1.png",
-                      "Plist": "A_FriendCard/Member.plist"
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 15,
-                    "Scale9OriginY": 11,
-                    "Scale9Width": 174,
-                    "Scale9Height": 51,
-                    "OutlineColor": {
-                      "G": 0,
-                      "B": 0
-                    },
-                    "ShadowColor": {
-                      "R": 110,
-                      "G": 110,
-                      "B": 110
-                    },
-                    "ShadowOffsetX": 2.0,
-                    "ShadowOffsetY": -2.0,
-                    "TouchEnable": true,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5203,
-                      "ScaleY": 0.5294
-                    },
-                    "Position": {
-                      "X": 1218.2958,
-                      "Y": 32.0625
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 1.5499,
-                      "Y": 0.064
-                    },
-                    "PreSize": {
-                      "X": 0.2595,
-                      "Y": 0.1457
-                    },
-                    "LeftMargin": 1112.1545,
-                    "RightMargin": -530.1066,
-                    "TopMargin": 434.5598,
-                    "BottomMargin": -6.5837,
-                    "Tag": 2783,
-                    "ActionTag": -1708344248,
-                    "Size": {
-                      "X": 204.0,
-                      "Y": 73.0
-                    },
-                    "Name": "Button_Xinyu",
                     "ctype": "ButtonObjectData"
                   },
                   {
@@ -23644,16 +23590,11 @@
         "A_Common/default_headpic.png",
         "A_FriendCard/FriendCardMain.plist",
         "A_FriendCard/FriendCardMain.png",
-        "A_FriendCard/Main/list_cell_bg.png",
-        "A_FriendCard/Main/list_top_bg.png",
-        "A_FriendCard/Main/tc_bg_nei.png",
+        "A_FriendCard/list_top_bg.png",
         "A_FriendCard/Member.plist",
         "A_FriendCard/Member.png",
-        "A_FriendCard/Member/check_bg.png",
-        "A_FriendCard/Member/checked_bg.png",
         "A_FriendCard/tc_bg.png",
         "A_FriendCard/tc_bg_nei0.png",
-        "createNewPng/daTC1_20.png",
         "Default/Button_Press.png",
         "Default/ImageFile.png",
         "fonts/fzcy.ttf",

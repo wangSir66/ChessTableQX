@@ -218,15 +218,15 @@
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Default",
-                      "Path": "Default/ImageFile.png",
-                      "Plist": ""
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Login/Main/input_bg.png",
+                      "Plist": "A_Login/Login.plist"
                     },
                     "Scale9Enable": true,
                     "Scale9OriginX": 30,
                     "Scale9OriginY": 16,
-                    "Scale9Width": 31,
-                    "Scale9Height": 18,
+                    "Scale9Width": 396,
+                    "Scale9Height": 25,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -246,13 +246,13 @@
                       "Y": 0.5375
                     },
                     "PreSize": {
-                      "X": 0.5416,
-                      "Y": 0.1786
+                      "X": 0.6657,
+                      "Y": 0.2036
                     },
-                    "LeftMargin": 195.2398,
-                    "RightMargin": 118.7603,
-                    "TopMargin": 104.4961,
-                    "BottomMargin": 125.5039,
+                    "LeftMargin": 152.7398,
+                    "RightMargin": 76.2602,
+                    "TopMargin": 100.9961,
+                    "BottomMargin": 122.0039,
                     "Tag": 506,
                     "Children": [
                       {
@@ -288,16 +288,16 @@
                         },
                         "IconVisible": false,
                         "PrePosition": {
-                          "X": -0.0126,
-                          "Y": 0.5
+                          "X": -0.0103,
+                          "Y": 0.4386
                         },
                         "PreSize": {
-                          "X": 0.2264,
-                          "Y": 0.56
+                          "X": 0.1842,
+                          "Y": 0.4912
                         },
                         "LeftMargin": -88.6771,
-                        "RightMargin": 375.6771,
-                        "TopMargin": 11.0,
+                        "RightMargin": 460.6771,
+                        "TopMargin": 18.0,
                         "BottomMargin": 11.0,
                         "Tag": 507,
                         "ActionTag": 1036309688,
@@ -311,8 +311,8 @@
                     ],
                     "ActionTag": 763891471,
                     "Size": {
-                      "X": 371.0,
-                      "Y": 50.0
+                      "X": 456.0,
+                      "Y": 57.0
                     },
                     "Name": "Image_nickname",
                     "ctype": "ImageViewObjectData"
@@ -573,7 +573,8 @@
       "UsedResources": [
         "A_Common/Common.plist",
         "A_Common/Common.png",
-        "Default/ImageFile.png",
+        "A_Login/Login.plist",
+        "A_Login/Login.png",
         "fonts/fzcy.ttf"
       ],
       "ctype": "GameFileData"

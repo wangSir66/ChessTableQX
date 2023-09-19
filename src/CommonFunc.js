@@ -9610,30 +9610,15 @@ function arrowbkNumberUpdate(node, endFunc, tikNum) {
                 node.setString(number);
             }
             else {
-                if (GameClass[MjClient.gameType] == MjClient.GAME_CLASS.PAO_DE_KUAI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_WAI_HU_ZI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.YI_YANG_WAI_HU_ZI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.NAN_XIAN_GUI_HU_ZI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.YUAN_JIANG_GUI_HU_ZI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE ||
-                    MjClient.gameType == MjClient.GAME_TYPE.CHONG_YANG_DA_GUN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.TONG_SHAN_DA_GONG ||
-                    MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K ||
-                    MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K ||
-                    MjClient.gameType == MjClient.GAME_TYPE.DA_YE_DA_GONG ||
-                    MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-                    MjClient.gameType == MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI)
-                    node.setString(number);
-                else
-                    node.setString("0" + number);
+                node.setString("0" + number);
                 var sData = MjClient.data.sData;
                 var tData = sData.tData;
                 var uids = tData.uids;
 
                 if (uids[tData.curPlayer] == SelfUid()) {
                     if (number == 0) {
-                        if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) playTimeUpEff = playEffect("loop_alarm", true);
+                        if (MjClient.gameType == MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER || MjClient.gameType == MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1 ||
+                            MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) playTimeUpEff = playEffect("loop_alarm", true);
                         MjClient.native.NativeVibrato();
                         node.stopAllActions();
                     }
@@ -9933,22 +9918,9 @@ function playEffectInPlay(card, isLoop) {
                 soundFile = sounds[getRandomRange(0, 100) < 50 ? 0 : 1];
             }
             break;
-        case MjClient.GAME_TYPE.TUAN_TUAN_ZHUAN:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_ZERO:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_TY:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_JZ:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_HA:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_LYG:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_NT:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN:
-        case MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU:
-        case MjClient.GAME_TYPE.DOU_DI_ZHU_NT:
-        case MjClient.GAME_TYPE.DOU_DI_ZHU_HA:
         case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN:
+        case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER:
+        case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1:
             if (card == "pass" || card == "single") {
                 if (card == "single")
                     cc.audioEngine.stopAllEffects();
@@ -11622,7 +11594,7 @@ function setGameOverPanelPlayerState(stateNode, pl, checkCount, bGoldField) {
             if (bGoldField == true) {
                 fileName = "game_picture/gold/end/mj/endGoldMJ_zimo.png";
             } else {
-                fileName = "gameOver/ico_zimo.png";
+                fileName = "XueZhanDaoDi/n_playLabel_" + ((pl.huIndex + 1) || 1) + "zimo.png";
             }
         }
     }
@@ -11631,7 +11603,7 @@ function setGameOverPanelPlayerState(stateNode, pl, checkCount, bGoldField) {
             if (bGoldField == true) {
                 fileName = "game_picture/gold/end/mj/endGoldMJ_hu.png";
             } else {
-                fileName = "gameOver/ico_hu-0.png";
+                fileName = "XueZhanDaoDi/n_playLabel_" + ((pl.huIndex + 1) || 1) + "hu.png";
             }
         }
     }
@@ -13317,7 +13289,7 @@ getAllGameListArray = function () {
         all._btnPicArray = ["all", "majiang", "poker"];
         all._btnNameArray = ["通用", "麻将", "扑克"];
         all._allGameListArray = [MjClient.gameListConfig.majiangList,
-        MjClient.gameListConfig.pokerList,];
+        MjClient.gameListConfig.pokerList];
     }
     else if (isJinZhongAPPType()) {
         all._btnPosArray = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6]];
@@ -16958,4 +16930,13 @@ function DealMJPut_haian(node, msg, off, outNum) {
             showMJOutBig(node, msg.card);
         }
     }
+}
+
+//包含的版本信息
+function getPackageMsgs() {
+    let pckn = MjClient.native.GetPackageName(),  //     包名
+        gv = MjClient.native.GetVersionName(), // 包版本
+        rv = MjClient.resVersion, // 热更版本
+        csvr = MjClient.curServerPort; // 服务器 
+    return pckn + "\n" + gv + "\n" + rv + "\n" + csvr.host + ':' + csvr.port;
 }

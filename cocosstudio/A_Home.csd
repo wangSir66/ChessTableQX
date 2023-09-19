@@ -4,12 +4,12 @@
     <Content>
       <Animation Duration="0" Speed="1.0000">
         <Timeline ActionTag="-1174038209" Property="Position">
-          <PointFrame FrameIndex="0" X="1125.5236" Y="9.2198">
+          <PointFrame FrameIndex="0" X="1159.5300" Y="9.2198">
             <EasingData Type="0" />
           </PointFrame>
         </Timeline>
         <Timeline ActionTag="-1174038209" Property="Scale">
-          <ScaleFrame FrameIndex="0" X="1.0000" Y="1.0000">
+          <ScaleFrame FrameIndex="0" X="0.6000" Y="0.6000">
             <EasingData Type="0" />
           </ScaleFrame>
         </Timeline>
@@ -28,15 +28,15 @@
               <AbstractNodeData Name="Panel_girl" ActionTag="-850165779" Tag="246" IconVisible="False" LeftMargin="16.9265" RightMargin="724.0735" TopMargin="130.0284" BottomMargin="-22.0284" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="539.0000" Y="612.0000" />
                 <Children>
-                  <AbstractNodeData Name="girl" ActionTag="985637107" Tag="135" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="126.5000" RightMargin="126.5000" TopMargin="22.0000" BottomMargin="22.0000" LeftEage="177" RightEage="177" TopEage="201" BottomEage="201" Scale9OriginX="109" Scale9OriginY="201" Scale9Width="68" Scale9Height="165" ctype="ImageViewObjectData">
-                    <Size X="286.0000" Y="568.0000" />
+                  <AbstractNodeData Name="girl" ActionTag="985637107" Tag="135" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="58.5000" RightMargin="58.5000" TopMargin="-23.0000" BottomMargin="-23.0000" LeftEage="177" RightEage="177" TopEage="201" BottomEage="201" Scale9OriginX="177" Scale9OriginY="201" Scale9Width="68" Scale9Height="256" ctype="ImageViewObjectData">
+                    <Size X="422.0000" Y="658.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="269.5000" Y="306.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.5000" Y="0.5000" />
-                    <PreSize X="0.5306" Y="0.9281" />
-                    <FileData Type="MarkedSubImage" Path="A_Home/Main/girl.png" Plist="A_Home/Home.plist" />
+                    <PreSize X="0.7829" Y="1.0752" />
+                    <FileData Type="MarkedSubImage" Path="A_Home/Main/girl_1.png" Plist="A_Home/Home.plist" />
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleX="0.5000" />
@@ -63,13 +63,13 @@
                     <PreSize X="1.0000" Y="0.5182" />
                     <FileData Type="Normal" Path="A_Home/xiadi.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="Button_store" ActionTag="-1174038209" Tag="73" IconVisible="False" LeftMargin="1003.5236" RightMargin="32.4764" TopMargin="-11.2198" BottomMargin="9.2198" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="214" Scale9Height="90" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                  <AbstractNodeData Name="Button_store" ActionTag="-1174038209" Tag="73" IconVisible="False" LeftMargin="1037.5300" RightMargin="-1.5300" TopMargin="-11.2198" BottomMargin="9.2198" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="214" Scale9Height="90" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                     <Size X="244.0000" Y="112.0000" />
                     <AnchorPoint ScaleX="0.5000" />
-                    <Position X="1125.5236" Y="9.2198" />
-                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <Position X="1159.5300" Y="9.2198" />
+                    <Scale ScaleX="0.6000" ScaleY="0.6000" />
                     <CColor A="255" R="255" G="255" B="255" />
-                    <PrePosition X="0.8793" Y="0.0838" />
+                    <PrePosition X="0.9059" Y="0.0838" />
                     <PreSize X="0.1906" Y="1.0182" />
                     <TextColor A="255" R="65" G="65" B="70" />
                     <NormalFileData Type="MarkedSubImage" Path="A_Home/Main/shop.png" Plist="A_Home/Home.plist" />
@@ -329,20 +329,20 @@
             <PreSize X="1.0000" Y="0.1222" />
             <FileData Type="Normal" Path="A_Home/bg_top.png" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="guangbo" ActionTag="-215884997" Tag="155" IconVisible="False" LeftMargin="212.6431" RightMargin="256.3569" TopMargin="99.0618" BottomMargin="580.9382" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="267" RightEage="267" TopEage="13" BottomEage="13" Scale9OriginX="267" Scale9OriginY="13" Scale9Width="277" Scale9Height="14" ctype="PanelObjectData">
+          <AbstractNodeData Name="guangbo" ActionTag="-215884997" Tag="155" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="234.5000" RightMargin="234.5000" TopMargin="99.0618" BottomMargin="580.9382" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" LeftEage="267" RightEage="267" TopEage="13" BottomEage="13" Scale9OriginX="267" Scale9OriginY="13" Scale9Width="277" Scale9Height="14" ctype="PanelObjectData">
             <Size X="811.0000" Y="40.0000" />
             <Children>
-              <AbstractNodeData Name="laba_bg" ActionTag="-1838991616" Tag="340" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="73.5474" RightMargin="698.4526" TopMargin="3.0000" BottomMargin="3.0000" LeftEage="12" RightEage="12" TopEage="14" BottomEage="14" Scale9OriginX="12" Scale9OriginY="14" Scale9Width="15" Scale9Height="6" ctype="ImageViewObjectData">
+              <AbstractNodeData Name="laba_bg" ActionTag="-1838991616" Tag="340" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="59.5473" RightMargin="712.4528" TopMargin="3.0000" BottomMargin="3.0000" LeftEage="12" RightEage="12" TopEage="14" BottomEage="14" Scale9OriginX="12" Scale9OriginY="14" Scale9Width="15" Scale9Height="6" ctype="ImageViewObjectData">
                 <Size X="39.0000" Y="34.0000" />
                 <AnchorPoint ScaleY="0.5000" />
-                <Position X="73.5474" Y="20.0000" />
+                <Position X="59.5473" Y="20.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.0907" Y="0.5000" />
+                <PrePosition X="0.0734" Y="0.5000" />
                 <PreSize X="0.0481" Y="0.8500" />
                 <FileData Type="MarkedSubImage" Path="A_Home/Main/laba_bg.png" Plist="A_Home/Home.plist" />
               </AbstractNodeData>
-              <AbstractNodeData Name="scroll" ActionTag="976010434" Tag="43" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="121.5109" RightMargin="39.4891" TopMargin="-1.5000" BottomMargin="-1.5000" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="245" RightEage="294" TopEage="14" BottomEage="14" Scale9OriginX="-294" Scale9OriginY="-14" Scale9Width="539" Scale9Height="28" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
+              <AbstractNodeData Name="scroll" ActionTag="976010434" Tag="43" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="107.5108" RightMargin="53.4891" TopMargin="-1.5001" BottomMargin="-1.4999" ClipAble="True" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" LeftEage="245" RightEage="294" TopEage="14" BottomEage="14" Scale9OriginX="-294" Scale9OriginY="-14" Scale9Width="539" Scale9Height="28" ScrollDirectionType="Horizontal" ctype="ScrollViewObjectData">
                 <Size X="650.0000" Y="43.0000" />
                 <Children>
                   <AbstractNodeData Name="msg" ActionTag="-1832792330" Tag="44" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-59.7012" RightMargin="-87.2988" TopMargin="11.6480" BottomMargin="25.3520" FontSize="23" LabelText="文明娱乐，严禁赌博，天涯游戏没有任何外挂，请大家放心游戏。不要轻信下载恶意软件，防止上当受骗泄露个人身份信息。" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
@@ -359,10 +359,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint ScaleY="0.5000" />
-                <Position X="121.5109" Y="20.0000" />
+                <Position X="107.5108" Y="20.0001" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.1498" Y="0.5000" />
+                <PrePosition X="0.1326" Y="0.5000" />
                 <PreSize X="0.8015" Y="1.0750" />
                 <SingleColor A="255" R="255" G="150" B="100" />
                 <FirstColor A="255" R="255" G="150" B="100" />
@@ -372,10 +372,10 @@
               </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="618.1431" Y="600.9382" />
+            <Position X="640.0000" Y="600.9382" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4829" Y="0.8346" />
+            <PrePosition X="0.5000" Y="0.8346" />
             <PreSize X="0.6336" Y="0.0556" />
             <FileData Type="Normal" Path="A_Home/dating-1_81.png" Plist="" />
             <SingleColor A="255" R="150" G="200" B="255" />
@@ -446,7 +446,7 @@
                         <PreSize X="0.2524" Y="1.0263" />
                         <FileData Type="MarkedSubImage" Path="A_Common/Main/icon_yuanbao.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="btn_add" CanEdit="False" Visible="False" ActionTag="1707761967" Tag="370" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="168.5000" RightMargin="-1.5000" TopMargin="-2.5000" BottomMargin="-2.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="13" Scale9Height="21" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                      <AbstractNodeData Name="btn_add" Visible="False" ActionTag="1707761967" Tag="370" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="168.5000" RightMargin="-1.5000" TopMargin="-2.5000" BottomMargin="-2.5000" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="13" Scale9Height="21" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                         <Size X="43.0000" Y="43.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="190.0000" Y="19.0000" />
