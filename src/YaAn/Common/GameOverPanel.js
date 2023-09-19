@@ -1,27 +1,29 @@
 // 设置圆形裁剪头像 (由于图片资源不统一，目前只用于岳阳app)
-function CircularCuttingHeadImg(node, pl) {
+function CircularCuttingHeadImg(node, pl, isCirl) {
     var head = node;
     var url = pl.info.headimgurl;
-    if (!url) url = "A_Common/default_headpic.png";
-    cc.loader.loadImg(url, { isCrossOrigin: true }, function (err, texture) {
-        if (!err && texture && cc.sys.isObjectValid(head)) {
-            var clippingNode = new cc.ClippingNode();
-            var mask = new cc.Sprite("Red20/DeskTexture/player_blue_bg.png");
-            mask.width -= 15;
-            mask.height -= 15;
-            clippingNode.setAlphaThreshold(0);
-            clippingNode.setStencil(mask);
-            var img = new cc.Sprite(texture);
-            img.setScale(mask.getContentSize().width / img.getContentSize().width);
-            clippingNode.addChild(img);
-            clippingNode.setPosition(head.getContentSize().width / 2, head.getContentSize().height / 2);
-            //遮罩框
-            // var hideblock = new cc.Sprite("Red20/DeskTexture/player_blue_bg.png");
-            // hideblock.setPosition(head.getContentSize().width / 2, head.getContentSize().height / 2);
-            head.addChild(clippingNode);
-            // head.addChild(hideblock);
-        }
-    });
+    if (!url) url = "A_Common/HeadImgs/head_102.jpg";
+    if (isCirl) {
+        var clippingNode = new cc.ClippingNode();
+        var mask = new cc.Sprite("Red20/DeskTexture/player_blue_bg.png");
+        mask.width -= 15;
+        mask.height -= 15;
+        clippingNode.setAlphaThreshold(0);
+        clippingNode.setStencil(mask);
+        var img = new cc.Sprite(url);
+        img.setScale(mask.getContentSize().width / img.getContentSize().width);
+        clippingNode.addChild(img);
+        clippingNode.setPosition(head.getContentSize().width / 2, head.getContentSize().height / 2);
+        //遮罩框
+        // var hideblock = new cc.Sprite("Red20/DeskTexture/player_blue_bg.png");
+        // hideblock.setPosition(head.getContentSize().width / 2, head.getContentSize().height / 2);
+        head.addChild(clippingNode);
+        // head.addChild(hideblock);
+    } else {
+        var img = new cc.Sprite(url);
+        img.setScale(head.parent.getChildByName("head_bg").width / img.getContentSize().width);
+        head.addChild(img);
+    }
 }
 
 // 添加复制按钮功能
@@ -1104,12 +1106,20 @@ var GameOverLayer = cc.Layer.extend({
         var _jsonPath = "endAll.json", isHaveNew = true, setPlayer = SetGameOverLayer;
         switch (MjClient.gameType) {
             case MjClient.GAME_TYPE.RED_20_POKER:
-                _jsonPath = "endAll_Red20.json";
+                _jsonPath = res.EndAll_Red20_json;
                 setPlayer = SetGameOverLayer_Red20;
                 break;
             case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN:
-                _jsonPath = "endAll_Runfaster.json";
+                _jsonPath = res.EndAll_Runfaster_json;
                 setPlayer = SetGameOverLayer_Runfaster;
+                break;
+            case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
+            case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
+                _jsonPath = res.EndAll_XueZhan_json;
+                setPlayer = SetGameOverLayer_XueZhan;
                 break;
             default:
                 isHaveNew = false;
@@ -1370,6 +1380,23 @@ var GameOverLayer = cc.Layer.extend({
         }
     }
 });
+//跑得快
+function SetGameOverLayer_XueZhan(node, off) {
+    if (!node) return;
+    var pl = MjClient.getPlayerByIndex(off);
+    node.setVisible(false);
+    if (!pl) return;
+    var sData = MjClient.data.sData,
+        staticNd = node.getChildByName('statistc');
+    setCommonMsg(node, pl, off, false);
+    let pData = sData.players[pl.info.uid];
+    staticNd.getChildByName('item0').getChildByName('num').setString(pData.zimoTotal || 0);
+    staticNd.getChildByName('item1').getChildByName('num').setString(pData.jiepaoTotal || 0);
+    staticNd.getChildByName('item2').getChildByName('num').setString(pData.dianpaoTotal || 0);
+    staticNd.getChildByName('item3').getChildByName('num').setString(pData.tingCount || 0);
+    staticNd.getChildByName('item4').getChildByName('num').setString(pData.noTingCount || 0);
+    node.getChildByName('currbg').visible = false;
+}
 
 //跑得快
 function SetGameOverLayer_Runfaster(node, off) {
@@ -1379,7 +1406,7 @@ function SetGameOverLayer_Runfaster(node, off) {
     if (!pl) return;
     var sData = MjClient.data.sData,
         staticNd = node.getChildByName('statistc');
-    setCommonMsg(node, pl, off);
+    setCommonMsg(node, pl, off, true);
     let pData = sData.players[pl.info.uid], leftNum = sData.tData.roundAll - pData.roundNum;
     let loseCount = MjClient.isDismiss ? leftNum - pData.winNum : leftNum - pData.winNum + 1;
     staticNd.getChildByName('item0').getChildByName('num').setString(pData.maxWin + '');
@@ -1397,7 +1424,7 @@ function SetGameOverLayer_Red20(node, off) {
     if (!pl) return;
     var sData = MjClient.data.sData;
     var tData = sData.tData;
-    setCommonMsg(node, pl, off);
+    setCommonMsg(node, pl, off, true);
     const cIndex = tData.uids.indexOf(pl.info.uid), staticNd = node.getChildByName('statistc'), msg = tData._gameOverData;
     staticNd.getChildByName('item0').getChildByName('num').setString(msg.TianHuCount[cIndex] + '次');
     staticNd.getChildByName('item1').getChildByName('num').setString(msg.DiHuCount[cIndex] + '次');
@@ -1408,7 +1435,7 @@ function SetGameOverLayer_Red20(node, off) {
     staticNd.getChildByName('item6').getChildByName('num').setString(msg.HuCount[cIndex] + '次');
 }
 //公共信息
-function setCommonMsg(node, pl, off) {
+function setCommonMsg(node, pl, off, isCirl) {
     var sData = MjClient.data.sData;
     let pData = sData.players[pl.info.uid],
         len = Object.keys(sData.players).length,
@@ -1416,7 +1443,7 @@ function setCommonMsg(node, pl, off) {
         spce = (w - len * node.width) / (len + 1);
     node.x = spce + (node.width + spce) * off;
     node.setVisible(true);
-    CircularCuttingHeadImg(node.getChildByName('head'), pl);
+    CircularCuttingHeadImg(node.getChildByName('head'), pl, isCirl);
     var uidSelf = SelfUid();
     node.getChildByName('currbg').visible = uidSelf == pl.info.uid;
     node.getChildByName('winNode').getChildByName('bigWinner').visible = MjClient.endallui._BigWinnerScore == pData.winall && MjClient.endallui._BigWinnerScore != 0;

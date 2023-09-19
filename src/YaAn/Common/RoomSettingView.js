@@ -74,14 +74,6 @@ var RoomSettingView = cc.Layer.extend({
                 _visible: true,
                 _run: function () {
                     this.ignoreContentAdaptWithSize(true);
-
-                    if ((MjClient.APP_TYPE.QXYYQP == MjClient.getAppType() || MjClient.getAppType() == MjClient.APP_TYPE.HUBEIMJ || MjClient.getAppType() == MjClient.APP_TYPE.YLHUNANMJ) &&
-                        MjClient.gameType != MjClient.GAME_TYPE.YUE_YANG_NIU_SHI_BIE && MjClient.gameType != MjClient.GAME_TYPE.DA_YE_510K &&
-                        MjClient.gameType != MjClient.GAME_TYPE.QI_CHUN_DA_GONG && MjClient.gameType != MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN &&
-                        MjClient.gameType != MjClient.GAME_TYPE.ZHU_ZHOU_DA_MA_ZI && MjClient.gameType != MjClient.GAME_TYPE.CHONG_YANG_DA_GUN &&
-                        MjClient.gameType != MjClient.GAME_TYPE.DA_YE_DA_GONG && MjClient.gameType != MjClient.GAME_TYPE.TONG_SHAN_DA_GONG)
-                        this.visible = false;
-
                     if (MjClient.isShenhe == true) {
                         this.setVisible(false);
                     }
@@ -109,7 +101,7 @@ var RoomSettingView = cc.Layer.extend({
                     this.addChild(_fixBtn);
                 },
                 _text: function () {
-                    return "Ver:" + MjClient.native.GetVersionName() + "(" + MjClient.resVersion + ")";
+                    return getPackageMsgs();
                 }
             },
             Slider_effect: {
@@ -146,7 +138,7 @@ var RoomSettingView = cc.Layer.extend({
     ctor: function () {
         this._super();
 
-        var jsonFile = "setting_yaan.json";
+        var jsonFile = res.Setting_yaan_json;
         var setui = ccs.load(jsonFile);
         BindUiAndLogic(setui.node, this.jsBind);
         this.addChild(setui.node);

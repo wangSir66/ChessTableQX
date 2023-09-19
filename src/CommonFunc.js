@@ -16931,3 +16931,12 @@ function DealMJPut_haian(node, msg, off, outNum) {
         }
     }
 }
+
+//包含的版本信息
+function getPackageMsgs() {
+    let pckn = MjClient.native.GetPackageName(),  //     包名
+        gv = MjClient.native.GetVersionName(), // 包版本
+        rv = MjClient.resVersion, // 热更版本
+        csvr = MjClient.curServerPort; // 服务器 
+    return pckn + "\n" + gv + "\n" + rv + "\n" + csvr.host + ':' + csvr.port;
+}
