@@ -3559,7 +3559,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_tianjia" Visible="False" ActionTag="-1058218837" VisibleForFrame="False" Tag="178" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="214.7840" RightMargin="15.2161" TopMargin="68.6080" BottomMargin="31.3920" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_tianjia" ActionTag="-1058218837" VisibleForFrame="False" Tag="178" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="214.7840" RightMargin="15.2161" TopMargin="68.6080" BottomMargin="31.3920" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="1050.0000" Y="620.0000" />
                 <Children>
                   <AbstractNodeData Name="Image_bg" Visible="False" ActionTag="392120962" Tag="179" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" LeftMargin="194.4600" RightMargin="809.5500" TopMargin="765.5760" BottomMargin="-191.5800" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="15" BottomEage="15" Scale9OriginX="22" Scale9OriginY="15" Scale9Width="2" Scale9Height="16" ctype="ImageViewObjectData">

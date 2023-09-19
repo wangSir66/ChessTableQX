@@ -2287,7 +2287,7 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="Panel_groupYB" Visible="False" ActionTag="-2086877919" Tag="2186" IconVisible="False" LeftMargin="224.7861" RightMargin="35.2139" TopMargin="141.3500" BottomMargin="28.6500" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+              <AbstractNodeData Name="Panel_groupYB" ActionTag="-2086877919" Tag="2186" IconVisible="False" LeftMargin="224.7861" RightMargin="35.2139" TopMargin="141.3500" BottomMargin="28.6500" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="1020.0000" Y="550.0000" />
                 <Children>
                   <AbstractNodeData Name="Image_listBg" ActionTag="-205241243" Tag="2187" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentWidthEnable="True" PercentHeightEnable="True" PercentWidthEnabled="True" PercentHeightEnabled="True" TopMargin="5.5000" BottomMargin="5.5000" Scale9Enable="True" LeftEage="22" RightEage="22" TopEage="21" BottomEage="21" Scale9OriginX="22" Scale9OriginY="21" Scale9Width="229" Scale9Height="97" ctype="ImageViewObjectData">
