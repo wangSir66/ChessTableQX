@@ -1744,9 +1744,9 @@
                   "ScaleY": 1.0
                 },
                 "CColor": {
-                  "R": 230,
-                  "G": 230,
-                  "B": 250
+                  "R": 165,
+                  "G": 42,
+                  "B": 42
                 },
                 "IconVisible": false,
                 "PrePosition": {

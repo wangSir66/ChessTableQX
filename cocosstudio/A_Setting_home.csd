@@ -371,7 +371,7 @@
                 <AnchorPoint ScaleX="0.5000" ScaleY="1.0000" />
                 <Position X="121.8026" Y="534.9995" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="230" G="230" B="250" />
+                <CColor A="255" R="165" G="42" B="42" />
                 <PrePosition X="0.1550" Y="0.9745" />
                 <PreSize X="0.2417" Y="0.0364" />
                 <FontResource Type="Default" Path="" Plist="" />
