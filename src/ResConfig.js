@@ -23,6 +23,12 @@ var res = {
 	Enter_json: "A_Enter.json",
 	Calculator_json: "A_Calculator.json",
 	CreateHomeTotal_json: "A_CreateHomeTotal.json",
+	EndOne_XueZhan_json: "A_EndOne_XueZhan.json",
+	EndAll_Red20_json: "A_EndAll_Red20.json",
+	EndAll_Runfaster_json: "A_EndAll_Runfaster.json",
+	EndAll_XueZhan_json: "A_EndAll_XueZhan.json",
+	Setting_yaan_json: "A_Setting_yaan.json",
+	Setting_home_json: "A_Setting_home.json",
 
 	Play_json: "Play.json",
 	Block_json: "block.json",

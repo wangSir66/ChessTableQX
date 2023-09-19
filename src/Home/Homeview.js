@@ -75,7 +75,8 @@ var HomeView_yaan = cc.Layer.extend({
                         } else if (cn === 'txtSpeak' || cn === 'SliderSpeak' || cn === 'CheckBoxSpeak') {
                             nC[i].y = blac.getSize().height / 2 - 50;
                         } else if (cn === 'packageName') {
-                            nC[i].setString(MjClient.native.GetPackageName());
+                            nC[i].setString(getPackageMsgs());
+                            nC[i].ignoreContentAdaptWithSize(true);
                         }
                     }
                     //默认震动
