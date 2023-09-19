@@ -70,7 +70,6 @@
         "src/PlaybackLayer.js",
         "src/LoseGameLayer.js",
         "src/WinGameLayer.js",
-        "src/GameOverPanel.js",
         "src/GameRecordLayer.js",
         "src/GameDesLayer.js",
         "src/GameWaitingLayer.js",
@@ -134,6 +133,8 @@
         "src/YaAn/Common/GameRuleView.js",
         "src/YaAn/Common/RoomSettingView.js",
         "src/YaAn/Common/UserInfoPanelPlaying.js",
+        "src/YaAn/Common/GameOverPanel.js",
+
         "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
         "src/YaAn/Red20/Arithmetic.js",
         "src/YaAn/Red20/CreateRoomNode.js",
