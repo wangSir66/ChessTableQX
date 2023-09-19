@@ -23,6 +23,7 @@ var res = {
 	Enter_json: "A_Enter.json",
 	Calculator_json: "A_Calculator.json",
 	CreateHomeTotal_json: "A_CreateHomeTotal.json",
+	EndOne_XueZhan_json: "A_EndOne_XueZhan.json",
 
 	Play_json: "Play.json",
 	Block_json: "block.json",

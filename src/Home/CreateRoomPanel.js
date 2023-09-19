@@ -63,9 +63,13 @@ CreateViewYaAn = cc.Layer.extend({
             case MjClient.GAME_TYPE.XUE_ZHAN_2to2://血战
             case MjClient.GAME_TYPE.XUE_ZHAN_2to1://血战
                 node = new CreateRoomNode_ynxuezhan(this, data);
-                break;
+                break; 
             case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN: //跑得快
                 node = new CreateRoomNode_PaoDeKuaiYA(this, data);
+                break;
+            case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER: //新跑得快16
+            case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1: //新跑得快15
+                node = new CreateRoomNode_NewRunFaster(this, data);
                 break;
         }
         return node;
@@ -133,7 +137,7 @@ CreateViewYaAn = cc.Layer.extend({
         let lIndex = this._gameTypeList.indexOf(lastGameType);
         if (lIndex != -1) {
             this._lastGameType = lastGameType;
-        }else this._lastGameType = this._gameTypeList[0];
+        } else this._lastGameType = this._gameTypeList[0];
 
         var jsonui = ccs.load(res.CreateHomeTotal_json);
         this.addChild(jsonui.node);

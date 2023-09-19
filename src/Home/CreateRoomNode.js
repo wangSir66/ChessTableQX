@@ -2,6 +2,7 @@
 const BTNCOLOR1 = cc.color('#3271F6');//选中
 const BTNCOLOR2 = cc.color('#8E8178');//禁用
 const BTNCOLOR3 = cc.color("#3271F6");//未选中
+const BTNCOLOR4 = cc.color("#464C7E");//文本yanse
 const KEYCURRGAMERULE = 'KEY_CURR_GAME_RULE';//缓存游戏规则
 
 var CreateRoomNodeYaAn = cc.Node.extend({
@@ -225,15 +226,17 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                             this.payWayNodeArray.push(col);
                         } else if (col.name == 'btnRadio0' || col.name == 'btnRadio1' || col.name == 'btnRadio2') {
                             col.getChildByName('text_0').setString('');
-                            col.getChildByName('text_0').setTextColor(cc.color("#F95824"))
-                            this.roundNodeArray.push(col)
+                            col.getChildByName('text_0').setTextColor(cc.color("#F95824"));
+                            this.roundNodeArray.push(col);
                         }
                     }
                     else {
                         col.addEventListener(this.callSelectBack.bind(this), col);
                         this.addListenerText(col, null, this.callSelectBack.bind(this));
                     }
-                    col.getChildByName('text').setColor(cc.color(this._unSelectColor));
+                    col.getChildByName('text').setTextColor(cc.color(this._unSelectColor));
+                }else if(col.name == "text_1"){
+                    col.setTextColor(cc.color(BTNCOLOR4));
                 }
             }
             if (btns.length > 0) {
@@ -466,9 +469,13 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     initFuwuFeiNode: function (row) {
         row.visible = this._data.clubType === 0;
         if (row.visible) {
+            row.getChildByName('text_1').setTextColor(cc.color(BTNCOLOR4));
+            row.getChildByName('difen').getChildByName('text_1').setTextColor(cc.color(BTNCOLOR4));
             this.qujianItems = [];
             //区间item
-            this.qujianItem = row.getChildByName('qujian').getChildByName('qujian0');
+            const qj = row.getChildByName('qujian');
+            qj.getChildByName('text_1').setTextColor(cc.color(BTNCOLOR4));
+            this.qujianItem = qj.getChildByName('qujian0');
             this.qujianItems.push(this.qujianItem);
             this.initQuJianItem();
             this.initFuWuFeiNodeFC(1);
@@ -477,18 +484,27 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             let _radio = createRadioBoxForCheckBoxs(btns, this.callSelectBack.bind(this), 0);
             this.RedioGroup['fuwufeipay'] = _radio;
             this.addListenerText(btns, _radio, this.callSelectBack.bind(this));
+            for (let _i = 0; _i < btns.length; _i++) {
+                const rItem = btns[_i];
+                rItem.getChildByName('text').setTextColor(cc.color(BTNCOLOR1));
+            }
             //同分
             btns = [row.getChildByName('btnRadiotf1'), row.getChildByName('btnRadiotf2')];
             _radio = createRadioBoxForCheckBoxs(btns, this.callSelectBack.bind(this), 0);
             this.RedioGroup['tongfenpay'] = _radio;
             this.addListenerText(btns, _radio, this.callSelectBack.bind(this));
+            for (let _i = 0; _i < btns.length; _i++) {
+                const rItem1 = btns[_i];
+                rItem1.getChildByName('text').setTextColor(cc.color(BTNCOLOR1));
+            }
             //低分解散
-            col = row.getChildByName('btnCheckdfjs');
+            const col = row.getChildByName('btnCheckdfjs');
+            col.getChildByName('text').setTextColor(cc.color(BTNCOLOR1));
             this._btnItems.push(col);
             col.addEventListener(this.callSelectBack.bind(this), col);
             this.addListenerText(col, null, this.callSelectBack.bind(this));
             //底分加減（1-20）
-            let Btnadd = row.getChildByName('qujian').getChildByName('Btnadd');
+            let Btnadd = qj.getChildByName('Btnadd');
             if (Btnadd) {
                 Btnadd.addTouchEventListener((sender, Type) => {
                     switch (Type) {
@@ -601,6 +617,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             let baseScoreT = null;
             item.getParent() || this.qujianItem.getParent().addChild(item);
             item.setPositionY(30 - 60 * len);
+            item.getChildByName('text1_0').setTextColor(cc.color(BTNCOLOR1));
             for (let _i = 0; _i < 3; _i++) {
                 const txt = item['txt' + _i] ? item['txt' + _i] : fun(item.getChildByName('Panel' + _i), msg[{ 0: 'min', 1: 'max', 2: 'score' }[_i]], _i);
                 _i == 2 && (baseScoreT = txt);

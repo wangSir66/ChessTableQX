@@ -1,6 +1,5 @@
 {
     "project_type": "javascript",
-
     "debugMode": 1,
     "showFPS": false,
     "frameRate": 60,
@@ -8,27 +7,28 @@
     "id": "gameCanvas",
     "renderMode": 0,
     "engineDir": "frameworks/cocos2d-html5",
-
-    "modules": [ "cocos2d", "cocostudio", "extensions" ],
+    "modules": [
+        "cocos2d",
+        "cocostudio",
+        "extensions"
+    ],
     "appType": 25,
+    "dev": true,
     "jsList": [
         "TestConfig.js",
         "src/h5/amapHelper.js",
         "src/h5/clipboardHelper.js",
         "src/h5/nativeHelper.js",
         "src/h5/weixinHelper.js",
-
         "src/util/base64.js",
         "src/util/md5.js",
         "src/util/localStorageEncrypt.js",
         "src/util/Timer.js",
-
         "src/Net/NetSender.js",
         "src/Net/NetControl.js",
         "src/Net/NetBuffer.js",
         "src/Net/NetClient.js",
         "src/Net/RequireAll.js",
-
         "src/CommonPool.js",
         "src/ResConfig.js",
         "src/NativeFunc.js",
@@ -45,17 +45,13 @@
         "src/CommonFunc_UI3D.js",
         "src/CommonFunc_card.js",
         "src/CommonFunc_Layer.js",
-        
         "src/Common/UIManager.js",
         "src/Common/CalculatorView.js",
-
         "src/Login/Update.js",
         "src/Login/LoginPanel.js",
         "src/Login/Dlgagreement.js",
         "src/Login/MobilePhoneLoginLayer.js",
         "src/Login/MobilePhoneRegisterLayer.js",
-
-        
         "src/Home/Homeview.js",
         "src/Home/CreateRoomPanel.js",
         "src/Home/CreateRoomNode.js",
@@ -63,7 +59,6 @@
         "src/Home/ChangeHeadView.js",
         "src/Home/ChangeNickName.js",
         "src/Home/ChangePWD.js",
-
         "src/FreeNumberVoteDialog.js",
         "src/ShiMingRenZhengLayer.js",
         "src/SelectPanel.js",
@@ -97,7 +92,6 @@
         "src/ShareCaishenLayer.js",
         "src/ShareYuanbaoLayer.js",
         "src/StoreLayer.js",
-
         "src/RecommendLayer_active.js",
         "src/GuidLayer.js",
         "src/GuidLayer_home.js",
@@ -121,7 +115,6 @@
         "src/startScene.js",
         "src/EmailLayer.js",
         "src/goldField.js",
-
         "src/friendCard/FriendCard_mainJS.js",
         "src/friendCard/FriendCard_ruleBlackList.js",
         "src/friendCard/FriendCard_gaojiSet.js",
@@ -138,30 +131,29 @@
         "src/friendCard/FriendCard_yaoqingMember.js",
         "src/friendCard/FriendCard_init.js",
         "src/friendCard/FriendCard_SelectWay.js",
-
-
         "src/YaAn/Common/GameRuleView.js",
         "src/YaAn/Common/RoomSettingView.js",
         "src/YaAn/Common/UserInfoPanelPlaying.js",
-
         "src/YaAn/YaAnMahjong/CreateRoomNode_yaan.js",
-
         "src/YaAn/Red20/Arithmetic.js",
         "src/YaAn/Red20/CreateRoomNode.js",
         "src/YaAn/Red20/PlayerGamePanel.js",
         "src/YaAn/Red20/WinGamePanel.js",
         "src/YaAn/Red20/GameRuleView.js",
-
         "src/YaAn/XueZhanMahjong/Arithmetic.js",
         "src/YaAn/XueZhanMahjong/CreateRoomNode.js",
         "src/YaAn/XueZhanMahjong/PlayerGamePanel.js",
         "src/YaAn/XueZhanMahjong/WinGamePanel.js",
         "src/YaAn/XueZhanMahjong/GameRuleView.js",
-        
         "src/YaAn/RunFaster/Arithmetic.js",
         "src/YaAn/RunFaster/CreateRoomNode.js",
         "src/YaAn/RunFaster/PlayerGamePanel.js",
         "src/YaAn/RunFaster/GameRuleView.js",
-        "src/YaAn/RunFaster/WinGamePanel.js"
+        "src/YaAn/RunFaster/WinGamePanel.js",
+        "src/YaAn/NewRunFaster/Arithmetic.js",
+        "src/YaAn/NewRunFaster/CreateRoomNode.js",
+        "src/YaAn/NewRunFaster/PlayerGamePanel.js",
+        "src/YaAn/NewRunFaster/GameRuleView.js",
+        "src/YaAn/NewRunFaster/WinGamePanel.js"
     ]
 }

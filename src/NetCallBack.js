@@ -544,6 +544,11 @@ MjClient.netCallBack = {
                     MjClient.majiang = MjClient.majiang_runfasterya;
                     MjClient.majiang.initAreaSelectMode(d.tData.areaSelectMode);
                     break;
+                case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER://新跑得快16
+                case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1://新跑得快15
+                    MjClient.majiang = MjClient.GameLogic_NewRunFaster;
+                    MjClient.majiang.initAreaSelectMode(d.tData.areaSelectMode);
+                    break;
                 case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
                 case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战
                 case MjClient.GAME_TYPE.XUE_ZHAN_3to3://血战
@@ -1470,6 +1475,10 @@ MjClient.netCallBack = {
                 switch (MjClient.gameType) {
                     case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN://跑得快
                         MjClient.Scene.addChild(new PlayLayer_RunFasterYA());
+                        break;
+                    case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER://新跑得快16
+                    case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1://新跑得快15
+                        MjClient.Scene.addChild(new PlayLayer_NewRunFaster());
                         break;
                     case MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG://血战
                     case MjClient.GAME_TYPE.XUE_ZHAN_3to2://血战

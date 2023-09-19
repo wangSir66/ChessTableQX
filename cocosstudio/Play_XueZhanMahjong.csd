@@ -176,10 +176,10 @@
           <AbstractNodeData Name="roundnumImg" ActionTag="928435269" Tag="163" IconVisible="False" LeftMargin="720.1110" RightMargin="417.8890" TopMargin="330.3727" BottomMargin="329.6273" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="10" BottomEage="10" Scale9OriginX="30" Scale9OriginY="10" Scale9Width="82" Scale9Height="40" ctype="ImageViewObjectData">
             <Size X="142.0000" Y="60.0000" />
             <Children>
-              <AbstractNodeData Name="roundnumAtlas" ActionTag="640381544" Tag="151" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="53.9109" RightMargin="66.0891" TopMargin="19.0150" BottomMargin="18.9850" FontSize="22" LabelText="88" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="roundnumAtlas" ActionTag="640381544" Tag="151" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="53.9082" RightMargin="66.0918" TopMargin="19.0120" BottomMargin="18.9880" FontSize="22" LabelText="88" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="22.0000" Y="22.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="64.9109" Y="29.9850" />
+                <Position X="64.9082" Y="29.9880" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4571" Y="0.4998" />
@@ -200,10 +200,10 @@
           <AbstractNodeData Name="cardNumImg" ActionTag="1895184865" Tag="164" IconVisible="False" LeftMargin="424.4237" RightMargin="713.5763" TopMargin="331.3792" BottomMargin="328.6208" Scale9Enable="True" LeftEage="30" RightEage="30" TopEage="10" BottomEage="10" Scale9OriginX="30" Scale9OriginY="10" Scale9Width="82" Scale9Height="40" ctype="ImageViewObjectData">
             <Size X="142.0000" Y="60.0000" />
             <Children>
-              <AbstractNodeData Name="cardnumAtlas" ActionTag="1597080676" Tag="149" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="66.9999" RightMargin="53.0001" TopMargin="19.0000" BottomMargin="19.0000" FontSize="22" LabelText="88" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+              <AbstractNodeData Name="cardnumAtlas" ActionTag="1597080676" Tag="149" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="67.0006" RightMargin="52.9994" TopMargin="19.0000" BottomMargin="19.0000" FontSize="22" LabelText="88" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                 <Size X="22.0000" Y="22.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="77.9999" Y="30.0000" />
+                <Position X="78.0006" Y="30.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.5493" Y="0.5000" />
@@ -224,43 +224,43 @@
           <AbstractNodeData Name="arrowbk" ActionTag="-1864122520" Tag="5903" IconVisible="False" LeftMargin="580.3801" RightMargin="577.6199" TopMargin="300.0922" BottomMargin="297.9078" LeftEage="15" RightEage="15" TopEage="15" BottomEage="15" Scale9OriginX="15" Scale9OriginY="15" Scale9Width="92" Scale9Height="92" ctype="ImageViewObjectData">
             <Size X="122.0000" Y="122.0000" />
             <Children>
-              <AbstractNodeData Name="arrow" ActionTag="-772444370" Tag="721" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" ctype="PanelObjectData">
+              <AbstractNodeData Name="arrow" ActionTag="-772444370" Tag="721" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="122.0000" Y="122.0000" />
                 <Children>
-                  <AbstractNodeData Name="arrow" ActionTag="1001521928" Tag="5904" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-12.4197" RightMargin="63.4197" TopMargin="0.0250" BottomMargin="-0.0250" Scale9Enable="True" LeftEage="10" RightEage="10" Scale9OriginX="10" Scale9Width="51" Scale9Height="122" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="arrow" ActionTag="1001521928" Tag="5904" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-12.4176" RightMargin="63.4176" TopMargin="0.0244" BottomMargin="-0.0244" Scale9Enable="True" LeftEage="10" RightEage="10" Scale9OriginX="10" Scale9Width="51" Scale9Height="122" ctype="ImageViewObjectData">
                     <Size X="71.0000" Y="122.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="23.0803" Y="60.9750" />
+                    <Position X="23.0824" Y="60.9756" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.1892" Y="0.4998" />
                     <PreSize X="0.5820" Y="1.0000" />
                     <FileData Type="Normal" Path="XueZhanDaoDi/n_play_label12.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="arrow_2" ActionTag="-1609472034" Tag="5905" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-0.0244" RightMargin="0.0244" TopMargin="63.3967" BottomMargin="-12.3967" Scale9Enable="True" LeftEage="58" Scale9OriginX="58" Scale9Width="64" Scale9Height="71" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="arrow_2" ActionTag="-1609472034" Tag="5905" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-0.0244" RightMargin="0.0244" TopMargin="63.3932" BottomMargin="-12.3932" Scale9Enable="True" LeftEage="58" Scale9OriginX="58" Scale9Width="64" Scale9Height="71" ctype="ImageViewObjectData">
                     <Size X="122.0000" Y="71.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="60.9756" Y="23.1033" />
+                    <Position X="60.9756" Y="23.1068" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4998" Y="0.1894" />
                     <PreSize X="1.0000" Y="0.5820" />
                     <FileData Type="Normal" Path="XueZhanDaoDi/n_play_label09.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="arrow_3" ActionTag="474852499" Tag="5906" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="63.1319" RightMargin="-12.1319" TopMargin="-0.5360" BottomMargin="0.5360" Scale9Enable="True" LeftEage="10" RightEage="10" Scale9OriginX="10" Scale9Width="51" Scale9Height="122" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="arrow_3" ActionTag="474852499" Tag="5906" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="63.1370" RightMargin="-12.1370" TopMargin="-0.5368" BottomMargin="0.5368" Scale9Enable="True" LeftEage="10" RightEage="10" Scale9OriginX="10" Scale9Width="51" Scale9Height="122" ctype="ImageViewObjectData">
                     <Size X="71.0000" Y="122.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="98.6319" Y="61.5360" />
+                    <Position X="98.6370" Y="61.5368" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.8085" Y="0.5044" />
                     <PreSize X="0.5820" Y="1.0000" />
                     <FileData Type="Normal" Path="XueZhanDaoDi/n_play_label11.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="arrow_4" ActionTag="1298570774" Tag="5907" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-0.5489" RightMargin="0.5489" TopMargin="-14.4236" BottomMargin="65.4236" TouchEnable="True" Scale9Enable="True" LeftEage="10" RightEage="10" Scale9OriginX="10" Scale9Width="102" Scale9Height="71" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="arrow_4" ActionTag="1298570774" Tag="5907" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-0.5490" RightMargin="0.5490" TopMargin="-14.4184" BottomMargin="65.4184" TouchEnable="True" Scale9Enable="True" LeftEage="10" RightEage="10" Scale9OriginX="10" Scale9Width="102" Scale9Height="71" ctype="ImageViewObjectData">
                     <Size X="122.0000" Y="71.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="60.4511" Y="100.9236" />
+                    <Position X="60.4510" Y="100.9184" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.4955" Y="0.8272" />

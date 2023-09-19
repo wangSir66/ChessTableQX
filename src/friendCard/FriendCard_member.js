@@ -2994,7 +2994,7 @@ var FriendCard_member = cc.Layer.extend({
             MjClient.showToast("请输入有效数字！");
         else {
             MjClient.block();
-            remarkStr = remarkStr.substr(0, remarkStr.indexOf('.') + 2);
+            remarkStr.indexOf('.') > -1 && (remarkStr = remarkStr.substr(0, remarkStr.indexOf('.') + 3));
             var sendInfo = {
                 clubId: this.clubInfo.clubId,
                 userId: itemData.userId,
@@ -3008,7 +3008,7 @@ var FriendCard_member = cc.Layer.extend({
                     if (cc.sys.isObjectValid(this)) {
                         itemData.honorVal = rtn.data.tAcount;
                         const opt = this.clubInfo.groupMap[rtn.data.uId + ""];
-                        if (opt) opt.honorVal = rtn.data.uAcount;
+                        if (opt) opt.honorVal = rtn.data.uAcount.toFixed(2);
                         this.reLoadCurPanleListUI();
                     }
                 }

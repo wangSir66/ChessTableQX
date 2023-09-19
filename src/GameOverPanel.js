@@ -1108,6 +1108,8 @@ var GameOverLayer = cc.Layer.extend({
                 setPlayer = SetGameOverLayer_Red20;
                 break;
             case MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN:
+            case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER:
+            case MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1:
                 _jsonPath = "endAll_Runfaster.json";
                 setPlayer = SetGameOverLayer_Runfaster;
                 break;

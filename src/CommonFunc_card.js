@@ -1095,16 +1095,8 @@ function UpdataCurrentPutCard(isTouch) {
             if (isPaodekuai && IsTurnToMe() && getUIPlayer(1).handCount == 1 && tData.lastPutCard.length == 1 && MjClient.tipCardsArray) {
                 var mustPut = false;
                 // 连云港、淮安、原江苏跑得快：下家报单,接单牌时不能过牌(炸弹可不出)
-                if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_ZERO ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HA ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_TY ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN ||
-                    MjClient.gameType == MjClient.GAME_TYPE.YZ_PAO_DE_KUAI_TY ||
-                    MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_HBTY ||
+                if (MjClient.gameType == MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER ||
+                    MjClient.gameType == MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1 ||
                     MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
                     for (var i = 0; i < MjClient.tipCardsArray.length; i++) {
                         if (MjClient.tipCardsArray[i].length == 1) {
@@ -3685,7 +3677,8 @@ function postCardsEnded() {
         postEvent("PostCardsEnded");
 
         // 连云港的发完牌  要自动提牌
-        if (MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_LYG ||
+        if (MjClient.gameType == MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1 ||
+            MjClient.gameType == MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER ||
             MjClient.gameType == MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
             var pl = getUIPlayer(0);
             if (!pl) return;
@@ -4630,68 +4623,28 @@ function playCardAni_chuntian(UIoff) {
     _node.addChild(_sprite, 9999);
 }
 function playCardAni_feiji(cards, UIoff) {
-    if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
-        playEffectInPlay("ani_feiji");
+    var s_Robot_png = "playing/Ani/feijiyuanwenjian0.png";
+    var s_Robot_plist = "playing/Ani/feijiyuanwenjian0.plist";
+    var s_Robot_json = "playing/Ani/feijiyuanwenjian.ExportJson";
+    playEffectInPlay("ani_feiji");
+    ccs.armatureDataManager.addArmatureFileInfo(
+        s_Robot_png,
+        s_Robot_plist,
+        s_Robot_json);
 
-        var anmPic = cc.Sprite("playing/shaoyangOptimize/feiji.png");
-        var _node = getNode_cards(UIoff);
-        var _nodeAni = _node.getChildByName("deskCard");
-        anmPic.setScale(_nodeAni.getScale() * 2);
-        // 需要根据当前的位置以及牌的数量调整图片x坐标 added by Joey
-        var xOffset = 0;
-        if (UIoff == 2) {// 左上角
-            xOffset = 35 + cards.length * 1;
-        }
-        else if (UIoff == 1) { // 右上角
-            xOffset = -35 - cards.length * 1;
-        }
-        anmPic.setPosition(_nodeAni.getPosition().x - 40 + xOffset, _nodeAni.getPosition().y - 30);
-        _node.addChild(anmPic, 9999);
-        anmPic.runAction(cc.sequence(
-            cc.moveBy(0.3, 40, 0),
-            cc.delayTime(1.5),
-            cc.removeSelf()
-        ));
-    } else {
-        if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_NT &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_TY &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_ZERO &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HA &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
-            return;
-        }
+    var _armature = new ccs.Armature("feijiyuanwenjian");
+    _armature.animation.play("Animation1");    // 站立
+    var _node = getNode_cards(UIoff);
+    var _nodeAni = _node.getChildByName("deskCard");
+    _armature.setScale(_nodeAni.getScale() * 1.5);
+    _armature.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
+    _node.addChild(_armature, 9999);
 
-        var s_Robot_png = "playing/Ani/feijiyuanwenjian0.png";
-        var s_Robot_plist = "playing/Ani/feijiyuanwenjian0.plist";
-        var s_Robot_json = "playing/Ani/feijiyuanwenjian.ExportJson";
-        playEffectInPlay("ani_feiji");
-        ccs.armatureDataManager.addArmatureFileInfo(
-            s_Robot_png,
-            s_Robot_plist,
-            s_Robot_json);
+    var a1 = cc.fadeOut(1);
+    var b1 = cc.moveBy(0.5, cc.p(-cc.winSize.width / 4, 0));
 
-        var _armature = new ccs.Armature("feijiyuanwenjian");
-        _armature.animation.play("Animation1");    // 站立
-        var _node = getNode_cards(UIoff);
-        var _nodeAni = _node.getChildByName("deskCard");
-        _armature.setScale(_nodeAni.getScale() * 1.5);
-        _armature.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
-        _node.addChild(_armature, 9999);
-
-        var a1 = cc.fadeOut(1);
-        var b1 = cc.moveBy(0.5, cc.p(-cc.winSize.width / 4, 0));
-
-        var seq = cc.sequence(cc.delayTime(1), cc.spawn(b1, a1), cc.removeSelf());
-        _armature.runAction(seq);
-    }
+    var seq = cc.sequence(cc.delayTime(1), cc.spawn(b1, a1), cc.removeSelf());
+    _armature.runAction(seq);
 }
 function playCardAni_feiji_new(cards, UIoff) {
     playEffectInPlay("ani_feiji");
@@ -4765,107 +4718,27 @@ function playCardAni_huojian(UIoff) {
     _armature.runAction(seq);
 }
 function playCardAni_shunzi(cards, UIoff) {
-    if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ ||
-        MjClient.gameType == MjClient.GAME_TYPE.DA_YE_510K || MjClient.gameType == MjClient.GAME_TYPE.QI_CHUN_DA_GONG ||
-        MjClient.gameType == MjClient.GAME_TYPE.QIAN_JIANG_QIAN_FEN || MjClient.gameType == MjClient.GAME_TYPE.WU_XUE_510K) {
-        playEffectInPlay("ani_shunzi");
-
-        var anmPic = cc.Sprite("playing/shaoyangOptimize/shunzi.png");
-        var _node = getNode_cards(UIoff);
-        var _nodeAni = _node.getChildByName("deskCard");
-        anmPic.setScale(_nodeAni.getScale() * 2);
-        // 需要根据当前的位置以及牌的数量调整图片x坐标 added by Joey
-        var xOffset = 0;
-        if (UIoff == 2) {// 左上角
-            xOffset = 35 + cards.length * 1;
-        }
-        else if (UIoff == 1) { // 右上角
-            xOffset = -35 - cards.length * 1;
-        }
-        anmPic.setPosition(_nodeAni.getPosition().x - 40 + xOffset, _nodeAni.getPosition().y - 30);
-        _node.addChild(anmPic, 9999);
-        anmPic.runAction(cc.sequence(
-            cc.moveBy(0.3, 40, 0),
-            cc.delayTime(1.5),
-            cc.removeSelf()
-        ));
-    } else {
-        if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_NT &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_TY &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_ZERO &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HA &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
-            return;
-        }
-
-        playEffectInPlay("ani_shunzi");
-        ccs.armatureDataManager.addArmatureFileInfo("playing/Ani/shunziyuanwenjian.ExportJson");
-        var _armature = new ccs.Armature("shunziyuanwenjian");
-        _armature.animation.play("Animation1");
-        var _node = getNode_cards(UIoff);
-        var _nodeAni = _node.getChildByName("deskCard");
-        _armature.setScale(_nodeAni.getScale() * 2);
-        _armature.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
-        _node.addChild(_armature, 9999);
-    }
+    playEffectInPlay("ani_shunzi");
+    ccs.armatureDataManager.addArmatureFileInfo("playing/Ani/shunziyuanwenjian.ExportJson");
+    var _armature = new ccs.Armature("shunziyuanwenjian");
+    _armature.animation.play("Animation1");
+    var _node = getNode_cards(UIoff);
+    var _nodeAni = _node.getChildByName("deskCard");
+    _armature.setScale(_nodeAni.getScale() * 2);
+    _armature.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
+    _node.addChild(_armature, 9999);
 }
 
 function playCardAni_liandui(cards, UIoff) {
-    if (MjClient.getAppType() == MjClient.APP_TYPE.HUNANWANGWANG || MjClient.getAppType() == MjClient.APP_TYPE.QXSYDTZ) {
-        playEffectInPlay("ani_liandui");
-        var anmPic = cc.Sprite("playing/shaoyangOptimize/liandui.png");
-        var _node = getNode_cards(UIoff);
-        var _nodeAni = _node.getChildByName("deskCard");
-        anmPic.setScale(_nodeAni.getScale() * 2);
-        // 需要根据当前的位置以及牌的数量调整图片x坐标 added by Joey
-        var xOffset = 0;
-        if (UIoff == 2) {// 左上角
-            xOffset = 35 + cards.length * 1;
-        }
-        else if (UIoff == 1) { // 右上角
-            xOffset = -35 - cards.length * 1;
-        }
-        anmPic.setPosition(_nodeAni.getPosition().x - 40 + xOffset, _nodeAni.getPosition().y - 30);
-        _node.addChild(anmPic, 9999);
-        anmPic.runAction(cc.sequence(
-            cc.moveBy(0.3, 40, 0),
-            cc.delayTime(1.5),
-            cc.removeSelf()
-        ));
-    } else {
-        if (GameClass[MjClient.gameType] != MjClient.GAME_CLASS.DOU_DI_ZHU &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_NT &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HAIAN &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_TY &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_ELEVEN &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_ZERO &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HA &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_HUAIAN_NEW &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_LYG &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XIANG_SHUI &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_JZ &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_XU_ZHOU &&
-            MjClient.gameType != MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN) {
-            return;
-        }
-        playEffectInPlay("ani_liandui");
-        ccs.armatureDataManager.addArmatureFileInfo("playing/Ani/lianduiyuanwenjian.ExportJson");
-        var _armature = new ccs.Armature("lianduiyuanwenjian");
-        _armature.animation.play("Animation1");
-        var _node = getNode_cards(UIoff);
-        var _nodeAni = _node.getChildByName("deskCard");
-        _armature.setScale(_nodeAni.getScale() * 2);
-        _armature.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
-        _node.addChild(_armature, 9999);
-    }
+    playEffectInPlay("ani_liandui");
+    ccs.armatureDataManager.addArmatureFileInfo("playing/Ani/lianduiyuanwenjian.ExportJson");
+    var _armature = new ccs.Armature("lianduiyuanwenjian");
+    _armature.animation.play("Animation1");
+    var _node = getNode_cards(UIoff);
+    var _nodeAni = _node.getChildByName("deskCard");
+    _armature.setScale(_nodeAni.getScale() * 2);
+    _armature.setPosition(_nodeAni.getPosition().x, _nodeAni.getPosition().y);
+    _node.addChild(_armature, 9999);
 }
 
 function playCardAni_WangZha(UIoff, numWang) {

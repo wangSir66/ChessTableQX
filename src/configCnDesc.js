@@ -351,7 +351,47 @@ GameCnDescDefault.showCardNumber = GameCnDescDefault.showHandCount;
 GameCnDescDefault.nohongzhongdouble = GameCnDescDefault.wuhongzhongjiabei;
 
 GameCnDesc = {};
-
+//新跑得快
+const newRunFasterDes = {
+    mustPutHongTaoSan: v => ['每局黑桃五先出', '每局赢家先出'][v],
+    HandCutRule: v => {
+        let p = Number(rule.maxPlayer);
+        if (p === 4) return 0;
+        else if (v == 0) return '去掉所有梅花牌';
+        else return '去掉' + (p == 3 ? '一' : '两') + '方玩家的牌';
+    },
+    Sisters: v => v ? '姊妹对' : null,
+    IsAnonymous: v => v ? '游戏内匿名' : null,
+    AllBlack: v => v ? '全黑' : null,
+    AllRed: v => v ? '全红' : null,
+    AllBig: v => v ? '全大' : null,
+    AllSmall: v => v ? '全小' : null,
+    AllSingly: v => v ? '全单' : null,
+    AllDouble: v => v ? '全双' : null,
+    Four5OrA: v => v ? '5555，AAAA' : null,
+    FourOther: v => v ? '4个6-4个K' : null,
+    can3geZha: v => v ? '3张算炸' : null,
+    can4geZha: v => v ? '4张算炸' : null,
+    XiScore: v => v ? ('名堂分:' + v + '分') : null,
+    BombScore: v => v ? ('炸弹分:' + v + '分') : null,
+    isZhaDanJiaFen: v => v ? '带炸弹' : '不带炸弹',
+    AutoReady: v => v ? '结算自动准备' : '结算手动准备',
+    payWay: v => v === 0 ? '圈主付' : (v === 1 ? 'AA' : '赢家付'),
+    trustTime: v => v === 0 ? '不托管' : '超时' + v + 's托管',
+    //默认规则
+    cardNumIndex: v => null,
+    isPlayerShuffle: v => null,
+    hongTao10Niao: v => null,
+    zhaDanBuChai: v => null,
+    showCardNumber: v => null,
+    mustPut: v => null,
+    can4dai2: v => null,
+    can4dai3: v => null,
+    can3aZhaDan: v => null,
+    jieSuanDiFen: v => null,
+};
+GameCnDesc[MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER] = newRunFasterDes;
+GameCnDesc[MjClient.GAME_TYPE.SI_CHUAN_NEW_RUNFASTER1] = newRunFasterDes;
 //雅安跑得快
 GameCnDesc[MjClient.GAME_TYPE.PAO_DE_KUAI_YAAN] = {
     mustPutHongTaoSan: v => ['每局黑桃五先出', '每局赢家先出'][v],
@@ -415,3 +455,34 @@ GameCnDesc[MjClient.GAME_TYPE.RED_20_POKER] = {
     BaseScore: v => '底分：' + v + '分',
     jieSuanDiFen: v => null,
 };
+
+//雅安血战
+const xuezhanRuleDes = {
+    subRule: v => ['血战到底', '三人三房', '三人两房', '二人两房', '二人一房'][v],
+    PointsLimit: v => v + '番封顶',
+    DianGangHua: v => '点杠花：' + (v === 1 ? '自摸' : '点炮'),
+    Forming: v => v + '张',
+    SwappingType: v => ['同花色换', '任意换', '不换'][v],
+    PointOfWinning: v => ['自摸不加', '自摸加番', '自摸加底'][v],
+    CallForwardingEnabled: v => v ? '呼叫转移' : null,
+    DuiDuiHuPoints: v => '对对胡' + v + '番',
+    MenQingEnabled: v => v ? '门清' : null,
+    ZhongZhangEnabled: v => v ? '中张' : null,
+    WinningFanEnabled: v => v ? '天地胡' : null,
+    WinningLastEnabled: v => v ? '海底捞' : null,
+    YaoJiuJiangDuiEnabled: v => v ? '幺九将对' : null,
+    KaxingwuEnabled: v => v ? '卡星五' : null,
+    DgwMultipleEnabled: v => v ? '巴倒烫' : null,
+    PingHuCanWinningByOther: v => v ? '平胡点炮可胡' : '1番起胡',
+    payWay: v => v === 0 ? '圈主付' : (v === 1 ? 'AA' : '赢家付'),
+    MaxPlayerCount: v => v + '人房',
+    MaxGameCount: v => v + '局',
+    BaseScore: v => '底分：' + v + '分',
+    jieSuanDiFen: v => null,
+    difen: v => null
+}
+GameCnDesc[MjClient.GAME_TYPE.XUE_ZHAN_MAHJONG] = xuezhanRuleDes;
+GameCnDesc[MjClient.GAME_TYPE.XUE_ZHAN_3to3] = xuezhanRuleDes;
+GameCnDesc[MjClient.GAME_TYPE.XUE_ZHAN_3to2] = xuezhanRuleDes;
+GameCnDesc[MjClient.GAME_TYPE.XUE_ZHAN_2to2] = xuezhanRuleDes;
+GameCnDesc[MjClient.GAME_TYPE.XUE_ZHAN_2to1] = xuezhanRuleDes;
