@@ -7476,20 +7476,34 @@
           </Folder>
           <Image Name="bg_circle.png" />
           <Image Name="bg_table.jpg" />
+          <Image Name="btn_continue.png" />
+          <Image Name="chahuazhu.png" />
           <Image Name="errenliangfang.png" />
           <Image Name="errenyifang.png" />
+          <Image Name="minHu.png" />
           <Image Name="n_play_back09.png" />
           <Image Name="n_play_back14.png" />
           <Image Name="n_play_back15.png" />
+          <Image Name="n_play_label04.png" />
           <Image Name="n_play_label09.png" />
           <Image Name="n_play_label10.png" />
           <Image Name="n_play_label11.png" />
           <Image Name="n_play_label12.png" />
           <Image Name="n_play_label21.png" />
           <Image Name="n_play_label22.png" />
-          <Image Name="n_play_num03.png" />
+          <Image Name="n_playLabel_1hu.png" />
+          <Image Name="n_playLabel_1zimo.png" />
+          <Image Name="n_playLabel_2hu.png" />
+          <Image Name="n_playLabel_2zimo.png" />
+          <Image Name="n_playLabel_3hu.png" />
+          <Image Name="n_playLabel_3zimo.png" />
           <Image Name="n2_history_btn05.png" />
           <Image Name="n2_popback09.png" />
+          <Image Name="n2_report_back02.png" />
+          <Image Name="n2_report_title01.png" />
+          <Image Name="n2_report_title02.png" />
+          <Image Name="n2_report_title03.png" />
+          <Image Name="not_xiajiao.png" />
           <Image Name="sanrenliangfang.png" />
           <Image Name="sanrensanfang.png" />
           <Image Name="sing_0.png" />
@@ -7501,6 +7515,8 @@
           <Image Name="swappPoint2.png" />
           <Image Name="swappTable.png" />
           <Image Name="swappType1.png" />
+          <Image Name="touxiangkuang1.png" />
+          <Image Name="tuoguan_icon.png" />
         </Folder>
         <Folder Name="ZhuaWaWa">
           <Image Name="bg_1.png" />
@@ -7562,6 +7578,7 @@
         <Project Name="A_ChangePWD.csd" Type="Layer" />
         <Project Name="A_CreateHomeTotal.csd" Type="Layer" />
         <Project Name="A_Dlgagreement.csd" Type="Layer" />
+        <Project Name="A_EndOne_XueZhan.csd" Type="Layer" />
         <Project Name="A_Enter.csd" Type="Layer" />
         <Project Name="A_Friendcard_gaojiSet.csd" Type="Layer" />
         <Project Name="A_Friendcard_info.csd" Type="Layer" />
