@@ -12,6 +12,11 @@
     "modules": [ "cocos2d", "cocostudio", "extensions" ],
     "appType": 25,
     "jsList": [
+        
+        "src/Common/UIManager.js",
+        "src/Common/CalculatorView.js",
+        "src/Common/ConfigStatic.js",
+        
         "TestConfig.js",
         "src/h5/amapHelper.js",
         "src/h5/clipboardHelper.js",
@@ -45,10 +50,6 @@
         "src/CommonFunc_UI3D.js",
         "src/CommonFunc_card.js",
         "src/CommonFunc_Layer.js",
-        
-        "src/Common/UIManager.js",
-        "src/Common/CalculatorView.js",
-        "src/Common/ConfigStatic.js",
 
         "src/Login/Update.js",
         "src/Login/LoginPanel.js",

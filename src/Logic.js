@@ -704,15 +704,11 @@ MjClient.CARD_FLOWER_TYPE = {
     MEI_HUA: 2,
     HONG_TAO: 3,
 }
-var ossUrl = 'http://test-project-0.oss-cn-hangzhou.aliyuncs.com'
+
 var GameDownloadCfgUrl = {};//http://121.199.14.235:9990/update/jiangshu/configuration.json
-GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/yaan-dev/";
-
-
+GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/jiangshu/";
 
 if (typeof (h5) != 'undefined' && h5.nativeHelper.isWeb()) h5.nativeHelper.changeGameDownloadCfgUrl(GameDownloadCfgUrl);
-
-
 var GameClassEnterBtn = {};
 GameClassEnterBtn[MjClient.GAME_CLASS.MA_JIANG] = "hall/MJ.png";
 GameClassEnterBtn[MjClient.GAME_CLASS.NIU_NIU] = "hall/niuniu.png";

@@ -16,7 +16,6 @@
         "Children": [
           {
             "ClipAble": false,
-            "BackColorAlpha": 229,
             "ComboBoxIndex": 1,
             "SingleColor": {
               "R": 0,
@@ -2790,7 +2789,7 @@
                           "ScaleY": 0.6295
                         },
                         "Position": {
-                          "X": 758.0231,
+                          "X": 758.0232,
                           "Y": 31.7236
                         },
                         "Scale": {
@@ -2808,10 +2807,10 @@
                           "X": 2.4706,
                           "Y": 1.3382
                         },
-                        "LeftMargin": 669.4871,
-                        "RightMargin": -769.4871,
+                        "LeftMargin": 669.4872,
+                        "RightMargin": -769.4872,
                         "TopMargin": 2.5609,
-                        "BottomMargin": -25.5608,
+                        "BottomMargin": -25.5609,
                         "Tag": 1514,
                         "ActionTag": -1181559418,
                         "Size": {

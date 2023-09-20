@@ -426,7 +426,7 @@
                 },
                 "Position": {
                   "X": 92.257,
-                  "Y": 674.1439
+                  "Y": 674.136
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -445,8 +445,8 @@
                 },
                 "LeftMargin": 67.257,
                 "RightMargin": 75.743,
-                "TopMargin": 25.8561,
-                "BottomMargin": 654.1439,
+                "TopMargin": 25.864,
+                "BottomMargin": 654.136,
                 "Tag": 1264,
                 "ActionTag": 1313843609,
                 "Size": {
@@ -598,7 +598,6 @@
             },
             "Scale9Width": 1,
             "Scale9Height": 1,
-            "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
