@@ -6,7 +6,7 @@
       <ObjectData Name="Layer" Tag="1208" ctype="GameLayerObjectData">
         <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="block" ActionTag="828311690" Tag="642" IconVisible="False" TouchEnable="True" ClipAble="False" BackColorAlpha="229" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="block" ActionTag="828311690" Tag="642" IconVisible="False" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="640.0000" Y="360.0000" />
@@ -603,10 +603,10 @@
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_139.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="weixiajiao" ActionTag="-1181559418" Tag="1514" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="669.4871" RightMargin="-769.4871" TopMargin="2.5609" BottomMargin="-25.5608" ctype="SpriteObjectData">
+                      <AbstractNodeData Name="weixiajiao" ActionTag="-1181559418" Tag="1514" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="669.4872" RightMargin="-769.4872" TopMargin="2.5609" BottomMargin="-25.5609" ctype="SpriteObjectData">
                         <Size X="168.0000" Y="91.0000" />
                         <AnchorPoint ScaleX="0.5270" ScaleY="0.6295" />
-                        <Position X="758.0231" Y="31.7236" />
+                        <Position X="758.0232" Y="31.7236" />
                         <Scale ScaleX="0.9400" ScaleY="0.9000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="11.1474" Y="0.4665" />

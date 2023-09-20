@@ -704,15 +704,11 @@ MjClient.CARD_FLOWER_TYPE = {
     MEI_HUA: 2,
     HONG_TAO: 3,
 }
-var ossUrl = 'http://test-project-0.oss-cn-hangzhou.aliyuncs.com'
-var GameDownloadCfgUrl = {};//http://8.139.4.112:9990/update/jiangshu/configuration.json
+
+var GameDownloadCfgUrl = {};//http://121.199.14.235:9990/update/jiangshu/configuration.json
 GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/yaan/";
 
-
-
 if (typeof (h5) != 'undefined' && h5.nativeHelper.isWeb()) h5.nativeHelper.changeGameDownloadCfgUrl(GameDownloadCfgUrl);
-
-
 var GameClassEnterBtn = {};
 GameClassEnterBtn[MjClient.GAME_CLASS.MA_JIANG] = "hall/MJ.png";
 GameClassEnterBtn[MjClient.GAME_CLASS.NIU_NIU] = "hall/niuniu.png";
@@ -11311,7 +11307,7 @@ var JSScene = cc.Scene.extend({
                     MjClient.Scene.addChild(new CreateViewYaAn(data));
                     if (!data.IsFriendCard) {
                         MjClient.gamenet.request("pkplayer.handler.getRoomConfig", {
-                            appid: "jiangshu"
+                            appid: "yaan"
                         },
                             function (rtn) {
                                 cc.log("---------rtn.code------", JSON.stringify(rtn))

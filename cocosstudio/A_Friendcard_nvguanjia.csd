@@ -88,10 +88,10 @@
                 <EndColor A="255" R="255" G="255" B="255" />
                 <ColorVector ScaleY="1.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="close" ActionTag="1313843609" Tag="1264" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="67.2570" RightMargin="75.7430" TopMargin="25.8561" BottomMargin="654.1439" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="20" Scale9Height="18" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="close" ActionTag="1313843609" Tag="1264" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="67.2570" RightMargin="75.7430" TopMargin="25.8640" BottomMargin="654.1360" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="20" Scale9Height="18" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="50.0000" Y="40.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="92.2570" Y="674.1439" />
+                <Position X="92.2570" Y="674.1360" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
                 <PrePosition X="0.4780" Y="0.9363" />
@@ -139,7 +139,7 @@
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Panel" ActionTag="-1044375428" Tag="337" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="2.9440" RightMargin="-2.9441" TopMargin="-0.0004" BottomMargin="0.0004" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+          <AbstractNodeData Name="Panel" ActionTag="-1044375428" Tag="337" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="2.9440" RightMargin="-2.9441" TopMargin="-0.0004" BottomMargin="0.0004" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <Children>
               <AbstractNodeData Name="btn_isStopKaiFang" ActionTag="-533963143" Tag="4170" IconVisible="False" LeftMargin="405.2085" RightMargin="719.7915" TopMargin="117.5000" BottomMargin="537.5000" TouchEnable="True" CheckedState="True" ctype="CheckBoxObjectData">
