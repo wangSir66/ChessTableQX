@@ -456,7 +456,7 @@ var FriendCard_info = cc.Layer.extend({
         else
             _btn_jiesan.setVisible(false);
 
-        _btn_jiesan.visible = false; //产品需求 先将解散俱乐部屏蔽
+        // _btn_jiesan.visible = false; //产品需求 先将解散俱乐部屏蔽
 
         _btn_jiesan.addTouchEventListener(function (sender, type) {
             if (type == 2) {

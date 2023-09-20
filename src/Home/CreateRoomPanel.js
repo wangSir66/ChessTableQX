@@ -127,13 +127,16 @@ CreateViewYaAn = cc.Layer.extend({
             this._gameTypeList.push(...a);
         })
 
-        var lastGameType = util.localStorageEncrypt.getNumberItem("KEY_GAME_TYPE", -1);
+        var lastGameType = 0;
+        cc.log('---this._data.clubRule--', JSON.stringify(MjClient.RuleParam), this._data.ruleNumer)
         if (this._data && this._data.clubRule)
             lastGameType = this._data.clubRule.gameType;
-        let lIndex = this._gameTypeList.indexOf(lastGameType);
-        if (lIndex != -1) {
-            this._lastGameType = lastGameType;
-        }else this._lastGameType = this._gameTypeList[0];
+        else {
+            lastGameType = util.localStorageEncrypt.getNumberItem("KEY_GAME_TYPE", -1)
+            let lIndex = this._gameTypeList.indexOf(lastGameType);
+            if (lIndex == -1) lastGameType = this._gameTypeList[0];
+        }
+        this._lastGameType = lastGameType;
 
         var jsonui = ccs.load(res.CreateHomeTotal_json);
         this.addChild(jsonui.node);
