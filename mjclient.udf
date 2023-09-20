@@ -31,9 +31,15 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="A_Setting_home.csd" />
+          <FilePathData Path="A_Friendcard_member.csd" />
+          <FilePathData Path="A_Friendcard_warningScore.csd" />
+          <FilePathData Path="A_Friendcard_info.csd" />
+          <FilePathData Path="A_FriendCard_ruleLayer.csd" />
+          <FilePathData Path="A_CreateHomeTotal.csd" />
+          <FilePathData Path="A_bg_xuezhan.csd" />
+          <FilePathData Path="A_Friendcard_inputRuleNameDialog.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="A_Setting_home.csd" />
+        <ActiveDocument Path="A_Friendcard_inputRuleNameDialog.csd" />
       </Value>
     </Item>
   </Properties>

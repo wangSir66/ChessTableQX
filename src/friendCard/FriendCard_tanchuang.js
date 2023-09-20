@@ -3624,7 +3624,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
                     clubType: this.clubData.type,
                     isMatch: (this.clubData.matchIsOpen & 2),
                 });
-
             }
         }, this);
         //全局邀请
@@ -3761,7 +3760,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
             if (i == 0) listView.setEnabled(false);
             setTimeout(() => {
                 var isOpenInvite = this.isOpenInvite(this._ruleListData[i]._index) ? 1 : 0;
-                cc.log('-------', this._ruleListData[i]._index)
                 this._acceptInviteSwitch[this._ruleListData[i]._index.toString()] = isOpenInvite;
                 if (i == 0) this.initRightPanel();
                 if (!isOpenInvite) {
@@ -3769,7 +3767,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
                 }
                 var itemData = this._ruleListData[i],
                     itemed = listView.getItems()[i];
-                itemData._localIndex = i;
                 if (itemed) {
                     this.createListItem(itemed, itemData, i);
                 } else {
@@ -3895,7 +3892,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
                 cb_isStopRoom.visible = FriendCard_Common.isManager();
             }
             cb_isStopRoom.ignoreContentAdaptWithSize(true);
-            cc.log('---this.clubData.ruleSwitch---', JSON.stringify(this.clubData.ruleSwitch))
             var isStopRoom = ((!((itemData._index + "") in this.clubData.ruleSwitch)) || this.clubData.ruleSwitch[itemData._index + ""]) ? false : true;
             cb_isStopRoom.setSelected(isStopRoom ? true : false);
             cb_isStopRoom._data = itemData;
@@ -3959,7 +3955,6 @@ var FriendCard_ruleLayer = cc.Layer.extend({
             btn_setRule._isShowLibertyCreRoom = isShowLibertyCreRoom
             btn_setRule.addTouchEventListener(function (sender, type) {
                 if (type == 2) {
-                    cc.log("createRoom ruleNumer", sender._wanFaIndex)
                     postEvent("createRoom", {
                         IsFriendCard: true,
                         ruleNumer: sender._wanFaIndex,

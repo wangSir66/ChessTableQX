@@ -20,6 +20,7 @@ var res = {
 	Friendcard_roomRecord_json: "A_Friendcard_roomRecord.json",
 	Friendcard_tongji_json: "A_Friendcard_tongji.json",
 	Friendcard_warningScore_json: "A_Friendcard_warningScore.json",
+	Friendcard_inputRuleNameDialog_json: "A_Friendcard_inputRuleNameDialog.json",
 	Enter_json: "A_Enter.json",
 	Calculator_json: "A_Calculator.json",
 	CreateHomeTotal_json: "A_CreateHomeTotal.json",

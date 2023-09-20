@@ -390,7 +390,7 @@
                                 },
                                 "Position": {
                                   "X": -11.953,
-                                  "Y": 13.0
+                                  "Y": 13.0004
                                 },
                                 "Scale": {
                                   "ScaleX": 0.6,
@@ -409,8 +409,8 @@
                                 },
                                 "LeftMargin": -35.953,
                                 "RightMargin": 85.953,
-                                "TopMargin": -6.5,
-                                "BottomMargin": -8.5,
+                                "TopMargin": -6.5004,
+                                "BottomMargin": -8.4996,
                                 "Tag": 573,
                                 "ActionTag": -754973127,
                                 "Size": {
@@ -579,7 +579,7 @@
                             },
                             "Position": {
                               "X": 133.9525,
-                              "Y": 21.4999
+                              "Y": 21.5007
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -602,8 +602,8 @@
                             },
                             "LeftMargin": 133.9525,
                             "RightMargin": -195.9525,
-                            "TopMargin": 1.5001,
-                            "BottomMargin": 7.4999,
+                            "TopMargin": 1.4993,
+                            "BottomMargin": 7.5007,
                             "Tag": 679,
                             "Children": [
                               {
@@ -622,7 +622,7 @@
                                 },
                                 "Position": {
                                   "X": -14.7515,
-                                  "Y": 12.6201
+                                  "Y": 12.6196
                                 },
                                 "Scale": {
                                   "ScaleX": 0.6,
@@ -641,8 +641,8 @@
                                 },
                                 "LeftMargin": -38.7515,
                                 "RightMargin": 88.7515,
-                                "TopMargin": -6.1201,
-                                "BottomMargin": -8.8799,
+                                "TopMargin": -6.1196,
+                                "BottomMargin": -8.8804,
                                 "Tag": 574,
                                 "ActionTag": -1927326593,
                                 "Size": {
@@ -812,7 +812,7 @@
                             },
                             "Position": {
                               "X": 137.0016,
-                              "Y": 18.5001
+                              "Y": 18.5
                             },
                             "Scale": {
                               "ScaleX": 1.0,
@@ -835,8 +835,8 @@
                             },
                             "LeftMargin": 137.0016,
                             "RightMargin": -199.0016,
-                            "TopMargin": 4.4999,
-                            "BottomMargin": 4.5001,
+                            "TopMargin": 4.5,
+                            "BottomMargin": 4.5,
                             "Tag": 680,
                             "Children": [
                               {
@@ -855,7 +855,7 @@
                                 },
                                 "Position": {
                                   "X": -14.0353,
-                                  "Y": 13.6592
+                                  "Y": 13.6584
                                 },
                                 "Scale": {
                                   "ScaleX": 0.6,
@@ -874,8 +874,8 @@
                                 },
                                 "LeftMargin": -38.0353,
                                 "RightMargin": 88.0353,
-                                "TopMargin": -7.1592,
-                                "BottomMargin": -7.8408,
+                                "TopMargin": -7.1584,
+                                "BottomMargin": -7.8416,
                                 "Tag": 575,
                                 "ActionTag": -69738096,
                                 "Size": {

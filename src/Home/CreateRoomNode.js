@@ -851,13 +851,13 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         return node;
     },
     showInputRuleNameDialog: function () {
-        var dialog = ccs.load("friendcard_inputRuleNameDialog.json").node;
+        var dialog = ccs.load(res.Friendcard_inputRuleNameDialog_json).node;
         setWgtLayout(dialog, [1, 1], [0, 0], [0, 0], true);
 
         var text_tip = dialog.getChildByName("Image_bg").getChildByName("Text_tip");
         text_tip.ignoreContentAdaptWithSize(true);
         var image = dialog.getChildByName("Image_bg").getChildByName("Image");
-        var textInput = new cc.EditBox(image.getContentSize(), new cc.Scale9Sprite("friendCards/int_playwords.png"));
+        var textInput = new cc.EditBox(image.getContentSize(), new cc.Scale9Sprite());
         textInput.setFontColor(cc.color(0x40, 0x40, 0x40));
         // textInput.setInputMode(cc.EDITBOX_INPUT_MODE_NUMERIC);
         textInput.setReturnType(cc.KEYBOARD_RETURNTYPE_DONE);
@@ -869,10 +869,10 @@ var CreateRoomNodeYaAn = cc.Node.extend({
 
         textInput.setPosition(image.getContentSize().width / 2, image.getContentSize().height / 2);
         image.addChild(textInput);
-
+        
         if (this._data) {
             if (this._data.ruleName) {
-                var splitRuleName = FriendCard_Common.splitClubRuleName(unescape(this._data.ruleName))
+                var splitRuleName = FriendCard_Common.splitClubRuleName1(unescape(this._data.ruleName))
                 textInput.setString(splitRuleName[0]);
             }
             //textInput.setString(GameCnName[this._data.gameType]);

@@ -45,10 +45,10 @@
                           <AbstractNodeData Name="text_0" ActionTag="-44289351" Tag="678" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="120.4707" RightMargin="-182.4707" TopMargin="5.4546" BottomMargin="3.5454" FontSize="28" LabelText="(8元宝)" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="98.0000" Y="28.0000" />
                             <Children>
-                              <AbstractNodeData Name="Image_1" ActionTag="-754973127" Tag="573" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-35.9530" RightMargin="85.9530" TopMargin="-6.5000" BottomMargin="-8.5000" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="18" Scale9Height="15" ctype="ImageViewObjectData">
+                              <AbstractNodeData Name="Image_1" ActionTag="-754973127" Tag="573" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-35.9530" RightMargin="85.9530" TopMargin="-6.5004" BottomMargin="-8.4996" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="18" Scale9Height="15" ctype="ImageViewObjectData">
                                 <Size X="48.0000" Y="43.0000" />
                                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                <Position X="-11.9530" Y="13.0000" />
+                                <Position X="-11.9530" Y="13.0004" />
                                 <Scale ScaleX="0.6000" ScaleY="0.6000" />
                                 <CColor A="255" R="255" G="255" B="255" />
                                 <PrePosition X="-0.1220" Y="0.4643" />
@@ -94,13 +94,13 @@
                             <OutlineColor A="255" R="82" G="54" B="33" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
-                          <AbstractNodeData Name="text_0" ActionTag="1422161537" Tag="679" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="133.9525" RightMargin="-195.9525" TopMargin="1.5001" BottomMargin="7.4999" FontSize="28" LabelText="(4元宝)" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text_0" ActionTag="1422161537" Tag="679" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="133.9525" RightMargin="-195.9525" TopMargin="1.4993" BottomMargin="7.5007" FontSize="28" LabelText="(4元宝)" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="98.0000" Y="28.0000" />
                             <Children>
-                              <AbstractNodeData Name="Image_1" ActionTag="-1927326593" Tag="574" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-38.7515" RightMargin="88.7515" TopMargin="-6.1201" BottomMargin="-8.8799" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="18" Scale9Height="15" ctype="ImageViewObjectData">
+                              <AbstractNodeData Name="Image_1" ActionTag="-1927326593" Tag="574" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-38.7515" RightMargin="88.7515" TopMargin="-6.1196" BottomMargin="-8.8804" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="18" Scale9Height="15" ctype="ImageViewObjectData">
                                 <Size X="48.0000" Y="43.0000" />
                                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                <Position X="-14.7515" Y="12.6201" />
+                                <Position X="-14.7515" Y="12.6196" />
                                 <Scale ScaleX="0.6000" ScaleY="0.6000" />
                                 <CColor A="255" R="255" G="255" B="255" />
                                 <PrePosition X="-0.1505" Y="0.4507" />
@@ -109,7 +109,7 @@
                               </AbstractNodeData>
                             </Children>
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="133.9525" Y="21.4999" />
+                            <Position X="133.9525" Y="21.5007" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
                             <PrePosition X="3.7209" Y="0.5811" />
@@ -146,13 +146,13 @@
                             <OutlineColor A="255" R="82" G="54" B="33" />
                             <ShadowColor A="255" R="110" G="110" B="110" />
                           </AbstractNodeData>
-                          <AbstractNodeData Name="text_0" ActionTag="-1260772158" Tag="680" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="137.0016" RightMargin="-199.0016" TopMargin="4.4999" BottomMargin="4.5001" FontSize="28" LabelText="(4元宝)" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                          <AbstractNodeData Name="text_0" ActionTag="-1260772158" Tag="680" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="137.0016" RightMargin="-199.0016" TopMargin="4.5000" BottomMargin="4.5000" FontSize="28" LabelText="(4元宝)" OutlineSize="2" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                             <Size X="98.0000" Y="28.0000" />
                             <Children>
-                              <AbstractNodeData Name="Image_1" ActionTag="-69738096" Tag="575" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-38.0353" RightMargin="88.0353" TopMargin="-7.1592" BottomMargin="-7.8408" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="18" Scale9Height="15" ctype="ImageViewObjectData">
+                              <AbstractNodeData Name="Image_1" ActionTag="-69738096" Tag="575" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="-38.0353" RightMargin="88.0353" TopMargin="-7.1584" BottomMargin="-7.8416" LeftEage="15" RightEage="15" TopEage="14" BottomEage="14" Scale9OriginX="15" Scale9OriginY="14" Scale9Width="18" Scale9Height="15" ctype="ImageViewObjectData">
                                 <Size X="48.0000" Y="43.0000" />
                                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                <Position X="-14.0353" Y="13.6592" />
+                                <Position X="-14.0353" Y="13.6584" />
                                 <Scale ScaleX="0.6000" ScaleY="0.6000" />
                                 <CColor A="255" R="255" G="255" B="255" />
                                 <PrePosition X="-0.1432" Y="0.4878" />
@@ -161,7 +161,7 @@
                               </AbstractNodeData>
                             </Children>
                             <AnchorPoint ScaleY="0.5000" />
-                            <Position X="137.0016" Y="18.5001" />
+                            <Position X="137.0016" Y="18.5000" />
                             <Scale ScaleX="1.0000" ScaleY="1.0000" />
                             <CColor A="255" R="96" G="46" B="26" />
                             <PrePosition X="3.8056" Y="0.5000" />
