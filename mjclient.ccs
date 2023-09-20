@@ -431,6 +431,7 @@
             <Image Name="universalBottom.png" />
             <Image Name="yellow-button.png" />
           </Folder>
+          <Image Name="avatar.png" />
           <PlistInfo Name="Common.csi" Type="Plist" />
           <Image Name="default_headpic.png" />
           <PlistInfo Name="HeadImgs.csi" Type="Plist" />
@@ -7474,6 +7475,7 @@
             <Image Name="S_Out2.png" />
             <Image Name="S_Peng2.png" />
           </Folder>
+          <Image Name="backBtn.png" />
           <Image Name="bg_circle.png" />
           <Image Name="bg_table.jpg" />
           <Image Name="btn_continue.png" />
@@ -7486,6 +7488,7 @@
           <Image Name="final_top_tip.png" />
           <Image Name="final_zong.png" />
           <Image Name="minHu.png" />
+          <Image Name="moOperBg.png" />
           <Image Name="n_play_back09.png" />
           <Image Name="n_play_back14.png" />
           <Image Name="n_play_back15.png" />
@@ -7496,12 +7499,16 @@
           <Image Name="n_play_label12.png" />
           <Image Name="n_play_label21.png" />
           <Image Name="n_play_label22.png" />
+          <Image Name="n_playLabel_17.png" />
           <Image Name="n_playLabel_1hu.png" />
           <Image Name="n_playLabel_1zimo.png" />
           <Image Name="n_playLabel_2hu.png" />
           <Image Name="n_playLabel_2zimo.png" />
           <Image Name="n_playLabel_3hu.png" />
           <Image Name="n_playLabel_3zimo.png" />
+          <Image Name="n_playLabel_6.png" />
+          <Image Name="n_playLabel_8.png" />
+          <Image Name="n_playLabel_9.png" />
           <Image Name="n2_history_btn05.png" />
           <Image Name="n2_popback09.png" />
           <Image Name="n2_report_back02.png" />
@@ -7509,6 +7516,8 @@
           <Image Name="n2_report_title02.png" />
           <Image Name="n2_report_title03.png" />
           <Image Name="not_xiajiao.png" />
+          <Image Name="num_2.png" />
+          <Image Name="num_3.png" />
           <Image Name="pjjs_17.png" />
           <Image Name="sanrenliangfang.png" />
           <Image Name="sanrensanfang.png" />
@@ -7521,6 +7530,7 @@
           <Image Name="swappPoint2.png" />
           <Image Name="swappTable.png" />
           <Image Name="swappType1.png" />
+          <Image Name="tips.png" />
           <Image Name="touxiangkuang1.png" />
           <Image Name="tuoguan_icon.png" />
         </Folder>
@@ -7587,6 +7597,7 @@
         <Project Name="A_EndAll_Red20.csd" Type="Layer" />
         <Project Name="A_EndAll_Runfaster.csd" Type="Layer" />
         <Project Name="A_EndAll_XueZhan.csd" Type="Layer" />
+        <Project Name="A_EndOne_Red20.csd" Type="Layer" />
         <Project Name="A_EndOne_XueZhan.csd" Type="Layer" />
         <Project Name="A_Enter.csd" Type="Layer" />
         <Project Name="A_Friendcard_gaojiSet.csd" Type="Layer" />
@@ -7602,6 +7613,9 @@
         <Project Name="A_Home.csd" Type="Layer" />
         <Project Name="A_Login.csd" Type="Layer" />
         <Project Name="A_mobilePhoneLogin.csd" Type="Layer" />
+        <Project Name="A_Play_Red20.csd" Type="Layer" />
+        <Project Name="A_Play_RunFasterYN.csd" Type="Layer" />
+        <Project Name="A_Play_XueZhanMahjong.csd" Type="Layer" />
         <Project Name="A_registerPhoneNumLayer.csd" Type="Layer" />
         <Project Name="A_SelectRulePanel.csd" Type="Layer" />
         <Project Name="A_Setting_home.csd" Type="Layer" />
@@ -7624,7 +7638,6 @@
         <Project Name="eMailLayerReceive.csd" Type="Layer" />
         <Project Name="endAll.csd" Type="Layer" />
         <Project Name="endOne.csd" Type="Layer" />
-        <Project Name="A_EndOne_Red20.csd" Type="Layer" />
         <Project Name="endOne_RunFasterYA.csd" Type="Layer" />
         <Project Name="EndRoom.csd" Type="Node" />
         <Project Name="fangQiang.csd" Type="Layer" />
@@ -7701,9 +7714,6 @@
         <Project Name="PayWayLayer.csd" Type="Layer" />
         <Project Name="PersonalMallLayer.csd" Type="Layer" />
         <Project Name="Play.csd" Type="Layer" />
-        <Project Name="A_Play_Red20.csd" Type="Layer" />
-        <Project Name="A_Play_RunFasterYN.csd" Type="Layer" />
-        <Project Name="A_Play_XueZhanMahjong.csd" Type="Layer" />
         <Project Name="playBackLayer.csd" Type="Layer" />
         <Project Name="PlayerChat.csd" Type="Layer" />
         <Project Name="PlayLog.csd" Type="Node" />

@@ -127,7 +127,7 @@ function SetEndOneUserUI(node, off) {
 				},
 			},
 			_run: function () {
-				this.loadTexture(pl.info.headimgurl || 'A_Common/HeadImgs/head_228.jpg', 1);
+				this.loadTexture(pl.info.headimgurl || DefaultHeadUrl, 1);
 			},
 			weixiajiao: {
 				_visible: false,
@@ -275,7 +275,7 @@ var EndOneView_YNXueZhan = cc.Layer.extend({
 				_text: function () {
 					var sData = MjClient.data.sData;
 					var tData = sData.tData;
-					if (tData) return "局数：" + (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll;
+					if (tData) return (tData.roundAll - tData.roundNum + 1) + "/" + tData.roundAll;
 					return '';
 				}
 			},

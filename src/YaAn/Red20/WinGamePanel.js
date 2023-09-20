@@ -122,6 +122,7 @@ function SetEndOneUserUI_Red20(node, off) {
                 _visible: false
             },
             _run: function () {
+                this.setScrollBarEnabled(false);
                 const _indx = tData.uids.indexOf(pl.info.uid),
                     other = result ? result.Other[_indx] : [],
                     base = result ? result.Base[_indx] : [];
@@ -159,9 +160,10 @@ function SetEndOneUserUI_Red20(node, off) {
                     const o = other[_i];
                     if (!o) continue;
                     fan += o[1];
-                    let it = itemLB.clone();
-                    it.setString(o[0] + "");
-                    this.addChild(it);
+                    let itl = itemLB.clone();
+                    itl.setString(o[0] + "");
+                    this.addChild(itl);
+                    itl.visible = true;
                 }
                 if (result && (result.Winner === pl.info.uid || result.Scores[_indx] > 0))
                     this.parent.getChildByName('fan').setString(fan > 0 ? fan + '' : '0');

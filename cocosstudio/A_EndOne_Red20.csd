@@ -247,7 +247,7 @@
                   <AbstractNodeData Name="scrollview" ActionTag="1732988344" Tag="2056" IconVisible="False" LeftMargin="918.0101" RightMargin="-1038.0100" TopMargin="-84.7424" BottomMargin="-35.2576" TouchEnable="True" ClipAble="True" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ScrollDirectionType="0" ItemMargin="5" DirectionType="Vertical" HorizontalType="Align_HorizontalCenter" ctype="ListViewObjectData">
                     <Size X="120.0000" Y="120.0000" />
                     <Children>
-                      <AbstractNodeData Name="item" ActionTag="876338792" Tag="2057" IconVisible="False" LeftMargin="-40.0000" RightMargin="-40.0000" BottomMargin="100.0000" IsCustomSize="True" FontSize="20" LabelText="" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="item" ActionTag="876338792" Tag="2057" IconVisible="False" LeftMargin="-40.0000" RightMargin="-40.0000" BottomMargin="100.0000" IsCustomSize="True" FontSize="20" LabelText="111" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="200.0000" Y="20.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                         <Position X="60.0000" Y="110.0000" />
