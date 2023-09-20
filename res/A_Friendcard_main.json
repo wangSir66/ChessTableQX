@@ -1209,7 +1209,7 @@
                                 },
                                 "Position": {
                                   "X": 181.0,
-                                  "Y": 408.1
+                                  "Y": 392.2
                                 },
                                 "Scale": {
                                   "ScaleX": 1.0,
@@ -1221,7 +1221,7 @@
                                 "PositionPercentYEnabled": true,
                                 "PrePosition": {
                                   "X": 0.5,
-                                  "Y": 0.77
+                                  "Y": 0.74
                                 },
                                 "PreSize": {
                                   "X": 0.7182,
@@ -1229,8 +1229,8 @@
                                 },
                                 "LeftMargin": 51.0,
                                 "RightMargin": 51.0,
-                                "TopMargin": -3.1,
-                                "BottomMargin": 283.1,
+                                "TopMargin": 12.8,
+                                "BottomMargin": 267.2,
                                 "Tag": 670,
                                 "Children": [
                                   {
@@ -1627,8 +1627,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 125.5452,
-                                          "Y": 20.4476
+                                          "X": 125.5458,
+                                          "Y": 20.4386
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -1646,10 +1646,10 @@
                                           "X": 0.2129,
                                           "Y": 0.2912
                                         },
-                                        "LeftMargin": 99.0452,
-                                        "RightMargin": 96.9548,
-                                        "TopMargin": 135.0524,
-                                        "BottomMargin": -6.0524,
+                                        "LeftMargin": 99.0458,
+                                        "RightMargin": 96.9542,
+                                        "TopMargin": 135.0614,
+                                        "BottomMargin": -6.0614,
                                         "Tag": 671,
                                         "ActionTag": 1528315954,
                                         "Size": {
@@ -1905,15 +1905,62 @@
                                       "Y": 0.3607
                                     },
                                     "PreSize": {
-                                      "X": 0.2423,
-                                      "Y": 0.252
+                                      "X": 0.2692,
+                                      "Y": 0.28
                                     },
-                                    "LeftMargin": 198.314,
-                                    "RightMargin": -1.314,
-                                    "TopMargin": 128.325,
-                                    "BottomMargin": 58.675,
+                                    "LeftMargin": 194.814,
+                                    "RightMargin": -4.814,
+                                    "TopMargin": 124.825,
+                                    "BottomMargin": 55.175,
                                     "Tag": 198,
                                     "Children": [
+                                      {
+                                        "FileData": {
+                                          "Type": "MarkedSubImage",
+                                          "Path": "A_Common/Main/avatar.png",
+                                          "Plist": "A_Common/Common.plist"
+                                        },
+                                        "Scale9OriginX": 21,
+                                        "Scale9OriginY": 21,
+                                        "Scale9Width": 28,
+                                        "Scale9Height": 28,
+                                        "AnchorPoint": {
+                                          "ScaleX": 0.5,
+                                          "ScaleY": 0.5
+                                        },
+                                        "Position": {
+                                          "X": 35.0,
+                                          "Y": 35.0
+                                        },
+                                        "Scale": {
+                                          "ScaleX": 1.0,
+                                          "ScaleY": 1.0
+                                        },
+                                        "CColor": {},
+                                        "IconVisible": false,
+                                        "PositionPercentXEnabled": true,
+                                        "PositionPercentYEnabled": true,
+                                        "PrePosition": {
+                                          "X": 0.5,
+                                          "Y": 0.5
+                                        },
+                                        "PreSize": {
+                                          "X": 0.9714,
+                                          "Y": 0.9714
+                                        },
+                                        "LeftMargin": 1.0,
+                                        "RightMargin": 1.0,
+                                        "TopMargin": 1.0,
+                                        "BottomMargin": 1.0,
+                                        "Tag": 1062,
+                                        "ActionTag": -2128132555,
+                                        "Size": {
+                                          "X": 68.0,
+                                          "Y": 68.0
+                                        },
+                                        "Name": "headfrem",
+                                        "ctype": "ImageViewObjectData"
+                                      },
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
@@ -1929,8 +1976,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 31.5,
-                                          "Y": 31.5
+                                          "X": 35.0,
+                                          "Y": 35.0
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -1945,13 +1992,13 @@
                                           "Y": 0.5
                                         },
                                         "PreSize": {
-                                          "X": 1.0317,
-                                          "Y": 1.0317
+                                          "X": 0.9286,
+                                          "Y": 0.9286
                                         },
-                                        "LeftMargin": -1.0,
-                                        "RightMargin": -1.0,
-                                        "TopMargin": -1.0,
-                                        "BottomMargin": -1.0,
+                                        "LeftMargin": 2.5,
+                                        "RightMargin": 2.5,
+                                        "TopMargin": 2.5,
+                                        "BottomMargin": 2.5,
                                         "Tag": 446,
                                         "ActionTag": -1128660600,
                                         "Size": {
@@ -1976,8 +2023,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 31.5,
-                                          "Y": 31.5
+                                          "X": 35.0,
+                                          "Y": 35.0
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -1992,18 +2039,14 @@
                                           "Y": 0.5
                                         },
                                         "PreSize": {
-                                          "X": 1.0317,
-                                          "Y": 1.0317
+                                          "X": 1.0,
+                                          "Y": 1.0
                                         },
-                                        "LeftMargin": -1.0,
-                                        "RightMargin": -1.0,
-                                        "TopMargin": -1.0,
-                                        "BottomMargin": -1.0,
                                         "Tag": 504,
                                         "ActionTag": -1803503082,
                                         "Size": {
-                                          "X": 65.0,
-                                          "Y": 65.0
+                                          "X": 70.0,
+                                          "Y": 70.0
                                         },
                                         "Name": "bg",
                                         "ctype": "ImageViewObjectData"
@@ -2023,8 +2066,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 32.7915,
-                                          "Y": -8.8704
+                                          "X": 36.435,
+                                          "Y": -9.856
                                         },
                                         "Scale": {
                                           "ScaleX": 0.6,
@@ -2039,13 +2082,13 @@
                                           "Y": -0.1408
                                         },
                                         "PreSize": {
-                                          "X": 2.9524,
-                                          "Y": 0.5397
+                                          "X": 2.6571,
+                                          "Y": 0.4857
                                         },
-                                        "LeftMargin": -60.2085,
-                                        "RightMargin": -62.7915,
-                                        "TopMargin": 54.8704,
-                                        "BottomMargin": -25.8704,
+                                        "LeftMargin": -56.565,
+                                        "RightMargin": -59.435,
+                                        "TopMargin": 62.856,
+                                        "BottomMargin": -26.856,
                                         "Tag": 199,
                                         "ActionTag": -216361870,
                                         "Size": {
@@ -2082,8 +2125,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 33.1632,
-                                          "Y": -8.8452
+                                          "X": 36.848,
+                                          "Y": -9.828
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2098,13 +2141,13 @@
                                           "Y": -0.1404
                                         },
                                         "PreSize": {
-                                          "X": 2.381,
-                                          "Y": 0.381
+                                          "X": 2.1429,
+                                          "Y": 0.3429
                                         },
-                                        "LeftMargin": -41.8368,
-                                        "RightMargin": -45.1632,
-                                        "TopMargin": 59.8452,
-                                        "BottomMargin": -20.8452,
+                                        "LeftMargin": -38.152,
+                                        "RightMargin": -41.848,
+                                        "TopMargin": 67.828,
+                                        "BottomMargin": -21.828,
                                         "Tag": 200,
                                         "ActionTag": -1945677535,
                                         "Size": {
@@ -2117,8 +2160,8 @@
                                     ],
                                     "ActionTag": 2064449521,
                                     "Size": {
-                                      "X": 63.0,
-                                      "Y": 63.0
+                                      "X": 70.0,
+                                      "Y": 70.0
                                     },
                                     "Name": "head_4",
                                     "ctype": "ImageViewObjectData"
@@ -2154,15 +2197,62 @@
                                       "Y": 0.9103
                                     },
                                     "PreSize": {
-                                      "X": 0.2423,
-                                      "Y": 0.252
+                                      "X": 0.2692,
+                                      "Y": 0.28
                                     },
-                                    "LeftMargin": 183.286,
-                                    "RightMargin": 13.714,
-                                    "TopMargin": -9.075,
-                                    "BottomMargin": 196.075,
+                                    "LeftMargin": 179.786,
+                                    "RightMargin": 10.214,
+                                    "TopMargin": -12.575,
+                                    "BottomMargin": 192.575,
                                     "Tag": 508,
                                     "Children": [
+                                      {
+                                        "FileData": {
+                                          "Type": "MarkedSubImage",
+                                          "Path": "A_Common/Main/avatar.png",
+                                          "Plist": "A_Common/Common.plist"
+                                        },
+                                        "Scale9OriginX": 21,
+                                        "Scale9OriginY": 21,
+                                        "Scale9Width": 28,
+                                        "Scale9Height": 28,
+                                        "AnchorPoint": {
+                                          "ScaleX": 0.5,
+                                          "ScaleY": 0.5
+                                        },
+                                        "Position": {
+                                          "X": 35.0,
+                                          "Y": 35.0
+                                        },
+                                        "Scale": {
+                                          "ScaleX": 1.0,
+                                          "ScaleY": 1.0
+                                        },
+                                        "CColor": {},
+                                        "IconVisible": false,
+                                        "PositionPercentXEnabled": true,
+                                        "PositionPercentYEnabled": true,
+                                        "PrePosition": {
+                                          "X": 0.5,
+                                          "Y": 0.5
+                                        },
+                                        "PreSize": {
+                                          "X": 0.9714,
+                                          "Y": 0.9714
+                                        },
+                                        "LeftMargin": 1.0,
+                                        "RightMargin": 1.0,
+                                        "TopMargin": 1.0,
+                                        "BottomMargin": 1.0,
+                                        "Tag": 1063,
+                                        "ActionTag": -732699690,
+                                        "Size": {
+                                          "X": 68.0,
+                                          "Y": 68.0
+                                        },
+                                        "Name": "headfrem",
+                                        "ctype": "ImageViewObjectData"
+                                      },
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
@@ -2178,8 +2268,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 31.5,
-                                          "Y": 31.5
+                                          "X": 35.0,
+                                          "Y": 35.0
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2194,13 +2284,13 @@
                                           "Y": 0.5
                                         },
                                         "PreSize": {
-                                          "X": 1.0317,
-                                          "Y": 1.0317
+                                          "X": 0.9286,
+                                          "Y": 0.9286
                                         },
-                                        "LeftMargin": -1.0,
-                                        "RightMargin": -1.0,
-                                        "TopMargin": -1.0,
-                                        "BottomMargin": -1.0,
+                                        "LeftMargin": 2.5,
+                                        "RightMargin": 2.5,
+                                        "TopMargin": 2.5,
+                                        "BottomMargin": 2.5,
                                         "Tag": 509,
                                         "ActionTag": 43189771,
                                         "Size": {
@@ -2225,8 +2315,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 31.5,
-                                          "Y": 31.5
+                                          "X": 35.0,
+                                          "Y": 35.0
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2241,18 +2331,14 @@
                                           "Y": 0.5
                                         },
                                         "PreSize": {
-                                          "X": 1.0317,
-                                          "Y": 1.0317
+                                          "X": 1.0,
+                                          "Y": 1.0
                                         },
-                                        "LeftMargin": -1.0,
-                                        "RightMargin": -1.0,
-                                        "TopMargin": -1.0,
-                                        "BottomMargin": -1.0,
                                         "Tag": 510,
                                         "ActionTag": -1174012937,
                                         "Size": {
-                                          "X": 65.0,
-                                          "Y": 65.0
+                                          "X": 70.0,
+                                          "Y": 70.0
                                         },
                                         "Name": "bg",
                                         "ctype": "ImageViewObjectData"
@@ -2272,8 +2358,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 32.7915,
-                                          "Y": -8.8704
+                                          "X": 36.435,
+                                          "Y": -9.856
                                         },
                                         "Scale": {
                                           "ScaleX": 0.6,
@@ -2288,13 +2374,13 @@
                                           "Y": -0.1408
                                         },
                                         "PreSize": {
-                                          "X": 2.9524,
-                                          "Y": 0.5397
+                                          "X": 2.6571,
+                                          "Y": 0.4857
                                         },
-                                        "LeftMargin": -60.2085,
-                                        "RightMargin": -62.7915,
-                                        "TopMargin": 54.8704,
-                                        "BottomMargin": -25.8704,
+                                        "LeftMargin": -56.565,
+                                        "RightMargin": -59.435,
+                                        "TopMargin": 62.856,
+                                        "BottomMargin": -26.856,
                                         "Tag": 511,
                                         "ActionTag": 400237096,
                                         "Size": {
@@ -2331,8 +2417,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 33.1632,
-                                          "Y": -8.8452
+                                          "X": 36.848,
+                                          "Y": -9.828
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2347,13 +2433,13 @@
                                           "Y": -0.1404
                                         },
                                         "PreSize": {
-                                          "X": 2.381,
-                                          "Y": 0.381
+                                          "X": 2.1429,
+                                          "Y": 0.3429
                                         },
-                                        "LeftMargin": -41.8368,
-                                        "RightMargin": -45.1632,
-                                        "TopMargin": 59.8452,
-                                        "BottomMargin": -20.8452,
+                                        "LeftMargin": -38.152,
+                                        "RightMargin": -41.848,
+                                        "TopMargin": 67.828,
+                                        "BottomMargin": -21.828,
                                         "Tag": 512,
                                         "ActionTag": -548009340,
                                         "Size": {
@@ -2366,8 +2452,8 @@
                                     ],
                                     "ActionTag": 314876255,
                                     "Size": {
-                                      "X": 63.0,
-                                      "Y": 63.0
+                                      "X": 70.0,
+                                      "Y": 70.0
                                     },
                                     "Name": "head_2",
                                     "ctype": "ImageViewObjectData"
@@ -2403,15 +2489,62 @@
                                       "Y": 0.8955
                                     },
                                     "PreSize": {
-                                      "X": 0.2423,
-                                      "Y": 0.252
+                                      "X": 0.2692,
+                                      "Y": 0.28
                                     },
-                                    "LeftMargin": 1.988,
-                                    "RightMargin": 195.012,
-                                    "TopMargin": -5.375,
-                                    "BottomMargin": 192.375,
+                                    "LeftMargin": -1.512,
+                                    "RightMargin": 191.512,
+                                    "TopMargin": -8.875,
+                                    "BottomMargin": 188.875,
                                     "Tag": 518,
                                     "Children": [
+                                      {
+                                        "FileData": {
+                                          "Type": "MarkedSubImage",
+                                          "Path": "A_Common/Main/avatar.png",
+                                          "Plist": "A_Common/Common.plist"
+                                        },
+                                        "Scale9OriginX": 21,
+                                        "Scale9OriginY": 21,
+                                        "Scale9Width": 28,
+                                        "Scale9Height": 28,
+                                        "AnchorPoint": {
+                                          "ScaleX": 0.5,
+                                          "ScaleY": 0.5
+                                        },
+                                        "Position": {
+                                          "X": 35.0,
+                                          "Y": 35.0
+                                        },
+                                        "Scale": {
+                                          "ScaleX": 1.0,
+                                          "ScaleY": 1.0
+                                        },
+                                        "CColor": {},
+                                        "IconVisible": false,
+                                        "PositionPercentXEnabled": true,
+                                        "PositionPercentYEnabled": true,
+                                        "PrePosition": {
+                                          "X": 0.5,
+                                          "Y": 0.5
+                                        },
+                                        "PreSize": {
+                                          "X": 0.9714,
+                                          "Y": 0.9714
+                                        },
+                                        "LeftMargin": 1.0,
+                                        "RightMargin": 1.0,
+                                        "TopMargin": 1.0,
+                                        "BottomMargin": 1.0,
+                                        "Tag": 1064,
+                                        "ActionTag": -615817509,
+                                        "Size": {
+                                          "X": 68.0,
+                                          "Y": 68.0
+                                        },
+                                        "Name": "headfrem",
+                                        "ctype": "ImageViewObjectData"
+                                      },
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
@@ -2427,8 +2560,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 31.5,
-                                          "Y": 31.5
+                                          "X": 35.0,
+                                          "Y": 35.0
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2443,13 +2576,13 @@
                                           "Y": 0.5
                                         },
                                         "PreSize": {
-                                          "X": 1.0317,
-                                          "Y": 1.0317
+                                          "X": 0.9286,
+                                          "Y": 0.9286
                                         },
-                                        "LeftMargin": -1.0,
-                                        "RightMargin": -1.0,
-                                        "TopMargin": -1.0,
-                                        "BottomMargin": -1.0,
+                                        "LeftMargin": 2.5,
+                                        "RightMargin": 2.5,
+                                        "TopMargin": 2.5,
+                                        "BottomMargin": 2.5,
                                         "Tag": 519,
                                         "ActionTag": -314299305,
                                         "Size": {
@@ -2474,8 +2607,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 31.5,
-                                          "Y": 31.5
+                                          "X": 35.0,
+                                          "Y": 35.0
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2490,18 +2623,14 @@
                                           "Y": 0.5
                                         },
                                         "PreSize": {
-                                          "X": 1.0317,
-                                          "Y": 1.0317
+                                          "X": 1.0,
+                                          "Y": 1.0
                                         },
-                                        "LeftMargin": -1.0,
-                                        "RightMargin": -1.0,
-                                        "TopMargin": -1.0,
-                                        "BottomMargin": -1.0,
                                         "Tag": 520,
                                         "ActionTag": -1702569417,
                                         "Size": {
-                                          "X": 65.0,
-                                          "Y": 65.0
+                                          "X": 70.0,
+                                          "Y": 70.0
                                         },
                                         "Name": "bg",
                                         "ctype": "ImageViewObjectData"
@@ -2521,8 +2650,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 32.7915,
-                                          "Y": -8.8704
+                                          "X": 36.435,
+                                          "Y": -9.856
                                         },
                                         "Scale": {
                                           "ScaleX": 0.6,
@@ -2537,13 +2666,13 @@
                                           "Y": -0.1408
                                         },
                                         "PreSize": {
-                                          "X": 2.9524,
-                                          "Y": 0.5397
+                                          "X": 2.6571,
+                                          "Y": 0.4857
                                         },
-                                        "LeftMargin": -60.2085,
-                                        "RightMargin": -62.7915,
-                                        "TopMargin": 54.8704,
-                                        "BottomMargin": -25.8704,
+                                        "LeftMargin": -56.565,
+                                        "RightMargin": -59.435,
+                                        "TopMargin": 62.856,
+                                        "BottomMargin": -26.856,
                                         "Tag": 521,
                                         "ActionTag": -1574464916,
                                         "Size": {
@@ -2580,8 +2709,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 33.1632,
-                                          "Y": -8.8452
+                                          "X": 36.848,
+                                          "Y": -9.828
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2596,13 +2725,13 @@
                                           "Y": -0.1404
                                         },
                                         "PreSize": {
-                                          "X": 2.381,
-                                          "Y": 0.381
+                                          "X": 2.1429,
+                                          "Y": 0.3429
                                         },
-                                        "LeftMargin": -41.8368,
-                                        "RightMargin": -45.1632,
-                                        "TopMargin": 59.8452,
-                                        "BottomMargin": -20.8452,
+                                        "LeftMargin": -38.152,
+                                        "RightMargin": -41.848,
+                                        "TopMargin": 67.828,
+                                        "BottomMargin": -21.828,
                                         "Tag": 522,
                                         "ActionTag": -69957226,
                                         "Size": {
@@ -2615,8 +2744,8 @@
                                     ],
                                     "ActionTag": -712374601,
                                     "Size": {
-                                      "X": 63.0,
-                                      "Y": 63.0
+                                      "X": 70.0,
+                                      "Y": 70.0
                                     },
                                     "Name": "head_3",
                                     "ctype": "ImageViewObjectData"
@@ -2652,15 +2781,62 @@
                                       "Y": 0.3972
                                     },
                                     "PreSize": {
-                                      "X": 0.2423,
-                                      "Y": 0.252
+                                      "X": 0.2692,
+                                      "Y": 0.28
                                     },
-                                    "LeftMargin": -15.328,
-                                    "RightMargin": 212.328,
-                                    "TopMargin": 119.2,
-                                    "BottomMargin": 67.8,
+                                    "LeftMargin": -18.828,
+                                    "RightMargin": 208.828,
+                                    "TopMargin": 115.7,
+                                    "BottomMargin": 64.3,
                                     "Tag": 523,
                                     "Children": [
+                                      {
+                                        "FileData": {
+                                          "Type": "MarkedSubImage",
+                                          "Path": "A_Common/Main/avatar.png",
+                                          "Plist": "A_Common/Common.plist"
+                                        },
+                                        "Scale9OriginX": 21,
+                                        "Scale9OriginY": 21,
+                                        "Scale9Width": 28,
+                                        "Scale9Height": 28,
+                                        "AnchorPoint": {
+                                          "ScaleX": 0.5,
+                                          "ScaleY": 0.5
+                                        },
+                                        "Position": {
+                                          "X": 35.0,
+                                          "Y": 35.0
+                                        },
+                                        "Scale": {
+                                          "ScaleX": 1.0,
+                                          "ScaleY": 1.0
+                                        },
+                                        "CColor": {},
+                                        "IconVisible": false,
+                                        "PositionPercentXEnabled": true,
+                                        "PositionPercentYEnabled": true,
+                                        "PrePosition": {
+                                          "X": 0.5,
+                                          "Y": 0.5
+                                        },
+                                        "PreSize": {
+                                          "X": 0.9714,
+                                          "Y": 0.9714
+                                        },
+                                        "LeftMargin": 1.0,
+                                        "RightMargin": 1.0,
+                                        "TopMargin": 1.0,
+                                        "BottomMargin": 1.0,
+                                        "Tag": 1065,
+                                        "ActionTag": -350666631,
+                                        "Size": {
+                                          "X": 68.0,
+                                          "Y": 68.0
+                                        },
+                                        "Name": "headfrem",
+                                        "ctype": "ImageViewObjectData"
+                                      },
                                       {
                                         "FileData": {
                                           "Type": "MarkedSubImage",
@@ -2676,8 +2852,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 31.5,
-                                          "Y": 31.5
+                                          "X": 35.0,
+                                          "Y": 35.0
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2692,13 +2868,13 @@
                                           "Y": 0.5
                                         },
                                         "PreSize": {
-                                          "X": 1.0317,
-                                          "Y": 1.0317
+                                          "X": 0.9286,
+                                          "Y": 0.9286
                                         },
-                                        "LeftMargin": -1.0,
-                                        "RightMargin": -1.0,
-                                        "TopMargin": -1.0,
-                                        "BottomMargin": -1.0,
+                                        "LeftMargin": 2.5,
+                                        "RightMargin": 2.5,
+                                        "TopMargin": 2.5,
+                                        "BottomMargin": 2.5,
                                         "Tag": 524,
                                         "ActionTag": -1243759295,
                                         "Size": {
@@ -2723,8 +2899,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 31.5,
-                                          "Y": 31.5
+                                          "X": 35.0,
+                                          "Y": 35.0
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2739,18 +2915,14 @@
                                           "Y": 0.5
                                         },
                                         "PreSize": {
-                                          "X": 1.0317,
-                                          "Y": 1.0317
+                                          "X": 1.0,
+                                          "Y": 1.0
                                         },
-                                        "LeftMargin": -1.0,
-                                        "RightMargin": -1.0,
-                                        "TopMargin": -1.0,
-                                        "BottomMargin": -1.0,
                                         "Tag": 525,
                                         "ActionTag": -1467132276,
                                         "Size": {
-                                          "X": 65.0,
-                                          "Y": 65.0
+                                          "X": 70.0,
+                                          "Y": 70.0
                                         },
                                         "Name": "bg",
                                         "ctype": "ImageViewObjectData"
@@ -2770,8 +2942,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 32.7915,
-                                          "Y": -8.8704
+                                          "X": 36.435,
+                                          "Y": -9.856
                                         },
                                         "Scale": {
                                           "ScaleX": 0.6,
@@ -2786,13 +2958,13 @@
                                           "Y": -0.1408
                                         },
                                         "PreSize": {
-                                          "X": 2.9524,
-                                          "Y": 0.5397
+                                          "X": 2.6571,
+                                          "Y": 0.4857
                                         },
-                                        "LeftMargin": -60.2085,
-                                        "RightMargin": -62.7915,
-                                        "TopMargin": 54.8704,
-                                        "BottomMargin": -25.8704,
+                                        "LeftMargin": -56.565,
+                                        "RightMargin": -59.435,
+                                        "TopMargin": 62.856,
+                                        "BottomMargin": -26.856,
                                         "Tag": 526,
                                         "ActionTag": -100083346,
                                         "Size": {
@@ -2829,8 +3001,8 @@
                                           "ScaleY": 0.5
                                         },
                                         "Position": {
-                                          "X": 33.1632,
-                                          "Y": -8.8452
+                                          "X": 36.848,
+                                          "Y": -9.828
                                         },
                                         "Scale": {
                                           "ScaleX": 1.0,
@@ -2845,13 +3017,13 @@
                                           "Y": -0.1404
                                         },
                                         "PreSize": {
-                                          "X": 2.381,
-                                          "Y": 0.381
+                                          "X": 2.1429,
+                                          "Y": 0.3429
                                         },
-                                        "LeftMargin": -41.8368,
-                                        "RightMargin": -45.1632,
-                                        "TopMargin": 59.8452,
-                                        "BottomMargin": -20.8452,
+                                        "LeftMargin": -38.152,
+                                        "RightMargin": -41.848,
+                                        "TopMargin": 67.828,
+                                        "BottomMargin": -21.828,
                                         "Tag": 527,
                                         "ActionTag": -1075127756,
                                         "Size": {
@@ -2864,8 +3036,8 @@
                                     ],
                                     "ActionTag": 456374756,
                                     "Size": {
-                                      "X": 63.0,
-                                      "Y": 63.0
+                                      "X": 70.0,
+                                      "Y": 70.0
                                     },
                                     "Name": "head_1",
                                     "ctype": "ImageViewObjectData"
@@ -4321,6 +4493,53 @@
                       "Y": 0.5424
                     },
                     "PreSize": {
+                      "X": 0.2263,
+                      "Y": 0.7654
+                    },
+                    "LeftMargin": 19.7174,
+                    "RightMargin": 192.2826,
+                    "TopMargin": 6.0656,
+                    "BottomMargin": 12.9344,
+                    "Tag": 141,
+                    "ActionTag": -1430801111,
+                    "Size": {
+                      "X": 62.0,
+                      "Y": 62.0
+                    },
+                    "Name": "head",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "A_Common/Main/avatar.png",
+                      "Plist": "A_Common/Common.plist"
+                    },
+                    "Scale9OriginX": 32,
+                    "Scale9OriginY": 32,
+                    "Scale9Width": 6,
+                    "Scale9Height": 6,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 50.7174,
+                      "Y": 43.9344
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentXEnabled": true,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.1851,
+                      "Y": 0.5424
+                    },
+                    "PreSize": {
                       "X": 0.2336,
                       "Y": 0.7901
                     },
@@ -4328,58 +4547,13 @@
                     "RightMargin": 191.2826,
                     "TopMargin": 5.0656,
                     "BottomMargin": 11.9344,
-                    "Tag": 141,
-                    "Children": [
-                      {
-                        "FileData": {
-                          "Type": "MarkedSubImage",
-                          "Path": "A_Common/Main/avatar.png",
-                          "Plist": "A_Common/Common.plist"
-                        },
-                        "Scale9OriginX": 32,
-                        "Scale9OriginY": 32,
-                        "Scale9Width": 6,
-                        "Scale9Height": 6,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 32.0,
-                          "Y": 32.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PositionPercentXEnabled": true,
-                        "PositionPercentYEnabled": true,
-                        "PrePosition": {
-                          "X": 0.5,
-                          "Y": 0.5
-                        },
-                        "PreSize": {
-                          "X": 1.0,
-                          "Y": 1.0
-                        },
-                        "Tag": 502,
-                        "ActionTag": 1075659763,
-                        "Size": {
-                          "X": 64.0,
-                          "Y": 64.0
-                        },
-                        "Name": "head_k",
-                        "ctype": "ImageViewObjectData"
-                      }
-                    ],
-                    "ActionTag": -1430801111,
+                    "Tag": 502,
+                    "ActionTag": 1075659763,
                     "Size": {
                       "X": 64.0,
                       "Y": 64.0
                     },
-                    "Name": "head",
+                    "Name": "head_k",
                     "ctype": "ImageViewObjectData"
                   },
                   {
@@ -4398,7 +4572,7 @@
                     },
                     "Position": {
                       "X": 223.8773,
-                      "Y": 58.0336
+                      "Y": 58.03
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -4408,7 +4582,7 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.8171,
-                      "Y": 0.7165
+                      "Y": 0.7164
                     },
                     "PreSize": {
                       "X": 0.1387,
@@ -4416,8 +4590,8 @@
                     },
                     "LeftMargin": 204.8773,
                     "RightMargin": 31.1227,
-                    "TopMargin": 6.9664,
-                    "BottomMargin": 42.0336,
+                    "TopMargin": 6.97,
+                    "BottomMargin": 42.03,
                     "Tag": 186,
                     "ActionTag": -307175465,
                     "Size": {

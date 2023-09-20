@@ -811,8 +811,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 64.9109,
-                  "Y": 29.985
+                  "X": 64.9082,
+                  "Y": 29.988
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -830,10 +830,10 @@
                   "X": 0.1549,
                   "Y": 0.3667
                 },
-                "LeftMargin": 53.9109,
-                "RightMargin": 66.0891,
-                "TopMargin": 19.015,
-                "BottomMargin": 18.985,
+                "LeftMargin": 53.9082,
+                "RightMargin": 66.0918,
+                "TopMargin": 19.012,
+                "BottomMargin": 18.988,
                 "Tag": 151,
                 "ActionTag": 640381544,
                 "Size": {
@@ -917,7 +917,7 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 77.9999,
+                  "X": 78.0006,
                   "Y": 30.0
                 },
                 "Scale": {
@@ -936,8 +936,8 @@
                   "X": 0.1549,
                   "Y": 0.3667
                 },
-                "LeftMargin": 66.9999,
-                "RightMargin": 53.0001,
+                "LeftMargin": 67.0006,
+                "RightMargin": 52.9994,
                 "TopMargin": 19.0,
                 "BottomMargin": 19.0,
                 "Tag": 149,
@@ -1011,6 +1011,8 @@
                 "ColorVector": {
                   "ScaleY": 1.0
                 },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
                 "TouchEnable": true,
                 "AnchorPoint": {
                   "ScaleX": 0.5,
@@ -1053,8 +1055,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 23.0803,
-                      "Y": 60.975
+                      "X": 23.0824,
+                      "Y": 60.9756
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1072,10 +1074,10 @@
                       "X": 0.582,
                       "Y": 1.0
                     },
-                    "LeftMargin": -12.4197,
-                    "RightMargin": 63.4197,
-                    "TopMargin": 0.025,
-                    "BottomMargin": -0.025,
+                    "LeftMargin": -12.4176,
+                    "RightMargin": 63.4176,
+                    "TopMargin": 0.0244,
+                    "BottomMargin": -0.0244,
                     "Tag": 5904,
                     "ActionTag": 1001521928,
                     "Size": {
@@ -1101,7 +1103,7 @@
                     },
                     "Position": {
                       "X": 60.9756,
-                      "Y": 23.1033
+                      "Y": 23.1068
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1121,8 +1123,8 @@
                     },
                     "LeftMargin": -0.0244,
                     "RightMargin": 0.0244,
-                    "TopMargin": 63.3967,
-                    "BottomMargin": -12.3967,
+                    "TopMargin": 63.3932,
+                    "BottomMargin": -12.3932,
                     "Tag": 5905,
                     "ActionTag": -1609472034,
                     "Size": {
@@ -1147,8 +1149,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 98.6319,
-                      "Y": 61.536
+                      "X": 98.637,
+                      "Y": 61.5368
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1166,10 +1168,10 @@
                       "X": 0.582,
                       "Y": 1.0
                     },
-                    "LeftMargin": 63.1319,
-                    "RightMargin": -12.1319,
-                    "TopMargin": -0.536,
-                    "BottomMargin": 0.536,
+                    "LeftMargin": 63.137,
+                    "RightMargin": -12.137,
+                    "TopMargin": -0.5368,
+                    "BottomMargin": 0.5368,
                     "Tag": 5906,
                     "ActionTag": 474852499,
                     "Size": {
@@ -1195,8 +1197,8 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 60.4511,
-                      "Y": 100.9236
+                      "X": 60.451,
+                      "Y": 100.9184
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -1214,10 +1216,10 @@
                       "X": 1.0,
                       "Y": 0.582
                     },
-                    "LeftMargin": -0.5489,
-                    "RightMargin": 0.5489,
-                    "TopMargin": -14.4236,
-                    "BottomMargin": 65.4236,
+                    "LeftMargin": -0.549,
+                    "RightMargin": 0.549,
+                    "TopMargin": -14.4184,
+                    "BottomMargin": 65.4184,
                     "Tag": 5907,
                     "ActionTag": 1298570774,
                     "Size": {
@@ -13505,14 +13507,14 @@
                 },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_55.png",
+                  "Path": "XueZhanDaoDi/n_playLabel_6.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9Width": 90,
+                "Scale9Height": 104,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -13530,8 +13532,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 628.3206,
-                  "Y": 173.78
+                  "X": 315.18,
+                  "Y": 313.84
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -13547,122 +13549,29 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 540.8206,
-                "RightMargin": -715.8206,
-                "TopMargin": -245.78,
-                "BottomMargin": 101.78,
+                "LeftMargin": 255.18,
+                "RightMargin": -375.18,
+                "TopMargin": -376.84,
+                "BottomMargin": 250.84,
                 "Tag": 3894,
                 "Children": [
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "playing/gameTable/bg_C_P_G.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 57,
-                    "Scale9OriginY": 47,
-                    "Scale9Width": 61,
-                    "Scale9Height": 50,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 89.25,
-                      "Y": 74.88
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.51,
-                      "Y": 0.52
-                    },
-                    "PreSize": {
-                      "X": 1.0,
-                      "Y": 1.0
-                    },
-                    "LeftMargin": 1.75,
-                    "RightMargin": -1.75,
-                    "TopMargin": -2.88,
-                    "BottomMargin": 2.88,
-                    "Tag": 3895,
-                    "ActionTag": -1108150371,
-                    "Size": {
-                      "X": 175.0,
-                      "Y": 144.0
-                    },
-                    "VisibleForFrame": false,
-                    "Name": "bg_img",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "setting/pai_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 75,
-                    "Scale9OriginY": 33,
-                    "Scale9Width": 80,
-                    "Scale9Height": 35,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": -5.3629,
-                      "Y": 43.5383
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": -0.0306,
-                      "Y": 0.3023
-                    },
-                    "PreSize": {
-                      "X": 1.3143,
-                      "Y": 0.7014
-                    },
-                    "LeftMargin": -120.3629,
-                    "RightMargin": 65.3629,
-                    "TopMargin": 49.9617,
-                    "BottomMargin": -6.9617,
-                    "Tag": 3896,
-                    "ActionTag": -1718178219,
-                    "Size": {
-                      "X": 230.0,
-                      "Y": 101.0
-                    },
-                    "Name": "bgground",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "XueZhanDaoDi/Card/0_135.png",
+                      "Path": "XueZhanDaoDi/num_2.png",
                       "Plist": ""
                     },
                     "Scale9OriginX": 11,
                     "Scale9OriginY": 18,
-                    "Scale9Width": 61,
-                    "Scale9Height": 89,
+                    "Scale9Width": 80,
+                    "Scale9Height": 61,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": -33.1574,
-                      "Y": 40.4935
+                      "X": 143.0,
+                      "Y": 63.0
                     },
                     "Scale": {
                       "ScaleX": 0.6,
@@ -13670,32 +13579,79 @@
                     },
                     "CColor": {},
                     "IconVisible": false,
+                    "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": -0.1895,
-                      "Y": 0.2812
+                      "X": 1.1917,
+                      "Y": 0.5
                     },
                     "PreSize": {
-                      "X": 0.4743,
-                      "Y": 0.8681
+                      "X": 0.85,
+                      "Y": 0.7698
                     },
-                    "LeftMargin": -74.6574,
-                    "RightMargin": 166.6574,
-                    "TopMargin": 41.0065,
-                    "BottomMargin": -22.0065,
+                    "LeftMargin": 92.0,
+                    "RightMargin": -74.0,
+                    "TopMargin": 14.5,
+                    "BottomMargin": 14.5,
                     "Tag": 3897,
                     "ActionTag": 1480414002,
                     "Size": {
-                      "X": 83.0,
-                      "Y": 125.0
+                      "X": 102.0,
+                      "Y": 97.0
                     },
-                    "Name": "card1",
+                    "Name": "num2",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Normal",
+                      "Path": "XueZhanDaoDi/num_3.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 11,
+                    "Scale9OriginY": 18,
+                    "Scale9Width": 80,
+                    "Scale9Height": 61,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 143.0,
+                      "Y": 63.0
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 1.1917,
+                      "Y": 0.5
+                    },
+                    "PreSize": {
+                      "X": 0.85,
+                      "Y": 0.7698
+                    },
+                    "LeftMargin": 92.0,
+                    "RightMargin": -74.0,
+                    "TopMargin": 14.5,
+                    "BottomMargin": 14.5,
+                    "Tag": 446,
+                    "ActionTag": 462148560,
+                    "Size": {
+                      "X": 102.0,
+                      "Y": 97.0
+                    },
+                    "Name": "num3",
                     "ctype": "ImageViewObjectData"
                   }
                 ],
                 "ActionTag": -1560096026,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 120.0,
+                  "Y": 126.0
                 },
                 "Name": "gang0",
                 "ctype": "ButtonObjectData"
@@ -13708,21 +13664,16 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_55.png",
+                  "Path": "XueZhanDaoDi/n_playLabel_8.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9Width": 74,
+                "Scale9Height": 86,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -13740,8 +13691,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 631.0609,
-                  "Y": 241.8864
+                  "X": 566.7866,
+                  "Y": 221.0304
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -13757,249 +13708,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 543.5609,
-                "RightMargin": -718.5609,
-                "TopMargin": -313.8864,
-                "BottomMargin": 169.8864,
-                "Tag": 3898,
-                "Children": [
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "XueZhanDaoDi/Card/0_135.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 11,
-                    "Scale9OriginY": 18,
-                    "Scale9Width": 61,
-                    "Scale9Height": 89,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 97.3997,
-                      "Y": 38.6006
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.5566,
-                      "Y": 0.2681
-                    },
-                    "PreSize": {
-                      "X": 0.4743,
-                      "Y": 0.8681
-                    },
-                    "LeftMargin": 55.8997,
-                    "RightMargin": 36.1003,
-                    "TopMargin": 42.8994,
-                    "BottomMargin": -23.8994,
-                    "Tag": 3899,
-                    "ActionTag": -848217353,
-                    "Size": {
-                      "X": 83.0,
-                      "Y": 125.0
-                    },
-                    "Name": "card",
-                    "ctype": "ImageViewObjectData"
-                  }
-                ],
-                "ActionTag": 659937467,
-                "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
-                },
-                "Name": "gang1",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_55.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 625.157,
-                  "Y": 247.3653
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 537.657,
-                "RightMargin": -712.657,
-                "TopMargin": -319.3653,
-                "BottomMargin": 175.3653,
-                "Tag": 3900,
-                "Children": [
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "XueZhanDaoDi/Card/0_135.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 11,
-                    "Scale9OriginY": 18,
-                    "Scale9Width": 61,
-                    "Scale9Height": 89,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 98.0,
-                      "Y": 44.0003
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.56,
-                      "Y": 0.3056
-                    },
-                    "PreSize": {
-                      "X": 0.4743,
-                      "Y": 0.8681
-                    },
-                    "LeftMargin": 56.5,
-                    "RightMargin": 35.5,
-                    "TopMargin": 37.4997,
-                    "BottomMargin": -18.4997,
-                    "Tag": 3901,
-                    "ActionTag": -1260449680,
-                    "Size": {
-                      "X": 83.0,
-                      "Y": 125.0
-                    },
-                    "Name": "card",
-                    "ctype": "ImageViewObjectData"
-                  }
-                ],
-                "ActionTag": -1874182969,
-                "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
-                },
-                "Name": "gang2",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "DisabledFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_61.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_61.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 943.4142,
-                  "Y": 170.8073
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 855.9142,
-                "RightMargin": -1030.9142,
-                "TopMargin": -242.8073,
-                "BottomMargin": 98.8073,
+                "LeftMargin": 514.7866,
+                "RightMargin": -618.7866,
+                "TopMargin": -275.0305,
+                "BottomMargin": 167.0304,
                 "Tag": 3902,
                 "ActionTag": -1149808915,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 104.0,
+                  "Y": 108.0
                 },
                 "Name": "guo",
                 "ctype": "ButtonObjectData"
@@ -14012,21 +13729,16 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_53.png",
+                  "Path": "XueZhanDaoDi/n_playLabel_17.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9Width": 90,
+                "Scale9Height": 104,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -14044,8 +13756,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 406.5042,
-                  "Y": 170.8073
+                  "X": 454.6498,
+                  "Y": 212.7051
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -14061,77 +13773,58 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 319.0042,
-                "RightMargin": -494.0042,
-                "TopMargin": -242.8073,
-                "BottomMargin": 98.8073,
+                "LeftMargin": 394.6498,
+                "RightMargin": -514.6498,
+                "TopMargin": -275.7051,
+                "BottomMargin": 149.7051,
                 "Tag": 3903,
+                "ActionTag": -1759301065,
+                "Size": {
+                  "X": 120.0,
+                  "Y": 126.0
+                },
+                "Name": "hu",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Tag": 3919,
                 "Children": [
                   {
                     "FileData": {
                       "Type": "Normal",
-                      "Path": "playing/gameTable/bg_H_G.png",
+                      "Path": "XueZhanDaoDi/moOperBg.png",
                       "Plist": ""
                     },
-                    "Scale9OriginX": 57,
-                    "Scale9OriginY": 47,
-                    "Scale9Width": 61,
-                    "Scale9Height": 50,
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 30,
+                    "Scale9OriginY": 30,
+                    "Scale9Width": 303,
+                    "Scale9Height": 107,
                     "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
+                      "ScaleX": 0.5
                     },
                     "Position": {
-                      "X": 89.25,
-                      "Y": 74.88
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.51,
-                      "Y": 0.52
-                    },
-                    "PreSize": {
-                      "X": 1.0,
-                      "Y": 1.0
-                    },
-                    "LeftMargin": 1.75,
-                    "RightMargin": -1.75,
-                    "TopMargin": -2.88,
-                    "BottomMargin": 2.88,
-                    "Tag": 3904,
-                    "ActionTag": 2089082712,
-                    "Size": {
-                      "X": 175.0,
-                      "Y": 144.0
-                    },
-                    "VisibleForFrame": false,
-                    "Name": "bg_img",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "setting/pai_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 75,
-                    "Scale9OriginY": 33,
-                    "Scale9Width": 80,
-                    "Scale9Height": 35,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": -1.8823,
-                      "Y": 45.7798
+                      "X": 638.7678,
+                      "Y": 172.0915
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -14140,79 +13833,174 @@
                     "CColor": {},
                     "IconVisible": false,
                     "PrePosition": {
-                      "X": -0.0108,
-                      "Y": 0.3179
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "PreSize": {
-                      "X": 1.3143,
-                      "Y": 0.7014
+                      "X": 0.0,
+                      "Y": 0.0
                     },
-                    "LeftMargin": -116.8823,
-                    "RightMargin": 61.8823,
-                    "TopMargin": 47.7202,
-                    "BottomMargin": -4.7202,
-                    "Tag": 3905,
-                    "ActionTag": -126630210,
+                    "LeftMargin": 457.2678,
+                    "RightMargin": -820.2678,
+                    "TopMargin": -339.0915,
+                    "BottomMargin": 172.0915,
+                    "Tag": 3920,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "XueZhanDaoDi/tips.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 11,
+                        "Scale9OriginY": 18,
+                        "Scale9Width": 58,
+                        "Scale9Height": 41,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 44.01,
+                          "Y": 127.711
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1212,
+                          "Y": 0.7647
+                        },
+                        "PreSize": {
+                          "X": 0.2204,
+                          "Y": 0.4611
+                        },
+                        "LeftMargin": 4.01,
+                        "RightMargin": 278.99,
+                        "TopMargin": 0.789,
+                        "BottomMargin": 89.211,
+                        "Tag": 447,
+                        "ActionTag": 983668680,
+                        "Size": {
+                          "X": 80.0,
+                          "Y": 77.0
+                        },
+                        "Name": "tip",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "XueZhanDaoDi/Card/00_111.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 11,
+                        "Scale9OriginY": 18,
+                        "Scale9Width": 33,
+                        "Scale9Height": 48,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 70.0,
+                          "Y": 84.2081
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 0.1928,
+                          "Y": 0.5042
+                        },
+                        "PreSize": {
+                          "X": 0.1515,
+                          "Y": 0.503
+                        },
+                        "LeftMargin": 42.5,
+                        "RightMargin": 265.5,
+                        "TopMargin": 40.7919,
+                        "BottomMargin": 42.2081,
+                        "Tag": 3921,
+                        "ActionTag": -2474663,
+                        "Size": {
+                          "X": 55.0,
+                          "Y": 84.0
+                        },
+                        "Name": "card",
+                        "ctype": "ImageViewObjectData"
+                      },
+                      {
+                        "FileData": {
+                          "Type": "Normal",
+                          "Path": "XueZhanDaoDi/backBtn.png",
+                          "Plist": ""
+                        },
+                        "Scale9OriginX": 23,
+                        "Scale9OriginY": 27,
+                        "Scale9Width": 86,
+                        "Scale9Height": 74,
+                        "TouchEnable": true,
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 412.5845,
+                          "Y": 85.774
+                        },
+                        "Scale": {
+                          "ScaleX": 0.7,
+                          "ScaleY": 0.7
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PrePosition": {
+                          "X": 1.1366,
+                          "Y": 0.5136
+                        },
+                        "PreSize": {
+                          "X": 0.3636,
+                          "Y": 0.7665
+                        },
+                        "LeftMargin": 346.5845,
+                        "RightMargin": -115.5845,
+                        "TopMargin": 17.226,
+                        "BottomMargin": 21.774,
+                        "Tag": 3924,
+                        "ActionTag": 1232302748,
+                        "Size": {
+                          "X": 132.0,
+                          "Y": 128.0
+                        },
+                        "Name": "fanhui",
+                        "ctype": "ImageViewObjectData"
+                      }
+                    ],
+                    "ActionTag": -1204035603,
                     "Size": {
-                      "X": 230.0,
-                      "Y": 101.0
+                      "X": 363.0,
+                      "Y": 167.0
                     },
-                    "Name": "bgground",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "XueZhanDaoDi/Card/0_138.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 11,
-                    "Scale9OriginY": 18,
-                    "Scale9Width": 61,
-                    "Scale9Height": 89,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": -32.5431,
-                      "Y": 39.6625
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": -0.186,
-                      "Y": 0.2754
-                    },
-                    "PreSize": {
-                      "X": 0.4743,
-                      "Y": 0.8681
-                    },
-                    "LeftMargin": -74.0431,
-                    "RightMargin": 166.0431,
-                    "TopMargin": 41.8375,
-                    "BottomMargin": -22.8375,
-                    "Tag": 3906,
-                    "ActionTag": 568965814,
-                    "Size": {
-                      "X": 83.0,
-                      "Y": 125.0
-                    },
-                    "Name": "card1",
+                    "Name": "changeuibg",
                     "ctype": "ImageViewObjectData"
                   }
                 ],
-                "ActionTag": -1759301065,
+                "ActionTag": -900554881,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 0.0,
+                  "Y": 0.0
                 },
-                "Name": "hu",
-                "ctype": "ButtonObjectData"
+                "Name": "changeui",
+                "ctype": "SingleNodeObjectData"
               },
               {
                 "FontSize": 14,
@@ -14222,21 +14010,16 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
                 "NormalFileData": {
                   "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_57.png",
+                  "Path": "XueZhanDaoDi/n_playLabel_9.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
                 "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9Width": 90,
+                "Scale9Height": 104,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -14254,8 +14037,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 511.7208,
-                  "Y": 177.5
+                  "X": 314.723,
+                  "Y": 162.5912
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -14271,155 +14054,15 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 424.2208,
-                "RightMargin": -599.2208,
-                "TopMargin": -249.5,
-                "BottomMargin": 105.5,
+                "LeftMargin": 254.723,
+                "RightMargin": -374.723,
+                "TopMargin": -225.5912,
+                "BottomMargin": 99.5912,
                 "Tag": 3907,
-                "Children": [
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "playing/gameTable/bg_C_P_G.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 57,
-                    "Scale9OriginY": 47,
-                    "Scale9Width": 61,
-                    "Scale9Height": 50,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 89.25,
-                      "Y": 74.88
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PositionPercentXEnabled": true,
-                    "PositionPercentYEnabled": true,
-                    "PrePosition": {
-                      "X": 0.51,
-                      "Y": 0.52
-                    },
-                    "PreSize": {
-                      "X": 1.0,
-                      "Y": 1.0
-                    },
-                    "LeftMargin": 1.75,
-                    "RightMargin": -1.75,
-                    "TopMargin": -2.88,
-                    "BottomMargin": 2.88,
-                    "Tag": 3908,
-                    "ActionTag": 1970709130,
-                    "Size": {
-                      "X": 175.0,
-                      "Y": 144.0
-                    },
-                    "VisibleForFrame": false,
-                    "Name": "bg_img",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "setting/pai_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 75,
-                    "Scale9OriginY": 33,
-                    "Scale9Width": 80,
-                    "Scale9Height": 35,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 2.3893,
-                      "Y": 38.65
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.0137,
-                      "Y": 0.2684
-                    },
-                    "PreSize": {
-                      "X": 1.3143,
-                      "Y": 0.7014
-                    },
-                    "LeftMargin": -112.6107,
-                    "RightMargin": 57.6107,
-                    "TopMargin": 54.85,
-                    "BottomMargin": -11.85,
-                    "Tag": 3909,
-                    "ActionTag": -1314798752,
-                    "Size": {
-                      "X": 230.0,
-                      "Y": 101.0
-                    },
-                    "Name": "bgground",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "XueZhanDaoDi/Card/0_135.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 11,
-                    "Scale9OriginY": 18,
-                    "Scale9Width": 61,
-                    "Scale9Height": 89,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 179.0526,
-                      "Y": 70.2481
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 1.0232,
-                      "Y": 0.4878
-                    },
-                    "PreSize": {
-                      "X": 0.4743,
-                      "Y": 0.8681
-                    },
-                    "LeftMargin": 137.5526,
-                    "RightMargin": -45.5526,
-                    "TopMargin": 11.2519,
-                    "BottomMargin": 7.7481,
-                    "Tag": 3910,
-                    "ActionTag": 597790505,
-                    "Size": {
-                      "X": 83.0,
-                      "Y": 125.0
-                    },
-                    "Name": "card1",
-                    "ctype": "ImageViewObjectData"
-                  }
-                ],
                 "ActionTag": 938964148,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 120.0,
+                  "Y": 126.0
                 },
                 "Name": "peng",
                 "ctype": "ButtonObjectData"
@@ -14432,15 +14075,65 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 145,
+                "Scale9Height": 122,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
                 },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_59.png",
-                  "Plist": ""
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 953.4142,
+                  "Y": 160.8073
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 953.4142,
+                "RightMargin": -953.4142,
+                "TopMargin": -160.8073,
+                "BottomMargin": 160.8073,
+                "Tag": 946,
+                "ActionTag": -123408867,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "noTing",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
@@ -14464,8 +14157,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 775.1613,
-                  "Y": 174.8072
+                  "X": 660.1019,
+                  "Y": 251.132
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -14481,29 +14174,29 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 687.6613,
-                "RightMargin": -862.6613,
-                "TopMargin": -246.8072,
-                "BottomMargin": 102.8072,
-                "Tag": 3911,
+                "LeftMargin": 660.1019,
+                "RightMargin": -660.1019,
+                "TopMargin": -251.132,
+                "BottomMargin": 251.132,
+                "Tag": 947,
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "playing/gameTable/bg_C_P_G.png",
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
                       "Plist": ""
                     },
-                    "Scale9OriginX": 57,
-                    "Scale9OriginY": 47,
-                    "Scale9Width": 61,
-                    "Scale9Height": 50,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 15,
+                    "Scale9Width": 16,
+                    "Scale9Height": 16,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 89.25,
-                      "Y": 74.88
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -14514,216 +14207,35 @@
                     "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.51,
-                      "Y": 0.52
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "PreSize": {
-                      "X": 1.0,
-                      "Y": 1.0
+                      "X": 0.0,
+                      "Y": 0.0
                     },
-                    "LeftMargin": 1.75,
-                    "RightMargin": -1.75,
-                    "TopMargin": -2.88,
-                    "BottomMargin": 2.88,
-                    "Tag": 3912,
-                    "ActionTag": -1427137806,
+                    "LeftMargin": -23.0,
+                    "RightMargin": -23.0,
+                    "TopMargin": -23.0,
+                    "BottomMargin": -23.0,
+                    "Tag": 948,
+                    "ActionTag": 1957982612,
                     "Size": {
-                      "X": 175.0,
-                      "Y": 144.0
+                      "X": 46.0,
+                      "Y": 46.0
                     },
                     "VisibleForFrame": false,
                     "Name": "bg_img",
                     "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "setting/pai_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 75,
-                    "Scale9OriginY": 33,
-                    "Scale9Width": 80,
-                    "Scale9Height": 35,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": -3.3949,
-                      "Y": 38.5202
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": -0.0194,
-                      "Y": 0.2675
-                    },
-                    "PreSize": {
-                      "X": 1.3143,
-                      "Y": 0.7014
-                    },
-                    "LeftMargin": -118.3949,
-                    "RightMargin": 63.3949,
-                    "TopMargin": 54.9798,
-                    "BottomMargin": -11.9798,
-                    "Tag": 3913,
-                    "ActionTag": 1789518600,
-                    "Size": {
-                      "X": 230.0,
-                      "Y": 101.0
-                    },
-                    "Name": "bgground",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "XueZhanDaoDi/Card/0_135.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 11,
-                    "Scale9OriginY": 18,
-                    "Scale9Width": 61,
-                    "Scale9Height": 89,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": -32.2654,
-                      "Y": 29.1449
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": -0.1844,
-                      "Y": 0.2024
-                    },
-                    "PreSize": {
-                      "X": 0.4743,
-                      "Y": 0.8681
-                    },
-                    "LeftMargin": -73.7654,
-                    "RightMargin": 165.7654,
-                    "TopMargin": 52.3551,
-                    "BottomMargin": -33.3551,
-                    "Tag": 3914,
-                    "ActionTag": -880530993,
-                    "Size": {
-                      "X": 83.0,
-                      "Y": 125.0
-                    },
-                    "Name": "card1",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "XueZhanDaoDi/Card/0_135.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 11,
-                    "Scale9OriginY": 18,
-                    "Scale9Width": 61,
-                    "Scale9Height": 89,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 128.91,
-                      "Y": 28.249
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.7366,
-                      "Y": 0.1962
-                    },
-                    "PreSize": {
-                      "X": 0.4743,
-                      "Y": 0.8681
-                    },
-                    "LeftMargin": 87.41,
-                    "RightMargin": 4.59,
-                    "TopMargin": 53.251,
-                    "BottomMargin": -34.251,
-                    "Tag": 3915,
-                    "ActionTag": 1203722185,
-                    "Size": {
-                      "X": 83.0,
-                      "Y": 125.0
-                    },
-                    "VisibleForFrame": false,
-                    "Name": "card2",
-                    "ctype": "ImageViewObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "XueZhanDaoDi/Card/0_135.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 11,
-                    "Scale9OriginY": 18,
-                    "Scale9Width": 61,
-                    "Scale9Height": 89,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 172.6013,
-                      "Y": 27.4977
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.9863,
-                      "Y": 0.191
-                    },
-                    "PreSize": {
-                      "X": 0.4743,
-                      "Y": 0.8681
-                    },
-                    "LeftMargin": 131.1013,
-                    "RightMargin": -39.1013,
-                    "TopMargin": 54.0023,
-                    "BottomMargin": -35.0023,
-                    "Tag": 3916,
-                    "ActionTag": 1930241513,
-                    "Size": {
-                      "X": 83.0,
-                      "Y": 125.0
-                    },
-                    "VisibleForFrame": false,
-                    "Name": "card3",
-                    "ctype": "ImageViewObjectData"
                   }
                 ],
-                "ActionTag": -699769627,
+                "ActionTag": -1079608331,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 0.0,
+                  "Y": 0.0
                 },
-                "Name": "chi0",
+                "VisibleForFrame": false,
+                "Name": "ting",
                 "ctype": "ButtonObjectData"
               },
               {
@@ -14737,81 +14249,6 @@
                 "DisabledFileData": {
                   "Type": "Default",
                   "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_59.png",
-                  "Plist": ""
-                },
-                "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
-                "OutlineColor": {
-                  "G": 0,
-                  "B": 0
-                },
-                "ShadowColor": {
-                  "R": 110,
-                  "G": 110,
-                  "B": 110
-                },
-                "ShadowOffsetX": 2.0,
-                "ShadowOffsetY": -2.0,
-                "TouchEnable": true,
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 736.8393,
-                  "Y": 250.8865
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "LeftMargin": 649.3393,
-                "RightMargin": -824.3393,
-                "TopMargin": -322.8865,
-                "BottomMargin": 178.8865,
-                "Tag": 3917,
-                "ActionTag": -80011527,
-                "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
-                },
-                "Name": "chi1",
-                "ctype": "ButtonObjectData"
-              },
-              {
-                "FontSize": 14,
-                "ButtonText": "",
-                "TextColor": {
-                  "R": 65,
-                  "G": 65,
-                  "B": 70
-                },
-                "DisabledFileData": {
-                  "Type": "Default",
-                  "Path": "Default/Button_Disable.png",
-                  "Plist": ""
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_59.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -14853,824 +14290,18 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 648.3392,
-                "RightMargin": -823.3392,
-                "TopMargin": -391.2032,
-                "BottomMargin": 247.2032,
-                "Tag": 3918,
-                "ActionTag": 91540411,
+                "LeftMargin": 735.8392,
+                "RightMargin": -735.8392,
+                "TopMargin": -319.2032,
+                "BottomMargin": 319.2032,
+                "Tag": 949,
+                "ActionTag": -1305346150,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 0.0,
+                  "Y": 0.0
                 },
                 "Name": "chi2",
                 "ctype": "ButtonObjectData"
-              },
-              {
-                "AnchorPoint": {},
-                "Position": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": true,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "Tag": 3919,
-                "Children": [
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "setting/chi_gang_bg.png",
-                      "Plist": ""
-                    },
-                    "Scale9Enable": true,
-                    "Scale9OriginX": 30,
-                    "Scale9OriginY": 30,
-                    "Scale9Width": 394,
-                    "Scale9Height": 186,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5
-                    },
-                    "Position": {
-                      "X": 642.67,
-                      "Y": 92.1418
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "PreSize": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "LeftMargin": 502.67,
-                    "RightMargin": -782.67,
-                    "TopMargin": -252.1418,
-                    "BottomMargin": 92.1418,
-                    "Tag": 3920,
-                    "Children": [
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "playing/MJ/Mj_up_2.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 11,
-                        "Scale9OriginY": 18,
-                        "Scale9Width": 83,
-                        "Scale9Height": 122,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 110.0,
-                          "Y": 44.0022
-                        },
-                        "Scale": {
-                          "ScaleX": 0.4,
-                          "ScaleY": 0.4
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.3929,
-                          "Y": 0.275
-                        },
-                        "PreSize": {
-                          "X": 0.375,
-                          "Y": 0.9875
-                        },
-                        "LeftMargin": 57.5,
-                        "RightMargin": 117.5,
-                        "TopMargin": 36.9978,
-                        "BottomMargin": -34.9978,
-                        "Tag": 3921,
-                        "ActionTag": -2474663,
-                        "Size": {
-                          "X": 105.0,
-                          "Y": 158.0
-                        },
-                        "Name": "card",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "setting/penggang_bottom.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 24,
-                        "Scale9OriginY": 23,
-                        "Scale9Width": 26,
-                        "Scale9Height": 24,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 340.1648,
-                          "Y": 60.6877
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 1.2149,
-                          "Y": 0.3793
-                        },
-                        "PreSize": {
-                          "X": 0.2643,
-                          "Y": 0.4375
-                        },
-                        "LeftMargin": 303.1648,
-                        "RightMargin": -97.1648,
-                        "TopMargin": 64.3123,
-                        "BottomMargin": 25.6877,
-                        "Tag": 3922,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "playing/gameTable/youxizhong-2_61.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 24,
-                            "Scale9OriginY": 22,
-                            "Scale9Width": 127,
-                            "Scale9Height": 100,
-                            "TouchEnable": true,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 40.7783,
-                              "Y": 32.2206
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.5511,
-                              "Y": 0.4603
-                            },
-                            "PreSize": {
-                              "X": 1.8243,
-                              "Y": 1.5857
-                            },
-                            "LeftMargin": -26.7217,
-                            "RightMargin": -34.2783,
-                            "TopMargin": -17.7206,
-                            "BottomMargin": -23.2794,
-                            "Tag": 3923,
-                            "ActionTag": 606170879,
-                            "Size": {
-                              "X": 135.0,
-                              "Y": 111.0
-                            },
-                            "VisibleForFrame": false,
-                            "Name": "guo",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "setting/fanhui.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 23,
-                            "Scale9OriginY": 27,
-                            "Scale9Width": 26,
-                            "Scale9Height": 30,
-                            "TouchEnable": true,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 0.0,
-                              "Y": 34.5331
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.4933
-                            },
-                            "PreSize": {
-                              "X": 0.973,
-                              "Y": 1.2
-                            },
-                            "LeftMargin": -36.0,
-                            "RightMargin": 38.0,
-                            "TopMargin": -6.5331,
-                            "BottomMargin": -7.4669,
-                            "Tag": 3924,
-                            "ActionTag": 1232302748,
-                            "Size": {
-                              "X": 72.0,
-                              "Y": 84.0
-                            },
-                            "Name": "fanhui",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": 100298804,
-                        "Size": {
-                          "X": 74.0,
-                          "Y": 70.0
-                        },
-                        "Name": "guobg",
-                        "ctype": "ImageViewObjectData"
-                      }
-                    ],
-                    "ActionTag": -1204035603,
-                    "Size": {
-                      "X": 280.0,
-                      "Y": 160.0
-                    },
-                    "VisibleForFrame": false,
-                    "Name": "changeuibg",
-                    "ctype": "ImageViewObjectData"
-                  }
-                ],
-                "ActionTag": -900554881,
-                "Size": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "Name": "changeui",
-                "ctype": "SingleNodeObjectData"
-              },
-              {
-                "AnchorPoint": {},
-                "Position": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": true,
-                "PrePosition": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "PreSize": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "Tag": 3925,
-                "Children": [
-                  {
-                    "FileData": {
-                      "Type": "Normal",
-                      "Path": "setting/pai_bottom.png",
-                      "Plist": ""
-                    },
-                    "Scale9OriginX": 75,
-                    "Scale9OriginY": 33,
-                    "Scale9Width": 80,
-                    "Scale9Height": 35,
-                    "AnchorPoint": {
-                      "ScaleX": 0.5,
-                      "ScaleY": 0.5
-                    },
-                    "Position": {
-                      "X": 642.67,
-                      "Y": 172.14
-                    },
-                    "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "PreSize": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "LeftMargin": 527.67,
-                    "RightMargin": -757.67,
-                    "TopMargin": -222.64,
-                    "BottomMargin": 121.64,
-                    "Tag": 3926,
-                    "Children": [
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "XueZhanDaoDi/Card/00_118.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 11,
-                        "Scale9OriginY": 18,
-                        "Scale9Width": 33,
-                        "Scale9Height": 48,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 98.0,
-                          "Y": 110.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.4261,
-                          "Y": 1.0891
-                        },
-                        "PreSize": {
-                          "X": 0.2391,
-                          "Y": 0.8317
-                        },
-                        "LeftMargin": 70.5,
-                        "RightMargin": 104.5,
-                        "TopMargin": -51.0,
-                        "BottomMargin": 68.0,
-                        "Tag": 3927,
-                        "ActionTag": -99221006,
-                        "Size": {
-                          "X": 55.0,
-                          "Y": 84.0
-                        },
-                        "Name": "card7",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "XueZhanDaoDi/Card/00_118.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 11,
-                        "Scale9OriginY": 18,
-                        "Scale9Width": 33,
-                        "Scale9Height": 48,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 58.0,
-                          "Y": 110.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.2522,
-                          "Y": 1.0891
-                        },
-                        "PreSize": {
-                          "X": 0.2391,
-                          "Y": 0.8317
-                        },
-                        "LeftMargin": 30.5,
-                        "RightMargin": 144.5,
-                        "TopMargin": -51.0,
-                        "BottomMargin": 68.0,
-                        "Tag": 3928,
-                        "ActionTag": -1774460775,
-                        "Size": {
-                          "X": 55.0,
-                          "Y": 84.0
-                        },
-                        "Name": "card6",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "XueZhanDaoDi/Card/00_118.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 11,
-                        "Scale9OriginY": 18,
-                        "Scale9Width": 33,
-                        "Scale9Height": 48,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 18.0,
-                          "Y": 110.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.0783,
-                          "Y": 1.0891
-                        },
-                        "PreSize": {
-                          "X": 0.2391,
-                          "Y": 0.8317
-                        },
-                        "LeftMargin": -9.5,
-                        "RightMargin": 184.5,
-                        "TopMargin": -51.0,
-                        "BottomMargin": 68.0,
-                        "Tag": 3929,
-                        "ActionTag": 1129627728,
-                        "Size": {
-                          "X": 55.0,
-                          "Y": 84.0
-                        },
-                        "Name": "card5",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "XueZhanDaoDi/Card/00_118.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 11,
-                        "Scale9OriginY": 18,
-                        "Scale9Width": 33,
-                        "Scale9Height": 48,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 138.0,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.6,
-                          "Y": 0.4455
-                        },
-                        "PreSize": {
-                          "X": 0.2391,
-                          "Y": 0.8317
-                        },
-                        "LeftMargin": 110.5,
-                        "RightMargin": 64.5,
-                        "TopMargin": 14.0,
-                        "BottomMargin": 3.0,
-                        "Tag": 3930,
-                        "ActionTag": 1273283085,
-                        "Size": {
-                          "X": 55.0,
-                          "Y": 84.0
-                        },
-                        "Name": "card4",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "XueZhanDaoDi/Card/00_118.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 11,
-                        "Scale9OriginY": 18,
-                        "Scale9Width": 33,
-                        "Scale9Height": 48,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 98.0,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.4261,
-                          "Y": 0.4455
-                        },
-                        "PreSize": {
-                          "X": 0.2391,
-                          "Y": 0.8317
-                        },
-                        "LeftMargin": 70.5,
-                        "RightMargin": 104.5,
-                        "TopMargin": 14.0,
-                        "BottomMargin": 3.0,
-                        "Tag": 3931,
-                        "ActionTag": 405384850,
-                        "Size": {
-                          "X": 55.0,
-                          "Y": 84.0
-                        },
-                        "Name": "card3",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "XueZhanDaoDi/Card/00_118.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 11,
-                        "Scale9OriginY": 18,
-                        "Scale9Width": 33,
-                        "Scale9Height": 48,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 58.0,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.2522,
-                          "Y": 0.4455
-                        },
-                        "PreSize": {
-                          "X": 0.2391,
-                          "Y": 0.8317
-                        },
-                        "LeftMargin": 30.5,
-                        "RightMargin": 144.5,
-                        "TopMargin": 14.0,
-                        "BottomMargin": 3.0,
-                        "Tag": 3932,
-                        "ActionTag": 1277662451,
-                        "Size": {
-                          "X": 55.0,
-                          "Y": 84.0
-                        },
-                        "Name": "card2",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "XueZhanDaoDi/Card/00_118.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 11,
-                        "Scale9OriginY": 18,
-                        "Scale9Width": 33,
-                        "Scale9Height": 48,
-                        "TouchEnable": true,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 18.0,
-                          "Y": 45.0
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 0.0783,
-                          "Y": 0.4455
-                        },
-                        "PreSize": {
-                          "X": 0.2391,
-                          "Y": 0.8317
-                        },
-                        "LeftMargin": -9.5,
-                        "RightMargin": 184.5,
-                        "TopMargin": 14.0,
-                        "BottomMargin": 3.0,
-                        "Tag": 3933,
-                        "ActionTag": 791392042,
-                        "Size": {
-                          "X": 55.0,
-                          "Y": 84.0
-                        },
-                        "Name": "card1",
-                        "ctype": "ImageViewObjectData"
-                      },
-                      {
-                        "FileData": {
-                          "Type": "Normal",
-                          "Path": "setting/penggang_bottom.png",
-                          "Plist": ""
-                        },
-                        "Scale9OriginX": 24,
-                        "Scale9OriginY": 23,
-                        "Scale9Width": 26,
-                        "Scale9Height": 24,
-                        "AnchorPoint": {
-                          "ScaleX": 0.5,
-                          "ScaleY": 0.5
-                        },
-                        "Position": {
-                          "X": 325.1644,
-                          "Y": 50.6875
-                        },
-                        "Scale": {
-                          "ScaleX": 1.0,
-                          "ScaleY": 1.0
-                        },
-                        "CColor": {},
-                        "IconVisible": false,
-                        "PrePosition": {
-                          "X": 1.4138,
-                          "Y": 0.5019
-                        },
-                        "PreSize": {
-                          "X": 0.3217,
-                          "Y": 0.6931
-                        },
-                        "LeftMargin": 288.1644,
-                        "RightMargin": -132.1644,
-                        "TopMargin": 15.3125,
-                        "BottomMargin": 15.6875,
-                        "Tag": 3934,
-                        "Children": [
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "playing/gameTable/youxizhong-2_61.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 24,
-                            "Scale9OriginY": 22,
-                            "Scale9Width": 127,
-                            "Scale9Height": 100,
-                            "TouchEnable": true,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 40.7783,
-                              "Y": 32.2206
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.5511,
-                              "Y": 0.4603
-                            },
-                            "PreSize": {
-                              "X": 1.8243,
-                              "Y": 1.5857
-                            },
-                            "LeftMargin": -26.7217,
-                            "RightMargin": -34.2783,
-                            "TopMargin": -17.7206,
-                            "BottomMargin": -23.2794,
-                            "Tag": 3935,
-                            "ActionTag": -2081332762,
-                            "Size": {
-                              "X": 135.0,
-                              "Y": 111.0
-                            },
-                            "VisibleForFrame": false,
-                            "Name": "guo",
-                            "ctype": "ImageViewObjectData"
-                          },
-                          {
-                            "FileData": {
-                              "Type": "Normal",
-                              "Path": "setting/fanhui.png",
-                              "Plist": ""
-                            },
-                            "Scale9OriginX": 23,
-                            "Scale9OriginY": 27,
-                            "Scale9Width": 26,
-                            "Scale9Height": 30,
-                            "TouchEnable": true,
-                            "AnchorPoint": {
-                              "ScaleX": 0.5,
-                              "ScaleY": 0.5
-                            },
-                            "Position": {
-                              "X": 0.0,
-                              "Y": 34.5331
-                            },
-                            "Scale": {
-                              "ScaleX": 1.0,
-                              "ScaleY": 1.0
-                            },
-                            "CColor": {},
-                            "IconVisible": false,
-                            "PrePosition": {
-                              "X": 0.0,
-                              "Y": 0.4933
-                            },
-                            "PreSize": {
-                              "X": 0.973,
-                              "Y": 1.2
-                            },
-                            "LeftMargin": -36.0,
-                            "RightMargin": 38.0,
-                            "TopMargin": -6.5331,
-                            "BottomMargin": -7.4669,
-                            "Tag": 3936,
-                            "ActionTag": 1187402036,
-                            "Size": {
-                              "X": 72.0,
-                              "Y": 84.0
-                            },
-                            "Name": "fanhui",
-                            "ctype": "ImageViewObjectData"
-                          }
-                        ],
-                        "ActionTag": 751576059,
-                        "Size": {
-                          "X": 74.0,
-                          "Y": 70.0
-                        },
-                        "Name": "guobg",
-                        "ctype": "ImageViewObjectData"
-                      }
-                    ],
-                    "ActionTag": -1483775832,
-                    "Size": {
-                      "X": 230.0,
-                      "Y": 101.0
-                    },
-                    "Name": "changeuibg",
-                    "ctype": "ImageViewObjectData"
-                  }
-                ],
-                "ActionTag": -862418072,
-                "Size": {
-                  "X": 0.0,
-                  "Y": 0.0
-                },
-                "VisibleForFrame": false,
-                "Name": "changeui_xuanfenggang",
-                "ctype": "SingleNodeObjectData"
               },
               {
                 "FontSize": 14,
@@ -15680,9 +14311,9 @@
                   "G": 65,
                   "B": 70
                 },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_66.png",
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
                   "Plist": ""
                 },
                 "Scale9Enable": true,
@@ -15707,8 +14338,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 660.1019,
-                  "Y": 251.132
+                  "X": 860.812,
+                  "Y": 228.4739
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -15724,29 +14355,89 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 572.6019,
-                "RightMargin": -747.6019,
-                "TopMargin": -323.132,
-                "BottomMargin": 179.132,
-                "Tag": 3937,
+                "LeftMargin": 860.812,
+                "RightMargin": -860.812,
+                "TopMargin": -228.4739,
+                "BottomMargin": 228.4739,
+                "Tag": 950,
+                "ActionTag": -1465832206,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "chi1",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": 15,
+                "Scale9OriginY": 11,
+                "Scale9Width": 145,
+                "Scale9Height": 122,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 775.1613,
+                  "Y": 174.8072
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 775.1613,
+                "RightMargin": -775.1613,
+                "TopMargin": -174.8072,
+                "BottomMargin": 174.8072,
+                "Tag": 951,
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "Normal",
-                      "Path": "playing/gameTable/bg_T_L.png",
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
                       "Plist": ""
                     },
-                    "Scale9OriginX": 57,
-                    "Scale9OriginY": 47,
-                    "Scale9Width": 61,
-                    "Scale9Height": 50,
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 15,
+                    "Scale9Width": 16,
+                    "Scale9Height": 16,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": 91.0,
-                      "Y": 74.88
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "Scale": {
                       "ScaleX": 1.0,
@@ -15757,34 +14448,216 @@
                     "PositionPercentXEnabled": true,
                     "PositionPercentYEnabled": true,
                     "PrePosition": {
-                      "X": 0.52,
-                      "Y": 0.52
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "PreSize": {
-                      "X": 1.0,
-                      "Y": 1.0
+                      "X": 0.0,
+                      "Y": 0.0
                     },
-                    "LeftMargin": 3.5,
-                    "RightMargin": -3.5,
-                    "TopMargin": -2.88,
-                    "BottomMargin": 2.88,
-                    "Tag": 3938,
-                    "ActionTag": 1043287793,
+                    "LeftMargin": -23.0,
+                    "RightMargin": -23.0,
+                    "TopMargin": -23.0,
+                    "BottomMargin": -23.0,
+                    "Tag": 952,
+                    "ActionTag": 947558282,
                     "Size": {
-                      "X": 175.0,
-                      "Y": 144.0
+                      "X": 46.0,
+                      "Y": 46.0
                     },
                     "VisibleForFrame": false,
                     "Name": "bg_img",
                     "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 15,
+                    "Scale9OriginY": 15,
+                    "Scale9Width": 16,
+                    "Scale9Height": 16,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -3.3949,
+                      "Y": 38.5202
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -26.3949,
+                    "RightMargin": -19.6051,
+                    "TopMargin": -61.5202,
+                    "BottomMargin": 15.5202,
+                    "Tag": 953,
+                    "ActionTag": 1955731810,
+                    "Size": {
+                      "X": 46.0,
+                      "Y": 46.0
+                    },
+                    "Name": "bgground",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 11,
+                    "Scale9OriginY": 18,
+                    "Scale9Width": 24,
+                    "Scale9Height": 10,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": -32.2654,
+                      "Y": 29.1449
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -55.2654,
+                    "RightMargin": 9.2654,
+                    "TopMargin": -52.1449,
+                    "BottomMargin": 6.1449,
+                    "Tag": 954,
+                    "ActionTag": 1372985745,
+                    "Size": {
+                      "X": 46.0,
+                      "Y": 46.0
+                    },
+                    "Name": "card1",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 11,
+                    "Scale9OriginY": 18,
+                    "Scale9Width": 24,
+                    "Scale9Height": 10,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 128.91,
+                      "Y": 28.249
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 105.91,
+                    "RightMargin": -151.91,
+                    "TopMargin": -51.249,
+                    "BottomMargin": 5.249,
+                    "Tag": 955,
+                    "ActionTag": 468397456,
+                    "Size": {
+                      "X": 46.0,
+                      "Y": 46.0
+                    },
+                    "VisibleForFrame": false,
+                    "Name": "card2",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 11,
+                    "Scale9OriginY": 18,
+                    "Scale9Width": 24,
+                    "Scale9Height": 10,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 172.6013,
+                      "Y": 27.4977
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 149.6013,
+                    "RightMargin": -195.6013,
+                    "TopMargin": -50.4977,
+                    "BottomMargin": 4.4977,
+                    "Tag": 956,
+                    "ActionTag": 397596646,
+                    "Size": {
+                      "X": 46.0,
+                      "Y": 46.0
+                    },
+                    "VisibleForFrame": false,
+                    "Name": "card3",
+                    "ctype": "ImageViewObjectData"
                   }
                 ],
-                "ActionTag": 600071541,
+                "ActionTag": -524579101,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 0.0,
+                  "Y": 0.0
                 },
-                "Name": "ting",
+                "Name": "chi0",
                 "ctype": "ButtonObjectData"
               },
               {
@@ -15794,11 +14667,6 @@
                   "R": 65,
                   "G": 65,
                   "B": 70
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_61.png",
-                  "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
@@ -15822,8 +14690,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 953.4142,
-                  "Y": 160.8073
+                  "X": 631.0609,
+                  "Y": 318.2031
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -15839,17 +14707,64 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 865.9142,
-                "RightMargin": -1040.9142,
-                "TopMargin": -232.8073,
-                "BottomMargin": 88.8073,
-                "Tag": 3939,
-                "ActionTag": -257131231,
+                "LeftMargin": 631.0609,
+                "RightMargin": -631.0609,
+                "TopMargin": -318.2031,
+                "BottomMargin": 318.2031,
+                "Tag": 957,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 11,
+                    "Scale9OriginY": 18,
+                    "Scale9Width": 24,
+                    "Scale9Height": 10,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 98.0,
+                      "Y": 44.0003
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 75.0,
+                    "RightMargin": -121.0,
+                    "TopMargin": -67.0003,
+                    "BottomMargin": 21.0003,
+                    "Tag": 958,
+                    "ActionTag": -77077945,
+                    "Size": {
+                      "X": 46.0,
+                      "Y": 46.0
+                    },
+                    "Name": "card",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 620487624,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 0.0,
+                  "Y": 0.0
                 },
-                "Name": "noTing",
+                "Name": "gang2",
                 "ctype": "ButtonObjectData"
               },
               {
@@ -15859,11 +14774,6 @@
                   "R": 65,
                   "G": 65,
                   "B": 70
-                },
-                "NormalFileData": {
-                  "Type": "Normal",
-                  "Path": "playing/gameTable/youxizhong-2_58.png",
-                  "Plist": ""
                 },
                 "Scale9Enable": true,
                 "Scale9OriginX": 15,
@@ -15887,8 +14797,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 953.4142,
-                  "Y": 160.8073
+                  "X": 631.0609,
+                  "Y": 241.8864
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -15904,15 +14814,127 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 865.9142,
-                "RightMargin": -1040.9142,
-                "TopMargin": -232.8073,
-                "BottomMargin": 88.8073,
-                "Tag": 3940,
-                "ActionTag": 1770375684,
+                "LeftMargin": 631.0609,
+                "RightMargin": -631.0609,
+                "TopMargin": -241.8864,
+                "BottomMargin": 241.8864,
+                "Tag": 959,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "Default",
+                      "Path": "Default/ImageFile.png",
+                      "Plist": ""
+                    },
+                    "Scale9OriginX": 11,
+                    "Scale9OriginY": 18,
+                    "Scale9Width": 24,
+                    "Scale9Height": 10,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 97.3997,
+                      "Y": 38.6006
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 74.3997,
+                    "RightMargin": -120.3997,
+                    "TopMargin": -61.6006,
+                    "BottomMargin": 15.6006,
+                    "Tag": 960,
+                    "ActionTag": -950780761,
+                    "Size": {
+                      "X": 46.0,
+                      "Y": 46.0
+                    },
+                    "Name": "card",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": -1358521266,
                 "Size": {
-                  "X": 175.0,
-                  "Y": 144.0
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "gang1",
+                "ctype": "ButtonObjectData"
+              },
+              {
+                "FontSize": 14,
+                "ButtonText": "",
+                "TextColor": {
+                  "R": 65,
+                  "G": 65,
+                  "B": 70
+                },
+                "DisabledFileData": {
+                  "Type": "Default",
+                  "Path": "Default/Button_Disable.png",
+                  "Plist": ""
+                },
+                "Scale9Enable": true,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 110,
+                  "G": 110,
+                  "B": 110
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 870.8119,
+                  "Y": 218.4739
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 870.8119,
+                "RightMargin": -870.8119,
+                "TopMargin": -218.4739,
+                "BottomMargin": 218.4739,
+                "Tag": 965,
+                "ActionTag": -1839654484,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
                 },
                 "Name": "cancel",
                 "ctype": "ButtonObjectData"
@@ -16433,9 +15455,6 @@
         "game_picture/dating-1_73.png",
         "playground/tuoguan.png",
         "playground/tuoguan_1.png",
-        "playing/gameTable/bg_C_P_G.png",
-        "playing/gameTable/bg_H_G.png",
-        "playing/gameTable/bg_T_L.png",
         "playing/gameTable/bg_time.png",
         "playing/gameTable/btn_chat_normal.png",
         "playing/gameTable/btn_chat_press.png",
@@ -16480,18 +15499,10 @@
         "playing/gameTable/youxizhong-1_14.png",
         "playing/gameTable/youxizhong-1_21.png",
         "playing/gameTable/youxizhong-1_89.png",
-        "playing/gameTable/youxizhong-2_53.png",
-        "playing/gameTable/youxizhong-2_55.png",
-        "playing/gameTable/youxizhong-2_57.png",
-        "playing/gameTable/youxizhong-2_58.png",
-        "playing/gameTable/youxizhong-2_59.png",
-        "playing/gameTable/youxizhong-2_61.png",
-        "playing/gameTable/youxizhong-2_66.png",
         "playing/gameTable/zhuobian_02.png",
         "playing/gameTable/zhuobian_06.png",
         "playing/gameTable/zhuobian_07_2.png",
         "playing/MJ/Mj_up_0.png",
-        "playing/MJ/Mj_up_2.png",
         "playing/other/chatbg_ld.png",
         "playing/other/chatbg_rd.png",
         "playing/other/Z_offline.png",
@@ -16501,18 +15512,13 @@
         "Red20/Common/RoomInfoBG_RunFaster.png",
         "Red20/DeskTexture/BtnRule.png",
         "Red20/DeskTexture/tipBg.png",
-        "setting/chi_gang_bg.png",
-        "setting/fanhui.png",
-        "setting/pai_bottom.png",
-        "setting/penggang_bottom.png",
+        "XueZhanDaoDi/backBtn.png",
         "XueZhanDaoDi/bg_circle.png",
         "XueZhanDaoDi/bg_table.jpg",
         "XueZhanDaoDi/Card/0_126.png",
-        "XueZhanDaoDi/Card/0_135.png",
         "XueZhanDaoDi/Card/0_138.png",
         "XueZhanDaoDi/Card/00_111.png",
         "XueZhanDaoDi/Card/00_115.png",
-        "XueZhanDaoDi/Card/00_118.png",
         "XueZhanDaoDi/Card/1_123.png",
         "XueZhanDaoDi/Card/1_138.png",
         "XueZhanDaoDi/Card/1_Hand.png",
@@ -16525,6 +15531,7 @@
         "XueZhanDaoDi/Card/D_Peng.png",
         "XueZhanDaoDi/Card/D_Peng2.png",
         "XueZhanDaoDi/Card/S_Peng2.png",
+        "XueZhanDaoDi/moOperBg.png",
         "XueZhanDaoDi/n_play_back09.png",
         "XueZhanDaoDi/n_play_back14.png",
         "XueZhanDaoDi/n_play_back15.png",
@@ -16534,14 +15541,21 @@
         "XueZhanDaoDi/n_play_label12.png",
         "XueZhanDaoDi/n_play_label21.png",
         "XueZhanDaoDi/n_play_label22.png",
+        "XueZhanDaoDi/n_playLabel_17.png",
+        "XueZhanDaoDi/n_playLabel_6.png",
+        "XueZhanDaoDi/n_playLabel_8.png",
+        "XueZhanDaoDi/n_playLabel_9.png",
         "XueZhanDaoDi/n2_history_btn05.png",
         "XueZhanDaoDi/n2_popback09.png",
+        "XueZhanDaoDi/num_2.png",
+        "XueZhanDaoDi/num_3.png",
         "XueZhanDaoDi/swappBg.png",
         "XueZhanDaoDi/swappPoint.png",
         "XueZhanDaoDi/swappPoint1.png",
         "XueZhanDaoDi/swappPoint2.png",
         "XueZhanDaoDi/swappTable.png",
-        "XueZhanDaoDi/swappType1.png"
+        "XueZhanDaoDi/swappType1.png",
+        "XueZhanDaoDi/tips.png"
       ],
       "ctype": "GameFileData"
     }

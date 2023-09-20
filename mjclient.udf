@@ -31,13 +31,9 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="A_Setting_home.csd" />
-          <FilePathData Path="A_Play_XueZhanMahjong.csd" />
-          <FilePathData Path="A_Update.csd" />
-          <FilePathData Path="A_Play_Red20.csd" />
-          <FilePathData Path="A_EndOne_Red20.csd" />
+          <FilePathData Path="A_Friendcard_main.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="A_EndOne_Red20.csd" />
+        <ActiveDocument Path="A_Friendcard_main.csd" />
       </Value>
     </Item>
   </Properties>

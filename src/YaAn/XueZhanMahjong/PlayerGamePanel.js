@@ -10,9 +10,8 @@ MjClient.MJPass2NetForxuezhanMJ = function () {
     cc.log("====================send======pass=====");
     var sData = MjClient.data.sData;
     var tData = sData.tData;
-
+    var eat = MjClient.playui.jsBind.eat;
     if (IsTurnToMe() && tData.tState == TableState.waitPut) {
-        var eat = MjClient.playui.jsBind.eat;
         var msg = "确认过";
         if (eat.gang0._node.visible) {
             msg += " 杠 ";
@@ -27,13 +26,11 @@ MjClient.MJPass2NetForxuezhanMJ = function () {
             eat.gang0._node.visible = false;
             eat.hu._node.visible = false;
             eat.guo._node.visible = false;
-            eat.ting._node.visible = false;
-            eat.cancel._node.visible = false;
             MJPassConfirmToServer();
         }, function () { }, "1");
     }
     else {
-        if (MjClient.playui.jsBind.eat.hu._node.visible) {
+        if (eat.hu._node.visible) {
             MjClient.showMsg("确认不胡吗?", MJPassConfirmToServer, function () { }, "1");
         }
         else {
@@ -53,17 +50,10 @@ function showShaiziAni_YNXueZhan(poff) {
     if (poff == 0) {
         //摇骰子的时候全部隐藏
         var eat = MjClient.playui.jsBind.eat;
-        eat.chi0._node.visible = false;
-        eat.chi1._node.visible = false;
-        eat.chi2._node.visible = false;
         eat.peng._node.visible = false;
         eat.gang0._node.visible = false;
-        eat.gang1._node.visible = false;
-        eat.gang2._node.visible = false;
         eat.hu._node.visible = false;
         eat.guo._node.visible = false;
-        eat.cancel._node.visible = false;
-
 
         if (MjClient.rePlayVideo != -1)//回放
         {
@@ -978,7 +968,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                     if (_isAniShow_xuezhanMJ) return;
                     var pl = getUIPlayer(0);
                     var eat = MjClient.playui.jsBind.eat;
-                    if (IsTurnToMe() && pl.isTing && !eat.hu._node.visible && !eat.gang0._node.visible && !eat.gang1._node.visible && !eat.gang2._node.visible) {
+                    if (IsTurnToMe() && pl.isTing && !eat.hu._node.visible && !eat.gang0._node.visible) {
                         cc.log("*********自动出牌*********");
                         this.runAction(cc.sequence(cc.delayTime(0.4),
                             cc.callFunc(MjClient.playui.jsBind.BtnPutCard._click)));
@@ -2680,132 +2670,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
             }
         },
         eat: {
-
-            chi0: {
-                _visible: false,
-                _layout: [
-                    [0, 0.1],
-                    [0.5, 0],
-                    [1.3, 2.5]
-                ],
-                bg_img: {
-                    _run: function () {
-                        var _Image_light_scale = this.getScale();
-
-                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
-                        var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
-                        var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function () {
-                            //this.setOpacity(255);
-                            this.setScale(_Image_light_scale * 0.95);
-                        }.bind(this));
-
-                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
-
-                    }
-
-                },
-                _touch: function (btn, eT) {
-                    if (eT == 2) MJChiCardchange(btn.tag);
-                },
-                bgimg: {
-                    _run: function () {
-                        this.zIndex = -1;
-                    }
-                },
-                bgground: {
-                    _run: function () {
-                        this.zIndex = -1;
-                    }
-                },
-                card1: {},
-                card2: {},
-                card3: {}
-            },
-            chi1: {
-                _visible: false,
-                _layout: [
-                    [0, 0.1],
-                    [0.5, 0],
-                    [1.3, 3.8]
-                ],
-                _touch: function (btn, eT) {
-                    if (eT == 2) MJChiCardchange(btn.tag);
-                }
-            },
-            chi2: {
-                _visible: false,
-                _layout: [
-                    [0, 0.1],
-                    [0.5, 0],
-                    [1.3, 5.1]
-                ],
-                _touch: function (btn, eT) {
-                    if (eT == 2) MJChiCardchange(btn.tag);
-                }
-            },
-            ting: {
-                _visible: false,
-                _layout: [
-                    [0, 0.1],
-                    [0.5, 0],
-                    [1.3, 2.5]
-                ],
-                bg_img: {
-                    _run: function () {
-                        var _Image_light_scale = this.getScale();
-
-                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
-                        var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
-                        var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function () {
-                            //this.setOpacity(255);
-                            this.setScale(_Image_light_scale * 0.95);
-                        }.bind(this));
-
-                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
-
-                    }
-
-                },
-                _touch: function (btn, eT) {
-                    if (eT == 2) {
-                        // MJTingToServer();
-                        var eat = MjClient.playui.jsBind.eat;
-                        eat.gang0._node.visible = false;
-                        eat.guo._node.visible = false;
-                        eat.ting._node.visible = false;
-                        eat.cancel._node.visible = true;
-                        MjClient.clickTing = true;
-                        eat.hu._node.visible = false;
-                        MjClient.playui._btnPutCard.visible = true;
-                        MjClient.playui.CardLayoutRestore(MjClient.playui._downNode, 0);
-                        /*
-                         设置当前听牌的张数
-                         */
-                        var pl = getUIPlayer(0);
-                        var currentCard = CurrentPutCardMsg();
-                        var tingCards = getCheckTingHuCards(currentCard, pl.mjhand);
-                        setCurrentTingNum(tingCards);
-                    }
-                }
-            },
-            noTing: {
-                _visible: false,
-                _layout: [
-                    [0, 0.1],
-                    [0.5, 0],
-                    [4.6, 2.5]
-                ],
-                _touch: function (btn, eT) {
-                    if (eT == 2) {
-                        cc.log("_____noting__888888____");
-                        hideTingBtn();
-                    }
-                }
-            },
             peng: {
                 _visible: false,
                 _layout: [
@@ -2813,35 +2677,12 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                     [0.5, 0],
                     [0, 2.5]
                 ],
-                bg_img: {
-                    _run: function () {
-                        var _Image_light_scale = this.getScale();
-
-                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
-                        var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
-                        var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function () {
-                            //this.setOpacity(255);
-                            this.setScale(_Image_light_scale * 0.95);
-                        }.bind(this));
-
-                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
-
-                    }
-
-                },
                 _touch: function (btn, eT) {
                     cc.log(">>>> lf，点击碰按钮");
                     COMMON_UI.clearShowCurrentEatCards();
                     if (eT == 2) MJPengToServer();
 
                 },
-                bgimg: {
-                    _run: function () {
-                        this.zIndex = -1;
-                    }
-                }
             },
             gang0: {
                 _visible: false,
@@ -2850,62 +2691,11 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                     [0.5, 0],
                     [-1.7, 2.5]
                 ],
-                bg_img: {
-                    _run: function () {
-                        var _Image_light_scale = this.getScale();
-
-                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
-                        var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
-                        var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function () {
-                            //this.setOpacity(255);
-                            this.setScale(_Image_light_scale * 0.95);
-                        }.bind(this));
-
-                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
-
-                    }
-
-                },
-                card1: {},
+                num2: { _visible: false },
+                num3: { _visible: false },
                 _touch: function (btn, eT) {
                     if (eT == 2) MJGangCardchange(btn.tag);
                 },
-                bgimg: {
-                    _run: function () {
-                        this.zIndex = -1;
-                    }
-                },
-                bgground: {
-                    _run: function () {
-                        this.zIndex = -1;
-                    }
-                }
-            },
-            gang1: {
-                _visible: false,
-                _layout: [
-                    [0, 0.1],
-                    [0.5, 0],
-                    [-1.7, 3.8]
-                ],
-                card: {},
-                _touch: function (btn, eT) {
-                    if (eT == 2) MJGangCardchange(btn.tag);
-                }
-            },
-            gang2: {
-                _visible: false,
-                _layout: [
-                    [0, 0.1],
-                    [0.5, 0],
-                    [-1.7, 5.1]
-                ],
-                card: {},
-                _touch: function (btn, eT) {
-                    if (eT == 2) MJGangCardchange(btn.tag);
-                }
             },
             guo: {
                 _visible: false,
@@ -2919,11 +2709,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                         MjClient.MJPass2NetForxuezhanMJ();
                     }
                 },
-                bgimg: {
-                    _run: function () {
-                        this.zIndex = -1;
-                    }
-                }
             },
             hu: {
                 _visible: false,
@@ -2932,96 +2717,44 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                     [0.5, 0],
                     [-3, 2.5]
                 ],
-                bg_img: {
-                    _run: function () {
-                        var _Image_light_scale = this.getScale();
-
-                        var a = cc.scaleTo(0.5, _Image_light_scale * 1.0);
-                        var aa = cc.fadeIn(0.5);
-                        var a1 = cc.scaleTo(1, _Image_light_scale * 1.3);
-                        var a2 = cc.fadeOut(1);
-                        var a3 = cc.callFunc(function () {
-                            //this.setOpacity(255);
-                            this.setScale(_Image_light_scale * 0.95);
-                        }.bind(this));
-
-                        this.runAction(cc.sequence(cc.spawn(a, aa), cc.spawn(a1, a2).easing(cc.easeCubicActionOut()), a3, cc.delayTime(0.2)).repeatForever());
-
-                    }
-
-                },
                 _touch: function (btn, eT) {
                     if (eT == 2) MJHuToServer();
                 },
-                bgimg: {
-                    _run: function () {
-                        this.zIndex = -1;
-                    }
-                }
-            },
-            cancel: {
-                _visible: false,
-                _layout: [
-                    [0, 0.16],
-                    [0.78, 0.1],
-                    [0, 1.12]
-                ],
-                _touch: function (btn, eT) {
-                    if (eT == 2) {
-                        btn.visible = false;
-                        MjClient.clickTing = false;
-                        hideCurrentTingNum();
-                        MjClient.playui.EatVisibleCheck();
-                        MjClient.playui.CardLayoutRestore(MjClient.playui._downNode, 0);
-                    }
-                }
             },
             changeui: {
                 _visible: true,
                 changeuibg: {
                     _layout: [
-                        [0.36, 0.36],
-                        [0.5, 0.15],
+                        [0.3, 0.3],
+                        [0.5, 0.2],
                         [0, 0]
                     ],
                     _run: function () {
                         this.visible = false;
                         this.getChildByName("card").visible = false;
-                        this.chiTouch = function (btn, et) {
-                            if (et == 2) {
-                                if (btn.name.localeCompare("card3") < 0) {
-                                    MJChiToServer(0);
-                                }
-                                else if (btn.name.localeCompare("card6") < 0) {
-                                    MJChiToServer(1);
-                                }
-                                else {
-                                    MJChiToServer(2);
-                                }
-                            }
-                        };
                         this.gangTouch = function (btn, et) {
                             if (et == 2)
                                 MJGangToServer(btn.tag);
                         };
                     },
-                    guobg: {
-                        guo: {
-                            _touch: function (btn, eT) {
-                                if (eT == 2) MjClient.MJPass2NetForxuezhanMJ();
-                            }
-                        },
-                        fanhui: {
-                            _touch: function (btn, et) {
-                                if (et == 2) {
-                                    btn.getParent().getParent().visible = false;
-                                    MjClient.playui.EatVisibleCheck();
-                                }
+                    fanhui: {
+                        _touch: function (btn, et) {
+                            if (et == 2) {
+                                btn.getParent().visible = false;
+                                MjClient.playui.EatVisibleCheck();
                             }
                         }
                     }
                 }
             },
+            gang1: { _visible: false, },
+            gang2: { _visible: false, },
+            chi0: { _visible: false, },
+            chi1: { _visible: false, },
+            chi2: { _visible: false, },
+            ting: { _visible: false, },
+            noTing: { _visible: false, },
+            cancel: { _visible: false, },
             _event: {
                 clearCardUI: function () {
                     //add by sking
@@ -3864,7 +3597,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         }
     },
     //设置牌的渲染
-    setCardSprite: function (node, cd, off, isOut = false) {
+    setCardSprite: function (node, cd, off) {
         node.removeAllChildren();
         var path = "XueZhanDaoDi/Card/",
             imgNames = [12, 13, 11];
@@ -3873,7 +3606,6 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
         if (cc.sys.isObjectValid(node) && cd != null && typeof (cd) != "undefined") {
             node.tag = cd;
         }
-        cc.log('0000------0000', off);
         //加载小图
         node.loadTexture(path + ".png");
     }
@@ -4291,44 +4023,20 @@ PlayLayer_YNXueZhan.prototype.EatVisibleCheck = function () {
     if (_isAniShow_xuezhanMJ) return;
     var eat = MjClient.playui.jsBind.eat;
     //sk 为啥要隐藏掉？   //因为一开始是不可见的，隐藏根节点 by sking
-    MjClient.playui.jsBind.eat.changeui.changeuibg._node.visible = false;
+    eat.changeui.changeuibg._node.visible = false;
     var sData = MjClient.data.sData;
     var tData = sData.tData;
-    eat.chi0._node.visible = false;
-    eat.chi1._node.visible = false;
-    eat.chi2._node.visible = false;
     eat.peng._node.visible = false;
     eat.gang0._node.visible = false;
-    eat.gang1._node.visible = false;
-    eat.gang2._node.visible = false;
     eat.hu._node.visible = false;
     eat.guo._node.visible = false;
-    eat.cancel._node.visible = false;
-
-
     var pl = sData.players[SelfUid() + ""];
     MjClient.gangCards = [];
     MjClient.eatpos = [];
 
-    if (!pl) {
-        return;
-    }
-
-    var mj = MjClient.majiang;
-
+    if (!pl || !(pl.mjState == TableState.waitEat || pl.mjState == TableState.waitPut && tData.uids[tData.curPlayer] == SelfUid())) return;
     //吃碰杠胡node
     var vnode = [];
-
-    if (
-        pl.mjState == TableState.waitEat ||
-        pl.mjState == TableState.waitPut &&
-        tData.uids[tData.curPlayer] == SelfUid()) {
-
-    }
-    else {
-        return;
-    }
-
     //自摸
     if (tData.tState == TableState.waitPut && pl.mjState == TableState.waitPut) {
         if (IsTurnToMe()) {
@@ -4340,155 +4048,38 @@ PlayLayer_YNXueZhan.prototype.EatVisibleCheck = function () {
                 }
             }
             //胡
-            if (pl.isNew && pl.eatFlag & 8) {
-                vnode.push(eat.hu._node);
-            }
+            if (pl.isNew && pl.eatFlag & 8) vnode.push(eat.hu._node);
             // 杠
-            cc.log("=== pl.mjpeng :  " + pl.mjpeng)
-            cc.log("=== pl.mjhand :  " + pl.mjhand)
-            cc.log("=== pl.isTing :  " + pl.isTing)
             var rtn = MjClient.majiang.canGang1(pl.mjpeng, pl.mjhand, pl.isTing, pl.que);
-            cc.log("$$$$杠牌监测" + JSON.stringify(rtn));
             if (rtn.length > 0 && pl.isNew) {
+                // rtn = rtn.concat(rtn).concat(rtn);
                 MjClient.gangCards = rtn;
                 vnode.push(eat.gang0._node);
+                eat.gang0.num2._node.visible = rtn.length == 2;
+                eat.gang0.num3._node.visible = rtn.length == 3;
             }
-            if (vnode.length > 0) {
-                vnode.push(eat.guo._node);
-                eat.ting._node.visible = false;
-                eat.noTing._node.visible = false;
-                isCheckedTing = false;
-            }
+            if (vnode.length > 0) vnode.push(eat.guo._node);
         }
     }
     //别人点
     else if (tData.tState == TableState.waitEat) {
-        // cc.log("diao pao hu-=================================================");
         if (!IsTurnToMe()) {
-            cc.log("pl.eatFlag ---------------   ", pl.eatFlag);
-            if (pl.eatFlag & 8) {
-                vnode.push(eat.hu._node);
-            }
+            if (pl.eatFlag & 8) vnode.push(eat.hu._node);
             if (pl.eatFlag & 4) {
                 vnode.push(eat.gang0._node);
                 MjClient.gangCards = [tData.lastPutCard];
                 eat.gang0._node.visible = true;
-                setCardSprite(eat.gang0.card1._node, MjClient.gangCards[0], 0);
+                eat.gang0.num2._node.visible = false;
+                eat.gang0.num3._node.visible = false;
             }
-            if (pl.eatFlag & 2) {
-                vnode.push(eat.peng._node);
-            }
-            if (pl.eatFlag & 1) {
-                var eatpos = mj.canChi(pl.mjhand, tData.lastPutCard);
-                MjClient.eatpos = eatpos;
-                if (eatpos.length > 0) {
-                    vnode.push(eat.chi0._node);
-                }
-            }
+            if (pl.eatFlag & 2) vnode.push(eat.peng._node);
 
             //如果，有杠，碰，吃。 这出现过的UI. 否则玩家状态为等待
-            if (vnode.length > 0) {
-                vnode.push(eat.guo._node);
-                eat.ting._node.visible = false;
-                eat.noTing._node.visible = false;
-                isCheckedTing = false;
-            }
-            else {
-                getUIPlayer(0).mjState = TableState.waitCard;
-            }
+            if (vnode.length > 0) vnode.push(eat.guo._node);
+            else getUIPlayer(0).mjState = TableState.waitCard;
         }
     }
-
-    //吃碰杠胡过处理
-    if (vnode.length > 0) {
-        var btnImgs =
-        {
-            "peng": ["playing/gameTable/youxizhong-2_57.png", "playing/gameTable/youxizhong-2_07.png"],
-            "gang0": ["playing/gameTable/youxizhong-2_55.png", "playing/gameTable/youxizhong-2_05.png"],
-            "chi0": ["playing/gameTable/youxizhong-2_59.png", "playing/gameTable/youxizhong-2_09.png"],
-        }
-
-        for (var i = 0; i < vnode.length; i++) {
-            vnode[i].visible = true;
-
-            if (vnode[i].getChildByName("card1")) {
-                vnode[i].getChildByName("card1").visible = false;
-            }
-
-            if (vnode[i].getChildByName("bgground")) {
-                vnode[i].getChildByName("bgground").visible = false;
-            }
-
-            if (vnode[i].getChildByName("bgimg")) {
-                vnode[i].getChildByName("bgimg").visible = true;
-            }
-
-            var btnName = vnode[i].name;
-            if (btnName == "peng" || btnName == "chi0" || btnName == "gang0") {
-                vnode[i].loadTextureNormal(btnImgs[btnName][0]);
-                // vnode[i].loadTexturePressed(btnImgs[btnName][1]);
-            }
-
-            if (i == 0) {
-                var cardVal = 0;
-                if (vnode[i].getChildByName("bgimg")) {
-                    vnode[i].getChildByName("bgimg").visible = false;
-                }
-
-                if (btnName == "peng" || btnName == "chi0" || btnName == "gang0") {
-                    vnode[i].loadTextureNormal(btnImgs[btnName][0]);
-                    // vnode[i].loadTexturePressed(btnImgs[btnName][1]);
-                }
-
-                if (btnName == "peng") {
-                    cardVal = tData.lastPutCard;
-                }
-                else if (btnName == "chi0") {
-                    if (MjClient.eatpos.length == 1) {
-                        cardVal = tData.lastPutCard;
-                    }
-                }
-                else if (btnName == "gang0") {
-                    if (MjClient.gangCards.length == 1) {
-                        cardVal = MjClient.gangCards[0];
-                    }
-                }
-                else if (btnName == "hu") {
-                    if (IsTurnToMe()) {
-                        cardVal = pl.mjhand[pl.mjhand.length - 1];
-                    }
-                    else {
-                        cardVal = tData.lastPutCard;
-                    }
-                }
-
-                if (cardVal && cardVal > 0) {
-                    setCardSprite(vnode[0].getChildByName("card1"), cardVal, 0);
-                    vnode[0].getChildByName("card1").visible = true;
-                }
-
-                if (vnode[0].getChildByName("bgground")) {
-                    vnode[0].getChildByName("bgground").zIndex = -1;
-                    vnode[0].getChildByName("bgground").visible = true;
-                }
-
-                //屏蔽到 碰 ，杠 的显示牌 add by sking
-                if (vnode[0].getChildByName("bgground")) {
-                    vnode[0].getChildByName("bgground").visible = false;
-                }
-                if (vnode[i].getChildByName("card1")) {
-                    vnode[i].getChildByName("card1").visible = false;
-                }
-                //end of 屏蔽 碰，杠的显示牌
-            }
-
-            setWgtLayout(vnode[i], [0, 0.18], [0.5, 0], [(1 - vnode.length) / 1.8 + i * 1.4, 1.8], false, false);
-        }
-    }
-
-    if (eat.hu._node.visible) {
-        MjClient.playui._btnPutCard.visible = false;
-    }
+    if (eat.hu._node.visible) MjClient.playui._btnPutCard.visible = false;
 
     //显示，吃，碰，杠的那几张牌
     COMMON_UI.showCurrentEatCards(vnode);

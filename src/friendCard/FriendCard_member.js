@@ -2737,7 +2737,7 @@ var FriendCard_member = cc.Layer.extend({
 
     },
     refreshHead: function (url, head) {
-        head.loadTexture(url ? url : 'A_Common/HeadImgs/head_228.jpg', 1);
+        head.loadTexture(url ? url : DefaultHeadUrl, 1);
     },
     setFrozenImg: function (item, itemData, head) {
         if (itemData.isFrozen) {

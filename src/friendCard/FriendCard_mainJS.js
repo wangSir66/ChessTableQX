@@ -682,18 +682,9 @@ var FriendCard_main = cc.Layer.extend({
 		return FriendCard_Common.isManager(this.data.info);
 	},
 	refreshHead: function (url, head) {
-		var callFunc = function () {
-			var text_name = head.getChildByName("Text_name");
-			var text_nameBg = head.getChildByName("Text_nameBg");
-			if (text_name && text_nameBg) {
-				text_name.zIndex = 10;
-				text_nameBg.zIndex = 9;
-			}
-		}
-		head.callFunc = callFunc;
-		head.needScale = 8;
-		COMMON_UI.refreshHead(this, url, head);
-
+        // head.loadTexture(url ? url : DefaultHeadUrl, 1);
+		
+        COMMON_UI.refreshLocalHead(url, head)
 	},
 	refreshClubListPlayerCount: function (info) {
 		//这里未必是当前的亲友圈
@@ -1380,7 +1371,6 @@ var FriendCard_main = cc.Layer.extend({
 		// img_xuhao.setString(this._ruleSort[room.ruleIndex]);
 		// img_xuhao.ignoreContentAdaptWithSize(true);
 		for (var j = 0; j < 4 || j < room.maxPlayer; j++) {
-
 			var head = cell.getChildByName("head_" + (j + 1));
 			var yizi = cell.getChildByName("yizi_" + (j + 1));
 			if (!head.initPos) {
@@ -1416,13 +1406,8 @@ var FriendCard_main = cc.Layer.extend({
 				head.setVisible(false);
 				continue;
 			}
-			if (yizi) {
-				yizi.setVisible(false);
-			}
-			head.isMask = isMask;
-			head.headMask = "friendCards/common/headMask.png";
-			this.deleteCellRemoteHeadUI(head);
-			this.refreshHead(room.players[j].headimgurl, head);
+			if (yizi) yizi.setVisible(false);
+			this.refreshHead(room.players[j].headimgurl, head.getChildByName("headfrem"));
 
 			var name = head.getChildByName("Text_name");
 			name.setString(getNewName_new(unescape(room.players[j].nickname), isMask ? 5 : 6));

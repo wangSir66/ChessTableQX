@@ -1,0 +1,1 @@
+const DefaultHeadUrl = "A_Common/HeadImgs/head_444.jpg"
