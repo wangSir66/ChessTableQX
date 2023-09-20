@@ -66,6 +66,7 @@ FriendCard_Common.getRuleParm = function (infoData) {
             rule.ruleIndex = rIndx;
             rule._index = rIndx;
             rules.push(rule);
+            MjClient.RuleParam[key] = rule;
         }
         key = keys[++_indx];
         rule = infoData[key];
