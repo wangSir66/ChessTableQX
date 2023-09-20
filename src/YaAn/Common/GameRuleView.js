@@ -79,6 +79,9 @@ var GameRuleView = cc.Layer.extend({
                     }
                     col.setTouchEnabled(false);
                     this._btnItems.push(col);
+                    col.getChildByName('text').setTextColor(cc.color(BTNCOLOR1));
+                }else if (col.name == "text_1") {
+                    col.setTextColor(cc.color(BTNCOLOR4));
                 }
             }
             if (btns.length > 0) {
@@ -119,6 +122,6 @@ var GameRuleView = cc.Layer.extend({
         return false;
     },
     selectedCB: function (text) {
-        text.setTextColor('#602E1A');
+        text.setTextColor(cc.color(BTNCOLOR1));
     },
 });

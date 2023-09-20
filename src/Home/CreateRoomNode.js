@@ -2,6 +2,7 @@
 const BTNCOLOR1 = cc.color('#3271F6');//选中
 const BTNCOLOR2 = cc.color('#8E8178');//禁用
 const BTNCOLOR3 = cc.color("#3271F6");//未选中
+const BTNCOLOR4 = cc.color("#464C7E");//文本yanse
 const KEYCURRGAMERULE = 'KEY_CURR_GAME_RULE';//缓存游戏规则
 
 var CreateRoomNodeYaAn = cc.Node.extend({
@@ -233,7 +234,9 @@ var CreateRoomNodeYaAn = cc.Node.extend({
                         col.addEventListener(this.callSelectBack.bind(this), col);
                         this.addListenerText(col, null, this.callSelectBack.bind(this));
                     }
-                    col.getChildByName('text').setColor(cc.color(this._unSelectColor));
+                    col.getChildByName('text').setTextColor(cc.color(this._unSelectColor));
+                } else if (col.name == "text_1") {
+                    col.setTextColor(cc.color(BTNCOLOR4));
                 }
             }
             if (btns.length > 0) {
@@ -466,9 +469,13 @@ var CreateRoomNodeYaAn = cc.Node.extend({
     initFuwuFeiNode: function (row) {
         row.visible = this._data.clubType === 0;
         if (row.visible) {
+            row.getChildByName('text_1').setTextColor(cc.color(BTNCOLOR4));
+            row.getChildByName('difen').getChildByName('text_1').setTextColor(cc.color(BTNCOLOR4));
             this.qujianItems = [];
             //区间item
-            this.qujianItem = row.getChildByName('qujian').getChildByName('qujian0');
+            const qj = row.getChildByName('qujian');
+            qj.getChildByName('text_1').setTextColor(cc.color(BTNCOLOR4));
+            this.qujianItem = qj.getChildByName('qujian0');
             this.qujianItems.push(this.qujianItem);
             this.initQuJianItem();
             this.initFuWuFeiNodeFC(1);
@@ -678,7 +685,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         //add by sking for create room need GPS
         var _selectCol = CREATEROOM_COLOR_1;
         var _UnSelectCol = CREATEROOM_COLOR_3;
-        this._nodeGPS = new ccui.CheckBox("A_Common/Main/daTC1_19.png", "A_Common/Main/daTC1_20.png","A_Common/Main/daTC1_20.png","A_Common/Main/daTC1_19.png","A_Common/Main/daTC1_20.png", 1);
+        this._nodeGPS = new ccui.CheckBox("A_Common/Main/daTC1_19.png", "A_Common/Main/daTC1_20.png", "A_Common/Main/daTC1_20.png", "A_Common/Main/daTC1_19.png", "A_Common/Main/daTC1_20.png", 1);
         this._nodeGPS.setPosition(cc.p(50, 20));
         this.bg_node.addChild(this._nodeGPS, 100);
         if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ) {

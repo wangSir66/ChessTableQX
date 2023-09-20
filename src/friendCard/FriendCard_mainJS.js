@@ -682,9 +682,9 @@ var FriendCard_main = cc.Layer.extend({
 		return FriendCard_Common.isManager(this.data.info);
 	},
 	refreshHead: function (url, head) {
-        // head.loadTexture(url ? url : DefaultHeadUrl, 1);
-		
-        COMMON_UI.refreshLocalHead(url, head)
+		// head.loadTexture(url ? url : DefaultHeadUrl, 1);
+
+		COMMON_UI.refreshLocalHead(url, head)
 	},
 	refreshClubListPlayerCount: function (info) {
 		//这里未必是当前的亲友圈
@@ -1295,9 +1295,7 @@ var FriendCard_main = cc.Layer.extend({
 		item.visible = true;
 		for (var j = 0; j < 3; j++) {
 			var otherCell = item.getChildByName("cell" + (j + 3) + "_" + (i % 2 + 1));
-			if (otherCell) {
-				otherCell.visible = false;
-			}
+			if (otherCell) otherCell.visible = false;
 		}
 		var cell = item.getChildByName("cell4" + "_" + (i % 2 + 1))
 		if (!cell) {
