@@ -991,7 +991,7 @@ var PlayerGamePanel_Red20 = cc.Layer.extend({
         down: {
             head: {
                 redPoint: {
-                    _visible: false
+                    _visible: false,
                 },
                 tuoguan: {
                     _run: function () {
@@ -3851,7 +3851,7 @@ PlayerGamePanel_Red20.prototype.updateRedPointCount = function () {
     if (redPoint) {
         redPoint.visible = true;
         let txt = redPoint.getChildByName('Text');
-        txt.setString('红点: ' + rNum + '\n' + '黑点: ' + hNum);
+        txt.setString('红点: ' + (rNum > 9 ? rNum : ' ' + rNum) + '\n' + '黑点: ' + (hNum > 9 ? hNum : ' ' + hNum));
         txt.ignoreContentAdaptWithSize(true);
     }
 }

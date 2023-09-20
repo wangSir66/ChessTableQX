@@ -2631,7 +2631,7 @@ function EatFlag() {
         eatFlag = eatFlag + 16;
     }
 
-    if (eat.gang0._node.visible) {
+    if (eat.gang && eat.gang._node.visible) {
         eatFlag = eatFlag + 4;
     }
 
@@ -2639,7 +2639,7 @@ function EatFlag() {
         eatFlag = eatFlag + 4;
     }
 
-    if (eat.hu._node.visible) {
+    if (eat.hu && eat.hu._node.visible) {
         eatFlag = eatFlag + 8;
     }
 
@@ -2647,7 +2647,7 @@ function EatFlag() {
         eatFlag = eatFlag + 1;
     }
 
-    if (eat.peng._node.visible) {
+    if (eat.peng && eat.peng._node.visible) {
         eatFlag = eatFlag + 2;
     }
 
@@ -6142,17 +6142,17 @@ function MJChiPengGangWhenHu() {
     var showFun = function (node) {
         var eat = MjClient.playui.jsBind.eat;
         var func = function () {
-            if (node === eat.peng._node) {
+            if (node.name === 'peng') {
                 if (MjClient.gameType === MjClient.GAME_TYPE.TAO_JIANG_MA_JIANG) {
                     MjClient.majiang.MJPengToServer();
                 } else {
                     MJPengToServer();
                 }
             }
-            if (node === eat.gang0._node || node === eat.gang1._node || node === eat.gang2._node) {
+            if (node.name === 'gang0' || node.name === 'gang1' || node.name === 'gang2' || node.name === 'gang') {
                 MJGangCardchange();
             }
-            if (node === eat.chi0._node || node === eat.chi1._node || node === eat.chi2._node) {
+            if (node.name === 'chi0' || node.name === 'chi1' || node.name === 'chi2') {
                 MJChiCardchange();
             }
         };
@@ -6169,7 +6169,15 @@ function MJChiPengGangWhenHu() {
     };
 
 
-    var node = [eat.chi0._node, eat.chi1._node, eat.chi2._node, eat.gang0._node, eat.gang1._node, eat.gang2._node, eat.peng._node];
+    var node = [];
+    eat.chi0 && node.push(eat.chi0._node);
+    eat.chi1 && node.push(eat.chi1._node);
+    eat.chi2 && node.push(eat.chi2._node);
+    eat.gang0 && node.push(eat.gang0._node);
+    eat.gang1 && node.push(eat.gang1._node);
+    eat.gang2 && node.push(eat.gang2._node);
+    eat.peng && node.push(eat.peng._node);
+    eat.gang && node.push(eat.gang._node);
     for (var i = node.length - 1; cc.sys.isObjectValid(node[i]); i--) {
         node[i].addTouchEventListener(function (sel, tar) {
             if (tar === 2) showFun(sel);
@@ -6331,7 +6339,7 @@ function MJGangCardchange(tag) {
         cc.log("杠牌多选一11111" + JSON.stringify(gangCards))
         var card = null;
         var width = (cardTemplet.width - 7) * cardTemplet.scaleX;
-        var startX = changeuibg._node.width / 2 - width * 1.5;
+        var startX = cardTemplet.x;
         for (var i = 0; i < gangCards.length; i++) {
             if (gangCards[i] instanceof Array) {
                 var gCards = gangCards[i];
@@ -6353,7 +6361,7 @@ function MJGangCardchange(tag) {
                 }
             }
             else {
-                var num = 4;
+                var num = 1;
                 if ((MjClient.gameType == MjClient.GAME_TYPE.YUE_YANG_YI_JIAO_LAI_YOU || MjClient.gameType == MjClient.GAME_TYPE.HU_BEI_YI_JIAO_LAI_YOU)
                     && tData.chaoTianCard == gangCards[i]) {
                     num = 3;
@@ -6363,16 +6371,20 @@ function MJGangCardchange(tag) {
                     setCardSprite(card, gangCards[i], 4);
                     card.visible = true;
                     card.setName("card" + (i * 4 + j));
-                    card.setPosition(startX + j * width, cardTemplet.y + i * cardTemplet.height * cardTemplet.scaleY);
+                    // card.setPosition(startX + j * width, cardTemplet.y + i * cardTemplet.height * cardTemplet.scaleY);
+                    card.setPosition(startX, cardTemplet.y);
                     changeuibg._node.addChild(card);
-
+                    startX += width * 1.5
                     card.addTouchEventListener(changeuibg._node.gangTouch, card);
                 }
             }
         }
 
-        if (card)
-            changeuibg._node.height = card.y + card.height * card.scaleY * card.anchorY + 8.0;
+        if (card) {
+            let fh = changeuibg._node.getChildByName("fanhui"), wh = gangCards.length * card.width * card.scaleX * card.anchorX * 1.5 + cardTemplet.x * 2 + card.width / 2;
+            changeuibg._node.width = wh;
+            if(fh) fh.x = wh + fh.width / 2 * fh.scaleX;
+        }
     }
 }
 
@@ -9636,8 +9648,10 @@ function arrowbkNumberUpdate(node, endFunc, tikNum) {
 
 //隐藏听牌操作按钮
 function hideTingBtn() {
-    MjClient.playui.jsBind.eat.ting._node.visible = false;
-    MjClient.playui.jsBind.eat.noTing._node.visible = false;
+    let eat = MjClient.playui.jsBind.eat;
+    if (!eat) return;
+    eat.ting && (eat.ting._node.visible = false);
+    eat.noTing && (eat.noTing._node.visible = false);
 }
 
 

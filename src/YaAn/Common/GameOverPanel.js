@@ -2,7 +2,7 @@
 function CircularCuttingHeadImg(node, pl, isCirl) {
     var head = node;
     var url = pl.info.headimgurl;
-    if (!url) url = "A_Common/HeadImgs/head_102.jpg";
+    if (!url) url = DefaultHeadUrl;
     if (isCirl) {
         var clippingNode = new cc.ClippingNode();
         var mask = new cc.Sprite("Red20/DeskTexture/player_blue_bg.png");

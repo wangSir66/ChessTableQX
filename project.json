@@ -48,6 +48,7 @@
         
         "src/Common/UIManager.js",
         "src/Common/CalculatorView.js",
+        "src/Common/ConfigStatic.js",
 
         "src/Login/Update.js",
         "src/Login/LoginPanel.js",
