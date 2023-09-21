@@ -1223,7 +1223,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 _run: function () {
                     var tData = MjClient.data.sData.tData,
                         num = 0.8;
-                    if (tData && tData.areaSelectMode && tData.areaSelectMode.Forming) num = -1 * (tData.areaSelectMode.Forming + 4) / 2;
+                    if (tData && tData.areaSelectMode && tData.areaSelectMode.Forming) num = -1 * (tData.areaSelectMode.Forming + 5) / 2;
                     setWgtLayout(this, [0.05, 0], [0.5, 0], [num, 0.7]);
                 }
             },
@@ -4107,18 +4107,18 @@ PlayLayer_YNXueZhan.prototype.playSignAnimation = function (node, off, dir, ani 
     node.addChild(sign);
     if (dir == 2) {
         posX = node.getContentSize().width / 6;
-        posY = node.getContentSize().height / 6 * 5
         setWgtLayout(sign, [1, 1], [0.64, -0.71], [0.5, 0.5]);
     }
     else if (dir == 3) {
+        posX = node.getContentSize().width / 6;
         setWgtLayout(sign, [1, 1], [1.02, -0.31], [0.5, 0.5]);
     }
     else if (dir == 1) {
-        posX = node.getContentSize().width / 6;
         setWgtLayout(sign, [1, 1], [-0.935, -0.325], [0.5, 0.5]);
     }
     else if (dir == 0) {
-        setWgtLayout(sign, [1, 1], [1.02, 0.43], [0.5, 0.5]);
+        posX = node.getContentSize().width / 6;
+        setWgtLayout(sign, [1, 1], [0, 0.43], [-0.5, 0.5]);
     }
     if (ani)
         sign.runAction(cc.spawn(cc.scaleTo(0.7, 1), cc.moveTo(0.7, cc.p(posX, posY))));

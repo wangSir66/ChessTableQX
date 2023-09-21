@@ -118,14 +118,15 @@
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="XueZhanDaoDi/final_tip_bg.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="head" ActionTag="1215668331" Tag="1387" IconVisible="True" LeftMargin="-75.2153" RightMargin="75.2153" TopMargin="-143.2380" BottomMargin="143.2380" ctype="SingleNodeObjectData">
-                    <Size X="0.0000" Y="0.0000" />
-                    <AnchorPoint />
-                    <Position X="-75.2153" Y="143.2380" />
+                  <AbstractNodeData Name="head" ActionTag="-1137681502" Tag="526" IconVisible="False" LeftMargin="-115.2200" RightMargin="35.2200" TopMargin="-183.2400" BottomMargin="103.2400" Scale9Enable="True" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
+                    <Size X="80.0000" Y="80.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="-75.2200" Y="143.2400" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
+                    <FileData Type="Normal" Path="A_Common/default_headpic.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="head_bg" ActionTag="-755017707" Tag="1381" IconVisible="False" LeftMargin="-116.0769" RightMargin="35.0769" TopMargin="-184.9086" BottomMargin="103.9086" ctype="SpriteObjectData">
                     <Size X="81.0000" Y="81.0000" />
@@ -441,7 +442,7 @@
                 <PrePosition X="0.1375" Y="0.5000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="head1" ActionTag="1691582975" Tag="563" IconVisible="True" LeftMargin="185.9999" RightMargin="1094.0000" TopMargin="360.0000" BottomMargin="360.0000" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="head1" Visible="False" ActionTag="1691582975" Tag="563" IconVisible="True" LeftMargin="185.9999" RightMargin="1094.0001" TopMargin="360.0000" BottomMargin="360.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="bg" ActionTag="1789110436" Tag="564" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-129.5000" RightMargin="-129.5000" TopMargin="-208.5000" BottomMargin="-208.5000" Scale9Enable="True" LeftEage="37" RightEage="37" TopEage="38" BottomEage="38" Scale9OriginX="37" Scale9OriginY="38" Scale9Width="185" Scale9Height="341" ctype="ImageViewObjectData">
@@ -454,14 +455,15 @@
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="XueZhanDaoDi/final_tip_bg.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="head" ActionTag="-847203053" Tag="565" IconVisible="True" LeftMargin="-75.2153" RightMargin="75.2153" TopMargin="-143.2380" BottomMargin="143.2380" ctype="SingleNodeObjectData">
-                    <Size X="0.0000" Y="0.0000" />
-                    <AnchorPoint />
-                    <Position X="-75.2153" Y="143.2380" />
+                  <AbstractNodeData Name="head" ActionTag="-1375511529" Tag="527" IconVisible="False" LeftMargin="-115.2200" RightMargin="35.2200" TopMargin="-183.2400" BottomMargin="103.2400" Scale9Enable="True" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
+                    <Size X="80.0000" Y="80.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="-75.2200" Y="143.2400" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
+                    <FileData Type="Normal" Path="A_Common/default_headpic.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="head_bg" ActionTag="-1151828662" Tag="566" IconVisible="False" LeftMargin="-116.0769" RightMargin="35.0769" TopMargin="-184.9086" BottomMargin="103.9086" ctype="SpriteObjectData">
                     <Size X="81.0000" Y="81.0000" />
@@ -777,7 +779,7 @@
                 <PrePosition X="0.1453" Y="0.5000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="head2" ActionTag="-382068806" Tag="593" IconVisible="True" LeftMargin="195.9999" RightMargin="1084.0001" TopMargin="360.0000" BottomMargin="360.0000" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="head2" Visible="False" ActionTag="-382068806" Tag="593" IconVisible="True" LeftMargin="195.9999" RightMargin="1084.0001" TopMargin="360.0000" BottomMargin="360.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="bg" ActionTag="-94368744" Tag="594" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-129.5000" RightMargin="-129.5000" TopMargin="-208.5000" BottomMargin="-208.5000" Scale9Enable="True" LeftEage="37" RightEage="37" TopEage="38" BottomEage="38" Scale9OriginX="37" Scale9OriginY="38" Scale9Width="185" Scale9Height="341" ctype="ImageViewObjectData">
@@ -790,14 +792,15 @@
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="XueZhanDaoDi/final_tip_bg.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="head" ActionTag="-434334719" Tag="595" IconVisible="True" LeftMargin="-75.2153" RightMargin="75.2153" TopMargin="-143.2380" BottomMargin="143.2380" ctype="SingleNodeObjectData">
-                    <Size X="0.0000" Y="0.0000" />
-                    <AnchorPoint />
-                    <Position X="-75.2153" Y="143.2380" />
+                  <AbstractNodeData Name="head" ActionTag="1959439402" Tag="528" IconVisible="False" LeftMargin="-115.2200" RightMargin="35.2200" TopMargin="-183.2400" BottomMargin="103.2400" Scale9Enable="True" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
+                    <Size X="80.0000" Y="80.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="-75.2200" Y="143.2400" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
+                    <FileData Type="Normal" Path="A_Common/default_headpic.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="head_bg" ActionTag="-1027843956" Tag="596" IconVisible="False" LeftMargin="-116.0769" RightMargin="35.0769" TopMargin="-184.9086" BottomMargin="103.9086" ctype="SpriteObjectData">
                     <Size X="81.0000" Y="81.0000" />
@@ -1113,7 +1116,7 @@
                 <PrePosition X="0.1531" Y="0.5000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="head3" ActionTag="771040144" Tag="623" IconVisible="True" LeftMargin="205.9999" RightMargin="1074.0000" TopMargin="360.0000" BottomMargin="360.0000" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="head3" Visible="False" ActionTag="771040144" Tag="623" IconVisible="True" LeftMargin="205.9999" RightMargin="1074.0001" TopMargin="360.0000" BottomMargin="360.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="bg" ActionTag="-440370889" Tag="624" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-129.5000" RightMargin="-129.5000" TopMargin="-208.5000" BottomMargin="-208.5000" Scale9Enable="True" LeftEage="37" RightEage="37" TopEage="38" BottomEage="38" Scale9OriginX="37" Scale9OriginY="38" Scale9Width="185" Scale9Height="341" ctype="ImageViewObjectData">
@@ -1126,14 +1129,15 @@
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="XueZhanDaoDi/final_tip_bg.png" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="head" ActionTag="-1356080352" Tag="625" IconVisible="True" LeftMargin="-75.2153" RightMargin="75.2153" TopMargin="-143.2380" BottomMargin="143.2380" ctype="SingleNodeObjectData">
-                    <Size X="0.0000" Y="0.0000" />
-                    <AnchorPoint />
-                    <Position X="-75.2153" Y="143.2380" />
+                  <AbstractNodeData Name="head" ActionTag="700131898" Tag="529" IconVisible="False" LeftMargin="-115.2200" RightMargin="35.2200" TopMargin="-183.2400" BottomMargin="103.2400" Scale9Enable="True" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
+                    <Size X="80.0000" Y="80.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="-75.2200" Y="143.2400" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
+                    <FileData Type="Normal" Path="A_Common/default_headpic.png" Plist="" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="head_bg" ActionTag="-1899008842" Tag="626" IconVisible="False" LeftMargin="-116.0769" RightMargin="35.0769" TopMargin="-184.9086" BottomMargin="103.9086" ctype="SpriteObjectData">
                     <Size X="81.0000" Y="81.0000" />
@@ -1449,7 +1453,7 @@
                 <PrePosition X="0.1609" Y="0.5000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="btnReplay" ActionTag="-1953946573" Tag="913" IconVisible="False" LeftMargin="817.1970" RightMargin="266.8030" TopMargin="612.4801" BottomMargin="25.5199" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+              <AbstractNodeData Name="btnReplay" Visible="False" ActionTag="-1953946573" Tag="913" IconVisible="False" LeftMargin="817.1970" RightMargin="266.8030" TopMargin="612.4801" BottomMargin="25.5199" TouchEnable="True" FontSize="14" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="166" Scale9Height="60" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
                 <Size X="196.0000" Y="82.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="915.1970" Y="66.5199" />

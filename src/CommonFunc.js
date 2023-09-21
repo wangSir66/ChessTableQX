@@ -2631,7 +2631,7 @@ function EatFlag() {
         eatFlag = eatFlag + 16;
     }
 
-    if (eat.gang && eat.gang._node.visible) {
+    if (eat.gang0 && eat.gang0._node.visible) {
         eatFlag = eatFlag + 4;
     }
 

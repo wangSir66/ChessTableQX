@@ -7602,6 +7602,7 @@
         <Project Name="A_Enter.csd" Type="Layer" />
         <Project Name="A_Friendcard_gaojiSet.csd" Type="Layer" />
         <Project Name="A_Friendcard_info.csd" Type="Layer" />
+        <Project Name="A_Friendcard_inputRuleNameDialog.csd" Type="Layer" />
         <Project Name="A_Friendcard_main.csd" Type="Layer" />
         <Project Name="A_Friendcard_member.csd" Type="Layer" />
         <Project Name="A_Friendcard_member_manage.csd" Type="Layer" />
@@ -7648,7 +7649,6 @@
         <Project Name="friendcard_findagain.csd" Type="Layer" />
         <Project Name="friendcard_gonggao.csd" Type="Node" />
         <Project Name="friendcard_guideLayer.csd" Type="Layer" />
-        <Project Name="A_Friendcard_inputRuleNameDialog.csd" Type="Layer" />
         <Project Name="friendcard_invite_shenhe.csd" Type="Layer" />
         <Project Name="friendcard_manageRecord.csd" Type="Node" />
         <Project Name="friendcard_member_daoru_result.csd" Type="Layer" />
