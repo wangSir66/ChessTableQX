@@ -1439,9 +1439,10 @@ function setCommonMsg(node, pl, off, isCirl) {
     var sData = MjClient.data.sData;
     let pData = sData.players[pl.info.uid],
         len = Object.keys(sData.players).length,
+        bw = node.getChildByName('bg').width,
         w = node.getParent().width,
-        spce = (w - len * node.getChildByName('bg').width) / (len + 1);
-    node.x = spce + (node.getChildByName('bg').width + spce) * off;
+        spce = (w - len * bw) / (len + 1);
+    node.x = spce + (bw + spce) * off + bw / 2;
     node.setVisible(true);
     CircularCuttingHeadImg(node.getChildByName('head'), pl, isCirl);
     var uidSelf = SelfUid();
