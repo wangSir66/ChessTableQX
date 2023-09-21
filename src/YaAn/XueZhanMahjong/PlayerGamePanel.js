@@ -1749,21 +1749,16 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 _layout: [
                     [0, 0.08],
                     [1, 1],
-                    [-5.5, -2.3]
+                    [-6.5, -3.2]
                 ],
                 _visible: false,
-                _event: {
-                    mjhand: function () {
-                        this.visible = false;
-                    }
-                }
             },
 
             up: {
                 _layout: [
                     [0, 0.05],
                     [1, 0],
-                    [-3.0, 6]
+                    [-3.2, 6]
                 ],
                 _visible: false
             },
@@ -2502,7 +2497,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 _layout: [
                     [0, 0.05],
                     [0, 1],
-                    [3.0, -3.5]
+                    [3.2, -5.5]
                 ],
                 _visible: false
             },
@@ -2510,7 +2505,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 _layout: [
                     [0, 0.05],
                     [0, 1],
-                    [3, -3]
+                    [3.2, -3]
                 ],
                 _visible: false
             },
@@ -2518,7 +2513,7 @@ var PlayLayer_YNXueZhan = cc.Layer.extend({
                 _layout: [
                     [0, 0.08],
                     [0, 0.6],
-                    [5.2, 3]
+                    [6.5, 3]
                 ],
                 _visible: false,
                 _event: {
@@ -3834,10 +3829,10 @@ PlayLayer_YNXueZhan.prototype.CardLayoutRestore = function (node, off) {
                         }
                         else {
                             if (off == 0) {
-                                ci.x = orders[i - 1].x + upSize.width * upS * 0.91;
+                                ci.x = orders[i - 1].x + upSize.width * upS * 1.05;
                             }
                             else {
-                                ci.x = orders[i - 1].x + upSize.width * upS * 1.05;//对家的手牌
+                                ci.x = orders[i - 1].x + upSize.width * upS * 1.1;//对家的手牌
                             }
                         }
                     }

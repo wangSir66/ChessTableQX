@@ -97,7 +97,7 @@ function SetEndOneUserUI(node, off) {
 					//添加手牌
 					for (var i = 0; i < pl.mjhand.length; i++) {
 
-						arry.push(getNewCard(node, "up", "mjhand", pl.mjhand[i], 0));
+						arry.push(getNewCard(node, "up", "mjhand1", pl.mjhand[i], 0));
 					}
 
 					for (var i = 0; i < arry.length; i++) {
@@ -105,8 +105,6 @@ function SetEndOneUserUI(node, off) {
 						arry[i].enabled = false;
 						arry[i].setScale(arry[i].getScale() * 1.1);
 					}
-
-
 					CardLayoutRestoreForEndOne(node, pl);
 
 				},
@@ -122,7 +120,6 @@ function SetEndOneUserUI(node, off) {
 					this.ignoreContentAdaptWithSize(true);
 				},
 				_text: function () {
-					cc.log('----', JSON.stringify(pl))
 					return pl.mjdesc + ""
 				},
 			},
@@ -132,13 +129,13 @@ function SetEndOneUserUI(node, off) {
 			weixiajiao: {
 				_visible: false,
 				_run: function () {
-					this.visible = pl.huDesc.indexOf('未下叫') > -1;
+					this.visible = pl.IsReadyTo == false && !(pl.winType > 0);
 				}
 			},
 			chahuazhu: {
 				_visible: false,
 				_run: function () {
-					this.visible = false;
+					this.visible = pl.IsColorfulPig;
 				}
 			}
 		},
@@ -157,7 +154,7 @@ function SetEndOneUserUI(node, off) {
 		},
 		hu: {
 			_run: function () {
-				setGameOverPanelPlayerState(this, pl, true);
+				setGameOverPanelPlayerState(this, pl, false);
 			}
 		}
 	}
@@ -935,7 +932,7 @@ function CardLayoutRestoreForEndOne(node, endonepl, isHu) {
 	var children = node.children;
 	for (var i = 0; i < children.length; i++) {
 		var ci = children[i];
-		if (ci.name == "mjhand") {
+		if (ci.name == "mjhand1") {
 			mjhandNum++;
 		}
 	}
@@ -970,7 +967,7 @@ function CardLayoutRestoreForEndOne(node, endonepl, isHu) {
 	for (var i = 0; i < children.length; i++) //children 为 "down" 节点下的字节点
 	{
 		var ci = children[i];
-		if (ci.name == "mjhand") {
+		if (ci.name == "mjhand1") {
 			if (newC == null && newVal == ci.tag) {
 				newC = ci; //从down 节点下，复制一个麻将node保存在newC 里 by sking
 			}
@@ -1056,7 +1053,7 @@ function CardLayoutRestoreForEndOne(node, endonepl, isHu) {
 	var slotheigt = upSize.height * upS * 0.3;
 	for (var i = 0; i < orders.length; i++) {
 		var ci = orders[i];
-		if (ci.name == "mjhand" && MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
+		if (ci.name == "mjhand1" && MjClient.getAppType() == MjClient.APP_TYPE.QXHAIANMJ) {
 			ci.y += 5;
 		}
 		if (i != 0) {
@@ -1072,11 +1069,11 @@ function CardLayoutRestoreForEndOne(node, endonepl, isHu) {
 					ci.x = orders[i - 2].x + upSize.width * upS * 1.2 + slotwith;
 				}
 				else {
-					if (ci.name == "mjhand") {
-						ci.x = orders[i - 1].x + upSize.width * upS * 1.35;
+					if (ci.name == "mjhand1") {
+						ci.x = orders[i - 1].x + upSize.width * upS * 1.24;
 					}
 					else {
-						ci.x = orders[i - 1].x + upSize.width * upS * 1.2;
+						ci.x = orders[i - 1].x + upSize.width * upS * 1.24;
 					}
 				}
 			}
@@ -1091,7 +1088,6 @@ function CardLayoutRestoreForEndOne(node, endonepl, isHu) {
 			}
 
 			if (i == orders.length - 1) {
-				cc.log("--------newC--------" + newC);
 				if (newC && endonepl) {
 					ci.x = ci.x + slotwith + 10;
 				}

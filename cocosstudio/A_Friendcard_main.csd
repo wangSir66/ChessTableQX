@@ -238,27 +238,47 @@
                               <AbstractNodeData Name="cell4_1" ActionTag="1490431409" Tag="670" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="51.0000" RightMargin="51.0000" TopMargin="12.8000" BottomMargin="267.2000" TouchEnable="True" ClipAble="False" BackColorAlpha="0" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                                 <Size X="260.0000" Y="250.0000" />
                                 <Children>
-                                  <AbstractNodeData Name="yizi_3" ActionTag="-863861007" Tag="676" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-19.0040" RightMargin="223.0040" TopMargin="12.8000" BottomMargin="115.2000" FlipX="True" LeftEage="22" RightEage="22" TopEage="24" BottomEage="24" Scale9OriginX="22" Scale9OriginY="24" Scale9Width="12" Scale9Height="74" ctype="ImageViewObjectData">
+                                  <AbstractNodeData Name="yizi_3" ActionTag="-863861007" Tag="676" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-20.0045" RightMargin="224.0045" TopMargin="12.6250" BottomMargin="115.3750" FlipX="True" LeftEage="22" RightEage="22" TopEage="24" BottomEage="24" Scale9OriginX="22" Scale9OriginY="24" Scale9Width="12" Scale9Height="74" ctype="ImageViewObjectData">
                                     <Size X="56.0000" Y="122.0000" />
                                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="8.9960" Y="176.2000" />
+                                    <Position X="7.9955" Y="176.3750" />
                                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                                     <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.0346" Y="0.7048" />
+                                    <PrePosition X="0.0308" Y="0.7055" />
                                     <PreSize X="0.2154" Y="0.4880" />
                                     <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/yizi_1_0.png" Plist="A_FriendCard/FriendCardMain.plist" />
                                   </AbstractNodeData>
-                                  <AbstractNodeData Name="yizi_2" ActionTag="1693540925" Tag="677" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="217.3620" RightMargin="-13.3620" TopMargin="11.6250" BottomMargin="116.3750" LeftEage="22" RightEage="22" TopEage="24" BottomEage="24" Scale9OriginX="22" Scale9OriginY="24" Scale9Width="12" Scale9Height="74" ctype="ImageViewObjectData">
+                                  <AbstractNodeData Name="yizi_2" ActionTag="1693540925" Tag="677" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="223.3611" RightMargin="-19.3611" TopMargin="12.6244" BottomMargin="115.3756" LeftEage="22" RightEage="22" TopEage="24" BottomEage="24" Scale9OriginX="22" Scale9OriginY="24" Scale9Width="12" Scale9Height="74" ctype="ImageViewObjectData">
                                     <Size X="56.0000" Y="122.0000" />
                                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="245.3620" Y="177.3750" />
+                                    <Position X="251.3611" Y="176.3756" />
                                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                                     <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.9437" Y="0.7095" />
+                                    <PrePosition X="0.9668" Y="0.7055" />
                                     <PreSize X="0.2154" Y="0.4880" />
                                     <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/yizi_1_0.png" Plist="A_FriendCard/FriendCardMain.plist" />
                                   </AbstractNodeData>
-                                  <AbstractNodeData Name="table" ActionTag="1388406116" Tag="673" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="3.0560" RightMargin="7.9440" TopMargin="45.3500" BottomMargin="22.6500" LeftEage="34" RightEage="34" TopEage="31" BottomEage="31" Scale9OriginX="34" Scale9OriginY="31" Scale9Width="181" Scale9Height="120" ctype="ImageViewObjectData">
+                                  <AbstractNodeData Name="yizi_4" ActionTag="378932920" Tag="678" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="182.6140" RightMargin="-34.6140" TopMargin="125.1250" BottomMargin="-16.1250" LeftEage="22" RightEage="22" TopEage="36" BottomEage="36" Scale9OriginX="22" Scale9OriginY="36" Scale9Width="68" Scale9Height="69" ctype="ImageViewObjectData">
+                                    <Size X="112.0000" Y="141.0000" />
+                                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                    <Position X="238.6140" Y="54.3750" />
+                                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                                    <CColor A="255" R="255" G="255" B="255" />
+                                    <PrePosition X="0.9177" Y="0.2175" />
+                                    <PreSize X="0.4308" Y="0.5640" />
+                                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/yizi_1_1.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                                  </AbstractNodeData>
+                                  <AbstractNodeData Name="yizi_1" ActionTag="-733097002" Tag="675" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-34.3391" RightMargin="182.3391" TopMargin="125.1249" BottomMargin="-16.1249" FlipX="True" LeftEage="22" RightEage="22" TopEage="36" BottomEage="36" Scale9OriginX="22" Scale9OriginY="36" Scale9Width="68" Scale9Height="69" ctype="ImageViewObjectData">
+                                    <Size X="112.0000" Y="141.0000" />
+                                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                                    <Position X="21.6609" Y="54.3751" />
+                                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                                    <CColor A="255" R="255" G="255" B="255" />
+                                    <PrePosition X="0.0833" Y="0.2175" />
+                                    <PreSize X="0.4308" Y="0.5640" />
+                                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/yizi_1_1.png" Plist="A_FriendCard/FriendCardMain.plist" />
+                                  </AbstractNodeData>
+                                  <AbstractNodeData Name="table" ActionTag="1388406116" Tag="673" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="5.5000" RightMargin="5.5000" TopMargin="45.3500" BottomMargin="22.6500" LeftEage="34" RightEage="34" TopEage="31" BottomEage="31" Scale9OriginX="34" Scale9OriginY="31" Scale9Width="181" Scale9Height="120" ctype="ImageViewObjectData">
                                     <Size X="249.0000" Y="182.0000" />
                                     <Children>
                                       <AbstractNodeData Name="Text_nameBg_0" ActionTag="39473702" Tag="190" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="92.9362" RightMargin="86.0638" TopMargin="14.1812" BottomMargin="142.8188" LeftEage="24" RightEage="24" TopEage="10" BottomEage="10" Scale9OriginX="24" Scale9OriginY="10" Scale9Width="57" Scale9Height="6" ctype="ImageViewObjectData">
@@ -322,10 +342,10 @@
                                       </AbstractNodeData>
                                     </Children>
                                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="127.5560" Y="113.6500" />
+                                    <Position X="130.0000" Y="113.6500" />
                                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                                     <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.4906" Y="0.4546" />
+                                    <PrePosition X="0.5000" Y="0.4546" />
                                     <PreSize X="0.9577" Y="0.7280" />
                                     <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/zhuozi_3.png" Plist="A_FriendCard/FriendCardMain.plist" />
                                   </AbstractNodeData>
@@ -353,27 +373,7 @@
                                     <PreSize X="0.1423" Y="0.2000" />
                                     <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/img_qian.png" Plist="A_FriendCard/FriendCardMain.plist" />
                                   </AbstractNodeData>
-                                  <AbstractNodeData Name="yizi_1" ActionTag="-733097002" Tag="675" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-45.3400" RightMargin="193.3400" TopMargin="125.1250" BottomMargin="-16.1250" FlipX="True" LeftEage="22" RightEage="22" TopEage="36" BottomEage="36" Scale9OriginX="22" Scale9OriginY="36" Scale9Width="68" Scale9Height="69" ctype="ImageViewObjectData">
-                                    <Size X="112.0000" Y="141.0000" />
-                                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="10.6600" Y="54.3750" />
-                                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                                    <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.0410" Y="0.2175" />
-                                    <PreSize X="0.4308" Y="0.5640" />
-                                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/yizi_1_1.png" Plist="A_FriendCard/FriendCardMain.plist" />
-                                  </AbstractNodeData>
-                                  <AbstractNodeData Name="yizi_4" ActionTag="378932920" Tag="678" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="168.6140" RightMargin="-20.6140" TopMargin="136.7750" BottomMargin="-27.7750" LeftEage="22" RightEage="22" TopEage="36" BottomEage="36" Scale9OriginX="22" Scale9OriginY="36" Scale9Width="68" Scale9Height="69" ctype="ImageViewObjectData">
-                                    <Size X="112.0000" Y="141.0000" />
-                                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="224.6140" Y="42.7250" />
-                                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                                    <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.8639" Y="0.1709" />
-                                    <PreSize X="0.4308" Y="0.5640" />
-                                    <FileData Type="MarkedSubImage" Path="A_FriendCard/Main/yizi_1_1.png" Plist="A_FriendCard/FriendCardMain.plist" />
-                                  </AbstractNodeData>
-                                  <AbstractNodeData Name="head_4" ActionTag="2064449521" Tag="198" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="194.8140" RightMargin="-4.8140" TopMargin="124.8250" BottomMargin="55.1750" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
+                                  <AbstractNodeData Name="head_4" ActionTag="2064449521" Tag="198" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="205.5260" RightMargin="-15.5260" TopMargin="133.6691" BottomMargin="46.3309" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
                                     <Size X="70.0000" Y="70.0000" />
                                     <Children>
                                       <AbstractNodeData Name="headfrem" ActionTag="-2128132555" Tag="1062" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.0000" RightMargin="1.0000" TopMargin="1.0000" BottomMargin="1.0000" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
@@ -430,14 +430,14 @@
                                       </AbstractNodeData>
                                     </Children>
                                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="229.8140" Y="90.1750" />
+                                    <Position X="240.5260" Y="81.3309" />
                                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                                     <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.8839" Y="0.3607" />
+                                    <PrePosition X="0.9251" Y="0.3253" />
                                     <PreSize X="0.2692" Y="0.2800" />
                                     <FileData Type="MarkedSubImage" Path="A_Common/Main/avatar.png" Plist="A_Common/Common.plist" />
                                   </AbstractNodeData>
-                                  <AbstractNodeData Name="head_2" ActionTag="314876255" Tag="508" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="179.7860" RightMargin="10.2140" TopMargin="-12.5750" BottomMargin="192.5750" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
+                                  <AbstractNodeData Name="head_2" ActionTag="314876255" Tag="508" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="205.5201" RightMargin="-15.5201" TopMargin="3.5012" BottomMargin="176.4988" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
                                     <Size X="70.0000" Y="70.0000" />
                                     <Children>
                                       <AbstractNodeData Name="headfrem" ActionTag="-732699690" Tag="1063" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.0000" RightMargin="1.0000" TopMargin="1.0000" BottomMargin="1.0000" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
@@ -494,14 +494,14 @@
                                       </AbstractNodeData>
                                     </Children>
                                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="214.7860" Y="227.5750" />
+                                    <Position X="240.5201" Y="211.4988" />
                                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                                     <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.8261" Y="0.9103" />
+                                    <PrePosition X="0.9251" Y="0.8460" />
                                     <PreSize X="0.2692" Y="0.2800" />
                                     <FileData Type="MarkedSubImage" Path="A_Common/Main/avatar.png" Plist="A_Common/Common.plist" />
                                   </AbstractNodeData>
-                                  <AbstractNodeData Name="head_3" ActionTag="-712374601" Tag="518" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-1.5120" RightMargin="191.5120" TopMargin="-8.8750" BottomMargin="188.8750" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
+                                  <AbstractNodeData Name="head_3" ActionTag="-712374601" Tag="518" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-16.7220" RightMargin="206.7220" TopMargin="3.5000" BottomMargin="176.5000" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
                                     <Size X="70.0000" Y="70.0000" />
                                     <Children>
                                       <AbstractNodeData Name="headfrem" ActionTag="-615817509" Tag="1064" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.0000" RightMargin="1.0000" TopMargin="1.0000" BottomMargin="1.0000" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
@@ -558,14 +558,14 @@
                                       </AbstractNodeData>
                                     </Children>
                                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="33.4880" Y="223.8750" />
+                                    <Position X="18.2780" Y="211.5000" />
                                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                                     <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.1288" Y="0.8955" />
+                                    <PrePosition X="0.0703" Y="0.8460" />
                                     <PreSize X="0.2692" Y="0.2800" />
                                     <FileData Type="MarkedSubImage" Path="A_Common/Main/avatar.png" Plist="A_Common/Common.plist" />
                                   </AbstractNodeData>
-                                  <AbstractNodeData Name="head_1" ActionTag="456374756" Tag="523" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-18.8280" RightMargin="208.8280" TopMargin="115.7000" BottomMargin="64.3000" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
+                                  <AbstractNodeData Name="head_1" ActionTag="456374756" Tag="523" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="-16.7220" RightMargin="206.7220" TopMargin="133.6750" BottomMargin="46.3250" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
                                     <Size X="70.0000" Y="70.0000" />
                                     <Children>
                                       <AbstractNodeData Name="headfrem" ActionTag="-350666631" Tag="1065" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="1.0000" RightMargin="1.0000" TopMargin="1.0000" BottomMargin="1.0000" LeftEage="21" RightEage="21" TopEage="21" BottomEage="21" Scale9OriginX="21" Scale9OriginY="21" Scale9Width="28" Scale9Height="28" ctype="ImageViewObjectData">
@@ -622,10 +622,10 @@
                                       </AbstractNodeData>
                                     </Children>
                                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                                    <Position X="16.1720" Y="99.3000" />
+                                    <Position X="18.2780" Y="81.3250" />
                                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                                     <CColor A="255" R="255" G="255" B="255" />
-                                    <PrePosition X="0.0622" Y="0.3972" />
+                                    <PrePosition X="0.0703" Y="0.3253" />
                                     <PreSize X="0.2692" Y="0.2800" />
                                     <FileData Type="MarkedSubImage" Path="A_Common/Main/avatar.png" Plist="A_Common/Common.plist" />
                                   </AbstractNodeData>
