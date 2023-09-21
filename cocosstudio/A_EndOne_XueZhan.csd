@@ -57,7 +57,7 @@
                     <OutlineColor A="255" R="96" G="69" B="40" />
                     <ShadowColor A="255" R="96" G="69" B="40" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="head" ActionTag="409642048" Tag="837" IconVisible="False" LeftMargin="-593.4908" RightMargin="525.4908" TopMargin="-206.2347" BottomMargin="138.2347" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="head" ActionTag="409642048" Tag="837" IconVisible="False" LeftMargin="-577.4900" RightMargin="509.4900" TopMargin="-206.2347" BottomMargin="138.2347" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
                     <Size X="68.0000" Y="68.0000" />
                     <Children>
                       <AbstractNodeData Name="zhuang" ActionTag="1114527857" Tag="2334" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-1.4280" RightMargin="-0.5720" TopMargin="45.8490" BottomMargin="0.1510" ctype="SpriteObjectData">
@@ -81,33 +81,33 @@
                         <PreSize X="1.0588" Y="1.0588" />
                         <FileData Type="MarkedSubImage" Path="A_Common/Main/avatar.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="up" ActionTag="-778467060" Tag="2336" IconVisible="False" LeftMargin="151.3348" RightMargin="-138.3348" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="33" Scale9Height="48" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="up" ActionTag="-778467060" Tag="2336" IconVisible="False" LeftMargin="124.3350" RightMargin="-111.3350" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="33" Scale9Height="48" ctype="ImageViewObjectData">
                         <Size X="55.0000" Y="84.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="178.8348" Y="35.0000" />
+                        <Position X="151.8350" Y="35.0000" />
                         <Scale ScaleX="0.6500" ScaleY="0.6500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="2.6299" Y="0.5147" />
+                        <PrePosition X="2.2329" Y="0.5147" />
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_206.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="down" ActionTag="316853101" Tag="2339" IconVisible="False" LeftMargin="211.0656" RightMargin="-188.0656" TopMargin="-1.0000" BottomMargin="1.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="9" Scale9Height="14" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="down" ActionTag="316853101" Tag="2339" IconVisible="False" LeftMargin="184.0657" RightMargin="-161.0657" TopMargin="-1.0000" BottomMargin="1.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="9" Scale9Height="14" ctype="ImageViewObjectData">
                         <Size X="45.0000" Y="68.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="233.5656" Y="35.0000" />
+                        <Position X="206.5657" Y="35.0000" />
                         <Scale ScaleX="0.8000" ScaleY="0.8000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="3.4348" Y="0.5147" />
+                        <PrePosition X="3.0377" Y="0.5147" />
                         <PreSize X="0.6618" Y="1.0000" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/D_Peng.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="stand" ActionTag="-1756484615" Tag="2340" IconVisible="False" LeftMargin="259.0969" RightMargin="-246.0969" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="19" Scale9Height="30" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="stand" ActionTag="-1756484615" Tag="2340" IconVisible="False" LeftMargin="232.0968" RightMargin="-219.0968" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="19" Scale9Height="30" ctype="ImageViewObjectData">
                         <Size X="55.0000" Y="84.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="286.5969" Y="35.0000" />
+                        <Position X="259.5968" Y="35.0000" />
                         <Scale ScaleX="0.6500" ScaleY="0.6500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="4.2147" Y="0.5147" />
+                        <PrePosition X="3.8176" Y="0.5147" />
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_139.png" Plist="" />
                       </AbstractNodeData>
@@ -133,37 +133,37 @@
                         <FileData Type="Normal" Path="XueZhanDaoDi/chahuazhu.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="winType" ActionTag="-2033130490" Tag="2338" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1103.4532" RightMargin="-1134.4532" TopMargin="-7.0664" BottomMargin="35.0664" FontSize="30" LabelText="4番4番" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="winType" ActionTag="-2033130490" Tag="2338" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1087.4546" RightMargin="-1118.4546" TopMargin="-6.0666" BottomMargin="34.0666" FontSize="30" LabelText="4番4番" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="99.0000" Y="40.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="1152.9532" Y="55.0664" />
+                        <Position X="1136.9546" Y="54.0666" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="228" B="172" />
-                        <PrePosition X="16.9552" Y="0.8098" />
+                        <PrePosition X="16.7199" Y="0.7951" />
                         <PreSize X="1.4559" Y="0.5882" />
                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                         <OutlineColor A="255" R="99" G="54" B="22" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="cardType" ActionTag="-731866159" Tag="2337" IconVisible="False" LeftMargin="129.7587" RightMargin="-816.7587" TopMargin="69.3375" BottomMargin="-25.3375" FontSize="20" LabelText="我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="cardType" ActionTag="-731866159" Tag="2337" IconVisible="False" LeftMargin="180.7574" RightMargin="-867.7574" TopMargin="69.3375" BottomMargin="-25.3375" FontSize="20" LabelText="我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="755.0000" Y="24.0000" />
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position X="129.7587" Y="-13.3375" />
+                        <Position X="180.7574" Y="-13.3375" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="228" B="172" />
-                        <PrePosition X="1.9082" Y="-0.1961" />
+                        <PrePosition X="2.6582" Y="-0.1961" />
                         <PreSize X="11.1029" Y="0.3529" />
                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="name" ActionTag="133983742" Tag="2335" IconVisible="False" LeftMargin="-17.7225" RightMargin="-34.2775" TopMargin="70.4751" BottomMargin="-22.4751" FontSize="20" LabelText="姓名姓名姓名" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="name" ActionTag="133983742" Tag="2335" IconVisible="False" LeftMargin="-25.7225" RightMargin="-26.2775" TopMargin="70.4751" BottomMargin="-22.4751" FontSize="20" LabelText="姓名姓名姓名" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="120.0000" Y="20.0000" />
                         <AnchorPoint ScaleX="0.4979" ScaleY="0.5000" />
-                        <Position X="42.0255" Y="-12.4751" />
+                        <Position X="34.0255" Y="-12.4751" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="245" B="243" />
-                        <PrePosition X="0.6180" Y="-0.1835" />
+                        <PrePosition X="0.5004" Y="-0.1835" />
                         <PreSize X="1.7647" Y="0.2941" />
                         <FontResource Type="Default" Path="" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -171,7 +171,7 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-559.4908" Y="172.2347" />
+                    <Position X="-543.4900" Y="172.2347" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
@@ -221,7 +221,7 @@
                     <OutlineColor A="255" R="96" G="69" B="40" />
                     <ShadowColor A="255" R="96" G="69" B="40" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="head" ActionTag="-1636388960" Tag="1476" IconVisible="False" LeftMargin="-593.4908" RightMargin="525.4908" TopMargin="-206.2347" BottomMargin="138.2347" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="head" ActionTag="-1636388960" Tag="1476" IconVisible="False" LeftMargin="-577.4900" RightMargin="509.4900" TopMargin="-206.2347" BottomMargin="138.2347" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
                     <Size X="68.0000" Y="68.0000" />
                     <Children>
                       <AbstractNodeData Name="zhuang" ActionTag="751787308" Tag="1477" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-1.4280" RightMargin="-0.5720" TopMargin="45.8490" BottomMargin="0.1510" ctype="SpriteObjectData">
@@ -245,33 +245,33 @@
                         <PreSize X="1.0588" Y="1.0588" />
                         <FileData Type="MarkedSubImage" Path="A_Common/Main/avatar.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="up" ActionTag="-2033997934" Tag="1479" IconVisible="False" LeftMargin="151.3348" RightMargin="-138.3348" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="33" Scale9Height="48" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="up" ActionTag="-2033997934" Tag="1479" IconVisible="False" LeftMargin="124.3350" RightMargin="-111.3350" TopMargin="-8.9999" BottomMargin="-7.0001" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="33" Scale9Height="48" ctype="ImageViewObjectData">
                         <Size X="55.0000" Y="84.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="178.8348" Y="35.0000" />
+                        <Position X="151.8350" Y="34.9999" />
                         <Scale ScaleX="0.6500" ScaleY="0.6500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="2.6299" Y="0.5147" />
+                        <PrePosition X="2.2329" Y="0.5147" />
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_206.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="down" ActionTag="-460111595" Tag="1480" IconVisible="False" LeftMargin="211.0656" RightMargin="-188.0656" TopMargin="-1.0000" BottomMargin="1.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="9" Scale9Height="14" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="down" ActionTag="-460111595" Tag="1480" IconVisible="False" LeftMargin="184.0657" RightMargin="-161.0657" TopMargin="-1.0000" BottomMargin="1.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="9" Scale9Height="14" ctype="ImageViewObjectData">
                         <Size X="45.0000" Y="68.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="233.5656" Y="35.0000" />
+                        <Position X="206.5657" Y="35.0000" />
                         <Scale ScaleX="0.8000" ScaleY="0.8000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="3.4348" Y="0.5147" />
+                        <PrePosition X="3.0377" Y="0.5147" />
                         <PreSize X="0.6618" Y="1.0000" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/D_Peng.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="stand" ActionTag="1184370109" Tag="1481" IconVisible="False" LeftMargin="259.0969" RightMargin="-246.0969" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="19" Scale9Height="30" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="stand" ActionTag="1184370109" Tag="1481" IconVisible="False" LeftMargin="232.0968" RightMargin="-219.0968" TopMargin="-8.9999" BottomMargin="-7.0001" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="19" Scale9Height="30" ctype="ImageViewObjectData">
                         <Size X="55.0000" Y="84.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="286.5969" Y="35.0000" />
+                        <Position X="259.5968" Y="34.9999" />
                         <Scale ScaleX="0.6500" ScaleY="0.6500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="4.2147" Y="0.5147" />
+                        <PrePosition X="3.8176" Y="0.5147" />
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_139.png" Plist="" />
                       </AbstractNodeData>
@@ -297,37 +297,37 @@
                         <FileData Type="Normal" Path="XueZhanDaoDi/chahuazhu.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="winType" ActionTag="1041189981" Tag="1484" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1103.4532" RightMargin="-1134.4532" TopMargin="-7.0664" BottomMargin="35.0664" FontSize="30" LabelText="4番4番" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="winType" ActionTag="1041189981" Tag="1484" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1087.4546" RightMargin="-1118.4546" TopMargin="-6.0665" BottomMargin="34.0665" FontSize="30" LabelText="4番4番" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="99.0000" Y="40.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="1152.9532" Y="55.0664" />
+                        <Position X="1136.9546" Y="54.0665" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="228" B="172" />
-                        <PrePosition X="16.9552" Y="0.8098" />
+                        <PrePosition X="16.7199" Y="0.7951" />
                         <PreSize X="1.4559" Y="0.5882" />
                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                         <OutlineColor A="255" R="99" G="54" B="22" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="cardType" ActionTag="1878310409" Tag="1485" IconVisible="False" LeftMargin="129.7587" RightMargin="-816.7587" TopMargin="69.3375" BottomMargin="-25.3375" FontSize="20" LabelText="我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="cardType" ActionTag="1878310409" Tag="1485" IconVisible="False" LeftMargin="180.7574" RightMargin="-867.7574" TopMargin="69.3375" BottomMargin="-25.3375" FontSize="20" LabelText="我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="755.0000" Y="24.0000" />
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position X="129.7587" Y="-13.3375" />
+                        <Position X="180.7574" Y="-13.3375" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="228" B="172" />
-                        <PrePosition X="1.9082" Y="-0.1961" />
+                        <PrePosition X="2.6582" Y="-0.1961" />
                         <PreSize X="11.1029" Y="0.3529" />
                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="name" ActionTag="84546553" Tag="1486" IconVisible="False" LeftMargin="-17.7225" RightMargin="-34.2775" TopMargin="70.4751" BottomMargin="-22.4751" FontSize="20" LabelText="姓名姓名姓名" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="name" ActionTag="84546553" Tag="1486" IconVisible="False" LeftMargin="-25.7225" RightMargin="-26.2775" TopMargin="70.4751" BottomMargin="-22.4751" FontSize="20" LabelText="姓名姓名姓名" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="120.0000" Y="20.0000" />
                         <AnchorPoint ScaleX="0.4979" ScaleY="0.5000" />
-                        <Position X="42.0255" Y="-12.4751" />
+                        <Position X="34.0255" Y="-12.4751" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="245" B="243" />
-                        <PrePosition X="0.6180" Y="-0.1835" />
+                        <PrePosition X="0.5004" Y="-0.1835" />
                         <PreSize X="1.7647" Y="0.2941" />
                         <FontResource Type="Default" Path="" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -335,7 +335,7 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-559.4908" Y="172.2347" />
+                    <Position X="-543.4900" Y="172.2347" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
@@ -385,7 +385,7 @@
                     <OutlineColor A="255" R="96" G="69" B="40" />
                     <ShadowColor A="255" R="96" G="69" B="40" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="head" ActionTag="-1061228682" Tag="1492" IconVisible="False" LeftMargin="-593.4908" RightMargin="525.4908" TopMargin="-206.2347" BottomMargin="138.2347" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="head" ActionTag="-1061228682" Tag="1492" IconVisible="False" LeftMargin="-577.4900" RightMargin="509.4900" TopMargin="-206.2347" BottomMargin="138.2347" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
                     <Size X="68.0000" Y="68.0000" />
                     <Children>
                       <AbstractNodeData Name="zhuang" ActionTag="-88068503" Tag="1493" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-1.4280" RightMargin="-0.5720" TopMargin="45.8490" BottomMargin="0.1510" ctype="SpriteObjectData">
@@ -409,33 +409,33 @@
                         <PreSize X="1.0588" Y="1.0588" />
                         <FileData Type="MarkedSubImage" Path="A_Common/Main/avatar.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="up" ActionTag="-617125673" Tag="1495" IconVisible="False" LeftMargin="151.3348" RightMargin="-138.3348" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="33" Scale9Height="48" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="up" ActionTag="-617125673" Tag="1495" IconVisible="False" LeftMargin="124.3350" RightMargin="-111.3350" TopMargin="-9.0001" BottomMargin="-6.9999" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="33" Scale9Height="48" ctype="ImageViewObjectData">
                         <Size X="55.0000" Y="84.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="178.8348" Y="35.0000" />
+                        <Position X="151.8350" Y="35.0001" />
                         <Scale ScaleX="0.6500" ScaleY="0.6500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="2.6299" Y="0.5147" />
+                        <PrePosition X="2.2329" Y="0.5147" />
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_206.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="down" ActionTag="-1907622907" Tag="1496" IconVisible="False" LeftMargin="211.0656" RightMargin="-188.0656" TopMargin="-1.0000" BottomMargin="1.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="9" Scale9Height="14" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="down" ActionTag="-1907622907" Tag="1496" IconVisible="False" LeftMargin="184.0657" RightMargin="-161.0657" TopMargin="-1.0001" BottomMargin="1.0001" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="9" Scale9Height="14" ctype="ImageViewObjectData">
                         <Size X="45.0000" Y="68.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="233.5656" Y="35.0000" />
+                        <Position X="206.5657" Y="35.0001" />
                         <Scale ScaleX="0.8000" ScaleY="0.8000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="3.4348" Y="0.5147" />
+                        <PrePosition X="3.0377" Y="0.5147" />
                         <PreSize X="0.6618" Y="1.0000" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/D_Peng.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="stand" ActionTag="496526324" Tag="1497" IconVisible="False" LeftMargin="259.0969" RightMargin="-246.0969" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="19" Scale9Height="30" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="stand" ActionTag="496526324" Tag="1497" IconVisible="False" LeftMargin="232.0968" RightMargin="-219.0968" TopMargin="-9.0001" BottomMargin="-6.9999" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="19" Scale9Height="30" ctype="ImageViewObjectData">
                         <Size X="55.0000" Y="84.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="286.5969" Y="35.0000" />
+                        <Position X="259.5968" Y="35.0001" />
                         <Scale ScaleX="0.6500" ScaleY="0.6500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="4.2147" Y="0.5147" />
+                        <PrePosition X="3.8176" Y="0.5147" />
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_139.png" Plist="" />
                       </AbstractNodeData>
@@ -461,37 +461,37 @@
                         <FileData Type="Normal" Path="XueZhanDaoDi/chahuazhu.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="winType" ActionTag="1081437391" Tag="1500" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1103.4532" RightMargin="-1134.4532" TopMargin="-7.0664" BottomMargin="35.0664" FontSize="30" LabelText="4番4番" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="winType" ActionTag="1081437391" Tag="1500" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1087.4546" RightMargin="-1118.4546" TopMargin="-6.0665" BottomMargin="34.0665" FontSize="30" LabelText="4番4番" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="99.0000" Y="40.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="1152.9532" Y="55.0664" />
+                        <Position X="1136.9546" Y="54.0665" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="228" B="172" />
-                        <PrePosition X="16.9552" Y="0.8098" />
+                        <PrePosition X="16.7199" Y="0.7951" />
                         <PreSize X="1.4559" Y="0.5882" />
                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                         <OutlineColor A="255" R="99" G="54" B="22" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="cardType" ActionTag="-1162367170" Tag="1501" IconVisible="False" LeftMargin="129.7587" RightMargin="-816.7587" TopMargin="69.3375" BottomMargin="-25.3375" FontSize="20" LabelText="我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="cardType" ActionTag="-1162367170" Tag="1501" IconVisible="False" LeftMargin="180.7574" RightMargin="-867.7574" TopMargin="69.3374" BottomMargin="-25.3374" FontSize="20" LabelText="我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="755.0000" Y="24.0000" />
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position X="129.7587" Y="-13.3375" />
+                        <Position X="180.7574" Y="-13.3374" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="228" B="172" />
-                        <PrePosition X="1.9082" Y="-0.1961" />
+                        <PrePosition X="2.6582" Y="-0.1961" />
                         <PreSize X="11.1029" Y="0.3529" />
                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="name" ActionTag="-503684060" Tag="1502" IconVisible="False" LeftMargin="-17.7225" RightMargin="-34.2775" TopMargin="70.4751" BottomMargin="-22.4751" FontSize="20" LabelText="姓名姓名姓名" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="name" ActionTag="-503684060" Tag="1502" IconVisible="False" LeftMargin="-25.7225" RightMargin="-26.2775" TopMargin="70.4750" BottomMargin="-22.4750" FontSize="20" LabelText="姓名姓名姓名" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="120.0000" Y="20.0000" />
                         <AnchorPoint ScaleX="0.4979" ScaleY="0.5000" />
-                        <Position X="42.0255" Y="-12.4751" />
+                        <Position X="34.0255" Y="-12.4750" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="245" B="243" />
-                        <PrePosition X="0.6180" Y="-0.1835" />
+                        <PrePosition X="0.5004" Y="-0.1835" />
                         <PreSize X="1.7647" Y="0.2941" />
                         <FontResource Type="Default" Path="" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -499,7 +499,7 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-559.4908" Y="172.2347" />
+                    <Position X="-543.4900" Y="172.2347" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
@@ -549,7 +549,7 @@
                     <OutlineColor A="255" R="96" G="69" B="40" />
                     <ShadowColor A="255" R="96" G="69" B="40" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="head" ActionTag="1528156104" Tag="1508" IconVisible="False" LeftMargin="-593.4908" RightMargin="525.4908" TopMargin="-206.2347" BottomMargin="138.2347" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
+                  <AbstractNodeData Name="head" ActionTag="1528156104" Tag="1508" IconVisible="False" LeftMargin="-577.4900" RightMargin="509.4900" TopMargin="-206.2347" BottomMargin="138.2347" LeftEage="23" RightEage="23" TopEage="23" BottomEage="23" Scale9OriginX="23" Scale9OriginY="23" Scale9Width="24" Scale9Height="24" ctype="ImageViewObjectData">
                     <Size X="68.0000" Y="68.0000" />
                     <Children>
                       <AbstractNodeData Name="zhuang" ActionTag="1524089854" Tag="1509" IconVisible="False" PositionPercentXEnabled="True" LeftMargin="-1.4280" RightMargin="-0.5720" TopMargin="45.8490" BottomMargin="0.1510" ctype="SpriteObjectData">
@@ -573,33 +573,33 @@
                         <PreSize X="1.0588" Y="1.0588" />
                         <FileData Type="MarkedSubImage" Path="A_Common/Main/avatar.png" Plist="A_Common/Common.plist" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="up" ActionTag="1601143370" Tag="1511" IconVisible="False" LeftMargin="151.3347" RightMargin="-138.3347" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="33" Scale9Height="48" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="up" ActionTag="1601143370" Tag="1511" IconVisible="False" LeftMargin="123.3353" RightMargin="-110.3353" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="11" RightEage="11" TopEage="18" BottomEage="18" Scale9OriginX="11" Scale9OriginY="18" Scale9Width="33" Scale9Height="48" ctype="ImageViewObjectData">
                         <Size X="55.0000" Y="84.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="178.8347" Y="35.0000" />
+                        <Position X="150.8353" Y="35.0000" />
                         <Scale ScaleX="0.6500" ScaleY="0.6500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="2.6299" Y="0.5147" />
+                        <PrePosition X="2.2182" Y="0.5147" />
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_206.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="down" ActionTag="670351185" Tag="1512" IconVisible="False" LeftMargin="211.0656" RightMargin="-188.0656" TopMargin="-1.0000" BottomMargin="1.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="9" Scale9Height="14" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="down" ActionTag="670351185" Tag="1512" IconVisible="False" LeftMargin="183.0660" RightMargin="-160.0660" TopMargin="-1.0000" BottomMargin="1.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="9" Scale9Height="14" ctype="ImageViewObjectData">
                         <Size X="45.0000" Y="68.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="233.5656" Y="35.0000" />
+                        <Position X="205.5660" Y="35.0000" />
                         <Scale ScaleX="0.8000" ScaleY="0.8000" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="3.4348" Y="0.5147" />
+                        <PrePosition X="3.0230" Y="0.5147" />
                         <PreSize X="0.6618" Y="1.0000" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/D_Peng.png" Plist="" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="stand" ActionTag="-881702638" Tag="1513" IconVisible="False" LeftMargin="259.0969" RightMargin="-246.0969" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="19" Scale9Height="30" ctype="ImageViewObjectData">
+                      <AbstractNodeData Name="stand" ActionTag="-881702638" Tag="1513" IconVisible="False" LeftMargin="231.0972" RightMargin="-218.0972" TopMargin="-9.0000" BottomMargin="-7.0000" LeftEage="18" RightEage="18" TopEage="27" BottomEage="27" Scale9OriginX="18" Scale9OriginY="27" Scale9Width="19" Scale9Height="30" ctype="ImageViewObjectData">
                         <Size X="55.0000" Y="84.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="286.5969" Y="35.0000" />
+                        <Position X="258.5972" Y="35.0000" />
                         <Scale ScaleX="0.6500" ScaleY="0.6500" />
                         <CColor A="255" R="255" G="255" B="255" />
-                        <PrePosition X="4.2147" Y="0.5147" />
+                        <PrePosition X="3.8029" Y="0.5147" />
                         <PreSize X="0.8088" Y="1.2353" />
                         <FileData Type="Normal" Path="XueZhanDaoDi/Card/00_139.png" Plist="" />
                       </AbstractNodeData>
@@ -625,37 +625,37 @@
                         <FileData Type="Normal" Path="XueZhanDaoDi/chahuazhu.png" Plist="" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="winType" ActionTag="-1849777682" Tag="1516" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1103.4532" RightMargin="-1134.4532" TopMargin="-7.0664" BottomMargin="35.0664" FontSize="30" LabelText="4番4番" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="winType" ActionTag="-1849777682" Tag="1516" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="1087.4546" RightMargin="-1118.4546" TopMargin="-6.0665" BottomMargin="34.0665" FontSize="30" LabelText="4番4番" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" OutlineSize="2" OutlineEnabled="True" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="99.0000" Y="40.0000" />
                         <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                        <Position X="1152.9532" Y="55.0664" />
+                        <Position X="1136.9546" Y="54.0665" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="228" B="172" />
-                        <PrePosition X="16.9552" Y="0.8098" />
+                        <PrePosition X="16.7199" Y="0.7951" />
                         <PreSize X="1.4559" Y="0.5882" />
                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                         <OutlineColor A="255" R="99" G="54" B="22" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="cardType" ActionTag="-1859680545" Tag="1517" IconVisible="False" LeftMargin="129.7587" RightMargin="-816.7587" TopMargin="69.3375" BottomMargin="-25.3375" FontSize="20" LabelText="我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="cardType" ActionTag="-1859680545" Tag="1517" IconVisible="False" LeftMargin="180.7574" RightMargin="-867.7574" TopMargin="69.3375" BottomMargin="-25.3375" FontSize="20" LabelText="我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个文字呢|我最多能显示个" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="755.0000" Y="24.0000" />
                         <AnchorPoint ScaleY="0.5000" />
-                        <Position X="129.7587" Y="-13.3375" />
+                        <Position X="180.7574" Y="-13.3375" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="228" B="172" />
-                        <PrePosition X="1.9082" Y="-0.1961" />
+                        <PrePosition X="2.6582" Y="-0.1961" />
                         <PreSize X="11.1029" Y="0.3529" />
                         <FontResource Type="Normal" Path="fonts/fzcy.ttf" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="name" ActionTag="594773398" Tag="1518" IconVisible="False" LeftMargin="-17.7225" RightMargin="-34.2775" TopMargin="70.4751" BottomMargin="-22.4751" FontSize="20" LabelText="姓名姓名姓名" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                      <AbstractNodeData Name="name" ActionTag="594773398" Tag="1518" IconVisible="False" LeftMargin="-25.7225" RightMargin="-26.2775" TopMargin="70.4752" BottomMargin="-22.4752" FontSize="20" LabelText="姓名姓名姓名" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                         <Size X="120.0000" Y="20.0000" />
                         <AnchorPoint ScaleX="0.4979" ScaleY="0.5000" />
-                        <Position X="42.0255" Y="-12.4751" />
+                        <Position X="34.0255" Y="-12.4752" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="245" G="245" B="243" />
-                        <PrePosition X="0.6180" Y="-0.1835" />
+                        <PrePosition X="0.5004" Y="-0.1835" />
                         <PreSize X="1.7647" Y="0.2941" />
                         <FontResource Type="Default" Path="" Plist="" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
@@ -663,7 +663,7 @@
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="-559.4908" Y="172.2347" />
+                    <Position X="-543.4900" Y="172.2347" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />

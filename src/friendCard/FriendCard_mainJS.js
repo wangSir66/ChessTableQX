@@ -415,7 +415,7 @@ var FriendCard_main = cc.Layer.extend({
 		// else if ((skinType == 6) || (skinType == 9)) { text_roundNum.setTextColor(cc.color("232e0f")) }
 		// else if ((skinType == 7) || (skinType == 10)) { text_roundNum.setTextColor(cc.color("1b293e")) }
 		// else if ((skinType == 8) || (skinType == 11)) { text_roundNum.setTextColor(cc.color("32213d")) }
-		this.setChairImg(desk, skinType);
+		// this.setChairImg(desk, skinType);
 	},
 	setChairImg: function (desk, skinType) {
 		var room = desk.room
@@ -443,27 +443,27 @@ var FriendCard_main = cc.Layer.extend({
 				} else {
 					yizi.zIndex = 10;
 				}
-				//设置椅子图片
-				// if (Number(skinType) > 2) {
-				// 	yiziPath = "yizi_2.png";
-				// } else {
-				// 	if ((k == 1) || (k == 4)) {
-				// 		yiziPath = "yizi_1_1.png";
-				// 	}
-				// 	else {
-				// 		yiziPath = "yizi_1_0.png";
-				// 	}
-				// }
-				// yizi.loadTexture(path + yiziPath, 1);
+				// 设置椅子图片
+				if (Number(skinType) > 2) {
+					yiziPath = "yizi_2.png";
+				} else {
+					if ((k == 1) || (k == 4)) {
+						yiziPath = "yizi_1_1.png";
+					}
+					else {
+						yiziPath = "yizi_1_0.png";
+					}
+				}
+				yizi.loadTexture(path + yiziPath, 1);
 
-				//当3人玩的时候 左上角的桌子位置换到右下角
-				// if (room.maxPlayer == 3 && k == 3) {
-				// 	yizi.zIndex = 20;
-				// 	if (!(Number(skinType) > 2)) {
-				// 		yizi.loadTexture(path + "yizi_1_1.png", 1);
-				// 	}
-				// 	yizi.setFlippedX(false)
-				// }
+				// 当3人玩的时候 左上角的桌子位置换到右下角
+				if (room.maxPlayer == 3 && k == 3) {
+					yizi.zIndex = 20;
+					if (!(Number(skinType) > 2)) {
+						yizi.loadTexture(path + "yizi_1_1.png", 1);
+					}
+					yizi.setFlippedX(false)
+				}
 			}
 		}
 	},
@@ -1391,12 +1391,26 @@ var FriendCard_main = cc.Layer.extend({
 			}
 
 			//当3人玩的时候 左上角的桌子位置换到右下角
-			if (room.maxPlayer == 3 && j == 2) {
-				var head4P = cell.getChildByName("head_4").initPos ? cell.getChildByName("head_4").initPos : cell.getChildByName("head_4").getPosition();
-				var yizi4P = cell.getChildByName("yizi_4").initPos ? cell.getChildByName("yizi_4").initPos : cell.getChildByName("yizi_4").getPosition();
-
-				head.setPosition(head4P);
-				yizi.setPosition(yizi4P);
+			if (j == 2){
+				if (room.maxPlayer == 3) {
+					var hd4 = cell.getChildByName("head_4"), yz4 = cell.getChildByName("yizi_4");
+					var head4P = hd4.initPos ? hd4.initPos : hd4.getPosition();
+					var yizi4P = yz4.initPos ? yz4.initPos : yz4.getPosition();
+					yizi.loadTexture('A_FriendCard/Main/yizi_1_1.png', 1);
+					yizi.width = yz4.width;
+					yizi.height = yz4.height;
+					yizi.setFlippedX(false);
+					head.setPosition(head4P);
+					yizi.setPosition(yizi4P);
+				}else{
+					var yz2 = cell.getChildByName("yizi_2");
+					yizi.loadTexture('A_FriendCard/Main/yizi_1_0.png', 1);
+					yizi.width = yz2.width;
+					yizi.height = yz2.height;
+					yizi.setFlippedX(true);
+					head.setPosition(head.initPos);
+					yizi.setPosition(yizi.initPos);
+				}
 			}
 
 			//没有玩家的时候不显示头像， 晋中显示坐下头像
