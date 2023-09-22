@@ -13710,7 +13710,7 @@
                 },
                 "LeftMargin": 514.7866,
                 "RightMargin": -618.7866,
-                "TopMargin": -275.0305,
+                "TopMargin": -275.0304,
                 "BottomMargin": 167.0304,
                 "Tag": 3902,
                 "ActionTag": -1149808915,
@@ -14076,10 +14076,10 @@
                   "B": 70
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -14136,10 +14136,10 @@
                   "B": 70
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -14252,10 +14252,10 @@
                   "Plist": ""
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -14317,10 +14317,10 @@
                   "Plist": ""
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -14377,10 +14377,10 @@
                   "B": 70
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -14669,10 +14669,10 @@
                   "B": 70
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
@@ -14776,10 +14776,10 @@
                   "B": 70
                 },
                 "Scale9Enable": true,
-                "Scale9OriginX": 15,
-                "Scale9OriginY": 11,
-                "Scale9Width": 145,
-                "Scale9Height": 122,
+                "Scale9OriginX": -15,
+                "Scale9OriginY": -11,
+                "Scale9Width": 30,
+                "Scale9Height": 22,
                 "OutlineColor": {
                   "G": 0,
                   "B": 0
