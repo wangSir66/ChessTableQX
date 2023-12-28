@@ -128,42 +128,42 @@ h5.weixinHelper = {
 
     wxShareUrlToPYQ: function(url, title, imgUrl)
     {
-        imgUrl = imgUrl || this._getImgUrl();
-        wx.onMenuShareTimeline({
-            title: title, // 分享标题
-            link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-            imgUrl: imgUrl, // 分享图标
-            success: function () {
-                // 用户确认分享后执行的回调函数
-                postEvent("WX_SHARE_SUCCESS", "{errCode:0}");
-            },
-            cancel: function () {
-                // 用户取消分享后执行的回调函数
-                postEvent("WX_SHARE_SUCCESS", "{errCode:1}");
-            }
-        });
+        // imgUrl = imgUrl || this._getImgUrl();
+        // wx.onMenuShareTimeline({
+        //     title: title, // 分享标题
+        //     link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        //     imgUrl: imgUrl, // 分享图标
+        //     success: function () {
+        //         // 用户确认分享后执行的回调函数
+        //         postEvent("WX_SHARE_SUCCESS", "{errCode:0}");
+        //     },
+        //     cancel: function () {
+        //         // 用户取消分享后执行的回调函数
+        //         postEvent("WX_SHARE_SUCCESS", "{errCode:1}");
+        //     }
+        // });
     },
 
 
     wxShareUrl: function(url, title, description, imgUrl)
     {
-        imgUrl = imgUrl || this._getImgUrl();
-        wx.onMenuShareAppMessage({
-            title: title, // 分享标题
-            desc: description, // 分享描述
-            link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-            imgUrl: imgUrl, // 分享图标
-            type: '', // 分享类型,music、video或link，不填默认为link
-            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-            success: function () {
-                // 用户确认分享后执行的回调函数
-                postEvent("WX_SHARE_SUCCESS", "{errCode:0}");
-            },
-            cancel: function () {
-                // 用户取消分享后执行的回调函数
-                postEvent("WX_SHARE_SUCCESS", "{errCode:1}");
-            }
-        });
+        // imgUrl = imgUrl || this._getImgUrl();
+        // wx.onMenuShareAppMessage({
+        //     title: title, // 分享标题
+        //     desc: description, // 分享描述
+        //     link: url, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        //     imgUrl: imgUrl, // 分享图标
+        //     type: '', // 分享类型,music、video或link，不填默认为link
+        //     dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        //     success: function () {
+        //         // 用户确认分享后执行的回调函数
+        //         postEvent("WX_SHARE_SUCCESS", "{errCode:0}");
+        //     },
+        //     cancel: function () {
+        //         // 用户取消分享后执行的回调函数
+        //         postEvent("WX_SHARE_SUCCESS", "{errCode:1}");
+        //     }
+        // });
     },
 
 
