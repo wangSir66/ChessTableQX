@@ -706,7 +706,7 @@ MjClient.CARD_FLOWER_TYPE = {
 }
 
 var GameDownloadCfgUrl = {};//http://121.199.14.235:9990/update/jiangshu/configuration.json
-GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/jiangshu/";
+GameDownloadCfgUrl[MjClient.APP_TYPE.YAAN] = ossUrl + "/update/yaan/";
 
 if (typeof (h5) != 'undefined' && h5.nativeHelper.isWeb()) h5.nativeHelper.changeGameDownloadCfgUrl(GameDownloadCfgUrl);
 var GameClassEnterBtn = {};

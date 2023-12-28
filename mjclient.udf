@@ -28,5 +28,20 @@
         <EnableHTML5Advanced Value="False" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="A_EndOne_XueZhan.csd" />
+          <FilePathData Path="A_Play_XueZhanMahjong.csd" />
+          <FilePathData Path="A_EndAll_XueZhan.csd" />
+          <FilePathData Path="A_EndOne_Red20.csd" />
+          <FilePathData Path="A_EndAll_Runfaster.csd" />
+          <FilePathData Path="A_EndAll_Red20.csd" />
+          <FilePathData Path="A_SelectRulePanel.csd" />
+          <FilePathData Path="A_Friendcard_main.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="A_SelectRulePanel.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>
