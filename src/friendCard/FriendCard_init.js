@@ -1000,7 +1000,6 @@ FriendCard_Common.setClubRulesSelectOSD = function (clubId, isSameScreen) {
 */
 FriendCard_Common.reSetCurSelectRule = function () {
     var that = MjClient.FriendCard_main_ui;
-    var clubRulesSelect = FriendCard_Common.getClubRulesSelect(that.clubId);
     that.ruleBtnNum = FriendCard_Common.getRuleNumber();
     if (FriendCard_Common.getOSDClub(that)) {
         for (var i = 1; i <= FriendCard_Common.getRuleNumber(); i++) {

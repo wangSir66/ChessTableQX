@@ -92,6 +92,19 @@ var FriendCard_main = cc.Layer.extend({
 		if (FriendCard_Common.isOpenLM())
 			FriendCard_LM_handleInviteMsg(that);
 	},
+	checkedSelectDesk: function () {
+		let clubRulesSelect = FriendCard_Common.getClubRulesSelect(this.data.info.clubId);
+		for (let key in this.data.info.ruleSwitch) {
+			if (Object.hasOwnProperty.call(this.data.info.ruleSwitch, key)) {
+				const actKey = this.data.info.ruleSwitch[key], _indx = clubRulesSelect.indexOf(Number(key));
+				if (_indx > -1 && actKey === 0) clubRulesSelect.splice(_indx, 1);
+			}
+		}
+		if (clubRulesSelect.length == 0) {
+			util.localStorageEncrypt.setStringItem("clubRulesSelect_" + this.data.info.clubId, JSON.stringify([-1]));
+			this.refreshDeskList();
+		}
+	},
 	initOther: function (back) {
 		var that = this
 		//顶部栏
@@ -952,7 +965,8 @@ var FriendCard_main = cc.Layer.extend({
 
 		var _indx = 0,
 			keys = Object.keys(this.data.info).filter(k => k.indexOf('rule') > -1 && !!this.data.info[k] && k != 'ruleSwitch'),
-			rule = this.data.info[keys[_indx]];
+			ruleSwitch = this.data.info.ruleSwitch || {};
+		rule = this.data.info[keys[_indx]];
 		this.gameTypes = [];
 		while (rule) {
 			if (rule != "delete") {
@@ -960,7 +974,7 @@ var FriendCard_main = cc.Layer.extend({
 				let rIndx = Number(keys[_indx].replace('rule', ''));
 				this._ruleSort[rIndx] = indexs.length;
 				rule.ruleIndex = rIndx;
-				this.gameTypes.push(rule);
+				ruleSwitch[rIndx] != 0 && this.gameTypes.push(rule);
 			}
 			rule = this.data.info[keys[++_indx]];
 		}
@@ -1391,7 +1405,7 @@ var FriendCard_main = cc.Layer.extend({
 			}
 
 			//当3人玩的时候 左上角的桌子位置换到右下角
-			if (j == 2){
+			if (j == 2) {
 				if (room.maxPlayer == 3) {
 					var hd4 = cell.getChildByName("head_4"), yz4 = cell.getChildByName("yizi_4");
 					var head4P = hd4.initPos ? hd4.initPos : hd4.getPosition();
@@ -1402,7 +1416,7 @@ var FriendCard_main = cc.Layer.extend({
 					yizi.setFlippedX(false);
 					head.setPosition(head4P);
 					yizi.setPosition(yizi4P);
-				}else{
+				} else {
 					var yz2 = cell.getChildByName("yizi_2");
 					yizi.loadTexture('A_FriendCard/Main/yizi_1_0.png', 1);
 					yizi.width = yz2.width;
