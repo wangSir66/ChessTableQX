@@ -3827,7 +3827,10 @@ var FriendCard_ruleLayer = cc.Layer.extend({
                     if (rtn.message) {
                         MjClient.showToast(rtn.message);
                     }
-                } else this.clubData.ruleSwitch[index] = sendInfo.action;
+                } else {
+                    this.clubData.ruleSwitch[index] = sendInfo.action;
+                    MjClient.FriendCard_main_ui && MjClient.FriendCard_main_ui.checkedSelectDesk();
+                }
             }.bind(this));
         }
     },
