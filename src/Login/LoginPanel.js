@@ -264,7 +264,7 @@
                 clipper.setAlphaThreshold(0.5);
                 logo.addChild(clipper);
                 var sprite1 = new cc.Sprite(spCache.getSpriteFrame('A_Login/Main/saog3.png'));
-                sprite1.setBlendFunc(cc.ONE,cc.ONE);
+                sprite1.setBlendFunc(cc.ONE, cc.ONE);
                 sprite1.setOpacity(255);
                 sprite1.setScale(1.5);
                 clipper.addChild(sprite1, 1);
@@ -274,7 +274,7 @@
                     cc.delayTime(0.5)));
                 sprite1.runAction(repeatAction); //进行向右移动的重复动作
                 var sprite2 = new cc.Sprite(spCache.getSpriteFrame('A_Login/Main/saog3.png'));
-                sprite2.setBlendFunc(cc.ONE,cc.ONE);
+                sprite2.setBlendFunc(cc.ONE, cc.ONE);
                 sprite2.setOpacity(255);
                 sprite2.setScale(1.5);
                 clipper.addChild(sprite2, 1);
@@ -401,6 +401,7 @@
                 _fixBtn.addTouchEventListener(function (sender, Type) {
                     switch (Type) {
                         case ccui.Widget.TOUCH_ENDED:
+                            // jsb.reflection.callStaticMethod("org.cocos2dx.javascript.CrashMock", "testNative", "()V");
                             let tm = new Date().getTime() - 120 * 1000;
                             if (tm > gameStartTime) {
                                 _fixBtn.setTouchEnabled(false);

@@ -32,6 +32,7 @@ var ChangeHeadView = cc.Layer.extend({
         _btnOther.addTouchEventListener(function (sender, Type) {
             switch (Type) {
                 case ccui.Widget.TOUCH_ENDED:
+                    this.currSeletPng = null;
                     this.init_info();
                     break;
                 default:

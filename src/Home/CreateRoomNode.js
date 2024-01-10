@@ -685,7 +685,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
         //add by sking for create room need GPS
         var _selectCol = BTNCOLOR1;
         var _UnSelectCol = BTNCOLOR3;
-        this._nodeGPS = new ccui.CheckBox("A_Common/Main/daTC1_19.png","A_Common/Main/daTC1_20.png","A_Common/Main/daTC1_20.png","A_Common/Main/daTC1_19.png","A_Common/Main/daTC1_20.png",1);
+        this._nodeGPS = new ccui.CheckBox("A_Common/Main/daTC1_19.png", "A_Common/Main/daTC1_20.png", "A_Common/Main/daTC1_20.png", "A_Common/Main/daTC1_19.png", "A_Common/Main/daTC1_20.png", 1);
         this._nodeGPS.setPosition(cc.p(50, 20));
         this.bg_node.addChild(this._nodeGPS, 100);
         if (MjClient.getAppType() == MjClient.APP_TYPE.QXJSMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXXZMJ || MjClient.getAppType() == MjClient.APP_TYPE.QXHAMJ) {
@@ -728,7 +728,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
 
                 util.localStorageEncrypt.setBoolItem(that.localStorageKey.KEY_GPS, that._nodeGPS.isSelected());
             }
-        });        
+        });
         this._nodeGPS.setSelected(false);
         this._nodeGPS.setSelected(false);
         this._nodeGPS.addEventListener(function (sender, type) {
@@ -869,7 +869,7 @@ var CreateRoomNodeYaAn = cc.Node.extend({
 
         textInput.setPosition(image.getContentSize().width / 2, image.getContentSize().height / 2);
         image.addChild(textInput);
-        
+
         if (this._data) {
             if (this._data.ruleName) {
                 var splitRuleName = FriendCard_Common.splitClubRuleName1(unescape(this._data.ruleName))
@@ -1246,11 +1246,21 @@ var CreateRoomNodeYaAn = cc.Node.extend({
             para.serverCharge = this.RedioGroup['fuwufeipay'].getSelectIndex();
             let counts = [];
             for (let _i = 0; _i < this.qujianItems.length; _i++) {
-                const item = this.qujianItems[_i];
+                const item = this.qujianItems[_i], bSc = counts[_i - 1],
+                    min = Number(item.txt0.getString()),
+                    max = Number(item.txt1.getString()),
+                    score = Number(item.txt2.getString());
+                if (min > max) {
+                    return MjClient.showToast("区间规则错误，服务费区间不正确（最小到最大）");
+                } else if (bSc) {
+                    if (bSc.max >= min) {
+                        return MjClient.showToast("区间规则错误，服务费区间不正确（前者最大值大于后者最小值）");
+                    }
+                }
                 counts.push({
-                    min: Number(item.txt0.getString()),
-                    max: Number(item.txt1.getString()),
-                    score: Number(item.txt2.getString()),
+                    min,
+                    max,
+                    score,
                 })
             }
             para.serverCount = counts;
